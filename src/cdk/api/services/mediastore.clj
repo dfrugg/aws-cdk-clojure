@@ -26,19 +26,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnContainer$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-logging-enabled)]
+  (when-some [data (lookup-entry config id :access-logging-enabled)]
     (. builder accessLoggingEnabled data))
-  (when-let [data (lookup-entry config id :container-name)]
+  (when-some [data (lookup-entry config id :container-name)]
     (. builder containerName data))
-  (when-let [data (lookup-entry config id :cors-policy)]
+  (when-some [data (lookup-entry config id :cors-policy)]
     (. builder corsPolicy data))
-  (when-let [data (lookup-entry config id :lifecycle-policy)]
+  (when-some [data (lookup-entry config id :lifecycle-policy)]
     (. builder lifecyclePolicy data))
-  (when-let [data (lookup-entry config id :metric-policy)]
+  (when-some [data (lookup-entry config id :metric-policy)]
     (. builder metricPolicy data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -70,15 +70,15 @@
 | `maxAgeSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-age-seconds` |
 "
   [^CfnContainer$CorsRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-headers)]
+  (when-some [data (lookup-entry config id :allowed-headers)]
     (. builder allowedHeaders data))
-  (when-let [data (lookup-entry config id :allowed-methods)]
+  (when-some [data (lookup-entry config id :allowed-methods)]
     (. builder allowedMethods data))
-  (when-let [data (lookup-entry config id :allowed-origins)]
+  (when-some [data (lookup-entry config id :allowed-origins)]
     (. builder allowedOrigins data))
-  (when-let [data (lookup-entry config id :expose-headers)]
+  (when-some [data (lookup-entry config id :expose-headers)]
     (. builder exposeHeaders data))
-  (when-let [data (lookup-entry config id :max-age-seconds)]
+  (when-some [data (lookup-entry config id :max-age-seconds)]
     (. builder maxAgeSeconds data))
   (.build builder))
 
@@ -107,9 +107,9 @@
 | `metricPolicyRules` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-policy-rules` |
 "
   [^CfnContainer$MetricPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-level-metrics)]
+  (when-some [data (lookup-entry config id :container-level-metrics)]
     (. builder containerLevelMetrics data))
-  (when-let [data (lookup-entry config id :metric-policy-rules)]
+  (when-some [data (lookup-entry config id :metric-policy-rules)]
     (. builder metricPolicyRules data))
   (.build builder))
 
@@ -138,9 +138,9 @@
 | `objectGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-group-name` |
 "
   [^CfnContainer$MetricPolicyRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object-group)]
+  (when-some [data (lookup-entry config id :object-group)]
     (. builder objectGroup data))
-  (when-let [data (lookup-entry config id :object-group-name)]
+  (when-some [data (lookup-entry config id :object-group-name)]
     (. builder objectGroupName data))
   (.build builder))
 
@@ -174,19 +174,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnContainerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-logging-enabled)]
+  (when-some [data (lookup-entry config id :access-logging-enabled)]
     (. builder accessLoggingEnabled data))
-  (when-let [data (lookup-entry config id :container-name)]
+  (when-some [data (lookup-entry config id :container-name)]
     (. builder containerName data))
-  (when-let [data (lookup-entry config id :cors-policy)]
+  (when-some [data (lookup-entry config id :cors-policy)]
     (. builder corsPolicy data))
-  (when-let [data (lookup-entry config id :lifecycle-policy)]
+  (when-some [data (lookup-entry config id :lifecycle-policy)]
     (. builder lifecyclePolicy data))
-  (when-let [data (lookup-entry config id :metric-policy)]
+  (when-some [data (lookup-entry config id :metric-policy)]
     (. builder metricPolicy data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

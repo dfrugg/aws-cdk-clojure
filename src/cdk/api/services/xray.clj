@@ -28,13 +28,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter-expression)]
+  (when-some [data (lookup-entry config id :filter-expression)]
     (. builder filterExpression data))
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :insights-configuration)]
+  (when-some [data (lookup-entry config id :insights-configuration)]
     (. builder insightsConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -63,9 +63,9 @@
 | `notificationsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notifications-enabled` |
 "
   [^CfnGroup$InsightsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :insights-enabled)]
+  (when-some [data (lookup-entry config id :insights-enabled)]
     (. builder insightsEnabled data))
-  (when-let [data (lookup-entry config id :notifications-enabled)]
+  (when-some [data (lookup-entry config id :notifications-enabled)]
     (. builder notificationsEnabled data))
   (.build builder))
 
@@ -96,13 +96,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter-expression)]
+  (when-some [data (lookup-entry config id :filter-expression)]
     (. builder filterExpression data))
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :insights-configuration)]
+  (when-some [data (lookup-entry config id :insights-configuration)]
     (. builder insightsConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -132,11 +132,11 @@
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnResourcePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :bypass-policy-lockout-check)]
+  (when-some [data (lookup-entry config id :bypass-policy-lockout-check)]
     (. builder bypassPolicyLockoutCheck data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -166,11 +166,11 @@
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnResourcePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bypass-policy-lockout-check)]
+  (when-some [data (lookup-entry config id :bypass-policy-lockout-check)]
     (. builder bypassPolicyLockoutCheck data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -202,15 +202,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSamplingRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :sampling-rule)]
+  (when-some [data (lookup-entry config id :sampling-rule)]
     (. builder samplingRule data))
-  (when-let [data (lookup-entry config id :sampling-rule-record)]
+  (when-some [data (lookup-entry config id :sampling-rule-record)]
     (. builder samplingRuleRecord data))
-  (when-let [data (lookup-entry config id :sampling-rule-update)]
+  (when-some [data (lookup-entry config id :sampling-rule-update)]
     (. builder samplingRuleUpdate data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -242,15 +242,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSamplingRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :sampling-rule)]
+  (when-some [data (lookup-entry config id :sampling-rule)]
     (. builder samplingRule data))
-  (when-let [data (lookup-entry config id :sampling-rule-record)]
+  (when-some [data (lookup-entry config id :sampling-rule-record)]
     (. builder samplingRuleRecord data))
-  (when-let [data (lookup-entry config id :sampling-rule-update)]
+  (when-some [data (lookup-entry config id :sampling-rule-update)]
     (. builder samplingRuleUpdate data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -290,31 +290,31 @@
 | `version` | java.lang.Number | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnSamplingRule$SamplingRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :fixed-rate)]
+  (when-some [data (lookup-entry config id :fixed-rate)]
     (. builder fixedRate data))
-  (when-let [data (lookup-entry config id :host)]
+  (when-some [data (lookup-entry config id :host)]
     (. builder host data))
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :reservoir-size)]
+  (when-some [data (lookup-entry config id :reservoir-size)]
     (. builder reservoirSize data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :rule-arn)]
+  (when-some [data (lookup-entry config id :rule-arn)]
     (. builder ruleArn data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
-  (when-let [data (lookup-entry config id :service-type)]
+  (when-some [data (lookup-entry config id :service-type)]
     (. builder serviceType data))
-  (when-let [data (lookup-entry config id :url-path)]
+  (when-some [data (lookup-entry config id :url-path)]
     (. builder urlPath data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -344,11 +344,11 @@
 | `samplingRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sampling-rule` |
 "
   [^CfnSamplingRule$SamplingRuleRecordProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :created-at)]
+  (when-some [data (lookup-entry config id :created-at)]
     (. builder createdAt data))
-  (when-let [data (lookup-entry config id :modified-at)]
+  (when-some [data (lookup-entry config id :modified-at)]
     (. builder modifiedAt data))
-  (when-let [data (lookup-entry config id :sampling-rule)]
+  (when-some [data (lookup-entry config id :sampling-rule)]
     (. builder samplingRule data))
   (.build builder))
 
@@ -387,29 +387,29 @@
 | `urlPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:url-path` |
 "
   [^CfnSamplingRule$SamplingRuleUpdateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :fixed-rate)]
+  (when-some [data (lookup-entry config id :fixed-rate)]
     (. builder fixedRate data))
-  (when-let [data (lookup-entry config id :host)]
+  (when-some [data (lookup-entry config id :host)]
     (. builder host data))
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :reservoir-size)]
+  (when-some [data (lookup-entry config id :reservoir-size)]
     (. builder reservoirSize data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :rule-arn)]
+  (when-some [data (lookup-entry config id :rule-arn)]
     (. builder ruleArn data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
-  (when-let [data (lookup-entry config id :service-type)]
+  (when-some [data (lookup-entry config id :service-type)]
     (. builder serviceType data))
-  (when-let [data (lookup-entry config id :url-path)]
+  (when-some [data (lookup-entry config id :url-path)]
     (. builder urlPath data))
   (.build builder))
 

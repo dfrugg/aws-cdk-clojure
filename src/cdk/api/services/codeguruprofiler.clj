@@ -41,7 +41,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
 "
   [^CfnProfilingGroup$AgentPermissionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
   (.build builder))
 
@@ -73,15 +73,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProfilingGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :agent-permissions)]
+  (when-some [data (lookup-entry config id :agent-permissions)]
     (. builder agentPermissions data))
-  (when-let [data (lookup-entry config id :anomaly-detection-notification-configuration)]
+  (when-some [data (lookup-entry config id :anomaly-detection-notification-configuration)]
     (. builder anomalyDetectionNotificationConfiguration data))
-  (when-let [data (lookup-entry config id :compute-platform)]
+  (when-some [data (lookup-entry config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :profiling-group-name)]
+  (when-some [data (lookup-entry config id :profiling-group-name)]
     (. builder profilingGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -110,9 +110,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `channelUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-uri` |
 "
   [^CfnProfilingGroup$ChannelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :channel-uri)]
+  (when-some [data (lookup-entry config id :channel-uri)]
     (. builder channelUri data))
   (.build builder))
 
@@ -144,15 +144,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProfilingGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :agent-permissions)]
+  (when-some [data (lookup-entry config id :agent-permissions)]
     (. builder agentPermissions data))
-  (when-let [data (lookup-entry config id :anomaly-detection-notification-configuration)]
+  (when-some [data (lookup-entry config id :anomaly-detection-notification-configuration)]
     (. builder anomalyDetectionNotificationConfiguration data))
-  (when-let [data (lookup-entry config id :compute-platform)]
+  (when-some [data (lookup-entry config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :profiling-group-name)]
+  (when-some [data (lookup-entry config id :profiling-group-name)]
     (. builder profilingGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -181,9 +181,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |
 "
   [^ProfilingGroup$Builder builder id config]
-  (when-let [data (compute-platform config id :compute-platform)]
+  (when-some [data (compute-platform config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :profiling-group-name)]
+  (when-some [data (lookup-entry config id :profiling-group-name)]
     (. builder profilingGroupName data))
   (.build builder))
 
@@ -212,9 +212,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |
 "
   [^ProfilingGroupProps$Builder builder id config]
-  (when-let [data (compute-platform config id :compute-platform)]
+  (when-some [data (compute-platform config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :profiling-group-name)]
+  (when-some [data (lookup-entry config id :profiling-group-name)]
     (. builder profilingGroupName data))
   (.build builder))
 

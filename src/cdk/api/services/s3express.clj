@@ -20,9 +20,9 @@
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
 "
   [^CfnBucketPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
 
@@ -51,9 +51,9 @@
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
 "
   [^CfnBucketPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
 
@@ -83,11 +83,11 @@
 | `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |
 "
   [^CfnDirectoryBucket$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :data-redundancy)]
+  (when-some [data (lookup-entry config id :data-redundancy)]
     (. builder dataRedundancy data))
-  (when-let [data (lookup-entry config id :location-name)]
+  (when-some [data (lookup-entry config id :location-name)]
     (. builder locationName data))
   (.build builder))
 
@@ -117,11 +117,11 @@
 | `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |
 "
   [^CfnDirectoryBucketProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :data-redundancy)]
+  (when-some [data (lookup-entry config id :data-redundancy)]
     (. builder dataRedundancy data))
-  (when-let [data (lookup-entry config id :location-name)]
+  (when-some [data (lookup-entry config id :location-name)]
     (. builder locationName data))
   (.build builder))
 

@@ -37,9 +37,9 @@
 | `snsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns-configuration` |
 "
   [^CfnAlert$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :lambda-configuration)]
+  (when-some [data (lookup-entry config id :lambda-configuration)]
     (. builder lambdaConfiguration data))
-  (when-let [data (lookup-entry config id :sns-configuration)]
+  (when-some [data (lookup-entry config id :sns-configuration)]
     (. builder snsConfiguration data))
   (.build builder))
 
@@ -71,15 +71,15 @@
 | `anomalyDetectorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:anomaly-detector-arn` |
 "
   [^CfnAlert$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :alert-description)]
+  (when-some [data (lookup-entry config id :alert-description)]
     (. builder alertDescription data))
-  (when-let [data (lookup-entry config id :alert-name)]
+  (when-some [data (lookup-entry config id :alert-name)]
     (. builder alertName data))
-  (when-let [data (lookup-entry config id :alert-sensitivity-threshold)]
+  (when-some [data (lookup-entry config id :alert-sensitivity-threshold)]
     (. builder alertSensitivityThreshold data))
-  (when-let [data (lookup-entry config id :anomaly-detector-arn)]
+  (when-some [data (lookup-entry config id :anomaly-detector-arn)]
     (. builder anomalyDetectorArn data))
   (.build builder))
 
@@ -108,9 +108,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnAlert$LambdaConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :lambda-arn)]
+  (when-some [data (lookup-entry config id :lambda-arn)]
     (. builder lambdaArn data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -142,15 +142,15 @@
 | `anomalyDetectorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:anomaly-detector-arn` |
 "
   [^CfnAlertProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :alert-description)]
+  (when-some [data (lookup-entry config id :alert-description)]
     (. builder alertDescription data))
-  (when-let [data (lookup-entry config id :alert-name)]
+  (when-some [data (lookup-entry config id :alert-name)]
     (. builder alertName data))
-  (when-let [data (lookup-entry config id :alert-sensitivity-threshold)]
+  (when-some [data (lookup-entry config id :alert-sensitivity-threshold)]
     (. builder alertSensitivityThreshold data))
-  (when-let [data (lookup-entry config id :anomaly-detector-arn)]
+  (when-some [data (lookup-entry config id :anomaly-detector-arn)]
     (. builder anomalyDetectorArn data))
   (.build builder))
 
@@ -179,9 +179,9 @@
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 "
   [^CfnAlert$SNSConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
 
@@ -209,7 +209,7 @@
 | `anomalyDetectorFrequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:anomaly-detector-frequency` |
 "
   [^CfnAnomalyDetector$AnomalyDetectorConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :anomaly-detector-frequency)]
+  (when-some [data (lookup-entry config id :anomaly-detector-frequency)]
     (. builder anomalyDetectorFrequency data))
   (.build builder))
 
@@ -238,9 +238,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnAnomalyDetector$AppFlowConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :flow-name)]
+  (when-some [data (lookup-entry config id :flow-name)]
     (. builder flowName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -272,15 +272,15 @@
 | `metricSetList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-set-list` |
 "
   [^CfnAnomalyDetector$Builder builder id config]
-  (when-let [data (lookup-entry config id :anomaly-detector-config)]
+  (when-some [data (lookup-entry config id :anomaly-detector-config)]
     (. builder anomalyDetectorConfig data))
-  (when-let [data (lookup-entry config id :anomaly-detector-description)]
+  (when-some [data (lookup-entry config id :anomaly-detector-description)]
     (. builder anomalyDetectorDescription data))
-  (when-let [data (lookup-entry config id :anomaly-detector-name)]
+  (when-some [data (lookup-entry config id :anomaly-detector-name)]
     (. builder anomalyDetectorName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :metric-set-list)]
+  (when-some [data (lookup-entry config id :metric-set-list)]
     (. builder metricSetList data))
   (.build builder))
 
@@ -308,7 +308,7 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnAnomalyDetector$CloudwatchConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -341,17 +341,17 @@
 | `quoteSymbol` | java.lang.String | [[cdk.support/lookup-entry]] | `:quote-symbol` |
 "
   [^CfnAnomalyDetector$CsvFormatDescriptorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :charset)]
+  (when-some [data (lookup-entry config id :charset)]
     (. builder charset data))
-  (when-let [data (lookup-entry config id :contains-header)]
+  (when-some [data (lookup-entry config id :contains-header)]
     (. builder containsHeader data))
-  (when-let [data (lookup-entry config id :delimiter)]
+  (when-some [data (lookup-entry config id :delimiter)]
     (. builder delimiter data))
-  (when-let [data (lookup-entry config id :file-compression)]
+  (when-some [data (lookup-entry config id :file-compression)]
     (. builder fileCompression data))
-  (when-let [data (lookup-entry config id :header-list)]
+  (when-some [data (lookup-entry config id :header-list)]
     (. builder headerList data))
-  (when-let [data (lookup-entry config id :quote-symbol)]
+  (when-some [data (lookup-entry config id :quote-symbol)]
     (. builder quoteSymbol data))
   (.build builder))
 
@@ -380,9 +380,9 @@
 | `jsonFormatDescriptor` | software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector$JsonFormatDescriptorProperty | [[cdk.support/lookup-entry]] | `:json-format-descriptor` |
 "
   [^CfnAnomalyDetector$FileFormatDescriptorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :csv-format-descriptor)]
+  (when-some [data (lookup-entry config id :csv-format-descriptor)]
     (. builder csvFormatDescriptor data))
-  (when-let [data (lookup-entry config id :json-format-descriptor)]
+  (when-some [data (lookup-entry config id :json-format-descriptor)]
     (. builder jsonFormatDescriptor data))
   (.build builder))
 
@@ -411,9 +411,9 @@
 | `fileCompression` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-compression` |
 "
   [^CfnAnomalyDetector$JsonFormatDescriptorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :charset)]
+  (when-some [data (lookup-entry config id :charset)]
     (. builder charset data))
-  (when-let [data (lookup-entry config id :file-compression)]
+  (when-some [data (lookup-entry config id :file-compression)]
     (. builder fileCompression data))
   (.build builder))
 
@@ -443,11 +443,11 @@
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
   [^CfnAnomalyDetector$MetricProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregation-function)]
+  (when-some [data (lookup-entry config id :aggregation-function)]
     (. builder aggregationFunction data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
 
@@ -483,23 +483,23 @@
 | `timezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone` |
 "
   [^CfnAnomalyDetector$MetricSetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimension-list)]
+  (when-some [data (lookup-entry config id :dimension-list)]
     (. builder dimensionList data))
-  (when-let [data (lookup-entry config id :metric-list)]
+  (when-some [data (lookup-entry config id :metric-list)]
     (. builder metricList data))
-  (when-let [data (lookup-entry config id :metric-set-description)]
+  (when-some [data (lookup-entry config id :metric-set-description)]
     (. builder metricSetDescription data))
-  (when-let [data (lookup-entry config id :metric-set-frequency)]
+  (when-some [data (lookup-entry config id :metric-set-frequency)]
     (. builder metricSetFrequency data))
-  (when-let [data (lookup-entry config id :metric-set-name)]
+  (when-some [data (lookup-entry config id :metric-set-name)]
     (. builder metricSetName data))
-  (when-let [data (lookup-entry config id :metric-source)]
+  (when-some [data (lookup-entry config id :metric-source)]
     (. builder metricSource data))
-  (when-let [data (lookup-entry config id :offset)]
+  (when-some [data (lookup-entry config id :offset)]
     (. builder offset data))
-  (when-let [data (lookup-entry config id :timestamp-column)]
+  (when-some [data (lookup-entry config id :timestamp-column)]
     (. builder timestampColumn data))
-  (when-let [data (lookup-entry config id :timezone)]
+  (when-some [data (lookup-entry config id :timezone)]
     (. builder timezone data))
   (.build builder))
 
@@ -531,15 +531,15 @@
 | `s3SourceConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-source-config` |
 "
   [^CfnAnomalyDetector$MetricSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-flow-config)]
+  (when-some [data (lookup-entry config id :app-flow-config)]
     (. builder appFlowConfig data))
-  (when-let [data (lookup-entry config id :cloudwatch-config)]
+  (when-some [data (lookup-entry config id :cloudwatch-config)]
     (. builder cloudwatchConfig data))
-  (when-let [data (lookup-entry config id :rds-source-config)]
+  (when-some [data (lookup-entry config id :rds-source-config)]
     (. builder rdsSourceConfig data))
-  (when-let [data (lookup-entry config id :redshift-source-config)]
+  (when-some [data (lookup-entry config id :redshift-source-config)]
     (. builder redshiftSourceConfig data))
-  (when-let [data (lookup-entry config id :s3-source-config)]
+  (when-some [data (lookup-entry config id :s3-source-config)]
     (. builder s3SourceConfig data))
   (.build builder))
 
@@ -571,15 +571,15 @@
 | `metricSetList` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-set-list` |
 "
   [^CfnAnomalyDetectorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :anomaly-detector-config)]
+  (when-some [data (lookup-entry config id :anomaly-detector-config)]
     (. builder anomalyDetectorConfig data))
-  (when-let [data (lookup-entry config id :anomaly-detector-description)]
+  (when-some [data (lookup-entry config id :anomaly-detector-description)]
     (. builder anomalyDetectorDescription data))
-  (when-let [data (lookup-entry config id :anomaly-detector-name)]
+  (when-some [data (lookup-entry config id :anomaly-detector-name)]
     (. builder anomalyDetectorName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :metric-set-list)]
+  (when-some [data (lookup-entry config id :metric-set-list)]
     (. builder metricSetList data))
   (.build builder))
 
@@ -614,21 +614,21 @@
 | `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnAnomalyDetector$RDSSourceConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :database-host)]
+  (when-some [data (lookup-entry config id :database-host)]
     (. builder databaseHost data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :database-port)]
+  (when-some [data (lookup-entry config id :database-port)]
     (. builder databasePort data))
-  (when-let [data (lookup-entry config id :db-instance-identifier)]
+  (when-some [data (lookup-entry config id :db-instance-identifier)]
     (. builder dbInstanceIdentifier data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :secret-manager-arn)]
+  (when-some [data (lookup-entry config id :secret-manager-arn)]
     (. builder secretManagerArn data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -663,21 +663,21 @@
 | `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnAnomalyDetector$RedshiftSourceConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-identifier)]
+  (when-some [data (lookup-entry config id :cluster-identifier)]
     (. builder clusterIdentifier data))
-  (when-let [data (lookup-entry config id :database-host)]
+  (when-some [data (lookup-entry config id :database-host)]
     (. builder databaseHost data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :database-port)]
+  (when-some [data (lookup-entry config id :database-port)]
     (. builder databasePort data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :secret-manager-arn)]
+  (when-some [data (lookup-entry config id :secret-manager-arn)]
     (. builder secretManagerArn data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -708,13 +708,13 @@
 | `templatedPathList` | java.util.List | [[cdk.support/lookup-entry]] | `:templated-path-list` |
 "
   [^CfnAnomalyDetector$S3SourceConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :file-format-descriptor)]
+  (when-some [data (lookup-entry config id :file-format-descriptor)]
     (. builder fileFormatDescriptor data))
-  (when-let [data (lookup-entry config id :historical-data-path-list)]
+  (when-some [data (lookup-entry config id :historical-data-path-list)]
     (. builder historicalDataPathList data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :templated-path-list)]
+  (when-some [data (lookup-entry config id :templated-path-list)]
     (. builder templatedPathList data))
   (.build builder))
 
@@ -743,9 +743,9 @@
 | `columnName` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-name` |
 "
   [^CfnAnomalyDetector$TimestampColumnProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-format)]
+  (when-some [data (lookup-entry config id :column-format)]
     (. builder columnFormat data))
-  (when-let [data (lookup-entry config id :column-name)]
+  (when-some [data (lookup-entry config id :column-name)]
     (. builder columnName data))
   (.build builder))
 
@@ -774,9 +774,9 @@
 | `subnetIdList` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-id-list` |
 "
   [^CfnAnomalyDetector$VpcConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-id-list)]
+  (when-some [data (lookup-entry config id :security-group-id-list)]
     (. builder securityGroupIdList data))
-  (when-let [data (lookup-entry config id :subnet-id-list)]
+  (when-some [data (lookup-entry config id :subnet-id-list)]
     (. builder subnetIdList data))
   (.build builder))
 

@@ -31,17 +31,17 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnGrant$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-operations)]
+  (when-some [data (lookup-entry config id :allowed-operations)]
     (. builder allowedOperations data))
-  (when-let [data (lookup-entry config id :grant-name)]
+  (when-some [data (lookup-entry config id :grant-name)]
     (. builder grantName data))
-  (when-let [data (lookup-entry config id :home-region)]
+  (when-some [data (lookup-entry config id :home-region)]
     (. builder homeRegion data))
-  (when-let [data (lookup-entry config id :license-arn)]
+  (when-some [data (lookup-entry config id :license-arn)]
     (. builder licenseArn data))
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -74,17 +74,17 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnGrantProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-operations)]
+  (when-some [data (lookup-entry config id :allowed-operations)]
     (. builder allowedOperations data))
-  (when-let [data (lookup-entry config id :grant-name)]
+  (when-some [data (lookup-entry config id :grant-name)]
     (. builder grantName data))
-  (when-let [data (lookup-entry config id :home-region)]
+  (when-some [data (lookup-entry config id :home-region)]
     (. builder homeRegion data))
-  (when-let [data (lookup-entry config id :license-arn)]
+  (when-some [data (lookup-entry config id :license-arn)]
     (. builder licenseArn data))
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -113,9 +113,9 @@
 | `maxTimeToLiveInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-time-to-live-in-minutes` |
 "
   [^CfnLicense$BorrowConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-early-check-in)]
+  (when-some [data (lookup-entry config id :allow-early-check-in)]
     (. builder allowEarlyCheckIn data))
-  (when-let [data (lookup-entry config id :max-time-to-live-in-minutes)]
+  (when-some [data (lookup-entry config id :max-time-to-live-in-minutes)]
     (. builder maxTimeToLiveInMinutes data))
   (.build builder))
 
@@ -153,27 +153,27 @@
 | `validity` | software.amazon.awscdk.services.licensemanager.CfnLicense$ValidityDateFormatProperty | [[cdk.support/lookup-entry]] | `:validity` |
 "
   [^CfnLicense$Builder builder id config]
-  (when-let [data (lookup-entry config id :beneficiary)]
+  (when-some [data (lookup-entry config id :beneficiary)]
     (. builder beneficiary data))
-  (when-let [data (lookup-entry config id :consumption-configuration)]
+  (when-some [data (lookup-entry config id :consumption-configuration)]
     (. builder consumptionConfiguration data))
-  (when-let [data (lookup-entry config id :entitlements)]
+  (when-some [data (lookup-entry config id :entitlements)]
     (. builder entitlements data))
-  (when-let [data (lookup-entry config id :home-region)]
+  (when-some [data (lookup-entry config id :home-region)]
     (. builder homeRegion data))
-  (when-let [data (lookup-entry config id :issuer)]
+  (when-some [data (lookup-entry config id :issuer)]
     (. builder issuer data))
-  (when-let [data (lookup-entry config id :license-metadata)]
+  (when-some [data (lookup-entry config id :license-metadata)]
     (. builder licenseMetadata data))
-  (when-let [data (lookup-entry config id :license-name)]
+  (when-some [data (lookup-entry config id :license-name)]
     (. builder licenseName data))
-  (when-let [data (lookup-entry config id :product-name)]
+  (when-some [data (lookup-entry config id :product-name)]
     (. builder productName data))
-  (when-let [data (lookup-entry config id :product-sku)]
+  (when-some [data (lookup-entry config id :product-sku)]
     (. builder productSku data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :validity)]
+  (when-some [data (lookup-entry config id :validity)]
     (. builder validity data))
   (.build builder))
 
@@ -203,11 +203,11 @@
 | `renewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:renew-type` |
 "
   [^CfnLicense$ConsumptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :borrow-configuration)]
+  (when-some [data (lookup-entry config id :borrow-configuration)]
     (. builder borrowConfiguration data))
-  (when-let [data (lookup-entry config id :provisional-configuration)]
+  (when-some [data (lookup-entry config id :provisional-configuration)]
     (. builder provisionalConfiguration data))
-  (when-let [data (lookup-entry config id :renew-type)]
+  (when-some [data (lookup-entry config id :renew-type)]
     (. builder renewType data))
   (.build builder))
 
@@ -240,17 +240,17 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnLicense$EntitlementProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-check-in)]
+  (when-some [data (lookup-entry config id :allow-check-in)]
     (. builder allowCheckIn data))
-  (when-let [data (lookup-entry config id :max-count)]
+  (when-some [data (lookup-entry config id :max-count)]
     (. builder maxCount data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :overage)]
+  (when-some [data (lookup-entry config id :overage)]
     (. builder overage data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -279,9 +279,9 @@
 | `signKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:sign-key` |
 "
   [^CfnLicense$IssuerDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sign-key)]
+  (when-some [data (lookup-entry config id :sign-key)]
     (. builder signKey data))
   (.build builder))
 
@@ -310,9 +310,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnLicense$MetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -350,27 +350,27 @@
 | `validity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validity` |
 "
   [^CfnLicenseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :beneficiary)]
+  (when-some [data (lookup-entry config id :beneficiary)]
     (. builder beneficiary data))
-  (when-let [data (lookup-entry config id :consumption-configuration)]
+  (when-some [data (lookup-entry config id :consumption-configuration)]
     (. builder consumptionConfiguration data))
-  (when-let [data (lookup-entry config id :entitlements)]
+  (when-some [data (lookup-entry config id :entitlements)]
     (. builder entitlements data))
-  (when-let [data (lookup-entry config id :home-region)]
+  (when-some [data (lookup-entry config id :home-region)]
     (. builder homeRegion data))
-  (when-let [data (lookup-entry config id :issuer)]
+  (when-some [data (lookup-entry config id :issuer)]
     (. builder issuer data))
-  (when-let [data (lookup-entry config id :license-metadata)]
+  (when-some [data (lookup-entry config id :license-metadata)]
     (. builder licenseMetadata data))
-  (when-let [data (lookup-entry config id :license-name)]
+  (when-some [data (lookup-entry config id :license-name)]
     (. builder licenseName data))
-  (when-let [data (lookup-entry config id :product-name)]
+  (when-some [data (lookup-entry config id :product-name)]
     (. builder productName data))
-  (when-let [data (lookup-entry config id :product-sku)]
+  (when-some [data (lookup-entry config id :product-sku)]
     (. builder productSku data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :validity)]
+  (when-some [data (lookup-entry config id :validity)]
     (. builder validity data))
   (.build builder))
 
@@ -398,7 +398,7 @@
 | `maxTimeToLiveInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-time-to-live-in-minutes` |
 "
   [^CfnLicense$ProvisionalConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-time-to-live-in-minutes)]
+  (when-some [data (lookup-entry config id :max-time-to-live-in-minutes)]
     (. builder maxTimeToLiveInMinutes data))
   (.build builder))
 
@@ -427,9 +427,9 @@
 | `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
 "
   [^CfnLicense$ValidityDateFormatProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :begin)]
+  (when-some [data (lookup-entry config id :begin)]
     (. builder begin data))
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
   (.build builder))
 

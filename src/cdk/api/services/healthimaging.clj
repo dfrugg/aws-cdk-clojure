@@ -19,11 +19,11 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDatastore$Builder builder id config]
-  (when-let [data (lookup-entry config id :datastore-name)]
+  (when-some [data (lookup-entry config id :datastore-name)]
     (. builder datastoreName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -53,11 +53,11 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDatastoreProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :datastore-name)]
+  (when-some [data (lookup-entry config id :datastore-name)]
     (. builder datastoreName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

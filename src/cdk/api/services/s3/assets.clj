@@ -29,23 +29,23 @@
 | `readers` | java.util.List | [[cdk.support/lookup-entry]] | `:readers` |
 "
   [^Asset$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-hash)]
+  (when-some [data (lookup-entry config id :asset-hash)]
     (. builder assetHash data))
-  (when-let [data (asset-hash-type config id :asset-hash-type)]
+  (when-some [data (asset-hash-type config id :asset-hash-type)]
     (. builder assetHashType data))
-  (when-let [data (lookup-entry config id :bundling)]
+  (when-some [data (lookup-entry config id :bundling)]
     (. builder bundling data))
-  (when-let [data (lookup-entry config id :deploy-time)]
+  (when-some [data (lookup-entry config id :deploy-time)]
     (. builder deployTime data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+  (when-some [data (symlink-follow-mode config id :follow-symlinks)]
     (. builder followSymlinks data))
-  (when-let [data (ignore-mode config id :ignore-mode)]
+  (when-some [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :readers)]
+  (when-some [data (lookup-entry config id :readers)]
     (. builder readers data))
   (.build builder))
 
@@ -80,21 +80,21 @@
 | `readers` | java.util.List | [[cdk.support/lookup-entry]] | `:readers` |
 "
   [^AssetOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-hash)]
+  (when-some [data (lookup-entry config id :asset-hash)]
     (. builder assetHash data))
-  (when-let [data (asset-hash-type config id :asset-hash-type)]
+  (when-some [data (asset-hash-type config id :asset-hash-type)]
     (. builder assetHashType data))
-  (when-let [data (lookup-entry config id :bundling)]
+  (when-some [data (lookup-entry config id :bundling)]
     (. builder bundling data))
-  (when-let [data (lookup-entry config id :deploy-time)]
+  (when-some [data (lookup-entry config id :deploy-time)]
     (. builder deployTime data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+  (when-some [data (symlink-follow-mode config id :follow-symlinks)]
     (. builder followSymlinks data))
-  (when-let [data (ignore-mode config id :ignore-mode)]
+  (when-some [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
-  (when-let [data (lookup-entry config id :readers)]
+  (when-some [data (lookup-entry config id :readers)]
     (. builder readers data))
   (.build builder))
 
@@ -130,23 +130,23 @@
 | `readers` | java.util.List | [[cdk.support/lookup-entry]] | `:readers` |
 "
   [^AssetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-hash)]
+  (when-some [data (lookup-entry config id :asset-hash)]
     (. builder assetHash data))
-  (when-let [data (asset-hash-type config id :asset-hash-type)]
+  (when-some [data (asset-hash-type config id :asset-hash-type)]
     (. builder assetHashType data))
-  (when-let [data (lookup-entry config id :bundling)]
+  (when-some [data (lookup-entry config id :bundling)]
     (. builder bundling data))
-  (when-let [data (lookup-entry config id :deploy-time)]
+  (when-some [data (lookup-entry config id :deploy-time)]
     (. builder deployTime data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+  (when-some [data (symlink-follow-mode config id :follow-symlinks)]
     (. builder followSymlinks data))
-  (when-let [data (ignore-mode config id :ignore-mode)]
+  (when-some [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :readers)]
+  (when-some [data (lookup-entry config id :readers)]
     (. builder readers data))
   (.build builder))
 

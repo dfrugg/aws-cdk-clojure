@@ -51,9 +51,9 @@
 | `subject` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject` |
 "
   [^CfnCertificate$ApiPassthroughProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :extensions)]
+  (when-some [data (lookup-entry config id :extensions)]
     (. builder extensions data))
-  (when-let [data (lookup-entry config id :subject)]
+  (when-some [data (lookup-entry config id :subject)]
     (. builder subject data))
   (.build builder))
 
@@ -82,9 +82,9 @@
 | `accessMethod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-method` |
 "
   [^CfnCertificateAuthority$AccessDescriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-location)]
+  (when-some [data (lookup-entry config id :access-location)]
     (. builder accessLocation data))
-  (when-let [data (lookup-entry config id :access-method)]
+  (when-some [data (lookup-entry config id :access-method)]
     (. builder accessMethod data))
   (.build builder))
 
@@ -113,9 +113,9 @@
 | `customObjectIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-object-identifier` |
 "
   [^CfnCertificateAuthority$AccessMethodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-method-type)]
+  (when-some [data (lookup-entry config id :access-method-type)]
     (. builder accessMethodType data))
-  (when-let [data (lookup-entry config id :custom-object-identifier)]
+  (when-some [data (lookup-entry config id :custom-object-identifier)]
     (. builder customObjectIdentifier data))
   (.build builder))
 
@@ -146,13 +146,13 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnCertificateAuthorityActivation$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :certificate-chain)]
+  (when-some [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -183,13 +183,13 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnCertificateAuthorityActivationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :certificate-chain)]
+  (when-some [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -225,23 +225,23 @@
 | `usageMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-mode` |
 "
   [^CfnCertificateAuthority$Builder builder id config]
-  (when-let [data (lookup-entry config id :csr-extensions)]
+  (when-some [data (lookup-entry config id :csr-extensions)]
     (. builder csrExtensions data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :key-storage-security-standard)]
+  (when-some [data (lookup-entry config id :key-storage-security-standard)]
     (. builder keyStorageSecurityStandard data))
-  (when-let [data (lookup-entry config id :revocation-configuration)]
+  (when-some [data (lookup-entry config id :revocation-configuration)]
     (. builder revocationConfiguration data))
-  (when-let [data (lookup-entry config id :signing-algorithm)]
+  (when-some [data (lookup-entry config id :signing-algorithm)]
     (. builder signingAlgorithm data))
-  (when-let [data (lookup-entry config id :subject)]
+  (when-some [data (lookup-entry config id :subject)]
     (. builder subject data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :usage-mode)]
+  (when-some [data (lookup-entry config id :usage-mode)]
     (. builder usageMode data))
   (.build builder))
 
@@ -274,17 +274,17 @@
 | `s3ObjectAcl` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-object-acl` |
 "
   [^CfnCertificateAuthority$CrlConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :crl-distribution-point-extension-configuration)]
+  (when-some [data (lookup-entry config id :crl-distribution-point-extension-configuration)]
     (. builder crlDistributionPointExtensionConfiguration data))
-  (when-let [data (lookup-entry config id :custom-cname)]
+  (when-some [data (lookup-entry config id :custom-cname)]
     (. builder customCname data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :expiration-in-days)]
+  (when-some [data (lookup-entry config id :expiration-in-days)]
     (. builder expirationInDays data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
-  (when-let [data (lookup-entry config id :s3-object-acl)]
+  (when-some [data (lookup-entry config id :s3-object-acl)]
     (. builder s3ObjectAcl data))
   (.build builder))
 
@@ -312,7 +312,7 @@
 | `omitExtension` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:omit-extension` |
 "
   [^CfnCertificateAuthority$CrlDistributionPointExtensionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :omit-extension)]
+  (when-some [data (lookup-entry config id :omit-extension)]
     (. builder omitExtension data))
   (.build builder))
 
@@ -341,9 +341,9 @@
 | `subjectInformationAccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-information-access` |
 "
   [^CfnCertificateAuthority$CsrExtensionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-usage)]
+  (when-some [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
-  (when-let [data (lookup-entry config id :subject-information-access)]
+  (when-some [data (lookup-entry config id :subject-information-access)]
     (. builder subjectInformationAccess data))
   (.build builder))
 
@@ -372,9 +372,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnCertificateAuthority$CustomAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object-identifier)]
+  (when-some [data (lookup-entry config id :object-identifier)]
     (. builder objectIdentifier data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -403,9 +403,9 @@
 | `partyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:party-name` |
 "
   [^CfnCertificateAuthority$EdiPartyNameProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name-assigner)]
+  (when-some [data (lookup-entry config id :name-assigner)]
     (. builder nameAssigner data))
-  (when-let [data (lookup-entry config id :party-name)]
+  (when-some [data (lookup-entry config id :party-name)]
     (. builder partyName data))
   (.build builder))
 
@@ -440,21 +440,21 @@
 | `uniformResourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:uniform-resource-identifier` |
 "
   [^CfnCertificateAuthority$GeneralNameProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :directory-name)]
+  (when-some [data (lookup-entry config id :directory-name)]
     (. builder directoryName data))
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :edi-party-name)]
+  (when-some [data (lookup-entry config id :edi-party-name)]
     (. builder ediPartyName data))
-  (when-let [data (lookup-entry config id :ip-address)]
+  (when-some [data (lookup-entry config id :ip-address)]
     (. builder ipAddress data))
-  (when-let [data (lookup-entry config id :other-name)]
+  (when-some [data (lookup-entry config id :other-name)]
     (. builder otherName data))
-  (when-let [data (lookup-entry config id :registered-id)]
+  (when-some [data (lookup-entry config id :registered-id)]
     (. builder registeredId data))
-  (when-let [data (lookup-entry config id :rfc822-name)]
+  (when-some [data (lookup-entry config id :rfc822-name)]
     (. builder rfc822Name data))
-  (when-let [data (lookup-entry config id :uniform-resource-identifier)]
+  (when-some [data (lookup-entry config id :uniform-resource-identifier)]
     (. builder uniformResourceIdentifier data))
   (.build builder))
 
@@ -490,23 +490,23 @@
 | `nonRepudiation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:non-repudiation` |
 "
   [^CfnCertificateAuthority$KeyUsageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :crl-sign)]
+  (when-some [data (lookup-entry config id :crl-sign)]
     (. builder crlSign data))
-  (when-let [data (lookup-entry config id :data-encipherment)]
+  (when-some [data (lookup-entry config id :data-encipherment)]
     (. builder dataEncipherment data))
-  (when-let [data (lookup-entry config id :decipher-only)]
+  (when-some [data (lookup-entry config id :decipher-only)]
     (. builder decipherOnly data))
-  (when-let [data (lookup-entry config id :digital-signature)]
+  (when-some [data (lookup-entry config id :digital-signature)]
     (. builder digitalSignature data))
-  (when-let [data (lookup-entry config id :encipher-only)]
+  (when-some [data (lookup-entry config id :encipher-only)]
     (. builder encipherOnly data))
-  (when-let [data (lookup-entry config id :key-agreement)]
+  (when-some [data (lookup-entry config id :key-agreement)]
     (. builder keyAgreement data))
-  (when-let [data (lookup-entry config id :key-cert-sign)]
+  (when-some [data (lookup-entry config id :key-cert-sign)]
     (. builder keyCertSign data))
-  (when-let [data (lookup-entry config id :key-encipherment)]
+  (when-some [data (lookup-entry config id :key-encipherment)]
     (. builder keyEncipherment data))
-  (when-let [data (lookup-entry config id :non-repudiation)]
+  (when-some [data (lookup-entry config id :non-repudiation)]
     (. builder nonRepudiation data))
   (.build builder))
 
@@ -535,9 +535,9 @@
 | `ocspCustomCname` | java.lang.String | [[cdk.support/lookup-entry]] | `:ocsp-custom-cname` |
 "
   [^CfnCertificateAuthority$OcspConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :ocsp-custom-cname)]
+  (when-some [data (lookup-entry config id :ocsp-custom-cname)]
     (. builder ocspCustomCname data))
   (.build builder))
 
@@ -566,9 +566,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnCertificateAuthority$OtherNameProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type-id)]
+  (when-some [data (lookup-entry config id :type-id)]
     (. builder typeId data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -604,23 +604,23 @@
 | `usageMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-mode` |
 "
   [^CfnCertificateAuthorityProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :csr-extensions)]
+  (when-some [data (lookup-entry config id :csr-extensions)]
     (. builder csrExtensions data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :key-storage-security-standard)]
+  (when-some [data (lookup-entry config id :key-storage-security-standard)]
     (. builder keyStorageSecurityStandard data))
-  (when-let [data (lookup-entry config id :revocation-configuration)]
+  (when-some [data (lookup-entry config id :revocation-configuration)]
     (. builder revocationConfiguration data))
-  (when-let [data (lookup-entry config id :signing-algorithm)]
+  (when-some [data (lookup-entry config id :signing-algorithm)]
     (. builder signingAlgorithm data))
-  (when-let [data (lookup-entry config id :subject)]
+  (when-some [data (lookup-entry config id :subject)]
     (. builder subject data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :usage-mode)]
+  (when-some [data (lookup-entry config id :usage-mode)]
     (. builder usageMode data))
   (.build builder))
 
@@ -649,9 +649,9 @@
 | `ocspConfiguration` | software.amazon.awscdk.services.acmpca.CfnCertificateAuthority$OcspConfigurationProperty | [[cdk.support/lookup-entry]] | `:ocsp-configuration` |
 "
   [^CfnCertificateAuthority$RevocationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :crl-configuration)]
+  (when-some [data (lookup-entry config id :crl-configuration)]
     (. builder crlConfiguration data))
-  (when-let [data (lookup-entry config id :ocsp-configuration)]
+  (when-some [data (lookup-entry config id :ocsp-configuration)]
     (. builder ocspConfiguration data))
   (.build builder))
 
@@ -693,35 +693,35 @@
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 "
   [^CfnCertificateAuthority$SubjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :common-name)]
+  (when-some [data (lookup-entry config id :common-name)]
     (. builder commonName data))
-  (when-let [data (lookup-entry config id :country)]
+  (when-some [data (lookup-entry config id :country)]
     (. builder country data))
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :distinguished-name-qualifier)]
+  (when-some [data (lookup-entry config id :distinguished-name-qualifier)]
     (. builder distinguishedNameQualifier data))
-  (when-let [data (lookup-entry config id :generation-qualifier)]
+  (when-some [data (lookup-entry config id :generation-qualifier)]
     (. builder generationQualifier data))
-  (when-let [data (lookup-entry config id :given-name)]
+  (when-some [data (lookup-entry config id :given-name)]
     (. builder givenName data))
-  (when-let [data (lookup-entry config id :initials)]
+  (when-some [data (lookup-entry config id :initials)]
     (. builder initials data))
-  (when-let [data (lookup-entry config id :locality)]
+  (when-some [data (lookup-entry config id :locality)]
     (. builder locality data))
-  (when-let [data (lookup-entry config id :organization)]
+  (when-some [data (lookup-entry config id :organization)]
     (. builder organization data))
-  (when-let [data (lookup-entry config id :organizational-unit)]
+  (when-some [data (lookup-entry config id :organizational-unit)]
     (. builder organizationalUnit data))
-  (when-let [data (lookup-entry config id :pseudonym)]
+  (when-some [data (lookup-entry config id :pseudonym)]
     (. builder pseudonym data))
-  (when-let [data (lookup-entry config id :serial-number)]
+  (when-some [data (lookup-entry config id :serial-number)]
     (. builder serialNumber data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :surname)]
+  (when-some [data (lookup-entry config id :surname)]
     (. builder surname data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
 
@@ -755,19 +755,19 @@
 | `validityNotBefore` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validity-not-before` |
 "
   [^CfnCertificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-passthrough)]
+  (when-some [data (lookup-entry config id :api-passthrough)]
     (. builder apiPassthrough data))
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :certificate-signing-request)]
+  (when-some [data (lookup-entry config id :certificate-signing-request)]
     (. builder certificateSigningRequest data))
-  (when-let [data (lookup-entry config id :signing-algorithm)]
+  (when-some [data (lookup-entry config id :signing-algorithm)]
     (. builder signingAlgorithm data))
-  (when-let [data (lookup-entry config id :template-arn)]
+  (when-some [data (lookup-entry config id :template-arn)]
     (. builder templateArn data))
-  (when-let [data (lookup-entry config id :validity)]
+  (when-some [data (lookup-entry config id :validity)]
     (. builder validity data))
-  (when-let [data (lookup-entry config id :validity-not-before)]
+  (when-some [data (lookup-entry config id :validity-not-before)]
     (. builder validityNotBefore data))
   (.build builder))
 
@@ -796,9 +796,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnCertificate$CustomAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object-identifier)]
+  (when-some [data (lookup-entry config id :object-identifier)]
     (. builder objectIdentifier data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -828,11 +828,11 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnCertificate$CustomExtensionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :critical)]
+  (when-some [data (lookup-entry config id :critical)]
     (. builder critical data))
-  (when-let [data (lookup-entry config id :object-identifier)]
+  (when-some [data (lookup-entry config id :object-identifier)]
     (. builder objectIdentifier data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -861,9 +861,9 @@
 | `partyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:party-name` |
 "
   [^CfnCertificate$EdiPartyNameProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name-assigner)]
+  (when-some [data (lookup-entry config id :name-assigner)]
     (. builder nameAssigner data))
-  (when-let [data (lookup-entry config id :party-name)]
+  (when-some [data (lookup-entry config id :party-name)]
     (. builder partyName data))
   (.build builder))
 
@@ -892,9 +892,9 @@
 | `extendedKeyUsageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:extended-key-usage-type` |
 "
   [^CfnCertificate$ExtendedKeyUsageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :extended-key-usage-object-identifier)]
+  (when-some [data (lookup-entry config id :extended-key-usage-object-identifier)]
     (. builder extendedKeyUsageObjectIdentifier data))
-  (when-let [data (lookup-entry config id :extended-key-usage-type)]
+  (when-some [data (lookup-entry config id :extended-key-usage-type)]
     (. builder extendedKeyUsageType data))
   (.build builder))
 
@@ -926,15 +926,15 @@
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 "
   [^CfnCertificate$ExtensionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-policies)]
+  (when-some [data (lookup-entry config id :certificate-policies)]
     (. builder certificatePolicies data))
-  (when-let [data (lookup-entry config id :custom-extensions)]
+  (when-some [data (lookup-entry config id :custom-extensions)]
     (. builder customExtensions data))
-  (when-let [data (lookup-entry config id :extended-key-usage)]
+  (when-some [data (lookup-entry config id :extended-key-usage)]
     (. builder extendedKeyUsage data))
-  (when-let [data (lookup-entry config id :key-usage)]
+  (when-some [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
   (.build builder))
 
@@ -969,21 +969,21 @@
 | `uniformResourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:uniform-resource-identifier` |
 "
   [^CfnCertificate$GeneralNameProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :directory-name)]
+  (when-some [data (lookup-entry config id :directory-name)]
     (. builder directoryName data))
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :edi-party-name)]
+  (when-some [data (lookup-entry config id :edi-party-name)]
     (. builder ediPartyName data))
-  (when-let [data (lookup-entry config id :ip-address)]
+  (when-some [data (lookup-entry config id :ip-address)]
     (. builder ipAddress data))
-  (when-let [data (lookup-entry config id :other-name)]
+  (when-some [data (lookup-entry config id :other-name)]
     (. builder otherName data))
-  (when-let [data (lookup-entry config id :registered-id)]
+  (when-some [data (lookup-entry config id :registered-id)]
     (. builder registeredId data))
-  (when-let [data (lookup-entry config id :rfc822-name)]
+  (when-some [data (lookup-entry config id :rfc822-name)]
     (. builder rfc822Name data))
-  (when-let [data (lookup-entry config id :uniform-resource-identifier)]
+  (when-some [data (lookup-entry config id :uniform-resource-identifier)]
     (. builder uniformResourceIdentifier data))
   (.build builder))
 
@@ -1019,23 +1019,23 @@
 | `nonRepudiation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:non-repudiation` |
 "
   [^CfnCertificate$KeyUsageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :crl-sign)]
+  (when-some [data (lookup-entry config id :crl-sign)]
     (. builder crlSign data))
-  (when-let [data (lookup-entry config id :data-encipherment)]
+  (when-some [data (lookup-entry config id :data-encipherment)]
     (. builder dataEncipherment data))
-  (when-let [data (lookup-entry config id :decipher-only)]
+  (when-some [data (lookup-entry config id :decipher-only)]
     (. builder decipherOnly data))
-  (when-let [data (lookup-entry config id :digital-signature)]
+  (when-some [data (lookup-entry config id :digital-signature)]
     (. builder digitalSignature data))
-  (when-let [data (lookup-entry config id :encipher-only)]
+  (when-some [data (lookup-entry config id :encipher-only)]
     (. builder encipherOnly data))
-  (when-let [data (lookup-entry config id :key-agreement)]
+  (when-some [data (lookup-entry config id :key-agreement)]
     (. builder keyAgreement data))
-  (when-let [data (lookup-entry config id :key-cert-sign)]
+  (when-some [data (lookup-entry config id :key-cert-sign)]
     (. builder keyCertSign data))
-  (when-let [data (lookup-entry config id :key-encipherment)]
+  (when-some [data (lookup-entry config id :key-encipherment)]
     (. builder keyEncipherment data))
-  (when-let [data (lookup-entry config id :non-repudiation)]
+  (when-some [data (lookup-entry config id :non-repudiation)]
     (. builder nonRepudiation data))
   (.build builder))
 
@@ -1064,9 +1064,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnCertificate$OtherNameProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type-id)]
+  (when-some [data (lookup-entry config id :type-id)]
     (. builder typeId data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1095,9 +1095,9 @@
 | `policyQualifiers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policy-qualifiers` |
 "
   [^CfnCertificate$PolicyInformationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cert-policy-id)]
+  (when-some [data (lookup-entry config id :cert-policy-id)]
     (. builder certPolicyId data))
-  (when-let [data (lookup-entry config id :policy-qualifiers)]
+  (when-some [data (lookup-entry config id :policy-qualifiers)]
     (. builder policyQualifiers data))
   (.build builder))
 
@@ -1126,9 +1126,9 @@
 | `qualifier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:qualifier` |
 "
   [^CfnCertificate$PolicyQualifierInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-qualifier-id)]
+  (when-some [data (lookup-entry config id :policy-qualifier-id)]
     (. builder policyQualifierId data))
-  (when-let [data (lookup-entry config id :qualifier)]
+  (when-some [data (lookup-entry config id :qualifier)]
     (. builder qualifier data))
   (.build builder))
 
@@ -1162,19 +1162,19 @@
 | `validityNotBefore` | software.amazon.awscdk.services.acmpca.CfnCertificate$ValidityProperty | [[cdk.support/lookup-entry]] | `:validity-not-before` |
 "
   [^CfnCertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-passthrough)]
+  (when-some [data (lookup-entry config id :api-passthrough)]
     (. builder apiPassthrough data))
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :certificate-signing-request)]
+  (when-some [data (lookup-entry config id :certificate-signing-request)]
     (. builder certificateSigningRequest data))
-  (when-let [data (lookup-entry config id :signing-algorithm)]
+  (when-some [data (lookup-entry config id :signing-algorithm)]
     (. builder signingAlgorithm data))
-  (when-let [data (lookup-entry config id :template-arn)]
+  (when-some [data (lookup-entry config id :template-arn)]
     (. builder templateArn data))
-  (when-let [data (lookup-entry config id :validity)]
+  (when-some [data (lookup-entry config id :validity)]
     (. builder validity data))
-  (when-let [data (lookup-entry config id :validity-not-before)]
+  (when-some [data (lookup-entry config id :validity-not-before)]
     (. builder validityNotBefore data))
   (.build builder))
 
@@ -1202,7 +1202,7 @@
 | `cpsUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:cps-uri` |
 "
   [^CfnCertificate$QualifierProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cps-uri)]
+  (when-some [data (lookup-entry config id :cps-uri)]
     (. builder cpsUri data))
   (.build builder))
 
@@ -1244,35 +1244,35 @@
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 "
   [^CfnCertificate$SubjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :common-name)]
+  (when-some [data (lookup-entry config id :common-name)]
     (. builder commonName data))
-  (when-let [data (lookup-entry config id :country)]
+  (when-some [data (lookup-entry config id :country)]
     (. builder country data))
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :distinguished-name-qualifier)]
+  (when-some [data (lookup-entry config id :distinguished-name-qualifier)]
     (. builder distinguishedNameQualifier data))
-  (when-let [data (lookup-entry config id :generation-qualifier)]
+  (when-some [data (lookup-entry config id :generation-qualifier)]
     (. builder generationQualifier data))
-  (when-let [data (lookup-entry config id :given-name)]
+  (when-some [data (lookup-entry config id :given-name)]
     (. builder givenName data))
-  (when-let [data (lookup-entry config id :initials)]
+  (when-some [data (lookup-entry config id :initials)]
     (. builder initials data))
-  (when-let [data (lookup-entry config id :locality)]
+  (when-some [data (lookup-entry config id :locality)]
     (. builder locality data))
-  (when-let [data (lookup-entry config id :organization)]
+  (when-some [data (lookup-entry config id :organization)]
     (. builder organization data))
-  (when-let [data (lookup-entry config id :organizational-unit)]
+  (when-some [data (lookup-entry config id :organizational-unit)]
     (. builder organizationalUnit data))
-  (when-let [data (lookup-entry config id :pseudonym)]
+  (when-some [data (lookup-entry config id :pseudonym)]
     (. builder pseudonym data))
-  (when-let [data (lookup-entry config id :serial-number)]
+  (when-some [data (lookup-entry config id :serial-number)]
     (. builder serialNumber data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :surname)]
+  (when-some [data (lookup-entry config id :surname)]
     (. builder surname data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
 
@@ -1301,9 +1301,9 @@
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnCertificate$ValidityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1334,13 +1334,13 @@
 | `sourceAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-account` |
 "
   [^CfnPermission$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :source-account)]
+  (when-some [data (lookup-entry config id :source-account)]
     (. builder sourceAccount data))
   (.build builder))
 
@@ -1371,13 +1371,13 @@
 | `sourceAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-account` |
 "
   [^CfnPermissionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :source-account)]
+  (when-some [data (lookup-entry config id :source-account)]
     (. builder sourceAccount data))
   (.build builder))
 

@@ -47,15 +47,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAutoScalingConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-configuration-name)]
+  (when-some [data (lookup-entry config id :auto-scaling-configuration-name)]
     (. builder autoScalingConfigurationName data))
-  (when-let [data (lookup-entry config id :max-concurrency)]
+  (when-some [data (lookup-entry config id :max-concurrency)]
     (. builder maxConcurrency data))
-  (when-let [data (lookup-entry config id :max-size)]
+  (when-some [data (lookup-entry config id :max-size)]
     (. builder maxSize data))
-  (when-let [data (lookup-entry config id :min-size)]
+  (when-some [data (lookup-entry config id :min-size)]
     (. builder minSize data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -87,15 +87,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAutoScalingConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-configuration-name)]
+  (when-some [data (lookup-entry config id :auto-scaling-configuration-name)]
     (. builder autoScalingConfigurationName data))
-  (when-let [data (lookup-entry config id :max-concurrency)]
+  (when-some [data (lookup-entry config id :max-concurrency)]
     (. builder maxConcurrency data))
-  (when-let [data (lookup-entry config id :max-size)]
+  (when-some [data (lookup-entry config id :max-size)]
     (. builder maxSize data))
-  (when-let [data (lookup-entry config id :min-size)]
+  (when-some [data (lookup-entry config id :min-size)]
     (. builder minSize data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -125,11 +125,11 @@
 | `traceConfiguration` | software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration$TraceConfigurationProperty | [[cdk.support/lookup-entry]] | `:trace-configuration` |
 "
   [^CfnObservabilityConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :observability-configuration-name)]
+  (when-some [data (lookup-entry config id :observability-configuration-name)]
     (. builder observabilityConfigurationName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :trace-configuration)]
+  (when-some [data (lookup-entry config id :trace-configuration)]
     (. builder traceConfiguration data))
   (.build builder))
 
@@ -159,11 +159,11 @@
 | `traceConfiguration` | software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration$TraceConfigurationProperty | [[cdk.support/lookup-entry]] | `:trace-configuration` |
 "
   [^CfnObservabilityConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :observability-configuration-name)]
+  (when-some [data (lookup-entry config id :observability-configuration-name)]
     (. builder observabilityConfigurationName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :trace-configuration)]
+  (when-some [data (lookup-entry config id :trace-configuration)]
     (. builder traceConfiguration data))
   (.build builder))
 
@@ -191,7 +191,7 @@
 | `vendor` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor` |
 "
   [^CfnObservabilityConfiguration$TraceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vendor)]
+  (when-some [data (lookup-entry config id :vendor)]
     (. builder vendor data))
   (.build builder))
 
@@ -220,9 +220,9 @@
 | `connectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-arn` |
 "
   [^CfnService$AuthenticationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-role-arn)]
+  (when-some [data (lookup-entry config id :access-role-arn)]
     (. builder accessRoleArn data))
-  (when-let [data (lookup-entry config id :connection-arn)]
+  (when-some [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
   (.build builder))
 
@@ -258,23 +258,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnService$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-configuration-arn)]
+  (when-some [data (lookup-entry config id :auto-scaling-configuration-arn)]
     (. builder autoScalingConfigurationArn data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :health-check-configuration)]
+  (when-some [data (lookup-entry config id :health-check-configuration)]
     (. builder healthCheckConfiguration data))
-  (when-let [data (lookup-entry config id :instance-configuration)]
+  (when-some [data (lookup-entry config id :instance-configuration)]
     (. builder instanceConfiguration data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :observability-configuration)]
+  (when-some [data (lookup-entry config id :observability-configuration)]
     (. builder observabilityConfiguration data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
-  (when-let [data (lookup-entry config id :source-configuration)]
+  (when-some [data (lookup-entry config id :source-configuration)]
     (. builder sourceConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -303,9 +303,9 @@
 | `configurationSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-source` |
 "
   [^CfnService$CodeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-configuration-values)]
+  (when-some [data (lookup-entry config id :code-configuration-values)]
     (. builder codeConfigurationValues data))
-  (when-let [data (lookup-entry config id :configuration-source)]
+  (when-some [data (lookup-entry config id :configuration-source)]
     (. builder configurationSource data))
   (.build builder))
 
@@ -338,17 +338,17 @@
 | `startCommand` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-command` |
 "
   [^CfnService$CodeConfigurationValuesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :build-command)]
+  (when-some [data (lookup-entry config id :build-command)]
     (. builder buildCommand data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :runtime)]
+  (when-some [data (lookup-entry config id :runtime)]
     (. builder runtime data))
-  (when-let [data (lookup-entry config id :runtime-environment-secrets)]
+  (when-some [data (lookup-entry config id :runtime-environment-secrets)]
     (. builder runtimeEnvironmentSecrets data))
-  (when-let [data (lookup-entry config id :runtime-environment-variables)]
+  (when-some [data (lookup-entry config id :runtime-environment-variables)]
     (. builder runtimeEnvironmentVariables data))
-  (when-let [data (lookup-entry config id :start-command)]
+  (when-some [data (lookup-entry config id :start-command)]
     (. builder startCommand data))
   (.build builder))
 
@@ -379,13 +379,13 @@
 | `sourceDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-directory` |
 "
   [^CfnService$CodeRepositoryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-configuration)]
+  (when-some [data (lookup-entry config id :code-configuration)]
     (. builder codeConfiguration data))
-  (when-let [data (lookup-entry config id :repository-url)]
+  (when-some [data (lookup-entry config id :repository-url)]
     (. builder repositoryUrl data))
-  (when-let [data (lookup-entry config id :source-code-version)]
+  (when-some [data (lookup-entry config id :source-code-version)]
     (. builder sourceCodeVersion data))
-  (when-let [data (lookup-entry config id :source-directory)]
+  (when-some [data (lookup-entry config id :source-directory)]
     (. builder sourceDirectory data))
   (.build builder))
 
@@ -414,9 +414,9 @@
 | `vpcConnectorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-connector-arn` |
 "
   [^CfnService$EgressConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-type)]
+  (when-some [data (lookup-entry config id :egress-type)]
     (. builder egressType data))
-  (when-let [data (lookup-entry config id :vpc-connector-arn)]
+  (when-some [data (lookup-entry config id :vpc-connector-arn)]
     (. builder vpcConnectorArn data))
   (.build builder))
 
@@ -444,7 +444,7 @@
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 "
   [^CfnService$EncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
 
@@ -477,17 +477,17 @@
 | `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
 "
   [^CfnService$HealthCheckConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :healthy-threshold)]
+  (when-some [data (lookup-entry config id :healthy-threshold)]
     (. builder healthyThreshold data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
 
@@ -518,13 +518,13 @@
 | `startCommand` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-command` |
 "
   [^CfnService$ImageConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :runtime-environment-secrets)]
+  (when-some [data (lookup-entry config id :runtime-environment-secrets)]
     (. builder runtimeEnvironmentSecrets data))
-  (when-let [data (lookup-entry config id :runtime-environment-variables)]
+  (when-some [data (lookup-entry config id :runtime-environment-variables)]
     (. builder runtimeEnvironmentVariables data))
-  (when-let [data (lookup-entry config id :start-command)]
+  (when-some [data (lookup-entry config id :start-command)]
     (. builder startCommand data))
   (.build builder))
 
@@ -554,11 +554,11 @@
 | `imageRepositoryType` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-repository-type` |
 "
   [^CfnService$ImageRepositoryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :image-configuration)]
+  (when-some [data (lookup-entry config id :image-configuration)]
     (. builder imageConfiguration data))
-  (when-let [data (lookup-entry config id :image-identifier)]
+  (when-some [data (lookup-entry config id :image-identifier)]
     (. builder imageIdentifier data))
-  (when-let [data (lookup-entry config id :image-repository-type)]
+  (when-some [data (lookup-entry config id :image-repository-type)]
     (. builder imageRepositoryType data))
   (.build builder))
 
@@ -586,7 +586,7 @@
 | `isPubliclyAccessible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-publicly-accessible` |
 "
   [^CfnService$IngressConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :is-publicly-accessible)]
+  (when-some [data (lookup-entry config id :is-publicly-accessible)]
     (. builder isPubliclyAccessible data))
   (.build builder))
 
@@ -616,11 +616,11 @@
 | `memory` | java.lang.String | [[cdk.support/lookup-entry]] | `:memory` |
 "
   [^CfnService$InstanceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cpu)]
+  (when-some [data (lookup-entry config id :cpu)]
     (. builder cpu data))
-  (when-let [data (lookup-entry config id :instance-role-arn)]
+  (when-some [data (lookup-entry config id :instance-role-arn)]
     (. builder instanceRoleArn data))
-  (when-let [data (lookup-entry config id :memory)]
+  (when-some [data (lookup-entry config id :memory)]
     (. builder memory data))
   (.build builder))
 
@@ -649,9 +649,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnService$KeyValuePairProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -681,11 +681,11 @@
 | `ipAddressType` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-address-type` |
 "
   [^CfnService$NetworkConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-configuration)]
+  (when-some [data (lookup-entry config id :egress-configuration)]
     (. builder egressConfiguration data))
-  (when-let [data (lookup-entry config id :ingress-configuration)]
+  (when-some [data (lookup-entry config id :ingress-configuration)]
     (. builder ingressConfiguration data))
-  (when-let [data (lookup-entry config id :ip-address-type)]
+  (when-some [data (lookup-entry config id :ip-address-type)]
     (. builder ipAddressType data))
   (.build builder))
 
@@ -721,23 +721,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-configuration-arn)]
+  (when-some [data (lookup-entry config id :auto-scaling-configuration-arn)]
     (. builder autoScalingConfigurationArn data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :health-check-configuration)]
+  (when-some [data (lookup-entry config id :health-check-configuration)]
     (. builder healthCheckConfiguration data))
-  (when-let [data (lookup-entry config id :instance-configuration)]
+  (when-some [data (lookup-entry config id :instance-configuration)]
     (. builder instanceConfiguration data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :observability-configuration)]
+  (when-some [data (lookup-entry config id :observability-configuration)]
     (. builder observabilityConfiguration data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
-  (when-let [data (lookup-entry config id :source-configuration)]
+  (when-some [data (lookup-entry config id :source-configuration)]
     (. builder sourceConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -766,9 +766,9 @@
 | `observabilityEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:observability-enabled` |
 "
   [^CfnService$ServiceObservabilityConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :observability-configuration-arn)]
+  (when-some [data (lookup-entry config id :observability-configuration-arn)]
     (. builder observabilityConfigurationArn data))
-  (when-let [data (lookup-entry config id :observability-enabled)]
+  (when-some [data (lookup-entry config id :observability-enabled)]
     (. builder observabilityEnabled data))
   (.build builder))
 
@@ -797,9 +797,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnService$SourceCodeVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -830,13 +830,13 @@
 | `imageRepository` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-repository` |
 "
   [^CfnService$SourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authentication-configuration)]
+  (when-some [data (lookup-entry config id :authentication-configuration)]
     (. builder authenticationConfiguration data))
-  (when-let [data (lookup-entry config id :auto-deployments-enabled)]
+  (when-some [data (lookup-entry config id :auto-deployments-enabled)]
     (. builder autoDeploymentsEnabled data))
-  (when-let [data (lookup-entry config id :code-repository)]
+  (when-some [data (lookup-entry config id :code-repository)]
     (. builder codeRepository data))
-  (when-let [data (lookup-entry config id :image-repository)]
+  (when-some [data (lookup-entry config id :image-repository)]
     (. builder imageRepository data))
   (.build builder))
 
@@ -867,13 +867,13 @@
 | `vpcConnectorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-connector-name` |
 "
   [^CfnVpcConnector$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-connector-name)]
+  (when-some [data (lookup-entry config id :vpc-connector-name)]
     (. builder vpcConnectorName data))
   (.build builder))
 
@@ -904,13 +904,13 @@
 | `vpcConnectorName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-connector-name` |
 "
   [^CfnVpcConnectorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-connector-name)]
+  (when-some [data (lookup-entry config id :vpc-connector-name)]
     (. builder vpcConnectorName data))
   (.build builder))
 
@@ -941,13 +941,13 @@
 | `vpcIngressConnectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-ingress-connection-name` |
 "
   [^CfnVpcIngressConnection$Builder builder id config]
-  (when-let [data (lookup-entry config id :ingress-vpc-configuration)]
+  (when-some [data (lookup-entry config id :ingress-vpc-configuration)]
     (. builder ingressVpcConfiguration data))
-  (when-let [data (lookup-entry config id :service-arn)]
+  (when-some [data (lookup-entry config id :service-arn)]
     (. builder serviceArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-ingress-connection-name)]
+  (when-some [data (lookup-entry config id :vpc-ingress-connection-name)]
     (. builder vpcIngressConnectionName data))
   (.build builder))
 
@@ -976,9 +976,9 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnVpcIngressConnection$IngressVpcConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-endpoint-id)]
+  (when-some [data (lookup-entry config id :vpc-endpoint-id)]
     (. builder vpcEndpointId data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -1009,13 +1009,13 @@
 | `vpcIngressConnectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-ingress-connection-name` |
 "
   [^CfnVpcIngressConnectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :ingress-vpc-configuration)]
+  (when-some [data (lookup-entry config id :ingress-vpc-configuration)]
     (. builder ingressVpcConfiguration data))
-  (when-let [data (lookup-entry config id :service-arn)]
+  (when-some [data (lookup-entry config id :service-arn)]
     (. builder serviceArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-ingress-connection-name)]
+  (when-some [data (lookup-entry config id :vpc-ingress-connection-name)]
     (. builder vpcIngressConnectionName data))
   (.build builder))
 

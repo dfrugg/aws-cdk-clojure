@@ -25,15 +25,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProfileAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :profile-id)]
+  (when-some [data (lookup-entry config id :profile-id)]
     (. builder profileId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -65,15 +65,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProfileAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :profile-id)]
+  (when-some [data (lookup-entry config id :profile-id)]
     (. builder profileId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -102,9 +102,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -133,9 +133,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -166,13 +166,13 @@
 | `resourceProperties` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-properties` |
 "
   [^CfnProfileResourceAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :profile-id)]
+  (when-some [data (lookup-entry config id :profile-id)]
     (. builder profileId data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :resource-properties)]
+  (when-some [data (lookup-entry config id :resource-properties)]
     (. builder resourceProperties data))
   (.build builder))
 
@@ -203,13 +203,13 @@
 | `resourceProperties` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-properties` |
 "
   [^CfnProfileResourceAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :profile-id)]
+  (when-some [data (lookup-entry config id :profile-id)]
     (. builder profileId data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :resource-properties)]
+  (when-some [data (lookup-entry config id :resource-properties)]
     (. builder resourceProperties data))
   (.build builder))
 

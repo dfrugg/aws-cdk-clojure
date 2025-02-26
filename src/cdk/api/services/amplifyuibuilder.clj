@@ -62,23 +62,23 @@
 | `url` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnComponent$ActionParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :anchor)]
+  (when-some [data (lookup-entry config id :anchor)]
     (. builder anchor data))
-  (when-let [data (lookup-entry config id :fields)]
+  (when-some [data (lookup-entry config id :fields)]
     (. builder fields data))
-  (when-let [data (lookup-entry config id :global)]
+  (when-some [data (lookup-entry config id :global)]
     (. builder global data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -119,33 +119,33 @@
 | `variants` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variants` |
 "
   [^CfnComponent$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :binding-properties)]
+  (when-some [data (lookup-entry config id :binding-properties)]
     (. builder bindingProperties data))
-  (when-let [data (lookup-entry config id :children)]
+  (when-some [data (lookup-entry config id :children)]
     (. builder children data))
-  (when-let [data (lookup-entry config id :collection-properties)]
+  (when-some [data (lookup-entry config id :collection-properties)]
     (. builder collectionProperties data))
-  (when-let [data (lookup-entry config id :component-type)]
+  (when-some [data (lookup-entry config id :component-type)]
     (. builder componentType data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :overrides)]
+  (when-some [data (lookup-entry config id :overrides)]
     (. builder overrides data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :schema-version)]
+  (when-some [data (lookup-entry config id :schema-version)]
     (. builder schemaVersion data))
-  (when-let [data (lookup-entry config id :source-id)]
+  (when-some [data (lookup-entry config id :source-id)]
     (. builder sourceId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variants)]
+  (when-some [data (lookup-entry config id :variants)]
     (. builder variants data))
   (.build builder))
 
@@ -180,21 +180,21 @@
 | `userAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-attribute` |
 "
   [^CfnComponent$ComponentBindingPropertiesValuePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :predicates)]
+  (when-some [data (lookup-entry config id :predicates)]
     (. builder predicates data))
-  (when-let [data (lookup-entry config id :slot-name)]
+  (when-some [data (lookup-entry config id :slot-name)]
     (. builder slotName data))
-  (when-let [data (lookup-entry config id :user-attribute)]
+  (when-some [data (lookup-entry config id :user-attribute)]
     (. builder userAttribute data))
   (.build builder))
 
@@ -224,11 +224,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnComponent$ComponentBindingPropertiesValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :binding-properties)]
+  (when-some [data (lookup-entry config id :binding-properties)]
     (. builder bindingProperties data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -261,17 +261,17 @@
 | `sourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-id` |
 "
   [^CfnComponent$ComponentChildProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :children)]
+  (when-some [data (lookup-entry config id :children)]
     (. builder children data))
-  (when-let [data (lookup-entry config id :component-type)]
+  (when-some [data (lookup-entry config id :component-type)]
     (. builder componentType data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :source-id)]
+  (when-some [data (lookup-entry config id :source-id)]
     (. builder sourceId data))
   (.build builder))
 
@@ -305,19 +305,19 @@
 | `then` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:then` |
 "
   [^CfnComponent$ComponentConditionPropertyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :else-value)]
+  (when-some [data (lookup-entry config id :else-value)]
     (. builder elseValue data))
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :operand)]
+  (when-some [data (lookup-entry config id :operand)]
     (. builder operand data))
-  (when-let [data (lookup-entry config id :operand-type)]
+  (when-some [data (lookup-entry config id :operand-type)]
     (. builder operandType data))
-  (when-let [data (lookup-entry config id :operator)]
+  (when-some [data (lookup-entry config id :operator)]
     (. builder operator data))
-  (when-let [data (lookup-entry config id :property)]
+  (when-some [data (lookup-entry config id :property)]
     (. builder property data))
-  (when-let [data (lookup-entry config id :then)]
+  (when-some [data (lookup-entry config id :then)]
     (. builder then data))
   (.build builder))
 
@@ -348,13 +348,13 @@
 | `sort` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sort` |
 "
   [^CfnComponent$ComponentDataConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :identifiers)]
+  (when-some [data (lookup-entry config id :identifiers)]
     (. builder identifiers data))
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :predicate)]
+  (when-some [data (lookup-entry config id :predicate)]
     (. builder predicate data))
-  (when-let [data (lookup-entry config id :sort)]
+  (when-some [data (lookup-entry config id :sort)]
     (. builder sort data))
   (.build builder))
 
@@ -384,11 +384,11 @@
 | `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnComponent$ComponentEventProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :binding-event)]
+  (when-some [data (lookup-entry config id :binding-event)]
     (. builder bindingEvent data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
 
@@ -417,9 +417,9 @@
 | `property` | java.lang.String | [[cdk.support/lookup-entry]] | `:property` |
 "
   [^CfnComponent$ComponentPropertyBindingPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :property)]
+  (when-some [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
 
@@ -461,35 +461,35 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnComponent$ComponentPropertyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :binding-properties)]
+  (when-some [data (lookup-entry config id :binding-properties)]
     (. builder bindingProperties data))
-  (when-let [data (lookup-entry config id :bindings)]
+  (when-some [data (lookup-entry config id :bindings)]
     (. builder bindings data))
-  (when-let [data (lookup-entry config id :collection-binding-properties)]
+  (when-some [data (lookup-entry config id :collection-binding-properties)]
     (. builder collectionBindingProperties data))
-  (when-let [data (lookup-entry config id :component-name)]
+  (when-some [data (lookup-entry config id :component-name)]
     (. builder componentName data))
-  (when-let [data (lookup-entry config id :concat)]
+  (when-some [data (lookup-entry config id :concat)]
     (. builder concat data))
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :configured)]
+  (when-some [data (lookup-entry config id :configured)]
     (. builder configured data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :imported-value)]
+  (when-some [data (lookup-entry config id :imported-value)]
     (. builder importedValue data))
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :property)]
+  (when-some [data (lookup-entry config id :property)]
     (. builder property data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :user-attribute)]
+  (when-some [data (lookup-entry config id :user-attribute)]
     (. builder userAttribute data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -518,9 +518,9 @@
 | `variantValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variant-values` |
 "
   [^CfnComponent$ComponentVariantProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :overrides)]
+  (when-some [data (lookup-entry config id :overrides)]
     (. builder overrides data))
-  (when-let [data (lookup-entry config id :variant-values)]
+  (when-some [data (lookup-entry config id :variant-values)]
     (. builder variantValues data))
   (.build builder))
 
@@ -549,9 +549,9 @@
 | `property` | java.lang.String | [[cdk.support/lookup-entry]] | `:property` |
 "
   [^CfnComponent$FormBindingElementProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :element)]
+  (when-some [data (lookup-entry config id :element)]
     (. builder element data))
-  (when-let [data (lookup-entry config id :property)]
+  (when-some [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
 
@@ -581,11 +581,11 @@
 | `set` | software.amazon.awscdk.services.amplifyuibuilder.CfnComponent$ComponentPropertyProperty | [[cdk.support/lookup-entry]] | `:set` |
 "
   [^CfnComponent$MutationActionSetStateParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component-name)]
+  (when-some [data (lookup-entry config id :component-name)]
     (. builder componentName data))
-  (when-let [data (lookup-entry config id :property)]
+  (when-some [data (lookup-entry config id :property)]
     (. builder property data))
-  (when-let [data (lookup-entry config id :set)]
+  (when-some [data (lookup-entry config id :set)]
     (. builder set data))
   (.build builder))
 
@@ -618,17 +618,17 @@
 | `or` | java.util.List | [[cdk.support/lookup-entry]] | `:or` |
 "
   [^CfnComponent$PredicateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :and)]
+  (when-some [data (lookup-entry config id :and)]
     (. builder and data))
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :operand)]
+  (when-some [data (lookup-entry config id :operand)]
     (. builder operand data))
-  (when-let [data (lookup-entry config id :operand-type)]
+  (when-some [data (lookup-entry config id :operand-type)]
     (. builder operandType data))
-  (when-let [data (lookup-entry config id :operator)]
+  (when-some [data (lookup-entry config id :operator)]
     (. builder operator data))
-  (when-let [data (lookup-entry config id :or)]
+  (when-some [data (lookup-entry config id :or)]
     (. builder or data))
   (.build builder))
 
@@ -669,33 +669,33 @@
 | `variants` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variants` |
 "
   [^CfnComponentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :binding-properties)]
+  (when-some [data (lookup-entry config id :binding-properties)]
     (. builder bindingProperties data))
-  (when-let [data (lookup-entry config id :children)]
+  (when-some [data (lookup-entry config id :children)]
     (. builder children data))
-  (when-let [data (lookup-entry config id :collection-properties)]
+  (when-some [data (lookup-entry config id :collection-properties)]
     (. builder collectionProperties data))
-  (when-let [data (lookup-entry config id :component-type)]
+  (when-some [data (lookup-entry config id :component-type)]
     (. builder componentType data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :overrides)]
+  (when-some [data (lookup-entry config id :overrides)]
     (. builder overrides data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :schema-version)]
+  (when-some [data (lookup-entry config id :schema-version)]
     (. builder schemaVersion data))
-  (when-let [data (lookup-entry config id :source-id)]
+  (when-some [data (lookup-entry config id :source-id)]
     (. builder sourceId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variants)]
+  (when-some [data (lookup-entry config id :variants)]
     (. builder variants data))
   (.build builder))
 
@@ -724,9 +724,9 @@
 | `field` | java.lang.String | [[cdk.support/lookup-entry]] | `:field` |
 "
   [^CfnComponent$SortPropertyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :direction)]
+  (when-some [data (lookup-entry config id :direction)]
     (. builder direction data))
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
   (.build builder))
 
@@ -765,29 +765,29 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnForm$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :cta)]
+  (when-some [data (lookup-entry config id :cta)]
     (. builder cta data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :fields)]
+  (when-some [data (lookup-entry config id :fields)]
     (. builder fields data))
-  (when-let [data (lookup-entry config id :form-action-type)]
+  (when-some [data (lookup-entry config id :form-action-type)]
     (. builder formActionType data))
-  (when-let [data (lookup-entry config id :label-decorator)]
+  (when-some [data (lookup-entry config id :label-decorator)]
     (. builder labelDecorator data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :schema-version)]
+  (when-some [data (lookup-entry config id :schema-version)]
     (. builder schemaVersion data))
-  (when-let [data (lookup-entry config id :sectional-elements)]
+  (when-some [data (lookup-entry config id :sectional-elements)]
     (. builder sectionalElements data))
-  (when-let [data (lookup-entry config id :style)]
+  (when-some [data (lookup-entry config id :style)]
     (. builder style data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -819,15 +819,15 @@
 | `validations` | java.util.List | [[cdk.support/lookup-entry]] | `:validations` |
 "
   [^CfnForm$FieldConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :excluded)]
+  (when-some [data (lookup-entry config id :excluded)]
     (. builder excluded data))
-  (when-let [data (lookup-entry config id :input-type)]
+  (when-some [data (lookup-entry config id :input-type)]
     (. builder inputType data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :position)]
+  (when-some [data (lookup-entry config id :position)]
     (. builder position data))
-  (when-let [data (lookup-entry config id :validations)]
+  (when-some [data (lookup-entry config id :validations)]
     (. builder validations data))
   (.build builder))
 
@@ -870,37 +870,37 @@
 | `valueMappings` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$ValueMappingsProperty | [[cdk.support/lookup-entry]] | `:value-mappings` |
 "
   [^CfnForm$FieldInputConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-checked)]
+  (when-some [data (lookup-entry config id :default-checked)]
     (. builder defaultChecked data))
-  (when-let [data (lookup-entry config id :default-country-code)]
+  (when-some [data (lookup-entry config id :default-country-code)]
     (. builder defaultCountryCode data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :descriptive-text)]
+  (when-some [data (lookup-entry config id :descriptive-text)]
     (. builder descriptiveText data))
-  (when-let [data (lookup-entry config id :file-uploader-config)]
+  (when-some [data (lookup-entry config id :file-uploader-config)]
     (. builder fileUploaderConfig data))
-  (when-let [data (lookup-entry config id :is-array)]
+  (when-some [data (lookup-entry config id :is-array)]
     (. builder isArray data))
-  (when-let [data (lookup-entry config id :max-value)]
+  (when-some [data (lookup-entry config id :max-value)]
     (. builder maxValue data))
-  (when-let [data (lookup-entry config id :min-value)]
+  (when-some [data (lookup-entry config id :min-value)]
     (. builder minValue data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :placeholder)]
+  (when-some [data (lookup-entry config id :placeholder)]
     (. builder placeholder data))
-  (when-let [data (lookup-entry config id :read-only)]
+  (when-some [data (lookup-entry config id :read-only)]
     (. builder readOnly data))
-  (when-let [data (lookup-entry config id :required)]
+  (when-some [data (lookup-entry config id :required)]
     (. builder required data))
-  (when-let [data (lookup-entry config id :step)]
+  (when-some [data (lookup-entry config id :step)]
     (. builder step data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :value-mappings)]
+  (when-some [data (lookup-entry config id :value-mappings)]
     (. builder valueMappings data))
   (.build builder))
 
@@ -930,11 +930,11 @@
 | `rightOf` | java.lang.String | [[cdk.support/lookup-entry]] | `:right-of` |
 "
   [^CfnForm$FieldPositionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :below)]
+  (when-some [data (lookup-entry config id :below)]
     (. builder below data))
-  (when-let [data (lookup-entry config id :fixed)]
+  (when-some [data (lookup-entry config id :fixed)]
     (. builder fixed data))
-  (when-let [data (lookup-entry config id :right-of)]
+  (when-some [data (lookup-entry config id :right-of)]
     (. builder rightOf data))
   (.build builder))
 
@@ -965,13 +965,13 @@
 | `validationMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-message` |
 "
   [^CfnForm$FieldValidationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :num-values)]
+  (when-some [data (lookup-entry config id :num-values)]
     (. builder numValues data))
-  (when-let [data (lookup-entry config id :str-values)]
+  (when-some [data (lookup-entry config id :str-values)]
     (. builder strValues data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :validation-message)]
+  (when-some [data (lookup-entry config id :validation-message)]
     (. builder validationMessage data))
   (.build builder))
 
@@ -1004,17 +1004,17 @@
 | `showThumbnails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:show-thumbnails` |
 "
   [^CfnForm$FileUploaderFieldConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :accepted-file-types)]
+  (when-some [data (lookup-entry config id :accepted-file-types)]
     (. builder acceptedFileTypes data))
-  (when-let [data (lookup-entry config id :access-level)]
+  (when-some [data (lookup-entry config id :access-level)]
     (. builder accessLevel data))
-  (when-let [data (lookup-entry config id :is-resumable)]
+  (when-some [data (lookup-entry config id :is-resumable)]
     (. builder isResumable data))
-  (when-let [data (lookup-entry config id :max-file-count)]
+  (when-some [data (lookup-entry config id :max-file-count)]
     (. builder maxFileCount data))
-  (when-let [data (lookup-entry config id :max-size)]
+  (when-some [data (lookup-entry config id :max-size)]
     (. builder maxSize data))
-  (when-let [data (lookup-entry config id :show-thumbnails)]
+  (when-some [data (lookup-entry config id :show-thumbnails)]
     (. builder showThumbnails data))
   (.build builder))
 
@@ -1044,11 +1044,11 @@
 | `position` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FieldPositionProperty | [[cdk.support/lookup-entry]] | `:position` |
 "
   [^CfnForm$FormButtonProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :children)]
+  (when-some [data (lookup-entry config id :children)]
     (. builder children data))
-  (when-let [data (lookup-entry config id :excluded)]
+  (when-some [data (lookup-entry config id :excluded)]
     (. builder excluded data))
-  (when-let [data (lookup-entry config id :position)]
+  (when-some [data (lookup-entry config id :position)]
     (. builder position data))
   (.build builder))
 
@@ -1079,13 +1079,13 @@
 | `submit` | software.amazon.awscdk.services.amplifyuibuilder.CfnForm$FormButtonProperty | [[cdk.support/lookup-entry]] | `:submit` |
 "
   [^CfnForm$FormCTAProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cancel)]
+  (when-some [data (lookup-entry config id :cancel)]
     (. builder cancel data))
-  (when-let [data (lookup-entry config id :clear)]
+  (when-some [data (lookup-entry config id :clear)]
     (. builder clear data))
-  (when-let [data (lookup-entry config id :position)]
+  (when-some [data (lookup-entry config id :position)]
     (. builder position data))
-  (when-let [data (lookup-entry config id :submit)]
+  (when-some [data (lookup-entry config id :submit)]
     (. builder submit data))
   (.build builder))
 
@@ -1114,9 +1114,9 @@
 | `dataTypeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-type-name` |
 "
   [^CfnForm$FormDataTypeConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-source-type)]
+  (when-some [data (lookup-entry config id :data-source-type)]
     (. builder dataSourceType data))
-  (when-let [data (lookup-entry config id :data-type-name)]
+  (when-some [data (lookup-entry config id :data-type-name)]
     (. builder dataTypeName data))
   (.build builder))
 
@@ -1144,7 +1144,7 @@
 | `model` | java.lang.String | [[cdk.support/lookup-entry]] | `:model` |
 "
   [^CfnForm$FormInputBindingPropertiesValuePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
   (.build builder))
 
@@ -1173,9 +1173,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnForm$FormInputBindingPropertiesValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :binding-properties)]
+  (when-some [data (lookup-entry config id :binding-properties)]
     (. builder bindingProperties data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1204,9 +1204,9 @@
 | `property` | java.lang.String | [[cdk.support/lookup-entry]] | `:property` |
 "
   [^CfnForm$FormInputValuePropertyBindingPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :property)]
+  (when-some [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
 
@@ -1236,11 +1236,11 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnForm$FormInputValuePropertyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :binding-properties)]
+  (when-some [data (lookup-entry config id :binding-properties)]
     (. builder bindingProperties data))
-  (when-let [data (lookup-entry config id :concat)]
+  (when-some [data (lookup-entry config id :concat)]
     (. builder concat data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1269,9 +1269,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnForm$FormStyleConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :token-reference)]
+  (when-some [data (lookup-entry config id :token-reference)]
     (. builder tokenReference data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1301,11 +1301,11 @@
 | `verticalGap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vertical-gap` |
 "
   [^CfnForm$FormStyleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :horizontal-gap)]
+  (when-some [data (lookup-entry config id :horizontal-gap)]
     (. builder horizontalGap data))
-  (when-let [data (lookup-entry config id :outer-padding)]
+  (when-some [data (lookup-entry config id :outer-padding)]
     (. builder outerPadding data))
-  (when-let [data (lookup-entry config id :vertical-gap)]
+  (when-some [data (lookup-entry config id :vertical-gap)]
     (. builder verticalGap data))
   (.build builder))
 
@@ -1344,29 +1344,29 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFormProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :cta)]
+  (when-some [data (lookup-entry config id :cta)]
     (. builder cta data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :fields)]
+  (when-some [data (lookup-entry config id :fields)]
     (. builder fields data))
-  (when-let [data (lookup-entry config id :form-action-type)]
+  (when-some [data (lookup-entry config id :form-action-type)]
     (. builder formActionType data))
-  (when-let [data (lookup-entry config id :label-decorator)]
+  (when-some [data (lookup-entry config id :label-decorator)]
     (. builder labelDecorator data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :schema-version)]
+  (when-some [data (lookup-entry config id :schema-version)]
     (. builder schemaVersion data))
-  (when-let [data (lookup-entry config id :sectional-elements)]
+  (when-some [data (lookup-entry config id :sectional-elements)]
     (. builder sectionalElements data))
-  (when-let [data (lookup-entry config id :style)]
+  (when-some [data (lookup-entry config id :style)]
     (. builder style data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1399,17 +1399,17 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnForm$SectionalElementProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :excluded)]
+  (when-some [data (lookup-entry config id :excluded)]
     (. builder excluded data))
-  (when-let [data (lookup-entry config id :level)]
+  (when-some [data (lookup-entry config id :level)]
     (. builder level data))
-  (when-let [data (lookup-entry config id :orientation)]
+  (when-some [data (lookup-entry config id :orientation)]
     (. builder orientation data))
-  (when-let [data (lookup-entry config id :position)]
+  (when-some [data (lookup-entry config id :position)]
     (. builder position data))
-  (when-let [data (lookup-entry config id :text)]
+  (when-some [data (lookup-entry config id :text)]
     (. builder text data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1438,9 +1438,9 @@
 | `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnForm$ValueMappingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :display-value)]
+  (when-some [data (lookup-entry config id :display-value)]
     (. builder displayValue data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1469,9 +1469,9 @@
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnForm$ValueMappingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :binding-properties)]
+  (when-some [data (lookup-entry config id :binding-properties)]
     (. builder bindingProperties data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -1504,17 +1504,17 @@
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTheme$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :overrides)]
+  (when-some [data (lookup-entry config id :overrides)]
     (. builder overrides data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -1547,17 +1547,17 @@
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnThemeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :overrides)]
+  (when-some [data (lookup-entry config id :overrides)]
     (. builder overrides data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -1586,9 +1586,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTheme$ThemeValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :children)]
+  (when-some [data (lookup-entry config id :children)]
     (. builder children data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1617,9 +1617,9 @@
 | `value` | software.amazon.awscdk.services.amplifyuibuilder.CfnTheme$ThemeValueProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTheme$ThemeValuesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 

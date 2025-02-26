@@ -52,11 +52,11 @@
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 "
   [^CfnFarm$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
   (.build builder))
 
@@ -86,11 +86,11 @@
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 "
   [^CfnFarmProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
   (.build builder))
 
@@ -119,9 +119,9 @@
 | `min` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min` |
 "
   [^CfnFleet$AcceleratorCountRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
 
@@ -150,9 +150,9 @@
 | `min` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min` |
 "
   [^CfnFleet$AcceleratorTotalMemoryMiBRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
 
@@ -186,19 +186,19 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnFleet$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :max-worker-count)]
+  (when-some [data (lookup-entry config id :max-worker-count)]
     (. builder maxWorkerCount data))
-  (when-let [data (lookup-entry config id :min-worker-count)]
+  (when-some [data (lookup-entry config id :min-worker-count)]
     (. builder minWorkerCount data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -228,11 +228,11 @@
 | `workerCapabilities` | software.amazon.awscdk.services.deadline.CfnFleet$CustomerManagedWorkerCapabilitiesProperty | [[cdk.support/lookup-entry]] | `:worker-capabilities` |
 "
   [^CfnFleet$CustomerManagedFleetConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :storage-profile-id)]
+  (when-some [data (lookup-entry config id :storage-profile-id)]
     (. builder storageProfileId data))
-  (when-let [data (lookup-entry config id :worker-capabilities)]
+  (when-some [data (lookup-entry config id :worker-capabilities)]
     (. builder workerCapabilities data))
   (.build builder))
 
@@ -268,23 +268,23 @@
 | `vCpuCount` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
 "
   [^CfnFleet$CustomerManagedWorkerCapabilitiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator-count)]
+  (when-some [data (lookup-entry config id :accelerator-count)]
     (. builder acceleratorCount data))
-  (when-let [data (lookup-entry config id :accelerator-total-memory-mi-b)]
+  (when-some [data (lookup-entry config id :accelerator-total-memory-mi-b)]
     (. builder acceleratorTotalMemoryMiB data))
-  (when-let [data (lookup-entry config id :accelerator-types)]
+  (when-some [data (lookup-entry config id :accelerator-types)]
     (. builder acceleratorTypes data))
-  (when-let [data (lookup-entry config id :cpu-architecture-type)]
+  (when-some [data (lookup-entry config id :cpu-architecture-type)]
     (. builder cpuArchitectureType data))
-  (when-let [data (lookup-entry config id :custom-amounts)]
+  (when-some [data (lookup-entry config id :custom-amounts)]
     (. builder customAmounts data))
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :memory-mi-b)]
+  (when-some [data (lookup-entry config id :memory-mi-b)]
     (. builder memoryMiB data))
-  (when-let [data (lookup-entry config id :os-family)]
+  (when-some [data (lookup-entry config id :os-family)]
     (. builder osFamily data))
-  (when-let [data (lookup-entry config id :v-cpu-count)]
+  (when-some [data (lookup-entry config id :v-cpu-count)]
     (. builder vCpuCount data))
   (.build builder))
 
@@ -314,11 +314,11 @@
 | `throughputMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput-mi-b` |
 "
   [^CfnFleet$Ec2EbsVolumeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :iops)]
+  (when-some [data (lookup-entry config id :iops)]
     (. builder iops data))
-  (when-let [data (lookup-entry config id :size-gi-b)]
+  (when-some [data (lookup-entry config id :size-gi-b)]
     (. builder sizeGiB data))
-  (when-let [data (lookup-entry config id :throughput-mi-b)]
+  (when-some [data (lookup-entry config id :throughput-mi-b)]
     (. builder throughputMiB data))
   (.build builder))
 
@@ -348,11 +348,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnFleet$FleetAmountCapabilityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -381,9 +381,9 @@
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnFleet$FleetAttributeCapabilityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -412,9 +412,9 @@
 | `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
 "
   [^CfnFleet$FleetCapabilitiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :amounts)]
+  (when-some [data (lookup-entry config id :amounts)]
     (. builder amounts data))
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
   (.build builder))
 
@@ -443,9 +443,9 @@
 | `serviceManagedEc2` | software.amazon.awscdk.services.deadline.CfnFleet$ServiceManagedEc2FleetConfigurationProperty | [[cdk.support/lookup-entry]] | `:service-managed-ec2` |
 "
   [^CfnFleet$FleetConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :customer-managed)]
+  (when-some [data (lookup-entry config id :customer-managed)]
     (. builder customerManaged data))
-  (when-let [data (lookup-entry config id :service-managed-ec2)]
+  (when-some [data (lookup-entry config id :service-managed-ec2)]
     (. builder serviceManagedEc2 data))
   (.build builder))
 
@@ -474,9 +474,9 @@
 | `min` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min` |
 "
   [^CfnFleet$MemoryMiBRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
 
@@ -510,19 +510,19 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnFleetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :max-worker-count)]
+  (when-some [data (lookup-entry config id :max-worker-count)]
     (. builder maxWorkerCount data))
-  (when-let [data (lookup-entry config id :min-worker-count)]
+  (when-some [data (lookup-entry config id :min-worker-count)]
     (. builder minWorkerCount data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -551,9 +551,9 @@
 | `instanceMarketOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:instance-market-options` |
 "
   [^CfnFleet$ServiceManagedEc2FleetConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-capabilities)]
+  (when-some [data (lookup-entry config id :instance-capabilities)]
     (. builder instanceCapabilities data))
-  (when-let [data (lookup-entry config id :instance-market-options)]
+  (when-some [data (lookup-entry config id :instance-market-options)]
     (. builder instanceMarketOptions data))
   (.build builder))
 
@@ -589,23 +589,23 @@
 | `vCpuCount` | software.amazon.awscdk.services.deadline.CfnFleet$VCpuCountRangeProperty | [[cdk.support/lookup-entry]] | `:v-cpu-count` |
 "
   [^CfnFleet$ServiceManagedEc2InstanceCapabilitiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-instance-types)]
+  (when-some [data (lookup-entry config id :allowed-instance-types)]
     (. builder allowedInstanceTypes data))
-  (when-let [data (lookup-entry config id :cpu-architecture-type)]
+  (when-some [data (lookup-entry config id :cpu-architecture-type)]
     (. builder cpuArchitectureType data))
-  (when-let [data (lookup-entry config id :custom-amounts)]
+  (when-some [data (lookup-entry config id :custom-amounts)]
     (. builder customAmounts data))
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :excluded-instance-types)]
+  (when-some [data (lookup-entry config id :excluded-instance-types)]
     (. builder excludedInstanceTypes data))
-  (when-let [data (lookup-entry config id :memory-mi-b)]
+  (when-some [data (lookup-entry config id :memory-mi-b)]
     (. builder memoryMiB data))
-  (when-let [data (lookup-entry config id :os-family)]
+  (when-some [data (lookup-entry config id :os-family)]
     (. builder osFamily data))
-  (when-let [data (lookup-entry config id :root-ebs-volume)]
+  (when-some [data (lookup-entry config id :root-ebs-volume)]
     (. builder rootEbsVolume data))
-  (when-let [data (lookup-entry config id :v-cpu-count)]
+  (when-some [data (lookup-entry config id :v-cpu-count)]
     (. builder vCpuCount data))
   (.build builder))
 
@@ -633,7 +633,7 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnFleet$ServiceManagedEc2InstanceMarketOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -662,9 +662,9 @@
 | `min` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min` |
 "
   [^CfnFleet$VCpuCountRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
 
@@ -694,11 +694,11 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnLicenseEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -728,11 +728,11 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnLicenseEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -764,15 +764,15 @@
 | `vendor` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor` |
 "
   [^CfnMeteredProduct$Builder builder id config]
-  (when-let [data (lookup-entry config id :family)]
+  (when-some [data (lookup-entry config id :family)]
     (. builder family data))
-  (when-let [data (lookup-entry config id :license-endpoint-id)]
+  (when-some [data (lookup-entry config id :license-endpoint-id)]
     (. builder licenseEndpointId data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :product-id)]
+  (when-some [data (lookup-entry config id :product-id)]
     (. builder productId data))
-  (when-let [data (lookup-entry config id :vendor)]
+  (when-some [data (lookup-entry config id :vendor)]
     (. builder vendor data))
   (.build builder))
 
@@ -804,15 +804,15 @@
 | `vendor` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor` |
 "
   [^CfnMeteredProductProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :family)]
+  (when-some [data (lookup-entry config id :family)]
     (. builder family data))
-  (when-let [data (lookup-entry config id :license-endpoint-id)]
+  (when-some [data (lookup-entry config id :license-endpoint-id)]
     (. builder licenseEndpointId data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :product-id)]
+  (when-some [data (lookup-entry config id :product-id)]
     (. builder productId data))
-  (when-let [data (lookup-entry config id :vendor)]
+  (when-some [data (lookup-entry config id :vendor)]
     (. builder vendor data))
   (.build builder))
 
@@ -848,23 +848,23 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnQueue$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-storage-profile-ids)]
+  (when-some [data (lookup-entry config id :allowed-storage-profile-ids)]
     (. builder allowedStorageProfileIds data))
-  (when-let [data (lookup-entry config id :default-budget-action)]
+  (when-some [data (lookup-entry config id :default-budget-action)]
     (. builder defaultBudgetAction data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :job-attachment-settings)]
+  (when-some [data (lookup-entry config id :job-attachment-settings)]
     (. builder jobAttachmentSettings data))
-  (when-let [data (lookup-entry config id :job-run-as-user)]
+  (when-some [data (lookup-entry config id :job-run-as-user)]
     (. builder jobRunAsUser data))
-  (when-let [data (lookup-entry config id :required-file-system-location-names)]
+  (when-some [data (lookup-entry config id :required-file-system-location-names)]
     (. builder requiredFileSystemLocationNames data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -896,15 +896,15 @@
 | `templateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-type` |
 "
   [^CfnQueueEnvironment$Builder builder id config]
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :queue-id)]
+  (when-some [data (lookup-entry config id :queue-id)]
     (. builder queueId data))
-  (when-let [data (lookup-entry config id :template)]
+  (when-some [data (lookup-entry config id :template)]
     (. builder template data))
-  (when-let [data (lookup-entry config id :template-type)]
+  (when-some [data (lookup-entry config id :template-type)]
     (. builder templateType data))
   (.build builder))
 
@@ -936,15 +936,15 @@
 | `templateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-type` |
 "
   [^CfnQueueEnvironmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :queue-id)]
+  (when-some [data (lookup-entry config id :queue-id)]
     (. builder queueId data))
-  (when-let [data (lookup-entry config id :template)]
+  (when-some [data (lookup-entry config id :template)]
     (. builder template data))
-  (when-let [data (lookup-entry config id :template-type)]
+  (when-some [data (lookup-entry config id :template-type)]
     (. builder templateType data))
   (.build builder))
 
@@ -974,11 +974,11 @@
 | `queueId` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-id` |
 "
   [^CfnQueueFleetAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :fleet-id)]
+  (when-some [data (lookup-entry config id :fleet-id)]
     (. builder fleetId data))
-  (when-let [data (lookup-entry config id :queue-id)]
+  (when-some [data (lookup-entry config id :queue-id)]
     (. builder queueId data))
   (.build builder))
 
@@ -1008,11 +1008,11 @@
 | `queueId` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-id` |
 "
   [^CfnQueueFleetAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :fleet-id)]
+  (when-some [data (lookup-entry config id :fleet-id)]
     (. builder fleetId data))
-  (when-let [data (lookup-entry config id :queue-id)]
+  (when-some [data (lookup-entry config id :queue-id)]
     (. builder queueId data))
   (.build builder))
 
@@ -1041,9 +1041,9 @@
 | `s3BucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-name` |
 "
   [^CfnQueue$JobAttachmentSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :root-prefix)]
+  (when-some [data (lookup-entry config id :root-prefix)]
     (. builder rootPrefix data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
   (.build builder))
 
@@ -1073,11 +1073,11 @@
 | `windows` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:windows` |
 "
   [^CfnQueue$JobRunAsUserProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :posix)]
+  (when-some [data (lookup-entry config id :posix)]
     (. builder posix data))
-  (when-let [data (lookup-entry config id :run-as)]
+  (when-some [data (lookup-entry config id :run-as)]
     (. builder runAs data))
-  (when-let [data (lookup-entry config id :windows)]
+  (when-some [data (lookup-entry config id :windows)]
     (. builder windows data))
   (.build builder))
 
@@ -1106,9 +1106,9 @@
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 "
   [^CfnQueue$PosixUserProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group)]
+  (when-some [data (lookup-entry config id :group)]
     (. builder group data))
-  (when-let [data (lookup-entry config id :user)]
+  (when-some [data (lookup-entry config id :user)]
     (. builder user data))
   (.build builder))
 
@@ -1144,23 +1144,23 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnQueueProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-storage-profile-ids)]
+  (when-some [data (lookup-entry config id :allowed-storage-profile-ids)]
     (. builder allowedStorageProfileIds data))
-  (when-let [data (lookup-entry config id :default-budget-action)]
+  (when-some [data (lookup-entry config id :default-budget-action)]
     (. builder defaultBudgetAction data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :job-attachment-settings)]
+  (when-some [data (lookup-entry config id :job-attachment-settings)]
     (. builder jobAttachmentSettings data))
-  (when-let [data (lookup-entry config id :job-run-as-user)]
+  (when-some [data (lookup-entry config id :job-run-as-user)]
     (. builder jobRunAsUser data))
-  (when-let [data (lookup-entry config id :required-file-system-location-names)]
+  (when-some [data (lookup-entry config id :required-file-system-location-names)]
     (. builder requiredFileSystemLocationNames data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -1189,9 +1189,9 @@
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 "
   [^CfnQueue$WindowsUserProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password-arn)]
+  (when-some [data (lookup-entry config id :password-arn)]
     (. builder passwordArn data))
-  (when-let [data (lookup-entry config id :user)]
+  (when-some [data (lookup-entry config id :user)]
     (. builder user data))
   (.build builder))
 
@@ -1222,13 +1222,13 @@
 | `osFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:os-family` |
 "
   [^CfnStorageProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :os-family)]
+  (when-some [data (lookup-entry config id :os-family)]
     (. builder osFamily data))
   (.build builder))
 
@@ -1258,11 +1258,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnStorageProfile$FileSystemLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1293,13 +1293,13 @@
 | `osFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:os-family` |
 "
   [^CfnStorageProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :farm-id)]
+  (when-some [data (lookup-entry config id :farm-id)]
     (. builder farmId data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :os-family)]
+  (when-some [data (lookup-entry config id :os-family)]
     (. builder osFamily data))
   (.build builder))
 

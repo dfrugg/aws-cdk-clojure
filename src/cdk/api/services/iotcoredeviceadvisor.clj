@@ -20,9 +20,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSuiteDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :suite-definition-configuration)]
+  (when-some [data (lookup-entry config id :suite-definition-configuration)]
     (. builder suiteDefinitionConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -51,9 +51,9 @@
 | `thingArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-arn` |
 "
   [^CfnSuiteDefinition$DeviceUnderTestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
   (.build builder))
 
@@ -82,9 +82,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSuiteDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :suite-definition-configuration)]
+  (when-some [data (lookup-entry config id :suite-definition-configuration)]
     (. builder suiteDefinitionConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -116,15 +116,15 @@
 | `suiteDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:suite-definition-name` |
 "
   [^CfnSuiteDefinition$SuiteDefinitionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :device-permission-role-arn)]
+  (when-some [data (lookup-entry config id :device-permission-role-arn)]
     (. builder devicePermissionRoleArn data))
-  (when-let [data (lookup-entry config id :devices)]
+  (when-some [data (lookup-entry config id :devices)]
     (. builder devices data))
-  (when-let [data (lookup-entry config id :intended-for-qualification)]
+  (when-some [data (lookup-entry config id :intended-for-qualification)]
     (. builder intendedForQualification data))
-  (when-let [data (lookup-entry config id :root-group)]
+  (when-some [data (lookup-entry config id :root-group)]
     (. builder rootGroup data))
-  (when-let [data (lookup-entry config id :suite-definition-name)]
+  (when-some [data (lookup-entry config id :suite-definition-name)]
     (. builder suiteDefinitionName data))
   (.build builder))
 

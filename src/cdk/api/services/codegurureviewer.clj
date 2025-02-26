@@ -22,17 +22,17 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnRepositoryAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :connection-arn)]
+  (when-some [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :owner)]
+  (when-some [data (lookup-entry config id :owner)]
     (. builder owner data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -65,17 +65,17 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnRepositoryAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :connection-arn)]
+  (when-some [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :owner)]
+  (when-some [data (lookup-entry config id :owner)]
     (. builder owner data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 

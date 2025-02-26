@@ -75,9 +75,9 @@
 | `codeContentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:code-content-type` |
 "
   [^CfnApplication$ApplicationCodeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-content)]
+  (when-some [data (lookup-entry config id :code-content)]
     (. builder codeContent data))
-  (when-let [data (lookup-entry config id :code-content-type)]
+  (when-some [data (lookup-entry config id :code-content-type)]
     (. builder codeContentType data))
   (.build builder))
 
@@ -111,19 +111,19 @@
 | `zeppelinApplicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zeppelin-application-configuration` |
 "
   [^CfnApplication$ApplicationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-code-configuration)]
+  (when-some [data (lookup-entry config id :application-code-configuration)]
     (. builder applicationCodeConfiguration data))
-  (when-let [data (lookup-entry config id :application-snapshot-configuration)]
+  (when-some [data (lookup-entry config id :application-snapshot-configuration)]
     (. builder applicationSnapshotConfiguration data))
-  (when-let [data (lookup-entry config id :environment-properties)]
+  (when-some [data (lookup-entry config id :environment-properties)]
     (. builder environmentProperties data))
-  (when-let [data (lookup-entry config id :flink-application-configuration)]
+  (when-some [data (lookup-entry config id :flink-application-configuration)]
     (. builder flinkApplicationConfiguration data))
-  (when-let [data (lookup-entry config id :sql-application-configuration)]
+  (when-some [data (lookup-entry config id :sql-application-configuration)]
     (. builder sqlApplicationConfiguration data))
-  (when-let [data (lookup-entry config id :vpc-configurations)]
+  (when-some [data (lookup-entry config id :vpc-configurations)]
     (. builder vpcConfigurations data))
-  (when-let [data (lookup-entry config id :zeppelin-application-configuration)]
+  (when-some [data (lookup-entry config id :zeppelin-application-configuration)]
     (. builder zeppelinApplicationConfiguration data))
   (.build builder))
 
@@ -151,7 +151,7 @@
 | `applicationMaintenanceWindowStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-maintenance-window-start-time` |
 "
   [^CfnApplication$ApplicationMaintenanceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-maintenance-window-start-time)]
+  (when-some [data (lookup-entry config id :application-maintenance-window-start-time)]
     (. builder applicationMaintenanceWindowStartTime data))
   (.build builder))
 
@@ -180,9 +180,9 @@
 | `snapshotName` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-name` |
 "
   [^CfnApplication$ApplicationRestoreConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-restore-type)]
+  (when-some [data (lookup-entry config id :application-restore-type)]
     (. builder applicationRestoreType data))
-  (when-let [data (lookup-entry config id :snapshot-name)]
+  (when-some [data (lookup-entry config id :snapshot-name)]
     (. builder snapshotName data))
   (.build builder))
 
@@ -210,7 +210,7 @@
 | `snapshotsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshots-enabled` |
 "
   [^CfnApplication$ApplicationSnapshotConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :snapshots-enabled)]
+  (when-some [data (lookup-entry config id :snapshots-enabled)]
     (. builder snapshotsEnabled data))
   (.build builder))
 
@@ -246,23 +246,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-configuration)]
+  (when-some [data (lookup-entry config id :application-configuration)]
     (. builder applicationConfiguration data))
-  (when-let [data (lookup-entry config id :application-description)]
+  (when-some [data (lookup-entry config id :application-description)]
     (. builder applicationDescription data))
-  (when-let [data (lookup-entry config id :application-maintenance-configuration)]
+  (when-some [data (lookup-entry config id :application-maintenance-configuration)]
     (. builder applicationMaintenanceConfiguration data))
-  (when-let [data (lookup-entry config id :application-mode)]
+  (when-some [data (lookup-entry config id :application-mode)]
     (. builder applicationMode data))
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :run-configuration)]
+  (when-some [data (lookup-entry config id :run-configuration)]
     (. builder runConfiguration data))
-  (when-let [data (lookup-entry config id :runtime-environment)]
+  (when-some [data (lookup-entry config id :runtime-environment)]
     (. builder runtimeEnvironment data))
-  (when-let [data (lookup-entry config id :service-execution-role)]
+  (when-some [data (lookup-entry config id :service-execution-role)]
     (. builder serviceExecutionRole data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -290,7 +290,7 @@
 | `glueDataCatalogConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:glue-data-catalog-configuration` |
 "
   [^CfnApplication$CatalogConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :glue-data-catalog-configuration)]
+  (when-some [data (lookup-entry config id :glue-data-catalog-configuration)]
     (. builder glueDataCatalogConfiguration data))
   (.build builder))
 
@@ -321,13 +321,13 @@
 | `minPauseBetweenCheckpoints` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-pause-between-checkpoints` |
 "
   [^CfnApplication$CheckpointConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :checkpoint-interval)]
+  (when-some [data (lookup-entry config id :checkpoint-interval)]
     (. builder checkpointInterval data))
-  (when-let [data (lookup-entry config id :checkpointing-enabled)]
+  (when-some [data (lookup-entry config id :checkpointing-enabled)]
     (. builder checkpointingEnabled data))
-  (when-let [data (lookup-entry config id :configuration-type)]
+  (when-some [data (lookup-entry config id :configuration-type)]
     (. builder configurationType data))
-  (when-let [data (lookup-entry config id :min-pause-between-checkpoints)]
+  (when-some [data (lookup-entry config id :min-pause-between-checkpoints)]
     (. builder minPauseBetweenCheckpoints data))
   (.build builder))
 
@@ -356,9 +356,9 @@
 | `cloudWatchLoggingOption` | software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption$CloudWatchLoggingOptionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-option` |
 "
   [^CfnApplicationCloudWatchLoggingOption$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-option)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-option)]
     (. builder cloudWatchLoggingOption data))
   (.build builder))
 
@@ -386,7 +386,7 @@
 | `logStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-arn` |
 "
   [^CfnApplicationCloudWatchLoggingOption$CloudWatchLoggingOptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-stream-arn)]
+  (when-some [data (lookup-entry config id :log-stream-arn)]
     (. builder logStreamArn data))
   (.build builder))
 
@@ -415,9 +415,9 @@
 | `cloudWatchLoggingOption` | software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption$CloudWatchLoggingOptionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-logging-option` |
 "
   [^CfnApplicationCloudWatchLoggingOptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-option)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-option)]
     (. builder cloudWatchLoggingOption data))
   (.build builder))
 
@@ -447,11 +447,11 @@
 | `zipFileContent` | java.lang.String | [[cdk.support/lookup-entry]] | `:zip-file-content` |
 "
   [^CfnApplication$CodeContentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-content-location)]
+  (when-some [data (lookup-entry config id :s3-content-location)]
     (. builder s3ContentLocation data))
-  (when-let [data (lookup-entry config id :text-content)]
+  (when-some [data (lookup-entry config id :text-content)]
     (. builder textContent data))
-  (when-let [data (lookup-entry config id :zip-file-content)]
+  (when-some [data (lookup-entry config id :zip-file-content)]
     (. builder zipFileContent data))
   (.build builder))
 
@@ -480,9 +480,9 @@
 | `recordRowDelimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-row-delimiter` |
 "
   [^CfnApplication$CSVMappingParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :record-column-delimiter)]
+  (when-some [data (lookup-entry config id :record-column-delimiter)]
     (. builder recordColumnDelimiter data))
-  (when-let [data (lookup-entry config id :record-row-delimiter)]
+  (when-some [data (lookup-entry config id :record-row-delimiter)]
     (. builder recordRowDelimiter data))
   (.build builder))
 
@@ -512,11 +512,11 @@
 | `s3ContentLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-content-location` |
 "
   [^CfnApplication$CustomArtifactConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifact-type)]
+  (when-some [data (lookup-entry config id :artifact-type)]
     (. builder artifactType data))
-  (when-let [data (lookup-entry config id :maven-reference)]
+  (when-some [data (lookup-entry config id :maven-reference)]
     (. builder mavenReference data))
-  (when-let [data (lookup-entry config id :s3-content-location)]
+  (when-some [data (lookup-entry config id :s3-content-location)]
     (. builder s3ContentLocation data))
   (.build builder))
 
@@ -544,7 +544,7 @@
 | `s3ContentLocation` | software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication$S3ContentBaseLocationProperty | [[cdk.support/lookup-entry]] | `:s3-content-location` |
 "
   [^CfnApplication$DeployAsApplicationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-content-location)]
+  (when-some [data (lookup-entry config id :s3-content-location)]
     (. builder s3ContentLocation data))
   (.build builder))
 
@@ -572,7 +572,7 @@
 | `propertyGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-groups` |
 "
   [^CfnApplication$EnvironmentPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :property-groups)]
+  (when-some [data (lookup-entry config id :property-groups)]
     (. builder propertyGroups data))
   (.build builder))
 
@@ -602,11 +602,11 @@
 | `parallelismConfiguration` | software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication$ParallelismConfigurationProperty | [[cdk.support/lookup-entry]] | `:parallelism-configuration` |
 "
   [^CfnApplication$FlinkApplicationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :checkpoint-configuration)]
+  (when-some [data (lookup-entry config id :checkpoint-configuration)]
     (. builder checkpointConfiguration data))
-  (when-let [data (lookup-entry config id :monitoring-configuration)]
+  (when-some [data (lookup-entry config id :monitoring-configuration)]
     (. builder monitoringConfiguration data))
-  (when-let [data (lookup-entry config id :parallelism-configuration)]
+  (when-some [data (lookup-entry config id :parallelism-configuration)]
     (. builder parallelismConfiguration data))
   (.build builder))
 
@@ -634,7 +634,7 @@
 | `allowNonRestoredState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-non-restored-state` |
 "
   [^CfnApplication$FlinkRunConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-non-restored-state)]
+  (when-some [data (lookup-entry config id :allow-non-restored-state)]
     (. builder allowNonRestoredState data))
   (.build builder))
 
@@ -662,7 +662,7 @@
 | `databaseArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-arn` |
 "
   [^CfnApplication$GlueDataCatalogConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :database-arn)]
+  (when-some [data (lookup-entry config id :database-arn)]
     (. builder databaseArn data))
   (.build builder))
 
@@ -690,7 +690,7 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnApplication$InputLambdaProcessorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -718,7 +718,7 @@
 | `count` | java.lang.Number | [[cdk.support/lookup-entry]] | `:count` |
 "
   [^CfnApplication$InputParallelismProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :count)]
+  (when-some [data (lookup-entry config id :count)]
     (. builder count data))
   (.build builder))
 
@@ -746,7 +746,7 @@
 | `inputLambdaProcessor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-lambda-processor` |
 "
   [^CfnApplication$InputProcessingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-lambda-processor)]
+  (when-some [data (lookup-entry config id :input-lambda-processor)]
     (. builder inputLambdaProcessor data))
   (.build builder))
 
@@ -779,17 +779,17 @@
 | `namePrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:name-prefix` |
 "
   [^CfnApplication$InputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-parallelism)]
+  (when-some [data (lookup-entry config id :input-parallelism)]
     (. builder inputParallelism data))
-  (when-let [data (lookup-entry config id :input-processing-configuration)]
+  (when-some [data (lookup-entry config id :input-processing-configuration)]
     (. builder inputProcessingConfiguration data))
-  (when-let [data (lookup-entry config id :input-schema)]
+  (when-some [data (lookup-entry config id :input-schema)]
     (. builder inputSchema data))
-  (when-let [data (lookup-entry config id :kinesis-firehose-input)]
+  (when-some [data (lookup-entry config id :kinesis-firehose-input)]
     (. builder kinesisFirehoseInput data))
-  (when-let [data (lookup-entry config id :kinesis-streams-input)]
+  (when-some [data (lookup-entry config id :kinesis-streams-input)]
     (. builder kinesisStreamsInput data))
-  (when-let [data (lookup-entry config id :name-prefix)]
+  (when-some [data (lookup-entry config id :name-prefix)]
     (. builder namePrefix data))
   (.build builder))
 
@@ -819,11 +819,11 @@
 | `recordFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:record-format` |
 "
   [^CfnApplication$InputSchemaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :record-columns)]
+  (when-some [data (lookup-entry config id :record-columns)]
     (. builder recordColumns data))
-  (when-let [data (lookup-entry config id :record-encoding)]
+  (when-some [data (lookup-entry config id :record-encoding)]
     (. builder recordEncoding data))
-  (when-let [data (lookup-entry config id :record-format)]
+  (when-some [data (lookup-entry config id :record-format)]
     (. builder recordFormat data))
   (.build builder))
 
@@ -851,7 +851,7 @@
 | `recordRowPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-row-path` |
 "
   [^CfnApplication$JSONMappingParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :record-row-path)]
+  (when-some [data (lookup-entry config id :record-row-path)]
     (. builder recordRowPath data))
   (.build builder))
 
@@ -879,7 +879,7 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnApplication$KinesisFirehoseInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -907,7 +907,7 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnApplication$KinesisStreamsInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -936,9 +936,9 @@
 | `jsonMappingParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json-mapping-parameters` |
 "
   [^CfnApplication$MappingParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :csv-mapping-parameters)]
+  (when-some [data (lookup-entry config id :csv-mapping-parameters)]
     (. builder csvMappingParameters data))
-  (when-let [data (lookup-entry config id :json-mapping-parameters)]
+  (when-some [data (lookup-entry config id :json-mapping-parameters)]
     (. builder jsonMappingParameters data))
   (.build builder))
 
@@ -968,11 +968,11 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnApplication$MavenReferenceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifact-id)]
+  (when-some [data (lookup-entry config id :artifact-id)]
     (. builder artifactId data))
-  (when-let [data (lookup-entry config id :group-id)]
+  (when-some [data (lookup-entry config id :group-id)]
     (. builder groupId data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -1002,11 +1002,11 @@
 | `metricsLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:metrics-level` |
 "
   [^CfnApplication$MonitoringConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-type)]
+  (when-some [data (lookup-entry config id :configuration-type)]
     (. builder configurationType data))
-  (when-let [data (lookup-entry config id :log-level)]
+  (when-some [data (lookup-entry config id :log-level)]
     (. builder logLevel data))
-  (when-let [data (lookup-entry config id :metrics-level)]
+  (when-some [data (lookup-entry config id :metrics-level)]
     (. builder metricsLevel data))
   (.build builder))
 
@@ -1035,9 +1035,9 @@
 | `output` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output` |
 "
   [^CfnApplicationOutput$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :output)]
+  (when-some [data (lookup-entry config id :output)]
     (. builder output data))
   (.build builder))
 
@@ -1065,7 +1065,7 @@
 | `recordFormatType` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-format-type` |
 "
   [^CfnApplicationOutput$DestinationSchemaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :record-format-type)]
+  (when-some [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
 
@@ -1093,7 +1093,7 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnApplicationOutput$KinesisFirehoseOutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -1121,7 +1121,7 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnApplicationOutput$KinesisStreamsOutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -1149,7 +1149,7 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnApplicationOutput$LambdaOutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -1181,15 +1181,15 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnApplicationOutput$OutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-schema)]
+  (when-some [data (lookup-entry config id :destination-schema)]
     (. builder destinationSchema data))
-  (when-let [data (lookup-entry config id :kinesis-firehose-output)]
+  (when-some [data (lookup-entry config id :kinesis-firehose-output)]
     (. builder kinesisFirehoseOutput data))
-  (when-let [data (lookup-entry config id :kinesis-streams-output)]
+  (when-some [data (lookup-entry config id :kinesis-streams-output)]
     (. builder kinesisStreamsOutput data))
-  (when-let [data (lookup-entry config id :lambda-output)]
+  (when-some [data (lookup-entry config id :lambda-output)]
     (. builder lambdaOutput data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1218,9 +1218,9 @@
 | `output` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output` |
 "
   [^CfnApplicationOutputProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :output)]
+  (when-some [data (lookup-entry config id :output)]
     (. builder output data))
   (.build builder))
 
@@ -1251,13 +1251,13 @@
 | `parallelismPerKpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:parallelism-per-kpu` |
 "
   [^CfnApplication$ParallelismConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-enabled)]
+  (when-some [data (lookup-entry config id :auto-scaling-enabled)]
     (. builder autoScalingEnabled data))
-  (when-let [data (lookup-entry config id :configuration-type)]
+  (when-some [data (lookup-entry config id :configuration-type)]
     (. builder configurationType data))
-  (when-let [data (lookup-entry config id :parallelism)]
+  (when-some [data (lookup-entry config id :parallelism)]
     (. builder parallelism data))
-  (when-let [data (lookup-entry config id :parallelism-per-kpu)]
+  (when-some [data (lookup-entry config id :parallelism-per-kpu)]
     (. builder parallelismPerKpu data))
   (.build builder))
 
@@ -1286,9 +1286,9 @@
 | `propertyMap` | java.util.Map | [[cdk.support/lookup-entry]] | `:property-map` |
 "
   [^CfnApplication$PropertyGroupProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :property-group-id)]
+  (when-some [data (lookup-entry config id :property-group-id)]
     (. builder propertyGroupId data))
-  (when-let [data (lookup-entry config id :property-map)]
+  (when-some [data (lookup-entry config id :property-map)]
     (. builder propertyMap data))
   (.build builder))
 
@@ -1324,23 +1324,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-configuration)]
+  (when-some [data (lookup-entry config id :application-configuration)]
     (. builder applicationConfiguration data))
-  (when-let [data (lookup-entry config id :application-description)]
+  (when-some [data (lookup-entry config id :application-description)]
     (. builder applicationDescription data))
-  (when-let [data (lookup-entry config id :application-maintenance-configuration)]
+  (when-some [data (lookup-entry config id :application-maintenance-configuration)]
     (. builder applicationMaintenanceConfiguration data))
-  (when-let [data (lookup-entry config id :application-mode)]
+  (when-some [data (lookup-entry config id :application-mode)]
     (. builder applicationMode data))
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :run-configuration)]
+  (when-some [data (lookup-entry config id :run-configuration)]
     (. builder runConfiguration data))
-  (when-let [data (lookup-entry config id :runtime-environment)]
+  (when-some [data (lookup-entry config id :runtime-environment)]
     (. builder runtimeEnvironment data))
-  (when-let [data (lookup-entry config id :service-execution-role)]
+  (when-some [data (lookup-entry config id :service-execution-role)]
     (. builder serviceExecutionRole data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1370,11 +1370,11 @@
 | `sqlType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sql-type` |
 "
   [^CfnApplication$RecordColumnProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mapping)]
+  (when-some [data (lookup-entry config id :mapping)]
     (. builder mapping data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sql-type)]
+  (when-some [data (lookup-entry config id :sql-type)]
     (. builder sqlType data))
   (.build builder))
 
@@ -1403,9 +1403,9 @@
 | `recordFormatType` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-format-type` |
 "
   [^CfnApplication$RecordFormatProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mapping-parameters)]
+  (when-some [data (lookup-entry config id :mapping-parameters)]
     (. builder mappingParameters data))
-  (when-let [data (lookup-entry config id :record-format-type)]
+  (when-some [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
 
@@ -1434,9 +1434,9 @@
 | `referenceDataSource` | software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource$ReferenceDataSourceProperty | [[cdk.support/lookup-entry]] | `:reference-data-source` |
 "
   [^CfnApplicationReferenceDataSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :reference-data-source)]
+  (when-some [data (lookup-entry config id :reference-data-source)]
     (. builder referenceDataSource data))
   (.build builder))
 
@@ -1465,9 +1465,9 @@
 | `recordRowDelimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-row-delimiter` |
 "
   [^CfnApplicationReferenceDataSource$CSVMappingParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :record-column-delimiter)]
+  (when-some [data (lookup-entry config id :record-column-delimiter)]
     (. builder recordColumnDelimiter data))
-  (when-let [data (lookup-entry config id :record-row-delimiter)]
+  (when-some [data (lookup-entry config id :record-row-delimiter)]
     (. builder recordRowDelimiter data))
   (.build builder))
 
@@ -1495,7 +1495,7 @@
 | `recordRowPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-row-path` |
 "
   [^CfnApplicationReferenceDataSource$JSONMappingParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :record-row-path)]
+  (when-some [data (lookup-entry config id :record-row-path)]
     (. builder recordRowPath data))
   (.build builder))
 
@@ -1524,9 +1524,9 @@
 | `jsonMappingParameters` | software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource$JSONMappingParametersProperty | [[cdk.support/lookup-entry]] | `:json-mapping-parameters` |
 "
   [^CfnApplicationReferenceDataSource$MappingParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :csv-mapping-parameters)]
+  (when-some [data (lookup-entry config id :csv-mapping-parameters)]
     (. builder csvMappingParameters data))
-  (when-let [data (lookup-entry config id :json-mapping-parameters)]
+  (when-some [data (lookup-entry config id :json-mapping-parameters)]
     (. builder jsonMappingParameters data))
   (.build builder))
 
@@ -1555,9 +1555,9 @@
 | `referenceDataSource` | software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource$ReferenceDataSourceProperty | [[cdk.support/lookup-entry]] | `:reference-data-source` |
 "
   [^CfnApplicationReferenceDataSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :reference-data-source)]
+  (when-some [data (lookup-entry config id :reference-data-source)]
     (. builder referenceDataSource data))
   (.build builder))
 
@@ -1587,11 +1587,11 @@
 | `sqlType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sql-type` |
 "
   [^CfnApplicationReferenceDataSource$RecordColumnProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mapping)]
+  (when-some [data (lookup-entry config id :mapping)]
     (. builder mapping data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sql-type)]
+  (when-some [data (lookup-entry config id :sql-type)]
     (. builder sqlType data))
   (.build builder))
 
@@ -1620,9 +1620,9 @@
 | `recordFormatType` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-format-type` |
 "
   [^CfnApplicationReferenceDataSource$RecordFormatProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mapping-parameters)]
+  (when-some [data (lookup-entry config id :mapping-parameters)]
     (. builder mappingParameters data))
-  (when-let [data (lookup-entry config id :record-format-type)]
+  (when-some [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
 
@@ -1652,11 +1652,11 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnApplicationReferenceDataSource$ReferenceDataSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :reference-schema)]
+  (when-some [data (lookup-entry config id :reference-schema)]
     (. builder referenceSchema data))
-  (when-let [data (lookup-entry config id :s3-reference-data-source)]
+  (when-some [data (lookup-entry config id :s3-reference-data-source)]
     (. builder s3ReferenceDataSource data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -1686,11 +1686,11 @@
 | `recordFormat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:record-format` |
 "
   [^CfnApplicationReferenceDataSource$ReferenceSchemaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :record-columns)]
+  (when-some [data (lookup-entry config id :record-columns)]
     (. builder recordColumns data))
-  (when-let [data (lookup-entry config id :record-encoding)]
+  (when-some [data (lookup-entry config id :record-encoding)]
     (. builder recordEncoding data))
-  (when-let [data (lookup-entry config id :record-format)]
+  (when-some [data (lookup-entry config id :record-format)]
     (. builder recordFormat data))
   (.build builder))
 
@@ -1719,9 +1719,9 @@
 | `fileKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-key` |
 "
   [^CfnApplicationReferenceDataSource$S3ReferenceDataSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-arn)]
+  (when-some [data (lookup-entry config id :bucket-arn)]
     (. builder bucketArn data))
-  (when-let [data (lookup-entry config id :file-key)]
+  (when-some [data (lookup-entry config id :file-key)]
     (. builder fileKey data))
   (.build builder))
 
@@ -1750,9 +1750,9 @@
 | `flinkRunConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:flink-run-configuration` |
 "
   [^CfnApplication$RunConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-restore-configuration)]
+  (when-some [data (lookup-entry config id :application-restore-configuration)]
     (. builder applicationRestoreConfiguration data))
-  (when-let [data (lookup-entry config id :flink-run-configuration)]
+  (when-some [data (lookup-entry config id :flink-run-configuration)]
     (. builder flinkRunConfiguration data))
   (.build builder))
 
@@ -1781,9 +1781,9 @@
 | `bucketArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-arn` |
 "
   [^CfnApplication$S3ContentBaseLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :bucket-arn)]
+  (when-some [data (lookup-entry config id :bucket-arn)]
     (. builder bucketArn data))
   (.build builder))
 
@@ -1813,11 +1813,11 @@
 | `objectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-version` |
 "
   [^CfnApplication$S3ContentLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-arn)]
+  (when-some [data (lookup-entry config id :bucket-arn)]
     (. builder bucketArn data))
-  (when-let [data (lookup-entry config id :file-key)]
+  (when-some [data (lookup-entry config id :file-key)]
     (. builder fileKey data))
-  (when-let [data (lookup-entry config id :object-version)]
+  (when-some [data (lookup-entry config id :object-version)]
     (. builder objectVersion data))
   (.build builder))
 
@@ -1845,7 +1845,7 @@
 | `inputs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:inputs` |
 "
   [^CfnApplication$SqlApplicationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :inputs)]
+  (when-some [data (lookup-entry config id :inputs)]
     (. builder inputs data))
   (.build builder))
 
@@ -1874,9 +1874,9 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnApplication$VpcConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -1907,13 +1907,13 @@
 | `monitoringConfiguration` | software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication$ZeppelinMonitoringConfigurationProperty | [[cdk.support/lookup-entry]] | `:monitoring-configuration` |
 "
   [^CfnApplication$ZeppelinApplicationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-configuration)]
+  (when-some [data (lookup-entry config id :catalog-configuration)]
     (. builder catalogConfiguration data))
-  (when-let [data (lookup-entry config id :custom-artifacts-configuration)]
+  (when-some [data (lookup-entry config id :custom-artifacts-configuration)]
     (. builder customArtifactsConfiguration data))
-  (when-let [data (lookup-entry config id :deploy-as-application-configuration)]
+  (when-some [data (lookup-entry config id :deploy-as-application-configuration)]
     (. builder deployAsApplicationConfiguration data))
-  (when-let [data (lookup-entry config id :monitoring-configuration)]
+  (when-some [data (lookup-entry config id :monitoring-configuration)]
     (. builder monitoringConfiguration data))
   (.build builder))
 
@@ -1941,7 +1941,7 @@
 | `logLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-level` |
 "
   [^CfnApplication$ZeppelinMonitoringConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-level)]
+  (when-some [data (lookup-entry config id :log-level)]
     (. builder logLevel data))
   (.build builder))
 

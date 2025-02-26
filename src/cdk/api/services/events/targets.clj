@@ -77,21 +77,21 @@
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^ApiDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :header-parameters)]
+  (when-some [data (lookup-entry config id :header-parameters)]
     (. builder headerParameters data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :path-parameter-values)]
+  (when-some [data (lookup-entry config id :path-parameter-values)]
     (. builder pathParameterValues data))
-  (when-let [data (lookup-entry config id :query-string-parameters)]
+  (when-some [data (lookup-entry config id :query-string-parameters)]
     (. builder queryStringParameters data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -129,21 +129,21 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IApiDestination]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^ApiDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :header-parameters)]
+  (when-some [data (lookup-entry config id :header-parameters)]
     (. builder headerParameters data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :path-parameter-values)]
+  (when-some [data (lookup-entry config id :path-parameter-values)]
     (. builder pathParameterValues data))
-  (when-let [data (lookup-entry config id :query-string-parameters)]
+  (when-some [data (lookup-entry config id :query-string-parameters)]
     (. builder queryStringParameters data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -181,27 +181,27 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IApiDestination]___
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
 "
   [^ApiGateway$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :header-parameters)]
+  (when-some [data (lookup-entry config id :header-parameters)]
     (. builder headerParameters data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :method)]
+  (when-some [data (lookup-entry config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :path-parameter-values)]
+  (when-some [data (lookup-entry config id :path-parameter-values)]
     (. builder pathParameterValues data))
-  (when-let [data (lookup-entry config id :post-body)]
+  (when-some [data (lookup-entry config id :post-body)]
     (. builder postBody data))
-  (when-let [data (lookup-entry config id :query-string-parameters)]
+  (when-some [data (lookup-entry config id :query-string-parameters)]
     (. builder queryStringParameters data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
 
@@ -242,27 +242,27 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.IRestApi]___
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
 "
   [^ApiGatewayProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :header-parameters)]
+  (when-some [data (lookup-entry config id :header-parameters)]
     (. builder headerParameters data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :method)]
+  (when-some [data (lookup-entry config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :path-parameter-values)]
+  (when-some [data (lookup-entry config id :path-parameter-values)]
     (. builder pathParameterValues data))
-  (when-let [data (lookup-entry config id :post-body)]
+  (when-some [data (lookup-entry config id :post-body)]
     (. builder postBody data))
-  (when-let [data (lookup-entry config id :query-string-parameters)]
+  (when-some [data (lookup-entry config id :query-string-parameters)]
     (. builder queryStringParameters data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
 
@@ -295,17 +295,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.IRestApi]___
 | `variables` | software.amazon.awscdk.services.events.RuleTargetInput | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^AppSync$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :graph-ql-operation)]
+  (when-some [data (lookup-entry config id :graph-ql-operation)]
     (. builder graphQlOperation data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -341,17 +341,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | `variables` | software.amazon.awscdk.services.events.RuleTargetInput | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^AppSyncGraphQLApiProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :graph-ql-operation)]
+  (when-some [data (lookup-entry config id :graph-ql-operation)]
     (. builder graphQlOperation data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -384,17 +384,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^AwsApi$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :api-version)]
+  (when-some [data (lookup-entry config id :api-version)]
     (. builder apiVersion data))
-  (when-let [data (lookup-entry config id :catch-error-pattern)]
+  (when-some [data (lookup-entry config id :catch-error-pattern)]
     (. builder catchErrorPattern data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy-statement)]
+  (when-some [data (lookup-entry config id :policy-statement)]
     (. builder policyStatement data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -426,15 +426,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^AwsApiInput$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :api-version)]
+  (when-some [data (lookup-entry config id :api-version)]
     (. builder apiVersion data))
-  (when-let [data (lookup-entry config id :catch-error-pattern)]
+  (when-some [data (lookup-entry config id :catch-error-pattern)]
     (. builder catchErrorPattern data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -467,17 +467,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^AwsApiProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :api-version)]
+  (when-some [data (lookup-entry config id :api-version)]
     (. builder apiVersion data))
-  (when-let [data (lookup-entry config id :catch-error-pattern)]
+  (when-some [data (lookup-entry config id :catch-error-pattern)]
     (. builder catchErrorPattern data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy-statement)]
+  (when-some [data (lookup-entry config id :policy-statement)]
     (. builder policyStatement data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -511,19 +511,19 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |
 "
   [^BatchJob$Builder builder id config]
-  (when-let [data (lookup-entry config id :attempts)]
+  (when-some [data (lookup-entry config id :attempts)]
     (. builder attempts data))
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :job-name)]
+  (when-some [data (lookup-entry config id :job-name)]
     (. builder jobName data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :size)]
+  (when-some [data (lookup-entry config id :size)]
     (. builder size data))
   (.build builder))
 
@@ -563,19 +563,19 @@ __Create Form:__ ____[java.lang.String software.constructs.IConstruct java.lang.
 | `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |
 "
   [^BatchJobProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :attempts)]
+  (when-some [data (lookup-entry config id :attempts)]
     (. builder attempts data))
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :job-name)]
+  (when-some [data (lookup-entry config id :job-name)]
     (. builder jobName data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :size)]
+  (when-some [data (lookup-entry config id :size)]
     (. builder size data))
   (.build builder))
 
@@ -608,17 +608,17 @@ __Create Form:__ ____[java.lang.String software.constructs.IConstruct java.lang.
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^CloudWatchLogGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :install-latest-aws-sdk)]
+  (when-some [data (lookup-entry config id :install-latest-aws-sdk)]
     (. builder installLatestAwsSdk data))
-  (when-let [data (lookup-entry config id :log-event)]
+  (when-some [data (lookup-entry config id :log-event)]
     (. builder logEvent data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -653,15 +653,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.logs.ILogGroup]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^CodeBuildProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -696,15 +696,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.codebuild.IProject]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^CodeBuildProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -735,13 +735,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.codebuild.IProject]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^CodePipeline$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -775,13 +775,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^CodePipelineTargetOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event-role)]
+  (when-some [data (lookup-entry config id :event-role)]
     (. builder eventRole data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -814,17 +814,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | `memoryReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation` |
 "
   [^ContainerOverride$Builder builder id config]
-  (when-let [data (lookup-entry config id :command)]
+  (when-some [data (lookup-entry config id :command)]
     (. builder command data))
-  (when-let [data (lookup-entry config id :container-name)]
+  (when-some [data (lookup-entry config id :container-name)]
     (. builder containerName data))
-  (when-let [data (lookup-entry config id :cpu)]
+  (when-some [data (lookup-entry config id :cpu)]
     (. builder cpu data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :memory-limit)]
+  (when-some [data (lookup-entry config id :memory-limit)]
     (. builder memoryLimit data))
-  (when-let [data (lookup-entry config id :memory-reservation)]
+  (when-some [data (lookup-entry config id :memory-reservation)]
     (. builder memoryReservation data))
   (.build builder))
 
@@ -867,37 +867,37 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | `taskDefinition` | software.amazon.awscdk.services.ecs.ITaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 "
   [^EcsTask$Builder builder id config]
-  (when-let [data (lookup-entry config id :assign-public-ip)]
+  (when-some [data (lookup-entry config id :assign-public-ip)]
     (. builder assignPublicIp data))
-  (when-let [data (lookup-entry config id :cluster)]
+  (when-some [data (lookup-entry config id :cluster)]
     (. builder cluster data))
-  (when-let [data (lookup-entry config id :container-overrides)]
+  (when-some [data (lookup-entry config id :container-overrides)]
     (. builder containerOverrides data))
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :enable-execute-command)]
+  (when-some [data (lookup-entry config id :enable-execute-command)]
     (. builder enableExecuteCommand data))
-  (when-let [data (launch-type config id :launch-type)]
+  (when-some [data (launch-type config id :launch-type)]
     (. builder launchType data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (fargate-platform-version config id :platform-version)]
+  (when-some [data (fargate-platform-version config id :platform-version)]
     (. builder platformVersion data))
-  (when-let [data (propagated-tag-source config id :propagate-tags)]
+  (when-some [data (propagated-tag-source config id :propagate-tags)]
     (. builder propagateTags data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-count)]
+  (when-some [data (lookup-entry config id :task-count)]
     (. builder taskCount data))
-  (when-let [data (lookup-entry config id :task-definition)]
+  (when-some [data (lookup-entry config id :task-definition)]
     (. builder taskDefinition data))
   (.build builder))
 
@@ -940,37 +940,37 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | `taskDefinition` | software.amazon.awscdk.services.ecs.ITaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 "
   [^EcsTaskProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assign-public-ip)]
+  (when-some [data (lookup-entry config id :assign-public-ip)]
     (. builder assignPublicIp data))
-  (when-let [data (lookup-entry config id :cluster)]
+  (when-some [data (lookup-entry config id :cluster)]
     (. builder cluster data))
-  (when-let [data (lookup-entry config id :container-overrides)]
+  (when-some [data (lookup-entry config id :container-overrides)]
     (. builder containerOverrides data))
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :enable-execute-command)]
+  (when-some [data (lookup-entry config id :enable-execute-command)]
     (. builder enableExecuteCommand data))
-  (when-let [data (launch-type config id :launch-type)]
+  (when-some [data (launch-type config id :launch-type)]
     (. builder launchType data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (fargate-platform-version config id :platform-version)]
+  (when-some [data (fargate-platform-version config id :platform-version)]
     (. builder platformVersion data))
-  (when-let [data (propagated-tag-source config id :propagate-tags)]
+  (when-some [data (propagated-tag-source config id :propagate-tags)]
     (. builder propagateTags data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-count)]
+  (when-some [data (lookup-entry config id :task-count)]
     (. builder taskCount data))
-  (when-let [data (lookup-entry config id :task-definition)]
+  (when-some [data (lookup-entry config id :task-definition)]
     (. builder taskDefinition data))
   (.build builder))
 
@@ -999,9 +999,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^EventBus$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -1033,9 +1033,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^EventBusProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -1063,7 +1063,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
 | `message` | software.amazon.awscdk.services.events.RuleTargetInput | [[cdk.support/lookup-entry]] | `:message` |
 "
   [^KinesisFirehoseStreamProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
   (.build builder))
 
@@ -1091,7 +1091,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
 | `message` | software.amazon.awscdk.services.events.RuleTargetInput | [[cdk.support/lookup-entry]] | `:message` |
 "
   [^KinesisFirehoseStreamV2$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
   (.build builder))
 
@@ -1123,9 +1123,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.targets.IDeliverySt
 | `partitionKeyPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:partition-key-path` |
 "
   [^KinesisStream$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :partition-key-path)]
+  (when-some [data (lookup-entry config id :partition-key-path)]
     (. builder partitionKeyPath data))
   (.build builder))
 
@@ -1157,9 +1157,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | `partitionKeyPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:partition-key-path` |
 "
   [^KinesisStreamProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :partition-key-path)]
+  (when-some [data (lookup-entry config id :partition-key-path)]
     (. builder partitionKeyPath data))
   (.build builder))
 
@@ -1190,13 +1190,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^LambdaFunction$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -1230,13 +1230,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^LambdaFunctionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -1269,17 +1269,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^LogGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :event)]
+  (when-some [data (lookup-entry config id :event)]
     (. builder event data))
-  (when-let [data (lookup-entry config id :install-latest-aws-sdk)]
+  (when-some [data (lookup-entry config id :install-latest-aws-sdk)]
     (. builder installLatestAwsSdk data))
-  (when-let [data (lookup-entry config id :log-event)]
+  (when-some [data (lookup-entry config id :log-event)]
     (. builder logEvent data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -1308,9 +1308,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `timestamp` | java.lang.Object | [[cdk.support/lookup-entry]] | `:timestamp` |
 "
   [^LogGroupTargetInputOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :timestamp)]
+  (when-some [data (lookup-entry config id :timestamp)]
     (. builder timestamp data))
   (.build builder))
 
@@ -1342,15 +1342,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^SfnStateMachine$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -1385,15 +1385,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.stepfunctions.IStateMachin
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^SfnStateMachineProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -1424,13 +1424,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.stepfunctions.IStateMachin
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^SnsTopic$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -1464,13 +1464,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^SnsTopicProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -1502,15 +1502,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^SqsQueue$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :message-group-id)]
+  (when-some [data (lookup-entry config id :message-group-id)]
     (. builder messageGroupId data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -1545,15 +1545,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^SqsQueueProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :message-group-id)]
+  (when-some [data (lookup-entry config id :message-group-id)]
     (. builder messageGroupId data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -1582,9 +1582,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^Tag$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1614,11 +1614,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 "
   [^TargetBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :max-event-age)]
+  (when-some [data (lookup-entry config id :max-event-age)]
     (. builder maxEventAge data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
 
@@ -1647,9 +1647,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^TaskEnvironmentVariable$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 

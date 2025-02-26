@@ -103,11 +103,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `readWriteType` | software.amazon.awscdk.services.cloudtrail.ReadWriteType | [[cdk.api.services.cloudtrail/read-write-type]] | `:read-write-type` |
 "
   [^AddEventSelectorOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-management-event-sources)]
+  (when-some [data (lookup-entry config id :exclude-management-event-sources)]
     (. builder excludeManagementEventSources data))
-  (when-let [data (lookup-entry config id :include-management-events)]
+  (when-some [data (lookup-entry config id :include-management-events)]
     (. builder includeManagementEvents data))
-  (when-let [data (read-write-type config id :read-write-type)]
+  (when-some [data (read-write-type config id :read-write-type)]
     (. builder readWriteType data))
   (.build builder))
 
@@ -138,13 +138,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnChannel$Builder builder id config]
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -173,9 +173,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnChannel$DestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -206,13 +206,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnChannelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -241,9 +241,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnEventDataStore$AdvancedEventSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field-selectors)]
+  (when-some [data (lookup-entry config id :field-selectors)]
     (. builder fieldSelectors data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -277,19 +277,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `startsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:starts-with` |
 "
   [^CfnEventDataStore$AdvancedFieldSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ends-with)]
+  (when-some [data (lookup-entry config id :ends-with)]
     (. builder endsWith data))
-  (when-let [data (lookup-entry config id :equal-to)]
+  (when-some [data (lookup-entry config id :equal-to)]
     (. builder equalTo data))
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :not-ends-with)]
+  (when-some [data (lookup-entry config id :not-ends-with)]
     (. builder notEndsWith data))
-  (when-let [data (lookup-entry config id :not-equals)]
+  (when-some [data (lookup-entry config id :not-equals)]
     (. builder notEquals data))
-  (when-let [data (lookup-entry config id :not-starts-with)]
+  (when-some [data (lookup-entry config id :not-starts-with)]
     (. builder notStartsWith data))
-  (when-let [data (lookup-entry config id :starts-with)]
+  (when-some [data (lookup-entry config id :starts-with)]
     (. builder startsWith data))
   (.build builder))
 
@@ -330,33 +330,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `terminationProtectionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |
 "
   [^CfnEventDataStore$Builder builder id config]
-  (when-let [data (lookup-entry config id :advanced-event-selectors)]
+  (when-some [data (lookup-entry config id :advanced-event-selectors)]
     (. builder advancedEventSelectors data))
-  (when-let [data (lookup-entry config id :billing-mode)]
+  (when-some [data (lookup-entry config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :federation-enabled)]
+  (when-some [data (lookup-entry config id :federation-enabled)]
     (. builder federationEnabled data))
-  (when-let [data (lookup-entry config id :federation-role-arn)]
+  (when-some [data (lookup-entry config id :federation-role-arn)]
     (. builder federationRoleArn data))
-  (when-let [data (lookup-entry config id :ingestion-enabled)]
+  (when-some [data (lookup-entry config id :ingestion-enabled)]
     (. builder ingestionEnabled data))
-  (when-let [data (lookup-entry config id :insight-selectors)]
+  (when-some [data (lookup-entry config id :insight-selectors)]
     (. builder insightSelectors data))
-  (when-let [data (lookup-entry config id :insights-destination)]
+  (when-some [data (lookup-entry config id :insights-destination)]
     (. builder insightsDestination data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :multi-region-enabled)]
+  (when-some [data (lookup-entry config id :multi-region-enabled)]
     (. builder multiRegionEnabled data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :organization-enabled)]
+  (when-some [data (lookup-entry config id :organization-enabled)]
     (. builder organizationEnabled data))
-  (when-let [data (lookup-entry config id :retention-period)]
+  (when-some [data (lookup-entry config id :retention-period)]
     (. builder retentionPeriod data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :termination-protection-enabled)]
+  (when-some [data (lookup-entry config id :termination-protection-enabled)]
     (. builder terminationProtectionEnabled data))
   (.build builder))
 
@@ -384,7 +384,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `insightType` | java.lang.String | [[cdk.support/lookup-entry]] | `:insight-type` |
 "
   [^CfnEventDataStore$InsightSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :insight-type)]
+  (when-some [data (lookup-entry config id :insight-type)]
     (. builder insightType data))
   (.build builder))
 
@@ -425,33 +425,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `terminationProtectionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |
 "
   [^CfnEventDataStoreProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :advanced-event-selectors)]
+  (when-some [data (lookup-entry config id :advanced-event-selectors)]
     (. builder advancedEventSelectors data))
-  (when-let [data (lookup-entry config id :billing-mode)]
+  (when-some [data (lookup-entry config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :federation-enabled)]
+  (when-some [data (lookup-entry config id :federation-enabled)]
     (. builder federationEnabled data))
-  (when-let [data (lookup-entry config id :federation-role-arn)]
+  (when-some [data (lookup-entry config id :federation-role-arn)]
     (. builder federationRoleArn data))
-  (when-let [data (lookup-entry config id :ingestion-enabled)]
+  (when-some [data (lookup-entry config id :ingestion-enabled)]
     (. builder ingestionEnabled data))
-  (when-let [data (lookup-entry config id :insight-selectors)]
+  (when-some [data (lookup-entry config id :insight-selectors)]
     (. builder insightSelectors data))
-  (when-let [data (lookup-entry config id :insights-destination)]
+  (when-some [data (lookup-entry config id :insights-destination)]
     (. builder insightsDestination data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :multi-region-enabled)]
+  (when-some [data (lookup-entry config id :multi-region-enabled)]
     (. builder multiRegionEnabled data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :organization-enabled)]
+  (when-some [data (lookup-entry config id :organization-enabled)]
     (. builder organizationEnabled data))
-  (when-let [data (lookup-entry config id :retention-period)]
+  (when-some [data (lookup-entry config id :retention-period)]
     (. builder retentionPeriod data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :termination-protection-enabled)]
+  (when-some [data (lookup-entry config id :termination-protection-enabled)]
     (. builder terminationProtectionEnabled data))
   (.build builder))
 
@@ -480,9 +480,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |
 "
   [^CfnResourcePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
   (.build builder))
 
@@ -511,9 +511,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |
 "
   [^CfnResourcePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
   (.build builder))
 
@@ -542,9 +542,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnTrail$AdvancedEventSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field-selectors)]
+  (when-some [data (lookup-entry config id :field-selectors)]
     (. builder fieldSelectors data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -578,19 +578,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `startsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:starts-with` |
 "
   [^CfnTrail$AdvancedFieldSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ends-with)]
+  (when-some [data (lookup-entry config id :ends-with)]
     (. builder endsWith data))
-  (when-let [data (lookup-entry config id :equal-to)]
+  (when-some [data (lookup-entry config id :equal-to)]
     (. builder equalTo data))
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :not-ends-with)]
+  (when-some [data (lookup-entry config id :not-ends-with)]
     (. builder notEndsWith data))
-  (when-let [data (lookup-entry config id :not-equals)]
+  (when-some [data (lookup-entry config id :not-equals)]
     (. builder notEquals data))
-  (when-let [data (lookup-entry config id :not-starts-with)]
+  (when-some [data (lookup-entry config id :not-starts-with)]
     (. builder notStartsWith data))
-  (when-let [data (lookup-entry config id :starts-with)]
+  (when-some [data (lookup-entry config id :starts-with)]
     (. builder startsWith data))
   (.build builder))
 
@@ -633,37 +633,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |
 "
   [^CfnTrail$Builder builder id config]
-  (when-let [data (lookup-entry config id :advanced-event-selectors)]
+  (when-some [data (lookup-entry config id :advanced-event-selectors)]
     (. builder advancedEventSelectors data))
-  (when-let [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
     (. builder cloudWatchLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :cloud-watch-logs-role-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs-role-arn)]
     (. builder cloudWatchLogsRoleArn data))
-  (when-let [data (lookup-entry config id :enable-log-file-validation)]
+  (when-some [data (lookup-entry config id :enable-log-file-validation)]
     (. builder enableLogFileValidation data))
-  (when-let [data (lookup-entry config id :event-selectors)]
+  (when-some [data (lookup-entry config id :event-selectors)]
     (. builder eventSelectors data))
-  (when-let [data (lookup-entry config id :include-global-service-events)]
+  (when-some [data (lookup-entry config id :include-global-service-events)]
     (. builder includeGlobalServiceEvents data))
-  (when-let [data (lookup-entry config id :insight-selectors)]
+  (when-some [data (lookup-entry config id :insight-selectors)]
     (. builder insightSelectors data))
-  (when-let [data (lookup-entry config id :is-logging)]
+  (when-some [data (lookup-entry config id :is-logging)]
     (. builder isLogging data))
-  (when-let [data (lookup-entry config id :is-multi-region-trail)]
+  (when-some [data (lookup-entry config id :is-multi-region-trail)]
     (. builder isMultiRegionTrail data))
-  (when-let [data (lookup-entry config id :is-organization-trail)]
+  (when-some [data (lookup-entry config id :is-organization-trail)]
     (. builder isOrganizationTrail data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
-  (when-let [data (lookup-entry config id :s3-key-prefix)]
+  (when-some [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
-  (when-let [data (lookup-entry config id :sns-topic-name)]
+  (when-some [data (lookup-entry config id :sns-topic-name)]
     (. builder snsTopicName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :trail-name)]
+  (when-some [data (lookup-entry config id :trail-name)]
     (. builder trailName data))
   (.build builder))
 
@@ -692,9 +692,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnTrail$DataResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -725,13 +725,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `readWriteType` | java.lang.String | [[cdk.support/lookup-entry]] | `:read-write-type` |
 "
   [^CfnTrail$EventSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-resources)]
+  (when-some [data (lookup-entry config id :data-resources)]
     (. builder dataResources data))
-  (when-let [data (lookup-entry config id :exclude-management-event-sources)]
+  (when-some [data (lookup-entry config id :exclude-management-event-sources)]
     (. builder excludeManagementEventSources data))
-  (when-let [data (lookup-entry config id :include-management-events)]
+  (when-some [data (lookup-entry config id :include-management-events)]
     (. builder includeManagementEvents data))
-  (when-let [data (lookup-entry config id :read-write-type)]
+  (when-some [data (lookup-entry config id :read-write-type)]
     (. builder readWriteType data))
   (.build builder))
 
@@ -759,7 +759,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `insightType` | java.lang.String | [[cdk.support/lookup-entry]] | `:insight-type` |
 "
   [^CfnTrail$InsightSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :insight-type)]
+  (when-some [data (lookup-entry config id :insight-type)]
     (. builder insightType data))
   (.build builder))
 
@@ -802,37 +802,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |
 "
   [^CfnTrailProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :advanced-event-selectors)]
+  (when-some [data (lookup-entry config id :advanced-event-selectors)]
     (. builder advancedEventSelectors data))
-  (when-let [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
     (. builder cloudWatchLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :cloud-watch-logs-role-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs-role-arn)]
     (. builder cloudWatchLogsRoleArn data))
-  (when-let [data (lookup-entry config id :enable-log-file-validation)]
+  (when-some [data (lookup-entry config id :enable-log-file-validation)]
     (. builder enableLogFileValidation data))
-  (when-let [data (lookup-entry config id :event-selectors)]
+  (when-some [data (lookup-entry config id :event-selectors)]
     (. builder eventSelectors data))
-  (when-let [data (lookup-entry config id :include-global-service-events)]
+  (when-some [data (lookup-entry config id :include-global-service-events)]
     (. builder includeGlobalServiceEvents data))
-  (when-let [data (lookup-entry config id :insight-selectors)]
+  (when-some [data (lookup-entry config id :insight-selectors)]
     (. builder insightSelectors data))
-  (when-let [data (lookup-entry config id :is-logging)]
+  (when-some [data (lookup-entry config id :is-logging)]
     (. builder isLogging data))
-  (when-let [data (lookup-entry config id :is-multi-region-trail)]
+  (when-some [data (lookup-entry config id :is-multi-region-trail)]
     (. builder isMultiRegionTrail data))
-  (when-let [data (lookup-entry config id :is-organization-trail)]
+  (when-some [data (lookup-entry config id :is-organization-trail)]
     (. builder isOrganizationTrail data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
-  (when-let [data (lookup-entry config id :s3-key-prefix)]
+  (when-some [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
-  (when-let [data (lookup-entry config id :sns-topic-name)]
+  (when-some [data (lookup-entry config id :sns-topic-name)]
     (. builder snsTopicName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :trail-name)]
+  (when-some [data (lookup-entry config id :trail-name)]
     (. builder trailName data))
   (.build builder))
 
@@ -861,9 +861,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `objectPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-prefix` |
 "
   [^S3EventSelector$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :object-prefix)]
+  (when-some [data (lookup-entry config id :object-prefix)]
     (. builder objectPrefix data))
   (.build builder))
 
@@ -905,35 +905,35 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |
 "
   [^Trail$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :cloud-watch-log-group)]
+  (when-some [data (lookup-entry config id :cloud-watch-log-group)]
     (. builder cloudWatchLogGroup data))
-  (when-let [data (retention-days config id :cloud-watch-logs-retention)]
+  (when-some [data (retention-days config id :cloud-watch-logs-retention)]
     (. builder cloudWatchLogsRetention data))
-  (when-let [data (lookup-entry config id :enable-file-validation)]
+  (when-some [data (lookup-entry config id :enable-file-validation)]
     (. builder enableFileValidation data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :include-global-service-events)]
+  (when-some [data (lookup-entry config id :include-global-service-events)]
     (. builder includeGlobalServiceEvents data))
-  (when-let [data (lookup-entry config id :insight-types)]
+  (when-some [data (lookup-entry config id :insight-types)]
     (. builder insightTypes data))
-  (when-let [data (lookup-entry config id :is-multi-region-trail)]
+  (when-some [data (lookup-entry config id :is-multi-region-trail)]
     (. builder isMultiRegionTrail data))
-  (when-let [data (lookup-entry config id :is-organization-trail)]
+  (when-some [data (lookup-entry config id :is-organization-trail)]
     (. builder isOrganizationTrail data))
-  (when-let [data (read-write-type config id :management-events)]
+  (when-some [data (read-write-type config id :management-events)]
     (. builder managementEvents data))
-  (when-let [data (lookup-entry config id :org-id)]
+  (when-some [data (lookup-entry config id :org-id)]
     (. builder orgId data))
-  (when-let [data (lookup-entry config id :s3-key-prefix)]
+  (when-some [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
-  (when-let [data (lookup-entry config id :send-to-cloud-watch-logs)]
+  (when-some [data (lookup-entry config id :send-to-cloud-watch-logs)]
     (. builder sendToCloudWatchLogs data))
-  (when-let [data (lookup-entry config id :sns-topic)]
+  (when-some [data (lookup-entry config id :sns-topic)]
     (. builder snsTopic data))
-  (when-let [data (lookup-entry config id :trail-name)]
+  (when-some [data (lookup-entry config id :trail-name)]
     (. builder trailName data))
   (.build builder))
 
@@ -975,35 +975,35 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |
 "
   [^TrailProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :cloud-watch-log-group)]
+  (when-some [data (lookup-entry config id :cloud-watch-log-group)]
     (. builder cloudWatchLogGroup data))
-  (when-let [data (retention-days config id :cloud-watch-logs-retention)]
+  (when-some [data (retention-days config id :cloud-watch-logs-retention)]
     (. builder cloudWatchLogsRetention data))
-  (when-let [data (lookup-entry config id :enable-file-validation)]
+  (when-some [data (lookup-entry config id :enable-file-validation)]
     (. builder enableFileValidation data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :include-global-service-events)]
+  (when-some [data (lookup-entry config id :include-global-service-events)]
     (. builder includeGlobalServiceEvents data))
-  (when-let [data (lookup-entry config id :insight-types)]
+  (when-some [data (lookup-entry config id :insight-types)]
     (. builder insightTypes data))
-  (when-let [data (lookup-entry config id :is-multi-region-trail)]
+  (when-some [data (lookup-entry config id :is-multi-region-trail)]
     (. builder isMultiRegionTrail data))
-  (when-let [data (lookup-entry config id :is-organization-trail)]
+  (when-some [data (lookup-entry config id :is-organization-trail)]
     (. builder isOrganizationTrail data))
-  (when-let [data (read-write-type config id :management-events)]
+  (when-some [data (read-write-type config id :management-events)]
     (. builder managementEvents data))
-  (when-let [data (lookup-entry config id :org-id)]
+  (when-some [data (lookup-entry config id :org-id)]
     (. builder orgId data))
-  (when-let [data (lookup-entry config id :s3-key-prefix)]
+  (when-some [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
-  (when-let [data (lookup-entry config id :send-to-cloud-watch-logs)]
+  (when-some [data (lookup-entry config id :send-to-cloud-watch-logs)]
     (. builder sendToCloudWatchLogs data))
-  (when-let [data (lookup-entry config id :sns-topic)]
+  (when-some [data (lookup-entry config id :sns-topic)]
     (. builder snsTopic data))
-  (when-let [data (lookup-entry config id :trail-name)]
+  (when-some [data (lookup-entry config id :trail-name)]
     (. builder trailName data))
   (.build builder))
 

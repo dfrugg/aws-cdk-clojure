@@ -32,29 +32,29 @@
 | `trafficPercentageToMonitor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-percentage-to-monitor` |
 "
   [^CfnMonitor$Builder builder id config]
-  (when-let [data (lookup-entry config id :health-events-config)]
+  (when-some [data (lookup-entry config id :health-events-config)]
     (. builder healthEventsConfig data))
-  (when-let [data (lookup-entry config id :include-linked-accounts)]
+  (when-some [data (lookup-entry config id :include-linked-accounts)]
     (. builder includeLinkedAccounts data))
-  (when-let [data (lookup-entry config id :internet-measurements-log-delivery)]
+  (when-some [data (lookup-entry config id :internet-measurements-log-delivery)]
     (. builder internetMeasurementsLogDelivery data))
-  (when-let [data (lookup-entry config id :linked-account-id)]
+  (when-some [data (lookup-entry config id :linked-account-id)]
     (. builder linkedAccountId data))
-  (when-let [data (lookup-entry config id :max-city-networks-to-monitor)]
+  (when-some [data (lookup-entry config id :max-city-networks-to-monitor)]
     (. builder maxCityNetworksToMonitor data))
-  (when-let [data (lookup-entry config id :monitor-name)]
+  (when-some [data (lookup-entry config id :monitor-name)]
     (. builder monitorName data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :resources-to-add)]
+  (when-some [data (lookup-entry config id :resources-to-add)]
     (. builder resourcesToAdd data))
-  (when-let [data (lookup-entry config id :resources-to-remove)]
+  (when-some [data (lookup-entry config id :resources-to-remove)]
     (. builder resourcesToRemove data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :traffic-percentage-to-monitor)]
+  (when-some [data (lookup-entry config id :traffic-percentage-to-monitor)]
     (. builder trafficPercentageToMonitor data))
   (.build builder))
 
@@ -85,13 +85,13 @@
 | `performanceScoreThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:performance-score-threshold` |
 "
   [^CfnMonitor$HealthEventsConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-local-health-events-config)]
+  (when-some [data (lookup-entry config id :availability-local-health-events-config)]
     (. builder availabilityLocalHealthEventsConfig data))
-  (when-let [data (lookup-entry config id :availability-score-threshold)]
+  (when-some [data (lookup-entry config id :availability-score-threshold)]
     (. builder availabilityScoreThreshold data))
-  (when-let [data (lookup-entry config id :performance-local-health-events-config)]
+  (when-some [data (lookup-entry config id :performance-local-health-events-config)]
     (. builder performanceLocalHealthEventsConfig data))
-  (when-let [data (lookup-entry config id :performance-score-threshold)]
+  (when-some [data (lookup-entry config id :performance-score-threshold)]
     (. builder performanceScoreThreshold data))
   (.build builder))
 
@@ -119,7 +119,7 @@
 | `s3Config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-config` |
 "
   [^CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-config)]
+  (when-some [data (lookup-entry config id :s3-config)]
     (. builder s3Config data))
   (.build builder))
 
@@ -149,11 +149,11 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnMonitor$LocalHealthEventsConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :health-score-threshold)]
+  (when-some [data (lookup-entry config id :health-score-threshold)]
     (. builder healthScoreThreshold data))
-  (when-let [data (lookup-entry config id :min-traffic-impact)]
+  (when-some [data (lookup-entry config id :min-traffic-impact)]
     (. builder minTrafficImpact data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -192,29 +192,29 @@
 | `trafficPercentageToMonitor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-percentage-to-monitor` |
 "
   [^CfnMonitorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :health-events-config)]
+  (when-some [data (lookup-entry config id :health-events-config)]
     (. builder healthEventsConfig data))
-  (when-let [data (lookup-entry config id :include-linked-accounts)]
+  (when-some [data (lookup-entry config id :include-linked-accounts)]
     (. builder includeLinkedAccounts data))
-  (when-let [data (lookup-entry config id :internet-measurements-log-delivery)]
+  (when-some [data (lookup-entry config id :internet-measurements-log-delivery)]
     (. builder internetMeasurementsLogDelivery data))
-  (when-let [data (lookup-entry config id :linked-account-id)]
+  (when-some [data (lookup-entry config id :linked-account-id)]
     (. builder linkedAccountId data))
-  (when-let [data (lookup-entry config id :max-city-networks-to-monitor)]
+  (when-some [data (lookup-entry config id :max-city-networks-to-monitor)]
     (. builder maxCityNetworksToMonitor data))
-  (when-let [data (lookup-entry config id :monitor-name)]
+  (when-some [data (lookup-entry config id :monitor-name)]
     (. builder monitorName data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :resources-to-add)]
+  (when-some [data (lookup-entry config id :resources-to-add)]
     (. builder resourcesToAdd data))
-  (when-let [data (lookup-entry config id :resources-to-remove)]
+  (when-some [data (lookup-entry config id :resources-to-remove)]
     (. builder resourcesToRemove data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :traffic-percentage-to-monitor)]
+  (when-some [data (lookup-entry config id :traffic-percentage-to-monitor)]
     (. builder trafficPercentageToMonitor data))
   (.build builder))
 
@@ -244,11 +244,11 @@
 | `logDeliveryStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-delivery-status` |
 "
   [^CfnMonitor$S3ConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :log-delivery-status)]
+  (when-some [data (lookup-entry config id :log-delivery-status)]
     (. builder logDeliveryStatus data))
   (.build builder))
 

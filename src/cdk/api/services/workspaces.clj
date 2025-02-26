@@ -22,9 +22,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectionAlias$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-string)]
+  (when-some [data (lookup-entry config id :connection-string)]
     (. builder connectionString data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -55,13 +55,13 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :associated-account-id)]
+  (when-some [data (lookup-entry config id :associated-account-id)]
     (. builder associatedAccountId data))
-  (when-let [data (lookup-entry config id :association-status)]
+  (when-some [data (lookup-entry config id :association-status)]
     (. builder associationStatus data))
-  (when-let [data (lookup-entry config id :connection-identifier)]
+  (when-some [data (lookup-entry config id :connection-identifier)]
     (. builder connectionIdentifier data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -90,9 +90,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectionAliasProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-string)]
+  (when-some [data (lookup-entry config id :connection-string)]
     (. builder connectionString data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -127,21 +127,21 @@
 | `workspaceProperties` | software.amazon.awscdk.services.workspaces.CfnWorkspace$WorkspacePropertiesProperty | [[cdk.support/lookup-entry]] | `:workspace-properties` |
 "
   [^CfnWorkspace$Builder builder id config]
-  (when-let [data (lookup-entry config id :bundle-id)]
+  (when-some [data (lookup-entry config id :bundle-id)]
     (. builder bundleId data))
-  (when-let [data (lookup-entry config id :directory-id)]
+  (when-some [data (lookup-entry config id :directory-id)]
     (. builder directoryId data))
-  (when-let [data (lookup-entry config id :root-volume-encryption-enabled)]
+  (when-some [data (lookup-entry config id :root-volume-encryption-enabled)]
     (. builder rootVolumeEncryptionEnabled data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
-  (when-let [data (lookup-entry config id :user-volume-encryption-enabled)]
+  (when-some [data (lookup-entry config id :user-volume-encryption-enabled)]
     (. builder userVolumeEncryptionEnabled data))
-  (when-let [data (lookup-entry config id :volume-encryption-key)]
+  (when-some [data (lookup-entry config id :volume-encryption-key)]
     (. builder volumeEncryptionKey data))
-  (when-let [data (lookup-entry config id :workspace-properties)]
+  (when-some [data (lookup-entry config id :workspace-properties)]
     (. builder workspaceProperties data))
   (.build builder))
 
@@ -176,21 +176,21 @@
 | `workspaceProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:workspace-properties` |
 "
   [^CfnWorkspaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bundle-id)]
+  (when-some [data (lookup-entry config id :bundle-id)]
     (. builder bundleId data))
-  (when-let [data (lookup-entry config id :directory-id)]
+  (when-some [data (lookup-entry config id :directory-id)]
     (. builder directoryId data))
-  (when-let [data (lookup-entry config id :root-volume-encryption-enabled)]
+  (when-some [data (lookup-entry config id :root-volume-encryption-enabled)]
     (. builder rootVolumeEncryptionEnabled data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
-  (when-let [data (lookup-entry config id :user-volume-encryption-enabled)]
+  (when-some [data (lookup-entry config id :user-volume-encryption-enabled)]
     (. builder userVolumeEncryptionEnabled data))
-  (when-let [data (lookup-entry config id :volume-encryption-key)]
+  (when-some [data (lookup-entry config id :volume-encryption-key)]
     (. builder volumeEncryptionKey data))
-  (when-let [data (lookup-entry config id :workspace-properties)]
+  (when-some [data (lookup-entry config id :workspace-properties)]
     (. builder workspaceProperties data))
   (.build builder))
 
@@ -222,15 +222,15 @@
 | `userVolumeSizeGib` | java.lang.Number | [[cdk.support/lookup-entry]] | `:user-volume-size-gib` |
 "
   [^CfnWorkspace$WorkspacePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :compute-type-name)]
+  (when-some [data (lookup-entry config id :compute-type-name)]
     (. builder computeTypeName data))
-  (when-let [data (lookup-entry config id :root-volume-size-gib)]
+  (when-some [data (lookup-entry config id :root-volume-size-gib)]
     (. builder rootVolumeSizeGib data))
-  (when-let [data (lookup-entry config id :running-mode)]
+  (when-some [data (lookup-entry config id :running-mode)]
     (. builder runningMode data))
-  (when-let [data (lookup-entry config id :running-mode-auto-stop-timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :running-mode-auto-stop-timeout-in-minutes)]
     (. builder runningModeAutoStopTimeoutInMinutes data))
-  (when-let [data (lookup-entry config id :user-volume-size-gib)]
+  (when-some [data (lookup-entry config id :user-volume-size-gib)]
     (. builder userVolumeSizeGib data))
   (.build builder))
 

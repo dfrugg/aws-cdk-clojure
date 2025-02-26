@@ -28,15 +28,15 @@
 | `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnAnomalyMonitor$Builder builder id config]
-  (when-let [data (lookup-entry config id :monitor-dimension)]
+  (when-some [data (lookup-entry config id :monitor-dimension)]
     (. builder monitorDimension data))
-  (when-let [data (lookup-entry config id :monitor-name)]
+  (when-some [data (lookup-entry config id :monitor-name)]
     (. builder monitorName data))
-  (when-let [data (lookup-entry config id :monitor-specification)]
+  (when-some [data (lookup-entry config id :monitor-specification)]
     (. builder monitorSpecification data))
-  (when-let [data (lookup-entry config id :monitor-type)]
+  (when-some [data (lookup-entry config id :monitor-type)]
     (. builder monitorType data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
   (.build builder))
 
@@ -68,15 +68,15 @@
 | `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnAnomalyMonitorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :monitor-dimension)]
+  (when-some [data (lookup-entry config id :monitor-dimension)]
     (. builder monitorDimension data))
-  (when-let [data (lookup-entry config id :monitor-name)]
+  (when-some [data (lookup-entry config id :monitor-name)]
     (. builder monitorName data))
-  (when-let [data (lookup-entry config id :monitor-specification)]
+  (when-some [data (lookup-entry config id :monitor-specification)]
     (. builder monitorSpecification data))
-  (when-let [data (lookup-entry config id :monitor-type)]
+  (when-some [data (lookup-entry config id :monitor-type)]
     (. builder monitorType data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
   (.build builder))
 
@@ -105,9 +105,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAnomalyMonitor$ResourceTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -141,19 +141,19 @@
 | `thresholdExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:threshold-expression` |
 "
   [^CfnAnomalySubscription$Builder builder id config]
-  (when-let [data (lookup-entry config id :frequency)]
+  (when-some [data (lookup-entry config id :frequency)]
     (. builder frequency data))
-  (when-let [data (lookup-entry config id :monitor-arn-list)]
+  (when-some [data (lookup-entry config id :monitor-arn-list)]
     (. builder monitorArnList data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
-  (when-let [data (lookup-entry config id :subscribers)]
+  (when-some [data (lookup-entry config id :subscribers)]
     (. builder subscribers data))
-  (when-let [data (lookup-entry config id :subscription-name)]
+  (when-some [data (lookup-entry config id :subscription-name)]
     (. builder subscriptionName data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (lookup-entry config id :threshold-expression)]
+  (when-some [data (lookup-entry config id :threshold-expression)]
     (. builder thresholdExpression data))
   (.build builder))
 
@@ -187,19 +187,19 @@
 | `thresholdExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:threshold-expression` |
 "
   [^CfnAnomalySubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :frequency)]
+  (when-some [data (lookup-entry config id :frequency)]
     (. builder frequency data))
-  (when-let [data (lookup-entry config id :monitor-arn-list)]
+  (when-some [data (lookup-entry config id :monitor-arn-list)]
     (. builder monitorArnList data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
-  (when-let [data (lookup-entry config id :subscribers)]
+  (when-some [data (lookup-entry config id :subscribers)]
     (. builder subscribers data))
-  (when-let [data (lookup-entry config id :subscription-name)]
+  (when-some [data (lookup-entry config id :subscription-name)]
     (. builder subscriptionName data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (lookup-entry config id :threshold-expression)]
+  (when-some [data (lookup-entry config id :threshold-expression)]
     (. builder thresholdExpression data))
   (.build builder))
 
@@ -228,9 +228,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAnomalySubscription$ResourceTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -260,11 +260,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAnomalySubscription$SubscriberProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :address)]
+  (when-some [data (lookup-entry config id :address)]
     (. builder address data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -296,15 +296,15 @@
 | `splitChargeRules` | java.lang.String | [[cdk.support/lookup-entry]] | `:split-charge-rules` |
 "
   [^CfnCostCategory$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rule-version)]
+  (when-some [data (lookup-entry config id :rule-version)]
     (. builder ruleVersion data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
-  (when-let [data (lookup-entry config id :split-charge-rules)]
+  (when-some [data (lookup-entry config id :split-charge-rules)]
     (. builder splitChargeRules data))
   (.build builder))
 
@@ -336,15 +336,15 @@
 | `splitChargeRules` | java.lang.String | [[cdk.support/lookup-entry]] | `:split-charge-rules` |
 "
   [^CfnCostCategoryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rule-version)]
+  (when-some [data (lookup-entry config id :rule-version)]
     (. builder ruleVersion data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
-  (when-let [data (lookup-entry config id :split-charge-rules)]
+  (when-some [data (lookup-entry config id :split-charge-rules)]
     (. builder splitChargeRules data))
   (.build builder))
 

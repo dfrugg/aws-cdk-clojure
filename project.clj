@@ -1,4 +1,4 @@
-(defproject io.github.dfrugg/aws-cdk-clojure "2.144.0-beta1"
+(defproject io.github.dfrugg/aws-cdk-clojure "2.144.0-beta2"
   :description "AWS CDK support library for clojure."
   :url "https://github.com/dfrugg/aws-cdk-clojure"
   :license {:name "Eclipse Public License - v 1.0"

@@ -43,11 +43,11 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnComponentVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :inline-recipe)]
+  (when-some [data (lookup-entry config id :inline-recipe)]
     (. builder inlineRecipe data))
-  (when-let [data (lookup-entry config id :lambda-function)]
+  (when-some [data (lookup-entry config id :lambda-function)]
     (. builder lambdaFunction data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -76,9 +76,9 @@
 | `versionRequirement` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-requirement` |
 "
   [^CfnComponentVersion$ComponentDependencyRequirementProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dependency-type)]
+  (when-some [data (lookup-entry config id :dependency-type)]
     (. builder dependencyType data))
-  (when-let [data (lookup-entry config id :version-requirement)]
+  (when-some [data (lookup-entry config id :version-requirement)]
     (. builder versionRequirement data))
   (.build builder))
 
@@ -107,9 +107,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnComponentVersion$ComponentPlatformProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -140,13 +140,13 @@
 | `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
 "
   [^CfnComponentVersion$LambdaContainerParamsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :devices)]
+  (when-some [data (lookup-entry config id :devices)]
     (. builder devices data))
-  (when-let [data (lookup-entry config id :memory-size-in-kb)]
+  (when-some [data (lookup-entry config id :memory-size-in-kb)]
     (. builder memorySizeInKb data))
-  (when-let [data (lookup-entry config id :mount-ro-sysfs)]
+  (when-some [data (lookup-entry config id :mount-ro-sysfs)]
     (. builder mountRoSysfs data))
-  (when-let [data (lookup-entry config id :volumes)]
+  (when-some [data (lookup-entry config id :volumes)]
     (. builder volumes data))
   (.build builder))
 
@@ -176,11 +176,11 @@
 | `permission` | java.lang.String | [[cdk.support/lookup-entry]] | `:permission` |
 "
   [^CfnComponentVersion$LambdaDeviceMountProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-group-owner)]
+  (when-some [data (lookup-entry config id :add-group-owner)]
     (. builder addGroupOwner data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permission)]
+  (when-some [data (lookup-entry config id :permission)]
     (. builder permission data))
   (.build builder))
 
@@ -209,9 +209,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnComponentVersion$LambdaEventSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -249,27 +249,27 @@
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 "
   [^CfnComponentVersion$LambdaExecutionParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :event-sources)]
+  (when-some [data (lookup-entry config id :event-sources)]
     (. builder eventSources data))
-  (when-let [data (lookup-entry config id :exec-args)]
+  (when-some [data (lookup-entry config id :exec-args)]
     (. builder execArgs data))
-  (when-let [data (lookup-entry config id :input-payload-encoding-type)]
+  (when-some [data (lookup-entry config id :input-payload-encoding-type)]
     (. builder inputPayloadEncodingType data))
-  (when-let [data (lookup-entry config id :linux-process-params)]
+  (when-some [data (lookup-entry config id :linux-process-params)]
     (. builder linuxProcessParams data))
-  (when-let [data (lookup-entry config id :max-idle-time-in-seconds)]
+  (when-some [data (lookup-entry config id :max-idle-time-in-seconds)]
     (. builder maxIdleTimeInSeconds data))
-  (when-let [data (lookup-entry config id :max-instances-count)]
+  (when-some [data (lookup-entry config id :max-instances-count)]
     (. builder maxInstancesCount data))
-  (when-let [data (lookup-entry config id :max-queue-size)]
+  (when-some [data (lookup-entry config id :max-queue-size)]
     (. builder maxQueueSize data))
-  (when-let [data (lookup-entry config id :pinned)]
+  (when-some [data (lookup-entry config id :pinned)]
     (. builder pinned data))
-  (when-let [data (lookup-entry config id :status-timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :status-timeout-in-seconds)]
     (. builder statusTimeoutInSeconds data))
-  (when-let [data (lookup-entry config id :timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
   (.build builder))
 
@@ -302,17 +302,17 @@
 | `lambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-arn` |
 "
   [^CfnComponentVersion$LambdaFunctionRecipeSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component-dependencies)]
+  (when-some [data (lookup-entry config id :component-dependencies)]
     (. builder componentDependencies data))
-  (when-let [data (lookup-entry config id :component-lambda-parameters)]
+  (when-some [data (lookup-entry config id :component-lambda-parameters)]
     (. builder componentLambdaParameters data))
-  (when-let [data (lookup-entry config id :component-name)]
+  (when-some [data (lookup-entry config id :component-name)]
     (. builder componentName data))
-  (when-let [data (lookup-entry config id :component-platforms)]
+  (when-some [data (lookup-entry config id :component-platforms)]
     (. builder componentPlatforms data))
-  (when-let [data (lookup-entry config id :component-version)]
+  (when-some [data (lookup-entry config id :component-version)]
     (. builder componentVersion data))
-  (when-let [data (lookup-entry config id :lambda-arn)]
+  (when-some [data (lookup-entry config id :lambda-arn)]
     (. builder lambdaArn data))
   (.build builder))
 
@@ -341,9 +341,9 @@
 | `isolationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:isolation-mode` |
 "
   [^CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-params)]
+  (when-some [data (lookup-entry config id :container-params)]
     (. builder containerParams data))
-  (when-let [data (lookup-entry config id :isolation-mode)]
+  (when-some [data (lookup-entry config id :isolation-mode)]
     (. builder isolationMode data))
   (.build builder))
 
@@ -374,13 +374,13 @@
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "
   [^CfnComponentVersion$LambdaVolumeMountProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-group-owner)]
+  (when-some [data (lookup-entry config id :add-group-owner)]
     (. builder addGroupOwner data))
-  (when-let [data (lookup-entry config id :destination-path)]
+  (when-some [data (lookup-entry config id :destination-path)]
     (. builder destinationPath data))
-  (when-let [data (lookup-entry config id :permission)]
+  (when-some [data (lookup-entry config id :permission)]
     (. builder permission data))
-  (when-let [data (lookup-entry config id :source-path)]
+  (when-some [data (lookup-entry config id :source-path)]
     (. builder sourcePath data))
   (.build builder))
 
@@ -410,11 +410,11 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnComponentVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :inline-recipe)]
+  (when-some [data (lookup-entry config id :inline-recipe)]
     (. builder inlineRecipe data))
-  (when-let [data (lookup-entry config id :lambda-function)]
+  (when-some [data (lookup-entry config id :lambda-function)]
     (. builder lambdaFunction data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -448,19 +448,19 @@
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnDeployment$Builder builder id config]
-  (when-let [data (lookup-entry config id :components)]
+  (when-some [data (lookup-entry config id :components)]
     (. builder components data))
-  (when-let [data (lookup-entry config id :deployment-name)]
+  (when-some [data (lookup-entry config id :deployment-name)]
     (. builder deploymentName data))
-  (when-let [data (lookup-entry config id :deployment-policies)]
+  (when-some [data (lookup-entry config id :deployment-policies)]
     (. builder deploymentPolicies data))
-  (when-let [data (lookup-entry config id :iot-job-configuration)]
+  (when-some [data (lookup-entry config id :iot-job-configuration)]
     (. builder iotJobConfiguration data))
-  (when-let [data (lookup-entry config id :parent-target-arn)]
+  (when-some [data (lookup-entry config id :parent-target-arn)]
     (. builder parentTargetArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -489,9 +489,9 @@
 | `reset` | java.util.List | [[cdk.support/lookup-entry]] | `:reset` |
 "
   [^CfnDeployment$ComponentConfigurationUpdateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :merge)]
+  (when-some [data (lookup-entry config id :merge)]
     (. builder merge data))
-  (when-let [data (lookup-entry config id :reset)]
+  (when-some [data (lookup-entry config id :reset)]
     (. builder reset data))
   (.build builder))
 
@@ -521,11 +521,11 @@
 | `runWith` | software.amazon.awscdk.services.greengrassv2.CfnDeployment$ComponentRunWithProperty | [[cdk.support/lookup-entry]] | `:run-with` |
 "
   [^CfnDeployment$ComponentDeploymentSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component-version)]
+  (when-some [data (lookup-entry config id :component-version)]
     (. builder componentVersion data))
-  (when-let [data (lookup-entry config id :configuration-update)]
+  (when-some [data (lookup-entry config id :configuration-update)]
     (. builder configurationUpdate data))
-  (when-let [data (lookup-entry config id :run-with)]
+  (when-some [data (lookup-entry config id :run-with)]
     (. builder runWith data))
   (.build builder))
 
@@ -555,11 +555,11 @@
 | `windowsUser` | java.lang.String | [[cdk.support/lookup-entry]] | `:windows-user` |
 "
   [^CfnDeployment$ComponentRunWithProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :posix-user)]
+  (when-some [data (lookup-entry config id :posix-user)]
     (. builder posixUser data))
-  (when-let [data (lookup-entry config id :system-resource-limits)]
+  (when-some [data (lookup-entry config id :system-resource-limits)]
     (. builder systemResourceLimits data))
-  (when-let [data (lookup-entry config id :windows-user)]
+  (when-some [data (lookup-entry config id :windows-user)]
     (. builder windowsUser data))
   (.build builder))
 
@@ -588,9 +588,9 @@
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 "
   [^CfnDeployment$DeploymentComponentUpdatePolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
   (.build builder))
 
@@ -618,7 +618,7 @@
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 "
   [^CfnDeployment$DeploymentConfigurationValidationPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
   (.build builder))
 
@@ -648,11 +648,11 @@
 | `timeoutConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-config` |
 "
   [^CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :abort-config)]
+  (when-some [data (lookup-entry config id :abort-config)]
     (. builder abortConfig data))
-  (when-let [data (lookup-entry config id :job-executions-rollout-config)]
+  (when-some [data (lookup-entry config id :job-executions-rollout-config)]
     (. builder jobExecutionsRolloutConfig data))
-  (when-let [data (lookup-entry config id :timeout-config)]
+  (when-some [data (lookup-entry config id :timeout-config)]
     (. builder timeoutConfig data))
   (.build builder))
 
@@ -682,11 +682,11 @@
 | `failureHandlingPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:failure-handling-policy` |
 "
   [^CfnDeployment$DeploymentPoliciesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component-update-policy)]
+  (when-some [data (lookup-entry config id :component-update-policy)]
     (. builder componentUpdatePolicy data))
-  (when-let [data (lookup-entry config id :configuration-validation-policy)]
+  (when-some [data (lookup-entry config id :configuration-validation-policy)]
     (. builder configurationValidationPolicy data))
-  (when-let [data (lookup-entry config id :failure-handling-policy)]
+  (when-some [data (lookup-entry config id :failure-handling-policy)]
     (. builder failureHandlingPolicy data))
   (.build builder))
 
@@ -714,7 +714,7 @@
 | `criteriaList` | java.util.List | [[cdk.support/lookup-entry]] | `:criteria-list` |
 "
   [^CfnDeployment$IoTJobAbortConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :criteria-list)]
+  (when-some [data (lookup-entry config id :criteria-list)]
     (. builder criteriaList data))
   (.build builder))
 
@@ -745,13 +745,13 @@
 | `thresholdPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold-percentage` |
 "
   [^CfnDeployment$IoTJobAbortCriteriaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :failure-type)]
+  (when-some [data (lookup-entry config id :failure-type)]
     (. builder failureType data))
-  (when-let [data (lookup-entry config id :min-number-of-executed-things)]
+  (when-some [data (lookup-entry config id :min-number-of-executed-things)]
     (. builder minNumberOfExecutedThings data))
-  (when-let [data (lookup-entry config id :threshold-percentage)]
+  (when-some [data (lookup-entry config id :threshold-percentage)]
     (. builder thresholdPercentage data))
   (.build builder))
 
@@ -780,9 +780,9 @@
 | `maximumPerMinute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-per-minute` |
 "
   [^CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exponential-rate)]
+  (when-some [data (lookup-entry config id :exponential-rate)]
     (. builder exponentialRate data))
-  (when-let [data (lookup-entry config id :maximum-per-minute)]
+  (when-some [data (lookup-entry config id :maximum-per-minute)]
     (. builder maximumPerMinute data))
   (.build builder))
 
@@ -812,11 +812,11 @@
 | `rateIncreaseCriteria` | java.lang.Object | [[cdk.support/lookup-entry]] | `:rate-increase-criteria` |
 "
   [^CfnDeployment$IoTJobExponentialRolloutRateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-rate-per-minute)]
+  (when-some [data (lookup-entry config id :base-rate-per-minute)]
     (. builder baseRatePerMinute data))
-  (when-let [data (lookup-entry config id :increment-factor)]
+  (when-some [data (lookup-entry config id :increment-factor)]
     (. builder incrementFactor data))
-  (when-let [data (lookup-entry config id :rate-increase-criteria)]
+  (when-some [data (lookup-entry config id :rate-increase-criteria)]
     (. builder rateIncreaseCriteria data))
   (.build builder))
 
@@ -844,7 +844,7 @@
 | `inProgressTimeoutInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:in-progress-timeout-in-minutes` |
 "
   [^CfnDeployment$IoTJobTimeoutConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :in-progress-timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :in-progress-timeout-in-minutes)]
     (. builder inProgressTimeoutInMinutes data))
   (.build builder))
 
@@ -878,19 +878,19 @@
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnDeploymentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :components)]
+  (when-some [data (lookup-entry config id :components)]
     (. builder components data))
-  (when-let [data (lookup-entry config id :deployment-name)]
+  (when-some [data (lookup-entry config id :deployment-name)]
     (. builder deploymentName data))
-  (when-let [data (lookup-entry config id :deployment-policies)]
+  (when-some [data (lookup-entry config id :deployment-policies)]
     (. builder deploymentPolicies data))
-  (when-let [data (lookup-entry config id :iot-job-configuration)]
+  (when-some [data (lookup-entry config id :iot-job-configuration)]
     (. builder iotJobConfiguration data))
-  (when-let [data (lookup-entry config id :parent-target-arn)]
+  (when-some [data (lookup-entry config id :parent-target-arn)]
     (. builder parentTargetArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -919,9 +919,9 @@
 | `memory` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory` |
 "
   [^CfnDeployment$SystemResourceLimitsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cpus)]
+  (when-some [data (lookup-entry config id :cpus)]
     (. builder cpus data))
-  (when-let [data (lookup-entry config id :memory)]
+  (when-some [data (lookup-entry config id :memory)]
     (. builder memory data))
   (.build builder))
 

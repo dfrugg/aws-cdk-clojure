@@ -64,19 +64,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAsset$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-endpoints)]
+  (when-some [data (lookup-entry config id :egress-endpoints)]
     (. builder egressEndpoints data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :packaging-group-id)]
+  (when-some [data (lookup-entry config id :packaging-group-id)]
     (. builder packagingGroupId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :source-arn)]
+  (when-some [data (lookup-entry config id :source-arn)]
     (. builder sourceArn data))
-  (when-let [data (lookup-entry config id :source-role-arn)]
+  (when-some [data (lookup-entry config id :source-role-arn)]
     (. builder sourceRoleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -105,9 +105,9 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnAsset$EgressEndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :packaging-configuration-id)]
+  (when-some [data (lookup-entry config id :packaging-configuration-id)]
     (. builder packagingConfigurationId data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -141,19 +141,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAssetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-endpoints)]
+  (when-some [data (lookup-entry config id :egress-endpoints)]
     (. builder egressEndpoints data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :packaging-group-id)]
+  (when-some [data (lookup-entry config id :packaging-group-id)]
     (. builder packagingGroupId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :source-arn)]
+  (when-some [data (lookup-entry config id :source-arn)]
     (. builder sourceArn data))
-  (when-let [data (lookup-entry config id :source-role-arn)]
+  (when-some [data (lookup-entry config id :source-role-arn)]
     (. builder sourceRoleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -186,17 +186,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnChannel$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :egress-access-logs)]
+  (when-some [data (lookup-entry config id :egress-access-logs)]
     (. builder egressAccessLogs data))
-  (when-let [data (lookup-entry config id :hls-ingest)]
+  (when-some [data (lookup-entry config id :hls-ingest)]
     (. builder hlsIngest data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :ingress-access-logs)]
+  (when-some [data (lookup-entry config id :ingress-access-logs)]
     (. builder ingressAccessLogs data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -224,7 +224,7 @@
 | `ingestEndpoints` | java.util.List | [[cdk.support/lookup-entry]] | `:ingest-endpoints` |
 "
   [^CfnChannel$HlsIngestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ingest-endpoints)]
+  (when-some [data (lookup-entry config id :ingest-endpoints)]
     (. builder ingestEndpoints data))
   (.build builder))
 
@@ -255,13 +255,13 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnChannel$IngestEndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -289,7 +289,7 @@
 | `logGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-name` |
 "
   [^CfnChannel$LogConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
   (.build builder))
 
@@ -322,17 +322,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnChannelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :egress-access-logs)]
+  (when-some [data (lookup-entry config id :egress-access-logs)]
     (. builder egressAccessLogs data))
-  (when-let [data (lookup-entry config id :hls-ingest)]
+  (when-some [data (lookup-entry config id :hls-ingest)]
     (. builder hlsIngest data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :ingress-access-logs)]
+  (when-some [data (lookup-entry config id :ingress-access-logs)]
     (. builder ingressAccessLogs data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -361,9 +361,9 @@
 | `secretsRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secrets-role-arn` |
 "
   [^CfnOriginEndpoint$AuthorizationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cdn-identifier-secret)]
+  (when-some [data (lookup-entry config id :cdn-identifier-secret)]
     (. builder cdnIdentifierSecret data))
-  (when-let [data (lookup-entry config id :secrets-role-arn)]
+  (when-some [data (lookup-entry config id :secrets-role-arn)]
     (. builder secretsRoleArn data))
   (.build builder))
 
@@ -404,33 +404,33 @@
 | `whitelist` | java.util.List | [[cdk.support/lookup-entry]] | `:whitelist` |
 "
   [^CfnOriginEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorization)]
+  (when-some [data (lookup-entry config id :authorization)]
     (. builder authorization data))
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :cmaf-package)]
+  (when-some [data (lookup-entry config id :cmaf-package)]
     (. builder cmafPackage data))
-  (when-let [data (lookup-entry config id :dash-package)]
+  (when-some [data (lookup-entry config id :dash-package)]
     (. builder dashPackage data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :hls-package)]
+  (when-some [data (lookup-entry config id :hls-package)]
     (. builder hlsPackage data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :manifest-name)]
+  (when-some [data (lookup-entry config id :manifest-name)]
     (. builder manifestName data))
-  (when-let [data (lookup-entry config id :mss-package)]
+  (when-some [data (lookup-entry config id :mss-package)]
     (. builder mssPackage data))
-  (when-let [data (lookup-entry config id :origination)]
+  (when-some [data (lookup-entry config id :origination)]
     (. builder origination data))
-  (when-let [data (lookup-entry config id :startover-window-seconds)]
+  (when-some [data (lookup-entry config id :startover-window-seconds)]
     (. builder startoverWindowSeconds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :time-delay-seconds)]
+  (when-some [data (lookup-entry config id :time-delay-seconds)]
     (. builder timeDelaySeconds data))
-  (when-let [data (lookup-entry config id :whitelist)]
+  (when-some [data (lookup-entry config id :whitelist)]
     (. builder whitelist data))
   (.build builder))
 
@@ -461,13 +461,13 @@
 | `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnOriginEndpoint$CmafEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :constant-initialization-vector)]
+  (when-some [data (lookup-entry config id :constant-initialization-vector)]
     (. builder constantInitializationVector data))
-  (when-let [data (lookup-entry config id :encryption-method)]
+  (when-some [data (lookup-entry config id :encryption-method)]
     (. builder encryptionMethod data))
-  (when-let [data (lookup-entry config id :key-rotation-interval-seconds)]
+  (when-some [data (lookup-entry config id :key-rotation-interval-seconds)]
     (. builder keyRotationIntervalSeconds data))
-  (when-let [data (lookup-entry config id :speke-key-provider)]
+  (when-some [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
 
@@ -499,15 +499,15 @@
 | `streamSelection` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$StreamSelectionProperty | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnOriginEndpoint$CmafPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :hls-manifests)]
+  (when-some [data (lookup-entry config id :hls-manifests)]
     (. builder hlsManifests data))
-  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+  (when-some [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
-  (when-let [data (lookup-entry config id :segment-prefix)]
+  (when-some [data (lookup-entry config id :segment-prefix)]
     (. builder segmentPrefix data))
-  (when-let [data (lookup-entry config id :stream-selection)]
+  (when-some [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
   (.build builder))
 
@@ -536,9 +536,9 @@
 | `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnOriginEndpoint$DashEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-rotation-interval-seconds)]
+  (when-some [data (lookup-entry config id :key-rotation-interval-seconds)]
     (. builder keyRotationIntervalSeconds data))
-  (when-let [data (lookup-entry config id :speke-key-provider)]
+  (when-some [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
 
@@ -581,37 +581,37 @@
 | `utcTimingUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:utc-timing-uri` |
 "
   [^CfnOriginEndpoint$DashPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-triggers)]
+  (when-some [data (lookup-entry config id :ad-triggers)]
     (. builder adTriggers data))
-  (when-let [data (lookup-entry config id :ads-on-delivery-restrictions)]
+  (when-some [data (lookup-entry config id :ads-on-delivery-restrictions)]
     (. builder adsOnDeliveryRestrictions data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :include-iframe-only-stream)]
+  (when-some [data (lookup-entry config id :include-iframe-only-stream)]
     (. builder includeIframeOnlyStream data))
-  (when-let [data (lookup-entry config id :manifest-layout)]
+  (when-some [data (lookup-entry config id :manifest-layout)]
     (. builder manifestLayout data))
-  (when-let [data (lookup-entry config id :manifest-window-seconds)]
+  (when-some [data (lookup-entry config id :manifest-window-seconds)]
     (. builder manifestWindowSeconds data))
-  (when-let [data (lookup-entry config id :min-buffer-time-seconds)]
+  (when-some [data (lookup-entry config id :min-buffer-time-seconds)]
     (. builder minBufferTimeSeconds data))
-  (when-let [data (lookup-entry config id :min-update-period-seconds)]
+  (when-some [data (lookup-entry config id :min-update-period-seconds)]
     (. builder minUpdatePeriodSeconds data))
-  (when-let [data (lookup-entry config id :period-triggers)]
+  (when-some [data (lookup-entry config id :period-triggers)]
     (. builder periodTriggers data))
-  (when-let [data (lookup-entry config id :profile)]
+  (when-some [data (lookup-entry config id :profile)]
     (. builder profile data))
-  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+  (when-some [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
-  (when-let [data (lookup-entry config id :segment-template-format)]
+  (when-some [data (lookup-entry config id :segment-template-format)]
     (. builder segmentTemplateFormat data))
-  (when-let [data (lookup-entry config id :stream-selection)]
+  (when-some [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
-  (when-let [data (lookup-entry config id :suggested-presentation-delay-seconds)]
+  (when-some [data (lookup-entry config id :suggested-presentation-delay-seconds)]
     (. builder suggestedPresentationDelaySeconds data))
-  (when-let [data (lookup-entry config id :utc-timing)]
+  (when-some [data (lookup-entry config id :utc-timing)]
     (. builder utcTiming data))
-  (when-let [data (lookup-entry config id :utc-timing-uri)]
+  (when-some [data (lookup-entry config id :utc-timing-uri)]
     (. builder utcTimingUri data))
   (.build builder))
 
@@ -640,9 +640,9 @@
 | `presetSpeke20Video` | java.lang.String | [[cdk.support/lookup-entry]] | `:preset-speke20-video` |
 "
   [^CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :preset-speke20-audio)]
+  (when-some [data (lookup-entry config id :preset-speke20-audio)]
     (. builder presetSpeke20Audio data))
-  (when-let [data (lookup-entry config id :preset-speke20-video)]
+  (when-some [data (lookup-entry config id :preset-speke20-video)]
     (. builder presetSpeke20Video data))
   (.build builder))
 
@@ -674,15 +674,15 @@
 | `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnOriginEndpoint$HlsEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :constant-initialization-vector)]
+  (when-some [data (lookup-entry config id :constant-initialization-vector)]
     (. builder constantInitializationVector data))
-  (when-let [data (lookup-entry config id :encryption-method)]
+  (when-some [data (lookup-entry config id :encryption-method)]
     (. builder encryptionMethod data))
-  (when-let [data (lookup-entry config id :key-rotation-interval-seconds)]
+  (when-some [data (lookup-entry config id :key-rotation-interval-seconds)]
     (. builder keyRotationIntervalSeconds data))
-  (when-let [data (lookup-entry config id :repeat-ext-x-key)]
+  (when-some [data (lookup-entry config id :repeat-ext-x-key)]
     (. builder repeatExtXKey data))
-  (when-let [data (lookup-entry config id :speke-key-provider)]
+  (when-some [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
 
@@ -719,25 +719,25 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnOriginEndpoint$HlsManifestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-markers)]
+  (when-some [data (lookup-entry config id :ad-markers)]
     (. builder adMarkers data))
-  (when-let [data (lookup-entry config id :ad-triggers)]
+  (when-some [data (lookup-entry config id :ad-triggers)]
     (. builder adTriggers data))
-  (when-let [data (lookup-entry config id :ads-on-delivery-restrictions)]
+  (when-some [data (lookup-entry config id :ads-on-delivery-restrictions)]
     (. builder adsOnDeliveryRestrictions data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :include-iframe-only-stream)]
+  (when-some [data (lookup-entry config id :include-iframe-only-stream)]
     (. builder includeIframeOnlyStream data))
-  (when-let [data (lookup-entry config id :manifest-name)]
+  (when-some [data (lookup-entry config id :manifest-name)]
     (. builder manifestName data))
-  (when-let [data (lookup-entry config id :playlist-type)]
+  (when-some [data (lookup-entry config id :playlist-type)]
     (. builder playlistType data))
-  (when-let [data (lookup-entry config id :playlist-window-seconds)]
+  (when-some [data (lookup-entry config id :playlist-window-seconds)]
     (. builder playlistWindowSeconds data))
-  (when-let [data (lookup-entry config id :program-date-time-interval-seconds)]
+  (when-some [data (lookup-entry config id :program-date-time-interval-seconds)]
     (. builder programDateTimeIntervalSeconds data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -776,29 +776,29 @@
 | `useAudioRenditionGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-audio-rendition-group` |
 "
   [^CfnOriginEndpoint$HlsPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-markers)]
+  (when-some [data (lookup-entry config id :ad-markers)]
     (. builder adMarkers data))
-  (when-let [data (lookup-entry config id :ad-triggers)]
+  (when-some [data (lookup-entry config id :ad-triggers)]
     (. builder adTriggers data))
-  (when-let [data (lookup-entry config id :ads-on-delivery-restrictions)]
+  (when-some [data (lookup-entry config id :ads-on-delivery-restrictions)]
     (. builder adsOnDeliveryRestrictions data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :include-dvb-subtitles)]
+  (when-some [data (lookup-entry config id :include-dvb-subtitles)]
     (. builder includeDvbSubtitles data))
-  (when-let [data (lookup-entry config id :include-iframe-only-stream)]
+  (when-some [data (lookup-entry config id :include-iframe-only-stream)]
     (. builder includeIframeOnlyStream data))
-  (when-let [data (lookup-entry config id :playlist-type)]
+  (when-some [data (lookup-entry config id :playlist-type)]
     (. builder playlistType data))
-  (when-let [data (lookup-entry config id :playlist-window-seconds)]
+  (when-some [data (lookup-entry config id :playlist-window-seconds)]
     (. builder playlistWindowSeconds data))
-  (when-let [data (lookup-entry config id :program-date-time-interval-seconds)]
+  (when-some [data (lookup-entry config id :program-date-time-interval-seconds)]
     (. builder programDateTimeIntervalSeconds data))
-  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+  (when-some [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
-  (when-let [data (lookup-entry config id :stream-selection)]
+  (when-some [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
-  (when-let [data (lookup-entry config id :use-audio-rendition-group)]
+  (when-some [data (lookup-entry config id :use-audio-rendition-group)]
     (. builder useAudioRenditionGroup data))
   (.build builder))
 
@@ -826,7 +826,7 @@
 | `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnOriginEndpoint$MssEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :speke-key-provider)]
+  (when-some [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
 
@@ -857,13 +857,13 @@
 | `streamSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnOriginEndpoint$MssPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :manifest-window-seconds)]
+  (when-some [data (lookup-entry config id :manifest-window-seconds)]
     (. builder manifestWindowSeconds data))
-  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+  (when-some [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
-  (when-let [data (lookup-entry config id :stream-selection)]
+  (when-some [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
   (.build builder))
 
@@ -904,33 +904,33 @@
 | `whitelist` | java.util.List | [[cdk.support/lookup-entry]] | `:whitelist` |
 "
   [^CfnOriginEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorization)]
+  (when-some [data (lookup-entry config id :authorization)]
     (. builder authorization data))
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :cmaf-package)]
+  (when-some [data (lookup-entry config id :cmaf-package)]
     (. builder cmafPackage data))
-  (when-let [data (lookup-entry config id :dash-package)]
+  (when-some [data (lookup-entry config id :dash-package)]
     (. builder dashPackage data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :hls-package)]
+  (when-some [data (lookup-entry config id :hls-package)]
     (. builder hlsPackage data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :manifest-name)]
+  (when-some [data (lookup-entry config id :manifest-name)]
     (. builder manifestName data))
-  (when-let [data (lookup-entry config id :mss-package)]
+  (when-some [data (lookup-entry config id :mss-package)]
     (. builder mssPackage data))
-  (when-let [data (lookup-entry config id :origination)]
+  (when-some [data (lookup-entry config id :origination)]
     (. builder origination data))
-  (when-let [data (lookup-entry config id :startover-window-seconds)]
+  (when-some [data (lookup-entry config id :startover-window-seconds)]
     (. builder startoverWindowSeconds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :time-delay-seconds)]
+  (when-some [data (lookup-entry config id :time-delay-seconds)]
     (. builder timeDelaySeconds data))
-  (when-let [data (lookup-entry config id :whitelist)]
+  (when-some [data (lookup-entry config id :whitelist)]
     (. builder whitelist data))
   (.build builder))
 
@@ -963,17 +963,17 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnOriginEndpoint$SpekeKeyProviderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :encryption-contract-configuration)]
+  (when-some [data (lookup-entry config id :encryption-contract-configuration)]
     (. builder encryptionContractConfiguration data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :system-ids)]
+  (when-some [data (lookup-entry config id :system-ids)]
     (. builder systemIds data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -1003,11 +1003,11 @@
 | `streamOrder` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-order` |
 "
   [^CfnOriginEndpoint$StreamSelectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-video-bits-per-second)]
+  (when-some [data (lookup-entry config id :max-video-bits-per-second)]
     (. builder maxVideoBitsPerSecond data))
-  (when-let [data (lookup-entry config id :min-video-bits-per-second)]
+  (when-some [data (lookup-entry config id :min-video-bits-per-second)]
     (. builder minVideoBitsPerSecond data))
-  (when-let [data (lookup-entry config id :stream-order)]
+  (when-some [data (lookup-entry config id :stream-order)]
     (. builder streamOrder data))
   (.build builder))
 
@@ -1041,19 +1041,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackagingConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :cmaf-package)]
+  (when-some [data (lookup-entry config id :cmaf-package)]
     (. builder cmafPackage data))
-  (when-let [data (lookup-entry config id :dash-package)]
+  (when-some [data (lookup-entry config id :dash-package)]
     (. builder dashPackage data))
-  (when-let [data (lookup-entry config id :hls-package)]
+  (when-some [data (lookup-entry config id :hls-package)]
     (. builder hlsPackage data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :mss-package)]
+  (when-some [data (lookup-entry config id :mss-package)]
     (. builder mssPackage data))
-  (when-let [data (lookup-entry config id :packaging-group-id)]
+  (when-some [data (lookup-entry config id :packaging-group-id)]
     (. builder packagingGroupId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1081,7 +1081,7 @@
 | `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnPackagingConfiguration$CmafEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :speke-key-provider)]
+  (when-some [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
 
@@ -1112,13 +1112,13 @@
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
 "
   [^CfnPackagingConfiguration$CmafPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :hls-manifests)]
+  (when-some [data (lookup-entry config id :hls-manifests)]
     (. builder hlsManifests data))
-  (when-let [data (lookup-entry config id :include-encoder-configuration-in-segments)]
+  (when-some [data (lookup-entry config id :include-encoder-configuration-in-segments)]
     (. builder includeEncoderConfigurationInSegments data))
-  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+  (when-some [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
   (.build builder))
 
@@ -1146,7 +1146,7 @@
 | `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnPackagingConfiguration$DashEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :speke-key-provider)]
+  (when-some [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
 
@@ -1179,17 +1179,17 @@
 | `streamSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnPackagingConfiguration$DashManifestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :manifest-layout)]
+  (when-some [data (lookup-entry config id :manifest-layout)]
     (. builder manifestLayout data))
-  (when-let [data (lookup-entry config id :manifest-name)]
+  (when-some [data (lookup-entry config id :manifest-name)]
     (. builder manifestName data))
-  (when-let [data (lookup-entry config id :min-buffer-time-seconds)]
+  (when-some [data (lookup-entry config id :min-buffer-time-seconds)]
     (. builder minBufferTimeSeconds data))
-  (when-let [data (lookup-entry config id :profile)]
+  (when-some [data (lookup-entry config id :profile)]
     (. builder profile data))
-  (when-let [data (lookup-entry config id :scte-markers-source)]
+  (when-some [data (lookup-entry config id :scte-markers-source)]
     (. builder scteMarkersSource data))
-  (when-let [data (lookup-entry config id :stream-selection)]
+  (when-some [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
   (.build builder))
 
@@ -1223,19 +1223,19 @@
 | `segmentTemplateFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-template-format` |
 "
   [^CfnPackagingConfiguration$DashPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dash-manifests)]
+  (when-some [data (lookup-entry config id :dash-manifests)]
     (. builder dashManifests data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :include-encoder-configuration-in-segments)]
+  (when-some [data (lookup-entry config id :include-encoder-configuration-in-segments)]
     (. builder includeEncoderConfigurationInSegments data))
-  (when-let [data (lookup-entry config id :include-iframe-only-stream)]
+  (when-some [data (lookup-entry config id :include-iframe-only-stream)]
     (. builder includeIframeOnlyStream data))
-  (when-let [data (lookup-entry config id :period-triggers)]
+  (when-some [data (lookup-entry config id :period-triggers)]
     (. builder periodTriggers data))
-  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+  (when-some [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
-  (when-let [data (lookup-entry config id :segment-template-format)]
+  (when-some [data (lookup-entry config id :segment-template-format)]
     (. builder segmentTemplateFormat data))
   (.build builder))
 
@@ -1264,9 +1264,9 @@
 | `presetSpeke20Video` | java.lang.String | [[cdk.support/lookup-entry]] | `:preset-speke20-video` |
 "
   [^CfnPackagingConfiguration$EncryptionContractConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :preset-speke20-audio)]
+  (when-some [data (lookup-entry config id :preset-speke20-audio)]
     (. builder presetSpeke20Audio data))
-  (when-let [data (lookup-entry config id :preset-speke20-video)]
+  (when-some [data (lookup-entry config id :preset-speke20-video)]
     (. builder presetSpeke20Video data))
   (.build builder))
 
@@ -1296,11 +1296,11 @@
 | `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnPackagingConfiguration$HlsEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :constant-initialization-vector)]
+  (when-some [data (lookup-entry config id :constant-initialization-vector)]
     (. builder constantInitializationVector data))
-  (when-let [data (lookup-entry config id :encryption-method)]
+  (when-some [data (lookup-entry config id :encryption-method)]
     (. builder encryptionMethod data))
-  (when-let [data (lookup-entry config id :speke-key-provider)]
+  (when-some [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
 
@@ -1333,17 +1333,17 @@
 | `streamSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnPackagingConfiguration$HlsManifestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-markers)]
+  (when-some [data (lookup-entry config id :ad-markers)]
     (. builder adMarkers data))
-  (when-let [data (lookup-entry config id :include-iframe-only-stream)]
+  (when-some [data (lookup-entry config id :include-iframe-only-stream)]
     (. builder includeIframeOnlyStream data))
-  (when-let [data (lookup-entry config id :manifest-name)]
+  (when-some [data (lookup-entry config id :manifest-name)]
     (. builder manifestName data))
-  (when-let [data (lookup-entry config id :program-date-time-interval-seconds)]
+  (when-some [data (lookup-entry config id :program-date-time-interval-seconds)]
     (. builder programDateTimeIntervalSeconds data))
-  (when-let [data (lookup-entry config id :repeat-ext-x-key)]
+  (when-some [data (lookup-entry config id :repeat-ext-x-key)]
     (. builder repeatExtXKey data))
-  (when-let [data (lookup-entry config id :stream-selection)]
+  (when-some [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
   (.build builder))
 
@@ -1375,15 +1375,15 @@
 | `useAudioRenditionGroup` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-audio-rendition-group` |
 "
   [^CfnPackagingConfiguration$HlsPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :hls-manifests)]
+  (when-some [data (lookup-entry config id :hls-manifests)]
     (. builder hlsManifests data))
-  (when-let [data (lookup-entry config id :include-dvb-subtitles)]
+  (when-some [data (lookup-entry config id :include-dvb-subtitles)]
     (. builder includeDvbSubtitles data))
-  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+  (when-some [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
-  (when-let [data (lookup-entry config id :use-audio-rendition-group)]
+  (when-some [data (lookup-entry config id :use-audio-rendition-group)]
     (. builder useAudioRenditionGroup data))
   (.build builder))
 
@@ -1411,7 +1411,7 @@
 | `spekeKeyProvider` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$SpekeKeyProviderProperty | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
 "
   [^CfnPackagingConfiguration$MssEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :speke-key-provider)]
+  (when-some [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
 
@@ -1440,9 +1440,9 @@
 | `streamSelection` | software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration$StreamSelectionProperty | [[cdk.support/lookup-entry]] | `:stream-selection` |
 "
   [^CfnPackagingConfiguration$MssManifestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :manifest-name)]
+  (when-some [data (lookup-entry config id :manifest-name)]
     (. builder manifestName data))
-  (when-let [data (lookup-entry config id :stream-selection)]
+  (when-some [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
   (.build builder))
 
@@ -1472,11 +1472,11 @@
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
 "
   [^CfnPackagingConfiguration$MssPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :mss-manifests)]
+  (when-some [data (lookup-entry config id :mss-manifests)]
     (. builder mssManifests data))
-  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+  (when-some [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
   (.build builder))
 
@@ -1510,19 +1510,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackagingConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cmaf-package)]
+  (when-some [data (lookup-entry config id :cmaf-package)]
     (. builder cmafPackage data))
-  (when-let [data (lookup-entry config id :dash-package)]
+  (when-some [data (lookup-entry config id :dash-package)]
     (. builder dashPackage data))
-  (when-let [data (lookup-entry config id :hls-package)]
+  (when-some [data (lookup-entry config id :hls-package)]
     (. builder hlsPackage data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :mss-package)]
+  (when-some [data (lookup-entry config id :mss-package)]
     (. builder mssPackage data))
-  (when-let [data (lookup-entry config id :packaging-group-id)]
+  (when-some [data (lookup-entry config id :packaging-group-id)]
     (. builder packagingGroupId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1553,13 +1553,13 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnPackagingConfiguration$SpekeKeyProviderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-contract-configuration)]
+  (when-some [data (lookup-entry config id :encryption-contract-configuration)]
     (. builder encryptionContractConfiguration data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :system-ids)]
+  (when-some [data (lookup-entry config id :system-ids)]
     (. builder systemIds data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -1589,11 +1589,11 @@
 | `streamOrder` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-order` |
 "
   [^CfnPackagingConfiguration$StreamSelectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-video-bits-per-second)]
+  (when-some [data (lookup-entry config id :max-video-bits-per-second)]
     (. builder maxVideoBitsPerSecond data))
-  (when-let [data (lookup-entry config id :min-video-bits-per-second)]
+  (when-some [data (lookup-entry config id :min-video-bits-per-second)]
     (. builder minVideoBitsPerSecond data))
-  (when-let [data (lookup-entry config id :stream-order)]
+  (when-some [data (lookup-entry config id :stream-order)]
     (. builder streamOrder data))
   (.build builder))
 
@@ -1622,9 +1622,9 @@
 | `secretsRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secrets-role-arn` |
 "
   [^CfnPackagingGroup$AuthorizationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cdn-identifier-secret)]
+  (when-some [data (lookup-entry config id :cdn-identifier-secret)]
     (. builder cdnIdentifierSecret data))
-  (when-let [data (lookup-entry config id :secrets-role-arn)]
+  (when-some [data (lookup-entry config id :secrets-role-arn)]
     (. builder secretsRoleArn data))
   (.build builder))
 
@@ -1655,13 +1655,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackagingGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorization)]
+  (when-some [data (lookup-entry config id :authorization)]
     (. builder authorization data))
-  (when-let [data (lookup-entry config id :egress-access-logs)]
+  (when-some [data (lookup-entry config id :egress-access-logs)]
     (. builder egressAccessLogs data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1689,7 +1689,7 @@
 | `logGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-name` |
 "
   [^CfnPackagingGroup$LogConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
   (.build builder))
 
@@ -1720,13 +1720,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackagingGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorization)]
+  (when-some [data (lookup-entry config id :authorization)]
     (. builder authorization data))
-  (when-let [data (lookup-entry config id :egress-access-logs)]
+  (when-some [data (lookup-entry config id :egress-access-logs)]
     (. builder egressAccessLogs data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

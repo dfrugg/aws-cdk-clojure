@@ -26,7 +26,7 @@
 | `externalUrlConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:external-url-config` |
 "
   [^CfnApplication$ApplicationSourceConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :external-url-config)]
+  (when-some [data (lookup-entry config id :external-url-config)]
     (. builder externalUrlConfig data))
   (.build builder))
 
@@ -59,17 +59,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-source-config)]
+  (when-some [data (lookup-entry config id :application-source-config)]
     (. builder applicationSourceConfig data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :permissions)]
+  (when-some [data (lookup-entry config id :permissions)]
     (. builder permissions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -98,9 +98,9 @@
 | `approvedOrigins` | java.util.List | [[cdk.support/lookup-entry]] | `:approved-origins` |
 "
   [^CfnApplication$ExternalUrlConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-url)]
+  (when-some [data (lookup-entry config id :access-url)]
     (. builder accessUrl data))
-  (when-let [data (lookup-entry config id :approved-origins)]
+  (when-some [data (lookup-entry config id :approved-origins)]
     (. builder approvedOrigins data))
   (.build builder))
 
@@ -133,17 +133,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-source-config)]
+  (when-some [data (lookup-entry config id :application-source-config)]
     (. builder applicationSourceConfig data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :permissions)]
+  (when-some [data (lookup-entry config id :permissions)]
     (. builder permissions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -178,21 +178,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :file-configuration)]
+  (when-some [data (lookup-entry config id :file-configuration)]
     (. builder fileConfiguration data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :object-configuration)]
+  (when-some [data (lookup-entry config id :object-configuration)]
     (. builder objectConfiguration data))
-  (when-let [data (lookup-entry config id :schedule-config)]
+  (when-some [data (lookup-entry config id :schedule-config)]
     (. builder scheduleConfig data))
-  (when-let [data (lookup-entry config id :source-uri)]
+  (when-some [data (lookup-entry config id :source-uri)]
     (. builder sourceUri data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -221,9 +221,9 @@
 | `folders` | java.util.List | [[cdk.support/lookup-entry]] | `:folders` |
 "
   [^CfnDataIntegration$FileConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :folders)]
+  (when-some [data (lookup-entry config id :folders)]
     (. builder folders data))
   (.build builder))
 
@@ -258,21 +258,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataIntegrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :file-configuration)]
+  (when-some [data (lookup-entry config id :file-configuration)]
     (. builder fileConfiguration data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :object-configuration)]
+  (when-some [data (lookup-entry config id :object-configuration)]
     (. builder objectConfiguration data))
-  (when-let [data (lookup-entry config id :schedule-config)]
+  (when-some [data (lookup-entry config id :schedule-config)]
     (. builder scheduleConfig data))
-  (when-let [data (lookup-entry config id :source-uri)]
+  (when-some [data (lookup-entry config id :source-uri)]
     (. builder sourceUri data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -302,11 +302,11 @@
 | `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |
 "
   [^CfnDataIntegration$ScheduleConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :first-execution-from)]
+  (when-some [data (lookup-entry config id :first-execution-from)]
     (. builder firstExecutionFrom data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
   (.build builder))
 
@@ -338,15 +338,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEventIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-bridge-bus)]
+  (when-some [data (lookup-entry config id :event-bridge-bus)]
     (. builder eventBridgeBus data))
-  (when-let [data (lookup-entry config id :event-filter)]
+  (when-some [data (lookup-entry config id :event-filter)]
     (. builder eventFilter data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -374,7 +374,7 @@
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnEventIntegration$EventFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
 
@@ -406,15 +406,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEventIntegrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-bridge-bus)]
+  (when-some [data (lookup-entry config id :event-bridge-bus)]
     (. builder eventBridgeBus data))
-  (when-let [data (lookup-entry config id :event-filter)]
+  (when-some [data (lookup-entry config id :event-filter)]
     (. builder eventFilter data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

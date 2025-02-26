@@ -474,13 +474,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `removeSuffix` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-suffix` |
 "
   [^AddApplicationActionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :remove-suffix)]
+  (when-some [data (lookup-entry config id :remove-suffix)]
     (. builder removeSuffix data))
   (.build builder))
 
@@ -510,11 +510,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^AddApplicationTargetGroupsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :target-groups)]
+  (when-some [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
 
@@ -554,31 +554,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^AddApplicationTargetsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :deregistration-delay)]
+  (when-some [data (lookup-entry config id :deregistration-delay)]
     (. builder deregistrationDelay data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
+  (when-some [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
     (. builder loadBalancingAlgorithmType data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (application-protocol config id :protocol)]
+  (when-some [data (application-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (application-protocol-version config id :protocol-version)]
+  (when-some [data (application-protocol-version config id :protocol-version)]
     (. builder protocolVersion data))
-  (when-let [data (lookup-entry config id :slow-start)]
+  (when-some [data (lookup-entry config id :slow-start)]
     (. builder slowStart data))
-  (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
+  (when-some [data (lookup-entry config id :stickiness-cookie-duration)]
     (. builder stickinessCookieDuration data))
-  (when-let [data (lookup-entry config id :stickiness-cookie-name)]
+  (when-some [data (lookup-entry config id :stickiness-cookie-name)]
     (. builder stickinessCookieName data))
-  (when-let [data (lookup-entry config id :target-group-name)]
+  (when-some [data (lookup-entry config id :target-group-name)]
     (. builder targetGroupName data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -606,7 +606,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `action` | software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction | [[cdk.support/lookup-entry]] | `:action` |
 "
   [^AddNetworkActionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
   (.build builder))
 
@@ -641,21 +641,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^AddNetworkTargetsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deregistration-delay)]
+  (when-some [data (lookup-entry config id :deregistration-delay)]
     (. builder deregistrationDelay data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (protocol config id :protocol)]
+  (when-some [data (protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :proxy-protocol-v2)]
+  (when-some [data (lookup-entry config id :proxy-protocol-v2)]
     (. builder proxyProtocolV2 data))
-  (when-let [data (lookup-entry config id :target-group-name)]
+  (when-some [data (lookup-entry config id :target-group-name)]
     (. builder targetGroupName data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -684,9 +684,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^AddRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -716,11 +716,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
 "
   [^ApplicationListenerAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-port)]
+  (when-some [data (lookup-entry config id :default-port)]
     (. builder defaultPort data))
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
   (.build builder))
 
@@ -755,21 +755,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
 "
   [^ApplicationListener$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :default-action)]
+  (when-some [data (lookup-entry config id :default-action)]
     (. builder defaultAction data))
-  (when-let [data (lookup-entry config id :default-target-groups)]
+  (when-some [data (lookup-entry config id :default-target-groups)]
     (. builder defaultTargetGroups data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :open)]
+  (when-some [data (lookup-entry config id :open)]
     (. builder open data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (application-protocol config id :protocol)]
+  (when-some [data (application-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (ssl-policy config id :ssl-policy)]
+  (when-some [data (ssl-policy config id :ssl-policy)]
     (. builder sslPolicy data))
   (.build builder))
 
@@ -798,9 +798,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |
 "
   [^ApplicationListenerCertificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
 
@@ -829,9 +829,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |
 "
   [^ApplicationListenerCertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
 
@@ -863,15 +863,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
 "
   [^ApplicationListenerLookupOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
-  (when-let [data (lookup-entry config id :listener-port)]
+  (when-some [data (lookup-entry config id :listener-port)]
     (. builder listenerPort data))
-  (when-let [data (application-protocol config id :listener-protocol)]
+  (when-some [data (application-protocol config id :listener-protocol)]
     (. builder listenerProtocol data))
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-tags)]
+  (when-some [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
 
@@ -906,21 +906,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
 "
   [^ApplicationListenerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :default-action)]
+  (when-some [data (lookup-entry config id :default-action)]
     (. builder defaultAction data))
-  (when-let [data (lookup-entry config id :default-target-groups)]
+  (when-some [data (lookup-entry config id :default-target-groups)]
     (. builder defaultTargetGroups data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :open)]
+  (when-some [data (lookup-entry config id :open)]
     (. builder open data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (application-protocol config id :protocol)]
+  (when-some [data (application-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (ssl-policy config id :ssl-policy)]
+  (when-some [data (ssl-policy config id :ssl-policy)]
     (. builder sslPolicy data))
   (.build builder))
 
@@ -952,15 +952,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^ApplicationListenerRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :target-groups)]
+  (when-some [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
 
@@ -992,15 +992,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^ApplicationListenerRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :target-groups)]
+  (when-some [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
 
@@ -1033,17 +1033,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^ApplicationLoadBalancerAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
+  (when-some [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
     (. builder loadBalancerCanonicalHostedZoneId data))
-  (when-let [data (lookup-entry config id :load-balancer-dns-name)]
+  (when-some [data (lookup-entry config id :load-balancer-dns-name)]
     (. builder loadBalancerDnsName data))
-  (when-let [data (lookup-entry config id :security-group-allows-all-outbound)]
+  (when-some [data (lookup-entry config id :security-group-allows-all-outbound)]
     (. builder securityGroupAllowsAllOutbound data))
-  (when-let [data (lookup-entry config id :security-group-id)]
+  (when-some [data (lookup-entry config id :security-group-id)]
     (. builder securityGroupId data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -1089,43 +1089,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `xffHeaderProcessingMode` | software.amazon.awscdk.services.elasticloadbalancingv2.XffHeaderProcessingMode | [[cdk.api.services.elasticloadbalancingv2/xff-header-processing-mode]] | `:xff-header-processing-mode` |
 "
   [^ApplicationLoadBalancer$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-keep-alive)]
+  (when-some [data (lookup-entry config id :client-keep-alive)]
     (. builder clientKeepAlive data))
-  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+  (when-some [data (lookup-entry config id :cross-zone-enabled)]
     (. builder crossZoneEnabled data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+  (when-some [data (lookup-entry config id :deny-all-igw-traffic)]
     (. builder denyAllIgwTraffic data))
-  (when-let [data (desync-mitigation-mode config id :desync-mitigation-mode)]
+  (when-some [data (desync-mitigation-mode config id :desync-mitigation-mode)]
     (. builder desyncMitigationMode data))
-  (when-let [data (lookup-entry config id :drop-invalid-header-fields)]
+  (when-some [data (lookup-entry config id :drop-invalid-header-fields)]
     (. builder dropInvalidHeaderFields data))
-  (when-let [data (lookup-entry config id :http2-enabled)]
+  (when-some [data (lookup-entry config id :http2-enabled)]
     (. builder http2Enabled data))
-  (when-let [data (lookup-entry config id :idle-timeout)]
+  (when-some [data (lookup-entry config id :idle-timeout)]
     (. builder idleTimeout data))
-  (when-let [data (lookup-entry config id :internet-facing)]
+  (when-some [data (lookup-entry config id :internet-facing)]
     (. builder internetFacing data))
-  (when-let [data (ip-address-type config id :ip-address-type)]
+  (when-some [data (ip-address-type config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :load-balancer-name)]
+  (when-some [data (lookup-entry config id :load-balancer-name)]
     (. builder loadBalancerName data))
-  (when-let [data (lookup-entry config id :preserve-host-header)]
+  (when-some [data (lookup-entry config id :preserve-host-header)]
     (. builder preserveHostHeader data))
-  (when-let [data (lookup-entry config id :preserve-xff-client-port)]
+  (when-some [data (lookup-entry config id :preserve-xff-client-port)]
     (. builder preserveXffClientPort data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
-  (when-let [data (lookup-entry config id :waf-fail-open)]
+  (when-some [data (lookup-entry config id :waf-fail-open)]
     (. builder wafFailOpen data))
-  (when-let [data (lookup-entry config id :x-amzn-tls-version-and-cipher-suite-headers)]
+  (when-some [data (lookup-entry config id :x-amzn-tls-version-and-cipher-suite-headers)]
     (. builder xAmznTlsVersionAndCipherSuiteHeaders data))
-  (when-let [data (xff-header-processing-mode config id :xff-header-processing-mode)]
+  (when-some [data (xff-header-processing-mode config id :xff-header-processing-mode)]
     (. builder xffHeaderProcessingMode data))
   (.build builder))
 
@@ -1154,9 +1154,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
 "
   [^ApplicationLoadBalancerLookupOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-tags)]
+  (when-some [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
 
@@ -1202,43 +1202,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `xffHeaderProcessingMode` | software.amazon.awscdk.services.elasticloadbalancingv2.XffHeaderProcessingMode | [[cdk.api.services.elasticloadbalancingv2/xff-header-processing-mode]] | `:xff-header-processing-mode` |
 "
   [^ApplicationLoadBalancerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-keep-alive)]
+  (when-some [data (lookup-entry config id :client-keep-alive)]
     (. builder clientKeepAlive data))
-  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+  (when-some [data (lookup-entry config id :cross-zone-enabled)]
     (. builder crossZoneEnabled data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+  (when-some [data (lookup-entry config id :deny-all-igw-traffic)]
     (. builder denyAllIgwTraffic data))
-  (when-let [data (desync-mitigation-mode config id :desync-mitigation-mode)]
+  (when-some [data (desync-mitigation-mode config id :desync-mitigation-mode)]
     (. builder desyncMitigationMode data))
-  (when-let [data (lookup-entry config id :drop-invalid-header-fields)]
+  (when-some [data (lookup-entry config id :drop-invalid-header-fields)]
     (. builder dropInvalidHeaderFields data))
-  (when-let [data (lookup-entry config id :http2-enabled)]
+  (when-some [data (lookup-entry config id :http2-enabled)]
     (. builder http2Enabled data))
-  (when-let [data (lookup-entry config id :idle-timeout)]
+  (when-some [data (lookup-entry config id :idle-timeout)]
     (. builder idleTimeout data))
-  (when-let [data (lookup-entry config id :internet-facing)]
+  (when-some [data (lookup-entry config id :internet-facing)]
     (. builder internetFacing data))
-  (when-let [data (ip-address-type config id :ip-address-type)]
+  (when-some [data (ip-address-type config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :load-balancer-name)]
+  (when-some [data (lookup-entry config id :load-balancer-name)]
     (. builder loadBalancerName data))
-  (when-let [data (lookup-entry config id :preserve-host-header)]
+  (when-some [data (lookup-entry config id :preserve-host-header)]
     (. builder preserveHostHeader data))
-  (when-let [data (lookup-entry config id :preserve-xff-client-port)]
+  (when-some [data (lookup-entry config id :preserve-xff-client-port)]
     (. builder preserveXffClientPort data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
-  (when-let [data (lookup-entry config id :waf-fail-open)]
+  (when-some [data (lookup-entry config id :waf-fail-open)]
     (. builder wafFailOpen data))
-  (when-let [data (lookup-entry config id :x-amzn-tls-version-and-cipher-suite-headers)]
+  (when-some [data (lookup-entry config id :x-amzn-tls-version-and-cipher-suite-headers)]
     (. builder xAmznTlsVersionAndCipherSuiteHeaders data))
-  (when-let [data (xff-header-processing-mode config id :xff-header-processing-mode)]
+  (when-some [data (xff-header-processing-mode config id :xff-header-processing-mode)]
     (. builder xffHeaderProcessingMode data))
   (.build builder))
 
@@ -1270,15 +1270,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:target-protocol` |
 "
   [^ApplicationLoadBalancerRedirectConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :open)]
+  (when-some [data (lookup-entry config id :open)]
     (. builder open data))
-  (when-let [data (lookup-entry config id :source-port)]
+  (when-some [data (lookup-entry config id :source-port)]
     (. builder sourcePort data))
-  (when-let [data (application-protocol config id :source-protocol)]
+  (when-some [data (application-protocol config id :source-protocol)]
     (. builder sourceProtocol data))
-  (when-let [data (lookup-entry config id :target-port)]
+  (when-some [data (lookup-entry config id :target-port)]
     (. builder targetPort data))
-  (when-let [data (application-protocol config id :target-protocol)]
+  (when-some [data (application-protocol config id :target-protocol)]
     (. builder targetProtocol data))
   (.build builder))
 
@@ -1318,31 +1318,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^ApplicationTargetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :deregistration-delay)]
+  (when-some [data (lookup-entry config id :deregistration-delay)]
     (. builder deregistrationDelay data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
+  (when-some [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
     (. builder loadBalancingAlgorithmType data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (application-protocol config id :protocol)]
+  (when-some [data (application-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (application-protocol-version config id :protocol-version)]
+  (when-some [data (application-protocol-version config id :protocol-version)]
     (. builder protocolVersion data))
-  (when-let [data (lookup-entry config id :slow-start)]
+  (when-some [data (lookup-entry config id :slow-start)]
     (. builder slowStart data))
-  (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
+  (when-some [data (lookup-entry config id :stickiness-cookie-duration)]
     (. builder stickinessCookieDuration data))
-  (when-let [data (lookup-entry config id :stickiness-cookie-name)]
+  (when-some [data (lookup-entry config id :stickiness-cookie-name)]
     (. builder stickinessCookieName data))
-  (when-let [data (lookup-entry config id :target-group-name)]
+  (when-some [data (lookup-entry config id :target-group-name)]
     (. builder targetGroupName data))
-  (when-let [data (target-type config id :target-type)]
+  (when-some [data (target-type config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -1382,31 +1382,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^ApplicationTargetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deregistration-delay)]
+  (when-some [data (lookup-entry config id :deregistration-delay)]
     (. builder deregistrationDelay data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
+  (when-some [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
     (. builder loadBalancingAlgorithmType data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (application-protocol config id :protocol)]
+  (when-some [data (application-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (application-protocol-version config id :protocol-version)]
+  (when-some [data (application-protocol-version config id :protocol-version)]
     (. builder protocolVersion data))
-  (when-let [data (lookup-entry config id :slow-start)]
+  (when-some [data (lookup-entry config id :slow-start)]
     (. builder slowStart data))
-  (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
+  (when-some [data (lookup-entry config id :stickiness-cookie-duration)]
     (. builder stickinessCookieDuration data))
-  (when-let [data (lookup-entry config id :stickiness-cookie-name)]
+  (when-some [data (lookup-entry config id :stickiness-cookie-name)]
     (. builder stickinessCookieName data))
-  (when-let [data (lookup-entry config id :target-group-name)]
+  (when-some [data (lookup-entry config id :target-group-name)]
     (. builder targetGroupName data))
-  (when-let [data (target-type config id :target-type)]
+  (when-some [data (target-type config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -1446,31 +1446,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |
 "
   [^AuthenticateOidcOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-https-outbound)]
+  (when-some [data (lookup-entry config id :allow-https-outbound)]
     (. builder allowHttpsOutbound data))
-  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+  (when-some [data (lookup-entry config id :authentication-request-extra-params)]
     (. builder authenticationRequestExtraParams data))
-  (when-let [data (lookup-entry config id :authorization-endpoint)]
+  (when-some [data (lookup-entry config id :authorization-endpoint)]
     (. builder authorizationEndpoint data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :issuer)]
+  (when-some [data (lookup-entry config id :issuer)]
     (. builder issuer data))
-  (when-let [data (lookup-entry config id :next)]
+  (when-some [data (lookup-entry config id :next)]
     (. builder next data))
-  (when-let [data (unauthenticated-action config id :on-unauthenticated-request)]
+  (when-some [data (unauthenticated-action config id :on-unauthenticated-request)]
     (. builder onUnauthenticatedRequest data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :session-cookie-name)]
+  (when-some [data (lookup-entry config id :session-cookie-name)]
     (. builder sessionCookieName data))
-  (when-let [data (lookup-entry config id :session-timeout)]
+  (when-some [data (lookup-entry config id :session-timeout)]
     (. builder sessionTimeout data))
-  (when-let [data (lookup-entry config id :token-endpoint)]
+  (when-some [data (lookup-entry config id :token-endpoint)]
     (. builder tokenEndpoint data))
-  (when-let [data (lookup-entry config id :user-info-endpoint)]
+  (when-some [data (lookup-entry config id :user-info-endpoint)]
     (. builder userInfoEndpoint data))
   (.build builder))
 
@@ -1504,19 +1504,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
 "
   [^BaseApplicationListenerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :default-action)]
+  (when-some [data (lookup-entry config id :default-action)]
     (. builder defaultAction data))
-  (when-let [data (lookup-entry config id :default-target-groups)]
+  (when-some [data (lookup-entry config id :default-target-groups)]
     (. builder defaultTargetGroups data))
-  (when-let [data (lookup-entry config id :open)]
+  (when-some [data (lookup-entry config id :open)]
     (. builder open data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (application-protocol config id :protocol)]
+  (when-some [data (application-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (ssl-policy config id :ssl-policy)]
+  (when-some [data (ssl-policy config id :ssl-policy)]
     (. builder sslPolicy data))
   (.build builder))
 
@@ -1547,13 +1547,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^BaseApplicationListenerRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :target-groups)]
+  (when-some [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
 
@@ -1583,11 +1583,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
 "
   [^BaseListenerLookupOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :listener-port)]
+  (when-some [data (lookup-entry config id :listener-port)]
     (. builder listenerPort data))
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-tags)]
+  (when-some [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
 
@@ -1616,9 +1616,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
 "
   [^BaseLoadBalancerLookupOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-tags)]
+  (when-some [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
 
@@ -1652,19 +1652,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^BaseLoadBalancerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+  (when-some [data (lookup-entry config id :cross-zone-enabled)]
     (. builder crossZoneEnabled data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+  (when-some [data (lookup-entry config id :deny-all-igw-traffic)]
     (. builder denyAllIgwTraffic data))
-  (when-let [data (lookup-entry config id :internet-facing)]
+  (when-some [data (lookup-entry config id :internet-facing)]
     (. builder internetFacing data))
-  (when-let [data (lookup-entry config id :load-balancer-name)]
+  (when-some [data (lookup-entry config id :load-balancer-name)]
     (. builder loadBalancerName data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -1698,19 +1698,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
 "
   [^BaseNetworkListenerProps$Builder builder id config]
-  (when-let [data (alpn-policy config id :alpn-policy)]
+  (when-some [data (alpn-policy config id :alpn-policy)]
     (. builder alpnPolicy data))
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :default-action)]
+  (when-some [data (lookup-entry config id :default-action)]
     (. builder defaultAction data))
-  (when-let [data (lookup-entry config id :default-target-groups)]
+  (when-some [data (lookup-entry config id :default-target-groups)]
     (. builder defaultTargetGroups data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (protocol config id :protocol)]
+  (when-some [data (protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (ssl-policy config id :ssl-policy)]
+  (when-some [data (ssl-policy config id :ssl-policy)]
     (. builder sslPolicy data))
   (.build builder))
 
@@ -1742,15 +1742,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^BaseTargetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deregistration-delay)]
+  (when-some [data (lookup-entry config id :deregistration-delay)]
     (. builder deregistrationDelay data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :target-group-name)]
+  (when-some [data (lookup-entry config id :target-group-name)]
     (. builder targetGroupName data))
-  (when-let [data (target-type config id :target-type)]
+  (when-some [data (target-type config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -1785,21 +1785,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnListener$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authenticate-cognito-config)]
+  (when-some [data (lookup-entry config id :authenticate-cognito-config)]
     (. builder authenticateCognitoConfig data))
-  (when-let [data (lookup-entry config id :authenticate-oidc-config)]
+  (when-some [data (lookup-entry config id :authenticate-oidc-config)]
     (. builder authenticateOidcConfig data))
-  (when-let [data (lookup-entry config id :fixed-response-config)]
+  (when-some [data (lookup-entry config id :fixed-response-config)]
     (. builder fixedResponseConfig data))
-  (when-let [data (lookup-entry config id :forward-config)]
+  (when-some [data (lookup-entry config id :forward-config)]
     (. builder forwardConfig data))
-  (when-let [data (lookup-entry config id :order)]
+  (when-some [data (lookup-entry config id :order)]
     (. builder order data))
-  (when-let [data (lookup-entry config id :redirect-config)]
+  (when-some [data (lookup-entry config id :redirect-config)]
     (. builder redirectConfig data))
-  (when-let [data (lookup-entry config id :target-group-arn)]
+  (when-some [data (lookup-entry config id :target-group-arn)]
     (. builder targetGroupArn data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1834,21 +1834,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userPoolDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-domain` |
 "
   [^CfnListener$AuthenticateCognitoConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+  (when-some [data (lookup-entry config id :authentication-request-extra-params)]
     (. builder authenticationRequestExtraParams data))
-  (when-let [data (lookup-entry config id :on-unauthenticated-request)]
+  (when-some [data (lookup-entry config id :on-unauthenticated-request)]
     (. builder onUnauthenticatedRequest data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :session-cookie-name)]
+  (when-some [data (lookup-entry config id :session-cookie-name)]
     (. builder sessionCookieName data))
-  (when-let [data (lookup-entry config id :session-timeout)]
+  (when-some [data (lookup-entry config id :session-timeout)]
     (. builder sessionTimeout data))
-  (when-let [data (lookup-entry config id :user-pool-arn)]
+  (when-some [data (lookup-entry config id :user-pool-arn)]
     (. builder userPoolArn data))
-  (when-let [data (lookup-entry config id :user-pool-client-id)]
+  (when-some [data (lookup-entry config id :user-pool-client-id)]
     (. builder userPoolClientId data))
-  (when-let [data (lookup-entry config id :user-pool-domain)]
+  (when-some [data (lookup-entry config id :user-pool-domain)]
     (. builder userPoolDomain data))
   (.build builder))
 
@@ -1887,29 +1887,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |
 "
   [^CfnListener$AuthenticateOidcConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+  (when-some [data (lookup-entry config id :authentication-request-extra-params)]
     (. builder authenticationRequestExtraParams data))
-  (when-let [data (lookup-entry config id :authorization-endpoint)]
+  (when-some [data (lookup-entry config id :authorization-endpoint)]
     (. builder authorizationEndpoint data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :issuer)]
+  (when-some [data (lookup-entry config id :issuer)]
     (. builder issuer data))
-  (when-let [data (lookup-entry config id :on-unauthenticated-request)]
+  (when-some [data (lookup-entry config id :on-unauthenticated-request)]
     (. builder onUnauthenticatedRequest data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :session-cookie-name)]
+  (when-some [data (lookup-entry config id :session-cookie-name)]
     (. builder sessionCookieName data))
-  (when-let [data (lookup-entry config id :session-timeout)]
+  (when-some [data (lookup-entry config id :session-timeout)]
     (. builder sessionTimeout data))
-  (when-let [data (lookup-entry config id :token-endpoint)]
+  (when-some [data (lookup-entry config id :token-endpoint)]
     (. builder tokenEndpoint data))
-  (when-let [data (lookup-entry config id :use-existing-client-secret)]
+  (when-some [data (lookup-entry config id :use-existing-client-secret)]
     (. builder useExistingClientSecret data))
-  (when-let [data (lookup-entry config id :user-info-endpoint)]
+  (when-some [data (lookup-entry config id :user-info-endpoint)]
     (. builder userInfoEndpoint data))
   (.build builder))
 
@@ -1944,21 +1944,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-policy` |
 "
   [^CfnListener$Builder builder id config]
-  (when-let [data (lookup-entry config id :alpn-policy)]
+  (when-some [data (lookup-entry config id :alpn-policy)]
     (. builder alpnPolicy data))
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :default-actions)]
+  (when-some [data (lookup-entry config id :default-actions)]
     (. builder defaultActions data))
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :mutual-authentication)]
+  (when-some [data (lookup-entry config id :mutual-authentication)]
     (. builder mutualAuthentication data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :ssl-policy)]
+  (when-some [data (lookup-entry config id :ssl-policy)]
     (. builder sslPolicy data))
   (.build builder))
 
@@ -1987,9 +1987,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
 "
   [^CfnListenerCertificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
   (.build builder))
 
@@ -2017,7 +2017,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 "
   [^CfnListenerCertificate$CertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
   (.build builder))
 
@@ -2045,7 +2045,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 "
   [^CfnListener$CertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
   (.build builder))
 
@@ -2074,9 +2074,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
 "
   [^CfnListenerCertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
   (.build builder))
 
@@ -2106,11 +2106,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnListener$FixedResponseConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :message-body)]
+  (when-some [data (lookup-entry config id :message-body)]
     (. builder messageBody data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -2139,9 +2139,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^CfnListener$ForwardConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-group-stickiness-config)]
+  (when-some [data (lookup-entry config id :target-group-stickiness-config)]
     (. builder targetGroupStickinessConfig data))
-  (when-let [data (lookup-entry config id :target-groups)]
+  (when-some [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
 
@@ -2171,11 +2171,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |
 "
   [^CfnListener$MutualAuthenticationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ignore-client-certificate-expiry)]
+  (when-some [data (lookup-entry config id :ignore-client-certificate-expiry)]
     (. builder ignoreClientCertificateExpiry data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :trust-store-arn)]
+  (when-some [data (lookup-entry config id :trust-store-arn)]
     (. builder trustStoreArn data))
   (.build builder))
 
@@ -2210,21 +2210,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-policy` |
 "
   [^CfnListenerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alpn-policy)]
+  (when-some [data (lookup-entry config id :alpn-policy)]
     (. builder alpnPolicy data))
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :default-actions)]
+  (when-some [data (lookup-entry config id :default-actions)]
     (. builder defaultActions data))
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :mutual-authentication)]
+  (when-some [data (lookup-entry config id :mutual-authentication)]
     (. builder mutualAuthentication data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :ssl-policy)]
+  (when-some [data (lookup-entry config id :ssl-policy)]
     (. builder sslPolicy data))
   (.build builder))
 
@@ -2257,17 +2257,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnListener$RedirectConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :host)]
+  (when-some [data (lookup-entry config id :host)]
     (. builder host data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :query)]
+  (when-some [data (lookup-entry config id :query)]
     (. builder query data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -2302,21 +2302,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnListenerRule$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authenticate-cognito-config)]
+  (when-some [data (lookup-entry config id :authenticate-cognito-config)]
     (. builder authenticateCognitoConfig data))
-  (when-let [data (lookup-entry config id :authenticate-oidc-config)]
+  (when-some [data (lookup-entry config id :authenticate-oidc-config)]
     (. builder authenticateOidcConfig data))
-  (when-let [data (lookup-entry config id :fixed-response-config)]
+  (when-some [data (lookup-entry config id :fixed-response-config)]
     (. builder fixedResponseConfig data))
-  (when-let [data (lookup-entry config id :forward-config)]
+  (when-some [data (lookup-entry config id :forward-config)]
     (. builder forwardConfig data))
-  (when-let [data (lookup-entry config id :order)]
+  (when-some [data (lookup-entry config id :order)]
     (. builder order data))
-  (when-let [data (lookup-entry config id :redirect-config)]
+  (when-some [data (lookup-entry config id :redirect-config)]
     (. builder redirectConfig data))
-  (when-let [data (lookup-entry config id :target-group-arn)]
+  (when-some [data (lookup-entry config id :target-group-arn)]
     (. builder targetGroupArn data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -2351,21 +2351,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userPoolDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-domain` |
 "
   [^CfnListenerRule$AuthenticateCognitoConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+  (when-some [data (lookup-entry config id :authentication-request-extra-params)]
     (. builder authenticationRequestExtraParams data))
-  (when-let [data (lookup-entry config id :on-unauthenticated-request)]
+  (when-some [data (lookup-entry config id :on-unauthenticated-request)]
     (. builder onUnauthenticatedRequest data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :session-cookie-name)]
+  (when-some [data (lookup-entry config id :session-cookie-name)]
     (. builder sessionCookieName data))
-  (when-let [data (lookup-entry config id :session-timeout)]
+  (when-some [data (lookup-entry config id :session-timeout)]
     (. builder sessionTimeout data))
-  (when-let [data (lookup-entry config id :user-pool-arn)]
+  (when-some [data (lookup-entry config id :user-pool-arn)]
     (. builder userPoolArn data))
-  (when-let [data (lookup-entry config id :user-pool-client-id)]
+  (when-some [data (lookup-entry config id :user-pool-client-id)]
     (. builder userPoolClientId data))
-  (when-let [data (lookup-entry config id :user-pool-domain)]
+  (when-some [data (lookup-entry config id :user-pool-domain)]
     (. builder userPoolDomain data))
   (.build builder))
 
@@ -2404,29 +2404,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |
 "
   [^CfnListenerRule$AuthenticateOidcConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+  (when-some [data (lookup-entry config id :authentication-request-extra-params)]
     (. builder authenticationRequestExtraParams data))
-  (when-let [data (lookup-entry config id :authorization-endpoint)]
+  (when-some [data (lookup-entry config id :authorization-endpoint)]
     (. builder authorizationEndpoint data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :issuer)]
+  (when-some [data (lookup-entry config id :issuer)]
     (. builder issuer data))
-  (when-let [data (lookup-entry config id :on-unauthenticated-request)]
+  (when-some [data (lookup-entry config id :on-unauthenticated-request)]
     (. builder onUnauthenticatedRequest data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :session-cookie-name)]
+  (when-some [data (lookup-entry config id :session-cookie-name)]
     (. builder sessionCookieName data))
-  (when-let [data (lookup-entry config id :session-timeout)]
+  (when-some [data (lookup-entry config id :session-timeout)]
     (. builder sessionTimeout data))
-  (when-let [data (lookup-entry config id :token-endpoint)]
+  (when-some [data (lookup-entry config id :token-endpoint)]
     (. builder tokenEndpoint data))
-  (when-let [data (lookup-entry config id :use-existing-client-secret)]
+  (when-some [data (lookup-entry config id :use-existing-client-secret)]
     (. builder useExistingClientSecret data))
-  (when-let [data (lookup-entry config id :user-info-endpoint)]
+  (when-some [data (lookup-entry config id :user-info-endpoint)]
     (. builder userInfoEndpoint data))
   (.build builder))
 
@@ -2457,13 +2457,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^CfnListenerRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -2493,11 +2493,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnListenerRule$FixedResponseConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :message-body)]
+  (when-some [data (lookup-entry config id :message-body)]
     (. builder messageBody data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -2526,9 +2526,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
 "
   [^CfnListenerRule$ForwardConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-group-stickiness-config)]
+  (when-some [data (lookup-entry config id :target-group-stickiness-config)]
     (. builder targetGroupStickinessConfig data))
-  (when-let [data (lookup-entry config id :target-groups)]
+  (when-some [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
 
@@ -2556,7 +2556,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnListenerRule$HostHeaderConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -2585,9 +2585,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnListenerRule$HttpHeaderConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :http-header-name)]
+  (when-some [data (lookup-entry config id :http-header-name)]
     (. builder httpHeaderName data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -2615,7 +2615,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnListenerRule$HttpRequestMethodConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -2643,7 +2643,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnListenerRule$PathPatternConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -2674,13 +2674,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^CfnListenerRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -2708,7 +2708,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnListenerRule$QueryStringConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -2737,9 +2737,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnListenerRule$QueryStringKeyValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -2772,17 +2772,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnListenerRule$RedirectConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :host)]
+  (when-some [data (lookup-entry config id :host)]
     (. builder host data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :query)]
+  (when-some [data (lookup-entry config id :query)]
     (. builder query data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -2817,21 +2817,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnListenerRule$RuleConditionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :host-header-config)]
+  (when-some [data (lookup-entry config id :host-header-config)]
     (. builder hostHeaderConfig data))
-  (when-let [data (lookup-entry config id :http-header-config)]
+  (when-some [data (lookup-entry config id :http-header-config)]
     (. builder httpHeaderConfig data))
-  (when-let [data (lookup-entry config id :http-request-method-config)]
+  (when-some [data (lookup-entry config id :http-request-method-config)]
     (. builder httpRequestMethodConfig data))
-  (when-let [data (lookup-entry config id :path-pattern-config)]
+  (when-some [data (lookup-entry config id :path-pattern-config)]
     (. builder pathPatternConfig data))
-  (when-let [data (lookup-entry config id :query-string-config)]
+  (when-some [data (lookup-entry config id :query-string-config)]
     (. builder queryStringConfig data))
-  (when-let [data (lookup-entry config id :source-ip-config)]
+  (when-some [data (lookup-entry config id :source-ip-config)]
     (. builder sourceIpConfig data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -2859,7 +2859,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnListenerRule$SourceIpConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -2888,9 +2888,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnListenerRule$TargetGroupStickinessConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-seconds)]
+  (when-some [data (lookup-entry config id :duration-seconds)]
     (. builder durationSeconds data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -2919,9 +2919,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnListenerRule$TargetGroupTupleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-group-arn)]
+  (when-some [data (lookup-entry config id :target-group-arn)]
     (. builder targetGroupArn data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -2950,9 +2950,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnListener$TargetGroupStickinessConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-seconds)]
+  (when-some [data (lookup-entry config id :duration-seconds)]
     (. builder durationSeconds data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -2981,9 +2981,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnListener$TargetGroupTupleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-group-arn)]
+  (when-some [data (lookup-entry config id :target-group-arn)]
     (. builder targetGroupArn data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -3020,25 +3020,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnLoadBalancer$Builder builder id config]
-  (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
+  (when-some [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
     (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
-  (when-let [data (lookup-entry config id :ip-address-type)]
+  (when-some [data (lookup-entry config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :load-balancer-attributes)]
+  (when-some [data (lookup-entry config id :load-balancer-attributes)]
     (. builder loadBalancerAttributes data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :scheme)]
+  (when-some [data (lookup-entry config id :scheme)]
     (. builder scheme data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnet-mappings)]
+  (when-some [data (lookup-entry config id :subnet-mappings)]
     (. builder subnetMappings data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -3067,9 +3067,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnLoadBalancer$LoadBalancerAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -3106,25 +3106,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnLoadBalancerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
+  (when-some [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
     (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
-  (when-let [data (lookup-entry config id :ip-address-type)]
+  (when-some [data (lookup-entry config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :load-balancer-attributes)]
+  (when-some [data (lookup-entry config id :load-balancer-attributes)]
     (. builder loadBalancerAttributes data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :scheme)]
+  (when-some [data (lookup-entry config id :scheme)]
     (. builder scheme data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnet-mappings)]
+  (when-some [data (lookup-entry config id :subnet-mappings)]
     (. builder subnetMappings data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -3155,13 +3155,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^CfnLoadBalancer$SubnetMappingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allocation-id)]
+  (when-some [data (lookup-entry config id :allocation-id)]
     (. builder allocationId data))
-  (when-let [data (lookup-entry config id :i-pv6-address)]
+  (when-some [data (lookup-entry config id :i-pv6-address)]
     (. builder iPv6Address data))
-  (when-let [data (lookup-entry config id :private-i-pv4-address)]
+  (when-some [data (lookup-entry config id :private-i-pv4-address)]
     (. builder privateIPv4Address data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 
@@ -3207,43 +3207,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnTargetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :health-check-enabled)]
+  (when-some [data (lookup-entry config id :health-check-enabled)]
     (. builder healthCheckEnabled data))
-  (when-let [data (lookup-entry config id :health-check-interval-seconds)]
+  (when-some [data (lookup-entry config id :health-check-interval-seconds)]
     (. builder healthCheckIntervalSeconds data))
-  (when-let [data (lookup-entry config id :health-check-path)]
+  (when-some [data (lookup-entry config id :health-check-path)]
     (. builder healthCheckPath data))
-  (when-let [data (lookup-entry config id :health-check-port)]
+  (when-some [data (lookup-entry config id :health-check-port)]
     (. builder healthCheckPort data))
-  (when-let [data (lookup-entry config id :health-check-protocol)]
+  (when-some [data (lookup-entry config id :health-check-protocol)]
     (. builder healthCheckProtocol data))
-  (when-let [data (lookup-entry config id :health-check-timeout-seconds)]
+  (when-some [data (lookup-entry config id :health-check-timeout-seconds)]
     (. builder healthCheckTimeoutSeconds data))
-  (when-let [data (lookup-entry config id :healthy-threshold-count)]
+  (when-some [data (lookup-entry config id :healthy-threshold-count)]
     (. builder healthyThresholdCount data))
-  (when-let [data (lookup-entry config id :ip-address-type)]
+  (when-some [data (lookup-entry config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :matcher)]
+  (when-some [data (lookup-entry config id :matcher)]
     (. builder matcher data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :protocol-version)]
+  (when-some [data (lookup-entry config id :protocol-version)]
     (. builder protocolVersion data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-group-attributes)]
+  (when-some [data (lookup-entry config id :target-group-attributes)]
     (. builder targetGroupAttributes data))
-  (when-let [data (lookup-entry config id :target-type)]
+  (when-some [data (lookup-entry config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold-count)]
     (. builder unhealthyThresholdCount data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -3272,9 +3272,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `httpCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-code` |
 "
   [^CfnTargetGroup$MatcherProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc-code)]
+  (when-some [data (lookup-entry config id :grpc-code)]
     (. builder grpcCode data))
-  (when-let [data (lookup-entry config id :http-code)]
+  (when-some [data (lookup-entry config id :http-code)]
     (. builder httpCode data))
   (.build builder))
 
@@ -3320,43 +3320,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnTargetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :health-check-enabled)]
+  (when-some [data (lookup-entry config id :health-check-enabled)]
     (. builder healthCheckEnabled data))
-  (when-let [data (lookup-entry config id :health-check-interval-seconds)]
+  (when-some [data (lookup-entry config id :health-check-interval-seconds)]
     (. builder healthCheckIntervalSeconds data))
-  (when-let [data (lookup-entry config id :health-check-path)]
+  (when-some [data (lookup-entry config id :health-check-path)]
     (. builder healthCheckPath data))
-  (when-let [data (lookup-entry config id :health-check-port)]
+  (when-some [data (lookup-entry config id :health-check-port)]
     (. builder healthCheckPort data))
-  (when-let [data (lookup-entry config id :health-check-protocol)]
+  (when-some [data (lookup-entry config id :health-check-protocol)]
     (. builder healthCheckProtocol data))
-  (when-let [data (lookup-entry config id :health-check-timeout-seconds)]
+  (when-some [data (lookup-entry config id :health-check-timeout-seconds)]
     (. builder healthCheckTimeoutSeconds data))
-  (when-let [data (lookup-entry config id :healthy-threshold-count)]
+  (when-some [data (lookup-entry config id :healthy-threshold-count)]
     (. builder healthyThresholdCount data))
-  (when-let [data (lookup-entry config id :ip-address-type)]
+  (when-some [data (lookup-entry config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :matcher)]
+  (when-some [data (lookup-entry config id :matcher)]
     (. builder matcher data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :protocol-version)]
+  (when-some [data (lookup-entry config id :protocol-version)]
     (. builder protocolVersion data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-group-attributes)]
+  (when-some [data (lookup-entry config id :target-group-attributes)]
     (. builder targetGroupAttributes data))
-  (when-let [data (lookup-entry config id :target-type)]
+  (when-some [data (lookup-entry config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold-count)]
     (. builder unhealthyThresholdCount data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -3386,11 +3386,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 "
   [^CfnTargetGroup$TargetDescriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zone)]
+  (when-some [data (lookup-entry config id :availability-zone)]
     (. builder availabilityZone data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
 
@@ -3419,9 +3419,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnTargetGroup$TargetGroupAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -3453,15 +3453,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTrustStore$Builder builder id config]
-  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-bucket)]
+  (when-some [data (lookup-entry config id :ca-certificates-bundle-s3-bucket)]
     (. builder caCertificatesBundleS3Bucket data))
-  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-key)]
+  (when-some [data (lookup-entry config id :ca-certificates-bundle-s3-key)]
     (. builder caCertificatesBundleS3Key data))
-  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-object-version)]
+  (when-some [data (lookup-entry config id :ca-certificates-bundle-s3-object-version)]
     (. builder caCertificatesBundleS3ObjectVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -3493,15 +3493,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTrustStoreProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-bucket)]
+  (when-some [data (lookup-entry config id :ca-certificates-bundle-s3-bucket)]
     (. builder caCertificatesBundleS3Bucket data))
-  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-key)]
+  (when-some [data (lookup-entry config id :ca-certificates-bundle-s3-key)]
     (. builder caCertificatesBundleS3Key data))
-  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-object-version)]
+  (when-some [data (lookup-entry config id :ca-certificates-bundle-s3-object-version)]
     (. builder caCertificatesBundleS3ObjectVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -3530,9 +3530,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |
 "
   [^CfnTrustStoreRevocation$Builder builder id config]
-  (when-let [data (lookup-entry config id :revocation-contents)]
+  (when-some [data (lookup-entry config id :revocation-contents)]
     (. builder revocationContents data))
-  (when-let [data (lookup-entry config id :trust-store-arn)]
+  (when-some [data (lookup-entry config id :trust-store-arn)]
     (. builder trustStoreArn data))
   (.build builder))
 
@@ -3561,9 +3561,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |
 "
   [^CfnTrustStoreRevocationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :revocation-contents)]
+  (when-some [data (lookup-entry config id :revocation-contents)]
     (. builder revocationContents data))
-  (when-let [data (lookup-entry config id :trust-store-arn)]
+  (when-some [data (lookup-entry config id :trust-store-arn)]
     (. builder trustStoreArn data))
   (.build builder))
 
@@ -3594,13 +3594,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-object-version` |
 "
   [^CfnTrustStoreRevocation$RevocationContentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :revocation-type)]
+  (when-some [data (lookup-entry config id :revocation-type)]
     (. builder revocationType data))
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-key)]
+  (when-some [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
-  (when-let [data (lookup-entry config id :s3-object-version)]
+  (when-some [data (lookup-entry config id :s3-object-version)]
     (. builder s3ObjectVersion data))
   (.build builder))
 
@@ -3631,13 +3631,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |
 "
   [^CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :number-of-revoked-entries)]
+  (when-some [data (lookup-entry config id :number-of-revoked-entries)]
     (. builder numberOfRevokedEntries data))
-  (when-let [data (lookup-entry config id :revocation-id)]
+  (when-some [data (lookup-entry config id :revocation-id)]
     (. builder revocationId data))
-  (when-let [data (lookup-entry config id :revocation-type)]
+  (when-some [data (lookup-entry config id :revocation-type)]
     (. builder revocationType data))
-  (when-let [data (lookup-entry config id :trust-store-arn)]
+  (when-some [data (lookup-entry config id :trust-store-arn)]
     (. builder trustStoreArn data))
   (.build builder))
 
@@ -3666,9 +3666,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `messageBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-body` |
 "
   [^FixedResponseOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :message-body)]
+  (when-some [data (lookup-entry config id :message-body)]
     (. builder messageBody data))
   (.build builder))
 
@@ -3696,7 +3696,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stickinessDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-duration` |
 "
   [^ForwardOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :stickiness-duration)]
+  (when-some [data (lookup-entry config id :stickiness-duration)]
     (. builder stickinessDuration data))
   (.build builder))
 
@@ -3733,25 +3733,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unhealthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold-count` |
 "
   [^HealthCheck$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :healthy-grpc-codes)]
+  (when-some [data (lookup-entry config id :healthy-grpc-codes)]
     (. builder healthyGrpcCodes data))
-  (when-let [data (lookup-entry config id :healthy-http-codes)]
+  (when-some [data (lookup-entry config id :healthy-http-codes)]
     (. builder healthyHttpCodes data))
-  (when-let [data (lookup-entry config id :healthy-threshold-count)]
+  (when-some [data (lookup-entry config id :healthy-threshold-count)]
     (. builder healthyThresholdCount data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (protocol config id :protocol)]
+  (when-some [data (protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold-count)]
     (. builder unhealthyThresholdCount data))
   (.build builder))
 
@@ -3780,9 +3780,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
 "
   [^LoadBalancerTargetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-json)]
+  (when-some [data (lookup-entry config id :target-json)]
     (. builder targetJson data))
-  (when-let [data (target-type config id :target-type)]
+  (when-some [data (target-type config id :target-type)]
     (. builder targetType data))
   (.build builder))
 
@@ -3810,7 +3810,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stickinessDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-duration` |
 "
   [^NetworkForwardOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :stickiness-duration)]
+  (when-some [data (lookup-entry config id :stickiness-duration)]
     (. builder stickinessDuration data))
   (.build builder))
 
@@ -3845,21 +3845,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
 "
   [^NetworkListener$Builder builder id config]
-  (when-let [data (alpn-policy config id :alpn-policy)]
+  (when-some [data (alpn-policy config id :alpn-policy)]
     (. builder alpnPolicy data))
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :default-action)]
+  (when-some [data (lookup-entry config id :default-action)]
     (. builder defaultAction data))
-  (when-let [data (lookup-entry config id :default-target-groups)]
+  (when-some [data (lookup-entry config id :default-target-groups)]
     (. builder defaultTargetGroups data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (protocol config id :protocol)]
+  (when-some [data (protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (ssl-policy config id :ssl-policy)]
+  (when-some [data (ssl-policy config id :ssl-policy)]
     (. builder sslPolicy data))
   (.build builder))
 
@@ -3890,13 +3890,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
 "
   [^NetworkListenerLookupOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :listener-port)]
+  (when-some [data (lookup-entry config id :listener-port)]
     (. builder listenerPort data))
-  (when-let [data (protocol config id :listener-protocol)]
+  (when-some [data (protocol config id :listener-protocol)]
     (. builder listenerProtocol data))
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-tags)]
+  (when-some [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
 
@@ -3931,21 +3931,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
 "
   [^NetworkListenerProps$Builder builder id config]
-  (when-let [data (alpn-policy config id :alpn-policy)]
+  (when-some [data (alpn-policy config id :alpn-policy)]
     (. builder alpnPolicy data))
-  (when-let [data (lookup-entry config id :certificates)]
+  (when-some [data (lookup-entry config id :certificates)]
     (. builder certificates data))
-  (when-let [data (lookup-entry config id :default-action)]
+  (when-some [data (lookup-entry config id :default-action)]
     (. builder defaultAction data))
-  (when-let [data (lookup-entry config id :default-target-groups)]
+  (when-some [data (lookup-entry config id :default-target-groups)]
     (. builder defaultTargetGroups data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (protocol config id :protocol)]
+  (when-some [data (protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (ssl-policy config id :ssl-policy)]
+  (when-some [data (ssl-policy config id :ssl-policy)]
     (. builder sslPolicy data))
   (.build builder))
 
@@ -3977,15 +3977,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^NetworkLoadBalancerAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
+  (when-some [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
     (. builder loadBalancerCanonicalHostedZoneId data))
-  (when-let [data (lookup-entry config id :load-balancer-dns-name)]
+  (when-some [data (lookup-entry config id :load-balancer-dns-name)]
     (. builder loadBalancerDnsName data))
-  (when-let [data (lookup-entry config id :load-balancer-security-groups)]
+  (when-some [data (lookup-entry config id :load-balancer-security-groups)]
     (. builder loadBalancerSecurityGroups data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -4023,27 +4023,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^NetworkLoadBalancer$Builder builder id config]
-  (when-let [data (client-routing-policy config id :client-routing-policy)]
+  (when-some [data (client-routing-policy config id :client-routing-policy)]
     (. builder clientRoutingPolicy data))
-  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+  (when-some [data (lookup-entry config id :cross-zone-enabled)]
     (. builder crossZoneEnabled data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+  (when-some [data (lookup-entry config id :deny-all-igw-traffic)]
     (. builder denyAllIgwTraffic data))
-  (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
+  (when-some [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
     (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
-  (when-let [data (lookup-entry config id :internet-facing)]
+  (when-some [data (lookup-entry config id :internet-facing)]
     (. builder internetFacing data))
-  (when-let [data (ip-address-type config id :ip-address-type)]
+  (when-some [data (ip-address-type config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :load-balancer-name)]
+  (when-some [data (lookup-entry config id :load-balancer-name)]
     (. builder loadBalancerName data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -4072,9 +4072,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
 "
   [^NetworkLoadBalancerLookupOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-tags)]
+  (when-some [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
 
@@ -4112,27 +4112,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^NetworkLoadBalancerProps$Builder builder id config]
-  (when-let [data (client-routing-policy config id :client-routing-policy)]
+  (when-some [data (client-routing-policy config id :client-routing-policy)]
     (. builder clientRoutingPolicy data))
-  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+  (when-some [data (lookup-entry config id :cross-zone-enabled)]
     (. builder crossZoneEnabled data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+  (when-some [data (lookup-entry config id :deny-all-igw-traffic)]
     (. builder denyAllIgwTraffic data))
-  (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
+  (when-some [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
     (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
-  (when-let [data (lookup-entry config id :internet-facing)]
+  (when-some [data (lookup-entry config id :internet-facing)]
     (. builder internetFacing data))
-  (when-let [data (ip-address-type config id :ip-address-type)]
+  (when-some [data (ip-address-type config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :load-balancer-name)]
+  (when-some [data (lookup-entry config id :load-balancer-name)]
     (. builder loadBalancerName data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -4170,27 +4170,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^NetworkTargetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-termination)]
+  (when-some [data (lookup-entry config id :connection-termination)]
     (. builder connectionTermination data))
-  (when-let [data (lookup-entry config id :deregistration-delay)]
+  (when-some [data (lookup-entry config id :deregistration-delay)]
     (. builder deregistrationDelay data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (protocol config id :protocol)]
+  (when-some [data (protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :proxy-protocol-v2)]
+  (when-some [data (lookup-entry config id :proxy-protocol-v2)]
     (. builder proxyProtocolV2 data))
-  (when-let [data (lookup-entry config id :target-group-name)]
+  (when-some [data (lookup-entry config id :target-group-name)]
     (. builder targetGroupName data))
-  (when-let [data (target-type config id :target-type)]
+  (when-some [data (target-type config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -4228,27 +4228,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^NetworkTargetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-termination)]
+  (when-some [data (lookup-entry config id :connection-termination)]
     (. builder connectionTermination data))
-  (when-let [data (lookup-entry config id :deregistration-delay)]
+  (when-some [data (lookup-entry config id :deregistration-delay)]
     (. builder deregistrationDelay data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (protocol config id :protocol)]
+  (when-some [data (protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :proxy-protocol-v2)]
+  (when-some [data (lookup-entry config id :proxy-protocol-v2)]
     (. builder proxyProtocolV2 data))
-  (when-let [data (lookup-entry config id :target-group-name)]
+  (when-some [data (lookup-entry config id :target-group-name)]
     (. builder targetGroupName data))
-  (when-let [data (target-type config id :target-type)]
+  (when-some [data (target-type config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -4277,9 +4277,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^NetworkWeightedTargetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-group)]
+  (when-some [data (lookup-entry config id :target-group)]
     (. builder targetGroup data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -4308,9 +4308,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^QueryStringCondition$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -4343,17 +4343,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `query` | java.lang.String | [[cdk.support/lookup-entry]] | `:query` |
 "
   [^RedirectOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :host)]
+  (when-some [data (lookup-entry config id :host)]
     (. builder host data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permanent)]
+  (when-some [data (lookup-entry config id :permanent)]
     (. builder permanent data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :query)]
+  (when-some [data (lookup-entry config id :query)]
     (. builder query data))
   (.build builder))
 
@@ -4382,9 +4382,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
 "
   [^TargetGroupAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :load-balancer-arns)]
+  (when-some [data (lookup-entry config id :load-balancer-arns)]
     (. builder loadBalancerArns data))
-  (when-let [data (lookup-entry config id :target-group-arn)]
+  (when-some [data (lookup-entry config id :target-group-arn)]
     (. builder targetGroupArn data))
   (.build builder))
 
@@ -4413,9 +4413,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^WeightedTargetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-group)]
+  (when-some [data (lookup-entry config id :target-group)]
     (. builder targetGroup data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 

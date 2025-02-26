@@ -22,9 +22,9 @@
 | `keyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-arn` |
 "
   [^CfnAlias$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-name)]
+  (when-some [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
-  (when-let [data (lookup-entry config id :key-arn)]
+  (when-some [data (lookup-entry config id :key-arn)]
     (. builder keyArn data))
   (.build builder))
 
@@ -53,9 +53,9 @@
 | `keyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-arn` |
 "
   [^CfnAliasProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-name)]
+  (when-some [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
-  (when-let [data (lookup-entry config id :key-arn)]
+  (when-some [data (lookup-entry config id :key-arn)]
     (. builder keyArn data))
   (.build builder))
 
@@ -87,15 +87,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :exportable)]
+  (when-some [data (lookup-entry config id :exportable)]
     (. builder exportable data))
-  (when-let [data (lookup-entry config id :key-attributes)]
+  (when-some [data (lookup-entry config id :key-attributes)]
     (. builder keyAttributes data))
-  (when-let [data (lookup-entry config id :key-check-value-algorithm)]
+  (when-some [data (lookup-entry config id :key-check-value-algorithm)]
     (. builder keyCheckValueAlgorithm data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -126,13 +126,13 @@
 | `keyUsage` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-usage` |
 "
   [^CfnKey$KeyAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :key-class)]
+  (when-some [data (lookup-entry config id :key-class)]
     (. builder keyClass data))
-  (when-let [data (lookup-entry config id :key-modes-of-use)]
+  (when-some [data (lookup-entry config id :key-modes-of-use)]
     (. builder keyModesOfUse data))
-  (when-let [data (lookup-entry config id :key-usage)]
+  (when-some [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
   (.build builder))
 
@@ -168,23 +168,23 @@
 | `wrap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:wrap` |
 "
   [^CfnKey$KeyModesOfUseProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :decrypt)]
+  (when-some [data (lookup-entry config id :decrypt)]
     (. builder decrypt data))
-  (when-let [data (lookup-entry config id :derive-key)]
+  (when-some [data (lookup-entry config id :derive-key)]
     (. builder deriveKey data))
-  (when-let [data (lookup-entry config id :encrypt)]
+  (when-some [data (lookup-entry config id :encrypt)]
     (. builder encrypt data))
-  (when-let [data (lookup-entry config id :generate)]
+  (when-some [data (lookup-entry config id :generate)]
     (. builder generate data))
-  (when-let [data (lookup-entry config id :no-restrictions)]
+  (when-some [data (lookup-entry config id :no-restrictions)]
     (. builder noRestrictions data))
-  (when-let [data (lookup-entry config id :sign)]
+  (when-some [data (lookup-entry config id :sign)]
     (. builder sign data))
-  (when-let [data (lookup-entry config id :unwrap)]
+  (when-some [data (lookup-entry config id :unwrap)]
     (. builder unwrap data))
-  (when-let [data (lookup-entry config id :verify)]
+  (when-some [data (lookup-entry config id :verify)]
     (. builder verify data))
-  (when-let [data (lookup-entry config id :wrap)]
+  (when-some [data (lookup-entry config id :wrap)]
     (. builder wrap data))
   (.build builder))
 
@@ -216,15 +216,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :exportable)]
+  (when-some [data (lookup-entry config id :exportable)]
     (. builder exportable data))
-  (when-let [data (lookup-entry config id :key-attributes)]
+  (when-some [data (lookup-entry config id :key-attributes)]
     (. builder keyAttributes data))
-  (when-let [data (lookup-entry config id :key-check-value-algorithm)]
+  (when-some [data (lookup-entry config id :key-check-value-algorithm)]
     (. builder keyCheckValueAlgorithm data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

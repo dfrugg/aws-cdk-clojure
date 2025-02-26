@@ -177,13 +177,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^AliasTargetInstance$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -214,13 +214,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^AliasTargetInstanceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -249,9 +249,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
 "
   [^BaseInstanceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
   (.build builder))
 
@@ -280,9 +280,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^BaseNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -313,13 +313,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^BaseServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-health-check)]
+  (when-some [data (lookup-entry config id :custom-health-check)]
     (. builder customHealthCheck data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -349,11 +349,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnHttpNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -383,11 +383,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnHttpNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -417,11 +417,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-id` |
 "
   [^CfnInstance$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-attributes)]
+  (when-some [data (lookup-entry config id :instance-attributes)]
     (. builder instanceAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :service-id)]
+  (when-some [data (lookup-entry config id :service-id)]
     (. builder serviceId data))
   (.build builder))
 
@@ -451,11 +451,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-id` |
 "
   [^CfnInstanceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-attributes)]
+  (when-some [data (lookup-entry config id :instance-attributes)]
     (. builder instanceAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :service-id)]
+  (when-some [data (lookup-entry config id :service-id)]
     (. builder serviceId data))
   (.build builder))
 
@@ -487,15 +487,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CfnPrivateDnsNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -523,7 +523,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `soa` | software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace$SOAProperty | [[cdk.support/lookup-entry]] | `:soa` |
 "
   [^CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :soa)]
+  (when-some [data (lookup-entry config id :soa)]
     (. builder soa data))
   (.build builder))
 
@@ -551,7 +551,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dnsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-properties` |
 "
   [^CfnPrivateDnsNamespace$PropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-properties)]
+  (when-some [data (lookup-entry config id :dns-properties)]
     (. builder dnsProperties data))
   (.build builder))
 
@@ -583,15 +583,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CfnPrivateDnsNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -619,7 +619,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
 "
   [^CfnPrivateDnsNamespace$SOAProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
   (.build builder))
 
@@ -650,13 +650,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPublicDnsNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -684,7 +684,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dnsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-properties` |
 "
   [^CfnPublicDnsNamespace$PropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-properties)]
+  (when-some [data (lookup-entry config id :dns-properties)]
     (. builder dnsProperties data))
   (.build builder))
 
@@ -715,13 +715,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPublicDnsNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -749,7 +749,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `soa` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:soa` |
 "
   [^CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :soa)]
+  (when-some [data (lookup-entry config id :soa)]
     (. builder soa data))
   (.build builder))
 
@@ -777,7 +777,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
 "
   [^CfnPublicDnsNamespace$SOAProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
   (.build builder))
 
@@ -812,21 +812,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnService$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :dns-config)]
+  (when-some [data (lookup-entry config id :dns-config)]
     (. builder dnsConfig data))
-  (when-let [data (lookup-entry config id :health-check-config)]
+  (when-some [data (lookup-entry config id :health-check-config)]
     (. builder healthCheckConfig data))
-  (when-let [data (lookup-entry config id :health-check-custom-config)]
+  (when-some [data (lookup-entry config id :health-check-custom-config)]
     (. builder healthCheckCustomConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :namespace-id)]
+  (when-some [data (lookup-entry config id :namespace-id)]
     (. builder namespaceId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -856,11 +856,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `routingPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:routing-policy` |
 "
   [^CfnService$DnsConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-records)]
+  (when-some [data (lookup-entry config id :dns-records)]
     (. builder dnsRecords data))
-  (when-let [data (lookup-entry config id :namespace-id)]
+  (when-some [data (lookup-entry config id :namespace-id)]
     (. builder namespaceId data))
-  (when-let [data (lookup-entry config id :routing-policy)]
+  (when-some [data (lookup-entry config id :routing-policy)]
     (. builder routingPolicy data))
   (.build builder))
 
@@ -889,9 +889,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnService$DnsRecordProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -921,11 +921,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnService$HealthCheckConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :failure-threshold)]
+  (when-some [data (lookup-entry config id :failure-threshold)]
     (. builder failureThreshold data))
-  (when-let [data (lookup-entry config id :resource-path)]
+  (when-some [data (lookup-entry config id :resource-path)]
     (. builder resourcePath data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -953,7 +953,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |
 "
   [^CfnService$HealthCheckCustomConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :failure-threshold)]
+  (when-some [data (lookup-entry config id :failure-threshold)]
     (. builder failureThreshold data))
   (.build builder))
 
@@ -988,21 +988,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :dns-config)]
+  (when-some [data (lookup-entry config id :dns-config)]
     (. builder dnsConfig data))
-  (when-let [data (lookup-entry config id :health-check-config)]
+  (when-some [data (lookup-entry config id :health-check-config)]
     (. builder healthCheckConfig data))
-  (when-let [data (lookup-entry config id :health-check-custom-config)]
+  (when-some [data (lookup-entry config id :health-check-custom-config)]
     (. builder healthCheckCustomConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :namespace-id)]
+  (when-some [data (lookup-entry config id :namespace-id)]
     (. builder namespaceId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1032,11 +1032,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
 "
   [^CnameInstanceBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-cname)]
+  (when-some [data (lookup-entry config id :instance-cname)]
     (. builder instanceCname data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
   (.build builder))
 
@@ -1067,13 +1067,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^CnameInstance$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-cname)]
+  (when-some [data (lookup-entry config id :instance-cname)]
     (. builder instanceCname data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -1104,13 +1104,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^CnameInstanceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-cname)]
+  (when-some [data (lookup-entry config id :instance-cname)]
     (. builder instanceCname data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -1146,23 +1146,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |
 "
   [^DnsServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-health-check)]
+  (when-some [data (lookup-entry config id :custom-health-check)]
     (. builder customHealthCheck data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (discovery-type config id :discovery-type)]
+  (when-some [data (discovery-type config id :discovery-type)]
     (. builder discoveryType data))
-  (when-let [data (dns-record-type config id :dns-record-type)]
+  (when-some [data (dns-record-type config id :dns-record-type)]
     (. builder dnsRecordType data))
-  (when-let [data (lookup-entry config id :dns-ttl)]
+  (when-some [data (lookup-entry config id :dns-ttl)]
     (. builder dnsTtl data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (routing-policy config id :routing-policy)]
+  (when-some [data (routing-policy config id :routing-policy)]
     (. builder routingPolicy data))
   (.build builder))
 
@@ -1192,11 +1192,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | software.amazon.awscdk.services.servicediscovery.HealthCheckType | [[cdk.api.services.servicediscovery/health-check-type]] | `:type` |
 "
   [^HealthCheckConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :failure-threshold)]
+  (when-some [data (lookup-entry config id :failure-threshold)]
     (. builder failureThreshold data))
-  (when-let [data (lookup-entry config id :resource-path)]
+  (when-some [data (lookup-entry config id :resource-path)]
     (. builder resourcePath data))
-  (when-let [data (health-check-type config id :type)]
+  (when-some [data (health-check-type config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1224,7 +1224,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |
 "
   [^HealthCheckCustomConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :failure-threshold)]
+  (when-some [data (lookup-entry config id :failure-threshold)]
     (. builder failureThreshold data))
   (.build builder))
 
@@ -1254,11 +1254,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
 "
   [^HttpNamespaceAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :namespace-arn)]
+  (when-some [data (lookup-entry config id :namespace-arn)]
     (. builder namespaceArn data))
-  (when-let [data (lookup-entry config id :namespace-id)]
+  (when-some [data (lookup-entry config id :namespace-id)]
     (. builder namespaceId data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
   (.build builder))
 
@@ -1287,9 +1287,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^HttpNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1318,9 +1318,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^HttpNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1352,15 +1352,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 "
   [^IpInstanceBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :ipv4)]
+  (when-some [data (lookup-entry config id :ipv4)]
     (. builder ipv4 data))
-  (when-let [data (lookup-entry config id :ipv6)]
+  (when-some [data (lookup-entry config id :ipv6)]
     (. builder ipv6 data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
 
@@ -1393,17 +1393,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^IpInstance$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :ipv4)]
+  (when-some [data (lookup-entry config id :ipv4)]
     (. builder ipv4 data))
-  (when-let [data (lookup-entry config id :ipv6)]
+  (when-some [data (lookup-entry config id :ipv6)]
     (. builder ipv6 data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -1436,17 +1436,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^IpInstanceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :ipv4)]
+  (when-some [data (lookup-entry config id :ipv4)]
     (. builder ipv4 data))
-  (when-let [data (lookup-entry config id :ipv6)]
+  (when-some [data (lookup-entry config id :ipv6)]
     (. builder ipv6 data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -1475,9 +1475,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
 "
   [^NonIpInstanceBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
   (.build builder))
 
@@ -1507,11 +1507,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^NonIpInstance$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -1541,11 +1541,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^NonIpInstanceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-attributes)]
+  (when-some [data (lookup-entry config id :custom-attributes)]
     (. builder customAttributes data))
-  (when-let [data (lookup-entry config id :instance-id)]
+  (when-some [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -1575,11 +1575,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
 "
   [^PrivateDnsNamespaceAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :namespace-arn)]
+  (when-some [data (lookup-entry config id :namespace-arn)]
     (. builder namespaceArn data))
-  (when-let [data (lookup-entry config id :namespace-id)]
+  (when-some [data (lookup-entry config id :namespace-id)]
     (. builder namespaceId data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
   (.build builder))
 
@@ -1609,11 +1609,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^PrivateDnsNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -1643,11 +1643,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^PrivateDnsNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -1677,11 +1677,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
 "
   [^PublicDnsNamespaceAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :namespace-arn)]
+  (when-some [data (lookup-entry config id :namespace-arn)]
     (. builder namespaceArn data))
-  (when-let [data (lookup-entry config id :namespace-id)]
+  (when-some [data (lookup-entry config id :namespace-id)]
     (. builder namespaceId data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
   (.build builder))
 
@@ -1710,9 +1710,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^PublicDnsNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1741,9 +1741,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^PublicDnsNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1777,19 +1777,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^ServiceAttributes$Builder builder id config]
-  (when-let [data (discovery-type config id :discovery-type)]
+  (when-some [data (discovery-type config id :discovery-type)]
     (. builder discoveryType data))
-  (when-let [data (dns-record-type config id :dns-record-type)]
+  (when-some [data (dns-record-type config id :dns-record-type)]
     (. builder dnsRecordType data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (routing-policy config id :routing-policy)]
+  (when-some [data (routing-policy config id :routing-policy)]
     (. builder routingPolicy data))
-  (when-let [data (lookup-entry config id :service-arn)]
+  (when-some [data (lookup-entry config id :service-arn)]
     (. builder serviceArn data))
-  (when-let [data (lookup-entry config id :service-id)]
+  (when-some [data (lookup-entry config id :service-id)]
     (. builder serviceId data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -1826,25 +1826,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |
 "
   [^Service$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-health-check)]
+  (when-some [data (lookup-entry config id :custom-health-check)]
     (. builder customHealthCheck data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (discovery-type config id :discovery-type)]
+  (when-some [data (discovery-type config id :discovery-type)]
     (. builder discoveryType data))
-  (when-let [data (dns-record-type config id :dns-record-type)]
+  (when-some [data (dns-record-type config id :dns-record-type)]
     (. builder dnsRecordType data))
-  (when-let [data (lookup-entry config id :dns-ttl)]
+  (when-some [data (lookup-entry config id :dns-ttl)]
     (. builder dnsTtl data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (routing-policy config id :routing-policy)]
+  (when-some [data (routing-policy config id :routing-policy)]
     (. builder routingPolicy data))
   (.build builder))
 
@@ -1881,25 +1881,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |
 "
   [^ServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-health-check)]
+  (when-some [data (lookup-entry config id :custom-health-check)]
     (. builder customHealthCheck data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (discovery-type config id :discovery-type)]
+  (when-some [data (discovery-type config id :discovery-type)]
     (. builder discoveryType data))
-  (when-let [data (dns-record-type config id :dns-record-type)]
+  (when-some [data (dns-record-type config id :dns-record-type)]
     (. builder dnsRecordType data))
-  (when-let [data (lookup-entry config id :dns-ttl)]
+  (when-some [data (lookup-entry config id :dns-ttl)]
     (. builder dnsTtl data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (routing-policy config id :routing-policy)]
+  (when-some [data (routing-policy config id :routing-policy)]
     (. builder routingPolicy data))
   (.build builder))
 

@@ -54,11 +54,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAnalysisTemplate$AnalysisParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -86,7 +86,7 @@
 | `referencedTables` | java.util.List | [[cdk.support/lookup-entry]] | `:referenced-tables` |
 "
   [^CfnAnalysisTemplate$AnalysisSchemaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :referenced-tables)]
+  (when-some [data (lookup-entry config id :referenced-tables)]
     (. builder referencedTables data))
   (.build builder))
 
@@ -114,7 +114,7 @@
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
 "
   [^CfnAnalysisTemplate$AnalysisSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :text)]
+  (when-some [data (lookup-entry config id :text)]
     (. builder text data))
   (.build builder))
 
@@ -148,19 +148,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAnalysisTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :analysis-parameters)]
+  (when-some [data (lookup-entry config id :analysis-parameters)]
     (. builder analysisParameters data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :membership-identifier)]
+  (when-some [data (lookup-entry config id :membership-identifier)]
     (. builder membershipIdentifier data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -194,19 +194,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAnalysisTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :analysis-parameters)]
+  (when-some [data (lookup-entry config id :analysis-parameters)]
     (. builder analysisParameters data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :membership-identifier)]
+  (when-some [data (lookup-entry config id :membership-identifier)]
     (. builder membershipIdentifier data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -242,23 +242,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCollaboration$Builder builder id config]
-  (when-let [data (lookup-entry config id :creator-display-name)]
+  (when-some [data (lookup-entry config id :creator-display-name)]
     (. builder creatorDisplayName data))
-  (when-let [data (lookup-entry config id :creator-member-abilities)]
+  (when-some [data (lookup-entry config id :creator-member-abilities)]
     (. builder creatorMemberAbilities data))
-  (when-let [data (lookup-entry config id :creator-payment-configuration)]
+  (when-some [data (lookup-entry config id :creator-payment-configuration)]
     (. builder creatorPaymentConfiguration data))
-  (when-let [data (lookup-entry config id :data-encryption-metadata)]
+  (when-some [data (lookup-entry config id :data-encryption-metadata)]
     (. builder dataEncryptionMetadata data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :members)]
+  (when-some [data (lookup-entry config id :members)]
     (. builder members data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :query-log-status)]
+  (when-some [data (lookup-entry config id :query-log-status)]
     (. builder queryLogStatus data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -289,13 +289,13 @@
 | `preserveNulls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preserve-nulls` |
 "
   [^CfnCollaboration$DataEncryptionMetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-cleartext)]
+  (when-some [data (lookup-entry config id :allow-cleartext)]
     (. builder allowCleartext data))
-  (when-let [data (lookup-entry config id :allow-duplicates)]
+  (when-some [data (lookup-entry config id :allow-duplicates)]
     (. builder allowDuplicates data))
-  (when-let [data (lookup-entry config id :allow-joins-on-columns-with-different-names)]
+  (when-some [data (lookup-entry config id :allow-joins-on-columns-with-different-names)]
     (. builder allowJoinsOnColumnsWithDifferentNames data))
-  (when-let [data (lookup-entry config id :preserve-nulls)]
+  (when-some [data (lookup-entry config id :preserve-nulls)]
     (. builder preserveNulls data))
   (.build builder))
 
@@ -326,13 +326,13 @@
 | `paymentConfiguration` | software.amazon.awscdk.services.cleanrooms.CfnCollaboration$PaymentConfigurationProperty | [[cdk.support/lookup-entry]] | `:payment-configuration` |
 "
   [^CfnCollaboration$MemberSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :member-abilities)]
+  (when-some [data (lookup-entry config id :member-abilities)]
     (. builder memberAbilities data))
-  (when-let [data (lookup-entry config id :payment-configuration)]
+  (when-some [data (lookup-entry config id :payment-configuration)]
     (. builder paymentConfiguration data))
   (.build builder))
 
@@ -360,7 +360,7 @@
 | `queryCompute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:query-compute` |
 "
   [^CfnCollaboration$PaymentConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :query-compute)]
+  (when-some [data (lookup-entry config id :query-compute)]
     (. builder queryCompute data))
   (.build builder))
 
@@ -396,23 +396,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCollaborationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :creator-display-name)]
+  (when-some [data (lookup-entry config id :creator-display-name)]
     (. builder creatorDisplayName data))
-  (when-let [data (lookup-entry config id :creator-member-abilities)]
+  (when-some [data (lookup-entry config id :creator-member-abilities)]
     (. builder creatorMemberAbilities data))
-  (when-let [data (lookup-entry config id :creator-payment-configuration)]
+  (when-some [data (lookup-entry config id :creator-payment-configuration)]
     (. builder creatorPaymentConfiguration data))
-  (when-let [data (lookup-entry config id :data-encryption-metadata)]
+  (when-some [data (lookup-entry config id :data-encryption-metadata)]
     (. builder dataEncryptionMetadata data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :members)]
+  (when-some [data (lookup-entry config id :members)]
     (. builder members data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :query-log-status)]
+  (when-some [data (lookup-entry config id :query-log-status)]
     (. builder queryLogStatus data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -440,7 +440,7 @@
 | `isResponsible` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-responsible` |
 "
   [^CfnCollaboration$QueryComputePaymentConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :is-responsible)]
+  (when-some [data (lookup-entry config id :is-responsible)]
     (. builder isResponsible data))
   (.build builder))
 
@@ -469,9 +469,9 @@
 | `function` | java.lang.String | [[cdk.support/lookup-entry]] | `:function` |
 "
   [^CfnConfiguredTable$AggregateColumnProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-names)]
+  (when-some [data (lookup-entry config id :column-names)]
     (. builder columnNames data))
-  (when-let [data (lookup-entry config id :function)]
+  (when-some [data (lookup-entry config id :function)]
     (. builder function data))
   (.build builder))
 
@@ -501,11 +501,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnConfiguredTable$AggregationConstraintProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-name)]
+  (when-some [data (lookup-entry config id :column-name)]
     (. builder columnName data))
-  (when-let [data (lookup-entry config id :minimum)]
+  (when-some [data (lookup-entry config id :minimum)]
     (. builder minimum data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -539,19 +539,19 @@
 | `scalarFunctions` | java.util.List | [[cdk.support/lookup-entry]] | `:scalar-functions` |
 "
   [^CfnConfiguredTable$AnalysisRuleAggregationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregate-columns)]
+  (when-some [data (lookup-entry config id :aggregate-columns)]
     (. builder aggregateColumns data))
-  (when-let [data (lookup-entry config id :allowed-join-operators)]
+  (when-some [data (lookup-entry config id :allowed-join-operators)]
     (. builder allowedJoinOperators data))
-  (when-let [data (lookup-entry config id :dimension-columns)]
+  (when-some [data (lookup-entry config id :dimension-columns)]
     (. builder dimensionColumns data))
-  (when-let [data (lookup-entry config id :join-columns)]
+  (when-some [data (lookup-entry config id :join-columns)]
     (. builder joinColumns data))
-  (when-let [data (lookup-entry config id :join-required)]
+  (when-some [data (lookup-entry config id :join-required)]
     (. builder joinRequired data))
-  (when-let [data (lookup-entry config id :output-constraints)]
+  (when-some [data (lookup-entry config id :output-constraints)]
     (. builder outputConstraints data))
-  (when-let [data (lookup-entry config id :scalar-functions)]
+  (when-some [data (lookup-entry config id :scalar-functions)]
     (. builder scalarFunctions data))
   (.build builder))
 
@@ -581,11 +581,11 @@
 | `differentialPrivacy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:differential-privacy` |
 "
   [^CfnConfiguredTable$AnalysisRuleCustomProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-analyses)]
+  (when-some [data (lookup-entry config id :allowed-analyses)]
     (. builder allowedAnalyses data))
-  (when-let [data (lookup-entry config id :allowed-analysis-providers)]
+  (when-some [data (lookup-entry config id :allowed-analysis-providers)]
     (. builder allowedAnalysisProviders data))
-  (when-let [data (lookup-entry config id :differential-privacy)]
+  (when-some [data (lookup-entry config id :differential-privacy)]
     (. builder differentialPrivacy data))
   (.build builder))
 
@@ -615,11 +615,11 @@
 | `listColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:list-columns` |
 "
   [^CfnConfiguredTable$AnalysisRuleListProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-join-operators)]
+  (when-some [data (lookup-entry config id :allowed-join-operators)]
     (. builder allowedJoinOperators data))
-  (when-let [data (lookup-entry config id :join-columns)]
+  (when-some [data (lookup-entry config id :join-columns)]
     (. builder joinColumns data))
-  (when-let [data (lookup-entry config id :list-columns)]
+  (when-some [data (lookup-entry config id :list-columns)]
     (. builder listColumns data))
   (.build builder))
 
@@ -648,9 +648,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnConfiguredTable$AnalysisRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -683,17 +683,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfiguredTableAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :configured-table-identifier)]
+  (when-some [data (lookup-entry config id :configured-table-identifier)]
     (. builder configuredTableIdentifier data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :membership-identifier)]
+  (when-some [data (lookup-entry config id :membership-identifier)]
     (. builder membershipIdentifier data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -726,17 +726,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfiguredTableAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configured-table-identifier)]
+  (when-some [data (lookup-entry config id :configured-table-identifier)]
     (. builder configuredTableIdentifier data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :membership-identifier)]
+  (when-some [data (lookup-entry config id :membership-identifier)]
     (. builder membershipIdentifier data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -770,19 +770,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfiguredTable$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-columns)]
+  (when-some [data (lookup-entry config id :allowed-columns)]
     (. builder allowedColumns data))
-  (when-let [data (lookup-entry config id :analysis-method)]
+  (when-some [data (lookup-entry config id :analysis-method)]
     (. builder analysisMethod data))
-  (when-let [data (lookup-entry config id :analysis-rules)]
+  (when-some [data (lookup-entry config id :analysis-rules)]
     (. builder analysisRules data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :table-reference)]
+  (when-some [data (lookup-entry config id :table-reference)]
     (. builder tableReference data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -810,7 +810,7 @@
 | `v1` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:v1` |
 "
   [^CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :v1)]
+  (when-some [data (lookup-entry config id :v1)]
     (. builder v1 data))
   (.build builder))
 
@@ -840,11 +840,11 @@
 | `list` | software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable$AnalysisRuleListProperty | [[cdk.support/lookup-entry]] | `:list` |
 "
   [^CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyV1Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregation)]
+  (when-some [data (lookup-entry config id :aggregation)]
     (. builder aggregation data))
-  (when-let [data (lookup-entry config id :custom)]
+  (when-some [data (lookup-entry config id :custom)]
     (. builder custom data))
-  (when-let [data (lookup-entry config id :list)]
+  (when-some [data (lookup-entry config id :list)]
     (. builder list data))
   (.build builder))
 
@@ -872,7 +872,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -900,7 +900,7 @@
 | `columns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:columns` |
 "
   [^CfnConfiguredTable$DifferentialPrivacyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :columns)]
+  (when-some [data (lookup-entry config id :columns)]
     (. builder columns data))
   (.build builder))
 
@@ -929,9 +929,9 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnConfiguredTable$GlueTableReferenceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -965,19 +965,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfiguredTableProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-columns)]
+  (when-some [data (lookup-entry config id :allowed-columns)]
     (. builder allowedColumns data))
-  (when-let [data (lookup-entry config id :analysis-method)]
+  (when-some [data (lookup-entry config id :analysis-method)]
     (. builder analysisMethod data))
-  (when-let [data (lookup-entry config id :analysis-rules)]
+  (when-some [data (lookup-entry config id :analysis-rules)]
     (. builder analysisRules data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :table-reference)]
+  (when-some [data (lookup-entry config id :table-reference)]
     (. builder tableReference data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1005,7 +1005,7 @@
 | `glue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:glue` |
 "
   [^CfnConfiguredTable$TableReferenceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :glue)]
+  (when-some [data (lookup-entry config id :glue)]
     (. builder glue data))
   (.build builder))
 
@@ -1037,15 +1037,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMembership$Builder builder id config]
-  (when-let [data (lookup-entry config id :collaboration-identifier)]
+  (when-some [data (lookup-entry config id :collaboration-identifier)]
     (. builder collaborationIdentifier data))
-  (when-let [data (lookup-entry config id :default-result-configuration)]
+  (when-some [data (lookup-entry config id :default-result-configuration)]
     (. builder defaultResultConfiguration data))
-  (when-let [data (lookup-entry config id :payment-configuration)]
+  (when-some [data (lookup-entry config id :payment-configuration)]
     (. builder paymentConfiguration data))
-  (when-let [data (lookup-entry config id :query-log-status)]
+  (when-some [data (lookup-entry config id :query-log-status)]
     (. builder queryLogStatus data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1073,7 +1073,7 @@
 | `queryCompute` | software.amazon.awscdk.services.cleanrooms.CfnMembership$MembershipQueryComputePaymentConfigProperty | [[cdk.support/lookup-entry]] | `:query-compute` |
 "
   [^CfnMembership$MembershipPaymentConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :query-compute)]
+  (when-some [data (lookup-entry config id :query-compute)]
     (. builder queryCompute data))
   (.build builder))
 
@@ -1101,7 +1101,7 @@
 | `s3` | software.amazon.awscdk.services.cleanrooms.CfnMembership$ProtectedQueryS3OutputConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
 
@@ -1130,9 +1130,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnMembership$MembershipProtectedQueryResultConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :output-configuration)]
+  (when-some [data (lookup-entry config id :output-configuration)]
     (. builder outputConfiguration data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -1160,7 +1160,7 @@
 | `isResponsible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-responsible` |
 "
   [^CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :is-responsible)]
+  (when-some [data (lookup-entry config id :is-responsible)]
     (. builder isResponsible data))
   (.build builder))
 
@@ -1192,15 +1192,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMembershipProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :collaboration-identifier)]
+  (when-some [data (lookup-entry config id :collaboration-identifier)]
     (. builder collaborationIdentifier data))
-  (when-let [data (lookup-entry config id :default-result-configuration)]
+  (when-some [data (lookup-entry config id :default-result-configuration)]
     (. builder defaultResultConfiguration data))
-  (when-let [data (lookup-entry config id :payment-configuration)]
+  (when-some [data (lookup-entry config id :payment-configuration)]
     (. builder paymentConfiguration data))
-  (when-let [data (lookup-entry config id :query-log-status)]
+  (when-some [data (lookup-entry config id :query-log-status)]
     (. builder queryLogStatus data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1230,11 +1230,11 @@
 | `resultFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-format` |
 "
   [^CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key-prefix)]
+  (when-some [data (lookup-entry config id :key-prefix)]
     (. builder keyPrefix data))
-  (when-let [data (lookup-entry config id :result-format)]
+  (when-some [data (lookup-entry config id :result-format)]
     (. builder resultFormat data))
   (.build builder))
 
@@ -1266,15 +1266,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPrivacyBudgetTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-refresh)]
+  (when-some [data (lookup-entry config id :auto-refresh)]
     (. builder autoRefresh data))
-  (when-let [data (lookup-entry config id :membership-identifier)]
+  (when-some [data (lookup-entry config id :membership-identifier)]
     (. builder membershipIdentifier data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :privacy-budget-type)]
+  (when-some [data (lookup-entry config id :privacy-budget-type)]
     (. builder privacyBudgetType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1303,9 +1303,9 @@
 | `usersNoisePerQuery` | java.lang.Number | [[cdk.support/lookup-entry]] | `:users-noise-per-query` |
 "
   [^CfnPrivacyBudgetTemplate$ParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :epsilon)]
+  (when-some [data (lookup-entry config id :epsilon)]
     (. builder epsilon data))
-  (when-let [data (lookup-entry config id :users-noise-per-query)]
+  (when-some [data (lookup-entry config id :users-noise-per-query)]
     (. builder usersNoisePerQuery data))
   (.build builder))
 
@@ -1337,15 +1337,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPrivacyBudgetTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-refresh)]
+  (when-some [data (lookup-entry config id :auto-refresh)]
     (. builder autoRefresh data))
-  (when-let [data (lookup-entry config id :membership-identifier)]
+  (when-some [data (lookup-entry config id :membership-identifier)]
     (. builder membershipIdentifier data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :privacy-budget-type)]
+  (when-some [data (lookup-entry config id :privacy-budget-type)]
     (. builder privacyBudgetType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

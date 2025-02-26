@@ -24,13 +24,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnection$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-name)]
+  (when-some [data (lookup-entry config id :connection-name)]
     (. builder connectionName data))
-  (when-let [data (lookup-entry config id :host-arn)]
+  (when-some [data (lookup-entry config id :host-arn)]
     (. builder hostArn data))
-  (when-let [data (lookup-entry config id :provider-type)]
+  (when-some [data (lookup-entry config id :provider-type)]
     (. builder providerType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -61,13 +61,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-name)]
+  (when-some [data (lookup-entry config id :connection-name)]
     (. builder connectionName data))
-  (when-let [data (lookup-entry config id :host-arn)]
+  (when-some [data (lookup-entry config id :host-arn)]
     (. builder hostArn data))
-  (when-let [data (lookup-entry config id :provider-type)]
+  (when-some [data (lookup-entry config id :provider-type)]
     (. builder providerType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -99,15 +99,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRepositoryLink$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-arn)]
+  (when-some [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
-  (when-let [data (lookup-entry config id :owner-id)]
+  (when-some [data (lookup-entry config id :owner-id)]
     (. builder ownerId data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -139,15 +139,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRepositoryLinkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-arn)]
+  (when-some [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
-  (when-let [data (lookup-entry config id :owner-id)]
+  (when-some [data (lookup-entry config id :owner-id)]
     (. builder ownerId data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -182,21 +182,21 @@
 | `triggerResourceUpdateOn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-resource-update-on` |
 "
   [^CfnSyncConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :branch)]
+  (when-some [data (lookup-entry config id :branch)]
     (. builder branch data))
-  (when-let [data (lookup-entry config id :config-file)]
+  (when-some [data (lookup-entry config id :config-file)]
     (. builder configFile data))
-  (when-let [data (lookup-entry config id :publish-deployment-status)]
+  (when-some [data (lookup-entry config id :publish-deployment-status)]
     (. builder publishDeploymentStatus data))
-  (when-let [data (lookup-entry config id :repository-link-id)]
+  (when-some [data (lookup-entry config id :repository-link-id)]
     (. builder repositoryLinkId data))
-  (when-let [data (lookup-entry config id :resource-name)]
+  (when-some [data (lookup-entry config id :resource-name)]
     (. builder resourceName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :sync-type)]
+  (when-some [data (lookup-entry config id :sync-type)]
     (. builder syncType data))
-  (when-let [data (lookup-entry config id :trigger-resource-update-on)]
+  (when-some [data (lookup-entry config id :trigger-resource-update-on)]
     (. builder triggerResourceUpdateOn data))
   (.build builder))
 
@@ -231,21 +231,21 @@
 | `triggerResourceUpdateOn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-resource-update-on` |
 "
   [^CfnSyncConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :branch)]
+  (when-some [data (lookup-entry config id :branch)]
     (. builder branch data))
-  (when-let [data (lookup-entry config id :config-file)]
+  (when-some [data (lookup-entry config id :config-file)]
     (. builder configFile data))
-  (when-let [data (lookup-entry config id :publish-deployment-status)]
+  (when-some [data (lookup-entry config id :publish-deployment-status)]
     (. builder publishDeploymentStatus data))
-  (when-let [data (lookup-entry config id :repository-link-id)]
+  (when-some [data (lookup-entry config id :repository-link-id)]
     (. builder repositoryLinkId data))
-  (when-let [data (lookup-entry config id :resource-name)]
+  (when-some [data (lookup-entry config id :resource-name)]
     (. builder resourceName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :sync-type)]
+  (when-some [data (lookup-entry config id :sync-type)]
     (. builder syncType data))
-  (when-let [data (lookup-entry config id :trigger-resource-update-on)]
+  (when-some [data (lookup-entry config id :trigger-resource-update-on)]
     (. builder triggerResourceUpdateOn data))
   (.build builder))
 

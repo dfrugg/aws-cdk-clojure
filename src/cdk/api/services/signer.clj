@@ -27,15 +27,15 @@
 | `statementId` | java.lang.String | [[cdk.support/lookup-entry]] | `:statement-id` |
 "
   [^CfnProfilePermission$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :profile-name)]
+  (when-some [data (lookup-entry config id :profile-name)]
     (. builder profileName data))
-  (when-let [data (lookup-entry config id :profile-version)]
+  (when-some [data (lookup-entry config id :profile-version)]
     (. builder profileVersion data))
-  (when-let [data (lookup-entry config id :statement-id)]
+  (when-some [data (lookup-entry config id :statement-id)]
     (. builder statementId data))
   (.build builder))
 
@@ -67,15 +67,15 @@
 | `statementId` | java.lang.String | [[cdk.support/lookup-entry]] | `:statement-id` |
 "
   [^CfnProfilePermissionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :profile-name)]
+  (when-some [data (lookup-entry config id :profile-name)]
     (. builder profileName data))
-  (when-let [data (lookup-entry config id :profile-version)]
+  (when-some [data (lookup-entry config id :profile-version)]
     (. builder profileVersion data))
-  (when-let [data (lookup-entry config id :statement-id)]
+  (when-some [data (lookup-entry config id :statement-id)]
     (. builder statementId data))
   (.build builder))
 
@@ -105,11 +105,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSigningProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :platform-id)]
+  (when-some [data (lookup-entry config id :platform-id)]
     (. builder platformId data))
-  (when-let [data (lookup-entry config id :signature-validity-period)]
+  (when-some [data (lookup-entry config id :signature-validity-period)]
     (. builder signatureValidityPeriod data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -139,11 +139,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSigningProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :platform-id)]
+  (when-some [data (lookup-entry config id :platform-id)]
     (. builder platformId data))
-  (when-let [data (lookup-entry config id :signature-validity-period)]
+  (when-some [data (lookup-entry config id :signature-validity-period)]
     (. builder signatureValidityPeriod data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -172,9 +172,9 @@
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnSigningProfile$SignatureValidityPeriodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -203,9 +203,9 @@
 | `signingProfileVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:signing-profile-version` |
 "
   [^SigningProfileAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :signing-profile-name)]
+  (when-some [data (lookup-entry config id :signing-profile-name)]
     (. builder signingProfileName data))
-  (when-let [data (lookup-entry config id :signing-profile-version)]
+  (when-some [data (lookup-entry config id :signing-profile-version)]
     (. builder signingProfileVersion data))
   (.build builder))
 
@@ -235,11 +235,11 @@
 | `signingProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:signing-profile-name` |
 "
   [^SigningProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :signature-validity)]
+  (when-some [data (lookup-entry config id :signature-validity)]
     (. builder signatureValidity data))
-  (when-let [data (lookup-entry config id :signing-profile-name)]
+  (when-some [data (lookup-entry config id :signing-profile-name)]
     (. builder signingProfileName data))
   (.build builder))
 
@@ -269,11 +269,11 @@
 | `signingProfileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:signing-profile-name` |
 "
   [^SigningProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :signature-validity)]
+  (when-some [data (lookup-entry config id :signature-validity)]
     (. builder signatureValidity data))
-  (when-let [data (lookup-entry config id :signing-profile-name)]
+  (when-some [data (lookup-entry config id :signing-profile-name)]
     (. builder signingProfileName data))
   (.build builder))
 

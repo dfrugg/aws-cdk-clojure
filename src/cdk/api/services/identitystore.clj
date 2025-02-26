@@ -22,11 +22,11 @@
 | `identityStoreId` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-store-id` |
 "
   [^CfnGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :identity-store-id)]
+  (when-some [data (lookup-entry config id :identity-store-id)]
     (. builder identityStoreId data))
   (.build builder))
 
@@ -56,11 +56,11 @@
 | `memberId` | software.amazon.awscdk.services.identitystore.CfnGroupMembership$MemberIdProperty | [[cdk.support/lookup-entry]] | `:member-id` |
 "
   [^CfnGroupMembership$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-id)]
+  (when-some [data (lookup-entry config id :group-id)]
     (. builder groupId data))
-  (when-let [data (lookup-entry config id :identity-store-id)]
+  (when-some [data (lookup-entry config id :identity-store-id)]
     (. builder identityStoreId data))
-  (when-let [data (lookup-entry config id :member-id)]
+  (when-some [data (lookup-entry config id :member-id)]
     (. builder memberId data))
   (.build builder))
 
@@ -88,7 +88,7 @@
 | `userId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-id` |
 "
   [^CfnGroupMembership$MemberIdProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :user-id)]
+  (when-some [data (lookup-entry config id :user-id)]
     (. builder userId data))
   (.build builder))
 
@@ -118,11 +118,11 @@
 | `memberId` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:member-id` |
 "
   [^CfnGroupMembershipProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-id)]
+  (when-some [data (lookup-entry config id :group-id)]
     (. builder groupId data))
-  (when-let [data (lookup-entry config id :identity-store-id)]
+  (when-some [data (lookup-entry config id :identity-store-id)]
     (. builder identityStoreId data))
-  (when-let [data (lookup-entry config id :member-id)]
+  (when-some [data (lookup-entry config id :member-id)]
     (. builder memberId data))
   (.build builder))
 
@@ -152,11 +152,11 @@
 | `identityStoreId` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity-store-id` |
 "
   [^CfnGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :identity-store-id)]
+  (when-some [data (lookup-entry config id :identity-store-id)]
     (. builder identityStoreId data))
   (.build builder))
 

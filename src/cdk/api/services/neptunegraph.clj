@@ -26,19 +26,19 @@
 | `vectorSearchConfiguration` | software.amazon.awscdk.services.neptunegraph.CfnGraph$VectorSearchConfigurationProperty | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |
 "
   [^CfnGraph$Builder builder id config]
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :graph-name)]
+  (when-some [data (lookup-entry config id :graph-name)]
     (. builder graphName data))
-  (when-let [data (lookup-entry config id :provisioned-memory)]
+  (when-some [data (lookup-entry config id :provisioned-memory)]
     (. builder provisionedMemory data))
-  (when-let [data (lookup-entry config id :public-connectivity)]
+  (when-some [data (lookup-entry config id :public-connectivity)]
     (. builder publicConnectivity data))
-  (when-let [data (lookup-entry config id :replica-count)]
+  (when-some [data (lookup-entry config id :replica-count)]
     (. builder replicaCount data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vector-search-configuration)]
+  (when-some [data (lookup-entry config id :vector-search-configuration)]
     (. builder vectorSearchConfiguration data))
   (.build builder))
 
@@ -72,19 +72,19 @@
 | `vectorSearchConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |
 "
   [^CfnGraphProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :graph-name)]
+  (when-some [data (lookup-entry config id :graph-name)]
     (. builder graphName data))
-  (when-let [data (lookup-entry config id :provisioned-memory)]
+  (when-some [data (lookup-entry config id :provisioned-memory)]
     (. builder provisionedMemory data))
-  (when-let [data (lookup-entry config id :public-connectivity)]
+  (when-some [data (lookup-entry config id :public-connectivity)]
     (. builder publicConnectivity data))
-  (when-let [data (lookup-entry config id :replica-count)]
+  (when-some [data (lookup-entry config id :replica-count)]
     (. builder replicaCount data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vector-search-configuration)]
+  (when-some [data (lookup-entry config id :vector-search-configuration)]
     (. builder vectorSearchConfiguration data))
   (.build builder))
 
@@ -112,7 +112,7 @@
 | `vectorSearchDimension` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vector-search-dimension` |
 "
   [^CfnGraph$VectorSearchConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vector-search-dimension)]
+  (when-some [data (lookup-entry config id :vector-search-dimension)]
     (. builder vectorSearchDimension data))
   (.build builder))
 
@@ -143,13 +143,13 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnPrivateGraphEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :graph-identifier)]
+  (when-some [data (lookup-entry config id :graph-identifier)]
     (. builder graphIdentifier data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -180,13 +180,13 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnPrivateGraphEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :graph-identifier)]
+  (when-some [data (lookup-entry config id :graph-identifier)]
     (. builder graphIdentifier data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 

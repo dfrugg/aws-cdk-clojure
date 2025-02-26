@@ -438,7 +438,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `destinationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-arn` |
 "
   [^AccessLogDestinationConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
   (.build builder))
 
@@ -466,7 +466,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `overrideLogicalId` | java.lang.String | [[cdk.support/lookup-entry]] | `:override-logical-id` |
 "
   [^AddApiKeyOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :override-logical-id)]
+  (when-some [data (lookup-entry config id :override-logical-id)]
     (. builder overrideLogicalId data))
   (.build builder))
 
@@ -495,9 +495,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Location` | software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location | [[cdk.support/lookup-entry]] | `:s3-location` |
 "
   [^ApiDefinitionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :inline-definition)]
+  (when-some [data (lookup-entry config id :inline-definition)]
     (. builder inlineDefinition data))
-  (when-let [data (lookup-entry config id :s3-location)]
+  (when-some [data (lookup-entry config id :s3-location)]
     (. builder s3Location data))
   (.build builder))
 
@@ -527,11 +527,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^ApiDefinitionS3Location$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -569,27 +569,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^ApiKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-name)]
+  (when-some [data (lookup-entry config id :api-key-name)]
     (. builder apiKeyName data))
-  (when-let [data (lookup-entry config id :customer-id)]
+  (when-some [data (lookup-entry config id :customer-id)]
     (. builder customerId data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :generate-distinct-id)]
+  (when-some [data (lookup-entry config id :generate-distinct-id)]
     (. builder generateDistinctId data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :stages)]
+  (when-some [data (lookup-entry config id :stages)]
     (. builder stages data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -622,17 +622,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^ApiKeyOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-name)]
+  (when-some [data (lookup-entry config id :api-key-name)]
     (. builder apiKeyName data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -670,27 +670,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^ApiKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-name)]
+  (when-some [data (lookup-entry config id :api-key-name)]
     (. builder apiKeyName data))
-  (when-let [data (lookup-entry config id :customer-id)]
+  (when-some [data (lookup-entry config id :customer-id)]
     (. builder customerId data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :generate-distinct-id)]
+  (when-some [data (lookup-entry config id :generate-distinct-id)]
     (. builder generateDistinctId data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :stages)]
+  (when-some [data (lookup-entry config id :stages)]
     (. builder stages data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -718,7 +718,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `basePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:base-path` |
 "
   [^ApiMappingOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
   (.build builder))
 
@@ -753,21 +753,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `readers` | java.util.List | [[cdk.support/lookup-entry]] | `:readers` |
 "
   [^AssetApiDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-hash)]
+  (when-some [data (lookup-entry config id :asset-hash)]
     (. builder assetHash data))
-  (when-let [data (asset-hash-type config id :asset-hash-type)]
+  (when-some [data (asset-hash-type config id :asset-hash-type)]
     (. builder assetHashType data))
-  (when-let [data (lookup-entry config id :bundling)]
+  (when-some [data (lookup-entry config id :bundling)]
     (. builder bundling data))
-  (when-let [data (lookup-entry config id :deploy-time)]
+  (when-some [data (lookup-entry config id :deploy-time)]
     (. builder deployTime data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+  (when-some [data (symlink-follow-mode config id :follow-symlinks)]
     (. builder followSymlinks data))
-  (when-let [data (ignore-mode config id :ignore-mode)]
+  (when-some [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
-  (when-let [data (lookup-entry config id :readers)]
+  (when-some [data (lookup-entry config id :readers)]
     (. builder readers data))
   (.build builder))
 
@@ -806,23 +806,23 @@ __Create Form:__ ____[java.lang.String]___
 | `subdomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:subdomain` |
 "
   [^AwsIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :action-parameters)]
+  (when-some [data (lookup-entry config id :action-parameters)]
     (. builder actionParameters data))
-  (when-let [data (lookup-entry config id :integration-http-method)]
+  (when-some [data (lookup-entry config id :integration-http-method)]
     (. builder integrationHttpMethod data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :proxy)]
+  (when-some [data (lookup-entry config id :proxy)]
     (. builder proxy data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
-  (when-let [data (lookup-entry config id :subdomain)]
+  (when-some [data (lookup-entry config id :subdomain)]
     (. builder subdomain data))
   (.build builder))
 
@@ -858,23 +858,23 @@ __Create Form:__ ____[java.lang.String]___
 | `subdomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:subdomain` |
 "
   [^AwsIntegrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :action-parameters)]
+  (when-some [data (lookup-entry config id :action-parameters)]
     (. builder actionParameters data))
-  (when-let [data (lookup-entry config id :integration-http-method)]
+  (when-some [data (lookup-entry config id :integration-http-method)]
     (. builder integrationHttpMethod data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :proxy)]
+  (when-some [data (lookup-entry config id :proxy)]
     (. builder proxy data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
-  (when-let [data (lookup-entry config id :subdomain)]
+  (when-some [data (lookup-entry config id :subdomain)]
     (. builder subdomain data))
   (.build builder))
 
@@ -906,15 +906,15 @@ __Create Form:__ ____[java.lang.String]___
 | `stage` | software.amazon.awscdk.services.apigateway.Stage | [[cdk.support/lookup-entry]] | `:stage` |
 "
   [^BasePathMapping$Builder builder id config]
-  (when-let [data (lookup-entry config id :attach-to-stage)]
+  (when-some [data (lookup-entry config id :attach-to-stage)]
     (. builder attachToStage data))
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
 
@@ -944,11 +944,11 @@ __Create Form:__ ____[java.lang.String]___
 | `stage` | software.amazon.awscdk.services.apigateway.Stage | [[cdk.support/lookup-entry]] | `:stage` |
 "
   [^BasePathMappingOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :attach-to-stage)]
+  (when-some [data (lookup-entry config id :attach-to-stage)]
     (. builder attachToStage data))
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
 
@@ -980,15 +980,15 @@ __Create Form:__ ____[java.lang.String]___
 | `stage` | software.amazon.awscdk.services.apigateway.Stage | [[cdk.support/lookup-entry]] | `:stage` |
 "
   [^BasePathMappingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :attach-to-stage)]
+  (when-some [data (lookup-entry config id :attach-to-stage)]
     (. builder attachToStage data))
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
 
@@ -1016,7 +1016,7 @@ __Create Form:__ ____[java.lang.String]___
 | `cloudWatchRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-role-arn` |
 "
   [^CfnAccount$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-role-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-role-arn)]
     (. builder cloudWatchRoleArn data))
   (.build builder))
 
@@ -1044,7 +1044,7 @@ __Create Form:__ ____[java.lang.String]___
 | `cloudWatchRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-role-arn` |
 "
   [^CfnAccountProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-role-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-role-arn)]
     (. builder cloudWatchRoleArn data))
   (.build builder))
 
@@ -1079,21 +1079,21 @@ __Create Form:__ ____[java.lang.String]___
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnApiKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :customer-id)]
+  (when-some [data (lookup-entry config id :customer-id)]
     (. builder customerId data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :generate-distinct-id)]
+  (when-some [data (lookup-entry config id :generate-distinct-id)]
     (. builder generateDistinctId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :stage-keys)]
+  (when-some [data (lookup-entry config id :stage-keys)]
     (. builder stageKeys data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1128,21 +1128,21 @@ __Create Form:__ ____[java.lang.String]___
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnApiKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :customer-id)]
+  (when-some [data (lookup-entry config id :customer-id)]
     (. builder customerId data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :generate-distinct-id)]
+  (when-some [data (lookup-entry config id :generate-distinct-id)]
     (. builder generateDistinctId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :stage-keys)]
+  (when-some [data (lookup-entry config id :stage-keys)]
     (. builder stageKeys data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1171,9 +1171,9 @@ __Create Form:__ ____[java.lang.String]___
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 "
   [^CfnApiKey$StageKeyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
 
@@ -1210,25 +1210,25 @@ __Create Form:__ ____[java.lang.String]___
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAuthorizer$Builder builder id config]
-  (when-let [data (lookup-entry config id :auth-type)]
+  (when-some [data (lookup-entry config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :authorizer-credentials)]
+  (when-some [data (lookup-entry config id :authorizer-credentials)]
     (. builder authorizerCredentials data))
-  (when-let [data (lookup-entry config id :authorizer-result-ttl-in-seconds)]
+  (when-some [data (lookup-entry config id :authorizer-result-ttl-in-seconds)]
     (. builder authorizerResultTtlInSeconds data))
-  (when-let [data (lookup-entry config id :authorizer-uri)]
+  (when-some [data (lookup-entry config id :authorizer-uri)]
     (. builder authorizerUri data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :identity-validation-expression)]
+  (when-some [data (lookup-entry config id :identity-validation-expression)]
     (. builder identityValidationExpression data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :provider-arns)]
+  (when-some [data (lookup-entry config id :provider-arns)]
     (. builder providerArns data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1265,25 +1265,25 @@ __Create Form:__ ____[java.lang.String]___
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auth-type)]
+  (when-some [data (lookup-entry config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :authorizer-credentials)]
+  (when-some [data (lookup-entry config id :authorizer-credentials)]
     (. builder authorizerCredentials data))
-  (when-let [data (lookup-entry config id :authorizer-result-ttl-in-seconds)]
+  (when-some [data (lookup-entry config id :authorizer-result-ttl-in-seconds)]
     (. builder authorizerResultTtlInSeconds data))
-  (when-let [data (lookup-entry config id :authorizer-uri)]
+  (when-some [data (lookup-entry config id :authorizer-uri)]
     (. builder authorizerUri data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :identity-validation-expression)]
+  (when-some [data (lookup-entry config id :identity-validation-expression)]
     (. builder identityValidationExpression data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :provider-arns)]
+  (when-some [data (lookup-entry config id :provider-arns)]
     (. builder providerArns data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1315,15 +1315,15 @@ __Create Form:__ ____[java.lang.String]___
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
 "
   [^CfnBasePathMapping$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
 
@@ -1355,15 +1355,15 @@ __Create Form:__ ____[java.lang.String]___
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
 "
   [^CfnBasePathMappingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
 
@@ -1392,9 +1392,9 @@ __Create Form:__ ____[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnClientCertificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1423,9 +1423,9 @@ __Create Form:__ ____[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnClientCertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1454,9 +1454,9 @@ __Create Form:__ ____[java.lang.String]___
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 "
   [^CfnDeployment$AccessLogSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
   (.build builder))
 
@@ -1488,15 +1488,15 @@ __Create Form:__ ____[java.lang.String]___
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 "
   [^CfnDeployment$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-canary-settings)]
+  (when-some [data (lookup-entry config id :deployment-canary-settings)]
     (. builder deploymentCanarySettings data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :stage-description)]
+  (when-some [data (lookup-entry config id :stage-description)]
     (. builder stageDescription data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
 
@@ -1526,11 +1526,11 @@ __Create Form:__ ____[java.lang.String]___
 | `useStageCache` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
 "
   [^CfnDeployment$CanarySettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :percent-traffic)]
+  (when-some [data (lookup-entry config id :percent-traffic)]
     (. builder percentTraffic data))
-  (when-let [data (lookup-entry config id :stage-variable-overrides)]
+  (when-some [data (lookup-entry config id :stage-variable-overrides)]
     (. builder stageVariableOverrides data))
-  (when-let [data (lookup-entry config id :use-stage-cache)]
+  (when-some [data (lookup-entry config id :use-stage-cache)]
     (. builder useStageCache data))
   (.build builder))
 
@@ -1560,11 +1560,11 @@ __Create Form:__ ____[java.lang.String]___
 | `useStageCache` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
 "
   [^CfnDeployment$DeploymentCanarySettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :percent-traffic)]
+  (when-some [data (lookup-entry config id :percent-traffic)]
     (. builder percentTraffic data))
-  (when-let [data (lookup-entry config id :stage-variable-overrides)]
+  (when-some [data (lookup-entry config id :stage-variable-overrides)]
     (. builder stageVariableOverrides data))
-  (when-let [data (lookup-entry config id :use-stage-cache)]
+  (when-some [data (lookup-entry config id :use-stage-cache)]
     (. builder useStageCache data))
   (.build builder))
 
@@ -1601,25 +1601,25 @@ __Create Form:__ ____[java.lang.String]___
 | `throttlingRateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throttling-rate-limit` |
 "
   [^CfnDeployment$MethodSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cache-data-encrypted)]
+  (when-some [data (lookup-entry config id :cache-data-encrypted)]
     (. builder cacheDataEncrypted data))
-  (when-let [data (lookup-entry config id :cache-ttl-in-seconds)]
+  (when-some [data (lookup-entry config id :cache-ttl-in-seconds)]
     (. builder cacheTtlInSeconds data))
-  (when-let [data (lookup-entry config id :caching-enabled)]
+  (when-some [data (lookup-entry config id :caching-enabled)]
     (. builder cachingEnabled data))
-  (when-let [data (lookup-entry config id :data-trace-enabled)]
+  (when-some [data (lookup-entry config id :data-trace-enabled)]
     (. builder dataTraceEnabled data))
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :logging-level)]
+  (when-some [data (lookup-entry config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :metrics-enabled)]
+  (when-some [data (lookup-entry config id :metrics-enabled)]
     (. builder metricsEnabled data))
-  (when-let [data (lookup-entry config id :resource-path)]
+  (when-some [data (lookup-entry config id :resource-path)]
     (. builder resourcePath data))
-  (when-let [data (lookup-entry config id :throttling-burst-limit)]
+  (when-some [data (lookup-entry config id :throttling-burst-limit)]
     (. builder throttlingBurstLimit data))
-  (when-let [data (lookup-entry config id :throttling-rate-limit)]
+  (when-some [data (lookup-entry config id :throttling-rate-limit)]
     (. builder throttlingRateLimit data))
   (.build builder))
 
@@ -1651,15 +1651,15 @@ __Create Form:__ ____[java.lang.String]___
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 "
   [^CfnDeploymentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-canary-settings)]
+  (when-some [data (lookup-entry config id :deployment-canary-settings)]
     (. builder deploymentCanarySettings data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :stage-description)]
+  (when-some [data (lookup-entry config id :stage-description)]
     (. builder stageDescription data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
 
@@ -1705,43 +1705,43 @@ __Create Form:__ ____[java.lang.String]___
 | `variables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnDeployment$StageDescriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log-setting)]
+  (when-some [data (lookup-entry config id :access-log-setting)]
     (. builder accessLogSetting data))
-  (when-let [data (lookup-entry config id :cache-cluster-enabled)]
+  (when-some [data (lookup-entry config id :cache-cluster-enabled)]
     (. builder cacheClusterEnabled data))
-  (when-let [data (lookup-entry config id :cache-cluster-size)]
+  (when-some [data (lookup-entry config id :cache-cluster-size)]
     (. builder cacheClusterSize data))
-  (when-let [data (lookup-entry config id :cache-data-encrypted)]
+  (when-some [data (lookup-entry config id :cache-data-encrypted)]
     (. builder cacheDataEncrypted data))
-  (when-let [data (lookup-entry config id :cache-ttl-in-seconds)]
+  (when-some [data (lookup-entry config id :cache-ttl-in-seconds)]
     (. builder cacheTtlInSeconds data))
-  (when-let [data (lookup-entry config id :caching-enabled)]
+  (when-some [data (lookup-entry config id :caching-enabled)]
     (. builder cachingEnabled data))
-  (when-let [data (lookup-entry config id :canary-setting)]
+  (when-some [data (lookup-entry config id :canary-setting)]
     (. builder canarySetting data))
-  (when-let [data (lookup-entry config id :client-certificate-id)]
+  (when-some [data (lookup-entry config id :client-certificate-id)]
     (. builder clientCertificateId data))
-  (when-let [data (lookup-entry config id :data-trace-enabled)]
+  (when-some [data (lookup-entry config id :data-trace-enabled)]
     (. builder dataTraceEnabled data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :documentation-version)]
+  (when-some [data (lookup-entry config id :documentation-version)]
     (. builder documentationVersion data))
-  (when-let [data (lookup-entry config id :logging-level)]
+  (when-some [data (lookup-entry config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :method-settings)]
+  (when-some [data (lookup-entry config id :method-settings)]
     (. builder methodSettings data))
-  (when-let [data (lookup-entry config id :metrics-enabled)]
+  (when-some [data (lookup-entry config id :metrics-enabled)]
     (. builder metricsEnabled data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :throttling-burst-limit)]
+  (when-some [data (lookup-entry config id :throttling-burst-limit)]
     (. builder throttlingBurstLimit data))
-  (when-let [data (lookup-entry config id :throttling-rate-limit)]
+  (when-some [data (lookup-entry config id :throttling-rate-limit)]
     (. builder throttlingRateLimit data))
-  (when-let [data (lookup-entry config id :tracing-enabled)]
+  (when-some [data (lookup-entry config id :tracing-enabled)]
     (. builder tracingEnabled data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -1771,11 +1771,11 @@ __Create Form:__ ____[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
   [^CfnDocumentationPart$Builder builder id config]
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
   (.build builder))
 
@@ -1807,15 +1807,15 @@ __Create Form:__ ____[java.lang.String]___
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDocumentationPart$LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :method)]
+  (when-some [data (lookup-entry config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1845,11 +1845,11 @@ __Create Form:__ ____[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
   [^CfnDocumentationPartProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
   (.build builder))
 
@@ -1879,11 +1879,11 @@ __Create Form:__ ____[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
   [^CfnDocumentationVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :documentation-version)]
+  (when-some [data (lookup-entry config id :documentation-version)]
     (. builder documentationVersion data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
   (.build builder))
 
@@ -1913,11 +1913,11 @@ __Create Form:__ ____[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
   [^CfnDocumentationVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :documentation-version)]
+  (when-some [data (lookup-entry config id :documentation-version)]
     (. builder documentationVersion data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
   (.build builder))
 
@@ -1952,21 +1952,21 @@ __Create Form:__ ____[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDomainName$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :mutual-tls-authentication)]
+  (when-some [data (lookup-entry config id :mutual-tls-authentication)]
     (. builder mutualTlsAuthentication data))
-  (when-let [data (lookup-entry config id :ownership-verification-certificate-arn)]
+  (when-some [data (lookup-entry config id :ownership-verification-certificate-arn)]
     (. builder ownershipVerificationCertificateArn data))
-  (when-let [data (lookup-entry config id :regional-certificate-arn)]
+  (when-some [data (lookup-entry config id :regional-certificate-arn)]
     (. builder regionalCertificateArn data))
-  (when-let [data (lookup-entry config id :security-policy)]
+  (when-some [data (lookup-entry config id :security-policy)]
     (. builder securityPolicy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1994,7 +1994,7 @@ __Create Form:__ ____[java.lang.String]___
 | `types` | java.util.List | [[cdk.support/lookup-entry]] | `:types` |
 "
   [^CfnDomainName$EndpointConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :types)]
+  (when-some [data (lookup-entry config id :types)]
     (. builder types data))
   (.build builder))
 
@@ -2023,9 +2023,9 @@ __Create Form:__ ____[java.lang.String]___
 | `truststoreVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:truststore-version` |
 "
   [^CfnDomainName$MutualTlsAuthenticationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :truststore-uri)]
+  (when-some [data (lookup-entry config id :truststore-uri)]
     (. builder truststoreUri data))
-  (when-let [data (lookup-entry config id :truststore-version)]
+  (when-some [data (lookup-entry config id :truststore-version)]
     (. builder truststoreVersion data))
   (.build builder))
 
@@ -2060,21 +2060,21 @@ __Create Form:__ ____[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDomainNameProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :mutual-tls-authentication)]
+  (when-some [data (lookup-entry config id :mutual-tls-authentication)]
     (. builder mutualTlsAuthentication data))
-  (when-let [data (lookup-entry config id :ownership-verification-certificate-arn)]
+  (when-some [data (lookup-entry config id :ownership-verification-certificate-arn)]
     (. builder ownershipVerificationCertificateArn data))
-  (when-let [data (lookup-entry config id :regional-certificate-arn)]
+  (when-some [data (lookup-entry config id :regional-certificate-arn)]
     (. builder regionalCertificateArn data))
-  (when-let [data (lookup-entry config id :security-policy)]
+  (when-some [data (lookup-entry config id :security-policy)]
     (. builder securityPolicy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2106,15 +2106,15 @@ __Create Form:__ ____[java.lang.String]___
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnGatewayResponse$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-parameters)]
+  (when-some [data (lookup-entry config id :response-parameters)]
     (. builder responseParameters data))
-  (when-let [data (lookup-entry config id :response-templates)]
+  (when-some [data (lookup-entry config id :response-templates)]
     (. builder responseTemplates data))
-  (when-let [data (lookup-entry config id :response-type)]
+  (when-some [data (lookup-entry config id :response-type)]
     (. builder responseType data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -2146,15 +2146,15 @@ __Create Form:__ ____[java.lang.String]___
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnGatewayResponseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-parameters)]
+  (when-some [data (lookup-entry config id :response-parameters)]
     (. builder responseParameters data))
-  (when-let [data (lookup-entry config id :response-templates)]
+  (when-some [data (lookup-entry config id :response-templates)]
     (. builder responseTemplates data))
-  (when-let [data (lookup-entry config id :response-type)]
+  (when-some [data (lookup-entry config id :response-type)]
     (. builder responseType data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -2194,31 +2194,31 @@ __Create Form:__ ____[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
   [^CfnMethod$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-required)]
+  (when-some [data (lookup-entry config id :api-key-required)]
     (. builder apiKeyRequired data))
-  (when-let [data (lookup-entry config id :authorization-scopes)]
+  (when-some [data (lookup-entry config id :authorization-scopes)]
     (. builder authorizationScopes data))
-  (when-let [data (lookup-entry config id :authorization-type)]
+  (when-some [data (lookup-entry config id :authorization-type)]
     (. builder authorizationType data))
-  (when-let [data (lookup-entry config id :authorizer-id)]
+  (when-some [data (lookup-entry config id :authorizer-id)]
     (. builder authorizerId data))
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :integration)]
+  (when-some [data (lookup-entry config id :integration)]
     (. builder integration data))
-  (when-let [data (lookup-entry config id :method-responses)]
+  (when-some [data (lookup-entry config id :method-responses)]
     (. builder methodResponses data))
-  (when-let [data (lookup-entry config id :operation-name)]
+  (when-some [data (lookup-entry config id :operation-name)]
     (. builder operationName data))
-  (when-let [data (lookup-entry config id :request-models)]
+  (when-some [data (lookup-entry config id :request-models)]
     (. builder requestModels data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-validator-id)]
+  (when-some [data (lookup-entry config id :request-validator-id)]
     (. builder requestValidatorId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
   (.build builder))
 
@@ -2259,33 +2259,33 @@ __Create Form:__ ____[java.lang.String]___
 | `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
 "
   [^CfnMethod$IntegrationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cache-key-parameters)]
+  (when-some [data (lookup-entry config id :cache-key-parameters)]
     (. builder cacheKeyParameters data))
-  (when-let [data (lookup-entry config id :cache-namespace)]
+  (when-some [data (lookup-entry config id :cache-namespace)]
     (. builder cacheNamespace data))
-  (when-let [data (lookup-entry config id :connection-id)]
+  (when-some [data (lookup-entry config id :connection-id)]
     (. builder connectionId data))
-  (when-let [data (lookup-entry config id :connection-type)]
+  (when-some [data (lookup-entry config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (lookup-entry config id :content-handling)]
+  (when-some [data (lookup-entry config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :integration-http-method)]
+  (when-some [data (lookup-entry config id :integration-http-method)]
     (. builder integrationHttpMethod data))
-  (when-let [data (lookup-entry config id :integration-responses)]
+  (when-some [data (lookup-entry config id :integration-responses)]
     (. builder integrationResponses data))
-  (when-let [data (lookup-entry config id :passthrough-behavior)]
+  (when-some [data (lookup-entry config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :timeout-in-millis)]
+  (when-some [data (lookup-entry config id :timeout-in-millis)]
     (. builder timeoutInMillis data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :uri)]
+  (when-some [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
 
@@ -2317,15 +2317,15 @@ __Create Form:__ ____[java.lang.String]___
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnMethod$IntegrationResponseProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-handling)]
+  (when-some [data (lookup-entry config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :response-parameters)]
+  (when-some [data (lookup-entry config id :response-parameters)]
     (. builder responseParameters data))
-  (when-let [data (lookup-entry config id :response-templates)]
+  (when-some [data (lookup-entry config id :response-templates)]
     (. builder responseTemplates data))
-  (when-let [data (lookup-entry config id :selection-pattern)]
+  (when-some [data (lookup-entry config id :selection-pattern)]
     (. builder selectionPattern data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -2355,11 +2355,11 @@ __Create Form:__ ____[java.lang.String]___
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CfnMethod$MethodResponseProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-models)]
+  (when-some [data (lookup-entry config id :response-models)]
     (. builder responseModels data))
-  (when-let [data (lookup-entry config id :response-parameters)]
+  (when-some [data (lookup-entry config id :response-parameters)]
     (. builder responseParameters data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -2399,31 +2399,31 @@ __Create Form:__ ____[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
   [^CfnMethodProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-required)]
+  (when-some [data (lookup-entry config id :api-key-required)]
     (. builder apiKeyRequired data))
-  (when-let [data (lookup-entry config id :authorization-scopes)]
+  (when-some [data (lookup-entry config id :authorization-scopes)]
     (. builder authorizationScopes data))
-  (when-let [data (lookup-entry config id :authorization-type)]
+  (when-some [data (lookup-entry config id :authorization-type)]
     (. builder authorizationType data))
-  (when-let [data (lookup-entry config id :authorizer-id)]
+  (when-some [data (lookup-entry config id :authorizer-id)]
     (. builder authorizerId data))
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :integration)]
+  (when-some [data (lookup-entry config id :integration)]
     (. builder integration data))
-  (when-let [data (lookup-entry config id :method-responses)]
+  (when-some [data (lookup-entry config id :method-responses)]
     (. builder methodResponses data))
-  (when-let [data (lookup-entry config id :operation-name)]
+  (when-some [data (lookup-entry config id :operation-name)]
     (. builder operationName data))
-  (when-let [data (lookup-entry config id :request-models)]
+  (when-some [data (lookup-entry config id :request-models)]
     (. builder requestModels data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-validator-id)]
+  (when-some [data (lookup-entry config id :request-validator-id)]
     (. builder requestValidatorId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
   (.build builder))
 
@@ -2455,15 +2455,15 @@ __Create Form:__ ____[java.lang.String]___
 | `schema` | java.lang.Object | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^CfnModel$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
 
@@ -2495,15 +2495,15 @@ __Create Form:__ ____[java.lang.String]___
 | `schema` | java.lang.Object | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^CfnModelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
 
@@ -2534,13 +2534,13 @@ __Create Form:__ ____[java.lang.String]___
 | `validateRequestParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validate-request-parameters` |
 "
   [^CfnRequestValidator$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :validate-request-body)]
+  (when-some [data (lookup-entry config id :validate-request-body)]
     (. builder validateRequestBody data))
-  (when-let [data (lookup-entry config id :validate-request-parameters)]
+  (when-some [data (lookup-entry config id :validate-request-parameters)]
     (. builder validateRequestParameters data))
   (.build builder))
 
@@ -2571,13 +2571,13 @@ __Create Form:__ ____[java.lang.String]___
 | `validateRequestParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validate-request-parameters` |
 "
   [^CfnRequestValidatorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :validate-request-body)]
+  (when-some [data (lookup-entry config id :validate-request-body)]
     (. builder validateRequestBody data))
-  (when-let [data (lookup-entry config id :validate-request-parameters)]
+  (when-some [data (lookup-entry config id :validate-request-parameters)]
     (. builder validateRequestParameters data))
   (.build builder))
 
@@ -2607,11 +2607,11 @@ __Create Form:__ ____[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
   [^CfnResource$Builder builder id config]
-  (when-let [data (lookup-entry config id :parent-id)]
+  (when-some [data (lookup-entry config id :parent-id)]
     (. builder parentId data))
-  (when-let [data (lookup-entry config id :path-part)]
+  (when-some [data (lookup-entry config id :path-part)]
     (. builder pathPart data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
   (.build builder))
 
@@ -2641,11 +2641,11 @@ __Create Form:__ ____[java.lang.String]___
 | `restApiId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rest-api-id` |
 "
   [^CfnResourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :parent-id)]
+  (when-some [data (lookup-entry config id :parent-id)]
     (. builder parentId data))
-  (when-let [data (lookup-entry config id :path-part)]
+  (when-some [data (lookup-entry config id :path-part)]
     (. builder pathPart data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
   (.build builder))
 
@@ -2687,35 +2687,35 @@ __Create Form:__ ____[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRestApi$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-source-type)]
+  (when-some [data (lookup-entry config id :api-key-source-type)]
     (. builder apiKeySourceType data))
-  (when-let [data (lookup-entry config id :binary-media-types)]
+  (when-some [data (lookup-entry config id :binary-media-types)]
     (. builder binaryMediaTypes data))
-  (when-let [data (lookup-entry config id :body)]
+  (when-some [data (lookup-entry config id :body)]
     (. builder body data))
-  (when-let [data (lookup-entry config id :body-s3-location)]
+  (when-some [data (lookup-entry config id :body-s3-location)]
     (. builder bodyS3Location data))
-  (when-let [data (lookup-entry config id :clone-from)]
+  (when-some [data (lookup-entry config id :clone-from)]
     (. builder cloneFrom data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :minimum-compression-size)]
+  (when-some [data (lookup-entry config id :minimum-compression-size)]
     (. builder minimumCompressionSize data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2744,9 +2744,9 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcEndpointIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-endpoint-ids` |
 "
   [^CfnRestApi$EndpointConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :types)]
+  (when-some [data (lookup-entry config id :types)]
     (. builder types data))
-  (when-let [data (lookup-entry config id :vpc-endpoint-ids)]
+  (when-some [data (lookup-entry config id :vpc-endpoint-ids)]
     (. builder vpcEndpointIds data))
   (.build builder))
 
@@ -2788,35 +2788,35 @@ __Create Form:__ ____[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRestApiProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-source-type)]
+  (when-some [data (lookup-entry config id :api-key-source-type)]
     (. builder apiKeySourceType data))
-  (when-let [data (lookup-entry config id :binary-media-types)]
+  (when-some [data (lookup-entry config id :binary-media-types)]
     (. builder binaryMediaTypes data))
-  (when-let [data (lookup-entry config id :body)]
+  (when-some [data (lookup-entry config id :body)]
     (. builder body data))
-  (when-let [data (lookup-entry config id :body-s3-location)]
+  (when-some [data (lookup-entry config id :body-s3-location)]
     (. builder bodyS3Location data))
-  (when-let [data (lookup-entry config id :clone-from)]
+  (when-some [data (lookup-entry config id :clone-from)]
     (. builder cloneFrom data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :minimum-compression-size)]
+  (when-some [data (lookup-entry config id :minimum-compression-size)]
     (. builder minimumCompressionSize data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2847,13 +2847,13 @@ __Create Form:__ ____[java.lang.String]___
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnRestApi$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :e-tag)]
+  (when-some [data (lookup-entry config id :e-tag)]
     (. builder eTag data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -2882,9 +2882,9 @@ __Create Form:__ ____[java.lang.String]___
 | `format` | java.lang.String | [[cdk.support/lookup-entry]] | `:format` |
 "
   [^CfnStage$AccessLogSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
   (.build builder))
 
@@ -2925,33 +2925,33 @@ __Create Form:__ ____[java.lang.String]___
 | `variables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnStage$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log-setting)]
+  (when-some [data (lookup-entry config id :access-log-setting)]
     (. builder accessLogSetting data))
-  (when-let [data (lookup-entry config id :cache-cluster-enabled)]
+  (when-some [data (lookup-entry config id :cache-cluster-enabled)]
     (. builder cacheClusterEnabled data))
-  (when-let [data (lookup-entry config id :cache-cluster-size)]
+  (when-some [data (lookup-entry config id :cache-cluster-size)]
     (. builder cacheClusterSize data))
-  (when-let [data (lookup-entry config id :canary-setting)]
+  (when-some [data (lookup-entry config id :canary-setting)]
     (. builder canarySetting data))
-  (when-let [data (lookup-entry config id :client-certificate-id)]
+  (when-some [data (lookup-entry config id :client-certificate-id)]
     (. builder clientCertificateId data))
-  (when-let [data (lookup-entry config id :deployment-id)]
+  (when-some [data (lookup-entry config id :deployment-id)]
     (. builder deploymentId data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :documentation-version)]
+  (when-some [data (lookup-entry config id :documentation-version)]
     (. builder documentationVersion data))
-  (when-let [data (lookup-entry config id :method-settings)]
+  (when-some [data (lookup-entry config id :method-settings)]
     (. builder methodSettings data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tracing-enabled)]
+  (when-some [data (lookup-entry config id :tracing-enabled)]
     (. builder tracingEnabled data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -2982,13 +2982,13 @@ __Create Form:__ ____[java.lang.String]___
 | `useStageCache` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-stage-cache` |
 "
   [^CfnStage$CanarySettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-id)]
+  (when-some [data (lookup-entry config id :deployment-id)]
     (. builder deploymentId data))
-  (when-let [data (lookup-entry config id :percent-traffic)]
+  (when-some [data (lookup-entry config id :percent-traffic)]
     (. builder percentTraffic data))
-  (when-let [data (lookup-entry config id :stage-variable-overrides)]
+  (when-some [data (lookup-entry config id :stage-variable-overrides)]
     (. builder stageVariableOverrides data))
-  (when-let [data (lookup-entry config id :use-stage-cache)]
+  (when-some [data (lookup-entry config id :use-stage-cache)]
     (. builder useStageCache data))
   (.build builder))
 
@@ -3025,25 +3025,25 @@ __Create Form:__ ____[java.lang.String]___
 | `throttlingRateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throttling-rate-limit` |
 "
   [^CfnStage$MethodSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cache-data-encrypted)]
+  (when-some [data (lookup-entry config id :cache-data-encrypted)]
     (. builder cacheDataEncrypted data))
-  (when-let [data (lookup-entry config id :cache-ttl-in-seconds)]
+  (when-some [data (lookup-entry config id :cache-ttl-in-seconds)]
     (. builder cacheTtlInSeconds data))
-  (when-let [data (lookup-entry config id :caching-enabled)]
+  (when-some [data (lookup-entry config id :caching-enabled)]
     (. builder cachingEnabled data))
-  (when-let [data (lookup-entry config id :data-trace-enabled)]
+  (when-some [data (lookup-entry config id :data-trace-enabled)]
     (. builder dataTraceEnabled data))
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :logging-level)]
+  (when-some [data (lookup-entry config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :metrics-enabled)]
+  (when-some [data (lookup-entry config id :metrics-enabled)]
     (. builder metricsEnabled data))
-  (when-let [data (lookup-entry config id :resource-path)]
+  (when-some [data (lookup-entry config id :resource-path)]
     (. builder resourcePath data))
-  (when-let [data (lookup-entry config id :throttling-burst-limit)]
+  (when-some [data (lookup-entry config id :throttling-burst-limit)]
     (. builder throttlingBurstLimit data))
-  (when-let [data (lookup-entry config id :throttling-rate-limit)]
+  (when-some [data (lookup-entry config id :throttling-rate-limit)]
     (. builder throttlingRateLimit data))
   (.build builder))
 
@@ -3084,33 +3084,33 @@ __Create Form:__ ____[java.lang.String]___
 | `variables` | java.util.Map | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnStageProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log-setting)]
+  (when-some [data (lookup-entry config id :access-log-setting)]
     (. builder accessLogSetting data))
-  (when-let [data (lookup-entry config id :cache-cluster-enabled)]
+  (when-some [data (lookup-entry config id :cache-cluster-enabled)]
     (. builder cacheClusterEnabled data))
-  (when-let [data (lookup-entry config id :cache-cluster-size)]
+  (when-some [data (lookup-entry config id :cache-cluster-size)]
     (. builder cacheClusterSize data))
-  (when-let [data (lookup-entry config id :canary-setting)]
+  (when-some [data (lookup-entry config id :canary-setting)]
     (. builder canarySetting data))
-  (when-let [data (lookup-entry config id :client-certificate-id)]
+  (when-some [data (lookup-entry config id :client-certificate-id)]
     (. builder clientCertificateId data))
-  (when-let [data (lookup-entry config id :deployment-id)]
+  (when-some [data (lookup-entry config id :deployment-id)]
     (. builder deploymentId data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :documentation-version)]
+  (when-some [data (lookup-entry config id :documentation-version)]
     (. builder documentationVersion data))
-  (when-let [data (lookup-entry config id :method-settings)]
+  (when-some [data (lookup-entry config id :method-settings)]
     (. builder methodSettings data))
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tracing-enabled)]
+  (when-some [data (lookup-entry config id :tracing-enabled)]
     (. builder tracingEnabled data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -3140,11 +3140,11 @@ __Create Form:__ ____[java.lang.String]___
 | `throttle` | java.util.Map | [[cdk.support/lookup-entry]] | `:throttle` |
 "
   [^CfnUsagePlan$ApiStageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-id)]
+  (when-some [data (lookup-entry config id :api-id)]
     (. builder apiId data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
   (.build builder))
 
@@ -3177,17 +3177,17 @@ __Create Form:__ ____[java.lang.String]___
 | `usagePlanName` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-plan-name` |
 "
   [^CfnUsagePlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-stages)]
+  (when-some [data (lookup-entry config id :api-stages)]
     (. builder apiStages data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :quota)]
+  (when-some [data (lookup-entry config id :quota)]
     (. builder quota data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
-  (when-let [data (lookup-entry config id :usage-plan-name)]
+  (when-some [data (lookup-entry config id :usage-plan-name)]
     (. builder usagePlanName data))
   (.build builder))
 
@@ -3217,11 +3217,11 @@ __Create Form:__ ____[java.lang.String]___
 | `usagePlanId` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-plan-id` |
 "
   [^CfnUsagePlanKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-id)]
+  (when-some [data (lookup-entry config id :key-id)]
     (. builder keyId data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
-  (when-let [data (lookup-entry config id :usage-plan-id)]
+  (when-some [data (lookup-entry config id :usage-plan-id)]
     (. builder usagePlanId data))
   (.build builder))
 
@@ -3251,11 +3251,11 @@ __Create Form:__ ____[java.lang.String]___
 | `usagePlanId` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-plan-id` |
 "
   [^CfnUsagePlanKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-id)]
+  (when-some [data (lookup-entry config id :key-id)]
     (. builder keyId data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
-  (when-let [data (lookup-entry config id :usage-plan-id)]
+  (when-some [data (lookup-entry config id :usage-plan-id)]
     (. builder usagePlanId data))
   (.build builder))
 
@@ -3288,17 +3288,17 @@ __Create Form:__ ____[java.lang.String]___
 | `usagePlanName` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-plan-name` |
 "
   [^CfnUsagePlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-stages)]
+  (when-some [data (lookup-entry config id :api-stages)]
     (. builder apiStages data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :quota)]
+  (when-some [data (lookup-entry config id :quota)]
     (. builder quota data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
-  (when-let [data (lookup-entry config id :usage-plan-name)]
+  (when-some [data (lookup-entry config id :usage-plan-name)]
     (. builder usagePlanName data))
   (.build builder))
 
@@ -3328,11 +3328,11 @@ __Create Form:__ ____[java.lang.String]___
 | `period` | java.lang.String | [[cdk.support/lookup-entry]] | `:period` |
 "
   [^CfnUsagePlan$QuotaSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :limit)]
+  (when-some [data (lookup-entry config id :limit)]
     (. builder limit data))
-  (when-let [data (lookup-entry config id :offset)]
+  (when-some [data (lookup-entry config id :offset)]
     (. builder offset data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
   (.build builder))
 
@@ -3361,9 +3361,9 @@ __Create Form:__ ____[java.lang.String]___
 | `rateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rate-limit` |
 "
   [^CfnUsagePlan$ThrottleSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :burst-limit)]
+  (when-some [data (lookup-entry config id :burst-limit)]
     (. builder burstLimit data))
-  (when-let [data (lookup-entry config id :rate-limit)]
+  (when-some [data (lookup-entry config id :rate-limit)]
     (. builder rateLimit data))
   (.build builder))
 
@@ -3394,13 +3394,13 @@ __Create Form:__ ____[java.lang.String]___
 | `targetArns` | java.util.List | [[cdk.support/lookup-entry]] | `:target-arns` |
 "
   [^CfnVpcLink$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-arns)]
+  (when-some [data (lookup-entry config id :target-arns)]
     (. builder targetArns data))
   (.build builder))
 
@@ -3431,13 +3431,13 @@ __Create Form:__ ____[java.lang.String]___
 | `targetArns` | java.util.List | [[cdk.support/lookup-entry]] | `:target-arns` |
 "
   [^CfnVpcLinkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-arns)]
+  (when-some [data (lookup-entry config id :target-arns)]
     (. builder targetArns data))
   (.build builder))
 
@@ -3468,13 +3468,13 @@ __Create Form:__ ____[java.lang.String]___
 | `resultsCacheTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:results-cache-ttl` |
 "
   [^CognitoUserPoolsAuthorizer$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :cognito-user-pools)]
+  (when-some [data (lookup-entry config id :cognito-user-pools)]
     (. builder cognitoUserPools data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
   (.build builder))
 
@@ -3505,13 +3505,13 @@ __Create Form:__ ____[java.lang.String]___
 | `resultsCacheTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:results-cache-ttl` |
 "
   [^CognitoUserPoolsAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :cognito-user-pools)]
+  (when-some [data (lookup-entry config id :cognito-user-pools)]
     (. builder cognitoUserPools data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
   (.build builder))
 
@@ -3546,21 +3546,21 @@ __Create Form:__ ____[java.lang.String]___
 | `statusCode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^CorsOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-credentials)]
+  (when-some [data (lookup-entry config id :allow-credentials)]
     (. builder allowCredentials data))
-  (when-let [data (lookup-entry config id :allow-headers)]
+  (when-some [data (lookup-entry config id :allow-headers)]
     (. builder allowHeaders data))
-  (when-let [data (lookup-entry config id :allow-methods)]
+  (when-some [data (lookup-entry config id :allow-methods)]
     (. builder allowMethods data))
-  (when-let [data (lookup-entry config id :allow-origins)]
+  (when-some [data (lookup-entry config id :allow-origins)]
     (. builder allowOrigins data))
-  (when-let [data (lookup-entry config id :disable-cache)]
+  (when-some [data (lookup-entry config id :disable-cache)]
     (. builder disableCache data))
-  (when-let [data (lookup-entry config id :expose-headers)]
+  (when-some [data (lookup-entry config id :expose-headers)]
     (. builder exposeHeaders data))
-  (when-let [data (lookup-entry config id :max-age)]
+  (when-some [data (lookup-entry config id :max-age)]
     (. builder maxAge data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -3591,13 +3591,13 @@ __Create Form:__ ____[java.lang.String]___
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 "
   [^Deployment$Builder builder id config]
-  (when-let [data (lookup-entry config id :api)]
+  (when-some [data (lookup-entry config id :api)]
     (. builder api data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
 
@@ -3628,13 +3628,13 @@ __Create Form:__ ____[java.lang.String]___
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 "
   [^DeploymentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api)]
+  (when-some [data (lookup-entry config id :api)]
     (. builder api data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
 
@@ -3664,11 +3664,11 @@ __Create Form:__ ____[java.lang.String]___
 | `domainNameAliasTarget` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name-alias-target` |
 "
   [^DomainNameAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :domain-name-alias-hosted-zone-id)]
+  (when-some [data (lookup-entry config id :domain-name-alias-hosted-zone-id)]
     (. builder domainNameAliasHostedZoneId data))
-  (when-let [data (lookup-entry config id :domain-name-alias-target)]
+  (when-some [data (lookup-entry config id :domain-name-alias-target)]
     (. builder domainNameAliasTarget data))
   (.build builder))
 
@@ -3702,19 +3702,19 @@ __Create Form:__ ____[java.lang.String]___
 | `securityPolicy` | software.amazon.awscdk.services.apigateway.SecurityPolicy | [[cdk.api.services.apigateway/security-policy]] | `:security-policy` |
 "
   [^DomainName$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (endpoint-type config id :endpoint-type)]
+  (when-some [data (endpoint-type config id :endpoint-type)]
     (. builder endpointType data))
-  (when-let [data (lookup-entry config id :mapping)]
+  (when-some [data (lookup-entry config id :mapping)]
     (. builder mapping data))
-  (when-let [data (lookup-entry config id :mtls)]
+  (when-some [data (lookup-entry config id :mtls)]
     (. builder mtls data))
-  (when-let [data (security-policy config id :security-policy)]
+  (when-some [data (security-policy config id :security-policy)]
     (. builder securityPolicy data))
   (.build builder))
 
@@ -3747,17 +3747,17 @@ __Create Form:__ ____[java.lang.String]___
 | `securityPolicy` | software.amazon.awscdk.services.apigateway.SecurityPolicy | [[cdk.api.services.apigateway/security-policy]] | `:security-policy` |
 "
   [^DomainNameOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (endpoint-type config id :endpoint-type)]
+  (when-some [data (endpoint-type config id :endpoint-type)]
     (. builder endpointType data))
-  (when-let [data (lookup-entry config id :mtls)]
+  (when-some [data (lookup-entry config id :mtls)]
     (. builder mtls data))
-  (when-let [data (security-policy config id :security-policy)]
+  (when-some [data (security-policy config id :security-policy)]
     (. builder securityPolicy data))
   (.build builder))
 
@@ -3791,19 +3791,19 @@ __Create Form:__ ____[java.lang.String]___
 | `securityPolicy` | software.amazon.awscdk.services.apigateway.SecurityPolicy | [[cdk.api.services.apigateway/security-policy]] | `:security-policy` |
 "
   [^DomainNameProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-path)]
+  (when-some [data (lookup-entry config id :base-path)]
     (. builder basePath data))
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (endpoint-type config id :endpoint-type)]
+  (when-some [data (endpoint-type config id :endpoint-type)]
     (. builder endpointType data))
-  (when-let [data (lookup-entry config id :mapping)]
+  (when-some [data (lookup-entry config id :mapping)]
     (. builder mapping data))
-  (when-let [data (lookup-entry config id :mtls)]
+  (when-some [data (lookup-entry config id :mtls)]
     (. builder mtls data))
-  (when-let [data (security-policy config id :security-policy)]
+  (when-some [data (security-policy config id :security-policy)]
     (. builder securityPolicy data))
   (.build builder))
 
@@ -3832,9 +3832,9 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcEndpoints` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-endpoints` |
 "
   [^EndpointConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :types)]
+  (when-some [data (lookup-entry config id :types)]
     (. builder types data))
-  (when-let [data (lookup-entry config id :vpc-endpoints)]
+  (when-some [data (lookup-entry config id :vpc-endpoints)]
     (. builder vpcEndpoints data))
   (.build builder))
 
@@ -3866,15 +3866,15 @@ __Create Form:__ ____[java.lang.String]___
 | `type` | software.amazon.awscdk.services.apigateway.ResponseType | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^GatewayResponse$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-headers)]
+  (when-some [data (lookup-entry config id :response-headers)]
     (. builder responseHeaders data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
-  (when-let [data (lookup-entry config id :templates)]
+  (when-some [data (lookup-entry config id :templates)]
     (. builder templates data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -3905,13 +3905,13 @@ __Create Form:__ ____[java.lang.String]___
 | `type` | software.amazon.awscdk.services.apigateway.ResponseType | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^GatewayResponseOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-headers)]
+  (when-some [data (lookup-entry config id :response-headers)]
     (. builder responseHeaders data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
-  (when-let [data (lookup-entry config id :templates)]
+  (when-some [data (lookup-entry config id :templates)]
     (. builder templates data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -3943,15 +3943,15 @@ __Create Form:__ ____[java.lang.String]___
 | `type` | software.amazon.awscdk.services.apigateway.ResponseType | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^GatewayResponseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-headers)]
+  (when-some [data (lookup-entry config id :response-headers)]
     (. builder responseHeaders data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
-  (when-let [data (lookup-entry config id :templates)]
+  (when-some [data (lookup-entry config id :templates)]
     (. builder templates data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -3981,11 +3981,11 @@ __Create Form:__ ____[java.lang.String]___
 | `proxy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:proxy` |
 "
   [^HttpIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :proxy)]
+  (when-some [data (lookup-entry config id :proxy)]
     (. builder proxy data))
   (.build builder))
 
@@ -4018,11 +4018,11 @@ __Create Form:__ ____[java.lang.String]___
 | `proxy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:proxy` |
 "
   [^HttpIntegrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :proxy)]
+  (when-some [data (lookup-entry config id :proxy)]
     (. builder proxy data))
   (.build builder))
 
@@ -4053,13 +4053,13 @@ __Create Form:__ ____[java.lang.String]___
 | `uri` | java.lang.Object | [[cdk.support/lookup-entry]] | `:uri` |
 "
   [^Integration$Builder builder id config]
-  (when-let [data (lookup-entry config id :integration-http-method)]
+  (when-some [data (lookup-entry config id :integration-http-method)]
     (. builder integrationHttpMethod data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (integration-type config id :type)]
+  (when-some [data (integration-type config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :uri)]
+  (when-some [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
 
@@ -4091,15 +4091,15 @@ __Create Form:__ ____[java.lang.String]___
 | `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
 "
   [^IntegrationConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-token)]
+  (when-some [data (lookup-entry config id :deployment-token)]
     (. builder deploymentToken data))
-  (when-let [data (lookup-entry config id :integration-http-method)]
+  (when-some [data (lookup-entry config id :integration-http-method)]
     (. builder integrationHttpMethod data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (integration-type config id :type)]
+  (when-some [data (integration-type config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :uri)]
+  (when-some [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
 
@@ -4138,29 +4138,29 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcLink` | software.amazon.awscdk.services.apigateway.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^IntegrationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :cache-key-parameters)]
+  (when-some [data (lookup-entry config id :cache-key-parameters)]
     (. builder cacheKeyParameters data))
-  (when-let [data (lookup-entry config id :cache-namespace)]
+  (when-some [data (lookup-entry config id :cache-namespace)]
     (. builder cacheNamespace data))
-  (when-let [data (connection-type config id :connection-type)]
+  (when-some [data (connection-type config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-passthrough)]
+  (when-some [data (lookup-entry config id :credentials-passthrough)]
     (. builder credentialsPassthrough data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :integration-responses)]
+  (when-some [data (lookup-entry config id :integration-responses)]
     (. builder integrationResponses data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -4191,13 +4191,13 @@ __Create Form:__ ____[java.lang.String]___
 | `uri` | java.lang.Object | [[cdk.support/lookup-entry]] | `:uri` |
 "
   [^IntegrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :integration-http-method)]
+  (when-some [data (lookup-entry config id :integration-http-method)]
     (. builder integrationHttpMethod data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (integration-type config id :type)]
+  (when-some [data (integration-type config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :uri)]
+  (when-some [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
 
@@ -4229,15 +4229,15 @@ __Create Form:__ ____[java.lang.String]___
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^IntegrationResponse$Builder builder id config]
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :response-parameters)]
+  (when-some [data (lookup-entry config id :response-parameters)]
     (. builder responseParameters data))
-  (when-let [data (lookup-entry config id :response-templates)]
+  (when-some [data (lookup-entry config id :response-templates)]
     (. builder responseTemplates data))
-  (when-let [data (lookup-entry config id :selection-pattern)]
+  (when-some [data (lookup-entry config id :selection-pattern)]
     (. builder selectionPattern data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -4300,77 +4300,77 @@ __Create Form:__ ____[java.lang.String]___
 | `uniqueItems` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unique-items` |
 "
   [^JsonSchema$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-items)]
+  (when-some [data (lookup-entry config id :additional-items)]
     (. builder additionalItems data))
-  (when-let [data (lookup-entry config id :additional-properties)]
+  (when-some [data (lookup-entry config id :additional-properties)]
     (. builder additionalProperties data))
-  (when-let [data (lookup-entry config id :all-of)]
+  (when-some [data (lookup-entry config id :all-of)]
     (. builder allOf data))
-  (when-let [data (lookup-entry config id :any-of)]
+  (when-some [data (lookup-entry config id :any-of)]
     (. builder anyOf data))
-  (when-let [data (lookup-entry config id :contains)]
+  (when-some [data (lookup-entry config id :contains)]
     (. builder contains data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :definitions)]
+  (when-some [data (lookup-entry config id :definitions)]
     (. builder definitions data))
-  (when-let [data (lookup-entry config id :dependencies)]
+  (when-some [data (lookup-entry config id :dependencies)]
     (. builder dependencies data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enum-value)]
+  (when-some [data (lookup-entry config id :enum-value)]
     (. builder enumValue data))
-  (when-let [data (lookup-entry config id :exclusive-maximum)]
+  (when-some [data (lookup-entry config id :exclusive-maximum)]
     (. builder exclusiveMaximum data))
-  (when-let [data (lookup-entry config id :exclusive-minimum)]
+  (when-some [data (lookup-entry config id :exclusive-minimum)]
     (. builder exclusiveMinimum data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :items)]
+  (when-some [data (lookup-entry config id :items)]
     (. builder items data))
-  (when-let [data (lookup-entry config id :max-items)]
+  (when-some [data (lookup-entry config id :max-items)]
     (. builder maxItems data))
-  (when-let [data (lookup-entry config id :max-length)]
+  (when-some [data (lookup-entry config id :max-length)]
     (. builder maxLength data))
-  (when-let [data (lookup-entry config id :max-properties)]
+  (when-some [data (lookup-entry config id :max-properties)]
     (. builder maxProperties data))
-  (when-let [data (lookup-entry config id :maximum)]
+  (when-some [data (lookup-entry config id :maximum)]
     (. builder maximum data))
-  (when-let [data (lookup-entry config id :min-items)]
+  (when-some [data (lookup-entry config id :min-items)]
     (. builder minItems data))
-  (when-let [data (lookup-entry config id :min-length)]
+  (when-some [data (lookup-entry config id :min-length)]
     (. builder minLength data))
-  (when-let [data (lookup-entry config id :min-properties)]
+  (when-some [data (lookup-entry config id :min-properties)]
     (. builder minProperties data))
-  (when-let [data (lookup-entry config id :minimum)]
+  (when-some [data (lookup-entry config id :minimum)]
     (. builder minimum data))
-  (when-let [data (lookup-entry config id :multiple-of)]
+  (when-some [data (lookup-entry config id :multiple-of)]
     (. builder multipleOf data))
-  (when-let [data (lookup-entry config id :not)]
+  (when-some [data (lookup-entry config id :not)]
     (. builder not data))
-  (when-let [data (lookup-entry config id :one-of)]
+  (when-some [data (lookup-entry config id :one-of)]
     (. builder oneOf data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :pattern-properties)]
+  (when-some [data (lookup-entry config id :pattern-properties)]
     (. builder patternProperties data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :property-names)]
+  (when-some [data (lookup-entry config id :property-names)]
     (. builder propertyNames data))
-  (when-let [data (lookup-entry config id :ref)]
+  (when-some [data (lookup-entry config id :ref)]
     (. builder ref data))
-  (when-let [data (lookup-entry config id :required)]
+  (when-some [data (lookup-entry config id :required)]
     (. builder required data))
-  (when-let [data (json-schema-version config id :schema)]
+  (when-some [data (json-schema-version config id :schema)]
     (. builder schema data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :unique-items)]
+  (when-some [data (lookup-entry config id :unique-items)]
     (. builder uniqueItems data))
   (.build builder))
 
@@ -4406,23 +4406,23 @@ __Create Form:__ ____[java.lang.String]___
 | `user` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user` |
 "
   [^JsonWithStandardFieldProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :caller)]
+  (when-some [data (lookup-entry config id :caller)]
     (. builder caller data))
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :ip)]
+  (when-some [data (lookup-entry config id :ip)]
     (. builder ip data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :request-time)]
+  (when-some [data (lookup-entry config id :request-time)]
     (. builder requestTime data))
-  (when-let [data (lookup-entry config id :resource-path)]
+  (when-some [data (lookup-entry config id :resource-path)]
     (. builder resourcePath data))
-  (when-let [data (lookup-entry config id :response-length)]
+  (when-some [data (lookup-entry config id :response-length)]
     (. builder responseLength data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :user)]
+  (when-some [data (lookup-entry config id :user)]
     (. builder user data))
   (.build builder))
 
@@ -4453,13 +4453,13 @@ __Create Form:__ ____[java.lang.String]___
 | `resultsCacheTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:results-cache-ttl` |
 "
   [^LambdaAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role)]
+  (when-some [data (lookup-entry config id :assume-role)]
     (. builder assumeRole data))
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
   (.build builder))
 
@@ -4500,33 +4500,33 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcLink` | software.amazon.awscdk.services.apigateway.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^LambdaIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-test-invoke)]
+  (when-some [data (lookup-entry config id :allow-test-invoke)]
     (. builder allowTestInvoke data))
-  (when-let [data (lookup-entry config id :cache-key-parameters)]
+  (when-some [data (lookup-entry config id :cache-key-parameters)]
     (. builder cacheKeyParameters data))
-  (when-let [data (lookup-entry config id :cache-namespace)]
+  (when-some [data (lookup-entry config id :cache-namespace)]
     (. builder cacheNamespace data))
-  (when-let [data (connection-type config id :connection-type)]
+  (when-some [data (connection-type config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-passthrough)]
+  (when-some [data (lookup-entry config id :credentials-passthrough)]
     (. builder credentialsPassthrough data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :integration-responses)]
+  (when-some [data (lookup-entry config id :integration-responses)]
     (. builder integrationResponses data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :proxy)]
+  (when-some [data (lookup-entry config id :proxy)]
     (. builder proxy data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -4570,33 +4570,33 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `vpcLink` | software.amazon.awscdk.services.apigateway.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^LambdaIntegrationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-test-invoke)]
+  (when-some [data (lookup-entry config id :allow-test-invoke)]
     (. builder allowTestInvoke data))
-  (when-let [data (lookup-entry config id :cache-key-parameters)]
+  (when-some [data (lookup-entry config id :cache-key-parameters)]
     (. builder cacheKeyParameters data))
-  (when-let [data (lookup-entry config id :cache-namespace)]
+  (when-some [data (lookup-entry config id :cache-namespace)]
     (. builder cacheNamespace data))
-  (when-let [data (connection-type config id :connection-type)]
+  (when-some [data (connection-type config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-passthrough)]
+  (when-some [data (lookup-entry config id :credentials-passthrough)]
     (. builder credentialsPassthrough data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :integration-responses)]
+  (when-some [data (lookup-entry config id :integration-responses)]
     (. builder integrationResponses data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :proxy)]
+  (when-some [data (lookup-entry config id :proxy)]
     (. builder proxy data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -4649,57 +4649,57 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `retainDeployments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployments` |
 "
   [^LambdaRestApi$Builder builder id config]
-  (when-let [data (api-key-source-type config id :api-key-source-type)]
+  (when-some [data (api-key-source-type config id :api-key-source-type)]
     (. builder apiKeySourceType data))
-  (when-let [data (lookup-entry config id :binary-media-types)]
+  (when-some [data (lookup-entry config id :binary-media-types)]
     (. builder binaryMediaTypes data))
-  (when-let [data (lookup-entry config id :clone-from)]
+  (when-some [data (lookup-entry config id :clone-from)]
     (. builder cloneFrom data))
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
-  (when-let [data (lookup-entry config id :integration-options)]
+  (when-some [data (lookup-entry config id :integration-options)]
     (. builder integrationOptions data))
-  (when-let [data (lookup-entry config id :min-compression-size)]
+  (when-some [data (lookup-entry config id :min-compression-size)]
     (. builder minCompressionSize data))
-  (when-let [data (lookup-entry config id :minimum-compression-size)]
+  (when-some [data (lookup-entry config id :minimum-compression-size)]
     (. builder minimumCompressionSize data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :proxy)]
+  (when-some [data (lookup-entry config id :proxy)]
     (. builder proxy data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
   (.build builder))
 
@@ -4752,57 +4752,57 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `retainDeployments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployments` |
 "
   [^LambdaRestApiProps$Builder builder id config]
-  (when-let [data (api-key-source-type config id :api-key-source-type)]
+  (when-some [data (api-key-source-type config id :api-key-source-type)]
     (. builder apiKeySourceType data))
-  (when-let [data (lookup-entry config id :binary-media-types)]
+  (when-some [data (lookup-entry config id :binary-media-types)]
     (. builder binaryMediaTypes data))
-  (when-let [data (lookup-entry config id :clone-from)]
+  (when-some [data (lookup-entry config id :clone-from)]
     (. builder cloneFrom data))
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
-  (when-let [data (lookup-entry config id :integration-options)]
+  (when-some [data (lookup-entry config id :integration-options)]
     (. builder integrationOptions data))
-  (when-let [data (lookup-entry config id :min-compression-size)]
+  (when-some [data (lookup-entry config id :min-compression-size)]
     (. builder minCompressionSize data))
-  (when-let [data (lookup-entry config id :minimum-compression-size)]
+  (when-some [data (lookup-entry config id :minimum-compression-size)]
     (. builder minimumCompressionSize data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :proxy)]
+  (when-some [data (lookup-entry config id :proxy)]
     (. builder proxy data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
   (.build builder))
 
@@ -4833,13 +4833,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `resource` | software.amazon.awscdk.services.apigateway.IResource | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^Method$Builder builder id config]
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :integration)]
+  (when-some [data (lookup-entry config id :integration)]
     (. builder integration data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -4874,21 +4874,21 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `throttlingRateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throttling-rate-limit` |
 "
   [^MethodDeploymentOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :cache-data-encrypted)]
+  (when-some [data (lookup-entry config id :cache-data-encrypted)]
     (. builder cacheDataEncrypted data))
-  (when-let [data (lookup-entry config id :cache-ttl)]
+  (when-some [data (lookup-entry config id :cache-ttl)]
     (. builder cacheTtl data))
-  (when-let [data (lookup-entry config id :caching-enabled)]
+  (when-some [data (lookup-entry config id :caching-enabled)]
     (. builder cachingEnabled data))
-  (when-let [data (lookup-entry config id :data-trace-enabled)]
+  (when-some [data (lookup-entry config id :data-trace-enabled)]
     (. builder dataTraceEnabled data))
-  (when-let [data (method-logging-level config id :logging-level)]
+  (when-some [data (method-logging-level config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :metrics-enabled)]
+  (when-some [data (lookup-entry config id :metrics-enabled)]
     (. builder metricsEnabled data))
-  (when-let [data (lookup-entry config id :throttling-burst-limit)]
+  (when-some [data (lookup-entry config id :throttling-burst-limit)]
     (. builder throttlingBurstLimit data))
-  (when-let [data (lookup-entry config id :throttling-rate-limit)]
+  (when-some [data (lookup-entry config id :throttling-rate-limit)]
     (. builder throttlingRateLimit data))
   (.build builder))
 
@@ -4925,25 +4925,25 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `requestValidatorOptions` | software.amazon.awscdk.services.apigateway.RequestValidatorOptions | [[cdk.support/lookup-entry]] | `:request-validator-options` |
 "
   [^MethodOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-required)]
+  (when-some [data (lookup-entry config id :api-key-required)]
     (. builder apiKeyRequired data))
-  (when-let [data (lookup-entry config id :authorization-scopes)]
+  (when-some [data (lookup-entry config id :authorization-scopes)]
     (. builder authorizationScopes data))
-  (when-let [data (authorization-type config id :authorization-type)]
+  (when-some [data (authorization-type config id :authorization-type)]
     (. builder authorizationType data))
-  (when-let [data (lookup-entry config id :authorizer)]
+  (when-some [data (lookup-entry config id :authorizer)]
     (. builder authorizer data))
-  (when-let [data (lookup-entry config id :method-responses)]
+  (when-some [data (lookup-entry config id :method-responses)]
     (. builder methodResponses data))
-  (when-let [data (lookup-entry config id :operation-name)]
+  (when-some [data (lookup-entry config id :operation-name)]
     (. builder operationName data))
-  (when-let [data (lookup-entry config id :request-models)]
+  (when-some [data (lookup-entry config id :request-models)]
     (. builder requestModels data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-validator)]
+  (when-some [data (lookup-entry config id :request-validator)]
     (. builder requestValidator data))
-  (when-let [data (lookup-entry config id :request-validator-options)]
+  (when-some [data (lookup-entry config id :request-validator-options)]
     (. builder requestValidatorOptions data))
   (.build builder))
 
@@ -4974,13 +4974,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `resource` | software.amazon.awscdk.services.apigateway.IResource | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^MethodProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :integration)]
+  (when-some [data (lookup-entry config id :integration)]
     (. builder integration data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -5010,11 +5010,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^MethodResponse$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-models)]
+  (when-some [data (lookup-entry config id :response-models)]
     (. builder responseModels data))
-  (when-let [data (lookup-entry config id :response-parameters)]
+  (when-some [data (lookup-entry config id :response-parameters)]
     (. builder responseParameters data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -5053,29 +5053,29 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `vpcLink` | software.amazon.awscdk.services.apigateway.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^MockIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :cache-key-parameters)]
+  (when-some [data (lookup-entry config id :cache-key-parameters)]
     (. builder cacheKeyParameters data))
-  (when-let [data (lookup-entry config id :cache-namespace)]
+  (when-some [data (lookup-entry config id :cache-namespace)]
     (. builder cacheNamespace data))
-  (when-let [data (connection-type config id :connection-type)]
+  (when-some [data (connection-type config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-passthrough)]
+  (when-some [data (lookup-entry config id :credentials-passthrough)]
     (. builder credentialsPassthrough data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :integration-responses)]
+  (when-some [data (lookup-entry config id :integration-responses)]
     (. builder integrationResponses data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -5107,15 +5107,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `schema` | software.amazon.awscdk.services.apigateway.JsonSchema | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^Model$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
 
@@ -5146,13 +5146,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `schema` | software.amazon.awscdk.services.apigateway.JsonSchema | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^ModelOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
 
@@ -5184,15 +5184,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `schema` | software.amazon.awscdk.services.apigateway.JsonSchema | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^ModelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
 
@@ -5222,11 +5222,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^MTLSConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -5258,15 +5258,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `parent` | software.amazon.awscdk.services.apigateway.IResource | [[cdk.support/lookup-entry]] | `:parent` |
 "
   [^ProxyResource$Builder builder id config]
-  (when-let [data (lookup-entry config id :any-method)]
+  (when-some [data (lookup-entry config id :any-method)]
     (. builder anyMethod data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :parent)]
+  (when-some [data (lookup-entry config id :parent)]
     (. builder parent data))
   (.build builder))
 
@@ -5297,13 +5297,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `defaultMethodOptions` | software.amazon.awscdk.services.apigateway.MethodOptions | [[cdk.support/lookup-entry]] | `:default-method-options` |
 "
   [^ProxyResourceOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :any-method)]
+  (when-some [data (lookup-entry config id :any-method)]
     (. builder anyMethod data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
   (.build builder))
 
@@ -5335,15 +5335,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `parent` | software.amazon.awscdk.services.apigateway.IResource | [[cdk.support/lookup-entry]] | `:parent` |
 "
   [^ProxyResourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :any-method)]
+  (when-some [data (lookup-entry config id :any-method)]
     (. builder anyMethod data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :parent)]
+  (when-some [data (lookup-entry config id :parent)]
     (. builder parent data))
   (.build builder))
 
@@ -5373,11 +5373,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `period` | software.amazon.awscdk.services.apigateway.Period | [[cdk.api.services.apigateway/period]] | `:period` |
 "
   [^QuotaSettings$Builder builder id config]
-  (when-let [data (lookup-entry config id :limit)]
+  (when-some [data (lookup-entry config id :limit)]
     (. builder limit data))
-  (when-let [data (lookup-entry config id :offset)]
+  (when-some [data (lookup-entry config id :offset)]
     (. builder offset data))
-  (when-let [data (period config id :period)]
+  (when-some [data (period config id :period)]
     (. builder period data))
   (.build builder))
 
@@ -5418,33 +5418,33 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^RateLimitedApiKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-name)]
+  (when-some [data (lookup-entry config id :api-key-name)]
     (. builder apiKeyName data))
-  (when-let [data (lookup-entry config id :api-stages)]
+  (when-some [data (lookup-entry config id :api-stages)]
     (. builder apiStages data))
-  (when-let [data (lookup-entry config id :customer-id)]
+  (when-some [data (lookup-entry config id :customer-id)]
     (. builder customerId data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :generate-distinct-id)]
+  (when-some [data (lookup-entry config id :generate-distinct-id)]
     (. builder generateDistinctId data))
-  (when-let [data (lookup-entry config id :quota)]
+  (when-some [data (lookup-entry config id :quota)]
     (. builder quota data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :stages)]
+  (when-some [data (lookup-entry config id :stages)]
     (. builder stages data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -5485,33 +5485,33 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^RateLimitedApiKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-name)]
+  (when-some [data (lookup-entry config id :api-key-name)]
     (. builder apiKeyName data))
-  (when-let [data (lookup-entry config id :api-stages)]
+  (when-some [data (lookup-entry config id :api-stages)]
     (. builder apiStages data))
-  (when-let [data (lookup-entry config id :customer-id)]
+  (when-some [data (lookup-entry config id :customer-id)]
     (. builder customerId data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :generate-distinct-id)]
+  (when-some [data (lookup-entry config id :generate-distinct-id)]
     (. builder generateDistinctId data))
-  (when-let [data (lookup-entry config id :quota)]
+  (when-some [data (lookup-entry config id :quota)]
     (. builder quota data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :stages)]
+  (when-some [data (lookup-entry config id :stages)]
     (. builder stages data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -5543,15 +5543,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `resultsCacheTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:results-cache-ttl` |
 "
   [^RequestAuthorizer$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role)]
+  (when-some [data (lookup-entry config id :assume-role)]
     (. builder assumeRole data))
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
-  (when-let [data (lookup-entry config id :identity-sources)]
+  (when-some [data (lookup-entry config id :identity-sources)]
     (. builder identitySources data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
   (.build builder))
 
@@ -5583,15 +5583,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `resultsCacheTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:results-cache-ttl` |
 "
   [^RequestAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role)]
+  (when-some [data (lookup-entry config id :assume-role)]
     (. builder assumeRole data))
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
-  (when-let [data (lookup-entry config id :identity-sources)]
+  (when-some [data (lookup-entry config id :identity-sources)]
     (. builder identitySources data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
   (.build builder))
 
@@ -5636,41 +5636,41 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `userArn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-arn` |
 "
   [^RequestContext$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :api-id)]
+  (when-some [data (lookup-entry config id :api-id)]
     (. builder apiId data))
-  (when-let [data (lookup-entry config id :api-key)]
+  (when-some [data (lookup-entry config id :api-key)]
     (. builder apiKey data))
-  (when-let [data (lookup-entry config id :authorizer-principal-id)]
+  (when-some [data (lookup-entry config id :authorizer-principal-id)]
     (. builder authorizerPrincipalId data))
-  (when-let [data (lookup-entry config id :caller)]
+  (when-some [data (lookup-entry config id :caller)]
     (. builder caller data))
-  (when-let [data (lookup-entry config id :cognito-authentication-provider)]
+  (when-some [data (lookup-entry config id :cognito-authentication-provider)]
     (. builder cognitoAuthenticationProvider data))
-  (when-let [data (lookup-entry config id :cognito-authentication-type)]
+  (when-some [data (lookup-entry config id :cognito-authentication-type)]
     (. builder cognitoAuthenticationType data))
-  (when-let [data (lookup-entry config id :cognito-identity-id)]
+  (when-some [data (lookup-entry config id :cognito-identity-id)]
     (. builder cognitoIdentityId data))
-  (when-let [data (lookup-entry config id :cognito-identity-pool-id)]
+  (when-some [data (lookup-entry config id :cognito-identity-pool-id)]
     (. builder cognitoIdentityPoolId data))
-  (when-let [data (lookup-entry config id :http-method)]
+  (when-some [data (lookup-entry config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :request-id)]
+  (when-some [data (lookup-entry config id :request-id)]
     (. builder requestId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :resource-path)]
+  (when-some [data (lookup-entry config id :resource-path)]
     (. builder resourcePath data))
-  (when-let [data (lookup-entry config id :source-ip)]
+  (when-some [data (lookup-entry config id :source-ip)]
     (. builder sourceIp data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
-  (when-let [data (lookup-entry config id :user)]
+  (when-some [data (lookup-entry config id :user)]
     (. builder user data))
-  (when-let [data (lookup-entry config id :user-agent)]
+  (when-some [data (lookup-entry config id :user-agent)]
     (. builder userAgent data))
-  (when-let [data (lookup-entry config id :user-arn)]
+  (when-some [data (lookup-entry config id :user-arn)]
     (. builder userArn data))
   (.build builder))
 
@@ -5701,13 +5701,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `validateRequestParameters` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:validate-request-parameters` |
 "
   [^RequestValidator$Builder builder id config]
-  (when-let [data (lookup-entry config id :request-validator-name)]
+  (when-some [data (lookup-entry config id :request-validator-name)]
     (. builder requestValidatorName data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :validate-request-body)]
+  (when-some [data (lookup-entry config id :validate-request-body)]
     (. builder validateRequestBody data))
-  (when-let [data (lookup-entry config id :validate-request-parameters)]
+  (when-some [data (lookup-entry config id :validate-request-parameters)]
     (. builder validateRequestParameters data))
   (.build builder))
 
@@ -5737,11 +5737,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `validateRequestParameters` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:validate-request-parameters` |
 "
   [^RequestValidatorOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :request-validator-name)]
+  (when-some [data (lookup-entry config id :request-validator-name)]
     (. builder requestValidatorName data))
-  (when-let [data (lookup-entry config id :validate-request-body)]
+  (when-some [data (lookup-entry config id :validate-request-body)]
     (. builder validateRequestBody data))
-  (when-let [data (lookup-entry config id :validate-request-parameters)]
+  (when-some [data (lookup-entry config id :validate-request-parameters)]
     (. builder validateRequestParameters data))
   (.build builder))
 
@@ -5772,13 +5772,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `validateRequestParameters` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:validate-request-parameters` |
 "
   [^RequestValidatorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :request-validator-name)]
+  (when-some [data (lookup-entry config id :request-validator-name)]
     (. builder requestValidatorName data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :validate-request-body)]
+  (when-some [data (lookup-entry config id :validate-request-body)]
     (. builder validateRequestBody data))
-  (when-let [data (lookup-entry config id :validate-request-parameters)]
+  (when-some [data (lookup-entry config id :validate-request-parameters)]
     (. builder validateRequestParameters data))
   (.build builder))
 
@@ -5808,11 +5808,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `restApi` | software.amazon.awscdk.services.apigateway.IRestApi | [[cdk.support/lookup-entry]] | `:rest-api` |
 "
   [^ResourceAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
   (.build builder))
 
@@ -5844,15 +5844,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `pathPart` | java.lang.String | [[cdk.support/lookup-entry]] | `:path-part` |
 "
   [^Resource$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :parent)]
+  (when-some [data (lookup-entry config id :parent)]
     (. builder parent data))
-  (when-let [data (lookup-entry config id :path-part)]
+  (when-some [data (lookup-entry config id :path-part)]
     (. builder pathPart data))
   (.build builder))
 
@@ -5882,11 +5882,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `defaultMethodOptions` | software.amazon.awscdk.services.apigateway.MethodOptions | [[cdk.support/lookup-entry]] | `:default-method-options` |
 "
   [^ResourceOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
   (.build builder))
 
@@ -5918,15 +5918,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `pathPart` | java.lang.String | [[cdk.support/lookup-entry]] | `:path-part` |
 "
   [^ResourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :parent)]
+  (when-some [data (lookup-entry config id :parent)]
     (. builder parent data))
-  (when-let [data (lookup-entry config id :path-part)]
+  (when-some [data (lookup-entry config id :path-part)]
     (. builder pathPart data))
   (.build builder))
 
@@ -5956,11 +5956,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `rootResourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-resource-id` |
 "
   [^RestApiAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :rest-api-id)]
+  (when-some [data (lookup-entry config id :rest-api-id)]
     (. builder restApiId data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :root-resource-id)]
+  (when-some [data (lookup-entry config id :root-resource-id)]
     (. builder rootResourceId data))
   (.build builder))
 
@@ -6001,33 +6001,33 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `retainDeployments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployments` |
 "
   [^RestApiBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
   (.build builder))
 
@@ -6077,51 +6077,51 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `retainDeployments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployments` |
 "
   [^RestApi$Builder builder id config]
-  (when-let [data (api-key-source-type config id :api-key-source-type)]
+  (when-some [data (api-key-source-type config id :api-key-source-type)]
     (. builder apiKeySourceType data))
-  (when-let [data (lookup-entry config id :binary-media-types)]
+  (when-some [data (lookup-entry config id :binary-media-types)]
     (. builder binaryMediaTypes data))
-  (when-let [data (lookup-entry config id :clone-from)]
+  (when-some [data (lookup-entry config id :clone-from)]
     (. builder cloneFrom data))
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :min-compression-size)]
+  (when-some [data (lookup-entry config id :min-compression-size)]
     (. builder minCompressionSize data))
-  (when-let [data (lookup-entry config id :minimum-compression-size)]
+  (when-some [data (lookup-entry config id :minimum-compression-size)]
     (. builder minimumCompressionSize data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
   (.build builder))
 
@@ -6171,51 +6171,51 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `retainDeployments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployments` |
 "
   [^RestApiProps$Builder builder id config]
-  (when-let [data (api-key-source-type config id :api-key-source-type)]
+  (when-some [data (api-key-source-type config id :api-key-source-type)]
     (. builder apiKeySourceType data))
-  (when-let [data (lookup-entry config id :binary-media-types)]
+  (when-some [data (lookup-entry config id :binary-media-types)]
     (. builder binaryMediaTypes data))
-  (when-let [data (lookup-entry config id :clone-from)]
+  (when-some [data (lookup-entry config id :clone-from)]
     (. builder cloneFrom data))
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :min-compression-size)]
+  (when-some [data (lookup-entry config id :min-compression-size)]
     (. builder minCompressionSize data))
-  (when-let [data (lookup-entry config id :minimum-compression-size)]
+  (when-some [data (lookup-entry config id :minimum-compression-size)]
     (. builder minimumCompressionSize data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
   (.build builder))
 
@@ -6254,29 +6254,29 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `vpcLink` | software.amazon.awscdk.services.apigateway.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^SagemakerIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :cache-key-parameters)]
+  (when-some [data (lookup-entry config id :cache-key-parameters)]
     (. builder cacheKeyParameters data))
-  (when-let [data (lookup-entry config id :cache-namespace)]
+  (when-some [data (lookup-entry config id :cache-namespace)]
     (. builder cacheNamespace data))
-  (when-let [data (connection-type config id :connection-type)]
+  (when-some [data (connection-type config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-passthrough)]
+  (when-some [data (lookup-entry config id :credentials-passthrough)]
     (. builder credentialsPassthrough data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :integration-responses)]
+  (when-some [data (lookup-entry config id :integration-responses)]
     (. builder integrationResponses data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -6318,29 +6318,29 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `vpcLink` | software.amazon.awscdk.services.apigateway.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^SagemakerIntegrationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :cache-key-parameters)]
+  (when-some [data (lookup-entry config id :cache-key-parameters)]
     (. builder cacheKeyParameters data))
-  (when-let [data (lookup-entry config id :cache-namespace)]
+  (when-some [data (lookup-entry config id :cache-namespace)]
     (. builder cacheNamespace data))
-  (when-let [data (connection-type config id :connection-type)]
+  (when-some [data (connection-type config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-passthrough)]
+  (when-some [data (lookup-entry config id :credentials-passthrough)]
     (. builder credentialsPassthrough data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :integration-responses)]
+  (when-some [data (lookup-entry config id :integration-responses)]
     (. builder integrationResponses data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -6383,37 +6383,37 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `retainDeployments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployments` |
 "
   [^SpecRestApi$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-definition)]
+  (when-some [data (lookup-entry config id :api-definition)]
     (. builder apiDefinition data))
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :min-compression-size)]
+  (when-some [data (lookup-entry config id :min-compression-size)]
     (. builder minCompressionSize data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
   (.build builder))
 
@@ -6456,37 +6456,37 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `retainDeployments` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retain-deployments` |
 "
   [^SpecRestApiProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-definition)]
+  (when-some [data (lookup-entry config id :api-definition)]
     (. builder apiDefinition data))
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :min-compression-size)]
+  (when-some [data (lookup-entry config id :min-compression-size)]
     (. builder minCompressionSize data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
   (.build builder))
 
@@ -6515,9 +6515,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 "
   [^StageAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :rest-api)]
+  (when-some [data (lookup-entry config id :rest-api)]
     (. builder restApi data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
 
@@ -6564,45 +6564,45 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `variables` | java.util.Map | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^Stage$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log-destination)]
+  (when-some [data (lookup-entry config id :access-log-destination)]
     (. builder accessLogDestination data))
-  (when-let [data (lookup-entry config id :access-log-format)]
+  (when-some [data (lookup-entry config id :access-log-format)]
     (. builder accessLogFormat data))
-  (when-let [data (lookup-entry config id :cache-cluster-enabled)]
+  (when-some [data (lookup-entry config id :cache-cluster-enabled)]
     (. builder cacheClusterEnabled data))
-  (when-let [data (lookup-entry config id :cache-cluster-size)]
+  (when-some [data (lookup-entry config id :cache-cluster-size)]
     (. builder cacheClusterSize data))
-  (when-let [data (lookup-entry config id :cache-data-encrypted)]
+  (when-some [data (lookup-entry config id :cache-data-encrypted)]
     (. builder cacheDataEncrypted data))
-  (when-let [data (lookup-entry config id :cache-ttl)]
+  (when-some [data (lookup-entry config id :cache-ttl)]
     (. builder cacheTtl data))
-  (when-let [data (lookup-entry config id :caching-enabled)]
+  (when-some [data (lookup-entry config id :caching-enabled)]
     (. builder cachingEnabled data))
-  (when-let [data (lookup-entry config id :client-certificate-id)]
+  (when-some [data (lookup-entry config id :client-certificate-id)]
     (. builder clientCertificateId data))
-  (when-let [data (lookup-entry config id :data-trace-enabled)]
+  (when-some [data (lookup-entry config id :data-trace-enabled)]
     (. builder dataTraceEnabled data))
-  (when-let [data (lookup-entry config id :deployment)]
+  (when-some [data (lookup-entry config id :deployment)]
     (. builder deployment data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :documentation-version)]
+  (when-some [data (lookup-entry config id :documentation-version)]
     (. builder documentationVersion data))
-  (when-let [data (method-logging-level config id :logging-level)]
+  (when-some [data (method-logging-level config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :method-options)]
+  (when-some [data (lookup-entry config id :method-options)]
     (. builder methodOptions data))
-  (when-let [data (lookup-entry config id :metrics-enabled)]
+  (when-some [data (lookup-entry config id :metrics-enabled)]
     (. builder metricsEnabled data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :throttling-burst-limit)]
+  (when-some [data (lookup-entry config id :throttling-burst-limit)]
     (. builder throttlingBurstLimit data))
-  (when-let [data (lookup-entry config id :throttling-rate-limit)]
+  (when-some [data (lookup-entry config id :throttling-rate-limit)]
     (. builder throttlingRateLimit data))
-  (when-let [data (lookup-entry config id :tracing-enabled)]
+  (when-some [data (lookup-entry config id :tracing-enabled)]
     (. builder tracingEnabled data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -6648,43 +6648,43 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `variables` | java.util.Map | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^StageOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log-destination)]
+  (when-some [data (lookup-entry config id :access-log-destination)]
     (. builder accessLogDestination data))
-  (when-let [data (lookup-entry config id :access-log-format)]
+  (when-some [data (lookup-entry config id :access-log-format)]
     (. builder accessLogFormat data))
-  (when-let [data (lookup-entry config id :cache-cluster-enabled)]
+  (when-some [data (lookup-entry config id :cache-cluster-enabled)]
     (. builder cacheClusterEnabled data))
-  (when-let [data (lookup-entry config id :cache-cluster-size)]
+  (when-some [data (lookup-entry config id :cache-cluster-size)]
     (. builder cacheClusterSize data))
-  (when-let [data (lookup-entry config id :cache-data-encrypted)]
+  (when-some [data (lookup-entry config id :cache-data-encrypted)]
     (. builder cacheDataEncrypted data))
-  (when-let [data (lookup-entry config id :cache-ttl)]
+  (when-some [data (lookup-entry config id :cache-ttl)]
     (. builder cacheTtl data))
-  (when-let [data (lookup-entry config id :caching-enabled)]
+  (when-some [data (lookup-entry config id :caching-enabled)]
     (. builder cachingEnabled data))
-  (when-let [data (lookup-entry config id :client-certificate-id)]
+  (when-some [data (lookup-entry config id :client-certificate-id)]
     (. builder clientCertificateId data))
-  (when-let [data (lookup-entry config id :data-trace-enabled)]
+  (when-some [data (lookup-entry config id :data-trace-enabled)]
     (. builder dataTraceEnabled data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :documentation-version)]
+  (when-some [data (lookup-entry config id :documentation-version)]
     (. builder documentationVersion data))
-  (when-let [data (method-logging-level config id :logging-level)]
+  (when-some [data (method-logging-level config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :method-options)]
+  (when-some [data (lookup-entry config id :method-options)]
     (. builder methodOptions data))
-  (when-let [data (lookup-entry config id :metrics-enabled)]
+  (when-some [data (lookup-entry config id :metrics-enabled)]
     (. builder metricsEnabled data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :throttling-burst-limit)]
+  (when-some [data (lookup-entry config id :throttling-burst-limit)]
     (. builder throttlingBurstLimit data))
-  (when-let [data (lookup-entry config id :throttling-rate-limit)]
+  (when-some [data (lookup-entry config id :throttling-rate-limit)]
     (. builder throttlingRateLimit data))
-  (when-let [data (lookup-entry config id :tracing-enabled)]
+  (when-some [data (lookup-entry config id :tracing-enabled)]
     (. builder tracingEnabled data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -6731,45 +6731,45 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `variables` | java.util.Map | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^StageProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log-destination)]
+  (when-some [data (lookup-entry config id :access-log-destination)]
     (. builder accessLogDestination data))
-  (when-let [data (lookup-entry config id :access-log-format)]
+  (when-some [data (lookup-entry config id :access-log-format)]
     (. builder accessLogFormat data))
-  (when-let [data (lookup-entry config id :cache-cluster-enabled)]
+  (when-some [data (lookup-entry config id :cache-cluster-enabled)]
     (. builder cacheClusterEnabled data))
-  (when-let [data (lookup-entry config id :cache-cluster-size)]
+  (when-some [data (lookup-entry config id :cache-cluster-size)]
     (. builder cacheClusterSize data))
-  (when-let [data (lookup-entry config id :cache-data-encrypted)]
+  (when-some [data (lookup-entry config id :cache-data-encrypted)]
     (. builder cacheDataEncrypted data))
-  (when-let [data (lookup-entry config id :cache-ttl)]
+  (when-some [data (lookup-entry config id :cache-ttl)]
     (. builder cacheTtl data))
-  (when-let [data (lookup-entry config id :caching-enabled)]
+  (when-some [data (lookup-entry config id :caching-enabled)]
     (. builder cachingEnabled data))
-  (when-let [data (lookup-entry config id :client-certificate-id)]
+  (when-some [data (lookup-entry config id :client-certificate-id)]
     (. builder clientCertificateId data))
-  (when-let [data (lookup-entry config id :data-trace-enabled)]
+  (when-some [data (lookup-entry config id :data-trace-enabled)]
     (. builder dataTraceEnabled data))
-  (when-let [data (lookup-entry config id :deployment)]
+  (when-some [data (lookup-entry config id :deployment)]
     (. builder deployment data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :documentation-version)]
+  (when-some [data (lookup-entry config id :documentation-version)]
     (. builder documentationVersion data))
-  (when-let [data (method-logging-level config id :logging-level)]
+  (when-some [data (method-logging-level config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :method-options)]
+  (when-some [data (lookup-entry config id :method-options)]
     (. builder methodOptions data))
-  (when-let [data (lookup-entry config id :metrics-enabled)]
+  (when-some [data (lookup-entry config id :metrics-enabled)]
     (. builder metricsEnabled data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :throttling-burst-limit)]
+  (when-some [data (lookup-entry config id :throttling-burst-limit)]
     (. builder throttlingBurstLimit data))
-  (when-let [data (lookup-entry config id :throttling-rate-limit)]
+  (when-some [data (lookup-entry config id :throttling-rate-limit)]
     (. builder throttlingRateLimit data))
-  (when-let [data (lookup-entry config id :tracing-enabled)]
+  (when-some [data (lookup-entry config id :tracing-enabled)]
     (. builder tracingEnabled data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -6814,41 +6814,41 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `vpcLink` | software.amazon.awscdk.services.apigateway.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^StepFunctionsExecutionIntegrationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer)]
+  (when-some [data (lookup-entry config id :authorizer)]
     (. builder authorizer data))
-  (when-let [data (lookup-entry config id :cache-key-parameters)]
+  (when-some [data (lookup-entry config id :cache-key-parameters)]
     (. builder cacheKeyParameters data))
-  (when-let [data (lookup-entry config id :cache-namespace)]
+  (when-some [data (lookup-entry config id :cache-namespace)]
     (. builder cacheNamespace data))
-  (when-let [data (connection-type config id :connection-type)]
+  (when-some [data (connection-type config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-passthrough)]
+  (when-some [data (lookup-entry config id :credentials-passthrough)]
     (. builder credentialsPassthrough data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :integration-responses)]
+  (when-some [data (lookup-entry config id :integration-responses)]
     (. builder integrationResponses data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :querystring)]
+  (when-some [data (lookup-entry config id :querystring)]
     (. builder querystring data))
-  (when-let [data (lookup-entry config id :request-context)]
+  (when-some [data (lookup-entry config id :request-context)]
     (. builder requestContext data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :use-default-method-responses)]
+  (when-some [data (lookup-entry config id :use-default-method-responses)]
     (. builder useDefaultMethodResponses data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -6906,67 +6906,67 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `useDefaultMethodResponses` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-default-method-responses` |
 "
   [^StepFunctionsRestApi$Builder builder id config]
-  (when-let [data (api-key-source-type config id :api-key-source-type)]
+  (when-some [data (api-key-source-type config id :api-key-source-type)]
     (. builder apiKeySourceType data))
-  (when-let [data (lookup-entry config id :authorizer)]
+  (when-some [data (lookup-entry config id :authorizer)]
     (. builder authorizer data))
-  (when-let [data (lookup-entry config id :binary-media-types)]
+  (when-some [data (lookup-entry config id :binary-media-types)]
     (. builder binaryMediaTypes data))
-  (when-let [data (lookup-entry config id :clone-from)]
+  (when-some [data (lookup-entry config id :clone-from)]
     (. builder cloneFrom data))
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :min-compression-size)]
+  (when-some [data (lookup-entry config id :min-compression-size)]
     (. builder minCompressionSize data))
-  (when-let [data (lookup-entry config id :minimum-compression-size)]
+  (when-some [data (lookup-entry config id :minimum-compression-size)]
     (. builder minimumCompressionSize data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :querystring)]
+  (when-some [data (lookup-entry config id :querystring)]
     (. builder querystring data))
-  (when-let [data (lookup-entry config id :request-context)]
+  (when-some [data (lookup-entry config id :request-context)]
     (. builder requestContext data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :state-machine)]
+  (when-some [data (lookup-entry config id :state-machine)]
     (. builder stateMachine data))
-  (when-let [data (lookup-entry config id :use-default-method-responses)]
+  (when-some [data (lookup-entry config id :use-default-method-responses)]
     (. builder useDefaultMethodResponses data))
   (.build builder))
 
@@ -7024,67 +7024,67 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `useDefaultMethodResponses` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-default-method-responses` |
 "
   [^StepFunctionsRestApiProps$Builder builder id config]
-  (when-let [data (api-key-source-type config id :api-key-source-type)]
+  (when-some [data (api-key-source-type config id :api-key-source-type)]
     (. builder apiKeySourceType data))
-  (when-let [data (lookup-entry config id :authorizer)]
+  (when-some [data (lookup-entry config id :authorizer)]
     (. builder authorizer data))
-  (when-let [data (lookup-entry config id :binary-media-types)]
+  (when-some [data (lookup-entry config id :binary-media-types)]
     (. builder binaryMediaTypes data))
-  (when-let [data (lookup-entry config id :clone-from)]
+  (when-some [data (lookup-entry config id :clone-from)]
     (. builder cloneFrom data))
-  (when-let [data (lookup-entry config id :cloud-watch-role)]
+  (when-some [data (lookup-entry config id :cloud-watch-role)]
     (. builder cloudWatchRole data))
-  (when-let [data (removal-policy config id :cloud-watch-role-removal-policy)]
+  (when-some [data (removal-policy config id :cloud-watch-role-removal-policy)]
     (. builder cloudWatchRoleRemovalPolicy data))
-  (when-let [data (lookup-entry config id :default-cors-preflight-options)]
+  (when-some [data (lookup-entry config id :default-cors-preflight-options)]
     (. builder defaultCorsPreflightOptions data))
-  (when-let [data (lookup-entry config id :default-integration)]
+  (when-some [data (lookup-entry config id :default-integration)]
     (. builder defaultIntegration data))
-  (when-let [data (lookup-entry config id :default-method-options)]
+  (when-some [data (lookup-entry config id :default-method-options)]
     (. builder defaultMethodOptions data))
-  (when-let [data (lookup-entry config id :deploy)]
+  (when-some [data (lookup-entry config id :deploy)]
     (. builder deploy data))
-  (when-let [data (lookup-entry config id :deploy-options)]
+  (when-some [data (lookup-entry config id :deploy-options)]
     (. builder deployOptions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disable-execute-api-endpoint)]
+  (when-some [data (lookup-entry config id :disable-execute-api-endpoint)]
     (. builder disableExecuteApiEndpoint data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :endpoint-export-name)]
+  (when-some [data (lookup-entry config id :endpoint-export-name)]
     (. builder endpointExportName data))
-  (when-let [data (lookup-entry config id :endpoint-types)]
+  (when-some [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
-  (when-let [data (lookup-entry config id :fail-on-warnings)]
+  (when-some [data (lookup-entry config id :fail-on-warnings)]
     (. builder failOnWarnings data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :min-compression-size)]
+  (when-some [data (lookup-entry config id :min-compression-size)]
     (. builder minCompressionSize data))
-  (when-let [data (lookup-entry config id :minimum-compression-size)]
+  (when-some [data (lookup-entry config id :minimum-compression-size)]
     (. builder minimumCompressionSize data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :querystring)]
+  (when-some [data (lookup-entry config id :querystring)]
     (. builder querystring data))
-  (when-let [data (lookup-entry config id :request-context)]
+  (when-some [data (lookup-entry config id :request-context)]
     (. builder requestContext data))
-  (when-let [data (lookup-entry config id :rest-api-name)]
+  (when-some [data (lookup-entry config id :rest-api-name)]
     (. builder restApiName data))
-  (when-let [data (lookup-entry config id :retain-deployments)]
+  (when-some [data (lookup-entry config id :retain-deployments)]
     (. builder retainDeployments data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :state-machine)]
+  (when-some [data (lookup-entry config id :state-machine)]
     (. builder stateMachine data))
-  (when-let [data (lookup-entry config id :use-default-method-responses)]
+  (when-some [data (lookup-entry config id :use-default-method-responses)]
     (. builder useDefaultMethodResponses data))
   (.build builder))
 
@@ -7113,9 +7113,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `rateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rate-limit` |
 "
   [^ThrottleSettings$Builder builder id config]
-  (when-let [data (lookup-entry config id :burst-limit)]
+  (when-some [data (lookup-entry config id :burst-limit)]
     (. builder burstLimit data))
-  (when-let [data (lookup-entry config id :rate-limit)]
+  (when-some [data (lookup-entry config id :rate-limit)]
     (. builder rateLimit data))
   (.build builder))
 
@@ -7144,9 +7144,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `throttle` | software.amazon.awscdk.services.apigateway.ThrottleSettings | [[cdk.support/lookup-entry]] | `:throttle` |
 "
   [^ThrottlingPerMethod$Builder builder id config]
-  (when-let [data (lookup-entry config id :method)]
+  (when-some [data (lookup-entry config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
   (.build builder))
 
@@ -7179,17 +7179,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `validationRegex` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-regex` |
 "
   [^TokenAuthorizer$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role)]
+  (when-some [data (lookup-entry config id :assume-role)]
     (. builder assumeRole data))
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
-  (when-let [data (lookup-entry config id :validation-regex)]
+  (when-some [data (lookup-entry config id :validation-regex)]
     (. builder validationRegex data))
   (.build builder))
 
@@ -7222,17 +7222,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `validationRegex` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-regex` |
 "
   [^TokenAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role)]
+  (when-some [data (lookup-entry config id :assume-role)]
     (. builder assumeRole data))
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
-  (when-let [data (lookup-entry config id :validation-regex)]
+  (when-some [data (lookup-entry config id :validation-regex)]
     (. builder validationRegex data))
   (.build builder))
 
@@ -7264,15 +7264,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `throttle` | software.amazon.awscdk.services.apigateway.ThrottleSettings | [[cdk.support/lookup-entry]] | `:throttle` |
 "
   [^UsagePlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-stages)]
+  (when-some [data (lookup-entry config id :api-stages)]
     (. builder apiStages data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :quota)]
+  (when-some [data (lookup-entry config id :quota)]
     (. builder quota data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
   (.build builder))
 
@@ -7302,11 +7302,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `throttle` | java.util.List | [[cdk.support/lookup-entry]] | `:throttle` |
 "
   [^UsagePlanPerApiStage$Builder builder id config]
-  (when-let [data (lookup-entry config id :api)]
+  (when-some [data (lookup-entry config id :api)]
     (. builder api data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
   (.build builder))
 
@@ -7338,15 +7338,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `throttle` | software.amazon.awscdk.services.apigateway.ThrottleSettings | [[cdk.support/lookup-entry]] | `:throttle` |
 "
   [^UsagePlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-stages)]
+  (when-some [data (lookup-entry config id :api-stages)]
     (. builder apiStages data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :quota)]
+  (when-some [data (lookup-entry config id :quota)]
     (. builder quota data))
-  (when-let [data (lookup-entry config id :throttle)]
+  (when-some [data (lookup-entry config id :throttle)]
     (. builder throttle data))
   (.build builder))
 
@@ -7376,11 +7376,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `vpcLinkName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-link-name` |
 "
   [^VpcLink$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :vpc-link-name)]
+  (when-some [data (lookup-entry config id :vpc-link-name)]
     (. builder vpcLinkName data))
   (.build builder))
 
@@ -7410,11 +7410,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 | `vpcLinkName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-link-name` |
 "
   [^VpcLinkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :vpc-link-name)]
+  (when-some [data (lookup-entry config id :vpc-link-name)]
     (. builder vpcLinkName data))
   (.build builder))
 

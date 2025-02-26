@@ -27,19 +27,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentAccountConnection$Builder builder id config]
-  (when-let [data (lookup-entry config id :codebuild-role-arn)]
+  (when-some [data (lookup-entry config id :codebuild-role-arn)]
     (. builder codebuildRoleArn data))
-  (when-let [data (lookup-entry config id :component-role-arn)]
+  (when-some [data (lookup-entry config id :component-role-arn)]
     (. builder componentRoleArn data))
-  (when-let [data (lookup-entry config id :environment-account-id)]
+  (when-some [data (lookup-entry config id :environment-account-id)]
     (. builder environmentAccountId data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :management-account-id)]
+  (when-some [data (lookup-entry config id :management-account-id)]
     (. builder managementAccountId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -73,19 +73,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentAccountConnectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :codebuild-role-arn)]
+  (when-some [data (lookup-entry config id :codebuild-role-arn)]
     (. builder codebuildRoleArn data))
-  (when-let [data (lookup-entry config id :component-role-arn)]
+  (when-some [data (lookup-entry config id :component-role-arn)]
     (. builder componentRoleArn data))
-  (when-let [data (lookup-entry config id :environment-account-id)]
+  (when-some [data (lookup-entry config id :environment-account-id)]
     (. builder environmentAccountId data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :management-account-id)]
+  (when-some [data (lookup-entry config id :management-account-id)]
     (. builder managementAccountId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -118,17 +118,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :provisioning)]
+  (when-some [data (lookup-entry config id :provisioning)]
     (. builder provisioning data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -161,17 +161,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :provisioning)]
+  (when-some [data (lookup-entry config id :provisioning)]
     (. builder provisioning data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -204,17 +204,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServiceTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pipeline-provisioning)]
+  (when-some [data (lookup-entry config id :pipeline-provisioning)]
     (. builder pipelineProvisioning data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -247,17 +247,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServiceTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pipeline-provisioning)]
+  (when-some [data (lookup-entry config id :pipeline-provisioning)]
     (. builder pipelineProvisioning data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

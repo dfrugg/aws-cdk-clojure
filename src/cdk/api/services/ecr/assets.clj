@@ -25,9 +25,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^DockerCacheOption$Builder builder id config]
-  (when-let [data (lookup-entry config id :params)]
+  (when-some [data (lookup-entry config id :params)]
     (. builder params data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -72,41 +72,41 @@
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^DockerImageAsset$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-name)]
+  (when-some [data (lookup-entry config id :asset-name)]
     (. builder assetName data))
-  (when-let [data (lookup-entry config id :build-args)]
+  (when-some [data (lookup-entry config id :build-args)]
     (. builder buildArgs data))
-  (when-let [data (lookup-entry config id :build-secrets)]
+  (when-some [data (lookup-entry config id :build-secrets)]
     (. builder buildSecrets data))
-  (when-let [data (lookup-entry config id :build-ssh)]
+  (when-some [data (lookup-entry config id :build-ssh)]
     (. builder buildSsh data))
-  (when-let [data (lookup-entry config id :cache-disabled)]
+  (when-some [data (lookup-entry config id :cache-disabled)]
     (. builder cacheDisabled data))
-  (when-let [data (lookup-entry config id :cache-from)]
+  (when-some [data (lookup-entry config id :cache-from)]
     (. builder cacheFrom data))
-  (when-let [data (lookup-entry config id :cache-to)]
+  (when-some [data (lookup-entry config id :cache-to)]
     (. builder cacheTo data))
-  (when-let [data (lookup-entry config id :directory)]
+  (when-some [data (lookup-entry config id :directory)]
     (. builder directory data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (lookup-entry config id :extra-hash)]
+  (when-some [data (lookup-entry config id :extra-hash)]
     (. builder extraHash data))
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+  (when-some [data (symlink-follow-mode config id :follow-symlinks)]
     (. builder followSymlinks data))
-  (when-let [data (ignore-mode config id :ignore-mode)]
+  (when-some [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
-  (when-let [data (lookup-entry config id :invalidation)]
+  (when-some [data (lookup-entry config id :invalidation)]
     (. builder invalidation data))
-  (when-let [data (lookup-entry config id :network-mode)]
+  (when-some [data (lookup-entry config id :network-mode)]
     (. builder networkMode data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -143,25 +143,25 @@
 | `target` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^DockerImageAssetInvalidationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :build-args)]
+  (when-some [data (lookup-entry config id :build-args)]
     (. builder buildArgs data))
-  (when-let [data (lookup-entry config id :build-secrets)]
+  (when-some [data (lookup-entry config id :build-secrets)]
     (. builder buildSecrets data))
-  (when-let [data (lookup-entry config id :build-ssh)]
+  (when-some [data (lookup-entry config id :build-ssh)]
     (. builder buildSsh data))
-  (when-let [data (lookup-entry config id :extra-hash)]
+  (when-some [data (lookup-entry config id :extra-hash)]
     (. builder extraHash data))
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :network-mode)]
+  (when-some [data (lookup-entry config id :network-mode)]
     (. builder networkMode data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -205,39 +205,39 @@
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^DockerImageAssetOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-name)]
+  (when-some [data (lookup-entry config id :asset-name)]
     (. builder assetName data))
-  (when-let [data (lookup-entry config id :build-args)]
+  (when-some [data (lookup-entry config id :build-args)]
     (. builder buildArgs data))
-  (when-let [data (lookup-entry config id :build-secrets)]
+  (when-some [data (lookup-entry config id :build-secrets)]
     (. builder buildSecrets data))
-  (when-let [data (lookup-entry config id :build-ssh)]
+  (when-some [data (lookup-entry config id :build-ssh)]
     (. builder buildSsh data))
-  (when-let [data (lookup-entry config id :cache-disabled)]
+  (when-some [data (lookup-entry config id :cache-disabled)]
     (. builder cacheDisabled data))
-  (when-let [data (lookup-entry config id :cache-from)]
+  (when-some [data (lookup-entry config id :cache-from)]
     (. builder cacheFrom data))
-  (when-let [data (lookup-entry config id :cache-to)]
+  (when-some [data (lookup-entry config id :cache-to)]
     (. builder cacheTo data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (lookup-entry config id :extra-hash)]
+  (when-some [data (lookup-entry config id :extra-hash)]
     (. builder extraHash data))
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+  (when-some [data (symlink-follow-mode config id :follow-symlinks)]
     (. builder followSymlinks data))
-  (when-let [data (ignore-mode config id :ignore-mode)]
+  (when-some [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
-  (when-let [data (lookup-entry config id :invalidation)]
+  (when-some [data (lookup-entry config id :invalidation)]
     (. builder invalidation data))
-  (when-let [data (lookup-entry config id :network-mode)]
+  (when-some [data (lookup-entry config id :network-mode)]
     (. builder networkMode data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -282,41 +282,41 @@
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^DockerImageAssetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-name)]
+  (when-some [data (lookup-entry config id :asset-name)]
     (. builder assetName data))
-  (when-let [data (lookup-entry config id :build-args)]
+  (when-some [data (lookup-entry config id :build-args)]
     (. builder buildArgs data))
-  (when-let [data (lookup-entry config id :build-secrets)]
+  (when-some [data (lookup-entry config id :build-secrets)]
     (. builder buildSecrets data))
-  (when-let [data (lookup-entry config id :build-ssh)]
+  (when-some [data (lookup-entry config id :build-ssh)]
     (. builder buildSsh data))
-  (when-let [data (lookup-entry config id :cache-disabled)]
+  (when-some [data (lookup-entry config id :cache-disabled)]
     (. builder cacheDisabled data))
-  (when-let [data (lookup-entry config id :cache-from)]
+  (when-some [data (lookup-entry config id :cache-from)]
     (. builder cacheFrom data))
-  (when-let [data (lookup-entry config id :cache-to)]
+  (when-some [data (lookup-entry config id :cache-to)]
     (. builder cacheTo data))
-  (when-let [data (lookup-entry config id :directory)]
+  (when-some [data (lookup-entry config id :directory)]
     (. builder directory data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (lookup-entry config id :extra-hash)]
+  (when-some [data (lookup-entry config id :extra-hash)]
     (. builder extraHash data))
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+  (when-some [data (symlink-follow-mode config id :follow-symlinks)]
     (. builder followSymlinks data))
-  (when-let [data (ignore-mode config id :ignore-mode)]
+  (when-some [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
-  (when-let [data (lookup-entry config id :invalidation)]
+  (when-some [data (lookup-entry config id :invalidation)]
     (. builder invalidation data))
-  (when-let [data (lookup-entry config id :network-mode)]
+  (when-some [data (lookup-entry config id :network-mode)]
     (. builder networkMode data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -344,7 +344,7 @@
 | `tarballFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:tarball-file` |
 "
   [^TarballImageAsset$Builder builder id config]
-  (when-let [data (lookup-entry config id :tarball-file)]
+  (when-some [data (lookup-entry config id :tarball-file)]
     (. builder tarballFile data))
   (.build builder))
 
@@ -372,7 +372,7 @@
 | `tarballFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:tarball-file` |
 "
   [^TarballImageAssetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :tarball-file)]
+  (when-some [data (lookup-entry config id :tarball-file)]
     (. builder tarballFile data))
   (.build builder))
 

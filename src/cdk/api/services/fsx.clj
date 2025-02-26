@@ -159,7 +159,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^CfnDataRepositoryAssociation$AutoExportPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
 
@@ -187,7 +187,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^CfnDataRepositoryAssociation$AutoImportPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
 
@@ -221,19 +221,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataRepositoryAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-import-meta-data-on-create)]
+  (when-some [data (lookup-entry config id :batch-import-meta-data-on-create)]
     (. builder batchImportMetaDataOnCreate data))
-  (when-let [data (lookup-entry config id :data-repository-path)]
+  (when-some [data (lookup-entry config id :data-repository-path)]
     (. builder dataRepositoryPath data))
-  (when-let [data (lookup-entry config id :file-system-id)]
+  (when-some [data (lookup-entry config id :file-system-id)]
     (. builder fileSystemId data))
-  (when-let [data (lookup-entry config id :file-system-path)]
+  (when-some [data (lookup-entry config id :file-system-path)]
     (. builder fileSystemPath data))
-  (when-let [data (lookup-entry config id :imported-file-chunk-size)]
+  (when-some [data (lookup-entry config id :imported-file-chunk-size)]
     (. builder importedFileChunkSize data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -267,19 +267,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataRepositoryAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-import-meta-data-on-create)]
+  (when-some [data (lookup-entry config id :batch-import-meta-data-on-create)]
     (. builder batchImportMetaDataOnCreate data))
-  (when-let [data (lookup-entry config id :data-repository-path)]
+  (when-some [data (lookup-entry config id :data-repository-path)]
     (. builder dataRepositoryPath data))
-  (when-let [data (lookup-entry config id :file-system-id)]
+  (when-some [data (lookup-entry config id :file-system-id)]
     (. builder fileSystemId data))
-  (when-let [data (lookup-entry config id :file-system-path)]
+  (when-some [data (lookup-entry config id :file-system-path)]
     (. builder fileSystemPath data))
-  (when-let [data (lookup-entry config id :imported-file-chunk-size)]
+  (when-some [data (lookup-entry config id :imported-file-chunk-size)]
     (. builder importedFileChunkSize data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -308,9 +308,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `autoImportPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-import-policy` |
 "
   [^CfnDataRepositoryAssociation$S3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-export-policy)]
+  (when-some [data (lookup-entry config id :auto-export-policy)]
     (. builder autoExportPolicy data))
-  (when-let [data (lookup-entry config id :auto-import-policy)]
+  (when-some [data (lookup-entry config id :auto-import-policy)]
     (. builder autoImportPolicy data))
   (.build builder))
 
@@ -340,11 +340,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `fileShareAccessAuditLogLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-share-access-audit-log-level` |
 "
   [^CfnFileSystem$AuditLogConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audit-log-destination)]
+  (when-some [data (lookup-entry config id :audit-log-destination)]
     (. builder auditLogDestination data))
-  (when-let [data (lookup-entry config id :file-access-audit-log-level)]
+  (when-some [data (lookup-entry config id :file-access-audit-log-level)]
     (. builder fileAccessAuditLogLevel data))
-  (when-let [data (lookup-entry config id :file-share-access-audit-log-level)]
+  (when-some [data (lookup-entry config id :file-share-access-audit-log-level)]
     (. builder fileShareAccessAuditLogLevel data))
   (.build builder))
 
@@ -384,31 +384,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `windowsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:windows-configuration` |
 "
   [^CfnFileSystem$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :file-system-type)]
+  (when-some [data (lookup-entry config id :file-system-type)]
     (. builder fileSystemType data))
-  (when-let [data (lookup-entry config id :file-system-type-version)]
+  (when-some [data (lookup-entry config id :file-system-type-version)]
     (. builder fileSystemTypeVersion data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :lustre-configuration)]
+  (when-some [data (lookup-entry config id :lustre-configuration)]
     (. builder lustreConfiguration data))
-  (when-let [data (lookup-entry config id :ontap-configuration)]
+  (when-some [data (lookup-entry config id :ontap-configuration)]
     (. builder ontapConfiguration data))
-  (when-let [data (lookup-entry config id :open-zfs-configuration)]
+  (when-some [data (lookup-entry config id :open-zfs-configuration)]
     (. builder openZfsConfiguration data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :storage-capacity)]
+  (when-some [data (lookup-entry config id :storage-capacity)]
     (. builder storageCapacity data))
-  (when-let [data (lookup-entry config id :storage-type)]
+  (when-some [data (lookup-entry config id :storage-type)]
     (. builder storageType data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :windows-configuration)]
+  (when-some [data (lookup-entry config id :windows-configuration)]
     (. builder windowsConfiguration data))
   (.build builder))
 
@@ -437,9 +437,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |
 "
   [^CfnFileSystem$ClientConfigurationsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :clients)]
+  (when-some [data (lookup-entry config id :clients)]
     (. builder clients data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
   (.build builder))
 
@@ -468,9 +468,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 "
   [^CfnFileSystem$DiskIopsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :iops)]
+  (when-some [data (lookup-entry config id :iops)]
     (. builder iops data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
   (.build builder))
 
@@ -509,29 +509,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
 "
   [^CfnFileSystem$LustreConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-import-policy)]
+  (when-some [data (lookup-entry config id :auto-import-policy)]
     (. builder autoImportPolicy data))
-  (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
+  (when-some [data (lookup-entry config id :automatic-backup-retention-days)]
     (. builder automaticBackupRetentionDays data))
-  (when-let [data (lookup-entry config id :copy-tags-to-backups)]
+  (when-some [data (lookup-entry config id :copy-tags-to-backups)]
     (. builder copyTagsToBackups data))
-  (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
+  (when-some [data (lookup-entry config id :daily-automatic-backup-start-time)]
     (. builder dailyAutomaticBackupStartTime data))
-  (when-let [data (lookup-entry config id :data-compression-type)]
+  (when-some [data (lookup-entry config id :data-compression-type)]
     (. builder dataCompressionType data))
-  (when-let [data (lookup-entry config id :deployment-type)]
+  (when-some [data (lookup-entry config id :deployment-type)]
     (. builder deploymentType data))
-  (when-let [data (lookup-entry config id :drive-cache-type)]
+  (when-some [data (lookup-entry config id :drive-cache-type)]
     (. builder driveCacheType data))
-  (when-let [data (lookup-entry config id :export-path)]
+  (when-some [data (lookup-entry config id :export-path)]
     (. builder exportPath data))
-  (when-let [data (lookup-entry config id :import-path)]
+  (when-some [data (lookup-entry config id :import-path)]
     (. builder importPath data))
-  (when-let [data (lookup-entry config id :imported-file-chunk-size)]
+  (when-some [data (lookup-entry config id :imported-file-chunk-size)]
     (. builder importedFileChunkSize data))
-  (when-let [data (lookup-entry config id :per-unit-storage-throughput)]
+  (when-some [data (lookup-entry config id :per-unit-storage-throughput)]
     (. builder perUnitStorageThroughput data))
-  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+  (when-some [data (lookup-entry config id :weekly-maintenance-start-time)]
     (. builder weeklyMaintenanceStartTime data))
   (.build builder))
 
@@ -559,7 +559,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `clientConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:client-configurations` |
 "
   [^CfnFileSystem$NfsExportsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-configurations)]
+  (when-some [data (lookup-entry config id :client-configurations)]
     (. builder clientConfigurations data))
   (.build builder))
 
@@ -598,29 +598,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
 "
   [^CfnFileSystem$OntapConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
+  (when-some [data (lookup-entry config id :automatic-backup-retention-days)]
     (. builder automaticBackupRetentionDays data))
-  (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
+  (when-some [data (lookup-entry config id :daily-automatic-backup-start-time)]
     (. builder dailyAutomaticBackupStartTime data))
-  (when-let [data (lookup-entry config id :deployment-type)]
+  (when-some [data (lookup-entry config id :deployment-type)]
     (. builder deploymentType data))
-  (when-let [data (lookup-entry config id :disk-iops-configuration)]
+  (when-some [data (lookup-entry config id :disk-iops-configuration)]
     (. builder diskIopsConfiguration data))
-  (when-let [data (lookup-entry config id :endpoint-ip-address-range)]
+  (when-some [data (lookup-entry config id :endpoint-ip-address-range)]
     (. builder endpointIpAddressRange data))
-  (when-let [data (lookup-entry config id :fsx-admin-password)]
+  (when-some [data (lookup-entry config id :fsx-admin-password)]
     (. builder fsxAdminPassword data))
-  (when-let [data (lookup-entry config id :ha-pairs)]
+  (when-some [data (lookup-entry config id :ha-pairs)]
     (. builder haPairs data))
-  (when-let [data (lookup-entry config id :preferred-subnet-id)]
+  (when-some [data (lookup-entry config id :preferred-subnet-id)]
     (. builder preferredSubnetId data))
-  (when-let [data (lookup-entry config id :route-table-ids)]
+  (when-some [data (lookup-entry config id :route-table-ids)]
     (. builder routeTableIds data))
-  (when-let [data (lookup-entry config id :throughput-capacity)]
+  (when-some [data (lookup-entry config id :throughput-capacity)]
     (. builder throughputCapacity data))
-  (when-let [data (lookup-entry config id :throughput-capacity-per-ha-pair)]
+  (when-some [data (lookup-entry config id :throughput-capacity-per-ha-pair)]
     (. builder throughputCapacityPerHaPair data))
-  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+  (when-some [data (lookup-entry config id :weekly-maintenance-start-time)]
     (. builder weeklyMaintenanceStartTime data))
   (.build builder))
 
@@ -660,31 +660,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
 "
   [^CfnFileSystem$OpenZFSConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
+  (when-some [data (lookup-entry config id :automatic-backup-retention-days)]
     (. builder automaticBackupRetentionDays data))
-  (when-let [data (lookup-entry config id :copy-tags-to-backups)]
+  (when-some [data (lookup-entry config id :copy-tags-to-backups)]
     (. builder copyTagsToBackups data))
-  (when-let [data (lookup-entry config id :copy-tags-to-volumes)]
+  (when-some [data (lookup-entry config id :copy-tags-to-volumes)]
     (. builder copyTagsToVolumes data))
-  (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
+  (when-some [data (lookup-entry config id :daily-automatic-backup-start-time)]
     (. builder dailyAutomaticBackupStartTime data))
-  (when-let [data (lookup-entry config id :deployment-type)]
+  (when-some [data (lookup-entry config id :deployment-type)]
     (. builder deploymentType data))
-  (when-let [data (lookup-entry config id :disk-iops-configuration)]
+  (when-some [data (lookup-entry config id :disk-iops-configuration)]
     (. builder diskIopsConfiguration data))
-  (when-let [data (lookup-entry config id :endpoint-ip-address-range)]
+  (when-some [data (lookup-entry config id :endpoint-ip-address-range)]
     (. builder endpointIpAddressRange data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :preferred-subnet-id)]
+  (when-some [data (lookup-entry config id :preferred-subnet-id)]
     (. builder preferredSubnetId data))
-  (when-let [data (lookup-entry config id :root-volume-configuration)]
+  (when-some [data (lookup-entry config id :root-volume-configuration)]
     (. builder rootVolumeConfiguration data))
-  (when-let [data (lookup-entry config id :route-table-ids)]
+  (when-some [data (lookup-entry config id :route-table-ids)]
     (. builder routeTableIds data))
-  (when-let [data (lookup-entry config id :throughput-capacity)]
+  (when-some [data (lookup-entry config id :throughput-capacity)]
     (. builder throughputCapacity data))
-  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+  (when-some [data (lookup-entry config id :weekly-maintenance-start-time)]
     (. builder weeklyMaintenanceStartTime data))
   (.build builder))
 
@@ -724,31 +724,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `windowsConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$WindowsConfigurationProperty | [[cdk.support/lookup-entry]] | `:windows-configuration` |
 "
   [^CfnFileSystemProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :file-system-type)]
+  (when-some [data (lookup-entry config id :file-system-type)]
     (. builder fileSystemType data))
-  (when-let [data (lookup-entry config id :file-system-type-version)]
+  (when-some [data (lookup-entry config id :file-system-type-version)]
     (. builder fileSystemTypeVersion data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :lustre-configuration)]
+  (when-some [data (lookup-entry config id :lustre-configuration)]
     (. builder lustreConfiguration data))
-  (when-let [data (lookup-entry config id :ontap-configuration)]
+  (when-some [data (lookup-entry config id :ontap-configuration)]
     (. builder ontapConfiguration data))
-  (when-let [data (lookup-entry config id :open-zfs-configuration)]
+  (when-some [data (lookup-entry config id :open-zfs-configuration)]
     (. builder openZfsConfiguration data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :storage-capacity)]
+  (when-some [data (lookup-entry config id :storage-capacity)]
     (. builder storageCapacity data))
-  (when-let [data (lookup-entry config id :storage-type)]
+  (when-some [data (lookup-entry config id :storage-type)]
     (. builder storageType data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :windows-configuration)]
+  (when-some [data (lookup-entry config id :windows-configuration)]
     (. builder windowsConfiguration data))
   (.build builder))
 
@@ -781,17 +781,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userAndGroupQuotas` | java.util.List | [[cdk.support/lookup-entry]] | `:user-and-group-quotas` |
 "
   [^CfnFileSystem$RootVolumeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :copy-tags-to-snapshots)]
+  (when-some [data (lookup-entry config id :copy-tags-to-snapshots)]
     (. builder copyTagsToSnapshots data))
-  (when-let [data (lookup-entry config id :data-compression-type)]
+  (when-some [data (lookup-entry config id :data-compression-type)]
     (. builder dataCompressionType data))
-  (when-let [data (lookup-entry config id :nfs-exports)]
+  (when-some [data (lookup-entry config id :nfs-exports)]
     (. builder nfsExports data))
-  (when-let [data (lookup-entry config id :read-only)]
+  (when-some [data (lookup-entry config id :read-only)]
     (. builder readOnly data))
-  (when-let [data (lookup-entry config id :record-size-ki-b)]
+  (when-some [data (lookup-entry config id :record-size-ki-b)]
     (. builder recordSizeKiB data))
-  (when-let [data (lookup-entry config id :user-and-group-quotas)]
+  (when-some [data (lookup-entry config id :user-and-group-quotas)]
     (. builder userAndGroupQuotas data))
   (.build builder))
 
@@ -824,17 +824,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnFileSystem$SelfManagedActiveDirectoryConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-ips)]
+  (when-some [data (lookup-entry config id :dns-ips)]
     (. builder dnsIps data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :file-system-administrators-group)]
+  (when-some [data (lookup-entry config id :file-system-administrators-group)]
     (. builder fileSystemAdministratorsGroup data))
-  (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
+  (when-some [data (lookup-entry config id :organizational-unit-distinguished-name)]
     (. builder organizationalUnitDistinguishedName data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -864,11 +864,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnFileSystem$UserAndGroupQuotasProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
+  (when-some [data (lookup-entry config id :storage-capacity-quota-gi-b)]
     (. builder storageCapacityQuotaGiB data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -907,29 +907,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
 "
   [^CfnFileSystem$WindowsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :active-directory-id)]
+  (when-some [data (lookup-entry config id :active-directory-id)]
     (. builder activeDirectoryId data))
-  (when-let [data (lookup-entry config id :aliases)]
+  (when-some [data (lookup-entry config id :aliases)]
     (. builder aliases data))
-  (when-let [data (lookup-entry config id :audit-log-configuration)]
+  (when-some [data (lookup-entry config id :audit-log-configuration)]
     (. builder auditLogConfiguration data))
-  (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
+  (when-some [data (lookup-entry config id :automatic-backup-retention-days)]
     (. builder automaticBackupRetentionDays data))
-  (when-let [data (lookup-entry config id :copy-tags-to-backups)]
+  (when-some [data (lookup-entry config id :copy-tags-to-backups)]
     (. builder copyTagsToBackups data))
-  (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
+  (when-some [data (lookup-entry config id :daily-automatic-backup-start-time)]
     (. builder dailyAutomaticBackupStartTime data))
-  (when-let [data (lookup-entry config id :deployment-type)]
+  (when-some [data (lookup-entry config id :deployment-type)]
     (. builder deploymentType data))
-  (when-let [data (lookup-entry config id :disk-iops-configuration)]
+  (when-some [data (lookup-entry config id :disk-iops-configuration)]
     (. builder diskIopsConfiguration data))
-  (when-let [data (lookup-entry config id :preferred-subnet-id)]
+  (when-some [data (lookup-entry config id :preferred-subnet-id)]
     (. builder preferredSubnetId data))
-  (when-let [data (lookup-entry config id :self-managed-active-directory-configuration)]
+  (when-some [data (lookup-entry config id :self-managed-active-directory-configuration)]
     (. builder selfManagedActiveDirectoryConfiguration data))
-  (when-let [data (lookup-entry config id :throughput-capacity)]
+  (when-some [data (lookup-entry config id :throughput-capacity)]
     (. builder throughputCapacity data))
-  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+  (when-some [data (lookup-entry config id :weekly-maintenance-start-time)]
     (. builder weeklyMaintenanceStartTime data))
   (.build builder))
 
@@ -959,11 +959,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-id` |
 "
   [^CfnSnapshot$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :volume-id)]
+  (when-some [data (lookup-entry config id :volume-id)]
     (. builder volumeId data))
   (.build builder))
 
@@ -993,11 +993,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-id` |
 "
   [^CfnSnapshotProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :volume-id)]
+  (when-some [data (lookup-entry config id :volume-id)]
     (. builder volumeId data))
   (.build builder))
 
@@ -1026,9 +1026,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `selfManagedActiveDirectoryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-active-directory-configuration` |
 "
   [^CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :net-bios-name)]
+  (when-some [data (lookup-entry config id :net-bios-name)]
     (. builder netBiosName data))
-  (when-let [data (lookup-entry config id :self-managed-active-directory-configuration)]
+  (when-some [data (lookup-entry config id :self-managed-active-directory-configuration)]
     (. builder selfManagedActiveDirectoryConfiguration data))
   (.build builder))
 
@@ -1061,17 +1061,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStorageVirtualMachine$Builder builder id config]
-  (when-let [data (lookup-entry config id :active-directory-configuration)]
+  (when-some [data (lookup-entry config id :active-directory-configuration)]
     (. builder activeDirectoryConfiguration data))
-  (when-let [data (lookup-entry config id :file-system-id)]
+  (when-some [data (lookup-entry config id :file-system-id)]
     (. builder fileSystemId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :root-volume-security-style)]
+  (when-some [data (lookup-entry config id :root-volume-security-style)]
     (. builder rootVolumeSecurityStyle data))
-  (when-let [data (lookup-entry config id :svm-admin-password)]
+  (when-some [data (lookup-entry config id :svm-admin-password)]
     (. builder svmAdminPassword data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1104,17 +1104,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStorageVirtualMachineProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :active-directory-configuration)]
+  (when-some [data (lookup-entry config id :active-directory-configuration)]
     (. builder activeDirectoryConfiguration data))
-  (when-let [data (lookup-entry config id :file-system-id)]
+  (when-some [data (lookup-entry config id :file-system-id)]
     (. builder fileSystemId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :root-volume-security-style)]
+  (when-some [data (lookup-entry config id :root-volume-security-style)]
     (. builder rootVolumeSecurityStyle data))
-  (when-let [data (lookup-entry config id :svm-admin-password)]
+  (when-some [data (lookup-entry config id :svm-admin-password)]
     (. builder svmAdminPassword data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1147,17 +1147,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnStorageVirtualMachine$SelfManagedActiveDirectoryConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-ips)]
+  (when-some [data (lookup-entry config id :dns-ips)]
     (. builder dnsIps data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :file-system-administrators-group)]
+  (when-some [data (lookup-entry config id :file-system-administrators-group)]
     (. builder fileSystemAdministratorsGroup data))
-  (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
+  (when-some [data (lookup-entry config id :organizational-unit-distinguished-name)]
     (. builder organizationalUnitDistinguishedName data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -1186,9 +1186,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `constituentsPerAggregate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:constituents-per-aggregate` |
 "
   [^CfnVolume$AggregateConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregates)]
+  (when-some [data (lookup-entry config id :aggregates)]
     (. builder aggregates data))
-  (when-let [data (lookup-entry config id :constituents-per-aggregate)]
+  (when-some [data (lookup-entry config id :constituents-per-aggregate)]
     (. builder constituentsPerAggregate data))
   (.build builder))
 
@@ -1217,9 +1217,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnVolume$AutocommitPeriodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1252,17 +1252,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |
 "
   [^CfnVolume$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :ontap-configuration)]
+  (when-some [data (lookup-entry config id :ontap-configuration)]
     (. builder ontapConfiguration data))
-  (when-let [data (lookup-entry config id :open-zfs-configuration)]
+  (when-some [data (lookup-entry config id :open-zfs-configuration)]
     (. builder openZfsConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :volume-type)]
+  (when-some [data (lookup-entry config id :volume-type)]
     (. builder volumeType data))
   (.build builder))
 
@@ -1291,9 +1291,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |
 "
   [^CfnVolume$ClientConfigurationsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :clients)]
+  (when-some [data (lookup-entry config id :clients)]
     (. builder clients data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
   (.build builder))
 
@@ -1321,7 +1321,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `clientConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:client-configurations` |
 "
   [^CfnVolume$NfsExportsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-configurations)]
+  (when-some [data (lookup-entry config id :client-configurations)]
     (. builder clientConfigurations data))
   (.build builder))
 
@@ -1361,31 +1361,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-style` |
 "
   [^CfnVolume$OntapConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregate-configuration)]
+  (when-some [data (lookup-entry config id :aggregate-configuration)]
     (. builder aggregateConfiguration data))
-  (when-let [data (lookup-entry config id :copy-tags-to-backups)]
+  (when-some [data (lookup-entry config id :copy-tags-to-backups)]
     (. builder copyTagsToBackups data))
-  (when-let [data (lookup-entry config id :junction-path)]
+  (when-some [data (lookup-entry config id :junction-path)]
     (. builder junctionPath data))
-  (when-let [data (lookup-entry config id :ontap-volume-type)]
+  (when-some [data (lookup-entry config id :ontap-volume-type)]
     (. builder ontapVolumeType data))
-  (when-let [data (lookup-entry config id :security-style)]
+  (when-some [data (lookup-entry config id :security-style)]
     (. builder securityStyle data))
-  (when-let [data (lookup-entry config id :size-in-bytes)]
+  (when-some [data (lookup-entry config id :size-in-bytes)]
     (. builder sizeInBytes data))
-  (when-let [data (lookup-entry config id :size-in-megabytes)]
+  (when-some [data (lookup-entry config id :size-in-megabytes)]
     (. builder sizeInMegabytes data))
-  (when-let [data (lookup-entry config id :snaplock-configuration)]
+  (when-some [data (lookup-entry config id :snaplock-configuration)]
     (. builder snaplockConfiguration data))
-  (when-let [data (lookup-entry config id :snapshot-policy)]
+  (when-some [data (lookup-entry config id :snapshot-policy)]
     (. builder snapshotPolicy data))
-  (when-let [data (lookup-entry config id :storage-efficiency-enabled)]
+  (when-some [data (lookup-entry config id :storage-efficiency-enabled)]
     (. builder storageEfficiencyEnabled data))
-  (when-let [data (lookup-entry config id :storage-virtual-machine-id)]
+  (when-some [data (lookup-entry config id :storage-virtual-machine-id)]
     (. builder storageVirtualMachineId data))
-  (when-let [data (lookup-entry config id :tiering-policy)]
+  (when-some [data (lookup-entry config id :tiering-policy)]
     (. builder tieringPolicy data))
-  (when-let [data (lookup-entry config id :volume-style)]
+  (when-some [data (lookup-entry config id :volume-style)]
     (. builder volumeStyle data))
   (.build builder))
 
@@ -1423,27 +1423,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userAndGroupQuotas` | java.util.List | [[cdk.support/lookup-entry]] | `:user-and-group-quotas` |
 "
   [^CfnVolume$OpenZFSConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :copy-tags-to-snapshots)]
+  (when-some [data (lookup-entry config id :copy-tags-to-snapshots)]
     (. builder copyTagsToSnapshots data))
-  (when-let [data (lookup-entry config id :data-compression-type)]
+  (when-some [data (lookup-entry config id :data-compression-type)]
     (. builder dataCompressionType data))
-  (when-let [data (lookup-entry config id :nfs-exports)]
+  (when-some [data (lookup-entry config id :nfs-exports)]
     (. builder nfsExports data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :origin-snapshot)]
+  (when-some [data (lookup-entry config id :origin-snapshot)]
     (. builder originSnapshot data))
-  (when-let [data (lookup-entry config id :parent-volume-id)]
+  (when-some [data (lookup-entry config id :parent-volume-id)]
     (. builder parentVolumeId data))
-  (when-let [data (lookup-entry config id :read-only)]
+  (when-some [data (lookup-entry config id :read-only)]
     (. builder readOnly data))
-  (when-let [data (lookup-entry config id :record-size-ki-b)]
+  (when-some [data (lookup-entry config id :record-size-ki-b)]
     (. builder recordSizeKiB data))
-  (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
+  (when-some [data (lookup-entry config id :storage-capacity-quota-gi-b)]
     (. builder storageCapacityQuotaGiB data))
-  (when-let [data (lookup-entry config id :storage-capacity-reservation-gi-b)]
+  (when-some [data (lookup-entry config id :storage-capacity-reservation-gi-b)]
     (. builder storageCapacityReservationGiB data))
-  (when-let [data (lookup-entry config id :user-and-group-quotas)]
+  (when-some [data (lookup-entry config id :user-and-group-quotas)]
     (. builder userAndGroupQuotas data))
   (.build builder))
 
@@ -1472,9 +1472,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `snapshotArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-arn` |
 "
   [^CfnVolume$OriginSnapshotProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :copy-strategy)]
+  (when-some [data (lookup-entry config id :copy-strategy)]
     (. builder copyStrategy data))
-  (when-let [data (lookup-entry config id :snapshot-arn)]
+  (when-some [data (lookup-entry config id :snapshot-arn)]
     (. builder snapshotArn data))
   (.build builder))
 
@@ -1507,17 +1507,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |
 "
   [^CfnVolumeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :ontap-configuration)]
+  (when-some [data (lookup-entry config id :ontap-configuration)]
     (. builder ontapConfiguration data))
-  (when-let [data (lookup-entry config id :open-zfs-configuration)]
+  (when-some [data (lookup-entry config id :open-zfs-configuration)]
     (. builder openZfsConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :volume-type)]
+  (when-some [data (lookup-entry config id :volume-type)]
     (. builder volumeType data))
   (.build builder))
 
@@ -1546,9 +1546,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnVolume$RetentionPeriodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1581,17 +1581,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeAppendModeEnabled` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-append-mode-enabled` |
 "
   [^CfnVolume$SnaplockConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audit-log-volume)]
+  (when-some [data (lookup-entry config id :audit-log-volume)]
     (. builder auditLogVolume data))
-  (when-let [data (lookup-entry config id :autocommit-period)]
+  (when-some [data (lookup-entry config id :autocommit-period)]
     (. builder autocommitPeriod data))
-  (when-let [data (lookup-entry config id :privileged-delete)]
+  (when-some [data (lookup-entry config id :privileged-delete)]
     (. builder privilegedDelete data))
-  (when-let [data (lookup-entry config id :retention-period)]
+  (when-some [data (lookup-entry config id :retention-period)]
     (. builder retentionPeriod data))
-  (when-let [data (lookup-entry config id :snaplock-type)]
+  (when-some [data (lookup-entry config id :snaplock-type)]
     (. builder snaplockType data))
-  (when-let [data (lookup-entry config id :volume-append-mode-enabled)]
+  (when-some [data (lookup-entry config id :volume-append-mode-enabled)]
     (. builder volumeAppendModeEnabled data))
   (.build builder))
 
@@ -1621,11 +1621,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minimumRetention` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:minimum-retention` |
 "
   [^CfnVolume$SnaplockRetentionPeriodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-retention)]
+  (when-some [data (lookup-entry config id :default-retention)]
     (. builder defaultRetention data))
-  (when-let [data (lookup-entry config id :maximum-retention)]
+  (when-some [data (lookup-entry config id :maximum-retention)]
     (. builder maximumRetention data))
-  (when-let [data (lookup-entry config id :minimum-retention)]
+  (when-some [data (lookup-entry config id :minimum-retention)]
     (. builder minimumRetention data))
   (.build builder))
 
@@ -1654,9 +1654,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnVolume$TieringPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cooling-period)]
+  (when-some [data (lookup-entry config id :cooling-period)]
     (. builder coolingPeriod data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1686,11 +1686,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnVolume$UserAndGroupQuotasProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
+  (when-some [data (lookup-entry config id :storage-capacity-quota-gi-b)]
     (. builder storageCapacityQuotaGiB data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1720,11 +1720,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
 "
   [^FileSystemAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :file-system-id)]
+  (when-some [data (lookup-entry config id :file-system-id)]
     (. builder fileSystemId data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
   (.build builder))
 
@@ -1757,17 +1757,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^FileSystemProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
+  (when-some [data (lookup-entry config id :storage-capacity-gi-b)]
     (. builder storageCapacityGiB data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -1802,21 +1802,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weeklyMaintenanceStartTime` | software.amazon.awscdk.services.fsx.LustreMaintenanceTime | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
 "
   [^LustreConfiguration$Builder builder id config]
-  (when-let [data (lustre-auto-import-policy config id :auto-import-policy)]
+  (when-some [data (lustre-auto-import-policy config id :auto-import-policy)]
     (. builder autoImportPolicy data))
-  (when-let [data (lustre-data-compression-type config id :data-compression-type)]
+  (when-some [data (lustre-data-compression-type config id :data-compression-type)]
     (. builder dataCompressionType data))
-  (when-let [data (lustre-deployment-type config id :deployment-type)]
+  (when-some [data (lustre-deployment-type config id :deployment-type)]
     (. builder deploymentType data))
-  (when-let [data (lookup-entry config id :export-path)]
+  (when-some [data (lookup-entry config id :export-path)]
     (. builder exportPath data))
-  (when-let [data (lookup-entry config id :import-path)]
+  (when-some [data (lookup-entry config id :import-path)]
     (. builder importPath data))
-  (when-let [data (lookup-entry config id :imported-file-chunk-size-mi-b)]
+  (when-some [data (lookup-entry config id :imported-file-chunk-size-mi-b)]
     (. builder importedFileChunkSizeMiB data))
-  (when-let [data (lookup-entry config id :per-unit-storage-throughput)]
+  (when-some [data (lookup-entry config id :per-unit-storage-throughput)]
     (. builder perUnitStorageThroughput data))
-  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+  (when-some [data (lookup-entry config id :weekly-maintenance-start-time)]
     (. builder weeklyMaintenanceStartTime data))
   (.build builder))
 
@@ -1851,21 +1851,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcSubnet` | software.amazon.awscdk.services.ec2.ISubnet | [[cdk.support/lookup-entry]] | `:vpc-subnet` |
 "
   [^LustreFileSystem$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :lustre-configuration)]
+  (when-some [data (lookup-entry config id :lustre-configuration)]
     (. builder lustreConfiguration data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
+  (when-some [data (lookup-entry config id :storage-capacity-gi-b)]
     (. builder storageCapacityGiB data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnet)]
+  (when-some [data (lookup-entry config id :vpc-subnet)]
     (. builder vpcSubnet data))
   (.build builder))
 
@@ -1900,21 +1900,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcSubnet` | software.amazon.awscdk.services.ec2.ISubnet | [[cdk.support/lookup-entry]] | `:vpc-subnet` |
 "
   [^LustreFileSystemProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :lustre-configuration)]
+  (when-some [data (lookup-entry config id :lustre-configuration)]
     (. builder lustreConfiguration data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
+  (when-some [data (lookup-entry config id :storage-capacity-gi-b)]
     (. builder storageCapacityGiB data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnet)]
+  (when-some [data (lookup-entry config id :vpc-subnet)]
     (. builder vpcSubnet data))
   (.build builder))
 
@@ -1944,11 +1944,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minute` |
 "
   [^LustreMaintenanceTime$Builder builder id config]
-  (when-let [data (weekday config id :day)]
+  (when-some [data (weekday config id :day)]
     (. builder day data))
-  (when-let [data (lookup-entry config id :hour)]
+  (when-some [data (lookup-entry config id :hour)]
     (. builder hour data))
-  (when-let [data (lookup-entry config id :minute)]
+  (when-some [data (lookup-entry config id :minute)]
     (. builder minute data))
   (.build builder))
 
@@ -1978,11 +1978,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minute` |
 "
   [^LustreMaintenanceTimeProps$Builder builder id config]
-  (when-let [data (weekday config id :day)]
+  (when-some [data (weekday config id :day)]
     (. builder day data))
-  (when-let [data (lookup-entry config id :hour)]
+  (when-some [data (lookup-entry config id :hour)]
     (. builder hour data))
-  (when-let [data (lookup-entry config id :minute)]
+  (when-some [data (lookup-entry config id :minute)]
     (. builder minute data))
   (.build builder))
 

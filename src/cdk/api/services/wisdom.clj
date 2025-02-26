@@ -27,7 +27,7 @@
 | `knowledgeBaseId` | java.lang.String | [[cdk.support/lookup-entry]] | `:knowledge-base-id` |
 "
   [^CfnAssistantAssociation$AssociationDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :knowledge-base-id)]
+  (when-some [data (lookup-entry config id :knowledge-base-id)]
     (. builder knowledgeBaseId data))
   (.build builder))
 
@@ -58,13 +58,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAssistantAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :assistant-id)]
+  (when-some [data (lookup-entry config id :assistant-id)]
     (. builder assistantId data))
-  (when-let [data (lookup-entry config id :association)]
+  (when-some [data (lookup-entry config id :association)]
     (. builder association data))
-  (when-let [data (lookup-entry config id :association-type)]
+  (when-some [data (lookup-entry config id :association-type)]
     (. builder associationType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -95,13 +95,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAssistantAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assistant-id)]
+  (when-some [data (lookup-entry config id :assistant-id)]
     (. builder assistantId data))
-  (when-let [data (lookup-entry config id :association)]
+  (when-some [data (lookup-entry config id :association)]
     (. builder association data))
-  (when-let [data (lookup-entry config id :association-type)]
+  (when-some [data (lookup-entry config id :association-type)]
     (. builder associationType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -133,15 +133,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAssistant$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
+  (when-some [data (lookup-entry config id :server-side-encryption-configuration)]
     (. builder serverSideEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -173,15 +173,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAssistantProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
+  (when-some [data (lookup-entry config id :server-side-encryption-configuration)]
     (. builder serverSideEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -209,7 +209,7 @@
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 "
   [^CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
 
@@ -238,9 +238,9 @@
 | `objectFields` | java.util.List | [[cdk.support/lookup-entry]] | `:object-fields` |
 "
   [^CfnKnowledgeBase$AppIntegrationsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-integration-arn)]
+  (when-some [data (lookup-entry config id :app-integration-arn)]
     (. builder appIntegrationArn data))
-  (when-let [data (lookup-entry config id :object-fields)]
+  (when-some [data (lookup-entry config id :object-fields)]
     (. builder objectFields data))
   (.build builder))
 
@@ -274,19 +274,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKnowledgeBase$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :knowledge-base-type)]
+  (when-some [data (lookup-entry config id :knowledge-base-type)]
     (. builder knowledgeBaseType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rendering-configuration)]
+  (when-some [data (lookup-entry config id :rendering-configuration)]
     (. builder renderingConfiguration data))
-  (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
+  (when-some [data (lookup-entry config id :server-side-encryption-configuration)]
     (. builder serverSideEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :source-configuration)]
+  (when-some [data (lookup-entry config id :source-configuration)]
     (. builder sourceConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -320,19 +320,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKnowledgeBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :knowledge-base-type)]
+  (when-some [data (lookup-entry config id :knowledge-base-type)]
     (. builder knowledgeBaseType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rendering-configuration)]
+  (when-some [data (lookup-entry config id :rendering-configuration)]
     (. builder renderingConfiguration data))
-  (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
+  (when-some [data (lookup-entry config id :server-side-encryption-configuration)]
     (. builder serverSideEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :source-configuration)]
+  (when-some [data (lookup-entry config id :source-configuration)]
     (. builder sourceConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -360,7 +360,7 @@
 | `templateUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-uri` |
 "
   [^CfnKnowledgeBase$RenderingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :template-uri)]
+  (when-some [data (lookup-entry config id :template-uri)]
     (. builder templateUri data))
   (.build builder))
 
@@ -388,7 +388,7 @@
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 "
   [^CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
 
@@ -416,7 +416,7 @@
 | `appIntegrations` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$AppIntegrationsConfigurationProperty | [[cdk.support/lookup-entry]] | `:app-integrations` |
 "
   [^CfnKnowledgeBase$SourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-integrations)]
+  (when-some [data (lookup-entry config id :app-integrations)]
     (. builder appIntegrations data))
   (.build builder))
 

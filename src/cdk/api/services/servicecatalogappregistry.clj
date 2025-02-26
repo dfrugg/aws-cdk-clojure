@@ -25,11 +25,11 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -59,11 +59,11 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -92,9 +92,9 @@
 | `attributeGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-group` |
 "
   [^CfnAttributeGroupAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :attribute-group)]
+  (when-some [data (lookup-entry config id :attribute-group)]
     (. builder attributeGroup data))
   (.build builder))
 
@@ -123,9 +123,9 @@
 | `attributeGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-group` |
 "
   [^CfnAttributeGroupAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :attribute-group)]
+  (when-some [data (lookup-entry config id :attribute-group)]
     (. builder attributeGroup data))
   (.build builder))
 
@@ -156,13 +156,13 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAttributeGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -193,13 +193,13 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAttributeGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -229,11 +229,11 @@
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 "
   [^CfnResourceAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
   (.build builder))
 
@@ -263,11 +263,11 @@
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 "
   [^CfnResourceAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
   (.build builder))
 

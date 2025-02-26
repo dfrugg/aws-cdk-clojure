@@ -32,13 +32,13 @@
 | `json` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:json` |
 "
   [^EmailSubscription$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (lookup-entry config id :json)]
+  (when-some [data (lookup-entry config id :json)]
     (. builder json data))
   (.build builder))
 
@@ -72,13 +72,13 @@ __Create Form:__ ____[java.lang.String]___
 | `json` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:json` |
 "
   [^EmailSubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (lookup-entry config id :json)]
+  (when-some [data (lookup-entry config id :json)]
     (. builder json data))
   (.build builder))
 
@@ -108,11 +108,11 @@ __Create Form:__ ____[java.lang.String]___
 | `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
 "
   [^LambdaSubscription$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
 
@@ -145,11 +145,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
 "
   [^LambdaSubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
 
@@ -179,11 +179,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
 "
   [^SmsSubscription$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
 
@@ -216,11 +216,11 @@ __Create Form:__ ____[java.lang.String]___
 | `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
 "
   [^SmsSubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
 
@@ -251,13 +251,13 @@ __Create Form:__ ____[java.lang.String]___
 | `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
 "
   [^SqsSubscription$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
   (.build builder))
 
@@ -291,13 +291,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
 "
   [^SqsSubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
   (.build builder))
 
@@ -327,11 +327,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
 "
   [^SubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
 
@@ -363,15 +363,15 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
 "
   [^UrlSubscription$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (subscription-protocol config id :protocol)]
+  (when-some [data (subscription-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
   (.build builder))
 
@@ -406,15 +406,15 @@ __Create Form:__ ____[java.lang.String]___
 | `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
 "
   [^UrlSubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (subscription-protocol config id :protocol)]
+  (when-some [data (subscription-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
   (.build builder))
 

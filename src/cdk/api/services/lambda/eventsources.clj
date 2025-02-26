@@ -75,25 +75,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `requestValidatorOptions` | software.amazon.awscdk.services.apigateway.RequestValidatorOptions | [[cdk.support/lookup-entry]] | `:request-validator-options` |
 "
   [^ApiEventSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key-required)]
+  (when-some [data (lookup-entry config id :api-key-required)]
     (. builder apiKeyRequired data))
-  (when-let [data (lookup-entry config id :authorization-scopes)]
+  (when-some [data (lookup-entry config id :authorization-scopes)]
     (. builder authorizationScopes data))
-  (when-let [data (authorization-type config id :authorization-type)]
+  (when-some [data (authorization-type config id :authorization-type)]
     (. builder authorizationType data))
-  (when-let [data (lookup-entry config id :authorizer)]
+  (when-some [data (lookup-entry config id :authorizer)]
     (. builder authorizer data))
-  (when-let [data (lookup-entry config id :method-responses)]
+  (when-some [data (lookup-entry config id :method-responses)]
     (. builder methodResponses data))
-  (when-let [data (lookup-entry config id :operation-name)]
+  (when-some [data (lookup-entry config id :operation-name)]
     (. builder operationName data))
-  (when-let [data (lookup-entry config id :request-models)]
+  (when-some [data (lookup-entry config id :request-models)]
     (. builder requestModels data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-validator)]
+  (when-some [data (lookup-entry config id :request-validator)]
     (. builder requestValidator data))
-  (when-let [data (lookup-entry config id :request-validator-options)]
+  (when-some [data (lookup-entry config id :request-validator-options)]
     (. builder requestValidatorOptions data))
   (.build builder))
 
@@ -128,13 +128,13 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
 "
   [^BaseStreamEventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
   (.build builder))
 
@@ -173,29 +173,29 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
 "
   [^DynamoEventSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+  (when-some [data (lookup-entry config id :bisect-batch-on-error)]
     (. builder bisectBatchOnError data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :max-record-age)]
+  (when-some [data (lookup-entry config id :max-record-age)]
     (. builder maxRecordAge data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :parallelization-factor)]
+  (when-some [data (lookup-entry config id :parallelization-factor)]
     (. builder parallelizationFactor data))
-  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+  (when-some [data (lookup-entry config id :report-batch-item-failures)]
     (. builder reportBatchItemFailures data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :tumbling-window)]
+  (when-some [data (lookup-entry config id :tumbling-window)]
     (. builder tumblingWindow data))
   (.build builder))
 
@@ -237,29 +237,29 @@ __Create Form:__ ____[software.amazon.awscdk.services.dynamodb.ITable]___
 | `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
 "
   [^DynamoEventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+  (when-some [data (lookup-entry config id :bisect-batch-on-error)]
     (. builder bisectBatchOnError data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :max-record-age)]
+  (when-some [data (lookup-entry config id :max-record-age)]
     (. builder maxRecordAge data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :parallelization-factor)]
+  (when-some [data (lookup-entry config id :parallelization-factor)]
     (. builder parallelizationFactor data))
-  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+  (when-some [data (lookup-entry config id :report-batch-item-failures)]
     (. builder reportBatchItemFailures data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :tumbling-window)]
+  (when-some [data (lookup-entry config id :tumbling-window)]
     (. builder tumblingWindow data))
   (.build builder))
 
@@ -295,23 +295,23 @@ __Create Form:__ ____[software.amazon.awscdk.services.dynamodb.ITable]___
 | `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^KafkaEventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :consumer-group-id)]
+  (when-some [data (lookup-entry config id :consumer-group-id)]
     (. builder consumerGroupId data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -351,31 +351,31 @@ __Create Form:__ ____[software.amazon.awscdk.services.dynamodb.ITable]___
 | `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
 "
   [^KinesisEventSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+  (when-some [data (lookup-entry config id :bisect-batch-on-error)]
     (. builder bisectBatchOnError data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :max-record-age)]
+  (when-some [data (lookup-entry config id :max-record-age)]
     (. builder maxRecordAge data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :parallelization-factor)]
+  (when-some [data (lookup-entry config id :parallelization-factor)]
     (. builder parallelizationFactor data))
-  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+  (when-some [data (lookup-entry config id :report-batch-item-failures)]
     (. builder reportBatchItemFailures data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :starting-position-timestamp)]
+  (when-some [data (lookup-entry config id :starting-position-timestamp)]
     (. builder startingPositionTimestamp data))
-  (when-let [data (lookup-entry config id :tumbling-window)]
+  (when-some [data (lookup-entry config id :tumbling-window)]
     (. builder tumblingWindow data))
   (.build builder))
 
@@ -418,31 +418,31 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
 "
   [^KinesisEventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+  (when-some [data (lookup-entry config id :bisect-batch-on-error)]
     (. builder bisectBatchOnError data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :max-record-age)]
+  (when-some [data (lookup-entry config id :max-record-age)]
     (. builder maxRecordAge data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :parallelization-factor)]
+  (when-some [data (lookup-entry config id :parallelization-factor)]
     (. builder parallelizationFactor data))
-  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+  (when-some [data (lookup-entry config id :report-batch-item-failures)]
     (. builder reportBatchItemFailures data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :starting-position-timestamp)]
+  (when-some [data (lookup-entry config id :starting-position-timestamp)]
     (. builder startingPositionTimestamp data))
-  (when-let [data (lookup-entry config id :tumbling-window)]
+  (when-some [data (lookup-entry config id :tumbling-window)]
     (. builder tumblingWindow data))
   (.build builder))
 
@@ -479,25 +479,25 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^ManagedKafkaEventSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :cluster-arn)]
+  (when-some [data (lookup-entry config id :cluster-arn)]
     (. builder clusterArn data))
-  (when-let [data (lookup-entry config id :consumer-group-id)]
+  (when-some [data (lookup-entry config id :consumer-group-id)]
     (. builder consumerGroupId data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -534,25 +534,25 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^ManagedKafkaEventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :cluster-arn)]
+  (when-some [data (lookup-entry config id :cluster-arn)]
     (. builder clusterArn data))
-  (when-let [data (lookup-entry config id :consumer-group-id)]
+  (when-some [data (lookup-entry config id :consumer-group-id)]
     (. builder consumerGroupId data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -581,9 +581,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
 "
   [^S3EventSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
   (.build builder))
 
@@ -615,9 +615,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.Bucket]___
 | `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
 "
   [^S3EventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
   (.build builder))
 
@@ -646,9 +646,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.Bucket]___
 | `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
 "
   [^S3EventSourceV2$Builder builder id config]
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
   (.build builder))
 
@@ -693,35 +693,35 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^SelfManagedKafkaEventSource$Builder builder id config]
-  (when-let [data (authentication-method config id :authentication-method)]
+  (when-some [data (authentication-method config id :authentication-method)]
     (. builder authenticationMethod data))
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :bootstrap-servers)]
+  (when-some [data (lookup-entry config id :bootstrap-servers)]
     (. builder bootstrapServers data))
-  (when-let [data (lookup-entry config id :consumer-group-id)]
+  (when-some [data (lookup-entry config id :consumer-group-id)]
     (. builder consumerGroupId data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :root-ca-certificate)]
+  (when-some [data (lookup-entry config id :root-ca-certificate)]
     (. builder rootCaCertificate data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -763,35 +763,35 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^SelfManagedKafkaEventSourceProps$Builder builder id config]
-  (when-let [data (authentication-method config id :authentication-method)]
+  (when-some [data (authentication-method config id :authentication-method)]
     (. builder authenticationMethod data))
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :bootstrap-servers)]
+  (when-some [data (lookup-entry config id :bootstrap-servers)]
     (. builder bootstrapServers data))
-  (when-let [data (lookup-entry config id :consumer-group-id)]
+  (when-some [data (lookup-entry config id :consumer-group-id)]
     (. builder consumerGroupId data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :root-ca-certificate)]
+  (when-some [data (lookup-entry config id :root-ca-certificate)]
     (. builder rootCaCertificate data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -821,11 +821,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
 | `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
 "
   [^SnsEventSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
 
@@ -858,11 +858,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
 | `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
 "
   [^SnsEventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
 
@@ -895,17 +895,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
 | `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |
 "
   [^SqsEventSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :max-concurrency)]
+  (when-some [data (lookup-entry config id :max-concurrency)]
     (. builder maxConcurrency data))
-  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+  (when-some [data (lookup-entry config id :report-batch-item-failures)]
     (. builder reportBatchItemFailures data))
   (.build builder))
 
@@ -941,17 +941,17 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |
 "
   [^SqsEventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :max-concurrency)]
+  (when-some [data (lookup-entry config id :max-concurrency)]
     (. builder maxConcurrency data))
-  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+  (when-some [data (lookup-entry config id :report-batch-item-failures)]
     (. builder reportBatchItemFailures data))
   (.build builder))
 
@@ -990,29 +990,29 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
 "
   [^StreamEventSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-size)]
+  (when-some [data (lookup-entry config id :batch-size)]
     (. builder batchSize data))
-  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+  (when-some [data (lookup-entry config id :bisect-batch-on-error)]
     (. builder bisectBatchOnError data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :max-batching-window)]
+  (when-some [data (lookup-entry config id :max-batching-window)]
     (. builder maxBatchingWindow data))
-  (when-let [data (lookup-entry config id :max-record-age)]
+  (when-some [data (lookup-entry config id :max-record-age)]
     (. builder maxRecordAge data))
-  (when-let [data (lookup-entry config id :on-failure)]
+  (when-some [data (lookup-entry config id :on-failure)]
     (. builder onFailure data))
-  (when-let [data (lookup-entry config id :parallelization-factor)]
+  (when-some [data (lookup-entry config id :parallelization-factor)]
     (. builder parallelizationFactor data))
-  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+  (when-some [data (lookup-entry config id :report-batch-item-failures)]
     (. builder reportBatchItemFailures data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (starting-position config id :starting-position)]
+  (when-some [data (starting-position config id :starting-position)]
     (. builder startingPosition data))
-  (when-let [data (lookup-entry config id :tumbling-window)]
+  (when-some [data (lookup-entry config id :tumbling-window)]
     (. builder tumblingWindow data))
   (.build builder))
 

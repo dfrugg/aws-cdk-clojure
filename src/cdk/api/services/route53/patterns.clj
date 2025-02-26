@@ -20,13 +20,13 @@
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^HttpsRedirect$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :record-names)]
+  (when-some [data (lookup-entry config id :record-names)]
     (. builder recordNames data))
-  (when-let [data (lookup-entry config id :target-domain)]
+  (when-some [data (lookup-entry config id :target-domain)]
     (. builder targetDomain data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -57,13 +57,13 @@
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^HttpsRedirectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :record-names)]
+  (when-some [data (lookup-entry config id :record-names)]
     (. builder recordNames data))
-  (when-let [data (lookup-entry config id :target-domain)]
+  (when-some [data (lookup-entry config id :target-domain)]
     (. builder targetDomain data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 

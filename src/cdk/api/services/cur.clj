@@ -28,29 +28,29 @@
 | `timeUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-unit` |
 "
   [^CfnReportDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-artifacts)]
+  (when-some [data (lookup-entry config id :additional-artifacts)]
     (. builder additionalArtifacts data))
-  (when-let [data (lookup-entry config id :additional-schema-elements)]
+  (when-some [data (lookup-entry config id :additional-schema-elements)]
     (. builder additionalSchemaElements data))
-  (when-let [data (lookup-entry config id :billing-view-arn)]
+  (when-some [data (lookup-entry config id :billing-view-arn)]
     (. builder billingViewArn data))
-  (when-let [data (lookup-entry config id :compression)]
+  (when-some [data (lookup-entry config id :compression)]
     (. builder compression data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :refresh-closed-reports)]
+  (when-some [data (lookup-entry config id :refresh-closed-reports)]
     (. builder refreshClosedReports data))
-  (when-let [data (lookup-entry config id :report-name)]
+  (when-some [data (lookup-entry config id :report-name)]
     (. builder reportName data))
-  (when-let [data (lookup-entry config id :report-versioning)]
+  (when-some [data (lookup-entry config id :report-versioning)]
     (. builder reportVersioning data))
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-prefix)]
+  (when-some [data (lookup-entry config id :s3-prefix)]
     (. builder s3Prefix data))
-  (when-let [data (lookup-entry config id :s3-region)]
+  (when-some [data (lookup-entry config id :s3-region)]
     (. builder s3Region data))
-  (when-let [data (lookup-entry config id :time-unit)]
+  (when-some [data (lookup-entry config id :time-unit)]
     (. builder timeUnit data))
   (.build builder))
 
@@ -89,29 +89,29 @@
 | `timeUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-unit` |
 "
   [^CfnReportDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-artifacts)]
+  (when-some [data (lookup-entry config id :additional-artifacts)]
     (. builder additionalArtifacts data))
-  (when-let [data (lookup-entry config id :additional-schema-elements)]
+  (when-some [data (lookup-entry config id :additional-schema-elements)]
     (. builder additionalSchemaElements data))
-  (when-let [data (lookup-entry config id :billing-view-arn)]
+  (when-some [data (lookup-entry config id :billing-view-arn)]
     (. builder billingViewArn data))
-  (when-let [data (lookup-entry config id :compression)]
+  (when-some [data (lookup-entry config id :compression)]
     (. builder compression data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :refresh-closed-reports)]
+  (when-some [data (lookup-entry config id :refresh-closed-reports)]
     (. builder refreshClosedReports data))
-  (when-let [data (lookup-entry config id :report-name)]
+  (when-some [data (lookup-entry config id :report-name)]
     (. builder reportName data))
-  (when-let [data (lookup-entry config id :report-versioning)]
+  (when-some [data (lookup-entry config id :report-versioning)]
     (. builder reportVersioning data))
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-prefix)]
+  (when-some [data (lookup-entry config id :s3-prefix)]
     (. builder s3Prefix data))
-  (when-let [data (lookup-entry config id :s3-region)]
+  (when-some [data (lookup-entry config id :s3-region)]
     (. builder s3Region data))
-  (when-let [data (lookup-entry config id :time-unit)]
+  (when-some [data (lookup-entry config id :time-unit)]
     (. builder timeUnit data))
   (.build builder))
 

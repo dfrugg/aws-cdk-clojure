@@ -35,11 +35,11 @@
 | `principalEntityType` | java.lang.String | [[cdk.support/lookup-entry]] | `:principal-entity-type` |
 "
   [^CfnIdentitySource$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :policy-store-id)]
+  (when-some [data (lookup-entry config id :policy-store-id)]
     (. builder policyStoreId data))
-  (when-let [data (lookup-entry config id :principal-entity-type)]
+  (when-some [data (lookup-entry config id :principal-entity-type)]
     (. builder principalEntityType data))
   (.build builder))
 
@@ -67,7 +67,7 @@
 | `groupEntityType` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-entity-type` |
 "
   [^CfnIdentitySource$CognitoGroupConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-entity-type)]
+  (when-some [data (lookup-entry config id :group-entity-type)]
     (. builder groupEntityType data))
   (.build builder))
 
@@ -97,11 +97,11 @@
 | `userPoolArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-arn` |
 "
   [^CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-ids)]
+  (when-some [data (lookup-entry config id :client-ids)]
     (. builder clientIds data))
-  (when-let [data (lookup-entry config id :group-configuration)]
+  (when-some [data (lookup-entry config id :group-configuration)]
     (. builder groupConfiguration data))
-  (when-let [data (lookup-entry config id :user-pool-arn)]
+  (when-some [data (lookup-entry config id :user-pool-arn)]
     (. builder userPoolArn data))
   (.build builder))
 
@@ -129,7 +129,7 @@
 | `cognitoUserPoolConfiguration` | software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource$CognitoUserPoolConfigurationProperty | [[cdk.support/lookup-entry]] | `:cognito-user-pool-configuration` |
 "
   [^CfnIdentitySource$IdentitySourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cognito-user-pool-configuration)]
+  (when-some [data (lookup-entry config id :cognito-user-pool-configuration)]
     (. builder cognitoUserPoolConfiguration data))
   (.build builder))
 
@@ -160,13 +160,13 @@
 | `userPoolArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-arn` |
 "
   [^CfnIdentitySource$IdentitySourceDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-ids)]
+  (when-some [data (lookup-entry config id :client-ids)]
     (. builder clientIds data))
-  (when-let [data (lookup-entry config id :discovery-url)]
+  (when-some [data (lookup-entry config id :discovery-url)]
     (. builder discoveryUrl data))
-  (when-let [data (lookup-entry config id :open-id-issuer)]
+  (when-some [data (lookup-entry config id :open-id-issuer)]
     (. builder openIdIssuer data))
-  (when-let [data (lookup-entry config id :user-pool-arn)]
+  (when-some [data (lookup-entry config id :user-pool-arn)]
     (. builder userPoolArn data))
   (.build builder))
 
@@ -196,11 +196,11 @@
 | `principalEntityType` | java.lang.String | [[cdk.support/lookup-entry]] | `:principal-entity-type` |
 "
   [^CfnIdentitySourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :policy-store-id)]
+  (when-some [data (lookup-entry config id :policy-store-id)]
     (. builder policyStoreId data))
-  (when-let [data (lookup-entry config id :principal-entity-type)]
+  (when-some [data (lookup-entry config id :principal-entity-type)]
     (. builder principalEntityType data))
   (.build builder))
 
@@ -229,9 +229,9 @@
 | `policyStoreId` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-store-id` |
 "
   [^CfnPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :definition)]
+  (when-some [data (lookup-entry config id :definition)]
     (. builder definition data))
-  (when-let [data (lookup-entry config id :policy-store-id)]
+  (when-some [data (lookup-entry config id :policy-store-id)]
     (. builder policyStoreId data))
   (.build builder))
 
@@ -260,9 +260,9 @@
 | `entityType` | java.lang.String | [[cdk.support/lookup-entry]] | `:entity-type` |
 "
   [^CfnPolicy$EntityIdentifierProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :entity-id)]
+  (when-some [data (lookup-entry config id :entity-id)]
     (. builder entityId data))
-  (when-let [data (lookup-entry config id :entity-type)]
+  (when-some [data (lookup-entry config id :entity-type)]
     (. builder entityType data))
   (.build builder))
 
@@ -291,9 +291,9 @@
 | `templateLinked` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicy$TemplateLinkedPolicyDefinitionProperty | [[cdk.support/lookup-entry]] | `:template-linked` |
 "
   [^CfnPolicy$PolicyDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :static-value)]
+  (when-some [data (lookup-entry config id :static-value)]
     (. builder staticValue data))
-  (when-let [data (lookup-entry config id :template-linked)]
+  (when-some [data (lookup-entry config id :template-linked)]
     (. builder templateLinked data))
   (.build builder))
 
@@ -322,9 +322,9 @@
 | `policyStoreId` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-store-id` |
 "
   [^CfnPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :definition)]
+  (when-some [data (lookup-entry config id :definition)]
     (. builder definition data))
-  (when-let [data (lookup-entry config id :policy-store-id)]
+  (when-some [data (lookup-entry config id :policy-store-id)]
     (. builder policyStoreId data))
   (.build builder))
 
@@ -353,9 +353,9 @@
 | `statement` | java.lang.String | [[cdk.support/lookup-entry]] | `:statement` |
 "
   [^CfnPolicy$StaticPolicyDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :statement)]
+  (when-some [data (lookup-entry config id :statement)]
     (. builder statement data))
   (.build builder))
 
@@ -385,11 +385,11 @@
 | `validationSettings` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore$ValidationSettingsProperty | [[cdk.support/lookup-entry]] | `:validation-settings` |
 "
   [^CfnPolicyStore$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
-  (when-let [data (lookup-entry config id :validation-settings)]
+  (when-some [data (lookup-entry config id :validation-settings)]
     (. builder validationSettings data))
   (.build builder))
 
@@ -419,11 +419,11 @@
 | `validationSettings` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore$ValidationSettingsProperty | [[cdk.support/lookup-entry]] | `:validation-settings` |
 "
   [^CfnPolicyStoreProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
-  (when-let [data (lookup-entry config id :validation-settings)]
+  (when-some [data (lookup-entry config id :validation-settings)]
     (. builder validationSettings data))
   (.build builder))
 
@@ -451,7 +451,7 @@
 | `cedarJson` | java.lang.String | [[cdk.support/lookup-entry]] | `:cedar-json` |
 "
   [^CfnPolicyStore$SchemaDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cedar-json)]
+  (when-some [data (lookup-entry config id :cedar-json)]
     (. builder cedarJson data))
   (.build builder))
 
@@ -479,7 +479,7 @@
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 "
   [^CfnPolicyStore$ValidationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
   (.build builder))
 
@@ -509,11 +509,11 @@
 | `statement` | java.lang.String | [[cdk.support/lookup-entry]] | `:statement` |
 "
   [^CfnPolicyTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :policy-store-id)]
+  (when-some [data (lookup-entry config id :policy-store-id)]
     (. builder policyStoreId data))
-  (when-let [data (lookup-entry config id :statement)]
+  (when-some [data (lookup-entry config id :statement)]
     (. builder statement data))
   (.build builder))
 
@@ -543,11 +543,11 @@
 | `resource` | software.amazon.awscdk.services.verifiedpermissions.CfnPolicy$EntityIdentifierProperty | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-template-id)]
+  (when-some [data (lookup-entry config id :policy-template-id)]
     (. builder policyTemplateId data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -577,11 +577,11 @@
 | `statement` | java.lang.String | [[cdk.support/lookup-entry]] | `:statement` |
 "
   [^CfnPolicyTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :policy-store-id)]
+  (when-some [data (lookup-entry config id :policy-store-id)]
     (. builder policyStoreId data))
-  (when-let [data (lookup-entry config id :statement)]
+  (when-some [data (lookup-entry config id :statement)]
     (. builder statement data))
   (.build builder))
 

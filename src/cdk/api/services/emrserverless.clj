@@ -32,7 +32,7 @@
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnApplication$AutoStartConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -61,9 +61,9 @@
 | `idleTimeoutMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-timeout-minutes` |
 "
   [^CfnApplication$AutoStopConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :idle-timeout-minutes)]
+  (when-some [data (lookup-entry config id :idle-timeout-minutes)]
     (. builder idleTimeoutMinutes data))
   (.build builder))
 
@@ -104,33 +104,33 @@
 | `workerTypeSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:worker-type-specifications` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :architecture)]
+  (when-some [data (lookup-entry config id :architecture)]
     (. builder architecture data))
-  (when-let [data (lookup-entry config id :auto-start-configuration)]
+  (when-some [data (lookup-entry config id :auto-start-configuration)]
     (. builder autoStartConfiguration data))
-  (when-let [data (lookup-entry config id :auto-stop-configuration)]
+  (when-some [data (lookup-entry config id :auto-stop-configuration)]
     (. builder autoStopConfiguration data))
-  (when-let [data (lookup-entry config id :image-configuration)]
+  (when-some [data (lookup-entry config id :image-configuration)]
     (. builder imageConfiguration data))
-  (when-let [data (lookup-entry config id :initial-capacity)]
+  (when-some [data (lookup-entry config id :initial-capacity)]
     (. builder initialCapacity data))
-  (when-let [data (lookup-entry config id :maximum-capacity)]
+  (when-some [data (lookup-entry config id :maximum-capacity)]
     (. builder maximumCapacity data))
-  (when-let [data (lookup-entry config id :monitoring-configuration)]
+  (when-some [data (lookup-entry config id :monitoring-configuration)]
     (. builder monitoringConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :release-label)]
+  (when-some [data (lookup-entry config id :release-label)]
     (. builder releaseLabel data))
-  (when-let [data (lookup-entry config id :runtime-configuration)]
+  (when-some [data (lookup-entry config id :runtime-configuration)]
     (. builder runtimeConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :worker-type-specifications)]
+  (when-some [data (lookup-entry config id :worker-type-specifications)]
     (. builder workerTypeSpecifications data))
   (.build builder))
 
@@ -162,15 +162,15 @@
 | `logTypeMap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:log-type-map` |
 "
   [^CfnApplication$CloudWatchLoggingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :log-stream-name-prefix)]
+  (when-some [data (lookup-entry config id :log-stream-name-prefix)]
     (. builder logStreamNamePrefix data))
-  (when-let [data (lookup-entry config id :log-type-map)]
+  (when-some [data (lookup-entry config id :log-type-map)]
     (. builder logTypeMap data))
   (.build builder))
 
@@ -200,11 +200,11 @@
 | `properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:properties` |
 "
   [^CfnApplication$ConfigurationObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :classification)]
+  (when-some [data (lookup-entry config id :classification)]
     (. builder classification data))
-  (when-let [data (lookup-entry config id :configurations)]
+  (when-some [data (lookup-entry config id :configurations)]
     (. builder configurations data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
   (.build builder))
 
@@ -232,7 +232,7 @@
 | `imageUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-uri` |
 "
   [^CfnApplication$ImageConfigurationInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :image-uri)]
+  (when-some [data (lookup-entry config id :image-uri)]
     (. builder imageUri data))
   (.build builder))
 
@@ -261,9 +261,9 @@
 | `value` | software.amazon.awscdk.services.emrserverless.CfnApplication$InitialCapacityConfigProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnApplication$InitialCapacityConfigKeyValuePairProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -292,9 +292,9 @@
 | `workerCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:worker-count` |
 "
   [^CfnApplication$InitialCapacityConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :worker-configuration)]
+  (when-some [data (lookup-entry config id :worker-configuration)]
     (. builder workerConfiguration data))
-  (when-let [data (lookup-entry config id :worker-count)]
+  (when-some [data (lookup-entry config id :worker-count)]
     (. builder workerCount data))
   (.build builder))
 
@@ -323,9 +323,9 @@
 | `value` | java.util.List | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnApplication$LogTypeMapKeyValuePairProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -354,9 +354,9 @@
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
 "
   [^CfnApplication$ManagedPersistenceMonitoringConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
   (.build builder))
 
@@ -386,11 +386,11 @@
 | `memory` | java.lang.String | [[cdk.support/lookup-entry]] | `:memory` |
 "
   [^CfnApplication$MaximumAllowedResourcesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cpu)]
+  (when-some [data (lookup-entry config id :cpu)]
     (. builder cpu data))
-  (when-let [data (lookup-entry config id :disk)]
+  (when-some [data (lookup-entry config id :disk)]
     (. builder disk data))
-  (when-let [data (lookup-entry config id :memory)]
+  (when-some [data (lookup-entry config id :memory)]
     (. builder memory data))
   (.build builder))
 
@@ -420,11 +420,11 @@
 | `s3MonitoringConfiguration` | software.amazon.awscdk.services.emrserverless.CfnApplication$S3MonitoringConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-monitoring-configuration` |
 "
   [^CfnApplication$MonitoringConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-logging-configuration)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-configuration)]
     (. builder cloudWatchLoggingConfiguration data))
-  (when-let [data (lookup-entry config id :managed-persistence-monitoring-configuration)]
+  (when-some [data (lookup-entry config id :managed-persistence-monitoring-configuration)]
     (. builder managedPersistenceMonitoringConfiguration data))
-  (when-let [data (lookup-entry config id :s3-monitoring-configuration)]
+  (when-some [data (lookup-entry config id :s3-monitoring-configuration)]
     (. builder s3MonitoringConfiguration data))
   (.build builder))
 
@@ -453,9 +453,9 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnApplication$NetworkConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -496,33 +496,33 @@
 | `workerTypeSpecifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:worker-type-specifications` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :architecture)]
+  (when-some [data (lookup-entry config id :architecture)]
     (. builder architecture data))
-  (when-let [data (lookup-entry config id :auto-start-configuration)]
+  (when-some [data (lookup-entry config id :auto-start-configuration)]
     (. builder autoStartConfiguration data))
-  (when-let [data (lookup-entry config id :auto-stop-configuration)]
+  (when-some [data (lookup-entry config id :auto-stop-configuration)]
     (. builder autoStopConfiguration data))
-  (when-let [data (lookup-entry config id :image-configuration)]
+  (when-some [data (lookup-entry config id :image-configuration)]
     (. builder imageConfiguration data))
-  (when-let [data (lookup-entry config id :initial-capacity)]
+  (when-some [data (lookup-entry config id :initial-capacity)]
     (. builder initialCapacity data))
-  (when-let [data (lookup-entry config id :maximum-capacity)]
+  (when-some [data (lookup-entry config id :maximum-capacity)]
     (. builder maximumCapacity data))
-  (when-let [data (lookup-entry config id :monitoring-configuration)]
+  (when-some [data (lookup-entry config id :monitoring-configuration)]
     (. builder monitoringConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :release-label)]
+  (when-some [data (lookup-entry config id :release-label)]
     (. builder releaseLabel data))
-  (when-let [data (lookup-entry config id :runtime-configuration)]
+  (when-some [data (lookup-entry config id :runtime-configuration)]
     (. builder runtimeConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :worker-type-specifications)]
+  (when-some [data (lookup-entry config id :worker-type-specifications)]
     (. builder workerTypeSpecifications data))
   (.build builder))
 
@@ -551,9 +551,9 @@
 | `logUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-uri` |
 "
   [^CfnApplication$S3MonitoringConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
-  (when-let [data (lookup-entry config id :log-uri)]
+  (when-some [data (lookup-entry config id :log-uri)]
     (. builder logUri data))
   (.build builder))
 
@@ -583,11 +583,11 @@
 | `memory` | java.lang.String | [[cdk.support/lookup-entry]] | `:memory` |
 "
   [^CfnApplication$WorkerConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cpu)]
+  (when-some [data (lookup-entry config id :cpu)]
     (. builder cpu data))
-  (when-let [data (lookup-entry config id :disk)]
+  (when-some [data (lookup-entry config id :disk)]
     (. builder disk data))
-  (when-let [data (lookup-entry config id :memory)]
+  (when-some [data (lookup-entry config id :memory)]
     (. builder memory data))
   (.build builder))
 
@@ -615,7 +615,7 @@
 | `imageConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:image-configuration` |
 "
   [^CfnApplication$WorkerTypeSpecificationInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :image-configuration)]
+  (when-some [data (lookup-entry config id :image-configuration)]
     (. builder imageConfiguration data))
   (.build builder))
 

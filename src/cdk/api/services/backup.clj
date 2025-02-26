@@ -136,13 +136,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `windowsVss` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:windows-vss` |
 "
   [^BackupPlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-plan-name)]
+  (when-some [data (lookup-entry config id :backup-plan-name)]
     (. builder backupPlanName data))
-  (when-let [data (lookup-entry config id :backup-plan-rules)]
+  (when-some [data (lookup-entry config id :backup-plan-rules)]
     (. builder backupPlanRules data))
-  (when-let [data (lookup-entry config id :backup-vault)]
+  (when-some [data (lookup-entry config id :backup-vault)]
     (. builder backupVault data))
-  (when-let [data (lookup-entry config id :windows-vss)]
+  (when-some [data (lookup-entry config id :windows-vss)]
     (. builder windowsVss data))
   (.build builder))
 
@@ -172,11 +172,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `moveToColdStorageAfter` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:move-to-cold-storage-after` |
 "
   [^BackupPlanCopyActionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-after)]
+  (when-some [data (lookup-entry config id :delete-after)]
     (. builder deleteAfter data))
-  (when-let [data (lookup-entry config id :destination-backup-vault)]
+  (when-some [data (lookup-entry config id :destination-backup-vault)]
     (. builder destinationBackupVault data))
-  (when-let [data (lookup-entry config id :move-to-cold-storage-after)]
+  (when-some [data (lookup-entry config id :move-to-cold-storage-after)]
     (. builder moveToColdStorageAfter data))
   (.build builder))
 
@@ -207,13 +207,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `windowsVss` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:windows-vss` |
 "
   [^BackupPlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-plan-name)]
+  (when-some [data (lookup-entry config id :backup-plan-name)]
     (. builder backupPlanName data))
-  (when-let [data (lookup-entry config id :backup-plan-rules)]
+  (when-some [data (lookup-entry config id :backup-plan-rules)]
     (. builder backupPlanRules data))
-  (when-let [data (lookup-entry config id :backup-vault)]
+  (when-some [data (lookup-entry config id :backup-vault)]
     (. builder backupVault data))
-  (when-let [data (lookup-entry config id :windows-vss)]
+  (when-some [data (lookup-entry config id :windows-vss)]
     (. builder windowsVss data))
   (.build builder))
 
@@ -250,25 +250,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `startWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:start-window` |
 "
   [^BackupPlanRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-vault)]
+  (when-some [data (lookup-entry config id :backup-vault)]
     (. builder backupVault data))
-  (when-let [data (lookup-entry config id :completion-window)]
+  (when-some [data (lookup-entry config id :completion-window)]
     (. builder completionWindow data))
-  (when-let [data (lookup-entry config id :copy-actions)]
+  (when-some [data (lookup-entry config id :copy-actions)]
     (. builder copyActions data))
-  (when-let [data (lookup-entry config id :delete-after)]
+  (when-some [data (lookup-entry config id :delete-after)]
     (. builder deleteAfter data))
-  (when-let [data (lookup-entry config id :enable-continuous-backup)]
+  (when-some [data (lookup-entry config id :enable-continuous-backup)]
     (. builder enableContinuousBackup data))
-  (when-let [data (lookup-entry config id :move-to-cold-storage-after)]
+  (when-some [data (lookup-entry config id :move-to-cold-storage-after)]
     (. builder moveToColdStorageAfter data))
-  (when-let [data (lookup-entry config id :recovery-point-tags)]
+  (when-some [data (lookup-entry config id :recovery-point-tags)]
     (. builder recoveryPointTags data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
-  (when-let [data (lookup-entry config id :start-window)]
+  (when-some [data (lookup-entry config id :start-window)]
     (. builder startWindow data))
   (.build builder))
 
@@ -305,25 +305,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `startWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:start-window` |
 "
   [^BackupPlanRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-vault)]
+  (when-some [data (lookup-entry config id :backup-vault)]
     (. builder backupVault data))
-  (when-let [data (lookup-entry config id :completion-window)]
+  (when-some [data (lookup-entry config id :completion-window)]
     (. builder completionWindow data))
-  (when-let [data (lookup-entry config id :copy-actions)]
+  (when-some [data (lookup-entry config id :copy-actions)]
     (. builder copyActions data))
-  (when-let [data (lookup-entry config id :delete-after)]
+  (when-some [data (lookup-entry config id :delete-after)]
     (. builder deleteAfter data))
-  (when-let [data (lookup-entry config id :enable-continuous-backup)]
+  (when-some [data (lookup-entry config id :enable-continuous-backup)]
     (. builder enableContinuousBackup data))
-  (when-let [data (lookup-entry config id :move-to-cold-storage-after)]
+  (when-some [data (lookup-entry config id :move-to-cold-storage-after)]
     (. builder moveToColdStorageAfter data))
-  (when-let [data (lookup-entry config id :recovery-point-tags)]
+  (when-some [data (lookup-entry config id :recovery-point-tags)]
     (. builder recoveryPointTags data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
-  (when-let [data (lookup-entry config id :start-window)]
+  (when-some [data (lookup-entry config id :start-window)]
     (. builder startWindow data))
   (.build builder))
 
@@ -353,11 +353,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^BackupResource$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (tag-operation config id :operation)]
+  (when-some [data (tag-operation config id :operation)]
     (. builder operation data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -414,17 +414,17 @@ __Create Form:__ ____[]___
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^BackupSelection$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-restores)]
+  (when-some [data (lookup-entry config id :allow-restores)]
     (. builder allowRestores data))
-  (when-let [data (lookup-entry config id :backup-plan)]
+  (when-some [data (lookup-entry config id :backup-plan)]
     (. builder backupPlan data))
-  (when-let [data (lookup-entry config id :backup-selection-name)]
+  (when-some [data (lookup-entry config id :backup-selection-name)]
     (. builder backupSelectionName data))
-  (when-let [data (lookup-entry config id :disable-default-backup-policy)]
+  (when-some [data (lookup-entry config id :disable-default-backup-policy)]
     (. builder disableDefaultBackupPolicy data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -456,15 +456,15 @@ __Create Form:__ ____[]___
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^BackupSelectionOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-restores)]
+  (when-some [data (lookup-entry config id :allow-restores)]
     (. builder allowRestores data))
-  (when-let [data (lookup-entry config id :backup-selection-name)]
+  (when-some [data (lookup-entry config id :backup-selection-name)]
     (. builder backupSelectionName data))
-  (when-let [data (lookup-entry config id :disable-default-backup-policy)]
+  (when-some [data (lookup-entry config id :disable-default-backup-policy)]
     (. builder disableDefaultBackupPolicy data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -497,17 +497,17 @@ __Create Form:__ ____[]___
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^BackupSelectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-restores)]
+  (when-some [data (lookup-entry config id :allow-restores)]
     (. builder allowRestores data))
-  (when-let [data (lookup-entry config id :backup-plan)]
+  (when-some [data (lookup-entry config id :backup-plan)]
     (. builder backupPlan data))
-  (when-let [data (lookup-entry config id :backup-selection-name)]
+  (when-some [data (lookup-entry config id :backup-selection-name)]
     (. builder backupSelectionName data))
-  (when-let [data (lookup-entry config id :disable-default-backup-policy)]
+  (when-some [data (lookup-entry config id :disable-default-backup-policy)]
     (. builder disableDefaultBackupPolicy data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -542,21 +542,21 @@ __Create Form:__ ____[]___
 | `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
 "
   [^BackupVault$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-policy)]
+  (when-some [data (lookup-entry config id :access-policy)]
     (. builder accessPolicy data))
-  (when-let [data (lookup-entry config id :backup-vault-name)]
+  (when-some [data (lookup-entry config id :backup-vault-name)]
     (. builder backupVaultName data))
-  (when-let [data (lookup-entry config id :block-recovery-point-deletion)]
+  (when-some [data (lookup-entry config id :block-recovery-point-deletion)]
     (. builder blockRecoveryPointDeletion data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :lock-configuration)]
+  (when-some [data (lookup-entry config id :lock-configuration)]
     (. builder lockConfiguration data))
-  (when-let [data (lookup-entry config id :notification-events)]
+  (when-some [data (lookup-entry config id :notification-events)]
     (. builder notificationEvents data))
-  (when-let [data (lookup-entry config id :notification-topic)]
+  (when-some [data (lookup-entry config id :notification-topic)]
     (. builder notificationTopic data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
   (.build builder))
 
@@ -591,21 +591,21 @@ __Create Form:__ ____[]___
 | `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
 "
   [^BackupVaultProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-policy)]
+  (when-some [data (lookup-entry config id :access-policy)]
     (. builder accessPolicy data))
-  (when-let [data (lookup-entry config id :backup-vault-name)]
+  (when-some [data (lookup-entry config id :backup-vault-name)]
     (. builder backupVaultName data))
-  (when-let [data (lookup-entry config id :block-recovery-point-deletion)]
+  (when-some [data (lookup-entry config id :block-recovery-point-deletion)]
     (. builder blockRecoveryPointDeletion data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :lock-configuration)]
+  (when-some [data (lookup-entry config id :lock-configuration)]
     (. builder lockConfiguration data))
-  (when-let [data (lookup-entry config id :notification-events)]
+  (when-some [data (lookup-entry config id :notification-events)]
     (. builder notificationEvents data))
-  (when-let [data (lookup-entry config id :notification-topic)]
+  (when-some [data (lookup-entry config id :notification-topic)]
     (. builder notificationTopic data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
   (.build builder))
 
@@ -634,9 +634,9 @@ __Create Form:__ ____[]___
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 "
   [^CfnBackupPlan$AdvancedBackupSettingResourceTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-options)]
+  (when-some [data (lookup-entry config id :backup-options)]
     (. builder backupOptions data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
   (.build builder))
 
@@ -666,11 +666,11 @@ __Create Form:__ ____[]___
 | `backupPlanRule` | java.util.List | [[cdk.support/lookup-entry]] | `:backup-plan-rule` |
 "
   [^CfnBackupPlan$BackupPlanResourceTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :advanced-backup-settings)]
+  (when-some [data (lookup-entry config id :advanced-backup-settings)]
     (. builder advancedBackupSettings data))
-  (when-let [data (lookup-entry config id :backup-plan-name)]
+  (when-some [data (lookup-entry config id :backup-plan-name)]
     (. builder backupPlanName data))
-  (when-let [data (lookup-entry config id :backup-plan-rule)]
+  (when-some [data (lookup-entry config id :backup-plan-rule)]
     (. builder backupPlanRule data))
   (.build builder))
 
@@ -707,25 +707,25 @@ __Create Form:__ ____[]___
 | `targetBackupVault` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-backup-vault` |
 "
   [^CfnBackupPlan$BackupRuleResourceTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :completion-window-minutes)]
+  (when-some [data (lookup-entry config id :completion-window-minutes)]
     (. builder completionWindowMinutes data))
-  (when-let [data (lookup-entry config id :copy-actions)]
+  (when-some [data (lookup-entry config id :copy-actions)]
     (. builder copyActions data))
-  (when-let [data (lookup-entry config id :enable-continuous-backup)]
+  (when-some [data (lookup-entry config id :enable-continuous-backup)]
     (. builder enableContinuousBackup data))
-  (when-let [data (lookup-entry config id :lifecycle)]
+  (when-some [data (lookup-entry config id :lifecycle)]
     (. builder lifecycle data))
-  (when-let [data (lookup-entry config id :recovery-point-tags)]
+  (when-some [data (lookup-entry config id :recovery-point-tags)]
     (. builder recoveryPointTags data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
-  (when-let [data (lookup-entry config id :schedule-expression-timezone)]
+  (when-some [data (lookup-entry config id :schedule-expression-timezone)]
     (. builder scheduleExpressionTimezone data))
-  (when-let [data (lookup-entry config id :start-window-minutes)]
+  (when-some [data (lookup-entry config id :start-window-minutes)]
     (. builder startWindowMinutes data))
-  (when-let [data (lookup-entry config id :target-backup-vault)]
+  (when-some [data (lookup-entry config id :target-backup-vault)]
     (. builder targetBackupVault data))
   (.build builder))
 
@@ -754,9 +754,9 @@ __Create Form:__ ____[]___
 | `backupPlanTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:backup-plan-tags` |
 "
   [^CfnBackupPlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-plan)]
+  (when-some [data (lookup-entry config id :backup-plan)]
     (. builder backupPlan data))
-  (when-let [data (lookup-entry config id :backup-plan-tags)]
+  (when-some [data (lookup-entry config id :backup-plan-tags)]
     (. builder backupPlanTags data))
   (.build builder))
 
@@ -785,9 +785,9 @@ __Create Form:__ ____[]___
 | `lifecycle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lifecycle` |
 "
   [^CfnBackupPlan$CopyActionResourceTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-backup-vault-arn)]
+  (when-some [data (lookup-entry config id :destination-backup-vault-arn)]
     (. builder destinationBackupVaultArn data))
-  (when-let [data (lookup-entry config id :lifecycle)]
+  (when-some [data (lookup-entry config id :lifecycle)]
     (. builder lifecycle data))
   (.build builder))
 
@@ -817,11 +817,11 @@ __Create Form:__ ____[]___
 | `optInToArchiveForSupportedResources` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:opt-in-to-archive-for-supported-resources` |
 "
   [^CfnBackupPlan$LifecycleResourceTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-after-days)]
+  (when-some [data (lookup-entry config id :delete-after-days)]
     (. builder deleteAfterDays data))
-  (when-let [data (lookup-entry config id :move-to-cold-storage-after-days)]
+  (when-some [data (lookup-entry config id :move-to-cold-storage-after-days)]
     (. builder moveToColdStorageAfterDays data))
-  (when-let [data (lookup-entry config id :opt-in-to-archive-for-supported-resources)]
+  (when-some [data (lookup-entry config id :opt-in-to-archive-for-supported-resources)]
     (. builder optInToArchiveForSupportedResources data))
   (.build builder))
 
@@ -850,9 +850,9 @@ __Create Form:__ ____[]___
 | `backupPlanTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:backup-plan-tags` |
 "
   [^CfnBackupPlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-plan)]
+  (when-some [data (lookup-entry config id :backup-plan)]
     (. builder backupPlan data))
-  (when-let [data (lookup-entry config id :backup-plan-tags)]
+  (when-some [data (lookup-entry config id :backup-plan-tags)]
     (. builder backupPlanTags data))
   (.build builder))
 
@@ -885,17 +885,17 @@ __Create Form:__ ____[]___
 | `selectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:selection-name` |
 "
   [^CfnBackupSelection$BackupSelectionResourceTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :list-of-tags)]
+  (when-some [data (lookup-entry config id :list-of-tags)]
     (. builder listOfTags data))
-  (when-let [data (lookup-entry config id :not-resources)]
+  (when-some [data (lookup-entry config id :not-resources)]
     (. builder notResources data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :selection-name)]
+  (when-some [data (lookup-entry config id :selection-name)]
     (. builder selectionName data))
   (.build builder))
 
@@ -924,9 +924,9 @@ __Create Form:__ ____[]___
 | `backupSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backup-selection` |
 "
   [^CfnBackupSelection$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-plan-id)]
+  (when-some [data (lookup-entry config id :backup-plan-id)]
     (. builder backupPlanId data))
-  (when-let [data (lookup-entry config id :backup-selection)]
+  (when-some [data (lookup-entry config id :backup-selection)]
     (. builder backupSelection data))
   (.build builder))
 
@@ -955,9 +955,9 @@ __Create Form:__ ____[]___
 | `conditionValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-value` |
 "
   [^CfnBackupSelection$ConditionParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :condition-key)]
+  (when-some [data (lookup-entry config id :condition-key)]
     (. builder conditionKey data))
-  (when-let [data (lookup-entry config id :condition-value)]
+  (when-some [data (lookup-entry config id :condition-value)]
     (. builder conditionValue data))
   (.build builder))
 
@@ -987,11 +987,11 @@ __Create Form:__ ____[]___
 | `conditionValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-value` |
 "
   [^CfnBackupSelection$ConditionResourceTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :condition-key)]
+  (when-some [data (lookup-entry config id :condition-key)]
     (. builder conditionKey data))
-  (when-let [data (lookup-entry config id :condition-type)]
+  (when-some [data (lookup-entry config id :condition-type)]
     (. builder conditionType data))
-  (when-let [data (lookup-entry config id :condition-value)]
+  (when-some [data (lookup-entry config id :condition-value)]
     (. builder conditionValue data))
   (.build builder))
 
@@ -1022,13 +1022,13 @@ __Create Form:__ ____[]___
 | `stringNotLike` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:string-not-like` |
 "
   [^CfnBackupSelection$ConditionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :string-equals)]
+  (when-some [data (lookup-entry config id :string-equals)]
     (. builder stringEquals data))
-  (when-let [data (lookup-entry config id :string-like)]
+  (when-some [data (lookup-entry config id :string-like)]
     (. builder stringLike data))
-  (when-let [data (lookup-entry config id :string-not-equals)]
+  (when-some [data (lookup-entry config id :string-not-equals)]
     (. builder stringNotEquals data))
-  (when-let [data (lookup-entry config id :string-not-like)]
+  (when-some [data (lookup-entry config id :string-not-like)]
     (. builder stringNotLike data))
   (.build builder))
 
@@ -1057,9 +1057,9 @@ __Create Form:__ ____[]___
 | `backupSelection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backup-selection` |
 "
   [^CfnBackupSelectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-plan-id)]
+  (when-some [data (lookup-entry config id :backup-plan-id)]
     (. builder backupPlanId data))
-  (when-let [data (lookup-entry config id :backup-selection)]
+  (when-some [data (lookup-entry config id :backup-selection)]
     (. builder backupSelection data))
   (.build builder))
 
@@ -1092,17 +1092,17 @@ __Create Form:__ ____[]___
 | `notifications` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notifications` |
 "
   [^CfnBackupVault$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-policy)]
+  (when-some [data (lookup-entry config id :access-policy)]
     (. builder accessPolicy data))
-  (when-let [data (lookup-entry config id :backup-vault-name)]
+  (when-some [data (lookup-entry config id :backup-vault-name)]
     (. builder backupVaultName data))
-  (when-let [data (lookup-entry config id :backup-vault-tags)]
+  (when-some [data (lookup-entry config id :backup-vault-tags)]
     (. builder backupVaultTags data))
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
-  (when-let [data (lookup-entry config id :lock-configuration)]
+  (when-some [data (lookup-entry config id :lock-configuration)]
     (. builder lockConfiguration data))
-  (when-let [data (lookup-entry config id :notifications)]
+  (when-some [data (lookup-entry config id :notifications)]
     (. builder notifications data))
   (.build builder))
 
@@ -1132,11 +1132,11 @@ __Create Form:__ ____[]___
 | `minRetentionDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-retention-days` |
 "
   [^CfnBackupVault$LockConfigurationTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :changeable-for-days)]
+  (when-some [data (lookup-entry config id :changeable-for-days)]
     (. builder changeableForDays data))
-  (when-let [data (lookup-entry config id :max-retention-days)]
+  (when-some [data (lookup-entry config id :max-retention-days)]
     (. builder maxRetentionDays data))
-  (when-let [data (lookup-entry config id :min-retention-days)]
+  (when-some [data (lookup-entry config id :min-retention-days)]
     (. builder minRetentionDays data))
   (.build builder))
 
@@ -1165,9 +1165,9 @@ __Create Form:__ ____[]___
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 "
   [^CfnBackupVault$NotificationObjectTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :backup-vault-events)]
+  (when-some [data (lookup-entry config id :backup-vault-events)]
     (. builder backupVaultEvents data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
 
@@ -1200,17 +1200,17 @@ __Create Form:__ ____[]___
 | `notifications` | software.amazon.awscdk.services.backup.CfnBackupVault$NotificationObjectTypeProperty | [[cdk.support/lookup-entry]] | `:notifications` |
 "
   [^CfnBackupVaultProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-policy)]
+  (when-some [data (lookup-entry config id :access-policy)]
     (. builder accessPolicy data))
-  (when-let [data (lookup-entry config id :backup-vault-name)]
+  (when-some [data (lookup-entry config id :backup-vault-name)]
     (. builder backupVaultName data))
-  (when-let [data (lookup-entry config id :backup-vault-tags)]
+  (when-some [data (lookup-entry config id :backup-vault-tags)]
     (. builder backupVaultTags data))
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
-  (when-let [data (lookup-entry config id :lock-configuration)]
+  (when-some [data (lookup-entry config id :lock-configuration)]
     (. builder lockConfiguration data))
-  (when-let [data (lookup-entry config id :notifications)]
+  (when-some [data (lookup-entry config id :notifications)]
     (. builder notifications data))
   (.build builder))
 
@@ -1241,13 +1241,13 @@ __Create Form:__ ____[]___
 | `frameworkTags` | java.util.List | [[cdk.support/lookup-entry]] | `:framework-tags` |
 "
   [^CfnFramework$Builder builder id config]
-  (when-let [data (lookup-entry config id :framework-controls)]
+  (when-some [data (lookup-entry config id :framework-controls)]
     (. builder frameworkControls data))
-  (when-let [data (lookup-entry config id :framework-description)]
+  (when-some [data (lookup-entry config id :framework-description)]
     (. builder frameworkDescription data))
-  (when-let [data (lookup-entry config id :framework-name)]
+  (when-some [data (lookup-entry config id :framework-name)]
     (. builder frameworkName data))
-  (when-let [data (lookup-entry config id :framework-tags)]
+  (when-some [data (lookup-entry config id :framework-tags)]
     (. builder frameworkTags data))
   (.build builder))
 
@@ -1276,9 +1276,9 @@ __Create Form:__ ____[]___
 | `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |
 "
   [^CfnFramework$ControlInputParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-name)]
+  (when-some [data (lookup-entry config id :parameter-name)]
     (. builder parameterName data))
-  (when-let [data (lookup-entry config id :parameter-value)]
+  (when-some [data (lookup-entry config id :parameter-value)]
     (. builder parameterValue data))
   (.build builder))
 
@@ -1308,11 +1308,11 @@ __Create Form:__ ____[]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFramework$ControlScopeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :compliance-resource-ids)]
+  (when-some [data (lookup-entry config id :compliance-resource-ids)]
     (. builder complianceResourceIds data))
-  (when-let [data (lookup-entry config id :compliance-resource-types)]
+  (when-some [data (lookup-entry config id :compliance-resource-types)]
     (. builder complianceResourceTypes data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1342,11 +1342,11 @@ __Create Form:__ ____[]___
 | `controlScope` | java.lang.Object | [[cdk.support/lookup-entry]] | `:control-scope` |
 "
   [^CfnFramework$FrameworkControlProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :control-input-parameters)]
+  (when-some [data (lookup-entry config id :control-input-parameters)]
     (. builder controlInputParameters data))
-  (when-let [data (lookup-entry config id :control-name)]
+  (when-some [data (lookup-entry config id :control-name)]
     (. builder controlName data))
-  (when-let [data (lookup-entry config id :control-scope)]
+  (when-some [data (lookup-entry config id :control-scope)]
     (. builder controlScope data))
   (.build builder))
 
@@ -1377,13 +1377,13 @@ __Create Form:__ ____[]___
 | `frameworkTags` | java.util.List | [[cdk.support/lookup-entry]] | `:framework-tags` |
 "
   [^CfnFrameworkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :framework-controls)]
+  (when-some [data (lookup-entry config id :framework-controls)]
     (. builder frameworkControls data))
-  (when-let [data (lookup-entry config id :framework-description)]
+  (when-some [data (lookup-entry config id :framework-description)]
     (. builder frameworkDescription data))
-  (when-let [data (lookup-entry config id :framework-name)]
+  (when-some [data (lookup-entry config id :framework-name)]
     (. builder frameworkName data))
-  (when-let [data (lookup-entry config id :framework-tags)]
+  (when-some [data (lookup-entry config id :framework-tags)]
     (. builder frameworkTags data))
   (.build builder))
 
@@ -1415,15 +1415,15 @@ __Create Form:__ ____[]___
 | `reportSetting` | java.lang.Object | [[cdk.support/lookup-entry]] | `:report-setting` |
 "
   [^CfnReportPlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :report-delivery-channel)]
+  (when-some [data (lookup-entry config id :report-delivery-channel)]
     (. builder reportDeliveryChannel data))
-  (when-let [data (lookup-entry config id :report-plan-description)]
+  (when-some [data (lookup-entry config id :report-plan-description)]
     (. builder reportPlanDescription data))
-  (when-let [data (lookup-entry config id :report-plan-name)]
+  (when-some [data (lookup-entry config id :report-plan-name)]
     (. builder reportPlanName data))
-  (when-let [data (lookup-entry config id :report-plan-tags)]
+  (when-some [data (lookup-entry config id :report-plan-tags)]
     (. builder reportPlanTags data))
-  (when-let [data (lookup-entry config id :report-setting)]
+  (when-some [data (lookup-entry config id :report-setting)]
     (. builder reportSetting data))
   (.build builder))
 
@@ -1455,15 +1455,15 @@ __Create Form:__ ____[]___
 | `reportSetting` | java.lang.Object | [[cdk.support/lookup-entry]] | `:report-setting` |
 "
   [^CfnReportPlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :report-delivery-channel)]
+  (when-some [data (lookup-entry config id :report-delivery-channel)]
     (. builder reportDeliveryChannel data))
-  (when-let [data (lookup-entry config id :report-plan-description)]
+  (when-some [data (lookup-entry config id :report-plan-description)]
     (. builder reportPlanDescription data))
-  (when-let [data (lookup-entry config id :report-plan-name)]
+  (when-some [data (lookup-entry config id :report-plan-name)]
     (. builder reportPlanName data))
-  (when-let [data (lookup-entry config id :report-plan-tags)]
+  (when-some [data (lookup-entry config id :report-plan-tags)]
     (. builder reportPlanTags data))
-  (when-let [data (lookup-entry config id :report-setting)]
+  (when-some [data (lookup-entry config id :report-setting)]
     (. builder reportSetting data))
   (.build builder))
 
@@ -1493,11 +1493,11 @@ __Create Form:__ ____[]___
 | `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
 "
   [^CfnReportPlan$ReportDeliveryChannelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :formats)]
+  (when-some [data (lookup-entry config id :formats)]
     (. builder formats data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
-  (when-let [data (lookup-entry config id :s3-key-prefix)]
+  (when-some [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
   (.build builder))
 
@@ -1529,15 +1529,15 @@ __Create Form:__ ____[]___
 | `reportTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:report-template` |
 "
   [^CfnReportPlan$ReportSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :accounts)]
+  (when-some [data (lookup-entry config id :accounts)]
     (. builder accounts data))
-  (when-let [data (lookup-entry config id :framework-arns)]
+  (when-some [data (lookup-entry config id :framework-arns)]
     (. builder frameworkArns data))
-  (when-let [data (lookup-entry config id :organization-units)]
+  (when-some [data (lookup-entry config id :organization-units)]
     (. builder organizationUnits data))
-  (when-let [data (lookup-entry config id :regions)]
+  (when-some [data (lookup-entry config id :regions)]
     (. builder regions data))
-  (when-let [data (lookup-entry config id :report-template)]
+  (when-some [data (lookup-entry config id :report-template)]
     (. builder reportTemplate data))
   (.build builder))
 
@@ -1570,17 +1570,17 @@ __Create Form:__ ____[]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRestoreTestingPlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :recovery-point-selection)]
+  (when-some [data (lookup-entry config id :recovery-point-selection)]
     (. builder recoveryPointSelection data))
-  (when-let [data (lookup-entry config id :restore-testing-plan-name)]
+  (when-some [data (lookup-entry config id :restore-testing-plan-name)]
     (. builder restoreTestingPlanName data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
-  (when-let [data (lookup-entry config id :schedule-expression-timezone)]
+  (when-some [data (lookup-entry config id :schedule-expression-timezone)]
     (. builder scheduleExpressionTimezone data))
-  (when-let [data (lookup-entry config id :start-window-hours)]
+  (when-some [data (lookup-entry config id :start-window-hours)]
     (. builder startWindowHours data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1613,17 +1613,17 @@ __Create Form:__ ____[]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRestoreTestingPlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :recovery-point-selection)]
+  (when-some [data (lookup-entry config id :recovery-point-selection)]
     (. builder recoveryPointSelection data))
-  (when-let [data (lookup-entry config id :restore-testing-plan-name)]
+  (when-some [data (lookup-entry config id :restore-testing-plan-name)]
     (. builder restoreTestingPlanName data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
-  (when-let [data (lookup-entry config id :schedule-expression-timezone)]
+  (when-some [data (lookup-entry config id :schedule-expression-timezone)]
     (. builder scheduleExpressionTimezone data))
-  (when-let [data (lookup-entry config id :start-window-hours)]
+  (when-some [data (lookup-entry config id :start-window-hours)]
     (. builder startWindowHours data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1655,15 +1655,15 @@ __Create Form:__ ____[]___
 | `selectionWindowDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:selection-window-days` |
 "
   [^CfnRestoreTestingPlan$RestoreTestingRecoveryPointSelectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm)]
+  (when-some [data (lookup-entry config id :algorithm)]
     (. builder algorithm data))
-  (when-let [data (lookup-entry config id :exclude-vaults)]
+  (when-some [data (lookup-entry config id :exclude-vaults)]
     (. builder excludeVaults data))
-  (when-let [data (lookup-entry config id :include-vaults)]
+  (when-some [data (lookup-entry config id :include-vaults)]
     (. builder includeVaults data))
-  (when-let [data (lookup-entry config id :recovery-point-types)]
+  (when-some [data (lookup-entry config id :recovery-point-types)]
     (. builder recoveryPointTypes data))
-  (when-let [data (lookup-entry config id :selection-window-days)]
+  (when-some [data (lookup-entry config id :selection-window-days)]
     (. builder selectionWindowDays data))
   (.build builder))
 
@@ -1698,21 +1698,21 @@ __Create Form:__ ____[]___
 | `validationWindowHours` | java.lang.Number | [[cdk.support/lookup-entry]] | `:validation-window-hours` |
 "
   [^CfnRestoreTestingSelection$Builder builder id config]
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :protected-resource-arns)]
+  (when-some [data (lookup-entry config id :protected-resource-arns)]
     (. builder protectedResourceArns data))
-  (when-let [data (lookup-entry config id :protected-resource-conditions)]
+  (when-some [data (lookup-entry config id :protected-resource-conditions)]
     (. builder protectedResourceConditions data))
-  (when-let [data (lookup-entry config id :protected-resource-type)]
+  (when-some [data (lookup-entry config id :protected-resource-type)]
     (. builder protectedResourceType data))
-  (when-let [data (lookup-entry config id :restore-metadata-overrides)]
+  (when-some [data (lookup-entry config id :restore-metadata-overrides)]
     (. builder restoreMetadataOverrides data))
-  (when-let [data (lookup-entry config id :restore-testing-plan-name)]
+  (when-some [data (lookup-entry config id :restore-testing-plan-name)]
     (. builder restoreTestingPlanName data))
-  (when-let [data (lookup-entry config id :restore-testing-selection-name)]
+  (when-some [data (lookup-entry config id :restore-testing-selection-name)]
     (. builder restoreTestingSelectionName data))
-  (when-let [data (lookup-entry config id :validation-window-hours)]
+  (when-some [data (lookup-entry config id :validation-window-hours)]
     (. builder validationWindowHours data))
   (.build builder))
 
@@ -1741,9 +1741,9 @@ __Create Form:__ ____[]___
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnRestoreTestingSelection$KeyValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1778,21 +1778,21 @@ __Create Form:__ ____[]___
 | `validationWindowHours` | java.lang.Number | [[cdk.support/lookup-entry]] | `:validation-window-hours` |
 "
   [^CfnRestoreTestingSelectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :protected-resource-arns)]
+  (when-some [data (lookup-entry config id :protected-resource-arns)]
     (. builder protectedResourceArns data))
-  (when-let [data (lookup-entry config id :protected-resource-conditions)]
+  (when-some [data (lookup-entry config id :protected-resource-conditions)]
     (. builder protectedResourceConditions data))
-  (when-let [data (lookup-entry config id :protected-resource-type)]
+  (when-some [data (lookup-entry config id :protected-resource-type)]
     (. builder protectedResourceType data))
-  (when-let [data (lookup-entry config id :restore-metadata-overrides)]
+  (when-some [data (lookup-entry config id :restore-metadata-overrides)]
     (. builder restoreMetadataOverrides data))
-  (when-let [data (lookup-entry config id :restore-testing-plan-name)]
+  (when-some [data (lookup-entry config id :restore-testing-plan-name)]
     (. builder restoreTestingPlanName data))
-  (when-let [data (lookup-entry config id :restore-testing-selection-name)]
+  (when-some [data (lookup-entry config id :restore-testing-selection-name)]
     (. builder restoreTestingSelectionName data))
-  (when-let [data (lookup-entry config id :validation-window-hours)]
+  (when-some [data (lookup-entry config id :validation-window-hours)]
     (. builder validationWindowHours data))
   (.build builder))
 
@@ -1821,9 +1821,9 @@ __Create Form:__ ____[]___
 | `stringNotEquals` | java.util.List | [[cdk.support/lookup-entry]] | `:string-not-equals` |
 "
   [^CfnRestoreTestingSelection$ProtectedResourceConditionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :string-equals)]
+  (when-some [data (lookup-entry config id :string-equals)]
     (. builder stringEquals data))
-  (when-let [data (lookup-entry config id :string-not-equals)]
+  (when-some [data (lookup-entry config id :string-not-equals)]
     (. builder stringNotEquals data))
   (.build builder))
 
@@ -1853,11 +1853,11 @@ __Create Form:__ ____[]___
 | `minRetention` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:min-retention` |
 "
   [^LockConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :changeable-for)]
+  (when-some [data (lookup-entry config id :changeable-for)]
     (. builder changeableFor data))
-  (when-let [data (lookup-entry config id :max-retention)]
+  (when-some [data (lookup-entry config id :max-retention)]
     (. builder maxRetention data))
-  (when-let [data (lookup-entry config id :min-retention)]
+  (when-some [data (lookup-entry config id :min-retention)]
     (. builder minRetention data))
   (.build builder))
 
@@ -1887,11 +1887,11 @@ __Create Form:__ ____[]___
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^TagCondition$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (tag-operation config id :operation)]
+  (when-some [data (tag-operation config id :operation)]
     (. builder operation data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 

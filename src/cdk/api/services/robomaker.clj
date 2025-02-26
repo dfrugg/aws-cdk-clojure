@@ -34,9 +34,9 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFleet$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -65,9 +65,9 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFleetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -100,17 +100,17 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRobotApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :current-revision-id)]
+  (when-some [data (lookup-entry config id :current-revision-id)]
     (. builder currentRevisionId data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :robot-software-suite)]
+  (when-some [data (lookup-entry config id :robot-software-suite)]
     (. builder robotSoftwareSuite data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -143,17 +143,17 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRobotApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :current-revision-id)]
+  (when-some [data (lookup-entry config id :current-revision-id)]
     (. builder currentRevisionId data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :robot-software-suite)]
+  (when-some [data (lookup-entry config id :robot-software-suite)]
     (. builder robotSoftwareSuite data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -182,9 +182,9 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnRobotApplication$RobotSoftwareSuiteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -214,11 +214,11 @@
 | `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |
 "
   [^CfnRobotApplication$SourceConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :architecture)]
+  (when-some [data (lookup-entry config id :architecture)]
     (. builder architecture data))
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-key)]
+  (when-some [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
   (.build builder))
 
@@ -247,9 +247,9 @@
 | `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
 "
   [^CfnRobotApplicationVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :current-revision-id)]
+  (when-some [data (lookup-entry config id :current-revision-id)]
     (. builder currentRevisionId data))
   (.build builder))
 
@@ -278,9 +278,9 @@
 | `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
 "
   [^CfnRobotApplicationVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :current-revision-id)]
+  (when-some [data (lookup-entry config id :current-revision-id)]
     (. builder currentRevisionId data))
   (.build builder))
 
@@ -312,15 +312,15 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRobot$Builder builder id config]
-  (when-let [data (lookup-entry config id :architecture)]
+  (when-some [data (lookup-entry config id :architecture)]
     (. builder architecture data))
-  (when-let [data (lookup-entry config id :fleet)]
+  (when-some [data (lookup-entry config id :fleet)]
     (. builder fleet data))
-  (when-let [data (lookup-entry config id :greengrass-group-id)]
+  (when-some [data (lookup-entry config id :greengrass-group-id)]
     (. builder greengrassGroupId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -352,15 +352,15 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRobotProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :architecture)]
+  (when-some [data (lookup-entry config id :architecture)]
     (. builder architecture data))
-  (when-let [data (lookup-entry config id :fleet)]
+  (when-some [data (lookup-entry config id :fleet)]
     (. builder fleet data))
-  (when-let [data (lookup-entry config id :greengrass-group-id)]
+  (when-some [data (lookup-entry config id :greengrass-group-id)]
     (. builder greengrassGroupId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -395,21 +395,21 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSimulationApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :current-revision-id)]
+  (when-some [data (lookup-entry config id :current-revision-id)]
     (. builder currentRevisionId data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rendering-engine)]
+  (when-some [data (lookup-entry config id :rendering-engine)]
     (. builder renderingEngine data))
-  (when-let [data (lookup-entry config id :robot-software-suite)]
+  (when-some [data (lookup-entry config id :robot-software-suite)]
     (. builder robotSoftwareSuite data))
-  (when-let [data (lookup-entry config id :simulation-software-suite)]
+  (when-some [data (lookup-entry config id :simulation-software-suite)]
     (. builder simulationSoftwareSuite data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -444,21 +444,21 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSimulationApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :current-revision-id)]
+  (when-some [data (lookup-entry config id :current-revision-id)]
     (. builder currentRevisionId data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rendering-engine)]
+  (when-some [data (lookup-entry config id :rendering-engine)]
     (. builder renderingEngine data))
-  (when-let [data (lookup-entry config id :robot-software-suite)]
+  (when-some [data (lookup-entry config id :robot-software-suite)]
     (. builder robotSoftwareSuite data))
-  (when-let [data (lookup-entry config id :simulation-software-suite)]
+  (when-some [data (lookup-entry config id :simulation-software-suite)]
     (. builder simulationSoftwareSuite data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -487,9 +487,9 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnSimulationApplication$RenderingEngineProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -518,9 +518,9 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -549,9 +549,9 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -581,11 +581,11 @@
 | `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |
 "
   [^CfnSimulationApplication$SourceConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :architecture)]
+  (when-some [data (lookup-entry config id :architecture)]
     (. builder architecture data))
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-key)]
+  (when-some [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
   (.build builder))
 
@@ -614,9 +614,9 @@
 | `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
 "
   [^CfnSimulationApplicationVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :current-revision-id)]
+  (when-some [data (lookup-entry config id :current-revision-id)]
     (. builder currentRevisionId data))
   (.build builder))
 
@@ -645,9 +645,9 @@
 | `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
 "
   [^CfnSimulationApplicationVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :current-revision-id)]
+  (when-some [data (lookup-entry config id :current-revision-id)]
     (. builder currentRevisionId data))
   (.build builder))
 

@@ -35,33 +35,33 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
-  (when-let [data (lookup-entry config id :cluster-endpoint-encryption-type)]
+  (when-some [data (lookup-entry config id :cluster-endpoint-encryption-type)]
     (. builder clusterEndpointEncryptionType data))
-  (when-let [data (lookup-entry config id :cluster-name)]
+  (when-some [data (lookup-entry config id :cluster-name)]
     (. builder clusterName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :node-type)]
+  (when-some [data (lookup-entry config id :node-type)]
     (. builder nodeType data))
-  (when-let [data (lookup-entry config id :notification-topic-arn)]
+  (when-some [data (lookup-entry config id :notification-topic-arn)]
     (. builder notificationTopicArn data))
-  (when-let [data (lookup-entry config id :parameter-group-name)]
+  (when-some [data (lookup-entry config id :parameter-group-name)]
     (. builder parameterGroupName data))
-  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+  (when-some [data (lookup-entry config id :preferred-maintenance-window)]
     (. builder preferredMaintenanceWindow data))
-  (when-let [data (lookup-entry config id :replication-factor)]
+  (when-some [data (lookup-entry config id :replication-factor)]
     (. builder replicationFactor data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :sse-specification)]
+  (when-some [data (lookup-entry config id :sse-specification)]
     (. builder sseSpecification data))
-  (when-let [data (lookup-entry config id :subnet-group-name)]
+  (when-some [data (lookup-entry config id :subnet-group-name)]
     (. builder subnetGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -102,33 +102,33 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
-  (when-let [data (lookup-entry config id :cluster-endpoint-encryption-type)]
+  (when-some [data (lookup-entry config id :cluster-endpoint-encryption-type)]
     (. builder clusterEndpointEncryptionType data))
-  (when-let [data (lookup-entry config id :cluster-name)]
+  (when-some [data (lookup-entry config id :cluster-name)]
     (. builder clusterName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :node-type)]
+  (when-some [data (lookup-entry config id :node-type)]
     (. builder nodeType data))
-  (when-let [data (lookup-entry config id :notification-topic-arn)]
+  (when-some [data (lookup-entry config id :notification-topic-arn)]
     (. builder notificationTopicArn data))
-  (when-let [data (lookup-entry config id :parameter-group-name)]
+  (when-some [data (lookup-entry config id :parameter-group-name)]
     (. builder parameterGroupName data))
-  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+  (when-some [data (lookup-entry config id :preferred-maintenance-window)]
     (. builder preferredMaintenanceWindow data))
-  (when-let [data (lookup-entry config id :replication-factor)]
+  (when-some [data (lookup-entry config id :replication-factor)]
     (. builder replicationFactor data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :sse-specification)]
+  (when-some [data (lookup-entry config id :sse-specification)]
     (. builder sseSpecification data))
-  (when-let [data (lookup-entry config id :subnet-group-name)]
+  (when-some [data (lookup-entry config id :subnet-group-name)]
     (. builder subnetGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -156,7 +156,7 @@
 | `sseEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sse-enabled` |
 "
   [^CfnCluster$SSESpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sse-enabled)]
+  (when-some [data (lookup-entry config id :sse-enabled)]
     (. builder sseEnabled data))
   (.build builder))
 
@@ -186,11 +186,11 @@
 | `parameterNameValues` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameter-name-values` |
 "
   [^CfnParameterGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :parameter-group-name)]
+  (when-some [data (lookup-entry config id :parameter-group-name)]
     (. builder parameterGroupName data))
-  (when-let [data (lookup-entry config id :parameter-name-values)]
+  (when-some [data (lookup-entry config id :parameter-name-values)]
     (. builder parameterNameValues data))
   (.build builder))
 
@@ -220,11 +220,11 @@
 | `parameterNameValues` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameter-name-values` |
 "
   [^CfnParameterGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :parameter-group-name)]
+  (when-some [data (lookup-entry config id :parameter-group-name)]
     (. builder parameterGroupName data))
-  (when-let [data (lookup-entry config id :parameter-name-values)]
+  (when-some [data (lookup-entry config id :parameter-name-values)]
     (. builder parameterNameValues data))
   (.build builder))
 
@@ -254,11 +254,11 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnSubnetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :subnet-group-name)]
+  (when-some [data (lookup-entry config id :subnet-group-name)]
     (. builder subnetGroupName data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -288,11 +288,11 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnSubnetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :subnet-group-name)]
+  (when-some [data (lookup-entry config id :subnet-group-name)]
     (. builder subnetGroupName data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 

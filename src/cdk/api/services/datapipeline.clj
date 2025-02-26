@@ -29,19 +29,19 @@
 | `pipelineTags` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-tags` |
 "
   [^CfnPipeline$Builder builder id config]
-  (when-let [data (lookup-entry config id :activate)]
+  (when-some [data (lookup-entry config id :activate)]
     (. builder activate data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parameter-objects)]
+  (when-some [data (lookup-entry config id :parameter-objects)]
     (. builder parameterObjects data))
-  (when-let [data (lookup-entry config id :parameter-values)]
+  (when-some [data (lookup-entry config id :parameter-values)]
     (. builder parameterValues data))
-  (when-let [data (lookup-entry config id :pipeline-objects)]
+  (when-some [data (lookup-entry config id :pipeline-objects)]
     (. builder pipelineObjects data))
-  (when-let [data (lookup-entry config id :pipeline-tags)]
+  (when-some [data (lookup-entry config id :pipeline-tags)]
     (. builder pipelineTags data))
   (.build builder))
 
@@ -71,11 +71,11 @@
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
 "
   [^CfnPipeline$FieldProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :ref-value)]
+  (when-some [data (lookup-entry config id :ref-value)]
     (. builder refValue data))
-  (when-let [data (lookup-entry config id :string-value)]
+  (when-some [data (lookup-entry config id :string-value)]
     (. builder stringValue data))
   (.build builder))
 
@@ -104,9 +104,9 @@
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
 "
   [^CfnPipeline$ParameterAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :string-value)]
+  (when-some [data (lookup-entry config id :string-value)]
     (. builder stringValue data))
   (.build builder))
 
@@ -135,9 +135,9 @@
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 "
   [^CfnPipeline$ParameterObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
   (.build builder))
 
@@ -166,9 +166,9 @@
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
 "
   [^CfnPipeline$ParameterValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :string-value)]
+  (when-some [data (lookup-entry config id :string-value)]
     (. builder stringValue data))
   (.build builder))
 
@@ -198,11 +198,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnPipeline$PipelineObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :fields)]
+  (when-some [data (lookup-entry config id :fields)]
     (. builder fields data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -231,9 +231,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnPipeline$PipelineTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -267,19 +267,19 @@
 | `pipelineTags` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-tags` |
 "
   [^CfnPipelineProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :activate)]
+  (when-some [data (lookup-entry config id :activate)]
     (. builder activate data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parameter-objects)]
+  (when-some [data (lookup-entry config id :parameter-objects)]
     (. builder parameterObjects data))
-  (when-let [data (lookup-entry config id :parameter-values)]
+  (when-some [data (lookup-entry config id :parameter-values)]
     (. builder parameterValues data))
-  (when-let [data (lookup-entry config id :pipeline-objects)]
+  (when-some [data (lookup-entry config id :pipeline-objects)]
     (. builder pipelineObjects data))
-  (when-let [data (lookup-entry config id :pipeline-tags)]
+  (when-some [data (lookup-entry config id :pipeline-tags)]
     (. builder pipelineTags data))
   (.build builder))
 

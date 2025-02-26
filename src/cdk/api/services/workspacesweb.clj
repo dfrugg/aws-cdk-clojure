@@ -37,13 +37,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBrowserSettings$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-encryption-context)]
+  (when-some [data (lookup-entry config id :additional-encryption-context)]
     (. builder additionalEncryptionContext data))
-  (when-let [data (lookup-entry config id :browser-policy)]
+  (when-some [data (lookup-entry config id :browser-policy)]
     (. builder browserPolicy data))
-  (when-let [data (lookup-entry config id :customer-managed-key)]
+  (when-some [data (lookup-entry config id :customer-managed-key)]
     (. builder customerManagedKey data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -74,13 +74,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBrowserSettingsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-encryption-context)]
+  (when-some [data (lookup-entry config id :additional-encryption-context)]
     (. builder additionalEncryptionContext data))
-  (when-let [data (lookup-entry config id :browser-policy)]
+  (when-some [data (lookup-entry config id :browser-policy)]
     (. builder browserPolicy data))
-  (when-let [data (lookup-entry config id :customer-managed-key)]
+  (when-some [data (lookup-entry config id :customer-managed-key)]
     (. builder customerManagedKey data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -111,13 +111,13 @@
 | `portalArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:portal-arn` |
 "
   [^CfnIdentityProvider$Builder builder id config]
-  (when-let [data (lookup-entry config id :identity-provider-details)]
+  (when-some [data (lookup-entry config id :identity-provider-details)]
     (. builder identityProviderDetails data))
-  (when-let [data (lookup-entry config id :identity-provider-name)]
+  (when-some [data (lookup-entry config id :identity-provider-name)]
     (. builder identityProviderName data))
-  (when-let [data (lookup-entry config id :identity-provider-type)]
+  (when-some [data (lookup-entry config id :identity-provider-type)]
     (. builder identityProviderType data))
-  (when-let [data (lookup-entry config id :portal-arn)]
+  (when-some [data (lookup-entry config id :portal-arn)]
     (. builder portalArn data))
   (.build builder))
 
@@ -148,13 +148,13 @@
 | `portalArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:portal-arn` |
 "
   [^CfnIdentityProviderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :identity-provider-details)]
+  (when-some [data (lookup-entry config id :identity-provider-details)]
     (. builder identityProviderDetails data))
-  (when-let [data (lookup-entry config id :identity-provider-name)]
+  (when-some [data (lookup-entry config id :identity-provider-name)]
     (. builder identityProviderName data))
-  (when-let [data (lookup-entry config id :identity-provider-type)]
+  (when-some [data (lookup-entry config id :identity-provider-type)]
     (. builder identityProviderType data))
-  (when-let [data (lookup-entry config id :portal-arn)]
+  (when-some [data (lookup-entry config id :portal-arn)]
     (. builder portalArn data))
   (.build builder))
 
@@ -187,17 +187,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIpAccessSettings$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-encryption-context)]
+  (when-some [data (lookup-entry config id :additional-encryption-context)]
     (. builder additionalEncryptionContext data))
-  (when-let [data (lookup-entry config id :customer-managed-key)]
+  (when-some [data (lookup-entry config id :customer-managed-key)]
     (. builder customerManagedKey data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :ip-rules)]
+  (when-some [data (lookup-entry config id :ip-rules)]
     (. builder ipRules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -226,9 +226,9 @@
 | `ipRange` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-range` |
 "
   [^CfnIpAccessSettings$IpRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ip-range)]
+  (when-some [data (lookup-entry config id :ip-range)]
     (. builder ipRange data))
   (.build builder))
 
@@ -261,17 +261,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIpAccessSettingsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-encryption-context)]
+  (when-some [data (lookup-entry config id :additional-encryption-context)]
     (. builder additionalEncryptionContext data))
-  (when-let [data (lookup-entry config id :customer-managed-key)]
+  (when-some [data (lookup-entry config id :customer-managed-key)]
     (. builder customerManagedKey data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :ip-rules)]
+  (when-some [data (lookup-entry config id :ip-rules)]
     (. builder ipRules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -302,13 +302,13 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnNetworkSettings$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -339,13 +339,13 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnNetworkSettingsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -385,31 +385,31 @@
 | `userSettingsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-settings-arn` |
 "
   [^CfnPortal$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-encryption-context)]
+  (when-some [data (lookup-entry config id :additional-encryption-context)]
     (. builder additionalEncryptionContext data))
-  (when-let [data (lookup-entry config id :authentication-type)]
+  (when-some [data (lookup-entry config id :authentication-type)]
     (. builder authenticationType data))
-  (when-let [data (lookup-entry config id :browser-settings-arn)]
+  (when-some [data (lookup-entry config id :browser-settings-arn)]
     (. builder browserSettingsArn data))
-  (when-let [data (lookup-entry config id :customer-managed-key)]
+  (when-some [data (lookup-entry config id :customer-managed-key)]
     (. builder customerManagedKey data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :ip-access-settings-arn)]
+  (when-some [data (lookup-entry config id :ip-access-settings-arn)]
     (. builder ipAccessSettingsArn data))
-  (when-let [data (lookup-entry config id :max-concurrent-sessions)]
+  (when-some [data (lookup-entry config id :max-concurrent-sessions)]
     (. builder maxConcurrentSessions data))
-  (when-let [data (lookup-entry config id :network-settings-arn)]
+  (when-some [data (lookup-entry config id :network-settings-arn)]
     (. builder networkSettingsArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :trust-store-arn)]
+  (when-some [data (lookup-entry config id :trust-store-arn)]
     (. builder trustStoreArn data))
-  (when-let [data (lookup-entry config id :user-access-logging-settings-arn)]
+  (when-some [data (lookup-entry config id :user-access-logging-settings-arn)]
     (. builder userAccessLoggingSettingsArn data))
-  (when-let [data (lookup-entry config id :user-settings-arn)]
+  (when-some [data (lookup-entry config id :user-settings-arn)]
     (. builder userSettingsArn data))
   (.build builder))
 
@@ -449,31 +449,31 @@
 | `userSettingsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-settings-arn` |
 "
   [^CfnPortalProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-encryption-context)]
+  (when-some [data (lookup-entry config id :additional-encryption-context)]
     (. builder additionalEncryptionContext data))
-  (when-let [data (lookup-entry config id :authentication-type)]
+  (when-some [data (lookup-entry config id :authentication-type)]
     (. builder authenticationType data))
-  (when-let [data (lookup-entry config id :browser-settings-arn)]
+  (when-some [data (lookup-entry config id :browser-settings-arn)]
     (. builder browserSettingsArn data))
-  (when-let [data (lookup-entry config id :customer-managed-key)]
+  (when-some [data (lookup-entry config id :customer-managed-key)]
     (. builder customerManagedKey data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :ip-access-settings-arn)]
+  (when-some [data (lookup-entry config id :ip-access-settings-arn)]
     (. builder ipAccessSettingsArn data))
-  (when-let [data (lookup-entry config id :max-concurrent-sessions)]
+  (when-some [data (lookup-entry config id :max-concurrent-sessions)]
     (. builder maxConcurrentSessions data))
-  (when-let [data (lookup-entry config id :network-settings-arn)]
+  (when-some [data (lookup-entry config id :network-settings-arn)]
     (. builder networkSettingsArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :trust-store-arn)]
+  (when-some [data (lookup-entry config id :trust-store-arn)]
     (. builder trustStoreArn data))
-  (when-let [data (lookup-entry config id :user-access-logging-settings-arn)]
+  (when-some [data (lookup-entry config id :user-access-logging-settings-arn)]
     (. builder userAccessLoggingSettingsArn data))
-  (when-let [data (lookup-entry config id :user-settings-arn)]
+  (when-some [data (lookup-entry config id :user-settings-arn)]
     (. builder userSettingsArn data))
   (.build builder))
 
@@ -502,9 +502,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTrustStore$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-list)]
+  (when-some [data (lookup-entry config id :certificate-list)]
     (. builder certificateList data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -533,9 +533,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTrustStoreProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-list)]
+  (when-some [data (lookup-entry config id :certificate-list)]
     (. builder certificateList data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -564,9 +564,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnUserAccessLoggingSettings$Builder builder id config]
-  (when-let [data (lookup-entry config id :kinesis-stream-arn)]
+  (when-some [data (lookup-entry config id :kinesis-stream-arn)]
     (. builder kinesisStreamArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -595,9 +595,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnUserAccessLoggingSettingsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :kinesis-stream-arn)]
+  (when-some [data (lookup-entry config id :kinesis-stream-arn)]
     (. builder kinesisStreamArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -635,27 +635,27 @@
 | `uploadAllowed` | java.lang.String | [[cdk.support/lookup-entry]] | `:upload-allowed` |
 "
   [^CfnUserSettings$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-encryption-context)]
+  (when-some [data (lookup-entry config id :additional-encryption-context)]
     (. builder additionalEncryptionContext data))
-  (when-let [data (lookup-entry config id :cookie-synchronization-configuration)]
+  (when-some [data (lookup-entry config id :cookie-synchronization-configuration)]
     (. builder cookieSynchronizationConfiguration data))
-  (when-let [data (lookup-entry config id :copy-allowed)]
+  (when-some [data (lookup-entry config id :copy-allowed)]
     (. builder copyAllowed data))
-  (when-let [data (lookup-entry config id :customer-managed-key)]
+  (when-some [data (lookup-entry config id :customer-managed-key)]
     (. builder customerManagedKey data))
-  (when-let [data (lookup-entry config id :disconnect-timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :disconnect-timeout-in-minutes)]
     (. builder disconnectTimeoutInMinutes data))
-  (when-let [data (lookup-entry config id :download-allowed)]
+  (when-some [data (lookup-entry config id :download-allowed)]
     (. builder downloadAllowed data))
-  (when-let [data (lookup-entry config id :idle-disconnect-timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :idle-disconnect-timeout-in-minutes)]
     (. builder idleDisconnectTimeoutInMinutes data))
-  (when-let [data (lookup-entry config id :paste-allowed)]
+  (when-some [data (lookup-entry config id :paste-allowed)]
     (. builder pasteAllowed data))
-  (when-let [data (lookup-entry config id :print-allowed)]
+  (when-some [data (lookup-entry config id :print-allowed)]
     (. builder printAllowed data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :upload-allowed)]
+  (when-some [data (lookup-entry config id :upload-allowed)]
     (. builder uploadAllowed data))
   (.build builder))
 
@@ -685,11 +685,11 @@
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^CfnUserSettings$CookieSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -718,9 +718,9 @@
 | `blocklist` | java.util.List | [[cdk.support/lookup-entry]] | `:blocklist` |
 "
   [^CfnUserSettings$CookieSynchronizationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowlist)]
+  (when-some [data (lookup-entry config id :allowlist)]
     (. builder allowlist data))
-  (when-let [data (lookup-entry config id :blocklist)]
+  (when-some [data (lookup-entry config id :blocklist)]
     (. builder blocklist data))
   (.build builder))
 
@@ -758,27 +758,27 @@
 | `uploadAllowed` | java.lang.String | [[cdk.support/lookup-entry]] | `:upload-allowed` |
 "
   [^CfnUserSettingsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-encryption-context)]
+  (when-some [data (lookup-entry config id :additional-encryption-context)]
     (. builder additionalEncryptionContext data))
-  (when-let [data (lookup-entry config id :cookie-synchronization-configuration)]
+  (when-some [data (lookup-entry config id :cookie-synchronization-configuration)]
     (. builder cookieSynchronizationConfiguration data))
-  (when-let [data (lookup-entry config id :copy-allowed)]
+  (when-some [data (lookup-entry config id :copy-allowed)]
     (. builder copyAllowed data))
-  (when-let [data (lookup-entry config id :customer-managed-key)]
+  (when-some [data (lookup-entry config id :customer-managed-key)]
     (. builder customerManagedKey data))
-  (when-let [data (lookup-entry config id :disconnect-timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :disconnect-timeout-in-minutes)]
     (. builder disconnectTimeoutInMinutes data))
-  (when-let [data (lookup-entry config id :download-allowed)]
+  (when-some [data (lookup-entry config id :download-allowed)]
     (. builder downloadAllowed data))
-  (when-let [data (lookup-entry config id :idle-disconnect-timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :idle-disconnect-timeout-in-minutes)]
     (. builder idleDisconnectTimeoutInMinutes data))
-  (when-let [data (lookup-entry config id :paste-allowed)]
+  (when-some [data (lookup-entry config id :paste-allowed)]
     (. builder pasteAllowed data))
-  (when-let [data (lookup-entry config id :print-allowed)]
+  (when-some [data (lookup-entry config id :print-allowed)]
     (. builder printAllowed data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :upload-allowed)]
+  (when-some [data (lookup-entry config id :upload-allowed)]
     (. builder uploadAllowed data))
   (.build builder))
 

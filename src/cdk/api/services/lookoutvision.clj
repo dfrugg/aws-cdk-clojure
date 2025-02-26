@@ -17,7 +17,7 @@
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
 
@@ -45,7 +45,7 @@
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
 

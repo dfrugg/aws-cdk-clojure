@@ -42,35 +42,35 @@
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^AwsCustomResource$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-name)]
+  (when-some [data (lookup-entry config id :function-name)]
     (. builder functionName data))
-  (when-let [data (lookup-entry config id :install-latest-aws-sdk)]
+  (when-some [data (lookup-entry config id :install-latest-aws-sdk)]
     (. builder installLatestAwsSdk data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (retention-days config id :log-retention)]
+  (when-some [data (retention-days config id :log-retention)]
     (. builder logRetention data))
-  (when-let [data (lookup-entry config id :memory-size)]
+  (when-some [data (lookup-entry config id :memory-size)]
     (. builder memorySize data))
-  (when-let [data (lookup-entry config id :on-create)]
+  (when-some [data (lookup-entry config id :on-create)]
     (. builder onCreate data))
-  (when-let [data (lookup-entry config id :on-delete)]
+  (when-some [data (lookup-entry config id :on-delete)]
     (. builder onDelete data))
-  (when-let [data (lookup-entry config id :on-update)]
+  (when-some [data (lookup-entry config id :on-update)]
     (. builder onUpdate data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -112,35 +112,35 @@
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^AwsCustomResourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-name)]
+  (when-some [data (lookup-entry config id :function-name)]
     (. builder functionName data))
-  (when-let [data (lookup-entry config id :install-latest-aws-sdk)]
+  (when-some [data (lookup-entry config id :install-latest-aws-sdk)]
     (. builder installLatestAwsSdk data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (retention-days config id :log-retention)]
+  (when-some [data (retention-days config id :log-retention)]
     (. builder logRetention data))
-  (when-let [data (lookup-entry config id :memory-size)]
+  (when-some [data (lookup-entry config id :memory-size)]
     (. builder memorySize data))
-  (when-let [data (lookup-entry config id :on-create)]
+  (when-some [data (lookup-entry config id :on-create)]
     (. builder onCreate data))
-  (when-let [data (lookup-entry config id :on-delete)]
+  (when-some [data (lookup-entry config id :on-delete)]
     (. builder onDelete data))
-  (when-let [data (lookup-entry config id :on-update)]
+  (when-some [data (lookup-entry config id :on-update)]
     (. builder onUpdate data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -177,25 +177,25 @@
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^AwsSdkCall$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :api-version)]
+  (when-some [data (lookup-entry config id :api-version)]
     (. builder apiVersion data))
-  (when-let [data (lookup-entry config id :assumed-role-arn)]
+  (when-some [data (lookup-entry config id :assumed-role-arn)]
     (. builder assumedRoleArn data))
-  (when-let [data (lookup-entry config id :ignore-error-codes-matching)]
+  (when-some [data (lookup-entry config id :ignore-error-codes-matching)]
     (. builder ignoreErrorCodesMatching data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :output-paths)]
+  (when-some [data (lookup-entry config id :output-paths)]
     (. builder outputPaths data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :physical-resource-id)]
+  (when-some [data (lookup-entry config id :physical-resource-id)]
     (. builder physicalResourceId data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -225,11 +225,11 @@
 | `level` | software.amazon.awscdk.services.stepfunctions.LogLevel | [[cdk.api.services.stepfunctions/log-level]] | `:level` |
 "
   [^LogOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :include-execution-data)]
+  (when-some [data (lookup-entry config id :include-execution-data)]
     (. builder includeExecutionData data))
-  (when-let [data (log-level config id :level)]
+  (when-some [data (log-level config id :level)]
     (. builder level data))
   (.build builder))
 
@@ -257,7 +257,7 @@
 | `logApiResponseData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:log-api-response-data` |
 "
   [^LoggingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-api-response-data)]
+  (when-some [data (lookup-entry config id :log-api-response-data)]
     (. builder logApiResponseData data))
   (.build builder))
 
@@ -298,33 +298,33 @@
 | `waiterStateMachineLogOptions` | software.amazon.awscdk.customresources.LogOptions | [[cdk.support/lookup-entry]] | `:waiter-state-machine-log-options` |
 "
   [^Provider$Builder builder id config]
-  (when-let [data (lookup-entry config id :disable-waiter-state-machine-logging)]
+  (when-some [data (lookup-entry config id :disable-waiter-state-machine-logging)]
     (. builder disableWaiterStateMachineLogging data))
-  (when-let [data (lookup-entry config id :is-complete-handler)]
+  (when-some [data (lookup-entry config id :is-complete-handler)]
     (. builder isCompleteHandler data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (retention-days config id :log-retention)]
+  (when-some [data (retention-days config id :log-retention)]
     (. builder logRetention data))
-  (when-let [data (lookup-entry config id :on-event-handler)]
+  (when-some [data (lookup-entry config id :on-event-handler)]
     (. builder onEventHandler data))
-  (when-let [data (lookup-entry config id :provider-function-env-encryption)]
+  (when-some [data (lookup-entry config id :provider-function-env-encryption)]
     (. builder providerFunctionEnvEncryption data))
-  (when-let [data (lookup-entry config id :provider-function-name)]
+  (when-some [data (lookup-entry config id :provider-function-name)]
     (. builder providerFunctionName data))
-  (when-let [data (lookup-entry config id :query-interval)]
+  (when-some [data (lookup-entry config id :query-interval)]
     (. builder queryInterval data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :total-timeout)]
+  (when-some [data (lookup-entry config id :total-timeout)]
     (. builder totalTimeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
-  (when-let [data (lookup-entry config id :waiter-state-machine-log-options)]
+  (when-some [data (lookup-entry config id :waiter-state-machine-log-options)]
     (. builder waiterStateMachineLogOptions data))
   (.build builder))
 
@@ -365,33 +365,33 @@
 | `waiterStateMachineLogOptions` | software.amazon.awscdk.customresources.LogOptions | [[cdk.support/lookup-entry]] | `:waiter-state-machine-log-options` |
 "
   [^ProviderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :disable-waiter-state-machine-logging)]
+  (when-some [data (lookup-entry config id :disable-waiter-state-machine-logging)]
     (. builder disableWaiterStateMachineLogging data))
-  (when-let [data (lookup-entry config id :is-complete-handler)]
+  (when-some [data (lookup-entry config id :is-complete-handler)]
     (. builder isCompleteHandler data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (retention-days config id :log-retention)]
+  (when-some [data (retention-days config id :log-retention)]
     (. builder logRetention data))
-  (when-let [data (lookup-entry config id :on-event-handler)]
+  (when-some [data (lookup-entry config id :on-event-handler)]
     (. builder onEventHandler data))
-  (when-let [data (lookup-entry config id :provider-function-env-encryption)]
+  (when-some [data (lookup-entry config id :provider-function-env-encryption)]
     (. builder providerFunctionEnvEncryption data))
-  (when-let [data (lookup-entry config id :provider-function-name)]
+  (when-some [data (lookup-entry config id :provider-function-name)]
     (. builder providerFunctionName data))
-  (when-let [data (lookup-entry config id :query-interval)]
+  (when-some [data (lookup-entry config id :query-interval)]
     (. builder queryInterval data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :total-timeout)]
+  (when-some [data (lookup-entry config id :total-timeout)]
     (. builder totalTimeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
-  (when-let [data (lookup-entry config id :waiter-state-machine-log-options)]
+  (when-some [data (lookup-entry config id :waiter-state-machine-log-options)]
     (. builder waiterStateMachineLogOptions data))
   (.build builder))
 
@@ -419,7 +419,7 @@
 | `resources` | java.util.List | [[cdk.support/lookup-entry]] | `:resources` |
 "
   [^SdkCallsPolicyOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
   (.build builder))
 
@@ -453,19 +453,19 @@
 | `timeoutHandler` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:timeout-handler` |
 "
   [^WaiterStateMachine$Builder builder id config]
-  (when-let [data (lookup-entry config id :backoff-rate)]
+  (when-some [data (lookup-entry config id :backoff-rate)]
     (. builder backoffRate data))
-  (when-let [data (lookup-entry config id :disable-logging)]
+  (when-some [data (lookup-entry config id :disable-logging)]
     (. builder disableLogging data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :is-complete-handler)]
+  (when-some [data (lookup-entry config id :is-complete-handler)]
     (. builder isCompleteHandler data))
-  (when-let [data (lookup-entry config id :log-options)]
+  (when-some [data (lookup-entry config id :log-options)]
     (. builder logOptions data))
-  (when-let [data (lookup-entry config id :max-attempts)]
+  (when-some [data (lookup-entry config id :max-attempts)]
     (. builder maxAttempts data))
-  (when-let [data (lookup-entry config id :timeout-handler)]
+  (when-some [data (lookup-entry config id :timeout-handler)]
     (. builder timeoutHandler data))
   (.build builder))
 
@@ -499,19 +499,19 @@
 | `timeoutHandler` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:timeout-handler` |
 "
   [^WaiterStateMachineProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :backoff-rate)]
+  (when-some [data (lookup-entry config id :backoff-rate)]
     (. builder backoffRate data))
-  (when-let [data (lookup-entry config id :disable-logging)]
+  (when-some [data (lookup-entry config id :disable-logging)]
     (. builder disableLogging data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :is-complete-handler)]
+  (when-some [data (lookup-entry config id :is-complete-handler)]
     (. builder isCompleteHandler data))
-  (when-let [data (lookup-entry config id :log-options)]
+  (when-some [data (lookup-entry config id :log-options)]
     (. builder logOptions data))
-  (when-let [data (lookup-entry config id :max-attempts)]
+  (when-some [data (lookup-entry config id :max-attempts)]
     (. builder maxAttempts data))
-  (when-let [data (lookup-entry config id :timeout-handler)]
+  (when-some [data (lookup-entry config id :timeout-handler)]
     (. builder timeoutHandler data))
   (.build builder))
 

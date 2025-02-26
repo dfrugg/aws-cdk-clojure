@@ -203,11 +203,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `upperBound` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-bound` |
 "
   [^AdjustmentTier$Builder builder id config]
-  (when-let [data (lookup-entry config id :adjustment)]
+  (when-some [data (lookup-entry config id :adjustment)]
     (. builder adjustment data))
-  (when-let [data (lookup-entry config id :lower-bound)]
+  (when-some [data (lookup-entry config id :lower-bound)]
     (. builder lowerBound data))
-  (when-let [data (lookup-entry config id :upper-bound)]
+  (when-some [data (lookup-entry config id :upper-bound)]
     (. builder upperBound data))
   (.build builder))
 
@@ -240,17 +240,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |
 "
   [^BaseScalableAttributeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimension)]
+  (when-some [data (lookup-entry config id :dimension)]
     (. builder dimension data))
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (service-namespace config id :service-namespace)]
+  (when-some [data (service-namespace config id :service-namespace)]
     (. builder serviceNamespace data))
   (.build builder))
 
@@ -281,13 +281,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scaleOutCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
 "
   [^BaseTargetTrackingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
   (.build builder))
 
@@ -322,21 +322,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-steps` |
 "
   [^BasicStepScalingPolicyProps$Builder builder id config]
-  (when-let [data (adjustment-type config id :adjustment-type)]
+  (when-some [data (adjustment-type config id :adjustment-type)]
     (. builder adjustmentType data))
-  (when-let [data (lookup-entry config id :cooldown)]
+  (when-some [data (lookup-entry config id :cooldown)]
     (. builder cooldown data))
-  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+  (when-some [data (lookup-entry config id :datapoints-to-alarm)]
     (. builder datapointsToAlarm data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :metric)]
+  (when-some [data (lookup-entry config id :metric)]
     (. builder metric data))
-  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+  (when-some [data (metric-aggregation-type config id :metric-aggregation-type)]
     (. builder metricAggregationType data))
-  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+  (when-some [data (lookup-entry config id :min-adjustment-magnitude)]
     (. builder minAdjustmentMagnitude data))
-  (when-let [data (lookup-entry config id :scaling-steps)]
+  (when-some [data (lookup-entry config id :scaling-steps)]
     (. builder scalingSteps data))
   (.build builder))
 
@@ -371,21 +371,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^BasicTargetTrackingScalingPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-metric)]
+  (when-some [data (lookup-entry config id :custom-metric)]
     (. builder customMetric data))
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (predefined-metric config id :predefined-metric)]
+  (when-some [data (predefined-metric config id :predefined-metric)]
     (. builder predefinedMetric data))
-  (when-let [data (lookup-entry config id :resource-label)]
+  (when-some [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 
@@ -420,21 +420,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `suspendedState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suspended-state` |
 "
   [^CfnScalableTarget$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :scalable-dimension)]
+  (when-some [data (lookup-entry config id :scalable-dimension)]
     (. builder scalableDimension data))
-  (when-let [data (lookup-entry config id :scheduled-actions)]
+  (when-some [data (lookup-entry config id :scheduled-actions)]
     (. builder scheduledActions data))
-  (when-let [data (lookup-entry config id :service-namespace)]
+  (when-some [data (lookup-entry config id :service-namespace)]
     (. builder serviceNamespace data))
-  (when-let [data (lookup-entry config id :suspended-state)]
+  (when-some [data (lookup-entry config id :suspended-state)]
     (. builder suspendedState data))
   (.build builder))
 
@@ -469,21 +469,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `suspendedState` | software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget$SuspendedStateProperty | [[cdk.support/lookup-entry]] | `:suspended-state` |
 "
   [^CfnScalableTargetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :scalable-dimension)]
+  (when-some [data (lookup-entry config id :scalable-dimension)]
     (. builder scalableDimension data))
-  (when-let [data (lookup-entry config id :scheduled-actions)]
+  (when-some [data (lookup-entry config id :scheduled-actions)]
     (. builder scheduledActions data))
-  (when-let [data (lookup-entry config id :service-namespace)]
+  (when-some [data (lookup-entry config id :service-namespace)]
     (. builder serviceNamespace data))
-  (when-let [data (lookup-entry config id :suspended-state)]
+  (when-some [data (lookup-entry config id :suspended-state)]
     (. builder suspendedState data))
   (.build builder))
 
@@ -512,9 +512,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 "
   [^CfnScalableTarget$ScalableTargetActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
   (.build builder))
 
@@ -547,17 +547,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone` |
 "
   [^CfnScalableTarget$ScheduledActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :end-time)]
+  (when-some [data (lookup-entry config id :end-time)]
     (. builder endTime data))
-  (when-let [data (lookup-entry config id :scalable-target-action)]
+  (when-some [data (lookup-entry config id :scalable-target-action)]
     (. builder scalableTargetAction data))
-  (when-let [data (lookup-entry config id :schedule)]
+  (when-some [data (lookup-entry config id :schedule)]
     (. builder schedule data))
-  (when-let [data (lookup-entry config id :scheduled-action-name)]
+  (when-some [data (lookup-entry config id :scheduled-action-name)]
     (. builder scheduledActionName data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
-  (when-let [data (lookup-entry config id :timezone)]
+  (when-some [data (lookup-entry config id :timezone)]
     (. builder timezone data))
   (.build builder))
 
@@ -587,11 +587,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scheduledScalingSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:scheduled-scaling-suspended` |
 "
   [^CfnScalableTarget$SuspendedStateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dynamic-scaling-in-suspended)]
+  (when-some [data (lookup-entry config id :dynamic-scaling-in-suspended)]
     (. builder dynamicScalingInSuspended data))
-  (when-let [data (lookup-entry config id :dynamic-scaling-out-suspended)]
+  (when-some [data (lookup-entry config id :dynamic-scaling-out-suspended)]
     (. builder dynamicScalingOutSuspended data))
-  (when-let [data (lookup-entry config id :scheduled-scaling-suspended)]
+  (when-some [data (lookup-entry config id :scheduled-scaling-suspended)]
     (. builder scheduledScalingSuspended data))
   (.build builder))
 
@@ -626,21 +626,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
 "
   [^CfnScalingPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :policy-type)]
+  (when-some [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :scalable-dimension)]
+  (when-some [data (lookup-entry config id :scalable-dimension)]
     (. builder scalableDimension data))
-  (when-let [data (lookup-entry config id :scaling-target-id)]
+  (when-some [data (lookup-entry config id :scaling-target-id)]
     (. builder scalingTargetId data))
-  (when-let [data (lookup-entry config id :service-namespace)]
+  (when-some [data (lookup-entry config id :service-namespace)]
     (. builder serviceNamespace data))
-  (when-let [data (lookup-entry config id :step-scaling-policy-configuration)]
+  (when-some [data (lookup-entry config id :step-scaling-policy-configuration)]
     (. builder stepScalingPolicyConfiguration data))
-  (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
+  (when-some [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
     (. builder targetTrackingScalingPolicyConfiguration data))
   (.build builder))
 
@@ -673,17 +673,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -712,9 +712,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnScalingPolicy$MetricDimensionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -743,9 +743,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-label` |
 "
   [^CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :predefined-metric-type)]
+  (when-some [data (lookup-entry config id :predefined-metric-type)]
     (. builder predefinedMetricType data))
-  (when-let [data (lookup-entry config id :resource-label)]
+  (when-some [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
   (.build builder))
 
@@ -780,21 +780,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
 "
   [^CfnScalingPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :policy-type)]
+  (when-some [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :scalable-dimension)]
+  (when-some [data (lookup-entry config id :scalable-dimension)]
     (. builder scalableDimension data))
-  (when-let [data (lookup-entry config id :scaling-target-id)]
+  (when-some [data (lookup-entry config id :scaling-target-id)]
     (. builder scalingTargetId data))
-  (when-let [data (lookup-entry config id :service-namespace)]
+  (when-some [data (lookup-entry config id :service-namespace)]
     (. builder serviceNamespace data))
-  (when-let [data (lookup-entry config id :step-scaling-policy-configuration)]
+  (when-some [data (lookup-entry config id :step-scaling-policy-configuration)]
     (. builder stepScalingPolicyConfiguration data))
-  (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
+  (when-some [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
     (. builder targetTrackingScalingPolicyConfiguration data))
   (.build builder))
 
@@ -824,11 +824,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingAdjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scaling-adjustment` |
 "
   [^CfnScalingPolicy$StepAdjustmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric-interval-lower-bound)]
+  (when-some [data (lookup-entry config id :metric-interval-lower-bound)]
     (. builder metricIntervalLowerBound data))
-  (when-let [data (lookup-entry config id :metric-interval-upper-bound)]
+  (when-some [data (lookup-entry config id :metric-interval-upper-bound)]
     (. builder metricIntervalUpperBound data))
-  (when-let [data (lookup-entry config id :scaling-adjustment)]
+  (when-some [data (lookup-entry config id :scaling-adjustment)]
     (. builder scalingAdjustment data))
   (.build builder))
 
@@ -860,15 +860,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stepAdjustments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:step-adjustments` |
 "
   [^CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :adjustment-type)]
+  (when-some [data (lookup-entry config id :adjustment-type)]
     (. builder adjustmentType data))
-  (when-let [data (lookup-entry config id :cooldown)]
+  (when-some [data (lookup-entry config id :cooldown)]
     (. builder cooldown data))
-  (when-let [data (lookup-entry config id :metric-aggregation-type)]
+  (when-some [data (lookup-entry config id :metric-aggregation-type)]
     (. builder metricAggregationType data))
-  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+  (when-some [data (lookup-entry config id :min-adjustment-magnitude)]
     (. builder minAdjustmentMagnitude data))
-  (when-let [data (lookup-entry config id :step-adjustments)]
+  (when-some [data (lookup-entry config id :step-adjustments)]
     (. builder stepAdjustments data))
   (.build builder))
 
@@ -900,15 +900,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |
 "
   [^CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :metric-stat)]
+  (when-some [data (lookup-entry config id :metric-stat)]
     (. builder metricStat data))
-  (when-let [data (lookup-entry config id :return-data)]
+  (when-some [data (lookup-entry config id :return-data)]
     (. builder returnData data))
   (.build builder))
 
@@ -937,9 +937,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -969,11 +969,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
   [^CfnScalingPolicy$TargetTrackingMetricProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
 
@@ -1003,11 +1003,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric)]
+  (when-some [data (lookup-entry config id :metric)]
     (. builder metric data))
-  (when-let [data (lookup-entry config id :stat)]
+  (when-some [data (lookup-entry config id :stat)]
     (. builder stat data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1040,17 +1040,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :customized-metric-specification)]
+  (when-some [data (lookup-entry config id :customized-metric-specification)]
     (. builder customizedMetricSpecification data))
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :predefined-metric-specification)]
+  (when-some [data (lookup-entry config id :predefined-metric-specification)]
     (. builder predefinedMetricSpecification data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 
@@ -1083,17 +1083,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `year` | java.lang.String | [[cdk.support/lookup-entry]] | `:year` |
 "
   [^CronOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :day)]
+  (when-some [data (lookup-entry config id :day)]
     (. builder day data))
-  (when-let [data (lookup-entry config id :hour)]
+  (when-some [data (lookup-entry config id :hour)]
     (. builder hour data))
-  (when-let [data (lookup-entry config id :minute)]
+  (when-some [data (lookup-entry config id :minute)]
     (. builder minute data))
-  (when-let [data (lookup-entry config id :month)]
+  (when-some [data (lookup-entry config id :month)]
     (. builder month data))
-  (when-let [data (lookup-entry config id :week-day)]
+  (when-some [data (lookup-entry config id :week-day)]
     (. builder weekDay data))
-  (when-let [data (lookup-entry config id :year)]
+  (when-some [data (lookup-entry config id :year)]
     (. builder year data))
   (.build builder))
 
@@ -1122,9 +1122,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 "
   [^EnableScalingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
   (.build builder))
 
@@ -1157,17 +1157,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |
 "
   [^ScalableTarget$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :scalable-dimension)]
+  (when-some [data (lookup-entry config id :scalable-dimension)]
     (. builder scalableDimension data))
-  (when-let [data (service-namespace config id :service-namespace)]
+  (when-some [data (service-namespace config id :service-namespace)]
     (. builder serviceNamespace data))
   (.build builder))
 
@@ -1200,17 +1200,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |
 "
   [^ScalableTargetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :scalable-dimension)]
+  (when-some [data (lookup-entry config id :scalable-dimension)]
     (. builder scalableDimension data))
-  (when-let [data (service-namespace config id :service-namespace)]
+  (when-some [data (service-namespace config id :service-namespace)]
     (. builder serviceNamespace data))
   (.build builder))
 
@@ -1240,11 +1240,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |
 "
   [^ScalingInterval$Builder builder id config]
-  (when-let [data (lookup-entry config id :change)]
+  (when-some [data (lookup-entry config id :change)]
     (. builder change data))
-  (when-let [data (lookup-entry config id :lower)]
+  (when-some [data (lookup-entry config id :lower)]
     (. builder lower data))
-  (when-let [data (lookup-entry config id :upper)]
+  (when-some [data (lookup-entry config id :upper)]
     (. builder upper data))
   (.build builder))
 
@@ -1277,17 +1277,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeZone` | software.amazon.awscdk.TimeZone | [[cdk.support/lookup-entry]] | `:time-zone` |
 "
   [^ScalingSchedule$Builder builder id config]
-  (when-let [data (lookup-entry config id :end-time)]
+  (when-some [data (lookup-entry config id :end-time)]
     (. builder endTime data))
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :schedule)]
+  (when-some [data (lookup-entry config id :schedule)]
     (. builder schedule data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
-  (when-let [data (lookup-entry config id :time-zone)]
+  (when-some [data (lookup-entry config id :time-zone)]
     (. builder timeZone data))
   (.build builder))
 
@@ -1320,17 +1320,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
 "
   [^StepScalingAction$Builder builder id config]
-  (when-let [data (adjustment-type config id :adjustment-type)]
+  (when-some [data (adjustment-type config id :adjustment-type)]
     (. builder adjustmentType data))
-  (when-let [data (lookup-entry config id :cooldown)]
+  (when-some [data (lookup-entry config id :cooldown)]
     (. builder cooldown data))
-  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+  (when-some [data (metric-aggregation-type config id :metric-aggregation-type)]
     (. builder metricAggregationType data))
-  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+  (when-some [data (lookup-entry config id :min-adjustment-magnitude)]
     (. builder minAdjustmentMagnitude data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :scaling-target)]
+  (when-some [data (lookup-entry config id :scaling-target)]
     (. builder scalingTarget data))
   (.build builder))
 
@@ -1363,17 +1363,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
 "
   [^StepScalingActionProps$Builder builder id config]
-  (when-let [data (adjustment-type config id :adjustment-type)]
+  (when-some [data (adjustment-type config id :adjustment-type)]
     (. builder adjustmentType data))
-  (when-let [data (lookup-entry config id :cooldown)]
+  (when-some [data (lookup-entry config id :cooldown)]
     (. builder cooldown data))
-  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+  (when-some [data (metric-aggregation-type config id :metric-aggregation-type)]
     (. builder metricAggregationType data))
-  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+  (when-some [data (lookup-entry config id :min-adjustment-magnitude)]
     (. builder minAdjustmentMagnitude data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :scaling-target)]
+  (when-some [data (lookup-entry config id :scaling-target)]
     (. builder scalingTarget data))
   (.build builder))
 
@@ -1409,23 +1409,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
 "
   [^StepScalingPolicy$Builder builder id config]
-  (when-let [data (adjustment-type config id :adjustment-type)]
+  (when-some [data (adjustment-type config id :adjustment-type)]
     (. builder adjustmentType data))
-  (when-let [data (lookup-entry config id :cooldown)]
+  (when-some [data (lookup-entry config id :cooldown)]
     (. builder cooldown data))
-  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+  (when-some [data (lookup-entry config id :datapoints-to-alarm)]
     (. builder datapointsToAlarm data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :metric)]
+  (when-some [data (lookup-entry config id :metric)]
     (. builder metric data))
-  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+  (when-some [data (metric-aggregation-type config id :metric-aggregation-type)]
     (. builder metricAggregationType data))
-  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+  (when-some [data (lookup-entry config id :min-adjustment-magnitude)]
     (. builder minAdjustmentMagnitude data))
-  (when-let [data (lookup-entry config id :scaling-steps)]
+  (when-some [data (lookup-entry config id :scaling-steps)]
     (. builder scalingSteps data))
-  (when-let [data (lookup-entry config id :scaling-target)]
+  (when-some [data (lookup-entry config id :scaling-target)]
     (. builder scalingTarget data))
   (.build builder))
 
@@ -1461,23 +1461,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
 "
   [^StepScalingPolicyProps$Builder builder id config]
-  (when-let [data (adjustment-type config id :adjustment-type)]
+  (when-some [data (adjustment-type config id :adjustment-type)]
     (. builder adjustmentType data))
-  (when-let [data (lookup-entry config id :cooldown)]
+  (when-some [data (lookup-entry config id :cooldown)]
     (. builder cooldown data))
-  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+  (when-some [data (lookup-entry config id :datapoints-to-alarm)]
     (. builder datapointsToAlarm data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :metric)]
+  (when-some [data (lookup-entry config id :metric)]
     (. builder metric data))
-  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+  (when-some [data (metric-aggregation-type config id :metric-aggregation-type)]
     (. builder metricAggregationType data))
-  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+  (when-some [data (lookup-entry config id :min-adjustment-magnitude)]
     (. builder minAdjustmentMagnitude data))
-  (when-let [data (lookup-entry config id :scaling-steps)]
+  (when-some [data (lookup-entry config id :scaling-steps)]
     (. builder scalingSteps data))
-  (when-let [data (lookup-entry config id :scaling-target)]
+  (when-some [data (lookup-entry config id :scaling-target)]
     (. builder scalingTarget data))
   (.build builder))
 
@@ -1513,23 +1513,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^TargetTrackingScalingPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-metric)]
+  (when-some [data (lookup-entry config id :custom-metric)]
     (. builder customMetric data))
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (predefined-metric config id :predefined-metric)]
+  (when-some [data (predefined-metric config id :predefined-metric)]
     (. builder predefinedMetric data))
-  (when-let [data (lookup-entry config id :resource-label)]
+  (when-some [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
-  (when-let [data (lookup-entry config id :scaling-target)]
+  (when-some [data (lookup-entry config id :scaling-target)]
     (. builder scalingTarget data))
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 
@@ -1565,23 +1565,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^TargetTrackingScalingPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-metric)]
+  (when-some [data (lookup-entry config id :custom-metric)]
     (. builder customMetric data))
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (predefined-metric config id :predefined-metric)]
+  (when-some [data (predefined-metric config id :predefined-metric)]
     (. builder predefinedMetric data))
-  (when-let [data (lookup-entry config id :resource-label)]
+  (when-some [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
-  (when-let [data (lookup-entry config id :scaling-target)]
+  (when-some [data (lookup-entry config id :scaling-target)]
     (. builder scalingTarget data))
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 

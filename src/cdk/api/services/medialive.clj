@@ -213,23 +213,23 @@
 | `vbrQuality` | java.lang.String | [[cdk.support/lookup-entry]] | `:vbr-quality` |
 "
   [^CfnChannel$AacSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :coding-mode)]
+  (when-some [data (lookup-entry config id :coding-mode)]
     (. builder codingMode data))
-  (when-let [data (lookup-entry config id :input-type)]
+  (when-some [data (lookup-entry config id :input-type)]
     (. builder inputType data))
-  (when-let [data (lookup-entry config id :profile)]
+  (when-some [data (lookup-entry config id :profile)]
     (. builder profile data))
-  (when-let [data (lookup-entry config id :rate-control-mode)]
+  (when-some [data (lookup-entry config id :rate-control-mode)]
     (. builder rateControlMode data))
-  (when-let [data (lookup-entry config id :raw-format)]
+  (when-some [data (lookup-entry config id :raw-format)]
     (. builder rawFormat data))
-  (when-let [data (lookup-entry config id :sample-rate)]
+  (when-some [data (lookup-entry config id :sample-rate)]
     (. builder sampleRate data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :vbr-quality)]
+  (when-some [data (lookup-entry config id :vbr-quality)]
     (. builder vbrQuality data))
   (.build builder))
 
@@ -264,21 +264,21 @@
 | `metadataControl` | java.lang.String | [[cdk.support/lookup-entry]] | `:metadata-control` |
 "
   [^CfnChannel$Ac3SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attenuation-control)]
+  (when-some [data (lookup-entry config id :attenuation-control)]
     (. builder attenuationControl data))
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :bitstream-mode)]
+  (when-some [data (lookup-entry config id :bitstream-mode)]
     (. builder bitstreamMode data))
-  (when-let [data (lookup-entry config id :coding-mode)]
+  (when-some [data (lookup-entry config id :coding-mode)]
     (. builder codingMode data))
-  (when-let [data (lookup-entry config id :dialnorm)]
+  (when-some [data (lookup-entry config id :dialnorm)]
     (. builder dialnorm data))
-  (when-let [data (lookup-entry config id :drc-profile)]
+  (when-some [data (lookup-entry config id :drc-profile)]
     (. builder drcProfile data))
-  (when-let [data (lookup-entry config id :lfe-filter)]
+  (when-some [data (lookup-entry config id :lfe-filter)]
     (. builder lfeFilter data))
-  (when-let [data (lookup-entry config id :metadata-control)]
+  (when-some [data (lookup-entry config id :metadata-control)]
     (. builder metadataControl data))
   (.build builder))
 
@@ -306,7 +306,7 @@
 | `sourceAncillaryChannelNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:source-ancillary-channel-number` |
 "
   [^CfnChannel$AncillarySourceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source-ancillary-channel-number)]
+  (when-some [data (lookup-entry config id :source-ancillary-channel-number)]
     (. builder sourceAncillaryChannelNumber data))
   (.build builder))
 
@@ -334,7 +334,7 @@
 | `archiveS3Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:archive-s3-settings` |
 "
   [^CfnChannel$ArchiveCdnSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :archive-s3-settings)]
+  (when-some [data (lookup-entry config id :archive-s3-settings)]
     (. builder archiveS3Settings data))
   (.build builder))
 
@@ -363,9 +363,9 @@
 | `rawSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:raw-settings` |
 "
   [^CfnChannel$ArchiveContainerSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :m2-ts-settings)]
+  (when-some [data (lookup-entry config id :m2-ts-settings)]
     (. builder m2TsSettings data))
-  (when-let [data (lookup-entry config id :raw-settings)]
+  (when-some [data (lookup-entry config id :raw-settings)]
     (. builder rawSettings data))
   (.build builder))
 
@@ -395,11 +395,11 @@
 | `rolloverInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rollover-interval` |
 "
   [^CfnChannel$ArchiveGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :archive-cdn-settings)]
+  (when-some [data (lookup-entry config id :archive-cdn-settings)]
     (. builder archiveCdnSettings data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :rollover-interval)]
+  (when-some [data (lookup-entry config id :rollover-interval)]
     (. builder rolloverInterval data))
   (.build builder))
 
@@ -429,11 +429,11 @@
 | `nameModifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:name-modifier` |
 "
   [^CfnChannel$ArchiveOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-settings)]
+  (when-some [data (lookup-entry config id :container-settings)]
     (. builder containerSettings data))
-  (when-let [data (lookup-entry config id :extension)]
+  (when-some [data (lookup-entry config id :extension)]
     (. builder extension data))
-  (when-let [data (lookup-entry config id :name-modifier)]
+  (when-some [data (lookup-entry config id :name-modifier)]
     (. builder nameModifier data))
   (.build builder))
 
@@ -461,7 +461,7 @@
 | `cannedAcl` | java.lang.String | [[cdk.support/lookup-entry]] | `:canned-acl` |
 "
   [^CfnChannel$ArchiveS3SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :canned-acl)]
+  (when-some [data (lookup-entry config id :canned-acl)]
     (. builder cannedAcl data))
   (.build builder))
 
@@ -502,9 +502,9 @@
 | `outputChannel` | java.lang.Number | [[cdk.support/lookup-entry]] | `:output-channel` |
 "
   [^CfnChannel$AudioChannelMappingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-channel-levels)]
+  (when-some [data (lookup-entry config id :input-channel-levels)]
     (. builder inputChannelLevels data))
-  (when-let [data (lookup-entry config id :output-channel)]
+  (when-some [data (lookup-entry config id :output-channel)]
     (. builder outputChannel data))
   (.build builder))
 
@@ -538,19 +538,19 @@
 | `wavSettings` | software.amazon.awscdk.services.medialive.CfnChannel$WavSettingsProperty | [[cdk.support/lookup-entry]] | `:wav-settings` |
 "
   [^CfnChannel$AudioCodecSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aac-settings)]
+  (when-some [data (lookup-entry config id :aac-settings)]
     (. builder aacSettings data))
-  (when-let [data (lookup-entry config id :ac3-settings)]
+  (when-some [data (lookup-entry config id :ac3-settings)]
     (. builder ac3Settings data))
-  (when-let [data (lookup-entry config id :eac3-atmos-settings)]
+  (when-some [data (lookup-entry config id :eac3-atmos-settings)]
     (. builder eac3AtmosSettings data))
-  (when-let [data (lookup-entry config id :eac3-settings)]
+  (when-some [data (lookup-entry config id :eac3-settings)]
     (. builder eac3Settings data))
-  (when-let [data (lookup-entry config id :mp2-settings)]
+  (when-some [data (lookup-entry config id :mp2-settings)]
     (. builder mp2Settings data))
-  (when-let [data (lookup-entry config id :pass-through-settings)]
+  (when-some [data (lookup-entry config id :pass-through-settings)]
     (. builder passThroughSettings data))
-  (when-let [data (lookup-entry config id :wav-settings)]
+  (when-some [data (lookup-entry config id :wav-settings)]
     (. builder wavSettings data))
   (.build builder))
 
@@ -590,31 +590,31 @@
 | `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |
 "
   [^CfnChannel$AudioDescriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-dash-roles)]
+  (when-some [data (lookup-entry config id :audio-dash-roles)]
     (. builder audioDashRoles data))
-  (when-let [data (lookup-entry config id :audio-normalization-settings)]
+  (when-some [data (lookup-entry config id :audio-normalization-settings)]
     (. builder audioNormalizationSettings data))
-  (when-let [data (lookup-entry config id :audio-selector-name)]
+  (when-some [data (lookup-entry config id :audio-selector-name)]
     (. builder audioSelectorName data))
-  (when-let [data (lookup-entry config id :audio-type)]
+  (when-some [data (lookup-entry config id :audio-type)]
     (. builder audioType data))
-  (when-let [data (lookup-entry config id :audio-type-control)]
+  (when-some [data (lookup-entry config id :audio-type-control)]
     (. builder audioTypeControl data))
-  (when-let [data (lookup-entry config id :audio-watermarking-settings)]
+  (when-some [data (lookup-entry config id :audio-watermarking-settings)]
     (. builder audioWatermarkingSettings data))
-  (when-let [data (lookup-entry config id :codec-settings)]
+  (when-some [data (lookup-entry config id :codec-settings)]
     (. builder codecSettings data))
-  (when-let [data (lookup-entry config id :dvb-dash-accessibility)]
+  (when-some [data (lookup-entry config id :dvb-dash-accessibility)]
     (. builder dvbDashAccessibility data))
-  (when-let [data (lookup-entry config id :language-code)]
+  (when-some [data (lookup-entry config id :language-code)]
     (. builder languageCode data))
-  (when-let [data (lookup-entry config id :language-code-control)]
+  (when-some [data (lookup-entry config id :language-code-control)]
     (. builder languageCodeControl data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :remix-settings)]
+  (when-some [data (lookup-entry config id :remix-settings)]
     (. builder remixSettings data))
-  (when-let [data (lookup-entry config id :stream-name)]
+  (when-some [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
   (.build builder))
 
@@ -642,7 +642,7 @@
 | `programSelection` | java.lang.String | [[cdk.support/lookup-entry]] | `:program-selection` |
 "
   [^CfnChannel$AudioDolbyEDecodeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :program-selection)]
+  (when-some [data (lookup-entry config id :program-selection)]
     (. builder programSelection data))
   (.build builder))
 
@@ -671,9 +671,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnChannel$AudioHlsRenditionSelectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-id)]
+  (when-some [data (lookup-entry config id :group-id)]
     (. builder groupId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -702,9 +702,9 @@
 | `languageSelectionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:language-selection-policy` |
 "
   [^CfnChannel$AudioLanguageSelectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :language-code)]
+  (when-some [data (lookup-entry config id :language-code)]
     (. builder languageCode data))
-  (when-let [data (lookup-entry config id :language-selection-policy)]
+  (when-some [data (lookup-entry config id :language-selection-policy)]
     (. builder languageSelectionPolicy data))
   (.build builder))
 
@@ -734,11 +734,11 @@
 | `targetLkfs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-lkfs` |
 "
   [^CfnChannel$AudioNormalizationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm)]
+  (when-some [data (lookup-entry config id :algorithm)]
     (. builder algorithm data))
-  (when-let [data (lookup-entry config id :algorithm-control)]
+  (when-some [data (lookup-entry config id :algorithm-control)]
     (. builder algorithmControl data))
-  (when-let [data (lookup-entry config id :target-lkfs)]
+  (when-some [data (lookup-entry config id :target-lkfs)]
     (. builder targetLkfs data))
   (.build builder))
 
@@ -769,13 +769,13 @@
 | `segmentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-type` |
 "
   [^CfnChannel$AudioOnlyHlsSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-group-id)]
+  (when-some [data (lookup-entry config id :audio-group-id)]
     (. builder audioGroupId data))
-  (when-let [data (lookup-entry config id :audio-only-image)]
+  (when-some [data (lookup-entry config id :audio-only-image)]
     (. builder audioOnlyImage data))
-  (when-let [data (lookup-entry config id :audio-track-type)]
+  (when-some [data (lookup-entry config id :audio-track-type)]
     (. builder audioTrackType data))
-  (when-let [data (lookup-entry config id :segment-type)]
+  (when-some [data (lookup-entry config id :segment-type)]
     (. builder segmentType data))
   (.build builder))
 
@@ -803,7 +803,7 @@
 | `pid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pid` |
 "
   [^CfnChannel$AudioPidSelectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :pid)]
+  (when-some [data (lookup-entry config id :pid)]
     (. builder pid data))
   (.build builder))
 
@@ -832,9 +832,9 @@
 | `selectorSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:selector-settings` |
 "
   [^CfnChannel$AudioSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :selector-settings)]
+  (when-some [data (lookup-entry config id :selector-settings)]
     (. builder selectorSettings data))
   (.build builder))
 
@@ -865,13 +865,13 @@
 | `audioTrackSelection` | software.amazon.awscdk.services.medialive.CfnChannel$AudioTrackSelectionProperty | [[cdk.support/lookup-entry]] | `:audio-track-selection` |
 "
   [^CfnChannel$AudioSelectorSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-hls-rendition-selection)]
+  (when-some [data (lookup-entry config id :audio-hls-rendition-selection)]
     (. builder audioHlsRenditionSelection data))
-  (when-let [data (lookup-entry config id :audio-language-selection)]
+  (when-some [data (lookup-entry config id :audio-language-selection)]
     (. builder audioLanguageSelection data))
-  (when-let [data (lookup-entry config id :audio-pid-selection)]
+  (when-some [data (lookup-entry config id :audio-pid-selection)]
     (. builder audioPidSelection data))
-  (when-let [data (lookup-entry config id :audio-track-selection)]
+  (when-some [data (lookup-entry config id :audio-track-selection)]
     (. builder audioTrackSelection data))
   (.build builder))
 
@@ -900,9 +900,9 @@
 | `audioSilenceThresholdMsec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:audio-silence-threshold-msec` |
 "
   [^CfnChannel$AudioSilenceFailoverSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-selector-name)]
+  (when-some [data (lookup-entry config id :audio-selector-name)]
     (. builder audioSelectorName data))
-  (when-let [data (lookup-entry config id :audio-silence-threshold-msec)]
+  (when-some [data (lookup-entry config id :audio-silence-threshold-msec)]
     (. builder audioSilenceThresholdMsec data))
   (.build builder))
 
@@ -930,7 +930,7 @@
 | `track` | java.lang.Number | [[cdk.support/lookup-entry]] | `:track` |
 "
   [^CfnChannel$AudioTrackProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :track)]
+  (when-some [data (lookup-entry config id :track)]
     (. builder track data))
   (.build builder))
 
@@ -959,9 +959,9 @@
 | `tracks` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tracks` |
 "
   [^CfnChannel$AudioTrackSelectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dolby-e-decode)]
+  (when-some [data (lookup-entry config id :dolby-e-decode)]
     (. builder dolbyEDecode data))
-  (when-let [data (lookup-entry config id :tracks)]
+  (when-some [data (lookup-entry config id :tracks)]
     (. builder tracks data))
   (.build builder))
 
@@ -989,7 +989,7 @@
 | `nielsenWatermarksSettings` | software.amazon.awscdk.services.medialive.CfnChannel$NielsenWatermarksSettingsProperty | [[cdk.support/lookup-entry]] | `:nielsen-watermarks-settings` |
 "
   [^CfnChannel$AudioWatermarkSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :nielsen-watermarks-settings)]
+  (when-some [data (lookup-entry config id :nielsen-watermarks-settings)]
     (. builder nielsenWatermarksSettings data))
   (.build builder))
 
@@ -1020,13 +1020,13 @@
 | `secondaryInputId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secondary-input-id` |
 "
   [^CfnChannel$AutomaticInputFailoverSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :error-clear-time-msec)]
+  (when-some [data (lookup-entry config id :error-clear-time-msec)]
     (. builder errorClearTimeMsec data))
-  (when-let [data (lookup-entry config id :failover-conditions)]
+  (when-some [data (lookup-entry config id :failover-conditions)]
     (. builder failoverConditions data))
-  (when-let [data (lookup-entry config id :input-preference)]
+  (when-some [data (lookup-entry config id :input-preference)]
     (. builder inputPreference data))
-  (when-let [data (lookup-entry config id :secondary-input-id)]
+  (when-some [data (lookup-entry config id :secondary-input-id)]
     (. builder secondaryInputId data))
   (.build builder))
 
@@ -1055,9 +1055,9 @@
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 "
   [^CfnChannel$AvailBlankingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :avail-blanking-image)]
+  (when-some [data (lookup-entry config id :avail-blanking-image)]
     (. builder availBlankingImage data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
 
@@ -1086,9 +1086,9 @@
 | `scte35SegmentationScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scte35-segmentation-scope` |
 "
   [^CfnChannel$AvailConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :avail-settings)]
+  (when-some [data (lookup-entry config id :avail-settings)]
     (. builder availSettings data))
-  (when-let [data (lookup-entry config id :scte35-segmentation-scope)]
+  (when-some [data (lookup-entry config id :scte35-segmentation-scope)]
     (. builder scte35SegmentationScope data))
   (.build builder))
 
@@ -1118,11 +1118,11 @@
 | `scte35TimeSignalApos` | software.amazon.awscdk.services.medialive.CfnChannel$Scte35TimeSignalAposProperty | [[cdk.support/lookup-entry]] | `:scte35-time-signal-apos` |
 "
   [^CfnChannel$AvailSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :esam)]
+  (when-some [data (lookup-entry config id :esam)]
     (. builder esam data))
-  (when-let [data (lookup-entry config id :scte35-splice-insert)]
+  (when-some [data (lookup-entry config id :scte35-splice-insert)]
     (. builder scte35SpliceInsert data))
-  (when-let [data (lookup-entry config id :scte35-time-signal-apos)]
+  (when-some [data (lookup-entry config id :scte35-time-signal-apos)]
     (. builder scte35TimeSignalApos data))
   (.build builder))
 
@@ -1154,15 +1154,15 @@
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 "
   [^CfnChannel$BlackoutSlateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :blackout-slate-image)]
+  (when-some [data (lookup-entry config id :blackout-slate-image)]
     (. builder blackoutSlateImage data))
-  (when-let [data (lookup-entry config id :network-end-blackout)]
+  (when-some [data (lookup-entry config id :network-end-blackout)]
     (. builder networkEndBlackout data))
-  (when-let [data (lookup-entry config id :network-end-blackout-image)]
+  (when-some [data (lookup-entry config id :network-end-blackout-image)]
     (. builder networkEndBlackoutImage data))
-  (when-let [data (lookup-entry config id :network-id)]
+  (when-some [data (lookup-entry config id :network-id)]
     (. builder networkId data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
 
@@ -1201,29 +1201,29 @@
 | `vpc` | software.amazon.awscdk.services.medialive.CfnChannel$VpcOutputSettingsProperty | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CfnChannel$Builder builder id config]
-  (when-let [data (lookup-entry config id :cdi-input-specification)]
+  (when-some [data (lookup-entry config id :cdi-input-specification)]
     (. builder cdiInputSpecification data))
-  (when-let [data (lookup-entry config id :channel-class)]
+  (when-some [data (lookup-entry config id :channel-class)]
     (. builder channelClass data))
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :encoder-settings)]
+  (when-some [data (lookup-entry config id :encoder-settings)]
     (. builder encoderSettings data))
-  (when-let [data (lookup-entry config id :input-attachments)]
+  (when-some [data (lookup-entry config id :input-attachments)]
     (. builder inputAttachments data))
-  (when-let [data (lookup-entry config id :input-specification)]
+  (when-some [data (lookup-entry config id :input-specification)]
     (. builder inputSpecification data))
-  (when-let [data (lookup-entry config id :log-level)]
+  (when-some [data (lookup-entry config id :log-level)]
     (. builder logLevel data))
-  (when-let [data (lookup-entry config id :maintenance)]
+  (when-some [data (lookup-entry config id :maintenance)]
     (. builder maintenance data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -1267,39 +1267,39 @@
 | `yPosition` | java.lang.Number | [[cdk.support/lookup-entry]] | `:y-position` |
 "
   [^CfnChannel$BurnInDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alignment)]
+  (when-some [data (lookup-entry config id :alignment)]
     (. builder alignment data))
-  (when-let [data (lookup-entry config id :background-color)]
+  (when-some [data (lookup-entry config id :background-color)]
     (. builder backgroundColor data))
-  (when-let [data (lookup-entry config id :background-opacity)]
+  (when-some [data (lookup-entry config id :background-opacity)]
     (. builder backgroundOpacity data))
-  (when-let [data (lookup-entry config id :font)]
+  (when-some [data (lookup-entry config id :font)]
     (. builder font data))
-  (when-let [data (lookup-entry config id :font-color)]
+  (when-some [data (lookup-entry config id :font-color)]
     (. builder fontColor data))
-  (when-let [data (lookup-entry config id :font-opacity)]
+  (when-some [data (lookup-entry config id :font-opacity)]
     (. builder fontOpacity data))
-  (when-let [data (lookup-entry config id :font-resolution)]
+  (when-some [data (lookup-entry config id :font-resolution)]
     (. builder fontResolution data))
-  (when-let [data (lookup-entry config id :font-size)]
+  (when-some [data (lookup-entry config id :font-size)]
     (. builder fontSize data))
-  (when-let [data (lookup-entry config id :outline-color)]
+  (when-some [data (lookup-entry config id :outline-color)]
     (. builder outlineColor data))
-  (when-let [data (lookup-entry config id :outline-size)]
+  (when-some [data (lookup-entry config id :outline-size)]
     (. builder outlineSize data))
-  (when-let [data (lookup-entry config id :shadow-color)]
+  (when-some [data (lookup-entry config id :shadow-color)]
     (. builder shadowColor data))
-  (when-let [data (lookup-entry config id :shadow-opacity)]
+  (when-some [data (lookup-entry config id :shadow-opacity)]
     (. builder shadowOpacity data))
-  (when-let [data (lookup-entry config id :shadow-x-offset)]
+  (when-some [data (lookup-entry config id :shadow-x-offset)]
     (. builder shadowXOffset data))
-  (when-let [data (lookup-entry config id :shadow-y-offset)]
+  (when-some [data (lookup-entry config id :shadow-y-offset)]
     (. builder shadowYOffset data))
-  (when-let [data (lookup-entry config id :teletext-grid-control)]
+  (when-some [data (lookup-entry config id :teletext-grid-control)]
     (. builder teletextGridControl data))
-  (when-let [data (lookup-entry config id :x-position)]
+  (when-some [data (lookup-entry config id :x-position)]
     (. builder xPosition data))
-  (when-let [data (lookup-entry config id :y-position)]
+  (when-some [data (lookup-entry config id :y-position)]
     (. builder yPosition data))
   (.build builder))
 
@@ -1334,21 +1334,21 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnChannel$CaptionDescriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :accessibility)]
+  (when-some [data (lookup-entry config id :accessibility)]
     (. builder accessibility data))
-  (when-let [data (lookup-entry config id :caption-dash-roles)]
+  (when-some [data (lookup-entry config id :caption-dash-roles)]
     (. builder captionDashRoles data))
-  (when-let [data (lookup-entry config id :caption-selector-name)]
+  (when-some [data (lookup-entry config id :caption-selector-name)]
     (. builder captionSelectorName data))
-  (when-let [data (lookup-entry config id :destination-settings)]
+  (when-some [data (lookup-entry config id :destination-settings)]
     (. builder destinationSettings data))
-  (when-let [data (lookup-entry config id :dvb-dash-accessibility)]
+  (when-some [data (lookup-entry config id :dvb-dash-accessibility)]
     (. builder dvbDashAccessibility data))
-  (when-let [data (lookup-entry config id :language-code)]
+  (when-some [data (lookup-entry config id :language-code)]
     (. builder languageCode data))
-  (when-let [data (lookup-entry config id :language-description)]
+  (when-some [data (lookup-entry config id :language-description)]
     (. builder languageDescription data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1388,31 +1388,31 @@
 | `webvttDestinationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:webvtt-destination-settings` |
 "
   [^CfnChannel$CaptionDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arib-destination-settings)]
+  (when-some [data (lookup-entry config id :arib-destination-settings)]
     (. builder aribDestinationSettings data))
-  (when-let [data (lookup-entry config id :burn-in-destination-settings)]
+  (when-some [data (lookup-entry config id :burn-in-destination-settings)]
     (. builder burnInDestinationSettings data))
-  (when-let [data (lookup-entry config id :dvb-sub-destination-settings)]
+  (when-some [data (lookup-entry config id :dvb-sub-destination-settings)]
     (. builder dvbSubDestinationSettings data))
-  (when-let [data (lookup-entry config id :ebu-tt-d-destination-settings)]
+  (when-some [data (lookup-entry config id :ebu-tt-d-destination-settings)]
     (. builder ebuTtDDestinationSettings data))
-  (when-let [data (lookup-entry config id :embedded-destination-settings)]
+  (when-some [data (lookup-entry config id :embedded-destination-settings)]
     (. builder embeddedDestinationSettings data))
-  (when-let [data (lookup-entry config id :embedded-plus-scte20-destination-settings)]
+  (when-some [data (lookup-entry config id :embedded-plus-scte20-destination-settings)]
     (. builder embeddedPlusScte20DestinationSettings data))
-  (when-let [data (lookup-entry config id :rtmp-caption-info-destination-settings)]
+  (when-some [data (lookup-entry config id :rtmp-caption-info-destination-settings)]
     (. builder rtmpCaptionInfoDestinationSettings data))
-  (when-let [data (lookup-entry config id :scte20-plus-embedded-destination-settings)]
+  (when-some [data (lookup-entry config id :scte20-plus-embedded-destination-settings)]
     (. builder scte20PlusEmbeddedDestinationSettings data))
-  (when-let [data (lookup-entry config id :scte27-destination-settings)]
+  (when-some [data (lookup-entry config id :scte27-destination-settings)]
     (. builder scte27DestinationSettings data))
-  (when-let [data (lookup-entry config id :smpte-tt-destination-settings)]
+  (when-some [data (lookup-entry config id :smpte-tt-destination-settings)]
     (. builder smpteTtDestinationSettings data))
-  (when-let [data (lookup-entry config id :teletext-destination-settings)]
+  (when-some [data (lookup-entry config id :teletext-destination-settings)]
     (. builder teletextDestinationSettings data))
-  (when-let [data (lookup-entry config id :ttml-destination-settings)]
+  (when-some [data (lookup-entry config id :ttml-destination-settings)]
     (. builder ttmlDestinationSettings data))
-  (when-let [data (lookup-entry config id :webvtt-destination-settings)]
+  (when-some [data (lookup-entry config id :webvtt-destination-settings)]
     (. builder webvttDestinationSettings data))
   (.build builder))
 
@@ -1442,11 +1442,11 @@
 | `languageDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:language-description` |
 "
   [^CfnChannel$CaptionLanguageMappingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :caption-channel)]
+  (when-some [data (lookup-entry config id :caption-channel)]
     (. builder captionChannel data))
-  (when-let [data (lookup-entry config id :language-code)]
+  (when-some [data (lookup-entry config id :language-code)]
     (. builder languageCode data))
-  (when-let [data (lookup-entry config id :language-description)]
+  (when-some [data (lookup-entry config id :language-description)]
     (. builder languageDescription data))
   (.build builder))
 
@@ -1477,13 +1477,13 @@
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^CfnChannel$CaptionRectangleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :left-offset)]
+  (when-some [data (lookup-entry config id :left-offset)]
     (. builder leftOffset data))
-  (when-let [data (lookup-entry config id :top-offset)]
+  (when-some [data (lookup-entry config id :top-offset)]
     (. builder topOffset data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -1513,11 +1513,11 @@
 | `selectorSettings` | software.amazon.awscdk.services.medialive.CfnChannel$CaptionSelectorSettingsProperty | [[cdk.support/lookup-entry]] | `:selector-settings` |
 "
   [^CfnChannel$CaptionSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :language-code)]
+  (when-some [data (lookup-entry config id :language-code)]
     (. builder languageCode data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :selector-settings)]
+  (when-some [data (lookup-entry config id :selector-settings)]
     (. builder selectorSettings data))
   (.build builder))
 
@@ -1551,19 +1551,19 @@
 | `teletextSourceSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:teletext-source-settings` |
 "
   [^CfnChannel$CaptionSelectorSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ancillary-source-settings)]
+  (when-some [data (lookup-entry config id :ancillary-source-settings)]
     (. builder ancillarySourceSettings data))
-  (when-let [data (lookup-entry config id :arib-source-settings)]
+  (when-some [data (lookup-entry config id :arib-source-settings)]
     (. builder aribSourceSettings data))
-  (when-let [data (lookup-entry config id :dvb-sub-source-settings)]
+  (when-some [data (lookup-entry config id :dvb-sub-source-settings)]
     (. builder dvbSubSourceSettings data))
-  (when-let [data (lookup-entry config id :embedded-source-settings)]
+  (when-some [data (lookup-entry config id :embedded-source-settings)]
     (. builder embeddedSourceSettings data))
-  (when-let [data (lookup-entry config id :scte20-source-settings)]
+  (when-some [data (lookup-entry config id :scte20-source-settings)]
     (. builder scte20SourceSettings data))
-  (when-let [data (lookup-entry config id :scte27-source-settings)]
+  (when-some [data (lookup-entry config id :scte27-source-settings)]
     (. builder scte27SourceSettings data))
-  (when-let [data (lookup-entry config id :teletext-source-settings)]
+  (when-some [data (lookup-entry config id :teletext-source-settings)]
     (. builder teletextSourceSettings data))
   (.build builder))
 
@@ -1591,7 +1591,7 @@
 | `resolution` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolution` |
 "
   [^CfnChannel$CdiInputSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resolution)]
+  (when-some [data (lookup-entry config id :resolution)]
     (. builder resolution data))
   (.build builder))
 
@@ -1624,17 +1624,17 @@
 | `sendDelayMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:send-delay-ms` |
 "
   [^CfnChannel$CmafIngestGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :nielsen-id3-behavior)]
+  (when-some [data (lookup-entry config id :nielsen-id3-behavior)]
     (. builder nielsenId3Behavior data))
-  (when-let [data (lookup-entry config id :scte35-type)]
+  (when-some [data (lookup-entry config id :scte35-type)]
     (. builder scte35Type data))
-  (when-let [data (lookup-entry config id :segment-length)]
+  (when-some [data (lookup-entry config id :segment-length)]
     (. builder segmentLength data))
-  (when-let [data (lookup-entry config id :segment-length-units)]
+  (when-some [data (lookup-entry config id :segment-length-units)]
     (. builder segmentLengthUnits data))
-  (when-let [data (lookup-entry config id :send-delay-ms)]
+  (when-some [data (lookup-entry config id :send-delay-ms)]
     (. builder sendDelayMs data))
   (.build builder))
 
@@ -1662,7 +1662,7 @@
 | `nameModifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:name-modifier` |
 "
   [^CfnChannel$CmafIngestOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name-modifier)]
+  (when-some [data (lookup-entry config id :name-modifier)]
     (. builder nameModifier data))
   (.build builder))
 
@@ -1692,11 +1692,11 @@
 | `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
 "
   [^CfnChannel$ColorCorrectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-color-space)]
+  (when-some [data (lookup-entry config id :input-color-space)]
     (. builder inputColorSpace data))
-  (when-let [data (lookup-entry config id :output-color-space)]
+  (when-some [data (lookup-entry config id :output-color-space)]
     (. builder outputColorSpace data))
-  (when-let [data (lookup-entry config id :uri)]
+  (when-some [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
 
@@ -1724,7 +1724,7 @@
 | `globalColorCorrections` | java.util.List | [[cdk.support/lookup-entry]] | `:global-color-corrections` |
 "
   [^CfnChannel$ColorCorrectionSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :global-color-corrections)]
+  (when-some [data (lookup-entry config id :global-color-corrections)]
     (. builder globalColorCorrections data))
   (.build builder))
 
@@ -1766,11 +1766,11 @@
 | `repInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rep-interval` |
 "
   [^CfnChannel$DvbNitSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :network-id)]
+  (when-some [data (lookup-entry config id :network-id)]
     (. builder networkId data))
-  (when-let [data (lookup-entry config id :network-name)]
+  (when-some [data (lookup-entry config id :network-name)]
     (. builder networkName data))
-  (when-let [data (lookup-entry config id :rep-interval)]
+  (when-some [data (lookup-entry config id :rep-interval)]
     (. builder repInterval data))
   (.build builder))
 
@@ -1801,13 +1801,13 @@
 | `serviceProviderName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-provider-name` |
 "
   [^CfnChannel$DvbSdtSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :output-sdt)]
+  (when-some [data (lookup-entry config id :output-sdt)]
     (. builder outputSdt data))
-  (when-let [data (lookup-entry config id :rep-interval)]
+  (when-some [data (lookup-entry config id :rep-interval)]
     (. builder repInterval data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
-  (when-let [data (lookup-entry config id :service-provider-name)]
+  (when-some [data (lookup-entry config id :service-provider-name)]
     (. builder serviceProviderName data))
   (.build builder))
 
@@ -1851,39 +1851,39 @@
 | `yPosition` | java.lang.Number | [[cdk.support/lookup-entry]] | `:y-position` |
 "
   [^CfnChannel$DvbSubDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alignment)]
+  (when-some [data (lookup-entry config id :alignment)]
     (. builder alignment data))
-  (when-let [data (lookup-entry config id :background-color)]
+  (when-some [data (lookup-entry config id :background-color)]
     (. builder backgroundColor data))
-  (when-let [data (lookup-entry config id :background-opacity)]
+  (when-some [data (lookup-entry config id :background-opacity)]
     (. builder backgroundOpacity data))
-  (when-let [data (lookup-entry config id :font)]
+  (when-some [data (lookup-entry config id :font)]
     (. builder font data))
-  (when-let [data (lookup-entry config id :font-color)]
+  (when-some [data (lookup-entry config id :font-color)]
     (. builder fontColor data))
-  (when-let [data (lookup-entry config id :font-opacity)]
+  (when-some [data (lookup-entry config id :font-opacity)]
     (. builder fontOpacity data))
-  (when-let [data (lookup-entry config id :font-resolution)]
+  (when-some [data (lookup-entry config id :font-resolution)]
     (. builder fontResolution data))
-  (when-let [data (lookup-entry config id :font-size)]
+  (when-some [data (lookup-entry config id :font-size)]
     (. builder fontSize data))
-  (when-let [data (lookup-entry config id :outline-color)]
+  (when-some [data (lookup-entry config id :outline-color)]
     (. builder outlineColor data))
-  (when-let [data (lookup-entry config id :outline-size)]
+  (when-some [data (lookup-entry config id :outline-size)]
     (. builder outlineSize data))
-  (when-let [data (lookup-entry config id :shadow-color)]
+  (when-some [data (lookup-entry config id :shadow-color)]
     (. builder shadowColor data))
-  (when-let [data (lookup-entry config id :shadow-opacity)]
+  (when-some [data (lookup-entry config id :shadow-opacity)]
     (. builder shadowOpacity data))
-  (when-let [data (lookup-entry config id :shadow-x-offset)]
+  (when-some [data (lookup-entry config id :shadow-x-offset)]
     (. builder shadowXOffset data))
-  (when-let [data (lookup-entry config id :shadow-y-offset)]
+  (when-some [data (lookup-entry config id :shadow-y-offset)]
     (. builder shadowYOffset data))
-  (when-let [data (lookup-entry config id :teletext-grid-control)]
+  (when-some [data (lookup-entry config id :teletext-grid-control)]
     (. builder teletextGridControl data))
-  (when-let [data (lookup-entry config id :x-position)]
+  (when-some [data (lookup-entry config id :x-position)]
     (. builder xPosition data))
-  (when-let [data (lookup-entry config id :y-position)]
+  (when-some [data (lookup-entry config id :y-position)]
     (. builder yPosition data))
   (.build builder))
 
@@ -1912,9 +1912,9 @@
 | `pid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pid` |
 "
   [^CfnChannel$DvbSubSourceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ocr-language)]
+  (when-some [data (lookup-entry config id :ocr-language)]
     (. builder ocrLanguage data))
-  (when-let [data (lookup-entry config id :pid)]
+  (when-some [data (lookup-entry config id :pid)]
     (. builder pid data))
   (.build builder))
 
@@ -1942,7 +1942,7 @@
 | `repInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rep-interval` |
 "
   [^CfnChannel$DvbTdtSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rep-interval)]
+  (when-some [data (lookup-entry config id :rep-interval)]
     (. builder repInterval data))
   (.build builder))
 
@@ -1976,19 +1976,19 @@
 | `surroundTrim` | java.lang.Number | [[cdk.support/lookup-entry]] | `:surround-trim` |
 "
   [^CfnChannel$Eac3AtmosSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :coding-mode)]
+  (when-some [data (lookup-entry config id :coding-mode)]
     (. builder codingMode data))
-  (when-let [data (lookup-entry config id :dialnorm)]
+  (when-some [data (lookup-entry config id :dialnorm)]
     (. builder dialnorm data))
-  (when-let [data (lookup-entry config id :drc-line)]
+  (when-some [data (lookup-entry config id :drc-line)]
     (. builder drcLine data))
-  (when-let [data (lookup-entry config id :drc-rf)]
+  (when-some [data (lookup-entry config id :drc-rf)]
     (. builder drcRf data))
-  (when-let [data (lookup-entry config id :height-trim)]
+  (when-some [data (lookup-entry config id :height-trim)]
     (. builder heightTrim data))
-  (when-let [data (lookup-entry config id :surround-trim)]
+  (when-some [data (lookup-entry config id :surround-trim)]
     (. builder surroundTrim data))
   (.build builder))
 
@@ -2035,45 +2035,45 @@
 | `surroundMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:surround-mode` |
 "
   [^CfnChannel$Eac3SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attenuation-control)]
+  (when-some [data (lookup-entry config id :attenuation-control)]
     (. builder attenuationControl data))
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :bitstream-mode)]
+  (when-some [data (lookup-entry config id :bitstream-mode)]
     (. builder bitstreamMode data))
-  (when-let [data (lookup-entry config id :coding-mode)]
+  (when-some [data (lookup-entry config id :coding-mode)]
     (. builder codingMode data))
-  (when-let [data (lookup-entry config id :dc-filter)]
+  (when-some [data (lookup-entry config id :dc-filter)]
     (. builder dcFilter data))
-  (when-let [data (lookup-entry config id :dialnorm)]
+  (when-some [data (lookup-entry config id :dialnorm)]
     (. builder dialnorm data))
-  (when-let [data (lookup-entry config id :drc-line)]
+  (when-some [data (lookup-entry config id :drc-line)]
     (. builder drcLine data))
-  (when-let [data (lookup-entry config id :drc-rf)]
+  (when-some [data (lookup-entry config id :drc-rf)]
     (. builder drcRf data))
-  (when-let [data (lookup-entry config id :lfe-control)]
+  (when-some [data (lookup-entry config id :lfe-control)]
     (. builder lfeControl data))
-  (when-let [data (lookup-entry config id :lfe-filter)]
+  (when-some [data (lookup-entry config id :lfe-filter)]
     (. builder lfeFilter data))
-  (when-let [data (lookup-entry config id :lo-ro-center-mix-level)]
+  (when-some [data (lookup-entry config id :lo-ro-center-mix-level)]
     (. builder loRoCenterMixLevel data))
-  (when-let [data (lookup-entry config id :lo-ro-surround-mix-level)]
+  (when-some [data (lookup-entry config id :lo-ro-surround-mix-level)]
     (. builder loRoSurroundMixLevel data))
-  (when-let [data (lookup-entry config id :lt-rt-center-mix-level)]
+  (when-some [data (lookup-entry config id :lt-rt-center-mix-level)]
     (. builder ltRtCenterMixLevel data))
-  (when-let [data (lookup-entry config id :lt-rt-surround-mix-level)]
+  (when-some [data (lookup-entry config id :lt-rt-surround-mix-level)]
     (. builder ltRtSurroundMixLevel data))
-  (when-let [data (lookup-entry config id :metadata-control)]
+  (when-some [data (lookup-entry config id :metadata-control)]
     (. builder metadataControl data))
-  (when-let [data (lookup-entry config id :passthrough-control)]
+  (when-some [data (lookup-entry config id :passthrough-control)]
     (. builder passthroughControl data))
-  (when-let [data (lookup-entry config id :phase-control)]
+  (when-some [data (lookup-entry config id :phase-control)]
     (. builder phaseControl data))
-  (when-let [data (lookup-entry config id :stereo-downmix)]
+  (when-some [data (lookup-entry config id :stereo-downmix)]
     (. builder stereoDownmix data))
-  (when-let [data (lookup-entry config id :surround-ex-mode)]
+  (when-some [data (lookup-entry config id :surround-ex-mode)]
     (. builder surroundExMode data))
-  (when-let [data (lookup-entry config id :surround-mode)]
+  (when-some [data (lookup-entry config id :surround-mode)]
     (. builder surroundMode data))
   (.build builder))
 
@@ -2104,13 +2104,13 @@
 | `styleControl` | java.lang.String | [[cdk.support/lookup-entry]] | `:style-control` |
 "
   [^CfnChannel$EbuTtDDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :copyright-holder)]
+  (when-some [data (lookup-entry config id :copyright-holder)]
     (. builder copyrightHolder data))
-  (when-let [data (lookup-entry config id :fill-line-gap)]
+  (when-some [data (lookup-entry config id :fill-line-gap)]
     (. builder fillLineGap data))
-  (when-let [data (lookup-entry config id :font-family)]
+  (when-some [data (lookup-entry config id :font-family)]
     (. builder fontFamily data))
-  (when-let [data (lookup-entry config id :style-control)]
+  (when-some [data (lookup-entry config id :style-control)]
     (. builder styleControl data))
   (.build builder))
 
@@ -2153,13 +2153,13 @@
 | `source608TrackNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:source608-track-number` |
 "
   [^CfnChannel$EmbeddedSourceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :convert608-to708)]
+  (when-some [data (lookup-entry config id :convert608-to708)]
     (. builder convert608To708 data))
-  (when-let [data (lookup-entry config id :scte20-detection)]
+  (when-some [data (lookup-entry config id :scte20-detection)]
     (. builder scte20Detection data))
-  (when-let [data (lookup-entry config id :source608-channel-number)]
+  (when-some [data (lookup-entry config id :source608-channel-number)]
     (. builder source608ChannelNumber data))
-  (when-let [data (lookup-entry config id :source608-track-number)]
+  (when-some [data (lookup-entry config id :source608-track-number)]
     (. builder source608TrackNumber data))
   (.build builder))
 
@@ -2200,33 +2200,33 @@
 | `videoDescriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video-descriptions` |
 "
   [^CfnChannel$EncoderSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-descriptions)]
+  (when-some [data (lookup-entry config id :audio-descriptions)]
     (. builder audioDescriptions data))
-  (when-let [data (lookup-entry config id :avail-blanking)]
+  (when-some [data (lookup-entry config id :avail-blanking)]
     (. builder availBlanking data))
-  (when-let [data (lookup-entry config id :avail-configuration)]
+  (when-some [data (lookup-entry config id :avail-configuration)]
     (. builder availConfiguration data))
-  (when-let [data (lookup-entry config id :blackout-slate)]
+  (when-some [data (lookup-entry config id :blackout-slate)]
     (. builder blackoutSlate data))
-  (when-let [data (lookup-entry config id :caption-descriptions)]
+  (when-some [data (lookup-entry config id :caption-descriptions)]
     (. builder captionDescriptions data))
-  (when-let [data (lookup-entry config id :color-correction-settings)]
+  (when-some [data (lookup-entry config id :color-correction-settings)]
     (. builder colorCorrectionSettings data))
-  (when-let [data (lookup-entry config id :feature-activations)]
+  (when-some [data (lookup-entry config id :feature-activations)]
     (. builder featureActivations data))
-  (when-let [data (lookup-entry config id :global-configuration)]
+  (when-some [data (lookup-entry config id :global-configuration)]
     (. builder globalConfiguration data))
-  (when-let [data (lookup-entry config id :motion-graphics-configuration)]
+  (when-some [data (lookup-entry config id :motion-graphics-configuration)]
     (. builder motionGraphicsConfiguration data))
-  (when-let [data (lookup-entry config id :nielsen-configuration)]
+  (when-some [data (lookup-entry config id :nielsen-configuration)]
     (. builder nielsenConfiguration data))
-  (when-let [data (lookup-entry config id :output-groups)]
+  (when-some [data (lookup-entry config id :output-groups)]
     (. builder outputGroups data))
-  (when-let [data (lookup-entry config id :thumbnail-configuration)]
+  (when-some [data (lookup-entry config id :thumbnail-configuration)]
     (. builder thumbnailConfiguration data))
-  (when-let [data (lookup-entry config id :timecode-config)]
+  (when-some [data (lookup-entry config id :timecode-config)]
     (. builder timecodeConfig data))
-  (when-let [data (lookup-entry config id :video-descriptions)]
+  (when-some [data (lookup-entry config id :video-descriptions)]
     (. builder videoDescriptions data))
   (.build builder))
 
@@ -2255,9 +2255,9 @@
 | `jamSyncTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:jam-sync-time` |
 "
   [^CfnChannel$EpochLockingSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-epoch)]
+  (when-some [data (lookup-entry config id :custom-epoch)]
     (. builder customEpoch data))
-  (when-let [data (lookup-entry config id :jam-sync-time)]
+  (when-some [data (lookup-entry config id :jam-sync-time)]
     (. builder jamSyncTime data))
   (.build builder))
 
@@ -2290,17 +2290,17 @@
 | `zoneIdentity` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-identity` |
 "
   [^CfnChannel$EsamProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acquisition-point-id)]
+  (when-some [data (lookup-entry config id :acquisition-point-id)]
     (. builder acquisitionPointId data))
-  (when-let [data (lookup-entry config id :ad-avail-offset)]
+  (when-some [data (lookup-entry config id :ad-avail-offset)]
     (. builder adAvailOffset data))
-  (when-let [data (lookup-entry config id :password-param)]
+  (when-some [data (lookup-entry config id :password-param)]
     (. builder passwordParam data))
-  (when-let [data (lookup-entry config id :pois-endpoint)]
+  (when-some [data (lookup-entry config id :pois-endpoint)]
     (. builder poisEndpoint data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
-  (when-let [data (lookup-entry config id :zone-identity)]
+  (when-some [data (lookup-entry config id :zone-identity)]
     (. builder zoneIdentity data))
   (.build builder))
 
@@ -2328,7 +2328,7 @@
 | `failoverConditionSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:failover-condition-settings` |
 "
   [^CfnChannel$FailoverConditionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :failover-condition-settings)]
+  (when-some [data (lookup-entry config id :failover-condition-settings)]
     (. builder failoverConditionSettings data))
   (.build builder))
 
@@ -2358,11 +2358,11 @@
 | `videoBlackSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video-black-settings` |
 "
   [^CfnChannel$FailoverConditionSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-silence-settings)]
+  (when-some [data (lookup-entry config id :audio-silence-settings)]
     (. builder audioSilenceSettings data))
-  (when-let [data (lookup-entry config id :input-loss-settings)]
+  (when-some [data (lookup-entry config id :input-loss-settings)]
     (. builder inputLossSettings data))
-  (when-let [data (lookup-entry config id :video-black-settings)]
+  (when-some [data (lookup-entry config id :video-black-settings)]
     (. builder videoBlackSettings data))
   (.build builder))
 
@@ -2391,9 +2391,9 @@
 | `outputStaticImageOverlayScheduleActions` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-static-image-overlay-schedule-actions` |
 "
   [^CfnChannel$FeatureActivationsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-prepare-schedule-actions)]
+  (when-some [data (lookup-entry config id :input-prepare-schedule-actions)]
     (. builder inputPrepareScheduleActions data))
-  (when-let [data (lookup-entry config id :output-static-image-overlay-schedule-actions)]
+  (when-some [data (lookup-entry config id :output-static-image-overlay-schedule-actions)]
     (. builder outputStaticImageOverlayScheduleActions data))
   (.build builder))
 
@@ -2423,11 +2423,11 @@
 | `rowLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:row-length` |
 "
   [^CfnChannel$FecOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-depth)]
+  (when-some [data (lookup-entry config id :column-depth)]
     (. builder columnDepth data))
-  (when-let [data (lookup-entry config id :include-fec)]
+  (when-some [data (lookup-entry config id :include-fec)]
     (. builder includeFec data))
-  (when-let [data (lookup-entry config id :row-length)]
+  (when-some [data (lookup-entry config id :row-length)]
     (. builder rowLength data))
   (.build builder))
 
@@ -2457,11 +2457,11 @@
 | `timedMetadataBehavior` | java.lang.String | [[cdk.support/lookup-entry]] | `:timed-metadata-behavior` |
 "
   [^CfnChannel$Fmp4HlsSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-rendition-sets)]
+  (when-some [data (lookup-entry config id :audio-rendition-sets)]
     (. builder audioRenditionSets data))
-  (when-let [data (lookup-entry config id :nielsen-id3-behavior)]
+  (when-some [data (lookup-entry config id :nielsen-id3-behavior)]
     (. builder nielsenId3Behavior data))
-  (when-let [data (lookup-entry config id :timed-metadata-behavior)]
+  (when-some [data (lookup-entry config id :timed-metadata-behavior)]
     (. builder timedMetadataBehavior data))
   (.build builder))
 
@@ -2489,7 +2489,7 @@
 | `frameCaptureS3Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:frame-capture-s3-settings` |
 "
   [^CfnChannel$FrameCaptureCdnSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :frame-capture-s3-settings)]
+  (when-some [data (lookup-entry config id :frame-capture-s3-settings)]
     (. builder frameCaptureS3Settings data))
   (.build builder))
 
@@ -2518,9 +2518,9 @@
 | `frameCaptureCdnSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:frame-capture-cdn-settings` |
 "
   [^CfnChannel$FrameCaptureGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :frame-capture-cdn-settings)]
+  (when-some [data (lookup-entry config id :frame-capture-cdn-settings)]
     (. builder frameCaptureCdnSettings data))
   (.build builder))
 
@@ -2554,7 +2554,7 @@
 | `nameModifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:name-modifier` |
 "
   [^CfnChannel$FrameCaptureOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name-modifier)]
+  (when-some [data (lookup-entry config id :name-modifier)]
     (. builder nameModifier data))
   (.build builder))
 
@@ -2582,7 +2582,7 @@
 | `cannedAcl` | java.lang.String | [[cdk.support/lookup-entry]] | `:canned-acl` |
 "
   [^CfnChannel$FrameCaptureS3SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :canned-acl)]
+  (when-some [data (lookup-entry config id :canned-acl)]
     (. builder cannedAcl data))
   (.build builder))
 
@@ -2612,11 +2612,11 @@
 | `timecodeBurninSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timecode-burnin-settings` |
 "
   [^CfnChannel$FrameCaptureSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :capture-interval)]
+  (when-some [data (lookup-entry config id :capture-interval)]
     (. builder captureInterval data))
-  (when-let [data (lookup-entry config id :capture-interval-units)]
+  (when-some [data (lookup-entry config id :capture-interval-units)]
     (. builder captureIntervalUnits data))
-  (when-let [data (lookup-entry config id :timecode-burnin-settings)]
+  (when-some [data (lookup-entry config id :timecode-burnin-settings)]
     (. builder timecodeBurninSettings data))
   (.build builder))
 
@@ -2650,19 +2650,19 @@
 | `supportLowFramerateInputs` | java.lang.String | [[cdk.support/lookup-entry]] | `:support-low-framerate-inputs` |
 "
   [^CfnChannel$GlobalConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-audio-gain)]
+  (when-some [data (lookup-entry config id :initial-audio-gain)]
     (. builder initialAudioGain data))
-  (when-let [data (lookup-entry config id :input-end-action)]
+  (when-some [data (lookup-entry config id :input-end-action)]
     (. builder inputEndAction data))
-  (when-let [data (lookup-entry config id :input-loss-behavior)]
+  (when-some [data (lookup-entry config id :input-loss-behavior)]
     (. builder inputLossBehavior data))
-  (when-let [data (lookup-entry config id :output-locking-mode)]
+  (when-some [data (lookup-entry config id :output-locking-mode)]
     (. builder outputLockingMode data))
-  (when-let [data (lookup-entry config id :output-locking-settings)]
+  (when-some [data (lookup-entry config id :output-locking-settings)]
     (. builder outputLockingSettings data))
-  (when-let [data (lookup-entry config id :output-timing-source)]
+  (when-some [data (lookup-entry config id :output-timing-source)]
     (. builder outputTimingSource data))
-  (when-let [data (lookup-entry config id :support-low-framerate-inputs)]
+  (when-some [data (lookup-entry config id :support-low-framerate-inputs)]
     (. builder supportLowFramerateInputs data))
   (.build builder))
 
@@ -2692,11 +2692,11 @@
 | `rec709Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rec709-settings` |
 "
   [^CfnChannel$H264ColorSpaceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :color-space-passthrough-settings)]
+  (when-some [data (lookup-entry config id :color-space-passthrough-settings)]
     (. builder colorSpacePassthroughSettings data))
-  (when-let [data (lookup-entry config id :rec601-settings)]
+  (when-some [data (lookup-entry config id :rec601-settings)]
     (. builder rec601Settings data))
-  (when-let [data (lookup-entry config id :rec709-settings)]
+  (when-some [data (lookup-entry config id :rec709-settings)]
     (. builder rec709Settings data))
   (.build builder))
 
@@ -2724,7 +2724,7 @@
 | `temporalFilterSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temporal-filter-settings` |
 "
   [^CfnChannel$H264FilterSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :temporal-filter-settings)]
+  (when-some [data (lookup-entry config id :temporal-filter-settings)]
     (. builder temporalFilterSettings data))
   (.build builder))
 
@@ -2793,89 +2793,89 @@
 | `timecodeInsertion` | java.lang.String | [[cdk.support/lookup-entry]] | `:timecode-insertion` |
 "
   [^CfnChannel$H264SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :adaptive-quantization)]
+  (when-some [data (lookup-entry config id :adaptive-quantization)]
     (. builder adaptiveQuantization data))
-  (when-let [data (lookup-entry config id :afd-signaling)]
+  (when-some [data (lookup-entry config id :afd-signaling)]
     (. builder afdSignaling data))
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :buf-fill-pct)]
+  (when-some [data (lookup-entry config id :buf-fill-pct)]
     (. builder bufFillPct data))
-  (when-let [data (lookup-entry config id :buf-size)]
+  (when-some [data (lookup-entry config id :buf-size)]
     (. builder bufSize data))
-  (when-let [data (lookup-entry config id :color-metadata)]
+  (when-some [data (lookup-entry config id :color-metadata)]
     (. builder colorMetadata data))
-  (when-let [data (lookup-entry config id :color-space-settings)]
+  (when-some [data (lookup-entry config id :color-space-settings)]
     (. builder colorSpaceSettings data))
-  (when-let [data (lookup-entry config id :entropy-encoding)]
+  (when-some [data (lookup-entry config id :entropy-encoding)]
     (. builder entropyEncoding data))
-  (when-let [data (lookup-entry config id :filter-settings)]
+  (when-some [data (lookup-entry config id :filter-settings)]
     (. builder filterSettings data))
-  (when-let [data (lookup-entry config id :fixed-afd)]
+  (when-some [data (lookup-entry config id :fixed-afd)]
     (. builder fixedAfd data))
-  (when-let [data (lookup-entry config id :flicker-aq)]
+  (when-some [data (lookup-entry config id :flicker-aq)]
     (. builder flickerAq data))
-  (when-let [data (lookup-entry config id :force-field-pictures)]
+  (when-some [data (lookup-entry config id :force-field-pictures)]
     (. builder forceFieldPictures data))
-  (when-let [data (lookup-entry config id :framerate-control)]
+  (when-some [data (lookup-entry config id :framerate-control)]
     (. builder framerateControl data))
-  (when-let [data (lookup-entry config id :framerate-denominator)]
+  (when-some [data (lookup-entry config id :framerate-denominator)]
     (. builder framerateDenominator data))
-  (when-let [data (lookup-entry config id :framerate-numerator)]
+  (when-some [data (lookup-entry config id :framerate-numerator)]
     (. builder framerateNumerator data))
-  (when-let [data (lookup-entry config id :gop-b-reference)]
+  (when-some [data (lookup-entry config id :gop-b-reference)]
     (. builder gopBReference data))
-  (when-let [data (lookup-entry config id :gop-closed-cadence)]
+  (when-some [data (lookup-entry config id :gop-closed-cadence)]
     (. builder gopClosedCadence data))
-  (when-let [data (lookup-entry config id :gop-num-b-frames)]
+  (when-some [data (lookup-entry config id :gop-num-b-frames)]
     (. builder gopNumBFrames data))
-  (when-let [data (lookup-entry config id :gop-size)]
+  (when-some [data (lookup-entry config id :gop-size)]
     (. builder gopSize data))
-  (when-let [data (lookup-entry config id :gop-size-units)]
+  (when-some [data (lookup-entry config id :gop-size-units)]
     (. builder gopSizeUnits data))
-  (when-let [data (lookup-entry config id :level)]
+  (when-some [data (lookup-entry config id :level)]
     (. builder level data))
-  (when-let [data (lookup-entry config id :look-ahead-rate-control)]
+  (when-some [data (lookup-entry config id :look-ahead-rate-control)]
     (. builder lookAheadRateControl data))
-  (when-let [data (lookup-entry config id :max-bitrate)]
+  (when-some [data (lookup-entry config id :max-bitrate)]
     (. builder maxBitrate data))
-  (when-let [data (lookup-entry config id :min-i-interval)]
+  (when-some [data (lookup-entry config id :min-i-interval)]
     (. builder minIInterval data))
-  (when-let [data (lookup-entry config id :num-ref-frames)]
+  (when-some [data (lookup-entry config id :num-ref-frames)]
     (. builder numRefFrames data))
-  (when-let [data (lookup-entry config id :par-control)]
+  (when-some [data (lookup-entry config id :par-control)]
     (. builder parControl data))
-  (when-let [data (lookup-entry config id :par-denominator)]
+  (when-some [data (lookup-entry config id :par-denominator)]
     (. builder parDenominator data))
-  (when-let [data (lookup-entry config id :par-numerator)]
+  (when-some [data (lookup-entry config id :par-numerator)]
     (. builder parNumerator data))
-  (when-let [data (lookup-entry config id :profile)]
+  (when-some [data (lookup-entry config id :profile)]
     (. builder profile data))
-  (when-let [data (lookup-entry config id :quality-level)]
+  (when-some [data (lookup-entry config id :quality-level)]
     (. builder qualityLevel data))
-  (when-let [data (lookup-entry config id :qvbr-quality-level)]
+  (when-some [data (lookup-entry config id :qvbr-quality-level)]
     (. builder qvbrQualityLevel data))
-  (when-let [data (lookup-entry config id :rate-control-mode)]
+  (when-some [data (lookup-entry config id :rate-control-mode)]
     (. builder rateControlMode data))
-  (when-let [data (lookup-entry config id :scan-type)]
+  (when-some [data (lookup-entry config id :scan-type)]
     (. builder scanType data))
-  (when-let [data (lookup-entry config id :scene-change-detect)]
+  (when-some [data (lookup-entry config id :scene-change-detect)]
     (. builder sceneChangeDetect data))
-  (when-let [data (lookup-entry config id :slices)]
+  (when-some [data (lookup-entry config id :slices)]
     (. builder slices data))
-  (when-let [data (lookup-entry config id :softness)]
+  (when-some [data (lookup-entry config id :softness)]
     (. builder softness data))
-  (when-let [data (lookup-entry config id :spatial-aq)]
+  (when-some [data (lookup-entry config id :spatial-aq)]
     (. builder spatialAq data))
-  (when-let [data (lookup-entry config id :subgop-length)]
+  (when-some [data (lookup-entry config id :subgop-length)]
     (. builder subgopLength data))
-  (when-let [data (lookup-entry config id :syntax)]
+  (when-some [data (lookup-entry config id :syntax)]
     (. builder syntax data))
-  (when-let [data (lookup-entry config id :temporal-aq)]
+  (when-some [data (lookup-entry config id :temporal-aq)]
     (. builder temporalAq data))
-  (when-let [data (lookup-entry config id :timecode-burnin-settings)]
+  (when-some [data (lookup-entry config id :timecode-burnin-settings)]
     (. builder timecodeBurninSettings data))
-  (when-let [data (lookup-entry config id :timecode-insertion)]
+  (when-some [data (lookup-entry config id :timecode-insertion)]
     (. builder timecodeInsertion data))
   (.build builder))
 
@@ -2907,15 +2907,15 @@
 | `rec709Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Rec709SettingsProperty | [[cdk.support/lookup-entry]] | `:rec709-settings` |
 "
   [^CfnChannel$H265ColorSpaceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :color-space-passthrough-settings)]
+  (when-some [data (lookup-entry config id :color-space-passthrough-settings)]
     (. builder colorSpacePassthroughSettings data))
-  (when-let [data (lookup-entry config id :dolby-vision81-settings)]
+  (when-some [data (lookup-entry config id :dolby-vision81-settings)]
     (. builder dolbyVision81Settings data))
-  (when-let [data (lookup-entry config id :hdr10-settings)]
+  (when-some [data (lookup-entry config id :hdr10-settings)]
     (. builder hdr10Settings data))
-  (when-let [data (lookup-entry config id :rec601-settings)]
+  (when-some [data (lookup-entry config id :rec601-settings)]
     (. builder rec601Settings data))
-  (when-let [data (lookup-entry config id :rec709-settings)]
+  (when-some [data (lookup-entry config id :rec709-settings)]
     (. builder rec709Settings data))
   (.build builder))
 
@@ -2943,7 +2943,7 @@
 | `temporalFilterSettings` | software.amazon.awscdk.services.medialive.CfnChannel$TemporalFilterSettingsProperty | [[cdk.support/lookup-entry]] | `:temporal-filter-settings` |
 "
   [^CfnChannel$H265FilterSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :temporal-filter-settings)]
+  (when-some [data (lookup-entry config id :temporal-filter-settings)]
     (. builder temporalFilterSettings data))
   (.build builder))
 
@@ -3006,77 +3006,77 @@
 | `treeblockSize` | java.lang.String | [[cdk.support/lookup-entry]] | `:treeblock-size` |
 "
   [^CfnChannel$H265SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :adaptive-quantization)]
+  (when-some [data (lookup-entry config id :adaptive-quantization)]
     (. builder adaptiveQuantization data))
-  (when-let [data (lookup-entry config id :afd-signaling)]
+  (when-some [data (lookup-entry config id :afd-signaling)]
     (. builder afdSignaling data))
-  (when-let [data (lookup-entry config id :alternative-transfer-function)]
+  (when-some [data (lookup-entry config id :alternative-transfer-function)]
     (. builder alternativeTransferFunction data))
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :buf-size)]
+  (when-some [data (lookup-entry config id :buf-size)]
     (. builder bufSize data))
-  (when-let [data (lookup-entry config id :color-metadata)]
+  (when-some [data (lookup-entry config id :color-metadata)]
     (. builder colorMetadata data))
-  (when-let [data (lookup-entry config id :color-space-settings)]
+  (when-some [data (lookup-entry config id :color-space-settings)]
     (. builder colorSpaceSettings data))
-  (when-let [data (lookup-entry config id :filter-settings)]
+  (when-some [data (lookup-entry config id :filter-settings)]
     (. builder filterSettings data))
-  (when-let [data (lookup-entry config id :fixed-afd)]
+  (when-some [data (lookup-entry config id :fixed-afd)]
     (. builder fixedAfd data))
-  (when-let [data (lookup-entry config id :flicker-aq)]
+  (when-some [data (lookup-entry config id :flicker-aq)]
     (. builder flickerAq data))
-  (when-let [data (lookup-entry config id :framerate-denominator)]
+  (when-some [data (lookup-entry config id :framerate-denominator)]
     (. builder framerateDenominator data))
-  (when-let [data (lookup-entry config id :framerate-numerator)]
+  (when-some [data (lookup-entry config id :framerate-numerator)]
     (. builder framerateNumerator data))
-  (when-let [data (lookup-entry config id :gop-closed-cadence)]
+  (when-some [data (lookup-entry config id :gop-closed-cadence)]
     (. builder gopClosedCadence data))
-  (when-let [data (lookup-entry config id :gop-size)]
+  (when-some [data (lookup-entry config id :gop-size)]
     (. builder gopSize data))
-  (when-let [data (lookup-entry config id :gop-size-units)]
+  (when-some [data (lookup-entry config id :gop-size-units)]
     (. builder gopSizeUnits data))
-  (when-let [data (lookup-entry config id :level)]
+  (when-some [data (lookup-entry config id :level)]
     (. builder level data))
-  (when-let [data (lookup-entry config id :look-ahead-rate-control)]
+  (when-some [data (lookup-entry config id :look-ahead-rate-control)]
     (. builder lookAheadRateControl data))
-  (when-let [data (lookup-entry config id :max-bitrate)]
+  (when-some [data (lookup-entry config id :max-bitrate)]
     (. builder maxBitrate data))
-  (when-let [data (lookup-entry config id :min-i-interval)]
+  (when-some [data (lookup-entry config id :min-i-interval)]
     (. builder minIInterval data))
-  (when-let [data (lookup-entry config id :mv-over-picture-boundaries)]
+  (when-some [data (lookup-entry config id :mv-over-picture-boundaries)]
     (. builder mvOverPictureBoundaries data))
-  (when-let [data (lookup-entry config id :mv-temporal-predictor)]
+  (when-some [data (lookup-entry config id :mv-temporal-predictor)]
     (. builder mvTemporalPredictor data))
-  (when-let [data (lookup-entry config id :par-denominator)]
+  (when-some [data (lookup-entry config id :par-denominator)]
     (. builder parDenominator data))
-  (when-let [data (lookup-entry config id :par-numerator)]
+  (when-some [data (lookup-entry config id :par-numerator)]
     (. builder parNumerator data))
-  (when-let [data (lookup-entry config id :profile)]
+  (when-some [data (lookup-entry config id :profile)]
     (. builder profile data))
-  (when-let [data (lookup-entry config id :qvbr-quality-level)]
+  (when-some [data (lookup-entry config id :qvbr-quality-level)]
     (. builder qvbrQualityLevel data))
-  (when-let [data (lookup-entry config id :rate-control-mode)]
+  (when-some [data (lookup-entry config id :rate-control-mode)]
     (. builder rateControlMode data))
-  (when-let [data (lookup-entry config id :scan-type)]
+  (when-some [data (lookup-entry config id :scan-type)]
     (. builder scanType data))
-  (when-let [data (lookup-entry config id :scene-change-detect)]
+  (when-some [data (lookup-entry config id :scene-change-detect)]
     (. builder sceneChangeDetect data))
-  (when-let [data (lookup-entry config id :slices)]
+  (when-some [data (lookup-entry config id :slices)]
     (. builder slices data))
-  (when-let [data (lookup-entry config id :tier)]
+  (when-some [data (lookup-entry config id :tier)]
     (. builder tier data))
-  (when-let [data (lookup-entry config id :tile-height)]
+  (when-some [data (lookup-entry config id :tile-height)]
     (. builder tileHeight data))
-  (when-let [data (lookup-entry config id :tile-padding)]
+  (when-some [data (lookup-entry config id :tile-padding)]
     (. builder tilePadding data))
-  (when-let [data (lookup-entry config id :tile-width)]
+  (when-some [data (lookup-entry config id :tile-width)]
     (. builder tileWidth data))
-  (when-let [data (lookup-entry config id :timecode-burnin-settings)]
+  (when-some [data (lookup-entry config id :timecode-burnin-settings)]
     (. builder timecodeBurninSettings data))
-  (when-let [data (lookup-entry config id :timecode-insertion)]
+  (when-some [data (lookup-entry config id :timecode-insertion)]
     (. builder timecodeInsertion data))
-  (when-let [data (lookup-entry config id :treeblock-size)]
+  (when-some [data (lookup-entry config id :treeblock-size)]
     (. builder treeblockSize data))
   (.build builder))
 
@@ -3105,9 +3105,9 @@
 | `maxFall` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-fall` |
 "
   [^CfnChannel$Hdr10SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-cll)]
+  (when-some [data (lookup-entry config id :max-cll)]
     (. builder maxCll data))
-  (when-let [data (lookup-entry config id :max-fall)]
+  (when-some [data (lookup-entry config id :max-fall)]
     (. builder maxFall data))
   (.build builder))
 
@@ -3141,19 +3141,19 @@
 | `token` | java.lang.String | [[cdk.support/lookup-entry]] | `:token` |
 "
   [^CfnChannel$HlsAkamaiSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-retry-interval)]
+  (when-some [data (lookup-entry config id :connection-retry-interval)]
     (. builder connectionRetryInterval data))
-  (when-let [data (lookup-entry config id :filecache-duration)]
+  (when-some [data (lookup-entry config id :filecache-duration)]
     (. builder filecacheDuration data))
-  (when-let [data (lookup-entry config id :http-transfer-mode)]
+  (when-some [data (lookup-entry config id :http-transfer-mode)]
     (. builder httpTransferMode data))
-  (when-let [data (lookup-entry config id :num-retries)]
+  (when-some [data (lookup-entry config id :num-retries)]
     (. builder numRetries data))
-  (when-let [data (lookup-entry config id :restart-delay)]
+  (when-some [data (lookup-entry config id :restart-delay)]
     (. builder restartDelay data))
-  (when-let [data (lookup-entry config id :salt)]
+  (when-some [data (lookup-entry config id :salt)]
     (. builder salt data))
-  (when-let [data (lookup-entry config id :token)]
+  (when-some [data (lookup-entry config id :token)]
     (. builder token data))
   (.build builder))
 
@@ -3184,13 +3184,13 @@
 | `restartDelay` | java.lang.Number | [[cdk.support/lookup-entry]] | `:restart-delay` |
 "
   [^CfnChannel$HlsBasicPutSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-retry-interval)]
+  (when-some [data (lookup-entry config id :connection-retry-interval)]
     (. builder connectionRetryInterval data))
-  (when-let [data (lookup-entry config id :filecache-duration)]
+  (when-some [data (lookup-entry config id :filecache-duration)]
     (. builder filecacheDuration data))
-  (when-let [data (lookup-entry config id :num-retries)]
+  (when-some [data (lookup-entry config id :num-retries)]
     (. builder numRetries data))
-  (when-let [data (lookup-entry config id :restart-delay)]
+  (when-some [data (lookup-entry config id :restart-delay)]
     (. builder restartDelay data))
   (.build builder))
 
@@ -3222,15 +3222,15 @@
 | `hlsWebdavSettings` | software.amazon.awscdk.services.medialive.CfnChannel$HlsWebdavSettingsProperty | [[cdk.support/lookup-entry]] | `:hls-webdav-settings` |
 "
   [^CfnChannel$HlsCdnSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hls-akamai-settings)]
+  (when-some [data (lookup-entry config id :hls-akamai-settings)]
     (. builder hlsAkamaiSettings data))
-  (when-let [data (lookup-entry config id :hls-basic-put-settings)]
+  (when-some [data (lookup-entry config id :hls-basic-put-settings)]
     (. builder hlsBasicPutSettings data))
-  (when-let [data (lookup-entry config id :hls-media-store-settings)]
+  (when-some [data (lookup-entry config id :hls-media-store-settings)]
     (. builder hlsMediaStoreSettings data))
-  (when-let [data (lookup-entry config id :hls-s3-settings)]
+  (when-some [data (lookup-entry config id :hls-s3-settings)]
     (. builder hlsS3Settings data))
-  (when-let [data (lookup-entry config id :hls-webdav-settings)]
+  (when-some [data (lookup-entry config id :hls-webdav-settings)]
     (. builder hlsWebdavSettings data))
   (.build builder))
 
@@ -3300,91 +3300,91 @@
 | `tsFileMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:ts-file-mode` |
 "
   [^CfnChannel$HlsGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-markers)]
+  (when-some [data (lookup-entry config id :ad-markers)]
     (. builder adMarkers data))
-  (when-let [data (lookup-entry config id :base-url-content)]
+  (when-some [data (lookup-entry config id :base-url-content)]
     (. builder baseUrlContent data))
-  (when-let [data (lookup-entry config id :base-url-content1)]
+  (when-some [data (lookup-entry config id :base-url-content1)]
     (. builder baseUrlContent1 data))
-  (when-let [data (lookup-entry config id :base-url-manifest)]
+  (when-some [data (lookup-entry config id :base-url-manifest)]
     (. builder baseUrlManifest data))
-  (when-let [data (lookup-entry config id :base-url-manifest1)]
+  (when-some [data (lookup-entry config id :base-url-manifest1)]
     (. builder baseUrlManifest1 data))
-  (when-let [data (lookup-entry config id :caption-language-mappings)]
+  (when-some [data (lookup-entry config id :caption-language-mappings)]
     (. builder captionLanguageMappings data))
-  (when-let [data (lookup-entry config id :caption-language-setting)]
+  (when-some [data (lookup-entry config id :caption-language-setting)]
     (. builder captionLanguageSetting data))
-  (when-let [data (lookup-entry config id :client-cache)]
+  (when-some [data (lookup-entry config id :client-cache)]
     (. builder clientCache data))
-  (when-let [data (lookup-entry config id :codec-specification)]
+  (when-some [data (lookup-entry config id :codec-specification)]
     (. builder codecSpecification data))
-  (when-let [data (lookup-entry config id :constant-iv)]
+  (when-some [data (lookup-entry config id :constant-iv)]
     (. builder constantIv data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :directory-structure)]
+  (when-some [data (lookup-entry config id :directory-structure)]
     (. builder directoryStructure data))
-  (when-let [data (lookup-entry config id :discontinuity-tags)]
+  (when-some [data (lookup-entry config id :discontinuity-tags)]
     (. builder discontinuityTags data))
-  (when-let [data (lookup-entry config id :encryption-type)]
+  (when-some [data (lookup-entry config id :encryption-type)]
     (. builder encryptionType data))
-  (when-let [data (lookup-entry config id :hls-cdn-settings)]
+  (when-some [data (lookup-entry config id :hls-cdn-settings)]
     (. builder hlsCdnSettings data))
-  (when-let [data (lookup-entry config id :hls-id3-segment-tagging)]
+  (when-some [data (lookup-entry config id :hls-id3-segment-tagging)]
     (. builder hlsId3SegmentTagging data))
-  (when-let [data (lookup-entry config id :i-frame-only-playlists)]
+  (when-some [data (lookup-entry config id :i-frame-only-playlists)]
     (. builder iFrameOnlyPlaylists data))
-  (when-let [data (lookup-entry config id :incomplete-segment-behavior)]
+  (when-some [data (lookup-entry config id :incomplete-segment-behavior)]
     (. builder incompleteSegmentBehavior data))
-  (when-let [data (lookup-entry config id :index-n-segments)]
+  (when-some [data (lookup-entry config id :index-n-segments)]
     (. builder indexNSegments data))
-  (when-let [data (lookup-entry config id :input-loss-action)]
+  (when-some [data (lookup-entry config id :input-loss-action)]
     (. builder inputLossAction data))
-  (when-let [data (lookup-entry config id :iv-in-manifest)]
+  (when-some [data (lookup-entry config id :iv-in-manifest)]
     (. builder ivInManifest data))
-  (when-let [data (lookup-entry config id :iv-source)]
+  (when-some [data (lookup-entry config id :iv-source)]
     (. builder ivSource data))
-  (when-let [data (lookup-entry config id :keep-segments)]
+  (when-some [data (lookup-entry config id :keep-segments)]
     (. builder keepSegments data))
-  (when-let [data (lookup-entry config id :key-format)]
+  (when-some [data (lookup-entry config id :key-format)]
     (. builder keyFormat data))
-  (when-let [data (lookup-entry config id :key-format-versions)]
+  (when-some [data (lookup-entry config id :key-format-versions)]
     (. builder keyFormatVersions data))
-  (when-let [data (lookup-entry config id :key-provider-settings)]
+  (when-some [data (lookup-entry config id :key-provider-settings)]
     (. builder keyProviderSettings data))
-  (when-let [data (lookup-entry config id :manifest-compression)]
+  (when-some [data (lookup-entry config id :manifest-compression)]
     (. builder manifestCompression data))
-  (when-let [data (lookup-entry config id :manifest-duration-format)]
+  (when-some [data (lookup-entry config id :manifest-duration-format)]
     (. builder manifestDurationFormat data))
-  (when-let [data (lookup-entry config id :min-segment-length)]
+  (when-some [data (lookup-entry config id :min-segment-length)]
     (. builder minSegmentLength data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :output-selection)]
+  (when-some [data (lookup-entry config id :output-selection)]
     (. builder outputSelection data))
-  (when-let [data (lookup-entry config id :program-date-time)]
+  (when-some [data (lookup-entry config id :program-date-time)]
     (. builder programDateTime data))
-  (when-let [data (lookup-entry config id :program-date-time-clock)]
+  (when-some [data (lookup-entry config id :program-date-time-clock)]
     (. builder programDateTimeClock data))
-  (when-let [data (lookup-entry config id :program-date-time-period)]
+  (when-some [data (lookup-entry config id :program-date-time-period)]
     (. builder programDateTimePeriod data))
-  (when-let [data (lookup-entry config id :redundant-manifest)]
+  (when-some [data (lookup-entry config id :redundant-manifest)]
     (. builder redundantManifest data))
-  (when-let [data (lookup-entry config id :segment-length)]
+  (when-some [data (lookup-entry config id :segment-length)]
     (. builder segmentLength data))
-  (when-let [data (lookup-entry config id :segmentation-mode)]
+  (when-some [data (lookup-entry config id :segmentation-mode)]
     (. builder segmentationMode data))
-  (when-let [data (lookup-entry config id :segments-per-subdirectory)]
+  (when-some [data (lookup-entry config id :segments-per-subdirectory)]
     (. builder segmentsPerSubdirectory data))
-  (when-let [data (lookup-entry config id :stream-inf-resolution)]
+  (when-some [data (lookup-entry config id :stream-inf-resolution)]
     (. builder streamInfResolution data))
-  (when-let [data (lookup-entry config id :timed-metadata-id3-frame)]
+  (when-some [data (lookup-entry config id :timed-metadata-id3-frame)]
     (. builder timedMetadataId3Frame data))
-  (when-let [data (lookup-entry config id :timed-metadata-id3-period)]
+  (when-some [data (lookup-entry config id :timed-metadata-id3-period)]
     (. builder timedMetadataId3Period data))
-  (when-let [data (lookup-entry config id :timestamp-delta-milliseconds)]
+  (when-some [data (lookup-entry config id :timestamp-delta-milliseconds)]
     (. builder timestampDeltaMilliseconds data))
-  (when-let [data (lookup-entry config id :ts-file-mode)]
+  (when-some [data (lookup-entry config id :ts-file-mode)]
     (. builder tsFileMode data))
   (.build builder))
 
@@ -3416,15 +3416,15 @@
 | `scte35Source` | java.lang.String | [[cdk.support/lookup-entry]] | `:scte35-source` |
 "
   [^CfnChannel$HlsInputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bandwidth)]
+  (when-some [data (lookup-entry config id :bandwidth)]
     (. builder bandwidth data))
-  (when-let [data (lookup-entry config id :buffer-segments)]
+  (when-some [data (lookup-entry config id :buffer-segments)]
     (. builder bufferSegments data))
-  (when-let [data (lookup-entry config id :retries)]
+  (when-some [data (lookup-entry config id :retries)]
     (. builder retries data))
-  (when-let [data (lookup-entry config id :retry-interval)]
+  (when-some [data (lookup-entry config id :retry-interval)]
     (. builder retryInterval data))
-  (when-let [data (lookup-entry config id :scte35-source)]
+  (when-some [data (lookup-entry config id :scte35-source)]
     (. builder scte35Source data))
   (.build builder))
 
@@ -3456,15 +3456,15 @@
 | `restartDelay` | java.lang.Number | [[cdk.support/lookup-entry]] | `:restart-delay` |
 "
   [^CfnChannel$HlsMediaStoreSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-retry-interval)]
+  (when-some [data (lookup-entry config id :connection-retry-interval)]
     (. builder connectionRetryInterval data))
-  (when-let [data (lookup-entry config id :filecache-duration)]
+  (when-some [data (lookup-entry config id :filecache-duration)]
     (. builder filecacheDuration data))
-  (when-let [data (lookup-entry config id :media-store-storage-class)]
+  (when-some [data (lookup-entry config id :media-store-storage-class)]
     (. builder mediaStoreStorageClass data))
-  (when-let [data (lookup-entry config id :num-retries)]
+  (when-some [data (lookup-entry config id :num-retries)]
     (. builder numRetries data))
-  (when-let [data (lookup-entry config id :restart-delay)]
+  (when-some [data (lookup-entry config id :restart-delay)]
     (. builder restartDelay data))
   (.build builder))
 
@@ -3495,13 +3495,13 @@
 | `segmentModifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-modifier` |
 "
   [^CfnChannel$HlsOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :h265-packaging-type)]
+  (when-some [data (lookup-entry config id :h265-packaging-type)]
     (. builder h265PackagingType data))
-  (when-let [data (lookup-entry config id :hls-settings)]
+  (when-some [data (lookup-entry config id :hls-settings)]
     (. builder hlsSettings data))
-  (when-let [data (lookup-entry config id :name-modifier)]
+  (when-some [data (lookup-entry config id :name-modifier)]
     (. builder nameModifier data))
-  (when-let [data (lookup-entry config id :segment-modifier)]
+  (when-some [data (lookup-entry config id :segment-modifier)]
     (. builder segmentModifier data))
   (.build builder))
 
@@ -3529,7 +3529,7 @@
 | `cannedAcl` | java.lang.String | [[cdk.support/lookup-entry]] | `:canned-acl` |
 "
   [^CfnChannel$HlsS3SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :canned-acl)]
+  (when-some [data (lookup-entry config id :canned-acl)]
     (. builder cannedAcl data))
   (.build builder))
 
@@ -3560,13 +3560,13 @@
 | `standardHlsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:standard-hls-settings` |
 "
   [^CfnChannel$HlsSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-only-hls-settings)]
+  (when-some [data (lookup-entry config id :audio-only-hls-settings)]
     (. builder audioOnlyHlsSettings data))
-  (when-let [data (lookup-entry config id :fmp4-hls-settings)]
+  (when-some [data (lookup-entry config id :fmp4-hls-settings)]
     (. builder fmp4HlsSettings data))
-  (when-let [data (lookup-entry config id :frame-capture-hls-settings)]
+  (when-some [data (lookup-entry config id :frame-capture-hls-settings)]
     (. builder frameCaptureHlsSettings data))
-  (when-let [data (lookup-entry config id :standard-hls-settings)]
+  (when-some [data (lookup-entry config id :standard-hls-settings)]
     (. builder standardHlsSettings data))
   (.build builder))
 
@@ -3598,15 +3598,15 @@
 | `restartDelay` | java.lang.Number | [[cdk.support/lookup-entry]] | `:restart-delay` |
 "
   [^CfnChannel$HlsWebdavSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-retry-interval)]
+  (when-some [data (lookup-entry config id :connection-retry-interval)]
     (. builder connectionRetryInterval data))
-  (when-let [data (lookup-entry config id :filecache-duration)]
+  (when-some [data (lookup-entry config id :filecache-duration)]
     (. builder filecacheDuration data))
-  (when-let [data (lookup-entry config id :http-transfer-mode)]
+  (when-some [data (lookup-entry config id :http-transfer-mode)]
     (. builder httpTransferMode data))
-  (when-let [data (lookup-entry config id :num-retries)]
+  (when-some [data (lookup-entry config id :num-retries)]
     (. builder numRetries data))
-  (when-let [data (lookup-entry config id :restart-delay)]
+  (when-some [data (lookup-entry config id :restart-delay)]
     (. builder restartDelay data))
   (.build builder))
 
@@ -3643,13 +3643,13 @@
 | `inputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-settings` |
 "
   [^CfnChannel$InputAttachmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatic-input-failover-settings)]
+  (when-some [data (lookup-entry config id :automatic-input-failover-settings)]
     (. builder automaticInputFailoverSettings data))
-  (when-let [data (lookup-entry config id :input-attachment-name)]
+  (when-some [data (lookup-entry config id :input-attachment-name)]
     (. builder inputAttachmentName data))
-  (when-let [data (lookup-entry config id :input-id)]
+  (when-some [data (lookup-entry config id :input-id)]
     (. builder inputId data))
-  (when-let [data (lookup-entry config id :input-settings)]
+  (when-some [data (lookup-entry config id :input-settings)]
     (. builder inputSettings data))
   (.build builder))
 
@@ -3678,9 +3678,9 @@
 | `inputChannel` | java.lang.Number | [[cdk.support/lookup-entry]] | `:input-channel` |
 "
   [^CfnChannel$InputChannelLevelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :gain)]
+  (when-some [data (lookup-entry config id :gain)]
     (. builder gain data))
-  (when-let [data (lookup-entry config id :input-channel)]
+  (when-some [data (lookup-entry config id :input-channel)]
     (. builder inputChannel data))
   (.build builder))
 
@@ -3710,11 +3710,11 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnChannel$InputLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password-param)]
+  (when-some [data (lookup-entry config id :password-param)]
     (. builder passwordParam data))
-  (when-let [data (lookup-entry config id :uri)]
+  (when-some [data (lookup-entry config id :uri)]
     (. builder uri data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -3746,15 +3746,15 @@
 | `repeatFrameMsec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:repeat-frame-msec` |
 "
   [^CfnChannel$InputLossBehaviorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :black-frame-msec)]
+  (when-some [data (lookup-entry config id :black-frame-msec)]
     (. builder blackFrameMsec data))
-  (when-let [data (lookup-entry config id :input-loss-image-color)]
+  (when-some [data (lookup-entry config id :input-loss-image-color)]
     (. builder inputLossImageColor data))
-  (when-let [data (lookup-entry config id :input-loss-image-slate)]
+  (when-some [data (lookup-entry config id :input-loss-image-slate)]
     (. builder inputLossImageSlate data))
-  (when-let [data (lookup-entry config id :input-loss-image-type)]
+  (when-some [data (lookup-entry config id :input-loss-image-type)]
     (. builder inputLossImageType data))
-  (when-let [data (lookup-entry config id :repeat-frame-msec)]
+  (when-some [data (lookup-entry config id :repeat-frame-msec)]
     (. builder repeatFrameMsec data))
   (.build builder))
 
@@ -3782,7 +3782,7 @@
 | `inputLossThresholdMsec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:input-loss-threshold-msec` |
 "
   [^CfnChannel$InputLossFailoverSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-loss-threshold-msec)]
+  (when-some [data (lookup-entry config id :input-loss-threshold-msec)]
     (. builder inputLossThresholdMsec data))
   (.build builder))
 
@@ -3820,27 +3820,27 @@
 | `videoSelector` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video-selector` |
 "
   [^CfnChannel$InputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-selectors)]
+  (when-some [data (lookup-entry config id :audio-selectors)]
     (. builder audioSelectors data))
-  (when-let [data (lookup-entry config id :caption-selectors)]
+  (when-some [data (lookup-entry config id :caption-selectors)]
     (. builder captionSelectors data))
-  (when-let [data (lookup-entry config id :deblock-filter)]
+  (when-some [data (lookup-entry config id :deblock-filter)]
     (. builder deblockFilter data))
-  (when-let [data (lookup-entry config id :denoise-filter)]
+  (when-some [data (lookup-entry config id :denoise-filter)]
     (. builder denoiseFilter data))
-  (when-let [data (lookup-entry config id :filter-strength)]
+  (when-some [data (lookup-entry config id :filter-strength)]
     (. builder filterStrength data))
-  (when-let [data (lookup-entry config id :input-filter)]
+  (when-some [data (lookup-entry config id :input-filter)]
     (. builder inputFilter data))
-  (when-let [data (lookup-entry config id :network-input-settings)]
+  (when-some [data (lookup-entry config id :network-input-settings)]
     (. builder networkInputSettings data))
-  (when-let [data (lookup-entry config id :scte35-pid)]
+  (when-some [data (lookup-entry config id :scte35-pid)]
     (. builder scte35Pid data))
-  (when-let [data (lookup-entry config id :smpte2038-data-preference)]
+  (when-some [data (lookup-entry config id :smpte2038-data-preference)]
     (. builder smpte2038DataPreference data))
-  (when-let [data (lookup-entry config id :source-end-behavior)]
+  (when-some [data (lookup-entry config id :source-end-behavior)]
     (. builder sourceEndBehavior data))
-  (when-let [data (lookup-entry config id :video-selector)]
+  (when-some [data (lookup-entry config id :video-selector)]
     (. builder videoSelector data))
   (.build builder))
 
@@ -3870,11 +3870,11 @@
 | `resolution` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolution` |
 "
   [^CfnChannel$InputSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :codec)]
+  (when-some [data (lookup-entry config id :codec)]
     (. builder codec data))
-  (when-let [data (lookup-entry config id :maximum-bitrate)]
+  (when-some [data (lookup-entry config id :maximum-bitrate)]
     (. builder maximumBitrate data))
-  (when-let [data (lookup-entry config id :resolution)]
+  (when-some [data (lookup-entry config id :resolution)]
     (. builder resolution data))
   (.build builder))
 
@@ -3902,7 +3902,7 @@
 | `staticKeySettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:static-key-settings` |
 "
   [^CfnChannel$KeyProviderSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :static-key-settings)]
+  (when-some [data (lookup-entry config id :static-key-settings)]
     (. builder staticKeySettings data))
   (.build builder))
 
@@ -3977,101 +3977,101 @@
 | `videoPid` | java.lang.String | [[cdk.support/lookup-entry]] | `:video-pid` |
 "
   [^CfnChannel$M2tsSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :absent-input-audio-behavior)]
+  (when-some [data (lookup-entry config id :absent-input-audio-behavior)]
     (. builder absentInputAudioBehavior data))
-  (when-let [data (lookup-entry config id :arib)]
+  (when-some [data (lookup-entry config id :arib)]
     (. builder arib data))
-  (when-let [data (lookup-entry config id :arib-captions-pid)]
+  (when-some [data (lookup-entry config id :arib-captions-pid)]
     (. builder aribCaptionsPid data))
-  (when-let [data (lookup-entry config id :arib-captions-pid-control)]
+  (when-some [data (lookup-entry config id :arib-captions-pid-control)]
     (. builder aribCaptionsPidControl data))
-  (when-let [data (lookup-entry config id :audio-buffer-model)]
+  (when-some [data (lookup-entry config id :audio-buffer-model)]
     (. builder audioBufferModel data))
-  (when-let [data (lookup-entry config id :audio-frames-per-pes)]
+  (when-some [data (lookup-entry config id :audio-frames-per-pes)]
     (. builder audioFramesPerPes data))
-  (when-let [data (lookup-entry config id :audio-pids)]
+  (when-some [data (lookup-entry config id :audio-pids)]
     (. builder audioPids data))
-  (when-let [data (lookup-entry config id :audio-stream-type)]
+  (when-some [data (lookup-entry config id :audio-stream-type)]
     (. builder audioStreamType data))
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :buffer-model)]
+  (when-some [data (lookup-entry config id :buffer-model)]
     (. builder bufferModel data))
-  (when-let [data (lookup-entry config id :cc-descriptor)]
+  (when-some [data (lookup-entry config id :cc-descriptor)]
     (. builder ccDescriptor data))
-  (when-let [data (lookup-entry config id :dvb-nit-settings)]
+  (when-some [data (lookup-entry config id :dvb-nit-settings)]
     (. builder dvbNitSettings data))
-  (when-let [data (lookup-entry config id :dvb-sdt-settings)]
+  (when-some [data (lookup-entry config id :dvb-sdt-settings)]
     (. builder dvbSdtSettings data))
-  (when-let [data (lookup-entry config id :dvb-sub-pids)]
+  (when-some [data (lookup-entry config id :dvb-sub-pids)]
     (. builder dvbSubPids data))
-  (when-let [data (lookup-entry config id :dvb-tdt-settings)]
+  (when-some [data (lookup-entry config id :dvb-tdt-settings)]
     (. builder dvbTdtSettings data))
-  (when-let [data (lookup-entry config id :dvb-teletext-pid)]
+  (when-some [data (lookup-entry config id :dvb-teletext-pid)]
     (. builder dvbTeletextPid data))
-  (when-let [data (lookup-entry config id :ebif)]
+  (when-some [data (lookup-entry config id :ebif)]
     (. builder ebif data))
-  (when-let [data (lookup-entry config id :ebp-audio-interval)]
+  (when-some [data (lookup-entry config id :ebp-audio-interval)]
     (. builder ebpAudioInterval data))
-  (when-let [data (lookup-entry config id :ebp-lookahead-ms)]
+  (when-some [data (lookup-entry config id :ebp-lookahead-ms)]
     (. builder ebpLookaheadMs data))
-  (when-let [data (lookup-entry config id :ebp-placement)]
+  (when-some [data (lookup-entry config id :ebp-placement)]
     (. builder ebpPlacement data))
-  (when-let [data (lookup-entry config id :ecm-pid)]
+  (when-some [data (lookup-entry config id :ecm-pid)]
     (. builder ecmPid data))
-  (when-let [data (lookup-entry config id :es-rate-in-pes)]
+  (when-some [data (lookup-entry config id :es-rate-in-pes)]
     (. builder esRateInPes data))
-  (when-let [data (lookup-entry config id :etv-platform-pid)]
+  (when-some [data (lookup-entry config id :etv-platform-pid)]
     (. builder etvPlatformPid data))
-  (when-let [data (lookup-entry config id :etv-signal-pid)]
+  (when-some [data (lookup-entry config id :etv-signal-pid)]
     (. builder etvSignalPid data))
-  (when-let [data (lookup-entry config id :fragment-time)]
+  (when-some [data (lookup-entry config id :fragment-time)]
     (. builder fragmentTime data))
-  (when-let [data (lookup-entry config id :klv)]
+  (when-some [data (lookup-entry config id :klv)]
     (. builder klv data))
-  (when-let [data (lookup-entry config id :klv-data-pids)]
+  (when-some [data (lookup-entry config id :klv-data-pids)]
     (. builder klvDataPids data))
-  (when-let [data (lookup-entry config id :nielsen-id3-behavior)]
+  (when-some [data (lookup-entry config id :nielsen-id3-behavior)]
     (. builder nielsenId3Behavior data))
-  (when-let [data (lookup-entry config id :null-packet-bitrate)]
+  (when-some [data (lookup-entry config id :null-packet-bitrate)]
     (. builder nullPacketBitrate data))
-  (when-let [data (lookup-entry config id :pat-interval)]
+  (when-some [data (lookup-entry config id :pat-interval)]
     (. builder patInterval data))
-  (when-let [data (lookup-entry config id :pcr-control)]
+  (when-some [data (lookup-entry config id :pcr-control)]
     (. builder pcrControl data))
-  (when-let [data (lookup-entry config id :pcr-period)]
+  (when-some [data (lookup-entry config id :pcr-period)]
     (. builder pcrPeriod data))
-  (when-let [data (lookup-entry config id :pcr-pid)]
+  (when-some [data (lookup-entry config id :pcr-pid)]
     (. builder pcrPid data))
-  (when-let [data (lookup-entry config id :pmt-interval)]
+  (when-some [data (lookup-entry config id :pmt-interval)]
     (. builder pmtInterval data))
-  (when-let [data (lookup-entry config id :pmt-pid)]
+  (when-some [data (lookup-entry config id :pmt-pid)]
     (. builder pmtPid data))
-  (when-let [data (lookup-entry config id :program-num)]
+  (when-some [data (lookup-entry config id :program-num)]
     (. builder programNum data))
-  (when-let [data (lookup-entry config id :rate-mode)]
+  (when-some [data (lookup-entry config id :rate-mode)]
     (. builder rateMode data))
-  (when-let [data (lookup-entry config id :scte27-pids)]
+  (when-some [data (lookup-entry config id :scte27-pids)]
     (. builder scte27Pids data))
-  (when-let [data (lookup-entry config id :scte35-control)]
+  (when-some [data (lookup-entry config id :scte35-control)]
     (. builder scte35Control data))
-  (when-let [data (lookup-entry config id :scte35-pid)]
+  (when-some [data (lookup-entry config id :scte35-pid)]
     (. builder scte35Pid data))
-  (when-let [data (lookup-entry config id :scte35-preroll-pullup-milliseconds)]
+  (when-some [data (lookup-entry config id :scte35-preroll-pullup-milliseconds)]
     (. builder scte35PrerollPullupMilliseconds data))
-  (when-let [data (lookup-entry config id :segmentation-markers)]
+  (when-some [data (lookup-entry config id :segmentation-markers)]
     (. builder segmentationMarkers data))
-  (when-let [data (lookup-entry config id :segmentation-style)]
+  (when-some [data (lookup-entry config id :segmentation-style)]
     (. builder segmentationStyle data))
-  (when-let [data (lookup-entry config id :segmentation-time)]
+  (when-some [data (lookup-entry config id :segmentation-time)]
     (. builder segmentationTime data))
-  (when-let [data (lookup-entry config id :timed-metadata-behavior)]
+  (when-some [data (lookup-entry config id :timed-metadata-behavior)]
     (. builder timedMetadataBehavior data))
-  (when-let [data (lookup-entry config id :timed-metadata-pid)]
+  (when-some [data (lookup-entry config id :timed-metadata-pid)]
     (. builder timedMetadataPid data))
-  (when-let [data (lookup-entry config id :transport-stream-id)]
+  (when-some [data (lookup-entry config id :transport-stream-id)]
     (. builder transportStreamId data))
-  (when-let [data (lookup-entry config id :video-pid)]
+  (when-some [data (lookup-entry config id :video-pid)]
     (. builder videoPid data))
   (.build builder))
 
@@ -4117,43 +4117,43 @@
 | `videoPid` | java.lang.String | [[cdk.support/lookup-entry]] | `:video-pid` |
 "
   [^CfnChannel$M3u8SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-frames-per-pes)]
+  (when-some [data (lookup-entry config id :audio-frames-per-pes)]
     (. builder audioFramesPerPes data))
-  (when-let [data (lookup-entry config id :audio-pids)]
+  (when-some [data (lookup-entry config id :audio-pids)]
     (. builder audioPids data))
-  (when-let [data (lookup-entry config id :ecm-pid)]
+  (when-some [data (lookup-entry config id :ecm-pid)]
     (. builder ecmPid data))
-  (when-let [data (lookup-entry config id :klv-behavior)]
+  (when-some [data (lookup-entry config id :klv-behavior)]
     (. builder klvBehavior data))
-  (when-let [data (lookup-entry config id :klv-data-pids)]
+  (when-some [data (lookup-entry config id :klv-data-pids)]
     (. builder klvDataPids data))
-  (when-let [data (lookup-entry config id :nielsen-id3-behavior)]
+  (when-some [data (lookup-entry config id :nielsen-id3-behavior)]
     (. builder nielsenId3Behavior data))
-  (when-let [data (lookup-entry config id :pat-interval)]
+  (when-some [data (lookup-entry config id :pat-interval)]
     (. builder patInterval data))
-  (when-let [data (lookup-entry config id :pcr-control)]
+  (when-some [data (lookup-entry config id :pcr-control)]
     (. builder pcrControl data))
-  (when-let [data (lookup-entry config id :pcr-period)]
+  (when-some [data (lookup-entry config id :pcr-period)]
     (. builder pcrPeriod data))
-  (when-let [data (lookup-entry config id :pcr-pid)]
+  (when-some [data (lookup-entry config id :pcr-pid)]
     (. builder pcrPid data))
-  (when-let [data (lookup-entry config id :pmt-interval)]
+  (when-some [data (lookup-entry config id :pmt-interval)]
     (. builder pmtInterval data))
-  (when-let [data (lookup-entry config id :pmt-pid)]
+  (when-some [data (lookup-entry config id :pmt-pid)]
     (. builder pmtPid data))
-  (when-let [data (lookup-entry config id :program-num)]
+  (when-some [data (lookup-entry config id :program-num)]
     (. builder programNum data))
-  (when-let [data (lookup-entry config id :scte35-behavior)]
+  (when-some [data (lookup-entry config id :scte35-behavior)]
     (. builder scte35Behavior data))
-  (when-let [data (lookup-entry config id :scte35-pid)]
+  (when-some [data (lookup-entry config id :scte35-pid)]
     (. builder scte35Pid data))
-  (when-let [data (lookup-entry config id :timed-metadata-behavior)]
+  (when-some [data (lookup-entry config id :timed-metadata-behavior)]
     (. builder timedMetadataBehavior data))
-  (when-let [data (lookup-entry config id :timed-metadata-pid)]
+  (when-some [data (lookup-entry config id :timed-metadata-pid)]
     (. builder timedMetadataPid data))
-  (when-let [data (lookup-entry config id :transport-stream-id)]
+  (when-some [data (lookup-entry config id :transport-stream-id)]
     (. builder transportStreamId data))
-  (when-let [data (lookup-entry config id :video-pid)]
+  (when-some [data (lookup-entry config id :video-pid)]
     (. builder videoPid data))
   (.build builder))
 
@@ -4182,9 +4182,9 @@
 | `maintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:maintenance-start-time` |
 "
   [^CfnChannel$MaintenanceCreateSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maintenance-day)]
+  (when-some [data (lookup-entry config id :maintenance-day)]
     (. builder maintenanceDay data))
-  (when-let [data (lookup-entry config id :maintenance-start-time)]
+  (when-some [data (lookup-entry config id :maintenance-start-time)]
     (. builder maintenanceStartTime data))
   (.build builder))
 
@@ -4214,11 +4214,11 @@
 | `maintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:maintenance-start-time` |
 "
   [^CfnChannel$MaintenanceUpdateSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maintenance-day)]
+  (when-some [data (lookup-entry config id :maintenance-day)]
     (. builder maintenanceDay data))
-  (when-let [data (lookup-entry config id :maintenance-scheduled-date)]
+  (when-some [data (lookup-entry config id :maintenance-scheduled-date)]
     (. builder maintenanceScheduledDate data))
-  (when-let [data (lookup-entry config id :maintenance-start-time)]
+  (when-some [data (lookup-entry config id :maintenance-start-time)]
     (. builder maintenanceStartTime data))
   (.build builder))
 
@@ -4246,7 +4246,7 @@
 | `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
 "
   [^CfnChannel$MediaPackageGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
   (.build builder))
 
@@ -4274,7 +4274,7 @@
 | `channelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-id` |
 "
   [^CfnChannel$MediaPackageOutputDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
   (.build builder))
 
@@ -4309,9 +4309,9 @@
 | `motionGraphicsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:motion-graphics-settings` |
 "
   [^CfnChannel$MotionGraphicsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :motion-graphics-insertion)]
+  (when-some [data (lookup-entry config id :motion-graphics-insertion)]
     (. builder motionGraphicsInsertion data))
-  (when-let [data (lookup-entry config id :motion-graphics-settings)]
+  (when-some [data (lookup-entry config id :motion-graphics-settings)]
     (. builder motionGraphicsSettings data))
   (.build builder))
 
@@ -4339,7 +4339,7 @@
 | `htmlMotionGraphicsSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:html-motion-graphics-settings` |
 "
   [^CfnChannel$MotionGraphicsSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :html-motion-graphics-settings)]
+  (when-some [data (lookup-entry config id :html-motion-graphics-settings)]
     (. builder htmlMotionGraphicsSettings data))
   (.build builder))
 
@@ -4369,11 +4369,11 @@
 | `sampleRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:sample-rate` |
 "
   [^CfnChannel$Mp2SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :coding-mode)]
+  (when-some [data (lookup-entry config id :coding-mode)]
     (. builder codingMode data))
-  (when-let [data (lookup-entry config id :sample-rate)]
+  (when-some [data (lookup-entry config id :sample-rate)]
     (. builder sampleRate data))
   (.build builder))
 
@@ -4401,7 +4401,7 @@
 | `temporalFilterSettings` | software.amazon.awscdk.services.medialive.CfnChannel$TemporalFilterSettingsProperty | [[cdk.support/lookup-entry]] | `:temporal-filter-settings` |
 "
   [^CfnChannel$Mpeg2FilterSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :temporal-filter-settings)]
+  (when-some [data (lookup-entry config id :temporal-filter-settings)]
     (. builder temporalFilterSettings data))
   (.build builder))
 
@@ -4445,39 +4445,39 @@
 | `timecodeInsertion` | java.lang.String | [[cdk.support/lookup-entry]] | `:timecode-insertion` |
 "
   [^CfnChannel$Mpeg2SettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :adaptive-quantization)]
+  (when-some [data (lookup-entry config id :adaptive-quantization)]
     (. builder adaptiveQuantization data))
-  (when-let [data (lookup-entry config id :afd-signaling)]
+  (when-some [data (lookup-entry config id :afd-signaling)]
     (. builder afdSignaling data))
-  (when-let [data (lookup-entry config id :color-metadata)]
+  (when-some [data (lookup-entry config id :color-metadata)]
     (. builder colorMetadata data))
-  (when-let [data (lookup-entry config id :color-space)]
+  (when-some [data (lookup-entry config id :color-space)]
     (. builder colorSpace data))
-  (when-let [data (lookup-entry config id :display-aspect-ratio)]
+  (when-some [data (lookup-entry config id :display-aspect-ratio)]
     (. builder displayAspectRatio data))
-  (when-let [data (lookup-entry config id :filter-settings)]
+  (when-some [data (lookup-entry config id :filter-settings)]
     (. builder filterSettings data))
-  (when-let [data (lookup-entry config id :fixed-afd)]
+  (when-some [data (lookup-entry config id :fixed-afd)]
     (. builder fixedAfd data))
-  (when-let [data (lookup-entry config id :framerate-denominator)]
+  (when-some [data (lookup-entry config id :framerate-denominator)]
     (. builder framerateDenominator data))
-  (when-let [data (lookup-entry config id :framerate-numerator)]
+  (when-some [data (lookup-entry config id :framerate-numerator)]
     (. builder framerateNumerator data))
-  (when-let [data (lookup-entry config id :gop-closed-cadence)]
+  (when-some [data (lookup-entry config id :gop-closed-cadence)]
     (. builder gopClosedCadence data))
-  (when-let [data (lookup-entry config id :gop-num-b-frames)]
+  (when-some [data (lookup-entry config id :gop-num-b-frames)]
     (. builder gopNumBFrames data))
-  (when-let [data (lookup-entry config id :gop-size)]
+  (when-some [data (lookup-entry config id :gop-size)]
     (. builder gopSize data))
-  (when-let [data (lookup-entry config id :gop-size-units)]
+  (when-some [data (lookup-entry config id :gop-size-units)]
     (. builder gopSizeUnits data))
-  (when-let [data (lookup-entry config id :scan-type)]
+  (when-some [data (lookup-entry config id :scan-type)]
     (. builder scanType data))
-  (when-let [data (lookup-entry config id :subgop-length)]
+  (when-some [data (lookup-entry config id :subgop-length)]
     (. builder subgopLength data))
-  (when-let [data (lookup-entry config id :timecode-burnin-settings)]
+  (when-some [data (lookup-entry config id :timecode-burnin-settings)]
     (. builder timecodeBurninSettings data))
-  (when-let [data (lookup-entry config id :timecode-insertion)]
+  (when-some [data (lookup-entry config id :timecode-insertion)]
     (. builder timecodeInsertion data))
   (.build builder))
 
@@ -4523,43 +4523,43 @@
 | `timestampOffsetMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:timestamp-offset-mode` |
 "
   [^CfnChannel$MsSmoothGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acquisition-point-id)]
+  (when-some [data (lookup-entry config id :acquisition-point-id)]
     (. builder acquisitionPointId data))
-  (when-let [data (lookup-entry config id :audio-only-timecode-control)]
+  (when-some [data (lookup-entry config id :audio-only-timecode-control)]
     (. builder audioOnlyTimecodeControl data))
-  (when-let [data (lookup-entry config id :certificate-mode)]
+  (when-some [data (lookup-entry config id :certificate-mode)]
     (. builder certificateMode data))
-  (when-let [data (lookup-entry config id :connection-retry-interval)]
+  (when-some [data (lookup-entry config id :connection-retry-interval)]
     (. builder connectionRetryInterval data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :event-id)]
+  (when-some [data (lookup-entry config id :event-id)]
     (. builder eventId data))
-  (when-let [data (lookup-entry config id :event-id-mode)]
+  (when-some [data (lookup-entry config id :event-id-mode)]
     (. builder eventIdMode data))
-  (when-let [data (lookup-entry config id :event-stop-behavior)]
+  (when-some [data (lookup-entry config id :event-stop-behavior)]
     (. builder eventStopBehavior data))
-  (when-let [data (lookup-entry config id :filecache-duration)]
+  (when-some [data (lookup-entry config id :filecache-duration)]
     (. builder filecacheDuration data))
-  (when-let [data (lookup-entry config id :fragment-length)]
+  (when-some [data (lookup-entry config id :fragment-length)]
     (. builder fragmentLength data))
-  (when-let [data (lookup-entry config id :input-loss-action)]
+  (when-some [data (lookup-entry config id :input-loss-action)]
     (. builder inputLossAction data))
-  (when-let [data (lookup-entry config id :num-retries)]
+  (when-some [data (lookup-entry config id :num-retries)]
     (. builder numRetries data))
-  (when-let [data (lookup-entry config id :restart-delay)]
+  (when-some [data (lookup-entry config id :restart-delay)]
     (. builder restartDelay data))
-  (when-let [data (lookup-entry config id :segmentation-mode)]
+  (when-some [data (lookup-entry config id :segmentation-mode)]
     (. builder segmentationMode data))
-  (when-let [data (lookup-entry config id :send-delay-ms)]
+  (when-some [data (lookup-entry config id :send-delay-ms)]
     (. builder sendDelayMs data))
-  (when-let [data (lookup-entry config id :sparse-track-type)]
+  (when-some [data (lookup-entry config id :sparse-track-type)]
     (. builder sparseTrackType data))
-  (when-let [data (lookup-entry config id :stream-manifest-behavior)]
+  (when-some [data (lookup-entry config id :stream-manifest-behavior)]
     (. builder streamManifestBehavior data))
-  (when-let [data (lookup-entry config id :timestamp-offset)]
+  (when-some [data (lookup-entry config id :timestamp-offset)]
     (. builder timestampOffset data))
-  (when-let [data (lookup-entry config id :timestamp-offset-mode)]
+  (when-some [data (lookup-entry config id :timestamp-offset-mode)]
     (. builder timestampOffsetMode data))
   (.build builder))
 
@@ -4588,9 +4588,9 @@
 | `nameModifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:name-modifier` |
 "
   [^CfnChannel$MsSmoothOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :h265-packaging-type)]
+  (when-some [data (lookup-entry config id :h265-packaging-type)]
     (. builder h265PackagingType data))
-  (when-let [data (lookup-entry config id :name-modifier)]
+  (when-some [data (lookup-entry config id :name-modifier)]
     (. builder nameModifier data))
   (.build builder))
 
@@ -4624,7 +4624,7 @@
 | `destination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination` |
 "
   [^CfnChannel$MultiplexOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
   (.build builder))
 
@@ -4653,9 +4653,9 @@
 | `programName` | java.lang.String | [[cdk.support/lookup-entry]] | `:program-name` |
 "
   [^CfnChannel$MultiplexProgramChannelDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :multiplex-id)]
+  (when-some [data (lookup-entry config id :multiplex-id)]
     (. builder multiplexId data))
-  (when-let [data (lookup-entry config id :program-name)]
+  (when-some [data (lookup-entry config id :program-name)]
     (. builder programName data))
   (.build builder))
 
@@ -4684,9 +4684,9 @@
 | `serverValidation` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-validation` |
 "
   [^CfnChannel$NetworkInputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hls-input-settings)]
+  (when-some [data (lookup-entry config id :hls-input-settings)]
     (. builder hlsInputSettings data))
-  (when-let [data (lookup-entry config id :server-validation)]
+  (when-some [data (lookup-entry config id :server-validation)]
     (. builder serverValidation data))
   (.build builder))
 
@@ -4716,11 +4716,11 @@
 | `csid` | java.lang.String | [[cdk.support/lookup-entry]] | `:csid` |
 "
   [^CfnChannel$NielsenCBETProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cbet-check-digit-string)]
+  (when-some [data (lookup-entry config id :cbet-check-digit-string)]
     (. builder cbetCheckDigitString data))
-  (when-let [data (lookup-entry config id :cbet-stepaside)]
+  (when-some [data (lookup-entry config id :cbet-stepaside)]
     (. builder cbetStepaside data))
-  (when-let [data (lookup-entry config id :csid)]
+  (when-some [data (lookup-entry config id :csid)]
     (. builder csid data))
   (.build builder))
 
@@ -4749,9 +4749,9 @@
 | `nielsenPcmToId3Tagging` | java.lang.String | [[cdk.support/lookup-entry]] | `:nielsen-pcm-to-id3-tagging` |
 "
   [^CfnChannel$NielsenConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :distributor-id)]
+  (when-some [data (lookup-entry config id :distributor-id)]
     (. builder distributorId data))
-  (when-let [data (lookup-entry config id :nielsen-pcm-to-id3-tagging)]
+  (when-some [data (lookup-entry config id :nielsen-pcm-to-id3-tagging)]
     (. builder nielsenPcmToId3Tagging data))
   (.build builder))
 
@@ -4781,11 +4781,11 @@
 | `timezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone` |
 "
   [^CfnChannel$NielsenNaesIiNwProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :check-digit-string)]
+  (when-some [data (lookup-entry config id :check-digit-string)]
     (. builder checkDigitString data))
-  (when-let [data (lookup-entry config id :sid)]
+  (when-some [data (lookup-entry config id :sid)]
     (. builder sid data))
-  (when-let [data (lookup-entry config id :timezone)]
+  (when-some [data (lookup-entry config id :timezone)]
     (. builder timezone data))
   (.build builder))
 
@@ -4815,11 +4815,11 @@
 | `nielsenNaesIiNwSettings` | software.amazon.awscdk.services.medialive.CfnChannel$NielsenNaesIiNwProperty | [[cdk.support/lookup-entry]] | `:nielsen-naes-ii-nw-settings` |
 "
   [^CfnChannel$NielsenWatermarksSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :nielsen-cbet-settings)]
+  (when-some [data (lookup-entry config id :nielsen-cbet-settings)]
     (. builder nielsenCbetSettings data))
-  (when-let [data (lookup-entry config id :nielsen-distribution-type)]
+  (when-some [data (lookup-entry config id :nielsen-distribution-type)]
     (. builder nielsenDistributionType data))
-  (when-let [data (lookup-entry config id :nielsen-naes-ii-nw-settings)]
+  (when-some [data (lookup-entry config id :nielsen-naes-ii-nw-settings)]
     (. builder nielsenNaesIiNwSettings data))
   (.build builder))
 
@@ -4850,13 +4850,13 @@
 | `settings` | java.util.List | [[cdk.support/lookup-entry]] | `:settings` |
 "
   [^CfnChannel$OutputDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :media-package-settings)]
+  (when-some [data (lookup-entry config id :media-package-settings)]
     (. builder mediaPackageSettings data))
-  (when-let [data (lookup-entry config id :multiplex-settings)]
+  (when-some [data (lookup-entry config id :multiplex-settings)]
     (. builder multiplexSettings data))
-  (when-let [data (lookup-entry config id :settings)]
+  (when-some [data (lookup-entry config id :settings)]
     (. builder settings data))
   (.build builder))
 
@@ -4887,13 +4887,13 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnChannel$OutputDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password-param)]
+  (when-some [data (lookup-entry config id :password-param)]
     (. builder passwordParam data))
-  (when-let [data (lookup-entry config id :stream-name)]
+  (when-some [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -4923,11 +4923,11 @@
 | `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
 "
   [^CfnChannel$OutputGroupProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-group-settings)]
+  (when-some [data (lookup-entry config id :output-group-settings)]
     (. builder outputGroupSettings data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
   (.build builder))
 
@@ -4963,23 +4963,23 @@
 | `udpGroupSettings` | software.amazon.awscdk.services.medialive.CfnChannel$UdpGroupSettingsProperty | [[cdk.support/lookup-entry]] | `:udp-group-settings` |
 "
   [^CfnChannel$OutputGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :archive-group-settings)]
+  (when-some [data (lookup-entry config id :archive-group-settings)]
     (. builder archiveGroupSettings data))
-  (when-let [data (lookup-entry config id :cmaf-ingest-group-settings)]
+  (when-some [data (lookup-entry config id :cmaf-ingest-group-settings)]
     (. builder cmafIngestGroupSettings data))
-  (when-let [data (lookup-entry config id :frame-capture-group-settings)]
+  (when-some [data (lookup-entry config id :frame-capture-group-settings)]
     (. builder frameCaptureGroupSettings data))
-  (when-let [data (lookup-entry config id :hls-group-settings)]
+  (when-some [data (lookup-entry config id :hls-group-settings)]
     (. builder hlsGroupSettings data))
-  (when-let [data (lookup-entry config id :media-package-group-settings)]
+  (when-some [data (lookup-entry config id :media-package-group-settings)]
     (. builder mediaPackageGroupSettings data))
-  (when-let [data (lookup-entry config id :ms-smooth-group-settings)]
+  (when-some [data (lookup-entry config id :ms-smooth-group-settings)]
     (. builder msSmoothGroupSettings data))
-  (when-let [data (lookup-entry config id :multiplex-group-settings)]
+  (when-some [data (lookup-entry config id :multiplex-group-settings)]
     (. builder multiplexGroupSettings data))
-  (when-let [data (lookup-entry config id :rtmp-group-settings)]
+  (when-some [data (lookup-entry config id :rtmp-group-settings)]
     (. builder rtmpGroupSettings data))
-  (when-let [data (lookup-entry config id :udp-group-settings)]
+  (when-some [data (lookup-entry config id :udp-group-settings)]
     (. builder udpGroupSettings data))
   (.build builder))
 
@@ -5007,7 +5007,7 @@
 | `destinationRefId` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-ref-id` |
 "
   [^CfnChannel$OutputLocationRefProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-ref-id)]
+  (when-some [data (lookup-entry config id :destination-ref-id)]
     (. builder destinationRefId data))
   (.build builder))
 
@@ -5036,9 +5036,9 @@
 | `pipelineLockingSettings` | java.lang.Object | [[cdk.support/lookup-entry]] | `:pipeline-locking-settings` |
 "
   [^CfnChannel$OutputLockingSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :epoch-locking-settings)]
+  (when-some [data (lookup-entry config id :epoch-locking-settings)]
     (. builder epochLockingSettings data))
-  (when-let [data (lookup-entry config id :pipeline-locking-settings)]
+  (when-some [data (lookup-entry config id :pipeline-locking-settings)]
     (. builder pipelineLockingSettings data))
   (.build builder))
 
@@ -5070,15 +5070,15 @@
 | `videoDescriptionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:video-description-name` |
 "
   [^CfnChannel$OutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-description-names)]
+  (when-some [data (lookup-entry config id :audio-description-names)]
     (. builder audioDescriptionNames data))
-  (when-let [data (lookup-entry config id :caption-description-names)]
+  (when-some [data (lookup-entry config id :caption-description-names)]
     (. builder captionDescriptionNames data))
-  (when-let [data (lookup-entry config id :output-name)]
+  (when-some [data (lookup-entry config id :output-name)]
     (. builder outputName data))
-  (when-let [data (lookup-entry config id :output-settings)]
+  (when-some [data (lookup-entry config id :output-settings)]
     (. builder outputSettings data))
-  (when-let [data (lookup-entry config id :video-description-name)]
+  (when-some [data (lookup-entry config id :video-description-name)]
     (. builder videoDescriptionName data))
   (.build builder))
 
@@ -5114,23 +5114,23 @@
 | `udpOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:udp-output-settings` |
 "
   [^CfnChannel$OutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :archive-output-settings)]
+  (when-some [data (lookup-entry config id :archive-output-settings)]
     (. builder archiveOutputSettings data))
-  (when-let [data (lookup-entry config id :cmaf-ingest-output-settings)]
+  (when-some [data (lookup-entry config id :cmaf-ingest-output-settings)]
     (. builder cmafIngestOutputSettings data))
-  (when-let [data (lookup-entry config id :frame-capture-output-settings)]
+  (when-some [data (lookup-entry config id :frame-capture-output-settings)]
     (. builder frameCaptureOutputSettings data))
-  (when-let [data (lookup-entry config id :hls-output-settings)]
+  (when-some [data (lookup-entry config id :hls-output-settings)]
     (. builder hlsOutputSettings data))
-  (when-let [data (lookup-entry config id :media-package-output-settings)]
+  (when-some [data (lookup-entry config id :media-package-output-settings)]
     (. builder mediaPackageOutputSettings data))
-  (when-let [data (lookup-entry config id :ms-smooth-output-settings)]
+  (when-some [data (lookup-entry config id :ms-smooth-output-settings)]
     (. builder msSmoothOutputSettings data))
-  (when-let [data (lookup-entry config id :multiplex-output-settings)]
+  (when-some [data (lookup-entry config id :multiplex-output-settings)]
     (. builder multiplexOutputSettings data))
-  (when-let [data (lookup-entry config id :rtmp-output-settings)]
+  (when-some [data (lookup-entry config id :rtmp-output-settings)]
     (. builder rtmpOutputSettings data))
-  (when-let [data (lookup-entry config id :udp-output-settings)]
+  (when-some [data (lookup-entry config id :udp-output-settings)]
     (. builder udpOutputSettings data))
   (.build builder))
 
@@ -5175,29 +5175,29 @@
 | `vpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CfnChannelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cdi-input-specification)]
+  (when-some [data (lookup-entry config id :cdi-input-specification)]
     (. builder cdiInputSpecification data))
-  (when-let [data (lookup-entry config id :channel-class)]
+  (when-some [data (lookup-entry config id :channel-class)]
     (. builder channelClass data))
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :encoder-settings)]
+  (when-some [data (lookup-entry config id :encoder-settings)]
     (. builder encoderSettings data))
-  (when-let [data (lookup-entry config id :input-attachments)]
+  (when-some [data (lookup-entry config id :input-attachments)]
     (. builder inputAttachments data))
-  (when-let [data (lookup-entry config id :input-specification)]
+  (when-some [data (lookup-entry config id :input-specification)]
     (. builder inputSpecification data))
-  (when-let [data (lookup-entry config id :log-level)]
+  (when-some [data (lookup-entry config id :log-level)]
     (. builder logLevel data))
-  (when-let [data (lookup-entry config id :maintenance)]
+  (when-some [data (lookup-entry config id :maintenance)]
     (. builder maintenance data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -5245,11 +5245,11 @@
 | `channelsOut` | java.lang.Number | [[cdk.support/lookup-entry]] | `:channels-out` |
 "
   [^CfnChannel$RemixSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-mappings)]
+  (when-some [data (lookup-entry config id :channel-mappings)]
     (. builder channelMappings data))
-  (when-let [data (lookup-entry config id :channels-in)]
+  (when-some [data (lookup-entry config id :channels-in)]
     (. builder channelsIn data))
-  (when-let [data (lookup-entry config id :channels-out)]
+  (when-some [data (lookup-entry config id :channels-out)]
     (. builder channelsOut data))
   (.build builder))
 
@@ -5290,21 +5290,21 @@
 | `restartDelay` | java.lang.Number | [[cdk.support/lookup-entry]] | `:restart-delay` |
 "
   [^CfnChannel$RtmpGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-markers)]
+  (when-some [data (lookup-entry config id :ad-markers)]
     (. builder adMarkers data))
-  (when-let [data (lookup-entry config id :authentication-scheme)]
+  (when-some [data (lookup-entry config id :authentication-scheme)]
     (. builder authenticationScheme data))
-  (when-let [data (lookup-entry config id :cache-full-behavior)]
+  (when-some [data (lookup-entry config id :cache-full-behavior)]
     (. builder cacheFullBehavior data))
-  (when-let [data (lookup-entry config id :cache-length)]
+  (when-some [data (lookup-entry config id :cache-length)]
     (. builder cacheLength data))
-  (when-let [data (lookup-entry config id :caption-data)]
+  (when-some [data (lookup-entry config id :caption-data)]
     (. builder captionData data))
-  (when-let [data (lookup-entry config id :include-filler-nal-units)]
+  (when-some [data (lookup-entry config id :include-filler-nal-units)]
     (. builder includeFillerNalUnits data))
-  (when-let [data (lookup-entry config id :input-loss-action)]
+  (when-some [data (lookup-entry config id :input-loss-action)]
     (. builder inputLossAction data))
-  (when-let [data (lookup-entry config id :restart-delay)]
+  (when-some [data (lookup-entry config id :restart-delay)]
     (. builder restartDelay data))
   (.build builder))
 
@@ -5335,13 +5335,13 @@
 | `numRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-retries` |
 "
   [^CfnChannel$RtmpOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-mode)]
+  (when-some [data (lookup-entry config id :certificate-mode)]
     (. builder certificateMode data))
-  (when-let [data (lookup-entry config id :connection-retry-interval)]
+  (when-some [data (lookup-entry config id :connection-retry-interval)]
     (. builder connectionRetryInterval data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :num-retries)]
+  (when-some [data (lookup-entry config id :num-retries)]
     (. builder numRetries data))
   (.build builder))
 
@@ -5376,9 +5376,9 @@
 | `source608ChannelNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:source608-channel-number` |
 "
   [^CfnChannel$Scte20SourceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :convert608-to708)]
+  (when-some [data (lookup-entry config id :convert608-to708)]
     (. builder convert608To708 data))
-  (when-let [data (lookup-entry config id :source608-channel-number)]
+  (when-some [data (lookup-entry config id :source608-channel-number)]
     (. builder source608ChannelNumber data))
   (.build builder))
 
@@ -5413,9 +5413,9 @@
 | `pid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pid` |
 "
   [^CfnChannel$Scte27SourceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ocr-language)]
+  (when-some [data (lookup-entry config id :ocr-language)]
     (. builder ocrLanguage data))
-  (when-let [data (lookup-entry config id :pid)]
+  (when-some [data (lookup-entry config id :pid)]
     (. builder pid data))
   (.build builder))
 
@@ -5445,11 +5445,11 @@
 | `webDeliveryAllowedFlag` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-delivery-allowed-flag` |
 "
   [^CfnChannel$Scte35SpliceInsertProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-avail-offset)]
+  (when-some [data (lookup-entry config id :ad-avail-offset)]
     (. builder adAvailOffset data))
-  (when-let [data (lookup-entry config id :no-regional-blackout-flag)]
+  (when-some [data (lookup-entry config id :no-regional-blackout-flag)]
     (. builder noRegionalBlackoutFlag data))
-  (when-let [data (lookup-entry config id :web-delivery-allowed-flag)]
+  (when-some [data (lookup-entry config id :web-delivery-allowed-flag)]
     (. builder webDeliveryAllowedFlag data))
   (.build builder))
 
@@ -5479,11 +5479,11 @@
 | `webDeliveryAllowedFlag` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-delivery-allowed-flag` |
 "
   [^CfnChannel$Scte35TimeSignalAposProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-avail-offset)]
+  (when-some [data (lookup-entry config id :ad-avail-offset)]
     (. builder adAvailOffset data))
-  (when-let [data (lookup-entry config id :no-regional-blackout-flag)]
+  (when-some [data (lookup-entry config id :no-regional-blackout-flag)]
     (. builder noRegionalBlackoutFlag data))
-  (when-let [data (lookup-entry config id :web-delivery-allowed-flag)]
+  (when-some [data (lookup-entry config id :web-delivery-allowed-flag)]
     (. builder webDeliveryAllowedFlag data))
   (.build builder))
 
@@ -5518,9 +5518,9 @@
 | `m3U8Settings` | software.amazon.awscdk.services.medialive.CfnChannel$M3u8SettingsProperty | [[cdk.support/lookup-entry]] | `:m3-u8-settings` |
 "
   [^CfnChannel$StandardHlsSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-rendition-sets)]
+  (when-some [data (lookup-entry config id :audio-rendition-sets)]
     (. builder audioRenditionSets data))
-  (when-let [data (lookup-entry config id :m3-u8-settings)]
+  (when-some [data (lookup-entry config id :m3-u8-settings)]
     (. builder m3U8Settings data))
   (.build builder))
 
@@ -5549,9 +5549,9 @@
 | `staticKeyValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:static-key-value` |
 "
   [^CfnChannel$StaticKeySettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-provider-server)]
+  (when-some [data (lookup-entry config id :key-provider-server)]
     (. builder keyProviderServer data))
-  (when-let [data (lookup-entry config id :static-key-value)]
+  (when-some [data (lookup-entry config id :static-key-value)]
     (. builder staticKeyValue data))
   (.build builder))
 
@@ -5586,9 +5586,9 @@
 | `pageNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:page-number` |
 "
   [^CfnChannel$TeletextSourceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :output-rectangle)]
+  (when-some [data (lookup-entry config id :output-rectangle)]
     (. builder outputRectangle data))
-  (when-let [data (lookup-entry config id :page-number)]
+  (when-some [data (lookup-entry config id :page-number)]
     (. builder pageNumber data))
   (.build builder))
 
@@ -5617,9 +5617,9 @@
 | `strength` | java.lang.String | [[cdk.support/lookup-entry]] | `:strength` |
 "
   [^CfnChannel$TemporalFilterSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :post-filter-sharpening)]
+  (when-some [data (lookup-entry config id :post-filter-sharpening)]
     (. builder postFilterSharpening data))
-  (when-let [data (lookup-entry config id :strength)]
+  (when-some [data (lookup-entry config id :strength)]
     (. builder strength data))
   (.build builder))
 
@@ -5647,7 +5647,7 @@
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 "
   [^CfnChannel$ThumbnailConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
 
@@ -5677,11 +5677,11 @@
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnChannel$TimecodeBurninSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :font-size)]
+  (when-some [data (lookup-entry config id :font-size)]
     (. builder fontSize data))
-  (when-let [data (lookup-entry config id :position)]
+  (when-some [data (lookup-entry config id :position)]
     (. builder position data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -5710,9 +5710,9 @@
 | `syncThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:sync-threshold` |
 "
   [^CfnChannel$TimecodeConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :sync-threshold)]
+  (when-some [data (lookup-entry config id :sync-threshold)]
     (. builder syncThreshold data))
   (.build builder))
 
@@ -5740,7 +5740,7 @@
 | `styleControl` | java.lang.String | [[cdk.support/lookup-entry]] | `:style-control` |
 "
   [^CfnChannel$TtmlDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :style-control)]
+  (when-some [data (lookup-entry config id :style-control)]
     (. builder styleControl data))
   (.build builder))
 
@@ -5768,7 +5768,7 @@
 | `m2TsSettings` | software.amazon.awscdk.services.medialive.CfnChannel$M2tsSettingsProperty | [[cdk.support/lookup-entry]] | `:m2-ts-settings` |
 "
   [^CfnChannel$UdpContainerSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :m2-ts-settings)]
+  (when-some [data (lookup-entry config id :m2-ts-settings)]
     (. builder m2TsSettings data))
   (.build builder))
 
@@ -5798,11 +5798,11 @@
 | `timedMetadataId3Period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timed-metadata-id3-period` |
 "
   [^CfnChannel$UdpGroupSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-loss-action)]
+  (when-some [data (lookup-entry config id :input-loss-action)]
     (. builder inputLossAction data))
-  (when-let [data (lookup-entry config id :timed-metadata-id3-frame)]
+  (when-some [data (lookup-entry config id :timed-metadata-id3-frame)]
     (. builder timedMetadataId3Frame data))
-  (when-let [data (lookup-entry config id :timed-metadata-id3-period)]
+  (when-some [data (lookup-entry config id :timed-metadata-id3-period)]
     (. builder timedMetadataId3Period data))
   (.build builder))
 
@@ -5833,13 +5833,13 @@
 | `fecOutputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fec-output-settings` |
 "
   [^CfnChannel$UdpOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :buffer-msec)]
+  (when-some [data (lookup-entry config id :buffer-msec)]
     (. builder bufferMsec data))
-  (when-let [data (lookup-entry config id :container-settings)]
+  (when-some [data (lookup-entry config id :container-settings)]
     (. builder containerSettings data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :fec-output-settings)]
+  (when-some [data (lookup-entry config id :fec-output-settings)]
     (. builder fecOutputSettings data))
   (.build builder))
 
@@ -5868,9 +5868,9 @@
 | `videoBlackThresholdMsec` | java.lang.Number | [[cdk.support/lookup-entry]] | `:video-black-threshold-msec` |
 "
   [^CfnChannel$VideoBlackFailoverSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :black-detect-threshold)]
+  (when-some [data (lookup-entry config id :black-detect-threshold)]
     (. builder blackDetectThreshold data))
-  (when-let [data (lookup-entry config id :video-black-threshold-msec)]
+  (when-some [data (lookup-entry config id :video-black-threshold-msec)]
     (. builder videoBlackThresholdMsec data))
   (.build builder))
 
@@ -5901,13 +5901,13 @@
 | `mpeg2Settings` | software.amazon.awscdk.services.medialive.CfnChannel$Mpeg2SettingsProperty | [[cdk.support/lookup-entry]] | `:mpeg2-settings` |
 "
   [^CfnChannel$VideoCodecSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :frame-capture-settings)]
+  (when-some [data (lookup-entry config id :frame-capture-settings)]
     (. builder frameCaptureSettings data))
-  (when-let [data (lookup-entry config id :h264-settings)]
+  (when-some [data (lookup-entry config id :h264-settings)]
     (. builder h264Settings data))
-  (when-let [data (lookup-entry config id :h265-settings)]
+  (when-some [data (lookup-entry config id :h265-settings)]
     (. builder h265Settings data))
-  (when-let [data (lookup-entry config id :mpeg2-settings)]
+  (when-some [data (lookup-entry config id :mpeg2-settings)]
     (. builder mpeg2Settings data))
   (.build builder))
 
@@ -5941,19 +5941,19 @@
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^CfnChannel$VideoDescriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :codec-settings)]
+  (when-some [data (lookup-entry config id :codec-settings)]
     (. builder codecSettings data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :respond-to-afd)]
+  (when-some [data (lookup-entry config id :respond-to-afd)]
     (. builder respondToAfd data))
-  (when-let [data (lookup-entry config id :scaling-behavior)]
+  (when-some [data (lookup-entry config id :scaling-behavior)]
     (. builder scalingBehavior data))
-  (when-let [data (lookup-entry config id :sharpness)]
+  (when-some [data (lookup-entry config id :sharpness)]
     (. builder sharpness data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -5981,7 +5981,7 @@
 | `hdr10Settings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hdr10-settings` |
 "
   [^CfnChannel$VideoSelectorColorSpaceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hdr10-settings)]
+  (when-some [data (lookup-entry config id :hdr10-settings)]
     (. builder hdr10Settings data))
   (.build builder))
 
@@ -6009,7 +6009,7 @@
 | `pid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pid` |
 "
   [^CfnChannel$VideoSelectorPidProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :pid)]
+  (when-some [data (lookup-entry config id :pid)]
     (. builder pid data))
   (.build builder))
 
@@ -6037,7 +6037,7 @@
 | `programId` | java.lang.Number | [[cdk.support/lookup-entry]] | `:program-id` |
 "
   [^CfnChannel$VideoSelectorProgramIdProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :program-id)]
+  (when-some [data (lookup-entry config id :program-id)]
     (. builder programId data))
   (.build builder))
 
@@ -6068,13 +6068,13 @@
 | `selectorSettings` | software.amazon.awscdk.services.medialive.CfnChannel$VideoSelectorSettingsProperty | [[cdk.support/lookup-entry]] | `:selector-settings` |
 "
   [^CfnChannel$VideoSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :color-space)]
+  (when-some [data (lookup-entry config id :color-space)]
     (. builder colorSpace data))
-  (when-let [data (lookup-entry config id :color-space-settings)]
+  (when-some [data (lookup-entry config id :color-space-settings)]
     (. builder colorSpaceSettings data))
-  (when-let [data (lookup-entry config id :color-space-usage)]
+  (when-some [data (lookup-entry config id :color-space-usage)]
     (. builder colorSpaceUsage data))
-  (when-let [data (lookup-entry config id :selector-settings)]
+  (when-some [data (lookup-entry config id :selector-settings)]
     (. builder selectorSettings data))
   (.build builder))
 
@@ -6103,9 +6103,9 @@
 | `videoSelectorProgramId` | software.amazon.awscdk.services.medialive.CfnChannel$VideoSelectorProgramIdProperty | [[cdk.support/lookup-entry]] | `:video-selector-program-id` |
 "
   [^CfnChannel$VideoSelectorSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :video-selector-pid)]
+  (when-some [data (lookup-entry config id :video-selector-pid)]
     (. builder videoSelectorPid data))
-  (when-let [data (lookup-entry config id :video-selector-program-id)]
+  (when-some [data (lookup-entry config id :video-selector-program-id)]
     (. builder videoSelectorProgramId data))
   (.build builder))
 
@@ -6135,11 +6135,11 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnChannel$VpcOutputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :public-address-allocation-ids)]
+  (when-some [data (lookup-entry config id :public-address-allocation-ids)]
     (. builder publicAddressAllocationIds data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -6169,11 +6169,11 @@
 | `sampleRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:sample-rate` |
 "
   [^CfnChannel$WavSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bit-depth)]
+  (when-some [data (lookup-entry config id :bit-depth)]
     (. builder bitDepth data))
-  (when-let [data (lookup-entry config id :coding-mode)]
+  (when-some [data (lookup-entry config id :coding-mode)]
     (. builder codingMode data))
-  (when-let [data (lookup-entry config id :sample-rate)]
+  (when-some [data (lookup-entry config id :sample-rate)]
     (. builder sampleRate data))
   (.build builder))
 
@@ -6201,7 +6201,7 @@
 | `styleControl` | java.lang.String | [[cdk.support/lookup-entry]] | `:style-control` |
 "
   [^CfnChannel$WebvttDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :style-control)]
+  (when-some [data (lookup-entry config id :style-control)]
     (. builder styleControl data))
   (.build builder))
 
@@ -6238,25 +6238,25 @@
 | `vpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CfnInput$Builder builder id config]
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :input-devices)]
+  (when-some [data (lookup-entry config id :input-devices)]
     (. builder inputDevices data))
-  (when-let [data (lookup-entry config id :input-security-groups)]
+  (when-some [data (lookup-entry config id :input-security-groups)]
     (. builder inputSecurityGroups data))
-  (when-let [data (lookup-entry config id :media-connect-flows)]
+  (when-some [data (lookup-entry config id :media-connect-flows)]
     (. builder mediaConnectFlows data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -6284,7 +6284,7 @@
 | `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |
 "
   [^CfnInput$InputDestinationRequestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :stream-name)]
+  (when-some [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
   (.build builder))
 
@@ -6312,7 +6312,7 @@
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 "
   [^CfnInput$InputDeviceRequestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
   (.build builder))
 
@@ -6340,7 +6340,7 @@
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 "
   [^CfnInput$InputDeviceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
   (.build builder))
 
@@ -6370,11 +6370,11 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnInput$InputSourceRequestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password-param)]
+  (when-some [data (lookup-entry config id :password-param)]
     (. builder passwordParam data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -6403,9 +6403,9 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnInput$InputVpcRequestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -6433,7 +6433,7 @@
 | `flowArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:flow-arn` |
 "
   [^CfnInput$MediaConnectFlowRequestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
   (.build builder))
 
@@ -6470,25 +6470,25 @@
 | `vpc` | software.amazon.awscdk.services.medialive.CfnInput$InputVpcRequestProperty | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CfnInputProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :input-devices)]
+  (when-some [data (lookup-entry config id :input-devices)]
     (. builder inputDevices data))
-  (when-let [data (lookup-entry config id :input-security-groups)]
+  (when-some [data (lookup-entry config id :input-security-groups)]
     (. builder inputSecurityGroups data))
-  (when-let [data (lookup-entry config id :media-connect-flows)]
+  (when-some [data (lookup-entry config id :media-connect-flows)]
     (. builder mediaConnectFlows data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -6517,9 +6517,9 @@
 | `whitelistRules` | java.util.List | [[cdk.support/lookup-entry]] | `:whitelist-rules` |
 "
   [^CfnInputSecurityGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :whitelist-rules)]
+  (when-some [data (lookup-entry config id :whitelist-rules)]
     (. builder whitelistRules data))
   (.build builder))
 
@@ -6547,7 +6547,7 @@
 | `cidr` | java.lang.String | [[cdk.support/lookup-entry]] | `:cidr` |
 "
   [^CfnInputSecurityGroup$InputWhitelistRuleCidrProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cidr)]
+  (when-some [data (lookup-entry config id :cidr)]
     (. builder cidr data))
   (.build builder))
 
@@ -6576,9 +6576,9 @@
 | `whitelistRules` | java.util.List | [[cdk.support/lookup-entry]] | `:whitelist-rules` |
 "
   [^CfnInputSecurityGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :whitelist-rules)]
+  (when-some [data (lookup-entry config id :whitelist-rules)]
     (. builder whitelistRules data))
   (.build builder))
 
@@ -6610,15 +6610,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMultiplex$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :multiplex-settings)]
+  (when-some [data (lookup-entry config id :multiplex-settings)]
     (. builder multiplexSettings data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -6646,7 +6646,7 @@
 | `entitlementArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:entitlement-arn` |
 "
   [^CfnMultiplex$MultiplexMediaConnectOutputDestinationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :entitlement-arn)]
+  (when-some [data (lookup-entry config id :entitlement-arn)]
     (. builder entitlementArn data))
   (.build builder))
 
@@ -6674,7 +6674,7 @@
 | `multiplexMediaConnectOutputDestinationSettings` | software.amazon.awscdk.services.medialive.CfnMultiplex$MultiplexMediaConnectOutputDestinationSettingsProperty | [[cdk.support/lookup-entry]] | `:multiplex-media-connect-output-destination-settings` |
 "
   [^CfnMultiplex$MultiplexOutputDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :multiplex-media-connect-output-destination-settings)]
+  (when-some [data (lookup-entry config id :multiplex-media-connect-output-destination-settings)]
     (. builder multiplexMediaConnectOutputDestinationSettings data))
   (.build builder))
 
@@ -6705,13 +6705,13 @@
 | `transportStreamReservedBitrate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:transport-stream-reserved-bitrate` |
 "
   [^CfnMultiplex$MultiplexSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maximum-video-buffer-delay-milliseconds)]
+  (when-some [data (lookup-entry config id :maximum-video-buffer-delay-milliseconds)]
     (. builder maximumVideoBufferDelayMilliseconds data))
-  (when-let [data (lookup-entry config id :transport-stream-bitrate)]
+  (when-some [data (lookup-entry config id :transport-stream-bitrate)]
     (. builder transportStreamBitrate data))
-  (when-let [data (lookup-entry config id :transport-stream-id)]
+  (when-some [data (lookup-entry config id :transport-stream-id)]
     (. builder transportStreamId data))
-  (when-let [data (lookup-entry config id :transport-stream-reserved-bitrate)]
+  (when-some [data (lookup-entry config id :transport-stream-reserved-bitrate)]
     (. builder transportStreamReservedBitrate data))
   (.build builder))
 
@@ -6743,15 +6743,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMultiplexProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :multiplex-settings)]
+  (when-some [data (lookup-entry config id :multiplex-settings)]
     (. builder multiplexSettings data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -6785,19 +6785,19 @@
 | `programName` | java.lang.String | [[cdk.support/lookup-entry]] | `:program-name` |
 "
   [^CfnMultiplexprogram$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :multiplex-id)]
+  (when-some [data (lookup-entry config id :multiplex-id)]
     (. builder multiplexId data))
-  (when-let [data (lookup-entry config id :multiplex-program-settings)]
+  (when-some [data (lookup-entry config id :multiplex-program-settings)]
     (. builder multiplexProgramSettings data))
-  (when-let [data (lookup-entry config id :packet-identifiers-map)]
+  (when-some [data (lookup-entry config id :packet-identifiers-map)]
     (. builder packetIdentifiersMap data))
-  (when-let [data (lookup-entry config id :pipeline-details)]
+  (when-some [data (lookup-entry config id :pipeline-details)]
     (. builder pipelineDetails data))
-  (when-let [data (lookup-entry config id :preferred-channel-pipeline)]
+  (when-some [data (lookup-entry config id :preferred-channel-pipeline)]
     (. builder preferredChannelPipeline data))
-  (when-let [data (lookup-entry config id :program-name)]
+  (when-some [data (lookup-entry config id :program-name)]
     (. builder programName data))
   (.build builder))
 
@@ -6837,31 +6837,31 @@
 | `videoPid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:video-pid` |
 "
   [^CfnMultiplexprogram$MultiplexProgramPacketIdentifiersMapProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-pids)]
+  (when-some [data (lookup-entry config id :audio-pids)]
     (. builder audioPids data))
-  (when-let [data (lookup-entry config id :dvb-sub-pids)]
+  (when-some [data (lookup-entry config id :dvb-sub-pids)]
     (. builder dvbSubPids data))
-  (when-let [data (lookup-entry config id :dvb-teletext-pid)]
+  (when-some [data (lookup-entry config id :dvb-teletext-pid)]
     (. builder dvbTeletextPid data))
-  (when-let [data (lookup-entry config id :etv-platform-pid)]
+  (when-some [data (lookup-entry config id :etv-platform-pid)]
     (. builder etvPlatformPid data))
-  (when-let [data (lookup-entry config id :etv-signal-pid)]
+  (when-some [data (lookup-entry config id :etv-signal-pid)]
     (. builder etvSignalPid data))
-  (when-let [data (lookup-entry config id :klv-data-pids)]
+  (when-some [data (lookup-entry config id :klv-data-pids)]
     (. builder klvDataPids data))
-  (when-let [data (lookup-entry config id :pcr-pid)]
+  (when-some [data (lookup-entry config id :pcr-pid)]
     (. builder pcrPid data))
-  (when-let [data (lookup-entry config id :pmt-pid)]
+  (when-some [data (lookup-entry config id :pmt-pid)]
     (. builder pmtPid data))
-  (when-let [data (lookup-entry config id :private-metadata-pid)]
+  (when-some [data (lookup-entry config id :private-metadata-pid)]
     (. builder privateMetadataPid data))
-  (when-let [data (lookup-entry config id :scte27-pids)]
+  (when-some [data (lookup-entry config id :scte27-pids)]
     (. builder scte27Pids data))
-  (when-let [data (lookup-entry config id :scte35-pid)]
+  (when-some [data (lookup-entry config id :scte35-pid)]
     (. builder scte35Pid data))
-  (when-let [data (lookup-entry config id :timed-metadata-pid)]
+  (when-some [data (lookup-entry config id :timed-metadata-pid)]
     (. builder timedMetadataPid data))
-  (when-let [data (lookup-entry config id :video-pid)]
+  (when-some [data (lookup-entry config id :video-pid)]
     (. builder videoPid data))
   (.build builder))
 
@@ -6890,9 +6890,9 @@
 | `pipelineId` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-id` |
 "
   [^CfnMultiplexprogram$MultiplexProgramPipelineDetailProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :active-channel-pipeline)]
+  (when-some [data (lookup-entry config id :active-channel-pipeline)]
     (. builder activeChannelPipeline data))
-  (when-let [data (lookup-entry config id :pipeline-id)]
+  (when-some [data (lookup-entry config id :pipeline-id)]
     (. builder pipelineId data))
   (.build builder))
 
@@ -6921,9 +6921,9 @@
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^CfnMultiplexprogram$MultiplexProgramServiceDescriptorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :provider-name)]
+  (when-some [data (lookup-entry config id :provider-name)]
     (. builder providerName data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -6954,13 +6954,13 @@
 | `videoSettings` | software.amazon.awscdk.services.medialive.CfnMultiplexprogram$MultiplexVideoSettingsProperty | [[cdk.support/lookup-entry]] | `:video-settings` |
 "
   [^CfnMultiplexprogram$MultiplexProgramSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :preferred-channel-pipeline)]
+  (when-some [data (lookup-entry config id :preferred-channel-pipeline)]
     (. builder preferredChannelPipeline data))
-  (when-let [data (lookup-entry config id :program-number)]
+  (when-some [data (lookup-entry config id :program-number)]
     (. builder programNumber data))
-  (when-let [data (lookup-entry config id :service-descriptor)]
+  (when-some [data (lookup-entry config id :service-descriptor)]
     (. builder serviceDescriptor data))
-  (when-let [data (lookup-entry config id :video-settings)]
+  (when-some [data (lookup-entry config id :video-settings)]
     (. builder videoSettings data))
   (.build builder))
 
@@ -6990,11 +6990,11 @@
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^CfnMultiplexprogram$MultiplexStatmuxVideoSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maximum-bitrate)]
+  (when-some [data (lookup-entry config id :maximum-bitrate)]
     (. builder maximumBitrate data))
-  (when-let [data (lookup-entry config id :minimum-bitrate)]
+  (when-some [data (lookup-entry config id :minimum-bitrate)]
     (. builder minimumBitrate data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -7023,9 +7023,9 @@
 | `statmuxSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statmux-settings` |
 "
   [^CfnMultiplexprogram$MultiplexVideoSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :constant-bitrate)]
+  (when-some [data (lookup-entry config id :constant-bitrate)]
     (. builder constantBitrate data))
-  (when-let [data (lookup-entry config id :statmux-settings)]
+  (when-some [data (lookup-entry config id :statmux-settings)]
     (. builder statmuxSettings data))
   (.build builder))
 
@@ -7059,19 +7059,19 @@
 | `programName` | java.lang.String | [[cdk.support/lookup-entry]] | `:program-name` |
 "
   [^CfnMultiplexprogramProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :multiplex-id)]
+  (when-some [data (lookup-entry config id :multiplex-id)]
     (. builder multiplexId data))
-  (when-let [data (lookup-entry config id :multiplex-program-settings)]
+  (when-some [data (lookup-entry config id :multiplex-program-settings)]
     (. builder multiplexProgramSettings data))
-  (when-let [data (lookup-entry config id :packet-identifiers-map)]
+  (when-some [data (lookup-entry config id :packet-identifiers-map)]
     (. builder packetIdentifiersMap data))
-  (when-let [data (lookup-entry config id :pipeline-details)]
+  (when-some [data (lookup-entry config id :pipeline-details)]
     (. builder pipelineDetails data))
-  (when-let [data (lookup-entry config id :preferred-channel-pipeline)]
+  (when-some [data (lookup-entry config id :preferred-channel-pipeline)]
     (. builder preferredChannelPipeline data))
-  (when-let [data (lookup-entry config id :program-name)]
+  (when-some [data (lookup-entry config id :program-name)]
     (. builder programName data))
   (.build builder))
 

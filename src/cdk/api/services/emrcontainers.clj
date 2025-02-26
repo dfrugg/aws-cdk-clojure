@@ -22,11 +22,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnVirtualCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-provider)]
+  (when-some [data (lookup-entry config id :container-provider)]
     (. builder containerProvider data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -54,7 +54,7 @@
 | `eksInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:eks-info` |
 "
   [^CfnVirtualCluster$ContainerInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :eks-info)]
+  (when-some [data (lookup-entry config id :eks-info)]
     (. builder eksInfo data))
   (.build builder))
 
@@ -84,11 +84,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnVirtualCluster$ContainerProviderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :info)]
+  (when-some [data (lookup-entry config id :info)]
     (. builder info data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -116,7 +116,7 @@
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
   [^CfnVirtualCluster$EksInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
 
@@ -146,11 +146,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnVirtualClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-provider)]
+  (when-some [data (lookup-entry config id :container-provider)]
     (. builder containerProvider data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

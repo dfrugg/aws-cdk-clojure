@@ -37,9 +37,9 @@
 | `historicalOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:historical-options` |
 "
   [^CfnBudget$AutoAdjustDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-adjust-type)]
+  (when-some [data (lookup-entry config id :auto-adjust-type)]
     (. builder autoAdjustType data))
-  (when-let [data (lookup-entry config id :historical-options)]
+  (when-some [data (lookup-entry config id :historical-options)]
     (. builder historicalOptions data))
   (.build builder))
 
@@ -75,23 +75,23 @@
 | `timeUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-unit` |
 "
   [^CfnBudget$BudgetDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-adjust-data)]
+  (when-some [data (lookup-entry config id :auto-adjust-data)]
     (. builder autoAdjustData data))
-  (when-let [data (lookup-entry config id :budget-limit)]
+  (when-some [data (lookup-entry config id :budget-limit)]
     (. builder budgetLimit data))
-  (when-let [data (lookup-entry config id :budget-name)]
+  (when-some [data (lookup-entry config id :budget-name)]
     (. builder budgetName data))
-  (when-let [data (lookup-entry config id :budget-type)]
+  (when-some [data (lookup-entry config id :budget-type)]
     (. builder budgetType data))
-  (when-let [data (lookup-entry config id :cost-filters)]
+  (when-some [data (lookup-entry config id :cost-filters)]
     (. builder costFilters data))
-  (when-let [data (lookup-entry config id :cost-types)]
+  (when-some [data (lookup-entry config id :cost-types)]
     (. builder costTypes data))
-  (when-let [data (lookup-entry config id :planned-budget-limits)]
+  (when-some [data (lookup-entry config id :planned-budget-limits)]
     (. builder plannedBudgetLimits data))
-  (when-let [data (lookup-entry config id :time-period)]
+  (when-some [data (lookup-entry config id :time-period)]
     (. builder timePeriod data))
-  (when-let [data (lookup-entry config id :time-unit)]
+  (when-some [data (lookup-entry config id :time-unit)]
     (. builder timeUnit data))
   (.build builder))
 
@@ -121,11 +121,11 @@
 | `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnBudget$Builder builder id config]
-  (when-let [data (lookup-entry config id :budget)]
+  (when-some [data (lookup-entry config id :budget)]
     (. builder budget data))
-  (when-let [data (lookup-entry config id :notifications-with-subscribers)]
+  (when-some [data (lookup-entry config id :notifications-with-subscribers)]
     (. builder notificationsWithSubscribers data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
   (.build builder))
 
@@ -163,27 +163,27 @@
 | `useBlended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-blended` |
 "
   [^CfnBudget$CostTypesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :include-credit)]
+  (when-some [data (lookup-entry config id :include-credit)]
     (. builder includeCredit data))
-  (when-let [data (lookup-entry config id :include-discount)]
+  (when-some [data (lookup-entry config id :include-discount)]
     (. builder includeDiscount data))
-  (when-let [data (lookup-entry config id :include-other-subscription)]
+  (when-some [data (lookup-entry config id :include-other-subscription)]
     (. builder includeOtherSubscription data))
-  (when-let [data (lookup-entry config id :include-recurring)]
+  (when-some [data (lookup-entry config id :include-recurring)]
     (. builder includeRecurring data))
-  (when-let [data (lookup-entry config id :include-refund)]
+  (when-some [data (lookup-entry config id :include-refund)]
     (. builder includeRefund data))
-  (when-let [data (lookup-entry config id :include-subscription)]
+  (when-some [data (lookup-entry config id :include-subscription)]
     (. builder includeSubscription data))
-  (when-let [data (lookup-entry config id :include-support)]
+  (when-some [data (lookup-entry config id :include-support)]
     (. builder includeSupport data))
-  (when-let [data (lookup-entry config id :include-tax)]
+  (when-some [data (lookup-entry config id :include-tax)]
     (. builder includeTax data))
-  (when-let [data (lookup-entry config id :include-upfront)]
+  (when-some [data (lookup-entry config id :include-upfront)]
     (. builder includeUpfront data))
-  (when-let [data (lookup-entry config id :use-amortized)]
+  (when-some [data (lookup-entry config id :use-amortized)]
     (. builder useAmortized data))
-  (when-let [data (lookup-entry config id :use-blended)]
+  (when-some [data (lookup-entry config id :use-blended)]
     (. builder useBlended data))
   (.build builder))
 
@@ -211,7 +211,7 @@
 | `budgetAdjustmentPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:budget-adjustment-period` |
 "
   [^CfnBudget$HistoricalOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :budget-adjustment-period)]
+  (when-some [data (lookup-entry config id :budget-adjustment-period)]
     (. builder budgetAdjustmentPeriod data))
   (.build builder))
 
@@ -242,13 +242,13 @@
 | `thresholdType` | java.lang.String | [[cdk.support/lookup-entry]] | `:threshold-type` |
 "
   [^CfnBudget$NotificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :comparison-operator)]
+  (when-some [data (lookup-entry config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :notification-type)]
+  (when-some [data (lookup-entry config id :notification-type)]
     (. builder notificationType data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (lookup-entry config id :threshold-type)]
+  (when-some [data (lookup-entry config id :threshold-type)]
     (. builder thresholdType data))
   (.build builder))
 
@@ -277,9 +277,9 @@
 | `subscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:subscribers` |
 "
   [^CfnBudget$NotificationWithSubscribersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :notification)]
+  (when-some [data (lookup-entry config id :notification)]
     (. builder notification data))
-  (when-let [data (lookup-entry config id :subscribers)]
+  (when-some [data (lookup-entry config id :subscribers)]
     (. builder subscribers data))
   (.build builder))
 
@@ -309,11 +309,11 @@
 | `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnBudgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :budget)]
+  (when-some [data (lookup-entry config id :budget)]
     (. builder budget data))
-  (when-let [data (lookup-entry config id :notifications-with-subscribers)]
+  (when-some [data (lookup-entry config id :notifications-with-subscribers)]
     (. builder notificationsWithSubscribers data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
   (.build builder))
 
@@ -342,9 +342,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBudget$ResourceTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -373,9 +373,9 @@
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnBudget$SpendProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :amount)]
+  (when-some [data (lookup-entry config id :amount)]
     (. builder amount data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -404,9 +404,9 @@
 | `subscriptionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-type` |
 "
   [^CfnBudget$SubscriberProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :address)]
+  (when-some [data (lookup-entry config id :address)]
     (. builder address data))
-  (when-let [data (lookup-entry config id :subscription-type)]
+  (when-some [data (lookup-entry config id :subscription-type)]
     (. builder subscriptionType data))
   (.build builder))
 
@@ -435,9 +435,9 @@
 | `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
 "
   [^CfnBudget$TimePeriodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
   (.build builder))
 
@@ -466,9 +466,9 @@
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBudgetsAction$ActionThresholdProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -504,23 +504,23 @@
 | `subscribers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscribers` |
 "
   [^CfnBudgetsAction$Builder builder id config]
-  (when-let [data (lookup-entry config id :action-threshold)]
+  (when-some [data (lookup-entry config id :action-threshold)]
     (. builder actionThreshold data))
-  (when-let [data (lookup-entry config id :action-type)]
+  (when-some [data (lookup-entry config id :action-type)]
     (. builder actionType data))
-  (when-let [data (lookup-entry config id :approval-model)]
+  (when-some [data (lookup-entry config id :approval-model)]
     (. builder approvalModel data))
-  (when-let [data (lookup-entry config id :budget-name)]
+  (when-some [data (lookup-entry config id :budget-name)]
     (. builder budgetName data))
-  (when-let [data (lookup-entry config id :definition)]
+  (when-some [data (lookup-entry config id :definition)]
     (. builder definition data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :notification-type)]
+  (when-some [data (lookup-entry config id :notification-type)]
     (. builder notificationType data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
-  (when-let [data (lookup-entry config id :subscribers)]
+  (when-some [data (lookup-entry config id :subscribers)]
     (. builder subscribers data))
   (.build builder))
 
@@ -550,11 +550,11 @@
 | `ssmActionDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssm-action-definition` |
 "
   [^CfnBudgetsAction$DefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :iam-action-definition)]
+  (when-some [data (lookup-entry config id :iam-action-definition)]
     (. builder iamActionDefinition data))
-  (when-let [data (lookup-entry config id :scp-action-definition)]
+  (when-some [data (lookup-entry config id :scp-action-definition)]
     (. builder scpActionDefinition data))
-  (when-let [data (lookup-entry config id :ssm-action-definition)]
+  (when-some [data (lookup-entry config id :ssm-action-definition)]
     (. builder ssmActionDefinition data))
   (.build builder))
 
@@ -585,13 +585,13 @@
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnBudgetsAction$IamActionDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :policy-arn)]
+  (when-some [data (lookup-entry config id :policy-arn)]
     (. builder policyArn data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -627,23 +627,23 @@
 | `subscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:subscribers` |
 "
   [^CfnBudgetsActionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action-threshold)]
+  (when-some [data (lookup-entry config id :action-threshold)]
     (. builder actionThreshold data))
-  (when-let [data (lookup-entry config id :action-type)]
+  (when-some [data (lookup-entry config id :action-type)]
     (. builder actionType data))
-  (when-let [data (lookup-entry config id :approval-model)]
+  (when-some [data (lookup-entry config id :approval-model)]
     (. builder approvalModel data))
-  (when-let [data (lookup-entry config id :budget-name)]
+  (when-some [data (lookup-entry config id :budget-name)]
     (. builder budgetName data))
-  (when-let [data (lookup-entry config id :definition)]
+  (when-some [data (lookup-entry config id :definition)]
     (. builder definition data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :notification-type)]
+  (when-some [data (lookup-entry config id :notification-type)]
     (. builder notificationType data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
-  (when-let [data (lookup-entry config id :subscribers)]
+  (when-some [data (lookup-entry config id :subscribers)]
     (. builder subscribers data))
   (.build builder))
 
@@ -672,9 +672,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBudgetsAction$ResourceTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -703,9 +703,9 @@
 | `targetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:target-ids` |
 "
   [^CfnBudgetsAction$ScpActionDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-id)]
+  (when-some [data (lookup-entry config id :policy-id)]
     (. builder policyId data))
-  (when-let [data (lookup-entry config id :target-ids)]
+  (when-some [data (lookup-entry config id :target-ids)]
     (. builder targetIds data))
   (.build builder))
 
@@ -735,11 +735,11 @@
 | `subtype` | java.lang.String | [[cdk.support/lookup-entry]] | `:subtype` |
 "
   [^CfnBudgetsAction$SsmActionDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-ids)]
+  (when-some [data (lookup-entry config id :instance-ids)]
     (. builder instanceIds data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :subtype)]
+  (when-some [data (lookup-entry config id :subtype)]
     (. builder subtype data))
   (.build builder))
 
@@ -768,9 +768,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnBudgetsAction$SubscriberProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :address)]
+  (when-some [data (lookup-entry config id :address)]
     (. builder address data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 

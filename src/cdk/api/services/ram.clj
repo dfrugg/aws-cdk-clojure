@@ -22,13 +22,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPermission$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :policy-template)]
+  (when-some [data (lookup-entry config id :policy-template)]
     (. builder policyTemplate data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -59,13 +59,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPermissionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :policy-template)]
+  (when-some [data (lookup-entry config id :policy-template)]
     (. builder policyTemplate data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -99,19 +99,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceShare$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-external-principals)]
+  (when-some [data (lookup-entry config id :allow-external-principals)]
     (. builder allowExternalPrincipals data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :permission-arns)]
+  (when-some [data (lookup-entry config id :permission-arns)]
     (. builder permissionArns data))
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -145,19 +145,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceShareProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-external-principals)]
+  (when-some [data (lookup-entry config id :allow-external-principals)]
     (. builder allowExternalPrincipals data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :permission-arns)]
+  (when-some [data (lookup-entry config id :permission-arns)]
     (. builder permissionArns data))
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

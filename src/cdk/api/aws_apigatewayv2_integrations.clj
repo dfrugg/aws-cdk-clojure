@@ -43,13 +43,13 @@
 | `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^HttpAlbIntegration$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :secure-server-name)]
+  (when-some [data (lookup-entry config id :secure-server-name)]
     (. builder secureServerName data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -83,13 +83,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^HttpAlbIntegrationProps$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :secure-server-name)]
+  (when-some [data (lookup-entry config id :secure-server-name)]
     (. builder secureServerName data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -118,9 +118,9 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | `payloadFormatVersion` | software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion | [[cdk.support/lookup-entry]] | `:payload-format-version` |
 "
   [^HttpLambdaIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :payload-format-version)]
+  (when-some [data (lookup-entry config id :payload-format-version)]
     (. builder payloadFormatVersion data))
   (.build builder))
 
@@ -152,9 +152,9 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | `payloadFormatVersion` | software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion | [[cdk.support/lookup-entry]] | `:payload-format-version` |
 "
   [^HttpLambdaIntegrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :payload-format-version)]
+  (when-some [data (lookup-entry config id :payload-format-version)]
     (. builder payloadFormatVersion data))
   (.build builder))
 
@@ -185,13 +185,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^HttpNlbIntegration$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :secure-server-name)]
+  (when-some [data (lookup-entry config id :secure-server-name)]
     (. builder secureServerName data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -225,13 +225,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^HttpNlbIntegrationProps$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :secure-server-name)]
+  (when-some [data (lookup-entry config id :secure-server-name)]
     (. builder secureServerName data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -262,13 +262,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^HttpPrivateIntegrationOptions$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :secure-server-name)]
+  (when-some [data (lookup-entry config id :secure-server-name)]
     (. builder secureServerName data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -299,13 +299,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^HttpServiceDiscoveryIntegration$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :secure-server-name)]
+  (when-some [data (lookup-entry config id :secure-server-name)]
     (. builder secureServerName data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -339,13 +339,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.servicedi
 | `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
 "
   [^HttpServiceDiscoveryIntegrationProps$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :secure-server-name)]
+  (when-some [data (lookup-entry config id :secure-server-name)]
     (. builder secureServerName data))
-  (when-let [data (lookup-entry config id :vpc-link)]
+  (when-some [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
 
@@ -375,11 +375,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.servicedi
 | `subtype` | software.amazon.awscdk.services.apigatewayv2.HttpIntegrationSubtype | [[cdk.api.services.apigatewayv2/http-integration-subtype]] | `:subtype` |
 "
   [^HttpStepFunctionsIntegration$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :state-machine)]
+  (when-some [data (lookup-entry config id :state-machine)]
     (. builder stateMachine data))
-  (when-let [data (http-integration-subtype config id :subtype)]
+  (when-some [data (http-integration-subtype config id :subtype)]
     (. builder subtype data))
   (.build builder))
 
@@ -412,11 +412,11 @@ __Create Form:__ ____[java.lang.String]___
 | `subtype` | software.amazon.awscdk.services.apigatewayv2.HttpIntegrationSubtype | [[cdk.api.services.apigatewayv2/http-integration-subtype]] | `:subtype` |
 "
   [^HttpStepFunctionsIntegrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
-  (when-let [data (lookup-entry config id :state-machine)]
+  (when-some [data (lookup-entry config id :state-machine)]
     (. builder stateMachine data))
-  (when-let [data (http-integration-subtype config id :subtype)]
+  (when-some [data (http-integration-subtype config id :subtype)]
     (. builder subtype data))
   (.build builder))
 
@@ -445,9 +445,9 @@ __Create Form:__ ____[java.lang.String]___
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 "
   [^HttpUrlIntegration$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
   (.build builder))
 
@@ -479,9 +479,9 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 "
   [^HttpUrlIntegrationProps$Builder builder id config]
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :parameter-mapping)]
+  (when-some [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
   (.build builder))
 
@@ -517,23 +517,23 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^WebSocketAwsIntegration$Builder builder id config]
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :integration-method)]
+  (when-some [data (lookup-entry config id :integration-method)]
     (. builder integrationMethod data))
-  (when-let [data (lookup-entry config id :integration-uri)]
+  (when-some [data (lookup-entry config id :integration-uri)]
     (. builder integrationUri data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :template-selection-expression)]
+  (when-some [data (lookup-entry config id :template-selection-expression)]
     (. builder templateSelectionExpression data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -572,23 +572,23 @@ __Create Form:__ ____[java.lang.String]___
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^WebSocketAwsIntegrationProps$Builder builder id config]
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :credentials-role)]
+  (when-some [data (lookup-entry config id :credentials-role)]
     (. builder credentialsRole data))
-  (when-let [data (lookup-entry config id :integration-method)]
+  (when-some [data (lookup-entry config id :integration-method)]
     (. builder integrationMethod data))
-  (when-let [data (lookup-entry config id :integration-uri)]
+  (when-some [data (lookup-entry config id :integration-uri)]
     (. builder integrationUri data))
-  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+  (when-some [data (passthrough-behavior config id :passthrough-behavior)]
     (. builder passthroughBehavior data))
-  (when-let [data (lookup-entry config id :request-parameters)]
+  (when-some [data (lookup-entry config id :request-parameters)]
     (. builder requestParameters data))
-  (when-let [data (lookup-entry config id :request-templates)]
+  (when-some [data (lookup-entry config id :request-templates)]
     (. builder requestTemplates data))
-  (when-let [data (lookup-entry config id :template-selection-expression)]
+  (when-some [data (lookup-entry config id :template-selection-expression)]
     (. builder templateSelectionExpression data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -617,9 +617,9 @@ __Create Form:__ ____[java.lang.String]___
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^WebSocketLambdaIntegration$Builder builder id config]
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -651,9 +651,9 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^WebSocketLambdaIntegrationProps$Builder builder id config]
-  (when-let [data (content-handling config id :content-handling)]
+  (when-some [data (content-handling config id :content-handling)]
     (. builder contentHandling data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 

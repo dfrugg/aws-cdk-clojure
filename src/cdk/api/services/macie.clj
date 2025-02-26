@@ -31,13 +31,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAllowList$Builder builder id config]
-  (when-let [data (lookup-entry config id :criteria)]
+  (when-some [data (lookup-entry config id :criteria)]
     (. builder criteria data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -66,9 +66,9 @@
 | `s3WordsList` | software.amazon.awscdk.services.macie.CfnAllowList$S3WordsListProperty | [[cdk.support/lookup-entry]] | `:s3-words-list` |
 "
   [^CfnAllowList$CriteriaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
-  (when-let [data (lookup-entry config id :s3-words-list)]
+  (when-some [data (lookup-entry config id :s3-words-list)]
     (. builder s3WordsList data))
   (.build builder))
 
@@ -99,13 +99,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAllowListProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :criteria)]
+  (when-some [data (lookup-entry config id :criteria)]
     (. builder criteria data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -134,9 +134,9 @@
 | `objectKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key` |
 "
   [^CfnAllowList$S3WordsListProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :object-key)]
+  (when-some [data (lookup-entry config id :object-key)]
     (. builder objectKey data))
   (.build builder))
 
@@ -170,19 +170,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCustomDataIdentifier$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ignore-words)]
+  (when-some [data (lookup-entry config id :ignore-words)]
     (. builder ignoreWords data))
-  (when-let [data (lookup-entry config id :keywords)]
+  (when-some [data (lookup-entry config id :keywords)]
     (. builder keywords data))
-  (when-let [data (lookup-entry config id :maximum-match-distance)]
+  (when-some [data (lookup-entry config id :maximum-match-distance)]
     (. builder maximumMatchDistance data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -216,19 +216,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCustomDataIdentifierProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ignore-words)]
+  (when-some [data (lookup-entry config id :ignore-words)]
     (. builder ignoreWords data))
-  (when-let [data (lookup-entry config id :keywords)]
+  (when-some [data (lookup-entry config id :keywords)]
     (. builder keywords data))
-  (when-let [data (lookup-entry config id :maximum-match-distance)]
+  (when-some [data (lookup-entry config id :maximum-match-distance)]
     (. builder maximumMatchDistance data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -261,17 +261,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFindingsFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :finding-criteria)]
+  (when-some [data (lookup-entry config id :finding-criteria)]
     (. builder findingCriteria data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :position)]
+  (when-some [data (lookup-entry config id :position)]
     (. builder position data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -304,17 +304,17 @@
 | `neq` | java.util.List | [[cdk.support/lookup-entry]] | `:neq` |
 "
   [^CfnFindingsFilter$CriterionAdditionalPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :eq)]
+  (when-some [data (lookup-entry config id :eq)]
     (. builder eq data))
-  (when-let [data (lookup-entry config id :gt)]
+  (when-some [data (lookup-entry config id :gt)]
     (. builder gt data))
-  (when-let [data (lookup-entry config id :gte)]
+  (when-some [data (lookup-entry config id :gte)]
     (. builder gte data))
-  (when-let [data (lookup-entry config id :lt)]
+  (when-some [data (lookup-entry config id :lt)]
     (. builder lt data))
-  (when-let [data (lookup-entry config id :lte)]
+  (when-some [data (lookup-entry config id :lte)]
     (. builder lte data))
-  (when-let [data (lookup-entry config id :neq)]
+  (when-some [data (lookup-entry config id :neq)]
     (. builder neq data))
   (.build builder))
 
@@ -342,7 +342,7 @@
 | `criterion` | java.util.Map | [[cdk.support/lookup-entry]] | `:criterion` |
 "
   [^CfnFindingsFilter$FindingCriteriaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :criterion)]
+  (when-some [data (lookup-entry config id :criterion)]
     (. builder criterion data))
   (.build builder))
 
@@ -371,9 +371,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnFindingsFilter$FindingsFilterListItemProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -406,17 +406,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFindingsFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :finding-criteria)]
+  (when-some [data (lookup-entry config id :finding-criteria)]
     (. builder findingCriteria data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :position)]
+  (when-some [data (lookup-entry config id :position)]
     (. builder position data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -445,9 +445,9 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnSession$Builder builder id config]
-  (when-let [data (lookup-entry config id :finding-publishing-frequency)]
+  (when-some [data (lookup-entry config id :finding-publishing-frequency)]
     (. builder findingPublishingFrequency data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -476,9 +476,9 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnSessionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :finding-publishing-frequency)]
+  (when-some [data (lookup-entry config id :finding-publishing-frequency)]
     (. builder findingPublishingFrequency data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 

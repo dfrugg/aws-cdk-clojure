@@ -43,13 +43,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFirewallDomainList$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-file-url)]
+  (when-some [data (lookup-entry config id :domain-file-url)]
     (. builder domainFileUrl data))
-  (when-let [data (lookup-entry config id :domains)]
+  (when-some [data (lookup-entry config id :domains)]
     (. builder domains data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -80,13 +80,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFirewallDomainListProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-file-url)]
+  (when-some [data (lookup-entry config id :domain-file-url)]
     (. builder domainFileUrl data))
-  (when-let [data (lookup-entry config id :domains)]
+  (when-some [data (lookup-entry config id :domains)]
     (. builder domains data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -119,17 +119,17 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnFirewallRuleGroupAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :firewall-rule-group-id)]
+  (when-some [data (lookup-entry config id :firewall-rule-group-id)]
     (. builder firewallRuleGroupId data))
-  (when-let [data (lookup-entry config id :mutation-protection)]
+  (when-some [data (lookup-entry config id :mutation-protection)]
     (. builder mutationProtection data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -162,17 +162,17 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnFirewallRuleGroupAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :firewall-rule-group-id)]
+  (when-some [data (lookup-entry config id :firewall-rule-group-id)]
     (. builder firewallRuleGroupId data))
-  (when-let [data (lookup-entry config id :mutation-protection)]
+  (when-some [data (lookup-entry config id :mutation-protection)]
     (. builder mutationProtection data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -202,11 +202,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFirewallRuleGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :firewall-rules)]
+  (when-some [data (lookup-entry config id :firewall-rules)]
     (. builder firewallRules data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -242,23 +242,23 @@
 | `qtype` | java.lang.String | [[cdk.support/lookup-entry]] | `:qtype` |
 "
   [^CfnFirewallRuleGroup$FirewallRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :block-override-dns-type)]
+  (when-some [data (lookup-entry config id :block-override-dns-type)]
     (. builder blockOverrideDnsType data))
-  (when-let [data (lookup-entry config id :block-override-domain)]
+  (when-some [data (lookup-entry config id :block-override-domain)]
     (. builder blockOverrideDomain data))
-  (when-let [data (lookup-entry config id :block-override-ttl)]
+  (when-some [data (lookup-entry config id :block-override-ttl)]
     (. builder blockOverrideTtl data))
-  (when-let [data (lookup-entry config id :block-response)]
+  (when-some [data (lookup-entry config id :block-response)]
     (. builder blockResponse data))
-  (when-let [data (lookup-entry config id :firewall-domain-list-id)]
+  (when-some [data (lookup-entry config id :firewall-domain-list-id)]
     (. builder firewallDomainListId data))
-  (when-let [data (lookup-entry config id :firewall-domain-redirection-action)]
+  (when-some [data (lookup-entry config id :firewall-domain-redirection-action)]
     (. builder firewallDomainRedirectionAction data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :qtype)]
+  (when-some [data (lookup-entry config id :qtype)]
     (. builder qtype data))
   (.build builder))
 
@@ -288,11 +288,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFirewallRuleGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :firewall-rules)]
+  (when-some [data (lookup-entry config id :firewall-rules)]
     (. builder firewallRules data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -324,15 +324,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnOutpostResolver$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-count)]
+  (when-some [data (lookup-entry config id :instance-count)]
     (. builder instanceCount data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :outpost-arn)]
+  (when-some [data (lookup-entry config id :outpost-arn)]
     (. builder outpostArn data))
-  (when-let [data (lookup-entry config id :preferred-instance-type)]
+  (when-some [data (lookup-entry config id :preferred-instance-type)]
     (. builder preferredInstanceType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -364,15 +364,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnOutpostResolverProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-count)]
+  (when-some [data (lookup-entry config id :instance-count)]
     (. builder instanceCount data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :outpost-arn)]
+  (when-some [data (lookup-entry config id :outpost-arn)]
     (. builder outpostArn data))
-  (when-let [data (lookup-entry config id :preferred-instance-type)]
+  (when-some [data (lookup-entry config id :preferred-instance-type)]
     (. builder preferredInstanceType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -401,9 +401,9 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnResolverConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :autodefined-reverse-flag)]
+  (when-some [data (lookup-entry config id :autodefined-reverse-flag)]
     (. builder autodefinedReverseFlag data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -432,9 +432,9 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnResolverConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :autodefined-reverse-flag)]
+  (when-some [data (lookup-entry config id :autodefined-reverse-flag)]
     (. builder autodefinedReverseFlag data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -462,7 +462,7 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnResolverDNSSECConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -490,7 +490,7 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnResolverDNSSECConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -526,23 +526,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResolverEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :direction)]
+  (when-some [data (lookup-entry config id :direction)]
     (. builder direction data))
-  (when-let [data (lookup-entry config id :ip-addresses)]
+  (when-some [data (lookup-entry config id :ip-addresses)]
     (. builder ipAddresses data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :outpost-arn)]
+  (when-some [data (lookup-entry config id :outpost-arn)]
     (. builder outpostArn data))
-  (when-let [data (lookup-entry config id :preferred-instance-type)]
+  (when-some [data (lookup-entry config id :preferred-instance-type)]
     (. builder preferredInstanceType data))
-  (when-let [data (lookup-entry config id :protocols)]
+  (when-some [data (lookup-entry config id :protocols)]
     (. builder protocols data))
-  (when-let [data (lookup-entry config id :resolver-endpoint-type)]
+  (when-some [data (lookup-entry config id :resolver-endpoint-type)]
     (. builder resolverEndpointType data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -572,11 +572,11 @@
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^CfnResolverEndpoint$IpAddressRequestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip)]
+  (when-some [data (lookup-entry config id :ip)]
     (. builder ip data))
-  (when-let [data (lookup-entry config id :ipv6)]
+  (when-some [data (lookup-entry config id :ipv6)]
     (. builder ipv6 data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 
@@ -612,23 +612,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResolverEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :direction)]
+  (when-some [data (lookup-entry config id :direction)]
     (. builder direction data))
-  (when-let [data (lookup-entry config id :ip-addresses)]
+  (when-some [data (lookup-entry config id :ip-addresses)]
     (. builder ipAddresses data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :outpost-arn)]
+  (when-some [data (lookup-entry config id :outpost-arn)]
     (. builder outpostArn data))
-  (when-let [data (lookup-entry config id :preferred-instance-type)]
+  (when-some [data (lookup-entry config id :preferred-instance-type)]
     (. builder preferredInstanceType data))
-  (when-let [data (lookup-entry config id :protocols)]
+  (when-some [data (lookup-entry config id :protocols)]
     (. builder protocols data))
-  (when-let [data (lookup-entry config id :resolver-endpoint-type)]
+  (when-some [data (lookup-entry config id :resolver-endpoint-type)]
     (. builder resolverEndpointType data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -657,9 +657,9 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnResolverQueryLoggingConfigAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :resolver-query-log-config-id)]
+  (when-some [data (lookup-entry config id :resolver-query-log-config-id)]
     (. builder resolverQueryLogConfigId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -688,9 +688,9 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnResolverQueryLoggingConfigAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resolver-query-log-config-id)]
+  (when-some [data (lookup-entry config id :resolver-query-log-config-id)]
     (. builder resolverQueryLogConfigId data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -719,9 +719,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnResolverQueryLoggingConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -750,9 +750,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnResolverQueryLoggingConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -782,11 +782,11 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnResolverRuleAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resolver-rule-id)]
+  (when-some [data (lookup-entry config id :resolver-rule-id)]
     (. builder resolverRuleId data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -816,11 +816,11 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnResolverRuleAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resolver-rule-id)]
+  (when-some [data (lookup-entry config id :resolver-rule-id)]
     (. builder resolverRuleId data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -853,17 +853,17 @@
 | `targetIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-ips` |
 "
   [^CfnResolverRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resolver-endpoint-id)]
+  (when-some [data (lookup-entry config id :resolver-endpoint-id)]
     (. builder resolverEndpointId data))
-  (when-let [data (lookup-entry config id :rule-type)]
+  (when-some [data (lookup-entry config id :rule-type)]
     (. builder ruleType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-ips)]
+  (when-some [data (lookup-entry config id :target-ips)]
     (. builder targetIps data))
   (.build builder))
 
@@ -896,17 +896,17 @@
 | `targetIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-ips` |
 "
   [^CfnResolverRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resolver-endpoint-id)]
+  (when-some [data (lookup-entry config id :resolver-endpoint-id)]
     (. builder resolverEndpointId data))
-  (when-let [data (lookup-entry config id :rule-type)]
+  (when-some [data (lookup-entry config id :rule-type)]
     (. builder ruleType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-ips)]
+  (when-some [data (lookup-entry config id :target-ips)]
     (. builder targetIps data))
   (.build builder))
 
@@ -937,13 +937,13 @@
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnResolverRule$TargetAddressProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip)]
+  (when-some [data (lookup-entry config id :ip)]
     (. builder ip data))
-  (when-let [data (lookup-entry config id :ipv6)]
+  (when-some [data (lookup-entry config id :ipv6)]
     (. builder ipv6 data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 

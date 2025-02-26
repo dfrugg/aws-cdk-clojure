@@ -119,13 +119,13 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnConnector$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-label)]
+  (when-some [data (lookup-entry config id :connector-label)]
     (. builder connectorLabel data))
-  (when-let [data (lookup-entry config id :connector-provisioning-config)]
+  (when-some [data (lookup-entry config id :connector-provisioning-config)]
     (. builder connectorProvisioningConfig data))
-  (when-let [data (lookup-entry config id :connector-provisioning-type)]
+  (when-some [data (lookup-entry config id :connector-provisioning-type)]
     (. builder connectorProvisioningType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
   (.build builder))
 
@@ -153,7 +153,7 @@
 | `lambda` | software.amazon.awscdk.services.appflow.CfnConnector$LambdaConnectorProvisioningConfigProperty | [[cdk.support/lookup-entry]] | `:lambda` |
 "
   [^CfnConnector$ConnectorProvisioningConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :lambda)]
+  (when-some [data (lookup-entry config id :lambda)]
     (. builder lambda data))
   (.build builder))
 
@@ -181,7 +181,7 @@
 | `lambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-arn` |
 "
   [^CfnConnector$LambdaConnectorProvisioningConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :lambda-arn)]
+  (when-some [data (lookup-entry config id :lambda-arn)]
     (. builder lambdaArn data))
   (.build builder))
 
@@ -210,9 +210,9 @@
 | `secretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-key` |
 "
   [^CfnConnectorProfile$AmplitudeConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key)]
+  (when-some [data (lookup-entry config id :api-key)]
     (. builder apiKey data))
-  (when-let [data (lookup-entry config id :secret-key)]
+  (when-some [data (lookup-entry config id :secret-key)]
     (. builder secretKey data))
   (.build builder))
 
@@ -241,9 +241,9 @@
 | `apiSecretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-secret-key` |
 "
   [^CfnConnectorProfile$ApiKeyCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key)]
+  (when-some [data (lookup-entry config id :api-key)]
     (. builder apiKey data))
-  (when-let [data (lookup-entry config id :api-secret-key)]
+  (when-some [data (lookup-entry config id :api-secret-key)]
     (. builder apiSecretKey data))
   (.build builder))
 
@@ -272,9 +272,9 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnConnectorProfile$BasicAuthCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -307,17 +307,17 @@
 | `kmsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-arn` |
 "
   [^CfnConnectorProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-mode)]
+  (when-some [data (lookup-entry config id :connection-mode)]
     (. builder connectionMode data))
-  (when-let [data (lookup-entry config id :connector-label)]
+  (when-some [data (lookup-entry config id :connector-label)]
     (. builder connectorLabel data))
-  (when-let [data (lookup-entry config id :connector-profile-config)]
+  (when-some [data (lookup-entry config id :connector-profile-config)]
     (. builder connectorProfileConfig data))
-  (when-let [data (lookup-entry config id :connector-profile-name)]
+  (when-some [data (lookup-entry config id :connector-profile-name)]
     (. builder connectorProfileName data))
-  (when-let [data (lookup-entry config id :connector-type)]
+  (when-some [data (lookup-entry config id :connector-type)]
     (. builder connectorType data))
-  (when-let [data (lookup-entry config id :kms-arn)]
+  (when-some [data (lookup-entry config id :kms-arn)]
     (. builder kmsArn data))
   (.build builder))
 
@@ -346,9 +346,9 @@
 | `redirectUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:redirect-uri` |
 "
   [^CfnConnectorProfile$ConnectorOAuthRequestProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auth-code)]
+  (when-some [data (lookup-entry config id :auth-code)]
     (. builder authCode data))
-  (when-let [data (lookup-entry config id :redirect-uri)]
+  (when-some [data (lookup-entry config id :redirect-uri)]
     (. builder redirectUri data))
   (.build builder))
 
@@ -377,9 +377,9 @@
 | `connectorProfileProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-profile-properties` |
 "
   [^CfnConnectorProfile$ConnectorProfileConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-profile-credentials)]
+  (when-some [data (lookup-entry config id :connector-profile-credentials)]
     (. builder connectorProfileCredentials data))
-  (when-let [data (lookup-entry config id :connector-profile-properties)]
+  (when-some [data (lookup-entry config id :connector-profile-properties)]
     (. builder connectorProfileProperties data))
   (.build builder))
 
@@ -424,41 +424,41 @@
 | `zendesk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnConnectorProfile$ConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :amplitude)]
+  (when-some [data (lookup-entry config id :amplitude)]
     (. builder amplitude data))
-  (when-let [data (lookup-entry config id :custom-connector)]
+  (when-some [data (lookup-entry config id :custom-connector)]
     (. builder customConnector data))
-  (when-let [data (lookup-entry config id :datadog)]
+  (when-some [data (lookup-entry config id :datadog)]
     (. builder datadog data))
-  (when-let [data (lookup-entry config id :dynatrace)]
+  (when-some [data (lookup-entry config id :dynatrace)]
     (. builder dynatrace data))
-  (when-let [data (lookup-entry config id :google-analytics)]
+  (when-some [data (lookup-entry config id :google-analytics)]
     (. builder googleAnalytics data))
-  (when-let [data (lookup-entry config id :infor-nexus)]
+  (when-some [data (lookup-entry config id :infor-nexus)]
     (. builder inforNexus data))
-  (when-let [data (lookup-entry config id :marketo)]
+  (when-some [data (lookup-entry config id :marketo)]
     (. builder marketo data))
-  (when-let [data (lookup-entry config id :pardot)]
+  (when-some [data (lookup-entry config id :pardot)]
     (. builder pardot data))
-  (when-let [data (lookup-entry config id :redshift)]
+  (when-some [data (lookup-entry config id :redshift)]
     (. builder redshift data))
-  (when-let [data (lookup-entry config id :salesforce)]
+  (when-some [data (lookup-entry config id :salesforce)]
     (. builder salesforce data))
-  (when-let [data (lookup-entry config id :sapo-data)]
+  (when-some [data (lookup-entry config id :sapo-data)]
     (. builder sapoData data))
-  (when-let [data (lookup-entry config id :service-now)]
+  (when-some [data (lookup-entry config id :service-now)]
     (. builder serviceNow data))
-  (when-let [data (lookup-entry config id :singular)]
+  (when-some [data (lookup-entry config id :singular)]
     (. builder singular data))
-  (when-let [data (lookup-entry config id :slack)]
+  (when-some [data (lookup-entry config id :slack)]
     (. builder slack data))
-  (when-let [data (lookup-entry config id :snowflake)]
+  (when-some [data (lookup-entry config id :snowflake)]
     (. builder snowflake data))
-  (when-let [data (lookup-entry config id :trendmicro)]
+  (when-some [data (lookup-entry config id :trendmicro)]
     (. builder trendmicro data))
-  (when-let [data (lookup-entry config id :veeva)]
+  (when-some [data (lookup-entry config id :veeva)]
     (. builder veeva data))
-  (when-let [data (lookup-entry config id :zendesk)]
+  (when-some [data (lookup-entry config id :zendesk)]
     (. builder zendesk data))
   (.build builder))
 
@@ -499,33 +499,33 @@
 | `zendesk` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ZendeskConnectorProfilePropertiesProperty | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnConnectorProfile$ConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-connector)]
+  (when-some [data (lookup-entry config id :custom-connector)]
     (. builder customConnector data))
-  (when-let [data (lookup-entry config id :datadog)]
+  (when-some [data (lookup-entry config id :datadog)]
     (. builder datadog data))
-  (when-let [data (lookup-entry config id :dynatrace)]
+  (when-some [data (lookup-entry config id :dynatrace)]
     (. builder dynatrace data))
-  (when-let [data (lookup-entry config id :infor-nexus)]
+  (when-some [data (lookup-entry config id :infor-nexus)]
     (. builder inforNexus data))
-  (when-let [data (lookup-entry config id :marketo)]
+  (when-some [data (lookup-entry config id :marketo)]
     (. builder marketo data))
-  (when-let [data (lookup-entry config id :pardot)]
+  (when-some [data (lookup-entry config id :pardot)]
     (. builder pardot data))
-  (when-let [data (lookup-entry config id :redshift)]
+  (when-some [data (lookup-entry config id :redshift)]
     (. builder redshift data))
-  (when-let [data (lookup-entry config id :salesforce)]
+  (when-some [data (lookup-entry config id :salesforce)]
     (. builder salesforce data))
-  (when-let [data (lookup-entry config id :sapo-data)]
+  (when-some [data (lookup-entry config id :sapo-data)]
     (. builder sapoData data))
-  (when-let [data (lookup-entry config id :service-now)]
+  (when-some [data (lookup-entry config id :service-now)]
     (. builder serviceNow data))
-  (when-let [data (lookup-entry config id :slack)]
+  (when-some [data (lookup-entry config id :slack)]
     (. builder slack data))
-  (when-let [data (lookup-entry config id :snowflake)]
+  (when-some [data (lookup-entry config id :snowflake)]
     (. builder snowflake data))
-  (when-let [data (lookup-entry config id :veeva)]
+  (when-some [data (lookup-entry config id :veeva)]
     (. builder veeva data))
-  (when-let [data (lookup-entry config id :zendesk)]
+  (when-some [data (lookup-entry config id :zendesk)]
     (. builder zendesk data))
   (.build builder))
 
@@ -554,9 +554,9 @@
 | `customAuthenticationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-authentication-type` |
 "
   [^CfnConnectorProfile$CustomAuthCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :credentials-map)]
+  (when-some [data (lookup-entry config id :credentials-map)]
     (. builder credentialsMap data))
-  (when-let [data (lookup-entry config id :custom-authentication-type)]
+  (when-some [data (lookup-entry config id :custom-authentication-type)]
     (. builder customAuthenticationType data))
   (.build builder))
 
@@ -588,15 +588,15 @@
 | `oauth2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:oauth2` |
 "
   [^CfnConnectorProfile$CustomConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key)]
+  (when-some [data (lookup-entry config id :api-key)]
     (. builder apiKey data))
-  (when-let [data (lookup-entry config id :authentication-type)]
+  (when-some [data (lookup-entry config id :authentication-type)]
     (. builder authenticationType data))
-  (when-let [data (lookup-entry config id :basic)]
+  (when-some [data (lookup-entry config id :basic)]
     (. builder basic data))
-  (when-let [data (lookup-entry config id :custom)]
+  (when-some [data (lookup-entry config id :custom)]
     (. builder custom data))
-  (when-let [data (lookup-entry config id :oauth2)]
+  (when-some [data (lookup-entry config id :oauth2)]
     (. builder oauth2 data))
   (.build builder))
 
@@ -625,9 +625,9 @@
 | `profileProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:profile-properties` |
 "
   [^CfnConnectorProfile$CustomConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :o-auth2-properties)]
+  (when-some [data (lookup-entry config id :o-auth2-properties)]
     (. builder oAuth2Properties data))
-  (when-let [data (lookup-entry config id :profile-properties)]
+  (when-some [data (lookup-entry config id :profile-properties)]
     (. builder profileProperties data))
   (.build builder))
 
@@ -656,9 +656,9 @@
 | `applicationKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-key` |
 "
   [^CfnConnectorProfile$DatadogConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key)]
+  (when-some [data (lookup-entry config id :api-key)]
     (. builder apiKey data))
-  (when-let [data (lookup-entry config id :application-key)]
+  (when-some [data (lookup-entry config id :application-key)]
     (. builder applicationKey data))
   (.build builder))
 
@@ -686,7 +686,7 @@
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
 "
   [^CfnConnectorProfile$DatadogConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
   (.build builder))
 
@@ -714,7 +714,7 @@
 | `apiToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-token` |
 "
   [^CfnConnectorProfile$DynatraceConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-token)]
+  (when-some [data (lookup-entry config id :api-token)]
     (. builder apiToken data))
   (.build builder))
 
@@ -742,7 +742,7 @@
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
 "
   [^CfnConnectorProfile$DynatraceConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
   (.build builder))
 
@@ -774,15 +774,15 @@
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnConnectorProfile$GoogleAnalyticsConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :connector-o-auth-request)]
+  (when-some [data (lookup-entry config id :connector-o-auth-request)]
     (. builder connectorOAuthRequest data))
-  (when-let [data (lookup-entry config id :refresh-token)]
+  (when-some [data (lookup-entry config id :refresh-token)]
     (. builder refreshToken data))
   (.build builder))
 
@@ -813,13 +813,13 @@
 | `userId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-id` |
 "
   [^CfnConnectorProfile$InforNexusConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-key-id)]
+  (when-some [data (lookup-entry config id :access-key-id)]
     (. builder accessKeyId data))
-  (when-let [data (lookup-entry config id :datakey)]
+  (when-some [data (lookup-entry config id :datakey)]
     (. builder datakey data))
-  (when-let [data (lookup-entry config id :secret-access-key)]
+  (when-some [data (lookup-entry config id :secret-access-key)]
     (. builder secretAccessKey data))
-  (when-let [data (lookup-entry config id :user-id)]
+  (when-some [data (lookup-entry config id :user-id)]
     (. builder userId data))
   (.build builder))
 
@@ -847,7 +847,7 @@
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
 "
   [^CfnConnectorProfile$InforNexusConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
   (.build builder))
 
@@ -878,13 +878,13 @@
 | `connectorOAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 "
   [^CfnConnectorProfile$MarketoConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :connector-o-auth-request)]
+  (when-some [data (lookup-entry config id :connector-o-auth-request)]
     (. builder connectorOAuthRequest data))
   (.build builder))
 
@@ -912,7 +912,7 @@
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
 "
   [^CfnConnectorProfile$MarketoConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
   (.build builder))
 
@@ -944,15 +944,15 @@
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnConnectorProfile$OAuthCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :connector-o-auth-request)]
+  (when-some [data (lookup-entry config id :connector-o-auth-request)]
     (. builder connectorOAuthRequest data))
-  (when-let [data (lookup-entry config id :refresh-token)]
+  (when-some [data (lookup-entry config id :refresh-token)]
     (. builder refreshToken data))
   (.build builder))
 
@@ -982,11 +982,11 @@
 | `tokenUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-url` |
 "
   [^CfnConnectorProfile$OAuthPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auth-code-url)]
+  (when-some [data (lookup-entry config id :auth-code-url)]
     (. builder authCodeUrl data))
-  (when-let [data (lookup-entry config id :o-auth-scopes)]
+  (when-some [data (lookup-entry config id :o-auth-scopes)]
     (. builder oAuthScopes data))
-  (when-let [data (lookup-entry config id :token-url)]
+  (when-some [data (lookup-entry config id :token-url)]
     (. builder tokenUrl data))
   (.build builder))
 
@@ -1018,15 +1018,15 @@
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnConnectorProfile$OAuth2CredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :o-auth-request)]
+  (when-some [data (lookup-entry config id :o-auth-request)]
     (. builder oAuthRequest data))
-  (when-let [data (lookup-entry config id :refresh-token)]
+  (when-some [data (lookup-entry config id :refresh-token)]
     (. builder refreshToken data))
   (.build builder))
 
@@ -1056,11 +1056,11 @@
 | `tokenUrlCustomProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:token-url-custom-properties` |
 "
   [^CfnConnectorProfile$OAuth2PropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :o-auth2-grant-type)]
+  (when-some [data (lookup-entry config id :o-auth2-grant-type)]
     (. builder oAuth2GrantType data))
-  (when-let [data (lookup-entry config id :token-url)]
+  (when-some [data (lookup-entry config id :token-url)]
     (. builder tokenUrl data))
-  (when-let [data (lookup-entry config id :token-url-custom-properties)]
+  (when-some [data (lookup-entry config id :token-url-custom-properties)]
     (. builder tokenUrlCustomProperties data))
   (.build builder))
 
@@ -1091,13 +1091,13 @@
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnConnectorProfile$PardotConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :client-credentials-arn)]
+  (when-some [data (lookup-entry config id :client-credentials-arn)]
     (. builder clientCredentialsArn data))
-  (when-let [data (lookup-entry config id :connector-o-auth-request)]
+  (when-some [data (lookup-entry config id :connector-o-auth-request)]
     (. builder connectorOAuthRequest data))
-  (when-let [data (lookup-entry config id :refresh-token)]
+  (when-some [data (lookup-entry config id :refresh-token)]
     (. builder refreshToken data))
   (.build builder))
 
@@ -1127,11 +1127,11 @@
 | `isSandboxEnvironment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-sandbox-environment` |
 "
   [^CfnConnectorProfile$PardotConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :business-unit-id)]
+  (when-some [data (lookup-entry config id :business-unit-id)]
     (. builder businessUnitId data))
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
-  (when-let [data (lookup-entry config id :is-sandbox-environment)]
+  (when-some [data (lookup-entry config id :is-sandbox-environment)]
     (. builder isSandboxEnvironment data))
   (.build builder))
 
@@ -1164,17 +1164,17 @@
 | `kmsArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-arn` |
 "
   [^CfnConnectorProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-mode)]
+  (when-some [data (lookup-entry config id :connection-mode)]
     (. builder connectionMode data))
-  (when-let [data (lookup-entry config id :connector-label)]
+  (when-some [data (lookup-entry config id :connector-label)]
     (. builder connectorLabel data))
-  (when-let [data (lookup-entry config id :connector-profile-config)]
+  (when-some [data (lookup-entry config id :connector-profile-config)]
     (. builder connectorProfileConfig data))
-  (when-let [data (lookup-entry config id :connector-profile-name)]
+  (when-some [data (lookup-entry config id :connector-profile-name)]
     (. builder connectorProfileName data))
-  (when-let [data (lookup-entry config id :connector-type)]
+  (when-some [data (lookup-entry config id :connector-type)]
     (. builder connectorType data))
-  (when-let [data (lookup-entry config id :kms-arn)]
+  (when-some [data (lookup-entry config id :kms-arn)]
     (. builder kmsArn data))
   (.build builder))
 
@@ -1203,9 +1203,9 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnConnectorProfile$RedshiftConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -1241,23 +1241,23 @@
 | `workgroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workgroup-name` |
 "
   [^CfnConnectorProfile$RedshiftConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :cluster-identifier)]
+  (when-some [data (lookup-entry config id :cluster-identifier)]
     (. builder clusterIdentifier data))
-  (when-let [data (lookup-entry config id :data-api-role-arn)]
+  (when-some [data (lookup-entry config id :data-api-role-arn)]
     (. builder dataApiRoleArn data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :database-url)]
+  (when-some [data (lookup-entry config id :database-url)]
     (. builder databaseUrl data))
-  (when-let [data (lookup-entry config id :is-redshift-serverless)]
+  (when-some [data (lookup-entry config id :is-redshift-serverless)]
     (. builder isRedshiftServerless data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :workgroup-name)]
+  (when-some [data (lookup-entry config id :workgroup-name)]
     (. builder workgroupName data))
   (.build builder))
 
@@ -1290,17 +1290,17 @@
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnConnectorProfile$SalesforceConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :client-credentials-arn)]
+  (when-some [data (lookup-entry config id :client-credentials-arn)]
     (. builder clientCredentialsArn data))
-  (when-let [data (lookup-entry config id :connector-o-auth-request)]
+  (when-some [data (lookup-entry config id :connector-o-auth-request)]
     (. builder connectorOAuthRequest data))
-  (when-let [data (lookup-entry config id :jwt-token)]
+  (when-some [data (lookup-entry config id :jwt-token)]
     (. builder jwtToken data))
-  (when-let [data (lookup-entry config id :o-auth2-grant-type)]
+  (when-some [data (lookup-entry config id :o-auth2-grant-type)]
     (. builder oAuth2GrantType data))
-  (when-let [data (lookup-entry config id :refresh-token)]
+  (when-some [data (lookup-entry config id :refresh-token)]
     (. builder refreshToken data))
   (.build builder))
 
@@ -1330,11 +1330,11 @@
 | `usePrivateLinkForMetadataAndAuthorization` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-private-link-for-metadata-and-authorization` |
 "
   [^CfnConnectorProfile$SalesforceConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
-  (when-let [data (lookup-entry config id :is-sandbox-environment)]
+  (when-some [data (lookup-entry config id :is-sandbox-environment)]
     (. builder isSandboxEnvironment data))
-  (when-let [data (lookup-entry config id :use-private-link-for-metadata-and-authorization)]
+  (when-some [data (lookup-entry config id :use-private-link-for-metadata-and-authorization)]
     (. builder usePrivateLinkForMetadataAndAuthorization data))
   (.build builder))
 
@@ -1363,9 +1363,9 @@
 | `oAuthCredentials` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:o-auth-credentials` |
 "
   [^CfnConnectorProfile$SAPODataConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :basic-auth-credentials)]
+  (when-some [data (lookup-entry config id :basic-auth-credentials)]
     (. builder basicAuthCredentials data))
-  (when-let [data (lookup-entry config id :o-auth-credentials)]
+  (when-some [data (lookup-entry config id :o-auth-credentials)]
     (. builder oAuthCredentials data))
   (.build builder))
 
@@ -1400,21 +1400,21 @@
 | `privateLinkServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-link-service-name` |
 "
   [^CfnConnectorProfile$SAPODataConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-host-url)]
+  (when-some [data (lookup-entry config id :application-host-url)]
     (. builder applicationHostUrl data))
-  (when-let [data (lookup-entry config id :application-service-path)]
+  (when-some [data (lookup-entry config id :application-service-path)]
     (. builder applicationServicePath data))
-  (when-let [data (lookup-entry config id :client-number)]
+  (when-some [data (lookup-entry config id :client-number)]
     (. builder clientNumber data))
-  (when-let [data (lookup-entry config id :disable-sso)]
+  (when-some [data (lookup-entry config id :disable-sso)]
     (. builder disableSso data))
-  (when-let [data (lookup-entry config id :logon-language)]
+  (when-some [data (lookup-entry config id :logon-language)]
     (. builder logonLanguage data))
-  (when-let [data (lookup-entry config id :o-auth-properties)]
+  (when-some [data (lookup-entry config id :o-auth-properties)]
     (. builder oAuthProperties data))
-  (when-let [data (lookup-entry config id :port-number)]
+  (when-some [data (lookup-entry config id :port-number)]
     (. builder portNumber data))
-  (when-let [data (lookup-entry config id :private-link-service-name)]
+  (when-some [data (lookup-entry config id :private-link-service-name)]
     (. builder privateLinkServiceName data))
   (.build builder))
 
@@ -1444,11 +1444,11 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnConnectorProfile$ServiceNowConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :o-auth2-credentials)]
+  (when-some [data (lookup-entry config id :o-auth2-credentials)]
     (. builder oAuth2Credentials data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -1476,7 +1476,7 @@
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
 "
   [^CfnConnectorProfile$ServiceNowConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
   (.build builder))
 
@@ -1504,7 +1504,7 @@
 | `apiKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-key` |
 "
   [^CfnConnectorProfile$SingularConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-key)]
+  (when-some [data (lookup-entry config id :api-key)]
     (. builder apiKey data))
   (.build builder))
 
@@ -1535,13 +1535,13 @@
 | `connectorOAuthRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 "
   [^CfnConnectorProfile$SlackConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :connector-o-auth-request)]
+  (when-some [data (lookup-entry config id :connector-o-auth-request)]
     (. builder connectorOAuthRequest data))
   (.build builder))
 
@@ -1569,7 +1569,7 @@
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
 "
   [^CfnConnectorProfile$SlackConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
   (.build builder))
 
@@ -1598,9 +1598,9 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnConnectorProfile$SnowflakeConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -1634,19 +1634,19 @@
 | `warehouse` | java.lang.String | [[cdk.support/lookup-entry]] | `:warehouse` |
 "
   [^CfnConnectorProfile$SnowflakeConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-name)]
+  (when-some [data (lookup-entry config id :account-name)]
     (. builder accountName data))
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :private-link-service-name)]
+  (when-some [data (lookup-entry config id :private-link-service-name)]
     (. builder privateLinkServiceName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
-  (when-let [data (lookup-entry config id :warehouse)]
+  (when-some [data (lookup-entry config id :warehouse)]
     (. builder warehouse data))
   (.build builder))
 
@@ -1674,7 +1674,7 @@
 | `apiSecretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-secret-key` |
 "
   [^CfnConnectorProfile$TrendmicroConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-secret-key)]
+  (when-some [data (lookup-entry config id :api-secret-key)]
     (. builder apiSecretKey data))
   (.build builder))
 
@@ -1703,9 +1703,9 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnConnectorProfile$VeevaConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -1733,7 +1733,7 @@
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
 "
   [^CfnConnectorProfile$VeevaConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
   (.build builder))
 
@@ -1764,13 +1764,13 @@
 | `connectorOAuthRequest` | software.amazon.awscdk.services.appflow.CfnConnectorProfile$ConnectorOAuthRequestProperty | [[cdk.support/lookup-entry]] | `:connector-o-auth-request` |
 "
   [^CfnConnectorProfile$ZendeskConnectorProfileCredentialsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :connector-o-auth-request)]
+  (when-some [data (lookup-entry config id :connector-o-auth-request)]
     (. builder connectorOAuthRequest data))
   (.build builder))
 
@@ -1798,7 +1798,7 @@
 | `instanceUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-url` |
 "
   [^CfnConnectorProfile$ZendeskConnectorProfilePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-url)]
+  (when-some [data (lookup-entry config id :instance-url)]
     (. builder instanceUrl data))
   (.build builder))
 
@@ -1829,13 +1829,13 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnConnectorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-label)]
+  (when-some [data (lookup-entry config id :connector-label)]
     (. builder connectorLabel data))
-  (when-let [data (lookup-entry config id :connector-provisioning-config)]
+  (when-some [data (lookup-entry config id :connector-provisioning-config)]
     (. builder connectorProvisioningConfig data))
-  (when-let [data (lookup-entry config id :connector-provisioning-type)]
+  (when-some [data (lookup-entry config id :connector-provisioning-type)]
     (. builder connectorProvisioningType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
   (.build builder))
 
@@ -1864,9 +1864,9 @@
 | `targetFileSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-file-size` |
 "
   [^CfnFlow$AggregationConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregation-type)]
+  (when-some [data (lookup-entry config id :aggregation-type)]
     (. builder aggregationType data))
-  (when-let [data (lookup-entry config id :target-file-size)]
+  (when-some [data (lookup-entry config id :target-file-size)]
     (. builder targetFileSize data))
   (.build builder))
 
@@ -1894,7 +1894,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$AmplitudeSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -1931,25 +1931,25 @@
 | `triggerConfig` | software.amazon.awscdk.services.appflow.CfnFlow$TriggerConfigProperty | [[cdk.support/lookup-entry]] | `:trigger-config` |
 "
   [^CfnFlow$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :destination-flow-config-list)]
+  (when-some [data (lookup-entry config id :destination-flow-config-list)]
     (. builder destinationFlowConfigList data))
-  (when-let [data (lookup-entry config id :flow-name)]
+  (when-some [data (lookup-entry config id :flow-name)]
     (. builder flowName data))
-  (when-let [data (lookup-entry config id :flow-status)]
+  (when-some [data (lookup-entry config id :flow-status)]
     (. builder flowStatus data))
-  (when-let [data (lookup-entry config id :kms-arn)]
+  (when-some [data (lookup-entry config id :kms-arn)]
     (. builder kmsArn data))
-  (when-let [data (lookup-entry config id :metadata-catalog-config)]
+  (when-some [data (lookup-entry config id :metadata-catalog-config)]
     (. builder metadataCatalogConfig data))
-  (when-let [data (lookup-entry config id :source-flow-config)]
+  (when-some [data (lookup-entry config id :source-flow-config)]
     (. builder sourceFlowConfig data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tasks)]
+  (when-some [data (lookup-entry config id :tasks)]
     (. builder tasks data))
-  (when-let [data (lookup-entry config id :trigger-config)]
+  (when-some [data (lookup-entry config id :trigger-config)]
     (. builder triggerConfig data))
   (.build builder))
 
@@ -1993,39 +1993,39 @@
 | `zendesk` | java.lang.String | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnFlow$ConnectorOperatorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :amplitude)]
+  (when-some [data (lookup-entry config id :amplitude)]
     (. builder amplitude data))
-  (when-let [data (lookup-entry config id :custom-connector)]
+  (when-some [data (lookup-entry config id :custom-connector)]
     (. builder customConnector data))
-  (when-let [data (lookup-entry config id :datadog)]
+  (when-some [data (lookup-entry config id :datadog)]
     (. builder datadog data))
-  (when-let [data (lookup-entry config id :dynatrace)]
+  (when-some [data (lookup-entry config id :dynatrace)]
     (. builder dynatrace data))
-  (when-let [data (lookup-entry config id :google-analytics)]
+  (when-some [data (lookup-entry config id :google-analytics)]
     (. builder googleAnalytics data))
-  (when-let [data (lookup-entry config id :infor-nexus)]
+  (when-some [data (lookup-entry config id :infor-nexus)]
     (. builder inforNexus data))
-  (when-let [data (lookup-entry config id :marketo)]
+  (when-some [data (lookup-entry config id :marketo)]
     (. builder marketo data))
-  (when-let [data (lookup-entry config id :pardot)]
+  (when-some [data (lookup-entry config id :pardot)]
     (. builder pardot data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
-  (when-let [data (lookup-entry config id :salesforce)]
+  (when-some [data (lookup-entry config id :salesforce)]
     (. builder salesforce data))
-  (when-let [data (lookup-entry config id :sapo-data)]
+  (when-some [data (lookup-entry config id :sapo-data)]
     (. builder sapoData data))
-  (when-let [data (lookup-entry config id :service-now)]
+  (when-some [data (lookup-entry config id :service-now)]
     (. builder serviceNow data))
-  (when-let [data (lookup-entry config id :singular)]
+  (when-some [data (lookup-entry config id :singular)]
     (. builder singular data))
-  (when-let [data (lookup-entry config id :slack)]
+  (when-some [data (lookup-entry config id :slack)]
     (. builder slack data))
-  (when-let [data (lookup-entry config id :trendmicro)]
+  (when-some [data (lookup-entry config id :trendmicro)]
     (. builder trendmicro data))
-  (when-let [data (lookup-entry config id :veeva)]
+  (when-some [data (lookup-entry config id :veeva)]
     (. builder veeva data))
-  (when-let [data (lookup-entry config id :zendesk)]
+  (when-some [data (lookup-entry config id :zendesk)]
     (. builder zendesk data))
   (.build builder))
 
@@ -2057,15 +2057,15 @@
 | `writeOperationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:write-operation-type` |
 "
   [^CfnFlow$CustomConnectorDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-properties)]
+  (when-some [data (lookup-entry config id :custom-properties)]
     (. builder customProperties data))
-  (when-let [data (lookup-entry config id :entity-name)]
+  (when-some [data (lookup-entry config id :entity-name)]
     (. builder entityName data))
-  (when-let [data (lookup-entry config id :error-handling-config)]
+  (when-some [data (lookup-entry config id :error-handling-config)]
     (. builder errorHandlingConfig data))
-  (when-let [data (lookup-entry config id :id-field-names)]
+  (when-some [data (lookup-entry config id :id-field-names)]
     (. builder idFieldNames data))
-  (when-let [data (lookup-entry config id :write-operation-type)]
+  (when-some [data (lookup-entry config id :write-operation-type)]
     (. builder writeOperationType data))
   (.build builder))
 
@@ -2095,11 +2095,11 @@
 | `entityName` | java.lang.String | [[cdk.support/lookup-entry]] | `:entity-name` |
 "
   [^CfnFlow$CustomConnectorSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-properties)]
+  (when-some [data (lookup-entry config id :custom-properties)]
     (. builder customProperties data))
-  (when-let [data (lookup-entry config id :data-transfer-api)]
+  (when-some [data (lookup-entry config id :data-transfer-api)]
     (. builder dataTransferApi data))
-  (when-let [data (lookup-entry config id :entity-name)]
+  (when-some [data (lookup-entry config id :entity-name)]
     (. builder entityName data))
   (.build builder))
 
@@ -2128,9 +2128,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnFlow$DataTransferApiProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -2158,7 +2158,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$DatadogSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2196,27 +2196,27 @@
 | `zendesk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnFlow$DestinationConnectorPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-connector)]
+  (when-some [data (lookup-entry config id :custom-connector)]
     (. builder customConnector data))
-  (when-let [data (lookup-entry config id :event-bridge)]
+  (when-some [data (lookup-entry config id :event-bridge)]
     (. builder eventBridge data))
-  (when-let [data (lookup-entry config id :lookout-metrics)]
+  (when-some [data (lookup-entry config id :lookout-metrics)]
     (. builder lookoutMetrics data))
-  (when-let [data (lookup-entry config id :marketo)]
+  (when-some [data (lookup-entry config id :marketo)]
     (. builder marketo data))
-  (when-let [data (lookup-entry config id :redshift)]
+  (when-some [data (lookup-entry config id :redshift)]
     (. builder redshift data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
-  (when-let [data (lookup-entry config id :salesforce)]
+  (when-some [data (lookup-entry config id :salesforce)]
     (. builder salesforce data))
-  (when-let [data (lookup-entry config id :sapo-data)]
+  (when-some [data (lookup-entry config id :sapo-data)]
     (. builder sapoData data))
-  (when-let [data (lookup-entry config id :snowflake)]
+  (when-some [data (lookup-entry config id :snowflake)]
     (. builder snowflake data))
-  (when-let [data (lookup-entry config id :upsolver)]
+  (when-some [data (lookup-entry config id :upsolver)]
     (. builder upsolver data))
-  (when-let [data (lookup-entry config id :zendesk)]
+  (when-some [data (lookup-entry config id :zendesk)]
     (. builder zendesk data))
   (.build builder))
 
@@ -2247,13 +2247,13 @@
 | `destinationConnectorProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destination-connector-properties` |
 "
   [^CfnFlow$DestinationFlowConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-version)]
+  (when-some [data (lookup-entry config id :api-version)]
     (. builder apiVersion data))
-  (when-let [data (lookup-entry config id :connector-profile-name)]
+  (when-some [data (lookup-entry config id :connector-profile-name)]
     (. builder connectorProfileName data))
-  (when-let [data (lookup-entry config id :connector-type)]
+  (when-some [data (lookup-entry config id :connector-type)]
     (. builder connectorType data))
-  (when-let [data (lookup-entry config id :destination-connector-properties)]
+  (when-some [data (lookup-entry config id :destination-connector-properties)]
     (. builder destinationConnectorProperties data))
   (.build builder))
 
@@ -2281,7 +2281,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$DynatraceSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2311,11 +2311,11 @@
 | `failOnFirstError` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fail-on-first-error` |
 "
   [^CfnFlow$ErrorHandlingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :fail-on-first-error)]
+  (when-some [data (lookup-entry config id :fail-on-first-error)]
     (. builder failOnFirstError data))
   (.build builder))
 
@@ -2344,9 +2344,9 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$EventBridgeDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :error-handling-config)]
+  (when-some [data (lookup-entry config id :error-handling-config)]
     (. builder errorHandlingConfig data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2376,11 +2376,11 @@
 | `tablePrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-prefix` |
 "
   [^CfnFlow$GlueDataCatalogProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :table-prefix)]
+  (when-some [data (lookup-entry config id :table-prefix)]
     (. builder tablePrefix data))
   (.build builder))
 
@@ -2408,7 +2408,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$GoogleAnalyticsSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2436,7 +2436,7 @@
 | `datetimeTypeFieldName` | java.lang.String | [[cdk.support/lookup-entry]] | `:datetime-type-field-name` |
 "
   [^CfnFlow$IncrementalPullConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :datetime-type-field-name)]
+  (when-some [data (lookup-entry config id :datetime-type-field-name)]
     (. builder datetimeTypeFieldName data))
   (.build builder))
 
@@ -2464,7 +2464,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$InforNexusSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2492,7 +2492,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$LookoutMetricsDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2521,9 +2521,9 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$MarketoDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :error-handling-config)]
+  (when-some [data (lookup-entry config id :error-handling-config)]
     (. builder errorHandlingConfig data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2551,7 +2551,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$MarketoSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2579,7 +2579,7 @@
 | `glueDataCatalog` | software.amazon.awscdk.services.appflow.CfnFlow$GlueDataCatalogProperty | [[cdk.support/lookup-entry]] | `:glue-data-catalog` |
 "
   [^CfnFlow$MetadataCatalogConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :glue-data-catalog)]
+  (when-some [data (lookup-entry config id :glue-data-catalog)]
     (. builder glueDataCatalog data))
   (.build builder))
 
@@ -2607,7 +2607,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$PardotSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2637,11 +2637,11 @@
 | `prefixType` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix-type` |
 "
   [^CfnFlow$PrefixConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :path-prefix-hierarchy)]
+  (when-some [data (lookup-entry config id :path-prefix-hierarchy)]
     (. builder pathPrefixHierarchy data))
-  (when-let [data (lookup-entry config id :prefix-format)]
+  (when-some [data (lookup-entry config id :prefix-format)]
     (. builder prefixFormat data))
-  (when-let [data (lookup-entry config id :prefix-type)]
+  (when-some [data (lookup-entry config id :prefix-type)]
     (. builder prefixType data))
   (.build builder))
 
@@ -2678,25 +2678,25 @@
 | `triggerConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trigger-config` |
 "
   [^CfnFlowProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :destination-flow-config-list)]
+  (when-some [data (lookup-entry config id :destination-flow-config-list)]
     (. builder destinationFlowConfigList data))
-  (when-let [data (lookup-entry config id :flow-name)]
+  (when-some [data (lookup-entry config id :flow-name)]
     (. builder flowName data))
-  (when-let [data (lookup-entry config id :flow-status)]
+  (when-some [data (lookup-entry config id :flow-status)]
     (. builder flowStatus data))
-  (when-let [data (lookup-entry config id :kms-arn)]
+  (when-some [data (lookup-entry config id :kms-arn)]
     (. builder kmsArn data))
-  (when-let [data (lookup-entry config id :metadata-catalog-config)]
+  (when-some [data (lookup-entry config id :metadata-catalog-config)]
     (. builder metadataCatalogConfig data))
-  (when-let [data (lookup-entry config id :source-flow-config)]
+  (when-some [data (lookup-entry config id :source-flow-config)]
     (. builder sourceFlowConfig data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tasks)]
+  (when-some [data (lookup-entry config id :tasks)]
     (. builder tasks data))
-  (when-let [data (lookup-entry config id :trigger-config)]
+  (when-some [data (lookup-entry config id :trigger-config)]
     (. builder triggerConfig data))
   (.build builder))
 
@@ -2727,13 +2727,13 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$RedshiftDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :error-handling-config)]
+  (when-some [data (lookup-entry config id :error-handling-config)]
     (. builder errorHandlingConfig data))
-  (when-let [data (lookup-entry config id :intermediate-bucket-name)]
+  (when-some [data (lookup-entry config id :intermediate-bucket-name)]
     (. builder intermediateBucketName data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2763,11 +2763,11 @@
 | `s3OutputFormatConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-output-format-config` |
 "
   [^CfnFlow$S3DestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :s3-output-format-config)]
+  (when-some [data (lookup-entry config id :s3-output-format-config)]
     (. builder s3OutputFormatConfig data))
   (.build builder))
 
@@ -2795,7 +2795,7 @@
 | `s3InputFileType` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-input-file-type` |
 "
   [^CfnFlow$S3InputFormatConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-input-file-type)]
+  (when-some [data (lookup-entry config id :s3-input-file-type)]
     (. builder s3InputFileType data))
   (.build builder))
 
@@ -2826,13 +2826,13 @@
 | `preserveSourceDataTyping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:preserve-source-data-typing` |
 "
   [^CfnFlow$S3OutputFormatConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregation-config)]
+  (when-some [data (lookup-entry config id :aggregation-config)]
     (. builder aggregationConfig data))
-  (when-let [data (lookup-entry config id :file-type)]
+  (when-some [data (lookup-entry config id :file-type)]
     (. builder fileType data))
-  (when-let [data (lookup-entry config id :prefix-config)]
+  (when-some [data (lookup-entry config id :prefix-config)]
     (. builder prefixConfig data))
-  (when-let [data (lookup-entry config id :preserve-source-data-typing)]
+  (when-some [data (lookup-entry config id :preserve-source-data-typing)]
     (. builder preserveSourceDataTyping data))
   (.build builder))
 
@@ -2862,11 +2862,11 @@
 | `s3InputFormatConfig` | software.amazon.awscdk.services.appflow.CfnFlow$S3InputFormatConfigProperty | [[cdk.support/lookup-entry]] | `:s3-input-format-config` |
 "
   [^CfnFlow$S3SourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :s3-input-format-config)]
+  (when-some [data (lookup-entry config id :s3-input-format-config)]
     (. builder s3InputFormatConfig data))
   (.build builder))
 
@@ -2898,15 +2898,15 @@
 | `writeOperationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:write-operation-type` |
 "
   [^CfnFlow$SalesforceDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-transfer-api)]
+  (when-some [data (lookup-entry config id :data-transfer-api)]
     (. builder dataTransferApi data))
-  (when-let [data (lookup-entry config id :error-handling-config)]
+  (when-some [data (lookup-entry config id :error-handling-config)]
     (. builder errorHandlingConfig data))
-  (when-let [data (lookup-entry config id :id-field-names)]
+  (when-some [data (lookup-entry config id :id-field-names)]
     (. builder idFieldNames data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
-  (when-let [data (lookup-entry config id :write-operation-type)]
+  (when-some [data (lookup-entry config id :write-operation-type)]
     (. builder writeOperationType data))
   (.build builder))
 
@@ -2937,13 +2937,13 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$SalesforceSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-transfer-api)]
+  (when-some [data (lookup-entry config id :data-transfer-api)]
     (. builder dataTransferApi data))
-  (when-let [data (lookup-entry config id :enable-dynamic-field-update)]
+  (when-some [data (lookup-entry config id :enable-dynamic-field-update)]
     (. builder enableDynamicFieldUpdate data))
-  (when-let [data (lookup-entry config id :include-deleted-records)]
+  (when-some [data (lookup-entry config id :include-deleted-records)]
     (. builder includeDeletedRecords data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -2975,15 +2975,15 @@
 | `writeOperationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:write-operation-type` |
 "
   [^CfnFlow$SAPODataDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :error-handling-config)]
+  (when-some [data (lookup-entry config id :error-handling-config)]
     (. builder errorHandlingConfig data))
-  (when-let [data (lookup-entry config id :id-field-names)]
+  (when-some [data (lookup-entry config id :id-field-names)]
     (. builder idFieldNames data))
-  (when-let [data (lookup-entry config id :object-path)]
+  (when-some [data (lookup-entry config id :object-path)]
     (. builder objectPath data))
-  (when-let [data (lookup-entry config id :success-response-handling-config)]
+  (when-some [data (lookup-entry config id :success-response-handling-config)]
     (. builder successResponseHandlingConfig data))
-  (when-let [data (lookup-entry config id :write-operation-type)]
+  (when-some [data (lookup-entry config id :write-operation-type)]
     (. builder writeOperationType data))
   (.build builder))
 
@@ -3011,7 +3011,7 @@
 | `maxPageSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-page-size` |
 "
   [^CfnFlow$SAPODataPaginationConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-page-size)]
+  (when-some [data (lookup-entry config id :max-page-size)]
     (. builder maxPageSize data))
   (.build builder))
 
@@ -3039,7 +3039,7 @@
 | `maxParallelism` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-parallelism` |
 "
   [^CfnFlow$SAPODataParallelismConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-parallelism)]
+  (when-some [data (lookup-entry config id :max-parallelism)]
     (. builder maxParallelism data))
   (.build builder))
 
@@ -3069,11 +3069,11 @@
 | `parallelismConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parallelism-config` |
 "
   [^CfnFlow$SAPODataSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object-path)]
+  (when-some [data (lookup-entry config id :object-path)]
     (. builder objectPath data))
-  (when-let [data (lookup-entry config id :pagination-config)]
+  (when-some [data (lookup-entry config id :pagination-config)]
     (. builder paginationConfig data))
-  (when-let [data (lookup-entry config id :parallelism-config)]
+  (when-some [data (lookup-entry config id :parallelism-config)]
     (. builder parallelismConfig data))
   (.build builder))
 
@@ -3108,21 +3108,21 @@
 | `timeZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-zone` |
 "
   [^CfnFlow$ScheduledTriggerPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-pull-mode)]
+  (when-some [data (lookup-entry config id :data-pull-mode)]
     (. builder dataPullMode data))
-  (when-let [data (lookup-entry config id :first-execution-from)]
+  (when-some [data (lookup-entry config id :first-execution-from)]
     (. builder firstExecutionFrom data))
-  (when-let [data (lookup-entry config id :flow-error-deactivation-threshold)]
+  (when-some [data (lookup-entry config id :flow-error-deactivation-threshold)]
     (. builder flowErrorDeactivationThreshold data))
-  (when-let [data (lookup-entry config id :schedule-end-time)]
+  (when-some [data (lookup-entry config id :schedule-end-time)]
     (. builder scheduleEndTime data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
-  (when-let [data (lookup-entry config id :schedule-offset)]
+  (when-some [data (lookup-entry config id :schedule-offset)]
     (. builder scheduleOffset data))
-  (when-let [data (lookup-entry config id :schedule-start-time)]
+  (when-some [data (lookup-entry config id :schedule-start-time)]
     (. builder scheduleStartTime data))
-  (when-let [data (lookup-entry config id :time-zone)]
+  (when-some [data (lookup-entry config id :time-zone)]
     (. builder timeZone data))
   (.build builder))
 
@@ -3150,7 +3150,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$ServiceNowSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -3178,7 +3178,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$SingularSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -3206,7 +3206,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$SlackSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -3237,13 +3237,13 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$SnowflakeDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :error-handling-config)]
+  (when-some [data (lookup-entry config id :error-handling-config)]
     (. builder errorHandlingConfig data))
-  (when-let [data (lookup-entry config id :intermediate-bucket-name)]
+  (when-some [data (lookup-entry config id :intermediate-bucket-name)]
     (. builder intermediateBucketName data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -3287,39 +3287,39 @@
 | `zendesk` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zendesk` |
 "
   [^CfnFlow$SourceConnectorPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :amplitude)]
+  (when-some [data (lookup-entry config id :amplitude)]
     (. builder amplitude data))
-  (when-let [data (lookup-entry config id :custom-connector)]
+  (when-some [data (lookup-entry config id :custom-connector)]
     (. builder customConnector data))
-  (when-let [data (lookup-entry config id :datadog)]
+  (when-some [data (lookup-entry config id :datadog)]
     (. builder datadog data))
-  (when-let [data (lookup-entry config id :dynatrace)]
+  (when-some [data (lookup-entry config id :dynatrace)]
     (. builder dynatrace data))
-  (when-let [data (lookup-entry config id :google-analytics)]
+  (when-some [data (lookup-entry config id :google-analytics)]
     (. builder googleAnalytics data))
-  (when-let [data (lookup-entry config id :infor-nexus)]
+  (when-some [data (lookup-entry config id :infor-nexus)]
     (. builder inforNexus data))
-  (when-let [data (lookup-entry config id :marketo)]
+  (when-some [data (lookup-entry config id :marketo)]
     (. builder marketo data))
-  (when-let [data (lookup-entry config id :pardot)]
+  (when-some [data (lookup-entry config id :pardot)]
     (. builder pardot data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
-  (when-let [data (lookup-entry config id :salesforce)]
+  (when-some [data (lookup-entry config id :salesforce)]
     (. builder salesforce data))
-  (when-let [data (lookup-entry config id :sapo-data)]
+  (when-some [data (lookup-entry config id :sapo-data)]
     (. builder sapoData data))
-  (when-let [data (lookup-entry config id :service-now)]
+  (when-some [data (lookup-entry config id :service-now)]
     (. builder serviceNow data))
-  (when-let [data (lookup-entry config id :singular)]
+  (when-some [data (lookup-entry config id :singular)]
     (. builder singular data))
-  (when-let [data (lookup-entry config id :slack)]
+  (when-some [data (lookup-entry config id :slack)]
     (. builder slack data))
-  (when-let [data (lookup-entry config id :trendmicro)]
+  (when-some [data (lookup-entry config id :trendmicro)]
     (. builder trendmicro data))
-  (when-let [data (lookup-entry config id :veeva)]
+  (when-some [data (lookup-entry config id :veeva)]
     (. builder veeva data))
-  (when-let [data (lookup-entry config id :zendesk)]
+  (when-some [data (lookup-entry config id :zendesk)]
     (. builder zendesk data))
   (.build builder))
 
@@ -3351,15 +3351,15 @@
 | `sourceConnectorProperties` | software.amazon.awscdk.services.appflow.CfnFlow$SourceConnectorPropertiesProperty | [[cdk.support/lookup-entry]] | `:source-connector-properties` |
 "
   [^CfnFlow$SourceFlowConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-version)]
+  (when-some [data (lookup-entry config id :api-version)]
     (. builder apiVersion data))
-  (when-let [data (lookup-entry config id :connector-profile-name)]
+  (when-some [data (lookup-entry config id :connector-profile-name)]
     (. builder connectorProfileName data))
-  (when-let [data (lookup-entry config id :connector-type)]
+  (when-some [data (lookup-entry config id :connector-type)]
     (. builder connectorType data))
-  (when-let [data (lookup-entry config id :incremental-pull-config)]
+  (when-some [data (lookup-entry config id :incremental-pull-config)]
     (. builder incrementalPullConfig data))
-  (when-let [data (lookup-entry config id :source-connector-properties)]
+  (when-some [data (lookup-entry config id :source-connector-properties)]
     (. builder sourceConnectorProperties data))
   (.build builder))
 
@@ -3388,9 +3388,9 @@
 | `bucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-prefix` |
 "
   [^CfnFlow$SuccessResponseHandlingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
   (.build builder))
 
@@ -3419,9 +3419,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnFlow$TaskPropertiesObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -3453,15 +3453,15 @@
 | `taskType` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-type` |
 "
   [^CfnFlow$TaskProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-operator)]
+  (when-some [data (lookup-entry config id :connector-operator)]
     (. builder connectorOperator data))
-  (when-let [data (lookup-entry config id :destination-field)]
+  (when-some [data (lookup-entry config id :destination-field)]
     (. builder destinationField data))
-  (when-let [data (lookup-entry config id :source-fields)]
+  (when-some [data (lookup-entry config id :source-fields)]
     (. builder sourceFields data))
-  (when-let [data (lookup-entry config id :task-properties)]
+  (when-some [data (lookup-entry config id :task-properties)]
     (. builder taskProperties data))
-  (when-let [data (lookup-entry config id :task-type)]
+  (when-some [data (lookup-entry config id :task-type)]
     (. builder taskType data))
   (.build builder))
 
@@ -3489,7 +3489,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$TrendmicroSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -3518,9 +3518,9 @@
 | `triggerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-type` |
 "
   [^CfnFlow$TriggerConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :trigger-properties)]
+  (when-some [data (lookup-entry config id :trigger-properties)]
     (. builder triggerProperties data))
-  (when-let [data (lookup-entry config id :trigger-type)]
+  (when-some [data (lookup-entry config id :trigger-type)]
     (. builder triggerType data))
   (.build builder))
 
@@ -3550,11 +3550,11 @@
 | `s3OutputFormatConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-output-format-config` |
 "
   [^CfnFlow$UpsolverDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :bucket-prefix)]
+  (when-some [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
-  (when-let [data (lookup-entry config id :s3-output-format-config)]
+  (when-some [data (lookup-entry config id :s3-output-format-config)]
     (. builder s3OutputFormatConfig data))
   (.build builder))
 
@@ -3584,11 +3584,11 @@
 | `prefixConfig` | software.amazon.awscdk.services.appflow.CfnFlow$PrefixConfigProperty | [[cdk.support/lookup-entry]] | `:prefix-config` |
 "
   [^CfnFlow$UpsolverS3OutputFormatConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregation-config)]
+  (when-some [data (lookup-entry config id :aggregation-config)]
     (. builder aggregationConfig data))
-  (when-let [data (lookup-entry config id :file-type)]
+  (when-some [data (lookup-entry config id :file-type)]
     (. builder fileType data))
-  (when-let [data (lookup-entry config id :prefix-config)]
+  (when-some [data (lookup-entry config id :prefix-config)]
     (. builder prefixConfig data))
   (.build builder))
 
@@ -3620,15 +3620,15 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$VeevaSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :document-type)]
+  (when-some [data (lookup-entry config id :document-type)]
     (. builder documentType data))
-  (when-let [data (lookup-entry config id :include-all-versions)]
+  (when-some [data (lookup-entry config id :include-all-versions)]
     (. builder includeAllVersions data))
-  (when-let [data (lookup-entry config id :include-renditions)]
+  (when-some [data (lookup-entry config id :include-renditions)]
     (. builder includeRenditions data))
-  (when-let [data (lookup-entry config id :include-source-files)]
+  (when-some [data (lookup-entry config id :include-source-files)]
     (. builder includeSourceFiles data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 
@@ -3659,13 +3659,13 @@
 | `writeOperationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:write-operation-type` |
 "
   [^CfnFlow$ZendeskDestinationPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :error-handling-config)]
+  (when-some [data (lookup-entry config id :error-handling-config)]
     (. builder errorHandlingConfig data))
-  (when-let [data (lookup-entry config id :id-field-names)]
+  (when-some [data (lookup-entry config id :id-field-names)]
     (. builder idFieldNames data))
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
-  (when-let [data (lookup-entry config id :write-operation-type)]
+  (when-some [data (lookup-entry config id :write-operation-type)]
     (. builder writeOperationType data))
   (.build builder))
 
@@ -3693,7 +3693,7 @@
 | `object` | java.lang.String | [[cdk.support/lookup-entry]] | `:object` |
 "
   [^CfnFlow$ZendeskSourcePropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :object)]
+  (when-some [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
 

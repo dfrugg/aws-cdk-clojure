@@ -27,13 +27,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDomain$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :permissions-policy-document)]
+  (when-some [data (lookup-entry config id :permissions-policy-document)]
     (. builder permissionsPolicyDocument data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -64,13 +64,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDomainProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :permissions-policy-document)]
+  (when-some [data (lookup-entry config id :permissions-policy-document)]
     (. builder permissionsPolicyDocument data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -104,19 +104,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackageGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-info)]
+  (when-some [data (lookup-entry config id :contact-info)]
     (. builder contactInfo data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :domain-owner)]
+  (when-some [data (lookup-entry config id :domain-owner)]
     (. builder domainOwner data))
-  (when-let [data (lookup-entry config id :origin-configuration)]
+  (when-some [data (lookup-entry config id :origin-configuration)]
     (. builder originConfiguration data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -144,7 +144,7 @@
 | `restrictions` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$RestrictionsProperty | [[cdk.support/lookup-entry]] | `:restrictions` |
 "
   [^CfnPackageGroup$OriginConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :restrictions)]
+  (when-some [data (lookup-entry config id :restrictions)]
     (. builder restrictions data))
   (.build builder))
 
@@ -178,19 +178,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackageGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-info)]
+  (when-some [data (lookup-entry config id :contact-info)]
     (. builder contactInfo data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :domain-owner)]
+  (when-some [data (lookup-entry config id :domain-owner)]
     (. builder domainOwner data))
-  (when-let [data (lookup-entry config id :origin-configuration)]
+  (when-some [data (lookup-entry config id :origin-configuration)]
     (. builder originConfiguration data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -219,9 +219,9 @@
 | `restrictionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:restriction-mode` |
 "
   [^CfnPackageGroup$RestrictionTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :repositories)]
+  (when-some [data (lookup-entry config id :repositories)]
     (. builder repositories data))
-  (when-let [data (lookup-entry config id :restriction-mode)]
+  (when-some [data (lookup-entry config id :restriction-mode)]
     (. builder restrictionMode data))
   (.build builder))
 
@@ -251,11 +251,11 @@
 | `publish` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publish` |
 "
   [^CfnPackageGroup$RestrictionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :external-upstream)]
+  (when-some [data (lookup-entry config id :external-upstream)]
     (. builder externalUpstream data))
-  (when-let [data (lookup-entry config id :internal-upstream)]
+  (when-some [data (lookup-entry config id :internal-upstream)]
     (. builder internalUpstream data))
-  (when-let [data (lookup-entry config id :publish)]
+  (when-some [data (lookup-entry config id :publish)]
     (. builder publish data))
   (.build builder))
 
@@ -290,21 +290,21 @@
 | `upstreams` | java.util.List | [[cdk.support/lookup-entry]] | `:upstreams` |
 "
   [^CfnRepository$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :domain-owner)]
+  (when-some [data (lookup-entry config id :domain-owner)]
     (. builder domainOwner data))
-  (when-let [data (lookup-entry config id :external-connections)]
+  (when-some [data (lookup-entry config id :external-connections)]
     (. builder externalConnections data))
-  (when-let [data (lookup-entry config id :permissions-policy-document)]
+  (when-some [data (lookup-entry config id :permissions-policy-document)]
     (. builder permissionsPolicyDocument data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :upstreams)]
+  (when-some [data (lookup-entry config id :upstreams)]
     (. builder upstreams data))
   (.build builder))
 
@@ -339,21 +339,21 @@
 | `upstreams` | java.util.List | [[cdk.support/lookup-entry]] | `:upstreams` |
 "
   [^CfnRepositoryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :domain-owner)]
+  (when-some [data (lookup-entry config id :domain-owner)]
     (. builder domainOwner data))
-  (when-let [data (lookup-entry config id :external-connections)]
+  (when-some [data (lookup-entry config id :external-connections)]
     (. builder externalConnections data))
-  (when-let [data (lookup-entry config id :permissions-policy-document)]
+  (when-some [data (lookup-entry config id :permissions-policy-document)]
     (. builder permissionsPolicyDocument data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :upstreams)]
+  (when-some [data (lookup-entry config id :upstreams)]
     (. builder upstreams data))
   (.build builder))
 

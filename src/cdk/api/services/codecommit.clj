@@ -94,17 +94,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `triggers` | java.util.List | [[cdk.support/lookup-entry]] | `:triggers` |
 "
   [^CfnRepository$Builder builder id config]
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :repository-description)]
+  (when-some [data (lookup-entry config id :repository-description)]
     (. builder repositoryDescription data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :triggers)]
+  (when-some [data (lookup-entry config id :triggers)]
     (. builder triggers data))
   (.build builder))
 
@@ -133,9 +133,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3` | software.amazon.awscdk.services.codecommit.CfnRepository$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnRepository$CodeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :branch-name)]
+  (when-some [data (lookup-entry config id :branch-name)]
     (. builder branchName data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
 
@@ -168,17 +168,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `triggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggers` |
 "
   [^CfnRepositoryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :repository-description)]
+  (when-some [data (lookup-entry config id :repository-description)]
     (. builder repositoryDescription data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :triggers)]
+  (when-some [data (lookup-entry config id :triggers)]
     (. builder triggers data))
   (.build builder))
 
@@ -210,15 +210,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRepository$RepositoryTriggerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :branches)]
+  (when-some [data (lookup-entry config id :branches)]
     (. builder branches data))
-  (when-let [data (lookup-entry config id :custom-data)]
+  (when-some [data (lookup-entry config id :custom-data)]
     (. builder customData data))
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -248,11 +248,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `objectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-version` |
 "
   [^CfnRepository$S3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :object-version)]
+  (when-some [data (lookup-entry config id :object-version)]
     (. builder objectVersion data))
   (.build builder))
 
@@ -280,7 +280,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `code` | software.amazon.awscdk.services.codecommit.CfnRepository$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
 "
   [^CodeConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
   (.build builder))
 
@@ -313,17 +313,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `target` | software.amazon.awscdk.services.events.IRuleTarget | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^OnCommitOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :branches)]
+  (when-some [data (lookup-entry config id :branches)]
     (. builder branches data))
-  (when-let [data (lookup-entry config id :cross-stack-scope)]
+  (when-some [data (lookup-entry config id :cross-stack-scope)]
     (. builder crossStackScope data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-pattern)]
+  (when-some [data (lookup-entry config id :event-pattern)]
     (. builder eventPattern data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -354,13 +354,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 "
   [^Repository$Builder builder id config]
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
 
@@ -391,13 +391,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |
 "
   [^RepositoryNotifyOnOptions$Builder builder id config]
-  (when-let [data (detail-type config id :detail-type)]
+  (when-some [data (detail-type config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :notification-rule-name)]
+  (when-some [data (lookup-entry config id :notification-rule-name)]
     (. builder notificationRuleName data))
   (.build builder))
 
@@ -428,13 +428,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 "
   [^RepositoryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
 
@@ -465,13 +465,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^RepositoryTriggerOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :branches)]
+  (when-some [data (lookup-entry config id :branches)]
     (. builder branches data))
-  (when-let [data (lookup-entry config id :custom-data)]
+  (when-some [data (lookup-entry config id :custom-data)]
     (. builder customData data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 

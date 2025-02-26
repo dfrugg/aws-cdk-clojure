@@ -32,23 +32,23 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApp$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-assessment-schedule)]
+  (when-some [data (lookup-entry config id :app-assessment-schedule)]
     (. builder appAssessmentSchedule data))
-  (when-let [data (lookup-entry config id :app-template-body)]
+  (when-some [data (lookup-entry config id :app-template-body)]
     (. builder appTemplateBody data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-subscriptions)]
+  (when-some [data (lookup-entry config id :event-subscriptions)]
     (. builder eventSubscriptions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :permission-model)]
+  (when-some [data (lookup-entry config id :permission-model)]
     (. builder permissionModel data))
-  (when-let [data (lookup-entry config id :resiliency-policy-arn)]
+  (when-some [data (lookup-entry config id :resiliency-policy-arn)]
     (. builder resiliencyPolicyArn data))
-  (when-let [data (lookup-entry config id :resource-mappings)]
+  (when-some [data (lookup-entry config id :resource-mappings)]
     (. builder resourceMappings data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -78,11 +78,11 @@
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 "
   [^CfnApp$EventSubscriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :event-type)]
+  (when-some [data (lookup-entry config id :event-type)]
     (. builder eventType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
 
@@ -112,11 +112,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnApp$PermissionModelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cross-account-role-arns)]
+  (when-some [data (lookup-entry config id :cross-account-role-arns)]
     (. builder crossAccountRoleArns data))
-  (when-let [data (lookup-entry config id :invoker-role-name)]
+  (when-some [data (lookup-entry config id :invoker-role-name)]
     (. builder invokerRoleName data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -147,13 +147,13 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnApp$PhysicalResourceIdProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-account-id)]
+  (when-some [data (lookup-entry config id :aws-account-id)]
     (. builder awsAccountId data))
-  (when-let [data (lookup-entry config id :aws-region)]
+  (when-some [data (lookup-entry config id :aws-region)]
     (. builder awsRegion data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -189,23 +189,23 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAppProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-assessment-schedule)]
+  (when-some [data (lookup-entry config id :app-assessment-schedule)]
     (. builder appAssessmentSchedule data))
-  (when-let [data (lookup-entry config id :app-template-body)]
+  (when-some [data (lookup-entry config id :app-template-body)]
     (. builder appTemplateBody data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-subscriptions)]
+  (when-some [data (lookup-entry config id :event-subscriptions)]
     (. builder eventSubscriptions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :permission-model)]
+  (when-some [data (lookup-entry config id :permission-model)]
     (. builder permissionModel data))
-  (when-let [data (lookup-entry config id :resiliency-policy-arn)]
+  (when-some [data (lookup-entry config id :resiliency-policy-arn)]
     (. builder resiliencyPolicyArn data))
-  (when-let [data (lookup-entry config id :resource-mappings)]
+  (when-some [data (lookup-entry config id :resource-mappings)]
     (. builder resourceMappings data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -238,17 +238,17 @@
 | `terraformSourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:terraform-source-name` |
 "
   [^CfnApp$ResourceMappingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :eks-source-name)]
+  (when-some [data (lookup-entry config id :eks-source-name)]
     (. builder eksSourceName data))
-  (when-let [data (lookup-entry config id :logical-stack-name)]
+  (when-some [data (lookup-entry config id :logical-stack-name)]
     (. builder logicalStackName data))
-  (when-let [data (lookup-entry config id :mapping-type)]
+  (when-some [data (lookup-entry config id :mapping-type)]
     (. builder mappingType data))
-  (when-let [data (lookup-entry config id :physical-resource-id)]
+  (when-some [data (lookup-entry config id :physical-resource-id)]
     (. builder physicalResourceId data))
-  (when-let [data (lookup-entry config id :resource-name)]
+  (when-some [data (lookup-entry config id :resource-name)]
     (. builder resourceName data))
-  (when-let [data (lookup-entry config id :terraform-source-name)]
+  (when-some [data (lookup-entry config id :terraform-source-name)]
     (. builder terraformSourceName data))
   (.build builder))
 
@@ -281,17 +281,17 @@
 | `tier` | java.lang.String | [[cdk.support/lookup-entry]] | `:tier` |
 "
   [^CfnResiliencyPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-location-constraint)]
+  (when-some [data (lookup-entry config id :data-location-constraint)]
     (. builder dataLocationConstraint data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :policy-description)]
+  (when-some [data (lookup-entry config id :policy-description)]
     (. builder policyDescription data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tier)]
+  (when-some [data (lookup-entry config id :tier)]
     (. builder tier data))
   (.build builder))
 
@@ -320,9 +320,9 @@
 | `rtoInSecs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rto-in-secs` |
 "
   [^CfnResiliencyPolicy$FailurePolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rpo-in-secs)]
+  (when-some [data (lookup-entry config id :rpo-in-secs)]
     (. builder rpoInSecs data))
-  (when-let [data (lookup-entry config id :rto-in-secs)]
+  (when-some [data (lookup-entry config id :rto-in-secs)]
     (. builder rtoInSecs data))
   (.build builder))
 
@@ -355,17 +355,17 @@
 | `tier` | java.lang.String | [[cdk.support/lookup-entry]] | `:tier` |
 "
   [^CfnResiliencyPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-location-constraint)]
+  (when-some [data (lookup-entry config id :data-location-constraint)]
     (. builder dataLocationConstraint data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :policy-description)]
+  (when-some [data (lookup-entry config id :policy-description)]
     (. builder policyDescription data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tier)]
+  (when-some [data (lookup-entry config id :tier)]
     (. builder tier data))
   (.build builder))
 

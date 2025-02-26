@@ -30,33 +30,33 @@
 | `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
 "
   [^CfnCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin-user-name)]
+  (when-some [data (lookup-entry config id :admin-user-name)]
     (. builder adminUserName data))
-  (when-let [data (lookup-entry config id :admin-user-password)]
+  (when-some [data (lookup-entry config id :admin-user-password)]
     (. builder adminUserPassword data))
-  (when-let [data (lookup-entry config id :auth-type)]
+  (when-some [data (lookup-entry config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :backup-retention-period)]
+  (when-some [data (lookup-entry config id :backup-retention-period)]
     (. builder backupRetentionPeriod data))
-  (when-let [data (lookup-entry config id :cluster-name)]
+  (when-some [data (lookup-entry config id :cluster-name)]
     (. builder clusterName data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :preferred-backup-window)]
+  (when-some [data (lookup-entry config id :preferred-backup-window)]
     (. builder preferredBackupWindow data))
-  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+  (when-some [data (lookup-entry config id :preferred-maintenance-window)]
     (. builder preferredMaintenanceWindow data))
-  (when-let [data (lookup-entry config id :shard-capacity)]
+  (when-some [data (lookup-entry config id :shard-capacity)]
     (. builder shardCapacity data))
-  (when-let [data (lookup-entry config id :shard-count)]
+  (when-some [data (lookup-entry config id :shard-count)]
     (. builder shardCount data))
-  (when-let [data (lookup-entry config id :shard-instance-count)]
+  (when-some [data (lookup-entry config id :shard-instance-count)]
     (. builder shardInstanceCount data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-security-group-ids)]
+  (when-some [data (lookup-entry config id :vpc-security-group-ids)]
     (. builder vpcSecurityGroupIds data))
   (.build builder))
 
@@ -97,33 +97,33 @@
 | `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
 "
   [^CfnClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin-user-name)]
+  (when-some [data (lookup-entry config id :admin-user-name)]
     (. builder adminUserName data))
-  (when-let [data (lookup-entry config id :admin-user-password)]
+  (when-some [data (lookup-entry config id :admin-user-password)]
     (. builder adminUserPassword data))
-  (when-let [data (lookup-entry config id :auth-type)]
+  (when-some [data (lookup-entry config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :backup-retention-period)]
+  (when-some [data (lookup-entry config id :backup-retention-period)]
     (. builder backupRetentionPeriod data))
-  (when-let [data (lookup-entry config id :cluster-name)]
+  (when-some [data (lookup-entry config id :cluster-name)]
     (. builder clusterName data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :preferred-backup-window)]
+  (when-some [data (lookup-entry config id :preferred-backup-window)]
     (. builder preferredBackupWindow data))
-  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+  (when-some [data (lookup-entry config id :preferred-maintenance-window)]
     (. builder preferredMaintenanceWindow data))
-  (when-let [data (lookup-entry config id :shard-capacity)]
+  (when-some [data (lookup-entry config id :shard-capacity)]
     (. builder shardCapacity data))
-  (when-let [data (lookup-entry config id :shard-count)]
+  (when-some [data (lookup-entry config id :shard-count)]
     (. builder shardCount data))
-  (when-let [data (lookup-entry config id :shard-instance-count)]
+  (when-some [data (lookup-entry config id :shard-instance-count)]
     (. builder shardInstanceCount data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-security-group-ids)]
+  (when-some [data (lookup-entry config id :vpc-security-group-ids)]
     (. builder vpcSecurityGroupIds data))
   (.build builder))
 

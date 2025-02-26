@@ -34,21 +34,21 @@
 | `targets` | java.util.Map | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnExperimentTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :experiment-options)]
+  (when-some [data (lookup-entry config id :experiment-options)]
     (. builder experimentOptions data))
-  (when-let [data (lookup-entry config id :log-configuration)]
+  (when-some [data (lookup-entry config id :log-configuration)]
     (. builder logConfiguration data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :stop-conditions)]
+  (when-some [data (lookup-entry config id :stop-conditions)]
     (. builder stopConditions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -76,7 +76,7 @@
 | `logGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-arn` |
 "
   [^CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-arn)]
+  (when-some [data (lookup-entry config id :log-group-arn)]
     (. builder logGroupArn data))
   (.build builder))
 
@@ -108,15 +108,15 @@
 | `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action-id)]
+  (when-some [data (lookup-entry config id :action-id)]
     (. builder actionId data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :start-after)]
+  (when-some [data (lookup-entry config id :start-after)]
     (. builder startAfter data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -145,9 +145,9 @@
 | `emptyTargetResolutionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:empty-target-resolution-mode` |
 "
   [^CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-targeting)]
+  (when-some [data (lookup-entry config id :account-targeting)]
     (. builder accountTargeting data))
-  (when-let [data (lookup-entry config id :empty-target-resolution-mode)]
+  (when-some [data (lookup-entry config id :empty-target-resolution-mode)]
     (. builder emptyTargetResolutionMode data))
   (.build builder))
 
@@ -177,11 +177,11 @@
 | `s3Configuration` | java.lang.Object | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 "
   [^CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-logs-configuration)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs-configuration)]
     (. builder cloudWatchLogsConfiguration data))
-  (when-let [data (lookup-entry config id :log-schema-version)]
+  (when-some [data (lookup-entry config id :log-schema-version)]
     (. builder logSchemaVersion data))
-  (when-let [data (lookup-entry config id :s3-configuration)]
+  (when-some [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
   (.build builder))
 
@@ -210,9 +210,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -241,9 +241,9 @@
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -276,17 +276,17 @@
 | `selectionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:selection-mode` |
 "
   [^CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :selection-mode)]
+  (when-some [data (lookup-entry config id :selection-mode)]
     (. builder selectionMode data))
   (.build builder))
 
@@ -321,21 +321,21 @@
 | `targets` | java.util.Map | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnExperimentTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :experiment-options)]
+  (when-some [data (lookup-entry config id :experiment-options)]
     (. builder experimentOptions data))
-  (when-let [data (lookup-entry config id :log-configuration)]
+  (when-some [data (lookup-entry config id :log-configuration)]
     (. builder logConfiguration data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :stop-conditions)]
+  (when-some [data (lookup-entry config id :stop-conditions)]
     (. builder stopConditions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -364,9 +364,9 @@
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnExperimentTemplate$S3ConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -397,13 +397,13 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnTargetAccountConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :experiment-template-id)]
+  (when-some [data (lookup-entry config id :experiment-template-id)]
     (. builder experimentTemplateId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -434,13 +434,13 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnTargetAccountConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :experiment-template-id)]
+  (when-some [data (lookup-entry config id :experiment-template-id)]
     (. builder experimentTemplateId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 

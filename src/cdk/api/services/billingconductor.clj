@@ -33,9 +33,9 @@
 | `linkedAccountIds` | java.util.List | [[cdk.support/lookup-entry]] | `:linked-account-ids` |
 "
   [^CfnBillingGroup$AccountGroupingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-associate)]
+  (when-some [data (lookup-entry config id :auto-associate)]
     (. builder autoAssociate data))
-  (when-let [data (lookup-entry config id :linked-account-ids)]
+  (when-some [data (lookup-entry config id :linked-account-ids)]
     (. builder linkedAccountIds data))
   (.build builder))
 
@@ -68,17 +68,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBillingGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-grouping)]
+  (when-some [data (lookup-entry config id :account-grouping)]
     (. builder accountGrouping data))
-  (when-let [data (lookup-entry config id :computation-preference)]
+  (when-some [data (lookup-entry config id :computation-preference)]
     (. builder computationPreference data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :primary-account-id)]
+  (when-some [data (lookup-entry config id :primary-account-id)]
     (. builder primaryAccountId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -106,7 +106,7 @@
 | `pricingPlanArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:pricing-plan-arn` |
 "
   [^CfnBillingGroup$ComputationPreferenceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :pricing-plan-arn)]
+  (when-some [data (lookup-entry config id :pricing-plan-arn)]
     (. builder pricingPlanArn data))
   (.build builder))
 
@@ -139,17 +139,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBillingGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-grouping)]
+  (when-some [data (lookup-entry config id :account-grouping)]
     (. builder accountGrouping data))
-  (when-let [data (lookup-entry config id :computation-preference)]
+  (when-some [data (lookup-entry config id :computation-preference)]
     (. builder computationPreference data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :primary-account-id)]
+  (when-some [data (lookup-entry config id :primary-account-id)]
     (. builder primaryAccountId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -178,9 +178,9 @@
 | `inclusiveStartBillingPeriod` | java.lang.String | [[cdk.support/lookup-entry]] | `:inclusive-start-billing-period` |
 "
   [^CfnCustomLineItem$BillingPeriodRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclusive-end-billing-period)]
+  (when-some [data (lookup-entry config id :exclusive-end-billing-period)]
     (. builder exclusiveEndBillingPeriod data))
-  (when-let [data (lookup-entry config id :inclusive-start-billing-period)]
+  (when-some [data (lookup-entry config id :inclusive-start-billing-period)]
     (. builder inclusiveStartBillingPeriod data))
   (.build builder))
 
@@ -214,19 +214,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCustomLineItem$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :billing-group-arn)]
+  (when-some [data (lookup-entry config id :billing-group-arn)]
     (. builder billingGroupArn data))
-  (when-let [data (lookup-entry config id :billing-period-range)]
+  (when-some [data (lookup-entry config id :billing-period-range)]
     (. builder billingPeriodRange data))
-  (when-let [data (lookup-entry config id :custom-line-item-charge-details)]
+  (when-some [data (lookup-entry config id :custom-line-item-charge-details)]
     (. builder customLineItemChargeDetails data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -257,13 +257,13 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :flat)]
+  (when-some [data (lookup-entry config id :flat)]
     (. builder flat data))
-  (when-let [data (lookup-entry config id :line-item-filters)]
+  (when-some [data (lookup-entry config id :line-item-filters)]
     (. builder lineItemFilters data))
-  (when-let [data (lookup-entry config id :percentage)]
+  (when-some [data (lookup-entry config id :percentage)]
     (. builder percentage data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -291,7 +291,7 @@
 | `chargeValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:charge-value` |
 "
   [^CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :charge-value)]
+  (when-some [data (lookup-entry config id :charge-value)]
     (. builder chargeValue data))
   (.build builder))
 
@@ -320,9 +320,9 @@
 | `percentageValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percentage-value` |
 "
   [^CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :child-associated-resources)]
+  (when-some [data (lookup-entry config id :child-associated-resources)]
     (. builder childAssociatedResources data))
-  (when-let [data (lookup-entry config id :percentage-value)]
+  (when-some [data (lookup-entry config id :percentage-value)]
     (. builder percentageValue data))
   (.build builder))
 
@@ -352,11 +352,11 @@
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnCustomLineItem$LineItemFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute)]
+  (when-some [data (lookup-entry config id :attribute)]
     (. builder attribute data))
-  (when-let [data (lookup-entry config id :match-option)]
+  (when-some [data (lookup-entry config id :match-option)]
     (. builder matchOption data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -390,19 +390,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCustomLineItemProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :billing-group-arn)]
+  (when-some [data (lookup-entry config id :billing-group-arn)]
     (. builder billingGroupArn data))
-  (when-let [data (lookup-entry config id :billing-period-range)]
+  (when-some [data (lookup-entry config id :billing-period-range)]
     (. builder billingPeriodRange data))
-  (when-let [data (lookup-entry config id :custom-line-item-charge-details)]
+  (when-some [data (lookup-entry config id :custom-line-item-charge-details)]
     (. builder customLineItemChargeDetails data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -433,13 +433,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPricingPlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pricing-rule-arns)]
+  (when-some [data (lookup-entry config id :pricing-rule-arns)]
     (. builder pricingRuleArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -470,13 +470,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPricingPlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pricing-rule-arns)]
+  (when-some [data (lookup-entry config id :pricing-rule-arns)]
     (. builder pricingRuleArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -514,27 +514,27 @@
 | `usageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-type` |
 "
   [^CfnPricingRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :billing-entity)]
+  (when-some [data (lookup-entry config id :billing-entity)]
     (. builder billingEntity data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :modifier-percentage)]
+  (when-some [data (lookup-entry config id :modifier-percentage)]
     (. builder modifierPercentage data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :operation)]
+  (when-some [data (lookup-entry config id :operation)]
     (. builder operation data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tiering)]
+  (when-some [data (lookup-entry config id :tiering)]
     (. builder tiering data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :usage-type)]
+  (when-some [data (lookup-entry config id :usage-type)]
     (. builder usageType data))
   (.build builder))
 
@@ -562,7 +562,7 @@
 | `activated` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:activated` |
 "
   [^CfnPricingRule$FreeTierProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :activated)]
+  (when-some [data (lookup-entry config id :activated)]
     (. builder activated data))
   (.build builder))
 
@@ -600,27 +600,27 @@
 | `usageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-type` |
 "
   [^CfnPricingRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :billing-entity)]
+  (when-some [data (lookup-entry config id :billing-entity)]
     (. builder billingEntity data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :modifier-percentage)]
+  (when-some [data (lookup-entry config id :modifier-percentage)]
     (. builder modifierPercentage data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :operation)]
+  (when-some [data (lookup-entry config id :operation)]
     (. builder operation data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tiering)]
+  (when-some [data (lookup-entry config id :tiering)]
     (. builder tiering data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :usage-type)]
+  (when-some [data (lookup-entry config id :usage-type)]
     (. builder usageType data))
   (.build builder))
 
@@ -648,7 +648,7 @@
 | `freeTier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:free-tier` |
 "
   [^CfnPricingRule$TieringProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :free-tier)]
+  (when-some [data (lookup-entry config id :free-tier)]
     (. builder freeTier data))
   (.build builder))
 

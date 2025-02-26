@@ -104,69 +104,69 @@ function on the data with the provided namespace id and item-key.  The found val
 | `websiteRedirectLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:website-redirect-location` |
 "
   [^BucketDeployment$Builder builder id config]
-  (when-let [data (bucket-access-control config id :access-control)]
+  (when-some [data (bucket-access-control config id :access-control)]
     (. builder accessControl data))
-  (when-let [data (lookup-entry config id :cache-control)]
+  (when-some [data (lookup-entry config id :cache-control)]
     (. builder cacheControl data))
-  (when-let [data (lookup-entry config id :content-disposition)]
+  (when-some [data (lookup-entry config id :content-disposition)]
     (. builder contentDisposition data))
-  (when-let [data (lookup-entry config id :content-encoding)]
+  (when-some [data (lookup-entry config id :content-encoding)]
     (. builder contentEncoding data))
-  (when-let [data (lookup-entry config id :content-language)]
+  (when-some [data (lookup-entry config id :content-language)]
     (. builder contentLanguage data))
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :destination-bucket)]
+  (when-some [data (lookup-entry config id :destination-bucket)]
     (. builder destinationBucket data))
-  (when-let [data (lookup-entry config id :destination-key-prefix)]
+  (when-some [data (lookup-entry config id :destination-key-prefix)]
     (. builder destinationKeyPrefix data))
-  (when-let [data (lookup-entry config id :distribution)]
+  (when-some [data (lookup-entry config id :distribution)]
     (. builder distribution data))
-  (when-let [data (lookup-entry config id :distribution-paths)]
+  (when-some [data (lookup-entry config id :distribution-paths)]
     (. builder distributionPaths data))
-  (when-let [data (lookup-entry config id :ephemeral-storage-size)]
+  (when-some [data (lookup-entry config id :ephemeral-storage-size)]
     (. builder ephemeralStorageSize data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (lookup-entry config id :expires)]
+  (when-some [data (lookup-entry config id :expires)]
     (. builder expires data))
-  (when-let [data (lookup-entry config id :extract)]
+  (when-some [data (lookup-entry config id :extract)]
     (. builder extract data))
-  (when-let [data (lookup-entry config id :include)]
+  (when-some [data (lookup-entry config id :include)]
     (. builder include data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (retention-days config id :log-retention)]
+  (when-some [data (retention-days config id :log-retention)]
     (. builder logRetention data))
-  (when-let [data (lookup-entry config id :memory-limit)]
+  (when-some [data (lookup-entry config id :memory-limit)]
     (. builder memoryLimit data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :prune)]
+  (when-some [data (lookup-entry config id :prune)]
     (. builder prune data))
-  (when-let [data (lookup-entry config id :retain-on-delete)]
+  (when-some [data (lookup-entry config id :retain-on-delete)]
     (. builder retainOnDelete data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (server-side-encryption config id :server-side-encryption)]
+  (when-some [data (server-side-encryption config id :server-side-encryption)]
     (. builder serverSideEncryption data))
-  (when-let [data (lookup-entry config id :server-side-encryption-aws-kms-key-id)]
+  (when-some [data (lookup-entry config id :server-side-encryption-aws-kms-key-id)]
     (. builder serverSideEncryptionAwsKmsKeyId data))
-  (when-let [data (lookup-entry config id :server-side-encryption-customer-algorithm)]
+  (when-some [data (lookup-entry config id :server-side-encryption-customer-algorithm)]
     (. builder serverSideEncryptionCustomerAlgorithm data))
-  (when-let [data (lookup-entry config id :sign-content)]
+  (when-some [data (lookup-entry config id :sign-content)]
     (. builder signContent data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (storage-class config id :storage-class)]
+  (when-some [data (storage-class config id :storage-class)]
     (. builder storageClass data))
-  (when-let [data (lookup-entry config id :use-efs)]
+  (when-some [data (lookup-entry config id :use-efs)]
     (. builder useEfs data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
-  (when-let [data (lookup-entry config id :website-redirect-location)]
+  (when-some [data (lookup-entry config id :website-redirect-location)]
     (. builder websiteRedirectLocation data))
   (.build builder))
 
@@ -225,69 +225,69 @@ function on the data with the provided namespace id and item-key.  The found val
 | `websiteRedirectLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:website-redirect-location` |
 "
   [^BucketDeploymentProps$Builder builder id config]
-  (when-let [data (bucket-access-control config id :access-control)]
+  (when-some [data (bucket-access-control config id :access-control)]
     (. builder accessControl data))
-  (when-let [data (lookup-entry config id :cache-control)]
+  (when-some [data (lookup-entry config id :cache-control)]
     (. builder cacheControl data))
-  (when-let [data (lookup-entry config id :content-disposition)]
+  (when-some [data (lookup-entry config id :content-disposition)]
     (. builder contentDisposition data))
-  (when-let [data (lookup-entry config id :content-encoding)]
+  (when-some [data (lookup-entry config id :content-encoding)]
     (. builder contentEncoding data))
-  (when-let [data (lookup-entry config id :content-language)]
+  (when-some [data (lookup-entry config id :content-language)]
     (. builder contentLanguage data))
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :destination-bucket)]
+  (when-some [data (lookup-entry config id :destination-bucket)]
     (. builder destinationBucket data))
-  (when-let [data (lookup-entry config id :destination-key-prefix)]
+  (when-some [data (lookup-entry config id :destination-key-prefix)]
     (. builder destinationKeyPrefix data))
-  (when-let [data (lookup-entry config id :distribution)]
+  (when-some [data (lookup-entry config id :distribution)]
     (. builder distribution data))
-  (when-let [data (lookup-entry config id :distribution-paths)]
+  (when-some [data (lookup-entry config id :distribution-paths)]
     (. builder distributionPaths data))
-  (when-let [data (lookup-entry config id :ephemeral-storage-size)]
+  (when-some [data (lookup-entry config id :ephemeral-storage-size)]
     (. builder ephemeralStorageSize data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (lookup-entry config id :expires)]
+  (when-some [data (lookup-entry config id :expires)]
     (. builder expires data))
-  (when-let [data (lookup-entry config id :extract)]
+  (when-some [data (lookup-entry config id :extract)]
     (. builder extract data))
-  (when-let [data (lookup-entry config id :include)]
+  (when-some [data (lookup-entry config id :include)]
     (. builder include data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (retention-days config id :log-retention)]
+  (when-some [data (retention-days config id :log-retention)]
     (. builder logRetention data))
-  (when-let [data (lookup-entry config id :memory-limit)]
+  (when-some [data (lookup-entry config id :memory-limit)]
     (. builder memoryLimit data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :prune)]
+  (when-some [data (lookup-entry config id :prune)]
     (. builder prune data))
-  (when-let [data (lookup-entry config id :retain-on-delete)]
+  (when-some [data (lookup-entry config id :retain-on-delete)]
     (. builder retainOnDelete data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (server-side-encryption config id :server-side-encryption)]
+  (when-some [data (server-side-encryption config id :server-side-encryption)]
     (. builder serverSideEncryption data))
-  (when-let [data (lookup-entry config id :server-side-encryption-aws-kms-key-id)]
+  (when-some [data (lookup-entry config id :server-side-encryption-aws-kms-key-id)]
     (. builder serverSideEncryptionAwsKmsKeyId data))
-  (when-let [data (lookup-entry config id :server-side-encryption-customer-algorithm)]
+  (when-some [data (lookup-entry config id :server-side-encryption-customer-algorithm)]
     (. builder serverSideEncryptionCustomerAlgorithm data))
-  (when-let [data (lookup-entry config id :sign-content)]
+  (when-some [data (lookup-entry config id :sign-content)]
     (. builder signContent data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (storage-class config id :storage-class)]
+  (when-some [data (storage-class config id :storage-class)]
     (. builder storageClass data))
-  (when-let [data (lookup-entry config id :use-efs)]
+  (when-some [data (lookup-entry config id :use-efs)]
     (. builder useEfs data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
-  (when-let [data (lookup-entry config id :website-redirect-location)]
+  (when-some [data (lookup-entry config id :website-redirect-location)]
     (. builder websiteRedirectLocation data))
   (.build builder))
 
@@ -319,15 +319,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `substitutions` | java.util.Map | [[cdk.support/lookup-entry]] | `:substitutions` |
 "
   [^DeployTimeSubstitutedFile$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-bucket)]
+  (when-some [data (lookup-entry config id :destination-bucket)]
     (. builder destinationBucket data))
-  (when-let [data (lookup-entry config id :destination-key)]
+  (when-some [data (lookup-entry config id :destination-key)]
     (. builder destinationKey data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :substitutions)]
+  (when-some [data (lookup-entry config id :substitutions)]
     (. builder substitutions data))
   (.build builder))
 
@@ -359,15 +359,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `substitutions` | java.util.Map | [[cdk.support/lookup-entry]] | `:substitutions` |
 "
   [^DeployTimeSubstitutedFileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-bucket)]
+  (when-some [data (lookup-entry config id :destination-bucket)]
     (. builder destinationBucket data))
-  (when-let [data (lookup-entry config id :destination-key)]
+  (when-some [data (lookup-entry config id :destination-key)]
     (. builder destinationKey data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :substitutions)]
+  (when-some [data (lookup-entry config id :substitutions)]
     (. builder substitutions data))
   (.build builder))
 
@@ -395,7 +395,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `handlerRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:handler-role` |
 "
   [^DeploymentSourceContext$Builder builder id config]
-  (when-let [data (lookup-entry config id :handler-role)]
+  (when-some [data (lookup-entry config id :handler-role)]
     (. builder handlerRole data))
   (.build builder))
 
@@ -425,11 +425,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zipObjectKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:zip-object-key` |
 "
   [^SourceConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :markers)]
+  (when-some [data (lookup-entry config id :markers)]
     (. builder markers data))
-  (when-let [data (lookup-entry config id :zip-object-key)]
+  (when-some [data (lookup-entry config id :zip-object-key)]
     (. builder zipObjectKey data))
   (.build builder))
 

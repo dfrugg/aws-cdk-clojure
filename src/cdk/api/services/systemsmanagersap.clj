@@ -24,19 +24,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-id)]
+  (when-some [data (lookup-entry config id :application-id)]
     (. builder applicationId data))
-  (when-let [data (lookup-entry config id :application-type)]
+  (when-some [data (lookup-entry config id :application-type)]
     (. builder applicationType data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :instances)]
+  (when-some [data (lookup-entry config id :instances)]
     (. builder instances data))
-  (when-let [data (lookup-entry config id :sap-instance-number)]
+  (when-some [data (lookup-entry config id :sap-instance-number)]
     (. builder sapInstanceNumber data))
-  (when-let [data (lookup-entry config id :sid)]
+  (when-some [data (lookup-entry config id :sid)]
     (. builder sid data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -66,11 +66,11 @@
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnApplication$CredentialProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :credential-type)]
+  (when-some [data (lookup-entry config id :credential-type)]
     (. builder credentialType data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :secret-id)]
+  (when-some [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
 
@@ -104,19 +104,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-id)]
+  (when-some [data (lookup-entry config id :application-id)]
     (. builder applicationId data))
-  (when-let [data (lookup-entry config id :application-type)]
+  (when-some [data (lookup-entry config id :application-type)]
     (. builder applicationType data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :instances)]
+  (when-some [data (lookup-entry config id :instances)]
     (. builder instances data))
-  (when-let [data (lookup-entry config id :sap-instance-number)]
+  (when-some [data (lookup-entry config id :sap-instance-number)]
     (. builder sapInstanceNumber data))
-  (when-let [data (lookup-entry config id :sid)]
+  (when-some [data (lookup-entry config id :sid)]
     (. builder sid data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

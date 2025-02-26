@@ -70,11 +70,11 @@
 | `routingStrategy` | software.amazon.awscdk.services.gamelift.CfnAlias$RoutingStrategyProperty | [[cdk.support/lookup-entry]] | `:routing-strategy` |
 "
   [^CfnAlias$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :routing-strategy)]
+  (when-some [data (lookup-entry config id :routing-strategy)]
     (. builder routingStrategy data))
   (.build builder))
 
@@ -104,11 +104,11 @@
 | `routingStrategy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:routing-strategy` |
 "
   [^CfnAliasProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :routing-strategy)]
+  (when-some [data (lookup-entry config id :routing-strategy)]
     (. builder routingStrategy data))
   (.build builder))
 
@@ -138,11 +138,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAlias$RoutingStrategyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :fleet-id)]
+  (when-some [data (lookup-entry config id :fleet-id)]
     (. builder fleetId data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -174,15 +174,15 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnBuild$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :operating-system)]
+  (when-some [data (lookup-entry config id :operating-system)]
     (. builder operatingSystem data))
-  (when-let [data (lookup-entry config id :server-sdk-version)]
+  (when-some [data (lookup-entry config id :server-sdk-version)]
     (. builder serverSdkVersion data))
-  (when-let [data (lookup-entry config id :storage-location)]
+  (when-some [data (lookup-entry config id :storage-location)]
     (. builder storageLocation data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -214,15 +214,15 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnBuildProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :operating-system)]
+  (when-some [data (lookup-entry config id :operating-system)]
     (. builder operatingSystem data))
-  (when-let [data (lookup-entry config id :server-sdk-version)]
+  (when-some [data (lookup-entry config id :server-sdk-version)]
     (. builder serverSdkVersion data))
-  (when-let [data (lookup-entry config id :storage-location)]
+  (when-some [data (lookup-entry config id :storage-location)]
     (. builder storageLocation data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -253,13 +253,13 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnBuild$StorageLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :object-version)]
+  (when-some [data (lookup-entry config id :object-version)]
     (. builder objectVersion data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -293,19 +293,19 @@
 | `totalMemoryLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total-memory-limit` |
 "
   [^CfnContainerGroupDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-definitions)]
+  (when-some [data (lookup-entry config id :container-definitions)]
     (. builder containerDefinitions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :operating-system)]
+  (when-some [data (lookup-entry config id :operating-system)]
     (. builder operatingSystem data))
-  (when-let [data (lookup-entry config id :scheduling-strategy)]
+  (when-some [data (lookup-entry config id :scheduling-strategy)]
     (. builder schedulingStrategy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :total-cpu-limit)]
+  (when-some [data (lookup-entry config id :total-cpu-limit)]
     (. builder totalCpuLimit data))
-  (when-let [data (lookup-entry config id :total-memory-limit)]
+  (when-some [data (lookup-entry config id :total-memory-limit)]
     (. builder totalMemoryLimit data))
   (.build builder))
 
@@ -345,31 +345,31 @@
 | `workingDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:working-directory` |
 "
   [^CfnContainerGroupDefinition$ContainerDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :command)]
+  (when-some [data (lookup-entry config id :command)]
     (. builder command data))
-  (when-let [data (lookup-entry config id :container-name)]
+  (when-some [data (lookup-entry config id :container-name)]
     (. builder containerName data))
-  (when-let [data (lookup-entry config id :cpu)]
+  (when-some [data (lookup-entry config id :cpu)]
     (. builder cpu data))
-  (when-let [data (lookup-entry config id :depends-on)]
+  (when-some [data (lookup-entry config id :depends-on)]
     (. builder dependsOn data))
-  (when-let [data (lookup-entry config id :entry-point)]
+  (when-some [data (lookup-entry config id :entry-point)]
     (. builder entryPoint data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :essential)]
+  (when-some [data (lookup-entry config id :essential)]
     (. builder essential data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :image-uri)]
+  (when-some [data (lookup-entry config id :image-uri)]
     (. builder imageUri data))
-  (when-let [data (lookup-entry config id :memory-limits)]
+  (when-some [data (lookup-entry config id :memory-limits)]
     (. builder memoryLimits data))
-  (when-let [data (lookup-entry config id :port-configuration)]
+  (when-some [data (lookup-entry config id :port-configuration)]
     (. builder portConfiguration data))
-  (when-let [data (lookup-entry config id :resolved-image-digest)]
+  (when-some [data (lookup-entry config id :resolved-image-digest)]
     (. builder resolvedImageDigest data))
-  (when-let [data (lookup-entry config id :working-directory)]
+  (when-some [data (lookup-entry config id :working-directory)]
     (. builder workingDirectory data))
   (.build builder))
 
@@ -398,9 +398,9 @@
 | `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
 "
   [^CfnContainerGroupDefinition$ContainerDependencyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :container-name)]
+  (when-some [data (lookup-entry config id :container-name)]
     (. builder containerName data))
   (.build builder))
 
@@ -429,9 +429,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnContainerGroupDefinition$ContainerEnvironmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -463,15 +463,15 @@
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnContainerGroupDefinition$ContainerHealthCheckProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :command)]
+  (when-some [data (lookup-entry config id :command)]
     (. builder command data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :retries)]
+  (when-some [data (lookup-entry config id :retries)]
     (. builder retries data))
-  (when-let [data (lookup-entry config id :start-period)]
+  (when-some [data (lookup-entry config id :start-period)]
     (. builder startPeriod data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -501,11 +501,11 @@
 | `toPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:to-port` |
 "
   [^CfnContainerGroupDefinition$ContainerPortRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :from-port)]
+  (when-some [data (lookup-entry config id :from-port)]
     (. builder fromPort data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :to-port)]
+  (when-some [data (lookup-entry config id :to-port)]
     (. builder toPort data))
   (.build builder))
 
@@ -534,9 +534,9 @@
 | `softLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:soft-limit` |
 "
   [^CfnContainerGroupDefinition$MemoryLimitsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hard-limit)]
+  (when-some [data (lookup-entry config id :hard-limit)]
     (. builder hardLimit data))
-  (when-let [data (lookup-entry config id :soft-limit)]
+  (when-some [data (lookup-entry config id :soft-limit)]
     (. builder softLimit data))
   (.build builder))
 
@@ -564,7 +564,7 @@
 | `containerPortRanges` | java.util.List | [[cdk.support/lookup-entry]] | `:container-port-ranges` |
 "
   [^CfnContainerGroupDefinition$PortConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-port-ranges)]
+  (when-some [data (lookup-entry config id :container-port-ranges)]
     (. builder containerPortRanges data))
   (.build builder))
 
@@ -598,19 +598,19 @@
 | `totalMemoryLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total-memory-limit` |
 "
   [^CfnContainerGroupDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-definitions)]
+  (when-some [data (lookup-entry config id :container-definitions)]
     (. builder containerDefinitions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :operating-system)]
+  (when-some [data (lookup-entry config id :operating-system)]
     (. builder operatingSystem data))
-  (when-let [data (lookup-entry config id :scheduling-strategy)]
+  (when-some [data (lookup-entry config id :scheduling-strategy)]
     (. builder schedulingStrategy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :total-cpu-limit)]
+  (when-some [data (lookup-entry config id :total-cpu-limit)]
     (. builder totalCpuLimit data))
-  (when-let [data (lookup-entry config id :total-memory-limit)]
+  (when-some [data (lookup-entry config id :total-memory-limit)]
     (. builder totalMemoryLimit data))
   (.build builder))
 
@@ -638,7 +638,7 @@
 | `cost` | java.lang.String | [[cdk.support/lookup-entry]] | `:cost` |
 "
   [^CfnFleet$AnywhereConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cost)]
+  (when-some [data (lookup-entry config id :cost)]
     (. builder cost data))
   (.build builder))
 
@@ -693,61 +693,61 @@
 | `serverLaunchPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-launch-path` |
 "
   [^CfnFleet$Builder builder id config]
-  (when-let [data (lookup-entry config id :anywhere-configuration)]
+  (when-some [data (lookup-entry config id :anywhere-configuration)]
     (. builder anywhereConfiguration data))
-  (when-let [data (lookup-entry config id :apply-capacity)]
+  (when-some [data (lookup-entry config id :apply-capacity)]
     (. builder applyCapacity data))
-  (when-let [data (lookup-entry config id :build-id)]
+  (when-some [data (lookup-entry config id :build-id)]
     (. builder buildId data))
-  (when-let [data (lookup-entry config id :certificate-configuration)]
+  (when-some [data (lookup-entry config id :certificate-configuration)]
     (. builder certificateConfiguration data))
-  (when-let [data (lookup-entry config id :compute-type)]
+  (when-some [data (lookup-entry config id :compute-type)]
     (. builder computeType data))
-  (when-let [data (lookup-entry config id :container-groups-configuration)]
+  (when-some [data (lookup-entry config id :container-groups-configuration)]
     (. builder containerGroupsConfiguration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :desired-ec2-instances)]
+  (when-some [data (lookup-entry config id :desired-ec2-instances)]
     (. builder desiredEc2Instances data))
-  (when-let [data (lookup-entry config id :ec2-inbound-permissions)]
+  (when-some [data (lookup-entry config id :ec2-inbound-permissions)]
     (. builder ec2InboundPermissions data))
-  (when-let [data (lookup-entry config id :ec2-instance-type)]
+  (when-some [data (lookup-entry config id :ec2-instance-type)]
     (. builder ec2InstanceType data))
-  (when-let [data (lookup-entry config id :fleet-type)]
+  (when-some [data (lookup-entry config id :fleet-type)]
     (. builder fleetType data))
-  (when-let [data (lookup-entry config id :instance-role-arn)]
+  (when-some [data (lookup-entry config id :instance-role-arn)]
     (. builder instanceRoleArn data))
-  (when-let [data (lookup-entry config id :instance-role-credentials-provider)]
+  (when-some [data (lookup-entry config id :instance-role-credentials-provider)]
     (. builder instanceRoleCredentialsProvider data))
-  (when-let [data (lookup-entry config id :locations)]
+  (when-some [data (lookup-entry config id :locations)]
     (. builder locations data))
-  (when-let [data (lookup-entry config id :log-paths)]
+  (when-some [data (lookup-entry config id :log-paths)]
     (. builder logPaths data))
-  (when-let [data (lookup-entry config id :max-size)]
+  (when-some [data (lookup-entry config id :max-size)]
     (. builder maxSize data))
-  (when-let [data (lookup-entry config id :metric-groups)]
+  (when-some [data (lookup-entry config id :metric-groups)]
     (. builder metricGroups data))
-  (when-let [data (lookup-entry config id :min-size)]
+  (when-some [data (lookup-entry config id :min-size)]
     (. builder minSize data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :new-game-session-protection-policy)]
+  (when-some [data (lookup-entry config id :new-game-session-protection-policy)]
     (. builder newGameSessionProtectionPolicy data))
-  (when-let [data (lookup-entry config id :peer-vpc-aws-account-id)]
+  (when-some [data (lookup-entry config id :peer-vpc-aws-account-id)]
     (. builder peerVpcAwsAccountId data))
-  (when-let [data (lookup-entry config id :peer-vpc-id)]
+  (when-some [data (lookup-entry config id :peer-vpc-id)]
     (. builder peerVpcId data))
-  (when-let [data (lookup-entry config id :resource-creation-limit-policy)]
+  (when-some [data (lookup-entry config id :resource-creation-limit-policy)]
     (. builder resourceCreationLimitPolicy data))
-  (when-let [data (lookup-entry config id :runtime-configuration)]
+  (when-some [data (lookup-entry config id :runtime-configuration)]
     (. builder runtimeConfiguration data))
-  (when-let [data (lookup-entry config id :scaling-policies)]
+  (when-some [data (lookup-entry config id :scaling-policies)]
     (. builder scalingPolicies data))
-  (when-let [data (lookup-entry config id :script-id)]
+  (when-some [data (lookup-entry config id :script-id)]
     (. builder scriptId data))
-  (when-let [data (lookup-entry config id :server-launch-parameters)]
+  (when-some [data (lookup-entry config id :server-launch-parameters)]
     (. builder serverLaunchParameters data))
-  (when-let [data (lookup-entry config id :server-launch-path)]
+  (when-some [data (lookup-entry config id :server-launch-path)]
     (. builder serverLaunchPath data))
   (.build builder))
 
@@ -775,7 +775,7 @@
 | `certificateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-type` |
 "
   [^CfnFleet$CertificateConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-type)]
+  (when-some [data (lookup-entry config id :certificate-type)]
     (. builder certificateType data))
   (.build builder))
 
@@ -804,9 +804,9 @@
 | `toPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:to-port` |
 "
   [^CfnFleet$ConnectionPortRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :from-port)]
+  (when-some [data (lookup-entry config id :from-port)]
     (. builder fromPort data))
-  (when-let [data (lookup-entry config id :to-port)]
+  (when-some [data (lookup-entry config id :to-port)]
     (. builder toPort data))
   (.build builder))
 
@@ -836,11 +836,11 @@
 | `containerGroupsPerInstance` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:container-groups-per-instance` |
 "
   [^CfnFleet$ContainerGroupsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-port-range)]
+  (when-some [data (lookup-entry config id :connection-port-range)]
     (. builder connectionPortRange data))
-  (when-let [data (lookup-entry config id :container-group-definition-names)]
+  (when-some [data (lookup-entry config id :container-group-definition-names)]
     (. builder containerGroupDefinitionNames data))
-  (when-let [data (lookup-entry config id :container-groups-per-instance)]
+  (when-some [data (lookup-entry config id :container-groups-per-instance)]
     (. builder containerGroupsPerInstance data))
   (.build builder))
 
@@ -869,9 +869,9 @@
 | `maxReplicaContainerGroupsPerInstance` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-replica-container-groups-per-instance` |
 "
   [^CfnFleet$ContainerGroupsPerInstanceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :desired-replica-container-groups-per-instance)]
+  (when-some [data (lookup-entry config id :desired-replica-container-groups-per-instance)]
     (. builder desiredReplicaContainerGroupsPerInstance data))
-  (when-let [data (lookup-entry config id :max-replica-container-groups-per-instance)]
+  (when-some [data (lookup-entry config id :max-replica-container-groups-per-instance)]
     (. builder maxReplicaContainerGroupsPerInstance data))
   (.build builder))
 
@@ -902,13 +902,13 @@
 | `toPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:to-port` |
 "
   [^CfnFleet$IpPermissionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :from-port)]
+  (when-some [data (lookup-entry config id :from-port)]
     (. builder fromPort data))
-  (when-let [data (lookup-entry config id :ip-range)]
+  (when-some [data (lookup-entry config id :ip-range)]
     (. builder ipRange data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :to-port)]
+  (when-some [data (lookup-entry config id :to-port)]
     (. builder toPort data))
   (.build builder))
 
@@ -938,11 +938,11 @@
 | `minSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-size` |
 "
   [^CfnFleet$LocationCapacityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :desired-ec2-instances)]
+  (when-some [data (lookup-entry config id :desired-ec2-instances)]
     (. builder desiredEc2Instances data))
-  (when-let [data (lookup-entry config id :max-size)]
+  (when-some [data (lookup-entry config id :max-size)]
     (. builder maxSize data))
-  (when-let [data (lookup-entry config id :min-size)]
+  (when-some [data (lookup-entry config id :min-size)]
     (. builder minSize data))
   (.build builder))
 
@@ -971,9 +971,9 @@
 | `locationCapacity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location-capacity` |
 "
   [^CfnFleet$LocationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :location-capacity)]
+  (when-some [data (lookup-entry config id :location-capacity)]
     (. builder locationCapacity data))
   (.build builder))
 
@@ -1028,61 +1028,61 @@
 | `serverLaunchPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-launch-path` |
 "
   [^CfnFleetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :anywhere-configuration)]
+  (when-some [data (lookup-entry config id :anywhere-configuration)]
     (. builder anywhereConfiguration data))
-  (when-let [data (lookup-entry config id :apply-capacity)]
+  (when-some [data (lookup-entry config id :apply-capacity)]
     (. builder applyCapacity data))
-  (when-let [data (lookup-entry config id :build-id)]
+  (when-some [data (lookup-entry config id :build-id)]
     (. builder buildId data))
-  (when-let [data (lookup-entry config id :certificate-configuration)]
+  (when-some [data (lookup-entry config id :certificate-configuration)]
     (. builder certificateConfiguration data))
-  (when-let [data (lookup-entry config id :compute-type)]
+  (when-some [data (lookup-entry config id :compute-type)]
     (. builder computeType data))
-  (when-let [data (lookup-entry config id :container-groups-configuration)]
+  (when-some [data (lookup-entry config id :container-groups-configuration)]
     (. builder containerGroupsConfiguration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :desired-ec2-instances)]
+  (when-some [data (lookup-entry config id :desired-ec2-instances)]
     (. builder desiredEc2Instances data))
-  (when-let [data (lookup-entry config id :ec2-inbound-permissions)]
+  (when-some [data (lookup-entry config id :ec2-inbound-permissions)]
     (. builder ec2InboundPermissions data))
-  (when-let [data (lookup-entry config id :ec2-instance-type)]
+  (when-some [data (lookup-entry config id :ec2-instance-type)]
     (. builder ec2InstanceType data))
-  (when-let [data (lookup-entry config id :fleet-type)]
+  (when-some [data (lookup-entry config id :fleet-type)]
     (. builder fleetType data))
-  (when-let [data (lookup-entry config id :instance-role-arn)]
+  (when-some [data (lookup-entry config id :instance-role-arn)]
     (. builder instanceRoleArn data))
-  (when-let [data (lookup-entry config id :instance-role-credentials-provider)]
+  (when-some [data (lookup-entry config id :instance-role-credentials-provider)]
     (. builder instanceRoleCredentialsProvider data))
-  (when-let [data (lookup-entry config id :locations)]
+  (when-some [data (lookup-entry config id :locations)]
     (. builder locations data))
-  (when-let [data (lookup-entry config id :log-paths)]
+  (when-some [data (lookup-entry config id :log-paths)]
     (. builder logPaths data))
-  (when-let [data (lookup-entry config id :max-size)]
+  (when-some [data (lookup-entry config id :max-size)]
     (. builder maxSize data))
-  (when-let [data (lookup-entry config id :metric-groups)]
+  (when-some [data (lookup-entry config id :metric-groups)]
     (. builder metricGroups data))
-  (when-let [data (lookup-entry config id :min-size)]
+  (when-some [data (lookup-entry config id :min-size)]
     (. builder minSize data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :new-game-session-protection-policy)]
+  (when-some [data (lookup-entry config id :new-game-session-protection-policy)]
     (. builder newGameSessionProtectionPolicy data))
-  (when-let [data (lookup-entry config id :peer-vpc-aws-account-id)]
+  (when-some [data (lookup-entry config id :peer-vpc-aws-account-id)]
     (. builder peerVpcAwsAccountId data))
-  (when-let [data (lookup-entry config id :peer-vpc-id)]
+  (when-some [data (lookup-entry config id :peer-vpc-id)]
     (. builder peerVpcId data))
-  (when-let [data (lookup-entry config id :resource-creation-limit-policy)]
+  (when-some [data (lookup-entry config id :resource-creation-limit-policy)]
     (. builder resourceCreationLimitPolicy data))
-  (when-let [data (lookup-entry config id :runtime-configuration)]
+  (when-some [data (lookup-entry config id :runtime-configuration)]
     (. builder runtimeConfiguration data))
-  (when-let [data (lookup-entry config id :scaling-policies)]
+  (when-some [data (lookup-entry config id :scaling-policies)]
     (. builder scalingPolicies data))
-  (when-let [data (lookup-entry config id :script-id)]
+  (when-some [data (lookup-entry config id :script-id)]
     (. builder scriptId data))
-  (when-let [data (lookup-entry config id :server-launch-parameters)]
+  (when-some [data (lookup-entry config id :server-launch-parameters)]
     (. builder serverLaunchParameters data))
-  (when-let [data (lookup-entry config id :server-launch-path)]
+  (when-some [data (lookup-entry config id :server-launch-path)]
     (. builder serverLaunchPath data))
   (.build builder))
 
@@ -1111,9 +1111,9 @@
 | `policyPeriodInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:policy-period-in-minutes` |
 "
   [^CfnFleet$ResourceCreationLimitPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :new-game-sessions-per-creator)]
+  (when-some [data (lookup-entry config id :new-game-sessions-per-creator)]
     (. builder newGameSessionsPerCreator data))
-  (when-let [data (lookup-entry config id :policy-period-in-minutes)]
+  (when-some [data (lookup-entry config id :policy-period-in-minutes)]
     (. builder policyPeriodInMinutes data))
   (.build builder))
 
@@ -1143,11 +1143,11 @@
 | `serverProcesses` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-processes` |
 "
   [^CfnFleet$RuntimeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :game-session-activation-timeout-seconds)]
+  (when-some [data (lookup-entry config id :game-session-activation-timeout-seconds)]
     (. builder gameSessionActivationTimeoutSeconds data))
-  (when-let [data (lookup-entry config id :max-concurrent-game-session-activations)]
+  (when-some [data (lookup-entry config id :max-concurrent-game-session-activations)]
     (. builder maxConcurrentGameSessionActivations data))
-  (when-let [data (lookup-entry config id :server-processes)]
+  (when-some [data (lookup-entry config id :server-processes)]
     (. builder serverProcesses data))
   (.build builder))
 
@@ -1186,29 +1186,29 @@
 | `updateStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-status` |
 "
   [^CfnFleet$ScalingPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :comparison-operator)]
+  (when-some [data (lookup-entry config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :policy-type)]
+  (when-some [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
-  (when-let [data (lookup-entry config id :scaling-adjustment)]
+  (when-some [data (lookup-entry config id :scaling-adjustment)]
     (. builder scalingAdjustment data))
-  (when-let [data (lookup-entry config id :scaling-adjustment-type)]
+  (when-some [data (lookup-entry config id :scaling-adjustment-type)]
     (. builder scalingAdjustmentType data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :target-configuration)]
+  (when-some [data (lookup-entry config id :target-configuration)]
     (. builder targetConfiguration data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (lookup-entry config id :update-status)]
+  (when-some [data (lookup-entry config id :update-status)]
     (. builder updateStatus data))
   (.build builder))
 
@@ -1238,11 +1238,11 @@
 | `parameters` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnFleet$ServerProcessProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :concurrent-executions)]
+  (when-some [data (lookup-entry config id :concurrent-executions)]
     (. builder concurrentExecutions data))
-  (when-let [data (lookup-entry config id :launch-path)]
+  (when-some [data (lookup-entry config id :launch-path)]
     (. builder launchPath data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
 
@@ -1270,7 +1270,7 @@
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^CfnFleet$TargetConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 
@@ -1299,9 +1299,9 @@
 | `targetTrackingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-configuration` |
 "
   [^CfnGameServerGroup$AutoScalingPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :estimated-instance-warmup)]
+  (when-some [data (lookup-entry config id :estimated-instance-warmup)]
     (. builder estimatedInstanceWarmup data))
-  (when-let [data (lookup-entry config id :target-tracking-configuration)]
+  (when-some [data (lookup-entry config id :target-tracking-configuration)]
     (. builder targetTrackingConfiguration data))
   (.build builder))
 
@@ -1340,29 +1340,29 @@
 | `vpcSubnets` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^CfnGameServerGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-policy)]
+  (when-some [data (lookup-entry config id :auto-scaling-policy)]
     (. builder autoScalingPolicy data))
-  (when-let [data (lookup-entry config id :balancing-strategy)]
+  (when-some [data (lookup-entry config id :balancing-strategy)]
     (. builder balancingStrategy data))
-  (when-let [data (lookup-entry config id :delete-option)]
+  (when-some [data (lookup-entry config id :delete-option)]
     (. builder deleteOption data))
-  (when-let [data (lookup-entry config id :game-server-group-name)]
+  (when-some [data (lookup-entry config id :game-server-group-name)]
     (. builder gameServerGroupName data))
-  (when-let [data (lookup-entry config id :game-server-protection-policy)]
+  (when-some [data (lookup-entry config id :game-server-protection-policy)]
     (. builder gameServerProtectionPolicy data))
-  (when-let [data (lookup-entry config id :instance-definitions)]
+  (when-some [data (lookup-entry config id :instance-definitions)]
     (. builder instanceDefinitions data))
-  (when-let [data (lookup-entry config id :launch-template)]
+  (when-some [data (lookup-entry config id :launch-template)]
     (. builder launchTemplate data))
-  (when-let [data (lookup-entry config id :max-size)]
+  (when-some [data (lookup-entry config id :max-size)]
     (. builder maxSize data))
-  (when-let [data (lookup-entry config id :min-size)]
+  (when-some [data (lookup-entry config id :min-size)]
     (. builder minSize data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -1391,9 +1391,9 @@
 | `weightedCapacity` | java.lang.String | [[cdk.support/lookup-entry]] | `:weighted-capacity` |
 "
   [^CfnGameServerGroup$InstanceDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :weighted-capacity)]
+  (when-some [data (lookup-entry config id :weighted-capacity)]
     (. builder weightedCapacity data))
   (.build builder))
 
@@ -1423,11 +1423,11 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnGameServerGroup$LaunchTemplateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :launch-template-id)]
+  (when-some [data (lookup-entry config id :launch-template-id)]
     (. builder launchTemplateId data))
-  (when-let [data (lookup-entry config id :launch-template-name)]
+  (when-some [data (lookup-entry config id :launch-template-name)]
     (. builder launchTemplateName data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -1466,29 +1466,29 @@
 | `vpcSubnets` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^CfnGameServerGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-policy)]
+  (when-some [data (lookup-entry config id :auto-scaling-policy)]
     (. builder autoScalingPolicy data))
-  (when-let [data (lookup-entry config id :balancing-strategy)]
+  (when-some [data (lookup-entry config id :balancing-strategy)]
     (. builder balancingStrategy data))
-  (when-let [data (lookup-entry config id :delete-option)]
+  (when-some [data (lookup-entry config id :delete-option)]
     (. builder deleteOption data))
-  (when-let [data (lookup-entry config id :game-server-group-name)]
+  (when-some [data (lookup-entry config id :game-server-group-name)]
     (. builder gameServerGroupName data))
-  (when-let [data (lookup-entry config id :game-server-protection-policy)]
+  (when-some [data (lookup-entry config id :game-server-protection-policy)]
     (. builder gameServerProtectionPolicy data))
-  (when-let [data (lookup-entry config id :instance-definitions)]
+  (when-some [data (lookup-entry config id :instance-definitions)]
     (. builder instanceDefinitions data))
-  (when-let [data (lookup-entry config id :launch-template)]
+  (when-some [data (lookup-entry config id :launch-template)]
     (. builder launchTemplate data))
-  (when-let [data (lookup-entry config id :max-size)]
+  (when-some [data (lookup-entry config id :max-size)]
     (. builder maxSize data))
-  (when-let [data (lookup-entry config id :min-size)]
+  (when-some [data (lookup-entry config id :min-size)]
     (. builder minSize data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -1516,7 +1516,7 @@
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^CfnGameServerGroup$TargetTrackingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 
@@ -1552,23 +1552,23 @@
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 "
   [^CfnGameSessionQueue$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-event-data)]
+  (when-some [data (lookup-entry config id :custom-event-data)]
     (. builder customEventData data))
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :filter-configuration)]
+  (when-some [data (lookup-entry config id :filter-configuration)]
     (. builder filterConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :notification-target)]
+  (when-some [data (lookup-entry config id :notification-target)]
     (. builder notificationTarget data))
-  (when-let [data (lookup-entry config id :player-latency-policies)]
+  (when-some [data (lookup-entry config id :player-latency-policies)]
     (. builder playerLatencyPolicies data))
-  (when-let [data (lookup-entry config id :priority-configuration)]
+  (when-some [data (lookup-entry config id :priority-configuration)]
     (. builder priorityConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
   (.build builder))
 
@@ -1596,7 +1596,7 @@
 | `destinationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-arn` |
 "
   [^CfnGameSessionQueue$DestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
   (.build builder))
 
@@ -1624,7 +1624,7 @@
 | `allowedLocations` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-locations` |
 "
   [^CfnGameSessionQueue$FilterConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-locations)]
+  (when-some [data (lookup-entry config id :allowed-locations)]
     (. builder allowedLocations data))
   (.build builder))
 
@@ -1652,7 +1652,7 @@
 | `destinationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-arn` |
 "
   [^CfnGameSessionQueue$GameSessionQueueDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
   (.build builder))
 
@@ -1681,9 +1681,9 @@
 | `policyDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:policy-duration-seconds` |
 "
   [^CfnGameSessionQueue$PlayerLatencyPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maximum-individual-player-latency-milliseconds)]
+  (when-some [data (lookup-entry config id :maximum-individual-player-latency-milliseconds)]
     (. builder maximumIndividualPlayerLatencyMilliseconds data))
-  (when-let [data (lookup-entry config id :policy-duration-seconds)]
+  (when-some [data (lookup-entry config id :policy-duration-seconds)]
     (. builder policyDurationSeconds data))
   (.build builder))
 
@@ -1712,9 +1712,9 @@
 | `priorityOrder` | java.util.List | [[cdk.support/lookup-entry]] | `:priority-order` |
 "
   [^CfnGameSessionQueue$PriorityConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :location-order)]
+  (when-some [data (lookup-entry config id :location-order)]
     (. builder locationOrder data))
-  (when-let [data (lookup-entry config id :priority-order)]
+  (when-some [data (lookup-entry config id :priority-order)]
     (. builder priorityOrder data))
   (.build builder))
 
@@ -1750,23 +1750,23 @@
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 "
   [^CfnGameSessionQueueProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-event-data)]
+  (when-some [data (lookup-entry config id :custom-event-data)]
     (. builder customEventData data))
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :filter-configuration)]
+  (when-some [data (lookup-entry config id :filter-configuration)]
     (. builder filterConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :notification-target)]
+  (when-some [data (lookup-entry config id :notification-target)]
     (. builder notificationTarget data))
-  (when-let [data (lookup-entry config id :player-latency-policies)]
+  (when-some [data (lookup-entry config id :player-latency-policies)]
     (. builder playerLatencyPolicies data))
-  (when-let [data (lookup-entry config id :priority-configuration)]
+  (when-some [data (lookup-entry config id :priority-configuration)]
     (. builder priorityConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
   (.build builder))
 
@@ -1795,9 +1795,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLocation$Builder builder id config]
-  (when-let [data (lookup-entry config id :location-name)]
+  (when-some [data (lookup-entry config id :location-name)]
     (. builder locationName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1826,9 +1826,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLocationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :location-name)]
+  (when-some [data (lookup-entry config id :location-name)]
     (. builder locationName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1872,39 +1872,39 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMatchmakingConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :acceptance-required)]
+  (when-some [data (lookup-entry config id :acceptance-required)]
     (. builder acceptanceRequired data))
-  (when-let [data (lookup-entry config id :acceptance-timeout-seconds)]
+  (when-some [data (lookup-entry config id :acceptance-timeout-seconds)]
     (. builder acceptanceTimeoutSeconds data))
-  (when-let [data (lookup-entry config id :additional-player-count)]
+  (when-some [data (lookup-entry config id :additional-player-count)]
     (. builder additionalPlayerCount data))
-  (when-let [data (lookup-entry config id :backfill-mode)]
+  (when-some [data (lookup-entry config id :backfill-mode)]
     (. builder backfillMode data))
-  (when-let [data (lookup-entry config id :creation-time)]
+  (when-some [data (lookup-entry config id :creation-time)]
     (. builder creationTime data))
-  (when-let [data (lookup-entry config id :custom-event-data)]
+  (when-some [data (lookup-entry config id :custom-event-data)]
     (. builder customEventData data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :flex-match-mode)]
+  (when-some [data (lookup-entry config id :flex-match-mode)]
     (. builder flexMatchMode data))
-  (when-let [data (lookup-entry config id :game-properties)]
+  (when-some [data (lookup-entry config id :game-properties)]
     (. builder gameProperties data))
-  (when-let [data (lookup-entry config id :game-session-data)]
+  (when-some [data (lookup-entry config id :game-session-data)]
     (. builder gameSessionData data))
-  (when-let [data (lookup-entry config id :game-session-queue-arns)]
+  (when-some [data (lookup-entry config id :game-session-queue-arns)]
     (. builder gameSessionQueueArns data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :notification-target)]
+  (when-some [data (lookup-entry config id :notification-target)]
     (. builder notificationTarget data))
-  (when-let [data (lookup-entry config id :request-timeout-seconds)]
+  (when-some [data (lookup-entry config id :request-timeout-seconds)]
     (. builder requestTimeoutSeconds data))
-  (when-let [data (lookup-entry config id :rule-set-arn)]
+  (when-some [data (lookup-entry config id :rule-set-arn)]
     (. builder ruleSetArn data))
-  (when-let [data (lookup-entry config id :rule-set-name)]
+  (when-some [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1933,9 +1933,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnMatchmakingConfiguration$GamePropertyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1979,39 +1979,39 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMatchmakingConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :acceptance-required)]
+  (when-some [data (lookup-entry config id :acceptance-required)]
     (. builder acceptanceRequired data))
-  (when-let [data (lookup-entry config id :acceptance-timeout-seconds)]
+  (when-some [data (lookup-entry config id :acceptance-timeout-seconds)]
     (. builder acceptanceTimeoutSeconds data))
-  (when-let [data (lookup-entry config id :additional-player-count)]
+  (when-some [data (lookup-entry config id :additional-player-count)]
     (. builder additionalPlayerCount data))
-  (when-let [data (lookup-entry config id :backfill-mode)]
+  (when-some [data (lookup-entry config id :backfill-mode)]
     (. builder backfillMode data))
-  (when-let [data (lookup-entry config id :creation-time)]
+  (when-some [data (lookup-entry config id :creation-time)]
     (. builder creationTime data))
-  (when-let [data (lookup-entry config id :custom-event-data)]
+  (when-some [data (lookup-entry config id :custom-event-data)]
     (. builder customEventData data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :flex-match-mode)]
+  (when-some [data (lookup-entry config id :flex-match-mode)]
     (. builder flexMatchMode data))
-  (when-let [data (lookup-entry config id :game-properties)]
+  (when-some [data (lookup-entry config id :game-properties)]
     (. builder gameProperties data))
-  (when-let [data (lookup-entry config id :game-session-data)]
+  (when-some [data (lookup-entry config id :game-session-data)]
     (. builder gameSessionData data))
-  (when-let [data (lookup-entry config id :game-session-queue-arns)]
+  (when-some [data (lookup-entry config id :game-session-queue-arns)]
     (. builder gameSessionQueueArns data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :notification-target)]
+  (when-some [data (lookup-entry config id :notification-target)]
     (. builder notificationTarget data))
-  (when-let [data (lookup-entry config id :request-timeout-seconds)]
+  (when-some [data (lookup-entry config id :request-timeout-seconds)]
     (. builder requestTimeoutSeconds data))
-  (when-let [data (lookup-entry config id :rule-set-arn)]
+  (when-some [data (lookup-entry config id :rule-set-arn)]
     (. builder ruleSetArn data))
-  (when-let [data (lookup-entry config id :rule-set-name)]
+  (when-some [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2041,11 +2041,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMatchmakingRuleSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rule-set-body)]
+  (when-some [data (lookup-entry config id :rule-set-body)]
     (. builder ruleSetBody data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2075,11 +2075,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMatchmakingRuleSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rule-set-body)]
+  (when-some [data (lookup-entry config id :rule-set-body)]
     (. builder ruleSetBody data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2110,13 +2110,13 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnScript$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :storage-location)]
+  (when-some [data (lookup-entry config id :storage-location)]
     (. builder storageLocation data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -2147,13 +2147,13 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnScriptProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :storage-location)]
+  (when-some [data (lookup-entry config id :storage-location)]
     (. builder storageLocation data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -2184,13 +2184,13 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnScript$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :object-version)]
+  (when-some [data (lookup-entry config id :object-version)]
     (. builder objectVersion data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 

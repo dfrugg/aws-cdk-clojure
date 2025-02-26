@@ -39,17 +39,17 @@
 | `trackingOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$TrackingOptionsProperty | [[cdk.support/lookup-entry]] | `:tracking-options` |
 "
   [^CfnConfigurationSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-options)]
+  (when-some [data (lookup-entry config id :delivery-options)]
     (. builder deliveryOptions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :reputation-options)]
+  (when-some [data (lookup-entry config id :reputation-options)]
     (. builder reputationOptions data))
-  (when-let [data (lookup-entry config id :sending-options)]
+  (when-some [data (lookup-entry config id :sending-options)]
     (. builder sendingOptions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tracking-options)]
+  (when-some [data (lookup-entry config id :tracking-options)]
     (. builder trackingOptions data))
   (.build builder))
 
@@ -77,7 +77,7 @@
 | `sendingPoolName` | java.lang.String | [[cdk.support/lookup-entry]] | `:sending-pool-name` |
 "
   [^CfnConfigurationSet$DeliveryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sending-pool-name)]
+  (when-some [data (lookup-entry config id :sending-pool-name)]
     (. builder sendingPoolName data))
   (.build builder))
 
@@ -107,11 +107,11 @@
 | `eventDestinationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-destination-name` |
 "
   [^CfnConfigurationSetEventDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-name)]
+  (when-some [data (lookup-entry config id :configuration-set-name)]
     (. builder configurationSetName data))
-  (when-let [data (lookup-entry config id :event-destination)]
+  (when-some [data (lookup-entry config id :event-destination)]
     (. builder eventDestination data))
-  (when-let [data (lookup-entry config id :event-destination-name)]
+  (when-some [data (lookup-entry config id :event-destination-name)]
     (. builder eventDestinationName data))
   (.build builder))
 
@@ -139,7 +139,7 @@
 | `dimensionConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:dimension-configurations` |
 "
   [^CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimension-configurations)]
+  (when-some [data (lookup-entry config id :dimension-configurations)]
     (. builder dimensionConfigurations data))
   (.build builder))
 
@@ -169,11 +169,11 @@
 | `dimensionValueSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:dimension-value-source` |
 "
   [^CfnConfigurationSetEventDestination$DimensionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-dimension-value)]
+  (when-some [data (lookup-entry config id :default-dimension-value)]
     (. builder defaultDimensionValue data))
-  (when-let [data (lookup-entry config id :dimension-name)]
+  (when-some [data (lookup-entry config id :dimension-name)]
     (. builder dimensionName data))
-  (when-let [data (lookup-entry config id :dimension-value-source)]
+  (when-some [data (lookup-entry config id :dimension-value-source)]
     (. builder dimensionValueSource data))
   (.build builder))
 
@@ -206,17 +206,17 @@
 | `snsDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns-destination` |
 "
   [^CfnConfigurationSetEventDestination$EventDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-destination)]
+  (when-some [data (lookup-entry config id :cloud-watch-destination)]
     (. builder cloudWatchDestination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :kinesis-firehose-destination)]
+  (when-some [data (lookup-entry config id :kinesis-firehose-destination)]
     (. builder kinesisFirehoseDestination data))
-  (when-let [data (lookup-entry config id :matching-event-types)]
+  (when-some [data (lookup-entry config id :matching-event-types)]
     (. builder matchingEventTypes data))
-  (when-let [data (lookup-entry config id :pinpoint-destination)]
+  (when-some [data (lookup-entry config id :pinpoint-destination)]
     (. builder pinpointDestination data))
-  (when-let [data (lookup-entry config id :sns-destination)]
+  (when-some [data (lookup-entry config id :sns-destination)]
     (. builder snsDestination data))
   (.build builder))
 
@@ -245,9 +245,9 @@
 | `iamRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-role-arn` |
 "
   [^CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-stream-arn)]
+  (when-some [data (lookup-entry config id :delivery-stream-arn)]
     (. builder deliveryStreamArn data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
   (.build builder))
 
@@ -275,7 +275,7 @@
 | `applicationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-arn` |
 "
   [^CfnConfigurationSetEventDestination$PinpointDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-arn)]
+  (when-some [data (lookup-entry config id :application-arn)]
     (. builder applicationArn data))
   (.build builder))
 
@@ -305,11 +305,11 @@
 | `eventDestinationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-destination-name` |
 "
   [^CfnConfigurationSetEventDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-name)]
+  (when-some [data (lookup-entry config id :configuration-set-name)]
     (. builder configurationSetName data))
-  (when-let [data (lookup-entry config id :event-destination)]
+  (when-some [data (lookup-entry config id :event-destination)]
     (. builder eventDestination data))
-  (when-let [data (lookup-entry config id :event-destination-name)]
+  (when-some [data (lookup-entry config id :event-destination-name)]
     (. builder eventDestinationName data))
   (.build builder))
 
@@ -337,7 +337,7 @@
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -370,17 +370,17 @@
 | `trackingOptions` | software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet$TrackingOptionsProperty | [[cdk.support/lookup-entry]] | `:tracking-options` |
 "
   [^CfnConfigurationSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-options)]
+  (when-some [data (lookup-entry config id :delivery-options)]
     (. builder deliveryOptions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :reputation-options)]
+  (when-some [data (lookup-entry config id :reputation-options)]
     (. builder reputationOptions data))
-  (when-let [data (lookup-entry config id :sending-options)]
+  (when-some [data (lookup-entry config id :sending-options)]
     (. builder sendingOptions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tracking-options)]
+  (when-some [data (lookup-entry config id :tracking-options)]
     (. builder trackingOptions data))
   (.build builder))
 
@@ -408,7 +408,7 @@
 | `reputationMetricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:reputation-metrics-enabled` |
 "
   [^CfnConfigurationSet$ReputationOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :reputation-metrics-enabled)]
+  (when-some [data (lookup-entry config id :reputation-metrics-enabled)]
     (. builder reputationMetricsEnabled data))
   (.build builder))
 
@@ -436,7 +436,7 @@
 | `sendingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sending-enabled` |
 "
   [^CfnConfigurationSet$SendingOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sending-enabled)]
+  (when-some [data (lookup-entry config id :sending-enabled)]
     (. builder sendingEnabled data))
   (.build builder))
 
@@ -464,7 +464,7 @@
 | `customRedirectDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-redirect-domain` |
 "
   [^CfnConfigurationSet$TrackingOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-redirect-domain)]
+  (when-some [data (lookup-entry config id :custom-redirect-domain)]
     (. builder customRedirectDomain data))
   (.build builder))
 
@@ -493,9 +493,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDedicatedIpPool$Builder builder id config]
-  (when-let [data (lookup-entry config id :pool-name)]
+  (when-some [data (lookup-entry config id :pool-name)]
     (. builder poolName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -524,9 +524,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDedicatedIpPoolProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :pool-name)]
+  (when-some [data (lookup-entry config id :pool-name)]
     (. builder poolName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -558,15 +558,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIdentity$Builder builder id config]
-  (when-let [data (lookup-entry config id :dkim-signing-enabled)]
+  (when-some [data (lookup-entry config id :dkim-signing-enabled)]
     (. builder dkimSigningEnabled data))
-  (when-let [data (lookup-entry config id :feedback-forwarding-enabled)]
+  (when-some [data (lookup-entry config id :feedback-forwarding-enabled)]
     (. builder feedbackForwardingEnabled data))
-  (when-let [data (lookup-entry config id :mail-from-attributes)]
+  (when-some [data (lookup-entry config id :mail-from-attributes)]
     (. builder mailFromAttributes data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -595,9 +595,9 @@
 | `mailFromDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:mail-from-domain` |
 "
   [^CfnIdentity$MailFromAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :behavior-on-mx-failure)]
+  (when-some [data (lookup-entry config id :behavior-on-mx-failure)]
     (. builder behaviorOnMxFailure data))
-  (when-let [data (lookup-entry config id :mail-from-domain)]
+  (when-some [data (lookup-entry config id :mail-from-domain)]
     (. builder mailFromDomain data))
   (.build builder))
 
@@ -629,15 +629,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnIdentityProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dkim-signing-enabled)]
+  (when-some [data (lookup-entry config id :dkim-signing-enabled)]
     (. builder dkimSigningEnabled data))
-  (when-let [data (lookup-entry config id :feedback-forwarding-enabled)]
+  (when-some [data (lookup-entry config id :feedback-forwarding-enabled)]
     (. builder feedbackForwardingEnabled data))
-  (when-let [data (lookup-entry config id :mail-from-attributes)]
+  (when-some [data (lookup-entry config id :mail-from-attributes)]
     (. builder mailFromAttributes data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

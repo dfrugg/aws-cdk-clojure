@@ -211,13 +211,13 @@
 ; Builder Methods
 (def template-builder-method-lookup
   "
-  (when-let [data (lookup-entry config id :%s)]
+  (when-some [data (lookup-entry config id :%s)]
     (. builder %s data))")
 
 
 (def template-builder-method-enum
   "
-  (when-let [data (%s config id :%s)]
+  (when-some [data (%s config id :%s)]
     (. builder %s data))")
 
 

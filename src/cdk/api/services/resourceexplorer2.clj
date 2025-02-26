@@ -24,7 +24,7 @@
 | `viewArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-arn` |
 "
   [^CfnDefaultViewAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :view-arn)]
+  (when-some [data (lookup-entry config id :view-arn)]
     (. builder viewArn data))
   (.build builder))
 
@@ -52,7 +52,7 @@
 | `viewArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-arn` |
 "
   [^CfnDefaultViewAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :view-arn)]
+  (when-some [data (lookup-entry config id :view-arn)]
     (. builder viewArn data))
   (.build builder))
 
@@ -81,9 +81,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnIndex$Builder builder id config]
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -112,9 +112,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnIndexProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -146,15 +146,15 @@
 | `viewName` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-name` |
 "
   [^CfnView$Builder builder id config]
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :included-properties)]
+  (when-some [data (lookup-entry config id :included-properties)]
     (. builder includedProperties data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :view-name)]
+  (when-some [data (lookup-entry config id :view-name)]
     (. builder viewName data))
   (.build builder))
 
@@ -182,7 +182,7 @@
 | `filterString` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-string` |
 "
   [^CfnView$FiltersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter-string)]
+  (when-some [data (lookup-entry config id :filter-string)]
     (. builder filterString data))
   (.build builder))
 
@@ -210,7 +210,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnView$IncludedPropertyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -242,15 +242,15 @@
 | `viewName` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-name` |
 "
   [^CfnViewProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :included-properties)]
+  (when-some [data (lookup-entry config id :included-properties)]
     (. builder includedProperties data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :view-name)]
+  (when-some [data (lookup-entry config id :view-name)]
     (. builder viewName data))
   (.build builder))
 
@@ -278,7 +278,7 @@
 | `filterString` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-string` |
 "
   [^CfnView$SearchFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter-string)]
+  (when-some [data (lookup-entry config id :filter-string)]
     (. builder filterString data))
   (.build builder))
 

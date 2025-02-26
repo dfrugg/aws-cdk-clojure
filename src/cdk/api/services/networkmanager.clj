@@ -63,17 +63,17 @@
 | `transportAttachmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transport-attachment-id` |
 "
   [^CfnConnectAttachment$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-id)]
+  (when-some [data (lookup-entry config id :core-network-id)]
     (. builder coreNetworkId data))
-  (when-let [data (lookup-entry config id :edge-location)]
+  (when-some [data (lookup-entry config id :edge-location)]
     (. builder edgeLocation data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :proposed-segment-change)]
+  (when-some [data (lookup-entry config id :proposed-segment-change)]
     (. builder proposedSegmentChange data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :transport-attachment-id)]
+  (when-some [data (lookup-entry config id :transport-attachment-id)]
     (. builder transportAttachmentId data))
   (.build builder))
 
@@ -101,7 +101,7 @@
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnConnectAttachment$ConnectAttachmentOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -131,11 +131,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectAttachment$ProposedSegmentChangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attachment-policy-rule-number)]
+  (when-some [data (lookup-entry config id :attachment-policy-rule-number)]
     (. builder attachmentPolicyRuleNumber data))
-  (when-let [data (lookup-entry config id :segment-name)]
+  (when-some [data (lookup-entry config id :segment-name)]
     (. builder segmentName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -168,17 +168,17 @@
 | `transportAttachmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:transport-attachment-id` |
 "
   [^CfnConnectAttachmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-id)]
+  (when-some [data (lookup-entry config id :core-network-id)]
     (. builder coreNetworkId data))
-  (when-let [data (lookup-entry config id :edge-location)]
+  (when-some [data (lookup-entry config id :edge-location)]
     (. builder edgeLocation data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :proposed-segment-change)]
+  (when-some [data (lookup-entry config id :proposed-segment-change)]
     (. builder proposedSegmentChange data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :transport-attachment-id)]
+  (when-some [data (lookup-entry config id :transport-attachment-id)]
     (. builder transportAttachmentId data))
   (.build builder))
 
@@ -206,7 +206,7 @@
 | `peerAsn` | java.lang.Number | [[cdk.support/lookup-entry]] | `:peer-asn` |
 "
   [^CfnConnectPeer$BgpOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :peer-asn)]
+  (when-some [data (lookup-entry config id :peer-asn)]
     (. builder peerAsn data))
   (.build builder))
 
@@ -240,19 +240,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectPeer$Builder builder id config]
-  (when-let [data (lookup-entry config id :bgp-options)]
+  (when-some [data (lookup-entry config id :bgp-options)]
     (. builder bgpOptions data))
-  (when-let [data (lookup-entry config id :connect-attachment-id)]
+  (when-some [data (lookup-entry config id :connect-attachment-id)]
     (. builder connectAttachmentId data))
-  (when-let [data (lookup-entry config id :core-network-address)]
+  (when-some [data (lookup-entry config id :core-network-address)]
     (. builder coreNetworkAddress data))
-  (when-let [data (lookup-entry config id :inside-cidr-blocks)]
+  (when-some [data (lookup-entry config id :inside-cidr-blocks)]
     (. builder insideCidrBlocks data))
-  (when-let [data (lookup-entry config id :peer-address)]
+  (when-some [data (lookup-entry config id :peer-address)]
     (. builder peerAddress data))
-  (when-let [data (lookup-entry config id :subnet-arn)]
+  (when-some [data (lookup-entry config id :subnet-arn)]
     (. builder subnetArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -283,13 +283,13 @@
 | `peerAsn` | java.lang.Number | [[cdk.support/lookup-entry]] | `:peer-asn` |
 "
   [^CfnConnectPeer$ConnectPeerBgpConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-address)]
+  (when-some [data (lookup-entry config id :core-network-address)]
     (. builder coreNetworkAddress data))
-  (when-let [data (lookup-entry config id :core-network-asn)]
+  (when-some [data (lookup-entry config id :core-network-asn)]
     (. builder coreNetworkAsn data))
-  (when-let [data (lookup-entry config id :peer-address)]
+  (when-some [data (lookup-entry config id :peer-address)]
     (. builder peerAddress data))
-  (when-let [data (lookup-entry config id :peer-asn)]
+  (when-some [data (lookup-entry config id :peer-asn)]
     (. builder peerAsn data))
   (.build builder))
 
@@ -321,15 +321,15 @@
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnConnectPeer$ConnectPeerConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bgp-configurations)]
+  (when-some [data (lookup-entry config id :bgp-configurations)]
     (. builder bgpConfigurations data))
-  (when-let [data (lookup-entry config id :core-network-address)]
+  (when-some [data (lookup-entry config id :core-network-address)]
     (. builder coreNetworkAddress data))
-  (when-let [data (lookup-entry config id :inside-cidr-blocks)]
+  (when-some [data (lookup-entry config id :inside-cidr-blocks)]
     (. builder insideCidrBlocks data))
-  (when-let [data (lookup-entry config id :peer-address)]
+  (when-some [data (lookup-entry config id :peer-address)]
     (. builder peerAddress data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -363,19 +363,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectPeerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bgp-options)]
+  (when-some [data (lookup-entry config id :bgp-options)]
     (. builder bgpOptions data))
-  (when-let [data (lookup-entry config id :connect-attachment-id)]
+  (when-some [data (lookup-entry config id :connect-attachment-id)]
     (. builder connectAttachmentId data))
-  (when-let [data (lookup-entry config id :core-network-address)]
+  (when-some [data (lookup-entry config id :core-network-address)]
     (. builder coreNetworkAddress data))
-  (when-let [data (lookup-entry config id :inside-cidr-blocks)]
+  (when-some [data (lookup-entry config id :inside-cidr-blocks)]
     (. builder insideCidrBlocks data))
-  (when-let [data (lookup-entry config id :peer-address)]
+  (when-some [data (lookup-entry config id :peer-address)]
     (. builder peerAddress data))
-  (when-let [data (lookup-entry config id :subnet-arn)]
+  (when-some [data (lookup-entry config id :subnet-arn)]
     (. builder subnetArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -406,13 +406,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCoreNetwork$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -442,11 +442,11 @@
 | `insideCidrBlocks` | java.util.List | [[cdk.support/lookup-entry]] | `:inside-cidr-blocks` |
 "
   [^CfnCoreNetwork$CoreNetworkEdgeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :asn)]
+  (when-some [data (lookup-entry config id :asn)]
     (. builder asn data))
-  (when-let [data (lookup-entry config id :edge-location)]
+  (when-some [data (lookup-entry config id :edge-location)]
     (. builder edgeLocation data))
-  (when-let [data (lookup-entry config id :inside-cidr-blocks)]
+  (when-some [data (lookup-entry config id :inside-cidr-blocks)]
     (. builder insideCidrBlocks data))
   (.build builder))
 
@@ -476,11 +476,11 @@
 | `sharedSegments` | java.util.List | [[cdk.support/lookup-entry]] | `:shared-segments` |
 "
   [^CfnCoreNetwork$CoreNetworkSegmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :edge-locations)]
+  (when-some [data (lookup-entry config id :edge-locations)]
     (. builder edgeLocations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :shared-segments)]
+  (when-some [data (lookup-entry config id :shared-segments)]
     (. builder sharedSegments data))
   (.build builder))
 
@@ -511,13 +511,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCoreNetworkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -548,13 +548,13 @@
 | `linkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:link-id` |
 "
   [^CfnCustomerGatewayAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :customer-gateway-arn)]
+  (when-some [data (lookup-entry config id :customer-gateway-arn)]
     (. builder customerGatewayArn data))
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :link-id)]
+  (when-some [data (lookup-entry config id :link-id)]
     (. builder linkId data))
   (.build builder))
 
@@ -585,13 +585,13 @@
 | `linkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:link-id` |
 "
   [^CfnCustomerGatewayAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :customer-gateway-arn)]
+  (when-some [data (lookup-entry config id :customer-gateway-arn)]
     (. builder customerGatewayArn data))
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :link-id)]
+  (when-some [data (lookup-entry config id :link-id)]
     (. builder linkId data))
   (.build builder))
 
@@ -620,9 +620,9 @@
 | `zone` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^CfnDevice$AWSLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :subnet-arn)]
+  (when-some [data (lookup-entry config id :subnet-arn)]
     (. builder subnetArn data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -659,25 +659,25 @@
 | `vendor` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor` |
 "
   [^CfnDevice$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-location)]
+  (when-some [data (lookup-entry config id :aws-location)]
     (. builder awsLocation data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :serial-number)]
+  (when-some [data (lookup-entry config id :serial-number)]
     (. builder serialNumber data))
-  (when-let [data (lookup-entry config id :site-id)]
+  (when-some [data (lookup-entry config id :site-id)]
     (. builder siteId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :vendor)]
+  (when-some [data (lookup-entry config id :vendor)]
     (. builder vendor data))
   (.build builder))
 
@@ -707,11 +707,11 @@
 | `longitude` | java.lang.String | [[cdk.support/lookup-entry]] | `:longitude` |
 "
   [^CfnDevice$LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :address)]
+  (when-some [data (lookup-entry config id :address)]
     (. builder address data))
-  (when-let [data (lookup-entry config id :latitude)]
+  (when-some [data (lookup-entry config id :latitude)]
     (. builder latitude data))
-  (when-let [data (lookup-entry config id :longitude)]
+  (when-some [data (lookup-entry config id :longitude)]
     (. builder longitude data))
   (.build builder))
 
@@ -748,25 +748,25 @@
 | `vendor` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor` |
 "
   [^CfnDeviceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-location)]
+  (when-some [data (lookup-entry config id :aws-location)]
     (. builder awsLocation data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :serial-number)]
+  (when-some [data (lookup-entry config id :serial-number)]
     (. builder serialNumber data))
-  (when-let [data (lookup-entry config id :site-id)]
+  (when-some [data (lookup-entry config id :site-id)]
     (. builder siteId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :vendor)]
+  (when-some [data (lookup-entry config id :vendor)]
     (. builder vendor data))
   (.build builder))
 
@@ -797,13 +797,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGlobalNetwork$Builder builder id config]
-  (when-let [data (lookup-entry config id :created-at)]
+  (when-some [data (lookup-entry config id :created-at)]
     (. builder createdAt data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -834,13 +834,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGlobalNetworkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :created-at)]
+  (when-some [data (lookup-entry config id :created-at)]
     (. builder createdAt data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -870,11 +870,11 @@
 | `linkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:link-id` |
 "
   [^CfnLinkAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :link-id)]
+  (when-some [data (lookup-entry config id :link-id)]
     (. builder linkId data))
   (.build builder))
 
@@ -904,11 +904,11 @@
 | `linkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:link-id` |
 "
   [^CfnLinkAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :link-id)]
+  (when-some [data (lookup-entry config id :link-id)]
     (. builder linkId data))
   (.build builder))
 
@@ -937,9 +937,9 @@
 | `uploadSpeed` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upload-speed` |
 "
   [^CfnLink$BandwidthProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :download-speed)]
+  (when-some [data (lookup-entry config id :download-speed)]
     (. builder downloadSpeed data))
-  (when-let [data (lookup-entry config id :upload-speed)]
+  (when-some [data (lookup-entry config id :upload-speed)]
     (. builder uploadSpeed data))
   (.build builder))
 
@@ -973,19 +973,19 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnLink$Builder builder id config]
-  (when-let [data (lookup-entry config id :bandwidth)]
+  (when-some [data (lookup-entry config id :bandwidth)]
     (. builder bandwidth data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :provider)]
+  (when-some [data (lookup-entry config id :provider)]
     (. builder provider data))
-  (when-let [data (lookup-entry config id :site-id)]
+  (when-some [data (lookup-entry config id :site-id)]
     (. builder siteId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1019,19 +1019,19 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnLinkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bandwidth)]
+  (when-some [data (lookup-entry config id :bandwidth)]
     (. builder bandwidth data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :provider)]
+  (when-some [data (lookup-entry config id :provider)]
     (. builder provider data))
-  (when-let [data (lookup-entry config id :site-id)]
+  (when-some [data (lookup-entry config id :site-id)]
     (. builder siteId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1062,13 +1062,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSite$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1098,11 +1098,11 @@
 | `longitude` | java.lang.String | [[cdk.support/lookup-entry]] | `:longitude` |
 "
   [^CfnSite$LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :address)]
+  (when-some [data (lookup-entry config id :address)]
     (. builder address data))
-  (when-let [data (lookup-entry config id :latitude)]
+  (when-some [data (lookup-entry config id :latitude)]
     (. builder latitude data))
-  (when-let [data (lookup-entry config id :longitude)]
+  (when-some [data (lookup-entry config id :longitude)]
     (. builder longitude data))
   (.build builder))
 
@@ -1133,13 +1133,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSiteProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1170,13 +1170,13 @@
 | `vpnConnectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpn-connection-arn` |
 "
   [^CfnSiteToSiteVpnAttachment$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-id)]
+  (when-some [data (lookup-entry config id :core-network-id)]
     (. builder coreNetworkId data))
-  (when-let [data (lookup-entry config id :proposed-segment-change)]
+  (when-some [data (lookup-entry config id :proposed-segment-change)]
     (. builder proposedSegmentChange data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpn-connection-arn)]
+  (when-some [data (lookup-entry config id :vpn-connection-arn)]
     (. builder vpnConnectionArn data))
   (.build builder))
 
@@ -1206,11 +1206,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSiteToSiteVpnAttachment$ProposedSegmentChangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attachment-policy-rule-number)]
+  (when-some [data (lookup-entry config id :attachment-policy-rule-number)]
     (. builder attachmentPolicyRuleNumber data))
-  (when-let [data (lookup-entry config id :segment-name)]
+  (when-some [data (lookup-entry config id :segment-name)]
     (. builder segmentName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1241,13 +1241,13 @@
 | `vpnConnectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpn-connection-arn` |
 "
   [^CfnSiteToSiteVpnAttachmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-id)]
+  (when-some [data (lookup-entry config id :core-network-id)]
     (. builder coreNetworkId data))
-  (when-let [data (lookup-entry config id :proposed-segment-change)]
+  (when-some [data (lookup-entry config id :proposed-segment-change)]
     (. builder proposedSegmentChange data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpn-connection-arn)]
+  (when-some [data (lookup-entry config id :vpn-connection-arn)]
     (. builder vpnConnectionArn data))
   (.build builder))
 
@@ -1277,11 +1277,11 @@
 | `transitGatewayArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-arn` |
 "
   [^CfnTransitGatewayPeering$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-id)]
+  (when-some [data (lookup-entry config id :core-network-id)]
     (. builder coreNetworkId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :transit-gateway-arn)]
+  (when-some [data (lookup-entry config id :transit-gateway-arn)]
     (. builder transitGatewayArn data))
   (.build builder))
 
@@ -1311,11 +1311,11 @@
 | `transitGatewayArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-arn` |
 "
   [^CfnTransitGatewayPeeringProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-id)]
+  (when-some [data (lookup-entry config id :core-network-id)]
     (. builder coreNetworkId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :transit-gateway-arn)]
+  (when-some [data (lookup-entry config id :transit-gateway-arn)]
     (. builder transitGatewayArn data))
   (.build builder))
 
@@ -1344,9 +1344,9 @@
 | `transitGatewayArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-arn` |
 "
   [^CfnTransitGatewayRegistration$Builder builder id config]
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :transit-gateway-arn)]
+  (when-some [data (lookup-entry config id :transit-gateway-arn)]
     (. builder transitGatewayArn data))
   (.build builder))
 
@@ -1375,9 +1375,9 @@
 | `transitGatewayArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-arn` |
 "
   [^CfnTransitGatewayRegistrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :global-network-id)]
+  (when-some [data (lookup-entry config id :global-network-id)]
     (. builder globalNetworkId data))
-  (when-let [data (lookup-entry config id :transit-gateway-arn)]
+  (when-some [data (lookup-entry config id :transit-gateway-arn)]
     (. builder transitGatewayArn data))
   (.build builder))
 
@@ -1408,13 +1408,13 @@
 | `transitGatewayRouteTableArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table-arn` |
 "
   [^CfnTransitGatewayRouteTableAttachment$Builder builder id config]
-  (when-let [data (lookup-entry config id :peering-id)]
+  (when-some [data (lookup-entry config id :peering-id)]
     (. builder peeringId data))
-  (when-let [data (lookup-entry config id :proposed-segment-change)]
+  (when-some [data (lookup-entry config id :proposed-segment-change)]
     (. builder proposedSegmentChange data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :transit-gateway-route-table-arn)]
+  (when-some [data (lookup-entry config id :transit-gateway-route-table-arn)]
     (. builder transitGatewayRouteTableArn data))
   (.build builder))
 
@@ -1444,11 +1444,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTransitGatewayRouteTableAttachment$ProposedSegmentChangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attachment-policy-rule-number)]
+  (when-some [data (lookup-entry config id :attachment-policy-rule-number)]
     (. builder attachmentPolicyRuleNumber data))
-  (when-let [data (lookup-entry config id :segment-name)]
+  (when-some [data (lookup-entry config id :segment-name)]
     (. builder segmentName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1479,13 +1479,13 @@
 | `transitGatewayRouteTableArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-gateway-route-table-arn` |
 "
   [^CfnTransitGatewayRouteTableAttachmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :peering-id)]
+  (when-some [data (lookup-entry config id :peering-id)]
     (. builder peeringId data))
-  (when-let [data (lookup-entry config id :proposed-segment-change)]
+  (when-some [data (lookup-entry config id :proposed-segment-change)]
     (. builder proposedSegmentChange data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :transit-gateway-route-table-arn)]
+  (when-some [data (lookup-entry config id :transit-gateway-route-table-arn)]
     (. builder transitGatewayRouteTableArn data))
   (.build builder))
 
@@ -1518,17 +1518,17 @@
 | `vpcArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-arn` |
 "
   [^CfnVpcAttachment$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-id)]
+  (when-some [data (lookup-entry config id :core-network-id)]
     (. builder coreNetworkId data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :proposed-segment-change)]
+  (when-some [data (lookup-entry config id :proposed-segment-change)]
     (. builder proposedSegmentChange data))
-  (when-let [data (lookup-entry config id :subnet-arns)]
+  (when-some [data (lookup-entry config id :subnet-arns)]
     (. builder subnetArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-arn)]
+  (when-some [data (lookup-entry config id :vpc-arn)]
     (. builder vpcArn data))
   (.build builder))
 
@@ -1558,11 +1558,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnVpcAttachment$ProposedSegmentChangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attachment-policy-rule-number)]
+  (when-some [data (lookup-entry config id :attachment-policy-rule-number)]
     (. builder attachmentPolicyRuleNumber data))
-  (when-let [data (lookup-entry config id :segment-name)]
+  (when-some [data (lookup-entry config id :segment-name)]
     (. builder segmentName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1595,17 +1595,17 @@
 | `vpcArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-arn` |
 "
   [^CfnVpcAttachmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-network-id)]
+  (when-some [data (lookup-entry config id :core-network-id)]
     (. builder coreNetworkId data))
-  (when-let [data (lookup-entry config id :options)]
+  (when-some [data (lookup-entry config id :options)]
     (. builder options data))
-  (when-let [data (lookup-entry config id :proposed-segment-change)]
+  (when-some [data (lookup-entry config id :proposed-segment-change)]
     (. builder proposedSegmentChange data))
-  (when-let [data (lookup-entry config id :subnet-arns)]
+  (when-some [data (lookup-entry config id :subnet-arns)]
     (. builder subnetArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-arn)]
+  (when-some [data (lookup-entry config id :vpc-arn)]
     (. builder vpcArn data))
   (.build builder))
 
@@ -1634,9 +1634,9 @@
 | `ipv6Support` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ipv6-support` |
 "
   [^CfnVpcAttachment$VpcOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :appliance-mode-support)]
+  (when-some [data (lookup-entry config id :appliance-mode-support)]
     (. builder applianceModeSupport data))
-  (when-let [data (lookup-entry config id :ipv6-support)]
+  (when-some [data (lookup-entry config id :ipv6-support)]
     (. builder ipv6Support data))
   (.build builder))
 

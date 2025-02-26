@@ -113,17 +113,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^AssetManifestArtifact$Builder builder id config]
-  (when-let [data (lookup-entry config id :dependencies)]
+  (when-some [data (lookup-entry config id :dependencies)]
     (. builder dependencies data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (artifact-type config id :type)]
+  (when-some [data (artifact-type config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -158,13 +158,13 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `terminationProtection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protection` |
 "
   [^AwsCloudFormationStackProperties$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :stack-name)]
+  (when-some [data (lookup-entry config id :stack-name)]
     (. builder stackName data))
-  (when-let [data (lookup-entry config id :template-file)]
+  (when-some [data (lookup-entry config id :template-file)]
     (. builder templateFile data))
-  (when-let [data (lookup-entry config id :termination-protection)]
+  (when-some [data (lookup-entry config id :termination-protection)]
     (. builder terminationProtection data))
   (.build builder))
 
@@ -194,11 +194,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `topoSort` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:topo-sort` |
 "
   [^CloudAssembly$Builder builder id config]
-  (when-let [data (lookup-entry config id :skip-enum-check)]
+  (when-some [data (lookup-entry config id :skip-enum-check)]
     (. builder skipEnumCheck data))
-  (when-let [data (lookup-entry config id :skip-version-check)]
+  (when-some [data (lookup-entry config id :skip-version-check)]
     (. builder skipVersionCheck data))
-  (when-let [data (lookup-entry config id :topo-sort)]
+  (when-some [data (lookup-entry config id :topo-sort)]
     (. builder topoSort data))
   (.build builder))
 
@@ -230,9 +230,9 @@ __Create Form:__ ____[java.lang.String]___
 | `parentBuilder` | software.amazon.awscdk.cxapi.CloudAssemblyBuilder | [[cdk.support/lookup-entry]] | `:parent-builder` |
 "
   [^CloudAssemblyBuilder$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-outdir)]
+  (when-some [data (lookup-entry config id :asset-outdir)]
     (. builder assetOutdir data))
-  (when-let [data (lookup-entry config id :parent-builder)]
+  (when-some [data (lookup-entry config id :parent-builder)]
     (. builder parentBuilder data))
   (.build builder))
 
@@ -274,9 +274,9 @@ __Create Form:__ ____[]___
 | `parentBuilder` | software.amazon.awscdk.cxapi.CloudAssemblyBuilder | [[cdk.support/lookup-entry]] | `:parent-builder` |
 "
   [^CloudAssemblyBuilderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-outdir)]
+  (when-some [data (lookup-entry config id :asset-outdir)]
     (. builder assetOutdir data))
-  (when-let [data (lookup-entry config id :parent-builder)]
+  (when-some [data (lookup-entry config id :parent-builder)]
     (. builder parentBuilder data))
   (.build builder))
 
@@ -309,17 +309,17 @@ __Create Form:__ ____[]___
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^CloudFormationStackArtifact$Builder builder id config]
-  (when-let [data (lookup-entry config id :dependencies)]
+  (when-some [data (lookup-entry config id :dependencies)]
     (. builder dependencies data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (artifact-type config id :type)]
+  (when-some [data (artifact-type config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -353,11 +353,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^EndpointServiceAvailabilityZonesContextQuery$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -387,11 +387,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^Environment$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -421,11 +421,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^EnvironmentPlaceholderValues$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :partition)]
+  (when-some [data (lookup-entry config id :partition)]
     (. builder partition data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -453,7 +453,7 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `keyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-id` |
 "
   [^KeyContextResponse$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-id)]
+  (when-some [data (lookup-entry config id :key-id)]
     (. builder keyId data))
   (.build builder))
 
@@ -486,17 +486,17 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^LoadBalancerContextResponse$Builder builder id config]
-  (when-let [data (load-balancer-ip-address-type config id :ip-address-type)]
+  (when-some [data (load-balancer-ip-address-type config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :load-balancer-arn)]
+  (when-some [data (lookup-entry config id :load-balancer-arn)]
     (. builder loadBalancerArn data))
-  (when-let [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
+  (when-some [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
     (. builder loadBalancerCanonicalHostedZoneId data))
-  (when-let [data (lookup-entry config id :load-balancer-dns-name)]
+  (when-some [data (lookup-entry config id :load-balancer-dns-name)]
     (. builder loadBalancerDnsName data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -526,11 +526,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 "
   [^LoadBalancerListenerContextResponse$Builder builder id config]
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
-  (when-let [data (lookup-entry config id :listener-port)]
+  (when-some [data (lookup-entry config id :listener-port)]
     (. builder listenerPort data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
   (.build builder))
 
@@ -561,13 +561,13 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^MetadataEntryResult$Builder builder id config]
-  (when-let [data (lookup-entry config id :data)]
+  (when-some [data (lookup-entry config id :data)]
     (. builder data data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :trace)]
+  (when-some [data (lookup-entry config id :trace)]
     (. builder trace data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -600,17 +600,17 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^NestedCloudAssemblyArtifact$Builder builder id config]
-  (when-let [data (lookup-entry config id :dependencies)]
+  (when-some [data (lookup-entry config id :dependencies)]
     (. builder dependencies data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (artifact-type config id :type)]
+  (when-some [data (artifact-type config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -643,9 +643,9 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `securityGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-group-id` |
 "
   [^SecurityGroupContextResponse$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-all-outbound)]
+  (when-some [data (lookup-entry config id :allow-all-outbound)]
     (. builder allowAllOutbound data))
-  (when-let [data (lookup-entry config id :security-group-id)]
+  (when-some [data (lookup-entry config id :security-group-id)]
     (. builder securityGroupId data))
   (.build builder))
 
@@ -675,11 +675,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `level` | software.amazon.awscdk.cxapi.SynthesisMessageLevel | [[cdk.api.cxapi/synthesis-message-level]] | `:level` |
 "
   [^SynthesisMessage$Builder builder id config]
-  (when-let [data (lookup-entry config id :entry)]
+  (when-some [data (lookup-entry config id :entry)]
     (. builder entry data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (synthesis-message-level config id :level)]
+  (when-some [data (synthesis-message-level config id :level)]
     (. builder level data))
   (.build builder))
 
@@ -712,17 +712,17 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `type` | software.amazon.awscdk.cloudassembly.schema.ArtifactType | [[cdk.api.cloudassembly.schema/artifact-type]] | `:type` |
 "
   [^TreeCloudArtifact$Builder builder id config]
-  (when-let [data (lookup-entry config id :dependencies)]
+  (when-some [data (lookup-entry config id :dependencies)]
     (. builder dependencies data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (artifact-type config id :type)]
+  (when-some [data (artifact-type config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -769,37 +769,37 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `vpnGatewayId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpn-gateway-id` |
 "
   [^VpcContextResponse$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
-  (when-let [data (lookup-entry config id :isolated-subnet-ids)]
+  (when-some [data (lookup-entry config id :isolated-subnet-ids)]
     (. builder isolatedSubnetIds data))
-  (when-let [data (lookup-entry config id :isolated-subnet-names)]
+  (when-some [data (lookup-entry config id :isolated-subnet-names)]
     (. builder isolatedSubnetNames data))
-  (when-let [data (lookup-entry config id :isolated-subnet-route-table-ids)]
+  (when-some [data (lookup-entry config id :isolated-subnet-route-table-ids)]
     (. builder isolatedSubnetRouteTableIds data))
-  (when-let [data (lookup-entry config id :owner-account-id)]
+  (when-some [data (lookup-entry config id :owner-account-id)]
     (. builder ownerAccountId data))
-  (when-let [data (lookup-entry config id :private-subnet-ids)]
+  (when-some [data (lookup-entry config id :private-subnet-ids)]
     (. builder privateSubnetIds data))
-  (when-let [data (lookup-entry config id :private-subnet-names)]
+  (when-some [data (lookup-entry config id :private-subnet-names)]
     (. builder privateSubnetNames data))
-  (when-let [data (lookup-entry config id :private-subnet-route-table-ids)]
+  (when-some [data (lookup-entry config id :private-subnet-route-table-ids)]
     (. builder privateSubnetRouteTableIds data))
-  (when-let [data (lookup-entry config id :public-subnet-ids)]
+  (when-some [data (lookup-entry config id :public-subnet-ids)]
     (. builder publicSubnetIds data))
-  (when-let [data (lookup-entry config id :public-subnet-names)]
+  (when-some [data (lookup-entry config id :public-subnet-names)]
     (. builder publicSubnetNames data))
-  (when-let [data (lookup-entry config id :public-subnet-route-table-ids)]
+  (when-some [data (lookup-entry config id :public-subnet-route-table-ids)]
     (. builder publicSubnetRouteTableIds data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :subnet-groups)]
+  (when-some [data (lookup-entry config id :subnet-groups)]
     (. builder subnetGroups data))
-  (when-let [data (lookup-entry config id :vpc-cidr-block)]
+  (when-some [data (lookup-entry config id :vpc-cidr-block)]
     (. builder vpcCidrBlock data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
-  (when-let [data (lookup-entry config id :vpn-gateway-id)]
+  (when-some [data (lookup-entry config id :vpn-gateway-id)]
     (. builder vpnGatewayId data))
   (.build builder))
 
@@ -830,13 +830,13 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^VpcSubnet$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zone)]
+  (when-some [data (lookup-entry config id :availability-zone)]
     (. builder availabilityZone data))
-  (when-let [data (lookup-entry config id :cidr)]
+  (when-some [data (lookup-entry config id :cidr)]
     (. builder cidr data))
-  (when-let [data (lookup-entry config id :route-table-id)]
+  (when-some [data (lookup-entry config id :route-table-id)]
     (. builder routeTableId data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 
@@ -866,11 +866,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | `type` | software.amazon.awscdk.cxapi.VpcSubnetGroupType | [[cdk.api.cxapi/vpc-subnet-group-type]] | `:type` |
 "
   [^VpcSubnetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (vpc-subnet-group-type config id :type)]
+  (when-some [data (vpc-subnet-group-type config id :type)]
     (. builder type data))
   (.build builder))
 

@@ -26,15 +26,15 @@
 | `trainingData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:training-data` |
 "
   [^CfnTrainingDataset$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :training-data)]
+  (when-some [data (lookup-entry config id :training-data)]
     (. builder trainingData data))
   (.build builder))
 
@@ -63,9 +63,9 @@
 | `columnTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:column-types` |
 "
   [^CfnTrainingDataset$ColumnSchemaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-name)]
+  (when-some [data (lookup-entry config id :column-name)]
     (. builder columnName data))
-  (when-let [data (lookup-entry config id :column-types)]
+  (when-some [data (lookup-entry config id :column-types)]
     (. builder columnTypes data))
   (.build builder))
 
@@ -93,7 +93,7 @@
 | `glueDataSource` | software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset$GlueDataSourceProperty | [[cdk.support/lookup-entry]] | `:glue-data-source` |
 "
   [^CfnTrainingDataset$DataSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :glue-data-source)]
+  (when-some [data (lookup-entry config id :glue-data-source)]
     (. builder glueDataSource data))
   (.build builder))
 
@@ -122,9 +122,9 @@
 | `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^CfnTrainingDataset$DatasetInputConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
 
@@ -153,9 +153,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnTrainingDataset$DatasetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-config)]
+  (when-some [data (lookup-entry config id :input-config)]
     (. builder inputConfig data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -185,11 +185,11 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnTrainingDataset$GlueDataSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -221,15 +221,15 @@
 | `trainingData` | java.util.List | [[cdk.support/lookup-entry]] | `:training-data` |
 "
   [^CfnTrainingDatasetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :training-data)]
+  (when-some [data (lookup-entry config id :training-data)]
     (. builder trainingData data))
   (.build builder))
 

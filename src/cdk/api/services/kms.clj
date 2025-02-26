@@ -93,9 +93,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `aliasTargetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:alias-target-key` |
 "
   [^AliasAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-name)]
+  (when-some [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
-  (when-let [data (lookup-entry config id :alias-target-key)]
+  (when-some [data (lookup-entry config id :alias-target-key)]
     (. builder aliasTargetKey data))
   (.build builder))
 
@@ -125,11 +125,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:target-key` |
 "
   [^Alias$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-name)]
+  (when-some [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :target-key)]
+  (when-some [data (lookup-entry config id :target-key)]
     (. builder targetKey data))
   (.build builder))
 
@@ -159,11 +159,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:target-key` |
 "
   [^AliasProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-name)]
+  (when-some [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :target-key)]
+  (when-some [data (lookup-entry config id :target-key)]
     (. builder targetKey data))
   (.build builder))
 
@@ -192,9 +192,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-key-id` |
 "
   [^CfnAlias$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-name)]
+  (when-some [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
-  (when-let [data (lookup-entry config id :target-key-id)]
+  (when-some [data (lookup-entry config id :target-key-id)]
     (. builder targetKeyId data))
   (.build builder))
 
@@ -223,9 +223,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-key-id` |
 "
   [^CfnAliasProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-name)]
+  (when-some [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
-  (when-let [data (lookup-entry config id :target-key-id)]
+  (when-some [data (lookup-entry config id :target-key-id)]
     (. builder targetKeyId data))
   (.build builder))
 
@@ -264,29 +264,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :bypass-policy-lockout-safety-check)]
+  (when-some [data (lookup-entry config id :bypass-policy-lockout-safety-check)]
     (. builder bypassPolicyLockoutSafetyCheck data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-key-rotation)]
+  (when-some [data (lookup-entry config id :enable-key-rotation)]
     (. builder enableKeyRotation data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :key-policy)]
+  (when-some [data (lookup-entry config id :key-policy)]
     (. builder keyPolicy data))
-  (when-let [data (lookup-entry config id :key-spec)]
+  (when-some [data (lookup-entry config id :key-spec)]
     (. builder keySpec data))
-  (when-let [data (lookup-entry config id :key-usage)]
+  (when-some [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
-  (when-let [data (lookup-entry config id :multi-region)]
+  (when-some [data (lookup-entry config id :multi-region)]
     (. builder multiRegion data))
-  (when-let [data (lookup-entry config id :origin)]
+  (when-some [data (lookup-entry config id :origin)]
     (. builder origin data))
-  (when-let [data (lookup-entry config id :pending-window-in-days)]
+  (when-some [data (lookup-entry config id :pending-window-in-days)]
     (. builder pendingWindowInDays data))
-  (when-let [data (lookup-entry config id :rotation-period-in-days)]
+  (when-some [data (lookup-entry config id :rotation-period-in-days)]
     (. builder rotationPeriodInDays data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -325,29 +325,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bypass-policy-lockout-safety-check)]
+  (when-some [data (lookup-entry config id :bypass-policy-lockout-safety-check)]
     (. builder bypassPolicyLockoutSafetyCheck data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-key-rotation)]
+  (when-some [data (lookup-entry config id :enable-key-rotation)]
     (. builder enableKeyRotation data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :key-policy)]
+  (when-some [data (lookup-entry config id :key-policy)]
     (. builder keyPolicy data))
-  (when-let [data (lookup-entry config id :key-spec)]
+  (when-some [data (lookup-entry config id :key-spec)]
     (. builder keySpec data))
-  (when-let [data (lookup-entry config id :key-usage)]
+  (when-some [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
-  (when-let [data (lookup-entry config id :multi-region)]
+  (when-some [data (lookup-entry config id :multi-region)]
     (. builder multiRegion data))
-  (when-let [data (lookup-entry config id :origin)]
+  (when-some [data (lookup-entry config id :origin)]
     (. builder origin data))
-  (when-let [data (lookup-entry config id :pending-window-in-days)]
+  (when-some [data (lookup-entry config id :pending-window-in-days)]
     (. builder pendingWindowInDays data))
-  (when-let [data (lookup-entry config id :rotation-period-in-days)]
+  (when-some [data (lookup-entry config id :rotation-period-in-days)]
     (. builder rotationPeriodInDays data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -380,17 +380,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReplicaKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :key-policy)]
+  (when-some [data (lookup-entry config id :key-policy)]
     (. builder keyPolicy data))
-  (when-let [data (lookup-entry config id :pending-window-in-days)]
+  (when-some [data (lookup-entry config id :pending-window-in-days)]
     (. builder pendingWindowInDays data))
-  (when-let [data (lookup-entry config id :primary-key-arn)]
+  (when-some [data (lookup-entry config id :primary-key-arn)]
     (. builder primaryKeyArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -423,17 +423,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReplicaKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :key-policy)]
+  (when-some [data (lookup-entry config id :key-policy)]
     (. builder keyPolicy data))
-  (when-let [data (lookup-entry config id :pending-window-in-days)]
+  (when-some [data (lookup-entry config id :pending-window-in-days)]
     (. builder pendingWindowInDays data))
-  (when-let [data (lookup-entry config id :primary-key-arn)]
+  (when-some [data (lookup-entry config id :primary-key-arn)]
     (. builder primaryKeyArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -471,27 +471,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `rotationPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:rotation-period` |
 "
   [^Key$Builder builder id config]
-  (when-let [data (lookup-entry config id :admins)]
+  (when-some [data (lookup-entry config id :admins)]
     (. builder admins data))
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-key-rotation)]
+  (when-some [data (lookup-entry config id :enable-key-rotation)]
     (. builder enableKeyRotation data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (key-spec config id :key-spec)]
+  (when-some [data (key-spec config id :key-spec)]
     (. builder keySpec data))
-  (when-let [data (key-usage config id :key-usage)]
+  (when-some [data (key-usage config id :key-usage)]
     (. builder keyUsage data))
-  (when-let [data (lookup-entry config id :pending-window)]
+  (when-some [data (lookup-entry config id :pending-window)]
     (. builder pendingWindow data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :rotation-period)]
+  (when-some [data (lookup-entry config id :rotation-period)]
     (. builder rotationPeriod data))
   (.build builder))
 
@@ -519,7 +519,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
 "
   [^KeyLookupOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-name)]
+  (when-some [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
   (.build builder))
 
@@ -557,27 +557,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `rotationPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:rotation-period` |
 "
   [^KeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :admins)]
+  (when-some [data (lookup-entry config id :admins)]
     (. builder admins data))
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-key-rotation)]
+  (when-some [data (lookup-entry config id :enable-key-rotation)]
     (. builder enableKeyRotation data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (key-spec config id :key-spec)]
+  (when-some [data (key-spec config id :key-spec)]
     (. builder keySpec data))
-  (when-let [data (key-usage config id :key-usage)]
+  (when-some [data (key-usage config id :key-usage)]
     (. builder keyUsage data))
-  (when-let [data (lookup-entry config id :pending-window)]
+  (when-some [data (lookup-entry config id :pending-window)]
     (. builder pendingWindow data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :rotation-period)]
+  (when-some [data (lookup-entry config id :rotation-period)]
     (. builder rotationPeriod data))
   (.build builder))
 

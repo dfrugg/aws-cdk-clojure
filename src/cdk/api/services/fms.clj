@@ -29,9 +29,9 @@
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 "
   [^CfnNotificationChannel$Builder builder id config]
-  (when-let [data (lookup-entry config id :sns-role-name)]
+  (when-some [data (lookup-entry config id :sns-role-name)]
     (. builder snsRoleName data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
 
@@ -60,9 +60,9 @@
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 "
   [^CfnNotificationChannelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :sns-role-name)]
+  (when-some [data (lookup-entry config id :sns-role-name)]
     (. builder snsRoleName data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
 
@@ -103,33 +103,33 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-all-policy-resources)]
+  (when-some [data (lookup-entry config id :delete-all-policy-resources)]
     (. builder deleteAllPolicyResources data))
-  (when-let [data (lookup-entry config id :exclude-map)]
+  (when-some [data (lookup-entry config id :exclude-map)]
     (. builder excludeMap data))
-  (when-let [data (lookup-entry config id :exclude-resource-tags)]
+  (when-some [data (lookup-entry config id :exclude-resource-tags)]
     (. builder excludeResourceTags data))
-  (when-let [data (lookup-entry config id :include-map)]
+  (when-some [data (lookup-entry config id :include-map)]
     (. builder includeMap data))
-  (when-let [data (lookup-entry config id :policy-description)]
+  (when-some [data (lookup-entry config id :policy-description)]
     (. builder policyDescription data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :remediation-enabled)]
+  (when-some [data (lookup-entry config id :remediation-enabled)]
     (. builder remediationEnabled data))
-  (when-let [data (lookup-entry config id :resource-set-ids)]
+  (when-some [data (lookup-entry config id :resource-set-ids)]
     (. builder resourceSetIds data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :resource-type-list)]
+  (when-some [data (lookup-entry config id :resource-type-list)]
     (. builder resourceTypeList data))
-  (when-let [data (lookup-entry config id :resources-clean-up)]
+  (when-some [data (lookup-entry config id :resources-clean-up)]
     (. builder resourcesCleanUp data))
-  (when-let [data (lookup-entry config id :security-service-policy-data)]
+  (when-some [data (lookup-entry config id :security-service-policy-data)]
     (. builder securityServicePolicyData data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -158,9 +158,9 @@
 | `orgunit` | java.util.List | [[cdk.support/lookup-entry]] | `:orgunit` |
 "
   [^CfnPolicy$IEMapProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :orgunit)]
+  (when-some [data (lookup-entry config id :orgunit)]
     (. builder orgunit data))
   (.build builder))
 
@@ -188,7 +188,7 @@
 | `firewallDeploymentModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-deployment-model` |
 "
   [^CfnPolicy$NetworkFirewallPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :firewall-deployment-model)]
+  (when-some [data (lookup-entry config id :firewall-deployment-model)]
     (. builder firewallDeploymentModel data))
   (.build builder))
 
@@ -217,9 +217,9 @@
 | `thirdPartyFirewallPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:third-party-firewall-policy` |
 "
   [^CfnPolicy$PolicyOptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :network-firewall-policy)]
+  (when-some [data (lookup-entry config id :network-firewall-policy)]
     (. builder networkFirewallPolicy data))
-  (when-let [data (lookup-entry config id :third-party-firewall-policy)]
+  (when-some [data (lookup-entry config id :third-party-firewall-policy)]
     (. builder thirdPartyFirewallPolicy data))
   (.build builder))
 
@@ -248,9 +248,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnPolicy$PolicyTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -291,33 +291,33 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-all-policy-resources)]
+  (when-some [data (lookup-entry config id :delete-all-policy-resources)]
     (. builder deleteAllPolicyResources data))
-  (when-let [data (lookup-entry config id :exclude-map)]
+  (when-some [data (lookup-entry config id :exclude-map)]
     (. builder excludeMap data))
-  (when-let [data (lookup-entry config id :exclude-resource-tags)]
+  (when-some [data (lookup-entry config id :exclude-resource-tags)]
     (. builder excludeResourceTags data))
-  (when-let [data (lookup-entry config id :include-map)]
+  (when-some [data (lookup-entry config id :include-map)]
     (. builder includeMap data))
-  (when-let [data (lookup-entry config id :policy-description)]
+  (when-some [data (lookup-entry config id :policy-description)]
     (. builder policyDescription data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :remediation-enabled)]
+  (when-some [data (lookup-entry config id :remediation-enabled)]
     (. builder remediationEnabled data))
-  (when-let [data (lookup-entry config id :resource-set-ids)]
+  (when-some [data (lookup-entry config id :resource-set-ids)]
     (. builder resourceSetIds data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :resource-type-list)]
+  (when-some [data (lookup-entry config id :resource-type-list)]
     (. builder resourceTypeList data))
-  (when-let [data (lookup-entry config id :resources-clean-up)]
+  (when-some [data (lookup-entry config id :resources-clean-up)]
     (. builder resourcesCleanUp data))
-  (when-let [data (lookup-entry config id :security-service-policy-data)]
+  (when-some [data (lookup-entry config id :security-service-policy-data)]
     (. builder securityServicePolicyData data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -346,9 +346,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnPolicy$ResourceTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -378,11 +378,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnPolicy$SecurityServicePolicyDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :managed-service-data)]
+  (when-some [data (lookup-entry config id :managed-service-data)]
     (. builder managedServiceData data))
-  (when-let [data (lookup-entry config id :policy-option)]
+  (when-some [data (lookup-entry config id :policy-option)]
     (. builder policyOption data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -410,7 +410,7 @@
 | `firewallDeploymentModel` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-deployment-model` |
 "
   [^CfnPolicy$ThirdPartyFirewallPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :firewall-deployment-model)]
+  (when-some [data (lookup-entry config id :firewall-deployment-model)]
     (. builder firewallDeploymentModel data))
   (.build builder))
 
@@ -442,15 +442,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-type-list)]
+  (when-some [data (lookup-entry config id :resource-type-list)]
     (. builder resourceTypeList data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -482,15 +482,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-type-list)]
+  (when-some [data (lookup-entry config id :resource-type-list)]
     (. builder resourceTypeList data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

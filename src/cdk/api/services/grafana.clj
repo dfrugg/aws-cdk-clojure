@@ -28,17 +28,17 @@
 | `role` | java.lang.String | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^CfnWorkspace$AssertionAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :email)]
+  (when-some [data (lookup-entry config id :email)]
     (. builder email data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :login)]
+  (when-some [data (lookup-entry config id :login)]
     (. builder login data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :org)]
+  (when-some [data (lookup-entry config id :org)]
     (. builder org data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -82,39 +82,39 @@
 | `vpcConfiguration` | software.amazon.awscdk.services.grafana.CfnWorkspace$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnWorkspace$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-access-type)]
+  (when-some [data (lookup-entry config id :account-access-type)]
     (. builder accountAccessType data))
-  (when-let [data (lookup-entry config id :authentication-providers)]
+  (when-some [data (lookup-entry config id :authentication-providers)]
     (. builder authenticationProviders data))
-  (when-let [data (lookup-entry config id :client-token)]
+  (when-some [data (lookup-entry config id :client-token)]
     (. builder clientToken data))
-  (when-let [data (lookup-entry config id :data-sources)]
+  (when-some [data (lookup-entry config id :data-sources)]
     (. builder dataSources data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :grafana-version)]
+  (when-some [data (lookup-entry config id :grafana-version)]
     (. builder grafanaVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-access-control)]
+  (when-some [data (lookup-entry config id :network-access-control)]
     (. builder networkAccessControl data))
-  (when-let [data (lookup-entry config id :notification-destinations)]
+  (when-some [data (lookup-entry config id :notification-destinations)]
     (. builder notificationDestinations data))
-  (when-let [data (lookup-entry config id :organization-role-name)]
+  (when-some [data (lookup-entry config id :organization-role-name)]
     (. builder organizationRoleName data))
-  (when-let [data (lookup-entry config id :organizational-units)]
+  (when-some [data (lookup-entry config id :organizational-units)]
     (. builder organizationalUnits data))
-  (when-let [data (lookup-entry config id :permission-type)]
+  (when-some [data (lookup-entry config id :permission-type)]
     (. builder permissionType data))
-  (when-let [data (lookup-entry config id :plugin-admin-enabled)]
+  (when-some [data (lookup-entry config id :plugin-admin-enabled)]
     (. builder pluginAdminEnabled data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :saml-configuration)]
+  (when-some [data (lookup-entry config id :saml-configuration)]
     (. builder samlConfiguration data))
-  (when-let [data (lookup-entry config id :stack-set-name)]
+  (when-some [data (lookup-entry config id :stack-set-name)]
     (. builder stackSetName data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -143,9 +143,9 @@
 | `xml` | java.lang.String | [[cdk.support/lookup-entry]] | `:xml` |
 "
   [^CfnWorkspace$IdpMetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
-  (when-let [data (lookup-entry config id :xml)]
+  (when-some [data (lookup-entry config id :xml)]
     (. builder xml data))
   (.build builder))
 
@@ -174,9 +174,9 @@
 | `vpceIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpce-ids` |
 "
   [^CfnWorkspace$NetworkAccessControlProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :prefix-list-ids)]
+  (when-some [data (lookup-entry config id :prefix-list-ids)]
     (. builder prefixListIds data))
-  (when-let [data (lookup-entry config id :vpce-ids)]
+  (when-some [data (lookup-entry config id :vpce-ids)]
     (. builder vpceIds data))
   (.build builder))
 
@@ -220,39 +220,39 @@
 | `vpcConfiguration` | software.amazon.awscdk.services.grafana.CfnWorkspace$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnWorkspaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-access-type)]
+  (when-some [data (lookup-entry config id :account-access-type)]
     (. builder accountAccessType data))
-  (when-let [data (lookup-entry config id :authentication-providers)]
+  (when-some [data (lookup-entry config id :authentication-providers)]
     (. builder authenticationProviders data))
-  (when-let [data (lookup-entry config id :client-token)]
+  (when-some [data (lookup-entry config id :client-token)]
     (. builder clientToken data))
-  (when-let [data (lookup-entry config id :data-sources)]
+  (when-some [data (lookup-entry config id :data-sources)]
     (. builder dataSources data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :grafana-version)]
+  (when-some [data (lookup-entry config id :grafana-version)]
     (. builder grafanaVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-access-control)]
+  (when-some [data (lookup-entry config id :network-access-control)]
     (. builder networkAccessControl data))
-  (when-let [data (lookup-entry config id :notification-destinations)]
+  (when-some [data (lookup-entry config id :notification-destinations)]
     (. builder notificationDestinations data))
-  (when-let [data (lookup-entry config id :organization-role-name)]
+  (when-some [data (lookup-entry config id :organization-role-name)]
     (. builder organizationRoleName data))
-  (when-let [data (lookup-entry config id :organizational-units)]
+  (when-some [data (lookup-entry config id :organizational-units)]
     (. builder organizationalUnits data))
-  (when-let [data (lookup-entry config id :permission-type)]
+  (when-some [data (lookup-entry config id :permission-type)]
     (. builder permissionType data))
-  (when-let [data (lookup-entry config id :plugin-admin-enabled)]
+  (when-some [data (lookup-entry config id :plugin-admin-enabled)]
     (. builder pluginAdminEnabled data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :saml-configuration)]
+  (when-some [data (lookup-entry config id :saml-configuration)]
     (. builder samlConfiguration data))
-  (when-let [data (lookup-entry config id :stack-set-name)]
+  (when-some [data (lookup-entry config id :stack-set-name)]
     (. builder stackSetName data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -281,9 +281,9 @@
 | `editor` | java.util.List | [[cdk.support/lookup-entry]] | `:editor` |
 "
   [^CfnWorkspace$RoleValuesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin)]
+  (when-some [data (lookup-entry config id :admin)]
     (. builder admin data))
-  (when-let [data (lookup-entry config id :editor)]
+  (when-some [data (lookup-entry config id :editor)]
     (. builder editor data))
   (.build builder))
 
@@ -315,15 +315,15 @@
 | `roleValues` | software.amazon.awscdk.services.grafana.CfnWorkspace$RoleValuesProperty | [[cdk.support/lookup-entry]] | `:role-values` |
 "
   [^CfnWorkspace$SamlConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-organizations)]
+  (when-some [data (lookup-entry config id :allowed-organizations)]
     (. builder allowedOrganizations data))
-  (when-let [data (lookup-entry config id :assertion-attributes)]
+  (when-some [data (lookup-entry config id :assertion-attributes)]
     (. builder assertionAttributes data))
-  (when-let [data (lookup-entry config id :idp-metadata)]
+  (when-some [data (lookup-entry config id :idp-metadata)]
     (. builder idpMetadata data))
-  (when-let [data (lookup-entry config id :login-validity-duration)]
+  (when-some [data (lookup-entry config id :login-validity-duration)]
     (. builder loginValidityDuration data))
-  (when-let [data (lookup-entry config id :role-values)]
+  (when-some [data (lookup-entry config id :role-values)]
     (. builder roleValues data))
   (.build builder))
 
@@ -352,9 +352,9 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnWorkspace$VpcConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 

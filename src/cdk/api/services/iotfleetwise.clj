@@ -66,39 +66,39 @@
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnCampaign$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :collection-scheme)]
+  (when-some [data (lookup-entry config id :collection-scheme)]
     (. builder collectionScheme data))
-  (when-let [data (lookup-entry config id :compression)]
+  (when-some [data (lookup-entry config id :compression)]
     (. builder compression data))
-  (when-let [data (lookup-entry config id :data-destination-configs)]
+  (when-some [data (lookup-entry config id :data-destination-configs)]
     (. builder dataDestinationConfigs data))
-  (when-let [data (lookup-entry config id :data-extra-dimensions)]
+  (when-some [data (lookup-entry config id :data-extra-dimensions)]
     (. builder dataExtraDimensions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :diagnostics-mode)]
+  (when-some [data (lookup-entry config id :diagnostics-mode)]
     (. builder diagnosticsMode data))
-  (when-let [data (lookup-entry config id :expiry-time)]
+  (when-some [data (lookup-entry config id :expiry-time)]
     (. builder expiryTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :post-trigger-collection-duration)]
+  (when-some [data (lookup-entry config id :post-trigger-collection-duration)]
     (. builder postTriggerCollectionDuration data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :signal-catalog-arn)]
+  (when-some [data (lookup-entry config id :signal-catalog-arn)]
     (. builder signalCatalogArn data))
-  (when-let [data (lookup-entry config id :signals-to-collect)]
+  (when-some [data (lookup-entry config id :signals-to-collect)]
     (. builder signalsToCollect data))
-  (when-let [data (lookup-entry config id :spooling-mode)]
+  (when-some [data (lookup-entry config id :spooling-mode)]
     (. builder spoolingMode data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -127,9 +127,9 @@
 | `timeBasedCollectionScheme` | software.amazon.awscdk.services.iotfleetwise.CfnCampaign$TimeBasedCollectionSchemeProperty | [[cdk.support/lookup-entry]] | `:time-based-collection-scheme` |
 "
   [^CfnCampaign$CollectionSchemeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :condition-based-collection-scheme)]
+  (when-some [data (lookup-entry config id :condition-based-collection-scheme)]
     (. builder conditionBasedCollectionScheme data))
-  (when-let [data (lookup-entry config id :time-based-collection-scheme)]
+  (when-some [data (lookup-entry config id :time-based-collection-scheme)]
     (. builder timeBasedCollectionScheme data))
   (.build builder))
 
@@ -160,13 +160,13 @@
 | `triggerMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-mode` |
 "
   [^CfnCampaign$ConditionBasedCollectionSchemeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :condition-language-version)]
+  (when-some [data (lookup-entry config id :condition-language-version)]
     (. builder conditionLanguageVersion data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :minimum-trigger-interval-ms)]
+  (when-some [data (lookup-entry config id :minimum-trigger-interval-ms)]
     (. builder minimumTriggerIntervalMs data))
-  (when-let [data (lookup-entry config id :trigger-mode)]
+  (when-some [data (lookup-entry config id :trigger-mode)]
     (. builder triggerMode data))
   (.build builder))
 
@@ -195,9 +195,9 @@
 | `timestreamConfig` | software.amazon.awscdk.services.iotfleetwise.CfnCampaign$TimestreamConfigProperty | [[cdk.support/lookup-entry]] | `:timestream-config` |
 "
   [^CfnCampaign$DataDestinationConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-config)]
+  (when-some [data (lookup-entry config id :s3-config)]
     (. builder s3Config data))
-  (when-let [data (lookup-entry config id :timestream-config)]
+  (when-some [data (lookup-entry config id :timestream-config)]
     (. builder timestreamConfig data))
   (.build builder))
 
@@ -241,39 +241,39 @@
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnCampaignProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :collection-scheme)]
+  (when-some [data (lookup-entry config id :collection-scheme)]
     (. builder collectionScheme data))
-  (when-let [data (lookup-entry config id :compression)]
+  (when-some [data (lookup-entry config id :compression)]
     (. builder compression data))
-  (when-let [data (lookup-entry config id :data-destination-configs)]
+  (when-some [data (lookup-entry config id :data-destination-configs)]
     (. builder dataDestinationConfigs data))
-  (when-let [data (lookup-entry config id :data-extra-dimensions)]
+  (when-some [data (lookup-entry config id :data-extra-dimensions)]
     (. builder dataExtraDimensions data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :diagnostics-mode)]
+  (when-some [data (lookup-entry config id :diagnostics-mode)]
     (. builder diagnosticsMode data))
-  (when-let [data (lookup-entry config id :expiry-time)]
+  (when-some [data (lookup-entry config id :expiry-time)]
     (. builder expiryTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :post-trigger-collection-duration)]
+  (when-some [data (lookup-entry config id :post-trigger-collection-duration)]
     (. builder postTriggerCollectionDuration data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :signal-catalog-arn)]
+  (when-some [data (lookup-entry config id :signal-catalog-arn)]
     (. builder signalCatalogArn data))
-  (when-let [data (lookup-entry config id :signals-to-collect)]
+  (when-some [data (lookup-entry config id :signals-to-collect)]
     (. builder signalsToCollect data))
-  (when-let [data (lookup-entry config id :spooling-mode)]
+  (when-some [data (lookup-entry config id :spooling-mode)]
     (. builder spoolingMode data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -304,13 +304,13 @@
 | `storageCompressionFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-compression-format` |
 "
   [^CfnCampaign$S3ConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-arn)]
+  (when-some [data (lookup-entry config id :bucket-arn)]
     (. builder bucketArn data))
-  (when-let [data (lookup-entry config id :data-format)]
+  (when-some [data (lookup-entry config id :data-format)]
     (. builder dataFormat data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :storage-compression-format)]
+  (when-some [data (lookup-entry config id :storage-compression-format)]
     (. builder storageCompressionFormat data))
   (.build builder))
 
@@ -340,11 +340,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnCampaign$SignalInformationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-sample-count)]
+  (when-some [data (lookup-entry config id :max-sample-count)]
     (. builder maxSampleCount data))
-  (when-let [data (lookup-entry config id :minimum-sampling-interval-ms)]
+  (when-some [data (lookup-entry config id :minimum-sampling-interval-ms)]
     (. builder minimumSamplingIntervalMs data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -372,7 +372,7 @@
 | `periodMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period-ms` |
 "
   [^CfnCampaign$TimeBasedCollectionSchemeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :period-ms)]
+  (when-some [data (lookup-entry config id :period-ms)]
     (. builder periodMs data))
   (.build builder))
 
@@ -401,9 +401,9 @@
 | `timestreamTableArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:timestream-table-arn` |
 "
   [^CfnCampaign$TimestreamConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :timestream-table-arn)]
+  (when-some [data (lookup-entry config id :timestream-table-arn)]
     (. builder timestreamTableArn data))
   (.build builder))
 
@@ -437,19 +437,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDecoderManifest$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :model-manifest-arn)]
+  (when-some [data (lookup-entry config id :model-manifest-arn)]
     (. builder modelManifestArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-interfaces)]
+  (when-some [data (lookup-entry config id :network-interfaces)]
     (. builder networkInterfaces data))
-  (when-let [data (lookup-entry config id :signal-decoders)]
+  (when-some [data (lookup-entry config id :signal-decoders)]
     (. builder signalDecoders data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -479,11 +479,11 @@
 | `protocolVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol-version` |
 "
   [^CfnDecoderManifest$CanInterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :protocol-name)]
+  (when-some [data (lookup-entry config id :protocol-name)]
     (. builder protocolName data))
-  (when-let [data (lookup-entry config id :protocol-version)]
+  (when-some [data (lookup-entry config id :protocol-version)]
     (. builder protocolVersion data))
   (.build builder))
 
@@ -513,11 +513,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDecoderManifest$CanNetworkInterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :can-interface)]
+  (when-some [data (lookup-entry config id :can-interface)]
     (. builder canInterface data))
-  (when-let [data (lookup-entry config id :interface-id)]
+  (when-some [data (lookup-entry config id :interface-id)]
     (. builder interfaceId data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -548,13 +548,13 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDecoderManifest$CanSignalDecoderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :can-signal)]
+  (when-some [data (lookup-entry config id :can-signal)]
     (. builder canSignal data))
-  (when-let [data (lookup-entry config id :fully-qualified-name)]
+  (when-some [data (lookup-entry config id :fully-qualified-name)]
     (. builder fullyQualifiedName data))
-  (when-let [data (lookup-entry config id :interface-id)]
+  (when-some [data (lookup-entry config id :interface-id)]
     (. builder interfaceId data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -589,21 +589,21 @@
 | `startBit` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-bit` |
 "
   [^CfnDecoderManifest$CanSignalProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :factor)]
+  (when-some [data (lookup-entry config id :factor)]
     (. builder factor data))
-  (when-let [data (lookup-entry config id :is-big-endian)]
+  (when-some [data (lookup-entry config id :is-big-endian)]
     (. builder isBigEndian data))
-  (when-let [data (lookup-entry config id :is-signed)]
+  (when-some [data (lookup-entry config id :is-signed)]
     (. builder isSigned data))
-  (when-let [data (lookup-entry config id :length)]
+  (when-some [data (lookup-entry config id :length)]
     (. builder length data))
-  (when-let [data (lookup-entry config id :message-id)]
+  (when-some [data (lookup-entry config id :message-id)]
     (. builder messageId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :offset)]
+  (when-some [data (lookup-entry config id :offset)]
     (. builder offset data))
-  (when-let [data (lookup-entry config id :start-bit)]
+  (when-some [data (lookup-entry config id :start-bit)]
     (. builder startBit data))
   (.build builder))
 
@@ -634,13 +634,13 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDecoderManifest$NetworkInterfacesItemsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :can-interface)]
+  (when-some [data (lookup-entry config id :can-interface)]
     (. builder canInterface data))
-  (when-let [data (lookup-entry config id :interface-id)]
+  (when-some [data (lookup-entry config id :interface-id)]
     (. builder interfaceId data))
-  (when-let [data (lookup-entry config id :obd-interface)]
+  (when-some [data (lookup-entry config id :obd-interface)]
     (. builder obdInterface data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -674,19 +674,19 @@
 | `useExtendedIds` | java.lang.String | [[cdk.support/lookup-entry]] | `:use-extended-ids` |
 "
   [^CfnDecoderManifest$ObdInterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dtc-request-interval-seconds)]
+  (when-some [data (lookup-entry config id :dtc-request-interval-seconds)]
     (. builder dtcRequestIntervalSeconds data))
-  (when-let [data (lookup-entry config id :has-transmission-ecu)]
+  (when-some [data (lookup-entry config id :has-transmission-ecu)]
     (. builder hasTransmissionEcu data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :obd-standard)]
+  (when-some [data (lookup-entry config id :obd-standard)]
     (. builder obdStandard data))
-  (when-let [data (lookup-entry config id :pid-request-interval-seconds)]
+  (when-some [data (lookup-entry config id :pid-request-interval-seconds)]
     (. builder pidRequestIntervalSeconds data))
-  (when-let [data (lookup-entry config id :request-message-id)]
+  (when-some [data (lookup-entry config id :request-message-id)]
     (. builder requestMessageId data))
-  (when-let [data (lookup-entry config id :use-extended-ids)]
+  (when-some [data (lookup-entry config id :use-extended-ids)]
     (. builder useExtendedIds data))
   (.build builder))
 
@@ -716,11 +716,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDecoderManifest$ObdNetworkInterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interface-id)]
+  (when-some [data (lookup-entry config id :interface-id)]
     (. builder interfaceId data))
-  (when-let [data (lookup-entry config id :obd-interface)]
+  (when-some [data (lookup-entry config id :obd-interface)]
     (. builder obdInterface data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -751,13 +751,13 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDecoderManifest$ObdSignalDecoderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :fully-qualified-name)]
+  (when-some [data (lookup-entry config id :fully-qualified-name)]
     (. builder fullyQualifiedName data))
-  (when-let [data (lookup-entry config id :interface-id)]
+  (when-some [data (lookup-entry config id :interface-id)]
     (. builder interfaceId data))
-  (when-let [data (lookup-entry config id :obd-signal)]
+  (when-some [data (lookup-entry config id :obd-signal)]
     (. builder obdSignal data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -793,23 +793,23 @@
 | `startByte` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-byte` |
 "
   [^CfnDecoderManifest$ObdSignalProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bit-mask-length)]
+  (when-some [data (lookup-entry config id :bit-mask-length)]
     (. builder bitMaskLength data))
-  (when-let [data (lookup-entry config id :bit-right-shift)]
+  (when-some [data (lookup-entry config id :bit-right-shift)]
     (. builder bitRightShift data))
-  (when-let [data (lookup-entry config id :byte-length)]
+  (when-some [data (lookup-entry config id :byte-length)]
     (. builder byteLength data))
-  (when-let [data (lookup-entry config id :offset)]
+  (when-some [data (lookup-entry config id :offset)]
     (. builder offset data))
-  (when-let [data (lookup-entry config id :pid)]
+  (when-some [data (lookup-entry config id :pid)]
     (. builder pid data))
-  (when-let [data (lookup-entry config id :pid-response-length)]
+  (when-some [data (lookup-entry config id :pid-response-length)]
     (. builder pidResponseLength data))
-  (when-let [data (lookup-entry config id :scaling)]
+  (when-some [data (lookup-entry config id :scaling)]
     (. builder scaling data))
-  (when-let [data (lookup-entry config id :service-mode)]
+  (when-some [data (lookup-entry config id :service-mode)]
     (. builder serviceMode data))
-  (when-let [data (lookup-entry config id :start-byte)]
+  (when-some [data (lookup-entry config id :start-byte)]
     (. builder startByte data))
   (.build builder))
 
@@ -843,19 +843,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDecoderManifestProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :model-manifest-arn)]
+  (when-some [data (lookup-entry config id :model-manifest-arn)]
     (. builder modelManifestArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-interfaces)]
+  (when-some [data (lookup-entry config id :network-interfaces)]
     (. builder networkInterfaces data))
-  (when-let [data (lookup-entry config id :signal-decoders)]
+  (when-some [data (lookup-entry config id :signal-decoders)]
     (. builder signalDecoders data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -887,15 +887,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDecoderManifest$SignalDecodersItemsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :can-signal)]
+  (when-some [data (lookup-entry config id :can-signal)]
     (. builder canSignal data))
-  (when-let [data (lookup-entry config id :fully-qualified-name)]
+  (when-some [data (lookup-entry config id :fully-qualified-name)]
     (. builder fullyQualifiedName data))
-  (when-let [data (lookup-entry config id :interface-id)]
+  (when-some [data (lookup-entry config id :interface-id)]
     (. builder interfaceId data))
-  (when-let [data (lookup-entry config id :obd-signal)]
+  (when-some [data (lookup-entry config id :obd-signal)]
     (. builder obdSignal data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -926,13 +926,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFleet$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :signal-catalog-arn)]
+  (when-some [data (lookup-entry config id :signal-catalog-arn)]
     (. builder signalCatalogArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -963,13 +963,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFleetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :signal-catalog-arn)]
+  (when-some [data (lookup-entry config id :signal-catalog-arn)]
     (. builder signalCatalogArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1002,17 +1002,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnModelManifest$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :nodes)]
+  (when-some [data (lookup-entry config id :nodes)]
     (. builder nodes data))
-  (when-let [data (lookup-entry config id :signal-catalog-arn)]
+  (when-some [data (lookup-entry config id :signal-catalog-arn)]
     (. builder signalCatalogArn data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1045,17 +1045,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnModelManifestProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :nodes)]
+  (when-some [data (lookup-entry config id :nodes)]
     (. builder nodes data))
-  (when-let [data (lookup-entry config id :signal-catalog-arn)]
+  (when-some [data (lookup-entry config id :signal-catalog-arn)]
     (. builder signalCatalogArn data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1090,21 +1090,21 @@
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnSignalCatalog$ActuatorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-values)]
+  (when-some [data (lookup-entry config id :allowed-values)]
     (. builder allowedValues data))
-  (when-let [data (lookup-entry config id :assigned-value)]
+  (when-some [data (lookup-entry config id :assigned-value)]
     (. builder assignedValue data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :fully-qualified-name)]
+  (when-some [data (lookup-entry config id :fully-qualified-name)]
     (. builder fullyQualifiedName data))
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1140,23 +1140,23 @@
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnSignalCatalog$AttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-values)]
+  (when-some [data (lookup-entry config id :allowed-values)]
     (. builder allowedValues data))
-  (when-let [data (lookup-entry config id :assigned-value)]
+  (when-some [data (lookup-entry config id :assigned-value)]
     (. builder assignedValue data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :fully-qualified-name)]
+  (when-some [data (lookup-entry config id :fully-qualified-name)]
     (. builder fullyQualifiedName data))
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1185,9 +1185,9 @@
 | `fullyQualifiedName` | java.lang.String | [[cdk.support/lookup-entry]] | `:fully-qualified-name` |
 "
   [^CfnSignalCatalog$BranchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :fully-qualified-name)]
+  (when-some [data (lookup-entry config id :fully-qualified-name)]
     (. builder fullyQualifiedName data))
   (.build builder))
 
@@ -1219,15 +1219,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSignalCatalog$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :node-counts)]
+  (when-some [data (lookup-entry config id :node-counts)]
     (. builder nodeCounts data))
-  (when-let [data (lookup-entry config id :nodes)]
+  (when-some [data (lookup-entry config id :nodes)]
     (. builder nodes data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1259,15 +1259,15 @@
 | `totalSensors` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total-sensors` |
 "
   [^CfnSignalCatalog$NodeCountsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :total-actuators)]
+  (when-some [data (lookup-entry config id :total-actuators)]
     (. builder totalActuators data))
-  (when-let [data (lookup-entry config id :total-attributes)]
+  (when-some [data (lookup-entry config id :total-attributes)]
     (. builder totalAttributes data))
-  (when-let [data (lookup-entry config id :total-branches)]
+  (when-some [data (lookup-entry config id :total-branches)]
     (. builder totalBranches data))
-  (when-let [data (lookup-entry config id :total-nodes)]
+  (when-some [data (lookup-entry config id :total-nodes)]
     (. builder totalNodes data))
-  (when-let [data (lookup-entry config id :total-sensors)]
+  (when-some [data (lookup-entry config id :total-sensors)]
     (. builder totalSensors data))
   (.build builder))
 
@@ -1298,13 +1298,13 @@
 | `sensor` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sensor` |
 "
   [^CfnSignalCatalog$NodeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :actuator)]
+  (when-some [data (lookup-entry config id :actuator)]
     (. builder actuator data))
-  (when-let [data (lookup-entry config id :attribute)]
+  (when-some [data (lookup-entry config id :attribute)]
     (. builder attribute data))
-  (when-let [data (lookup-entry config id :branch)]
+  (when-some [data (lookup-entry config id :branch)]
     (. builder branch data))
-  (when-let [data (lookup-entry config id :sensor)]
+  (when-some [data (lookup-entry config id :sensor)]
     (. builder sensor data))
   (.build builder))
 
@@ -1336,15 +1336,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSignalCatalogProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :node-counts)]
+  (when-some [data (lookup-entry config id :node-counts)]
     (. builder nodeCounts data))
-  (when-let [data (lookup-entry config id :nodes)]
+  (when-some [data (lookup-entry config id :nodes)]
     (. builder nodes data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1378,19 +1378,19 @@
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnSignalCatalog$SensorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-values)]
+  (when-some [data (lookup-entry config id :allowed-values)]
     (. builder allowedValues data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :fully-qualified-name)]
+  (when-some [data (lookup-entry config id :fully-qualified-name)]
     (. builder fullyQualifiedName data))
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1423,17 +1423,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnVehicle$Builder builder id config]
-  (when-let [data (lookup-entry config id :association-behavior)]
+  (when-some [data (lookup-entry config id :association-behavior)]
     (. builder associationBehavior data))
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :decoder-manifest-arn)]
+  (when-some [data (lookup-entry config id :decoder-manifest-arn)]
     (. builder decoderManifestArn data))
-  (when-let [data (lookup-entry config id :model-manifest-arn)]
+  (when-some [data (lookup-entry config id :model-manifest-arn)]
     (. builder modelManifestArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1466,17 +1466,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnVehicleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :association-behavior)]
+  (when-some [data (lookup-entry config id :association-behavior)]
     (. builder associationBehavior data))
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :decoder-manifest-arn)]
+  (when-some [data (lookup-entry config id :decoder-manifest-arn)]
     (. builder decoderManifestArn data))
-  (when-let [data (lookup-entry config id :model-manifest-arn)]
+  (when-some [data (lookup-entry config id :model-manifest-arn)]
     (. builder modelManifestArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

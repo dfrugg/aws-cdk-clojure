@@ -56,13 +56,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3BucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-prefix` |
 "
   [^CfnLoadBalancer$AccessLoggingPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :emit-interval)]
+  (when-some [data (lookup-entry config id :emit-interval)]
     (. builder emitInterval data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
-  (when-let [data (lookup-entry config id :s3-bucket-prefix)]
+  (when-some [data (lookup-entry config id :s3-bucket-prefix)]
     (. builder s3BucketPrefix data))
   (.build builder))
 
@@ -91,9 +91,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cookie-name)]
+  (when-some [data (lookup-entry config id :cookie-name)]
     (. builder cookieName data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -136,37 +136,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLoadBalancer$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-logging-policy)]
+  (when-some [data (lookup-entry config id :access-logging-policy)]
     (. builder accessLoggingPolicy data))
-  (when-let [data (lookup-entry config id :app-cookie-stickiness-policy)]
+  (when-some [data (lookup-entry config id :app-cookie-stickiness-policy)]
     (. builder appCookieStickinessPolicy data))
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
-  (when-let [data (lookup-entry config id :connection-draining-policy)]
+  (when-some [data (lookup-entry config id :connection-draining-policy)]
     (. builder connectionDrainingPolicy data))
-  (when-let [data (lookup-entry config id :connection-settings)]
+  (when-some [data (lookup-entry config id :connection-settings)]
     (. builder connectionSettings data))
-  (when-let [data (lookup-entry config id :cross-zone)]
+  (when-some [data (lookup-entry config id :cross-zone)]
     (. builder crossZone data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :instances)]
+  (when-some [data (lookup-entry config id :instances)]
     (. builder instances data))
-  (when-let [data (lookup-entry config id :lb-cookie-stickiness-policy)]
+  (when-some [data (lookup-entry config id :lb-cookie-stickiness-policy)]
     (. builder lbCookieStickinessPolicy data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :load-balancer-name)]
+  (when-some [data (lookup-entry config id :load-balancer-name)]
     (. builder loadBalancerName data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
-  (when-let [data (lookup-entry config id :scheme)]
+  (when-some [data (lookup-entry config id :scheme)]
     (. builder scheme data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -195,9 +195,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -225,7 +225,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `idleTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-timeout` |
 "
   [^CfnLoadBalancer$ConnectionSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle-timeout)]
+  (when-some [data (lookup-entry config id :idle-timeout)]
     (. builder idleTimeout data))
   (.build builder))
 
@@ -257,15 +257,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unhealthyThreshold` | java.lang.String | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
 "
   [^CfnLoadBalancer$HealthCheckProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :healthy-threshold)]
+  (when-some [data (lookup-entry config id :healthy-threshold)]
     (. builder healthyThreshold data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
 
@@ -294,9 +294,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cookie-expiration-period)]
+  (when-some [data (lookup-entry config id :cookie-expiration-period)]
     (. builder cookieExpirationPeriod data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -329,17 +329,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslCertificateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-certificate-id` |
 "
   [^CfnLoadBalancer$ListenersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-port)]
+  (when-some [data (lookup-entry config id :instance-port)]
     (. builder instancePort data))
-  (when-let [data (lookup-entry config id :instance-protocol)]
+  (when-some [data (lookup-entry config id :instance-protocol)]
     (. builder instanceProtocol data))
-  (when-let [data (lookup-entry config id :load-balancer-port)]
+  (when-some [data (lookup-entry config id :load-balancer-port)]
     (. builder loadBalancerPort data))
-  (when-let [data (lookup-entry config id :policy-names)]
+  (when-some [data (lookup-entry config id :policy-names)]
     (. builder policyNames data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :ssl-certificate-id)]
+  (when-some [data (lookup-entry config id :ssl-certificate-id)]
     (. builder sslCertificateId data))
   (.build builder))
 
@@ -371,15 +371,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-type` |
 "
   [^CfnLoadBalancer$PoliciesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :instance-ports)]
+  (when-some [data (lookup-entry config id :instance-ports)]
     (. builder instancePorts data))
-  (when-let [data (lookup-entry config id :load-balancer-ports)]
+  (when-some [data (lookup-entry config id :load-balancer-ports)]
     (. builder loadBalancerPorts data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :policy-type)]
+  (when-some [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
   (.build builder))
 
@@ -422,37 +422,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLoadBalancerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-logging-policy)]
+  (when-some [data (lookup-entry config id :access-logging-policy)]
     (. builder accessLoggingPolicy data))
-  (when-let [data (lookup-entry config id :app-cookie-stickiness-policy)]
+  (when-some [data (lookup-entry config id :app-cookie-stickiness-policy)]
     (. builder appCookieStickinessPolicy data))
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
-  (when-let [data (lookup-entry config id :connection-draining-policy)]
+  (when-some [data (lookup-entry config id :connection-draining-policy)]
     (. builder connectionDrainingPolicy data))
-  (when-let [data (lookup-entry config id :connection-settings)]
+  (when-some [data (lookup-entry config id :connection-settings)]
     (. builder connectionSettings data))
-  (when-let [data (lookup-entry config id :cross-zone)]
+  (when-some [data (lookup-entry config id :cross-zone)]
     (. builder crossZone data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :instances)]
+  (when-some [data (lookup-entry config id :instances)]
     (. builder instances data))
-  (when-let [data (lookup-entry config id :lb-cookie-stickiness-policy)]
+  (when-some [data (lookup-entry config id :lb-cookie-stickiness-policy)]
     (. builder lbCookieStickinessPolicy data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :load-balancer-name)]
+  (when-some [data (lookup-entry config id :load-balancer-name)]
     (. builder loadBalancerName data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
-  (when-let [data (lookup-entry config id :scheme)]
+  (when-some [data (lookup-entry config id :scheme)]
     (. builder scheme data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -486,19 +486,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
 "
   [^HealthCheck$Builder builder id config]
-  (when-let [data (lookup-entry config id :healthy-threshold)]
+  (when-some [data (lookup-entry config id :healthy-threshold)]
     (. builder healthyThreshold data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (load-balancing-protocol config id :protocol)]
+  (when-some [data (load-balancing-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
 
@@ -533,21 +533,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^LoadBalancer$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-logging-policy)]
+  (when-some [data (lookup-entry config id :access-logging-policy)]
     (. builder accessLoggingPolicy data))
-  (when-let [data (lookup-entry config id :cross-zone)]
+  (when-some [data (lookup-entry config id :cross-zone)]
     (. builder crossZone data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :internet-facing)]
+  (when-some [data (lookup-entry config id :internet-facing)]
     (. builder internetFacing data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -581,19 +581,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sslCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-certificate-arn` |
 "
   [^LoadBalancerListener$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-connections-from)]
+  (when-some [data (lookup-entry config id :allow-connections-from)]
     (. builder allowConnectionsFrom data))
-  (when-let [data (lookup-entry config id :external-port)]
+  (when-some [data (lookup-entry config id :external-port)]
     (. builder externalPort data))
-  (when-let [data (load-balancing-protocol config id :external-protocol)]
+  (when-some [data (load-balancing-protocol config id :external-protocol)]
     (. builder externalProtocol data))
-  (when-let [data (lookup-entry config id :internal-port)]
+  (when-some [data (lookup-entry config id :internal-port)]
     (. builder internalPort data))
-  (when-let [data (load-balancing-protocol config id :internal-protocol)]
+  (when-some [data (load-balancing-protocol config id :internal-protocol)]
     (. builder internalProtocol data))
-  (when-let [data (lookup-entry config id :policy-names)]
+  (when-some [data (lookup-entry config id :policy-names)]
     (. builder policyNames data))
-  (when-let [data (lookup-entry config id :ssl-certificate-arn)]
+  (when-some [data (lookup-entry config id :ssl-certificate-arn)]
     (. builder sslCertificateArn data))
   (.build builder))
 
@@ -628,21 +628,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^LoadBalancerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-logging-policy)]
+  (when-some [data (lookup-entry config id :access-logging-policy)]
     (. builder accessLoggingPolicy data))
-  (when-let [data (lookup-entry config id :cross-zone)]
+  (when-some [data (lookup-entry config id :cross-zone)]
     (. builder crossZone data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :internet-facing)]
+  (when-some [data (lookup-entry config id :internet-facing)]
     (. builder internetFacing data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 

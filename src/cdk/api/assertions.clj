@@ -19,9 +19,9 @@
 | `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^MatchCapture$Builder builder id config]
-  (when-let [data (lookup-entry config id :capture)]
+  (when-some [data (lookup-entry config id :capture)]
     (. builder capture data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -52,13 +52,13 @@
 | `path` | java.util.List | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^MatchFailure$Builder builder id config]
-  (when-let [data (lookup-entry config id :cost)]
+  (when-some [data (lookup-entry config id :cost)]
     (. builder cost data))
-  (when-let [data (lookup-entry config id :matcher)]
+  (when-some [data (lookup-entry config id :matcher)]
     (. builder matcher data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -86,7 +86,7 @@
 | `skipCyclicalDependenciesCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:skip-cyclical-dependencies-check` |
 "
   [^TemplateParsingOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :skip-cyclical-dependencies-check)]
+  (when-some [data (lookup-entry config id :skip-cyclical-dependencies-check)]
     (. builder skipCyclicalDependenciesCheck data))
   (.build builder))
 

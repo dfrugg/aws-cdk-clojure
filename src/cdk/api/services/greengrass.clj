@@ -99,11 +99,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectorDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -131,7 +131,7 @@
 | `connectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connectors` |
 "
   [^CfnConnectorDefinition$ConnectorDefinitionVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connectors)]
+  (when-some [data (lookup-entry config id :connectors)]
     (. builder connectors data))
   (.build builder))
 
@@ -161,11 +161,11 @@
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnConnectorDefinition$ConnectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-arn)]
+  (when-some [data (lookup-entry config id :connector-arn)]
     (. builder connectorArn data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
 
@@ -195,11 +195,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectorDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -228,9 +228,9 @@
 | `connectors` | java.util.List | [[cdk.support/lookup-entry]] | `:connectors` |
 "
   [^CfnConnectorDefinitionVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-definition-id)]
+  (when-some [data (lookup-entry config id :connector-definition-id)]
     (. builder connectorDefinitionId data))
-  (when-let [data (lookup-entry config id :connectors)]
+  (when-some [data (lookup-entry config id :connectors)]
     (. builder connectors data))
   (.build builder))
 
@@ -260,11 +260,11 @@
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnConnectorDefinitionVersion$ConnectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-arn)]
+  (when-some [data (lookup-entry config id :connector-arn)]
     (. builder connectorArn data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
 
@@ -293,9 +293,9 @@
 | `connectors` | java.util.List | [[cdk.support/lookup-entry]] | `:connectors` |
 "
   [^CfnConnectorDefinitionVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-definition-id)]
+  (when-some [data (lookup-entry config id :connector-definition-id)]
     (. builder connectorDefinitionId data))
-  (when-let [data (lookup-entry config id :connectors)]
+  (when-some [data (lookup-entry config id :connectors)]
     (. builder connectors data))
   (.build builder))
 
@@ -325,11 +325,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCoreDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -357,7 +357,7 @@
 | `cores` | java.util.List | [[cdk.support/lookup-entry]] | `:cores` |
 "
   [^CfnCoreDefinition$CoreDefinitionVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cores)]
+  (when-some [data (lookup-entry config id :cores)]
     (. builder cores data))
   (.build builder))
 
@@ -388,13 +388,13 @@
 | `thingArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-arn` |
 "
   [^CfnCoreDefinition$CoreProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :sync-shadow)]
+  (when-some [data (lookup-entry config id :sync-shadow)]
     (. builder syncShadow data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
   (.build builder))
 
@@ -424,11 +424,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCoreDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -457,9 +457,9 @@
 | `cores` | java.util.List | [[cdk.support/lookup-entry]] | `:cores` |
 "
   [^CfnCoreDefinitionVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-definition-id)]
+  (when-some [data (lookup-entry config id :core-definition-id)]
     (. builder coreDefinitionId data))
-  (when-let [data (lookup-entry config id :cores)]
+  (when-some [data (lookup-entry config id :cores)]
     (. builder cores data))
   (.build builder))
 
@@ -490,13 +490,13 @@
 | `thingArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-arn` |
 "
   [^CfnCoreDefinitionVersion$CoreProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :sync-shadow)]
+  (when-some [data (lookup-entry config id :sync-shadow)]
     (. builder syncShadow data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
   (.build builder))
 
@@ -525,9 +525,9 @@
 | `cores` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cores` |
 "
   [^CfnCoreDefinitionVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :core-definition-id)]
+  (when-some [data (lookup-entry config id :core-definition-id)]
     (. builder coreDefinitionId data))
-  (when-let [data (lookup-entry config id :cores)]
+  (when-some [data (lookup-entry config id :cores)]
     (. builder cores data))
   (.build builder))
 
@@ -557,11 +557,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeviceDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -589,7 +589,7 @@
 | `devices` | java.util.List | [[cdk.support/lookup-entry]] | `:devices` |
 "
   [^CfnDeviceDefinition$DeviceDefinitionVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :devices)]
+  (when-some [data (lookup-entry config id :devices)]
     (. builder devices data))
   (.build builder))
 
@@ -620,13 +620,13 @@
 | `thingArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-arn` |
 "
   [^CfnDeviceDefinition$DeviceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :sync-shadow)]
+  (when-some [data (lookup-entry config id :sync-shadow)]
     (. builder syncShadow data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
   (.build builder))
 
@@ -656,11 +656,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeviceDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -689,9 +689,9 @@
 | `devices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:devices` |
 "
   [^CfnDeviceDefinitionVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :device-definition-id)]
+  (when-some [data (lookup-entry config id :device-definition-id)]
     (. builder deviceDefinitionId data))
-  (when-let [data (lookup-entry config id :devices)]
+  (when-some [data (lookup-entry config id :devices)]
     (. builder devices data))
   (.build builder))
 
@@ -722,13 +722,13 @@
 | `thingArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-arn` |
 "
   [^CfnDeviceDefinitionVersion$DeviceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :sync-shadow)]
+  (when-some [data (lookup-entry config id :sync-shadow)]
     (. builder syncShadow data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
   (.build builder))
 
@@ -757,9 +757,9 @@
 | `devices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:devices` |
 "
   [^CfnDeviceDefinitionVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :device-definition-id)]
+  (when-some [data (lookup-entry config id :device-definition-id)]
     (. builder deviceDefinitionId data))
-  (when-let [data (lookup-entry config id :devices)]
+  (when-some [data (lookup-entry config id :devices)]
     (. builder devices data))
   (.build builder))
 
@@ -789,11 +789,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFunctionDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -821,7 +821,7 @@
 | `execution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution` |
 "
   [^CfnFunctionDefinition$DefaultConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :execution)]
+  (when-some [data (lookup-entry config id :execution)]
     (. builder execution data))
   (.build builder))
 
@@ -852,13 +852,13 @@
 | `variables` | java.lang.Object | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnFunctionDefinition$EnvironmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-sysfs)]
+  (when-some [data (lookup-entry config id :access-sysfs)]
     (. builder accessSysfs data))
-  (when-let [data (lookup-entry config id :execution)]
+  (when-some [data (lookup-entry config id :execution)]
     (. builder execution data))
-  (when-let [data (lookup-entry config id :resource-access-policies)]
+  (when-some [data (lookup-entry config id :resource-access-policies)]
     (. builder resourceAccessPolicies data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -887,9 +887,9 @@
 | `runAs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:run-as` |
 "
   [^CfnFunctionDefinition$ExecutionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :isolation-mode)]
+  (when-some [data (lookup-entry config id :isolation-mode)]
     (. builder isolationMode data))
-  (when-let [data (lookup-entry config id :run-as)]
+  (when-some [data (lookup-entry config id :run-as)]
     (. builder runAs data))
   (.build builder))
 
@@ -923,19 +923,19 @@
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnFunctionDefinition$FunctionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encoding-type)]
+  (when-some [data (lookup-entry config id :encoding-type)]
     (. builder encodingType data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :exec-args)]
+  (when-some [data (lookup-entry config id :exec-args)]
     (. builder execArgs data))
-  (when-let [data (lookup-entry config id :executable)]
+  (when-some [data (lookup-entry config id :executable)]
     (. builder executable data))
-  (when-let [data (lookup-entry config id :memory-size)]
+  (when-some [data (lookup-entry config id :memory-size)]
     (. builder memorySize data))
-  (when-let [data (lookup-entry config id :pinned)]
+  (when-some [data (lookup-entry config id :pinned)]
     (. builder pinned data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -964,9 +964,9 @@
 | `functions` | java.util.List | [[cdk.support/lookup-entry]] | `:functions` |
 "
   [^CfnFunctionDefinition$FunctionDefinitionVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-config)]
+  (when-some [data (lookup-entry config id :default-config)]
     (. builder defaultConfig data))
-  (when-let [data (lookup-entry config id :functions)]
+  (when-some [data (lookup-entry config id :functions)]
     (. builder functions data))
   (.build builder))
 
@@ -996,11 +996,11 @@
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 "
   [^CfnFunctionDefinition$FunctionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :function-configuration)]
+  (when-some [data (lookup-entry config id :function-configuration)]
     (. builder functionConfiguration data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
   (.build builder))
 
@@ -1030,11 +1030,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFunctionDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1063,9 +1063,9 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnFunctionDefinition$ResourceAccessPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :permission)]
+  (when-some [data (lookup-entry config id :permission)]
     (. builder permission data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -1094,9 +1094,9 @@
 | `uid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uid` |
 "
   [^CfnFunctionDefinition$RunAsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :gid)]
+  (when-some [data (lookup-entry config id :gid)]
     (. builder gid data))
-  (when-let [data (lookup-entry config id :uid)]
+  (when-some [data (lookup-entry config id :uid)]
     (. builder uid data))
   (.build builder))
 
@@ -1126,11 +1126,11 @@
 | `functions` | java.util.List | [[cdk.support/lookup-entry]] | `:functions` |
 "
   [^CfnFunctionDefinitionVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-config)]
+  (when-some [data (lookup-entry config id :default-config)]
     (. builder defaultConfig data))
-  (when-let [data (lookup-entry config id :function-definition-id)]
+  (when-some [data (lookup-entry config id :function-definition-id)]
     (. builder functionDefinitionId data))
-  (when-let [data (lookup-entry config id :functions)]
+  (when-some [data (lookup-entry config id :functions)]
     (. builder functions data))
   (.build builder))
 
@@ -1158,7 +1158,7 @@
 | `execution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:execution` |
 "
   [^CfnFunctionDefinitionVersion$DefaultConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :execution)]
+  (when-some [data (lookup-entry config id :execution)]
     (. builder execution data))
   (.build builder))
 
@@ -1189,13 +1189,13 @@
 | `variables` | java.lang.Object | [[cdk.support/lookup-entry]] | `:variables` |
 "
   [^CfnFunctionDefinitionVersion$EnvironmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-sysfs)]
+  (when-some [data (lookup-entry config id :access-sysfs)]
     (. builder accessSysfs data))
-  (when-let [data (lookup-entry config id :execution)]
+  (when-some [data (lookup-entry config id :execution)]
     (. builder execution data))
-  (when-let [data (lookup-entry config id :resource-access-policies)]
+  (when-some [data (lookup-entry config id :resource-access-policies)]
     (. builder resourceAccessPolicies data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
   (.build builder))
 
@@ -1224,9 +1224,9 @@
 | `runAs` | software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion$RunAsProperty | [[cdk.support/lookup-entry]] | `:run-as` |
 "
   [^CfnFunctionDefinitionVersion$ExecutionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :isolation-mode)]
+  (when-some [data (lookup-entry config id :isolation-mode)]
     (. builder isolationMode data))
-  (when-let [data (lookup-entry config id :run-as)]
+  (when-some [data (lookup-entry config id :run-as)]
     (. builder runAs data))
   (.build builder))
 
@@ -1260,19 +1260,19 @@
 | `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnFunctionDefinitionVersion$FunctionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encoding-type)]
+  (when-some [data (lookup-entry config id :encoding-type)]
     (. builder encodingType data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :exec-args)]
+  (when-some [data (lookup-entry config id :exec-args)]
     (. builder execArgs data))
-  (when-let [data (lookup-entry config id :executable)]
+  (when-some [data (lookup-entry config id :executable)]
     (. builder executable data))
-  (when-let [data (lookup-entry config id :memory-size)]
+  (when-some [data (lookup-entry config id :memory-size)]
     (. builder memorySize data))
-  (when-let [data (lookup-entry config id :pinned)]
+  (when-some [data (lookup-entry config id :pinned)]
     (. builder pinned data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1302,11 +1302,11 @@
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 "
   [^CfnFunctionDefinitionVersion$FunctionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :function-configuration)]
+  (when-some [data (lookup-entry config id :function-configuration)]
     (. builder functionConfiguration data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
   (.build builder))
 
@@ -1336,11 +1336,11 @@
 | `functions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:functions` |
 "
   [^CfnFunctionDefinitionVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-config)]
+  (when-some [data (lookup-entry config id :default-config)]
     (. builder defaultConfig data))
-  (when-let [data (lookup-entry config id :function-definition-id)]
+  (when-some [data (lookup-entry config id :function-definition-id)]
     (. builder functionDefinitionId data))
-  (when-let [data (lookup-entry config id :functions)]
+  (when-some [data (lookup-entry config id :functions)]
     (. builder functions data))
   (.build builder))
 
@@ -1369,9 +1369,9 @@
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 "
   [^CfnFunctionDefinitionVersion$ResourceAccessPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :permission)]
+  (when-some [data (lookup-entry config id :permission)]
     (. builder permission data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
   (.build builder))
 
@@ -1400,9 +1400,9 @@
 | `uid` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uid` |
 "
   [^CfnFunctionDefinitionVersion$RunAsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :gid)]
+  (when-some [data (lookup-entry config id :gid)]
     (. builder gid data))
-  (when-let [data (lookup-entry config id :uid)]
+  (when-some [data (lookup-entry config id :uid)]
     (. builder uid data))
   (.build builder))
 
@@ -1433,13 +1433,13 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1473,19 +1473,19 @@
 | `subscriptionDefinitionVersionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-definition-version-arn` |
 "
   [^CfnGroup$GroupVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-definition-version-arn)]
+  (when-some [data (lookup-entry config id :connector-definition-version-arn)]
     (. builder connectorDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :core-definition-version-arn)]
+  (when-some [data (lookup-entry config id :core-definition-version-arn)]
     (. builder coreDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :device-definition-version-arn)]
+  (when-some [data (lookup-entry config id :device-definition-version-arn)]
     (. builder deviceDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :function-definition-version-arn)]
+  (when-some [data (lookup-entry config id :function-definition-version-arn)]
     (. builder functionDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :logger-definition-version-arn)]
+  (when-some [data (lookup-entry config id :logger-definition-version-arn)]
     (. builder loggerDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :resource-definition-version-arn)]
+  (when-some [data (lookup-entry config id :resource-definition-version-arn)]
     (. builder resourceDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :subscription-definition-version-arn)]
+  (when-some [data (lookup-entry config id :subscription-definition-version-arn)]
     (. builder subscriptionDefinitionVersionArn data))
   (.build builder))
 
@@ -1516,13 +1516,13 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1557,21 +1557,21 @@
 | `subscriptionDefinitionVersionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-definition-version-arn` |
 "
   [^CfnGroupVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-definition-version-arn)]
+  (when-some [data (lookup-entry config id :connector-definition-version-arn)]
     (. builder connectorDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :core-definition-version-arn)]
+  (when-some [data (lookup-entry config id :core-definition-version-arn)]
     (. builder coreDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :device-definition-version-arn)]
+  (when-some [data (lookup-entry config id :device-definition-version-arn)]
     (. builder deviceDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :function-definition-version-arn)]
+  (when-some [data (lookup-entry config id :function-definition-version-arn)]
     (. builder functionDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :group-id)]
+  (when-some [data (lookup-entry config id :group-id)]
     (. builder groupId data))
-  (when-let [data (lookup-entry config id :logger-definition-version-arn)]
+  (when-some [data (lookup-entry config id :logger-definition-version-arn)]
     (. builder loggerDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :resource-definition-version-arn)]
+  (when-some [data (lookup-entry config id :resource-definition-version-arn)]
     (. builder resourceDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :subscription-definition-version-arn)]
+  (when-some [data (lookup-entry config id :subscription-definition-version-arn)]
     (. builder subscriptionDefinitionVersionArn data))
   (.build builder))
 
@@ -1606,21 +1606,21 @@
 | `subscriptionDefinitionVersionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-definition-version-arn` |
 "
   [^CfnGroupVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-definition-version-arn)]
+  (when-some [data (lookup-entry config id :connector-definition-version-arn)]
     (. builder connectorDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :core-definition-version-arn)]
+  (when-some [data (lookup-entry config id :core-definition-version-arn)]
     (. builder coreDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :device-definition-version-arn)]
+  (when-some [data (lookup-entry config id :device-definition-version-arn)]
     (. builder deviceDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :function-definition-version-arn)]
+  (when-some [data (lookup-entry config id :function-definition-version-arn)]
     (. builder functionDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :group-id)]
+  (when-some [data (lookup-entry config id :group-id)]
     (. builder groupId data))
-  (when-let [data (lookup-entry config id :logger-definition-version-arn)]
+  (when-some [data (lookup-entry config id :logger-definition-version-arn)]
     (. builder loggerDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :resource-definition-version-arn)]
+  (when-some [data (lookup-entry config id :resource-definition-version-arn)]
     (. builder resourceDefinitionVersionArn data))
-  (when-let [data (lookup-entry config id :subscription-definition-version-arn)]
+  (when-some [data (lookup-entry config id :subscription-definition-version-arn)]
     (. builder subscriptionDefinitionVersionArn data))
   (.build builder))
 
@@ -1650,11 +1650,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLoggerDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1682,7 +1682,7 @@
 | `loggers` | java.util.List | [[cdk.support/lookup-entry]] | `:loggers` |
 "
   [^CfnLoggerDefinition$LoggerDefinitionVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :loggers)]
+  (when-some [data (lookup-entry config id :loggers)]
     (. builder loggers data))
   (.build builder))
 
@@ -1714,15 +1714,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnLoggerDefinition$LoggerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component)]
+  (when-some [data (lookup-entry config id :component)]
     (. builder component data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :level)]
+  (when-some [data (lookup-entry config id :level)]
     (. builder level data))
-  (when-let [data (lookup-entry config id :space)]
+  (when-some [data (lookup-entry config id :space)]
     (. builder space data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1752,11 +1752,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLoggerDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1785,9 +1785,9 @@
 | `loggers` | java.util.List | [[cdk.support/lookup-entry]] | `:loggers` |
 "
   [^CfnLoggerDefinitionVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :logger-definition-id)]
+  (when-some [data (lookup-entry config id :logger-definition-id)]
     (. builder loggerDefinitionId data))
-  (when-let [data (lookup-entry config id :loggers)]
+  (when-some [data (lookup-entry config id :loggers)]
     (. builder loggers data))
   (.build builder))
 
@@ -1819,15 +1819,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnLoggerDefinitionVersion$LoggerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component)]
+  (when-some [data (lookup-entry config id :component)]
     (. builder component data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :level)]
+  (when-some [data (lookup-entry config id :level)]
     (. builder level data))
-  (when-let [data (lookup-entry config id :space)]
+  (when-some [data (lookup-entry config id :space)]
     (. builder space data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1856,9 +1856,9 @@
 | `loggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:loggers` |
 "
   [^CfnLoggerDefinitionVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :logger-definition-id)]
+  (when-some [data (lookup-entry config id :logger-definition-id)]
     (. builder loggerDefinitionId data))
-  (when-let [data (lookup-entry config id :loggers)]
+  (when-some [data (lookup-entry config id :loggers)]
     (. builder loggers data))
   (.build builder))
 
@@ -1888,11 +1888,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1921,9 +1921,9 @@
 | `groupOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-owner` |
 "
   [^CfnResourceDefinition$GroupOwnerSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-add-group-owner)]
+  (when-some [data (lookup-entry config id :auto-add-group-owner)]
     (. builder autoAddGroupOwner data))
-  (when-let [data (lookup-entry config id :group-owner)]
+  (when-some [data (lookup-entry config id :group-owner)]
     (. builder groupOwner data))
   (.build builder))
 
@@ -1952,9 +1952,9 @@
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "
   [^CfnResourceDefinition$LocalDeviceResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-owner-setting)]
+  (when-some [data (lookup-entry config id :group-owner-setting)]
     (. builder groupOwnerSetting data))
-  (when-let [data (lookup-entry config id :source-path)]
+  (when-some [data (lookup-entry config id :source-path)]
     (. builder sourcePath data))
   (.build builder))
 
@@ -1984,11 +1984,11 @@
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "
   [^CfnResourceDefinition$LocalVolumeResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-path)]
+  (when-some [data (lookup-entry config id :destination-path)]
     (. builder destinationPath data))
-  (when-let [data (lookup-entry config id :group-owner-setting)]
+  (when-some [data (lookup-entry config id :group-owner-setting)]
     (. builder groupOwnerSetting data))
-  (when-let [data (lookup-entry config id :source-path)]
+  (when-some [data (lookup-entry config id :source-path)]
     (. builder sourcePath data))
   (.build builder))
 
@@ -2018,11 +2018,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2054,15 +2054,15 @@
 | `secretsManagerSecretResourceData` | software.amazon.awscdk.services.greengrass.CfnResourceDefinition$SecretsManagerSecretResourceDataProperty | [[cdk.support/lookup-entry]] | `:secrets-manager-secret-resource-data` |
 "
   [^CfnResourceDefinition$ResourceDataContainerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :local-device-resource-data)]
+  (when-some [data (lookup-entry config id :local-device-resource-data)]
     (. builder localDeviceResourceData data))
-  (when-let [data (lookup-entry config id :local-volume-resource-data)]
+  (when-some [data (lookup-entry config id :local-volume-resource-data)]
     (. builder localVolumeResourceData data))
-  (when-let [data (lookup-entry config id :s3-machine-learning-model-resource-data)]
+  (when-some [data (lookup-entry config id :s3-machine-learning-model-resource-data)]
     (. builder s3MachineLearningModelResourceData data))
-  (when-let [data (lookup-entry config id :sage-maker-machine-learning-model-resource-data)]
+  (when-some [data (lookup-entry config id :sage-maker-machine-learning-model-resource-data)]
     (. builder sageMakerMachineLearningModelResourceData data))
-  (when-let [data (lookup-entry config id :secrets-manager-secret-resource-data)]
+  (when-some [data (lookup-entry config id :secrets-manager-secret-resource-data)]
     (. builder secretsManagerSecretResourceData data))
   (.build builder))
 
@@ -2090,7 +2090,7 @@
 | `resources` | java.util.List | [[cdk.support/lookup-entry]] | `:resources` |
 "
   [^CfnResourceDefinition$ResourceDefinitionVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
   (.build builder))
 
@@ -2119,9 +2119,9 @@
 | `groupPermission` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-permission` |
 "
   [^CfnResourceDefinition$ResourceDownloadOwnerSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-owner)]
+  (when-some [data (lookup-entry config id :group-owner)]
     (. builder groupOwner data))
-  (when-let [data (lookup-entry config id :group-permission)]
+  (when-some [data (lookup-entry config id :group-permission)]
     (. builder groupPermission data))
   (.build builder))
 
@@ -2151,11 +2151,11 @@
 | `resourceDataContainer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-data-container` |
 "
   [^CfnResourceDefinition$ResourceInstanceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-data-container)]
+  (when-some [data (lookup-entry config id :resource-data-container)]
     (. builder resourceDataContainer data))
   (.build builder))
 
@@ -2185,11 +2185,11 @@
 | `s3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-uri` |
 "
   [^CfnResourceDefinition$S3MachineLearningModelResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-path)]
+  (when-some [data (lookup-entry config id :destination-path)]
     (. builder destinationPath data))
-  (when-let [data (lookup-entry config id :owner-setting)]
+  (when-some [data (lookup-entry config id :owner-setting)]
     (. builder ownerSetting data))
-  (when-let [data (lookup-entry config id :s3-uri)]
+  (when-some [data (lookup-entry config id :s3-uri)]
     (. builder s3Uri data))
   (.build builder))
 
@@ -2219,11 +2219,11 @@
 | `sageMakerJobArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sage-maker-job-arn` |
 "
   [^CfnResourceDefinition$SageMakerMachineLearningModelResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-path)]
+  (when-some [data (lookup-entry config id :destination-path)]
     (. builder destinationPath data))
-  (when-let [data (lookup-entry config id :owner-setting)]
+  (when-some [data (lookup-entry config id :owner-setting)]
     (. builder ownerSetting data))
-  (when-let [data (lookup-entry config id :sage-maker-job-arn)]
+  (when-some [data (lookup-entry config id :sage-maker-job-arn)]
     (. builder sageMakerJobArn data))
   (.build builder))
 
@@ -2252,9 +2252,9 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnResourceDefinition$SecretsManagerSecretResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-staging-labels-to-download)]
+  (when-some [data (lookup-entry config id :additional-staging-labels-to-download)]
     (. builder additionalStagingLabelsToDownload data))
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -2283,9 +2283,9 @@
 | `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
 "
   [^CfnResourceDefinitionVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-definition-id)]
+  (when-some [data (lookup-entry config id :resource-definition-id)]
     (. builder resourceDefinitionId data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
   (.build builder))
 
@@ -2314,9 +2314,9 @@
 | `groupOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-owner` |
 "
   [^CfnResourceDefinitionVersion$GroupOwnerSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-add-group-owner)]
+  (when-some [data (lookup-entry config id :auto-add-group-owner)]
     (. builder autoAddGroupOwner data))
-  (when-let [data (lookup-entry config id :group-owner)]
+  (when-some [data (lookup-entry config id :group-owner)]
     (. builder groupOwner data))
   (.build builder))
 
@@ -2345,9 +2345,9 @@
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "
   [^CfnResourceDefinitionVersion$LocalDeviceResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-owner-setting)]
+  (when-some [data (lookup-entry config id :group-owner-setting)]
     (. builder groupOwnerSetting data))
-  (when-let [data (lookup-entry config id :source-path)]
+  (when-some [data (lookup-entry config id :source-path)]
     (. builder sourcePath data))
   (.build builder))
 
@@ -2377,11 +2377,11 @@
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "
   [^CfnResourceDefinitionVersion$LocalVolumeResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-path)]
+  (when-some [data (lookup-entry config id :destination-path)]
     (. builder destinationPath data))
-  (when-let [data (lookup-entry config id :group-owner-setting)]
+  (when-some [data (lookup-entry config id :group-owner-setting)]
     (. builder groupOwnerSetting data))
-  (when-let [data (lookup-entry config id :source-path)]
+  (when-some [data (lookup-entry config id :source-path)]
     (. builder sourcePath data))
   (.build builder))
 
@@ -2410,9 +2410,9 @@
 | `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
 "
   [^CfnResourceDefinitionVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-definition-id)]
+  (when-some [data (lookup-entry config id :resource-definition-id)]
     (. builder resourceDefinitionId data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
   (.build builder))
 
@@ -2444,15 +2444,15 @@
 | `secretsManagerSecretResourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secrets-manager-secret-resource-data` |
 "
   [^CfnResourceDefinitionVersion$ResourceDataContainerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :local-device-resource-data)]
+  (when-some [data (lookup-entry config id :local-device-resource-data)]
     (. builder localDeviceResourceData data))
-  (when-let [data (lookup-entry config id :local-volume-resource-data)]
+  (when-some [data (lookup-entry config id :local-volume-resource-data)]
     (. builder localVolumeResourceData data))
-  (when-let [data (lookup-entry config id :s3-machine-learning-model-resource-data)]
+  (when-some [data (lookup-entry config id :s3-machine-learning-model-resource-data)]
     (. builder s3MachineLearningModelResourceData data))
-  (when-let [data (lookup-entry config id :sage-maker-machine-learning-model-resource-data)]
+  (when-some [data (lookup-entry config id :sage-maker-machine-learning-model-resource-data)]
     (. builder sageMakerMachineLearningModelResourceData data))
-  (when-let [data (lookup-entry config id :secrets-manager-secret-resource-data)]
+  (when-some [data (lookup-entry config id :secrets-manager-secret-resource-data)]
     (. builder secretsManagerSecretResourceData data))
   (.build builder))
 
@@ -2481,9 +2481,9 @@
 | `groupPermission` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-permission` |
 "
   [^CfnResourceDefinitionVersion$ResourceDownloadOwnerSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-owner)]
+  (when-some [data (lookup-entry config id :group-owner)]
     (. builder groupOwner data))
-  (when-let [data (lookup-entry config id :group-permission)]
+  (when-some [data (lookup-entry config id :group-permission)]
     (. builder groupPermission data))
   (.build builder))
 
@@ -2513,11 +2513,11 @@
 | `resourceDataContainer` | software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion$ResourceDataContainerProperty | [[cdk.support/lookup-entry]] | `:resource-data-container` |
 "
   [^CfnResourceDefinitionVersion$ResourceInstanceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-data-container)]
+  (when-some [data (lookup-entry config id :resource-data-container)]
     (. builder resourceDataContainer data))
   (.build builder))
 
@@ -2547,11 +2547,11 @@
 | `s3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-uri` |
 "
   [^CfnResourceDefinitionVersion$S3MachineLearningModelResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-path)]
+  (when-some [data (lookup-entry config id :destination-path)]
     (. builder destinationPath data))
-  (when-let [data (lookup-entry config id :owner-setting)]
+  (when-some [data (lookup-entry config id :owner-setting)]
     (. builder ownerSetting data))
-  (when-let [data (lookup-entry config id :s3-uri)]
+  (when-some [data (lookup-entry config id :s3-uri)]
     (. builder s3Uri data))
   (.build builder))
 
@@ -2581,11 +2581,11 @@
 | `sageMakerJobArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sage-maker-job-arn` |
 "
   [^CfnResourceDefinitionVersion$SageMakerMachineLearningModelResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-path)]
+  (when-some [data (lookup-entry config id :destination-path)]
     (. builder destinationPath data))
-  (when-let [data (lookup-entry config id :owner-setting)]
+  (when-some [data (lookup-entry config id :owner-setting)]
     (. builder ownerSetting data))
-  (when-let [data (lookup-entry config id :sage-maker-job-arn)]
+  (when-some [data (lookup-entry config id :sage-maker-job-arn)]
     (. builder sageMakerJobArn data))
   (.build builder))
 
@@ -2614,9 +2614,9 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnResourceDefinitionVersion$SecretsManagerSecretResourceDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-staging-labels-to-download)]
+  (when-some [data (lookup-entry config id :additional-staging-labels-to-download)]
     (. builder additionalStagingLabelsToDownload data))
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -2646,11 +2646,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSubscriptionDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2680,11 +2680,11 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSubscriptionDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-version)]
+  (when-some [data (lookup-entry config id :initial-version)]
     (. builder initialVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2712,7 +2712,7 @@
 | `subscriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscriptions` |
 "
   [^CfnSubscriptionDefinition$SubscriptionDefinitionVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :subscriptions)]
+  (when-some [data (lookup-entry config id :subscriptions)]
     (. builder subscriptions data))
   (.build builder))
 
@@ -2743,13 +2743,13 @@
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnSubscriptionDefinition$SubscriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :subject)]
+  (when-some [data (lookup-entry config id :subject)]
     (. builder subject data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -2778,9 +2778,9 @@
 | `subscriptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscriptions` |
 "
   [^CfnSubscriptionDefinitionVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :subscription-definition-id)]
+  (when-some [data (lookup-entry config id :subscription-definition-id)]
     (. builder subscriptionDefinitionId data))
-  (when-let [data (lookup-entry config id :subscriptions)]
+  (when-some [data (lookup-entry config id :subscriptions)]
     (. builder subscriptions data))
   (.build builder))
 
@@ -2809,9 +2809,9 @@
 | `subscriptions` | java.util.List | [[cdk.support/lookup-entry]] | `:subscriptions` |
 "
   [^CfnSubscriptionDefinitionVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :subscription-definition-id)]
+  (when-some [data (lookup-entry config id :subscription-definition-id)]
     (. builder subscriptionDefinitionId data))
-  (when-let [data (lookup-entry config id :subscriptions)]
+  (when-some [data (lookup-entry config id :subscriptions)]
     (. builder subscriptions data))
   (.build builder))
 
@@ -2842,13 +2842,13 @@
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnSubscriptionDefinitionVersion$SubscriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :subject)]
+  (when-some [data (lookup-entry config id :subject)]
     (. builder subject data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 

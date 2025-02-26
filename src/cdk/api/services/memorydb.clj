@@ -29,11 +29,11 @@
 | `userNames` | java.util.List | [[cdk.support/lookup-entry]] | `:user-names` |
 "
   [^CfnACL$Builder builder id config]
-  (when-let [data (lookup-entry config id :acl-name)]
+  (when-some [data (lookup-entry config id :acl-name)]
     (. builder aclName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-names)]
+  (when-some [data (lookup-entry config id :user-names)]
     (. builder userNames data))
   (.build builder))
 
@@ -63,11 +63,11 @@
 | `userNames` | java.util.List | [[cdk.support/lookup-entry]] | `:user-names` |
 "
   [^CfnACLProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :acl-name)]
+  (when-some [data (lookup-entry config id :acl-name)]
     (. builder aclName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-names)]
+  (when-some [data (lookup-entry config id :user-names)]
     (. builder userNames data))
   (.build builder))
 
@@ -119,55 +119,55 @@
 | `tlsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls-enabled` |
 "
   [^CfnCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :acl-name)]
+  (when-some [data (lookup-entry config id :acl-name)]
     (. builder aclName data))
-  (when-let [data (lookup-entry config id :auto-minor-version-upgrade)]
+  (when-some [data (lookup-entry config id :auto-minor-version-upgrade)]
     (. builder autoMinorVersionUpgrade data))
-  (when-let [data (lookup-entry config id :cluster-endpoint)]
+  (when-some [data (lookup-entry config id :cluster-endpoint)]
     (. builder clusterEndpoint data))
-  (when-let [data (lookup-entry config id :cluster-name)]
+  (when-some [data (lookup-entry config id :cluster-name)]
     (. builder clusterName data))
-  (when-let [data (lookup-entry config id :data-tiering)]
+  (when-some [data (lookup-entry config id :data-tiering)]
     (. builder dataTiering data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :engine-version)]
+  (when-some [data (lookup-entry config id :engine-version)]
     (. builder engineVersion data))
-  (when-let [data (lookup-entry config id :final-snapshot-name)]
+  (when-some [data (lookup-entry config id :final-snapshot-name)]
     (. builder finalSnapshotName data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :maintenance-window)]
+  (when-some [data (lookup-entry config id :maintenance-window)]
     (. builder maintenanceWindow data))
-  (when-let [data (lookup-entry config id :node-type)]
+  (when-some [data (lookup-entry config id :node-type)]
     (. builder nodeType data))
-  (when-let [data (lookup-entry config id :num-replicas-per-shard)]
+  (when-some [data (lookup-entry config id :num-replicas-per-shard)]
     (. builder numReplicasPerShard data))
-  (when-let [data (lookup-entry config id :num-shards)]
+  (when-some [data (lookup-entry config id :num-shards)]
     (. builder numShards data))
-  (when-let [data (lookup-entry config id :parameter-group-name)]
+  (when-some [data (lookup-entry config id :parameter-group-name)]
     (. builder parameterGroupName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :snapshot-arns)]
+  (when-some [data (lookup-entry config id :snapshot-arns)]
     (. builder snapshotArns data))
-  (when-let [data (lookup-entry config id :snapshot-name)]
+  (when-some [data (lookup-entry config id :snapshot-name)]
     (. builder snapshotName data))
-  (when-let [data (lookup-entry config id :snapshot-retention-limit)]
+  (when-some [data (lookup-entry config id :snapshot-retention-limit)]
     (. builder snapshotRetentionLimit data))
-  (when-let [data (lookup-entry config id :snapshot-window)]
+  (when-some [data (lookup-entry config id :snapshot-window)]
     (. builder snapshotWindow data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
-  (when-let [data (lookup-entry config id :sns-topic-status)]
+  (when-some [data (lookup-entry config id :sns-topic-status)]
     (. builder snsTopicStatus data))
-  (when-let [data (lookup-entry config id :subnet-group-name)]
+  (when-some [data (lookup-entry config id :subnet-group-name)]
     (. builder subnetGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tls-enabled)]
+  (when-some [data (lookup-entry config id :tls-enabled)]
     (. builder tlsEnabled data))
   (.build builder))
 
@@ -196,9 +196,9 @@
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 "
   [^CfnCluster$EndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :address)]
+  (when-some [data (lookup-entry config id :address)]
     (. builder address data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
 
@@ -250,55 +250,55 @@
 | `tlsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:tls-enabled` |
 "
   [^CfnClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :acl-name)]
+  (when-some [data (lookup-entry config id :acl-name)]
     (. builder aclName data))
-  (when-let [data (lookup-entry config id :auto-minor-version-upgrade)]
+  (when-some [data (lookup-entry config id :auto-minor-version-upgrade)]
     (. builder autoMinorVersionUpgrade data))
-  (when-let [data (lookup-entry config id :cluster-endpoint)]
+  (when-some [data (lookup-entry config id :cluster-endpoint)]
     (. builder clusterEndpoint data))
-  (when-let [data (lookup-entry config id :cluster-name)]
+  (when-some [data (lookup-entry config id :cluster-name)]
     (. builder clusterName data))
-  (when-let [data (lookup-entry config id :data-tiering)]
+  (when-some [data (lookup-entry config id :data-tiering)]
     (. builder dataTiering data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :engine-version)]
+  (when-some [data (lookup-entry config id :engine-version)]
     (. builder engineVersion data))
-  (when-let [data (lookup-entry config id :final-snapshot-name)]
+  (when-some [data (lookup-entry config id :final-snapshot-name)]
     (. builder finalSnapshotName data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :maintenance-window)]
+  (when-some [data (lookup-entry config id :maintenance-window)]
     (. builder maintenanceWindow data))
-  (when-let [data (lookup-entry config id :node-type)]
+  (when-some [data (lookup-entry config id :node-type)]
     (. builder nodeType data))
-  (when-let [data (lookup-entry config id :num-replicas-per-shard)]
+  (when-some [data (lookup-entry config id :num-replicas-per-shard)]
     (. builder numReplicasPerShard data))
-  (when-let [data (lookup-entry config id :num-shards)]
+  (when-some [data (lookup-entry config id :num-shards)]
     (. builder numShards data))
-  (when-let [data (lookup-entry config id :parameter-group-name)]
+  (when-some [data (lookup-entry config id :parameter-group-name)]
     (. builder parameterGroupName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :snapshot-arns)]
+  (when-some [data (lookup-entry config id :snapshot-arns)]
     (. builder snapshotArns data))
-  (when-let [data (lookup-entry config id :snapshot-name)]
+  (when-some [data (lookup-entry config id :snapshot-name)]
     (. builder snapshotName data))
-  (when-let [data (lookup-entry config id :snapshot-retention-limit)]
+  (when-some [data (lookup-entry config id :snapshot-retention-limit)]
     (. builder snapshotRetentionLimit data))
-  (when-let [data (lookup-entry config id :snapshot-window)]
+  (when-some [data (lookup-entry config id :snapshot-window)]
     (. builder snapshotWindow data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
-  (when-let [data (lookup-entry config id :sns-topic-status)]
+  (when-some [data (lookup-entry config id :sns-topic-status)]
     (. builder snsTopicStatus data))
-  (when-let [data (lookup-entry config id :subnet-group-name)]
+  (when-some [data (lookup-entry config id :subnet-group-name)]
     (. builder subnetGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tls-enabled)]
+  (when-some [data (lookup-entry config id :tls-enabled)]
     (. builder tlsEnabled data))
   (.build builder))
 
@@ -330,15 +330,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnParameterGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :family)]
+  (when-some [data (lookup-entry config id :family)]
     (. builder family data))
-  (when-let [data (lookup-entry config id :parameter-group-name)]
+  (when-some [data (lookup-entry config id :parameter-group-name)]
     (. builder parameterGroupName data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -370,15 +370,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnParameterGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :family)]
+  (when-some [data (lookup-entry config id :family)]
     (. builder family data))
-  (when-let [data (lookup-entry config id :parameter-group-name)]
+  (when-some [data (lookup-entry config id :parameter-group-name)]
     (. builder parameterGroupName data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -409,13 +409,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSubnetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :subnet-group-name)]
+  (when-some [data (lookup-entry config id :subnet-group-name)]
     (. builder subnetGroupName data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -446,13 +446,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSubnetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :subnet-group-name)]
+  (when-some [data (lookup-entry config id :subnet-group-name)]
     (. builder subnetGroupName data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -481,9 +481,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnUser$AuthenticationModeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :passwords)]
+  (when-some [data (lookup-entry config id :passwords)]
     (. builder passwords data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -514,13 +514,13 @@
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnUser$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-string)]
+  (when-some [data (lookup-entry config id :access-string)]
     (. builder accessString data))
-  (when-let [data (lookup-entry config id :authentication-mode)]
+  (when-some [data (lookup-entry config id :authentication-mode)]
     (. builder authenticationMode data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -551,13 +551,13 @@
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnUserProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-string)]
+  (when-some [data (lookup-entry config id :access-string)]
     (. builder accessString data))
-  (when-let [data (lookup-entry config id :authentication-mode)]
+  (when-some [data (lookup-entry config id :authentication-mode)]
     (. builder authenticationMode data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 

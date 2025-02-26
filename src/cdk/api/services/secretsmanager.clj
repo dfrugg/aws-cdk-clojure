@@ -76,7 +76,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^AttachedSecretOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -106,11 +106,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnResourcePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :block-public-policy)]
+  (when-some [data (lookup-entry config id :block-public-policy)]
     (. builder blockPublicPolicy data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :secret-id)]
+  (when-some [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
 
@@ -140,11 +140,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnResourcePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :block-public-policy)]
+  (when-some [data (lookup-entry config id :block-public-policy)]
     (. builder blockPublicPolicy data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :secret-id)]
+  (when-some [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
 
@@ -176,15 +176,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnRotationSchedule$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-rotation-lambda)]
+  (when-some [data (lookup-entry config id :hosted-rotation-lambda)]
     (. builder hostedRotationLambda data))
-  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+  (when-some [data (lookup-entry config id :rotate-immediately-on-update)]
     (. builder rotateImmediatelyOnUpdate data))
-  (when-let [data (lookup-entry config id :rotation-lambda-arn)]
+  (when-some [data (lookup-entry config id :rotation-lambda-arn)]
     (. builder rotationLambdaArn data))
-  (when-let [data (lookup-entry config id :rotation-rules)]
+  (when-some [data (lookup-entry config id :rotation-rules)]
     (. builder rotationRules data))
-  (when-let [data (lookup-entry config id :secret-id)]
+  (when-some [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
 
@@ -222,27 +222,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcSubnetIds` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-subnet-ids` |
 "
   [^CfnRotationSchedule$HostedRotationLambdaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-characters)]
+  (when-some [data (lookup-entry config id :exclude-characters)]
     (. builder excludeCharacters data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :master-secret-arn)]
+  (when-some [data (lookup-entry config id :master-secret-arn)]
     (. builder masterSecretArn data))
-  (when-let [data (lookup-entry config id :master-secret-kms-key-arn)]
+  (when-some [data (lookup-entry config id :master-secret-kms-key-arn)]
     (. builder masterSecretKmsKeyArn data))
-  (when-let [data (lookup-entry config id :rotation-lambda-name)]
+  (when-some [data (lookup-entry config id :rotation-lambda-name)]
     (. builder rotationLambdaName data))
-  (when-let [data (lookup-entry config id :rotation-type)]
+  (when-some [data (lookup-entry config id :rotation-type)]
     (. builder rotationType data))
-  (when-let [data (lookup-entry config id :runtime)]
+  (when-some [data (lookup-entry config id :runtime)]
     (. builder runtime data))
-  (when-let [data (lookup-entry config id :superuser-secret-arn)]
+  (when-some [data (lookup-entry config id :superuser-secret-arn)]
     (. builder superuserSecretArn data))
-  (when-let [data (lookup-entry config id :superuser-secret-kms-key-arn)]
+  (when-some [data (lookup-entry config id :superuser-secret-kms-key-arn)]
     (. builder superuserSecretKmsKeyArn data))
-  (when-let [data (lookup-entry config id :vpc-security-group-ids)]
+  (when-some [data (lookup-entry config id :vpc-security-group-ids)]
     (. builder vpcSecurityGroupIds data))
-  (when-let [data (lookup-entry config id :vpc-subnet-ids)]
+  (when-some [data (lookup-entry config id :vpc-subnet-ids)]
     (. builder vpcSubnetIds data))
   (.build builder))
 
@@ -274,15 +274,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnRotationScheduleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-rotation-lambda)]
+  (when-some [data (lookup-entry config id :hosted-rotation-lambda)]
     (. builder hostedRotationLambda data))
-  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+  (when-some [data (lookup-entry config id :rotate-immediately-on-update)]
     (. builder rotateImmediatelyOnUpdate data))
-  (when-let [data (lookup-entry config id :rotation-lambda-arn)]
+  (when-some [data (lookup-entry config id :rotation-lambda-arn)]
     (. builder rotationLambdaArn data))
-  (when-let [data (lookup-entry config id :rotation-rules)]
+  (when-some [data (lookup-entry config id :rotation-rules)]
     (. builder rotationRules data))
-  (when-let [data (lookup-entry config id :secret-id)]
+  (when-some [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
 
@@ -312,11 +312,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |
 "
   [^CfnRotationSchedule$RotationRulesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatically-after-days)]
+  (when-some [data (lookup-entry config id :automatically-after-days)]
     (. builder automaticallyAfterDays data))
-  (when-let [data (lookup-entry config id :duration)]
+  (when-some [data (lookup-entry config id :duration)]
     (. builder duration data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
   (.build builder))
 
@@ -350,19 +350,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSecret$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :generate-secret-string)]
+  (when-some [data (lookup-entry config id :generate-secret-string)]
     (. builder generateSecretString data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :replica-regions)]
+  (when-some [data (lookup-entry config id :replica-regions)]
     (. builder replicaRegions data))
-  (when-let [data (lookup-entry config id :secret-string)]
+  (when-some [data (lookup-entry config id :secret-string)]
     (. builder secretString data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -399,25 +399,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretStringTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string-template` |
 "
   [^CfnSecret$GenerateSecretStringProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-characters)]
+  (when-some [data (lookup-entry config id :exclude-characters)]
     (. builder excludeCharacters data))
-  (when-let [data (lookup-entry config id :exclude-lowercase)]
+  (when-some [data (lookup-entry config id :exclude-lowercase)]
     (. builder excludeLowercase data))
-  (when-let [data (lookup-entry config id :exclude-numbers)]
+  (when-some [data (lookup-entry config id :exclude-numbers)]
     (. builder excludeNumbers data))
-  (when-let [data (lookup-entry config id :exclude-punctuation)]
+  (when-some [data (lookup-entry config id :exclude-punctuation)]
     (. builder excludePunctuation data))
-  (when-let [data (lookup-entry config id :exclude-uppercase)]
+  (when-some [data (lookup-entry config id :exclude-uppercase)]
     (. builder excludeUppercase data))
-  (when-let [data (lookup-entry config id :generate-string-key)]
+  (when-some [data (lookup-entry config id :generate-string-key)]
     (. builder generateStringKey data))
-  (when-let [data (lookup-entry config id :include-space)]
+  (when-some [data (lookup-entry config id :include-space)]
     (. builder includeSpace data))
-  (when-let [data (lookup-entry config id :password-length)]
+  (when-some [data (lookup-entry config id :password-length)]
     (. builder passwordLength data))
-  (when-let [data (lookup-entry config id :require-each-included-type)]
+  (when-some [data (lookup-entry config id :require-each-included-type)]
     (. builder requireEachIncludedType data))
-  (when-let [data (lookup-entry config id :secret-string-template)]
+  (when-some [data (lookup-entry config id :secret-string-template)]
     (. builder secretStringTemplate data))
   (.build builder))
 
@@ -451,19 +451,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSecretProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :generate-secret-string)]
+  (when-some [data (lookup-entry config id :generate-secret-string)]
     (. builder generateSecretString data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :replica-regions)]
+  (when-some [data (lookup-entry config id :replica-regions)]
     (. builder replicaRegions data))
-  (when-let [data (lookup-entry config id :secret-string)]
+  (when-some [data (lookup-entry config id :secret-string)]
     (. builder secretString data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -492,9 +492,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^CfnSecret$ReplicaRegionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -524,11 +524,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 "
   [^CfnSecretTargetAttachment$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret-id)]
+  (when-some [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
-  (when-let [data (lookup-entry config id :target-id)]
+  (when-some [data (lookup-entry config id :target-id)]
     (. builder targetId data))
-  (when-let [data (lookup-entry config id :target-type)]
+  (when-some [data (lookup-entry config id :target-type)]
     (. builder targetType data))
   (.build builder))
 
@@ -558,11 +558,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 "
   [^CfnSecretTargetAttachmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret-id)]
+  (when-some [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
-  (when-let [data (lookup-entry config id :target-id)]
+  (when-some [data (lookup-entry config id :target-id)]
     (. builder targetId data))
-  (when-let [data (lookup-entry config id :target-type)]
+  (when-some [data (lookup-entry config id :target-type)]
     (. builder targetType data))
   (.build builder))
 
@@ -595,17 +595,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^MultiUserHostedRotationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-characters)]
+  (when-some [data (lookup-entry config id :exclude-characters)]
     (. builder excludeCharacters data))
-  (when-let [data (lookup-entry config id :function-name)]
+  (when-some [data (lookup-entry config id :function-name)]
     (. builder functionName data))
-  (when-let [data (lookup-entry config id :master-secret)]
+  (when-some [data (lookup-entry config id :master-secret)]
     (. builder masterSecret data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -634,9 +634,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^ReplicaRegion$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -664,7 +664,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
 "
   [^ResourcePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
   (.build builder))
 
@@ -692,7 +692,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
 "
   [^ResourcePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
   (.build builder))
 
@@ -724,15 +724,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
 "
   [^RotationSchedule$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatically-after)]
+  (when-some [data (lookup-entry config id :automatically-after)]
     (. builder automaticallyAfter data))
-  (when-let [data (lookup-entry config id :hosted-rotation)]
+  (when-some [data (lookup-entry config id :hosted-rotation)]
     (. builder hostedRotation data))
-  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+  (when-some [data (lookup-entry config id :rotate-immediately-on-update)]
     (. builder rotateImmediatelyOnUpdate data))
-  (when-let [data (lookup-entry config id :rotation-lambda)]
+  (when-some [data (lookup-entry config id :rotation-lambda)]
     (. builder rotationLambda data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
   (.build builder))
 
@@ -763,13 +763,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `rotationLambda` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:rotation-lambda` |
 "
   [^RotationScheduleOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatically-after)]
+  (when-some [data (lookup-entry config id :automatically-after)]
     (. builder automaticallyAfter data))
-  (when-let [data (lookup-entry config id :hosted-rotation)]
+  (when-some [data (lookup-entry config id :hosted-rotation)]
     (. builder hostedRotation data))
-  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+  (when-some [data (lookup-entry config id :rotate-immediately-on-update)]
     (. builder rotateImmediatelyOnUpdate data))
-  (when-let [data (lookup-entry config id :rotation-lambda)]
+  (when-some [data (lookup-entry config id :rotation-lambda)]
     (. builder rotationLambda data))
   (.build builder))
 
@@ -801,15 +801,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
 "
   [^RotationScheduleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatically-after)]
+  (when-some [data (lookup-entry config id :automatically-after)]
     (. builder automaticallyAfter data))
-  (when-let [data (lookup-entry config id :hosted-rotation)]
+  (when-some [data (lookup-entry config id :hosted-rotation)]
     (. builder hostedRotation data))
-  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+  (when-some [data (lookup-entry config id :rotate-immediately-on-update)]
     (. builder rotateImmediatelyOnUpdate data))
-  (when-let [data (lookup-entry config id :rotation-lambda)]
+  (when-some [data (lookup-entry config id :rotation-lambda)]
     (. builder rotationLambda data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
   (.build builder))
 
@@ -838,9 +838,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetType` | software.amazon.awscdk.services.secretsmanager.AttachmentTargetType | [[cdk.api.services.secretsmanager/attachment-target-type]] | `:target-type` |
 "
   [^SecretAttachmentTargetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-id)]
+  (when-some [data (lookup-entry config id :target-id)]
     (. builder targetId data))
-  (when-let [data (attachment-target-type config id :target-type)]
+  (when-some [data (attachment-target-type config id :target-type)]
     (. builder targetType data))
   (.build builder))
 
@@ -870,11 +870,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretPartialArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-partial-arn` |
 "
   [^SecretAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :secret-complete-arn)]
+  (when-some [data (lookup-entry config id :secret-complete-arn)]
     (. builder secretCompleteArn data))
-  (when-let [data (lookup-entry config id :secret-partial-arn)]
+  (when-some [data (lookup-entry config id :secret-partial-arn)]
     (. builder secretPartialArn data))
   (.build builder))
 
@@ -910,23 +910,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretStringValue` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:secret-string-value` |
 "
   [^Secret$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :generate-secret-string)]
+  (when-some [data (lookup-entry config id :generate-secret-string)]
     (. builder generateSecretString data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :replica-regions)]
+  (when-some [data (lookup-entry config id :replica-regions)]
     (. builder replicaRegions data))
-  (when-let [data (lookup-entry config id :secret-name)]
+  (when-some [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
-  (when-let [data (lookup-entry config id :secret-object-value)]
+  (when-some [data (lookup-entry config id :secret-object-value)]
     (. builder secretObjectValue data))
-  (when-let [data (lookup-entry config id :secret-string-beta1)]
+  (when-some [data (lookup-entry config id :secret-string-beta1)]
     (. builder secretStringBeta1 data))
-  (when-let [data (lookup-entry config id :secret-string-value)]
+  (when-some [data (lookup-entry config id :secret-string-value)]
     (. builder secretStringValue data))
   (.build builder))
 
@@ -962,23 +962,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretStringValue` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:secret-string-value` |
 "
   [^SecretProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :generate-secret-string)]
+  (when-some [data (lookup-entry config id :generate-secret-string)]
     (. builder generateSecretString data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :replica-regions)]
+  (when-some [data (lookup-entry config id :replica-regions)]
     (. builder replicaRegions data))
-  (when-let [data (lookup-entry config id :secret-name)]
+  (when-some [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
-  (when-let [data (lookup-entry config id :secret-object-value)]
+  (when-some [data (lookup-entry config id :secret-object-value)]
     (. builder secretObjectValue data))
-  (when-let [data (lookup-entry config id :secret-string-beta1)]
+  (when-some [data (lookup-entry config id :secret-string-beta1)]
     (. builder secretStringBeta1 data))
-  (when-let [data (lookup-entry config id :secret-string-value)]
+  (when-some [data (lookup-entry config id :secret-string-value)]
     (. builder secretStringValue data))
   (.build builder))
 
@@ -1006,7 +1006,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `isMultiUser` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-user` |
 "
   [^SecretRotationApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :is-multi-user)]
+  (when-some [data (lookup-entry config id :is-multi-user)]
     (. builder isMultiUser data))
   (.build builder))
 
@@ -1038,7 +1038,7 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `isMultiUser` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-user` |
 "
   [^SecretRotationApplicationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :is-multi-user)]
+  (when-some [data (lookup-entry config id :is-multi-user)]
     (. builder isMultiUser data))
   (.build builder))
 
@@ -1076,27 +1076,27 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^SecretRotation$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :automatically-after)]
+  (when-some [data (lookup-entry config id :automatically-after)]
     (. builder automaticallyAfter data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :exclude-characters)]
+  (when-some [data (lookup-entry config id :exclude-characters)]
     (. builder excludeCharacters data))
-  (when-let [data (lookup-entry config id :master-secret)]
+  (when-some [data (lookup-entry config id :master-secret)]
     (. builder masterSecret data))
-  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+  (when-some [data (lookup-entry config id :rotate-immediately-on-update)]
     (. builder rotateImmediatelyOnUpdate data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -1134,27 +1134,27 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^SecretRotationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :automatically-after)]
+  (when-some [data (lookup-entry config id :automatically-after)]
     (. builder automaticallyAfter data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :exclude-characters)]
+  (when-some [data (lookup-entry config id :exclude-characters)]
     (. builder excludeCharacters data))
-  (when-let [data (lookup-entry config id :master-secret)]
+  (when-some [data (lookup-entry config id :master-secret)]
     (. builder masterSecret data))
-  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+  (when-some [data (lookup-entry config id :rotate-immediately-on-update)]
     (. builder rotateImmediatelyOnUpdate data))
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (lookup-entry config id :security-group)]
+  (when-some [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -1191,25 +1191,25 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `secretStringTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string-template` |
 "
   [^SecretStringGenerator$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-characters)]
+  (when-some [data (lookup-entry config id :exclude-characters)]
     (. builder excludeCharacters data))
-  (when-let [data (lookup-entry config id :exclude-lowercase)]
+  (when-some [data (lookup-entry config id :exclude-lowercase)]
     (. builder excludeLowercase data))
-  (when-let [data (lookup-entry config id :exclude-numbers)]
+  (when-some [data (lookup-entry config id :exclude-numbers)]
     (. builder excludeNumbers data))
-  (when-let [data (lookup-entry config id :exclude-punctuation)]
+  (when-some [data (lookup-entry config id :exclude-punctuation)]
     (. builder excludePunctuation data))
-  (when-let [data (lookup-entry config id :exclude-uppercase)]
+  (when-some [data (lookup-entry config id :exclude-uppercase)]
     (. builder excludeUppercase data))
-  (when-let [data (lookup-entry config id :generate-string-key)]
+  (when-some [data (lookup-entry config id :generate-string-key)]
     (. builder generateStringKey data))
-  (when-let [data (lookup-entry config id :include-space)]
+  (when-some [data (lookup-entry config id :include-space)]
     (. builder includeSpace data))
-  (when-let [data (lookup-entry config id :password-length)]
+  (when-some [data (lookup-entry config id :password-length)]
     (. builder passwordLength data))
-  (when-let [data (lookup-entry config id :require-each-included-type)]
+  (when-some [data (lookup-entry config id :require-each-included-type)]
     (. builder requireEachIncludedType data))
-  (when-let [data (lookup-entry config id :secret-string-template)]
+  (when-some [data (lookup-entry config id :secret-string-template)]
     (. builder secretStringTemplate data))
   (.build builder))
 
@@ -1238,9 +1238,9 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^SecretTargetAttachment$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -1269,9 +1269,9 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^SecretTargetAttachmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret)]
+  (when-some [data (lookup-entry config id :secret)]
     (. builder secret data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -1303,15 +1303,15 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^SingleUserHostedRotationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-characters)]
+  (when-some [data (lookup-entry config id :exclude-characters)]
     (. builder excludeCharacters data))
-  (when-let [data (lookup-entry config id :function-name)]
+  (when-some [data (lookup-entry config id :function-name)]
     (. builder functionName data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 

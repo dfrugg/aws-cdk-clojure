@@ -133,11 +133,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `user` | software.amazon.awscdk.services.iam.IUser | [[cdk.support/lookup-entry]] | `:user` |
 "
   [^AccessKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :serial)]
+  (when-some [data (lookup-entry config id :serial)]
     (. builder serial data))
-  (when-let [data (access-key-status config id :status)]
+  (when-some [data (access-key-status config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :user)]
+  (when-some [data (lookup-entry config id :user)]
     (. builder user data))
   (.build builder))
 
@@ -167,11 +167,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `user` | software.amazon.awscdk.services.iam.IUser | [[cdk.support/lookup-entry]] | `:user` |
 "
   [^AccessKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :serial)]
+  (when-some [data (lookup-entry config id :serial)]
     (. builder serial data))
-  (when-let [data (access-key-status config id :status)]
+  (when-some [data (access-key-status config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :user)]
+  (when-some [data (lookup-entry config id :user)]
     (. builder user data))
   (.build builder))
 
@@ -200,9 +200,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statementAdded` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:statement-added` |
 "
   [^AddToPrincipalPolicyResult$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-dependable)]
+  (when-some [data (lookup-entry config id :policy-dependable)]
     (. builder policyDependable data))
-  (when-let [data (lookup-entry config id :statement-added)]
+  (when-some [data (lookup-entry config id :statement-added)]
     (. builder statementAdded data))
   (.build builder))
 
@@ -231,9 +231,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statementAdded` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:statement-added` |
 "
   [^AddToResourcePolicyResult$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-dependable)]
+  (when-some [data (lookup-entry config id :policy-dependable)]
     (. builder policyDependable data))
-  (when-let [data (lookup-entry config id :statement-added)]
+  (when-some [data (lookup-entry config id :statement-added)]
     (. builder statementAdded data))
   (.build builder))
 
@@ -263,11 +263,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnAccessKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :serial)]
+  (when-some [data (lookup-entry config id :serial)]
     (. builder serial data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -297,11 +297,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnAccessKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :serial)]
+  (when-some [data (lookup-entry config id :serial)]
     (. builder serial data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -332,13 +332,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
 "
   [^CfnGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :managed-policy-arns)]
+  (when-some [data (lookup-entry config id :managed-policy-arns)]
     (. builder managedPolicyArns data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
   (.build builder))
 
@@ -368,11 +368,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnGroupPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -401,9 +401,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnGroup$PolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -433,11 +433,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnGroupPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -468,13 +468,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
 "
   [^CfnGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :managed-policy-arns)]
+  (when-some [data (lookup-entry config id :managed-policy-arns)]
     (. builder managedPolicyArns data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
   (.build builder))
 
@@ -504,11 +504,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roles` | java.util.List | [[cdk.support/lookup-entry]] | `:roles` |
 "
   [^CfnInstanceProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-profile-name)]
+  (when-some [data (lookup-entry config id :instance-profile-name)]
     (. builder instanceProfileName data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
   (.build builder))
 
@@ -538,11 +538,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roles` | java.util.List | [[cdk.support/lookup-entry]] | `:roles` |
 "
   [^CfnInstanceProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-profile-name)]
+  (when-some [data (lookup-entry config id :instance-profile-name)]
     (. builder instanceProfileName data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
   (.build builder))
 
@@ -576,19 +576,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnManagedPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :managed-policy-name)]
+  (when-some [data (lookup-entry config id :managed-policy-name)]
     (. builder managedPolicyName data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -622,19 +622,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnManagedPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :managed-policy-name)]
+  (when-some [data (lookup-entry config id :managed-policy-name)]
     (. builder managedPolicyName data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -665,13 +665,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnOIDCProvider$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-id-list)]
+  (when-some [data (lookup-entry config id :client-id-list)]
     (. builder clientIdList data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :thumbprint-list)]
+  (when-some [data (lookup-entry config id :thumbprint-list)]
     (. builder thumbprintList data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -702,13 +702,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnOIDCProviderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-id-list)]
+  (when-some [data (lookup-entry config id :client-id-list)]
     (. builder clientIdList data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :thumbprint-list)]
+  (when-some [data (lookup-entry config id :thumbprint-list)]
     (. builder thumbprintList data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -740,15 +740,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -780,15 +780,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -824,23 +824,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRole$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role-policy-document)]
+  (when-some [data (lookup-entry config id :assume-role-policy-document)]
     (. builder assumeRolePolicyDocument data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :managed-policy-arns)]
+  (when-some [data (lookup-entry config id :managed-policy-arns)]
     (. builder managedPolicyArns data))
-  (when-let [data (lookup-entry config id :max-session-duration)]
+  (when-some [data (lookup-entry config id :max-session-duration)]
     (. builder maxSessionDuration data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -870,11 +870,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-name` |
 "
   [^CfnRolePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
   (.build builder))
 
@@ -903,9 +903,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnRole$PolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -935,11 +935,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-name` |
 "
   [^CfnRolePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
   (.build builder))
 
@@ -975,23 +975,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRoleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role-policy-document)]
+  (when-some [data (lookup-entry config id :assume-role-policy-document)]
     (. builder assumeRolePolicyDocument data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :managed-policy-arns)]
+  (when-some [data (lookup-entry config id :managed-policy-arns)]
     (. builder managedPolicyArns data))
-  (when-let [data (lookup-entry config id :max-session-duration)]
+  (when-some [data (lookup-entry config id :max-session-duration)]
     (. builder maxSessionDuration data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1021,11 +1021,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSAMLProvider$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :saml-metadata-document)]
+  (when-some [data (lookup-entry config id :saml-metadata-document)]
     (. builder samlMetadataDocument data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1055,11 +1055,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSAMLProviderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :saml-metadata-document)]
+  (when-some [data (lookup-entry config id :saml-metadata-document)]
     (. builder samlMetadataDocument data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1092,17 +1092,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServerCertificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-body)]
+  (when-some [data (lookup-entry config id :certificate-body)]
     (. builder certificateBody data))
-  (when-let [data (lookup-entry config id :certificate-chain)]
+  (when-some [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :private-key)]
+  (when-some [data (lookup-entry config id :private-key)]
     (. builder privateKey data))
-  (when-let [data (lookup-entry config id :server-certificate-name)]
+  (when-some [data (lookup-entry config id :server-certificate-name)]
     (. builder serverCertificateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1135,17 +1135,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServerCertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-body)]
+  (when-some [data (lookup-entry config id :certificate-body)]
     (. builder certificateBody data))
-  (when-let [data (lookup-entry config id :certificate-chain)]
+  (when-some [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :private-key)]
+  (when-some [data (lookup-entry config id :private-key)]
     (. builder privateKey data))
-  (when-let [data (lookup-entry config id :server-certificate-name)]
+  (when-some [data (lookup-entry config id :server-certificate-name)]
     (. builder serverCertificateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1175,11 +1175,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnServiceLinkedRole$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-service-name)]
+  (when-some [data (lookup-entry config id :aws-service-name)]
     (. builder awsServiceName data))
-  (when-let [data (lookup-entry config id :custom-suffix)]
+  (when-some [data (lookup-entry config id :custom-suffix)]
     (. builder customSuffix data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
   (.build builder))
 
@@ -1209,11 +1209,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnServiceLinkedRoleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-service-name)]
+  (when-some [data (lookup-entry config id :aws-service-name)]
     (. builder awsServiceName data))
-  (when-let [data (lookup-entry config id :custom-suffix)]
+  (when-some [data (lookup-entry config id :custom-suffix)]
     (. builder customSuffix data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
   (.build builder))
 
@@ -1248,21 +1248,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnUser$Builder builder id config]
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :login-profile)]
+  (when-some [data (lookup-entry config id :login-profile)]
     (. builder loginProfile data))
-  (when-let [data (lookup-entry config id :managed-policy-arns)]
+  (when-some [data (lookup-entry config id :managed-policy-arns)]
     (. builder managedPolicyArns data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -1291,9 +1291,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `passwordResetRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:password-reset-required` |
 "
   [^CfnUser$LoginProfileProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :password-reset-required)]
+  (when-some [data (lookup-entry config id :password-reset-required)]
     (. builder passwordResetRequired data))
   (.build builder))
 
@@ -1323,11 +1323,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnUserPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -1356,9 +1356,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnUser$PolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -1388,11 +1388,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnUserPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -1427,21 +1427,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^CfnUserProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :login-profile)]
+  (when-some [data (lookup-entry config id :login-profile)]
     (. builder loginProfile data))
-  (when-let [data (lookup-entry config id :managed-policy-arns)]
+  (when-some [data (lookup-entry config id :managed-policy-arns)]
     (. builder managedPolicyArns data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -1470,9 +1470,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnUserToGroupAddition$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -1501,9 +1501,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^CfnUserToGroupAdditionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -1534,13 +1534,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualMfaDeviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-mfa-device-name` |
 "
   [^CfnVirtualMFADevice$Builder builder id config]
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
-  (when-let [data (lookup-entry config id :virtual-mfa-device-name)]
+  (when-some [data (lookup-entry config id :virtual-mfa-device-name)]
     (. builder virtualMfaDeviceName data))
   (.build builder))
 
@@ -1571,13 +1571,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualMfaDeviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-mfa-device-name` |
 "
   [^CfnVirtualMFADeviceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
-  (when-let [data (lookup-entry config id :virtual-mfa-device-name)]
+  (when-some [data (lookup-entry config id :virtual-mfa-device-name)]
     (. builder virtualMfaDeviceName data))
   (.build builder))
 
@@ -1608,13 +1608,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceArns` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-arns` |
 "
   [^CommonGrantOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :grantee)]
+  (when-some [data (lookup-entry config id :grantee)]
     (. builder grantee data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
   (.build builder))
 
@@ -1643,9 +1643,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `usePrecreatedRoles` | java.util.Map | [[cdk.support/lookup-entry]] | `:use-precreated-roles` |
 "
   [^CustomizeRolesOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :prevent-synthesis)]
+  (when-some [data (lookup-entry config id :prevent-synthesis)]
     (. builder preventSynthesis data))
-  (when-let [data (lookup-entry config id :use-precreated-roles)]
+  (when-some [data (lookup-entry config id :use-precreated-roles)]
     (. builder usePrecreatedRoles data))
   (.build builder))
 
@@ -1675,11 +1675,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mutable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:mutable` |
 "
   [^FromRoleArnOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-grants-to-resources)]
+  (when-some [data (lookup-entry config id :add-grants-to-resources)]
     (. builder addGrantsToResources data))
-  (when-let [data (lookup-entry config id :default-policy-name)]
+  (when-some [data (lookup-entry config id :default-policy-name)]
     (. builder defaultPolicyName data))
-  (when-let [data (lookup-entry config id :mutable)]
+  (when-some [data (lookup-entry config id :mutable)]
     (. builder mutable data))
   (.build builder))
 
@@ -1709,11 +1709,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mutable` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:mutable` |
 "
   [^FromRoleNameOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-grants-to-resources)]
+  (when-some [data (lookup-entry config id :add-grants-to-resources)]
     (. builder addGrantsToResources data))
-  (when-let [data (lookup-entry config id :default-policy-name)]
+  (when-some [data (lookup-entry config id :default-policy-name)]
     (. builder defaultPolicyName data))
-  (when-let [data (lookup-entry config id :mutable)]
+  (when-some [data (lookup-entry config id :mutable)]
     (. builder mutable data))
   (.build builder))
 
@@ -1747,19 +1747,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceSelfArns` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-self-arns` |
 "
   [^GrantOnPrincipalAndResourceOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :grantee)]
+  (when-some [data (lookup-entry config id :grantee)]
     (. builder grantee data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
-  (when-let [data (lookup-entry config id :resource-policy-principal)]
+  (when-some [data (lookup-entry config id :resource-policy-principal)]
     (. builder resourcePolicyPrincipal data))
-  (when-let [data (lookup-entry config id :resource-self-arns)]
+  (when-some [data (lookup-entry config id :resource-self-arns)]
     (. builder resourceSelfArns data))
   (.build builder))
 
@@ -1791,15 +1791,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scope` | software.constructs.IConstruct | [[cdk.support/lookup-entry]] | `:scope` |
 "
   [^GrantOnPrincipalOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :grantee)]
+  (when-some [data (lookup-entry config id :grantee)]
     (. builder grantee data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
   (.build builder))
 
@@ -1832,17 +1832,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceSelfArns` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-self-arns` |
 "
   [^GrantWithResourceOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :grantee)]
+  (when-some [data (lookup-entry config id :grantee)]
     (. builder grantee data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
-  (when-let [data (lookup-entry config id :resource-self-arns)]
+  (when-some [data (lookup-entry config id :resource-self-arns)]
     (. builder resourceSelfArns data))
   (.build builder))
 
@@ -1872,11 +1872,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^Group$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :managed-policies)]
+  (when-some [data (lookup-entry config id :managed-policies)]
     (. builder managedPolicies data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -1906,11 +1906,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^GroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :managed-policies)]
+  (when-some [data (lookup-entry config id :managed-policies)]
     (. builder managedPolicies data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -1939,9 +1939,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^InstanceProfileAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-profile-arn)]
+  (when-some [data (lookup-entry config id :instance-profile-arn)]
     (. builder instanceProfileArn data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -1971,11 +1971,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^InstanceProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-profile-name)]
+  (when-some [data (lookup-entry config id :instance-profile-name)]
     (. builder instanceProfileName data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -2005,11 +2005,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^InstanceProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-profile-name)]
+  (when-some [data (lookup-entry config id :instance-profile-name)]
     (. builder instanceProfileName data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -2045,23 +2045,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-name` |
 "
   [^LazyRole$Builder builder id config]
-  (when-let [data (lookup-entry config id :assumed-by)]
+  (when-some [data (lookup-entry config id :assumed-by)]
     (. builder assumedBy data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :external-ids)]
+  (when-some [data (lookup-entry config id :external-ids)]
     (. builder externalIds data))
-  (when-let [data (lookup-entry config id :inline-policies)]
+  (when-some [data (lookup-entry config id :inline-policies)]
     (. builder inlinePolicies data))
-  (when-let [data (lookup-entry config id :managed-policies)]
+  (when-some [data (lookup-entry config id :managed-policies)]
     (. builder managedPolicies data))
-  (when-let [data (lookup-entry config id :max-session-duration)]
+  (when-some [data (lookup-entry config id :max-session-duration)]
     (. builder maxSessionDuration data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
   (.build builder))
 
@@ -2097,23 +2097,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-name` |
 "
   [^LazyRoleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assumed-by)]
+  (when-some [data (lookup-entry config id :assumed-by)]
     (. builder assumedBy data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :external-ids)]
+  (when-some [data (lookup-entry config id :external-ids)]
     (. builder externalIds data))
-  (when-let [data (lookup-entry config id :inline-policies)]
+  (when-some [data (lookup-entry config id :inline-policies)]
     (. builder inlinePolicies data))
-  (when-let [data (lookup-entry config id :managed-policies)]
+  (when-some [data (lookup-entry config id :managed-policies)]
     (. builder managedPolicies data))
-  (when-let [data (lookup-entry config id :max-session-duration)]
+  (when-some [data (lookup-entry config id :max-session-duration)]
     (. builder maxSessionDuration data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
   (.build builder))
 
@@ -2148,21 +2148,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^ManagedPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :document)]
+  (when-some [data (lookup-entry config id :document)]
     (. builder document data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :managed-policy-name)]
+  (when-some [data (lookup-entry config id :managed-policy-name)]
     (. builder managedPolicyName data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :statements)]
+  (when-some [data (lookup-entry config id :statements)]
     (. builder statements data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -2197,21 +2197,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^ManagedPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :document)]
+  (when-some [data (lookup-entry config id :document)]
     (. builder document data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :managed-policy-name)]
+  (when-some [data (lookup-entry config id :managed-policy-name)]
     (. builder managedPolicyName data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :statements)]
+  (when-some [data (lookup-entry config id :statements)]
     (. builder statements data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -2241,11 +2241,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^OpenIdConnectProvider$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-ids)]
+  (when-some [data (lookup-entry config id :client-ids)]
     (. builder clientIds data))
-  (when-let [data (lookup-entry config id :thumbprints)]
+  (when-some [data (lookup-entry config id :thumbprints)]
     (. builder thumbprints data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -2275,11 +2275,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^OpenIdConnectProviderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-ids)]
+  (when-some [data (lookup-entry config id :client-ids)]
     (. builder clientIds data))
-  (when-let [data (lookup-entry config id :thumbprints)]
+  (when-some [data (lookup-entry config id :thumbprints)]
     (. builder thumbprints data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -2313,19 +2313,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^Policy$Builder builder id config]
-  (when-let [data (lookup-entry config id :document)]
+  (when-some [data (lookup-entry config id :document)]
     (. builder document data))
-  (when-let [data (lookup-entry config id :force)]
+  (when-some [data (lookup-entry config id :force)]
     (. builder force data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :statements)]
+  (when-some [data (lookup-entry config id :statements)]
     (. builder statements data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -2355,11 +2355,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statements` | java.util.List | [[cdk.support/lookup-entry]] | `:statements` |
 "
   [^PolicyDocument$Builder builder id config]
-  (when-let [data (lookup-entry config id :assign-sids)]
+  (when-some [data (lookup-entry config id :assign-sids)]
     (. builder assignSids data))
-  (when-let [data (lookup-entry config id :minimize)]
+  (when-some [data (lookup-entry config id :minimize)]
     (. builder minimize data))
-  (when-let [data (lookup-entry config id :statements)]
+  (when-some [data (lookup-entry config id :statements)]
     (. builder statements data))
   (.build builder))
 
@@ -2389,11 +2389,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statements` | java.util.List | [[cdk.support/lookup-entry]] | `:statements` |
 "
   [^PolicyDocumentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assign-sids)]
+  (when-some [data (lookup-entry config id :assign-sids)]
     (. builder assignSids data))
-  (when-let [data (lookup-entry config id :minimize)]
+  (when-some [data (lookup-entry config id :minimize)]
     (. builder minimize data))
-  (when-let [data (lookup-entry config id :statements)]
+  (when-some [data (lookup-entry config id :statements)]
     (. builder statements data))
   (.build builder))
 
@@ -2427,19 +2427,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `users` | java.util.List | [[cdk.support/lookup-entry]] | `:users` |
 "
   [^PolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :document)]
+  (when-some [data (lookup-entry config id :document)]
     (. builder document data))
-  (when-let [data (lookup-entry config id :force)]
+  (when-some [data (lookup-entry config id :force)]
     (. builder force data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :statements)]
+  (when-some [data (lookup-entry config id :statements)]
     (. builder statements data))
-  (when-let [data (lookup-entry config id :users)]
+  (when-some [data (lookup-entry config id :users)]
     (. builder users data))
   (.build builder))
 
@@ -2475,23 +2475,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sid` | java.lang.String | [[cdk.support/lookup-entry]] | `:sid` |
 "
   [^PolicyStatement$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (effect config id :effect)]
+  (when-some [data (effect config id :effect)]
     (. builder effect data))
-  (when-let [data (lookup-entry config id :not-actions)]
+  (when-some [data (lookup-entry config id :not-actions)]
     (. builder notActions data))
-  (when-let [data (lookup-entry config id :not-principals)]
+  (when-some [data (lookup-entry config id :not-principals)]
     (. builder notPrincipals data))
-  (when-let [data (lookup-entry config id :not-resources)]
+  (when-some [data (lookup-entry config id :not-resources)]
     (. builder notResources data))
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :sid)]
+  (when-some [data (lookup-entry config id :sid)]
     (. builder sid data))
   (.build builder))
 
@@ -2527,23 +2527,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sid` | java.lang.String | [[cdk.support/lookup-entry]] | `:sid` |
 "
   [^PolicyStatementProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (effect config id :effect)]
+  (when-some [data (effect config id :effect)]
     (. builder effect data))
-  (when-let [data (lookup-entry config id :not-actions)]
+  (when-some [data (lookup-entry config id :not-actions)]
     (. builder notActions data))
-  (when-let [data (lookup-entry config id :not-principals)]
+  (when-some [data (lookup-entry config id :not-principals)]
     (. builder notPrincipals data))
-  (when-let [data (lookup-entry config id :not-resources)]
+  (when-some [data (lookup-entry config id :not-resources)]
     (. builder notResources data))
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :sid)]
+  (when-some [data (lookup-entry config id :sid)]
     (. builder sid data))
   (.build builder))
 
@@ -2579,23 +2579,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-name` |
 "
   [^Role$Builder builder id config]
-  (when-let [data (lookup-entry config id :assumed-by)]
+  (when-some [data (lookup-entry config id :assumed-by)]
     (. builder assumedBy data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :external-ids)]
+  (when-some [data (lookup-entry config id :external-ids)]
     (. builder externalIds data))
-  (when-let [data (lookup-entry config id :inline-policies)]
+  (when-some [data (lookup-entry config id :inline-policies)]
     (. builder inlinePolicies data))
-  (when-let [data (lookup-entry config id :managed-policies)]
+  (when-some [data (lookup-entry config id :managed-policies)]
     (. builder managedPolicies data))
-  (when-let [data (lookup-entry config id :max-session-duration)]
+  (when-some [data (lookup-entry config id :max-session-duration)]
     (. builder maxSessionDuration data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
   (.build builder))
 
@@ -2631,23 +2631,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-name` |
 "
   [^RoleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assumed-by)]
+  (when-some [data (lookup-entry config id :assumed-by)]
     (. builder assumedBy data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :external-ids)]
+  (when-some [data (lookup-entry config id :external-ids)]
     (. builder externalIds data))
-  (when-let [data (lookup-entry config id :inline-policies)]
+  (when-some [data (lookup-entry config id :inline-policies)]
     (. builder inlinePolicies data))
-  (when-let [data (lookup-entry config id :managed-policies)]
+  (when-some [data (lookup-entry config id :managed-policies)]
     (. builder managedPolicies data))
-  (when-let [data (lookup-entry config id :max-session-duration)]
+  (when-some [data (lookup-entry config id :max-session-duration)]
     (. builder maxSessionDuration data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
   (.build builder))
 
@@ -2676,9 +2676,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^SamlProvider$Builder builder id config]
-  (when-let [data (lookup-entry config id :metadata-document)]
+  (when-some [data (lookup-entry config id :metadata-document)]
     (. builder metadataDocument data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -2707,9 +2707,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^SamlProviderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :metadata-document)]
+  (when-some [data (lookup-entry config id :metadata-document)]
     (. builder metadataDocument data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -2738,9 +2738,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^ServicePrincipal$Builder builder id config]
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -2772,9 +2772,9 @@ __Create Form:__ ____[java.lang.String]___
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^ServicePrincipalOpts$Builder builder id config]
-  (when-let [data (lookup-entry config id :conditions)]
+  (when-some [data (lookup-entry config id :conditions)]
     (. builder conditions data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -2802,7 +2802,7 @@ __Create Form:__ ____[java.lang.String]___
 | `resource` | software.constructs.IConstruct | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^UnknownPrincipal$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -2830,7 +2830,7 @@ __Create Form:__ ____[java.lang.String]___
 | `resource` | software.constructs.IConstruct | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^UnknownPrincipalProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -2858,7 +2858,7 @@ __Create Form:__ ____[java.lang.String]___
 | `userArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-arn` |
 "
   [^UserAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :user-arn)]
+  (when-some [data (lookup-entry config id :user-arn)]
     (. builder userArn data))
   (.build builder))
 
@@ -2892,19 +2892,19 @@ __Create Form:__ ____[java.lang.String]___
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^User$Builder builder id config]
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :managed-policies)]
+  (when-some [data (lookup-entry config id :managed-policies)]
     (. builder managedPolicies data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :password-reset-required)]
+  (when-some [data (lookup-entry config id :password-reset-required)]
     (. builder passwordResetRequired data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -2938,19 +2938,19 @@ __Create Form:__ ____[java.lang.String]___
 | `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
 "
   [^UserProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :managed-policies)]
+  (when-some [data (lookup-entry config id :managed-policies)]
     (. builder managedPolicies data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :password-reset-required)]
+  (when-some [data (lookup-entry config id :password-reset-required)]
     (. builder passwordResetRequired data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :permissions-boundary)]
+  (when-some [data (lookup-entry config id :permissions-boundary)]
     (. builder permissionsBoundary data))
-  (when-let [data (lookup-entry config id :user-name)]
+  (when-some [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
 
@@ -2978,7 +2978,7 @@ __Create Form:__ ____[java.lang.String]___
 | `addGrantsToResources` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-grants-to-resources` |
 "
   [^WithoutPolicyUpdatesOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-grants-to-resources)]
+  (when-some [data (lookup-entry config id :add-grants-to-resources)]
     (. builder addGrantsToResources data))
   (.build builder))
 

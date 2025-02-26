@@ -31,9 +31,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCollection$Builder builder id config]
-  (when-let [data (lookup-entry config id :collection-id)]
+  (when-some [data (lookup-entry config id :collection-id)]
     (. builder collectionId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -62,9 +62,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCollectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :collection-id)]
+  (when-some [data (lookup-entry config id :collection-id)]
     (. builder collectionId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -92,7 +92,7 @@
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
 
@@ -120,7 +120,7 @@
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
 
@@ -151,13 +151,13 @@
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^CfnStreamProcessor$BoundingBoxProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :left)]
+  (when-some [data (lookup-entry config id :left)]
     (. builder left data))
-  (when-let [data (lookup-entry config id :top)]
+  (when-some [data (lookup-entry config id :top)]
     (. builder top data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -197,31 +197,31 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamProcessor$Builder builder id config]
-  (when-let [data (lookup-entry config id :bounding-box-regions-of-interest)]
+  (when-some [data (lookup-entry config id :bounding-box-regions-of-interest)]
     (. builder boundingBoxRegionsOfInterest data))
-  (when-let [data (lookup-entry config id :connected-home-settings)]
+  (when-some [data (lookup-entry config id :connected-home-settings)]
     (. builder connectedHomeSettings data))
-  (when-let [data (lookup-entry config id :data-sharing-preference)]
+  (when-some [data (lookup-entry config id :data-sharing-preference)]
     (. builder dataSharingPreference data))
-  (when-let [data (lookup-entry config id :face-search-settings)]
+  (when-some [data (lookup-entry config id :face-search-settings)]
     (. builder faceSearchSettings data))
-  (when-let [data (lookup-entry config id :kinesis-data-stream)]
+  (when-some [data (lookup-entry config id :kinesis-data-stream)]
     (. builder kinesisDataStream data))
-  (when-let [data (lookup-entry config id :kinesis-video-stream)]
+  (when-some [data (lookup-entry config id :kinesis-video-stream)]
     (. builder kinesisVideoStream data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :notification-channel)]
+  (when-some [data (lookup-entry config id :notification-channel)]
     (. builder notificationChannel data))
-  (when-let [data (lookup-entry config id :polygon-regions-of-interest)]
+  (when-some [data (lookup-entry config id :polygon-regions-of-interest)]
     (. builder polygonRegionsOfInterest data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-destination)]
+  (when-some [data (lookup-entry config id :s3-destination)]
     (. builder s3Destination data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -250,9 +250,9 @@
 | `minConfidence` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-confidence` |
 "
   [^CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :labels)]
+  (when-some [data (lookup-entry config id :labels)]
     (. builder labels data))
-  (when-let [data (lookup-entry config id :min-confidence)]
+  (when-some [data (lookup-entry config id :min-confidence)]
     (. builder minConfidence data))
   (.build builder))
 
@@ -280,7 +280,7 @@
 | `optIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:opt-in` |
 "
   [^CfnStreamProcessor$DataSharingPreferenceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :opt-in)]
+  (when-some [data (lookup-entry config id :opt-in)]
     (. builder optIn data))
   (.build builder))
 
@@ -309,9 +309,9 @@
 | `faceMatchThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:face-match-threshold` |
 "
   [^CfnStreamProcessor$FaceSearchSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :collection-id)]
+  (when-some [data (lookup-entry config id :collection-id)]
     (. builder collectionId data))
-  (when-let [data (lookup-entry config id :face-match-threshold)]
+  (when-some [data (lookup-entry config id :face-match-threshold)]
     (. builder faceMatchThreshold data))
   (.build builder))
 
@@ -339,7 +339,7 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnStreamProcessor$KinesisDataStreamProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -367,7 +367,7 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnStreamProcessor$KinesisVideoStreamProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -395,7 +395,7 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnStreamProcessor$NotificationChannelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -424,9 +424,9 @@
 | `y` | java.lang.Number | [[cdk.support/lookup-entry]] | `:y` |
 "
   [^CfnStreamProcessor$PointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :x)]
+  (when-some [data (lookup-entry config id :x)]
     (. builder x data))
-  (when-let [data (lookup-entry config id :y)]
+  (when-some [data (lookup-entry config id :y)]
     (. builder y data))
   (.build builder))
 
@@ -466,31 +466,31 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamProcessorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bounding-box-regions-of-interest)]
+  (when-some [data (lookup-entry config id :bounding-box-regions-of-interest)]
     (. builder boundingBoxRegionsOfInterest data))
-  (when-let [data (lookup-entry config id :connected-home-settings)]
+  (when-some [data (lookup-entry config id :connected-home-settings)]
     (. builder connectedHomeSettings data))
-  (when-let [data (lookup-entry config id :data-sharing-preference)]
+  (when-some [data (lookup-entry config id :data-sharing-preference)]
     (. builder dataSharingPreference data))
-  (when-let [data (lookup-entry config id :face-search-settings)]
+  (when-some [data (lookup-entry config id :face-search-settings)]
     (. builder faceSearchSettings data))
-  (when-let [data (lookup-entry config id :kinesis-data-stream)]
+  (when-some [data (lookup-entry config id :kinesis-data-stream)]
     (. builder kinesisDataStream data))
-  (when-let [data (lookup-entry config id :kinesis-video-stream)]
+  (when-some [data (lookup-entry config id :kinesis-video-stream)]
     (. builder kinesisVideoStream data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :notification-channel)]
+  (when-some [data (lookup-entry config id :notification-channel)]
     (. builder notificationChannel data))
-  (when-let [data (lookup-entry config id :polygon-regions-of-interest)]
+  (when-some [data (lookup-entry config id :polygon-regions-of-interest)]
     (. builder polygonRegionsOfInterest data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-destination)]
+  (when-some [data (lookup-entry config id :s3-destination)]
     (. builder s3Destination data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -519,9 +519,9 @@
 | `objectKeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key-prefix` |
 "
   [^CfnStreamProcessor$S3DestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :object-key-prefix)]
+  (when-some [data (lookup-entry config id :object-key-prefix)]
     (. builder objectKeyPrefix data))
   (.build builder))
 

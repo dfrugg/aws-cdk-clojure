@@ -21,7 +21,7 @@
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^KinesisDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -52,7 +52,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^KinesisDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -80,7 +80,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | `addPermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-permissions` |
 "
   [^LambdaDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-permissions)]
+  (when-some [data (lookup-entry config id :add-permissions)]
     (. builder addPermissions data))
   (.build builder))
 
@@ -111,7 +111,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `addPermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-permissions` |
 "
   [^LambdaDestinationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-permissions)]
+  (when-some [data (lookup-entry config id :add-permissions)]
     (. builder addPermissions data))
   (.build builder))
 

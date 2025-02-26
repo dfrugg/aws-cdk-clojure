@@ -22,15 +22,15 @@
 | `templateFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-file` |
 "
   [^CfnInclude$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-cyclical-references)]
+  (when-some [data (lookup-entry config id :allow-cyclical-references)]
     (. builder allowCyclicalReferences data))
-  (when-let [data (lookup-entry config id :load-nested-stacks)]
+  (when-some [data (lookup-entry config id :load-nested-stacks)]
     (. builder loadNestedStacks data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :preserve-logical-ids)]
+  (when-some [data (lookup-entry config id :preserve-logical-ids)]
     (. builder preserveLogicalIds data))
-  (when-let [data (lookup-entry config id :template-file)]
+  (when-some [data (lookup-entry config id :template-file)]
     (. builder templateFile data))
   (.build builder))
 
@@ -62,15 +62,15 @@
 | `templateFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-file` |
 "
   [^CfnIncludeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-cyclical-references)]
+  (when-some [data (lookup-entry config id :allow-cyclical-references)]
     (. builder allowCyclicalReferences data))
-  (when-let [data (lookup-entry config id :load-nested-stacks)]
+  (when-some [data (lookup-entry config id :load-nested-stacks)]
     (. builder loadNestedStacks data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :preserve-logical-ids)]
+  (when-some [data (lookup-entry config id :preserve-logical-ids)]
     (. builder preserveLogicalIds data))
-  (when-let [data (lookup-entry config id :template-file)]
+  (when-some [data (lookup-entry config id :template-file)]
     (. builder templateFile data))
   (.build builder))
 
@@ -99,9 +99,9 @@
 | `stack` | software.amazon.awscdk.NestedStack | [[cdk.support/lookup-entry]] | `:stack` |
 "
   [^IncludedNestedStack$Builder builder id config]
-  (when-let [data (lookup-entry config id :included-template)]
+  (when-some [data (lookup-entry config id :included-template)]
     (. builder includedTemplate data))
-  (when-let [data (lookup-entry config id :stack)]
+  (when-some [data (lookup-entry config id :stack)]
     (. builder stack data))
   (.build builder))
 

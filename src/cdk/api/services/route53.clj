@@ -222,27 +222,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^ARecordAttrs$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :target-dns)]
+  (when-some [data (lookup-entry config id :target-dns)]
     (. builder targetDns data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -280,27 +280,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^ARecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -338,27 +338,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^ARecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -396,27 +396,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^AaaaRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -454,27 +454,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^AaaaRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -503,9 +503,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 "
   [^AliasRecordTargetConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
   (.build builder))
 
@@ -542,25 +542,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^CaaAmazonRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -597,25 +597,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^CaaAmazonRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -653,27 +653,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^CaaRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -711,27 +711,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^CaaRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -761,11 +761,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CaaRecordValue$Builder builder id config]
-  (when-let [data (lookup-entry config id :flag)]
+  (when-some [data (lookup-entry config id :flag)]
     (. builder flag data))
-  (when-let [data (caa-tag config id :tag)]
+  (when-some [data (caa-tag config id :tag)]
     (. builder tag data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -794,9 +794,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnCidrCollection$Builder builder id config]
-  (when-let [data (lookup-entry config id :locations)]
+  (when-some [data (lookup-entry config id :locations)]
     (. builder locations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -825,9 +825,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |
 "
   [^CfnCidrCollection$LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cidr-list)]
+  (when-some [data (lookup-entry config id :cidr-list)]
     (. builder cidrList data))
-  (when-let [data (lookup-entry config id :location-name)]
+  (when-some [data (lookup-entry config id :location-name)]
     (. builder locationName data))
   (.build builder))
 
@@ -856,9 +856,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnCidrCollectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :locations)]
+  (when-some [data (lookup-entry config id :locations)]
     (. builder locations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -886,7 +886,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 "
   [^CfnDNSSEC$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
   (.build builder))
 
@@ -914,7 +914,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 "
   [^CfnDNSSECProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
   (.build builder))
 
@@ -943,9 +943,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^CfnHealthCheck$AlarmIdentifierProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -974,9 +974,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `healthCheckTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:health-check-tags` |
 "
   [^CfnHealthCheck$Builder builder id config]
-  (when-let [data (lookup-entry config id :health-check-config)]
+  (when-some [data (lookup-entry config id :health-check-config)]
     (. builder healthCheckConfig data))
-  (when-let [data (lookup-entry config id :health-check-tags)]
+  (when-some [data (lookup-entry config id :health-check-tags)]
     (. builder healthCheckTags data))
   (.build builder))
 
@@ -1020,39 +1020,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnHealthCheck$HealthCheckConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-identifier)]
+  (when-some [data (lookup-entry config id :alarm-identifier)]
     (. builder alarmIdentifier data))
-  (when-let [data (lookup-entry config id :child-health-checks)]
+  (when-some [data (lookup-entry config id :child-health-checks)]
     (. builder childHealthChecks data))
-  (when-let [data (lookup-entry config id :enable-sni)]
+  (when-some [data (lookup-entry config id :enable-sni)]
     (. builder enableSni data))
-  (when-let [data (lookup-entry config id :failure-threshold)]
+  (when-some [data (lookup-entry config id :failure-threshold)]
     (. builder failureThreshold data))
-  (when-let [data (lookup-entry config id :fully-qualified-domain-name)]
+  (when-some [data (lookup-entry config id :fully-qualified-domain-name)]
     (. builder fullyQualifiedDomainName data))
-  (when-let [data (lookup-entry config id :health-threshold)]
+  (when-some [data (lookup-entry config id :health-threshold)]
     (. builder healthThreshold data))
-  (when-let [data (lookup-entry config id :insufficient-data-health-status)]
+  (when-some [data (lookup-entry config id :insufficient-data-health-status)]
     (. builder insufficientDataHealthStatus data))
-  (when-let [data (lookup-entry config id :inverted)]
+  (when-some [data (lookup-entry config id :inverted)]
     (. builder inverted data))
-  (when-let [data (lookup-entry config id :ip-address)]
+  (when-some [data (lookup-entry config id :ip-address)]
     (. builder ipAddress data))
-  (when-let [data (lookup-entry config id :measure-latency)]
+  (when-some [data (lookup-entry config id :measure-latency)]
     (. builder measureLatency data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :regions)]
+  (when-some [data (lookup-entry config id :regions)]
     (. builder regions data))
-  (when-let [data (lookup-entry config id :request-interval)]
+  (when-some [data (lookup-entry config id :request-interval)]
     (. builder requestInterval data))
-  (when-let [data (lookup-entry config id :resource-path)]
+  (when-some [data (lookup-entry config id :resource-path)]
     (. builder resourcePath data))
-  (when-let [data (lookup-entry config id :routing-control-arn)]
+  (when-some [data (lookup-entry config id :routing-control-arn)]
     (. builder routingControlArn data))
-  (when-let [data (lookup-entry config id :search-string)]
+  (when-some [data (lookup-entry config id :search-string)]
     (. builder searchString data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1081,9 +1081,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnHealthCheck$HealthCheckTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1112,9 +1112,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `healthCheckTags` | java.util.List | [[cdk.support/lookup-entry]] | `:health-check-tags` |
 "
   [^CfnHealthCheckProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :health-check-config)]
+  (when-some [data (lookup-entry config id :health-check-config)]
     (. builder healthCheckConfig data))
-  (when-let [data (lookup-entry config id :health-check-tags)]
+  (when-some [data (lookup-entry config id :health-check-tags)]
     (. builder healthCheckTags data))
   (.build builder))
 
@@ -1146,15 +1146,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpcs` |
 "
   [^CfnHostedZone$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone-config)]
+  (when-some [data (lookup-entry config id :hosted-zone-config)]
     (. builder hostedZoneConfig data))
-  (when-let [data (lookup-entry config id :hosted-zone-tags)]
+  (when-some [data (lookup-entry config id :hosted-zone-tags)]
     (. builder hostedZoneTags data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :query-logging-config)]
+  (when-some [data (lookup-entry config id :query-logging-config)]
     (. builder queryLoggingConfig data))
-  (when-let [data (lookup-entry config id :vpcs)]
+  (when-some [data (lookup-entry config id :vpcs)]
     (. builder vpcs data))
   (.build builder))
 
@@ -1182,7 +1182,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
 "
   [^CfnHostedZone$HostedZoneConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
   (.build builder))
 
@@ -1211,9 +1211,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnHostedZone$HostedZoneTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1245,15 +1245,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpcs` |
 "
   [^CfnHostedZoneProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone-config)]
+  (when-some [data (lookup-entry config id :hosted-zone-config)]
     (. builder hostedZoneConfig data))
-  (when-let [data (lookup-entry config id :hosted-zone-tags)]
+  (when-some [data (lookup-entry config id :hosted-zone-tags)]
     (. builder hostedZoneTags data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :query-logging-config)]
+  (when-some [data (lookup-entry config id :query-logging-config)]
     (. builder queryLoggingConfig data))
-  (when-let [data (lookup-entry config id :vpcs)]
+  (when-some [data (lookup-entry config id :vpcs)]
     (. builder vpcs data))
   (.build builder))
 
@@ -1281,7 +1281,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `cloudWatchLogsLogGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cloud-watch-logs-log-group-arn` |
 "
   [^CfnHostedZone$QueryLoggingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
     (. builder cloudWatchLogsLogGroupArn data))
   (.build builder))
 
@@ -1310,9 +1310,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-region` |
 "
   [^CfnHostedZone$VPCProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
-  (when-let [data (lookup-entry config id :vpc-region)]
+  (when-some [data (lookup-entry config id :vpc-region)]
     (. builder vpcRegion data))
   (.build builder))
 
@@ -1343,13 +1343,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnKeySigningKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :key-management-service-arn)]
+  (when-some [data (lookup-entry config id :key-management-service-arn)]
     (. builder keyManagementServiceArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -1380,13 +1380,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnKeySigningKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :key-management-service-arn)]
+  (when-some [data (lookup-entry config id :key-management-service-arn)]
     (. builder keyManagementServiceArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -1416,11 +1416,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 "
   [^CfnRecordSet$AliasTargetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :evaluate-target-health)]
+  (when-some [data (lookup-entry config id :evaluate-target-health)]
     (. builder evaluateTargetHealth data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
   (.build builder))
 
@@ -1464,39 +1464,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnRecordSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-target)]
+  (when-some [data (lookup-entry config id :alias-target)]
     (. builder aliasTarget data))
-  (when-let [data (lookup-entry config id :cidr-routing-config)]
+  (when-some [data (lookup-entry config id :cidr-routing-config)]
     (. builder cidrRoutingConfig data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :failover)]
+  (when-some [data (lookup-entry config id :failover)]
     (. builder failover data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :geo-proximity-location)]
+  (when-some [data (lookup-entry config id :geo-proximity-location)]
     (. builder geoProximityLocation data))
-  (when-let [data (lookup-entry config id :health-check-id)]
+  (when-some [data (lookup-entry config id :health-check-id)]
     (. builder healthCheckId data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :hosted-zone-name)]
+  (when-some [data (lookup-entry config id :hosted-zone-name)]
     (. builder hostedZoneName data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :resource-records)]
+  (when-some [data (lookup-entry config id :resource-records)]
     (. builder resourceRecords data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -1525,9 +1525,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |
 "
   [^CfnRecordSet$CidrRoutingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :collection-id)]
+  (when-some [data (lookup-entry config id :collection-id)]
     (. builder collectionId data))
-  (when-let [data (lookup-entry config id :location-name)]
+  (when-some [data (lookup-entry config id :location-name)]
     (. builder locationName data))
   (.build builder))
 
@@ -1556,9 +1556,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `longitude` | java.lang.String | [[cdk.support/lookup-entry]] | `:longitude` |
 "
   [^CfnRecordSet$CoordinatesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :latitude)]
+  (when-some [data (lookup-entry config id :latitude)]
     (. builder latitude data))
-  (when-let [data (lookup-entry config id :longitude)]
+  (when-some [data (lookup-entry config id :longitude)]
     (. builder longitude data))
   (.build builder))
 
@@ -1588,11 +1588,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subdivisionCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:subdivision-code` |
 "
   [^CfnRecordSet$GeoLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :continent-code)]
+  (when-some [data (lookup-entry config id :continent-code)]
     (. builder continentCode data))
-  (when-let [data (lookup-entry config id :country-code)]
+  (when-some [data (lookup-entry config id :country-code)]
     (. builder countryCode data))
-  (when-let [data (lookup-entry config id :subdivision-code)]
+  (when-some [data (lookup-entry config id :subdivision-code)]
     (. builder subdivisionCode data))
   (.build builder))
 
@@ -1623,13 +1623,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `localZoneGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:local-zone-group` |
 "
   [^CfnRecordSet$GeoProximityLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-region)]
+  (when-some [data (lookup-entry config id :aws-region)]
     (. builder awsRegion data))
-  (when-let [data (lookup-entry config id :bias)]
+  (when-some [data (lookup-entry config id :bias)]
     (. builder bias data))
-  (when-let [data (lookup-entry config id :coordinates)]
+  (when-some [data (lookup-entry config id :coordinates)]
     (. builder coordinates data))
-  (when-let [data (lookup-entry config id :local-zone-group)]
+  (when-some [data (lookup-entry config id :local-zone-group)]
     (. builder localZoneGroup data))
   (.build builder))
 
@@ -1659,11 +1659,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
 "
   [^CfnRecordSetGroup$AliasTargetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :evaluate-target-health)]
+  (when-some [data (lookup-entry config id :evaluate-target-health)]
     (. builder evaluateTargetHealth data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
   (.build builder))
 
@@ -1694,13 +1694,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `recordSets` | java.util.List | [[cdk.support/lookup-entry]] | `:record-sets` |
 "
   [^CfnRecordSetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :hosted-zone-name)]
+  (when-some [data (lookup-entry config id :hosted-zone-name)]
     (. builder hostedZoneName data))
-  (when-let [data (lookup-entry config id :record-sets)]
+  (when-some [data (lookup-entry config id :record-sets)]
     (. builder recordSets data))
   (.build builder))
 
@@ -1729,9 +1729,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |
 "
   [^CfnRecordSetGroup$CidrRoutingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :collection-id)]
+  (when-some [data (lookup-entry config id :collection-id)]
     (. builder collectionId data))
-  (when-let [data (lookup-entry config id :location-name)]
+  (when-some [data (lookup-entry config id :location-name)]
     (. builder locationName data))
   (.build builder))
 
@@ -1760,9 +1760,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `longitude` | java.lang.String | [[cdk.support/lookup-entry]] | `:longitude` |
 "
   [^CfnRecordSetGroup$CoordinatesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :latitude)]
+  (when-some [data (lookup-entry config id :latitude)]
     (. builder latitude data))
-  (when-let [data (lookup-entry config id :longitude)]
+  (when-some [data (lookup-entry config id :longitude)]
     (. builder longitude data))
   (.build builder))
 
@@ -1792,11 +1792,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subdivisionCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:subdivision-code` |
 "
   [^CfnRecordSetGroup$GeoLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :continent-code)]
+  (when-some [data (lookup-entry config id :continent-code)]
     (. builder continentCode data))
-  (when-let [data (lookup-entry config id :country-code)]
+  (when-some [data (lookup-entry config id :country-code)]
     (. builder countryCode data))
-  (when-let [data (lookup-entry config id :subdivision-code)]
+  (when-some [data (lookup-entry config id :subdivision-code)]
     (. builder subdivisionCode data))
   (.build builder))
 
@@ -1827,13 +1827,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `localZoneGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:local-zone-group` |
 "
   [^CfnRecordSetGroup$GeoProximityLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-region)]
+  (when-some [data (lookup-entry config id :aws-region)]
     (. builder awsRegion data))
-  (when-let [data (lookup-entry config id :bias)]
+  (when-some [data (lookup-entry config id :bias)]
     (. builder bias data))
-  (when-let [data (lookup-entry config id :coordinates)]
+  (when-some [data (lookup-entry config id :coordinates)]
     (. builder coordinates data))
-  (when-let [data (lookup-entry config id :local-zone-group)]
+  (when-some [data (lookup-entry config id :local-zone-group)]
     (. builder localZoneGroup data))
   (.build builder))
 
@@ -1864,13 +1864,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `recordSets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:record-sets` |
 "
   [^CfnRecordSetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :hosted-zone-name)]
+  (when-some [data (lookup-entry config id :hosted-zone-name)]
     (. builder hostedZoneName data))
-  (when-let [data (lookup-entry config id :record-sets)]
+  (when-some [data (lookup-entry config id :record-sets)]
     (. builder recordSets data))
   (.build builder))
 
@@ -1913,37 +1913,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnRecordSetGroup$RecordSetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-target)]
+  (when-some [data (lookup-entry config id :alias-target)]
     (. builder aliasTarget data))
-  (when-let [data (lookup-entry config id :cidr-routing-config)]
+  (when-some [data (lookup-entry config id :cidr-routing-config)]
     (. builder cidrRoutingConfig data))
-  (when-let [data (lookup-entry config id :failover)]
+  (when-some [data (lookup-entry config id :failover)]
     (. builder failover data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :geo-proximity-location)]
+  (when-some [data (lookup-entry config id :geo-proximity-location)]
     (. builder geoProximityLocation data))
-  (when-let [data (lookup-entry config id :health-check-id)]
+  (when-some [data (lookup-entry config id :health-check-id)]
     (. builder healthCheckId data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :hosted-zone-name)]
+  (when-some [data (lookup-entry config id :hosted-zone-name)]
     (. builder hostedZoneName data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :resource-records)]
+  (when-some [data (lookup-entry config id :resource-records)]
     (. builder resourceRecords data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -1987,39 +1987,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnRecordSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias-target)]
+  (when-some [data (lookup-entry config id :alias-target)]
     (. builder aliasTarget data))
-  (when-let [data (lookup-entry config id :cidr-routing-config)]
+  (when-some [data (lookup-entry config id :cidr-routing-config)]
     (. builder cidrRoutingConfig data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :failover)]
+  (when-some [data (lookup-entry config id :failover)]
     (. builder failover data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :geo-proximity-location)]
+  (when-some [data (lookup-entry config id :geo-proximity-location)]
     (. builder geoProximityLocation data))
-  (when-let [data (lookup-entry config id :health-check-id)]
+  (when-some [data (lookup-entry config id :health-check-id)]
     (. builder healthCheckId data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :hosted-zone-name)]
+  (when-some [data (lookup-entry config id :hosted-zone-name)]
     (. builder hostedZoneName data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :resource-records)]
+  (when-some [data (lookup-entry config id :resource-records)]
     (. builder resourceRecords data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -2057,27 +2057,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^CnameRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -2115,27 +2115,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^CnameRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -2166,13 +2166,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^CommonHostedZoneProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-trailing-dot)]
+  (when-some [data (lookup-entry config id :add-trailing-dot)]
     (. builder addTrailingDot data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :query-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :query-logs-log-group-arn)]
     (. builder queryLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -2206,19 +2206,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ttl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:ttl` |
 "
   [^CrossAccountZoneDelegationRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role-region)]
+  (when-some [data (lookup-entry config id :assume-role-region)]
     (. builder assumeRoleRegion data))
-  (when-let [data (lookup-entry config id :delegated-zone)]
+  (when-some [data (lookup-entry config id :delegated-zone)]
     (. builder delegatedZone data))
-  (when-let [data (lookup-entry config id :delegation-role)]
+  (when-some [data (lookup-entry config id :delegation-role)]
     (. builder delegationRole data))
-  (when-let [data (lookup-entry config id :parent-hosted-zone-id)]
+  (when-some [data (lookup-entry config id :parent-hosted-zone-id)]
     (. builder parentHostedZoneId data))
-  (when-let [data (lookup-entry config id :parent-hosted-zone-name)]
+  (when-some [data (lookup-entry config id :parent-hosted-zone-name)]
     (. builder parentHostedZoneName data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
   (.build builder))
 
@@ -2252,19 +2252,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ttl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:ttl` |
 "
   [^CrossAccountZoneDelegationRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assume-role-region)]
+  (when-some [data (lookup-entry config id :assume-role-region)]
     (. builder assumeRoleRegion data))
-  (when-let [data (lookup-entry config id :delegated-zone)]
+  (when-some [data (lookup-entry config id :delegated-zone)]
     (. builder delegatedZone data))
-  (when-let [data (lookup-entry config id :delegation-role)]
+  (when-some [data (lookup-entry config id :delegation-role)]
     (. builder delegationRole data))
-  (when-let [data (lookup-entry config id :parent-hosted-zone-id)]
+  (when-some [data (lookup-entry config id :parent-hosted-zone-id)]
     (. builder parentHostedZoneId data))
-  (when-let [data (lookup-entry config id :parent-hosted-zone-name)]
+  (when-some [data (lookup-entry config id :parent-hosted-zone-name)]
     (. builder parentHostedZoneName data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
   (.build builder))
 
@@ -2302,27 +2302,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^DsRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -2360,27 +2360,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^DsRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -2409,9 +2409,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^HostedZoneAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -2443,15 +2443,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^HostedZone$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-trailing-dot)]
+  (when-some [data (lookup-entry config id :add-trailing-dot)]
     (. builder addTrailingDot data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :query-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :query-logs-log-group-arn)]
     (. builder queryLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :vpcs)]
+  (when-some [data (lookup-entry config id :vpcs)]
     (. builder vpcs data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -2483,15 +2483,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^HostedZoneProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-trailing-dot)]
+  (when-some [data (lookup-entry config id :add-trailing-dot)]
     (. builder addTrailingDot data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :query-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :query-logs-log-group-arn)]
     (. builder queryLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :vpcs)]
+  (when-some [data (lookup-entry config id :vpcs)]
     (. builder vpcs data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -2521,11 +2521,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^HostedZoneProviderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :private-zone)]
+  (when-some [data (lookup-entry config id :private-zone)]
     (. builder privateZone data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -2554,9 +2554,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `keySigningKeyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-signing-key-name` |
 "
   [^KeySigningKeyAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone)]
+  (when-some [data (lookup-entry config id :hosted-zone)]
     (. builder hostedZone data))
-  (when-let [data (lookup-entry config id :key-signing-key-name)]
+  (when-some [data (lookup-entry config id :key-signing-key-name)]
     (. builder keySigningKeyName data))
   (.build builder))
 
@@ -2587,13 +2587,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `status` | software.amazon.awscdk.services.route53.KeySigningKeyStatus | [[cdk.api.services.route53/key-signing-key-status]] | `:status` |
 "
   [^KeySigningKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone)]
+  (when-some [data (lookup-entry config id :hosted-zone)]
     (. builder hostedZone data))
-  (when-let [data (lookup-entry config id :key-signing-key-name)]
+  (when-some [data (lookup-entry config id :key-signing-key-name)]
     (. builder keySigningKeyName data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (key-signing-key-status config id :status)]
+  (when-some [data (key-signing-key-status config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -2624,13 +2624,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `status` | software.amazon.awscdk.services.route53.KeySigningKeyStatus | [[cdk.api.services.route53/key-signing-key-status]] | `:status` |
 "
   [^KeySigningKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone)]
+  (when-some [data (lookup-entry config id :hosted-zone)]
     (. builder hostedZone data))
-  (when-let [data (lookup-entry config id :key-signing-key-name)]
+  (when-some [data (lookup-entry config id :key-signing-key-name)]
     (. builder keySigningKeyName data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (key-signing-key-status config id :status)]
+  (when-some [data (key-signing-key-status config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -2668,27 +2668,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^MxRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -2726,27 +2726,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^MxRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -2775,9 +2775,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^MxRecordValue$Builder builder id config]
-  (when-let [data (lookup-entry config id :host-name)]
+  (when-some [data (lookup-entry config id :host-name)]
     (. builder hostName data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -2815,27 +2815,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^NsRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -2873,27 +2873,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^NsRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -2925,15 +2925,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^PrivateHostedZone$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-trailing-dot)]
+  (when-some [data (lookup-entry config id :add-trailing-dot)]
     (. builder addTrailingDot data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :query-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :query-logs-log-group-arn)]
     (. builder queryLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -2965,15 +2965,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^PrivateHostedZoneProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-trailing-dot)]
+  (when-some [data (lookup-entry config id :add-trailing-dot)]
     (. builder addTrailingDot data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :query-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :query-logs-log-group-arn)]
     (. builder queryLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -3002,9 +3002,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^PublicHostedZoneAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -3038,19 +3038,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^PublicHostedZone$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-trailing-dot)]
+  (when-some [data (lookup-entry config id :add-trailing-dot)]
     (. builder addTrailingDot data))
-  (when-let [data (lookup-entry config id :caa-amazon)]
+  (when-some [data (lookup-entry config id :caa-amazon)]
     (. builder caaAmazon data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :cross-account-zone-delegation-principal)]
+  (when-some [data (lookup-entry config id :cross-account-zone-delegation-principal)]
     (. builder crossAccountZoneDelegationPrincipal data))
-  (when-let [data (lookup-entry config id :cross-account-zone-delegation-role-name)]
+  (when-some [data (lookup-entry config id :cross-account-zone-delegation-role-name)]
     (. builder crossAccountZoneDelegationRoleName data))
-  (when-let [data (lookup-entry config id :query-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :query-logs-log-group-arn)]
     (. builder queryLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -3084,19 +3084,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zoneName` | java.lang.String | [[cdk.support/lookup-entry]] | `:zone-name` |
 "
   [^PublicHostedZoneProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-trailing-dot)]
+  (when-some [data (lookup-entry config id :add-trailing-dot)]
     (. builder addTrailingDot data))
-  (when-let [data (lookup-entry config id :caa-amazon)]
+  (when-some [data (lookup-entry config id :caa-amazon)]
     (. builder caaAmazon data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :cross-account-zone-delegation-principal)]
+  (when-some [data (lookup-entry config id :cross-account-zone-delegation-principal)]
     (. builder crossAccountZoneDelegationPrincipal data))
-  (when-let [data (lookup-entry config id :cross-account-zone-delegation-role-name)]
+  (when-some [data (lookup-entry config id :cross-account-zone-delegation-role-name)]
     (. builder crossAccountZoneDelegationRoleName data))
-  (when-let [data (lookup-entry config id :query-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :query-logs-log-group-arn)]
     (. builder queryLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :zone-name)]
+  (when-some [data (lookup-entry config id :zone-name)]
     (. builder zoneName data))
   (.build builder))
 
@@ -3135,29 +3135,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^RecordSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (record-type config id :record-type)]
+  (when-some [data (record-type config id :record-type)]
     (. builder recordType data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3194,25 +3194,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^RecordSetOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3251,29 +3251,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^RecordSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (record-type config id :record-type)]
+  (when-some [data (record-type config id :record-type)]
     (. builder recordType data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3311,27 +3311,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^SrvRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3369,27 +3369,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^SrvRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3420,13 +3420,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^SrvRecordValue$Builder builder id config]
-  (when-let [data (lookup-entry config id :host-name)]
+  (when-some [data (lookup-entry config id :host-name)]
     (. builder hostName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -3464,27 +3464,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^TxtRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3522,27 +3522,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^TxtRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3572,11 +3572,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `publicHostedZone` | software.amazon.awscdk.services.route53.IPublicHostedZone | [[cdk.support/lookup-entry]] | `:public-hosted-zone` |
 "
   [^VpcEndpointServiceDomainName$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-service)]
+  (when-some [data (lookup-entry config id :endpoint-service)]
     (. builder endpointService data))
-  (when-let [data (lookup-entry config id :public-hosted-zone)]
+  (when-some [data (lookup-entry config id :public-hosted-zone)]
     (. builder publicHostedZone data))
   (.build builder))
 
@@ -3606,11 +3606,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `publicHostedZone` | software.amazon.awscdk.services.route53.IPublicHostedZone | [[cdk.support/lookup-entry]] | `:public-hosted-zone` |
 "
   [^VpcEndpointServiceDomainNameProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :endpoint-service)]
+  (when-some [data (lookup-entry config id :endpoint-service)]
     (. builder endpointService data))
-  (when-let [data (lookup-entry config id :public-hosted-zone)]
+  (when-some [data (lookup-entry config id :public-hosted-zone)]
     (. builder publicHostedZone data))
   (.build builder))
 
@@ -3639,9 +3639,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ttl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:ttl` |
 "
   [^ZoneDelegationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
   (.build builder))
 
@@ -3679,27 +3679,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^ZoneDelegationRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :name-servers)]
+  (when-some [data (lookup-entry config id :name-servers)]
     (. builder nameServers data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3737,27 +3737,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:zone` |
 "
   [^ZoneDelegationRecordProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :delete-existing)]
+  (when-some [data (lookup-entry config id :delete-existing)]
     (. builder deleteExisting data))
-  (when-let [data (lookup-entry config id :geo-location)]
+  (when-some [data (lookup-entry config id :geo-location)]
     (. builder geoLocation data))
-  (when-let [data (lookup-entry config id :multi-value-answer)]
+  (when-some [data (lookup-entry config id :multi-value-answer)]
     (. builder multiValueAnswer data))
-  (when-let [data (lookup-entry config id :name-servers)]
+  (when-some [data (lookup-entry config id :name-servers)]
     (. builder nameServers data))
-  (when-let [data (lookup-entry config id :record-name)]
+  (when-some [data (lookup-entry config id :record-name)]
     (. builder recordName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-identifier)]
+  (when-some [data (lookup-entry config id :set-identifier)]
     (. builder setIdentifier data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
-  (when-let [data (lookup-entry config id :zone)]
+  (when-some [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
 
@@ -3786,9 +3786,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `kmsKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:kms-key` |
 "
   [^ZoneSigningOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-signing-key-name)]
+  (when-some [data (lookup-entry config id :key-signing-key-name)]
     (. builder keySigningKeyName data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
 

@@ -27,15 +27,15 @@
 | `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |
 "
   [^CfnEnabledBaseline$Builder builder id config]
-  (when-let [data (lookup-entry config id :baseline-identifier)]
+  (when-some [data (lookup-entry config id :baseline-identifier)]
     (. builder baselineIdentifier data))
-  (when-let [data (lookup-entry config id :baseline-version)]
+  (when-some [data (lookup-entry config id :baseline-version)]
     (. builder baselineVersion data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-identifier)]
+  (when-some [data (lookup-entry config id :target-identifier)]
     (. builder targetIdentifier data))
   (.build builder))
 
@@ -64,9 +64,9 @@
 | `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnEnabledBaseline$ParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -98,15 +98,15 @@
 | `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |
 "
   [^CfnEnabledBaselineProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :baseline-identifier)]
+  (when-some [data (lookup-entry config id :baseline-identifier)]
     (. builder baselineIdentifier data))
-  (when-let [data (lookup-entry config id :baseline-version)]
+  (when-some [data (lookup-entry config id :baseline-version)]
     (. builder baselineVersion data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-identifier)]
+  (when-some [data (lookup-entry config id :target-identifier)]
     (. builder targetIdentifier data))
   (.build builder))
 
@@ -137,13 +137,13 @@
 | `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |
 "
   [^CfnEnabledControl$Builder builder id config]
-  (when-let [data (lookup-entry config id :control-identifier)]
+  (when-some [data (lookup-entry config id :control-identifier)]
     (. builder controlIdentifier data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-identifier)]
+  (when-some [data (lookup-entry config id :target-identifier)]
     (. builder targetIdentifier data))
   (.build builder))
 
@@ -172,9 +172,9 @@
 | `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnEnabledControl$EnabledControlParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -205,13 +205,13 @@
 | `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |
 "
   [^CfnEnabledControlProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :control-identifier)]
+  (when-some [data (lookup-entry config id :control-identifier)]
     (. builder controlIdentifier data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-identifier)]
+  (when-some [data (lookup-entry config id :target-identifier)]
     (. builder targetIdentifier data))
   (.build builder))
 
@@ -241,11 +241,11 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnLandingZone$Builder builder id config]
-  (when-let [data (lookup-entry config id :manifest)]
+  (when-some [data (lookup-entry config id :manifest)]
     (. builder manifest data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -275,11 +275,11 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnLandingZoneProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :manifest)]
+  (when-some [data (lookup-entry config id :manifest)]
     (. builder manifest data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 

@@ -30,13 +30,13 @@
 | `workspace` | java.lang.String | [[cdk.support/lookup-entry]] | `:workspace` |
 "
   [^CfnRuleGroupsNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :data)]
+  (when-some [data (lookup-entry config id :data)]
     (. builder data data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :workspace)]
+  (when-some [data (lookup-entry config id :workspace)]
     (. builder workspace data))
   (.build builder))
 
@@ -67,13 +67,13 @@
 | `workspace` | java.lang.String | [[cdk.support/lookup-entry]] | `:workspace` |
 "
   [^CfnRuleGroupsNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data)]
+  (when-some [data (lookup-entry config id :data)]
     (. builder data data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :workspace)]
+  (when-some [data (lookup-entry config id :workspace)]
     (. builder workspace data))
   (.build builder))
 
@@ -101,7 +101,7 @@
 | `workspaceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:workspace-arn` |
 "
   [^CfnScraper$AmpConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :workspace-arn)]
+  (when-some [data (lookup-entry config id :workspace-arn)]
     (. builder workspaceArn data))
   (.build builder))
 
@@ -133,15 +133,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnScraper$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :scrape-configuration)]
+  (when-some [data (lookup-entry config id :scrape-configuration)]
     (. builder scrapeConfiguration data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -169,7 +169,7 @@
 | `ampConfiguration` | software.amazon.awscdk.services.aps.CfnScraper$AmpConfigurationProperty | [[cdk.support/lookup-entry]] | `:amp-configuration` |
 "
   [^CfnScraper$DestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :amp-configuration)]
+  (when-some [data (lookup-entry config id :amp-configuration)]
     (. builder ampConfiguration data))
   (.build builder))
 
@@ -199,11 +199,11 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnScraper$EksConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-arn)]
+  (when-some [data (lookup-entry config id :cluster-arn)]
     (. builder clusterArn data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -235,15 +235,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnScraperProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :scrape-configuration)]
+  (when-some [data (lookup-entry config id :scrape-configuration)]
     (. builder scrapeConfiguration data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -271,7 +271,7 @@
 | `configurationBlob` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-blob` |
 "
   [^CfnScraper$ScrapeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-blob)]
+  (when-some [data (lookup-entry config id :configuration-blob)]
     (. builder configurationBlob data))
   (.build builder))
 
@@ -299,7 +299,7 @@
 | `eksConfiguration` | software.amazon.awscdk.services.aps.CfnScraper$EksConfigurationProperty | [[cdk.support/lookup-entry]] | `:eks-configuration` |
 "
   [^CfnScraper$SourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :eks-configuration)]
+  (when-some [data (lookup-entry config id :eks-configuration)]
     (. builder eksConfiguration data))
   (.build builder))
 
@@ -331,15 +331,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnWorkspace$Builder builder id config]
-  (when-let [data (lookup-entry config id :alert-manager-definition)]
+  (when-some [data (lookup-entry config id :alert-manager-definition)]
     (. builder alertManagerDefinition data))
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :logging-configuration)]
+  (when-some [data (lookup-entry config id :logging-configuration)]
     (. builder loggingConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -367,7 +367,7 @@
 | `logGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-arn` |
 "
   [^CfnWorkspace$LoggingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-arn)]
+  (when-some [data (lookup-entry config id :log-group-arn)]
     (. builder logGroupArn data))
   (.build builder))
 
@@ -399,15 +399,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnWorkspaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alert-manager-definition)]
+  (when-some [data (lookup-entry config id :alert-manager-definition)]
     (. builder alertManagerDefinition data))
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :logging-configuration)]
+  (when-some [data (lookup-entry config id :logging-configuration)]
     (. builder loggingConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

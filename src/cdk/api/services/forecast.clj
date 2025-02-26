@@ -24,9 +24,9 @@
 | `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |
 "
   [^CfnDataset$AttributesItemsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-name)]
+  (when-some [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
-  (when-let [data (lookup-entry config id :attribute-type)]
+  (when-some [data (lookup-entry config id :attribute-type)]
     (. builder attributeType data))
   (.build builder))
 
@@ -60,19 +60,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataset$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-frequency)]
+  (when-some [data (lookup-entry config id :data-frequency)]
     (. builder dataFrequency data))
-  (when-let [data (lookup-entry config id :dataset-name)]
+  (when-some [data (lookup-entry config id :dataset-name)]
     (. builder datasetName data))
-  (when-let [data (lookup-entry config id :dataset-type)]
+  (when-some [data (lookup-entry config id :dataset-type)]
     (. builder datasetType data))
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :encryption-config)]
+  (when-some [data (lookup-entry config id :encryption-config)]
     (. builder encryptionConfig data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -101,9 +101,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDataset$EncryptionConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -134,13 +134,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDatasetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-arns)]
+  (when-some [data (lookup-entry config id :dataset-arns)]
     (. builder datasetArns data))
-  (when-let [data (lookup-entry config id :dataset-group-name)]
+  (when-some [data (lookup-entry config id :dataset-group-name)]
     (. builder datasetGroupName data))
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -171,13 +171,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDatasetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-arns)]
+  (when-some [data (lookup-entry config id :dataset-arns)]
     (. builder datasetArns data))
-  (when-let [data (lookup-entry config id :dataset-group-name)]
+  (when-some [data (lookup-entry config id :dataset-group-name)]
     (. builder datasetGroupName data))
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -211,19 +211,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDatasetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-frequency)]
+  (when-some [data (lookup-entry config id :data-frequency)]
     (. builder dataFrequency data))
-  (when-let [data (lookup-entry config id :dataset-name)]
+  (when-some [data (lookup-entry config id :dataset-name)]
     (. builder datasetName data))
-  (when-let [data (lookup-entry config id :dataset-type)]
+  (when-some [data (lookup-entry config id :dataset-type)]
     (. builder datasetType data))
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :encryption-config)]
+  (when-some [data (lookup-entry config id :encryption-config)]
     (. builder encryptionConfig data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -251,7 +251,7 @@
 | `attributes` | java.util.List | [[cdk.support/lookup-entry]] | `:attributes` |
 "
   [^CfnDataset$SchemaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
   (.build builder))
 
@@ -280,9 +280,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDataset$TagsItemsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 

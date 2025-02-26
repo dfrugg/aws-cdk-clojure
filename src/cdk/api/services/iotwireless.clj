@@ -63,17 +63,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :expression-type)]
+  (when-some [data (lookup-entry config id :expression-type)]
     (. builder expressionType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -106,17 +106,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :expression-type)]
+  (when-some [data (lookup-entry config id :expression-type)]
     (. builder expressionType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -146,11 +146,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeviceProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -196,43 +196,43 @@
 | `supportsJoin` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:supports-join` |
 "
   [^CfnDeviceProfile$LoRaWANDeviceProfileProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :class-b-timeout)]
+  (when-some [data (lookup-entry config id :class-b-timeout)]
     (. builder classBTimeout data))
-  (when-let [data (lookup-entry config id :class-c-timeout)]
+  (when-some [data (lookup-entry config id :class-c-timeout)]
     (. builder classCTimeout data))
-  (when-let [data (lookup-entry config id :factory-preset-freqs-list)]
+  (when-some [data (lookup-entry config id :factory-preset-freqs-list)]
     (. builder factoryPresetFreqsList data))
-  (when-let [data (lookup-entry config id :mac-version)]
+  (when-some [data (lookup-entry config id :mac-version)]
     (. builder macVersion data))
-  (when-let [data (lookup-entry config id :max-duty-cycle)]
+  (when-some [data (lookup-entry config id :max-duty-cycle)]
     (. builder maxDutyCycle data))
-  (when-let [data (lookup-entry config id :max-eirp)]
+  (when-some [data (lookup-entry config id :max-eirp)]
     (. builder maxEirp data))
-  (when-let [data (lookup-entry config id :ping-slot-dr)]
+  (when-some [data (lookup-entry config id :ping-slot-dr)]
     (. builder pingSlotDr data))
-  (when-let [data (lookup-entry config id :ping-slot-freq)]
+  (when-some [data (lookup-entry config id :ping-slot-freq)]
     (. builder pingSlotFreq data))
-  (when-let [data (lookup-entry config id :ping-slot-period)]
+  (when-some [data (lookup-entry config id :ping-slot-period)]
     (. builder pingSlotPeriod data))
-  (when-let [data (lookup-entry config id :reg-params-revision)]
+  (when-some [data (lookup-entry config id :reg-params-revision)]
     (. builder regParamsRevision data))
-  (when-let [data (lookup-entry config id :rf-region)]
+  (when-some [data (lookup-entry config id :rf-region)]
     (. builder rfRegion data))
-  (when-let [data (lookup-entry config id :rx-data-rate2)]
+  (when-some [data (lookup-entry config id :rx-data-rate2)]
     (. builder rxDataRate2 data))
-  (when-let [data (lookup-entry config id :rx-delay1)]
+  (when-some [data (lookup-entry config id :rx-delay1)]
     (. builder rxDelay1 data))
-  (when-let [data (lookup-entry config id :rx-dr-offset1)]
+  (when-some [data (lookup-entry config id :rx-dr-offset1)]
     (. builder rxDrOffset1 data))
-  (when-let [data (lookup-entry config id :rx-freq2)]
+  (when-some [data (lookup-entry config id :rx-freq2)]
     (. builder rxFreq2 data))
-  (when-let [data (lookup-entry config id :supports32-bit-f-cnt)]
+  (when-some [data (lookup-entry config id :supports32-bit-f-cnt)]
     (. builder supports32BitFCnt data))
-  (when-let [data (lookup-entry config id :supports-class-b)]
+  (when-some [data (lookup-entry config id :supports-class-b)]
     (. builder supportsClassB data))
-  (when-let [data (lookup-entry config id :supports-class-c)]
+  (when-some [data (lookup-entry config id :supports-class-c)]
     (. builder supportsClassC data))
-  (when-let [data (lookup-entry config id :supports-join)]
+  (when-some [data (lookup-entry config id :supports-join)]
     (. builder supportsJoin data))
   (.build builder))
 
@@ -262,11 +262,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeviceProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -303,25 +303,25 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFuotaTask$Builder builder id config]
-  (when-let [data (lookup-entry config id :associate-multicast-group)]
+  (when-some [data (lookup-entry config id :associate-multicast-group)]
     (. builder associateMulticastGroup data))
-  (when-let [data (lookup-entry config id :associate-wireless-device)]
+  (when-some [data (lookup-entry config id :associate-wireless-device)]
     (. builder associateWirelessDevice data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disassociate-multicast-group)]
+  (when-some [data (lookup-entry config id :disassociate-multicast-group)]
     (. builder disassociateMulticastGroup data))
-  (when-let [data (lookup-entry config id :disassociate-wireless-device)]
+  (when-some [data (lookup-entry config id :disassociate-wireless-device)]
     (. builder disassociateWirelessDevice data))
-  (when-let [data (lookup-entry config id :firmware-update-image)]
+  (when-some [data (lookup-entry config id :firmware-update-image)]
     (. builder firmwareUpdateImage data))
-  (when-let [data (lookup-entry config id :firmware-update-role)]
+  (when-some [data (lookup-entry config id :firmware-update-role)]
     (. builder firmwareUpdateRole data))
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -350,9 +350,9 @@
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
 "
   [^CfnFuotaTask$LoRaWANProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rf-region)]
+  (when-some [data (lookup-entry config id :rf-region)]
     (. builder rfRegion data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
   (.build builder))
 
@@ -389,25 +389,25 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFuotaTaskProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :associate-multicast-group)]
+  (when-some [data (lookup-entry config id :associate-multicast-group)]
     (. builder associateMulticastGroup data))
-  (when-let [data (lookup-entry config id :associate-wireless-device)]
+  (when-some [data (lookup-entry config id :associate-wireless-device)]
     (. builder associateWirelessDevice data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disassociate-multicast-group)]
+  (when-some [data (lookup-entry config id :disassociate-multicast-group)]
     (. builder disassociateMulticastGroup data))
-  (when-let [data (lookup-entry config id :disassociate-wireless-device)]
+  (when-some [data (lookup-entry config id :disassociate-wireless-device)]
     (. builder disassociateWirelessDevice data))
-  (when-let [data (lookup-entry config id :firmware-update-image)]
+  (when-some [data (lookup-entry config id :firmware-update-image)]
     (. builder firmwareUpdateImage data))
-  (when-let [data (lookup-entry config id :firmware-update-role)]
+  (when-some [data (lookup-entry config id :firmware-update-role)]
     (. builder firmwareUpdateRole data))
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -440,17 +440,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMulticastGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :associate-wireless-device)]
+  (when-some [data (lookup-entry config id :associate-wireless-device)]
     (. builder associateWirelessDevice data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disassociate-wireless-device)]
+  (when-some [data (lookup-entry config id :disassociate-wireless-device)]
     (. builder disassociateWirelessDevice data))
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -481,13 +481,13 @@
 | `rfRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:rf-region` |
 "
   [^CfnMulticastGroup$LoRaWANProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dl-class)]
+  (when-some [data (lookup-entry config id :dl-class)]
     (. builder dlClass data))
-  (when-let [data (lookup-entry config id :number-of-devices-in-group)]
+  (when-some [data (lookup-entry config id :number-of-devices-in-group)]
     (. builder numberOfDevicesInGroup data))
-  (when-let [data (lookup-entry config id :number-of-devices-requested)]
+  (when-some [data (lookup-entry config id :number-of-devices-requested)]
     (. builder numberOfDevicesRequested data))
-  (when-let [data (lookup-entry config id :rf-region)]
+  (when-some [data (lookup-entry config id :rf-region)]
     (. builder rfRegion data))
   (.build builder))
 
@@ -520,17 +520,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMulticastGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :associate-wireless-device)]
+  (when-some [data (lookup-entry config id :associate-wireless-device)]
     (. builder associateWirelessDevice data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :disassociate-wireless-device)]
+  (when-some [data (lookup-entry config id :disassociate-wireless-device)]
     (. builder disassociateWirelessDevice data))
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -563,17 +563,17 @@
 | `wirelessGateways` | java.util.List | [[cdk.support/lookup-entry]] | `:wireless-gateways` |
 "
   [^CfnNetworkAnalyzerConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :trace-content)]
+  (when-some [data (lookup-entry config id :trace-content)]
     (. builder traceContent data))
-  (when-let [data (lookup-entry config id :wireless-devices)]
+  (when-some [data (lookup-entry config id :wireless-devices)]
     (. builder wirelessDevices data))
-  (when-let [data (lookup-entry config id :wireless-gateways)]
+  (when-some [data (lookup-entry config id :wireless-gateways)]
     (. builder wirelessGateways data))
   (.build builder))
 
@@ -606,17 +606,17 @@
 | `wirelessGateways` | java.util.List | [[cdk.support/lookup-entry]] | `:wireless-gateways` |
 "
   [^CfnNetworkAnalyzerConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :trace-content)]
+  (when-some [data (lookup-entry config id :trace-content)]
     (. builder traceContent data))
-  (when-let [data (lookup-entry config id :wireless-devices)]
+  (when-some [data (lookup-entry config id :wireless-devices)]
     (. builder wirelessDevices data))
-  (when-let [data (lookup-entry config id :wireless-gateways)]
+  (when-some [data (lookup-entry config id :wireless-gateways)]
     (. builder wirelessGateways data))
   (.build builder))
 
@@ -645,9 +645,9 @@
 | `wirelessDeviceFrameInfo` | java.lang.String | [[cdk.support/lookup-entry]] | `:wireless-device-frame-info` |
 "
   [^CfnNetworkAnalyzerConfiguration$TraceContentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-level)]
+  (when-some [data (lookup-entry config id :log-level)]
     (. builder logLevel data))
-  (when-let [data (lookup-entry config id :wireless-device-frame-info)]
+  (when-some [data (lookup-entry config id :wireless-device-frame-info)]
     (. builder wirelessDeviceFrameInfo data))
   (.build builder))
 
@@ -681,19 +681,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPartnerAccount$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-linked)]
+  (when-some [data (lookup-entry config id :account-linked)]
     (. builder accountLinked data))
-  (when-let [data (lookup-entry config id :partner-account-id)]
+  (when-some [data (lookup-entry config id :partner-account-id)]
     (. builder partnerAccountId data))
-  (when-let [data (lookup-entry config id :partner-type)]
+  (when-some [data (lookup-entry config id :partner-type)]
     (. builder partnerType data))
-  (when-let [data (lookup-entry config id :sidewalk)]
+  (when-some [data (lookup-entry config id :sidewalk)]
     (. builder sidewalk data))
-  (when-let [data (lookup-entry config id :sidewalk-response)]
+  (when-some [data (lookup-entry config id :sidewalk-response)]
     (. builder sidewalkResponse data))
-  (when-let [data (lookup-entry config id :sidewalk-update)]
+  (when-some [data (lookup-entry config id :sidewalk-update)]
     (. builder sidewalkUpdate data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -727,19 +727,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPartnerAccountProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-linked)]
+  (when-some [data (lookup-entry config id :account-linked)]
     (. builder accountLinked data))
-  (when-let [data (lookup-entry config id :partner-account-id)]
+  (when-some [data (lookup-entry config id :partner-account-id)]
     (. builder partnerAccountId data))
-  (when-let [data (lookup-entry config id :partner-type)]
+  (when-some [data (lookup-entry config id :partner-type)]
     (. builder partnerType data))
-  (when-let [data (lookup-entry config id :sidewalk)]
+  (when-some [data (lookup-entry config id :sidewalk)]
     (. builder sidewalk data))
-  (when-let [data (lookup-entry config id :sidewalk-response)]
+  (when-some [data (lookup-entry config id :sidewalk-response)]
     (. builder sidewalkResponse data))
-  (when-let [data (lookup-entry config id :sidewalk-update)]
+  (when-some [data (lookup-entry config id :sidewalk-update)]
     (. builder sidewalkUpdate data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -767,7 +767,7 @@
 | `appServerPrivateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-server-private-key` |
 "
   [^CfnPartnerAccount$SidewalkAccountInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-server-private-key)]
+  (when-some [data (lookup-entry config id :app-server-private-key)]
     (. builder appServerPrivateKey data))
   (.build builder))
 
@@ -797,11 +797,11 @@
 | `fingerprint` | java.lang.String | [[cdk.support/lookup-entry]] | `:fingerprint` |
 "
   [^CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :amazon-id)]
+  (when-some [data (lookup-entry config id :amazon-id)]
     (. builder amazonId data))
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :fingerprint)]
+  (when-some [data (lookup-entry config id :fingerprint)]
     (. builder fingerprint data))
   (.build builder))
 
@@ -829,7 +829,7 @@
 | `appServerPrivateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-server-private-key` |
 "
   [^CfnPartnerAccount$SidewalkUpdateAccountProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-server-private-key)]
+  (when-some [data (lookup-entry config id :app-server-private-key)]
     (. builder appServerPrivateKey data))
   (.build builder))
 
@@ -859,11 +859,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServiceProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -909,43 +909,43 @@
 | `ulRatePolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ul-rate-policy` |
 "
   [^CfnServiceProfile$LoRaWANServiceProfileProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-gw-metadata)]
+  (when-some [data (lookup-entry config id :add-gw-metadata)]
     (. builder addGwMetadata data))
-  (when-let [data (lookup-entry config id :channel-mask)]
+  (when-some [data (lookup-entry config id :channel-mask)]
     (. builder channelMask data))
-  (when-let [data (lookup-entry config id :dev-status-req-freq)]
+  (when-some [data (lookup-entry config id :dev-status-req-freq)]
     (. builder devStatusReqFreq data))
-  (when-let [data (lookup-entry config id :dl-bucket-size)]
+  (when-some [data (lookup-entry config id :dl-bucket-size)]
     (. builder dlBucketSize data))
-  (when-let [data (lookup-entry config id :dl-rate)]
+  (when-some [data (lookup-entry config id :dl-rate)]
     (. builder dlRate data))
-  (when-let [data (lookup-entry config id :dl-rate-policy)]
+  (when-some [data (lookup-entry config id :dl-rate-policy)]
     (. builder dlRatePolicy data))
-  (when-let [data (lookup-entry config id :dr-max)]
+  (when-some [data (lookup-entry config id :dr-max)]
     (. builder drMax data))
-  (when-let [data (lookup-entry config id :dr-min)]
+  (when-some [data (lookup-entry config id :dr-min)]
     (. builder drMin data))
-  (when-let [data (lookup-entry config id :hr-allowed)]
+  (when-some [data (lookup-entry config id :hr-allowed)]
     (. builder hrAllowed data))
-  (when-let [data (lookup-entry config id :min-gw-diversity)]
+  (when-some [data (lookup-entry config id :min-gw-diversity)]
     (. builder minGwDiversity data))
-  (when-let [data (lookup-entry config id :nwk-geo-loc)]
+  (when-some [data (lookup-entry config id :nwk-geo-loc)]
     (. builder nwkGeoLoc data))
-  (when-let [data (lookup-entry config id :pr-allowed)]
+  (when-some [data (lookup-entry config id :pr-allowed)]
     (. builder prAllowed data))
-  (when-let [data (lookup-entry config id :ra-allowed)]
+  (when-some [data (lookup-entry config id :ra-allowed)]
     (. builder raAllowed data))
-  (when-let [data (lookup-entry config id :report-dev-status-battery)]
+  (when-some [data (lookup-entry config id :report-dev-status-battery)]
     (. builder reportDevStatusBattery data))
-  (when-let [data (lookup-entry config id :report-dev-status-margin)]
+  (when-some [data (lookup-entry config id :report-dev-status-margin)]
     (. builder reportDevStatusMargin data))
-  (when-let [data (lookup-entry config id :target-per)]
+  (when-some [data (lookup-entry config id :target-per)]
     (. builder targetPer data))
-  (when-let [data (lookup-entry config id :ul-bucket-size)]
+  (when-some [data (lookup-entry config id :ul-bucket-size)]
     (. builder ulBucketSize data))
-  (when-let [data (lookup-entry config id :ul-rate)]
+  (when-some [data (lookup-entry config id :ul-rate)]
     (. builder ulRate data))
-  (when-let [data (lookup-entry config id :ul-rate-policy)]
+  (when-some [data (lookup-entry config id :ul-rate-policy)]
     (. builder ulRatePolicy data))
   (.build builder))
 
@@ -975,11 +975,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServiceProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1012,17 +1012,17 @@
 | `update` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update` |
 "
   [^CfnTaskDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-create-tasks)]
+  (when-some [data (lookup-entry config id :auto-create-tasks)]
     (. builder autoCreateTasks data))
-  (when-let [data (lookup-entry config id :lo-ra-wan-update-gateway-task-entry)]
+  (when-some [data (lookup-entry config id :lo-ra-wan-update-gateway-task-entry)]
     (. builder loRaWanUpdateGatewayTaskEntry data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-definition-type)]
+  (when-some [data (lookup-entry config id :task-definition-type)]
     (. builder taskDefinitionType data))
-  (when-let [data (lookup-entry config id :update)]
+  (when-some [data (lookup-entry config id :update)]
     (. builder update data))
   (.build builder))
 
@@ -1052,11 +1052,11 @@
 | `station` | java.lang.String | [[cdk.support/lookup-entry]] | `:station` |
 "
   [^CfnTaskDefinition$LoRaWANGatewayVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :package-version)]
+  (when-some [data (lookup-entry config id :package-version)]
     (. builder packageVersion data))
-  (when-let [data (lookup-entry config id :station)]
+  (when-some [data (lookup-entry config id :station)]
     (. builder station data))
   (.build builder))
 
@@ -1087,13 +1087,13 @@
 | `updateVersion` | software.amazon.awscdk.services.iotwireless.CfnTaskDefinition$LoRaWANGatewayVersionProperty | [[cdk.support/lookup-entry]] | `:update-version` |
 "
   [^CfnTaskDefinition$LoRaWANUpdateGatewayTaskCreateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :current-version)]
+  (when-some [data (lookup-entry config id :current-version)]
     (. builder currentVersion data))
-  (when-let [data (lookup-entry config id :sig-key-crc)]
+  (when-some [data (lookup-entry config id :sig-key-crc)]
     (. builder sigKeyCrc data))
-  (when-let [data (lookup-entry config id :update-signature)]
+  (when-some [data (lookup-entry config id :update-signature)]
     (. builder updateSignature data))
-  (when-let [data (lookup-entry config id :update-version)]
+  (when-some [data (lookup-entry config id :update-version)]
     (. builder updateVersion data))
   (.build builder))
 
@@ -1122,9 +1122,9 @@
 | `updateVersion` | software.amazon.awscdk.services.iotwireless.CfnTaskDefinition$LoRaWANGatewayVersionProperty | [[cdk.support/lookup-entry]] | `:update-version` |
 "
   [^CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :current-version)]
+  (when-some [data (lookup-entry config id :current-version)]
     (. builder currentVersion data))
-  (when-let [data (lookup-entry config id :update-version)]
+  (when-some [data (lookup-entry config id :update-version)]
     (. builder updateVersion data))
   (.build builder))
 
@@ -1157,17 +1157,17 @@
 | `update` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update` |
 "
   [^CfnTaskDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-create-tasks)]
+  (when-some [data (lookup-entry config id :auto-create-tasks)]
     (. builder autoCreateTasks data))
-  (when-let [data (lookup-entry config id :lo-ra-wan-update-gateway-task-entry)]
+  (when-some [data (lookup-entry config id :lo-ra-wan-update-gateway-task-entry)]
     (. builder loRaWanUpdateGatewayTaskEntry data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-definition-type)]
+  (when-some [data (lookup-entry config id :task-definition-type)]
     (. builder taskDefinitionType data))
-  (when-let [data (lookup-entry config id :update)]
+  (when-some [data (lookup-entry config id :update)]
     (. builder update data))
   (.build builder))
 
@@ -1197,11 +1197,11 @@
 | `updateDataSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-data-source` |
 "
   [^CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :update-data-role)]
+  (when-some [data (lookup-entry config id :update-data-role)]
     (. builder updateDataRole data))
-  (when-let [data (lookup-entry config id :update-data-source)]
+  (when-some [data (lookup-entry config id :update-data-source)]
     (. builder updateDataSource data))
   (.build builder))
 
@@ -1230,9 +1230,9 @@
 | `sessionKeys` | software.amazon.awscdk.services.iotwireless.CfnWirelessDevice$SessionKeysAbpV10xProperty | [[cdk.support/lookup-entry]] | `:session-keys` |
 "
   [^CfnWirelessDevice$AbpV10xProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dev-addr)]
+  (when-some [data (lookup-entry config id :dev-addr)]
     (. builder devAddr data))
-  (when-let [data (lookup-entry config id :session-keys)]
+  (when-some [data (lookup-entry config id :session-keys)]
     (. builder sessionKeys data))
   (.build builder))
 
@@ -1261,9 +1261,9 @@
 | `sessionKeys` | software.amazon.awscdk.services.iotwireless.CfnWirelessDevice$SessionKeysAbpV11Property | [[cdk.support/lookup-entry]] | `:session-keys` |
 "
   [^CfnWirelessDevice$AbpV11Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :dev-addr)]
+  (when-some [data (lookup-entry config id :dev-addr)]
     (. builder devAddr data))
-  (when-let [data (lookup-entry config id :session-keys)]
+  (when-some [data (lookup-entry config id :session-keys)]
     (. builder sessionKeys data))
   (.build builder))
 
@@ -1299,23 +1299,23 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnWirelessDevice$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :destination-name)]
+  (when-some [data (lookup-entry config id :destination-name)]
     (. builder destinationName data))
-  (when-let [data (lookup-entry config id :last-uplink-received-at)]
+  (when-some [data (lookup-entry config id :last-uplink-received-at)]
     (. builder lastUplinkReceivedAt data))
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :positioning)]
+  (when-some [data (lookup-entry config id :positioning)]
     (. builder positioning data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1345,11 +1345,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnWirelessDeviceImportTask$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-name)]
+  (when-some [data (lookup-entry config id :destination-name)]
     (. builder destinationName data))
-  (when-let [data (lookup-entry config id :sidewalk)]
+  (when-some [data (lookup-entry config id :sidewalk)]
     (. builder sidewalk data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1379,11 +1379,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnWirelessDeviceImportTaskProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-name)]
+  (when-some [data (lookup-entry config id :destination-name)]
     (. builder destinationName data))
-  (when-let [data (lookup-entry config id :sidewalk)]
+  (when-some [data (lookup-entry config id :sidewalk)]
     (. builder sidewalk data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1414,13 +1414,13 @@
 | `sidewalkManufacturingSn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sidewalk-manufacturing-sn` |
 "
   [^CfnWirelessDeviceImportTask$SidewalkProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :device-creation-file)]
+  (when-some [data (lookup-entry config id :device-creation-file)]
     (. builder deviceCreationFile data))
-  (when-let [data (lookup-entry config id :device-creation-file-list)]
+  (when-some [data (lookup-entry config id :device-creation-file-list)]
     (. builder deviceCreationFileList data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :sidewalk-manufacturing-sn)]
+  (when-some [data (lookup-entry config id :sidewalk-manufacturing-sn)]
     (. builder sidewalkManufacturingSn data))
   (.build builder))
 
@@ -1454,19 +1454,19 @@
 | `serviceProfileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-profile-id` |
 "
   [^CfnWirelessDevice$LoRaWANDeviceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :abp-v10-x)]
+  (when-some [data (lookup-entry config id :abp-v10-x)]
     (. builder abpV10X data))
-  (when-let [data (lookup-entry config id :abp-v11)]
+  (when-some [data (lookup-entry config id :abp-v11)]
     (. builder abpV11 data))
-  (when-let [data (lookup-entry config id :dev-eui)]
+  (when-some [data (lookup-entry config id :dev-eui)]
     (. builder devEui data))
-  (when-let [data (lookup-entry config id :device-profile-id)]
+  (when-some [data (lookup-entry config id :device-profile-id)]
     (. builder deviceProfileId data))
-  (when-let [data (lookup-entry config id :otaa-v10-x)]
+  (when-some [data (lookup-entry config id :otaa-v10-x)]
     (. builder otaaV10X data))
-  (when-let [data (lookup-entry config id :otaa-v11)]
+  (when-some [data (lookup-entry config id :otaa-v11)]
     (. builder otaaV11 data))
-  (when-let [data (lookup-entry config id :service-profile-id)]
+  (when-some [data (lookup-entry config id :service-profile-id)]
     (. builder serviceProfileId data))
   (.build builder))
 
@@ -1495,9 +1495,9 @@
 | `appKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-key` |
 "
   [^CfnWirelessDevice$OtaaV10xProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-eui)]
+  (when-some [data (lookup-entry config id :app-eui)]
     (. builder appEui data))
-  (when-let [data (lookup-entry config id :app-key)]
+  (when-some [data (lookup-entry config id :app-key)]
     (. builder appKey data))
   (.build builder))
 
@@ -1527,11 +1527,11 @@
 | `nwkKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:nwk-key` |
 "
   [^CfnWirelessDevice$OtaaV11Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-key)]
+  (when-some [data (lookup-entry config id :app-key)]
     (. builder appKey data))
-  (when-let [data (lookup-entry config id :join-eui)]
+  (when-some [data (lookup-entry config id :join-eui)]
     (. builder joinEui data))
-  (when-let [data (lookup-entry config id :nwk-key)]
+  (when-some [data (lookup-entry config id :nwk-key)]
     (. builder nwkKey data))
   (.build builder))
 
@@ -1567,23 +1567,23 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnWirelessDeviceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :destination-name)]
+  (when-some [data (lookup-entry config id :destination-name)]
     (. builder destinationName data))
-  (when-let [data (lookup-entry config id :last-uplink-received-at)]
+  (when-some [data (lookup-entry config id :last-uplink-received-at)]
     (. builder lastUplinkReceivedAt data))
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :positioning)]
+  (when-some [data (lookup-entry config id :positioning)]
     (. builder positioning data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1612,9 +1612,9 @@
 | `nwkSKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:nwk-s-key` |
 "
   [^CfnWirelessDevice$SessionKeysAbpV10xProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-s-key)]
+  (when-some [data (lookup-entry config id :app-s-key)]
     (. builder appSKey data))
-  (when-let [data (lookup-entry config id :nwk-s-key)]
+  (when-some [data (lookup-entry config id :nwk-s-key)]
     (. builder nwkSKey data))
   (.build builder))
 
@@ -1645,13 +1645,13 @@
 | `sNwkSIntKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:s-nwk-s-int-key` |
 "
   [^CfnWirelessDevice$SessionKeysAbpV11Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-s-key)]
+  (when-some [data (lookup-entry config id :app-s-key)]
     (. builder appSKey data))
-  (when-let [data (lookup-entry config id :f-nwk-s-int-key)]
+  (when-some [data (lookup-entry config id :f-nwk-s-int-key)]
     (. builder fNwkSIntKey data))
-  (when-let [data (lookup-entry config id :nwk-s-enc-key)]
+  (when-some [data (lookup-entry config id :nwk-s-enc-key)]
     (. builder nwkSEncKey data))
-  (when-let [data (lookup-entry config id :s-nwk-s-int-key)]
+  (when-some [data (lookup-entry config id :s-nwk-s-int-key)]
     (. builder sNwkSIntKey data))
   (.build builder))
 
@@ -1685,19 +1685,19 @@
 | `thingName` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-name` |
 "
   [^CfnWirelessGateway$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :last-uplink-received-at)]
+  (when-some [data (lookup-entry config id :last-uplink-received-at)]
     (. builder lastUplinkReceivedAt data))
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
-  (when-let [data (lookup-entry config id :thing-name)]
+  (when-some [data (lookup-entry config id :thing-name)]
     (. builder thingName data))
   (.build builder))
 
@@ -1726,9 +1726,9 @@
 | `rfRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:rf-region` |
 "
   [^CfnWirelessGateway$LoRaWANGatewayProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :gateway-eui)]
+  (when-some [data (lookup-entry config id :gateway-eui)]
     (. builder gatewayEui data))
-  (when-let [data (lookup-entry config id :rf-region)]
+  (when-some [data (lookup-entry config id :rf-region)]
     (. builder rfRegion data))
   (.build builder))
 
@@ -1762,19 +1762,19 @@
 | `thingName` | java.lang.String | [[cdk.support/lookup-entry]] | `:thing-name` |
 "
   [^CfnWirelessGatewayProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :last-uplink-received-at)]
+  (when-some [data (lookup-entry config id :last-uplink-received-at)]
     (. builder lastUplinkReceivedAt data))
-  (when-let [data (lookup-entry config id :lo-ra-wan)]
+  (when-some [data (lookup-entry config id :lo-ra-wan)]
     (. builder loRaWan data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :thing-arn)]
+  (when-some [data (lookup-entry config id :thing-arn)]
     (. builder thingArn data))
-  (when-let [data (lookup-entry config id :thing-name)]
+  (when-some [data (lookup-entry config id :thing-name)]
     (. builder thingName data))
   (.build builder))
 

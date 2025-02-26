@@ -21,13 +21,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnExecutionPlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :capacity-units)]
+  (when-some [data (lookup-entry config id :capacity-units)]
     (. builder capacityUnits data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -55,7 +55,7 @@
 | `rescoreCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rescore-capacity-units` |
 "
   [^CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rescore-capacity-units)]
+  (when-some [data (lookup-entry config id :rescore-capacity-units)]
     (. builder rescoreCapacityUnits data))
   (.build builder))
 
@@ -86,13 +86,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnExecutionPlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :capacity-units)]
+  (when-some [data (lookup-entry config id :capacity-units)]
     (. builder capacityUnits data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

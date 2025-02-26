@@ -44,55 +44,55 @@
 | `weeklyMaintenanceWindowStart` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-window-start` |
 "
   [^CfnEnvironment$Builder builder id config]
-  (when-let [data (lookup-entry config id :airflow-configuration-options)]
+  (when-some [data (lookup-entry config id :airflow-configuration-options)]
     (. builder airflowConfigurationOptions data))
-  (when-let [data (lookup-entry config id :airflow-version)]
+  (when-some [data (lookup-entry config id :airflow-version)]
     (. builder airflowVersion data))
-  (when-let [data (lookup-entry config id :dag-s3-path)]
+  (when-some [data (lookup-entry config id :dag-s3-path)]
     (. builder dagS3Path data))
-  (when-let [data (lookup-entry config id :endpoint-management)]
+  (when-some [data (lookup-entry config id :endpoint-management)]
     (. builder endpointManagement data))
-  (when-let [data (lookup-entry config id :environment-class)]
+  (when-some [data (lookup-entry config id :environment-class)]
     (. builder environmentClass data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :logging-configuration)]
+  (when-some [data (lookup-entry config id :logging-configuration)]
     (. builder loggingConfiguration data))
-  (when-let [data (lookup-entry config id :max-webservers)]
+  (when-some [data (lookup-entry config id :max-webservers)]
     (. builder maxWebservers data))
-  (when-let [data (lookup-entry config id :max-workers)]
+  (when-some [data (lookup-entry config id :max-workers)]
     (. builder maxWorkers data))
-  (when-let [data (lookup-entry config id :min-webservers)]
+  (when-some [data (lookup-entry config id :min-webservers)]
     (. builder minWebservers data))
-  (when-let [data (lookup-entry config id :min-workers)]
+  (when-some [data (lookup-entry config id :min-workers)]
     (. builder minWorkers data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :plugins-s3-object-version)]
+  (when-some [data (lookup-entry config id :plugins-s3-object-version)]
     (. builder pluginsS3ObjectVersion data))
-  (when-let [data (lookup-entry config id :plugins-s3-path)]
+  (when-some [data (lookup-entry config id :plugins-s3-path)]
     (. builder pluginsS3Path data))
-  (when-let [data (lookup-entry config id :requirements-s3-object-version)]
+  (when-some [data (lookup-entry config id :requirements-s3-object-version)]
     (. builder requirementsS3ObjectVersion data))
-  (when-let [data (lookup-entry config id :requirements-s3-path)]
+  (when-some [data (lookup-entry config id :requirements-s3-path)]
     (. builder requirementsS3Path data))
-  (when-let [data (lookup-entry config id :schedulers)]
+  (when-some [data (lookup-entry config id :schedulers)]
     (. builder schedulers data))
-  (when-let [data (lookup-entry config id :source-bucket-arn)]
+  (when-some [data (lookup-entry config id :source-bucket-arn)]
     (. builder sourceBucketArn data))
-  (when-let [data (lookup-entry config id :startup-script-s3-object-version)]
+  (when-some [data (lookup-entry config id :startup-script-s3-object-version)]
     (. builder startupScriptS3ObjectVersion data))
-  (when-let [data (lookup-entry config id :startup-script-s3-path)]
+  (when-some [data (lookup-entry config id :startup-script-s3-path)]
     (. builder startupScriptS3Path data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :webserver-access-mode)]
+  (when-some [data (lookup-entry config id :webserver-access-mode)]
     (. builder webserverAccessMode data))
-  (when-let [data (lookup-entry config id :weekly-maintenance-window-start)]
+  (when-some [data (lookup-entry config id :weekly-maintenance-window-start)]
     (. builder weeklyMaintenanceWindowStart data))
   (.build builder))
 
@@ -124,15 +124,15 @@
 | `workerLogs` | software.amazon.awscdk.services.mwaa.CfnEnvironment$ModuleLoggingConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-logs` |
 "
   [^CfnEnvironment$LoggingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dag-processing-logs)]
+  (when-some [data (lookup-entry config id :dag-processing-logs)]
     (. builder dagProcessingLogs data))
-  (when-let [data (lookup-entry config id :scheduler-logs)]
+  (when-some [data (lookup-entry config id :scheduler-logs)]
     (. builder schedulerLogs data))
-  (when-let [data (lookup-entry config id :task-logs)]
+  (when-some [data (lookup-entry config id :task-logs)]
     (. builder taskLogs data))
-  (when-let [data (lookup-entry config id :webserver-logs)]
+  (when-some [data (lookup-entry config id :webserver-logs)]
     (. builder webserverLogs data))
-  (when-let [data (lookup-entry config id :worker-logs)]
+  (when-some [data (lookup-entry config id :worker-logs)]
     (. builder workerLogs data))
   (.build builder))
 
@@ -162,11 +162,11 @@
 | `logLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-level` |
 "
   [^CfnEnvironment$ModuleLoggingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-log-group-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-log-group-arn)]
     (. builder cloudWatchLogGroupArn data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :log-level)]
+  (when-some [data (lookup-entry config id :log-level)]
     (. builder logLevel data))
   (.build builder))
 
@@ -195,9 +195,9 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnEnvironment$NetworkConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -249,55 +249,55 @@
 | `weeklyMaintenanceWindowStart` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-window-start` |
 "
   [^CfnEnvironmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :airflow-configuration-options)]
+  (when-some [data (lookup-entry config id :airflow-configuration-options)]
     (. builder airflowConfigurationOptions data))
-  (when-let [data (lookup-entry config id :airflow-version)]
+  (when-some [data (lookup-entry config id :airflow-version)]
     (. builder airflowVersion data))
-  (when-let [data (lookup-entry config id :dag-s3-path)]
+  (when-some [data (lookup-entry config id :dag-s3-path)]
     (. builder dagS3Path data))
-  (when-let [data (lookup-entry config id :endpoint-management)]
+  (when-some [data (lookup-entry config id :endpoint-management)]
     (. builder endpointManagement data))
-  (when-let [data (lookup-entry config id :environment-class)]
+  (when-some [data (lookup-entry config id :environment-class)]
     (. builder environmentClass data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :logging-configuration)]
+  (when-some [data (lookup-entry config id :logging-configuration)]
     (. builder loggingConfiguration data))
-  (when-let [data (lookup-entry config id :max-webservers)]
+  (when-some [data (lookup-entry config id :max-webservers)]
     (. builder maxWebservers data))
-  (when-let [data (lookup-entry config id :max-workers)]
+  (when-some [data (lookup-entry config id :max-workers)]
     (. builder maxWorkers data))
-  (when-let [data (lookup-entry config id :min-webservers)]
+  (when-some [data (lookup-entry config id :min-webservers)]
     (. builder minWebservers data))
-  (when-let [data (lookup-entry config id :min-workers)]
+  (when-some [data (lookup-entry config id :min-workers)]
     (. builder minWorkers data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :plugins-s3-object-version)]
+  (when-some [data (lookup-entry config id :plugins-s3-object-version)]
     (. builder pluginsS3ObjectVersion data))
-  (when-let [data (lookup-entry config id :plugins-s3-path)]
+  (when-some [data (lookup-entry config id :plugins-s3-path)]
     (. builder pluginsS3Path data))
-  (when-let [data (lookup-entry config id :requirements-s3-object-version)]
+  (when-some [data (lookup-entry config id :requirements-s3-object-version)]
     (. builder requirementsS3ObjectVersion data))
-  (when-let [data (lookup-entry config id :requirements-s3-path)]
+  (when-some [data (lookup-entry config id :requirements-s3-path)]
     (. builder requirementsS3Path data))
-  (when-let [data (lookup-entry config id :schedulers)]
+  (when-some [data (lookup-entry config id :schedulers)]
     (. builder schedulers data))
-  (when-let [data (lookup-entry config id :source-bucket-arn)]
+  (when-some [data (lookup-entry config id :source-bucket-arn)]
     (. builder sourceBucketArn data))
-  (when-let [data (lookup-entry config id :startup-script-s3-object-version)]
+  (when-some [data (lookup-entry config id :startup-script-s3-object-version)]
     (. builder startupScriptS3ObjectVersion data))
-  (when-let [data (lookup-entry config id :startup-script-s3-path)]
+  (when-some [data (lookup-entry config id :startup-script-s3-path)]
     (. builder startupScriptS3Path data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :webserver-access-mode)]
+  (when-some [data (lookup-entry config id :webserver-access-mode)]
     (. builder webserverAccessMode data))
-  (when-let [data (lookup-entry config id :weekly-maintenance-window-start)]
+  (when-some [data (lookup-entry config id :weekly-maintenance-window-start)]
     (. builder weeklyMaintenanceWindowStart data))
   (.build builder))
 

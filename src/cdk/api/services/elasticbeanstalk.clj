@@ -33,9 +33,9 @@
 | `versionLifecycleConfig` | software.amazon.awscdk.services.elasticbeanstalk.CfnApplication$ApplicationVersionLifecycleConfigProperty | [[cdk.support/lookup-entry]] | `:version-lifecycle-config` |
 "
   [^CfnApplication$ApplicationResourceLifecycleConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :service-role)]
+  (when-some [data (lookup-entry config id :service-role)]
     (. builder serviceRole data))
-  (when-let [data (lookup-entry config id :version-lifecycle-config)]
+  (when-some [data (lookup-entry config id :version-lifecycle-config)]
     (. builder versionLifecycleConfig data))
   (.build builder))
 
@@ -64,9 +64,9 @@
 | `maxCountRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:max-count-rule` |
 "
   [^CfnApplication$ApplicationVersionLifecycleConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-age-rule)]
+  (when-some [data (lookup-entry config id :max-age-rule)]
     (. builder maxAgeRule data))
-  (when-let [data (lookup-entry config id :max-count-rule)]
+  (when-some [data (lookup-entry config id :max-count-rule)]
     (. builder maxCountRule data))
   (.build builder))
 
@@ -96,11 +96,11 @@
 | `resourceLifecycleConfig` | software.amazon.awscdk.services.elasticbeanstalk.CfnApplication$ApplicationResourceLifecycleConfigProperty | [[cdk.support/lookup-entry]] | `:resource-lifecycle-config` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :resource-lifecycle-config)]
+  (when-some [data (lookup-entry config id :resource-lifecycle-config)]
     (. builder resourceLifecycleConfig data))
   (.build builder))
 
@@ -130,11 +130,11 @@
 | `maxAgeInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-age-in-days` |
 "
   [^CfnApplication$MaxAgeRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-source-from-s3)]
+  (when-some [data (lookup-entry config id :delete-source-from-s3)]
     (. builder deleteSourceFromS3 data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :max-age-in-days)]
+  (when-some [data (lookup-entry config id :max-age-in-days)]
     (. builder maxAgeInDays data))
   (.build builder))
 
@@ -164,11 +164,11 @@
 | `maxCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-count` |
 "
   [^CfnApplication$MaxCountRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-source-from-s3)]
+  (when-some [data (lookup-entry config id :delete-source-from-s3)]
     (. builder deleteSourceFromS3 data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :max-count)]
+  (when-some [data (lookup-entry config id :max-count)]
     (. builder maxCount data))
   (.build builder))
 
@@ -198,11 +198,11 @@
 | `resourceLifecycleConfig` | software.amazon.awscdk.services.elasticbeanstalk.CfnApplication$ApplicationResourceLifecycleConfigProperty | [[cdk.support/lookup-entry]] | `:resource-lifecycle-config` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :resource-lifecycle-config)]
+  (when-some [data (lookup-entry config id :resource-lifecycle-config)]
     (. builder resourceLifecycleConfig data))
   (.build builder))
 
@@ -232,11 +232,11 @@
 | `sourceBundle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-bundle` |
 "
   [^CfnApplicationVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :source-bundle)]
+  (when-some [data (lookup-entry config id :source-bundle)]
     (. builder sourceBundle data))
   (.build builder))
 
@@ -266,11 +266,11 @@
 | `sourceBundle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-bundle` |
 "
   [^CfnApplicationVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :source-bundle)]
+  (when-some [data (lookup-entry config id :source-bundle)]
     (. builder sourceBundle data))
   (.build builder))
 
@@ -299,9 +299,9 @@
 | `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |
 "
   [^CfnApplicationVersion$SourceBundleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-key)]
+  (when-some [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
   (.build builder))
 
@@ -335,19 +335,19 @@
 | `sourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-configuration` |
 "
   [^CfnConfigurationTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :environment-id)]
+  (when-some [data (lookup-entry config id :environment-id)]
     (. builder environmentId data))
-  (when-let [data (lookup-entry config id :option-settings)]
+  (when-some [data (lookup-entry config id :option-settings)]
     (. builder optionSettings data))
-  (when-let [data (lookup-entry config id :platform-arn)]
+  (when-some [data (lookup-entry config id :platform-arn)]
     (. builder platformArn data))
-  (when-let [data (lookup-entry config id :solution-stack-name)]
+  (when-some [data (lookup-entry config id :solution-stack-name)]
     (. builder solutionStackName data))
-  (when-let [data (lookup-entry config id :source-configuration)]
+  (when-some [data (lookup-entry config id :source-configuration)]
     (. builder sourceConfiguration data))
   (.build builder))
 
@@ -378,13 +378,13 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnConfigurationTemplate$ConfigurationOptionSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :option-name)]
+  (when-some [data (lookup-entry config id :option-name)]
     (. builder optionName data))
-  (when-let [data (lookup-entry config id :resource-name)]
+  (when-some [data (lookup-entry config id :resource-name)]
     (. builder resourceName data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -418,19 +418,19 @@
 | `sourceConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-configuration` |
 "
   [^CfnConfigurationTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :environment-id)]
+  (when-some [data (lookup-entry config id :environment-id)]
     (. builder environmentId data))
-  (when-let [data (lookup-entry config id :option-settings)]
+  (when-some [data (lookup-entry config id :option-settings)]
     (. builder optionSettings data))
-  (when-let [data (lookup-entry config id :platform-arn)]
+  (when-some [data (lookup-entry config id :platform-arn)]
     (. builder platformArn data))
-  (when-let [data (lookup-entry config id :solution-stack-name)]
+  (when-some [data (lookup-entry config id :solution-stack-name)]
     (. builder solutionStackName data))
-  (when-let [data (lookup-entry config id :source-configuration)]
+  (when-some [data (lookup-entry config id :source-configuration)]
     (. builder sourceConfiguration data))
   (.build builder))
 
@@ -459,9 +459,9 @@
 | `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
 "
   [^CfnConfigurationTemplate$SourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :template-name)]
+  (when-some [data (lookup-entry config id :template-name)]
     (. builder templateName data))
   (.build builder))
 
@@ -500,29 +500,29 @@
 | `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
 "
   [^CfnEnvironment$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :cname-prefix)]
+  (when-some [data (lookup-entry config id :cname-prefix)]
     (. builder cnamePrefix data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :operations-role)]
+  (when-some [data (lookup-entry config id :operations-role)]
     (. builder operationsRole data))
-  (when-let [data (lookup-entry config id :option-settings)]
+  (when-some [data (lookup-entry config id :option-settings)]
     (. builder optionSettings data))
-  (when-let [data (lookup-entry config id :platform-arn)]
+  (when-some [data (lookup-entry config id :platform-arn)]
     (. builder platformArn data))
-  (when-let [data (lookup-entry config id :solution-stack-name)]
+  (when-some [data (lookup-entry config id :solution-stack-name)]
     (. builder solutionStackName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :template-name)]
+  (when-some [data (lookup-entry config id :template-name)]
     (. builder templateName data))
-  (when-let [data (lookup-entry config id :tier)]
+  (when-some [data (lookup-entry config id :tier)]
     (. builder tier data))
-  (when-let [data (lookup-entry config id :version-label)]
+  (when-some [data (lookup-entry config id :version-label)]
     (. builder versionLabel data))
   (.build builder))
 
@@ -553,13 +553,13 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnEnvironment$OptionSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :option-name)]
+  (when-some [data (lookup-entry config id :option-name)]
     (. builder optionName data))
-  (when-let [data (lookup-entry config id :resource-name)]
+  (when-some [data (lookup-entry config id :resource-name)]
     (. builder resourceName data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -598,29 +598,29 @@
 | `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
 "
   [^CfnEnvironmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :cname-prefix)]
+  (when-some [data (lookup-entry config id :cname-prefix)]
     (. builder cnamePrefix data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :environment-name)]
+  (when-some [data (lookup-entry config id :environment-name)]
     (. builder environmentName data))
-  (when-let [data (lookup-entry config id :operations-role)]
+  (when-some [data (lookup-entry config id :operations-role)]
     (. builder operationsRole data))
-  (when-let [data (lookup-entry config id :option-settings)]
+  (when-some [data (lookup-entry config id :option-settings)]
     (. builder optionSettings data))
-  (when-let [data (lookup-entry config id :platform-arn)]
+  (when-some [data (lookup-entry config id :platform-arn)]
     (. builder platformArn data))
-  (when-let [data (lookup-entry config id :solution-stack-name)]
+  (when-some [data (lookup-entry config id :solution-stack-name)]
     (. builder solutionStackName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :template-name)]
+  (when-some [data (lookup-entry config id :template-name)]
     (. builder templateName data))
-  (when-let [data (lookup-entry config id :tier)]
+  (when-some [data (lookup-entry config id :tier)]
     (. builder tier data))
-  (when-let [data (lookup-entry config id :version-label)]
+  (when-some [data (lookup-entry config id :version-label)]
     (. builder versionLabel data))
   (.build builder))
 
@@ -650,11 +650,11 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnEnvironment$TierProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 

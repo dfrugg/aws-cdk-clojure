@@ -282,7 +282,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `artifactsProperty` | software.amazon.awscdk.services.codebuild.CfnProject$ArtifactsProperty | [[cdk.support/lookup-entry]] | `:artifacts-property` |
 "
   [^ArtifactsConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifacts-property)]
+  (when-some [data (lookup-entry config id :artifacts-property)]
     (. builder artifactsProperty data))
   (.build builder))
 
@@ -310,7 +310,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `identifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:identifier` |
 "
   [^ArtifactsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
   (.build builder))
 
@@ -338,7 +338,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^BatchBuildConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -366,7 +366,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `artifactBucket` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:artifact-bucket` |
 "
   [^BindToCodePipelineOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifact-bucket)]
+  (when-some [data (lookup-entry config id :artifact-bucket)]
     (. builder artifactBucket data))
   (.build builder))
 
@@ -395,9 +395,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `username` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^BitBucketSourceCredentials$Builder builder id config]
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -426,9 +426,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `username` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^BitBucketSourceCredentialsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -467,29 +467,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `webhookTriggersBatchBuild` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:webhook-triggers-batch-build` |
 "
   [^BitBucketSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :branch-or-ref)]
+  (when-some [data (lookup-entry config id :branch-or-ref)]
     (. builder branchOrRef data))
-  (when-let [data (lookup-entry config id :build-status-name)]
+  (when-some [data (lookup-entry config id :build-status-name)]
     (. builder buildStatusName data))
-  (when-let [data (lookup-entry config id :build-status-url)]
+  (when-some [data (lookup-entry config id :build-status-url)]
     (. builder buildStatusUrl data))
-  (when-let [data (lookup-entry config id :clone-depth)]
+  (when-some [data (lookup-entry config id :clone-depth)]
     (. builder cloneDepth data))
-  (when-let [data (lookup-entry config id :fetch-submodules)]
+  (when-some [data (lookup-entry config id :fetch-submodules)]
     (. builder fetchSubmodules data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :owner)]
+  (when-some [data (lookup-entry config id :owner)]
     (. builder owner data))
-  (when-let [data (lookup-entry config id :repo)]
+  (when-some [data (lookup-entry config id :repo)]
     (. builder repo data))
-  (when-let [data (lookup-entry config id :report-build-status)]
+  (when-some [data (lookup-entry config id :report-build-status)]
     (. builder reportBuildStatus data))
-  (when-let [data (lookup-entry config id :webhook)]
+  (when-some [data (lookup-entry config id :webhook)]
     (. builder webhook data))
-  (when-let [data (lookup-entry config id :webhook-filters)]
+  (when-some [data (lookup-entry config id :webhook-filters)]
     (. builder webhookFilters data))
-  (when-let [data (lookup-entry config id :webhook-triggers-batch-build)]
+  (when-some [data (lookup-entry config id :webhook-triggers-batch-build)]
     (. builder webhookTriggersBatchBuild data))
   (.build builder))
 
@@ -517,7 +517,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^BucketCacheOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -549,15 +549,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `privileged` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:privileged` |
 "
   [^BuildEnvironment$Builder builder id config]
-  (when-let [data (lookup-entry config id :build-image)]
+  (when-some [data (lookup-entry config id :build-image)]
     (. builder buildImage data))
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (compute-type config id :compute-type)]
+  (when-some [data (compute-type config id :compute-type)]
     (. builder computeType data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :privileged)]
+  (when-some [data (lookup-entry config id :privileged)]
     (. builder privileged data))
   (.build builder))
 
@@ -586,9 +586,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `objectKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key` |
 "
   [^BuildEnvironmentCertificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :object-key)]
+  (when-some [data (lookup-entry config id :object-key)]
     (. builder objectKey data))
   (.build builder))
 
@@ -617,9 +617,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^BuildEnvironmentVariable$Builder builder id config]
-  (when-let [data (build-environment-variable-type config id :type)]
+  (when-some [data (build-environment-variable-type config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -666,21 +666,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFleet$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-capacity)]
+  (when-some [data (lookup-entry config id :base-capacity)]
     (. builder baseCapacity data))
-  (when-let [data (lookup-entry config id :compute-type)]
+  (when-some [data (lookup-entry config id :compute-type)]
     (. builder computeType data))
-  (when-let [data (lookup-entry config id :environment-type)]
+  (when-some [data (lookup-entry config id :environment-type)]
     (. builder environmentType data))
-  (when-let [data (lookup-entry config id :fleet-service-role)]
+  (when-some [data (lookup-entry config id :fleet-service-role)]
     (. builder fleetServiceRole data))
-  (when-let [data (lookup-entry config id :fleet-vpc-config)]
+  (when-some [data (lookup-entry config id :fleet-vpc-config)]
     (. builder fleetVpcConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :overflow-behavior)]
+  (when-some [data (lookup-entry config id :overflow-behavior)]
     (. builder overflowBehavior data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -715,21 +715,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFleetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-capacity)]
+  (when-some [data (lookup-entry config id :base-capacity)]
     (. builder baseCapacity data))
-  (when-let [data (lookup-entry config id :compute-type)]
+  (when-some [data (lookup-entry config id :compute-type)]
     (. builder computeType data))
-  (when-let [data (lookup-entry config id :environment-type)]
+  (when-some [data (lookup-entry config id :environment-type)]
     (. builder environmentType data))
-  (when-let [data (lookup-entry config id :fleet-service-role)]
+  (when-some [data (lookup-entry config id :fleet-service-role)]
     (. builder fleetServiceRole data))
-  (when-let [data (lookup-entry config id :fleet-vpc-config)]
+  (when-some [data (lookup-entry config id :fleet-vpc-config)]
     (. builder fleetVpcConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :overflow-behavior)]
+  (when-some [data (lookup-entry config id :overflow-behavior)]
     (. builder overflowBehavior data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -759,11 +759,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnFleet$VpcConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -799,23 +799,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnProject$ArtifactsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifact-identifier)]
+  (when-some [data (lookup-entry config id :artifact-identifier)]
     (. builder artifactIdentifier data))
-  (when-let [data (lookup-entry config id :encryption-disabled)]
+  (when-some [data (lookup-entry config id :encryption-disabled)]
     (. builder encryptionDisabled data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :namespace-type)]
+  (when-some [data (lookup-entry config id :namespace-type)]
     (. builder namespaceType data))
-  (when-let [data (lookup-entry config id :override-artifact-name)]
+  (when-some [data (lookup-entry config id :override-artifact-name)]
     (. builder overrideArtifactName data))
-  (when-let [data (lookup-entry config id :packaging)]
+  (when-some [data (lookup-entry config id :packaging)]
     (. builder packaging data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -844,9 +844,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maximumBuildsAllowed` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-builds-allowed` |
 "
   [^CfnProject$BatchRestrictionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :compute-types-allowed)]
+  (when-some [data (lookup-entry config id :compute-types-allowed)]
     (. builder computeTypesAllowed data))
-  (when-let [data (lookup-entry config id :maximum-builds-allowed)]
+  (when-some [data (lookup-entry config id :maximum-builds-allowed)]
     (. builder maximumBuildsAllowed data))
   (.build builder))
 
@@ -875,9 +875,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-url` |
 "
   [^CfnProject$BuildStatusConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :context)]
+  (when-some [data (lookup-entry config id :context)]
     (. builder context data))
-  (when-let [data (lookup-entry config id :target-url)]
+  (when-some [data (lookup-entry config id :target-url)]
     (. builder targetUrl data))
   (.build builder))
 
@@ -928,53 +928,53 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcConfig` | software.amazon.awscdk.services.codebuild.CfnProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifacts)]
+  (when-some [data (lookup-entry config id :artifacts)]
     (. builder artifacts data))
-  (when-let [data (lookup-entry config id :badge-enabled)]
+  (when-some [data (lookup-entry config id :badge-enabled)]
     (. builder badgeEnabled data))
-  (when-let [data (lookup-entry config id :build-batch-config)]
+  (when-some [data (lookup-entry config id :build-batch-config)]
     (. builder buildBatchConfig data))
-  (when-let [data (lookup-entry config id :cache)]
+  (when-some [data (lookup-entry config id :cache)]
     (. builder cache data))
-  (when-let [data (lookup-entry config id :concurrent-build-limit)]
+  (when-some [data (lookup-entry config id :concurrent-build-limit)]
     (. builder concurrentBuildLimit data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :logs-config)]
+  (when-some [data (lookup-entry config id :logs-config)]
     (. builder logsConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :queued-timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :queued-timeout-in-minutes)]
     (. builder queuedTimeoutInMinutes data))
-  (when-let [data (lookup-entry config id :resource-access-role)]
+  (when-some [data (lookup-entry config id :resource-access-role)]
     (. builder resourceAccessRole data))
-  (when-let [data (lookup-entry config id :secondary-artifacts)]
+  (when-some [data (lookup-entry config id :secondary-artifacts)]
     (. builder secondaryArtifacts data))
-  (when-let [data (lookup-entry config id :secondary-source-versions)]
+  (when-some [data (lookup-entry config id :secondary-source-versions)]
     (. builder secondarySourceVersions data))
-  (when-let [data (lookup-entry config id :secondary-sources)]
+  (when-some [data (lookup-entry config id :secondary-sources)]
     (. builder secondarySources data))
-  (when-let [data (lookup-entry config id :service-role)]
+  (when-some [data (lookup-entry config id :service-role)]
     (. builder serviceRole data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :source-version)]
+  (when-some [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :timeout-in-minutes)]
     (. builder timeoutInMinutes data))
-  (when-let [data (lookup-entry config id :triggers)]
+  (when-some [data (lookup-entry config id :triggers)]
     (. builder triggers data))
-  (when-let [data (lookup-entry config id :visibility)]
+  (when-some [data (lookup-entry config id :visibility)]
     (. builder visibility data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -1004,11 +1004,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |
 "
   [^CfnProject$CloudWatchLogsConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :stream-name)]
+  (when-some [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
   (.build builder))
 
@@ -1044,23 +1044,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnProject$EnvironmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :compute-type)]
+  (when-some [data (lookup-entry config id :compute-type)]
     (. builder computeType data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :fleet)]
+  (when-some [data (lookup-entry config id :fleet)]
     (. builder fleet data))
-  (when-let [data (lookup-entry config id :image)]
+  (when-some [data (lookup-entry config id :image)]
     (. builder image data))
-  (when-let [data (lookup-entry config id :image-pull-credentials-type)]
+  (when-some [data (lookup-entry config id :image-pull-credentials-type)]
     (. builder imagePullCredentialsType data))
-  (when-let [data (lookup-entry config id :privileged-mode)]
+  (when-some [data (lookup-entry config id :privileged-mode)]
     (. builder privilegedMode data))
-  (when-let [data (lookup-entry config id :registry-credential)]
+  (when-some [data (lookup-entry config id :registry-credential)]
     (. builder registryCredential data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1090,11 +1090,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnProject$EnvironmentVariableProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1122,7 +1122,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `fetchSubmodules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fetch-submodules` |
 "
   [^CfnProject$GitSubmodulesConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :fetch-submodules)]
+  (when-some [data (lookup-entry config id :fetch-submodules)]
     (. builder fetchSubmodules data))
   (.build builder))
 
@@ -1151,9 +1151,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Logs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-logs` |
 "
   [^CfnProject$LogsConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-logs)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs)]
     (. builder cloudWatchLogs data))
-  (when-let [data (lookup-entry config id :s3-logs)]
+  (when-some [data (lookup-entry config id :s3-logs)]
     (. builder s3Logs data))
   (.build builder))
 
@@ -1185,15 +1185,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeoutInMins` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-mins` |
 "
   [^CfnProject$ProjectBuildBatchConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :batch-report-mode)]
+  (when-some [data (lookup-entry config id :batch-report-mode)]
     (. builder batchReportMode data))
-  (when-let [data (lookup-entry config id :combine-artifacts)]
+  (when-some [data (lookup-entry config id :combine-artifacts)]
     (. builder combineArtifacts data))
-  (when-let [data (lookup-entry config id :restrictions)]
+  (when-some [data (lookup-entry config id :restrictions)]
     (. builder restrictions data))
-  (when-let [data (lookup-entry config id :service-role)]
+  (when-some [data (lookup-entry config id :service-role)]
     (. builder serviceRole data))
-  (when-let [data (lookup-entry config id :timeout-in-mins)]
+  (when-some [data (lookup-entry config id :timeout-in-mins)]
     (. builder timeoutInMins data))
   (.build builder))
 
@@ -1223,11 +1223,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnProject$ProjectCacheProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :modes)]
+  (when-some [data (lookup-entry config id :modes)]
     (. builder modes data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1259,15 +1259,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnProject$ProjectFileSystemLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :mount-options)]
+  (when-some [data (lookup-entry config id :mount-options)]
     (. builder mountOptions data))
-  (when-let [data (lookup-entry config id :mount-point)]
+  (when-some [data (lookup-entry config id :mount-point)]
     (. builder mountPoint data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1295,7 +1295,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `fleetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:fleet-arn` |
 "
   [^CfnProject$ProjectFleetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :fleet-arn)]
+  (when-some [data (lookup-entry config id :fleet-arn)]
     (. builder fleetArn data))
   (.build builder))
 
@@ -1324,9 +1324,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sourceVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-version` |
 "
   [^CfnProject$ProjectSourceVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source-identifier)]
+  (when-some [data (lookup-entry config id :source-identifier)]
     (. builder sourceIdentifier data))
-  (when-let [data (lookup-entry config id :source-version)]
+  (when-some [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
 
@@ -1356,11 +1356,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `webhook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:webhook` |
 "
   [^CfnProject$ProjectTriggersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :build-type)]
+  (when-some [data (lookup-entry config id :build-type)]
     (. builder buildType data))
-  (when-let [data (lookup-entry config id :filter-groups)]
+  (when-some [data (lookup-entry config id :filter-groups)]
     (. builder filterGroups data))
-  (when-let [data (lookup-entry config id :webhook)]
+  (when-some [data (lookup-entry config id :webhook)]
     (. builder webhook data))
   (.build builder))
 
@@ -1411,53 +1411,53 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcConfig` | software.amazon.awscdk.services.codebuild.CfnProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifacts)]
+  (when-some [data (lookup-entry config id :artifacts)]
     (. builder artifacts data))
-  (when-let [data (lookup-entry config id :badge-enabled)]
+  (when-some [data (lookup-entry config id :badge-enabled)]
     (. builder badgeEnabled data))
-  (when-let [data (lookup-entry config id :build-batch-config)]
+  (when-some [data (lookup-entry config id :build-batch-config)]
     (. builder buildBatchConfig data))
-  (when-let [data (lookup-entry config id :cache)]
+  (when-some [data (lookup-entry config id :cache)]
     (. builder cache data))
-  (when-let [data (lookup-entry config id :concurrent-build-limit)]
+  (when-some [data (lookup-entry config id :concurrent-build-limit)]
     (. builder concurrentBuildLimit data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :logs-config)]
+  (when-some [data (lookup-entry config id :logs-config)]
     (. builder logsConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :queued-timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :queued-timeout-in-minutes)]
     (. builder queuedTimeoutInMinutes data))
-  (when-let [data (lookup-entry config id :resource-access-role)]
+  (when-some [data (lookup-entry config id :resource-access-role)]
     (. builder resourceAccessRole data))
-  (when-let [data (lookup-entry config id :secondary-artifacts)]
+  (when-some [data (lookup-entry config id :secondary-artifacts)]
     (. builder secondaryArtifacts data))
-  (when-let [data (lookup-entry config id :secondary-source-versions)]
+  (when-some [data (lookup-entry config id :secondary-source-versions)]
     (. builder secondarySourceVersions data))
-  (when-let [data (lookup-entry config id :secondary-sources)]
+  (when-some [data (lookup-entry config id :secondary-sources)]
     (. builder secondarySources data))
-  (when-let [data (lookup-entry config id :service-role)]
+  (when-some [data (lookup-entry config id :service-role)]
     (. builder serviceRole data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :source-version)]
+  (when-some [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :timeout-in-minutes)]
+  (when-some [data (lookup-entry config id :timeout-in-minutes)]
     (. builder timeoutInMinutes data))
-  (when-let [data (lookup-entry config id :triggers)]
+  (when-some [data (lookup-entry config id :triggers)]
     (. builder triggers data))
-  (when-let [data (lookup-entry config id :visibility)]
+  (when-some [data (lookup-entry config id :visibility)]
     (. builder visibility data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -1486,9 +1486,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `credentialProvider` | java.lang.String | [[cdk.support/lookup-entry]] | `:credential-provider` |
 "
   [^CfnProject$RegistryCredentialProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :credential)]
+  (when-some [data (lookup-entry config id :credential)]
     (. builder credential data))
-  (when-let [data (lookup-entry config id :credential-provider)]
+  (when-some [data (lookup-entry config id :credential-provider)]
     (. builder credentialProvider data))
   (.build builder))
 
@@ -1518,11 +1518,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnProject$S3LogsConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-disabled)]
+  (when-some [data (lookup-entry config id :encryption-disabled)]
     (. builder encryptionDisabled data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -1551,9 +1551,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnProject$SourceAuthProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1590,25 +1590,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnProject$SourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auth)]
+  (when-some [data (lookup-entry config id :auth)]
     (. builder auth data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :build-status-config)]
+  (when-some [data (lookup-entry config id :build-status-config)]
     (. builder buildStatusConfig data))
-  (when-let [data (lookup-entry config id :git-clone-depth)]
+  (when-some [data (lookup-entry config id :git-clone-depth)]
     (. builder gitCloneDepth data))
-  (when-let [data (lookup-entry config id :git-submodules-config)]
+  (when-some [data (lookup-entry config id :git-submodules-config)]
     (. builder gitSubmodulesConfig data))
-  (when-let [data (lookup-entry config id :insecure-ssl)]
+  (when-some [data (lookup-entry config id :insecure-ssl)]
     (. builder insecureSsl data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :report-build-status)]
+  (when-some [data (lookup-entry config id :report-build-status)]
     (. builder reportBuildStatus data))
-  (when-let [data (lookup-entry config id :source-identifier)]
+  (when-some [data (lookup-entry config id :source-identifier)]
     (. builder sourceIdentifier data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1638,11 +1638,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnProject$VpcConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -1672,11 +1672,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnProject$WebhookFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-matched-pattern)]
+  (when-some [data (lookup-entry config id :exclude-matched-pattern)]
     (. builder excludeMatchedPattern data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1708,15 +1708,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnReportGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-reports)]
+  (when-some [data (lookup-entry config id :delete-reports)]
     (. builder deleteReports data))
-  (when-let [data (lookup-entry config id :export-config)]
+  (when-some [data (lookup-entry config id :export-config)]
     (. builder exportConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1748,15 +1748,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnReportGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-reports)]
+  (when-some [data (lookup-entry config id :delete-reports)]
     (. builder deleteReports data))
-  (when-let [data (lookup-entry config id :export-config)]
+  (when-some [data (lookup-entry config id :export-config)]
     (. builder exportConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1785,9 +1785,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Destination` | software.amazon.awscdk.services.codebuild.CfnReportGroup$S3ReportExportConfigProperty | [[cdk.support/lookup-entry]] | `:s3-destination` |
 "
   [^CfnReportGroup$ReportExportConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :export-config-type)]
+  (when-some [data (lookup-entry config id :export-config-type)]
     (. builder exportConfigType data))
-  (when-let [data (lookup-entry config id :s3-destination)]
+  (when-some [data (lookup-entry config id :s3-destination)]
     (. builder s3Destination data))
   (.build builder))
 
@@ -1820,17 +1820,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^CfnReportGroup$S3ReportExportConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :bucket-owner)]
+  (when-some [data (lookup-entry config id :bucket-owner)]
     (. builder bucketOwner data))
-  (when-let [data (lookup-entry config id :encryption-disabled)]
+  (when-some [data (lookup-entry config id :encryption-disabled)]
     (. builder encryptionDisabled data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :packaging)]
+  (when-some [data (lookup-entry config id :packaging)]
     (. builder packaging data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -1861,13 +1861,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnSourceCredential$Builder builder id config]
-  (when-let [data (lookup-entry config id :auth-type)]
+  (when-some [data (lookup-entry config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :server-type)]
+  (when-some [data (lookup-entry config id :server-type)]
     (. builder serverType data))
-  (when-let [data (lookup-entry config id :token)]
+  (when-some [data (lookup-entry config id :token)]
     (. builder token data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -1898,13 +1898,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnSourceCredentialProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auth-type)]
+  (when-some [data (lookup-entry config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :server-type)]
+  (when-some [data (lookup-entry config id :server-type)]
     (. builder serverType data))
-  (when-let [data (lookup-entry config id :token)]
+  (when-some [data (lookup-entry config id :token)]
     (. builder token data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -1934,11 +1934,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CloudWatchLoggingOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -1970,15 +1970,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repository` | software.amazon.awscdk.services.codecommit.IRepository | [[cdk.support/lookup-entry]] | `:repository` |
 "
   [^CodeCommitSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :branch-or-ref)]
+  (when-some [data (lookup-entry config id :branch-or-ref)]
     (. builder branchOrRef data))
-  (when-let [data (lookup-entry config id :clone-depth)]
+  (when-some [data (lookup-entry config id :clone-depth)]
     (. builder cloneDepth data))
-  (when-let [data (lookup-entry config id :fetch-submodules)]
+  (when-some [data (lookup-entry config id :fetch-submodules)]
     (. builder fetchSubmodules data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :repository)]
+  (when-some [data (lookup-entry config id :repository)]
     (. builder repository data))
   (.build builder))
 
@@ -2026,47 +2026,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^CommonProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-all-outbound)]
+  (when-some [data (lookup-entry config id :allow-all-outbound)]
     (. builder allowAllOutbound data))
-  (when-let [data (lookup-entry config id :badge)]
+  (when-some [data (lookup-entry config id :badge)]
     (. builder badge data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :cache)]
+  (when-some [data (lookup-entry config id :cache)]
     (. builder cache data))
-  (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
+  (when-some [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
     (. builder checkSecretsInPlainTextEnvVariables data))
-  (when-let [data (lookup-entry config id :concurrent-build-limit)]
+  (when-some [data (lookup-entry config id :concurrent-build-limit)]
     (. builder concurrentBuildLimit data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :grant-report-group-permissions)]
+  (when-some [data (lookup-entry config id :grant-report-group-permissions)]
     (. builder grantReportGroupPermissions data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
-  (when-let [data (lookup-entry config id :queued-timeout)]
+  (when-some [data (lookup-entry config id :queued-timeout)]
     (. builder queuedTimeout data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :ssm-session-permissions)]
+  (when-some [data (lookup-entry config id :ssm-session-permissions)]
     (. builder ssmSessionPermissions data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -2094,7 +2094,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretsManagerCredentials` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secrets-manager-credentials` |
 "
   [^DockerImageOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :secrets-manager-credentials)]
+  (when-some [data (lookup-entry config id :secrets-manager-credentials)]
     (. builder secretsManagerCredentials data))
   (.build builder))
 
@@ -2125,13 +2125,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mountPoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-point` |
 "
   [^EfsFileSystemLocationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :mount-options)]
+  (when-some [data (lookup-entry config id :mount-options)]
     (. builder mountOptions data))
-  (when-let [data (lookup-entry config id :mount-point)]
+  (when-some [data (lookup-entry config id :mount-point)]
     (. builder mountPoint data))
   (.build builder))
 
@@ -2159,7 +2159,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `location` | software.amazon.awscdk.services.codebuild.CfnProject$ProjectFileSystemLocationProperty | [[cdk.support/lookup-entry]] | `:location` |
 "
   [^FileSystemConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
   (.build builder))
 
@@ -2187,7 +2187,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `accessToken` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:access-token` |
 "
   [^GitHubEnterpriseSourceCredentials$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
   (.build builder))
 
@@ -2215,7 +2215,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `accessToken` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:access-token` |
 "
   [^GitHubEnterpriseSourceCredentialsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
   (.build builder))
 
@@ -2254,29 +2254,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `webhookTriggersBatchBuild` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:webhook-triggers-batch-build` |
 "
   [^GitHubEnterpriseSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :branch-or-ref)]
+  (when-some [data (lookup-entry config id :branch-or-ref)]
     (. builder branchOrRef data))
-  (when-let [data (lookup-entry config id :build-status-context)]
+  (when-some [data (lookup-entry config id :build-status-context)]
     (. builder buildStatusContext data))
-  (when-let [data (lookup-entry config id :build-status-url)]
+  (when-some [data (lookup-entry config id :build-status-url)]
     (. builder buildStatusUrl data))
-  (when-let [data (lookup-entry config id :clone-depth)]
+  (when-some [data (lookup-entry config id :clone-depth)]
     (. builder cloneDepth data))
-  (when-let [data (lookup-entry config id :fetch-submodules)]
+  (when-some [data (lookup-entry config id :fetch-submodules)]
     (. builder fetchSubmodules data))
-  (when-let [data (lookup-entry config id :https-clone-url)]
+  (when-some [data (lookup-entry config id :https-clone-url)]
     (. builder httpsCloneUrl data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :ignore-ssl-errors)]
+  (when-some [data (lookup-entry config id :ignore-ssl-errors)]
     (. builder ignoreSslErrors data))
-  (when-let [data (lookup-entry config id :report-build-status)]
+  (when-some [data (lookup-entry config id :report-build-status)]
     (. builder reportBuildStatus data))
-  (when-let [data (lookup-entry config id :webhook)]
+  (when-some [data (lookup-entry config id :webhook)]
     (. builder webhook data))
-  (when-let [data (lookup-entry config id :webhook-filters)]
+  (when-some [data (lookup-entry config id :webhook-filters)]
     (. builder webhookFilters data))
-  (when-let [data (lookup-entry config id :webhook-triggers-batch-build)]
+  (when-some [data (lookup-entry config id :webhook-triggers-batch-build)]
     (. builder webhookTriggersBatchBuild data))
   (.build builder))
 
@@ -2304,7 +2304,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `accessToken` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:access-token` |
 "
   [^GitHubSourceCredentials$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
   (.build builder))
 
@@ -2332,7 +2332,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `accessToken` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:access-token` |
 "
   [^GitHubSourceCredentialsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
   (.build builder))
 
@@ -2371,29 +2371,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `webhookTriggersBatchBuild` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:webhook-triggers-batch-build` |
 "
   [^GitHubSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :branch-or-ref)]
+  (when-some [data (lookup-entry config id :branch-or-ref)]
     (. builder branchOrRef data))
-  (when-let [data (lookup-entry config id :build-status-context)]
+  (when-some [data (lookup-entry config id :build-status-context)]
     (. builder buildStatusContext data))
-  (when-let [data (lookup-entry config id :build-status-url)]
+  (when-some [data (lookup-entry config id :build-status-url)]
     (. builder buildStatusUrl data))
-  (when-let [data (lookup-entry config id :clone-depth)]
+  (when-some [data (lookup-entry config id :clone-depth)]
     (. builder cloneDepth data))
-  (when-let [data (lookup-entry config id :fetch-submodules)]
+  (when-some [data (lookup-entry config id :fetch-submodules)]
     (. builder fetchSubmodules data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :owner)]
+  (when-some [data (lookup-entry config id :owner)]
     (. builder owner data))
-  (when-let [data (lookup-entry config id :repo)]
+  (when-some [data (lookup-entry config id :repo)]
     (. builder repo data))
-  (when-let [data (lookup-entry config id :report-build-status)]
+  (when-some [data (lookup-entry config id :report-build-status)]
     (. builder reportBuildStatus data))
-  (when-let [data (lookup-entry config id :webhook)]
+  (when-some [data (lookup-entry config id :webhook)]
     (. builder webhook data))
-  (when-let [data (lookup-entry config id :webhook-filters)]
+  (when-some [data (lookup-entry config id :webhook-filters)]
     (. builder webhookFilters data))
-  (when-let [data (lookup-entry config id :webhook-triggers-batch-build)]
+  (when-some [data (lookup-entry config id :webhook-triggers-batch-build)]
     (. builder webhookTriggersBatchBuild data))
   (.build builder))
 
@@ -2422,9 +2422,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3` | software.amazon.awscdk.services.codebuild.S3LoggingOptions | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^LoggingOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch)]
+  (when-some [data (lookup-entry config id :cloud-watch)]
     (. builder cloudWatch data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
 
@@ -2472,47 +2472,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^PipelineProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-all-outbound)]
+  (when-some [data (lookup-entry config id :allow-all-outbound)]
     (. builder allowAllOutbound data))
-  (when-let [data (lookup-entry config id :badge)]
+  (when-some [data (lookup-entry config id :badge)]
     (. builder badge data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :cache)]
+  (when-some [data (lookup-entry config id :cache)]
     (. builder cache data))
-  (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
+  (when-some [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
     (. builder checkSecretsInPlainTextEnvVariables data))
-  (when-let [data (lookup-entry config id :concurrent-build-limit)]
+  (when-some [data (lookup-entry config id :concurrent-build-limit)]
     (. builder concurrentBuildLimit data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :grant-report-group-permissions)]
+  (when-some [data (lookup-entry config id :grant-report-group-permissions)]
     (. builder grantReportGroupPermissions data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
-  (when-let [data (lookup-entry config id :queued-timeout)]
+  (when-some [data (lookup-entry config id :queued-timeout)]
     (. builder queuedTimeout data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :ssm-session-permissions)]
+  (when-some [data (lookup-entry config id :ssm-session-permissions)]
     (. builder ssmSessionPermissions data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -2560,47 +2560,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^PipelineProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-all-outbound)]
+  (when-some [data (lookup-entry config id :allow-all-outbound)]
     (. builder allowAllOutbound data))
-  (when-let [data (lookup-entry config id :badge)]
+  (when-some [data (lookup-entry config id :badge)]
     (. builder badge data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :cache)]
+  (when-some [data (lookup-entry config id :cache)]
     (. builder cache data))
-  (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
+  (when-some [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
     (. builder checkSecretsInPlainTextEnvVariables data))
-  (when-let [data (lookup-entry config id :concurrent-build-limit)]
+  (when-some [data (lookup-entry config id :concurrent-build-limit)]
     (. builder concurrentBuildLimit data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :grant-report-group-permissions)]
+  (when-some [data (lookup-entry config id :grant-report-group-permissions)]
     (. builder grantReportGroupPermissions data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
-  (when-let [data (lookup-entry config id :queued-timeout)]
+  (when-some [data (lookup-entry config id :queued-timeout)]
     (. builder queuedTimeout data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :ssm-session-permissions)]
+  (when-some [data (lookup-entry config id :ssm-session-permissions)]
     (. builder ssmSessionPermissions data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -2652,55 +2652,55 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^Project$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-all-outbound)]
+  (when-some [data (lookup-entry config id :allow-all-outbound)]
     (. builder allowAllOutbound data))
-  (when-let [data (lookup-entry config id :artifacts)]
+  (when-some [data (lookup-entry config id :artifacts)]
     (. builder artifacts data))
-  (when-let [data (lookup-entry config id :badge)]
+  (when-some [data (lookup-entry config id :badge)]
     (. builder badge data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :cache)]
+  (when-some [data (lookup-entry config id :cache)]
     (. builder cache data))
-  (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
+  (when-some [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
     (. builder checkSecretsInPlainTextEnvVariables data))
-  (when-let [data (lookup-entry config id :concurrent-build-limit)]
+  (when-some [data (lookup-entry config id :concurrent-build-limit)]
     (. builder concurrentBuildLimit data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :grant-report-group-permissions)]
+  (when-some [data (lookup-entry config id :grant-report-group-permissions)]
     (. builder grantReportGroupPermissions data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
-  (when-let [data (lookup-entry config id :queued-timeout)]
+  (when-some [data (lookup-entry config id :queued-timeout)]
     (. builder queuedTimeout data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :secondary-artifacts)]
+  (when-some [data (lookup-entry config id :secondary-artifacts)]
     (. builder secondaryArtifacts data))
-  (when-let [data (lookup-entry config id :secondary-sources)]
+  (when-some [data (lookup-entry config id :secondary-sources)]
     (. builder secondarySources data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :ssm-session-permissions)]
+  (when-some [data (lookup-entry config id :ssm-session-permissions)]
     (. builder ssmSessionPermissions data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -2731,13 +2731,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |
 "
   [^ProjectNotifyOnOptions$Builder builder id config]
-  (when-let [data (detail-type config id :detail-type)]
+  (when-some [data (detail-type config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :notification-rule-name)]
+  (when-some [data (lookup-entry config id :notification-rule-name)]
     (. builder notificationRuleName data))
   (.build builder))
 
@@ -2789,55 +2789,55 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^ProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-all-outbound)]
+  (when-some [data (lookup-entry config id :allow-all-outbound)]
     (. builder allowAllOutbound data))
-  (when-let [data (lookup-entry config id :artifacts)]
+  (when-some [data (lookup-entry config id :artifacts)]
     (. builder artifacts data))
-  (when-let [data (lookup-entry config id :badge)]
+  (when-some [data (lookup-entry config id :badge)]
     (. builder badge data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :cache)]
+  (when-some [data (lookup-entry config id :cache)]
     (. builder cache data))
-  (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
+  (when-some [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
     (. builder checkSecretsInPlainTextEnvVariables data))
-  (when-let [data (lookup-entry config id :concurrent-build-limit)]
+  (when-some [data (lookup-entry config id :concurrent-build-limit)]
     (. builder concurrentBuildLimit data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :file-system-locations)]
+  (when-some [data (lookup-entry config id :file-system-locations)]
     (. builder fileSystemLocations data))
-  (when-let [data (lookup-entry config id :grant-report-group-permissions)]
+  (when-some [data (lookup-entry config id :grant-report-group-permissions)]
     (. builder grantReportGroupPermissions data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
-  (when-let [data (lookup-entry config id :queued-timeout)]
+  (when-some [data (lookup-entry config id :queued-timeout)]
     (. builder queuedTimeout data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :secondary-artifacts)]
+  (when-some [data (lookup-entry config id :secondary-artifacts)]
     (. builder secondaryArtifacts data))
-  (when-let [data (lookup-entry config id :secondary-sources)]
+  (when-some [data (lookup-entry config id :secondary-sources)]
     (. builder secondarySources data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :ssm-session-permissions)]
+  (when-some [data (lookup-entry config id :ssm-session-permissions)]
     (. builder ssmSessionPermissions data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -2870,17 +2870,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zipExport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:zip-export` |
 "
   [^ReportGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-reports)]
+  (when-some [data (lookup-entry config id :delete-reports)]
     (. builder deleteReports data))
-  (when-let [data (lookup-entry config id :export-bucket)]
+  (when-some [data (lookup-entry config id :export-bucket)]
     (. builder exportBucket data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :report-group-name)]
+  (when-some [data (lookup-entry config id :report-group-name)]
     (. builder reportGroupName data))
-  (when-let [data (report-group-type config id :type)]
+  (when-some [data (report-group-type config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :zip-export)]
+  (when-some [data (lookup-entry config id :zip-export)]
     (. builder zipExport data))
   (.build builder))
 
@@ -2913,17 +2913,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zipExport` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:zip-export` |
 "
   [^ReportGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delete-reports)]
+  (when-some [data (lookup-entry config id :delete-reports)]
     (. builder deleteReports data))
-  (when-let [data (lookup-entry config id :export-bucket)]
+  (when-some [data (lookup-entry config id :export-bucket)]
     (. builder exportBucket data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :report-group-name)]
+  (when-some [data (lookup-entry config id :report-group-name)]
     (. builder reportGroupName data))
-  (when-let [data (report-group-type config id :type)]
+  (when-some [data (report-group-type config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :zip-export)]
+  (when-some [data (lookup-entry config id :zip-export)]
     (. builder zipExport data))
   (.build builder))
 
@@ -2957,19 +2957,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^S3ArtifactsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :include-build-id)]
+  (when-some [data (lookup-entry config id :include-build-id)]
     (. builder includeBuildId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :package-zip)]
+  (when-some [data (lookup-entry config id :package-zip)]
     (. builder packageZip data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -3000,13 +3000,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^S3LoggingOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :encrypted)]
+  (when-some [data (lookup-entry config id :encrypted)]
     (. builder encrypted data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -3037,13 +3037,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^S3SourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -3073,11 +3073,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sourceVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-version` |
 "
   [^SourceConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :build-triggers)]
+  (when-some [data (lookup-entry config id :build-triggers)]
     (. builder buildTriggers data))
-  (when-let [data (lookup-entry config id :source-property)]
+  (when-some [data (lookup-entry config id :source-property)]
     (. builder sourceProperty data))
-  (when-let [data (lookup-entry config id :source-version)]
+  (when-some [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
 
@@ -3105,7 +3105,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `identifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:identifier` |
 "
   [^SourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
   (.build builder))
 
@@ -3134,9 +3134,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `managedPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:managed-policy-name` |
 "
   [^UntrustedCodeBoundaryPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-statements)]
+  (when-some [data (lookup-entry config id :additional-statements)]
     (. builder additionalStatements data))
-  (when-let [data (lookup-entry config id :managed-policy-name)]
+  (when-some [data (lookup-entry config id :managed-policy-name)]
     (. builder managedPolicyName data))
   (.build builder))
 
@@ -3165,9 +3165,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `managedPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:managed-policy-name` |
 "
   [^UntrustedCodeBoundaryPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-statements)]
+  (when-some [data (lookup-entry config id :additional-statements)]
     (. builder additionalStatements data))
-  (when-let [data (lookup-entry config id :managed-policy-name)]
+  (when-some [data (lookup-entry config id :managed-policy-name)]
     (. builder managedPolicyName data))
   (.build builder))
 

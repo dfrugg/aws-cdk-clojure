@@ -23,7 +23,7 @@
 | `persistentBufferEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:persistent-buffer-enabled` |
 "
   [^CfnPipeline$BufferOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :persistent-buffer-enabled)]
+  (when-some [data (lookup-entry config id :persistent-buffer-enabled)]
     (. builder persistentBufferEnabled data))
   (.build builder))
 
@@ -59,23 +59,23 @@
 | `vpcOptions` | software.amazon.awscdk.services.osis.CfnPipeline$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnPipeline$Builder builder id config]
-  (when-let [data (lookup-entry config id :buffer-options)]
+  (when-some [data (lookup-entry config id :buffer-options)]
     (. builder bufferOptions data))
-  (when-let [data (lookup-entry config id :encryption-at-rest-options)]
+  (when-some [data (lookup-entry config id :encryption-at-rest-options)]
     (. builder encryptionAtRestOptions data))
-  (when-let [data (lookup-entry config id :log-publishing-options)]
+  (when-some [data (lookup-entry config id :log-publishing-options)]
     (. builder logPublishingOptions data))
-  (when-let [data (lookup-entry config id :max-units)]
+  (when-some [data (lookup-entry config id :max-units)]
     (. builder maxUnits data))
-  (when-let [data (lookup-entry config id :min-units)]
+  (when-some [data (lookup-entry config id :min-units)]
     (. builder minUnits data))
-  (when-let [data (lookup-entry config id :pipeline-configuration-body)]
+  (when-some [data (lookup-entry config id :pipeline-configuration-body)]
     (. builder pipelineConfigurationBody data))
-  (when-let [data (lookup-entry config id :pipeline-name)]
+  (when-some [data (lookup-entry config id :pipeline-name)]
     (. builder pipelineName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-options)]
+  (when-some [data (lookup-entry config id :vpc-options)]
     (. builder vpcOptions data))
   (.build builder))
 
@@ -103,7 +103,7 @@
 | `logGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group` |
 "
   [^CfnPipeline$CloudWatchLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
   (.build builder))
 
@@ -131,7 +131,7 @@
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 "
   [^CfnPipeline$EncryptionAtRestOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
   (.build builder))
 
@@ -160,9 +160,9 @@
 | `isLoggingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-logging-enabled` |
 "
   [^CfnPipeline$LogPublishingOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-log-destination)]
+  (when-some [data (lookup-entry config id :cloud-watch-log-destination)]
     (. builder cloudWatchLogDestination data))
-  (when-let [data (lookup-entry config id :is-logging-enabled)]
+  (when-some [data (lookup-entry config id :is-logging-enabled)]
     (. builder isLoggingEnabled data))
   (.build builder))
 
@@ -198,23 +198,23 @@
 | `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnPipelineProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :buffer-options)]
+  (when-some [data (lookup-entry config id :buffer-options)]
     (. builder bufferOptions data))
-  (when-let [data (lookup-entry config id :encryption-at-rest-options)]
+  (when-some [data (lookup-entry config id :encryption-at-rest-options)]
     (. builder encryptionAtRestOptions data))
-  (when-let [data (lookup-entry config id :log-publishing-options)]
+  (when-some [data (lookup-entry config id :log-publishing-options)]
     (. builder logPublishingOptions data))
-  (when-let [data (lookup-entry config id :max-units)]
+  (when-some [data (lookup-entry config id :max-units)]
     (. builder maxUnits data))
-  (when-let [data (lookup-entry config id :min-units)]
+  (when-some [data (lookup-entry config id :min-units)]
     (. builder minUnits data))
-  (when-let [data (lookup-entry config id :pipeline-configuration-body)]
+  (when-some [data (lookup-entry config id :pipeline-configuration-body)]
     (. builder pipelineConfigurationBody data))
-  (when-let [data (lookup-entry config id :pipeline-name)]
+  (when-some [data (lookup-entry config id :pipeline-name)]
     (. builder pipelineName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-options)]
+  (when-some [data (lookup-entry config id :vpc-options)]
     (. builder vpcOptions data))
   (.build builder))
 
@@ -244,11 +244,11 @@
 | `vpcOptions` | software.amazon.awscdk.services.osis.CfnPipeline$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnPipeline$VpcEndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-endpoint-id)]
+  (when-some [data (lookup-entry config id :vpc-endpoint-id)]
     (. builder vpcEndpointId data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
-  (when-let [data (lookup-entry config id :vpc-options)]
+  (when-some [data (lookup-entry config id :vpc-options)]
     (. builder vpcOptions data))
   (.build builder))
 
@@ -277,9 +277,9 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnPipeline$VpcOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 

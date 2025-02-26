@@ -28,9 +28,9 @@
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^ApplicationLoadBalancerEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -62,9 +62,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.IAp
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^ApplicationLoadBalancerEndpointOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -92,7 +92,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.IAp
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnEipEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -123,7 +123,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.CfnEIP]___
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnEipEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -152,9 +152,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.CfnEIP]___
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^InstanceEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -186,9 +186,9 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.IInstance]___
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^InstanceEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -216,7 +216,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.IInstance]___
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^NetworkLoadBalancerEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -247,7 +247,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.INe
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^NetworkLoadBalancerEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 

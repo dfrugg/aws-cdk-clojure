@@ -60,13 +60,13 @@
 | `vpcInformation` | software.amazon.awscdk.services.pcaconnectorad.CfnConnector$VpcInformationProperty | [[cdk.support/lookup-entry]] | `:vpc-information` |
 "
   [^CfnConnector$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :directory-id)]
+  (when-some [data (lookup-entry config id :directory-id)]
     (. builder directoryId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-information)]
+  (when-some [data (lookup-entry config id :vpc-information)]
     (. builder vpcInformation data))
   (.build builder))
 
@@ -97,13 +97,13 @@
 | `vpcInformation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-information` |
 "
   [^CfnConnectorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :directory-id)]
+  (when-some [data (lookup-entry config id :directory-id)]
     (. builder directoryId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-information)]
+  (when-some [data (lookup-entry config id :vpc-information)]
     (. builder vpcInformation data))
   (.build builder))
 
@@ -131,7 +131,7 @@
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 "
   [^CfnConnector$VpcInformationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
   (.build builder))
 
@@ -160,9 +160,9 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDirectoryRegistration$Builder builder id config]
-  (when-let [data (lookup-entry config id :directory-id)]
+  (when-some [data (lookup-entry config id :directory-id)]
     (. builder directoryId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -191,9 +191,9 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDirectoryRegistrationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :directory-id)]
+  (when-some [data (lookup-entry config id :directory-id)]
     (. builder directoryId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -222,9 +222,9 @@
 | `directoryRegistrationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-registration-arn` |
 "
   [^CfnServicePrincipalName$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-arn)]
+  (when-some [data (lookup-entry config id :connector-arn)]
     (. builder connectorArn data))
-  (when-let [data (lookup-entry config id :directory-registration-arn)]
+  (when-some [data (lookup-entry config id :directory-registration-arn)]
     (. builder directoryRegistrationArn data))
   (.build builder))
 
@@ -253,9 +253,9 @@
 | `directoryRegistrationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:directory-registration-arn` |
 "
   [^CfnServicePrincipalNameProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-arn)]
+  (when-some [data (lookup-entry config id :connector-arn)]
     (. builder connectorArn data))
-  (when-let [data (lookup-entry config id :directory-registration-arn)]
+  (when-some [data (lookup-entry config id :directory-registration-arn)]
     (. builder directoryRegistrationArn data))
   (.build builder))
 
@@ -284,9 +284,9 @@
 | `policies` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:policies` |
 "
   [^CfnTemplate$ApplicationPoliciesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :critical)]
+  (when-some [data (lookup-entry config id :critical)]
     (. builder critical data))
-  (when-let [data (lookup-entry config id :policies)]
+  (when-some [data (lookup-entry config id :policies)]
     (. builder policies data))
   (.build builder))
 
@@ -315,9 +315,9 @@
 | `policyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-type` |
 "
   [^CfnTemplate$ApplicationPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-object-identifier)]
+  (when-some [data (lookup-entry config id :policy-object-identifier)]
     (. builder policyObjectIdentifier data))
-  (when-let [data (lookup-entry config id :policy-type)]
+  (when-some [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
   (.build builder))
 
@@ -349,15 +349,15 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-arn)]
+  (when-some [data (lookup-entry config id :connector-arn)]
     (. builder connectorArn data))
-  (when-let [data (lookup-entry config id :definition)]
+  (when-some [data (lookup-entry config id :definition)]
     (. builder definition data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :reenroll-all-certificate-holders)]
+  (when-some [data (lookup-entry config id :reenroll-all-certificate-holders)]
     (. builder reenrollAllCertificateHolders data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -386,9 +386,9 @@
 | `validityPeriod` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$ValidityPeriodProperty | [[cdk.support/lookup-entry]] | `:validity-period` |
 "
   [^CfnTemplate$CertificateValidityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :renewal-period)]
+  (when-some [data (lookup-entry config id :renewal-period)]
     (. builder renewalPeriod data))
-  (when-let [data (lookup-entry config id :validity-period)]
+  (when-some [data (lookup-entry config id :validity-period)]
     (. builder validityPeriod data))
   (.build builder))
 
@@ -420,15 +420,15 @@
 | `userInteractionRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
 "
   [^CfnTemplate$EnrollmentFlagsV2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
+  (when-some [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
     (. builder enableKeyReuseOnNtTokenKeysetStorageFull data))
-  (when-let [data (lookup-entry config id :include-symmetric-algorithms)]
+  (when-some [data (lookup-entry config id :include-symmetric-algorithms)]
     (. builder includeSymmetricAlgorithms data))
-  (when-let [data (lookup-entry config id :no-security-extension)]
+  (when-some [data (lookup-entry config id :no-security-extension)]
     (. builder noSecurityExtension data))
-  (when-let [data (lookup-entry config id :remove-invalid-certificate-from-personal-store)]
+  (when-some [data (lookup-entry config id :remove-invalid-certificate-from-personal-store)]
     (. builder removeInvalidCertificateFromPersonalStore data))
-  (when-let [data (lookup-entry config id :user-interaction-required)]
+  (when-some [data (lookup-entry config id :user-interaction-required)]
     (. builder userInteractionRequired data))
   (.build builder))
 
@@ -460,15 +460,15 @@
 | `userInteractionRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
 "
   [^CfnTemplate$EnrollmentFlagsV3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
+  (when-some [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
     (. builder enableKeyReuseOnNtTokenKeysetStorageFull data))
-  (when-let [data (lookup-entry config id :include-symmetric-algorithms)]
+  (when-some [data (lookup-entry config id :include-symmetric-algorithms)]
     (. builder includeSymmetricAlgorithms data))
-  (when-let [data (lookup-entry config id :no-security-extension)]
+  (when-some [data (lookup-entry config id :no-security-extension)]
     (. builder noSecurityExtension data))
-  (when-let [data (lookup-entry config id :remove-invalid-certificate-from-personal-store)]
+  (when-some [data (lookup-entry config id :remove-invalid-certificate-from-personal-store)]
     (. builder removeInvalidCertificateFromPersonalStore data))
-  (when-let [data (lookup-entry config id :user-interaction-required)]
+  (when-some [data (lookup-entry config id :user-interaction-required)]
     (. builder userInteractionRequired data))
   (.build builder))
 
@@ -500,15 +500,15 @@
 | `userInteractionRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-interaction-required` |
 "
   [^CfnTemplate$EnrollmentFlagsV4Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
+  (when-some [data (lookup-entry config id :enable-key-reuse-on-nt-token-keyset-storage-full)]
     (. builder enableKeyReuseOnNtTokenKeysetStorageFull data))
-  (when-let [data (lookup-entry config id :include-symmetric-algorithms)]
+  (when-some [data (lookup-entry config id :include-symmetric-algorithms)]
     (. builder includeSymmetricAlgorithms data))
-  (when-let [data (lookup-entry config id :no-security-extension)]
+  (when-some [data (lookup-entry config id :no-security-extension)]
     (. builder noSecurityExtension data))
-  (when-let [data (lookup-entry config id :remove-invalid-certificate-from-personal-store)]
+  (when-some [data (lookup-entry config id :remove-invalid-certificate-from-personal-store)]
     (. builder removeInvalidCertificateFromPersonalStore data))
-  (when-let [data (lookup-entry config id :user-interaction-required)]
+  (when-some [data (lookup-entry config id :user-interaction-required)]
     (. builder userInteractionRequired data))
   (.build builder))
 
@@ -537,9 +537,9 @@
 | `keyUsage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-usage` |
 "
   [^CfnTemplate$ExtensionsV2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-policies)]
+  (when-some [data (lookup-entry config id :application-policies)]
     (. builder applicationPolicies data))
-  (when-let [data (lookup-entry config id :key-usage)]
+  (when-some [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
   (.build builder))
 
@@ -568,9 +568,9 @@
 | `keyUsage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-usage` |
 "
   [^CfnTemplate$ExtensionsV3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-policies)]
+  (when-some [data (lookup-entry config id :application-policies)]
     (. builder applicationPolicies data))
-  (when-let [data (lookup-entry config id :key-usage)]
+  (when-some [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
   (.build builder))
 
@@ -599,9 +599,9 @@
 | `keyUsage` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$KeyUsageProperty | [[cdk.support/lookup-entry]] | `:key-usage` |
 "
   [^CfnTemplate$ExtensionsV4Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-policies)]
+  (when-some [data (lookup-entry config id :application-policies)]
     (. builder applicationPolicies data))
-  (when-let [data (lookup-entry config id :key-usage)]
+  (when-some [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
   (.build builder))
 
@@ -630,9 +630,9 @@
 | `machineType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:machine-type` |
 "
   [^CfnTemplate$GeneralFlagsV2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-enrollment)]
+  (when-some [data (lookup-entry config id :auto-enrollment)]
     (. builder autoEnrollment data))
-  (when-let [data (lookup-entry config id :machine-type)]
+  (when-some [data (lookup-entry config id :machine-type)]
     (. builder machineType data))
   (.build builder))
 
@@ -661,9 +661,9 @@
 | `machineType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:machine-type` |
 "
   [^CfnTemplate$GeneralFlagsV3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-enrollment)]
+  (when-some [data (lookup-entry config id :auto-enrollment)]
     (. builder autoEnrollment data))
-  (when-let [data (lookup-entry config id :machine-type)]
+  (when-some [data (lookup-entry config id :machine-type)]
     (. builder machineType data))
   (.build builder))
 
@@ -692,9 +692,9 @@
 | `machineType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:machine-type` |
 "
   [^CfnTemplate$GeneralFlagsV4Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-enrollment)]
+  (when-some [data (lookup-entry config id :auto-enrollment)]
     (. builder autoEnrollment data))
-  (when-let [data (lookup-entry config id :machine-type)]
+  (when-some [data (lookup-entry config id :machine-type)]
     (. builder machineType data))
   (.build builder))
 
@@ -723,9 +723,9 @@
 | `enroll` | java.lang.String | [[cdk.support/lookup-entry]] | `:enroll` |
 "
   [^CfnTemplateGroupAccessControlEntry$AccessRightsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-enroll)]
+  (when-some [data (lookup-entry config id :auto-enroll)]
     (. builder autoEnroll data))
-  (when-let [data (lookup-entry config id :enroll)]
+  (when-some [data (lookup-entry config id :enroll)]
     (. builder enroll data))
   (.build builder))
 
@@ -756,13 +756,13 @@
 | `templateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-arn` |
 "
   [^CfnTemplateGroupAccessControlEntry$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-rights)]
+  (when-some [data (lookup-entry config id :access-rights)]
     (. builder accessRights data))
-  (when-let [data (lookup-entry config id :group-display-name)]
+  (when-some [data (lookup-entry config id :group-display-name)]
     (. builder groupDisplayName data))
-  (when-let [data (lookup-entry config id :group-security-identifier)]
+  (when-some [data (lookup-entry config id :group-security-identifier)]
     (. builder groupSecurityIdentifier data))
-  (when-let [data (lookup-entry config id :template-arn)]
+  (when-some [data (lookup-entry config id :template-arn)]
     (. builder templateArn data))
   (.build builder))
 
@@ -793,13 +793,13 @@
 | `templateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-arn` |
 "
   [^CfnTemplateGroupAccessControlEntryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-rights)]
+  (when-some [data (lookup-entry config id :access-rights)]
     (. builder accessRights data))
-  (when-let [data (lookup-entry config id :group-display-name)]
+  (when-some [data (lookup-entry config id :group-display-name)]
     (. builder groupDisplayName data))
-  (when-let [data (lookup-entry config id :group-security-identifier)]
+  (when-some [data (lookup-entry config id :group-security-identifier)]
     (. builder groupSecurityIdentifier data))
-  (when-let [data (lookup-entry config id :template-arn)]
+  (when-some [data (lookup-entry config id :template-arn)]
     (. builder templateArn data))
   (.build builder))
 
@@ -831,15 +831,15 @@
 | `nonRepudiation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:non-repudiation` |
 "
   [^CfnTemplate$KeyUsageFlagsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-encipherment)]
+  (when-some [data (lookup-entry config id :data-encipherment)]
     (. builder dataEncipherment data))
-  (when-let [data (lookup-entry config id :digital-signature)]
+  (when-some [data (lookup-entry config id :digital-signature)]
     (. builder digitalSignature data))
-  (when-let [data (lookup-entry config id :key-agreement)]
+  (when-some [data (lookup-entry config id :key-agreement)]
     (. builder keyAgreement data))
-  (when-let [data (lookup-entry config id :key-encipherment)]
+  (when-some [data (lookup-entry config id :key-encipherment)]
     (. builder keyEncipherment data))
-  (when-let [data (lookup-entry config id :non-repudiation)]
+  (when-some [data (lookup-entry config id :non-repudiation)]
     (. builder nonRepudiation data))
   (.build builder))
 
@@ -868,9 +868,9 @@
 | `usageFlags` | software.amazon.awscdk.services.pcaconnectorad.CfnTemplate$KeyUsageFlagsProperty | [[cdk.support/lookup-entry]] | `:usage-flags` |
 "
   [^CfnTemplate$KeyUsageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :critical)]
+  (when-some [data (lookup-entry config id :critical)]
     (. builder critical data))
-  (when-let [data (lookup-entry config id :usage-flags)]
+  (when-some [data (lookup-entry config id :usage-flags)]
     (. builder usageFlags data))
   (.build builder))
 
@@ -900,11 +900,11 @@
 | `sign` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sign` |
 "
   [^CfnTemplate$KeyUsagePropertyFlagsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :decrypt)]
+  (when-some [data (lookup-entry config id :decrypt)]
     (. builder decrypt data))
-  (when-let [data (lookup-entry config id :key-agreement)]
+  (when-some [data (lookup-entry config id :key-agreement)]
     (. builder keyAgreement data))
-  (when-let [data (lookup-entry config id :sign)]
+  (when-some [data (lookup-entry config id :sign)]
     (. builder sign data))
   (.build builder))
 
@@ -933,9 +933,9 @@
 | `propertyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:property-type` |
 "
   [^CfnTemplate$KeyUsagePropertyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :property-flags)]
+  (when-some [data (lookup-entry config id :property-flags)]
     (. builder propertyFlags data))
-  (when-let [data (lookup-entry config id :property-type)]
+  (when-some [data (lookup-entry config id :property-type)]
     (. builder propertyType data))
   (.build builder))
 
@@ -965,11 +965,11 @@
 | `minimalKeyLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimal-key-length` |
 "
   [^CfnTemplate$PrivateKeyAttributesV2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :crypto-providers)]
+  (when-some [data (lookup-entry config id :crypto-providers)]
     (. builder cryptoProviders data))
-  (when-let [data (lookup-entry config id :key-spec)]
+  (when-some [data (lookup-entry config id :key-spec)]
     (. builder keySpec data))
-  (when-let [data (lookup-entry config id :minimal-key-length)]
+  (when-some [data (lookup-entry config id :minimal-key-length)]
     (. builder minimalKeyLength data))
   (.build builder))
 
@@ -1001,15 +1001,15 @@
 | `minimalKeyLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimal-key-length` |
 "
   [^CfnTemplate$PrivateKeyAttributesV3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm)]
+  (when-some [data (lookup-entry config id :algorithm)]
     (. builder algorithm data))
-  (when-let [data (lookup-entry config id :crypto-providers)]
+  (when-some [data (lookup-entry config id :crypto-providers)]
     (. builder cryptoProviders data))
-  (when-let [data (lookup-entry config id :key-spec)]
+  (when-some [data (lookup-entry config id :key-spec)]
     (. builder keySpec data))
-  (when-let [data (lookup-entry config id :key-usage-property)]
+  (when-some [data (lookup-entry config id :key-usage-property)]
     (. builder keyUsageProperty data))
-  (when-let [data (lookup-entry config id :minimal-key-length)]
+  (when-some [data (lookup-entry config id :minimal-key-length)]
     (. builder minimalKeyLength data))
   (.build builder))
 
@@ -1041,15 +1041,15 @@
 | `minimalKeyLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimal-key-length` |
 "
   [^CfnTemplate$PrivateKeyAttributesV4Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm)]
+  (when-some [data (lookup-entry config id :algorithm)]
     (. builder algorithm data))
-  (when-let [data (lookup-entry config id :crypto-providers)]
+  (when-some [data (lookup-entry config id :crypto-providers)]
     (. builder cryptoProviders data))
-  (when-let [data (lookup-entry config id :key-spec)]
+  (when-some [data (lookup-entry config id :key-spec)]
     (. builder keySpec data))
-  (when-let [data (lookup-entry config id :key-usage-property)]
+  (when-some [data (lookup-entry config id :key-usage-property)]
     (. builder keyUsageProperty data))
-  (when-let [data (lookup-entry config id :minimal-key-length)]
+  (when-some [data (lookup-entry config id :minimal-key-length)]
     (. builder minimalKeyLength data))
   (.build builder))
 
@@ -1079,11 +1079,11 @@
 | `strongKeyProtectionRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:strong-key-protection-required` |
 "
   [^CfnTemplate$PrivateKeyFlagsV2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-version)]
+  (when-some [data (lookup-entry config id :client-version)]
     (. builder clientVersion data))
-  (when-let [data (lookup-entry config id :exportable-key)]
+  (when-some [data (lookup-entry config id :exportable-key)]
     (. builder exportableKey data))
-  (when-let [data (lookup-entry config id :strong-key-protection-required)]
+  (when-some [data (lookup-entry config id :strong-key-protection-required)]
     (. builder strongKeyProtectionRequired data))
   (.build builder))
 
@@ -1114,13 +1114,13 @@
 | `strongKeyProtectionRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:strong-key-protection-required` |
 "
   [^CfnTemplate$PrivateKeyFlagsV3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-version)]
+  (when-some [data (lookup-entry config id :client-version)]
     (. builder clientVersion data))
-  (when-let [data (lookup-entry config id :exportable-key)]
+  (when-some [data (lookup-entry config id :exportable-key)]
     (. builder exportableKey data))
-  (when-let [data (lookup-entry config id :require-alternate-signature-algorithm)]
+  (when-some [data (lookup-entry config id :require-alternate-signature-algorithm)]
     (. builder requireAlternateSignatureAlgorithm data))
-  (when-let [data (lookup-entry config id :strong-key-protection-required)]
+  (when-some [data (lookup-entry config id :strong-key-protection-required)]
     (. builder strongKeyProtectionRequired data))
   (.build builder))
 
@@ -1153,17 +1153,17 @@
 | `useLegacyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-legacy-provider` |
 "
   [^CfnTemplate$PrivateKeyFlagsV4Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-version)]
+  (when-some [data (lookup-entry config id :client-version)]
     (. builder clientVersion data))
-  (when-let [data (lookup-entry config id :exportable-key)]
+  (when-some [data (lookup-entry config id :exportable-key)]
     (. builder exportableKey data))
-  (when-let [data (lookup-entry config id :require-alternate-signature-algorithm)]
+  (when-some [data (lookup-entry config id :require-alternate-signature-algorithm)]
     (. builder requireAlternateSignatureAlgorithm data))
-  (when-let [data (lookup-entry config id :require-same-key-renewal)]
+  (when-some [data (lookup-entry config id :require-same-key-renewal)]
     (. builder requireSameKeyRenewal data))
-  (when-let [data (lookup-entry config id :strong-key-protection-required)]
+  (when-some [data (lookup-entry config id :strong-key-protection-required)]
     (. builder strongKeyProtectionRequired data))
-  (when-let [data (lookup-entry config id :use-legacy-provider)]
+  (when-some [data (lookup-entry config id :use-legacy-provider)]
     (. builder useLegacyProvider data))
   (.build builder))
 
@@ -1195,15 +1195,15 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connector-arn)]
+  (when-some [data (lookup-entry config id :connector-arn)]
     (. builder connectorArn data))
-  (when-let [data (lookup-entry config id :definition)]
+  (when-some [data (lookup-entry config id :definition)]
     (. builder definition data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :reenroll-all-certificate-holders)]
+  (when-some [data (lookup-entry config id :reenroll-all-certificate-holders)]
     (. builder reenrollAllCertificateHolders data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1240,25 +1240,25 @@
 | `sanRequireUpn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:san-require-upn` |
 "
   [^CfnTemplate$SubjectNameFlagsV2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :require-common-name)]
+  (when-some [data (lookup-entry config id :require-common-name)]
     (. builder requireCommonName data))
-  (when-let [data (lookup-entry config id :require-directory-path)]
+  (when-some [data (lookup-entry config id :require-directory-path)]
     (. builder requireDirectoryPath data))
-  (when-let [data (lookup-entry config id :require-dns-as-cn)]
+  (when-some [data (lookup-entry config id :require-dns-as-cn)]
     (. builder requireDnsAsCn data))
-  (when-let [data (lookup-entry config id :require-email)]
+  (when-some [data (lookup-entry config id :require-email)]
     (. builder requireEmail data))
-  (when-let [data (lookup-entry config id :san-require-directory-guid)]
+  (when-some [data (lookup-entry config id :san-require-directory-guid)]
     (. builder sanRequireDirectoryGuid data))
-  (when-let [data (lookup-entry config id :san-require-dns)]
+  (when-some [data (lookup-entry config id :san-require-dns)]
     (. builder sanRequireDns data))
-  (when-let [data (lookup-entry config id :san-require-domain-dns)]
+  (when-some [data (lookup-entry config id :san-require-domain-dns)]
     (. builder sanRequireDomainDns data))
-  (when-let [data (lookup-entry config id :san-require-email)]
+  (when-some [data (lookup-entry config id :san-require-email)]
     (. builder sanRequireEmail data))
-  (when-let [data (lookup-entry config id :san-require-spn)]
+  (when-some [data (lookup-entry config id :san-require-spn)]
     (. builder sanRequireSpn data))
-  (when-let [data (lookup-entry config id :san-require-upn)]
+  (when-some [data (lookup-entry config id :san-require-upn)]
     (. builder sanRequireUpn data))
   (.build builder))
 
@@ -1295,25 +1295,25 @@
 | `sanRequireUpn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-upn` |
 "
   [^CfnTemplate$SubjectNameFlagsV3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :require-common-name)]
+  (when-some [data (lookup-entry config id :require-common-name)]
     (. builder requireCommonName data))
-  (when-let [data (lookup-entry config id :require-directory-path)]
+  (when-some [data (lookup-entry config id :require-directory-path)]
     (. builder requireDirectoryPath data))
-  (when-let [data (lookup-entry config id :require-dns-as-cn)]
+  (when-some [data (lookup-entry config id :require-dns-as-cn)]
     (. builder requireDnsAsCn data))
-  (when-let [data (lookup-entry config id :require-email)]
+  (when-some [data (lookup-entry config id :require-email)]
     (. builder requireEmail data))
-  (when-let [data (lookup-entry config id :san-require-directory-guid)]
+  (when-some [data (lookup-entry config id :san-require-directory-guid)]
     (. builder sanRequireDirectoryGuid data))
-  (when-let [data (lookup-entry config id :san-require-dns)]
+  (when-some [data (lookup-entry config id :san-require-dns)]
     (. builder sanRequireDns data))
-  (when-let [data (lookup-entry config id :san-require-domain-dns)]
+  (when-some [data (lookup-entry config id :san-require-domain-dns)]
     (. builder sanRequireDomainDns data))
-  (when-let [data (lookup-entry config id :san-require-email)]
+  (when-some [data (lookup-entry config id :san-require-email)]
     (. builder sanRequireEmail data))
-  (when-let [data (lookup-entry config id :san-require-spn)]
+  (when-some [data (lookup-entry config id :san-require-spn)]
     (. builder sanRequireSpn data))
-  (when-let [data (lookup-entry config id :san-require-upn)]
+  (when-some [data (lookup-entry config id :san-require-upn)]
     (. builder sanRequireUpn data))
   (.build builder))
 
@@ -1350,25 +1350,25 @@
 | `sanRequireUpn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:san-require-upn` |
 "
   [^CfnTemplate$SubjectNameFlagsV4Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :require-common-name)]
+  (when-some [data (lookup-entry config id :require-common-name)]
     (. builder requireCommonName data))
-  (when-let [data (lookup-entry config id :require-directory-path)]
+  (when-some [data (lookup-entry config id :require-directory-path)]
     (. builder requireDirectoryPath data))
-  (when-let [data (lookup-entry config id :require-dns-as-cn)]
+  (when-some [data (lookup-entry config id :require-dns-as-cn)]
     (. builder requireDnsAsCn data))
-  (when-let [data (lookup-entry config id :require-email)]
+  (when-some [data (lookup-entry config id :require-email)]
     (. builder requireEmail data))
-  (when-let [data (lookup-entry config id :san-require-directory-guid)]
+  (when-some [data (lookup-entry config id :san-require-directory-guid)]
     (. builder sanRequireDirectoryGuid data))
-  (when-let [data (lookup-entry config id :san-require-dns)]
+  (when-some [data (lookup-entry config id :san-require-dns)]
     (. builder sanRequireDns data))
-  (when-let [data (lookup-entry config id :san-require-domain-dns)]
+  (when-some [data (lookup-entry config id :san-require-domain-dns)]
     (. builder sanRequireDomainDns data))
-  (when-let [data (lookup-entry config id :san-require-email)]
+  (when-some [data (lookup-entry config id :san-require-email)]
     (. builder sanRequireEmail data))
-  (when-let [data (lookup-entry config id :san-require-spn)]
+  (when-some [data (lookup-entry config id :san-require-spn)]
     (. builder sanRequireSpn data))
-  (when-let [data (lookup-entry config id :san-require-upn)]
+  (when-some [data (lookup-entry config id :san-require-upn)]
     (. builder sanRequireUpn data))
   (.build builder))
 
@@ -1398,11 +1398,11 @@
 | `templateV4` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template-v4` |
 "
   [^CfnTemplate$TemplateDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :template-v2)]
+  (when-some [data (lookup-entry config id :template-v2)]
     (. builder templateV2 data))
-  (when-let [data (lookup-entry config id :template-v3)]
+  (when-some [data (lookup-entry config id :template-v3)]
     (. builder templateV3 data))
-  (when-let [data (lookup-entry config id :template-v4)]
+  (when-some [data (lookup-entry config id :template-v4)]
     (. builder templateV4 data))
   (.build builder))
 
@@ -1437,21 +1437,21 @@
 | `supersededTemplates` | java.util.List | [[cdk.support/lookup-entry]] | `:superseded-templates` |
 "
   [^CfnTemplate$TemplateV2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-validity)]
+  (when-some [data (lookup-entry config id :certificate-validity)]
     (. builder certificateValidity data))
-  (when-let [data (lookup-entry config id :enrollment-flags)]
+  (when-some [data (lookup-entry config id :enrollment-flags)]
     (. builder enrollmentFlags data))
-  (when-let [data (lookup-entry config id :extensions)]
+  (when-some [data (lookup-entry config id :extensions)]
     (. builder extensions data))
-  (when-let [data (lookup-entry config id :general-flags)]
+  (when-some [data (lookup-entry config id :general-flags)]
     (. builder generalFlags data))
-  (when-let [data (lookup-entry config id :private-key-attributes)]
+  (when-some [data (lookup-entry config id :private-key-attributes)]
     (. builder privateKeyAttributes data))
-  (when-let [data (lookup-entry config id :private-key-flags)]
+  (when-some [data (lookup-entry config id :private-key-flags)]
     (. builder privateKeyFlags data))
-  (when-let [data (lookup-entry config id :subject-name-flags)]
+  (when-some [data (lookup-entry config id :subject-name-flags)]
     (. builder subjectNameFlags data))
-  (when-let [data (lookup-entry config id :superseded-templates)]
+  (when-some [data (lookup-entry config id :superseded-templates)]
     (. builder supersededTemplates data))
   (.build builder))
 
@@ -1487,23 +1487,23 @@
 | `supersededTemplates` | java.util.List | [[cdk.support/lookup-entry]] | `:superseded-templates` |
 "
   [^CfnTemplate$TemplateV3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-validity)]
+  (when-some [data (lookup-entry config id :certificate-validity)]
     (. builder certificateValidity data))
-  (when-let [data (lookup-entry config id :enrollment-flags)]
+  (when-some [data (lookup-entry config id :enrollment-flags)]
     (. builder enrollmentFlags data))
-  (when-let [data (lookup-entry config id :extensions)]
+  (when-some [data (lookup-entry config id :extensions)]
     (. builder extensions data))
-  (when-let [data (lookup-entry config id :general-flags)]
+  (when-some [data (lookup-entry config id :general-flags)]
     (. builder generalFlags data))
-  (when-let [data (lookup-entry config id :hash-algorithm)]
+  (when-some [data (lookup-entry config id :hash-algorithm)]
     (. builder hashAlgorithm data))
-  (when-let [data (lookup-entry config id :private-key-attributes)]
+  (when-some [data (lookup-entry config id :private-key-attributes)]
     (. builder privateKeyAttributes data))
-  (when-let [data (lookup-entry config id :private-key-flags)]
+  (when-some [data (lookup-entry config id :private-key-flags)]
     (. builder privateKeyFlags data))
-  (when-let [data (lookup-entry config id :subject-name-flags)]
+  (when-some [data (lookup-entry config id :subject-name-flags)]
     (. builder subjectNameFlags data))
-  (when-let [data (lookup-entry config id :superseded-templates)]
+  (when-some [data (lookup-entry config id :superseded-templates)]
     (. builder supersededTemplates data))
   (.build builder))
 
@@ -1539,23 +1539,23 @@
 | `supersededTemplates` | java.util.List | [[cdk.support/lookup-entry]] | `:superseded-templates` |
 "
   [^CfnTemplate$TemplateV4Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-validity)]
+  (when-some [data (lookup-entry config id :certificate-validity)]
     (. builder certificateValidity data))
-  (when-let [data (lookup-entry config id :enrollment-flags)]
+  (when-some [data (lookup-entry config id :enrollment-flags)]
     (. builder enrollmentFlags data))
-  (when-let [data (lookup-entry config id :extensions)]
+  (when-some [data (lookup-entry config id :extensions)]
     (. builder extensions data))
-  (when-let [data (lookup-entry config id :general-flags)]
+  (when-some [data (lookup-entry config id :general-flags)]
     (. builder generalFlags data))
-  (when-let [data (lookup-entry config id :hash-algorithm)]
+  (when-some [data (lookup-entry config id :hash-algorithm)]
     (. builder hashAlgorithm data))
-  (when-let [data (lookup-entry config id :private-key-attributes)]
+  (when-some [data (lookup-entry config id :private-key-attributes)]
     (. builder privateKeyAttributes data))
-  (when-let [data (lookup-entry config id :private-key-flags)]
+  (when-some [data (lookup-entry config id :private-key-flags)]
     (. builder privateKeyFlags data))
-  (when-let [data (lookup-entry config id :subject-name-flags)]
+  (when-some [data (lookup-entry config id :subject-name-flags)]
     (. builder subjectNameFlags data))
-  (when-let [data (lookup-entry config id :superseded-templates)]
+  (when-some [data (lookup-entry config id :superseded-templates)]
     (. builder supersededTemplates data))
   (.build builder))
 
@@ -1584,9 +1584,9 @@
 | `periodType` | java.lang.String | [[cdk.support/lookup-entry]] | `:period-type` |
 "
   [^CfnTemplate$ValidityPeriodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :period-type)]
+  (when-some [data (lookup-entry config id :period-type)]
     (. builder periodType data))
   (.build builder))
 

@@ -20,9 +20,9 @@
 | `upperAlarmIntervalIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-alarm-interval-index` |
 "
   [^Alarms$Builder builder id config]
-  (when-let [data (lookup-entry config id :lower-alarm-interval-index)]
+  (when-some [data (lookup-entry config id :lower-alarm-interval-index)]
     (. builder lowerAlarmIntervalIndex data))
-  (when-let [data (lookup-entry config id :upper-alarm-interval-index)]
+  (when-some [data (lookup-entry config id :upper-alarm-interval-index)]
     (. builder upperAlarmIntervalIndex data))
   (.build builder))
 
@@ -51,9 +51,9 @@
 | `intervals` | java.util.List | [[cdk.support/lookup-entry]] | `:intervals` |
 "
   [^ArbitraryIntervals$Builder builder id config]
-  (when-let [data (lookup-entry config id :absolute)]
+  (when-some [data (lookup-entry config id :absolute)]
     (. builder absolute data))
-  (when-let [data (lookup-entry config id :intervals)]
+  (when-some [data (lookup-entry config id :intervals)]
     (. builder intervals data))
   (.build builder))
 
@@ -83,11 +83,11 @@
 | `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |
 "
   [^CompleteScalingInterval$Builder builder id config]
-  (when-let [data (lookup-entry config id :change)]
+  (when-some [data (lookup-entry config id :change)]
     (. builder change data))
-  (when-let [data (lookup-entry config id :lower)]
+  (when-some [data (lookup-entry config id :lower)]
     (. builder lower data))
-  (when-let [data (lookup-entry config id :upper)]
+  (when-some [data (lookup-entry config id :upper)]
     (. builder upper data))
   (.build builder))
 
@@ -117,11 +117,11 @@
 | `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |
 "
   [^ScalingInterval$Builder builder id config]
-  (when-let [data (lookup-entry config id :change)]
+  (when-some [data (lookup-entry config id :change)]
     (. builder change data))
-  (when-let [data (lookup-entry config id :lower)]
+  (when-some [data (lookup-entry config id :lower)]
     (. builder lower data))
-  (when-let [data (lookup-entry config id :upper)]
+  (when-some [data (lookup-entry config id :upper)]
     (. builder upper data))
   (.build builder))
 

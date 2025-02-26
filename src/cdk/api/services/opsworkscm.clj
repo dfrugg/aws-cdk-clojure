@@ -38,47 +38,47 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServer$Builder builder id config]
-  (when-let [data (lookup-entry config id :associate-public-ip-address)]
+  (when-some [data (lookup-entry config id :associate-public-ip-address)]
     (. builder associatePublicIpAddress data))
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :backup-retention-count)]
+  (when-some [data (lookup-entry config id :backup-retention-count)]
     (. builder backupRetentionCount data))
-  (when-let [data (lookup-entry config id :custom-certificate)]
+  (when-some [data (lookup-entry config id :custom-certificate)]
     (. builder customCertificate data))
-  (when-let [data (lookup-entry config id :custom-domain)]
+  (when-some [data (lookup-entry config id :custom-domain)]
     (. builder customDomain data))
-  (when-let [data (lookup-entry config id :custom-private-key)]
+  (when-some [data (lookup-entry config id :custom-private-key)]
     (. builder customPrivateKey data))
-  (when-let [data (lookup-entry config id :disable-automated-backup)]
+  (when-some [data (lookup-entry config id :disable-automated-backup)]
     (. builder disableAutomatedBackup data))
-  (when-let [data (lookup-entry config id :engine)]
+  (when-some [data (lookup-entry config id :engine)]
     (. builder engine data))
-  (when-let [data (lookup-entry config id :engine-attributes)]
+  (when-some [data (lookup-entry config id :engine-attributes)]
     (. builder engineAttributes data))
-  (when-let [data (lookup-entry config id :engine-model)]
+  (when-some [data (lookup-entry config id :engine-model)]
     (. builder engineModel data))
-  (when-let [data (lookup-entry config id :engine-version)]
+  (when-some [data (lookup-entry config id :engine-version)]
     (. builder engineVersion data))
-  (when-let [data (lookup-entry config id :instance-profile-arn)]
+  (when-some [data (lookup-entry config id :instance-profile-arn)]
     (. builder instanceProfileArn data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :key-pair)]
+  (when-some [data (lookup-entry config id :key-pair)]
     (. builder keyPair data))
-  (when-let [data (lookup-entry config id :preferred-backup-window)]
+  (when-some [data (lookup-entry config id :preferred-backup-window)]
     (. builder preferredBackupWindow data))
-  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+  (when-some [data (lookup-entry config id :preferred-maintenance-window)]
     (. builder preferredMaintenanceWindow data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :server-name)]
+  (when-some [data (lookup-entry config id :server-name)]
     (. builder serverName data))
-  (when-let [data (lookup-entry config id :service-role-arn)]
+  (when-some [data (lookup-entry config id :service-role-arn)]
     (. builder serviceRoleArn data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -107,9 +107,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnServer$EngineAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -157,47 +157,47 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnServerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :associate-public-ip-address)]
+  (when-some [data (lookup-entry config id :associate-public-ip-address)]
     (. builder associatePublicIpAddress data))
-  (when-let [data (lookup-entry config id :backup-id)]
+  (when-some [data (lookup-entry config id :backup-id)]
     (. builder backupId data))
-  (when-let [data (lookup-entry config id :backup-retention-count)]
+  (when-some [data (lookup-entry config id :backup-retention-count)]
     (. builder backupRetentionCount data))
-  (when-let [data (lookup-entry config id :custom-certificate)]
+  (when-some [data (lookup-entry config id :custom-certificate)]
     (. builder customCertificate data))
-  (when-let [data (lookup-entry config id :custom-domain)]
+  (when-some [data (lookup-entry config id :custom-domain)]
     (. builder customDomain data))
-  (when-let [data (lookup-entry config id :custom-private-key)]
+  (when-some [data (lookup-entry config id :custom-private-key)]
     (. builder customPrivateKey data))
-  (when-let [data (lookup-entry config id :disable-automated-backup)]
+  (when-some [data (lookup-entry config id :disable-automated-backup)]
     (. builder disableAutomatedBackup data))
-  (when-let [data (lookup-entry config id :engine)]
+  (when-some [data (lookup-entry config id :engine)]
     (. builder engine data))
-  (when-let [data (lookup-entry config id :engine-attributes)]
+  (when-some [data (lookup-entry config id :engine-attributes)]
     (. builder engineAttributes data))
-  (when-let [data (lookup-entry config id :engine-model)]
+  (when-some [data (lookup-entry config id :engine-model)]
     (. builder engineModel data))
-  (when-let [data (lookup-entry config id :engine-version)]
+  (when-some [data (lookup-entry config id :engine-version)]
     (. builder engineVersion data))
-  (when-let [data (lookup-entry config id :instance-profile-arn)]
+  (when-some [data (lookup-entry config id :instance-profile-arn)]
     (. builder instanceProfileArn data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :key-pair)]
+  (when-some [data (lookup-entry config id :key-pair)]
     (. builder keyPair data))
-  (when-let [data (lookup-entry config id :preferred-backup-window)]
+  (when-some [data (lookup-entry config id :preferred-backup-window)]
     (. builder preferredBackupWindow data))
-  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+  (when-some [data (lookup-entry config id :preferred-maintenance-window)]
     (. builder preferredMaintenanceWindow data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :server-name)]
+  (when-some [data (lookup-entry config id :server-name)]
     (. builder serverName data))
-  (when-let [data (lookup-entry config id :service-role-arn)]
+  (when-some [data (lookup-entry config id :service-role-arn)]
     (. builder serviceRoleArn data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

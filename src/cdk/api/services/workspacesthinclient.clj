@@ -26,23 +26,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironment$Builder builder id config]
-  (when-let [data (lookup-entry config id :desired-software-set-id)]
+  (when-some [data (lookup-entry config id :desired-software-set-id)]
     (. builder desiredSoftwareSetId data))
-  (when-let [data (lookup-entry config id :desktop-arn)]
+  (when-some [data (lookup-entry config id :desktop-arn)]
     (. builder desktopArn data))
-  (when-let [data (lookup-entry config id :desktop-endpoint)]
+  (when-some [data (lookup-entry config id :desktop-endpoint)]
     (. builder desktopEndpoint data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :maintenance-window)]
+  (when-some [data (lookup-entry config id :maintenance-window)]
     (. builder maintenanceWindow data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :software-set-update-mode)]
+  (when-some [data (lookup-entry config id :software-set-update-mode)]
     (. builder softwareSetUpdateMode data))
-  (when-let [data (lookup-entry config id :software-set-update-schedule)]
+  (when-some [data (lookup-entry config id :software-set-update-schedule)]
     (. builder softwareSetUpdateSchedule data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -76,19 +76,19 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnEnvironment$MaintenanceWindowProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :apply-time-of)]
+  (when-some [data (lookup-entry config id :apply-time-of)]
     (. builder applyTimeOf data))
-  (when-let [data (lookup-entry config id :days-of-the-week)]
+  (when-some [data (lookup-entry config id :days-of-the-week)]
     (. builder daysOfTheWeek data))
-  (when-let [data (lookup-entry config id :end-time-hour)]
+  (when-some [data (lookup-entry config id :end-time-hour)]
     (. builder endTimeHour data))
-  (when-let [data (lookup-entry config id :end-time-minute)]
+  (when-some [data (lookup-entry config id :end-time-minute)]
     (. builder endTimeMinute data))
-  (when-let [data (lookup-entry config id :start-time-hour)]
+  (when-some [data (lookup-entry config id :start-time-hour)]
     (. builder startTimeHour data))
-  (when-let [data (lookup-entry config id :start-time-minute)]
+  (when-some [data (lookup-entry config id :start-time-minute)]
     (. builder startTimeMinute data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -124,23 +124,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :desired-software-set-id)]
+  (when-some [data (lookup-entry config id :desired-software-set-id)]
     (. builder desiredSoftwareSetId data))
-  (when-let [data (lookup-entry config id :desktop-arn)]
+  (when-some [data (lookup-entry config id :desktop-arn)]
     (. builder desktopArn data))
-  (when-let [data (lookup-entry config id :desktop-endpoint)]
+  (when-some [data (lookup-entry config id :desktop-endpoint)]
     (. builder desktopEndpoint data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :maintenance-window)]
+  (when-some [data (lookup-entry config id :maintenance-window)]
     (. builder maintenanceWindow data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :software-set-update-mode)]
+  (when-some [data (lookup-entry config id :software-set-update-mode)]
     (. builder softwareSetUpdateMode data))
-  (when-let [data (lookup-entry config id :software-set-update-schedule)]
+  (when-some [data (lookup-entry config id :software-set-update-schedule)]
     (. builder softwareSetUpdateSchedule data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

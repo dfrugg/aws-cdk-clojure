@@ -30,11 +30,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCell$Builder builder id config]
-  (when-let [data (lookup-entry config id :cell-name)]
+  (when-some [data (lookup-entry config id :cell-name)]
     (. builder cellName data))
-  (when-let [data (lookup-entry config id :cells)]
+  (when-some [data (lookup-entry config id :cells)]
     (. builder cells data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -64,11 +64,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCellProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cell-name)]
+  (when-some [data (lookup-entry config id :cell-name)]
     (. builder cellName data))
-  (when-let [data (lookup-entry config id :cells)]
+  (when-some [data (lookup-entry config id :cells)]
     (. builder cells data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -98,11 +98,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReadinessCheck$Builder builder id config]
-  (when-let [data (lookup-entry config id :readiness-check-name)]
+  (when-some [data (lookup-entry config id :readiness-check-name)]
     (. builder readinessCheckName data))
-  (when-let [data (lookup-entry config id :resource-set-name)]
+  (when-some [data (lookup-entry config id :resource-set-name)]
     (. builder resourceSetName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -132,11 +132,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReadinessCheckProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :readiness-check-name)]
+  (when-some [data (lookup-entry config id :readiness-check-name)]
     (. builder readinessCheckName data))
-  (when-let [data (lookup-entry config id :resource-set-name)]
+  (when-some [data (lookup-entry config id :resource-set-name)]
     (. builder resourceSetName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -166,11 +166,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRecoveryGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :cells)]
+  (when-some [data (lookup-entry config id :cells)]
     (. builder cells data))
-  (when-let [data (lookup-entry config id :recovery-group-name)]
+  (when-some [data (lookup-entry config id :recovery-group-name)]
     (. builder recoveryGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -200,11 +200,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRecoveryGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cells)]
+  (when-some [data (lookup-entry config id :cells)]
     (. builder cells data))
-  (when-let [data (lookup-entry config id :recovery-group-name)]
+  (when-some [data (lookup-entry config id :recovery-group-name)]
     (. builder recoveryGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -235,13 +235,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-set-name)]
+  (when-some [data (lookup-entry config id :resource-set-name)]
     (. builder resourceSetName data))
-  (when-let [data (lookup-entry config id :resource-set-type)]
+  (when-some [data (lookup-entry config id :resource-set-type)]
     (. builder resourceSetType data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -273,15 +273,15 @@
 | `targetResource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-resource` |
 "
   [^CfnResourceSet$DNSTargetResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :hosted-zone-arn)]
+  (when-some [data (lookup-entry config id :hosted-zone-arn)]
     (. builder hostedZoneArn data))
-  (when-let [data (lookup-entry config id :record-set-id)]
+  (when-some [data (lookup-entry config id :record-set-id)]
     (. builder recordSetId data))
-  (when-let [data (lookup-entry config id :record-type)]
+  (when-some [data (lookup-entry config id :record-type)]
     (. builder recordType data))
-  (when-let [data (lookup-entry config id :target-resource)]
+  (when-some [data (lookup-entry config id :target-resource)]
     (. builder targetResource data))
   (.build builder))
 
@@ -309,7 +309,7 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnResourceSet$NLBResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -340,13 +340,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-set-name)]
+  (when-some [data (lookup-entry config id :resource-set-name)]
     (. builder resourceSetName data))
-  (when-let [data (lookup-entry config id :resource-set-type)]
+  (when-some [data (lookup-entry config id :resource-set-type)]
     (. builder resourceSetType data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -375,9 +375,9 @@
 | `recordSetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:record-set-id` |
 "
   [^CfnResourceSet$R53ResourceRecordProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :record-set-id)]
+  (when-some [data (lookup-entry config id :record-set-id)]
     (. builder recordSetId data))
   (.build builder))
 
@@ -408,13 +408,13 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnResourceSet$ResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component-id)]
+  (when-some [data (lookup-entry config id :component-id)]
     (. builder componentId data))
-  (when-let [data (lookup-entry config id :dns-target-resource)]
+  (when-some [data (lookup-entry config id :dns-target-resource)]
     (. builder dnsTargetResource data))
-  (when-let [data (lookup-entry config id :readiness-scopes)]
+  (when-some [data (lookup-entry config id :readiness-scopes)]
     (. builder readinessScopes data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -443,9 +443,9 @@
 | `r53Resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:r53-resource` |
 "
   [^CfnResourceSet$TargetResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :nlb-resource)]
+  (when-some [data (lookup-entry config id :nlb-resource)]
     (. builder nlbResource data))
-  (when-let [data (lookup-entry config id :r53-resource)]
+  (when-some [data (lookup-entry config id :r53-resource)]
     (. builder r53Resource data))
   (.build builder))
 

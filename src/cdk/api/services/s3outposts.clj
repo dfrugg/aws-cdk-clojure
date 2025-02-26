@@ -35,13 +35,13 @@
 | `vpcConfiguration` | software.amazon.awscdk.services.s3outposts.CfnAccessPoint$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnAccessPoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -72,13 +72,13 @@
 | `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnAccessPointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -106,7 +106,7 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnAccessPoint$VpcConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -134,7 +134,7 @@
 | `daysAfterInitiation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:days-after-initiation` |
 "
   [^CfnBucket$AbortIncompleteMultipartUploadProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :days-after-initiation)]
+  (when-some [data (lookup-entry config id :days-after-initiation)]
     (. builder daysAfterInitiation data))
   (.build builder))
 
@@ -165,13 +165,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBucket$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :lifecycle-configuration)]
+  (when-some [data (lookup-entry config id :lifecycle-configuration)]
     (. builder lifecycleConfiguration data))
-  (when-let [data (lookup-entry config id :outpost-id)]
+  (when-some [data (lookup-entry config id :outpost-id)]
     (. builder outpostId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -200,9 +200,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBucket$FilterAndOperatorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -232,11 +232,11 @@
 | `tag` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tag` |
 "
   [^CfnBucket$FilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :and-operator)]
+  (when-some [data (lookup-entry config id :and-operator)]
     (. builder andOperator data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :tag)]
+  (when-some [data (lookup-entry config id :tag)]
     (. builder tag data))
   (.build builder))
 
@@ -265,9 +265,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBucket$FilterTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -295,7 +295,7 @@
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnBucket$LifecycleConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
 
@@ -324,9 +324,9 @@
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
 "
   [^CfnBucketPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
 
@@ -355,9 +355,9 @@
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
 "
   [^CfnBucketPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
 
@@ -388,13 +388,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBucketProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :lifecycle-configuration)]
+  (when-some [data (lookup-entry config id :lifecycle-configuration)]
     (. builder lifecycleConfiguration data))
-  (when-let [data (lookup-entry config id :outpost-id)]
+  (when-some [data (lookup-entry config id :outpost-id)]
     (. builder outpostId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -427,17 +427,17 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnBucket$RuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :abort-incomplete-multipart-upload)]
+  (when-some [data (lookup-entry config id :abort-incomplete-multipart-upload)]
     (. builder abortIncompleteMultipartUpload data))
-  (when-let [data (lookup-entry config id :expiration-date)]
+  (when-some [data (lookup-entry config id :expiration-date)]
     (. builder expirationDate data))
-  (when-let [data (lookup-entry config id :expiration-in-days)]
+  (when-some [data (lookup-entry config id :expiration-in-days)]
     (. builder expirationInDays data))
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -470,17 +470,17 @@
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^CfnEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-type)]
+  (when-some [data (lookup-entry config id :access-type)]
     (. builder accessType data))
-  (when-let [data (lookup-entry config id :customer-owned-ipv4-pool)]
+  (when-some [data (lookup-entry config id :customer-owned-ipv4-pool)]
     (. builder customerOwnedIpv4Pool data))
-  (when-let [data (lookup-entry config id :failed-reason)]
+  (when-some [data (lookup-entry config id :failed-reason)]
     (. builder failedReason data))
-  (when-let [data (lookup-entry config id :outpost-id)]
+  (when-some [data (lookup-entry config id :outpost-id)]
     (. builder outpostId data))
-  (when-let [data (lookup-entry config id :security-group-id)]
+  (when-some [data (lookup-entry config id :security-group-id)]
     (. builder securityGroupId data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 
@@ -509,9 +509,9 @@
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
 "
   [^CfnEndpoint$FailedReasonProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :error-code)]
+  (when-some [data (lookup-entry config id :error-code)]
     (. builder errorCode data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
   (.build builder))
 
@@ -539,7 +539,7 @@
 | `networkInterfaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-interface-id` |
 "
   [^CfnEndpoint$NetworkInterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :network-interface-id)]
+  (when-some [data (lookup-entry config id :network-interface-id)]
     (. builder networkInterfaceId data))
   (.build builder))
 
@@ -572,17 +572,17 @@
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^CfnEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-type)]
+  (when-some [data (lookup-entry config id :access-type)]
     (. builder accessType data))
-  (when-let [data (lookup-entry config id :customer-owned-ipv4-pool)]
+  (when-some [data (lookup-entry config id :customer-owned-ipv4-pool)]
     (. builder customerOwnedIpv4Pool data))
-  (when-let [data (lookup-entry config id :failed-reason)]
+  (when-some [data (lookup-entry config id :failed-reason)]
     (. builder failedReason data))
-  (when-let [data (lookup-entry config id :outpost-id)]
+  (when-some [data (lookup-entry config id :outpost-id)]
     (. builder outpostId data))
-  (when-let [data (lookup-entry config id :security-group-id)]
+  (when-some [data (lookup-entry config id :security-group-id)]
     (. builder securityGroupId data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 

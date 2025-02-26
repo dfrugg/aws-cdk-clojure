@@ -130,37 +130,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visibilityTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
 "
   [^CfnQueue$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :deduplication-scope)]
+  (when-some [data (lookup-entry config id :deduplication-scope)]
     (. builder deduplicationScope data))
-  (when-let [data (lookup-entry config id :delay-seconds)]
+  (when-some [data (lookup-entry config id :delay-seconds)]
     (. builder delaySeconds data))
-  (when-let [data (lookup-entry config id :fifo-queue)]
+  (when-some [data (lookup-entry config id :fifo-queue)]
     (. builder fifoQueue data))
-  (when-let [data (lookup-entry config id :fifo-throughput-limit)]
+  (when-some [data (lookup-entry config id :fifo-throughput-limit)]
     (. builder fifoThroughputLimit data))
-  (when-let [data (lookup-entry config id :kms-data-key-reuse-period-seconds)]
+  (when-some [data (lookup-entry config id :kms-data-key-reuse-period-seconds)]
     (. builder kmsDataKeyReusePeriodSeconds data))
-  (when-let [data (lookup-entry config id :kms-master-key-id)]
+  (when-some [data (lookup-entry config id :kms-master-key-id)]
     (. builder kmsMasterKeyId data))
-  (when-let [data (lookup-entry config id :maximum-message-size)]
+  (when-some [data (lookup-entry config id :maximum-message-size)]
     (. builder maximumMessageSize data))
-  (when-let [data (lookup-entry config id :message-retention-period)]
+  (when-some [data (lookup-entry config id :message-retention-period)]
     (. builder messageRetentionPeriod data))
-  (when-let [data (lookup-entry config id :queue-name)]
+  (when-some [data (lookup-entry config id :queue-name)]
     (. builder queueName data))
-  (when-let [data (lookup-entry config id :receive-message-wait-time-seconds)]
+  (when-some [data (lookup-entry config id :receive-message-wait-time-seconds)]
     (. builder receiveMessageWaitTimeSeconds data))
-  (when-let [data (lookup-entry config id :redrive-allow-policy)]
+  (when-some [data (lookup-entry config id :redrive-allow-policy)]
     (. builder redriveAllowPolicy data))
-  (when-let [data (lookup-entry config id :redrive-policy)]
+  (when-some [data (lookup-entry config id :redrive-policy)]
     (. builder redrivePolicy data))
-  (when-let [data (lookup-entry config id :sqs-managed-sse-enabled)]
+  (when-some [data (lookup-entry config id :sqs-managed-sse-enabled)]
     (. builder sqsManagedSseEnabled data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :visibility-timeout)]
+  (when-some [data (lookup-entry config id :visibility-timeout)]
     (. builder visibilityTimeout data))
   (.build builder))
 
@@ -189,9 +189,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |
 "
   [^CfnQueueInlinePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :queue)]
+  (when-some [data (lookup-entry config id :queue)]
     (. builder queue data))
   (.build builder))
 
@@ -220,9 +220,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |
 "
   [^CfnQueueInlinePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :queue)]
+  (when-some [data (lookup-entry config id :queue)]
     (. builder queue data))
   (.build builder))
 
@@ -251,9 +251,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
 "
   [^CfnQueuePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :queues)]
+  (when-some [data (lookup-entry config id :queues)]
     (. builder queues data))
   (.build builder))
 
@@ -282,9 +282,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
 "
   [^CfnQueuePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :queues)]
+  (when-some [data (lookup-entry config id :queues)]
     (. builder queues data))
   (.build builder))
 
@@ -327,37 +327,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visibilityTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
 "
   [^CfnQueueProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :deduplication-scope)]
+  (when-some [data (lookup-entry config id :deduplication-scope)]
     (. builder deduplicationScope data))
-  (when-let [data (lookup-entry config id :delay-seconds)]
+  (when-some [data (lookup-entry config id :delay-seconds)]
     (. builder delaySeconds data))
-  (when-let [data (lookup-entry config id :fifo-queue)]
+  (when-some [data (lookup-entry config id :fifo-queue)]
     (. builder fifoQueue data))
-  (when-let [data (lookup-entry config id :fifo-throughput-limit)]
+  (when-some [data (lookup-entry config id :fifo-throughput-limit)]
     (. builder fifoThroughputLimit data))
-  (when-let [data (lookup-entry config id :kms-data-key-reuse-period-seconds)]
+  (when-some [data (lookup-entry config id :kms-data-key-reuse-period-seconds)]
     (. builder kmsDataKeyReusePeriodSeconds data))
-  (when-let [data (lookup-entry config id :kms-master-key-id)]
+  (when-some [data (lookup-entry config id :kms-master-key-id)]
     (. builder kmsMasterKeyId data))
-  (when-let [data (lookup-entry config id :maximum-message-size)]
+  (when-some [data (lookup-entry config id :maximum-message-size)]
     (. builder maximumMessageSize data))
-  (when-let [data (lookup-entry config id :message-retention-period)]
+  (when-some [data (lookup-entry config id :message-retention-period)]
     (. builder messageRetentionPeriod data))
-  (when-let [data (lookup-entry config id :queue-name)]
+  (when-some [data (lookup-entry config id :queue-name)]
     (. builder queueName data))
-  (when-let [data (lookup-entry config id :receive-message-wait-time-seconds)]
+  (when-some [data (lookup-entry config id :receive-message-wait-time-seconds)]
     (. builder receiveMessageWaitTimeSeconds data))
-  (when-let [data (lookup-entry config id :redrive-allow-policy)]
+  (when-some [data (lookup-entry config id :redrive-allow-policy)]
     (. builder redriveAllowPolicy data))
-  (when-let [data (lookup-entry config id :redrive-policy)]
+  (when-some [data (lookup-entry config id :redrive-policy)]
     (. builder redrivePolicy data))
-  (when-let [data (lookup-entry config id :sqs-managed-sse-enabled)]
+  (when-some [data (lookup-entry config id :sqs-managed-sse-enabled)]
     (. builder sqsManagedSseEnabled data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :visibility-timeout)]
+  (when-some [data (lookup-entry config id :visibility-timeout)]
     (. builder visibilityTimeout data))
   (.build builder))
 
@@ -386,9 +386,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:queue` |
 "
   [^DeadLetterQueue$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-receive-count)]
+  (when-some [data (lookup-entry config id :max-receive-count)]
     (. builder maxReceiveCount data))
-  (when-let [data (lookup-entry config id :queue)]
+  (when-some [data (lookup-entry config id :queue)]
     (. builder queue data))
   (.build builder))
 
@@ -420,15 +420,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queueUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-url` |
 "
   [^QueueAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :fifo)]
+  (when-some [data (lookup-entry config id :fifo)]
     (. builder fifo data))
-  (when-let [data (lookup-entry config id :key-arn)]
+  (when-some [data (lookup-entry config id :key-arn)]
     (. builder keyArn data))
-  (when-let [data (lookup-entry config id :queue-arn)]
+  (when-some [data (lookup-entry config id :queue-arn)]
     (. builder queueArn data))
-  (when-let [data (lookup-entry config id :queue-name)]
+  (when-some [data (lookup-entry config id :queue-name)]
     (. builder queueName data))
-  (when-let [data (lookup-entry config id :queue-url)]
+  (when-some [data (lookup-entry config id :queue-url)]
     (. builder queueUrl data))
   (.build builder))
 
@@ -472,39 +472,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
 "
   [^Queue$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :data-key-reuse)]
+  (when-some [data (lookup-entry config id :data-key-reuse)]
     (. builder dataKeyReuse data))
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (deduplication-scope config id :deduplication-scope)]
+  (when-some [data (deduplication-scope config id :deduplication-scope)]
     (. builder deduplicationScope data))
-  (when-let [data (lookup-entry config id :delivery-delay)]
+  (when-some [data (lookup-entry config id :delivery-delay)]
     (. builder deliveryDelay data))
-  (when-let [data (queue-encryption config id :encryption)]
+  (when-some [data (queue-encryption config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-master-key)]
+  (when-some [data (lookup-entry config id :encryption-master-key)]
     (. builder encryptionMasterKey data))
-  (when-let [data (lookup-entry config id :enforce-ssl)]
+  (when-some [data (lookup-entry config id :enforce-ssl)]
     (. builder enforceSsl data))
-  (when-let [data (lookup-entry config id :fifo)]
+  (when-some [data (lookup-entry config id :fifo)]
     (. builder fifo data))
-  (when-let [data (fifo-throughput-limit config id :fifo-throughput-limit)]
+  (when-some [data (fifo-throughput-limit config id :fifo-throughput-limit)]
     (. builder fifoThroughputLimit data))
-  (when-let [data (lookup-entry config id :max-message-size-bytes)]
+  (when-some [data (lookup-entry config id :max-message-size-bytes)]
     (. builder maxMessageSizeBytes data))
-  (when-let [data (lookup-entry config id :queue-name)]
+  (when-some [data (lookup-entry config id :queue-name)]
     (. builder queueName data))
-  (when-let [data (lookup-entry config id :receive-message-wait-time)]
+  (when-some [data (lookup-entry config id :receive-message-wait-time)]
     (. builder receiveMessageWaitTime data))
-  (when-let [data (lookup-entry config id :redrive-allow-policy)]
+  (when-some [data (lookup-entry config id :redrive-allow-policy)]
     (. builder redriveAllowPolicy data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :retention-period)]
+  (when-some [data (lookup-entry config id :retention-period)]
     (. builder retentionPeriod data))
-  (when-let [data (lookup-entry config id :visibility-timeout)]
+  (when-some [data (lookup-entry config id :visibility-timeout)]
     (. builder visibilityTimeout data))
   (.build builder))
 
@@ -532,7 +532,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
 "
   [^QueuePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :queues)]
+  (when-some [data (lookup-entry config id :queues)]
     (. builder queues data))
   (.build builder))
 
@@ -560,7 +560,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
 "
   [^QueuePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :queues)]
+  (when-some [data (lookup-entry config id :queues)]
     (. builder queues data))
   (.build builder))
 
@@ -604,39 +604,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
 "
   [^QueueProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :data-key-reuse)]
+  (when-some [data (lookup-entry config id :data-key-reuse)]
     (. builder dataKeyReuse data))
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (deduplication-scope config id :deduplication-scope)]
+  (when-some [data (deduplication-scope config id :deduplication-scope)]
     (. builder deduplicationScope data))
-  (when-let [data (lookup-entry config id :delivery-delay)]
+  (when-some [data (lookup-entry config id :delivery-delay)]
     (. builder deliveryDelay data))
-  (when-let [data (queue-encryption config id :encryption)]
+  (when-some [data (queue-encryption config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-master-key)]
+  (when-some [data (lookup-entry config id :encryption-master-key)]
     (. builder encryptionMasterKey data))
-  (when-let [data (lookup-entry config id :enforce-ssl)]
+  (when-some [data (lookup-entry config id :enforce-ssl)]
     (. builder enforceSsl data))
-  (when-let [data (lookup-entry config id :fifo)]
+  (when-some [data (lookup-entry config id :fifo)]
     (. builder fifo data))
-  (when-let [data (fifo-throughput-limit config id :fifo-throughput-limit)]
+  (when-some [data (fifo-throughput-limit config id :fifo-throughput-limit)]
     (. builder fifoThroughputLimit data))
-  (when-let [data (lookup-entry config id :max-message-size-bytes)]
+  (when-some [data (lookup-entry config id :max-message-size-bytes)]
     (. builder maxMessageSizeBytes data))
-  (when-let [data (lookup-entry config id :queue-name)]
+  (when-some [data (lookup-entry config id :queue-name)]
     (. builder queueName data))
-  (when-let [data (lookup-entry config id :receive-message-wait-time)]
+  (when-some [data (lookup-entry config id :receive-message-wait-time)]
     (. builder receiveMessageWaitTime data))
-  (when-let [data (lookup-entry config id :redrive-allow-policy)]
+  (when-some [data (lookup-entry config id :redrive-allow-policy)]
     (. builder redriveAllowPolicy data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :retention-period)]
+  (when-some [data (lookup-entry config id :retention-period)]
     (. builder retentionPeriod data))
-  (when-let [data (lookup-entry config id :visibility-timeout)]
+  (when-some [data (lookup-entry config id :visibility-timeout)]
     (. builder visibilityTimeout data))
   (.build builder))
 
@@ -665,9 +665,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sourceQueues` | java.util.List | [[cdk.support/lookup-entry]] | `:source-queues` |
 "
   [^RedriveAllowPolicy$Builder builder id config]
-  (when-let [data (redrive-permission config id :redrive-permission)]
+  (when-some [data (redrive-permission config id :redrive-permission)]
     (. builder redrivePermission data))
-  (when-let [data (lookup-entry config id :source-queues)]
+  (when-some [data (lookup-entry config id :source-queues)]
     (. builder sourceQueues data))
   (.build builder))
 

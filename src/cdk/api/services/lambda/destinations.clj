@@ -18,7 +18,7 @@
 | `responseOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:response-only` |
 "
   [^LambdaDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-only)]
+  (when-some [data (lookup-entry config id :response-only)]
     (. builder responseOnly data))
   (.build builder))
 
@@ -49,7 +49,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | `responseOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:response-only` |
 "
   [^LambdaDestinationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :response-only)]
+  (when-some [data (lookup-entry config id :response-only)]
     (. builder responseOnly data))
   (.build builder))
 

@@ -118,7 +118,7 @@
 | `audioRecognitionStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:audio-recognition-strategy` |
 "
   [^CfnBot$AdvancedRecognitionSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-recognition-strategy)]
+  (when-some [data (lookup-entry config id :audio-recognition-strategy)]
     (. builder audioRecognitionStrategy data))
   (.build builder))
 
@@ -146,7 +146,7 @@
 | `s3Bucket` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-bucket` |
 "
   [^CfnBotAlias$AudioLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
   (.build builder))
 
@@ -175,9 +175,9 @@
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBotAlias$AudioLogSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -206,9 +206,9 @@
 | `localeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:locale-id` |
 "
   [^CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bot-alias-locale-setting)]
+  (when-some [data (lookup-entry config id :bot-alias-locale-setting)]
     (. builder botAliasLocaleSetting data))
-  (when-let [data (lookup-entry config id :locale-id)]
+  (when-some [data (lookup-entry config id :locale-id)]
     (. builder localeId data))
   (.build builder))
 
@@ -237,9 +237,9 @@
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBotAlias$BotAliasLocaleSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-hook-specification)]
+  (when-some [data (lookup-entry config id :code-hook-specification)]
     (. builder codeHookSpecification data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -274,21 +274,21 @@
 | `sentimentAnalysisSettings` | java.lang.Object | [[cdk.support/lookup-entry]] | `:sentiment-analysis-settings` |
 "
   [^CfnBotAlias$Builder builder id config]
-  (when-let [data (lookup-entry config id :bot-alias-locale-settings)]
+  (when-some [data (lookup-entry config id :bot-alias-locale-settings)]
     (. builder botAliasLocaleSettings data))
-  (when-let [data (lookup-entry config id :bot-alias-name)]
+  (when-some [data (lookup-entry config id :bot-alias-name)]
     (. builder botAliasName data))
-  (when-let [data (lookup-entry config id :bot-alias-tags)]
+  (when-some [data (lookup-entry config id :bot-alias-tags)]
     (. builder botAliasTags data))
-  (when-let [data (lookup-entry config id :bot-id)]
+  (when-some [data (lookup-entry config id :bot-id)]
     (. builder botId data))
-  (when-let [data (lookup-entry config id :bot-version)]
+  (when-some [data (lookup-entry config id :bot-version)]
     (. builder botVersion data))
-  (when-let [data (lookup-entry config id :conversation-log-settings)]
+  (when-some [data (lookup-entry config id :conversation-log-settings)]
     (. builder conversationLogSettings data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :sentiment-analysis-settings)]
+  (when-some [data (lookup-entry config id :sentiment-analysis-settings)]
     (. builder sentimentAnalysisSettings data))
   (.build builder))
 
@@ -317,9 +317,9 @@
 | `logPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-prefix` |
 "
   [^CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-log-group-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-log-group-arn)]
     (. builder cloudWatchLogGroupArn data))
-  (when-let [data (lookup-entry config id :log-prefix)]
+  (when-some [data (lookup-entry config id :log-prefix)]
     (. builder logPrefix data))
   (.build builder))
 
@@ -347,7 +347,7 @@
 | `lambdaCodeHook` | software.amazon.awscdk.services.lex.CfnBotAlias$LambdaCodeHookProperty | [[cdk.support/lookup-entry]] | `:lambda-code-hook` |
 "
   [^CfnBotAlias$CodeHookSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :lambda-code-hook)]
+  (when-some [data (lookup-entry config id :lambda-code-hook)]
     (. builder lambdaCodeHook data))
   (.build builder))
 
@@ -376,9 +376,9 @@
 | `textLogSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:text-log-settings` |
 "
   [^CfnBotAlias$ConversationLogSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-log-settings)]
+  (when-some [data (lookup-entry config id :audio-log-settings)]
     (. builder audioLogSettings data))
-  (when-let [data (lookup-entry config id :text-log-settings)]
+  (when-some [data (lookup-entry config id :text-log-settings)]
     (. builder textLogSettings data))
   (.build builder))
 
@@ -407,9 +407,9 @@
 | `lambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-arn` |
 "
   [^CfnBotAlias$LambdaCodeHookProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-hook-interface-version)]
+  (when-some [data (lookup-entry config id :code-hook-interface-version)]
     (. builder codeHookInterfaceVersion data))
-  (when-let [data (lookup-entry config id :lambda-arn)]
+  (when-some [data (lookup-entry config id :lambda-arn)]
     (. builder lambdaArn data))
   (.build builder))
 
@@ -444,21 +444,21 @@
 | `sentimentAnalysisSettings` | java.lang.Object | [[cdk.support/lookup-entry]] | `:sentiment-analysis-settings` |
 "
   [^CfnBotAliasProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bot-alias-locale-settings)]
+  (when-some [data (lookup-entry config id :bot-alias-locale-settings)]
     (. builder botAliasLocaleSettings data))
-  (when-let [data (lookup-entry config id :bot-alias-name)]
+  (when-some [data (lookup-entry config id :bot-alias-name)]
     (. builder botAliasName data))
-  (when-let [data (lookup-entry config id :bot-alias-tags)]
+  (when-some [data (lookup-entry config id :bot-alias-tags)]
     (. builder botAliasTags data))
-  (when-let [data (lookup-entry config id :bot-id)]
+  (when-some [data (lookup-entry config id :bot-id)]
     (. builder botId data))
-  (when-let [data (lookup-entry config id :bot-version)]
+  (when-some [data (lookup-entry config id :bot-version)]
     (. builder botVersion data))
-  (when-let [data (lookup-entry config id :conversation-log-settings)]
+  (when-some [data (lookup-entry config id :conversation-log-settings)]
     (. builder conversationLogSettings data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :sentiment-analysis-settings)]
+  (when-some [data (lookup-entry config id :sentiment-analysis-settings)]
     (. builder sentimentAnalysisSettings data))
   (.build builder))
 
@@ -488,11 +488,11 @@
 | `s3BucketArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-arn` |
 "
   [^CfnBotAlias$S3BucketLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :log-prefix)]
+  (when-some [data (lookup-entry config id :log-prefix)]
     (. builder logPrefix data))
-  (when-let [data (lookup-entry config id :s3-bucket-arn)]
+  (when-some [data (lookup-entry config id :s3-bucket-arn)]
     (. builder s3BucketArn data))
   (.build builder))
 
@@ -520,7 +520,7 @@
 | `detectSentiment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:detect-sentiment` |
 "
   [^CfnBotAlias$SentimentAnalysisSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :detect-sentiment)]
+  (when-some [data (lookup-entry config id :detect-sentiment)]
     (. builder detectSentiment data))
   (.build builder))
 
@@ -548,7 +548,7 @@
 | `cloudWatch` | software.amazon.awscdk.services.lex.CfnBotAlias$CloudWatchLogGroupLogDestinationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch` |
 "
   [^CfnBotAlias$TextLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch)]
+  (when-some [data (lookup-entry config id :cloud-watch)]
     (. builder cloudWatch data))
   (.build builder))
 
@@ -577,9 +577,9 @@
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBotAlias$TextLogSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -608,9 +608,9 @@
 | `allowDtmfInput` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-dtmf-input` |
 "
   [^CfnBot$AllowedInputTypesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-audio-input)]
+  (when-some [data (lookup-entry config id :allow-audio-input)]
     (. builder allowAudioInput data))
-  (when-let [data (lookup-entry config id :allow-dtmf-input)]
+  (when-some [data (lookup-entry config id :allow-dtmf-input)]
     (. builder allowDtmfInput data))
   (.build builder))
 
@@ -640,11 +640,11 @@
 | `startTimeoutMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-timeout-ms` |
 "
   [^CfnBot$AudioAndDTMFInputSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-specification)]
+  (when-some [data (lookup-entry config id :audio-specification)]
     (. builder audioSpecification data))
-  (when-let [data (lookup-entry config id :dtmf-specification)]
+  (when-some [data (lookup-entry config id :dtmf-specification)]
     (. builder dtmfSpecification data))
-  (when-let [data (lookup-entry config id :start-timeout-ms)]
+  (when-some [data (lookup-entry config id :start-timeout-ms)]
     (. builder startTimeoutMs data))
   (.build builder))
 
@@ -672,7 +672,7 @@
 | `s3Bucket` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-bucket` |
 "
   [^CfnBot$AudioLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
   (.build builder))
 
@@ -701,9 +701,9 @@
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBot$AudioLogSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -732,9 +732,9 @@
 | `maxLengthMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-length-ms` |
 "
   [^CfnBot$AudioSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :end-timeout-ms)]
+  (when-some [data (lookup-entry config id :end-timeout-ms)]
     (. builder endTimeoutMs data))
-  (when-let [data (lookup-entry config id :max-length-ms)]
+  (when-some [data (lookup-entry config id :max-length-ms)]
     (. builder maxLengthMs data))
   (.build builder))
 
@@ -763,9 +763,9 @@
 | `localeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:locale-id` |
 "
   [^CfnBot$BotAliasLocaleSettingsItemProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bot-alias-locale-setting)]
+  (when-some [data (lookup-entry config id :bot-alias-locale-setting)]
     (. builder botAliasLocaleSetting data))
-  (when-let [data (lookup-entry config id :locale-id)]
+  (when-some [data (lookup-entry config id :locale-id)]
     (. builder localeId data))
   (.build builder))
 
@@ -794,9 +794,9 @@
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBot$BotAliasLocaleSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-hook-specification)]
+  (when-some [data (lookup-entry config id :code-hook-specification)]
     (. builder codeHookSpecification data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -830,19 +830,19 @@
 | `voiceSettings` | software.amazon.awscdk.services.lex.CfnBot$VoiceSettingsProperty | [[cdk.support/lookup-entry]] | `:voice-settings` |
 "
   [^CfnBot$BotLocaleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-vocabulary)]
+  (when-some [data (lookup-entry config id :custom-vocabulary)]
     (. builder customVocabulary data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :intents)]
+  (when-some [data (lookup-entry config id :intents)]
     (. builder intents data))
-  (when-let [data (lookup-entry config id :locale-id)]
+  (when-some [data (lookup-entry config id :locale-id)]
     (. builder localeId data))
-  (when-let [data (lookup-entry config id :nlu-confidence-threshold)]
+  (when-some [data (lookup-entry config id :nlu-confidence-threshold)]
     (. builder nluConfidenceThreshold data))
-  (when-let [data (lookup-entry config id :slot-types)]
+  (when-some [data (lookup-entry config id :slot-types)]
     (. builder slotTypes data))
-  (when-let [data (lookup-entry config id :voice-settings)]
+  (when-some [data (lookup-entry config id :voice-settings)]
     (. builder voiceSettings data))
   (.build builder))
 
@@ -880,27 +880,27 @@
 | `testBotAliasTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:test-bot-alias-tags` |
 "
   [^CfnBot$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-build-bot-locales)]
+  (when-some [data (lookup-entry config id :auto-build-bot-locales)]
     (. builder autoBuildBotLocales data))
-  (when-let [data (lookup-entry config id :bot-file-s3-location)]
+  (when-some [data (lookup-entry config id :bot-file-s3-location)]
     (. builder botFileS3Location data))
-  (when-let [data (lookup-entry config id :bot-locales)]
+  (when-some [data (lookup-entry config id :bot-locales)]
     (. builder botLocales data))
-  (when-let [data (lookup-entry config id :bot-tags)]
+  (when-some [data (lookup-entry config id :bot-tags)]
     (. builder botTags data))
-  (when-let [data (lookup-entry config id :data-privacy)]
+  (when-some [data (lookup-entry config id :data-privacy)]
     (. builder dataPrivacy data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :idle-session-ttl-in-seconds)]
+  (when-some [data (lookup-entry config id :idle-session-ttl-in-seconds)]
     (. builder idleSessionTtlInSeconds data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :test-bot-alias-settings)]
+  (when-some [data (lookup-entry config id :test-bot-alias-settings)]
     (. builder testBotAliasSettings data))
-  (when-let [data (lookup-entry config id :test-bot-alias-tags)]
+  (when-some [data (lookup-entry config id :test-bot-alias-tags)]
     (. builder testBotAliasTags data))
   (.build builder))
 
@@ -929,9 +929,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBot$ButtonProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :text)]
+  (when-some [data (lookup-entry config id :text)]
     (. builder text data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -960,9 +960,9 @@
 | `logPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-prefix` |
 "
   [^CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-log-group-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-log-group-arn)]
     (. builder cloudWatchLogGroupArn data))
-  (when-let [data (lookup-entry config id :log-prefix)]
+  (when-some [data (lookup-entry config id :log-prefix)]
     (. builder logPrefix data))
   (.build builder))
 
@@ -990,7 +990,7 @@
 | `lambdaCodeHook` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:lambda-code-hook` |
 "
   [^CfnBot$CodeHookSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :lambda-code-hook)]
+  (when-some [data (lookup-entry config id :lambda-code-hook)]
     (. builder lambdaCodeHook data))
   (.build builder))
 
@@ -1018,7 +1018,7 @@
 | `expressionString` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression-string` |
 "
   [^CfnBot$ConditionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :expression-string)]
+  (when-some [data (lookup-entry config id :expression-string)]
     (. builder expressionString data))
   (.build builder))
 
@@ -1049,13 +1049,13 @@
 | `response` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:response` |
 "
   [^CfnBot$ConditionalBranchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :next-step)]
+  (when-some [data (lookup-entry config id :next-step)]
     (. builder nextStep data))
-  (when-let [data (lookup-entry config id :response)]
+  (when-some [data (lookup-entry config id :response)]
     (. builder response data))
   (.build builder))
 
@@ -1085,11 +1085,11 @@
 | `isActive` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-active` |
 "
   [^CfnBot$ConditionalSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :conditional-branches)]
+  (when-some [data (lookup-entry config id :conditional-branches)]
     (. builder conditionalBranches data))
-  (when-let [data (lookup-entry config id :default-branch)]
+  (when-some [data (lookup-entry config id :default-branch)]
     (. builder defaultBranch data))
-  (when-let [data (lookup-entry config id :is-active)]
+  (when-some [data (lookup-entry config id :is-active)]
     (. builder isActive data))
   (.build builder))
 
@@ -1118,9 +1118,9 @@
 | `textLogSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:text-log-settings` |
 "
   [^CfnBot$ConversationLogSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :audio-log-settings)]
+  (when-some [data (lookup-entry config id :audio-log-settings)]
     (. builder audioLogSettings data))
-  (when-let [data (lookup-entry config id :text-log-settings)]
+  (when-some [data (lookup-entry config id :text-log-settings)]
     (. builder textLogSettings data))
   (.build builder))
 
@@ -1148,7 +1148,7 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBot$CustomPayloadProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1178,11 +1178,11 @@
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnBot$CustomVocabularyItemProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :display-as)]
+  (when-some [data (lookup-entry config id :display-as)]
     (. builder displayAs data))
-  (when-let [data (lookup-entry config id :phrase)]
+  (when-some [data (lookup-entry config id :phrase)]
     (. builder phrase data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -1210,7 +1210,7 @@
 | `customVocabularyItems` | java.util.List | [[cdk.support/lookup-entry]] | `:custom-vocabulary-items` |
 "
   [^CfnBot$CustomVocabularyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-vocabulary-items)]
+  (when-some [data (lookup-entry config id :custom-vocabulary-items)]
     (. builder customVocabularyItems data))
   (.build builder))
 
@@ -1238,7 +1238,7 @@
 | `childDirected` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:child-directed` |
 "
   [^CfnBot$DataPrivacyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :child-directed)]
+  (when-some [data (lookup-entry config id :child-directed)]
     (. builder childDirected data))
   (.build builder))
 
@@ -1267,9 +1267,9 @@
 | `response` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:response` |
 "
   [^CfnBot$DefaultConditionalBranchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :next-step)]
+  (when-some [data (lookup-entry config id :next-step)]
     (. builder nextStep data))
-  (when-let [data (lookup-entry config id :response)]
+  (when-some [data (lookup-entry config id :response)]
     (. builder response data))
   (.build builder))
 
@@ -1299,11 +1299,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnBot$DialogActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :slot-to-elicit)]
+  (when-some [data (lookup-entry config id :slot-to-elicit)]
     (. builder slotToElicit data))
-  (when-let [data (lookup-entry config id :suppress-next-message)]
+  (when-some [data (lookup-entry config id :suppress-next-message)]
     (. builder suppressNextMessage data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1334,13 +1334,13 @@
 | `postCodeHookSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:post-code-hook-specification` |
 "
   [^CfnBot$DialogCodeHookInvocationSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enable-code-hook-invocation)]
+  (when-some [data (lookup-entry config id :enable-code-hook-invocation)]
     (. builder enableCodeHookInvocation data))
-  (when-let [data (lookup-entry config id :invocation-label)]
+  (when-some [data (lookup-entry config id :invocation-label)]
     (. builder invocationLabel data))
-  (when-let [data (lookup-entry config id :is-active)]
+  (when-some [data (lookup-entry config id :is-active)]
     (. builder isActive data))
-  (when-let [data (lookup-entry config id :post-code-hook-specification)]
+  (when-some [data (lookup-entry config id :post-code-hook-specification)]
     (. builder postCodeHookSpecification data))
   (.build builder))
 
@@ -1368,7 +1368,7 @@
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBot$DialogCodeHookSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -1398,11 +1398,11 @@
 | `sessionAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:session-attributes` |
 "
   [^CfnBot$DialogStateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dialog-action)]
+  (when-some [data (lookup-entry config id :dialog-action)]
     (. builder dialogAction data))
-  (when-let [data (lookup-entry config id :intent)]
+  (when-some [data (lookup-entry config id :intent)]
     (. builder intent data))
-  (when-let [data (lookup-entry config id :session-attributes)]
+  (when-some [data (lookup-entry config id :session-attributes)]
     (. builder sessionAttributes data))
   (.build builder))
 
@@ -1433,13 +1433,13 @@
 | `maxLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-length` |
 "
   [^CfnBot$DTMFSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :deletion-character)]
+  (when-some [data (lookup-entry config id :deletion-character)]
     (. builder deletionCharacter data))
-  (when-let [data (lookup-entry config id :end-character)]
+  (when-some [data (lookup-entry config id :end-character)]
     (. builder endCharacter data))
-  (when-let [data (lookup-entry config id :end-timeout-ms)]
+  (when-some [data (lookup-entry config id :end-timeout-ms)]
     (. builder endTimeoutMs data))
-  (when-let [data (lookup-entry config id :max-length)]
+  (when-some [data (lookup-entry config id :max-length)]
     (. builder maxLength data))
   (.build builder))
 
@@ -1468,9 +1468,9 @@
 | `invocationLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:invocation-label` |
 "
   [^CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enable-code-hook-invocation)]
+  (when-some [data (lookup-entry config id :enable-code-hook-invocation)]
     (. builder enableCodeHookInvocation data))
-  (when-let [data (lookup-entry config id :invocation-label)]
+  (when-some [data (lookup-entry config id :invocation-label)]
     (. builder invocationLabel data))
   (.build builder))
 
@@ -1498,7 +1498,7 @@
 | `grammarSlotTypeSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grammar-slot-type-setting` |
 "
   [^CfnBot$ExternalSourceSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :grammar-slot-type-setting)]
+  (when-some [data (lookup-entry config id :grammar-slot-type-setting)]
     (. builder grammarSlotTypeSetting data))
   (.build builder))
 
@@ -1529,13 +1529,13 @@
 | `postFulfillmentStatusSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:post-fulfillment-status-specification` |
 "
   [^CfnBot$FulfillmentCodeHookSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :fulfillment-updates-specification)]
+  (when-some [data (lookup-entry config id :fulfillment-updates-specification)]
     (. builder fulfillmentUpdatesSpecification data))
-  (when-let [data (lookup-entry config id :is-active)]
+  (when-some [data (lookup-entry config id :is-active)]
     (. builder isActive data))
-  (when-let [data (lookup-entry config id :post-fulfillment-status-specification)]
+  (when-some [data (lookup-entry config id :post-fulfillment-status-specification)]
     (. builder postFulfillmentStatusSpecification data))
   (.build builder))
 
@@ -1565,11 +1565,11 @@
 | `messageGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:message-groups` |
 "
   [^CfnBot$FulfillmentStartResponseSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-interrupt)]
+  (when-some [data (lookup-entry config id :allow-interrupt)]
     (. builder allowInterrupt data))
-  (when-let [data (lookup-entry config id :delay-in-seconds)]
+  (when-some [data (lookup-entry config id :delay-in-seconds)]
     (. builder delayInSeconds data))
-  (when-let [data (lookup-entry config id :message-groups)]
+  (when-some [data (lookup-entry config id :message-groups)]
     (. builder messageGroups data))
   (.build builder))
 
@@ -1599,11 +1599,11 @@
 | `messageGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:message-groups` |
 "
   [^CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-interrupt)]
+  (when-some [data (lookup-entry config id :allow-interrupt)]
     (. builder allowInterrupt data))
-  (when-let [data (lookup-entry config id :frequency-in-seconds)]
+  (when-some [data (lookup-entry config id :frequency-in-seconds)]
     (. builder frequencyInSeconds data))
-  (when-let [data (lookup-entry config id :message-groups)]
+  (when-some [data (lookup-entry config id :message-groups)]
     (. builder messageGroups data))
   (.build builder))
 
@@ -1634,13 +1634,13 @@
 | `updateResponse` | software.amazon.awscdk.services.lex.CfnBot$FulfillmentUpdateResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:update-response` |
 "
   [^CfnBot$FulfillmentUpdatesSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :active)]
+  (when-some [data (lookup-entry config id :active)]
     (. builder active data))
-  (when-let [data (lookup-entry config id :start-response)]
+  (when-some [data (lookup-entry config id :start-response)]
     (. builder startResponse data))
-  (when-let [data (lookup-entry config id :timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
-  (when-let [data (lookup-entry config id :update-response)]
+  (when-some [data (lookup-entry config id :update-response)]
     (. builder updateResponse data))
   (.build builder))
 
@@ -1668,7 +1668,7 @@
 | `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnBot$GrammarSlotTypeSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
 
@@ -1698,11 +1698,11 @@
 | `s3ObjectKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-object-key` |
 "
   [^CfnBot$GrammarSlotTypeSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
-  (when-let [data (lookup-entry config id :s3-object-key)]
+  (when-some [data (lookup-entry config id :s3-object-key)]
     (. builder s3ObjectKey data))
   (.build builder))
 
@@ -1733,13 +1733,13 @@
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 "
   [^CfnBot$ImageResponseCardProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :buttons)]
+  (when-some [data (lookup-entry config id :buttons)]
     (. builder buttons data))
-  (when-let [data (lookup-entry config id :image-url)]
+  (when-some [data (lookup-entry config id :image-url)]
     (. builder imageUrl data))
-  (when-let [data (lookup-entry config id :subtitle)]
+  (when-some [data (lookup-entry config id :subtitle)]
     (. builder subtitle data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
 
@@ -1770,13 +1770,13 @@
 | `nextStep` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:next-step` |
 "
   [^CfnBot$InitialResponseSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-hook)]
+  (when-some [data (lookup-entry config id :code-hook)]
     (. builder codeHook data))
-  (when-let [data (lookup-entry config id :conditional)]
+  (when-some [data (lookup-entry config id :conditional)]
     (. builder conditional data))
-  (when-let [data (lookup-entry config id :initial-response)]
+  (when-some [data (lookup-entry config id :initial-response)]
     (. builder initialResponse data))
-  (when-let [data (lookup-entry config id :next-step)]
+  (when-some [data (lookup-entry config id :next-step)]
     (. builder nextStep data))
   (.build builder))
 
@@ -1804,7 +1804,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnBot$InputContextProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1835,13 +1835,13 @@
 | `nextStep` | software.amazon.awscdk.services.lex.CfnBot$DialogStateProperty | [[cdk.support/lookup-entry]] | `:next-step` |
 "
   [^CfnBot$IntentClosingSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :closing-response)]
+  (when-some [data (lookup-entry config id :closing-response)]
     (. builder closingResponse data))
-  (when-let [data (lookup-entry config id :conditional)]
+  (when-some [data (lookup-entry config id :conditional)]
     (. builder conditional data))
-  (when-let [data (lookup-entry config id :is-active)]
+  (when-some [data (lookup-entry config id :is-active)]
     (. builder isActive data))
-  (when-let [data (lookup-entry config id :next-step)]
+  (when-some [data (lookup-entry config id :next-step)]
     (. builder nextStep data))
   (.build builder))
 
@@ -1881,31 +1881,31 @@
 | `promptSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prompt-specification` |
 "
   [^CfnBot$IntentConfirmationSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-hook)]
+  (when-some [data (lookup-entry config id :code-hook)]
     (. builder codeHook data))
-  (when-let [data (lookup-entry config id :confirmation-conditional)]
+  (when-some [data (lookup-entry config id :confirmation-conditional)]
     (. builder confirmationConditional data))
-  (when-let [data (lookup-entry config id :confirmation-next-step)]
+  (when-some [data (lookup-entry config id :confirmation-next-step)]
     (. builder confirmationNextStep data))
-  (when-let [data (lookup-entry config id :confirmation-response)]
+  (when-some [data (lookup-entry config id :confirmation-response)]
     (. builder confirmationResponse data))
-  (when-let [data (lookup-entry config id :declination-conditional)]
+  (when-some [data (lookup-entry config id :declination-conditional)]
     (. builder declinationConditional data))
-  (when-let [data (lookup-entry config id :declination-next-step)]
+  (when-some [data (lookup-entry config id :declination-next-step)]
     (. builder declinationNextStep data))
-  (when-let [data (lookup-entry config id :declination-response)]
+  (when-some [data (lookup-entry config id :declination-response)]
     (. builder declinationResponse data))
-  (when-let [data (lookup-entry config id :elicitation-code-hook)]
+  (when-some [data (lookup-entry config id :elicitation-code-hook)]
     (. builder elicitationCodeHook data))
-  (when-let [data (lookup-entry config id :failure-conditional)]
+  (when-some [data (lookup-entry config id :failure-conditional)]
     (. builder failureConditional data))
-  (when-let [data (lookup-entry config id :failure-next-step)]
+  (when-some [data (lookup-entry config id :failure-next-step)]
     (. builder failureNextStep data))
-  (when-let [data (lookup-entry config id :failure-response)]
+  (when-some [data (lookup-entry config id :failure-response)]
     (. builder failureResponse data))
-  (when-let [data (lookup-entry config id :is-active)]
+  (when-some [data (lookup-entry config id :is-active)]
     (. builder isActive data))
-  (when-let [data (lookup-entry config id :prompt-specification)]
+  (when-some [data (lookup-entry config id :prompt-specification)]
     (. builder promptSpecification data))
   (.build builder))
 
@@ -1934,9 +1934,9 @@
 | `slots` | java.util.List | [[cdk.support/lookup-entry]] | `:slots` |
 "
   [^CfnBot$IntentOverrideProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :slots)]
+  (when-some [data (lookup-entry config id :slots)]
     (. builder slots data))
   (.build builder))
 
@@ -1977,33 +1977,33 @@
 | `slots` | java.util.List | [[cdk.support/lookup-entry]] | `:slots` |
 "
   [^CfnBot$IntentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :dialog-code-hook)]
+  (when-some [data (lookup-entry config id :dialog-code-hook)]
     (. builder dialogCodeHook data))
-  (when-let [data (lookup-entry config id :fulfillment-code-hook)]
+  (when-some [data (lookup-entry config id :fulfillment-code-hook)]
     (. builder fulfillmentCodeHook data))
-  (when-let [data (lookup-entry config id :initial-response-setting)]
+  (when-some [data (lookup-entry config id :initial-response-setting)]
     (. builder initialResponseSetting data))
-  (when-let [data (lookup-entry config id :input-contexts)]
+  (when-some [data (lookup-entry config id :input-contexts)]
     (. builder inputContexts data))
-  (when-let [data (lookup-entry config id :intent-closing-setting)]
+  (when-some [data (lookup-entry config id :intent-closing-setting)]
     (. builder intentClosingSetting data))
-  (when-let [data (lookup-entry config id :intent-confirmation-setting)]
+  (when-some [data (lookup-entry config id :intent-confirmation-setting)]
     (. builder intentConfirmationSetting data))
-  (when-let [data (lookup-entry config id :kendra-configuration)]
+  (when-some [data (lookup-entry config id :kendra-configuration)]
     (. builder kendraConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-contexts)]
+  (when-some [data (lookup-entry config id :output-contexts)]
     (. builder outputContexts data))
-  (when-let [data (lookup-entry config id :parent-intent-signature)]
+  (when-some [data (lookup-entry config id :parent-intent-signature)]
     (. builder parentIntentSignature data))
-  (when-let [data (lookup-entry config id :sample-utterances)]
+  (when-some [data (lookup-entry config id :sample-utterances)]
     (. builder sampleUtterances data))
-  (when-let [data (lookup-entry config id :slot-priorities)]
+  (when-some [data (lookup-entry config id :slot-priorities)]
     (. builder slotPriorities data))
-  (when-let [data (lookup-entry config id :slots)]
+  (when-some [data (lookup-entry config id :slots)]
     (. builder slots data))
   (.build builder))
 
@@ -2033,11 +2033,11 @@
 | `queryFilterStringEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:query-filter-string-enabled` |
 "
   [^CfnBot$KendraConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kendra-index)]
+  (when-some [data (lookup-entry config id :kendra-index)]
     (. builder kendraIndex data))
-  (when-let [data (lookup-entry config id :query-filter-string)]
+  (when-some [data (lookup-entry config id :query-filter-string)]
     (. builder queryFilterString data))
-  (when-let [data (lookup-entry config id :query-filter-string-enabled)]
+  (when-some [data (lookup-entry config id :query-filter-string-enabled)]
     (. builder queryFilterStringEnabled data))
   (.build builder))
 
@@ -2066,9 +2066,9 @@
 | `lambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-arn` |
 "
   [^CfnBot$LambdaCodeHookProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :code-hook-interface-version)]
+  (when-some [data (lookup-entry config id :code-hook-interface-version)]
     (. builder codeHookInterfaceVersion data))
-  (when-let [data (lookup-entry config id :lambda-arn)]
+  (when-some [data (lookup-entry config id :lambda-arn)]
     (. builder lambdaArn data))
   (.build builder))
 
@@ -2097,9 +2097,9 @@
 | `variations` | java.util.List | [[cdk.support/lookup-entry]] | `:variations` |
 "
   [^CfnBot$MessageGroupProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :variations)]
+  (when-some [data (lookup-entry config id :variations)]
     (. builder variations data))
   (.build builder))
 
@@ -2130,13 +2130,13 @@
 | `ssmlMessage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssml-message` |
 "
   [^CfnBot$MessageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-payload)]
+  (when-some [data (lookup-entry config id :custom-payload)]
     (. builder customPayload data))
-  (when-let [data (lookup-entry config id :image-response-card)]
+  (when-some [data (lookup-entry config id :image-response-card)]
     (. builder imageResponseCard data))
-  (when-let [data (lookup-entry config id :plain-text-message)]
+  (when-some [data (lookup-entry config id :plain-text-message)]
     (. builder plainTextMessage data))
-  (when-let [data (lookup-entry config id :ssml-message)]
+  (when-some [data (lookup-entry config id :ssml-message)]
     (. builder ssmlMessage data))
   (.build builder))
 
@@ -2164,7 +2164,7 @@
 | `allowMultipleValues` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:allow-multiple-values` |
 "
   [^CfnBot$MultipleValuesSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-multiple-values)]
+  (when-some [data (lookup-entry config id :allow-multiple-values)]
     (. builder allowMultipleValues data))
   (.build builder))
 
@@ -2192,7 +2192,7 @@
 | `obfuscationSettingType` | java.lang.String | [[cdk.support/lookup-entry]] | `:obfuscation-setting-type` |
 "
   [^CfnBot$ObfuscationSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :obfuscation-setting-type)]
+  (when-some [data (lookup-entry config id :obfuscation-setting-type)]
     (. builder obfuscationSettingType data))
   (.build builder))
 
@@ -2222,11 +2222,11 @@
 | `turnsToLive` | java.lang.Number | [[cdk.support/lookup-entry]] | `:turns-to-live` |
 "
   [^CfnBot$OutputContextProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :time-to-live-in-seconds)]
+  (when-some [data (lookup-entry config id :time-to-live-in-seconds)]
     (. builder timeToLiveInSeconds data))
-  (when-let [data (lookup-entry config id :turns-to-live)]
+  (when-some [data (lookup-entry config id :turns-to-live)]
     (. builder turnsToLive data))
   (.build builder))
 
@@ -2254,7 +2254,7 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBot$PlainTextMessageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -2290,23 +2290,23 @@
 | `timeoutResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-response` |
 "
   [^CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :failure-conditional)]
+  (when-some [data (lookup-entry config id :failure-conditional)]
     (. builder failureConditional data))
-  (when-let [data (lookup-entry config id :failure-next-step)]
+  (when-some [data (lookup-entry config id :failure-next-step)]
     (. builder failureNextStep data))
-  (when-let [data (lookup-entry config id :failure-response)]
+  (when-some [data (lookup-entry config id :failure-response)]
     (. builder failureResponse data))
-  (when-let [data (lookup-entry config id :success-conditional)]
+  (when-some [data (lookup-entry config id :success-conditional)]
     (. builder successConditional data))
-  (when-let [data (lookup-entry config id :success-next-step)]
+  (when-some [data (lookup-entry config id :success-next-step)]
     (. builder successNextStep data))
-  (when-let [data (lookup-entry config id :success-response)]
+  (when-some [data (lookup-entry config id :success-response)]
     (. builder successResponse data))
-  (when-let [data (lookup-entry config id :timeout-conditional)]
+  (when-some [data (lookup-entry config id :timeout-conditional)]
     (. builder timeoutConditional data))
-  (when-let [data (lookup-entry config id :timeout-next-step)]
+  (when-some [data (lookup-entry config id :timeout-next-step)]
     (. builder timeoutNextStep data))
-  (when-let [data (lookup-entry config id :timeout-response)]
+  (when-some [data (lookup-entry config id :timeout-response)]
     (. builder timeoutResponse data))
   (.build builder))
 
@@ -2342,23 +2342,23 @@
 | `timeoutResponse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout-response` |
 "
   [^CfnBot$PostFulfillmentStatusSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :failure-conditional)]
+  (when-some [data (lookup-entry config id :failure-conditional)]
     (. builder failureConditional data))
-  (when-let [data (lookup-entry config id :failure-next-step)]
+  (when-some [data (lookup-entry config id :failure-next-step)]
     (. builder failureNextStep data))
-  (when-let [data (lookup-entry config id :failure-response)]
+  (when-some [data (lookup-entry config id :failure-response)]
     (. builder failureResponse data))
-  (when-let [data (lookup-entry config id :success-conditional)]
+  (when-some [data (lookup-entry config id :success-conditional)]
     (. builder successConditional data))
-  (when-let [data (lookup-entry config id :success-next-step)]
+  (when-some [data (lookup-entry config id :success-next-step)]
     (. builder successNextStep data))
-  (when-let [data (lookup-entry config id :success-response)]
+  (when-some [data (lookup-entry config id :success-response)]
     (. builder successResponse data))
-  (when-let [data (lookup-entry config id :timeout-conditional)]
+  (when-some [data (lookup-entry config id :timeout-conditional)]
     (. builder timeoutConditional data))
-  (when-let [data (lookup-entry config id :timeout-next-step)]
+  (when-some [data (lookup-entry config id :timeout-next-step)]
     (. builder timeoutNextStep data))
-  (when-let [data (lookup-entry config id :timeout-response)]
+  (when-some [data (lookup-entry config id :timeout-response)]
     (. builder timeoutResponse data))
   (.build builder))
 
@@ -2389,13 +2389,13 @@
 | `textInputSpecification` | software.amazon.awscdk.services.lex.CfnBot$TextInputSpecificationProperty | [[cdk.support/lookup-entry]] | `:text-input-specification` |
 "
   [^CfnBot$PromptAttemptSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-interrupt)]
+  (when-some [data (lookup-entry config id :allow-interrupt)]
     (. builder allowInterrupt data))
-  (when-let [data (lookup-entry config id :allowed-input-types)]
+  (when-some [data (lookup-entry config id :allowed-input-types)]
     (. builder allowedInputTypes data))
-  (when-let [data (lookup-entry config id :audio-and-dtmf-input-specification)]
+  (when-some [data (lookup-entry config id :audio-and-dtmf-input-specification)]
     (. builder audioAndDtmfInputSpecification data))
-  (when-let [data (lookup-entry config id :text-input-specification)]
+  (when-some [data (lookup-entry config id :text-input-specification)]
     (. builder textInputSpecification data))
   (.build builder))
 
@@ -2427,15 +2427,15 @@
 | `promptAttemptsSpecification` | java.util.Map | [[cdk.support/lookup-entry]] | `:prompt-attempts-specification` |
 "
   [^CfnBot$PromptSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-interrupt)]
+  (when-some [data (lookup-entry config id :allow-interrupt)]
     (. builder allowInterrupt data))
-  (when-let [data (lookup-entry config id :max-retries)]
+  (when-some [data (lookup-entry config id :max-retries)]
     (. builder maxRetries data))
-  (when-let [data (lookup-entry config id :message-groups-list)]
+  (when-some [data (lookup-entry config id :message-groups-list)]
     (. builder messageGroupsList data))
-  (when-let [data (lookup-entry config id :message-selection-strategy)]
+  (when-some [data (lookup-entry config id :message-selection-strategy)]
     (. builder messageSelectionStrategy data))
-  (when-let [data (lookup-entry config id :prompt-attempts-specification)]
+  (when-some [data (lookup-entry config id :prompt-attempts-specification)]
     (. builder promptAttemptsSpecification data))
   (.build builder))
 
@@ -2473,27 +2473,27 @@
 | `testBotAliasTags` | java.util.List | [[cdk.support/lookup-entry]] | `:test-bot-alias-tags` |
 "
   [^CfnBotProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-build-bot-locales)]
+  (when-some [data (lookup-entry config id :auto-build-bot-locales)]
     (. builder autoBuildBotLocales data))
-  (when-let [data (lookup-entry config id :bot-file-s3-location)]
+  (when-some [data (lookup-entry config id :bot-file-s3-location)]
     (. builder botFileS3Location data))
-  (when-let [data (lookup-entry config id :bot-locales)]
+  (when-some [data (lookup-entry config id :bot-locales)]
     (. builder botLocales data))
-  (when-let [data (lookup-entry config id :bot-tags)]
+  (when-some [data (lookup-entry config id :bot-tags)]
     (. builder botTags data))
-  (when-let [data (lookup-entry config id :data-privacy)]
+  (when-some [data (lookup-entry config id :data-privacy)]
     (. builder dataPrivacy data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :idle-session-ttl-in-seconds)]
+  (when-some [data (lookup-entry config id :idle-session-ttl-in-seconds)]
     (. builder idleSessionTtlInSeconds data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :test-bot-alias-settings)]
+  (when-some [data (lookup-entry config id :test-bot-alias-settings)]
     (. builder testBotAliasSettings data))
-  (when-let [data (lookup-entry config id :test-bot-alias-tags)]
+  (when-some [data (lookup-entry config id :test-bot-alias-tags)]
     (. builder testBotAliasTags data))
   (.build builder))
 
@@ -2522,9 +2522,9 @@
 | `messageGroupsList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:message-groups-list` |
 "
   [^CfnBot$ResponseSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-interrupt)]
+  (when-some [data (lookup-entry config id :allow-interrupt)]
     (. builder allowInterrupt data))
-  (when-let [data (lookup-entry config id :message-groups-list)]
+  (when-some [data (lookup-entry config id :message-groups-list)]
     (. builder messageGroupsList data))
   (.build builder))
 
@@ -2554,11 +2554,11 @@
 | `s3BucketArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-arn` |
 "
   [^CfnBot$S3BucketLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :log-prefix)]
+  (when-some [data (lookup-entry config id :log-prefix)]
     (. builder logPrefix data))
-  (when-let [data (lookup-entry config id :s3-bucket-arn)]
+  (when-some [data (lookup-entry config id :s3-bucket-arn)]
     (. builder s3BucketArn data))
   (.build builder))
 
@@ -2588,11 +2588,11 @@
 | `s3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-object-version` |
 "
   [^CfnBot$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-object-key)]
+  (when-some [data (lookup-entry config id :s3-object-key)]
     (. builder s3ObjectKey data))
-  (when-let [data (lookup-entry config id :s3-object-version)]
+  (when-some [data (lookup-entry config id :s3-object-version)]
     (. builder s3ObjectVersion data))
   (.build builder))
 
@@ -2620,7 +2620,7 @@
 | `utterance` | java.lang.String | [[cdk.support/lookup-entry]] | `:utterance` |
 "
   [^CfnBot$SampleUtteranceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :utterance)]
+  (when-some [data (lookup-entry config id :utterance)]
     (. builder utterance data))
   (.build builder))
 
@@ -2648,7 +2648,7 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBot$SampleValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -2676,7 +2676,7 @@
 | `detectSentiment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:detect-sentiment` |
 "
   [^CfnBot$SentimentAnalysisSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :detect-sentiment)]
+  (when-some [data (lookup-entry config id :detect-sentiment)]
     (. builder detectSentiment data))
   (.build builder))
 
@@ -2705,9 +2705,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBot$SessionAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -2742,21 +2742,21 @@
 | `failureResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:failure-response` |
 "
   [^CfnBot$SlotCaptureSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :capture-conditional)]
+  (when-some [data (lookup-entry config id :capture-conditional)]
     (. builder captureConditional data))
-  (when-let [data (lookup-entry config id :capture-next-step)]
+  (when-some [data (lookup-entry config id :capture-next-step)]
     (. builder captureNextStep data))
-  (when-let [data (lookup-entry config id :capture-response)]
+  (when-some [data (lookup-entry config id :capture-response)]
     (. builder captureResponse data))
-  (when-let [data (lookup-entry config id :code-hook)]
+  (when-some [data (lookup-entry config id :code-hook)]
     (. builder codeHook data))
-  (when-let [data (lookup-entry config id :elicitation-code-hook)]
+  (when-some [data (lookup-entry config id :elicitation-code-hook)]
     (. builder elicitationCodeHook data))
-  (when-let [data (lookup-entry config id :failure-conditional)]
+  (when-some [data (lookup-entry config id :failure-conditional)]
     (. builder failureConditional data))
-  (when-let [data (lookup-entry config id :failure-next-step)]
+  (when-some [data (lookup-entry config id :failure-next-step)]
     (. builder failureNextStep data))
-  (when-let [data (lookup-entry config id :failure-response)]
+  (when-some [data (lookup-entry config id :failure-response)]
     (. builder failureResponse data))
   (.build builder))
 
@@ -2784,7 +2784,7 @@
 | `defaultValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-value` |
 "
   [^CfnBot$SlotDefaultValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
   (.build builder))
 
@@ -2812,7 +2812,7 @@
 | `defaultValueList` | java.util.List | [[cdk.support/lookup-entry]] | `:default-value-list` |
 "
   [^CfnBot$SlotDefaultValueSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value-list)]
+  (when-some [data (lookup-entry config id :default-value-list)]
     (. builder defaultValueList data))
   (.build builder))
 
@@ -2841,9 +2841,9 @@
 | `slotName` | java.lang.String | [[cdk.support/lookup-entry]] | `:slot-name` |
 "
   [^CfnBot$SlotPriorityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :slot-name)]
+  (when-some [data (lookup-entry config id :slot-name)]
     (. builder slotName data))
   (.build builder))
 
@@ -2876,17 +2876,17 @@
 | `valueElicitationSetting` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value-elicitation-setting` |
 "
   [^CfnBot$SlotProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :multiple-values-setting)]
+  (when-some [data (lookup-entry config id :multiple-values-setting)]
     (. builder multipleValuesSetting data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :obfuscation-setting)]
+  (when-some [data (lookup-entry config id :obfuscation-setting)]
     (. builder obfuscationSetting data))
-  (when-let [data (lookup-entry config id :slot-type-name)]
+  (when-some [data (lookup-entry config id :slot-type-name)]
     (. builder slotTypeName data))
-  (when-let [data (lookup-entry config id :value-elicitation-setting)]
+  (when-some [data (lookup-entry config id :value-elicitation-setting)]
     (. builder valueElicitationSetting data))
   (.build builder))
 
@@ -2919,17 +2919,17 @@
 | `valueSelectionSetting` | software.amazon.awscdk.services.lex.CfnBot$SlotValueSelectionSettingProperty | [[cdk.support/lookup-entry]] | `:value-selection-setting` |
 "
   [^CfnBot$SlotTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :external-source-setting)]
+  (when-some [data (lookup-entry config id :external-source-setting)]
     (. builder externalSourceSetting data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parent-slot-type-signature)]
+  (when-some [data (lookup-entry config id :parent-slot-type-signature)]
     (. builder parentSlotTypeSignature data))
-  (when-let [data (lookup-entry config id :slot-type-values)]
+  (when-some [data (lookup-entry config id :slot-type-values)]
     (. builder slotTypeValues data))
-  (when-let [data (lookup-entry config id :value-selection-setting)]
+  (when-some [data (lookup-entry config id :value-selection-setting)]
     (. builder valueSelectionSetting data))
   (.build builder))
 
@@ -2958,9 +2958,9 @@
 | `synonyms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:synonyms` |
 "
   [^CfnBot$SlotTypeValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sample-value)]
+  (when-some [data (lookup-entry config id :sample-value)]
     (. builder sampleValue data))
-  (when-let [data (lookup-entry config id :synonyms)]
+  (when-some [data (lookup-entry config id :synonyms)]
     (. builder synonyms data))
   (.build builder))
 
@@ -2993,17 +2993,17 @@
 | `waitAndContinueSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:wait-and-continue-specification` |
 "
   [^CfnBot$SlotValueElicitationSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value-specification)]
+  (when-some [data (lookup-entry config id :default-value-specification)]
     (. builder defaultValueSpecification data))
-  (when-let [data (lookup-entry config id :prompt-specification)]
+  (when-some [data (lookup-entry config id :prompt-specification)]
     (. builder promptSpecification data))
-  (when-let [data (lookup-entry config id :sample-utterances)]
+  (when-some [data (lookup-entry config id :sample-utterances)]
     (. builder sampleUtterances data))
-  (when-let [data (lookup-entry config id :slot-capture-setting)]
+  (when-some [data (lookup-entry config id :slot-capture-setting)]
     (. builder slotCaptureSetting data))
-  (when-let [data (lookup-entry config id :slot-constraint)]
+  (when-some [data (lookup-entry config id :slot-constraint)]
     (. builder slotConstraint data))
-  (when-let [data (lookup-entry config id :wait-and-continue-specification)]
+  (when-some [data (lookup-entry config id :wait-and-continue-specification)]
     (. builder waitAndContinueSpecification data))
   (.build builder))
 
@@ -3032,9 +3032,9 @@
 | `slotValueOverride` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:slot-value-override` |
 "
   [^CfnBot$SlotValueOverrideMapProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :slot-name)]
+  (when-some [data (lookup-entry config id :slot-name)]
     (. builder slotName data))
-  (when-let [data (lookup-entry config id :slot-value-override)]
+  (when-some [data (lookup-entry config id :slot-value-override)]
     (. builder slotValueOverride data))
   (.build builder))
 
@@ -3064,11 +3064,11 @@
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnBot$SlotValueOverrideProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :shape)]
+  (when-some [data (lookup-entry config id :shape)]
     (. builder shape data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -3096,7 +3096,7 @@
 | `interpretedValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:interpreted-value` |
 "
   [^CfnBot$SlotValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interpreted-value)]
+  (when-some [data (lookup-entry config id :interpreted-value)]
     (. builder interpretedValue data))
   (.build builder))
 
@@ -3124,7 +3124,7 @@
 | `pattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern` |
 "
   [^CfnBot$SlotValueRegexFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
   (.build builder))
 
@@ -3154,11 +3154,11 @@
 | `resolutionStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolution-strategy` |
 "
   [^CfnBot$SlotValueSelectionSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :advanced-recognition-setting)]
+  (when-some [data (lookup-entry config id :advanced-recognition-setting)]
     (. builder advancedRecognitionSetting data))
-  (when-let [data (lookup-entry config id :regex-filter)]
+  (when-some [data (lookup-entry config id :regex-filter)]
     (. builder regexFilter data))
-  (when-let [data (lookup-entry config id :resolution-strategy)]
+  (when-some [data (lookup-entry config id :resolution-strategy)]
     (. builder resolutionStrategy data))
   (.build builder))
 
@@ -3186,7 +3186,7 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBot$SSMLMessageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -3217,13 +3217,13 @@
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 "
   [^CfnBot$StillWaitingResponseSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-interrupt)]
+  (when-some [data (lookup-entry config id :allow-interrupt)]
     (. builder allowInterrupt data))
-  (when-let [data (lookup-entry config id :frequency-in-seconds)]
+  (when-some [data (lookup-entry config id :frequency-in-seconds)]
     (. builder frequencyInSeconds data))
-  (when-let [data (lookup-entry config id :message-groups-list)]
+  (when-some [data (lookup-entry config id :message-groups-list)]
     (. builder messageGroupsList data))
-  (when-let [data (lookup-entry config id :timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
   (.build builder))
 
@@ -3254,13 +3254,13 @@
 | `sentimentAnalysisSettings` | java.lang.Object | [[cdk.support/lookup-entry]] | `:sentiment-analysis-settings` |
 "
   [^CfnBot$TestBotAliasSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bot-alias-locale-settings)]
+  (when-some [data (lookup-entry config id :bot-alias-locale-settings)]
     (. builder botAliasLocaleSettings data))
-  (when-let [data (lookup-entry config id :conversation-log-settings)]
+  (when-some [data (lookup-entry config id :conversation-log-settings)]
     (. builder conversationLogSettings data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :sentiment-analysis-settings)]
+  (when-some [data (lookup-entry config id :sentiment-analysis-settings)]
     (. builder sentimentAnalysisSettings data))
   (.build builder))
 
@@ -3288,7 +3288,7 @@
 | `startTimeoutMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-timeout-ms` |
 "
   [^CfnBot$TextInputSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :start-timeout-ms)]
+  (when-some [data (lookup-entry config id :start-timeout-ms)]
     (. builder startTimeoutMs data))
   (.build builder))
 
@@ -3316,7 +3316,7 @@
 | `cloudWatch` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch` |
 "
   [^CfnBot$TextLogDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch)]
+  (when-some [data (lookup-entry config id :cloud-watch)]
     (. builder cloudWatch data))
   (.build builder))
 
@@ -3345,9 +3345,9 @@
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnBot$TextLogSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -3375,7 +3375,7 @@
 | `sourceBotVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-bot-version` |
 "
   [^CfnBotVersion$BotVersionLocaleDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source-bot-version)]
+  (when-some [data (lookup-entry config id :source-bot-version)]
     (. builder sourceBotVersion data))
   (.build builder))
 
@@ -3404,9 +3404,9 @@
 | `localeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:locale-id` |
 "
   [^CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bot-version-locale-details)]
+  (when-some [data (lookup-entry config id :bot-version-locale-details)]
     (. builder botVersionLocaleDetails data))
-  (when-let [data (lookup-entry config id :locale-id)]
+  (when-some [data (lookup-entry config id :locale-id)]
     (. builder localeId data))
   (.build builder))
 
@@ -3436,11 +3436,11 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnBotVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :bot-id)]
+  (when-some [data (lookup-entry config id :bot-id)]
     (. builder botId data))
-  (when-let [data (lookup-entry config id :bot-version-locale-specification)]
+  (when-some [data (lookup-entry config id :bot-version-locale-specification)]
     (. builder botVersionLocaleSpecification data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
   (.build builder))
 
@@ -3470,11 +3470,11 @@
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 "
   [^CfnBotVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bot-id)]
+  (when-some [data (lookup-entry config id :bot-id)]
     (. builder botId data))
-  (when-let [data (lookup-entry config id :bot-version-locale-specification)]
+  (when-some [data (lookup-entry config id :bot-version-locale-specification)]
     (. builder botVersionLocaleSpecification data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
   (.build builder))
 
@@ -3503,9 +3503,9 @@
 | `voiceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:voice-id` |
 "
   [^CfnBot$VoiceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :engine)]
+  (when-some [data (lookup-entry config id :engine)]
     (. builder engine data))
-  (when-let [data (lookup-entry config id :voice-id)]
+  (when-some [data (lookup-entry config id :voice-id)]
     (. builder voiceId data))
   (.build builder))
 
@@ -3536,13 +3536,13 @@
 | `waitingResponse` | software.amazon.awscdk.services.lex.CfnBot$ResponseSpecificationProperty | [[cdk.support/lookup-entry]] | `:waiting-response` |
 "
   [^CfnBot$WaitAndContinueSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :continue-response)]
+  (when-some [data (lookup-entry config id :continue-response)]
     (. builder continueResponse data))
-  (when-let [data (lookup-entry config id :is-active)]
+  (when-some [data (lookup-entry config id :is-active)]
     (. builder isActive data))
-  (when-let [data (lookup-entry config id :still-waiting-response)]
+  (when-some [data (lookup-entry config id :still-waiting-response)]
     (. builder stillWaitingResponse data))
-  (when-let [data (lookup-entry config id :waiting-response)]
+  (when-some [data (lookup-entry config id :waiting-response)]
     (. builder waitingResponse data))
   (.build builder))
 
@@ -3571,9 +3571,9 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnResourcePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -3602,9 +3602,9 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnResourcePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 

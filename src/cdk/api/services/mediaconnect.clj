@@ -74,11 +74,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnBridge$BridgeFlowSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :flow-vpc-interface-attachment)]
+  (when-some [data (lookup-entry config id :flow-vpc-interface-attachment)]
     (. builder flowVpcInterfaceAttachment data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -111,17 +111,17 @@
 | `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
 "
   [^CfnBridge$BridgeNetworkOutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip-address)]
+  (when-some [data (lookup-entry config id :ip-address)]
     (. builder ipAddress data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-name)]
+  (when-some [data (lookup-entry config id :network-name)]
     (. builder networkName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
   (.build builder))
 
@@ -153,15 +153,15 @@
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnBridge$BridgeNetworkSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :multicast-ip)]
+  (when-some [data (lookup-entry config id :multicast-ip)]
     (. builder multicastIp data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-name)]
+  (when-some [data (lookup-entry config id :network-name)]
     (. builder networkName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -189,7 +189,7 @@
 | `networkOutput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-output` |
 "
   [^CfnBridge$BridgeOutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :network-output)]
+  (when-some [data (lookup-entry config id :network-output)]
     (. builder networkOutput data))
   (.build builder))
 
@@ -218,9 +218,9 @@
 | `networkSource` | software.amazon.awscdk.services.mediaconnect.CfnBridge$BridgeNetworkSourceProperty | [[cdk.support/lookup-entry]] | `:network-source` |
 "
   [^CfnBridge$BridgeSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :flow-source)]
+  (when-some [data (lookup-entry config id :flow-source)]
     (. builder flowSource data))
-  (when-let [data (lookup-entry config id :network-source)]
+  (when-some [data (lookup-entry config id :network-source)]
     (. builder networkSource data))
   (.build builder))
 
@@ -254,19 +254,19 @@
 | `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
 "
   [^CfnBridge$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-gateway-bridge)]
+  (when-some [data (lookup-entry config id :egress-gateway-bridge)]
     (. builder egressGatewayBridge data))
-  (when-let [data (lookup-entry config id :ingress-gateway-bridge)]
+  (when-some [data (lookup-entry config id :ingress-gateway-bridge)]
     (. builder ingressGatewayBridge data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
-  (when-let [data (lookup-entry config id :placement-arn)]
+  (when-some [data (lookup-entry config id :placement-arn)]
     (. builder placementArn data))
-  (when-let [data (lookup-entry config id :source-failover-config)]
+  (when-some [data (lookup-entry config id :source-failover-config)]
     (. builder sourceFailoverConfig data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
   (.build builder))
 
@@ -294,7 +294,7 @@
 | `maxBitrate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-bitrate` |
 "
   [^CfnBridge$EgressGatewayBridgeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-bitrate)]
+  (when-some [data (lookup-entry config id :max-bitrate)]
     (. builder maxBitrate data))
   (.build builder))
 
@@ -324,11 +324,11 @@
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 "
   [^CfnBridge$FailoverConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :failover-mode)]
+  (when-some [data (lookup-entry config id :failover-mode)]
     (. builder failoverMode data))
-  (when-let [data (lookup-entry config id :source-priority)]
+  (when-some [data (lookup-entry config id :source-priority)]
     (. builder sourcePriority data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
 
@@ -357,9 +357,9 @@
 | `maxOutputs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-outputs` |
 "
   [^CfnBridge$IngressGatewayBridgeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-bitrate)]
+  (when-some [data (lookup-entry config id :max-bitrate)]
     (. builder maxBitrate data))
-  (when-let [data (lookup-entry config id :max-outputs)]
+  (when-some [data (lookup-entry config id :max-outputs)]
     (. builder maxOutputs data))
   (.build builder))
 
@@ -391,15 +391,15 @@
 | `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
 "
   [^CfnBridgeOutput$BridgeNetworkOutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip-address)]
+  (when-some [data (lookup-entry config id :ip-address)]
     (. builder ipAddress data))
-  (when-let [data (lookup-entry config id :network-name)]
+  (when-some [data (lookup-entry config id :network-name)]
     (. builder networkName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :ttl)]
+  (when-some [data (lookup-entry config id :ttl)]
     (. builder ttl data))
   (.build builder))
 
@@ -429,11 +429,11 @@
 | `networkOutput` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-output` |
 "
   [^CfnBridgeOutput$Builder builder id config]
-  (when-let [data (lookup-entry config id :bridge-arn)]
+  (when-some [data (lookup-entry config id :bridge-arn)]
     (. builder bridgeArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-output)]
+  (when-some [data (lookup-entry config id :network-output)]
     (. builder networkOutput data))
   (.build builder))
 
@@ -463,11 +463,11 @@
 | `networkOutput` | software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput$BridgeNetworkOutputProperty | [[cdk.support/lookup-entry]] | `:network-output` |
 "
   [^CfnBridgeOutputProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bridge-arn)]
+  (when-some [data (lookup-entry config id :bridge-arn)]
     (. builder bridgeArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-output)]
+  (when-some [data (lookup-entry config id :network-output)]
     (. builder networkOutput data))
   (.build builder))
 
@@ -501,19 +501,19 @@
 | `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
 "
   [^CfnBridgeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-gateway-bridge)]
+  (when-some [data (lookup-entry config id :egress-gateway-bridge)]
     (. builder egressGatewayBridge data))
-  (when-let [data (lookup-entry config id :ingress-gateway-bridge)]
+  (when-some [data (lookup-entry config id :ingress-gateway-bridge)]
     (. builder ingressGatewayBridge data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
-  (when-let [data (lookup-entry config id :placement-arn)]
+  (when-some [data (lookup-entry config id :placement-arn)]
     (. builder placementArn data))
-  (when-let [data (lookup-entry config id :source-failover-config)]
+  (when-some [data (lookup-entry config id :source-failover-config)]
     (. builder sourceFailoverConfig data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
   (.build builder))
 
@@ -542,9 +542,9 @@
 | `flowVpcInterfaceAttachment` | software.amazon.awscdk.services.mediaconnect.CfnBridgeSource$VpcInterfaceAttachmentProperty | [[cdk.support/lookup-entry]] | `:flow-vpc-interface-attachment` |
 "
   [^CfnBridgeSource$BridgeFlowSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :flow-vpc-interface-attachment)]
+  (when-some [data (lookup-entry config id :flow-vpc-interface-attachment)]
     (. builder flowVpcInterfaceAttachment data))
   (.build builder))
 
@@ -575,13 +575,13 @@
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnBridgeSource$BridgeNetworkSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :multicast-ip)]
+  (when-some [data (lookup-entry config id :multicast-ip)]
     (. builder multicastIp data))
-  (when-let [data (lookup-entry config id :network-name)]
+  (when-some [data (lookup-entry config id :network-name)]
     (. builder networkName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -612,13 +612,13 @@
 | `networkSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-source` |
 "
   [^CfnBridgeSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :bridge-arn)]
+  (when-some [data (lookup-entry config id :bridge-arn)]
     (. builder bridgeArn data))
-  (when-let [data (lookup-entry config id :flow-source)]
+  (when-some [data (lookup-entry config id :flow-source)]
     (. builder flowSource data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-source)]
+  (when-some [data (lookup-entry config id :network-source)]
     (. builder networkSource data))
   (.build builder))
 
@@ -646,7 +646,7 @@
 | `primarySource` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-source` |
 "
   [^CfnBridge$SourcePriorityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :primary-source)]
+  (when-some [data (lookup-entry config id :primary-source)]
     (. builder primarySource data))
   (.build builder))
 
@@ -677,13 +677,13 @@
 | `networkSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:network-source` |
 "
   [^CfnBridgeSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :bridge-arn)]
+  (when-some [data (lookup-entry config id :bridge-arn)]
     (. builder bridgeArn data))
-  (when-let [data (lookup-entry config id :flow-source)]
+  (when-some [data (lookup-entry config id :flow-source)]
     (. builder flowSource data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-source)]
+  (when-some [data (lookup-entry config id :network-source)]
     (. builder networkSource data))
   (.build builder))
 
@@ -711,7 +711,7 @@
 | `vpcInterfaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-interface-name` |
 "
   [^CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-interface-name)]
+  (when-some [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
   (.build builder))
 
@@ -739,7 +739,7 @@
 | `vpcInterfaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-interface-name` |
 "
   [^CfnBridge$VpcInterfaceAttachmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-interface-name)]
+  (when-some [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
   (.build builder))
 
@@ -773,19 +773,19 @@
 | `vpcInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interfaces` |
 "
   [^CfnFlow$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zone)]
+  (when-some [data (lookup-entry config id :availability-zone)]
     (. builder availabilityZone data))
-  (when-let [data (lookup-entry config id :maintenance)]
+  (when-some [data (lookup-entry config id :maintenance)]
     (. builder maintenance data))
-  (when-let [data (lookup-entry config id :media-streams)]
+  (when-some [data (lookup-entry config id :media-streams)]
     (. builder mediaStreams data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :source-failover-config)]
+  (when-some [data (lookup-entry config id :source-failover-config)]
     (. builder sourceFailoverConfig data))
-  (when-let [data (lookup-entry config id :vpc-interfaces)]
+  (when-some [data (lookup-entry config id :vpc-interfaces)]
     (. builder vpcInterfaces data))
   (.build builder))
 
@@ -821,23 +821,23 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnFlow$EncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm)]
+  (when-some [data (lookup-entry config id :algorithm)]
     (. builder algorithm data))
-  (when-let [data (lookup-entry config id :constant-initialization-vector)]
+  (when-some [data (lookup-entry config id :constant-initialization-vector)]
     (. builder constantInitializationVector data))
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :secret-arn)]
+  (when-some [data (lookup-entry config id :secret-arn)]
     (. builder secretArn data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -871,19 +871,19 @@
 | `subscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:subscribers` |
 "
   [^CfnFlowEntitlement$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-transfer-subscriber-fee-percent)]
+  (when-some [data (lookup-entry config id :data-transfer-subscriber-fee-percent)]
     (. builder dataTransferSubscriberFeePercent data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :entitlement-status)]
+  (when-some [data (lookup-entry config id :entitlement-status)]
     (. builder entitlementStatus data))
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :subscribers)]
+  (when-some [data (lookup-entry config id :subscribers)]
     (. builder subscribers data))
   (.build builder))
 
@@ -919,23 +919,23 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnFlowEntitlement$EncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm)]
+  (when-some [data (lookup-entry config id :algorithm)]
     (. builder algorithm data))
-  (when-let [data (lookup-entry config id :constant-initialization-vector)]
+  (when-some [data (lookup-entry config id :constant-initialization-vector)]
     (. builder constantInitializationVector data))
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :secret-arn)]
+  (when-some [data (lookup-entry config id :secret-arn)]
     (. builder secretArn data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -969,19 +969,19 @@
 | `subscribers` | java.util.List | [[cdk.support/lookup-entry]] | `:subscribers` |
 "
   [^CfnFlowEntitlementProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-transfer-subscriber-fee-percent)]
+  (when-some [data (lookup-entry config id :data-transfer-subscriber-fee-percent)]
     (. builder dataTransferSubscriberFeePercent data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :entitlement-status)]
+  (when-some [data (lookup-entry config id :entitlement-status)]
     (. builder entitlementStatus data))
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :subscribers)]
+  (when-some [data (lookup-entry config id :subscribers)]
     (. builder subscribers data))
   (.build builder))
 
@@ -1012,13 +1012,13 @@
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
 "
   [^CfnFlow$FailoverConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :failover-mode)]
+  (when-some [data (lookup-entry config id :failover-mode)]
     (. builder failoverMode data))
-  (when-let [data (lookup-entry config id :recovery-window)]
+  (when-some [data (lookup-entry config id :recovery-window)]
     (. builder recoveryWindow data))
-  (when-let [data (lookup-entry config id :source-priority)]
+  (when-some [data (lookup-entry config id :source-priority)]
     (. builder sourcePriority data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
 
@@ -1052,19 +1052,19 @@
 | `tcs` | java.lang.String | [[cdk.support/lookup-entry]] | `:tcs` |
 "
   [^CfnFlow$FmtpProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-order)]
+  (when-some [data (lookup-entry config id :channel-order)]
     (. builder channelOrder data))
-  (when-let [data (lookup-entry config id :colorimetry)]
+  (when-some [data (lookup-entry config id :colorimetry)]
     (. builder colorimetry data))
-  (when-let [data (lookup-entry config id :exact-framerate)]
+  (when-some [data (lookup-entry config id :exact-framerate)]
     (. builder exactFramerate data))
-  (when-let [data (lookup-entry config id :par)]
+  (when-some [data (lookup-entry config id :par)]
     (. builder par data))
-  (when-let [data (lookup-entry config id :range)]
+  (when-some [data (lookup-entry config id :range)]
     (. builder range data))
-  (when-let [data (lookup-entry config id :scan-mode)]
+  (when-some [data (lookup-entry config id :scan-mode)]
     (. builder scanMode data))
-  (when-let [data (lookup-entry config id :tcs)]
+  (when-some [data (lookup-entry config id :tcs)]
     (. builder tcs data))
   (.build builder))
 
@@ -1093,9 +1093,9 @@
 | `vpcInterfaceAttachment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
 "
   [^CfnFlow$GatewayBridgeSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bridge-arn)]
+  (when-some [data (lookup-entry config id :bridge-arn)]
     (. builder bridgeArn data))
-  (when-let [data (lookup-entry config id :vpc-interface-attachment)]
+  (when-some [data (lookup-entry config id :vpc-interface-attachment)]
     (. builder vpcInterfaceAttachment data))
   (.build builder))
 
@@ -1124,9 +1124,9 @@
 | `interfaceValue` | software.amazon.awscdk.services.mediaconnect.CfnFlow$InterfaceProperty | [[cdk.support/lookup-entry]] | `:interface-value` |
 "
   [^CfnFlow$InputConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-port)]
+  (when-some [data (lookup-entry config id :input-port)]
     (. builder inputPort data))
-  (when-let [data (lookup-entry config id :interface-value)]
+  (when-some [data (lookup-entry config id :interface-value)]
     (. builder interfaceValue data))
   (.build builder))
 
@@ -1154,7 +1154,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnFlow$InterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1183,9 +1183,9 @@
 | `maintenanceStartHour` | java.lang.String | [[cdk.support/lookup-entry]] | `:maintenance-start-hour` |
 "
   [^CfnFlow$MaintenanceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maintenance-day)]
+  (when-some [data (lookup-entry config id :maintenance-day)]
     (. builder maintenanceDay data))
-  (when-let [data (lookup-entry config id :maintenance-start-hour)]
+  (when-some [data (lookup-entry config id :maintenance-start-hour)]
     (. builder maintenanceStartHour data))
   (.build builder))
 
@@ -1214,9 +1214,9 @@
 | `lang` | java.lang.String | [[cdk.support/lookup-entry]] | `:lang` |
 "
   [^CfnFlow$MediaStreamAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :fmtp)]
+  (when-some [data (lookup-entry config id :fmtp)]
     (. builder fmtp data))
-  (when-let [data (lookup-entry config id :lang)]
+  (when-some [data (lookup-entry config id :lang)]
     (. builder lang data))
   (.build builder))
 
@@ -1251,21 +1251,21 @@
 | `videoFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:video-format` |
 "
   [^CfnFlow$MediaStreamProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :clock-rate)]
+  (when-some [data (lookup-entry config id :clock-rate)]
     (. builder clockRate data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :fmt)]
+  (when-some [data (lookup-entry config id :fmt)]
     (. builder fmt data))
-  (when-let [data (lookup-entry config id :media-stream-id)]
+  (when-some [data (lookup-entry config id :media-stream-id)]
     (. builder mediaStreamId data))
-  (when-let [data (lookup-entry config id :media-stream-name)]
+  (when-some [data (lookup-entry config id :media-stream-name)]
     (. builder mediaStreamName data))
-  (when-let [data (lookup-entry config id :media-stream-type)]
+  (when-some [data (lookup-entry config id :media-stream-type)]
     (. builder mediaStreamType data))
-  (when-let [data (lookup-entry config id :video-format)]
+  (when-some [data (lookup-entry config id :video-format)]
     (. builder videoFormat data))
   (.build builder))
 
@@ -1295,11 +1295,11 @@
 | `mediaStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:media-stream-name` |
 "
   [^CfnFlow$MediaStreamSourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encoding-name)]
+  (when-some [data (lookup-entry config id :encoding-name)]
     (. builder encodingName data))
-  (when-let [data (lookup-entry config id :input-configurations)]
+  (when-some [data (lookup-entry config id :input-configurations)]
     (. builder inputConfigurations data))
-  (when-let [data (lookup-entry config id :media-stream-name)]
+  (when-some [data (lookup-entry config id :media-stream-name)]
     (. builder mediaStreamName data))
   (.build builder))
 
@@ -1341,35 +1341,35 @@
 | `vpcInterfaceAttachment` | software.amazon.awscdk.services.mediaconnect.CfnFlowOutput$VpcInterfaceAttachmentProperty | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
 "
   [^CfnFlowOutput$Builder builder id config]
-  (when-let [data (lookup-entry config id :cidr-allow-list)]
+  (when-some [data (lookup-entry config id :cidr-allow-list)]
     (. builder cidrAllowList data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :max-latency)]
+  (when-some [data (lookup-entry config id :max-latency)]
     (. builder maxLatency data))
-  (when-let [data (lookup-entry config id :media-stream-output-configurations)]
+  (when-some [data (lookup-entry config id :media-stream-output-configurations)]
     (. builder mediaStreamOutputConfigurations data))
-  (when-let [data (lookup-entry config id :min-latency)]
+  (when-some [data (lookup-entry config id :min-latency)]
     (. builder minLatency data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :remote-id)]
+  (when-some [data (lookup-entry config id :remote-id)]
     (. builder remoteId data))
-  (when-let [data (lookup-entry config id :smoothing-latency)]
+  (when-some [data (lookup-entry config id :smoothing-latency)]
     (. builder smoothingLatency data))
-  (when-let [data (lookup-entry config id :stream-id)]
+  (when-some [data (lookup-entry config id :stream-id)]
     (. builder streamId data))
-  (when-let [data (lookup-entry config id :vpc-interface-attachment)]
+  (when-some [data (lookup-entry config id :vpc-interface-attachment)]
     (. builder vpcInterfaceAttachment data))
   (.build builder))
 
@@ -1399,11 +1399,11 @@
 | `interfaceValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:interface-value` |
 "
   [^CfnFlowOutput$DestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-ip)]
+  (when-some [data (lookup-entry config id :destination-ip)]
     (. builder destinationIp data))
-  (when-let [data (lookup-entry config id :destination-port)]
+  (when-some [data (lookup-entry config id :destination-port)]
     (. builder destinationPort data))
-  (when-let [data (lookup-entry config id :interface-value)]
+  (when-some [data (lookup-entry config id :interface-value)]
     (. builder interfaceValue data))
   (.build builder))
 
@@ -1432,9 +1432,9 @@
 | `encoderProfile` | java.lang.String | [[cdk.support/lookup-entry]] | `:encoder-profile` |
 "
   [^CfnFlowOutput$EncodingParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :compression-factor)]
+  (when-some [data (lookup-entry config id :compression-factor)]
     (. builder compressionFactor data))
-  (when-let [data (lookup-entry config id :encoder-profile)]
+  (when-some [data (lookup-entry config id :encoder-profile)]
     (. builder encoderProfile data))
   (.build builder))
 
@@ -1465,13 +1465,13 @@
 | `secretArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-arn` |
 "
   [^CfnFlowOutput$EncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm)]
+  (when-some [data (lookup-entry config id :algorithm)]
     (. builder algorithm data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :secret-arn)]
+  (when-some [data (lookup-entry config id :secret-arn)]
     (. builder secretArn data))
   (.build builder))
 
@@ -1499,7 +1499,7 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnFlowOutput$InterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1530,13 +1530,13 @@
 | `mediaStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:media-stream-name` |
 "
   [^CfnFlowOutput$MediaStreamOutputConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-configurations)]
+  (when-some [data (lookup-entry config id :destination-configurations)]
     (. builder destinationConfigurations data))
-  (when-let [data (lookup-entry config id :encoding-name)]
+  (when-some [data (lookup-entry config id :encoding-name)]
     (. builder encodingName data))
-  (when-let [data (lookup-entry config id :encoding-parameters)]
+  (when-some [data (lookup-entry config id :encoding-parameters)]
     (. builder encodingParameters data))
-  (when-let [data (lookup-entry config id :media-stream-name)]
+  (when-some [data (lookup-entry config id :media-stream-name)]
     (. builder mediaStreamName data))
   (.build builder))
 
@@ -1578,35 +1578,35 @@
 | `vpcInterfaceAttachment` | software.amazon.awscdk.services.mediaconnect.CfnFlowOutput$VpcInterfaceAttachmentProperty | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
 "
   [^CfnFlowOutputProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cidr-allow-list)]
+  (when-some [data (lookup-entry config id :cidr-allow-list)]
     (. builder cidrAllowList data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :max-latency)]
+  (when-some [data (lookup-entry config id :max-latency)]
     (. builder maxLatency data))
-  (when-let [data (lookup-entry config id :media-stream-output-configurations)]
+  (when-some [data (lookup-entry config id :media-stream-output-configurations)]
     (. builder mediaStreamOutputConfigurations data))
-  (when-let [data (lookup-entry config id :min-latency)]
+  (when-some [data (lookup-entry config id :min-latency)]
     (. builder minLatency data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :remote-id)]
+  (when-some [data (lookup-entry config id :remote-id)]
     (. builder remoteId data))
-  (when-let [data (lookup-entry config id :smoothing-latency)]
+  (when-some [data (lookup-entry config id :smoothing-latency)]
     (. builder smoothingLatency data))
-  (when-let [data (lookup-entry config id :stream-id)]
+  (when-some [data (lookup-entry config id :stream-id)]
     (. builder streamId data))
-  (when-let [data (lookup-entry config id :vpc-interface-attachment)]
+  (when-some [data (lookup-entry config id :vpc-interface-attachment)]
     (. builder vpcInterfaceAttachment data))
   (.build builder))
 
@@ -1634,7 +1634,7 @@
 | `vpcInterfaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-interface-name` |
 "
   [^CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-interface-name)]
+  (when-some [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
   (.build builder))
 
@@ -1668,19 +1668,19 @@
 | `vpcInterfaces` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interfaces` |
 "
   [^CfnFlowProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zone)]
+  (when-some [data (lookup-entry config id :availability-zone)]
     (. builder availabilityZone data))
-  (when-let [data (lookup-entry config id :maintenance)]
+  (when-some [data (lookup-entry config id :maintenance)]
     (. builder maintenance data))
-  (when-let [data (lookup-entry config id :media-streams)]
+  (when-some [data (lookup-entry config id :media-streams)]
     (. builder mediaStreams data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :source-failover-config)]
+  (when-some [data (lookup-entry config id :source-failover-config)]
     (. builder sourceFailoverConfig data))
-  (when-let [data (lookup-entry config id :vpc-interfaces)]
+  (when-some [data (lookup-entry config id :vpc-interfaces)]
     (. builder vpcInterfaces data))
   (.build builder))
 
@@ -1725,41 +1725,41 @@
 | `whitelistCidr` | java.lang.String | [[cdk.support/lookup-entry]] | `:whitelist-cidr` |
 "
   [^CfnFlowSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :decryption)]
+  (when-some [data (lookup-entry config id :decryption)]
     (. builder decryption data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :entitlement-arn)]
+  (when-some [data (lookup-entry config id :entitlement-arn)]
     (. builder entitlementArn data))
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :gateway-bridge-source)]
+  (when-some [data (lookup-entry config id :gateway-bridge-source)]
     (. builder gatewayBridgeSource data))
-  (when-let [data (lookup-entry config id :ingest-port)]
+  (when-some [data (lookup-entry config id :ingest-port)]
     (. builder ingestPort data))
-  (when-let [data (lookup-entry config id :max-bitrate)]
+  (when-some [data (lookup-entry config id :max-bitrate)]
     (. builder maxBitrate data))
-  (when-let [data (lookup-entry config id :max-latency)]
+  (when-some [data (lookup-entry config id :max-latency)]
     (. builder maxLatency data))
-  (when-let [data (lookup-entry config id :min-latency)]
+  (when-some [data (lookup-entry config id :min-latency)]
     (. builder minLatency data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :sender-control-port)]
+  (when-some [data (lookup-entry config id :sender-control-port)]
     (. builder senderControlPort data))
-  (when-let [data (lookup-entry config id :sender-ip-address)]
+  (when-some [data (lookup-entry config id :sender-ip-address)]
     (. builder senderIpAddress data))
-  (when-let [data (lookup-entry config id :source-listener-address)]
+  (when-some [data (lookup-entry config id :source-listener-address)]
     (. builder sourceListenerAddress data))
-  (when-let [data (lookup-entry config id :source-listener-port)]
+  (when-some [data (lookup-entry config id :source-listener-port)]
     (. builder sourceListenerPort data))
-  (when-let [data (lookup-entry config id :stream-id)]
+  (when-some [data (lookup-entry config id :stream-id)]
     (. builder streamId data))
-  (when-let [data (lookup-entry config id :vpc-interface-name)]
+  (when-some [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
-  (when-let [data (lookup-entry config id :whitelist-cidr)]
+  (when-some [data (lookup-entry config id :whitelist-cidr)]
     (. builder whitelistCidr data))
   (.build builder))
 
@@ -1795,23 +1795,23 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnFlowSource$EncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm)]
+  (when-some [data (lookup-entry config id :algorithm)]
     (. builder algorithm data))
-  (when-let [data (lookup-entry config id :constant-initialization-vector)]
+  (when-some [data (lookup-entry config id :constant-initialization-vector)]
     (. builder constantInitializationVector data))
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :secret-arn)]
+  (when-some [data (lookup-entry config id :secret-arn)]
     (. builder secretArn data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -1840,9 +1840,9 @@
 | `vpcInterfaceAttachment` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-interface-attachment` |
 "
   [^CfnFlowSource$GatewayBridgeSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bridge-arn)]
+  (when-some [data (lookup-entry config id :bridge-arn)]
     (. builder bridgeArn data))
-  (when-let [data (lookup-entry config id :vpc-interface-attachment)]
+  (when-some [data (lookup-entry config id :vpc-interface-attachment)]
     (. builder vpcInterfaceAttachment data))
   (.build builder))
 
@@ -1870,7 +1870,7 @@
 | `primarySource` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-source` |
 "
   [^CfnFlow$SourcePriorityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :primary-source)]
+  (when-some [data (lookup-entry config id :primary-source)]
     (. builder primarySource data))
   (.build builder))
 
@@ -1919,49 +1919,49 @@
 | `whitelistCidr` | java.lang.String | [[cdk.support/lookup-entry]] | `:whitelist-cidr` |
 "
   [^CfnFlow$SourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :decryption)]
+  (when-some [data (lookup-entry config id :decryption)]
     (. builder decryption data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :entitlement-arn)]
+  (when-some [data (lookup-entry config id :entitlement-arn)]
     (. builder entitlementArn data))
-  (when-let [data (lookup-entry config id :gateway-bridge-source)]
+  (when-some [data (lookup-entry config id :gateway-bridge-source)]
     (. builder gatewayBridgeSource data))
-  (when-let [data (lookup-entry config id :ingest-ip)]
+  (when-some [data (lookup-entry config id :ingest-ip)]
     (. builder ingestIp data))
-  (when-let [data (lookup-entry config id :ingest-port)]
+  (when-some [data (lookup-entry config id :ingest-port)]
     (. builder ingestPort data))
-  (when-let [data (lookup-entry config id :max-bitrate)]
+  (when-some [data (lookup-entry config id :max-bitrate)]
     (. builder maxBitrate data))
-  (when-let [data (lookup-entry config id :max-latency)]
+  (when-some [data (lookup-entry config id :max-latency)]
     (. builder maxLatency data))
-  (when-let [data (lookup-entry config id :max-sync-buffer)]
+  (when-some [data (lookup-entry config id :max-sync-buffer)]
     (. builder maxSyncBuffer data))
-  (when-let [data (lookup-entry config id :media-stream-source-configurations)]
+  (when-some [data (lookup-entry config id :media-stream-source-configurations)]
     (. builder mediaStreamSourceConfigurations data))
-  (when-let [data (lookup-entry config id :min-latency)]
+  (when-some [data (lookup-entry config id :min-latency)]
     (. builder minLatency data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :sender-control-port)]
+  (when-some [data (lookup-entry config id :sender-control-port)]
     (. builder senderControlPort data))
-  (when-let [data (lookup-entry config id :sender-ip-address)]
+  (when-some [data (lookup-entry config id :sender-ip-address)]
     (. builder senderIpAddress data))
-  (when-let [data (lookup-entry config id :source-arn)]
+  (when-some [data (lookup-entry config id :source-arn)]
     (. builder sourceArn data))
-  (when-let [data (lookup-entry config id :source-ingest-port)]
+  (when-some [data (lookup-entry config id :source-ingest-port)]
     (. builder sourceIngestPort data))
-  (when-let [data (lookup-entry config id :source-listener-address)]
+  (when-some [data (lookup-entry config id :source-listener-address)]
     (. builder sourceListenerAddress data))
-  (when-let [data (lookup-entry config id :source-listener-port)]
+  (when-some [data (lookup-entry config id :source-listener-port)]
     (. builder sourceListenerPort data))
-  (when-let [data (lookup-entry config id :stream-id)]
+  (when-some [data (lookup-entry config id :stream-id)]
     (. builder streamId data))
-  (when-let [data (lookup-entry config id :vpc-interface-name)]
+  (when-some [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
-  (when-let [data (lookup-entry config id :whitelist-cidr)]
+  (when-some [data (lookup-entry config id :whitelist-cidr)]
     (. builder whitelistCidr data))
   (.build builder))
 
@@ -2006,41 +2006,41 @@
 | `whitelistCidr` | java.lang.String | [[cdk.support/lookup-entry]] | `:whitelist-cidr` |
 "
   [^CfnFlowSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :decryption)]
+  (when-some [data (lookup-entry config id :decryption)]
     (. builder decryption data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :entitlement-arn)]
+  (when-some [data (lookup-entry config id :entitlement-arn)]
     (. builder entitlementArn data))
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :gateway-bridge-source)]
+  (when-some [data (lookup-entry config id :gateway-bridge-source)]
     (. builder gatewayBridgeSource data))
-  (when-let [data (lookup-entry config id :ingest-port)]
+  (when-some [data (lookup-entry config id :ingest-port)]
     (. builder ingestPort data))
-  (when-let [data (lookup-entry config id :max-bitrate)]
+  (when-some [data (lookup-entry config id :max-bitrate)]
     (. builder maxBitrate data))
-  (when-let [data (lookup-entry config id :max-latency)]
+  (when-some [data (lookup-entry config id :max-latency)]
     (. builder maxLatency data))
-  (when-let [data (lookup-entry config id :min-latency)]
+  (when-some [data (lookup-entry config id :min-latency)]
     (. builder minLatency data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :sender-control-port)]
+  (when-some [data (lookup-entry config id :sender-control-port)]
     (. builder senderControlPort data))
-  (when-let [data (lookup-entry config id :sender-ip-address)]
+  (when-some [data (lookup-entry config id :sender-ip-address)]
     (. builder senderIpAddress data))
-  (when-let [data (lookup-entry config id :source-listener-address)]
+  (when-some [data (lookup-entry config id :source-listener-address)]
     (. builder sourceListenerAddress data))
-  (when-let [data (lookup-entry config id :source-listener-port)]
+  (when-some [data (lookup-entry config id :source-listener-port)]
     (. builder sourceListenerPort data))
-  (when-let [data (lookup-entry config id :stream-id)]
+  (when-some [data (lookup-entry config id :stream-id)]
     (. builder streamId data))
-  (when-let [data (lookup-entry config id :vpc-interface-name)]
+  (when-some [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
-  (when-let [data (lookup-entry config id :whitelist-cidr)]
+  (when-some [data (lookup-entry config id :whitelist-cidr)]
     (. builder whitelistCidr data))
   (.build builder))
 
@@ -2068,7 +2068,7 @@
 | `vpcInterfaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-interface-name` |
 "
   [^CfnFlowSource$VpcInterfaceAttachmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-interface-name)]
+  (when-some [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
   (.build builder))
 
@@ -2096,7 +2096,7 @@
 | `vpcInterfaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-interface-name` |
 "
   [^CfnFlow$VpcInterfaceAttachmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :vpc-interface-name)]
+  (when-some [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
   (.build builder))
 
@@ -2128,15 +2128,15 @@
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^CfnFlowVpcInterface$Builder builder id config]
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 
@@ -2169,17 +2169,17 @@
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^CfnFlow$VpcInterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-interface-ids)]
+  (when-some [data (lookup-entry config id :network-interface-ids)]
     (. builder networkInterfaceIds data))
-  (when-let [data (lookup-entry config id :network-interface-type)]
+  (when-some [data (lookup-entry config id :network-interface-type)]
     (. builder networkInterfaceType data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 
@@ -2211,15 +2211,15 @@
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^CfnFlowVpcInterfaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :flow-arn)]
+  (when-some [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 
@@ -2249,11 +2249,11 @@
 | `networks` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:networks` |
 "
   [^CfnGateway$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-cidr-blocks)]
+  (when-some [data (lookup-entry config id :egress-cidr-blocks)]
     (. builder egressCidrBlocks data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :networks)]
+  (when-some [data (lookup-entry config id :networks)]
     (. builder networks data))
   (.build builder))
 
@@ -2282,9 +2282,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnGateway$GatewayNetworkProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cidr-block)]
+  (when-some [data (lookup-entry config id :cidr-block)]
     (. builder cidrBlock data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -2314,11 +2314,11 @@
 | `networks` | java.util.List | [[cdk.support/lookup-entry]] | `:networks` |
 "
   [^CfnGatewayProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-cidr-blocks)]
+  (when-some [data (lookup-entry config id :egress-cidr-blocks)]
     (. builder egressCidrBlocks data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :networks)]
+  (when-some [data (lookup-entry config id :networks)]
     (. builder networks data))
   (.build builder))
 

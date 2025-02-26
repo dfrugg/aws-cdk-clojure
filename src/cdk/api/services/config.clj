@@ -104,17 +104,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^AccessKeysRotated$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :max-age)]
+  (when-some [data (lookup-entry config id :max-age)]
     (. builder maxAge data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -147,17 +147,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^AccessKeysRotatedProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :max-age)]
+  (when-some [data (lookup-entry config id :max-age)]
     (. builder maxAge data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -187,11 +187,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAggregationAuthorization$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorized-account-id)]
+  (when-some [data (lookup-entry config id :authorized-account-id)]
     (. builder authorizedAccountId data))
-  (when-let [data (lookup-entry config id :authorized-aws-region)]
+  (when-some [data (lookup-entry config id :authorized-aws-region)]
     (. builder authorizedAwsRegion data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -221,11 +221,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAggregationAuthorizationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorized-account-id)]
+  (when-some [data (lookup-entry config id :authorized-account-id)]
     (. builder authorizedAccountId data))
-  (when-let [data (lookup-entry config id :authorized-aws-region)]
+  (when-some [data (lookup-entry config id :authorized-aws-region)]
     (. builder authorizedAwsRegion data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -260,21 +260,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnConfigRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :compliance)]
+  (when-some [data (lookup-entry config id :compliance)]
     (. builder compliance data))
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :evaluation-modes)]
+  (when-some [data (lookup-entry config id :evaluation-modes)]
     (. builder evaluationModes data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :maximum-execution-frequency)]
+  (when-some [data (lookup-entry config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
 
@@ -302,7 +302,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnConfigRule$ComplianceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -332,11 +332,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyText` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-text` |
 "
   [^CfnConfigRule$CustomPolicyDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enable-debug-log-delivery)]
+  (when-some [data (lookup-entry config id :enable-debug-log-delivery)]
     (. builder enableDebugLogDelivery data))
-  (when-let [data (lookup-entry config id :policy-runtime)]
+  (when-some [data (lookup-entry config id :policy-runtime)]
     (. builder policyRuntime data))
-  (when-let [data (lookup-entry config id :policy-text)]
+  (when-some [data (lookup-entry config id :policy-text)]
     (. builder policyText data))
   (.build builder))
 
@@ -364,7 +364,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 "
   [^CfnConfigRule$EvaluationModeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
   (.build builder))
 
@@ -399,21 +399,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnConfigRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :compliance)]
+  (when-some [data (lookup-entry config id :compliance)]
     (. builder compliance data))
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :evaluation-modes)]
+  (when-some [data (lookup-entry config id :evaluation-modes)]
     (. builder evaluationModes data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :maximum-execution-frequency)]
+  (when-some [data (lookup-entry config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
 
@@ -444,13 +444,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tagValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:tag-value` |
 "
   [^CfnConfigRule$ScopeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :compliance-resource-id)]
+  (when-some [data (lookup-entry config id :compliance-resource-id)]
     (. builder complianceResourceId data))
-  (when-let [data (lookup-entry config id :compliance-resource-types)]
+  (when-some [data (lookup-entry config id :compliance-resource-types)]
     (. builder complianceResourceTypes data))
-  (when-let [data (lookup-entry config id :tag-key)]
+  (when-some [data (lookup-entry config id :tag-key)]
     (. builder tagKey data))
-  (when-let [data (lookup-entry config id :tag-value)]
+  (when-some [data (lookup-entry config id :tag-value)]
     (. builder tagValue data))
   (.build builder))
 
@@ -480,11 +480,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `messageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-type` |
 "
   [^CfnConfigRule$SourceDetailProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :event-source)]
+  (when-some [data (lookup-entry config id :event-source)]
     (. builder eventSource data))
-  (when-let [data (lookup-entry config id :maximum-execution-frequency)]
+  (when-some [data (lookup-entry config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :message-type)]
+  (when-some [data (lookup-entry config id :message-type)]
     (. builder messageType data))
   (.build builder))
 
@@ -515,13 +515,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-identifier` |
 "
   [^CfnConfigRule$SourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-policy-details)]
+  (when-some [data (lookup-entry config id :custom-policy-details)]
     (. builder customPolicyDetails data))
-  (when-let [data (lookup-entry config id :owner)]
+  (when-some [data (lookup-entry config id :owner)]
     (. builder owner data))
-  (when-let [data (lookup-entry config id :source-details)]
+  (when-some [data (lookup-entry config id :source-details)]
     (. builder sourceDetails data))
-  (when-let [data (lookup-entry config id :source-identifier)]
+  (when-some [data (lookup-entry config id :source-identifier)]
     (. builder sourceIdentifier data))
   (.build builder))
 
@@ -551,11 +551,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `awsRegions` | java.util.List | [[cdk.support/lookup-entry]] | `:aws-regions` |
 "
   [^CfnConfigurationAggregator$AccountAggregationSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-ids)]
+  (when-some [data (lookup-entry config id :account-ids)]
     (. builder accountIds data))
-  (when-let [data (lookup-entry config id :all-aws-regions)]
+  (when-some [data (lookup-entry config id :all-aws-regions)]
     (. builder allAwsRegions data))
-  (when-let [data (lookup-entry config id :aws-regions)]
+  (when-some [data (lookup-entry config id :aws-regions)]
     (. builder awsRegions data))
   (.build builder))
 
@@ -586,13 +586,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfigurationAggregator$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-aggregation-sources)]
+  (when-some [data (lookup-entry config id :account-aggregation-sources)]
     (. builder accountAggregationSources data))
-  (when-let [data (lookup-entry config id :configuration-aggregator-name)]
+  (when-some [data (lookup-entry config id :configuration-aggregator-name)]
     (. builder configurationAggregatorName data))
-  (when-let [data (lookup-entry config id :organization-aggregation-source)]
+  (when-some [data (lookup-entry config id :organization-aggregation-source)]
     (. builder organizationAggregationSource data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -622,11 +622,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnConfigurationAggregator$OrganizationAggregationSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :all-aws-regions)]
+  (when-some [data (lookup-entry config id :all-aws-regions)]
     (. builder allAwsRegions data))
-  (when-let [data (lookup-entry config id :aws-regions)]
+  (when-some [data (lookup-entry config id :aws-regions)]
     (. builder awsRegions data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -657,13 +657,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfigurationAggregatorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-aggregation-sources)]
+  (when-some [data (lookup-entry config id :account-aggregation-sources)]
     (. builder accountAggregationSources data))
-  (when-let [data (lookup-entry config id :configuration-aggregator-name)]
+  (when-some [data (lookup-entry config id :configuration-aggregator-name)]
     (. builder configurationAggregatorName data))
-  (when-let [data (lookup-entry config id :organization-aggregation-source)]
+  (when-some [data (lookup-entry config id :organization-aggregation-source)]
     (. builder organizationAggregationSource data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -694,13 +694,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnConfigurationRecorder$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recording-group)]
+  (when-some [data (lookup-entry config id :recording-group)]
     (. builder recordingGroup data))
-  (when-let [data (lookup-entry config id :recording-mode)]
+  (when-some [data (lookup-entry config id :recording-mode)]
     (. builder recordingMode data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -728,7 +728,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-types` |
 "
   [^CfnConfigurationRecorder$ExclusionByResourceTypesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-types)]
+  (when-some [data (lookup-entry config id :resource-types)]
     (. builder resourceTypes data))
   (.build builder))
 
@@ -759,13 +759,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnConfigurationRecorderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recording-group)]
+  (when-some [data (lookup-entry config id :recording-group)]
     (. builder recordingGroup data))
-  (when-let [data (lookup-entry config id :recording-mode)]
+  (when-some [data (lookup-entry config id :recording-mode)]
     (. builder recordingMode data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -797,15 +797,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-types` |
 "
   [^CfnConfigurationRecorder$RecordingGroupProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :all-supported)]
+  (when-some [data (lookup-entry config id :all-supported)]
     (. builder allSupported data))
-  (when-let [data (lookup-entry config id :exclusion-by-resource-types)]
+  (when-some [data (lookup-entry config id :exclusion-by-resource-types)]
     (. builder exclusionByResourceTypes data))
-  (when-let [data (lookup-entry config id :include-global-resource-types)]
+  (when-some [data (lookup-entry config id :include-global-resource-types)]
     (. builder includeGlobalResourceTypes data))
-  (when-let [data (lookup-entry config id :recording-strategy)]
+  (when-some [data (lookup-entry config id :recording-strategy)]
     (. builder recordingStrategy data))
-  (when-let [data (lookup-entry config id :resource-types)]
+  (when-some [data (lookup-entry config id :resource-types)]
     (. builder resourceTypes data))
   (.build builder))
 
@@ -835,11 +835,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-types` |
 "
   [^CfnConfigurationRecorder$RecordingModeOverrideProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :recording-frequency)]
+  (when-some [data (lookup-entry config id :recording-frequency)]
     (. builder recordingFrequency data))
-  (when-let [data (lookup-entry config id :resource-types)]
+  (when-some [data (lookup-entry config id :resource-types)]
     (. builder resourceTypes data))
   (.build builder))
 
@@ -868,9 +868,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `recordingModeOverrides` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:recording-mode-overrides` |
 "
   [^CfnConfigurationRecorder$RecordingModeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :recording-frequency)]
+  (when-some [data (lookup-entry config id :recording-frequency)]
     (. builder recordingFrequency data))
-  (when-let [data (lookup-entry config id :recording-mode-overrides)]
+  (when-some [data (lookup-entry config id :recording-mode-overrides)]
     (. builder recordingModeOverrides data))
   (.build builder))
 
@@ -898,7 +898,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `useOnly` | java.lang.String | [[cdk.support/lookup-entry]] | `:use-only` |
 "
   [^CfnConfigurationRecorder$RecordingStrategyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :use-only)]
+  (when-some [data (lookup-entry config id :use-only)]
     (. builder useOnly data))
   (.build builder))
 
@@ -932,19 +932,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `templateSsmDocumentDetails` | java.lang.Object | [[cdk.support/lookup-entry]] | `:template-ssm-document-details` |
 "
   [^CfnConformancePack$Builder builder id config]
-  (when-let [data (lookup-entry config id :conformance-pack-input-parameters)]
+  (when-some [data (lookup-entry config id :conformance-pack-input-parameters)]
     (. builder conformancePackInputParameters data))
-  (when-let [data (lookup-entry config id :conformance-pack-name)]
+  (when-some [data (lookup-entry config id :conformance-pack-name)]
     (. builder conformancePackName data))
-  (when-let [data (lookup-entry config id :delivery-s3-bucket)]
+  (when-some [data (lookup-entry config id :delivery-s3-bucket)]
     (. builder deliveryS3Bucket data))
-  (when-let [data (lookup-entry config id :delivery-s3-key-prefix)]
+  (when-some [data (lookup-entry config id :delivery-s3-key-prefix)]
     (. builder deliveryS3KeyPrefix data))
-  (when-let [data (lookup-entry config id :template-body)]
+  (when-some [data (lookup-entry config id :template-body)]
     (. builder templateBody data))
-  (when-let [data (lookup-entry config id :template-s3-uri)]
+  (when-some [data (lookup-entry config id :template-s3-uri)]
     (. builder templateS3Uri data))
-  (when-let [data (lookup-entry config id :template-ssm-document-details)]
+  (when-some [data (lookup-entry config id :template-ssm-document-details)]
     (. builder templateSsmDocumentDetails data))
   (.build builder))
 
@@ -973,9 +973,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |
 "
   [^CfnConformancePack$ConformancePackInputParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-name)]
+  (when-some [data (lookup-entry config id :parameter-name)]
     (. builder parameterName data))
-  (when-let [data (lookup-entry config id :parameter-value)]
+  (when-some [data (lookup-entry config id :parameter-value)]
     (. builder parameterValue data))
   (.build builder))
 
@@ -1009,19 +1009,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `templateSsmDocumentDetails` | java.lang.Object | [[cdk.support/lookup-entry]] | `:template-ssm-document-details` |
 "
   [^CfnConformancePackProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :conformance-pack-input-parameters)]
+  (when-some [data (lookup-entry config id :conformance-pack-input-parameters)]
     (. builder conformancePackInputParameters data))
-  (when-let [data (lookup-entry config id :conformance-pack-name)]
+  (when-some [data (lookup-entry config id :conformance-pack-name)]
     (. builder conformancePackName data))
-  (when-let [data (lookup-entry config id :delivery-s3-bucket)]
+  (when-some [data (lookup-entry config id :delivery-s3-bucket)]
     (. builder deliveryS3Bucket data))
-  (when-let [data (lookup-entry config id :delivery-s3-key-prefix)]
+  (when-some [data (lookup-entry config id :delivery-s3-key-prefix)]
     (. builder deliveryS3KeyPrefix data))
-  (when-let [data (lookup-entry config id :template-body)]
+  (when-some [data (lookup-entry config id :template-body)]
     (. builder templateBody data))
-  (when-let [data (lookup-entry config id :template-s3-uri)]
+  (when-some [data (lookup-entry config id :template-s3-uri)]
     (. builder templateS3Uri data))
-  (when-let [data (lookup-entry config id :template-ssm-document-details)]
+  (when-some [data (lookup-entry config id :template-ssm-document-details)]
     (. builder templateSsmDocumentDetails data))
   (.build builder))
 
@@ -1050,9 +1050,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `documentVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:document-version` |
 "
   [^CfnConformancePack$TemplateSSMDocumentDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :document-name)]
+  (when-some [data (lookup-entry config id :document-name)]
     (. builder documentName data))
-  (when-let [data (lookup-entry config id :document-version)]
+  (when-some [data (lookup-entry config id :document-version)]
     (. builder documentVersion data))
   (.build builder))
 
@@ -1085,17 +1085,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 "
   [^CfnDeliveryChannel$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-snapshot-delivery-properties)]
+  (when-some [data (lookup-entry config id :config-snapshot-delivery-properties)]
     (. builder configSnapshotDeliveryProperties data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
-  (when-let [data (lookup-entry config id :s3-key-prefix)]
+  (when-some [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
-  (when-let [data (lookup-entry config id :s3-kms-key-arn)]
+  (when-some [data (lookup-entry config id :s3-kms-key-arn)]
     (. builder s3KmsKeyArn data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
 
@@ -1123,7 +1123,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deliveryFrequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-frequency` |
 "
   [^CfnDeliveryChannel$ConfigSnapshotDeliveryPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-frequency)]
+  (when-some [data (lookup-entry config id :delivery-frequency)]
     (. builder deliveryFrequency data))
   (.build builder))
 
@@ -1156,17 +1156,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 "
   [^CfnDeliveryChannelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-snapshot-delivery-properties)]
+  (when-some [data (lookup-entry config id :config-snapshot-delivery-properties)]
     (. builder configSnapshotDeliveryProperties data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :s3-bucket-name)]
+  (when-some [data (lookup-entry config id :s3-bucket-name)]
     (. builder s3BucketName data))
-  (when-let [data (lookup-entry config id :s3-key-prefix)]
+  (when-some [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
-  (when-let [data (lookup-entry config id :s3-kms-key-arn)]
+  (when-some [data (lookup-entry config id :s3-kms-key-arn)]
     (. builder s3KmsKeyArn data))
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
 
@@ -1198,15 +1198,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `organizationManagedRuleMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-managed-rule-metadata` |
 "
   [^CfnOrganizationConfigRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :excluded-accounts)]
+  (when-some [data (lookup-entry config id :excluded-accounts)]
     (. builder excludedAccounts data))
-  (when-let [data (lookup-entry config id :organization-config-rule-name)]
+  (when-some [data (lookup-entry config id :organization-config-rule-name)]
     (. builder organizationConfigRuleName data))
-  (when-let [data (lookup-entry config id :organization-custom-policy-rule-metadata)]
+  (when-some [data (lookup-entry config id :organization-custom-policy-rule-metadata)]
     (. builder organizationCustomPolicyRuleMetadata data))
-  (when-let [data (lookup-entry config id :organization-custom-rule-metadata)]
+  (when-some [data (lookup-entry config id :organization-custom-rule-metadata)]
     (. builder organizationCustomRuleMetadata data))
-  (when-let [data (lookup-entry config id :organization-managed-rule-metadata)]
+  (when-some [data (lookup-entry config id :organization-managed-rule-metadata)]
     (. builder organizationManagedRuleMetadata data))
   (.build builder))
 
@@ -1244,27 +1244,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tagValueScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:tag-value-scope` |
 "
   [^CfnOrganizationConfigRule$OrganizationCustomPolicyRuleMetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :debug-log-delivery-accounts)]
+  (when-some [data (lookup-entry config id :debug-log-delivery-accounts)]
     (. builder debugLogDeliveryAccounts data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :maximum-execution-frequency)]
+  (when-some [data (lookup-entry config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :organization-config-rule-trigger-types)]
+  (when-some [data (lookup-entry config id :organization-config-rule-trigger-types)]
     (. builder organizationConfigRuleTriggerTypes data))
-  (when-let [data (lookup-entry config id :policy-text)]
+  (when-some [data (lookup-entry config id :policy-text)]
     (. builder policyText data))
-  (when-let [data (lookup-entry config id :resource-id-scope)]
+  (when-some [data (lookup-entry config id :resource-id-scope)]
     (. builder resourceIdScope data))
-  (when-let [data (lookup-entry config id :resource-types-scope)]
+  (when-some [data (lookup-entry config id :resource-types-scope)]
     (. builder resourceTypesScope data))
-  (when-let [data (lookup-entry config id :runtime)]
+  (when-some [data (lookup-entry config id :runtime)]
     (. builder runtime data))
-  (when-let [data (lookup-entry config id :tag-key-scope)]
+  (when-some [data (lookup-entry config id :tag-key-scope)]
     (. builder tagKeyScope data))
-  (when-let [data (lookup-entry config id :tag-value-scope)]
+  (when-some [data (lookup-entry config id :tag-value-scope)]
     (. builder tagValueScope data))
   (.build builder))
 
@@ -1300,23 +1300,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tagValueScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:tag-value-scope` |
 "
   [^CfnOrganizationConfigRule$OrganizationCustomRuleMetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :lambda-function-arn)]
+  (when-some [data (lookup-entry config id :lambda-function-arn)]
     (. builder lambdaFunctionArn data))
-  (when-let [data (lookup-entry config id :maximum-execution-frequency)]
+  (when-some [data (lookup-entry config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :organization-config-rule-trigger-types)]
+  (when-some [data (lookup-entry config id :organization-config-rule-trigger-types)]
     (. builder organizationConfigRuleTriggerTypes data))
-  (when-let [data (lookup-entry config id :resource-id-scope)]
+  (when-some [data (lookup-entry config id :resource-id-scope)]
     (. builder resourceIdScope data))
-  (when-let [data (lookup-entry config id :resource-types-scope)]
+  (when-some [data (lookup-entry config id :resource-types-scope)]
     (. builder resourceTypesScope data))
-  (when-let [data (lookup-entry config id :tag-key-scope)]
+  (when-some [data (lookup-entry config id :tag-key-scope)]
     (. builder tagKeyScope data))
-  (when-let [data (lookup-entry config id :tag-value-scope)]
+  (when-some [data (lookup-entry config id :tag-value-scope)]
     (. builder tagValueScope data))
   (.build builder))
 
@@ -1351,21 +1351,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tagValueScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:tag-value-scope` |
 "
   [^CfnOrganizationConfigRule$OrganizationManagedRuleMetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :maximum-execution-frequency)]
+  (when-some [data (lookup-entry config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :resource-id-scope)]
+  (when-some [data (lookup-entry config id :resource-id-scope)]
     (. builder resourceIdScope data))
-  (when-let [data (lookup-entry config id :resource-types-scope)]
+  (when-some [data (lookup-entry config id :resource-types-scope)]
     (. builder resourceTypesScope data))
-  (when-let [data (lookup-entry config id :rule-identifier)]
+  (when-some [data (lookup-entry config id :rule-identifier)]
     (. builder ruleIdentifier data))
-  (when-let [data (lookup-entry config id :tag-key-scope)]
+  (when-some [data (lookup-entry config id :tag-key-scope)]
     (. builder tagKeyScope data))
-  (when-let [data (lookup-entry config id :tag-value-scope)]
+  (when-some [data (lookup-entry config id :tag-value-scope)]
     (. builder tagValueScope data))
   (.build builder))
 
@@ -1397,15 +1397,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `organizationManagedRuleMetadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-managed-rule-metadata` |
 "
   [^CfnOrganizationConfigRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :excluded-accounts)]
+  (when-some [data (lookup-entry config id :excluded-accounts)]
     (. builder excludedAccounts data))
-  (when-let [data (lookup-entry config id :organization-config-rule-name)]
+  (when-some [data (lookup-entry config id :organization-config-rule-name)]
     (. builder organizationConfigRuleName data))
-  (when-let [data (lookup-entry config id :organization-custom-policy-rule-metadata)]
+  (when-some [data (lookup-entry config id :organization-custom-policy-rule-metadata)]
     (. builder organizationCustomPolicyRuleMetadata data))
-  (when-let [data (lookup-entry config id :organization-custom-rule-metadata)]
+  (when-some [data (lookup-entry config id :organization-custom-rule-metadata)]
     (. builder organizationCustomRuleMetadata data))
-  (when-let [data (lookup-entry config id :organization-managed-rule-metadata)]
+  (when-some [data (lookup-entry config id :organization-managed-rule-metadata)]
     (. builder organizationManagedRuleMetadata data))
   (.build builder))
 
@@ -1439,19 +1439,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `templateS3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-s3-uri` |
 "
   [^CfnOrganizationConformancePack$Builder builder id config]
-  (when-let [data (lookup-entry config id :conformance-pack-input-parameters)]
+  (when-some [data (lookup-entry config id :conformance-pack-input-parameters)]
     (. builder conformancePackInputParameters data))
-  (when-let [data (lookup-entry config id :delivery-s3-bucket)]
+  (when-some [data (lookup-entry config id :delivery-s3-bucket)]
     (. builder deliveryS3Bucket data))
-  (when-let [data (lookup-entry config id :delivery-s3-key-prefix)]
+  (when-some [data (lookup-entry config id :delivery-s3-key-prefix)]
     (. builder deliveryS3KeyPrefix data))
-  (when-let [data (lookup-entry config id :excluded-accounts)]
+  (when-some [data (lookup-entry config id :excluded-accounts)]
     (. builder excludedAccounts data))
-  (when-let [data (lookup-entry config id :organization-conformance-pack-name)]
+  (when-some [data (lookup-entry config id :organization-conformance-pack-name)]
     (. builder organizationConformancePackName data))
-  (when-let [data (lookup-entry config id :template-body)]
+  (when-some [data (lookup-entry config id :template-body)]
     (. builder templateBody data))
-  (when-let [data (lookup-entry config id :template-s3-uri)]
+  (when-some [data (lookup-entry config id :template-s3-uri)]
     (. builder templateS3Uri data))
   (.build builder))
 
@@ -1480,9 +1480,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |
 "
   [^CfnOrganizationConformancePack$ConformancePackInputParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-name)]
+  (when-some [data (lookup-entry config id :parameter-name)]
     (. builder parameterName data))
-  (when-let [data (lookup-entry config id :parameter-value)]
+  (when-some [data (lookup-entry config id :parameter-value)]
     (. builder parameterValue data))
   (.build builder))
 
@@ -1516,19 +1516,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `templateS3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-s3-uri` |
 "
   [^CfnOrganizationConformancePackProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :conformance-pack-input-parameters)]
+  (when-some [data (lookup-entry config id :conformance-pack-input-parameters)]
     (. builder conformancePackInputParameters data))
-  (when-let [data (lookup-entry config id :delivery-s3-bucket)]
+  (when-some [data (lookup-entry config id :delivery-s3-bucket)]
     (. builder deliveryS3Bucket data))
-  (when-let [data (lookup-entry config id :delivery-s3-key-prefix)]
+  (when-some [data (lookup-entry config id :delivery-s3-key-prefix)]
     (. builder deliveryS3KeyPrefix data))
-  (when-let [data (lookup-entry config id :excluded-accounts)]
+  (when-some [data (lookup-entry config id :excluded-accounts)]
     (. builder excludedAccounts data))
-  (when-let [data (lookup-entry config id :organization-conformance-pack-name)]
+  (when-some [data (lookup-entry config id :organization-conformance-pack-name)]
     (. builder organizationConformancePackName data))
-  (when-let [data (lookup-entry config id :template-body)]
+  (when-some [data (lookup-entry config id :template-body)]
     (. builder templateBody data))
-  (when-let [data (lookup-entry config id :template-s3-uri)]
+  (when-some [data (lookup-entry config id :template-s3-uri)]
     (. builder templateS3Uri data))
   (.build builder))
 
@@ -1565,25 +1565,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-version` |
 "
   [^CfnRemediationConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatic)]
+  (when-some [data (lookup-entry config id :automatic)]
     (. builder automatic data))
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :execution-controls)]
+  (when-some [data (lookup-entry config id :execution-controls)]
     (. builder executionControls data))
-  (when-let [data (lookup-entry config id :maximum-automatic-attempts)]
+  (when-some [data (lookup-entry config id :maximum-automatic-attempts)]
     (. builder maximumAutomaticAttempts data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :retry-attempt-seconds)]
+  (when-some [data (lookup-entry config id :retry-attempt-seconds)]
     (. builder retryAttemptSeconds data))
-  (when-let [data (lookup-entry config id :target-id)]
+  (when-some [data (lookup-entry config id :target-id)]
     (. builder targetId data))
-  (when-let [data (lookup-entry config id :target-type)]
+  (when-some [data (lookup-entry config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :target-version)]
+  (when-some [data (lookup-entry config id :target-version)]
     (. builder targetVersion data))
   (.build builder))
 
@@ -1611,7 +1611,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ssmControls` | software.amazon.awscdk.services.config.CfnRemediationConfiguration$SsmControlsProperty | [[cdk.support/lookup-entry]] | `:ssm-controls` |
 "
   [^CfnRemediationConfiguration$ExecutionControlsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ssm-controls)]
+  (when-some [data (lookup-entry config id :ssm-controls)]
     (. builder ssmControls data))
   (.build builder))
 
@@ -1648,25 +1648,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-version` |
 "
   [^CfnRemediationConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatic)]
+  (when-some [data (lookup-entry config id :automatic)]
     (. builder automatic data))
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :execution-controls)]
+  (when-some [data (lookup-entry config id :execution-controls)]
     (. builder executionControls data))
-  (when-let [data (lookup-entry config id :maximum-automatic-attempts)]
+  (when-some [data (lookup-entry config id :maximum-automatic-attempts)]
     (. builder maximumAutomaticAttempts data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :retry-attempt-seconds)]
+  (when-some [data (lookup-entry config id :retry-attempt-seconds)]
     (. builder retryAttemptSeconds data))
-  (when-let [data (lookup-entry config id :target-id)]
+  (when-some [data (lookup-entry config id :target-id)]
     (. builder targetId data))
-  (when-let [data (lookup-entry config id :target-type)]
+  (when-some [data (lookup-entry config id :target-type)]
     (. builder targetType data))
-  (when-let [data (lookup-entry config id :target-version)]
+  (when-some [data (lookup-entry config id :target-version)]
     (. builder targetVersion data))
   (.build builder))
 
@@ -1695,9 +1695,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `staticValue` | software.amazon.awscdk.services.config.CfnRemediationConfiguration$StaticValueProperty | [[cdk.support/lookup-entry]] | `:static-value` |
 "
   [^CfnRemediationConfiguration$RemediationParameterValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-value)]
+  (when-some [data (lookup-entry config id :resource-value)]
     (. builder resourceValue data))
-  (when-let [data (lookup-entry config id :static-value)]
+  (when-some [data (lookup-entry config id :static-value)]
     (. builder staticValue data))
   (.build builder))
 
@@ -1725,7 +1725,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnRemediationConfiguration$ResourceValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1754,9 +1754,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `errorPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:error-percentage` |
 "
   [^CfnRemediationConfiguration$SsmControlsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :concurrent-execution-rate-percentage)]
+  (when-some [data (lookup-entry config id :concurrent-execution-rate-percentage)]
     (. builder concurrentExecutionRatePercentage data))
-  (when-let [data (lookup-entry config id :error-percentage)]
+  (when-some [data (lookup-entry config id :error-percentage)]
     (. builder errorPercentage data))
   (.build builder))
 
@@ -1785,9 +1785,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnRemediationConfiguration$StaticValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -1818,13 +1818,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStoredQuery$Builder builder id config]
-  (when-let [data (lookup-entry config id :query-description)]
+  (when-some [data (lookup-entry config id :query-description)]
     (. builder queryDescription data))
-  (when-let [data (lookup-entry config id :query-expression)]
+  (when-some [data (lookup-entry config id :query-expression)]
     (. builder queryExpression data))
-  (when-let [data (lookup-entry config id :query-name)]
+  (when-some [data (lookup-entry config id :query-name)]
     (. builder queryName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1855,13 +1855,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStoredQueryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :query-description)]
+  (when-some [data (lookup-entry config id :query-description)]
     (. builder queryDescription data))
-  (when-let [data (lookup-entry config id :query-expression)]
+  (when-some [data (lookup-entry config id :query-expression)]
     (. builder queryExpression data))
-  (when-let [data (lookup-entry config id :query-name)]
+  (when-some [data (lookup-entry config id :query-name)]
     (. builder queryName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1895,19 +1895,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^CloudFormationStackDriftDetectionCheck$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :own-stack-only)]
+  (when-some [data (lookup-entry config id :own-stack-only)]
     (. builder ownStackOnly data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -1941,19 +1941,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^CloudFormationStackDriftDetectionCheckProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :own-stack-only)]
+  (when-some [data (lookup-entry config id :own-stack-only)]
     (. builder ownStackOnly data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -1986,17 +1986,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^CloudFormationStackNotificationCheck$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
-  (when-let [data (lookup-entry config id :topics)]
+  (when-some [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
 
@@ -2029,17 +2029,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^CloudFormationStackNotificationCheckProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
-  (when-let [data (lookup-entry config id :topics)]
+  (when-some [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
 
@@ -2073,19 +2073,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^CustomPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-debug-log)]
+  (when-some [data (lookup-entry config id :enable-debug-log)]
     (. builder enableDebugLog data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :policy-text)]
+  (when-some [data (lookup-entry config id :policy-text)]
     (. builder policyText data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -2119,19 +2119,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^CustomPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-debug-log)]
+  (when-some [data (lookup-entry config id :enable-debug-log)]
     (. builder enableDebugLog data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :policy-text)]
+  (when-some [data (lookup-entry config id :policy-text)]
     (. builder policyText data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -2166,21 +2166,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^CustomRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :configuration-changes)]
+  (when-some [data (lookup-entry config id :configuration-changes)]
     (. builder configurationChanges data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :lambda-function)]
+  (when-some [data (lookup-entry config id :lambda-function)]
     (. builder lambdaFunction data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :periodic)]
+  (when-some [data (lookup-entry config id :periodic)]
     (. builder periodic data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -2215,21 +2215,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^CustomRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :configuration-changes)]
+  (when-some [data (lookup-entry config id :configuration-changes)]
     (. builder configurationChanges data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (lookup-entry config id :lambda-function)]
+  (when-some [data (lookup-entry config id :lambda-function)]
     (. builder lambdaFunction data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :periodic)]
+  (when-some [data (lookup-entry config id :periodic)]
     (. builder periodic data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -2262,17 +2262,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^ManagedRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -2305,17 +2305,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^ManagedRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :identifier)]
+  (when-some [data (lookup-entry config id :identifier)]
     (. builder identifier data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 
@@ -2347,15 +2347,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleScope` | software.amazon.awscdk.services.config.RuleScope | [[cdk.support/lookup-entry]] | `:rule-scope` |
 "
   [^RuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-rule-name)]
+  (when-some [data (lookup-entry config id :config-rule-name)]
     (. builder configRuleName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-parameters)]
+  (when-some [data (lookup-entry config id :input-parameters)]
     (. builder inputParameters data))
-  (when-let [data (maximum-execution-frequency config id :maximum-execution-frequency)]
+  (when-some [data (maximum-execution-frequency config id :maximum-execution-frequency)]
     (. builder maximumExecutionFrequency data))
-  (when-let [data (lookup-entry config id :rule-scope)]
+  (when-some [data (lookup-entry config id :rule-scope)]
     (. builder ruleScope data))
   (.build builder))
 

@@ -23,7 +23,7 @@
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 "
   [^CfnJobTemplate$AccelerationSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
   (.build builder))
 
@@ -60,25 +60,25 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnJobTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :acceleration-settings)]
+  (when-some [data (lookup-entry config id :acceleration-settings)]
     (. builder accelerationSettings data))
-  (when-let [data (lookup-entry config id :category)]
+  (when-some [data (lookup-entry config id :category)]
     (. builder category data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :hop-destinations)]
+  (when-some [data (lookup-entry config id :hop-destinations)]
     (. builder hopDestinations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :queue)]
+  (when-some [data (lookup-entry config id :queue)]
     (. builder queue data))
-  (when-let [data (lookup-entry config id :settings-json)]
+  (when-some [data (lookup-entry config id :settings-json)]
     (. builder settingsJson data))
-  (when-let [data (lookup-entry config id :status-update-interval)]
+  (when-some [data (lookup-entry config id :status-update-interval)]
     (. builder statusUpdateInterval data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -108,11 +108,11 @@
 | `waitMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-minutes` |
 "
   [^CfnJobTemplate$HopDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :queue)]
+  (when-some [data (lookup-entry config id :queue)]
     (. builder queue data))
-  (when-let [data (lookup-entry config id :wait-minutes)]
+  (when-some [data (lookup-entry config id :wait-minutes)]
     (. builder waitMinutes data))
   (.build builder))
 
@@ -149,25 +149,25 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnJobTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :acceleration-settings)]
+  (when-some [data (lookup-entry config id :acceleration-settings)]
     (. builder accelerationSettings data))
-  (when-let [data (lookup-entry config id :category)]
+  (when-some [data (lookup-entry config id :category)]
     (. builder category data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :hop-destinations)]
+  (when-some [data (lookup-entry config id :hop-destinations)]
     (. builder hopDestinations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :queue)]
+  (when-some [data (lookup-entry config id :queue)]
     (. builder queue data))
-  (when-let [data (lookup-entry config id :settings-json)]
+  (when-some [data (lookup-entry config id :settings-json)]
     (. builder settingsJson data))
-  (when-let [data (lookup-entry config id :status-update-interval)]
+  (when-some [data (lookup-entry config id :status-update-interval)]
     (. builder statusUpdateInterval data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -199,15 +199,15 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPreset$Builder builder id config]
-  (when-let [data (lookup-entry config id :category)]
+  (when-some [data (lookup-entry config id :category)]
     (. builder category data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :settings-json)]
+  (when-some [data (lookup-entry config id :settings-json)]
     (. builder settingsJson data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -239,15 +239,15 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPresetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :category)]
+  (when-some [data (lookup-entry config id :category)]
     (. builder category data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :settings-json)]
+  (when-some [data (lookup-entry config id :settings-json)]
     (. builder settingsJson data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -279,15 +279,15 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnQueue$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -319,15 +319,15 @@
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnQueueProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

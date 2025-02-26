@@ -63,19 +63,19 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnDataCellsFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-names)]
+  (when-some [data (lookup-entry config id :column-names)]
     (. builder columnNames data))
-  (when-let [data (lookup-entry config id :column-wildcard)]
+  (when-some [data (lookup-entry config id :column-wildcard)]
     (. builder columnWildcard data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :row-filter)]
+  (when-some [data (lookup-entry config id :row-filter)]
     (. builder rowFilter data))
-  (when-let [data (lookup-entry config id :table-catalog-id)]
+  (when-some [data (lookup-entry config id :table-catalog-id)]
     (. builder tableCatalogId data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -103,7 +103,7 @@
 | `excludedColumnNames` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-column-names` |
 "
   [^CfnDataCellsFilter$ColumnWildcardProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :excluded-column-names)]
+  (when-some [data (lookup-entry config id :excluded-column-names)]
     (. builder excludedColumnNames data))
   (.build builder))
 
@@ -137,19 +137,19 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnDataCellsFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-names)]
+  (when-some [data (lookup-entry config id :column-names)]
     (. builder columnNames data))
-  (when-let [data (lookup-entry config id :column-wildcard)]
+  (when-some [data (lookup-entry config id :column-wildcard)]
     (. builder columnWildcard data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :row-filter)]
+  (when-some [data (lookup-entry config id :row-filter)]
     (. builder rowFilter data))
-  (when-let [data (lookup-entry config id :table-catalog-id)]
+  (when-some [data (lookup-entry config id :table-catalog-id)]
     (. builder tableCatalogId data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -178,9 +178,9 @@
 | `filterExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-expression` |
 "
   [^CfnDataCellsFilter$RowFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :all-rows-wildcard)]
+  (when-some [data (lookup-entry config id :all-rows-wildcard)]
     (. builder allRowsWildcard data))
-  (when-let [data (lookup-entry config id :filter-expression)]
+  (when-some [data (lookup-entry config id :filter-expression)]
     (. builder filterExpression data))
   (.build builder))
 
@@ -217,25 +217,25 @@
 | `trustedResourceOwners` | java.util.List | [[cdk.support/lookup-entry]] | `:trusted-resource-owners` |
 "
   [^CfnDataLakeSettings$Builder builder id config]
-  (when-let [data (lookup-entry config id :admins)]
+  (when-some [data (lookup-entry config id :admins)]
     (. builder admins data))
-  (when-let [data (lookup-entry config id :allow-external-data-filtering)]
+  (when-some [data (lookup-entry config id :allow-external-data-filtering)]
     (. builder allowExternalDataFiltering data))
-  (when-let [data (lookup-entry config id :allow-full-table-external-data-access)]
+  (when-some [data (lookup-entry config id :allow-full-table-external-data-access)]
     (. builder allowFullTableExternalDataAccess data))
-  (when-let [data (lookup-entry config id :authorized-session-tag-value-list)]
+  (when-some [data (lookup-entry config id :authorized-session-tag-value-list)]
     (. builder authorizedSessionTagValueList data))
-  (when-let [data (lookup-entry config id :create-database-default-permissions)]
+  (when-some [data (lookup-entry config id :create-database-default-permissions)]
     (. builder createDatabaseDefaultPermissions data))
-  (when-let [data (lookup-entry config id :create-table-default-permissions)]
+  (when-some [data (lookup-entry config id :create-table-default-permissions)]
     (. builder createTableDefaultPermissions data))
-  (when-let [data (lookup-entry config id :external-data-filtering-allow-list)]
+  (when-some [data (lookup-entry config id :external-data-filtering-allow-list)]
     (. builder externalDataFilteringAllowList data))
-  (when-let [data (lookup-entry config id :mutation-type)]
+  (when-some [data (lookup-entry config id :mutation-type)]
     (. builder mutationType data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :trusted-resource-owners)]
+  (when-some [data (lookup-entry config id :trusted-resource-owners)]
     (. builder trustedResourceOwners data))
   (.build builder))
 
@@ -263,7 +263,7 @@
 | `dataLakePrincipalIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-lake-principal-identifier` |
 "
   [^CfnDataLakeSettings$DataLakePrincipalProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-lake-principal-identifier)]
+  (when-some [data (lookup-entry config id :data-lake-principal-identifier)]
     (. builder dataLakePrincipalIdentifier data))
   (.build builder))
 
@@ -292,9 +292,9 @@
 | `principal` | software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings$DataLakePrincipalProperty | [[cdk.support/lookup-entry]] | `:principal` |
 "
   [^CfnDataLakeSettings$PrincipalPermissionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :permissions)]
+  (when-some [data (lookup-entry config id :permissions)]
     (. builder permissions data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
   (.build builder))
 
@@ -331,25 +331,25 @@
 | `trustedResourceOwners` | java.util.List | [[cdk.support/lookup-entry]] | `:trusted-resource-owners` |
 "
   [^CfnDataLakeSettingsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :admins)]
+  (when-some [data (lookup-entry config id :admins)]
     (. builder admins data))
-  (when-let [data (lookup-entry config id :allow-external-data-filtering)]
+  (when-some [data (lookup-entry config id :allow-external-data-filtering)]
     (. builder allowExternalDataFiltering data))
-  (when-let [data (lookup-entry config id :allow-full-table-external-data-access)]
+  (when-some [data (lookup-entry config id :allow-full-table-external-data-access)]
     (. builder allowFullTableExternalDataAccess data))
-  (when-let [data (lookup-entry config id :authorized-session-tag-value-list)]
+  (when-some [data (lookup-entry config id :authorized-session-tag-value-list)]
     (. builder authorizedSessionTagValueList data))
-  (when-let [data (lookup-entry config id :create-database-default-permissions)]
+  (when-some [data (lookup-entry config id :create-database-default-permissions)]
     (. builder createDatabaseDefaultPermissions data))
-  (when-let [data (lookup-entry config id :create-table-default-permissions)]
+  (when-some [data (lookup-entry config id :create-table-default-permissions)]
     (. builder createTableDefaultPermissions data))
-  (when-let [data (lookup-entry config id :external-data-filtering-allow-list)]
+  (when-some [data (lookup-entry config id :external-data-filtering-allow-list)]
     (. builder externalDataFilteringAllowList data))
-  (when-let [data (lookup-entry config id :mutation-type)]
+  (when-some [data (lookup-entry config id :mutation-type)]
     (. builder mutationType data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :trusted-resource-owners)]
+  (when-some [data (lookup-entry config id :trusted-resource-owners)]
     (. builder trustedResourceOwners data))
   (.build builder))
 
@@ -380,13 +380,13 @@
 | `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPermissions$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-lake-principal)]
+  (when-some [data (lookup-entry config id :data-lake-principal)]
     (. builder dataLakePrincipal data))
-  (when-let [data (lookup-entry config id :permissions)]
+  (when-some [data (lookup-entry config id :permissions)]
     (. builder permissions data))
-  (when-let [data (lookup-entry config id :permissions-with-grant-option)]
+  (when-some [data (lookup-entry config id :permissions-with-grant-option)]
     (. builder permissionsWithGrantOption data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -414,7 +414,7 @@
 | `excludedColumnNames` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-column-names` |
 "
   [^CfnPermissions$ColumnWildcardProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :excluded-column-names)]
+  (when-some [data (lookup-entry config id :excluded-column-names)]
     (. builder excludedColumnNames data))
   (.build builder))
 
@@ -442,7 +442,7 @@
 | `dataLakePrincipalIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-lake-principal-identifier` |
 "
   [^CfnPermissions$DataLakePrincipalProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-lake-principal-identifier)]
+  (when-some [data (lookup-entry config id :data-lake-principal-identifier)]
     (. builder dataLakePrincipalIdentifier data))
   (.build builder))
 
@@ -471,9 +471,9 @@
 | `s3Resource` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-resource` |
 "
   [^CfnPermissions$DataLocationResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :s3-resource)]
+  (when-some [data (lookup-entry config id :s3-resource)]
     (. builder s3Resource data))
   (.build builder))
 
@@ -502,9 +502,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnPermissions$DatabaseResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -535,13 +535,13 @@
 | `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPermissionsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-lake-principal)]
+  (when-some [data (lookup-entry config id :data-lake-principal)]
     (. builder dataLakePrincipal data))
-  (when-let [data (lookup-entry config id :permissions)]
+  (when-some [data (lookup-entry config id :permissions)]
     (. builder permissions data))
-  (when-let [data (lookup-entry config id :permissions-with-grant-option)]
+  (when-some [data (lookup-entry config id :permissions-with-grant-option)]
     (. builder permissionsWithGrantOption data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -572,13 +572,13 @@
 | `tableWithColumnsResource` | software.amazon.awscdk.services.lakeformation.CfnPermissions$TableWithColumnsResourceProperty | [[cdk.support/lookup-entry]] | `:table-with-columns-resource` |
 "
   [^CfnPermissions$ResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-location-resource)]
+  (when-some [data (lookup-entry config id :data-location-resource)]
     (. builder dataLocationResource data))
-  (when-let [data (lookup-entry config id :database-resource)]
+  (when-some [data (lookup-entry config id :database-resource)]
     (. builder databaseResource data))
-  (when-let [data (lookup-entry config id :table-resource)]
+  (when-some [data (lookup-entry config id :table-resource)]
     (. builder tableResource data))
-  (when-let [data (lookup-entry config id :table-with-columns-resource)]
+  (when-some [data (lookup-entry config id :table-with-columns-resource)]
     (. builder tableWithColumnsResource data))
   (.build builder))
 
@@ -609,13 +609,13 @@
 | `tableWildcard` | software.amazon.awscdk.services.lakeformation.CfnPermissions$TableWildcardProperty | [[cdk.support/lookup-entry]] | `:table-wildcard` |
 "
   [^CfnPermissions$TableResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :table-wildcard)]
+  (when-some [data (lookup-entry config id :table-wildcard)]
     (. builder tableWildcard data))
   (.build builder))
 
@@ -653,15 +653,15 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnPermissions$TableWithColumnsResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :column-names)]
+  (when-some [data (lookup-entry config id :column-names)]
     (. builder columnNames data))
-  (when-let [data (lookup-entry config id :column-wildcard)]
+  (when-some [data (lookup-entry config id :column-wildcard)]
     (. builder columnWildcard data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -693,15 +693,15 @@
 | `resource` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$ResourceProperty | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPrincipalPermissions$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog)]
+  (when-some [data (lookup-entry config id :catalog)]
     (. builder catalog data))
-  (when-let [data (lookup-entry config id :permissions)]
+  (when-some [data (lookup-entry config id :permissions)]
     (. builder permissions data))
-  (when-let [data (lookup-entry config id :permissions-with-grant-option)]
+  (when-some [data (lookup-entry config id :permissions-with-grant-option)]
     (. builder permissionsWithGrantOption data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -729,7 +729,7 @@
 | `excludedColumnNames` | java.util.List | [[cdk.support/lookup-entry]] | `:excluded-column-names` |
 "
   [^CfnPrincipalPermissions$ColumnWildcardProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :excluded-column-names)]
+  (when-some [data (lookup-entry config id :excluded-column-names)]
     (. builder excludedColumnNames data))
   (.build builder))
 
@@ -760,13 +760,13 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :table-catalog-id)]
+  (when-some [data (lookup-entry config id :table-catalog-id)]
     (. builder tableCatalogId data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -794,7 +794,7 @@
 | `dataLakePrincipalIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-lake-principal-identifier` |
 "
   [^CfnPrincipalPermissions$DataLakePrincipalProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-lake-principal-identifier)]
+  (when-some [data (lookup-entry config id :data-lake-principal-identifier)]
     (. builder dataLakePrincipalIdentifier data))
   (.build builder))
 
@@ -823,9 +823,9 @@
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
 "
   [^CfnPrincipalPermissions$DataLocationResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
 
@@ -854,9 +854,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnPrincipalPermissions$DatabaseResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -886,11 +886,11 @@
 | `tagValues` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-values` |
 "
   [^CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :tag-key)]
+  (when-some [data (lookup-entry config id :tag-key)]
     (. builder tagKey data))
-  (when-let [data (lookup-entry config id :tag-values)]
+  (when-some [data (lookup-entry config id :tag-values)]
     (. builder tagValues data))
   (.build builder))
 
@@ -920,11 +920,11 @@
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
 "
   [^CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
   (.build builder))
 
@@ -953,9 +953,9 @@
 | `tagValues` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-values` |
 "
   [^CfnPrincipalPermissions$LFTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :tag-key)]
+  (when-some [data (lookup-entry config id :tag-key)]
     (. builder tagKey data))
-  (when-let [data (lookup-entry config id :tag-values)]
+  (when-some [data (lookup-entry config id :tag-values)]
     (. builder tagValues data))
   (.build builder))
 
@@ -987,15 +987,15 @@
 | `resource` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$ResourceProperty | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnPrincipalPermissionsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog)]
+  (when-some [data (lookup-entry config id :catalog)]
     (. builder catalog data))
-  (when-let [data (lookup-entry config id :permissions)]
+  (when-some [data (lookup-entry config id :permissions)]
     (. builder permissions data))
-  (when-let [data (lookup-entry config id :permissions-with-grant-option)]
+  (when-some [data (lookup-entry config id :permissions-with-grant-option)]
     (. builder permissionsWithGrantOption data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -1030,21 +1030,21 @@
 | `tableWithColumns` | software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions$TableWithColumnsResourceProperty | [[cdk.support/lookup-entry]] | `:table-with-columns` |
 "
   [^CfnPrincipalPermissions$ResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog)]
+  (when-some [data (lookup-entry config id :catalog)]
     (. builder catalog data))
-  (when-let [data (lookup-entry config id :data-cells-filter)]
+  (when-some [data (lookup-entry config id :data-cells-filter)]
     (. builder dataCellsFilter data))
-  (when-let [data (lookup-entry config id :data-location)]
+  (when-some [data (lookup-entry config id :data-location)]
     (. builder dataLocation data))
-  (when-let [data (lookup-entry config id :database)]
+  (when-some [data (lookup-entry config id :database)]
     (. builder database data))
-  (when-let [data (lookup-entry config id :lf-tag)]
+  (when-some [data (lookup-entry config id :lf-tag)]
     (. builder lfTag data))
-  (when-let [data (lookup-entry config id :lf-tag-policy)]
+  (when-some [data (lookup-entry config id :lf-tag-policy)]
     (. builder lfTagPolicy data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :table-with-columns)]
+  (when-some [data (lookup-entry config id :table-with-columns)]
     (. builder tableWithColumns data))
   (.build builder))
 
@@ -1075,13 +1075,13 @@
 | `tableWildcard` | java.lang.Object | [[cdk.support/lookup-entry]] | `:table-wildcard` |
 "
   [^CfnPrincipalPermissions$TableResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :table-wildcard)]
+  (when-some [data (lookup-entry config id :table-wildcard)]
     (. builder tableWildcard data))
   (.build builder))
 
@@ -1113,15 +1113,15 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :column-names)]
+  (when-some [data (lookup-entry config id :column-names)]
     (. builder columnNames data))
-  (when-let [data (lookup-entry config id :column-wildcard)]
+  (when-some [data (lookup-entry config id :column-wildcard)]
     (. builder columnWildcard data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1153,15 +1153,15 @@
 | `withFederation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:with-federation` |
 "
   [^CfnResource$Builder builder id config]
-  (when-let [data (lookup-entry config id :hybrid-access-enabled)]
+  (when-some [data (lookup-entry config id :hybrid-access-enabled)]
     (. builder hybridAccessEnabled data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :use-service-linked-role)]
+  (when-some [data (lookup-entry config id :use-service-linked-role)]
     (. builder useServiceLinkedRole data))
-  (when-let [data (lookup-entry config id :with-federation)]
+  (when-some [data (lookup-entry config id :with-federation)]
     (. builder withFederation data))
   (.build builder))
 
@@ -1193,15 +1193,15 @@
 | `withFederation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:with-federation` |
 "
   [^CfnResourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :hybrid-access-enabled)]
+  (when-some [data (lookup-entry config id :hybrid-access-enabled)]
     (. builder hybridAccessEnabled data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :use-service-linked-role)]
+  (when-some [data (lookup-entry config id :use-service-linked-role)]
     (. builder useServiceLinkedRole data))
-  (when-let [data (lookup-entry config id :with-federation)]
+  (when-some [data (lookup-entry config id :with-federation)]
     (. builder withFederation data))
   (.build builder))
 
@@ -1230,9 +1230,9 @@
 | `resource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnTagAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :lf-tags)]
+  (when-some [data (lookup-entry config id :lf-tags)]
     (. builder lfTags data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -1261,9 +1261,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnTagAssociation$DatabaseResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1293,11 +1293,11 @@
 | `tagValues` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-values` |
 "
   [^CfnTagAssociation$LFTagPairProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :tag-key)]
+  (when-some [data (lookup-entry config id :tag-key)]
     (. builder tagKey data))
-  (when-let [data (lookup-entry config id :tag-values)]
+  (when-some [data (lookup-entry config id :tag-values)]
     (. builder tagValues data))
   (.build builder))
 
@@ -1326,9 +1326,9 @@
 | `resource` | software.amazon.awscdk.services.lakeformation.CfnTagAssociation$ResourceProperty | [[cdk.support/lookup-entry]] | `:resource` |
 "
   [^CfnTagAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :lf-tags)]
+  (when-some [data (lookup-entry config id :lf-tags)]
     (. builder lfTags data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
   (.build builder))
 
@@ -1359,13 +1359,13 @@
 | `tableWithColumns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:table-with-columns` |
 "
   [^CfnTagAssociation$ResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog)]
+  (when-some [data (lookup-entry config id :catalog)]
     (. builder catalog data))
-  (when-let [data (lookup-entry config id :database)]
+  (when-some [data (lookup-entry config id :database)]
     (. builder database data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :table-with-columns)]
+  (when-some [data (lookup-entry config id :table-with-columns)]
     (. builder tableWithColumns data))
   (.build builder))
 
@@ -1396,13 +1396,13 @@
 | `tableWildcard` | java.lang.Object | [[cdk.support/lookup-entry]] | `:table-wildcard` |
 "
   [^CfnTagAssociation$TableResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :table-wildcard)]
+  (when-some [data (lookup-entry config id :table-wildcard)]
     (. builder tableWildcard data))
   (.build builder))
 
@@ -1433,13 +1433,13 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnTagAssociation$TableWithColumnsResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :column-names)]
+  (when-some [data (lookup-entry config id :column-names)]
     (. builder columnNames data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1469,11 +1469,11 @@
 | `tagValues` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-values` |
 "
   [^CfnTag$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :tag-key)]
+  (when-some [data (lookup-entry config id :tag-key)]
     (. builder tagKey data))
-  (when-let [data (lookup-entry config id :tag-values)]
+  (when-some [data (lookup-entry config id :tag-values)]
     (. builder tagValues data))
   (.build builder))
 
@@ -1503,11 +1503,11 @@
 | `tagValues` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-values` |
 "
   [^CfnTagProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :tag-key)]
+  (when-some [data (lookup-entry config id :tag-key)]
     (. builder tagKey data))
-  (when-let [data (lookup-entry config id :tag-values)]
+  (when-some [data (lookup-entry config id :tag-values)]
     (. builder tagValues data))
   (.build builder))
 

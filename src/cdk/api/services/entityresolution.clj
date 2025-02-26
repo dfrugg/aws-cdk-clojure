@@ -48,19 +48,19 @@
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |
 "
   [^CfnIdMappingWorkflow$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :id-mapping-techniques)]
+  (when-some [data (lookup-entry config id :id-mapping-techniques)]
     (. builder idMappingTechniques data))
-  (when-let [data (lookup-entry config id :input-source-config)]
+  (when-some [data (lookup-entry config id :input-source-config)]
     (. builder inputSourceConfig data))
-  (when-let [data (lookup-entry config id :output-source-config)]
+  (when-some [data (lookup-entry config id :output-source-config)]
     (. builder outputSourceConfig data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :workflow-name)]
+  (when-some [data (lookup-entry config id :workflow-name)]
     (. builder workflowName data))
   (.build builder))
 
@@ -89,9 +89,9 @@
 | `providerProperties` | software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow$ProviderPropertiesProperty | [[cdk.support/lookup-entry]] | `:provider-properties` |
 "
   [^CfnIdMappingWorkflow$IdMappingTechniquesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id-mapping-type)]
+  (when-some [data (lookup-entry config id :id-mapping-type)]
     (. builder idMappingType data))
-  (when-let [data (lookup-entry config id :provider-properties)]
+  (when-some [data (lookup-entry config id :provider-properties)]
     (. builder providerProperties data))
   (.build builder))
 
@@ -121,11 +121,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnIdMappingWorkflow$IdMappingWorkflowInputSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-source-arn)]
+  (when-some [data (lookup-entry config id :input-source-arn)]
     (. builder inputSourceArn data))
-  (when-let [data (lookup-entry config id :schema-arn)]
+  (when-some [data (lookup-entry config id :schema-arn)]
     (. builder schemaArn data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -154,9 +154,9 @@
 | `outputS3Path` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-s3-path` |
 "
   [^CfnIdMappingWorkflow$IdMappingWorkflowOutputSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-arn)]
+  (when-some [data (lookup-entry config id :kms-arn)]
     (. builder kmsArn data))
-  (when-let [data (lookup-entry config id :output-s3-path)]
+  (when-some [data (lookup-entry config id :output-s3-path)]
     (. builder outputS3Path data))
   (.build builder))
 
@@ -184,7 +184,7 @@
 | `intermediateS3Path` | java.lang.String | [[cdk.support/lookup-entry]] | `:intermediate-s3-path` |
 "
   [^CfnIdMappingWorkflow$IntermediateSourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :intermediate-s3-path)]
+  (when-some [data (lookup-entry config id :intermediate-s3-path)]
     (. builder intermediateS3Path data))
   (.build builder))
 
@@ -218,19 +218,19 @@
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |
 "
   [^CfnIdMappingWorkflowProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :id-mapping-techniques)]
+  (when-some [data (lookup-entry config id :id-mapping-techniques)]
     (. builder idMappingTechniques data))
-  (when-let [data (lookup-entry config id :input-source-config)]
+  (when-some [data (lookup-entry config id :input-source-config)]
     (. builder inputSourceConfig data))
-  (when-let [data (lookup-entry config id :output-source-config)]
+  (when-some [data (lookup-entry config id :output-source-config)]
     (. builder outputSourceConfig data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :workflow-name)]
+  (when-some [data (lookup-entry config id :workflow-name)]
     (. builder workflowName data))
   (.build builder))
 
@@ -260,11 +260,11 @@
 | `providerServiceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-service-arn` |
 "
   [^CfnIdMappingWorkflow$ProviderPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :intermediate-source-configuration)]
+  (when-some [data (lookup-entry config id :intermediate-source-configuration)]
     (. builder intermediateSourceConfiguration data))
-  (when-let [data (lookup-entry config id :provider-configuration)]
+  (when-some [data (lookup-entry config id :provider-configuration)]
     (. builder providerConfiguration data))
-  (when-let [data (lookup-entry config id :provider-service-arn)]
+  (when-some [data (lookup-entry config id :provider-service-arn)]
     (. builder providerServiceArn data))
   (.build builder))
 
@@ -298,19 +298,19 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnIdNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :id-mapping-workflow-properties)]
+  (when-some [data (lookup-entry config id :id-mapping-workflow-properties)]
     (. builder idMappingWorkflowProperties data))
-  (when-let [data (lookup-entry config id :id-namespace-name)]
+  (when-some [data (lookup-entry config id :id-namespace-name)]
     (. builder idNamespaceName data))
-  (when-let [data (lookup-entry config id :input-source-config)]
+  (when-some [data (lookup-entry config id :input-source-config)]
     (. builder inputSourceConfig data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -339,9 +339,9 @@
 | `providerProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provider-properties` |
 "
   [^CfnIdNamespace$IdNamespaceIdMappingWorkflowPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :id-mapping-type)]
+  (when-some [data (lookup-entry config id :id-mapping-type)]
     (. builder idMappingType data))
-  (when-let [data (lookup-entry config id :provider-properties)]
+  (when-some [data (lookup-entry config id :provider-properties)]
     (. builder providerProperties data))
   (.build builder))
 
@@ -370,9 +370,9 @@
 | `schemaName` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-name` |
 "
   [^CfnIdNamespace$IdNamespaceInputSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-source-arn)]
+  (when-some [data (lookup-entry config id :input-source-arn)]
     (. builder inputSourceArn data))
-  (when-let [data (lookup-entry config id :schema-name)]
+  (when-some [data (lookup-entry config id :schema-name)]
     (. builder schemaName data))
   (.build builder))
 
@@ -401,9 +401,9 @@
 | `providerServiceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-service-arn` |
 "
   [^CfnIdNamespace$NamespaceProviderPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :provider-configuration)]
+  (when-some [data (lookup-entry config id :provider-configuration)]
     (. builder providerConfiguration data))
-  (when-let [data (lookup-entry config id :provider-service-arn)]
+  (when-some [data (lookup-entry config id :provider-service-arn)]
     (. builder providerServiceArn data))
   (.build builder))
 
@@ -437,19 +437,19 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnIdNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :id-mapping-workflow-properties)]
+  (when-some [data (lookup-entry config id :id-mapping-workflow-properties)]
     (. builder idMappingWorkflowProperties data))
-  (when-let [data (lookup-entry config id :id-namespace-name)]
+  (when-some [data (lookup-entry config id :id-namespace-name)]
     (. builder idNamespaceName data))
-  (when-let [data (lookup-entry config id :input-source-config)]
+  (when-some [data (lookup-entry config id :input-source-config)]
     (. builder inputSourceConfig data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -483,19 +483,19 @@
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |
 "
   [^CfnMatchingWorkflow$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-source-config)]
+  (when-some [data (lookup-entry config id :input-source-config)]
     (. builder inputSourceConfig data))
-  (when-let [data (lookup-entry config id :output-source-config)]
+  (when-some [data (lookup-entry config id :output-source-config)]
     (. builder outputSourceConfig data))
-  (when-let [data (lookup-entry config id :resolution-techniques)]
+  (when-some [data (lookup-entry config id :resolution-techniques)]
     (. builder resolutionTechniques data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :workflow-name)]
+  (when-some [data (lookup-entry config id :workflow-name)]
     (. builder workflowName data))
   (.build builder))
 
@@ -525,11 +525,11 @@
 | `schemaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-arn` |
 "
   [^CfnMatchingWorkflow$InputSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :apply-normalization)]
+  (when-some [data (lookup-entry config id :apply-normalization)]
     (. builder applyNormalization data))
-  (when-let [data (lookup-entry config id :input-source-arn)]
+  (when-some [data (lookup-entry config id :input-source-arn)]
     (. builder inputSourceArn data))
-  (when-let [data (lookup-entry config id :schema-arn)]
+  (when-some [data (lookup-entry config id :schema-arn)]
     (. builder schemaArn data))
   (.build builder))
 
@@ -557,7 +557,7 @@
 | `intermediateS3Path` | java.lang.String | [[cdk.support/lookup-entry]] | `:intermediate-s3-path` |
 "
   [^CfnMatchingWorkflow$IntermediateSourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :intermediate-s3-path)]
+  (when-some [data (lookup-entry config id :intermediate-s3-path)]
     (. builder intermediateS3Path data))
   (.build builder))
 
@@ -586,9 +586,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnMatchingWorkflow$OutputAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hashed)]
+  (when-some [data (lookup-entry config id :hashed)]
     (. builder hashed data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -619,13 +619,13 @@
 | `outputS3Path` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-s3-path` |
 "
   [^CfnMatchingWorkflow$OutputSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :apply-normalization)]
+  (when-some [data (lookup-entry config id :apply-normalization)]
     (. builder applyNormalization data))
-  (when-let [data (lookup-entry config id :kms-arn)]
+  (when-some [data (lookup-entry config id :kms-arn)]
     (. builder kmsArn data))
-  (when-let [data (lookup-entry config id :output)]
+  (when-some [data (lookup-entry config id :output)]
     (. builder output data))
-  (when-let [data (lookup-entry config id :output-s3-path)]
+  (when-some [data (lookup-entry config id :output-s3-path)]
     (. builder outputS3Path data))
   (.build builder))
 
@@ -659,19 +659,19 @@
 | `workflowName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workflow-name` |
 "
   [^CfnMatchingWorkflowProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :input-source-config)]
+  (when-some [data (lookup-entry config id :input-source-config)]
     (. builder inputSourceConfig data))
-  (when-let [data (lookup-entry config id :output-source-config)]
+  (when-some [data (lookup-entry config id :output-source-config)]
     (. builder outputSourceConfig data))
-  (when-let [data (lookup-entry config id :resolution-techniques)]
+  (when-some [data (lookup-entry config id :resolution-techniques)]
     (. builder resolutionTechniques data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :workflow-name)]
+  (when-some [data (lookup-entry config id :workflow-name)]
     (. builder workflowName data))
   (.build builder))
 
@@ -701,11 +701,11 @@
 | `providerServiceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-service-arn` |
 "
   [^CfnMatchingWorkflow$ProviderPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :intermediate-source-configuration)]
+  (when-some [data (lookup-entry config id :intermediate-source-configuration)]
     (. builder intermediateSourceConfiguration data))
-  (when-let [data (lookup-entry config id :provider-configuration)]
+  (when-some [data (lookup-entry config id :provider-configuration)]
     (. builder providerConfiguration data))
-  (when-let [data (lookup-entry config id :provider-service-arn)]
+  (when-some [data (lookup-entry config id :provider-service-arn)]
     (. builder providerServiceArn data))
   (.build builder))
 
@@ -735,11 +735,11 @@
 | `ruleBasedProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rule-based-properties` |
 "
   [^CfnMatchingWorkflow$ResolutionTechniquesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :provider-properties)]
+  (when-some [data (lookup-entry config id :provider-properties)]
     (. builder providerProperties data))
-  (when-let [data (lookup-entry config id :resolution-type)]
+  (when-some [data (lookup-entry config id :resolution-type)]
     (. builder resolutionType data))
-  (when-let [data (lookup-entry config id :rule-based-properties)]
+  (when-some [data (lookup-entry config id :rule-based-properties)]
     (. builder ruleBasedProperties data))
   (.build builder))
 
@@ -768,9 +768,9 @@
 | `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnMatchingWorkflow$RuleBasedPropertiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-matching-model)]
+  (when-some [data (lookup-entry config id :attribute-matching-model)]
     (. builder attributeMatchingModel data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
 
@@ -799,9 +799,9 @@
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
 "
   [^CfnMatchingWorkflow$RuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :matching-keys)]
+  (when-some [data (lookup-entry config id :matching-keys)]
     (. builder matchingKeys data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
   (.build builder))
 
@@ -834,17 +834,17 @@
 | `statementId` | java.lang.String | [[cdk.support/lookup-entry]] | `:statement-id` |
 "
   [^CfnPolicyStatement$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :effect)]
+  (when-some [data (lookup-entry config id :effect)]
     (. builder effect data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :statement-id)]
+  (when-some [data (lookup-entry config id :statement-id)]
     (. builder statementId data))
   (.build builder))
 
@@ -877,17 +877,17 @@
 | `statementId` | java.lang.String | [[cdk.support/lookup-entry]] | `:statement-id` |
 "
   [^CfnPolicyStatementProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :effect)]
+  (when-some [data (lookup-entry config id :effect)]
     (. builder effect data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
-  (when-let [data (lookup-entry config id :statement-id)]
+  (when-some [data (lookup-entry config id :statement-id)]
     (. builder statementId data))
   (.build builder))
 
@@ -918,13 +918,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSchemaMapping$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :mapped-input-fields)]
+  (when-some [data (lookup-entry config id :mapped-input-fields)]
     (. builder mappedInputFields data))
-  (when-let [data (lookup-entry config id :schema-name)]
+  (when-some [data (lookup-entry config id :schema-name)]
     (. builder schemaName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -955,13 +955,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSchemaMappingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :mapped-input-fields)]
+  (when-some [data (lookup-entry config id :mapped-input-fields)]
     (. builder mappedInputFields data))
-  (when-let [data (lookup-entry config id :schema-name)]
+  (when-some [data (lookup-entry config id :schema-name)]
     (. builder schemaName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -993,15 +993,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSchemaMapping$SchemaInputAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field-name)]
+  (when-some [data (lookup-entry config id :field-name)]
     (. builder fieldName data))
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :match-key)]
+  (when-some [data (lookup-entry config id :match-key)]
     (. builder matchKey data))
-  (when-let [data (lookup-entry config id :sub-type)]
+  (when-some [data (lookup-entry config id :sub-type)]
     (. builder subType data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 

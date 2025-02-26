@@ -68,7 +68,7 @@
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnAlarmModel$AcknowledgeFlowProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -104,23 +104,23 @@
 | `sqs` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$SqsProperty | [[cdk.support/lookup-entry]] | `:sqs` |
 "
   [^CfnAlarmModel$AlarmActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dynamo-d-bv2)]
+  (when-some [data (lookup-entry config id :dynamo-d-bv2)]
     (. builder dynamoDBv2 data))
-  (when-let [data (lookup-entry config id :dynamo-db)]
+  (when-some [data (lookup-entry config id :dynamo-db)]
     (. builder dynamoDb data))
-  (when-let [data (lookup-entry config id :firehose)]
+  (when-some [data (lookup-entry config id :firehose)]
     (. builder firehose data))
-  (when-let [data (lookup-entry config id :iot-events)]
+  (when-some [data (lookup-entry config id :iot-events)]
     (. builder iotEvents data))
-  (when-let [data (lookup-entry config id :iot-site-wise)]
+  (when-some [data (lookup-entry config id :iot-site-wise)]
     (. builder iotSiteWise data))
-  (when-let [data (lookup-entry config id :iot-topic-publish)]
+  (when-some [data (lookup-entry config id :iot-topic-publish)]
     (. builder iotTopicPublish data))
-  (when-let [data (lookup-entry config id :lambda)]
+  (when-some [data (lookup-entry config id :lambda)]
     (. builder lambda data))
-  (when-let [data (lookup-entry config id :sns)]
+  (when-some [data (lookup-entry config id :sns)]
     (. builder sns data))
-  (when-let [data (lookup-entry config id :sqs)]
+  (when-some [data (lookup-entry config id :sqs)]
     (. builder sqs data))
   (.build builder))
 
@@ -149,9 +149,9 @@
 | `initializationConfiguration` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$InitializationConfigurationProperty | [[cdk.support/lookup-entry]] | `:initialization-configuration` |
 "
   [^CfnAlarmModel$AlarmCapabilitiesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acknowledge-flow)]
+  (when-some [data (lookup-entry config id :acknowledge-flow)]
     (. builder acknowledgeFlow data))
-  (when-let [data (lookup-entry config id :initialization-configuration)]
+  (when-some [data (lookup-entry config id :initialization-configuration)]
     (. builder initializationConfiguration data))
   (.build builder))
 
@@ -179,7 +179,7 @@
 | `alarmActions` | java.util.List | [[cdk.support/lookup-entry]] | `:alarm-actions` |
 "
   [^CfnAlarmModel$AlarmEventActionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-actions)]
+  (when-some [data (lookup-entry config id :alarm-actions)]
     (. builder alarmActions data))
   (.build builder))
 
@@ -207,7 +207,7 @@
 | `simpleRule` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$SimpleRuleProperty | [[cdk.support/lookup-entry]] | `:simple-rule` |
 "
   [^CfnAlarmModel$AlarmRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :simple-rule)]
+  (when-some [data (lookup-entry config id :simple-rule)]
     (. builder simpleRule data))
   (.build builder))
 
@@ -236,9 +236,9 @@
 | `timeInSeconds` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-in-seconds` |
 "
   [^CfnAlarmModel$AssetPropertyTimestampProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :offset-in-nanos)]
+  (when-some [data (lookup-entry config id :offset-in-nanos)]
     (. builder offsetInNanos data))
-  (when-let [data (lookup-entry config id :time-in-seconds)]
+  (when-some [data (lookup-entry config id :time-in-seconds)]
     (. builder timeInSeconds data))
   (.build builder))
 
@@ -268,11 +268,11 @@
 | `value` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$AssetPropertyVariantProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAlarmModel$AssetPropertyValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :quality)]
+  (when-some [data (lookup-entry config id :quality)]
     (. builder quality data))
-  (when-let [data (lookup-entry config id :timestamp)]
+  (when-some [data (lookup-entry config id :timestamp)]
     (. builder timestamp data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -303,13 +303,13 @@
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
 "
   [^CfnAlarmModel$AssetPropertyVariantProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :boolean-value)]
+  (when-some [data (lookup-entry config id :boolean-value)]
     (. builder booleanValue data))
-  (when-let [data (lookup-entry config id :double-value)]
+  (when-some [data (lookup-entry config id :double-value)]
     (. builder doubleValue data))
-  (when-let [data (lookup-entry config id :integer-value)]
+  (when-some [data (lookup-entry config id :integer-value)]
     (. builder integerValue data))
-  (when-let [data (lookup-entry config id :string-value)]
+  (when-some [data (lookup-entry config id :string-value)]
     (. builder stringValue data))
   (.build builder))
 
@@ -345,23 +345,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAlarmModel$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-capabilities)]
+  (when-some [data (lookup-entry config id :alarm-capabilities)]
     (. builder alarmCapabilities data))
-  (when-let [data (lookup-entry config id :alarm-event-actions)]
+  (when-some [data (lookup-entry config id :alarm-event-actions)]
     (. builder alarmEventActions data))
-  (when-let [data (lookup-entry config id :alarm-model-description)]
+  (when-some [data (lookup-entry config id :alarm-model-description)]
     (. builder alarmModelDescription data))
-  (when-let [data (lookup-entry config id :alarm-model-name)]
+  (when-some [data (lookup-entry config id :alarm-model-name)]
     (. builder alarmModelName data))
-  (when-let [data (lookup-entry config id :alarm-rule)]
+  (when-some [data (lookup-entry config id :alarm-rule)]
     (. builder alarmRule data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :severity)]
+  (when-some [data (lookup-entry config id :severity)]
     (. builder severity data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -390,9 +390,9 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnAlarmModel$DynamoDBv2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -429,25 +429,25 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnAlarmModel$DynamoDBProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hash-key-field)]
+  (when-some [data (lookup-entry config id :hash-key-field)]
     (. builder hashKeyField data))
-  (when-let [data (lookup-entry config id :hash-key-type)]
+  (when-some [data (lookup-entry config id :hash-key-type)]
     (. builder hashKeyType data))
-  (when-let [data (lookup-entry config id :hash-key-value)]
+  (when-some [data (lookup-entry config id :hash-key-value)]
     (. builder hashKeyValue data))
-  (when-let [data (lookup-entry config id :operation)]
+  (when-some [data (lookup-entry config id :operation)]
     (. builder operation data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :payload-field)]
+  (when-some [data (lookup-entry config id :payload-field)]
     (. builder payloadField data))
-  (when-let [data (lookup-entry config id :range-key-field)]
+  (when-some [data (lookup-entry config id :range-key-field)]
     (. builder rangeKeyField data))
-  (when-let [data (lookup-entry config id :range-key-type)]
+  (when-some [data (lookup-entry config id :range-key-type)]
     (. builder rangeKeyType data))
-  (when-let [data (lookup-entry config id :range-key-value)]
+  (when-some [data (lookup-entry config id :range-key-value)]
     (. builder rangeKeyValue data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -477,11 +477,11 @@
 | `separator` | java.lang.String | [[cdk.support/lookup-entry]] | `:separator` |
 "
   [^CfnAlarmModel$FirehoseProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-stream-name)]
+  (when-some [data (lookup-entry config id :delivery-stream-name)]
     (. builder deliveryStreamName data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :separator)]
+  (when-some [data (lookup-entry config id :separator)]
     (. builder separator data))
   (.build builder))
 
@@ -509,7 +509,7 @@
 | `disabledOnInitialization` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:disabled-on-initialization` |
 "
   [^CfnAlarmModel$InitializationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :disabled-on-initialization)]
+  (when-some [data (lookup-entry config id :disabled-on-initialization)]
     (. builder disabledOnInitialization data))
   (.build builder))
 
@@ -538,9 +538,9 @@
 | `payload` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 "
   [^CfnAlarmModel$IotEventsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-name)]
+  (when-some [data (lookup-entry config id :input-name)]
     (. builder inputName data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
   (.build builder))
 
@@ -572,15 +572,15 @@
 | `propertyValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-value` |
 "
   [^CfnAlarmModel$IotSiteWiseProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-id)]
+  (when-some [data (lookup-entry config id :asset-id)]
     (. builder assetId data))
-  (when-let [data (lookup-entry config id :entry-id)]
+  (when-some [data (lookup-entry config id :entry-id)]
     (. builder entryId data))
-  (when-let [data (lookup-entry config id :property-alias)]
+  (when-some [data (lookup-entry config id :property-alias)]
     (. builder propertyAlias data))
-  (when-let [data (lookup-entry config id :property-id)]
+  (when-some [data (lookup-entry config id :property-id)]
     (. builder propertyId data))
-  (when-let [data (lookup-entry config id :property-value)]
+  (when-some [data (lookup-entry config id :property-value)]
     (. builder propertyValue data))
   (.build builder))
 
@@ -609,9 +609,9 @@
 | `payload` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 "
   [^CfnAlarmModel$IotTopicPublishProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mqtt-topic)]
+  (when-some [data (lookup-entry config id :mqtt-topic)]
     (. builder mqttTopic data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
   (.build builder))
 
@@ -640,9 +640,9 @@
 | `payload` | software.amazon.awscdk.services.iotevents.CfnAlarmModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 "
   [^CfnAlarmModel$LambdaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
   (.build builder))
 
@@ -671,9 +671,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAlarmModel$PayloadProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-expression)]
+  (when-some [data (lookup-entry config id :content-expression)]
     (. builder contentExpression data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -709,23 +709,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAlarmModelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-capabilities)]
+  (when-some [data (lookup-entry config id :alarm-capabilities)]
     (. builder alarmCapabilities data))
-  (when-let [data (lookup-entry config id :alarm-event-actions)]
+  (when-some [data (lookup-entry config id :alarm-event-actions)]
     (. builder alarmEventActions data))
-  (when-let [data (lookup-entry config id :alarm-model-description)]
+  (when-some [data (lookup-entry config id :alarm-model-description)]
     (. builder alarmModelDescription data))
-  (when-let [data (lookup-entry config id :alarm-model-name)]
+  (when-some [data (lookup-entry config id :alarm-model-name)]
     (. builder alarmModelName data))
-  (when-let [data (lookup-entry config id :alarm-rule)]
+  (when-some [data (lookup-entry config id :alarm-rule)]
     (. builder alarmRule data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :severity)]
+  (when-some [data (lookup-entry config id :severity)]
     (. builder severity data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -755,11 +755,11 @@
 | `threshold` | java.lang.String | [[cdk.support/lookup-entry]] | `:threshold` |
 "
   [^CfnAlarmModel$SimpleRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :comparison-operator)]
+  (when-some [data (lookup-entry config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :input-property)]
+  (when-some [data (lookup-entry config id :input-property)]
     (. builder inputProperty data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
   (.build builder))
 
@@ -788,9 +788,9 @@
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnAlarmModel$SnsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -820,11 +820,11 @@
 | `useBase64` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-base64` |
 "
   [^CfnAlarmModel$SqsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :queue-url)]
+  (when-some [data (lookup-entry config id :queue-url)]
     (. builder queueUrl data))
-  (when-let [data (lookup-entry config id :use-base64)]
+  (when-some [data (lookup-entry config id :use-base64)]
     (. builder useBase64 data))
   (.build builder))
 
@@ -864,31 +864,31 @@
 | `sqs` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs` |
 "
   [^CfnDetectorModel$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :clear-timer)]
+  (when-some [data (lookup-entry config id :clear-timer)]
     (. builder clearTimer data))
-  (when-let [data (lookup-entry config id :dynamo-d-bv2)]
+  (when-some [data (lookup-entry config id :dynamo-d-bv2)]
     (. builder dynamoDBv2 data))
-  (when-let [data (lookup-entry config id :dynamo-db)]
+  (when-some [data (lookup-entry config id :dynamo-db)]
     (. builder dynamoDb data))
-  (when-let [data (lookup-entry config id :firehose)]
+  (when-some [data (lookup-entry config id :firehose)]
     (. builder firehose data))
-  (when-let [data (lookup-entry config id :iot-events)]
+  (when-some [data (lookup-entry config id :iot-events)]
     (. builder iotEvents data))
-  (when-let [data (lookup-entry config id :iot-site-wise)]
+  (when-some [data (lookup-entry config id :iot-site-wise)]
     (. builder iotSiteWise data))
-  (when-let [data (lookup-entry config id :iot-topic-publish)]
+  (when-some [data (lookup-entry config id :iot-topic-publish)]
     (. builder iotTopicPublish data))
-  (when-let [data (lookup-entry config id :lambda)]
+  (when-some [data (lookup-entry config id :lambda)]
     (. builder lambda data))
-  (when-let [data (lookup-entry config id :reset-timer)]
+  (when-some [data (lookup-entry config id :reset-timer)]
     (. builder resetTimer data))
-  (when-let [data (lookup-entry config id :set-timer)]
+  (when-some [data (lookup-entry config id :set-timer)]
     (. builder setTimer data))
-  (when-let [data (lookup-entry config id :set-variable)]
+  (when-some [data (lookup-entry config id :set-variable)]
     (. builder setVariable data))
-  (when-let [data (lookup-entry config id :sns)]
+  (when-some [data (lookup-entry config id :sns)]
     (. builder sns data))
-  (when-let [data (lookup-entry config id :sqs)]
+  (when-some [data (lookup-entry config id :sqs)]
     (. builder sqs data))
   (.build builder))
 
@@ -917,9 +917,9 @@
 | `timeInSeconds` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-in-seconds` |
 "
   [^CfnDetectorModel$AssetPropertyTimestampProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :offset-in-nanos)]
+  (when-some [data (lookup-entry config id :offset-in-nanos)]
     (. builder offsetInNanos data))
-  (when-let [data (lookup-entry config id :time-in-seconds)]
+  (when-some [data (lookup-entry config id :time-in-seconds)]
     (. builder timeInSeconds data))
   (.build builder))
 
@@ -949,11 +949,11 @@
 | `value` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDetectorModel$AssetPropertyValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :quality)]
+  (when-some [data (lookup-entry config id :quality)]
     (. builder quality data))
-  (when-let [data (lookup-entry config id :timestamp)]
+  (when-some [data (lookup-entry config id :timestamp)]
     (. builder timestamp data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -984,13 +984,13 @@
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
 "
   [^CfnDetectorModel$AssetPropertyVariantProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :boolean-value)]
+  (when-some [data (lookup-entry config id :boolean-value)]
     (. builder booleanValue data))
-  (when-let [data (lookup-entry config id :double-value)]
+  (when-some [data (lookup-entry config id :double-value)]
     (. builder doubleValue data))
-  (when-let [data (lookup-entry config id :integer-value)]
+  (when-some [data (lookup-entry config id :integer-value)]
     (. builder integerValue data))
-  (when-let [data (lookup-entry config id :string-value)]
+  (when-some [data (lookup-entry config id :string-value)]
     (. builder stringValue data))
   (.build builder))
 
@@ -1024,19 +1024,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetectorModel$Builder builder id config]
-  (when-let [data (lookup-entry config id :detector-model-definition)]
+  (when-some [data (lookup-entry config id :detector-model-definition)]
     (. builder detectorModelDefinition data))
-  (when-let [data (lookup-entry config id :detector-model-description)]
+  (when-some [data (lookup-entry config id :detector-model-description)]
     (. builder detectorModelDescription data))
-  (when-let [data (lookup-entry config id :detector-model-name)]
+  (when-some [data (lookup-entry config id :detector-model-name)]
     (. builder detectorModelName data))
-  (when-let [data (lookup-entry config id :evaluation-method)]
+  (when-some [data (lookup-entry config id :evaluation-method)]
     (. builder evaluationMethod data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1064,7 +1064,7 @@
 | `timerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:timer-name` |
 "
   [^CfnDetectorModel$ClearTimerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :timer-name)]
+  (when-some [data (lookup-entry config id :timer-name)]
     (. builder timerName data))
   (.build builder))
 
@@ -1093,9 +1093,9 @@
 | `states` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:states` |
 "
   [^CfnDetectorModel$DetectorModelDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :initial-state-name)]
+  (when-some [data (lookup-entry config id :initial-state-name)]
     (. builder initialStateName data))
-  (when-let [data (lookup-entry config id :states)]
+  (when-some [data (lookup-entry config id :states)]
     (. builder states data))
   (.build builder))
 
@@ -1124,9 +1124,9 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnDetectorModel$DynamoDBv2Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -1163,25 +1163,25 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnDetectorModel$DynamoDBProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hash-key-field)]
+  (when-some [data (lookup-entry config id :hash-key-field)]
     (. builder hashKeyField data))
-  (when-let [data (lookup-entry config id :hash-key-type)]
+  (when-some [data (lookup-entry config id :hash-key-type)]
     (. builder hashKeyType data))
-  (when-let [data (lookup-entry config id :hash-key-value)]
+  (when-some [data (lookup-entry config id :hash-key-value)]
     (. builder hashKeyValue data))
-  (when-let [data (lookup-entry config id :operation)]
+  (when-some [data (lookup-entry config id :operation)]
     (. builder operation data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :payload-field)]
+  (when-some [data (lookup-entry config id :payload-field)]
     (. builder payloadField data))
-  (when-let [data (lookup-entry config id :range-key-field)]
+  (when-some [data (lookup-entry config id :range-key-field)]
     (. builder rangeKeyField data))
-  (when-let [data (lookup-entry config id :range-key-type)]
+  (when-some [data (lookup-entry config id :range-key-type)]
     (. builder rangeKeyType data))
-  (when-let [data (lookup-entry config id :range-key-value)]
+  (when-some [data (lookup-entry config id :range-key-value)]
     (. builder rangeKeyValue data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -1211,11 +1211,11 @@
 | `eventName` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-name` |
 "
   [^CfnDetectorModel$EventProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :event-name)]
+  (when-some [data (lookup-entry config id :event-name)]
     (. builder eventName data))
   (.build builder))
 
@@ -1245,11 +1245,11 @@
 | `separator` | java.lang.String | [[cdk.support/lookup-entry]] | `:separator` |
 "
   [^CfnDetectorModel$FirehoseProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-stream-name)]
+  (when-some [data (lookup-entry config id :delivery-stream-name)]
     (. builder deliveryStreamName data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :separator)]
+  (when-some [data (lookup-entry config id :separator)]
     (. builder separator data))
   (.build builder))
 
@@ -1278,9 +1278,9 @@
 | `payload` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 "
   [^CfnDetectorModel$IotEventsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-name)]
+  (when-some [data (lookup-entry config id :input-name)]
     (. builder inputName data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
   (.build builder))
 
@@ -1312,15 +1312,15 @@
 | `propertyValue` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:property-value` |
 "
   [^CfnDetectorModel$IotSiteWiseProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-id)]
+  (when-some [data (lookup-entry config id :asset-id)]
     (. builder assetId data))
-  (when-let [data (lookup-entry config id :entry-id)]
+  (when-some [data (lookup-entry config id :entry-id)]
     (. builder entryId data))
-  (when-let [data (lookup-entry config id :property-alias)]
+  (when-some [data (lookup-entry config id :property-alias)]
     (. builder propertyAlias data))
-  (when-let [data (lookup-entry config id :property-id)]
+  (when-some [data (lookup-entry config id :property-id)]
     (. builder propertyId data))
-  (when-let [data (lookup-entry config id :property-value)]
+  (when-some [data (lookup-entry config id :property-value)]
     (. builder propertyValue data))
   (.build builder))
 
@@ -1349,9 +1349,9 @@
 | `payload` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 "
   [^CfnDetectorModel$IotTopicPublishProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mqtt-topic)]
+  (when-some [data (lookup-entry config id :mqtt-topic)]
     (. builder mqttTopic data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
   (.build builder))
 
@@ -1380,9 +1380,9 @@
 | `payload` | software.amazon.awscdk.services.iotevents.CfnDetectorModel$PayloadProperty | [[cdk.support/lookup-entry]] | `:payload` |
 "
   [^CfnDetectorModel$LambdaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
   (.build builder))
 
@@ -1410,7 +1410,7 @@
 | `events` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^CfnDetectorModel$OnEnterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
 
@@ -1438,7 +1438,7 @@
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^CfnDetectorModel$OnExitProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
 
@@ -1467,9 +1467,9 @@
 | `transitionEvents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transition-events` |
 "
   [^CfnDetectorModel$OnInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :transition-events)]
+  (when-some [data (lookup-entry config id :transition-events)]
     (. builder transitionEvents data))
   (.build builder))
 
@@ -1498,9 +1498,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDetectorModel$PayloadProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-expression)]
+  (when-some [data (lookup-entry config id :content-expression)]
     (. builder contentExpression data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1534,19 +1534,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetectorModelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :detector-model-definition)]
+  (when-some [data (lookup-entry config id :detector-model-definition)]
     (. builder detectorModelDefinition data))
-  (when-let [data (lookup-entry config id :detector-model-description)]
+  (when-some [data (lookup-entry config id :detector-model-description)]
     (. builder detectorModelDescription data))
-  (when-let [data (lookup-entry config id :detector-model-name)]
+  (when-some [data (lookup-entry config id :detector-model-name)]
     (. builder detectorModelName data))
-  (when-let [data (lookup-entry config id :evaluation-method)]
+  (when-some [data (lookup-entry config id :evaluation-method)]
     (. builder evaluationMethod data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1574,7 +1574,7 @@
 | `timerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:timer-name` |
 "
   [^CfnDetectorModel$ResetTimerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :timer-name)]
+  (when-some [data (lookup-entry config id :timer-name)]
     (. builder timerName data))
   (.build builder))
 
@@ -1604,11 +1604,11 @@
 | `timerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:timer-name` |
 "
   [^CfnDetectorModel$SetTimerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-expression)]
+  (when-some [data (lookup-entry config id :duration-expression)]
     (. builder durationExpression data))
-  (when-let [data (lookup-entry config id :seconds)]
+  (when-some [data (lookup-entry config id :seconds)]
     (. builder seconds data))
-  (when-let [data (lookup-entry config id :timer-name)]
+  (when-some [data (lookup-entry config id :timer-name)]
     (. builder timerName data))
   (.build builder))
 
@@ -1637,9 +1637,9 @@
 | `variableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable-name` |
 "
   [^CfnDetectorModel$SetVariableProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :variable-name)]
+  (when-some [data (lookup-entry config id :variable-name)]
     (. builder variableName data))
   (.build builder))
 
@@ -1668,9 +1668,9 @@
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnDetectorModel$SnsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -1700,11 +1700,11 @@
 | `useBase64` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-base64` |
 "
   [^CfnDetectorModel$SqsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :queue-url)]
+  (when-some [data (lookup-entry config id :queue-url)]
     (. builder queueUrl data))
-  (when-let [data (lookup-entry config id :use-base64)]
+  (when-some [data (lookup-entry config id :use-base64)]
     (. builder useBase64 data))
   (.build builder))
 
@@ -1735,13 +1735,13 @@
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 "
   [^CfnDetectorModel$StateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :on-enter)]
+  (when-some [data (lookup-entry config id :on-enter)]
     (. builder onEnter data))
-  (when-let [data (lookup-entry config id :on-exit)]
+  (when-some [data (lookup-entry config id :on-exit)]
     (. builder onExit data))
-  (when-let [data (lookup-entry config id :on-input)]
+  (when-some [data (lookup-entry config id :on-input)]
     (. builder onInput data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
   (.build builder))
 
@@ -1772,13 +1772,13 @@
 | `nextState` | java.lang.String | [[cdk.support/lookup-entry]] | `:next-state` |
 "
   [^CfnDetectorModel$TransitionEventProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :event-name)]
+  (when-some [data (lookup-entry config id :event-name)]
     (. builder eventName data))
-  (when-let [data (lookup-entry config id :next-state)]
+  (when-some [data (lookup-entry config id :next-state)]
     (. builder nextState data))
   (.build builder))
 
@@ -1806,7 +1806,7 @@
 | `jsonPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:json-path` |
 "
   [^CfnInput$AttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :json-path)]
+  (when-some [data (lookup-entry config id :json-path)]
     (. builder jsonPath data))
   (.build builder))
 
@@ -1837,13 +1837,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInput$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-definition)]
+  (when-some [data (lookup-entry config id :input-definition)]
     (. builder inputDefinition data))
-  (when-let [data (lookup-entry config id :input-description)]
+  (when-some [data (lookup-entry config id :input-description)]
     (. builder inputDescription data))
-  (when-let [data (lookup-entry config id :input-name)]
+  (when-some [data (lookup-entry config id :input-name)]
     (. builder inputName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1871,7 +1871,7 @@
 | `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
 "
   [^CfnInput$InputDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
   (.build builder))
 
@@ -1902,13 +1902,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInputProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-definition)]
+  (when-some [data (lookup-entry config id :input-definition)]
     (. builder inputDefinition data))
-  (when-let [data (lookup-entry config id :input-description)]
+  (when-some [data (lookup-entry config id :input-description)]
     (. builder inputDescription data))
-  (when-let [data (lookup-entry config id :input-name)]
+  (when-some [data (lookup-entry config id :input-name)]
     (. builder inputName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

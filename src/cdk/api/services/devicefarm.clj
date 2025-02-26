@@ -35,17 +35,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDevicePool$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :max-devices)]
+  (when-some [data (lookup-entry config id :max-devices)]
     (. builder maxDevices data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :project-arn)]
+  (when-some [data (lookup-entry config id :project-arn)]
     (. builder projectArn data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -78,17 +78,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDevicePoolProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :max-devices)]
+  (when-some [data (lookup-entry config id :max-devices)]
     (. builder maxDevices data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :project-arn)]
+  (when-some [data (lookup-entry config id :project-arn)]
     (. builder projectArn data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -118,11 +118,11 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDevicePool$RuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute)]
+  (when-some [data (lookup-entry config id :attribute)]
     (. builder attribute data))
-  (when-let [data (lookup-entry config id :operator)]
+  (when-some [data (lookup-entry config id :operator)]
     (. builder operator data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -155,17 +155,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInstanceProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :exclude-app-packages-from-cleanup)]
+  (when-some [data (lookup-entry config id :exclude-app-packages-from-cleanup)]
     (. builder excludeAppPackagesFromCleanup data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :package-cleanup)]
+  (when-some [data (lookup-entry config id :package-cleanup)]
     (. builder packageCleanup data))
-  (when-let [data (lookup-entry config id :reboot-after-use)]
+  (when-some [data (lookup-entry config id :reboot-after-use)]
     (. builder rebootAfterUse data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -198,17 +198,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInstanceProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :exclude-app-packages-from-cleanup)]
+  (when-some [data (lookup-entry config id :exclude-app-packages-from-cleanup)]
     (. builder excludeAppPackagesFromCleanup data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :package-cleanup)]
+  (when-some [data (lookup-entry config id :package-cleanup)]
     (. builder packageCleanup data))
-  (when-let [data (lookup-entry config id :reboot-after-use)]
+  (when-some [data (lookup-entry config id :reboot-after-use)]
     (. builder rebootAfterUse data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -247,29 +247,29 @@
 | `uplinkLossPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-loss-percent` |
 "
   [^CfnNetworkProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :downlink-bandwidth-bits)]
+  (when-some [data (lookup-entry config id :downlink-bandwidth-bits)]
     (. builder downlinkBandwidthBits data))
-  (when-let [data (lookup-entry config id :downlink-delay-ms)]
+  (when-some [data (lookup-entry config id :downlink-delay-ms)]
     (. builder downlinkDelayMs data))
-  (when-let [data (lookup-entry config id :downlink-jitter-ms)]
+  (when-some [data (lookup-entry config id :downlink-jitter-ms)]
     (. builder downlinkJitterMs data))
-  (when-let [data (lookup-entry config id :downlink-loss-percent)]
+  (when-some [data (lookup-entry config id :downlink-loss-percent)]
     (. builder downlinkLossPercent data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :project-arn)]
+  (when-some [data (lookup-entry config id :project-arn)]
     (. builder projectArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :uplink-bandwidth-bits)]
+  (when-some [data (lookup-entry config id :uplink-bandwidth-bits)]
     (. builder uplinkBandwidthBits data))
-  (when-let [data (lookup-entry config id :uplink-delay-ms)]
+  (when-some [data (lookup-entry config id :uplink-delay-ms)]
     (. builder uplinkDelayMs data))
-  (when-let [data (lookup-entry config id :uplink-jitter-ms)]
+  (when-some [data (lookup-entry config id :uplink-jitter-ms)]
     (. builder uplinkJitterMs data))
-  (when-let [data (lookup-entry config id :uplink-loss-percent)]
+  (when-some [data (lookup-entry config id :uplink-loss-percent)]
     (. builder uplinkLossPercent data))
   (.build builder))
 
@@ -308,29 +308,29 @@
 | `uplinkLossPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-loss-percent` |
 "
   [^CfnNetworkProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :downlink-bandwidth-bits)]
+  (when-some [data (lookup-entry config id :downlink-bandwidth-bits)]
     (. builder downlinkBandwidthBits data))
-  (when-let [data (lookup-entry config id :downlink-delay-ms)]
+  (when-some [data (lookup-entry config id :downlink-delay-ms)]
     (. builder downlinkDelayMs data))
-  (when-let [data (lookup-entry config id :downlink-jitter-ms)]
+  (when-some [data (lookup-entry config id :downlink-jitter-ms)]
     (. builder downlinkJitterMs data))
-  (when-let [data (lookup-entry config id :downlink-loss-percent)]
+  (when-some [data (lookup-entry config id :downlink-loss-percent)]
     (. builder downlinkLossPercent data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :project-arn)]
+  (when-some [data (lookup-entry config id :project-arn)]
     (. builder projectArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :uplink-bandwidth-bits)]
+  (when-some [data (lookup-entry config id :uplink-bandwidth-bits)]
     (. builder uplinkBandwidthBits data))
-  (when-let [data (lookup-entry config id :uplink-delay-ms)]
+  (when-some [data (lookup-entry config id :uplink-delay-ms)]
     (. builder uplinkDelayMs data))
-  (when-let [data (lookup-entry config id :uplink-jitter-ms)]
+  (when-some [data (lookup-entry config id :uplink-jitter-ms)]
     (. builder uplinkJitterMs data))
-  (when-let [data (lookup-entry config id :uplink-loss-percent)]
+  (when-some [data (lookup-entry config id :uplink-loss-percent)]
     (. builder uplinkLossPercent data))
   (.build builder))
 
@@ -361,13 +361,13 @@
 | `vpcConfig` | software.amazon.awscdk.services.devicefarm.CfnProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-job-timeout-minutes)]
+  (when-some [data (lookup-entry config id :default-job-timeout-minutes)]
     (. builder defaultJobTimeoutMinutes data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -398,13 +398,13 @@
 | `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-job-timeout-minutes)]
+  (when-some [data (lookup-entry config id :default-job-timeout-minutes)]
     (. builder defaultJobTimeoutMinutes data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -434,11 +434,11 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnProject$VpcConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -469,13 +469,13 @@
 | `vpcConfig` | software.amazon.awscdk.services.devicefarm.CfnTestGridProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnTestGridProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -506,13 +506,13 @@
 | `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnTestGridProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -542,11 +542,11 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnTestGridProject$VpcConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -578,15 +578,15 @@
 | `vpceServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-service-name` |
 "
   [^CfnVPCEConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :service-dns-name)]
+  (when-some [data (lookup-entry config id :service-dns-name)]
     (. builder serviceDnsName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpce-configuration-description)]
+  (when-some [data (lookup-entry config id :vpce-configuration-description)]
     (. builder vpceConfigurationDescription data))
-  (when-let [data (lookup-entry config id :vpce-configuration-name)]
+  (when-some [data (lookup-entry config id :vpce-configuration-name)]
     (. builder vpceConfigurationName data))
-  (when-let [data (lookup-entry config id :vpce-service-name)]
+  (when-some [data (lookup-entry config id :vpce-service-name)]
     (. builder vpceServiceName data))
   (.build builder))
 
@@ -618,15 +618,15 @@
 | `vpceServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-service-name` |
 "
   [^CfnVPCEConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :service-dns-name)]
+  (when-some [data (lookup-entry config id :service-dns-name)]
     (. builder serviceDnsName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpce-configuration-description)]
+  (when-some [data (lookup-entry config id :vpce-configuration-description)]
     (. builder vpceConfigurationDescription data))
-  (when-let [data (lookup-entry config id :vpce-configuration-name)]
+  (when-some [data (lookup-entry config id :vpce-configuration-name)]
     (. builder vpceConfigurationName data))
-  (when-let [data (lookup-entry config id :vpce-service-name)]
+  (when-some [data (lookup-entry config id :vpce-service-name)]
     (. builder vpceServiceName data))
   (.build builder))
 

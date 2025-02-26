@@ -44,7 +44,7 @@
 | `config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config` |
 "
   [^CfnNotificationChannel$Builder builder id config]
-  (when-let [data (lookup-entry config id :config)]
+  (when-some [data (lookup-entry config id :config)]
     (. builder config data))
   (.build builder))
 
@@ -73,9 +73,9 @@
 | `sns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns` |
 "
   [^CfnNotificationChannel$NotificationChannelConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :filters)]
+  (when-some [data (lookup-entry config id :filters)]
     (. builder filters data))
-  (when-let [data (lookup-entry config id :sns)]
+  (when-some [data (lookup-entry config id :sns)]
     (. builder sns data))
   (.build builder))
 
@@ -104,9 +104,9 @@
 | `severities` | java.util.List | [[cdk.support/lookup-entry]] | `:severities` |
 "
   [^CfnNotificationChannel$NotificationFilterConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :message-types)]
+  (when-some [data (lookup-entry config id :message-types)]
     (. builder messageTypes data))
-  (when-let [data (lookup-entry config id :severities)]
+  (when-some [data (lookup-entry config id :severities)]
     (. builder severities data))
   (.build builder))
 
@@ -134,7 +134,7 @@
 | `config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:config` |
 "
   [^CfnNotificationChannelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config)]
+  (when-some [data (lookup-entry config id :config)]
     (. builder config data))
   (.build builder))
 
@@ -162,7 +162,7 @@
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnNotificationChannel$SnsChannelConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -190,7 +190,7 @@
 | `resourceCollectionFilter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-collection-filter` |
 "
   [^CfnResourceCollection$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-collection-filter)]
+  (when-some [data (lookup-entry config id :resource-collection-filter)]
     (. builder resourceCollectionFilter data))
   (.build builder))
 
@@ -218,7 +218,7 @@
 | `stackNames` | java.util.List | [[cdk.support/lookup-entry]] | `:stack-names` |
 "
   [^CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :stack-names)]
+  (when-some [data (lookup-entry config id :stack-names)]
     (. builder stackNames data))
   (.build builder))
 
@@ -246,7 +246,7 @@
 | `resourceCollectionFilter` | software.amazon.awscdk.services.devopsguru.CfnResourceCollection$ResourceCollectionFilterProperty | [[cdk.support/lookup-entry]] | `:resource-collection-filter` |
 "
   [^CfnResourceCollectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-collection-filter)]
+  (when-some [data (lookup-entry config id :resource-collection-filter)]
     (. builder resourceCollectionFilter data))
   (.build builder))
 
@@ -275,9 +275,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourceCollection$ResourceCollectionFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-formation)]
+  (when-some [data (lookup-entry config id :cloud-formation)]
     (. builder cloudFormation data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -306,9 +306,9 @@
 | `tagValues` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-values` |
 "
   [^CfnResourceCollection$TagCollectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-boundary-key)]
+  (when-some [data (lookup-entry config id :app-boundary-key)]
     (. builder appBoundaryKey data))
-  (when-let [data (lookup-entry config id :tag-values)]
+  (when-some [data (lookup-entry config id :tag-values)]
     (. builder tagValues data))
   (.build builder))
 

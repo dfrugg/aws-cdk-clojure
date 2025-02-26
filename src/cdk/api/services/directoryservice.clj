@@ -27,19 +27,19 @@
 | `vpcSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-settings` |
 "
   [^CfnMicrosoftAD$Builder builder id config]
-  (when-let [data (lookup-entry config id :create-alias)]
+  (when-some [data (lookup-entry config id :create-alias)]
     (. builder createAlias data))
-  (when-let [data (lookup-entry config id :edition)]
+  (when-some [data (lookup-entry config id :edition)]
     (. builder edition data))
-  (when-let [data (lookup-entry config id :enable-sso)]
+  (when-some [data (lookup-entry config id :enable-sso)]
     (. builder enableSso data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :short-name)]
+  (when-some [data (lookup-entry config id :short-name)]
     (. builder shortName data))
-  (when-let [data (lookup-entry config id :vpc-settings)]
+  (when-some [data (lookup-entry config id :vpc-settings)]
     (. builder vpcSettings data))
   (.build builder))
 
@@ -73,19 +73,19 @@
 | `vpcSettings` | software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD$VpcSettingsProperty | [[cdk.support/lookup-entry]] | `:vpc-settings` |
 "
   [^CfnMicrosoftADProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :create-alias)]
+  (when-some [data (lookup-entry config id :create-alias)]
     (. builder createAlias data))
-  (when-let [data (lookup-entry config id :edition)]
+  (when-some [data (lookup-entry config id :edition)]
     (. builder edition data))
-  (when-let [data (lookup-entry config id :enable-sso)]
+  (when-some [data (lookup-entry config id :enable-sso)]
     (. builder enableSso data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :short-name)]
+  (when-some [data (lookup-entry config id :short-name)]
     (. builder shortName data))
-  (when-let [data (lookup-entry config id :vpc-settings)]
+  (when-some [data (lookup-entry config id :vpc-settings)]
     (. builder vpcSettings data))
   (.build builder))
 
@@ -114,9 +114,9 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnMicrosoftAD$VpcSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -151,21 +151,21 @@
 | `vpcSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-settings` |
 "
   [^CfnSimpleAD$Builder builder id config]
-  (when-let [data (lookup-entry config id :create-alias)]
+  (when-some [data (lookup-entry config id :create-alias)]
     (. builder createAlias data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-sso)]
+  (when-some [data (lookup-entry config id :enable-sso)]
     (. builder enableSso data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :short-name)]
+  (when-some [data (lookup-entry config id :short-name)]
     (. builder shortName data))
-  (when-let [data (lookup-entry config id :size)]
+  (when-some [data (lookup-entry config id :size)]
     (. builder size data))
-  (when-let [data (lookup-entry config id :vpc-settings)]
+  (when-some [data (lookup-entry config id :vpc-settings)]
     (. builder vpcSettings data))
   (.build builder))
 
@@ -200,21 +200,21 @@
 | `vpcSettings` | software.amazon.awscdk.services.directoryservice.CfnSimpleAD$VpcSettingsProperty | [[cdk.support/lookup-entry]] | `:vpc-settings` |
 "
   [^CfnSimpleADProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :create-alias)]
+  (when-some [data (lookup-entry config id :create-alias)]
     (. builder createAlias data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-sso)]
+  (when-some [data (lookup-entry config id :enable-sso)]
     (. builder enableSso data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :short-name)]
+  (when-some [data (lookup-entry config id :short-name)]
     (. builder shortName data))
-  (when-let [data (lookup-entry config id :size)]
+  (when-some [data (lookup-entry config id :size)]
     (. builder size data))
-  (when-let [data (lookup-entry config id :vpc-settings)]
+  (when-some [data (lookup-entry config id :vpc-settings)]
     (. builder vpcSettings data))
   (.build builder))
 
@@ -243,9 +243,9 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnSimpleAD$VpcSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 

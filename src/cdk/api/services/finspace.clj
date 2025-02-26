@@ -21,9 +21,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnEnvironment$AttributeMapItemsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -58,21 +58,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironment$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-bundles)]
+  (when-some [data (lookup-entry config id :data-bundles)]
     (. builder dataBundles data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :federation-mode)]
+  (when-some [data (lookup-entry config id :federation-mode)]
     (. builder federationMode data))
-  (when-let [data (lookup-entry config id :federation-parameters)]
+  (when-some [data (lookup-entry config id :federation-parameters)]
     (. builder federationParameters data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :superuser-parameters)]
+  (when-some [data (lookup-entry config id :superuser-parameters)]
     (. builder superuserParameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -105,17 +105,17 @@
 | `samlMetadataUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:saml-metadata-url` |
 "
   [^CfnEnvironment$FederationParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-call-back-url)]
+  (when-some [data (lookup-entry config id :application-call-back-url)]
     (. builder applicationCallBackUrl data))
-  (when-let [data (lookup-entry config id :attribute-map)]
+  (when-some [data (lookup-entry config id :attribute-map)]
     (. builder attributeMap data))
-  (when-let [data (lookup-entry config id :federation-provider-name)]
+  (when-some [data (lookup-entry config id :federation-provider-name)]
     (. builder federationProviderName data))
-  (when-let [data (lookup-entry config id :federation-urn)]
+  (when-some [data (lookup-entry config id :federation-urn)]
     (. builder federationUrn data))
-  (when-let [data (lookup-entry config id :saml-metadata-document)]
+  (when-some [data (lookup-entry config id :saml-metadata-document)]
     (. builder samlMetadataDocument data))
-  (when-let [data (lookup-entry config id :saml-metadata-url)]
+  (when-some [data (lookup-entry config id :saml-metadata-url)]
     (. builder samlMetadataUrl data))
   (.build builder))
 
@@ -150,21 +150,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-bundles)]
+  (when-some [data (lookup-entry config id :data-bundles)]
     (. builder dataBundles data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :federation-mode)]
+  (when-some [data (lookup-entry config id :federation-mode)]
     (. builder federationMode data))
-  (when-let [data (lookup-entry config id :federation-parameters)]
+  (when-some [data (lookup-entry config id :federation-parameters)]
     (. builder federationParameters data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :superuser-parameters)]
+  (when-some [data (lookup-entry config id :superuser-parameters)]
     (. builder superuserParameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -194,11 +194,11 @@
 | `lastName` | java.lang.String | [[cdk.support/lookup-entry]] | `:last-name` |
 "
   [^CfnEnvironment$SuperuserParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :email-address)]
+  (when-some [data (lookup-entry config id :email-address)]
     (. builder emailAddress data))
-  (when-let [data (lookup-entry config id :first-name)]
+  (when-some [data (lookup-entry config id :first-name)]
     (. builder firstName data))
-  (when-let [data (lookup-entry config id :last-name)]
+  (when-some [data (lookup-entry config id :last-name)]
     (. builder lastName data))
   (.build builder))
 

@@ -29,15 +29,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAccount$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-name)]
+  (when-some [data (lookup-entry config id :account-name)]
     (. builder accountName data))
-  (when-let [data (lookup-entry config id :email)]
+  (when-some [data (lookup-entry config id :email)]
     (. builder email data))
-  (when-let [data (lookup-entry config id :parent-ids)]
+  (when-some [data (lookup-entry config id :parent-ids)]
     (. builder parentIds data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -69,15 +69,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAccountProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-name)]
+  (when-some [data (lookup-entry config id :account-name)]
     (. builder accountName data))
-  (when-let [data (lookup-entry config id :email)]
+  (when-some [data (lookup-entry config id :email)]
     (. builder email data))
-  (when-let [data (lookup-entry config id :parent-ids)]
+  (when-some [data (lookup-entry config id :parent-ids)]
     (. builder parentIds data))
-  (when-let [data (lookup-entry config id :role-name)]
+  (when-some [data (lookup-entry config id :role-name)]
     (. builder roleName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -105,7 +105,7 @@
 | `featureSet` | java.lang.String | [[cdk.support/lookup-entry]] | `:feature-set` |
 "
   [^CfnOrganization$Builder builder id config]
-  (when-let [data (lookup-entry config id :feature-set)]
+  (when-some [data (lookup-entry config id :feature-set)]
     (. builder featureSet data))
   (.build builder))
 
@@ -133,7 +133,7 @@
 | `featureSet` | java.lang.String | [[cdk.support/lookup-entry]] | `:feature-set` |
 "
   [^CfnOrganizationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :feature-set)]
+  (when-some [data (lookup-entry config id :feature-set)]
     (. builder featureSet data))
   (.build builder))
 
@@ -163,11 +163,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnOrganizationalUnit$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parent-id)]
+  (when-some [data (lookup-entry config id :parent-id)]
     (. builder parentId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -197,11 +197,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnOrganizationalUnitProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parent-id)]
+  (when-some [data (lookup-entry config id :parent-id)]
     (. builder parentId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -234,17 +234,17 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :content)]
+  (when-some [data (lookup-entry config id :content)]
     (. builder content data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-ids)]
+  (when-some [data (lookup-entry config id :target-ids)]
     (. builder targetIds data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -277,17 +277,17 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :content)]
+  (when-some [data (lookup-entry config id :content)]
     (. builder content data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-ids)]
+  (when-some [data (lookup-entry config id :target-ids)]
     (. builder targetIds data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -316,9 +316,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourcePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :content)]
+  (when-some [data (lookup-entry config id :content)]
     (. builder content data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -347,9 +347,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResourcePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :content)]
+  (when-some [data (lookup-entry config id :content)]
     (. builder content data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

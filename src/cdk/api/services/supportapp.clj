@@ -21,7 +21,7 @@
 | `accountAlias` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-alias` |
 "
   [^CfnAccountAlias$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-alias)]
+  (when-some [data (lookup-entry config id :account-alias)]
     (. builder accountAlias data))
   (.build builder))
 
@@ -49,7 +49,7 @@
 | `accountAlias` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-alias` |
 "
   [^CfnAccountAliasProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-alias)]
+  (when-some [data (lookup-entry config id :account-alias)]
     (. builder accountAlias data))
   (.build builder))
 
@@ -84,21 +84,21 @@
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 "
   [^CfnSlackChannelConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :channel-name)]
+  (when-some [data (lookup-entry config id :channel-name)]
     (. builder channelName data))
-  (when-let [data (lookup-entry config id :channel-role-arn)]
+  (when-some [data (lookup-entry config id :channel-role-arn)]
     (. builder channelRoleArn data))
-  (when-let [data (lookup-entry config id :notify-on-add-correspondence-to-case)]
+  (when-some [data (lookup-entry config id :notify-on-add-correspondence-to-case)]
     (. builder notifyOnAddCorrespondenceToCase data))
-  (when-let [data (lookup-entry config id :notify-on-case-severity)]
+  (when-some [data (lookup-entry config id :notify-on-case-severity)]
     (. builder notifyOnCaseSeverity data))
-  (when-let [data (lookup-entry config id :notify-on-create-or-reopen-case)]
+  (when-some [data (lookup-entry config id :notify-on-create-or-reopen-case)]
     (. builder notifyOnCreateOrReopenCase data))
-  (when-let [data (lookup-entry config id :notify-on-resolve-case)]
+  (when-some [data (lookup-entry config id :notify-on-resolve-case)]
     (. builder notifyOnResolveCase data))
-  (when-let [data (lookup-entry config id :team-id)]
+  (when-some [data (lookup-entry config id :team-id)]
     (. builder teamId data))
   (.build builder))
 
@@ -133,21 +133,21 @@
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 "
   [^CfnSlackChannelConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :channel-name)]
+  (when-some [data (lookup-entry config id :channel-name)]
     (. builder channelName data))
-  (when-let [data (lookup-entry config id :channel-role-arn)]
+  (when-some [data (lookup-entry config id :channel-role-arn)]
     (. builder channelRoleArn data))
-  (when-let [data (lookup-entry config id :notify-on-add-correspondence-to-case)]
+  (when-some [data (lookup-entry config id :notify-on-add-correspondence-to-case)]
     (. builder notifyOnAddCorrespondenceToCase data))
-  (when-let [data (lookup-entry config id :notify-on-case-severity)]
+  (when-some [data (lookup-entry config id :notify-on-case-severity)]
     (. builder notifyOnCaseSeverity data))
-  (when-let [data (lookup-entry config id :notify-on-create-or-reopen-case)]
+  (when-some [data (lookup-entry config id :notify-on-create-or-reopen-case)]
     (. builder notifyOnCreateOrReopenCase data))
-  (when-let [data (lookup-entry config id :notify-on-resolve-case)]
+  (when-some [data (lookup-entry config id :notify-on-resolve-case)]
     (. builder notifyOnResolveCase data))
-  (when-let [data (lookup-entry config id :team-id)]
+  (when-some [data (lookup-entry config id :team-id)]
     (. builder teamId data))
   (.build builder))
 
@@ -176,9 +176,9 @@
 | `versionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-id` |
 "
   [^CfnSlackWorkspaceConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :team-id)]
+  (when-some [data (lookup-entry config id :team-id)]
     (. builder teamId data))
-  (when-let [data (lookup-entry config id :version-id)]
+  (when-some [data (lookup-entry config id :version-id)]
     (. builder versionId data))
   (.build builder))
 
@@ -207,9 +207,9 @@
 | `versionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-id` |
 "
   [^CfnSlackWorkspaceConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :team-id)]
+  (when-some [data (lookup-entry config id :team-id)]
     (. builder teamId data))
-  (when-let [data (lookup-entry config id :version-id)]
+  (when-some [data (lookup-entry config id :version-id)]
     (. builder versionId data))
   (.build builder))
 

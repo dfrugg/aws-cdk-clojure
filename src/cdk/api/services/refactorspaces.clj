@@ -29,9 +29,9 @@
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 "
   [^CfnApplication$ApiGatewayProxyInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-type)]
+  (when-some [data (lookup-entry config id :endpoint-type)]
     (. builder endpointType data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
 
@@ -64,17 +64,17 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-gateway-proxy)]
+  (when-some [data (lookup-entry config id :api-gateway-proxy)]
     (. builder apiGatewayProxy data))
-  (when-let [data (lookup-entry config id :environment-identifier)]
+  (when-some [data (lookup-entry config id :environment-identifier)]
     (. builder environmentIdentifier data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :proxy-type)]
+  (when-some [data (lookup-entry config id :proxy-type)]
     (. builder proxyType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -107,17 +107,17 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-gateway-proxy)]
+  (when-some [data (lookup-entry config id :api-gateway-proxy)]
     (. builder apiGatewayProxy data))
-  (when-let [data (lookup-entry config id :environment-identifier)]
+  (when-some [data (lookup-entry config id :environment-identifier)]
     (. builder environmentIdentifier data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :proxy-type)]
+  (when-some [data (lookup-entry config id :proxy-type)]
     (. builder proxyType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -148,13 +148,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironment$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-fabric-type)]
+  (when-some [data (lookup-entry config id :network-fabric-type)]
     (. builder networkFabricType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -185,13 +185,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-fabric-type)]
+  (when-some [data (lookup-entry config id :network-fabric-type)]
     (. builder networkFabricType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -225,19 +225,19 @@
 | `uriPathRoute` | software.amazon.awscdk.services.refactorspaces.CfnRoute$UriPathRouteInputProperty | [[cdk.support/lookup-entry]] | `:uri-path-route` |
 "
   [^CfnRoute$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-identifier)]
+  (when-some [data (lookup-entry config id :application-identifier)]
     (. builder applicationIdentifier data))
-  (when-let [data (lookup-entry config id :default-route)]
+  (when-some [data (lookup-entry config id :default-route)]
     (. builder defaultRoute data))
-  (when-let [data (lookup-entry config id :environment-identifier)]
+  (when-some [data (lookup-entry config id :environment-identifier)]
     (. builder environmentIdentifier data))
-  (when-let [data (lookup-entry config id :route-type)]
+  (when-some [data (lookup-entry config id :route-type)]
     (. builder routeType data))
-  (when-let [data (lookup-entry config id :service-identifier)]
+  (when-some [data (lookup-entry config id :service-identifier)]
     (. builder serviceIdentifier data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :uri-path-route)]
+  (when-some [data (lookup-entry config id :uri-path-route)]
     (. builder uriPathRoute data))
   (.build builder))
 
@@ -265,7 +265,7 @@
 | `activationState` | java.lang.String | [[cdk.support/lookup-entry]] | `:activation-state` |
 "
   [^CfnRoute$DefaultRouteInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :activation-state)]
+  (when-some [data (lookup-entry config id :activation-state)]
     (. builder activationState data))
   (.build builder))
 
@@ -299,19 +299,19 @@
 | `uriPathRoute` | software.amazon.awscdk.services.refactorspaces.CfnRoute$UriPathRouteInputProperty | [[cdk.support/lookup-entry]] | `:uri-path-route` |
 "
   [^CfnRouteProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-identifier)]
+  (when-some [data (lookup-entry config id :application-identifier)]
     (. builder applicationIdentifier data))
-  (when-let [data (lookup-entry config id :default-route)]
+  (when-some [data (lookup-entry config id :default-route)]
     (. builder defaultRoute data))
-  (when-let [data (lookup-entry config id :environment-identifier)]
+  (when-some [data (lookup-entry config id :environment-identifier)]
     (. builder environmentIdentifier data))
-  (when-let [data (lookup-entry config id :route-type)]
+  (when-some [data (lookup-entry config id :route-type)]
     (. builder routeType data))
-  (when-let [data (lookup-entry config id :service-identifier)]
+  (when-some [data (lookup-entry config id :service-identifier)]
     (. builder serviceIdentifier data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :uri-path-route)]
+  (when-some [data (lookup-entry config id :uri-path-route)]
     (. builder uriPathRoute data))
   (.build builder))
 
@@ -343,15 +343,15 @@
 | `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
 "
   [^CfnRoute$UriPathRouteInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :activation-state)]
+  (when-some [data (lookup-entry config id :activation-state)]
     (. builder activationState data))
-  (when-let [data (lookup-entry config id :append-source-path)]
+  (when-some [data (lookup-entry config id :append-source-path)]
     (. builder appendSourcePath data))
-  (when-let [data (lookup-entry config id :include-child-paths)]
+  (when-some [data (lookup-entry config id :include-child-paths)]
     (. builder includeChildPaths data))
-  (when-let [data (lookup-entry config id :methods)]
+  (when-some [data (lookup-entry config id :methods)]
     (. builder methods data))
-  (when-let [data (lookup-entry config id :source-path)]
+  (when-some [data (lookup-entry config id :source-path)]
     (. builder sourcePath data))
   (.build builder))
 
@@ -387,23 +387,23 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnService$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-identifier)]
+  (when-some [data (lookup-entry config id :application-identifier)]
     (. builder applicationIdentifier data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :endpoint-type)]
+  (when-some [data (lookup-entry config id :endpoint-type)]
     (. builder endpointType data))
-  (when-let [data (lookup-entry config id :environment-identifier)]
+  (when-some [data (lookup-entry config id :environment-identifier)]
     (. builder environmentIdentifier data))
-  (when-let [data (lookup-entry config id :lambda-endpoint)]
+  (when-some [data (lookup-entry config id :lambda-endpoint)]
     (. builder lambdaEndpoint data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :url-endpoint)]
+  (when-some [data (lookup-entry config id :url-endpoint)]
     (. builder urlEndpoint data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -431,7 +431,7 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnService$LambdaEndpointInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -467,23 +467,23 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-identifier)]
+  (when-some [data (lookup-entry config id :application-identifier)]
     (. builder applicationIdentifier data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :endpoint-type)]
+  (when-some [data (lookup-entry config id :endpoint-type)]
     (. builder endpointType data))
-  (when-let [data (lookup-entry config id :environment-identifier)]
+  (when-some [data (lookup-entry config id :environment-identifier)]
     (. builder environmentIdentifier data))
-  (when-let [data (lookup-entry config id :lambda-endpoint)]
+  (when-some [data (lookup-entry config id :lambda-endpoint)]
     (. builder lambdaEndpoint data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :url-endpoint)]
+  (when-some [data (lookup-entry config id :url-endpoint)]
     (. builder urlEndpoint data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -512,9 +512,9 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnService$UrlEndpointInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :health-url)]
+  (when-some [data (lookup-entry config id :health-url)]
     (. builder healthUrl data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 

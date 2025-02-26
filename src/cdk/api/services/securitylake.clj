@@ -33,13 +33,13 @@
 | `sourceVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-version` |
 "
   [^CfnAwsLogSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :accounts)]
+  (when-some [data (lookup-entry config id :accounts)]
     (. builder accounts data))
-  (when-let [data (lookup-entry config id :data-lake-arn)]
+  (when-some [data (lookup-entry config id :data-lake-arn)]
     (. builder dataLakeArn data))
-  (when-let [data (lookup-entry config id :source-name)]
+  (when-some [data (lookup-entry config id :source-name)]
     (. builder sourceName data))
-  (when-let [data (lookup-entry config id :source-version)]
+  (when-some [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
 
@@ -70,13 +70,13 @@
 | `sourceVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-version` |
 "
   [^CfnAwsLogSourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :accounts)]
+  (when-some [data (lookup-entry config id :accounts)]
     (. builder accounts data))
-  (when-let [data (lookup-entry config id :data-lake-arn)]
+  (when-some [data (lookup-entry config id :data-lake-arn)]
     (. builder dataLakeArn data))
-  (when-let [data (lookup-entry config id :source-name)]
+  (when-some [data (lookup-entry config id :source-name)]
     (. builder sourceName data))
-  (when-let [data (lookup-entry config id :source-version)]
+  (when-some [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
 
@@ -108,15 +108,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataLake$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :lifecycle-configuration)]
+  (when-some [data (lookup-entry config id :lifecycle-configuration)]
     (. builder lifecycleConfiguration data))
-  (when-let [data (lookup-entry config id :meta-store-manager-role-arn)]
+  (when-some [data (lookup-entry config id :meta-store-manager-role-arn)]
     (. builder metaStoreManagerRoleArn data))
-  (when-let [data (lookup-entry config id :replication-configuration)]
+  (when-some [data (lookup-entry config id :replication-configuration)]
     (. builder replicationConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -144,7 +144,7 @@
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 "
   [^CfnDataLake$EncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
 
@@ -172,7 +172,7 @@
 | `days` | java.lang.Number | [[cdk.support/lookup-entry]] | `:days` |
 "
   [^CfnDataLake$ExpirationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :days)]
+  (when-some [data (lookup-entry config id :days)]
     (. builder days data))
   (.build builder))
 
@@ -201,9 +201,9 @@
 | `transitions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transitions` |
 "
   [^CfnDataLake$LifecycleConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :expiration)]
+  (when-some [data (lookup-entry config id :expiration)]
     (. builder expiration data))
-  (when-let [data (lookup-entry config id :transitions)]
+  (when-some [data (lookup-entry config id :transitions)]
     (. builder transitions data))
   (.build builder))
 
@@ -235,15 +235,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataLakeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :lifecycle-configuration)]
+  (when-some [data (lookup-entry config id :lifecycle-configuration)]
     (. builder lifecycleConfiguration data))
-  (when-let [data (lookup-entry config id :meta-store-manager-role-arn)]
+  (when-some [data (lookup-entry config id :meta-store-manager-role-arn)]
     (. builder metaStoreManagerRoleArn data))
-  (when-let [data (lookup-entry config id :replication-configuration)]
+  (when-some [data (lookup-entry config id :replication-configuration)]
     (. builder replicationConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -272,9 +272,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDataLake$ReplicationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :regions)]
+  (when-some [data (lookup-entry config id :regions)]
     (. builder regions data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -303,9 +303,9 @@
 | `storageClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-class` |
 "
   [^CfnDataLake$TransitionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :days)]
+  (when-some [data (lookup-entry config id :days)]
     (. builder days data))
-  (when-let [data (lookup-entry config id :storage-class)]
+  (when-some [data (lookup-entry config id :storage-class)]
     (. builder storageClass data))
   (.build builder))
 
@@ -334,9 +334,9 @@
 | `sourceVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-version` |
 "
   [^CfnSubscriber$AwsLogSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source-name)]
+  (when-some [data (lookup-entry config id :source-name)]
     (. builder sourceName data))
-  (when-let [data (lookup-entry config id :source-version)]
+  (when-some [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
 
@@ -370,19 +370,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSubscriber$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-types)]
+  (when-some [data (lookup-entry config id :access-types)]
     (. builder accessTypes data))
-  (when-let [data (lookup-entry config id :data-lake-arn)]
+  (when-some [data (lookup-entry config id :data-lake-arn)]
     (. builder dataLakeArn data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :subscriber-description)]
+  (when-some [data (lookup-entry config id :subscriber-description)]
     (. builder subscriberDescription data))
-  (when-let [data (lookup-entry config id :subscriber-identity)]
+  (when-some [data (lookup-entry config id :subscriber-identity)]
     (. builder subscriberIdentity data))
-  (when-let [data (lookup-entry config id :subscriber-name)]
+  (when-some [data (lookup-entry config id :subscriber-name)]
     (. builder subscriberName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -411,9 +411,9 @@
 | `sourceVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-version` |
 "
   [^CfnSubscriber$CustomLogSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source-name)]
+  (when-some [data (lookup-entry config id :source-name)]
     (. builder sourceName data))
-  (when-let [data (lookup-entry config id :source-version)]
+  (when-some [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
 
@@ -447,19 +447,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSubscriberProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-types)]
+  (when-some [data (lookup-entry config id :access-types)]
     (. builder accessTypes data))
-  (when-let [data (lookup-entry config id :data-lake-arn)]
+  (when-some [data (lookup-entry config id :data-lake-arn)]
     (. builder dataLakeArn data))
-  (when-let [data (lookup-entry config id :sources)]
+  (when-some [data (lookup-entry config id :sources)]
     (. builder sources data))
-  (when-let [data (lookup-entry config id :subscriber-description)]
+  (when-some [data (lookup-entry config id :subscriber-description)]
     (. builder subscriberDescription data))
-  (when-let [data (lookup-entry config id :subscriber-identity)]
+  (when-some [data (lookup-entry config id :subscriber-identity)]
     (. builder subscriberIdentity data))
-  (when-let [data (lookup-entry config id :subscriber-name)]
+  (when-some [data (lookup-entry config id :subscriber-name)]
     (. builder subscriberName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -488,9 +488,9 @@
 | `customLogSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:custom-log-source` |
 "
   [^CfnSubscriber$SourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-log-source)]
+  (when-some [data (lookup-entry config id :aws-log-source)]
     (. builder awsLogSource data))
-  (when-let [data (lookup-entry config id :custom-log-source)]
+  (when-some [data (lookup-entry config id :custom-log-source)]
     (. builder customLogSource data))
   (.build builder))
 
@@ -519,9 +519,9 @@
 | `principal` | java.lang.String | [[cdk.support/lookup-entry]] | `:principal` |
 "
   [^CfnSubscriber$SubscriberIdentityProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :external-id)]
+  (when-some [data (lookup-entry config id :external-id)]
     (. builder externalId data))
-  (when-let [data (lookup-entry config id :principal)]
+  (when-some [data (lookup-entry config id :principal)]
     (. builder principal data))
   (.build builder))
 

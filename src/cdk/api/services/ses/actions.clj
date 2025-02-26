@@ -72,9 +72,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^AddHeader$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -103,9 +103,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^AddHeaderProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -135,11 +135,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^Bounce$Builder builder id config]
-  (when-let [data (lookup-entry config id :sender)]
+  (when-some [data (lookup-entry config id :sender)]
     (. builder sender data))
-  (when-let [data (lookup-entry config id :template)]
+  (when-some [data (lookup-entry config id :template)]
     (. builder template data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -169,11 +169,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^BounceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :sender)]
+  (when-some [data (lookup-entry config id :sender)]
     (. builder sender data))
-  (when-let [data (lookup-entry config id :template)]
+  (when-some [data (lookup-entry config id :template)]
     (. builder template data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -203,11 +203,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^BounceTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :smtp-reply-code)]
+  (when-some [data (lookup-entry config id :smtp-reply-code)]
     (. builder smtpReplyCode data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -237,11 +237,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
 "
   [^BounceTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :smtp-reply-code)]
+  (when-some [data (lookup-entry config id :smtp-reply-code)]
     (. builder smtpReplyCode data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
 
@@ -271,11 +271,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^Lambda$Builder builder id config]
-  (when-let [data (lookup-entry config id :function)]
+  (when-some [data (lookup-entry config id :function)]
     (. builder function data))
-  (when-let [data (lambda-invocation-type config id :invocation-type)]
+  (when-some [data (lambda-invocation-type config id :invocation-type)]
     (. builder invocationType data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -305,11 +305,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^LambdaProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :function)]
+  (when-some [data (lookup-entry config id :function)]
     (. builder function data))
-  (when-let [data (lambda-invocation-type config id :invocation-type)]
+  (when-some [data (lambda-invocation-type config id :invocation-type)]
     (. builder invocationType data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -340,13 +340,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^S3$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :object-key-prefix)]
+  (when-some [data (lookup-entry config id :object-key-prefix)]
     (. builder objectKeyPrefix data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -377,13 +377,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^S3Props$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :object-key-prefix)]
+  (when-some [data (lookup-entry config id :object-key-prefix)]
     (. builder objectKeyPrefix data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -412,9 +412,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^Sns$Builder builder id config]
-  (when-let [data (email-encoding config id :encoding)]
+  (when-some [data (email-encoding config id :encoding)]
     (. builder encoding data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -443,9 +443,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^SnsProps$Builder builder id config]
-  (when-let [data (email-encoding config id :encoding)]
+  (when-some [data (email-encoding config id :encoding)]
     (. builder encoding data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -473,7 +473,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^Stop$Builder builder id config]
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -501,7 +501,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^StopProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -530,9 +530,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^WorkMail$Builder builder id config]
-  (when-let [data (lookup-entry config id :organization-arn)]
+  (when-some [data (lookup-entry config id :organization-arn)]
     (. builder organizationArn data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -561,9 +561,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^WorkMailProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :organization-arn)]
+  (when-some [data (lookup-entry config id :organization-arn)]
     (. builder organizationArn data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 

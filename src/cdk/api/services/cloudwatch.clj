@@ -499,7 +499,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `alarmActionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-action-arn` |
 "
   [^AlarmActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-action-arn)]
+  (when-some [data (lookup-entry config id :alarm-action-arn)]
     (. builder alarmActionArn data))
   (.build builder))
 
@@ -536,25 +536,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |
 "
   [^Alarm$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-name)]
+  (when-some [data (lookup-entry config id :alarm-name)]
     (. builder alarmName data))
-  (when-let [data (comparison-operator config id :comparison-operator)]
+  (when-some [data (comparison-operator config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+  (when-some [data (lookup-entry config id :datapoints-to-alarm)]
     (. builder datapointsToAlarm data))
-  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+  (when-some [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
     (. builder evaluateLowSampleCountPercentile data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :metric)]
+  (when-some [data (lookup-entry config id :metric)]
     (. builder metric data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (treat-missing-data config id :treat-missing-data)]
+  (when-some [data (treat-missing-data config id :treat-missing-data)]
     (. builder treatMissingData data))
   (.build builder))
 
@@ -591,25 +591,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |
 "
   [^AlarmProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-name)]
+  (when-some [data (lookup-entry config id :alarm-name)]
     (. builder alarmName data))
-  (when-let [data (comparison-operator config id :comparison-operator)]
+  (when-some [data (comparison-operator config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+  (when-some [data (lookup-entry config id :datapoints-to-alarm)]
     (. builder datapointsToAlarm data))
-  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+  (when-some [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
     (. builder evaluateLowSampleCountPercentile data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :metric)]
+  (when-some [data (lookup-entry config id :metric)]
     (. builder metric data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (treat-missing-data config id :treat-missing-data)]
+  (when-some [data (treat-missing-data config id :treat-missing-data)]
     (. builder treatMissingData data))
   (.build builder))
 
@@ -642,17 +642,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^AlarmStatusWidget$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (alarm-status-widget-sort-by config id :sort-by)]
+  (when-some [data (alarm-status-widget-sort-by config id :sort-by)]
     (. builder sortBy data))
-  (when-let [data (lookup-entry config id :states)]
+  (when-some [data (lookup-entry config id :states)]
     (. builder states data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -685,17 +685,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^AlarmStatusWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (alarm-status-widget-sort-by config id :sort-by)]
+  (when-some [data (alarm-status-widget-sort-by config id :sort-by)]
     (. builder sortBy data))
-  (when-let [data (lookup-entry config id :states)]
+  (when-some [data (lookup-entry config id :states)]
     (. builder states data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -728,17 +728,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^AlarmWidget$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm)]
+  (when-some [data (lookup-entry config id :alarm)]
     (. builder alarm data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :left-y-axis)]
+  (when-some [data (lookup-entry config id :left-y-axis)]
     (. builder leftYAxis data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -771,17 +771,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^AlarmWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm)]
+  (when-some [data (lookup-entry config id :alarm)]
     (. builder alarm data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :left-y-axis)]
+  (when-some [data (lookup-entry config id :left-y-axis)]
     (. builder leftYAxis data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -830,49 +830,49 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnAlarm$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :alarm-actions)]
+  (when-some [data (lookup-entry config id :alarm-actions)]
     (. builder alarmActions data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-name)]
+  (when-some [data (lookup-entry config id :alarm-name)]
     (. builder alarmName data))
-  (when-let [data (lookup-entry config id :comparison-operator)]
+  (when-some [data (lookup-entry config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+  (when-some [data (lookup-entry config id :datapoints-to-alarm)]
     (. builder datapointsToAlarm data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+  (when-some [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
     (. builder evaluateLowSampleCountPercentile data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :extended-statistic)]
+  (when-some [data (lookup-entry config id :extended-statistic)]
     (. builder extendedStatistic data))
-  (when-let [data (lookup-entry config id :insufficient-data-actions)]
+  (when-some [data (lookup-entry config id :insufficient-data-actions)]
     (. builder insufficientDataActions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :ok-actions)]
+  (when-some [data (lookup-entry config id :ok-actions)]
     (. builder okActions data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (lookup-entry config id :threshold-metric-id)]
+  (when-some [data (lookup-entry config id :threshold-metric-id)]
     (. builder thresholdMetricId data))
-  (when-let [data (lookup-entry config id :treat-missing-data)]
+  (when-some [data (lookup-entry config id :treat-missing-data)]
     (. builder treatMissingData data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -901,9 +901,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAlarm$DimensionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -937,19 +937,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |
 "
   [^CfnAlarm$MetricDataQueryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :metric-stat)]
+  (when-some [data (lookup-entry config id :metric-stat)]
     (. builder metricStat data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :return-data)]
+  (when-some [data (lookup-entry config id :return-data)]
     (. builder returnData data))
   (.build builder))
 
@@ -979,11 +979,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
   [^CfnAlarm$MetricProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
 
@@ -1014,13 +1014,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnAlarm$MetricStatProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric)]
+  (when-some [data (lookup-entry config id :metric)]
     (. builder metric data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :stat)]
+  (when-some [data (lookup-entry config id :stat)]
     (. builder stat data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1069,49 +1069,49 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnAlarmProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :alarm-actions)]
+  (when-some [data (lookup-entry config id :alarm-actions)]
     (. builder alarmActions data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-name)]
+  (when-some [data (lookup-entry config id :alarm-name)]
     (. builder alarmName data))
-  (when-let [data (lookup-entry config id :comparison-operator)]
+  (when-some [data (lookup-entry config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+  (when-some [data (lookup-entry config id :datapoints-to-alarm)]
     (. builder datapointsToAlarm data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+  (when-some [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
     (. builder evaluateLowSampleCountPercentile data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :extended-statistic)]
+  (when-some [data (lookup-entry config id :extended-statistic)]
     (. builder extendedStatistic data))
-  (when-let [data (lookup-entry config id :insufficient-data-actions)]
+  (when-some [data (lookup-entry config id :insufficient-data-actions)]
     (. builder insufficientDataActions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :ok-actions)]
+  (when-some [data (lookup-entry config id :ok-actions)]
     (. builder okActions data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (lookup-entry config id :threshold-metric-id)]
+  (when-some [data (lookup-entry config id :threshold-metric-id)]
     (. builder thresholdMetricId data))
-  (when-let [data (lookup-entry config id :treat-missing-data)]
+  (when-some [data (lookup-entry config id :treat-missing-data)]
     (. builder treatMissingData data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1146,21 +1146,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
 "
   [^CfnAnomalyDetector$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-characteristics)]
+  (when-some [data (lookup-entry config id :metric-characteristics)]
     (. builder metricCharacteristics data))
-  (when-let [data (lookup-entry config id :metric-math-anomaly-detector)]
+  (when-some [data (lookup-entry config id :metric-math-anomaly-detector)]
     (. builder metricMathAnomalyDetector data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :single-metric-anomaly-detector)]
+  (when-some [data (lookup-entry config id :single-metric-anomaly-detector)]
     (. builder singleMetricAnomalyDetector data))
-  (when-let [data (lookup-entry config id :stat)]
+  (when-some [data (lookup-entry config id :stat)]
     (. builder stat data))
   (.build builder))
 
@@ -1189,9 +1189,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `metricTimeZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-time-zone` |
 "
   [^CfnAnomalyDetector$ConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :excluded-time-ranges)]
+  (when-some [data (lookup-entry config id :excluded-time-ranges)]
     (. builder excludedTimeRanges data))
-  (when-let [data (lookup-entry config id :metric-time-zone)]
+  (when-some [data (lookup-entry config id :metric-time-zone)]
     (. builder metricTimeZone data))
   (.build builder))
 
@@ -1220,9 +1220,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAnomalyDetector$DimensionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1250,7 +1250,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `periodicSpikes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:periodic-spikes` |
 "
   [^CfnAnomalyDetector$MetricCharacteristicsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :periodic-spikes)]
+  (when-some [data (lookup-entry config id :periodic-spikes)]
     (. builder periodicSpikes data))
   (.build builder))
 
@@ -1284,19 +1284,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `returnData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:return-data` |
 "
   [^CfnAnomalyDetector$MetricDataQueryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :metric-stat)]
+  (when-some [data (lookup-entry config id :metric-stat)]
     (. builder metricStat data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :return-data)]
+  (when-some [data (lookup-entry config id :return-data)]
     (. builder returnData data))
   (.build builder))
 
@@ -1324,7 +1324,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `metricDataQueries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-data-queries` |
 "
   [^CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric-data-queries)]
+  (when-some [data (lookup-entry config id :metric-data-queries)]
     (. builder metricDataQueries data))
   (.build builder))
 
@@ -1354,11 +1354,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
   [^CfnAnomalyDetector$MetricProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
 
@@ -1389,13 +1389,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnAnomalyDetector$MetricStatProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric)]
+  (when-some [data (lookup-entry config id :metric)]
     (. builder metric data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :stat)]
+  (when-some [data (lookup-entry config id :stat)]
     (. builder stat data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1430,21 +1430,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
 "
   [^CfnAnomalyDetectorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-characteristics)]
+  (when-some [data (lookup-entry config id :metric-characteristics)]
     (. builder metricCharacteristics data))
-  (when-let [data (lookup-entry config id :metric-math-anomaly-detector)]
+  (when-some [data (lookup-entry config id :metric-math-anomaly-detector)]
     (. builder metricMathAnomalyDetector data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :single-metric-anomaly-detector)]
+  (when-some [data (lookup-entry config id :single-metric-anomaly-detector)]
     (. builder singleMetricAnomalyDetector data))
-  (when-let [data (lookup-entry config id :stat)]
+  (when-some [data (lookup-entry config id :stat)]
     (. builder stat data))
   (.build builder))
 
@@ -1473,9 +1473,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
 "
   [^CfnAnomalyDetector$RangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :end-time)]
+  (when-some [data (lookup-entry config id :end-time)]
     (. builder endTime data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
   (.build builder))
 
@@ -1507,15 +1507,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
 "
   [^CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :stat)]
+  (when-some [data (lookup-entry config id :stat)]
     (. builder stat data))
   (.build builder))
 
@@ -1553,27 +1553,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCompositeAlarm$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :actions-suppressor)]
+  (when-some [data (lookup-entry config id :actions-suppressor)]
     (. builder actionsSuppressor data))
-  (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
+  (when-some [data (lookup-entry config id :actions-suppressor-extension-period)]
     (. builder actionsSuppressorExtensionPeriod data))
-  (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
+  (when-some [data (lookup-entry config id :actions-suppressor-wait-period)]
     (. builder actionsSuppressorWaitPeriod data))
-  (when-let [data (lookup-entry config id :alarm-actions)]
+  (when-some [data (lookup-entry config id :alarm-actions)]
     (. builder alarmActions data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-name)]
+  (when-some [data (lookup-entry config id :alarm-name)]
     (. builder alarmName data))
-  (when-let [data (lookup-entry config id :alarm-rule)]
+  (when-some [data (lookup-entry config id :alarm-rule)]
     (. builder alarmRule data))
-  (when-let [data (lookup-entry config id :insufficient-data-actions)]
+  (when-some [data (lookup-entry config id :insufficient-data-actions)]
     (. builder insufficientDataActions data))
-  (when-let [data (lookup-entry config id :ok-actions)]
+  (when-some [data (lookup-entry config id :ok-actions)]
     (. builder okActions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1611,27 +1611,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCompositeAlarmProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :actions-suppressor)]
+  (when-some [data (lookup-entry config id :actions-suppressor)]
     (. builder actionsSuppressor data))
-  (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
+  (when-some [data (lookup-entry config id :actions-suppressor-extension-period)]
     (. builder actionsSuppressorExtensionPeriod data))
-  (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
+  (when-some [data (lookup-entry config id :actions-suppressor-wait-period)]
     (. builder actionsSuppressorWaitPeriod data))
-  (when-let [data (lookup-entry config id :alarm-actions)]
+  (when-some [data (lookup-entry config id :alarm-actions)]
     (. builder alarmActions data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-name)]
+  (when-some [data (lookup-entry config id :alarm-name)]
     (. builder alarmName data))
-  (when-let [data (lookup-entry config id :alarm-rule)]
+  (when-some [data (lookup-entry config id :alarm-rule)]
     (. builder alarmRule data))
-  (when-let [data (lookup-entry config id :insufficient-data-actions)]
+  (when-some [data (lookup-entry config id :insufficient-data-actions)]
     (. builder insufficientDataActions data))
-  (when-let [data (lookup-entry config id :ok-actions)]
+  (when-some [data (lookup-entry config id :ok-actions)]
     (. builder okActions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1660,9 +1660,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dashboardName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-name` |
 "
   [^CfnDashboard$Builder builder id config]
-  (when-let [data (lookup-entry config id :dashboard-body)]
+  (when-some [data (lookup-entry config id :dashboard-body)]
     (. builder dashboardBody data))
-  (when-let [data (lookup-entry config id :dashboard-name)]
+  (when-some [data (lookup-entry config id :dashboard-name)]
     (. builder dashboardName data))
   (.build builder))
 
@@ -1691,9 +1691,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dashboardName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-name` |
 "
   [^CfnDashboardProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dashboard-body)]
+  (when-some [data (lookup-entry config id :dashboard-body)]
     (. builder dashboardBody data))
-  (when-let [data (lookup-entry config id :dashboard-name)]
+  (when-some [data (lookup-entry config id :dashboard-name)]
     (. builder dashboardName data))
   (.build builder))
 
@@ -1724,13 +1724,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInsightRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :rule-body)]
+  (when-some [data (lookup-entry config id :rule-body)]
     (. builder ruleBody data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :rule-state)]
+  (when-some [data (lookup-entry config id :rule-state)]
     (. builder ruleState data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1761,13 +1761,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInsightRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :rule-body)]
+  (when-some [data (lookup-entry config id :rule-body)]
     (. builder ruleBody data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :rule-state)]
+  (when-some [data (lookup-entry config id :rule-state)]
     (. builder ruleState data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1803,23 +1803,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMetricStream$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-filters)]
+  (when-some [data (lookup-entry config id :exclude-filters)]
     (. builder excludeFilters data))
-  (when-let [data (lookup-entry config id :firehose-arn)]
+  (when-some [data (lookup-entry config id :firehose-arn)]
     (. builder firehoseArn data))
-  (when-let [data (lookup-entry config id :include-filters)]
+  (when-some [data (lookup-entry config id :include-filters)]
     (. builder includeFilters data))
-  (when-let [data (lookup-entry config id :include-linked-accounts-metrics)]
+  (when-some [data (lookup-entry config id :include-linked-accounts-metrics)]
     (. builder includeLinkedAccountsMetrics data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-format)]
+  (when-some [data (lookup-entry config id :output-format)]
     (. builder outputFormat data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :statistics-configurations)]
+  (when-some [data (lookup-entry config id :statistics-configurations)]
     (. builder statisticsConfigurations data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1848,9 +1848,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
   [^CfnMetricStream$MetricStreamFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric-names)]
+  (when-some [data (lookup-entry config id :metric-names)]
     (. builder metricNames data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
 
@@ -1879,9 +1879,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `includeMetrics` | java.util.List | [[cdk.support/lookup-entry]] | `:include-metrics` |
 "
   [^CfnMetricStream$MetricStreamStatisticsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-statistics)]
+  (when-some [data (lookup-entry config id :additional-statistics)]
     (. builder additionalStatistics data))
-  (when-let [data (lookup-entry config id :include-metrics)]
+  (when-some [data (lookup-entry config id :include-metrics)]
     (. builder includeMetrics data))
   (.build builder))
 
@@ -1910,9 +1910,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 "
   [^CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
 
@@ -1948,23 +1948,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMetricStreamProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-filters)]
+  (when-some [data (lookup-entry config id :exclude-filters)]
     (. builder excludeFilters data))
-  (when-let [data (lookup-entry config id :firehose-arn)]
+  (when-some [data (lookup-entry config id :firehose-arn)]
     (. builder firehoseArn data))
-  (when-let [data (lookup-entry config id :include-filters)]
+  (when-some [data (lookup-entry config id :include-filters)]
     (. builder includeFilters data))
-  (when-let [data (lookup-entry config id :include-linked-accounts-metrics)]
+  (when-some [data (lookup-entry config id :include-linked-accounts-metrics)]
     (. builder includeLinkedAccountsMetrics data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-format)]
+  (when-some [data (lookup-entry config id :output-format)]
     (. builder outputFormat data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :statistics-configurations)]
+  (when-some [data (lookup-entry config id :statistics-configurations)]
     (. builder statisticsConfigurations data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1999,21 +1999,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^CommonMetricOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :dimensions-map)]
+  (when-some [data (lookup-entry config id :dimensions-map)]
     (. builder dimensionsMap data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -2047,19 +2047,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `compositeAlarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:composite-alarm-name` |
 "
   [^CompositeAlarm$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :actions-suppressor)]
+  (when-some [data (lookup-entry config id :actions-suppressor)]
     (. builder actionsSuppressor data))
-  (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
+  (when-some [data (lookup-entry config id :actions-suppressor-extension-period)]
     (. builder actionsSuppressorExtensionPeriod data))
-  (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
+  (when-some [data (lookup-entry config id :actions-suppressor-wait-period)]
     (. builder actionsSuppressorWaitPeriod data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-rule)]
+  (when-some [data (lookup-entry config id :alarm-rule)]
     (. builder alarmRule data))
-  (when-let [data (lookup-entry config id :composite-alarm-name)]
+  (when-some [data (lookup-entry config id :composite-alarm-name)]
     (. builder compositeAlarmName data))
   (.build builder))
 
@@ -2093,19 +2093,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `compositeAlarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:composite-alarm-name` |
 "
   [^CompositeAlarmProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :actions-suppressor)]
+  (when-some [data (lookup-entry config id :actions-suppressor)]
     (. builder actionsSuppressor data))
-  (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
+  (when-some [data (lookup-entry config id :actions-suppressor-extension-period)]
     (. builder actionsSuppressorExtensionPeriod data))
-  (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
+  (when-some [data (lookup-entry config id :actions-suppressor-wait-period)]
     (. builder actionsSuppressorWaitPeriod data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-rule)]
+  (when-some [data (lookup-entry config id :alarm-rule)]
     (. builder alarmRule data))
-  (when-let [data (lookup-entry config id :composite-alarm-name)]
+  (when-some [data (lookup-entry config id :composite-alarm-name)]
     (. builder compositeAlarmName data))
   (.build builder))
 
@@ -2141,23 +2141,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |
 "
   [^CreateAlarmOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions-enabled)]
+  (when-some [data (lookup-entry config id :actions-enabled)]
     (. builder actionsEnabled data))
-  (when-let [data (lookup-entry config id :alarm-description)]
+  (when-some [data (lookup-entry config id :alarm-description)]
     (. builder alarmDescription data))
-  (when-let [data (lookup-entry config id :alarm-name)]
+  (when-some [data (lookup-entry config id :alarm-name)]
     (. builder alarmName data))
-  (when-let [data (comparison-operator config id :comparison-operator)]
+  (when-some [data (comparison-operator config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+  (when-some [data (lookup-entry config id :datapoints-to-alarm)]
     (. builder datapointsToAlarm data))
-  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+  (when-some [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
     (. builder evaluateLowSampleCountPercentile data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (treat-missing-data config id :treat-missing-data)]
+  (when-some [data (treat-missing-data config id :treat-missing-data)]
     (. builder treatMissingData data))
   (.build builder))
 
@@ -2192,21 +2192,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^CustomWidget$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :params)]
+  (when-some [data (lookup-entry config id :params)]
     (. builder params data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :update-on-refresh)]
+  (when-some [data (lookup-entry config id :update-on-refresh)]
     (. builder updateOnRefresh data))
-  (when-let [data (lookup-entry config id :update-on-resize)]
+  (when-some [data (lookup-entry config id :update-on-resize)]
     (. builder updateOnResize data))
-  (when-let [data (lookup-entry config id :update-on-time-range-change)]
+  (when-some [data (lookup-entry config id :update-on-time-range-change)]
     (. builder updateOnTimeRangeChange data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -2241,21 +2241,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^CustomWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :params)]
+  (when-some [data (lookup-entry config id :params)]
     (. builder params data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :update-on-refresh)]
+  (when-some [data (lookup-entry config id :update-on-refresh)]
     (. builder updateOnRefresh data))
-  (when-let [data (lookup-entry config id :update-on-resize)]
+  (when-some [data (lookup-entry config id :update-on-resize)]
     (. builder updateOnResize data))
-  (when-let [data (lookup-entry config id :update-on-time-range-change)]
+  (when-some [data (lookup-entry config id :update-on-time-range-change)]
     (. builder updateOnTimeRangeChange data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -2289,19 +2289,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `widgets` | java.util.List | [[cdk.support/lookup-entry]] | `:widgets` |
 "
   [^Dashboard$Builder builder id config]
-  (when-let [data (lookup-entry config id :dashboard-name)]
+  (when-some [data (lookup-entry config id :dashboard-name)]
     (. builder dashboardName data))
-  (when-let [data (lookup-entry config id :default-interval)]
+  (when-some [data (lookup-entry config id :default-interval)]
     (. builder defaultInterval data))
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (period-override config id :period-override)]
+  (when-some [data (period-override config id :period-override)]
     (. builder periodOverride data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
-  (when-let [data (lookup-entry config id :widgets)]
+  (when-some [data (lookup-entry config id :widgets)]
     (. builder widgets data))
   (.build builder))
 
@@ -2335,19 +2335,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `widgets` | java.util.List | [[cdk.support/lookup-entry]] | `:widgets` |
 "
   [^DashboardProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dashboard-name)]
+  (when-some [data (lookup-entry config id :dashboard-name)]
     (. builder dashboardName data))
-  (when-let [data (lookup-entry config id :default-interval)]
+  (when-some [data (lookup-entry config id :default-interval)]
     (. builder defaultInterval data))
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (period-override config id :period-override)]
+  (when-some [data (period-override config id :period-override)]
     (. builder periodOverride data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :variables)]
+  (when-some [data (lookup-entry config id :variables)]
     (. builder variables data))
-  (when-let [data (lookup-entry config id :widgets)]
+  (when-some [data (lookup-entry config id :widgets)]
     (. builder widgets data))
   (.build builder))
 
@@ -2382,21 +2382,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |
 "
   [^DashboardVariable$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (variable-input-type config id :input-type)]
+  (when-some [data (variable-input-type config id :input-type)]
     (. builder inputType data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (variable-type config id :type)]
+  (when-some [data (variable-type config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :visible)]
+  (when-some [data (lookup-entry config id :visible)]
     (. builder visible data))
   (.build builder))
 
@@ -2431,21 +2431,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |
 "
   [^DashboardVariableOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (variable-input-type config id :input-type)]
+  (when-some [data (variable-input-type config id :input-type)]
     (. builder inputType data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (variable-type config id :type)]
+  (when-some [data (variable-type config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
-  (when-let [data (lookup-entry config id :visible)]
+  (when-some [data (lookup-entry config id :visible)]
     (. builder visible data))
   (.build builder))
 
@@ -2474,9 +2474,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^Dimension$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -2517,33 +2517,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^GaugeWidget$Builder builder id config]
-  (when-let [data (lookup-entry config id :annotations)]
+  (when-some [data (lookup-entry config id :annotations)]
     (. builder annotations data))
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :left-y-axis)]
+  (when-some [data (lookup-entry config id :left-y-axis)]
     (. builder leftYAxis data))
-  (when-let [data (legend-position config id :legend-position)]
+  (when-some [data (legend-position config id :legend-position)]
     (. builder legendPosition data))
-  (when-let [data (lookup-entry config id :live-data)]
+  (when-some [data (lookup-entry config id :live-data)]
     (. builder liveData data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+  (when-some [data (lookup-entry config id :set-period-to-time-range)]
     (. builder setPeriodToTimeRange data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -2584,33 +2584,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^GaugeWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :annotations)]
+  (when-some [data (lookup-entry config id :annotations)]
     (. builder annotations data))
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :left-y-axis)]
+  (when-some [data (lookup-entry config id :left-y-axis)]
     (. builder leftYAxis data))
-  (when-let [data (legend-position config id :legend-position)]
+  (when-some [data (legend-position config id :legend-position)]
     (. builder legendPosition data))
-  (when-let [data (lookup-entry config id :live-data)]
+  (when-some [data (lookup-entry config id :live-data)]
     (. builder liveData data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+  (when-some [data (lookup-entry config id :set-period-to-time-range)]
     (. builder setPeriodToTimeRange data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -2657,45 +2657,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^GraphWidget$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :left)]
+  (when-some [data (lookup-entry config id :left)]
     (. builder left data))
-  (when-let [data (lookup-entry config id :left-annotations)]
+  (when-some [data (lookup-entry config id :left-annotations)]
     (. builder leftAnnotations data))
-  (when-let [data (lookup-entry config id :left-y-axis)]
+  (when-some [data (lookup-entry config id :left-y-axis)]
     (. builder leftYAxis data))
-  (when-let [data (legend-position config id :legend-position)]
+  (when-some [data (legend-position config id :legend-position)]
     (. builder legendPosition data))
-  (when-let [data (lookup-entry config id :live-data)]
+  (when-some [data (lookup-entry config id :live-data)]
     (. builder liveData data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :right)]
+  (when-some [data (lookup-entry config id :right)]
     (. builder right data))
-  (when-let [data (lookup-entry config id :right-annotations)]
+  (when-some [data (lookup-entry config id :right-annotations)]
     (. builder rightAnnotations data))
-  (when-let [data (lookup-entry config id :right-y-axis)]
+  (when-some [data (lookup-entry config id :right-y-axis)]
     (. builder rightYAxis data))
-  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+  (when-some [data (lookup-entry config id :set-period-to-time-range)]
     (. builder setPeriodToTimeRange data))
-  (when-let [data (lookup-entry config id :stacked)]
+  (when-some [data (lookup-entry config id :stacked)]
     (. builder stacked data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :vertical-annotations)]
+  (when-some [data (lookup-entry config id :vertical-annotations)]
     (. builder verticalAnnotations data))
-  (when-let [data (graph-widget-view config id :view)]
+  (when-some [data (graph-widget-view config id :view)]
     (. builder view data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -2742,45 +2742,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^GraphWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :left)]
+  (when-some [data (lookup-entry config id :left)]
     (. builder left data))
-  (when-let [data (lookup-entry config id :left-annotations)]
+  (when-some [data (lookup-entry config id :left-annotations)]
     (. builder leftAnnotations data))
-  (when-let [data (lookup-entry config id :left-y-axis)]
+  (when-some [data (lookup-entry config id :left-y-axis)]
     (. builder leftYAxis data))
-  (when-let [data (legend-position config id :legend-position)]
+  (when-some [data (legend-position config id :legend-position)]
     (. builder legendPosition data))
-  (when-let [data (lookup-entry config id :live-data)]
+  (when-some [data (lookup-entry config id :live-data)]
     (. builder liveData data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :right)]
+  (when-some [data (lookup-entry config id :right)]
     (. builder right data))
-  (when-let [data (lookup-entry config id :right-annotations)]
+  (when-some [data (lookup-entry config id :right-annotations)]
     (. builder rightAnnotations data))
-  (when-let [data (lookup-entry config id :right-y-axis)]
+  (when-some [data (lookup-entry config id :right-y-axis)]
     (. builder rightYAxis data))
-  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+  (when-some [data (lookup-entry config id :set-period-to-time-range)]
     (. builder setPeriodToTimeRange data))
-  (when-let [data (lookup-entry config id :stacked)]
+  (when-some [data (lookup-entry config id :stacked)]
     (. builder stacked data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :vertical-annotations)]
+  (when-some [data (lookup-entry config id :vertical-annotations)]
     (. builder verticalAnnotations data))
-  (when-let [data (graph-widget-view config id :view)]
+  (when-some [data (graph-widget-view config id :view)]
     (. builder view data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -2812,15 +2812,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |
 "
   [^HorizontalAnnotation$Builder builder id config]
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (shading config id :fill)]
+  (when-some [data (shading config id :fill)]
     (. builder fill data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :visible)]
+  (when-some [data (lookup-entry config id :visible)]
     (. builder visible data))
   (.build builder))
 
@@ -2855,21 +2855,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^LogQueryWidget$Builder builder id config]
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :log-group-names)]
+  (when-some [data (lookup-entry config id :log-group-names)]
     (. builder logGroupNames data))
-  (when-let [data (lookup-entry config id :query-lines)]
+  (when-some [data (lookup-entry config id :query-lines)]
     (. builder queryLines data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (log-query-visualization-type config id :view)]
+  (when-some [data (log-query-visualization-type config id :view)]
     (. builder view data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -2904,21 +2904,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^LogQueryWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :log-group-names)]
+  (when-some [data (lookup-entry config id :log-group-names)]
     (. builder logGroupNames data))
-  (when-let [data (lookup-entry config id :query-lines)]
+  (when-some [data (lookup-entry config id :query-lines)]
     (. builder queryLines data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (log-query-visualization-type config id :view)]
+  (when-some [data (log-query-visualization-type config id :view)]
     (. builder view data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -2952,19 +2952,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |
 "
   [^MathExpression$Builder builder id config]
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :search-account)]
+  (when-some [data (lookup-entry config id :search-account)]
     (. builder searchAccount data))
-  (when-let [data (lookup-entry config id :search-region)]
+  (when-some [data (lookup-entry config id :search-region)]
     (. builder searchRegion data))
-  (when-let [data (lookup-entry config id :using-metrics)]
+  (when-some [data (lookup-entry config id :using-metrics)]
     (. builder usingMetrics data))
   (.build builder))
 
@@ -2996,15 +2996,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `searchRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-region` |
 "
   [^MathExpressionOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :search-account)]
+  (when-some [data (lookup-entry config id :search-account)]
     (. builder searchAccount data))
-  (when-let [data (lookup-entry config id :search-region)]
+  (when-some [data (lookup-entry config id :search-region)]
     (. builder searchRegion data))
   (.build builder))
 
@@ -3038,19 +3038,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |
 "
   [^MathExpressionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :search-account)]
+  (when-some [data (lookup-entry config id :search-account)]
     (. builder searchAccount data))
-  (when-let [data (lookup-entry config id :search-region)]
+  (when-some [data (lookup-entry config id :search-region)]
     (. builder searchRegion data))
-  (when-let [data (lookup-entry config id :using-metrics)]
+  (when-some [data (lookup-entry config id :using-metrics)]
     (. builder usingMetrics data))
   (.build builder))
 
@@ -3087,25 +3087,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^Metric$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :dimensions-map)]
+  (when-some [data (lookup-entry config id :dimensions-map)]
     (. builder dimensionsMap data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -3135,11 +3135,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `renderingProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:rendering-properties` |
 "
   [^MetricConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :math-expression)]
+  (when-some [data (lookup-entry config id :math-expression)]
     (. builder mathExpression data))
-  (when-let [data (lookup-entry config id :metric-stat)]
+  (when-some [data (lookup-entry config id :metric-stat)]
     (. builder metricStat data))
-  (when-let [data (lookup-entry config id :rendering-properties)]
+  (when-some [data (lookup-entry config id :rendering-properties)]
     (. builder renderingProperties data))
   (.build builder))
 
@@ -3171,15 +3171,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |
 "
   [^MetricExpressionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :search-account)]
+  (when-some [data (lookup-entry config id :search-account)]
     (. builder searchAccount data))
-  (when-let [data (lookup-entry config id :search-region)]
+  (when-some [data (lookup-entry config id :search-region)]
     (. builder searchRegion data))
-  (when-let [data (lookup-entry config id :using-metrics)]
+  (when-some [data (lookup-entry config id :using-metrics)]
     (. builder usingMetrics data))
   (.build builder))
 
@@ -3214,21 +3214,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^MetricOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :dimensions-map)]
+  (when-some [data (lookup-entry config id :dimensions-map)]
     (. builder dimensionsMap data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -3265,25 +3265,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^MetricProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :dimensions-map)]
+  (when-some [data (lookup-entry config id :dimensions-map)]
     (. builder dimensionsMap data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -3318,21 +3318,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unitFilter` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit-filter` |
 "
   [^MetricStatConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (unit config id :unit-filter)]
+  (when-some [data (unit config id :unit-filter)]
     (. builder unitFilter data))
   (.build builder))
 
@@ -3363,13 +3363,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^MetricWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3400,13 +3400,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `populateFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:populate-from` |
 "
   [^SearchComponents$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :populate-from)]
+  (when-some [data (lookup-entry config id :populate-from)]
     (. builder populateFrom data))
   (.build builder))
 
@@ -3444,27 +3444,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^SingleValueWidget$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :full-precision)]
+  (when-some [data (lookup-entry config id :full-precision)]
     (. builder fullPrecision data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+  (when-some [data (lookup-entry config id :set-period-to-time-range)]
     (. builder setPeriodToTimeRange data))
-  (when-let [data (lookup-entry config id :sparkline)]
+  (when-some [data (lookup-entry config id :sparkline)]
     (. builder sparkline data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3502,27 +3502,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^SingleValueWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :full-precision)]
+  (when-some [data (lookup-entry config id :full-precision)]
     (. builder fullPrecision data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+  (when-some [data (lookup-entry config id :set-period-to-time-range)]
     (. builder setPeriodToTimeRange data))
-  (when-let [data (lookup-entry config id :sparkline)]
+  (when-some [data (lookup-entry config id :sparkline)]
     (. builder sparkline data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3551,9 +3551,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^Spacer$Builder builder id config]
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3582,9 +3582,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^SpacerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3614,11 +3614,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sticky` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sticky` |
 "
   [^TableSummaryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :columns)]
+  (when-some [data (lookup-entry config id :columns)]
     (. builder columns data))
-  (when-let [data (lookup-entry config id :hide-non-summary-columns)]
+  (when-some [data (lookup-entry config id :hide-non-summary-columns)]
     (. builder hideNonSummaryColumns data))
-  (when-let [data (lookup-entry config id :sticky)]
+  (when-some [data (lookup-entry config id :sticky)]
     (. builder sticky data))
   (.build builder))
 
@@ -3661,37 +3661,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^TableWidget$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :full-precision)]
+  (when-some [data (lookup-entry config id :full-precision)]
     (. builder fullPrecision data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (table-layout config id :layout)]
+  (when-some [data (table-layout config id :layout)]
     (. builder layout data))
-  (when-let [data (lookup-entry config id :live-data)]
+  (when-some [data (lookup-entry config id :live-data)]
     (. builder liveData data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+  (when-some [data (lookup-entry config id :set-period-to-time-range)]
     (. builder setPeriodToTimeRange data))
-  (when-let [data (lookup-entry config id :show-units-in-label)]
+  (when-some [data (lookup-entry config id :show-units-in-label)]
     (. builder showUnitsInLabel data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :summary)]
+  (when-some [data (lookup-entry config id :summary)]
     (. builder summary data))
-  (when-let [data (lookup-entry config id :thresholds)]
+  (when-some [data (lookup-entry config id :thresholds)]
     (. builder thresholds data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3734,37 +3734,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^TableWidgetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :full-precision)]
+  (when-some [data (lookup-entry config id :full-precision)]
     (. builder fullPrecision data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (table-layout config id :layout)]
+  (when-some [data (table-layout config id :layout)]
     (. builder layout data))
-  (when-let [data (lookup-entry config id :live-data)]
+  (when-some [data (lookup-entry config id :live-data)]
     (. builder liveData data))
-  (when-let [data (lookup-entry config id :metrics)]
+  (when-some [data (lookup-entry config id :metrics)]
     (. builder metrics data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+  (when-some [data (lookup-entry config id :set-period-to-time-range)]
     (. builder setPeriodToTimeRange data))
-  (when-let [data (lookup-entry config id :show-units-in-label)]
+  (when-some [data (lookup-entry config id :show-units-in-label)]
     (. builder showUnitsInLabel data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :summary)]
+  (when-some [data (lookup-entry config id :summary)]
     (. builder summary data))
-  (when-let [data (lookup-entry config id :thresholds)]
+  (when-some [data (lookup-entry config id :thresholds)]
     (. builder thresholds data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3795,13 +3795,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^TextWidget$Builder builder id config]
-  (when-let [data (text-widget-background config id :background)]
+  (when-some [data (text-widget-background config id :background)]
     (. builder background data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :markdown)]
+  (when-some [data (lookup-entry config id :markdown)]
     (. builder markdown data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3832,13 +3832,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^TextWidgetProps$Builder builder id config]
-  (when-let [data (text-widget-background config id :background)]
+  (when-some [data (text-widget-background config id :background)]
     (. builder background data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :markdown)]
+  (when-some [data (lookup-entry config id :markdown)]
     (. builder markdown data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -3867,9 +3867,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^VariableValue$Builder builder id config]
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -3901,15 +3901,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |
 "
   [^VerticalAnnotation$Builder builder id config]
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :date)]
+  (when-some [data (lookup-entry config id :date)]
     (. builder date data))
-  (when-let [data (vertical-shading config id :fill)]
+  (when-some [data (vertical-shading config id :fill)]
     (. builder fill data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :visible)]
+  (when-some [data (lookup-entry config id :visible)]
     (. builder visible data))
   (.build builder))
 
@@ -3940,13 +3940,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `showUnits` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:show-units` |
 "
   [^YAxisProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :max)]
+  (when-some [data (lookup-entry config id :max)]
     (. builder max data))
-  (when-let [data (lookup-entry config id :min)]
+  (when-some [data (lookup-entry config id :min)]
     (. builder min data))
-  (when-let [data (lookup-entry config id :show-units)]
+  (when-some [data (lookup-entry config id :show-units)]
     (. builder showUnits data))
   (.build builder))
 

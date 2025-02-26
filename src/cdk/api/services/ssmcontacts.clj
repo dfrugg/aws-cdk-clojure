@@ -39,13 +39,13 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnContact$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :plan)]
+  (when-some [data (lookup-entry config id :plan)]
     (. builder plan data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -77,15 +77,15 @@
 | `deferActivation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:defer-activation` |
 "
   [^CfnContactChannel$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-address)]
+  (when-some [data (lookup-entry config id :channel-address)]
     (. builder channelAddress data))
-  (when-let [data (lookup-entry config id :channel-name)]
+  (when-some [data (lookup-entry config id :channel-name)]
     (. builder channelName data))
-  (when-let [data (lookup-entry config id :channel-type)]
+  (when-some [data (lookup-entry config id :channel-type)]
     (. builder channelType data))
-  (when-let [data (lookup-entry config id :contact-id)]
+  (when-some [data (lookup-entry config id :contact-id)]
     (. builder contactId data))
-  (when-let [data (lookup-entry config id :defer-activation)]
+  (when-some [data (lookup-entry config id :defer-activation)]
     (. builder deferActivation data))
   (.build builder))
 
@@ -117,15 +117,15 @@
 | `deferActivation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:defer-activation` |
 "
   [^CfnContactChannelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-address)]
+  (when-some [data (lookup-entry config id :channel-address)]
     (. builder channelAddress data))
-  (when-let [data (lookup-entry config id :channel-name)]
+  (when-some [data (lookup-entry config id :channel-name)]
     (. builder channelName data))
-  (when-let [data (lookup-entry config id :channel-type)]
+  (when-some [data (lookup-entry config id :channel-type)]
     (. builder channelType data))
-  (when-let [data (lookup-entry config id :contact-id)]
+  (when-some [data (lookup-entry config id :contact-id)]
     (. builder contactId data))
-  (when-let [data (lookup-entry config id :defer-activation)]
+  (when-some [data (lookup-entry config id :defer-activation)]
     (. builder deferActivation data))
   (.build builder))
 
@@ -154,9 +154,9 @@
 | `retryIntervalInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-interval-in-minutes` |
 "
   [^CfnContact$ChannelTargetInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :retry-interval-in-minutes)]
+  (when-some [data (lookup-entry config id :retry-interval-in-minutes)]
     (. builder retryIntervalInMinutes data))
   (.build builder))
 
@@ -185,9 +185,9 @@
 | `isEssential` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-essential` |
 "
   [^CfnContact$ContactTargetInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-id)]
+  (when-some [data (lookup-entry config id :contact-id)]
     (. builder contactId data))
-  (when-let [data (lookup-entry config id :is-essential)]
+  (when-some [data (lookup-entry config id :is-essential)]
     (. builder isEssential data))
   (.build builder))
 
@@ -218,13 +218,13 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnContactProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :plan)]
+  (when-some [data (lookup-entry config id :plan)]
     (. builder plan data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -254,11 +254,11 @@
 | `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnContact$StageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-minutes)]
+  (when-some [data (lookup-entry config id :duration-in-minutes)]
     (. builder durationInMinutes data))
-  (when-let [data (lookup-entry config id :rotation-ids)]
+  (when-some [data (lookup-entry config id :rotation-ids)]
     (. builder rotationIds data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -287,9 +287,9 @@
 | `contactTargetInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contact-target-info` |
 "
   [^CfnContact$TargetsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-target-info)]
+  (when-some [data (lookup-entry config id :channel-target-info)]
     (. builder channelTargetInfo data))
-  (when-let [data (lookup-entry config id :contact-target-info)]
+  (when-some [data (lookup-entry config id :contact-target-info)]
     (. builder contactTargetInfo data))
   (.build builder))
 
@@ -319,11 +319,11 @@
 | `stages` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stages` |
 "
   [^CfnPlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-id)]
+  (when-some [data (lookup-entry config id :contact-id)]
     (. builder contactId data))
-  (when-let [data (lookup-entry config id :rotation-ids)]
+  (when-some [data (lookup-entry config id :rotation-ids)]
     (. builder rotationIds data))
-  (when-let [data (lookup-entry config id :stages)]
+  (when-some [data (lookup-entry config id :stages)]
     (. builder stages data))
   (.build builder))
 
@@ -352,9 +352,9 @@
 | `retryIntervalInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-interval-in-minutes` |
 "
   [^CfnPlan$ChannelTargetInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-id)]
+  (when-some [data (lookup-entry config id :channel-id)]
     (. builder channelId data))
-  (when-let [data (lookup-entry config id :retry-interval-in-minutes)]
+  (when-some [data (lookup-entry config id :retry-interval-in-minutes)]
     (. builder retryIntervalInMinutes data))
   (.build builder))
 
@@ -383,9 +383,9 @@
 | `isEssential` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-essential` |
 "
   [^CfnPlan$ContactTargetInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-id)]
+  (when-some [data (lookup-entry config id :contact-id)]
     (. builder contactId data))
-  (when-let [data (lookup-entry config id :is-essential)]
+  (when-some [data (lookup-entry config id :is-essential)]
     (. builder isEssential data))
   (.build builder))
 
@@ -415,11 +415,11 @@
 | `stages` | java.util.List | [[cdk.support/lookup-entry]] | `:stages` |
 "
   [^CfnPlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-id)]
+  (when-some [data (lookup-entry config id :contact-id)]
     (. builder contactId data))
-  (when-let [data (lookup-entry config id :rotation-ids)]
+  (when-some [data (lookup-entry config id :rotation-ids)]
     (. builder rotationIds data))
-  (when-let [data (lookup-entry config id :stages)]
+  (when-some [data (lookup-entry config id :stages)]
     (. builder stages data))
   (.build builder))
 
@@ -448,9 +448,9 @@
 | `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnPlan$StageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-minutes)]
+  (when-some [data (lookup-entry config id :duration-in-minutes)]
     (. builder durationInMinutes data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -479,9 +479,9 @@
 | `contactTargetInfo` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contact-target-info` |
 "
   [^CfnPlan$TargetsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-target-info)]
+  (when-some [data (lookup-entry config id :channel-target-info)]
     (. builder channelTargetInfo data))
-  (when-let [data (lookup-entry config id :contact-target-info)]
+  (when-some [data (lookup-entry config id :contact-target-info)]
     (. builder contactTargetInfo data))
   (.build builder))
 
@@ -514,17 +514,17 @@
 | `timeZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-zone-id` |
 "
   [^CfnRotation$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-ids)]
+  (when-some [data (lookup-entry config id :contact-ids)]
     (. builder contactIds data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recurrence)]
+  (when-some [data (lookup-entry config id :recurrence)]
     (. builder recurrence data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :time-zone-id)]
+  (when-some [data (lookup-entry config id :time-zone-id)]
     (. builder timeZoneId data))
   (.build builder))
 
@@ -553,9 +553,9 @@
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
 "
   [^CfnRotation$CoverageTimeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :end-time)]
+  (when-some [data (lookup-entry config id :end-time)]
     (. builder endTime data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
   (.build builder))
 
@@ -584,9 +584,9 @@
 | `handOffTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:hand-off-time` |
 "
   [^CfnRotation$MonthlySettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :day-of-month)]
+  (when-some [data (lookup-entry config id :day-of-month)]
     (. builder dayOfMonth data))
-  (when-let [data (lookup-entry config id :hand-off-time)]
+  (when-some [data (lookup-entry config id :hand-off-time)]
     (. builder handOffTime data))
   (.build builder))
 
@@ -619,17 +619,17 @@
 | `timeZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-zone-id` |
 "
   [^CfnRotationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-ids)]
+  (when-some [data (lookup-entry config id :contact-ids)]
     (. builder contactIds data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recurrence)]
+  (when-some [data (lookup-entry config id :recurrence)]
     (. builder recurrence data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :time-zone-id)]
+  (when-some [data (lookup-entry config id :time-zone-id)]
     (. builder timeZoneId data))
   (.build builder))
 
@@ -662,17 +662,17 @@
 | `weeklySettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weekly-settings` |
 "
   [^CfnRotation$RecurrenceSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :daily-settings)]
+  (when-some [data (lookup-entry config id :daily-settings)]
     (. builder dailySettings data))
-  (when-let [data (lookup-entry config id :monthly-settings)]
+  (when-some [data (lookup-entry config id :monthly-settings)]
     (. builder monthlySettings data))
-  (when-let [data (lookup-entry config id :number-of-on-calls)]
+  (when-some [data (lookup-entry config id :number-of-on-calls)]
     (. builder numberOfOnCalls data))
-  (when-let [data (lookup-entry config id :recurrence-multiplier)]
+  (when-some [data (lookup-entry config id :recurrence-multiplier)]
     (. builder recurrenceMultiplier data))
-  (when-let [data (lookup-entry config id :shift-coverages)]
+  (when-some [data (lookup-entry config id :shift-coverages)]
     (. builder shiftCoverages data))
-  (when-let [data (lookup-entry config id :weekly-settings)]
+  (when-some [data (lookup-entry config id :weekly-settings)]
     (. builder weeklySettings data))
   (.build builder))
 
@@ -701,9 +701,9 @@
 | `dayOfWeek` | java.lang.String | [[cdk.support/lookup-entry]] | `:day-of-week` |
 "
   [^CfnRotation$ShiftCoverageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :coverage-times)]
+  (when-some [data (lookup-entry config id :coverage-times)]
     (. builder coverageTimes data))
-  (when-let [data (lookup-entry config id :day-of-week)]
+  (when-some [data (lookup-entry config id :day-of-week)]
     (. builder dayOfWeek data))
   (.build builder))
 
@@ -732,9 +732,9 @@
 | `handOffTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:hand-off-time` |
 "
   [^CfnRotation$WeeklySettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :day-of-week)]
+  (when-some [data (lookup-entry config id :day-of-week)]
     (. builder dayOfWeek data))
-  (when-let [data (lookup-entry config id :hand-off-time)]
+  (when-some [data (lookup-entry config id :hand-off-time)]
     (. builder handOffTime data))
   (.build builder))
 

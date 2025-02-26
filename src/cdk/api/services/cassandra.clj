@@ -32,11 +32,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKeyspace$Builder builder id config]
-  (when-let [data (lookup-entry config id :keyspace-name)]
+  (when-some [data (lookup-entry config id :keyspace-name)]
     (. builder keyspaceName data))
-  (when-let [data (lookup-entry config id :replication-specification)]
+  (when-some [data (lookup-entry config id :replication-specification)]
     (. builder replicationSpecification data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -66,11 +66,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnKeyspaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :keyspace-name)]
+  (when-some [data (lookup-entry config id :keyspace-name)]
     (. builder keyspaceName data))
-  (when-let [data (lookup-entry config id :replication-specification)]
+  (when-some [data (lookup-entry config id :replication-specification)]
     (. builder replicationSpecification data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -99,9 +99,9 @@
 | `replicationStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:replication-strategy` |
 "
   [^CfnKeyspace$ReplicationSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :region-list)]
+  (when-some [data (lookup-entry config id :region-list)]
     (. builder regionList data))
-  (when-let [data (lookup-entry config id :replication-strategy)]
+  (when-some [data (lookup-entry config id :replication-strategy)]
     (. builder replicationStrategy data))
   (.build builder))
 
@@ -132,13 +132,13 @@
 | `scalingPolicy` | software.amazon.awscdk.services.cassandra.CfnTable$ScalingPolicyProperty | [[cdk.support/lookup-entry]] | `:scaling-policy` |
 "
   [^CfnTable$AutoScalingSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-disabled)]
+  (when-some [data (lookup-entry config id :auto-scaling-disabled)]
     (. builder autoScalingDisabled data))
-  (when-let [data (lookup-entry config id :maximum-units)]
+  (when-some [data (lookup-entry config id :maximum-units)]
     (. builder maximumUnits data))
-  (when-let [data (lookup-entry config id :minimum-units)]
+  (when-some [data (lookup-entry config id :minimum-units)]
     (. builder minimumUnits data))
-  (when-let [data (lookup-entry config id :scaling-policy)]
+  (when-some [data (lookup-entry config id :scaling-policy)]
     (. builder scalingPolicy data))
   (.build builder))
 
@@ -167,9 +167,9 @@
 | `writeCapacityAutoScaling` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-capacity-auto-scaling` |
 "
   [^CfnTable$AutoScalingSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :read-capacity-auto-scaling)]
+  (when-some [data (lookup-entry config id :read-capacity-auto-scaling)]
     (. builder readCapacityAutoScaling data))
-  (when-let [data (lookup-entry config id :write-capacity-auto-scaling)]
+  (when-some [data (lookup-entry config id :write-capacity-auto-scaling)]
     (. builder writeCapacityAutoScaling data))
   (.build builder))
 
@@ -198,9 +198,9 @@
 | `provisionedThroughput` | software.amazon.awscdk.services.cassandra.CfnTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
 "
   [^CfnTable$BillingModeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :provisioned-throughput)]
+  (when-some [data (lookup-entry config id :provisioned-throughput)]
     (. builder provisionedThroughput data))
   (.build builder))
 
@@ -240,31 +240,31 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTable$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-specifications)]
+  (when-some [data (lookup-entry config id :auto-scaling-specifications)]
     (. builder autoScalingSpecifications data))
-  (when-let [data (lookup-entry config id :billing-mode)]
+  (when-some [data (lookup-entry config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :client-side-timestamps-enabled)]
+  (when-some [data (lookup-entry config id :client-side-timestamps-enabled)]
     (. builder clientSideTimestampsEnabled data))
-  (when-let [data (lookup-entry config id :clustering-key-columns)]
+  (when-some [data (lookup-entry config id :clustering-key-columns)]
     (. builder clusteringKeyColumns data))
-  (when-let [data (lookup-entry config id :default-time-to-live)]
+  (when-some [data (lookup-entry config id :default-time-to-live)]
     (. builder defaultTimeToLive data))
-  (when-let [data (lookup-entry config id :encryption-specification)]
+  (when-some [data (lookup-entry config id :encryption-specification)]
     (. builder encryptionSpecification data))
-  (when-let [data (lookup-entry config id :keyspace-name)]
+  (when-some [data (lookup-entry config id :keyspace-name)]
     (. builder keyspaceName data))
-  (when-let [data (lookup-entry config id :partition-key-columns)]
+  (when-some [data (lookup-entry config id :partition-key-columns)]
     (. builder partitionKeyColumns data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery-enabled)]
     (. builder pointInTimeRecoveryEnabled data))
-  (when-let [data (lookup-entry config id :regular-columns)]
+  (when-some [data (lookup-entry config id :regular-columns)]
     (. builder regularColumns data))
-  (when-let [data (lookup-entry config id :replica-specifications)]
+  (when-some [data (lookup-entry config id :replica-specifications)]
     (. builder replicaSpecifications data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -293,9 +293,9 @@
 | `orderBy` | java.lang.String | [[cdk.support/lookup-entry]] | `:order-by` |
 "
   [^CfnTable$ClusteringKeyColumnProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :column)]
+  (when-some [data (lookup-entry config id :column)]
     (. builder column data))
-  (when-let [data (lookup-entry config id :order-by)]
+  (when-some [data (lookup-entry config id :order-by)]
     (. builder orderBy data))
   (.build builder))
 
@@ -324,9 +324,9 @@
 | `columnType` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-type` |
 "
   [^CfnTable$ColumnProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-name)]
+  (when-some [data (lookup-entry config id :column-name)]
     (. builder columnName data))
-  (when-let [data (lookup-entry config id :column-type)]
+  (when-some [data (lookup-entry config id :column-type)]
     (. builder columnType data))
   (.build builder))
 
@@ -355,9 +355,9 @@
 | `kmsKeyIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-identifier` |
 "
   [^CfnTable$EncryptionSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-type)]
+  (when-some [data (lookup-entry config id :encryption-type)]
     (. builder encryptionType data))
-  (when-let [data (lookup-entry config id :kms-key-identifier)]
+  (when-some [data (lookup-entry config id :kms-key-identifier)]
     (. builder kmsKeyIdentifier data))
   (.build builder))
 
@@ -397,31 +397,31 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTableProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-specifications)]
+  (when-some [data (lookup-entry config id :auto-scaling-specifications)]
     (. builder autoScalingSpecifications data))
-  (when-let [data (lookup-entry config id :billing-mode)]
+  (when-some [data (lookup-entry config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :client-side-timestamps-enabled)]
+  (when-some [data (lookup-entry config id :client-side-timestamps-enabled)]
     (. builder clientSideTimestampsEnabled data))
-  (when-let [data (lookup-entry config id :clustering-key-columns)]
+  (when-some [data (lookup-entry config id :clustering-key-columns)]
     (. builder clusteringKeyColumns data))
-  (when-let [data (lookup-entry config id :default-time-to-live)]
+  (when-some [data (lookup-entry config id :default-time-to-live)]
     (. builder defaultTimeToLive data))
-  (when-let [data (lookup-entry config id :encryption-specification)]
+  (when-some [data (lookup-entry config id :encryption-specification)]
     (. builder encryptionSpecification data))
-  (when-let [data (lookup-entry config id :keyspace-name)]
+  (when-some [data (lookup-entry config id :keyspace-name)]
     (. builder keyspaceName data))
-  (when-let [data (lookup-entry config id :partition-key-columns)]
+  (when-some [data (lookup-entry config id :partition-key-columns)]
     (. builder partitionKeyColumns data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery-enabled)]
     (. builder pointInTimeRecoveryEnabled data))
-  (when-let [data (lookup-entry config id :regular-columns)]
+  (when-some [data (lookup-entry config id :regular-columns)]
     (. builder regularColumns data))
-  (when-let [data (lookup-entry config id :replica-specifications)]
+  (when-some [data (lookup-entry config id :replica-specifications)]
     (. builder replicaSpecifications data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -450,9 +450,9 @@
 | `writeCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity-units` |
 "
   [^CfnTable$ProvisionedThroughputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :read-capacity-units)]
+  (when-some [data (lookup-entry config id :read-capacity-units)]
     (. builder readCapacityUnits data))
-  (when-let [data (lookup-entry config id :write-capacity-units)]
+  (when-some [data (lookup-entry config id :write-capacity-units)]
     (. builder writeCapacityUnits data))
   (.build builder))
 
@@ -482,11 +482,11 @@
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^CfnTable$ReplicaSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :read-capacity-auto-scaling)]
+  (when-some [data (lookup-entry config id :read-capacity-auto-scaling)]
     (. builder readCapacityAutoScaling data))
-  (when-let [data (lookup-entry config id :read-capacity-units)]
+  (when-some [data (lookup-entry config id :read-capacity-units)]
     (. builder readCapacityUnits data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -514,7 +514,7 @@
 | `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.cassandra.CfnTable$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
 "
   [^CfnTable$ScalingPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
+  (when-some [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
     (. builder targetTrackingScalingPolicyConfiguration data))
   (.build builder))
 
@@ -545,13 +545,13 @@
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^CfnTable$TargetTrackingScalingPolicyConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 

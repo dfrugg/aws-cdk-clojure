@@ -24,15 +24,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLedger$Builder builder id config]
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :permissions-mode)]
+  (when-some [data (lookup-entry config id :permissions-mode)]
     (. builder permissionsMode data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -64,15 +64,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLedgerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :permissions-mode)]
+  (when-some [data (lookup-entry config id :permissions-mode)]
     (. builder permissionsMode data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -106,19 +106,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStream$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclusive-end-time)]
+  (when-some [data (lookup-entry config id :exclusive-end-time)]
     (. builder exclusiveEndTime data))
-  (when-let [data (lookup-entry config id :inclusive-start-time)]
+  (when-some [data (lookup-entry config id :inclusive-start-time)]
     (. builder inclusiveStartTime data))
-  (when-let [data (lookup-entry config id :kinesis-configuration)]
+  (when-some [data (lookup-entry config id :kinesis-configuration)]
     (. builder kinesisConfiguration data))
-  (when-let [data (lookup-entry config id :ledger-name)]
+  (when-some [data (lookup-entry config id :ledger-name)]
     (. builder ledgerName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :stream-name)]
+  (when-some [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -147,9 +147,9 @@
 | `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
 "
   [^CfnStream$KinesisConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregation-enabled)]
+  (when-some [data (lookup-entry config id :aggregation-enabled)]
     (. builder aggregationEnabled data))
-  (when-let [data (lookup-entry config id :stream-arn)]
+  (when-some [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
 
@@ -183,19 +183,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclusive-end-time)]
+  (when-some [data (lookup-entry config id :exclusive-end-time)]
     (. builder exclusiveEndTime data))
-  (when-let [data (lookup-entry config id :inclusive-start-time)]
+  (when-some [data (lookup-entry config id :inclusive-start-time)]
     (. builder inclusiveStartTime data))
-  (when-let [data (lookup-entry config id :kinesis-configuration)]
+  (when-some [data (lookup-entry config id :kinesis-configuration)]
     (. builder kinesisConfiguration data))
-  (when-let [data (lookup-entry config id :ledger-name)]
+  (when-some [data (lookup-entry config id :ledger-name)]
     (. builder ledgerName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :stream-name)]
+  (when-some [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

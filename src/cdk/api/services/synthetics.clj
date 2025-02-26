@@ -80,9 +80,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^ArtifactsBucketLocation$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -117,21 +117,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `readers` | java.util.List | [[cdk.support/lookup-entry]] | `:readers` |
 "
   [^AssetCode$Builder builder id config]
-  (when-let [data (lookup-entry config id :asset-hash)]
+  (when-some [data (lookup-entry config id :asset-hash)]
     (. builder assetHash data))
-  (when-let [data (asset-hash-type config id :asset-hash-type)]
+  (when-some [data (asset-hash-type config id :asset-hash-type)]
     (. builder assetHashType data))
-  (when-let [data (lookup-entry config id :bundling)]
+  (when-some [data (lookup-entry config id :bundling)]
     (. builder bundling data))
-  (when-let [data (lookup-entry config id :deploy-time)]
+  (when-some [data (lookup-entry config id :deploy-time)]
     (. builder deployTime data))
-  (when-let [data (lookup-entry config id :exclude)]
+  (when-some [data (lookup-entry config id :exclude)]
     (. builder exclude data))
-  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+  (when-some [data (symlink-follow-mode config id :follow-symlinks)]
     (. builder followSymlinks data))
-  (when-let [data (ignore-mode config id :ignore-mode)]
+  (when-some [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
-  (when-let [data (lookup-entry config id :readers)]
+  (when-some [data (lookup-entry config id :readers)]
     (. builder readers data))
   (.build builder))
 
@@ -177,37 +177,37 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^Canary$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifacts-bucket-lifecycle-rules)]
+  (when-some [data (lookup-entry config id :artifacts-bucket-lifecycle-rules)]
     (. builder artifactsBucketLifecycleRules data))
-  (when-let [data (lookup-entry config id :artifacts-bucket-location)]
+  (when-some [data (lookup-entry config id :artifacts-bucket-location)]
     (. builder artifactsBucketLocation data))
-  (when-let [data (lookup-entry config id :canary-name)]
+  (when-some [data (lookup-entry config id :canary-name)]
     (. builder canaryName data))
-  (when-let [data (cleanup config id :cleanup)]
+  (when-some [data (cleanup config id :cleanup)]
     (. builder cleanup data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :failure-retention-period)]
+  (when-some [data (lookup-entry config id :failure-retention-period)]
     (. builder failureRetentionPeriod data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :runtime)]
+  (when-some [data (lookup-entry config id :runtime)]
     (. builder runtime data))
-  (when-let [data (lookup-entry config id :schedule)]
+  (when-some [data (lookup-entry config id :schedule)]
     (. builder schedule data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :start-after-creation)]
+  (when-some [data (lookup-entry config id :start-after-creation)]
     (. builder startAfterCreation data))
-  (when-let [data (lookup-entry config id :success-retention-period)]
+  (when-some [data (lookup-entry config id :success-retention-period)]
     (. builder successRetentionPeriod data))
-  (when-let [data (lookup-entry config id :test)]
+  (when-some [data (lookup-entry config id :test)]
     (. builder test data))
-  (when-let [data (lookup-entry config id :time-to-live)]
+  (when-some [data (lookup-entry config id :time-to-live)]
     (. builder timeToLive data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -250,37 +250,37 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 "
   [^CanaryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifacts-bucket-lifecycle-rules)]
+  (when-some [data (lookup-entry config id :artifacts-bucket-lifecycle-rules)]
     (. builder artifactsBucketLifecycleRules data))
-  (when-let [data (lookup-entry config id :artifacts-bucket-location)]
+  (when-some [data (lookup-entry config id :artifacts-bucket-location)]
     (. builder artifactsBucketLocation data))
-  (when-let [data (lookup-entry config id :canary-name)]
+  (when-some [data (lookup-entry config id :canary-name)]
     (. builder canaryName data))
-  (when-let [data (cleanup config id :cleanup)]
+  (when-some [data (cleanup config id :cleanup)]
     (. builder cleanup data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :failure-retention-period)]
+  (when-some [data (lookup-entry config id :failure-retention-period)]
     (. builder failureRetentionPeriod data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :runtime)]
+  (when-some [data (lookup-entry config id :runtime)]
     (. builder runtime data))
-  (when-let [data (lookup-entry config id :schedule)]
+  (when-some [data (lookup-entry config id :schedule)]
     (. builder schedule data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :start-after-creation)]
+  (when-some [data (lookup-entry config id :start-after-creation)]
     (. builder startAfterCreation data))
-  (when-let [data (lookup-entry config id :success-retention-period)]
+  (when-some [data (lookup-entry config id :success-retention-period)]
     (. builder successRetentionPeriod data))
-  (when-let [data (lookup-entry config id :test)]
+  (when-some [data (lookup-entry config id :test)]
     (. builder test data))
-  (when-let [data (lookup-entry config id :time-to-live)]
+  (when-some [data (lookup-entry config id :time-to-live)]
     (. builder timeToLive data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
-  (when-let [data (lookup-entry config id :vpc-subnets)]
+  (when-some [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
 
@@ -308,7 +308,7 @@ __Create Form:__ ____[java.lang.String]___
 | `s3Encryption` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-encryption` |
 "
   [^CfnCanary$ArtifactConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-encryption)]
+  (when-some [data (lookup-entry config id :s3-encryption)]
     (. builder s3Encryption data))
   (.build builder))
 
@@ -337,9 +337,9 @@ __Create Form:__ ____[java.lang.String]___
 | `screenshotName` | java.lang.String | [[cdk.support/lookup-entry]] | `:screenshot-name` |
 "
   [^CfnCanary$BaseScreenshotProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ignore-coordinates)]
+  (when-some [data (lookup-entry config id :ignore-coordinates)]
     (. builder ignoreCoordinates data))
-  (when-let [data (lookup-entry config id :screenshot-name)]
+  (when-some [data (lookup-entry config id :screenshot-name)]
     (. builder screenshotName data))
   (.build builder))
 
@@ -381,35 +381,35 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcConfig` | software.amazon.awscdk.services.synthetics.CfnCanary$VPCConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnCanary$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifact-config)]
+  (when-some [data (lookup-entry config id :artifact-config)]
     (. builder artifactConfig data))
-  (when-let [data (lookup-entry config id :artifact-s3-location)]
+  (when-some [data (lookup-entry config id :artifact-s3-location)]
     (. builder artifactS3Location data))
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :delete-lambda-resources-on-canary-deletion)]
+  (when-some [data (lookup-entry config id :delete-lambda-resources-on-canary-deletion)]
     (. builder deleteLambdaResourcesOnCanaryDeletion data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :failure-retention-period)]
+  (when-some [data (lookup-entry config id :failure-retention-period)]
     (. builder failureRetentionPeriod data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :run-config)]
+  (when-some [data (lookup-entry config id :run-config)]
     (. builder runConfig data))
-  (when-let [data (lookup-entry config id :runtime-version)]
+  (when-some [data (lookup-entry config id :runtime-version)]
     (. builder runtimeVersion data))
-  (when-let [data (lookup-entry config id :schedule)]
+  (when-some [data (lookup-entry config id :schedule)]
     (. builder schedule data))
-  (when-let [data (lookup-entry config id :start-canary-after-creation)]
+  (when-some [data (lookup-entry config id :start-canary-after-creation)]
     (. builder startCanaryAfterCreation data))
-  (when-let [data (lookup-entry config id :success-retention-period)]
+  (when-some [data (lookup-entry config id :success-retention-period)]
     (. builder successRetentionPeriod data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :visual-reference)]
+  (when-some [data (lookup-entry config id :visual-reference)]
     (. builder visualReference data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -442,17 +442,17 @@ __Create Form:__ ____[java.lang.String]___
 | `sourceLocationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-location-arn` |
 "
   [^CfnCanary$CodeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-key)]
+  (when-some [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
-  (when-let [data (lookup-entry config id :s3-object-version)]
+  (when-some [data (lookup-entry config id :s3-object-version)]
     (. builder s3ObjectVersion data))
-  (when-let [data (lookup-entry config id :script)]
+  (when-some [data (lookup-entry config id :script)]
     (. builder script data))
-  (when-let [data (lookup-entry config id :source-location-arn)]
+  (when-some [data (lookup-entry config id :source-location-arn)]
     (. builder sourceLocationArn data))
   (.build builder))
 
@@ -494,35 +494,35 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcConfig` | software.amazon.awscdk.services.synthetics.CfnCanary$VPCConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^CfnCanaryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :artifact-config)]
+  (when-some [data (lookup-entry config id :artifact-config)]
     (. builder artifactConfig data))
-  (when-let [data (lookup-entry config id :artifact-s3-location)]
+  (when-some [data (lookup-entry config id :artifact-s3-location)]
     (. builder artifactS3Location data))
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :delete-lambda-resources-on-canary-deletion)]
+  (when-some [data (lookup-entry config id :delete-lambda-resources-on-canary-deletion)]
     (. builder deleteLambdaResourcesOnCanaryDeletion data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :failure-retention-period)]
+  (when-some [data (lookup-entry config id :failure-retention-period)]
     (. builder failureRetentionPeriod data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :run-config)]
+  (when-some [data (lookup-entry config id :run-config)]
     (. builder runConfig data))
-  (when-let [data (lookup-entry config id :runtime-version)]
+  (when-some [data (lookup-entry config id :runtime-version)]
     (. builder runtimeVersion data))
-  (when-let [data (lookup-entry config id :schedule)]
+  (when-some [data (lookup-entry config id :schedule)]
     (. builder schedule data))
-  (when-let [data (lookup-entry config id :start-canary-after-creation)]
+  (when-some [data (lookup-entry config id :start-canary-after-creation)]
     (. builder startCanaryAfterCreation data))
-  (when-let [data (lookup-entry config id :success-retention-period)]
+  (when-some [data (lookup-entry config id :success-retention-period)]
     (. builder successRetentionPeriod data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :visual-reference)]
+  (when-some [data (lookup-entry config id :visual-reference)]
     (. builder visualReference data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -553,13 +553,13 @@ __Create Form:__ ____[java.lang.String]___
 | `timeoutInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-in-seconds` |
 "
   [^CfnCanary$RunConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :active-tracing)]
+  (when-some [data (lookup-entry config id :active-tracing)]
     (. builder activeTracing data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :memory-in-mb)]
+  (when-some [data (lookup-entry config id :memory-in-mb)]
     (. builder memoryInMb data))
-  (when-let [data (lookup-entry config id :timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
   (.build builder))
 
@@ -588,9 +588,9 @@ __Create Form:__ ____[java.lang.String]___
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 "
   [^CfnCanary$S3EncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-mode)]
+  (when-some [data (lookup-entry config id :encryption-mode)]
     (. builder encryptionMode data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
   (.build builder))
 
@@ -619,9 +619,9 @@ __Create Form:__ ____[java.lang.String]___
 | `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
 "
   [^CfnCanary$ScheduleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
   (.build builder))
 
@@ -650,9 +650,9 @@ __Create Form:__ ____[java.lang.String]___
 | `baseScreenshots` | java.util.List | [[cdk.support/lookup-entry]] | `:base-screenshots` |
 "
   [^CfnCanary$VisualReferenceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-canary-run-id)]
+  (when-some [data (lookup-entry config id :base-canary-run-id)]
     (. builder baseCanaryRunId data))
-  (when-let [data (lookup-entry config id :base-screenshots)]
+  (when-some [data (lookup-entry config id :base-screenshots)]
     (. builder baseScreenshots data))
   (.build builder))
 
@@ -682,11 +682,11 @@ __Create Form:__ ____[java.lang.String]___
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnCanary$VPCConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -716,11 +716,11 @@ __Create Form:__ ____[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -750,11 +750,11 @@ __Create Form:__ ____[java.lang.String]___
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-arns)]
+  (when-some [data (lookup-entry config id :resource-arns)]
     (. builder resourceArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -783,9 +783,9 @@ __Create Form:__ ____[java.lang.String]___
 | `s3Location` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:s3-location` |
 "
   [^CodeConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :inline-code)]
+  (when-some [data (lookup-entry config id :inline-code)]
     (. builder inlineCode data))
-  (when-let [data (lookup-entry config id :s3-location)]
+  (when-some [data (lookup-entry config id :s3-location)]
     (. builder s3Location data))
   (.build builder))
 
@@ -817,15 +817,15 @@ __Create Form:__ ____[java.lang.String]___
 | `weekDay` | java.lang.String | [[cdk.support/lookup-entry]] | `:week-day` |
 "
   [^CronOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :day)]
+  (when-some [data (lookup-entry config id :day)]
     (. builder day data))
-  (when-let [data (lookup-entry config id :hour)]
+  (when-some [data (lookup-entry config id :hour)]
     (. builder hour data))
-  (when-let [data (lookup-entry config id :minute)]
+  (when-some [data (lookup-entry config id :minute)]
     (. builder minute data))
-  (when-let [data (lookup-entry config id :month)]
+  (when-some [data (lookup-entry config id :month)]
     (. builder month data))
-  (when-let [data (lookup-entry config id :week-day)]
+  (when-some [data (lookup-entry config id :week-day)]
     (. builder weekDay data))
   (.build builder))
 
@@ -854,9 +854,9 @@ __Create Form:__ ____[java.lang.String]___
 | `handler` | java.lang.String | [[cdk.support/lookup-entry]] | `:handler` |
 "
   [^CustomTestOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :handler)]
+  (when-some [data (lookup-entry config id :handler)]
     (. builder handler data))
   (.build builder))
 

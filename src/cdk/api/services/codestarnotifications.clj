@@ -52,25 +52,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnNotificationRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :created-by)]
+  (when-some [data (lookup-entry config id :created-by)]
     (. builder createdBy data))
-  (when-let [data (lookup-entry config id :detail-type)]
+  (when-some [data (lookup-entry config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :event-type-id)]
+  (when-some [data (lookup-entry config id :event-type-id)]
     (. builder eventTypeId data))
-  (when-let [data (lookup-entry config id :event-type-ids)]
+  (when-some [data (lookup-entry config id :event-type-ids)]
     (. builder eventTypeIds data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-address)]
+  (when-some [data (lookup-entry config id :target-address)]
     (. builder targetAddress data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -107,25 +107,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^CfnNotificationRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :created-by)]
+  (when-some [data (lookup-entry config id :created-by)]
     (. builder createdBy data))
-  (when-let [data (lookup-entry config id :detail-type)]
+  (when-some [data (lookup-entry config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :event-type-id)]
+  (when-some [data (lookup-entry config id :event-type-id)]
     (. builder eventTypeId data))
-  (when-let [data (lookup-entry config id :event-type-ids)]
+  (when-some [data (lookup-entry config id :event-type-ids)]
     (. builder eventTypeIds data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource)]
+  (when-some [data (lookup-entry config id :resource)]
     (. builder resource data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-address)]
+  (when-some [data (lookup-entry config id :target-address)]
     (. builder targetAddress data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -154,9 +154,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 "
   [^CfnNotificationRule$TargetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-address)]
+  (when-some [data (lookup-entry config id :target-address)]
     (. builder targetAddress data))
-  (when-let [data (lookup-entry config id :target-type)]
+  (when-some [data (lookup-entry config id :target-type)]
     (. builder targetType data))
   (.build builder))
 
@@ -189,17 +189,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^NotificationRule$Builder builder id config]
-  (when-let [data (detail-type config id :detail-type)]
+  (when-some [data (detail-type config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :notification-rule-name)]
+  (when-some [data (lookup-entry config id :notification-rule-name)]
     (. builder notificationRuleName data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -229,11 +229,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |
 "
   [^NotificationRuleOptions$Builder builder id config]
-  (when-let [data (detail-type config id :detail-type)]
+  (when-some [data (detail-type config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :notification-rule-name)]
+  (when-some [data (lookup-entry config id :notification-rule-name)]
     (. builder notificationRuleName data))
   (.build builder))
 
@@ -266,17 +266,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 "
   [^NotificationRuleProps$Builder builder id config]
-  (when-let [data (detail-type config id :detail-type)]
+  (when-some [data (detail-type config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
-  (when-let [data (lookup-entry config id :notification-rule-name)]
+  (when-some [data (lookup-entry config id :notification-rule-name)]
     (. builder notificationRuleName data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :targets)]
+  (when-some [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
 
@@ -304,7 +304,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-arn` |
 "
   [^NotificationRuleSourceConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :source-arn)]
+  (when-some [data (lookup-entry config id :source-arn)]
     (. builder sourceArn data))
   (.build builder))
 
@@ -333,9 +333,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 "
   [^NotificationRuleTargetConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-address)]
+  (when-some [data (lookup-entry config id :target-address)]
     (. builder targetAddress data))
-  (when-let [data (lookup-entry config id :target-type)]
+  (when-some [data (lookup-entry config id :target-type)]
     (. builder targetType data))
   (.build builder))
 

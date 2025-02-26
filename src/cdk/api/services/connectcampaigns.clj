@@ -23,7 +23,7 @@
 | `dialingCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dialing-capacity` |
 "
   [^CfnCampaign$AgentlessDialerConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dialing-capacity)]
+  (when-some [data (lookup-entry config id :dialing-capacity)]
     (. builder dialingCapacity data))
   (.build builder))
 
@@ -52,9 +52,9 @@
 | `enableAnswerMachineDetection` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-answer-machine-detection` |
 "
   [^CfnCampaign$AnswerMachineDetectionConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :await-answer-machine-prompt)]
+  (when-some [data (lookup-entry config id :await-answer-machine-prompt)]
     (. builder awaitAnswerMachinePrompt data))
-  (when-let [data (lookup-entry config id :enable-answer-machine-detection)]
+  (when-some [data (lookup-entry config id :enable-answer-machine-detection)]
     (. builder enableAnswerMachineDetection data))
   (.build builder))
 
@@ -86,15 +86,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCampaign$Builder builder id config]
-  (when-let [data (lookup-entry config id :connect-instance-arn)]
+  (when-some [data (lookup-entry config id :connect-instance-arn)]
     (. builder connectInstanceArn data))
-  (when-let [data (lookup-entry config id :dialer-config)]
+  (when-some [data (lookup-entry config id :dialer-config)]
     (. builder dialerConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :outbound-call-config)]
+  (when-some [data (lookup-entry config id :outbound-call-config)]
     (. builder outboundCallConfig data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -124,11 +124,11 @@
 | `progressiveDialerConfig` | software.amazon.awscdk.services.connectcampaigns.CfnCampaign$ProgressiveDialerConfigProperty | [[cdk.support/lookup-entry]] | `:progressive-dialer-config` |
 "
   [^CfnCampaign$DialerConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :agentless-dialer-config)]
+  (when-some [data (lookup-entry config id :agentless-dialer-config)]
     (. builder agentlessDialerConfig data))
-  (when-let [data (lookup-entry config id :predictive-dialer-config)]
+  (when-some [data (lookup-entry config id :predictive-dialer-config)]
     (. builder predictiveDialerConfig data))
-  (when-let [data (lookup-entry config id :progressive-dialer-config)]
+  (when-some [data (lookup-entry config id :progressive-dialer-config)]
     (. builder progressiveDialerConfig data))
   (.build builder))
 
@@ -159,13 +159,13 @@
 | `connectSourcePhoneNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:connect-source-phone-number` |
 "
   [^CfnCampaign$OutboundCallConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :answer-machine-detection-config)]
+  (when-some [data (lookup-entry config id :answer-machine-detection-config)]
     (. builder answerMachineDetectionConfig data))
-  (when-let [data (lookup-entry config id :connect-contact-flow-arn)]
+  (when-some [data (lookup-entry config id :connect-contact-flow-arn)]
     (. builder connectContactFlowArn data))
-  (when-let [data (lookup-entry config id :connect-queue-arn)]
+  (when-some [data (lookup-entry config id :connect-queue-arn)]
     (. builder connectQueueArn data))
-  (when-let [data (lookup-entry config id :connect-source-phone-number)]
+  (when-some [data (lookup-entry config id :connect-source-phone-number)]
     (. builder connectSourcePhoneNumber data))
   (.build builder))
 
@@ -194,9 +194,9 @@
 | `dialingCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dialing-capacity` |
 "
   [^CfnCampaign$PredictiveDialerConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bandwidth-allocation)]
+  (when-some [data (lookup-entry config id :bandwidth-allocation)]
     (. builder bandwidthAllocation data))
-  (when-let [data (lookup-entry config id :dialing-capacity)]
+  (when-some [data (lookup-entry config id :dialing-capacity)]
     (. builder dialingCapacity data))
   (.build builder))
 
@@ -225,9 +225,9 @@
 | `dialingCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:dialing-capacity` |
 "
   [^CfnCampaign$ProgressiveDialerConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bandwidth-allocation)]
+  (when-some [data (lookup-entry config id :bandwidth-allocation)]
     (. builder bandwidthAllocation data))
-  (when-let [data (lookup-entry config id :dialing-capacity)]
+  (when-some [data (lookup-entry config id :dialing-capacity)]
     (. builder dialingCapacity data))
   (.build builder))
 
@@ -259,15 +259,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCampaignProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connect-instance-arn)]
+  (when-some [data (lookup-entry config id :connect-instance-arn)]
     (. builder connectInstanceArn data))
-  (when-let [data (lookup-entry config id :dialer-config)]
+  (when-some [data (lookup-entry config id :dialer-config)]
     (. builder dialerConfig data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :outbound-call-config)]
+  (when-some [data (lookup-entry config id :outbound-call-config)]
     (. builder outboundCallConfig data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

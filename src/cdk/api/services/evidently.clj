@@ -52,29 +52,29 @@
 | `treatments` | java.util.List | [[cdk.support/lookup-entry]] | `:treatments` |
 "
   [^CfnExperiment$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :metric-goals)]
+  (when-some [data (lookup-entry config id :metric-goals)]
     (. builder metricGoals data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :online-ab-config)]
+  (when-some [data (lookup-entry config id :online-ab-config)]
     (. builder onlineAbConfig data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :randomization-salt)]
+  (when-some [data (lookup-entry config id :randomization-salt)]
     (. builder randomizationSalt data))
-  (when-let [data (lookup-entry config id :remove-segment)]
+  (when-some [data (lookup-entry config id :remove-segment)]
     (. builder removeSegment data))
-  (when-let [data (lookup-entry config id :running-status)]
+  (when-some [data (lookup-entry config id :running-status)]
     (. builder runningStatus data))
-  (when-let [data (lookup-entry config id :sampling-rate)]
+  (when-some [data (lookup-entry config id :sampling-rate)]
     (. builder samplingRate data))
-  (when-let [data (lookup-entry config id :segment)]
+  (when-some [data (lookup-entry config id :segment)]
     (. builder segment data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :treatments)]
+  (when-some [data (lookup-entry config id :treatments)]
     (. builder treatments data))
   (.build builder))
 
@@ -107,17 +107,17 @@
 | `valueKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-key` |
 "
   [^CfnExperiment$MetricGoalObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :desired-change)]
+  (when-some [data (lookup-entry config id :desired-change)]
     (. builder desiredChange data))
-  (when-let [data (lookup-entry config id :entity-id-key)]
+  (when-some [data (lookup-entry config id :entity-id-key)]
     (. builder entityIdKey data))
-  (when-let [data (lookup-entry config id :event-pattern)]
+  (when-some [data (lookup-entry config id :event-pattern)]
     (. builder eventPattern data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :unit-label)]
+  (when-some [data (lookup-entry config id :unit-label)]
     (. builder unitLabel data))
-  (when-let [data (lookup-entry config id :value-key)]
+  (when-some [data (lookup-entry config id :value-key)]
     (. builder valueKey data))
   (.build builder))
 
@@ -146,9 +146,9 @@
 | `treatmentWeights` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:treatment-weights` |
 "
   [^CfnExperiment$OnlineAbConfigObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :control-treatment-name)]
+  (when-some [data (lookup-entry config id :control-treatment-name)]
     (. builder controlTreatmentName data))
-  (when-let [data (lookup-entry config id :treatment-weights)]
+  (when-some [data (lookup-entry config id :treatment-weights)]
     (. builder treatmentWeights data))
   (.build builder))
 
@@ -187,29 +187,29 @@
 | `treatments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:treatments` |
 "
   [^CfnExperimentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :metric-goals)]
+  (when-some [data (lookup-entry config id :metric-goals)]
     (. builder metricGoals data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :online-ab-config)]
+  (when-some [data (lookup-entry config id :online-ab-config)]
     (. builder onlineAbConfig data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :randomization-salt)]
+  (when-some [data (lookup-entry config id :randomization-salt)]
     (. builder randomizationSalt data))
-  (when-let [data (lookup-entry config id :remove-segment)]
+  (when-some [data (lookup-entry config id :remove-segment)]
     (. builder removeSegment data))
-  (when-let [data (lookup-entry config id :running-status)]
+  (when-some [data (lookup-entry config id :running-status)]
     (. builder runningStatus data))
-  (when-let [data (lookup-entry config id :sampling-rate)]
+  (when-some [data (lookup-entry config id :sampling-rate)]
     (. builder samplingRate data))
-  (when-let [data (lookup-entry config id :segment)]
+  (when-some [data (lookup-entry config id :segment)]
     (. builder segment data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :treatments)]
+  (when-some [data (lookup-entry config id :treatments)]
     (. builder treatments data))
   (.build builder))
 
@@ -240,13 +240,13 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnExperiment$RunningStatusObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :analysis-complete-time)]
+  (when-some [data (lookup-entry config id :analysis-complete-time)]
     (. builder analysisCompleteTime data))
-  (when-let [data (lookup-entry config id :desired-state)]
+  (when-some [data (lookup-entry config id :desired-state)]
     (. builder desiredState data))
-  (when-let [data (lookup-entry config id :reason)]
+  (when-some [data (lookup-entry config id :reason)]
     (. builder reason data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -277,13 +277,13 @@
 | `variation` | java.lang.String | [[cdk.support/lookup-entry]] | `:variation` |
 "
   [^CfnExperiment$TreatmentObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :feature)]
+  (when-some [data (lookup-entry config id :feature)]
     (. builder feature data))
-  (when-let [data (lookup-entry config id :treatment-name)]
+  (when-some [data (lookup-entry config id :treatment-name)]
     (. builder treatmentName data))
-  (when-let [data (lookup-entry config id :variation)]
+  (when-some [data (lookup-entry config id :variation)]
     (. builder variation data))
   (.build builder))
 
@@ -312,9 +312,9 @@
 | `treatment` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment` |
 "
   [^CfnExperiment$TreatmentToWeightProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :split-weight)]
+  (when-some [data (lookup-entry config id :split-weight)]
     (. builder splitWeight data))
-  (when-let [data (lookup-entry config id :treatment)]
+  (when-some [data (lookup-entry config id :treatment)]
     (. builder treatment data))
   (.build builder))
 
@@ -349,21 +349,21 @@
 | `variations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:variations` |
 "
   [^CfnFeature$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-variation)]
+  (when-some [data (lookup-entry config id :default-variation)]
     (. builder defaultVariation data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :entity-overrides)]
+  (when-some [data (lookup-entry config id :entity-overrides)]
     (. builder entityOverrides data))
-  (when-let [data (lookup-entry config id :evaluation-strategy)]
+  (when-some [data (lookup-entry config id :evaluation-strategy)]
     (. builder evaluationStrategy data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variations)]
+  (when-some [data (lookup-entry config id :variations)]
     (. builder variations data))
   (.build builder))
 
@@ -392,9 +392,9 @@
 | `variation` | java.lang.String | [[cdk.support/lookup-entry]] | `:variation` |
 "
   [^CfnFeature$EntityOverrideProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :entity-id)]
+  (when-some [data (lookup-entry config id :entity-id)]
     (. builder entityId data))
-  (when-let [data (lookup-entry config id :variation)]
+  (when-some [data (lookup-entry config id :variation)]
     (. builder variation data))
   (.build builder))
 
@@ -429,21 +429,21 @@
 | `variations` | java.util.List | [[cdk.support/lookup-entry]] | `:variations` |
 "
   [^CfnFeatureProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-variation)]
+  (when-some [data (lookup-entry config id :default-variation)]
     (. builder defaultVariation data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :entity-overrides)]
+  (when-some [data (lookup-entry config id :entity-overrides)]
     (. builder entityOverrides data))
-  (when-let [data (lookup-entry config id :evaluation-strategy)]
+  (when-some [data (lookup-entry config id :evaluation-strategy)]
     (. builder evaluationStrategy data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variations)]
+  (when-some [data (lookup-entry config id :variations)]
     (. builder variations data))
   (.build builder))
 
@@ -475,15 +475,15 @@
 | `variationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variation-name` |
 "
   [^CfnFeature$VariationObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :boolean-value)]
+  (when-some [data (lookup-entry config id :boolean-value)]
     (. builder booleanValue data))
-  (when-let [data (lookup-entry config id :double-value)]
+  (when-some [data (lookup-entry config id :double-value)]
     (. builder doubleValue data))
-  (when-let [data (lookup-entry config id :long-value)]
+  (when-some [data (lookup-entry config id :long-value)]
     (. builder longValue data))
-  (when-let [data (lookup-entry config id :string-value)]
+  (when-some [data (lookup-entry config id :string-value)]
     (. builder stringValue data))
-  (when-let [data (lookup-entry config id :variation-name)]
+  (when-some [data (lookup-entry config id :variation-name)]
     (. builder variationName data))
   (.build builder))
 
@@ -519,23 +519,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLaunch$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :execution-status)]
+  (when-some [data (lookup-entry config id :execution-status)]
     (. builder executionStatus data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :metric-monitors)]
+  (when-some [data (lookup-entry config id :metric-monitors)]
     (. builder metricMonitors data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :randomization-salt)]
+  (when-some [data (lookup-entry config id :randomization-salt)]
     (. builder randomizationSalt data))
-  (when-let [data (lookup-entry config id :scheduled-splits-config)]
+  (when-some [data (lookup-entry config id :scheduled-splits-config)]
     (. builder scheduledSplitsConfig data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -565,11 +565,11 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnLaunch$ExecutionStatusObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :desired-state)]
+  (when-some [data (lookup-entry config id :desired-state)]
     (. builder desiredState data))
-  (when-let [data (lookup-entry config id :reason)]
+  (when-some [data (lookup-entry config id :reason)]
     (. builder reason data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -598,9 +598,9 @@
 | `splitWeight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:split-weight` |
 "
   [^CfnLaunch$GroupToWeightProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :split-weight)]
+  (when-some [data (lookup-entry config id :split-weight)]
     (. builder splitWeight data))
   (.build builder))
 
@@ -631,13 +631,13 @@
 | `variation` | java.lang.String | [[cdk.support/lookup-entry]] | `:variation` |
 "
   [^CfnLaunch$LaunchGroupObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :feature)]
+  (when-some [data (lookup-entry config id :feature)]
     (. builder feature data))
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :variation)]
+  (when-some [data (lookup-entry config id :variation)]
     (. builder variation data))
   (.build builder))
 
@@ -669,15 +669,15 @@
 | `valueKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-key` |
 "
   [^CfnLaunch$MetricDefinitionObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :entity-id-key)]
+  (when-some [data (lookup-entry config id :entity-id-key)]
     (. builder entityIdKey data))
-  (when-let [data (lookup-entry config id :event-pattern)]
+  (when-some [data (lookup-entry config id :event-pattern)]
     (. builder eventPattern data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :unit-label)]
+  (when-some [data (lookup-entry config id :unit-label)]
     (. builder unitLabel data))
-  (when-let [data (lookup-entry config id :value-key)]
+  (when-some [data (lookup-entry config id :value-key)]
     (. builder valueKey data))
   (.build builder))
 
@@ -713,23 +713,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLaunchProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :execution-status)]
+  (when-some [data (lookup-entry config id :execution-status)]
     (. builder executionStatus data))
-  (when-let [data (lookup-entry config id :groups)]
+  (when-some [data (lookup-entry config id :groups)]
     (. builder groups data))
-  (when-let [data (lookup-entry config id :metric-monitors)]
+  (when-some [data (lookup-entry config id :metric-monitors)]
     (. builder metricMonitors data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :randomization-salt)]
+  (when-some [data (lookup-entry config id :randomization-salt)]
     (. builder randomizationSalt data))
-  (when-let [data (lookup-entry config id :scheduled-splits-config)]
+  (when-some [data (lookup-entry config id :scheduled-splits-config)]
     (. builder scheduledSplitsConfig data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -759,11 +759,11 @@
 | `weights` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weights` |
 "
   [^CfnLaunch$SegmentOverrideProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :evaluation-order)]
+  (when-some [data (lookup-entry config id :evaluation-order)]
     (. builder evaluationOrder data))
-  (when-let [data (lookup-entry config id :segment)]
+  (when-some [data (lookup-entry config id :segment)]
     (. builder segment data))
-  (when-let [data (lookup-entry config id :weights)]
+  (when-some [data (lookup-entry config id :weights)]
     (. builder weights data))
   (.build builder))
 
@@ -793,11 +793,11 @@
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
 "
   [^CfnLaunch$StepConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :group-weights)]
+  (when-some [data (lookup-entry config id :group-weights)]
     (. builder groupWeights data))
-  (when-let [data (lookup-entry config id :segment-overrides)]
+  (when-some [data (lookup-entry config id :segment-overrides)]
     (. builder segmentOverrides data))
-  (when-let [data (lookup-entry config id :start-time)]
+  (when-some [data (lookup-entry config id :start-time)]
     (. builder startTime data))
   (.build builder))
 
@@ -826,9 +826,9 @@
 | `environmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-id` |
 "
   [^CfnProject$AppConfigResourceObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-id)]
+  (when-some [data (lookup-entry config id :application-id)]
     (. builder applicationId data))
-  (when-let [data (lookup-entry config id :environment-id)]
+  (when-some [data (lookup-entry config id :environment-id)]
     (. builder environmentId data))
   (.build builder))
 
@@ -860,15 +860,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-config-resource)]
+  (when-some [data (lookup-entry config id :app-config-resource)]
     (. builder appConfigResource data))
-  (when-let [data (lookup-entry config id :data-delivery)]
+  (when-some [data (lookup-entry config id :data-delivery)]
     (. builder dataDelivery data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -897,9 +897,9 @@
 | `s3` | software.amazon.awscdk.services.evidently.CfnProject$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnProject$DataDeliveryObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
 
@@ -931,15 +931,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-config-resource)]
+  (when-some [data (lookup-entry config id :app-config-resource)]
     (. builder appConfigResource data))
-  (when-let [data (lookup-entry config id :data-delivery)]
+  (when-some [data (lookup-entry config id :data-delivery)]
     (. builder dataDelivery data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -968,9 +968,9 @@
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnProject$S3DestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -1001,13 +1001,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSegment$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1038,13 +1038,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSegmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

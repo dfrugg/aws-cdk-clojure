@@ -303,9 +303,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `headerValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:header-value` |
 "
   [^AddHeaderActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :header-name)]
+  (when-some [data (lookup-entry config id :header-name)]
     (. builder headerName data))
-  (when-let [data (lookup-entry config id :header-value)]
+  (when-some [data (lookup-entry config id :header-value)]
     (. builder headerValue data))
   (.build builder))
 
@@ -333,7 +333,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ips` | java.util.List | [[cdk.support/lookup-entry]] | `:ips` |
 "
   [^AllowListReceiptFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :ips)]
+  (when-some [data (lookup-entry config id :ips)]
     (. builder ips data))
   (.build builder))
 
@@ -361,7 +361,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ips` | java.util.List | [[cdk.support/lookup-entry]] | `:ips` |
 "
   [^AllowListReceiptFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :ips)]
+  (when-some [data (lookup-entry config id :ips)]
     (. builder ips data))
   (.build builder))
 
@@ -393,15 +393,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^BounceActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :sender)]
+  (when-some [data (lookup-entry config id :sender)]
     (. builder sender data))
-  (when-let [data (lookup-entry config id :smtp-reply-code)]
+  (when-some [data (lookup-entry config id :smtp-reply-code)]
     (. builder smtpReplyCode data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -431,11 +431,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `selector` | java.lang.String | [[cdk.support/lookup-entry]] | `:selector` |
 "
   [^ByoDkimOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :private-key)]
+  (when-some [data (lookup-entry config id :private-key)]
     (. builder privateKey data))
-  (when-let [data (lookup-entry config id :public-key)]
+  (when-some [data (lookup-entry config id :public-key)]
     (. builder publicKey data))
-  (when-let [data (lookup-entry config id :selector)]
+  (when-some [data (lookup-entry config id :selector)]
     (. builder selector data))
   (.build builder))
 
@@ -469,19 +469,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vdmOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vdm-options` |
 "
   [^CfnConfigurationSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-options)]
+  (when-some [data (lookup-entry config id :delivery-options)]
     (. builder deliveryOptions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :reputation-options)]
+  (when-some [data (lookup-entry config id :reputation-options)]
     (. builder reputationOptions data))
-  (when-let [data (lookup-entry config id :sending-options)]
+  (when-some [data (lookup-entry config id :sending-options)]
     (. builder sendingOptions data))
-  (when-let [data (lookup-entry config id :suppression-options)]
+  (when-some [data (lookup-entry config id :suppression-options)]
     (. builder suppressionOptions data))
-  (when-let [data (lookup-entry config id :tracking-options)]
+  (when-some [data (lookup-entry config id :tracking-options)]
     (. builder trackingOptions data))
-  (when-let [data (lookup-entry config id :vdm-options)]
+  (when-some [data (lookup-entry config id :vdm-options)]
     (. builder vdmOptions data))
   (.build builder))
 
@@ -509,7 +509,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `engagementMetrics` | java.lang.String | [[cdk.support/lookup-entry]] | `:engagement-metrics` |
 "
   [^CfnConfigurationSet$DashboardOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :engagement-metrics)]
+  (when-some [data (lookup-entry config id :engagement-metrics)]
     (. builder engagementMetrics data))
   (.build builder))
 
@@ -538,9 +538,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tls-policy` |
 "
   [^CfnConfigurationSet$DeliveryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sending-pool-name)]
+  (when-some [data (lookup-entry config id :sending-pool-name)]
     (. builder sendingPoolName data))
-  (when-let [data (lookup-entry config id :tls-policy)]
+  (when-some [data (lookup-entry config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -569,9 +569,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `eventDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-destination` |
 "
   [^CfnConfigurationSetEventDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-name)]
+  (when-some [data (lookup-entry config id :configuration-set-name)]
     (. builder configurationSetName data))
-  (when-let [data (lookup-entry config id :event-destination)]
+  (when-some [data (lookup-entry config id :event-destination)]
     (. builder eventDestination data))
   (.build builder))
 
@@ -599,7 +599,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dimensionConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:dimension-configurations` |
 "
   [^CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimension-configurations)]
+  (when-some [data (lookup-entry config id :dimension-configurations)]
     (. builder dimensionConfigurations data))
   (.build builder))
 
@@ -629,11 +629,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dimensionValueSource` | java.lang.String | [[cdk.support/lookup-entry]] | `:dimension-value-source` |
 "
   [^CfnConfigurationSetEventDestination$DimensionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-dimension-value)]
+  (when-some [data (lookup-entry config id :default-dimension-value)]
     (. builder defaultDimensionValue data))
-  (when-let [data (lookup-entry config id :dimension-name)]
+  (when-some [data (lookup-entry config id :dimension-name)]
     (. builder dimensionName data))
-  (when-let [data (lookup-entry config id :dimension-value-source)]
+  (when-some [data (lookup-entry config id :dimension-value-source)]
     (. builder dimensionValueSource data))
   (.build builder))
 
@@ -666,17 +666,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `snsDestination` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sns-destination` |
 "
   [^CfnConfigurationSetEventDestination$EventDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-destination)]
+  (when-some [data (lookup-entry config id :cloud-watch-destination)]
     (. builder cloudWatchDestination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :kinesis-firehose-destination)]
+  (when-some [data (lookup-entry config id :kinesis-firehose-destination)]
     (. builder kinesisFirehoseDestination data))
-  (when-let [data (lookup-entry config id :matching-event-types)]
+  (when-some [data (lookup-entry config id :matching-event-types)]
     (. builder matchingEventTypes data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sns-destination)]
+  (when-some [data (lookup-entry config id :sns-destination)]
     (. builder snsDestination data))
   (.build builder))
 
@@ -705,9 +705,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `iamRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam-role-arn` |
 "
   [^CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-stream-arn)]
+  (when-some [data (lookup-entry config id :delivery-stream-arn)]
     (. builder deliveryStreamArn data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
   (.build builder))
 
@@ -736,9 +736,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `eventDestination` | software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination$EventDestinationProperty | [[cdk.support/lookup-entry]] | `:event-destination` |
 "
   [^CfnConfigurationSetEventDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-name)]
+  (when-some [data (lookup-entry config id :configuration-set-name)]
     (. builder configurationSetName data))
-  (when-let [data (lookup-entry config id :event-destination)]
+  (when-some [data (lookup-entry config id :event-destination)]
     (. builder eventDestination data))
   (.build builder))
 
@@ -766,7 +766,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -794,7 +794,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `optimizedSharedDelivery` | java.lang.String | [[cdk.support/lookup-entry]] | `:optimized-shared-delivery` |
 "
   [^CfnConfigurationSet$GuardianOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :optimized-shared-delivery)]
+  (when-some [data (lookup-entry config id :optimized-shared-delivery)]
     (. builder optimizedSharedDelivery data))
   (.build builder))
 
@@ -828,19 +828,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vdmOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$VdmOptionsProperty | [[cdk.support/lookup-entry]] | `:vdm-options` |
 "
   [^CfnConfigurationSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-options)]
+  (when-some [data (lookup-entry config id :delivery-options)]
     (. builder deliveryOptions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :reputation-options)]
+  (when-some [data (lookup-entry config id :reputation-options)]
     (. builder reputationOptions data))
-  (when-let [data (lookup-entry config id :sending-options)]
+  (when-some [data (lookup-entry config id :sending-options)]
     (. builder sendingOptions data))
-  (when-let [data (lookup-entry config id :suppression-options)]
+  (when-some [data (lookup-entry config id :suppression-options)]
     (. builder suppressionOptions data))
-  (when-let [data (lookup-entry config id :tracking-options)]
+  (when-some [data (lookup-entry config id :tracking-options)]
     (. builder trackingOptions data))
-  (when-let [data (lookup-entry config id :vdm-options)]
+  (when-some [data (lookup-entry config id :vdm-options)]
     (. builder vdmOptions data))
   (.build builder))
 
@@ -868,7 +868,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `reputationMetricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reputation-metrics-enabled` |
 "
   [^CfnConfigurationSet$ReputationOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :reputation-metrics-enabled)]
+  (when-some [data (lookup-entry config id :reputation-metrics-enabled)]
     (. builder reputationMetricsEnabled data))
   (.build builder))
 
@@ -896,7 +896,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sendingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sending-enabled` |
 "
   [^CfnConfigurationSet$SendingOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sending-enabled)]
+  (when-some [data (lookup-entry config id :sending-enabled)]
     (. builder sendingEnabled data))
   (.build builder))
 
@@ -924,7 +924,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `suppressedReasons` | java.util.List | [[cdk.support/lookup-entry]] | `:suppressed-reasons` |
 "
   [^CfnConfigurationSet$SuppressionOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :suppressed-reasons)]
+  (when-some [data (lookup-entry config id :suppressed-reasons)]
     (. builder suppressedReasons data))
   (.build builder))
 
@@ -952,7 +952,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `customRedirectDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-redirect-domain` |
 "
   [^CfnConfigurationSet$TrackingOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-redirect-domain)]
+  (when-some [data (lookup-entry config id :custom-redirect-domain)]
     (. builder customRedirectDomain data))
   (.build builder))
 
@@ -981,9 +981,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `guardianOptions` | software.amazon.awscdk.services.ses.CfnConfigurationSet$GuardianOptionsProperty | [[cdk.support/lookup-entry]] | `:guardian-options` |
 "
   [^CfnConfigurationSet$VdmOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dashboard-options)]
+  (when-some [data (lookup-entry config id :dashboard-options)]
     (. builder dashboardOptions data))
-  (when-let [data (lookup-entry config id :guardian-options)]
+  (when-some [data (lookup-entry config id :guardian-options)]
     (. builder guardianOptions data))
   (.build builder))
 
@@ -1014,13 +1014,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^CfnContactList$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-list-name)]
+  (when-some [data (lookup-entry config id :contact-list-name)]
     (. builder contactListName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :topics)]
+  (when-some [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
 
@@ -1051,13 +1051,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^CfnContactListProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-list-name)]
+  (when-some [data (lookup-entry config id :contact-list-name)]
     (. builder contactListName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :topics)]
+  (when-some [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
 
@@ -1088,13 +1088,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |
 "
   [^CfnContactList$TopicProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-subscription-status)]
+  (when-some [data (lookup-entry config id :default-subscription-status)]
     (. builder defaultSubscriptionStatus data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :topic-name)]
+  (when-some [data (lookup-entry config id :topic-name)]
     (. builder topicName data))
   (.build builder))
 
@@ -1123,9 +1123,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:scaling-mode` |
 "
   [^CfnDedicatedIpPool$Builder builder id config]
-  (when-let [data (lookup-entry config id :pool-name)]
+  (when-some [data (lookup-entry config id :pool-name)]
     (. builder poolName data))
-  (when-let [data (lookup-entry config id :scaling-mode)]
+  (when-some [data (lookup-entry config id :scaling-mode)]
     (. builder scalingMode data))
   (.build builder))
 
@@ -1154,9 +1154,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:scaling-mode` |
 "
   [^CfnDedicatedIpPoolProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :pool-name)]
+  (when-some [data (lookup-entry config id :pool-name)]
     (. builder poolName data))
-  (when-let [data (lookup-entry config id :scaling-mode)]
+  (when-some [data (lookup-entry config id :scaling-mode)]
     (. builder scalingMode data))
   (.build builder))
 
@@ -1189,17 +1189,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mailFromAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
 "
   [^CfnEmailIdentity$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-attributes)]
+  (when-some [data (lookup-entry config id :configuration-set-attributes)]
     (. builder configurationSetAttributes data))
-  (when-let [data (lookup-entry config id :dkim-attributes)]
+  (when-some [data (lookup-entry config id :dkim-attributes)]
     (. builder dkimAttributes data))
-  (when-let [data (lookup-entry config id :dkim-signing-attributes)]
+  (when-some [data (lookup-entry config id :dkim-signing-attributes)]
     (. builder dkimSigningAttributes data))
-  (when-let [data (lookup-entry config id :email-identity)]
+  (when-some [data (lookup-entry config id :email-identity)]
     (. builder emailIdentity data))
-  (when-let [data (lookup-entry config id :feedback-attributes)]
+  (when-some [data (lookup-entry config id :feedback-attributes)]
     (. builder feedbackAttributes data))
-  (when-let [data (lookup-entry config id :mail-from-attributes)]
+  (when-some [data (lookup-entry config id :mail-from-attributes)]
     (. builder mailFromAttributes data))
   (.build builder))
 
@@ -1227,7 +1227,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `configurationSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-set-name` |
 "
   [^CfnEmailIdentity$ConfigurationSetAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-name)]
+  (when-some [data (lookup-entry config id :configuration-set-name)]
     (. builder configurationSetName data))
   (.build builder))
 
@@ -1255,7 +1255,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `signingEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:signing-enabled` |
 "
   [^CfnEmailIdentity$DkimAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :signing-enabled)]
+  (when-some [data (lookup-entry config id :signing-enabled)]
     (. builder signingEnabled data))
   (.build builder))
 
@@ -1285,11 +1285,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `nextSigningKeyLength` | java.lang.String | [[cdk.support/lookup-entry]] | `:next-signing-key-length` |
 "
   [^CfnEmailIdentity$DkimSigningAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-signing-private-key)]
+  (when-some [data (lookup-entry config id :domain-signing-private-key)]
     (. builder domainSigningPrivateKey data))
-  (when-let [data (lookup-entry config id :domain-signing-selector)]
+  (when-some [data (lookup-entry config id :domain-signing-selector)]
     (. builder domainSigningSelector data))
-  (when-let [data (lookup-entry config id :next-signing-key-length)]
+  (when-some [data (lookup-entry config id :next-signing-key-length)]
     (. builder nextSigningKeyLength data))
   (.build builder))
 
@@ -1317,7 +1317,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `emailForwardingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:email-forwarding-enabled` |
 "
   [^CfnEmailIdentity$FeedbackAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :email-forwarding-enabled)]
+  (when-some [data (lookup-entry config id :email-forwarding-enabled)]
     (. builder emailForwardingEnabled data))
   (.build builder))
 
@@ -1346,9 +1346,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mailFromDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:mail-from-domain` |
 "
   [^CfnEmailIdentity$MailFromAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :behavior-on-mx-failure)]
+  (when-some [data (lookup-entry config id :behavior-on-mx-failure)]
     (. builder behaviorOnMxFailure data))
-  (when-let [data (lookup-entry config id :mail-from-domain)]
+  (when-some [data (lookup-entry config id :mail-from-domain)]
     (. builder mailFromDomain data))
   (.build builder))
 
@@ -1381,17 +1381,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mailFromAttributes` | software.amazon.awscdk.services.ses.CfnEmailIdentity$MailFromAttributesProperty | [[cdk.support/lookup-entry]] | `:mail-from-attributes` |
 "
   [^CfnEmailIdentityProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-attributes)]
+  (when-some [data (lookup-entry config id :configuration-set-attributes)]
     (. builder configurationSetAttributes data))
-  (when-let [data (lookup-entry config id :dkim-attributes)]
+  (when-some [data (lookup-entry config id :dkim-attributes)]
     (. builder dkimAttributes data))
-  (when-let [data (lookup-entry config id :dkim-signing-attributes)]
+  (when-some [data (lookup-entry config id :dkim-signing-attributes)]
     (. builder dkimSigningAttributes data))
-  (when-let [data (lookup-entry config id :email-identity)]
+  (when-some [data (lookup-entry config id :email-identity)]
     (. builder emailIdentity data))
-  (when-let [data (lookup-entry config id :feedback-attributes)]
+  (when-some [data (lookup-entry config id :feedback-attributes)]
     (. builder feedbackAttributes data))
-  (when-let [data (lookup-entry config id :mail-from-attributes)]
+  (when-some [data (lookup-entry config id :mail-from-attributes)]
     (. builder mailFromAttributes data))
   (.build builder))
 
@@ -1419,7 +1419,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `filter` | software.amazon.awscdk.services.ses.CfnReceiptFilter$FilterProperty | [[cdk.support/lookup-entry]] | `:filter` |
 "
   [^CfnReceiptFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
   (.build builder))
 
@@ -1448,9 +1448,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnReceiptFilter$FilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip-filter)]
+  (when-some [data (lookup-entry config id :ip-filter)]
     (. builder ipFilter data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1479,9 +1479,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
 "
   [^CfnReceiptFilter$IpFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cidr)]
+  (when-some [data (lookup-entry config id :cidr)]
     (. builder cidr data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
   (.build builder))
 
@@ -1509,7 +1509,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `filter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:filter` |
 "
   [^CfnReceiptFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
   (.build builder))
 
@@ -1543,19 +1543,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `workmailAction` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:workmail-action` |
 "
   [^CfnReceiptRule$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-header-action)]
+  (when-some [data (lookup-entry config id :add-header-action)]
     (. builder addHeaderAction data))
-  (when-let [data (lookup-entry config id :bounce-action)]
+  (when-some [data (lookup-entry config id :bounce-action)]
     (. builder bounceAction data))
-  (when-let [data (lookup-entry config id :lambda-action)]
+  (when-some [data (lookup-entry config id :lambda-action)]
     (. builder lambdaAction data))
-  (when-let [data (lookup-entry config id :s3-action)]
+  (when-some [data (lookup-entry config id :s3-action)]
     (. builder s3Action data))
-  (when-let [data (lookup-entry config id :sns-action)]
+  (when-some [data (lookup-entry config id :sns-action)]
     (. builder snsAction data))
-  (when-let [data (lookup-entry config id :stop-action)]
+  (when-some [data (lookup-entry config id :stop-action)]
     (. builder stopAction data))
-  (when-let [data (lookup-entry config id :workmail-action)]
+  (when-some [data (lookup-entry config id :workmail-action)]
     (. builder workmailAction data))
   (.build builder))
 
@@ -1584,9 +1584,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `headerValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:header-value` |
 "
   [^CfnReceiptRule$AddHeaderActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :header-name)]
+  (when-some [data (lookup-entry config id :header-name)]
     (. builder headerName data))
-  (when-let [data (lookup-entry config id :header-value)]
+  (when-some [data (lookup-entry config id :header-value)]
     (. builder headerValue data))
   (.build builder))
 
@@ -1618,15 +1618,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnReceiptRule$BounceActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :sender)]
+  (when-some [data (lookup-entry config id :sender)]
     (. builder sender data))
-  (when-let [data (lookup-entry config id :smtp-reply-code)]
+  (when-some [data (lookup-entry config id :smtp-reply-code)]
     (. builder smtpReplyCode data))
-  (when-let [data (lookup-entry config id :status-code)]
+  (when-some [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -1656,11 +1656,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-set-name` |
 "
   [^CfnReceiptRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :after)]
+  (when-some [data (lookup-entry config id :after)]
     (. builder after data))
-  (when-let [data (lookup-entry config id :rule)]
+  (when-some [data (lookup-entry config id :rule)]
     (. builder rule data))
-  (when-let [data (lookup-entry config id :rule-set-name)]
+  (when-some [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
   (.build builder))
 
@@ -1690,11 +1690,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnReceiptRule$LambdaActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :invocation-type)]
+  (when-some [data (lookup-entry config id :invocation-type)]
     (. builder invocationType data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -1724,11 +1724,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-set-name` |
 "
   [^CfnReceiptRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :after)]
+  (when-some [data (lookup-entry config id :after)]
     (. builder after data))
-  (when-let [data (lookup-entry config id :rule)]
+  (when-some [data (lookup-entry config id :rule)]
     (. builder rule data))
-  (when-let [data (lookup-entry config id :rule-set-name)]
+  (when-some [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
   (.build builder))
 
@@ -1761,17 +1761,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tls-policy` |
 "
   [^CfnReceiptRule$RuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recipients)]
+  (when-some [data (lookup-entry config id :recipients)]
     (. builder recipients data))
-  (when-let [data (lookup-entry config id :scan-enabled)]
+  (when-some [data (lookup-entry config id :scan-enabled)]
     (. builder scanEnabled data))
-  (when-let [data (lookup-entry config id :tls-policy)]
+  (when-some [data (lookup-entry config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -1802,13 +1802,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnReceiptRule$S3ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :object-key-prefix)]
+  (when-some [data (lookup-entry config id :object-key-prefix)]
     (. builder objectKeyPrefix data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -1836,7 +1836,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-set-name` |
 "
   [^CfnReceiptRuleSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :rule-set-name)]
+  (when-some [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
   (.build builder))
 
@@ -1864,7 +1864,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ruleSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-set-name` |
 "
   [^CfnReceiptRuleSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :rule-set-name)]
+  (when-some [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
   (.build builder))
 
@@ -1893,9 +1893,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnReceiptRule$SNSActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encoding)]
+  (when-some [data (lookup-entry config id :encoding)]
     (. builder encoding data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -1924,9 +1924,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnReceiptRule$StopActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -1955,9 +1955,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnReceiptRule$WorkmailActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :organization-arn)]
+  (when-some [data (lookup-entry config id :organization-arn)]
     (. builder organizationArn data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -1985,7 +1985,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `template` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template` |
 "
   [^CfnTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :template)]
+  (when-some [data (lookup-entry config id :template)]
     (. builder template data))
   (.build builder))
 
@@ -2013,7 +2013,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `template` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template` |
 "
   [^CfnTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :template)]
+  (when-some [data (lookup-entry config id :template)]
     (. builder template data))
   (.build builder))
 
@@ -2044,13 +2044,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `textPart` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-part` |
 "
   [^CfnTemplate$TemplateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :html-part)]
+  (when-some [data (lookup-entry config id :html-part)]
     (. builder htmlPart data))
-  (when-let [data (lookup-entry config id :subject-part)]
+  (when-some [data (lookup-entry config id :subject-part)]
     (. builder subjectPart data))
-  (when-let [data (lookup-entry config id :template-name)]
+  (when-some [data (lookup-entry config id :template-name)]
     (. builder templateName data))
-  (when-let [data (lookup-entry config id :text-part)]
+  (when-some [data (lookup-entry config id :text-part)]
     (. builder textPart data))
   (.build builder))
 
@@ -2079,9 +2079,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `guardianAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:guardian-attributes` |
 "
   [^CfnVdmAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :dashboard-attributes)]
+  (when-some [data (lookup-entry config id :dashboard-attributes)]
     (. builder dashboardAttributes data))
-  (when-let [data (lookup-entry config id :guardian-attributes)]
+  (when-some [data (lookup-entry config id :guardian-attributes)]
     (. builder guardianAttributes data))
   (.build builder))
 
@@ -2109,7 +2109,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `engagementMetrics` | java.lang.String | [[cdk.support/lookup-entry]] | `:engagement-metrics` |
 "
   [^CfnVdmAttributes$DashboardAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :engagement-metrics)]
+  (when-some [data (lookup-entry config id :engagement-metrics)]
     (. builder engagementMetrics data))
   (.build builder))
 
@@ -2137,7 +2137,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `optimizedSharedDelivery` | java.lang.String | [[cdk.support/lookup-entry]] | `:optimized-shared-delivery` |
 "
   [^CfnVdmAttributes$GuardianAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :optimized-shared-delivery)]
+  (when-some [data (lookup-entry config id :optimized-shared-delivery)]
     (. builder optimizedSharedDelivery data))
   (.build builder))
 
@@ -2166,9 +2166,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `guardianAttributes` | software.amazon.awscdk.services.ses.CfnVdmAttributes$GuardianAttributesProperty | [[cdk.support/lookup-entry]] | `:guardian-attributes` |
 "
   [^CfnVdmAttributesProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dashboard-attributes)]
+  (when-some [data (lookup-entry config id :dashboard-attributes)]
     (. builder dashboardAttributes data))
-  (when-let [data (lookup-entry config id :guardian-attributes)]
+  (when-some [data (lookup-entry config id :guardian-attributes)]
     (. builder guardianAttributes data))
   (.build builder))
 
@@ -2198,11 +2198,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `source` | software.amazon.awscdk.services.ses.CloudWatchDimensionSource | [[cdk.api.services.ses/cloud-watch-dimension-source]] | `:source` |
 "
   [^CloudWatchDimension$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (cloud-watch-dimension-source config id :source)]
+  (when-some [data (cloud-watch-dimension-source config id :source)]
     (. builder source data))
   (.build builder))
 
@@ -2236,19 +2236,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | software.amazon.awscdk.services.ses.ConfigurationSetTlsPolicy | [[cdk.api.services.ses/configuration-set-tls-policy]] | `:tls-policy` |
 "
   [^ConfigurationSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-name)]
+  (when-some [data (lookup-entry config id :configuration-set-name)]
     (. builder configurationSetName data))
-  (when-let [data (lookup-entry config id :custom-tracking-redirect-domain)]
+  (when-some [data (lookup-entry config id :custom-tracking-redirect-domain)]
     (. builder customTrackingRedirectDomain data))
-  (when-let [data (lookup-entry config id :dedicated-ip-pool)]
+  (when-some [data (lookup-entry config id :dedicated-ip-pool)]
     (. builder dedicatedIpPool data))
-  (when-let [data (lookup-entry config id :reputation-metrics)]
+  (when-some [data (lookup-entry config id :reputation-metrics)]
     (. builder reputationMetrics data))
-  (when-let [data (lookup-entry config id :sending-enabled)]
+  (when-some [data (lookup-entry config id :sending-enabled)]
     (. builder sendingEnabled data))
-  (when-let [data (suppression-reasons config id :suppression-reasons)]
+  (when-some [data (suppression-reasons config id :suppression-reasons)]
     (. builder suppressionReasons data))
-  (when-let [data (configuration-set-tls-policy config id :tls-policy)]
+  (when-some [data (configuration-set-tls-policy config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -2280,15 +2280,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^ConfigurationSetEventDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set)]
+  (when-some [data (lookup-entry config id :configuration-set)]
     (. builder configurationSet data))
-  (when-let [data (lookup-entry config id :configuration-set-event-destination-name)]
+  (when-some [data (lookup-entry config id :configuration-set-event-destination-name)]
     (. builder configurationSetEventDestinationName data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
 
@@ -2319,13 +2319,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^ConfigurationSetEventDestinationOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-event-destination-name)]
+  (when-some [data (lookup-entry config id :configuration-set-event-destination-name)]
     (. builder configurationSetEventDestinationName data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
 
@@ -2357,15 +2357,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^ConfigurationSetEventDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set)]
+  (when-some [data (lookup-entry config id :configuration-set)]
     (. builder configurationSet data))
-  (when-let [data (lookup-entry config id :configuration-set-event-destination-name)]
+  (when-some [data (lookup-entry config id :configuration-set-event-destination-name)]
     (. builder configurationSetEventDestinationName data))
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
 
@@ -2399,19 +2399,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | software.amazon.awscdk.services.ses.ConfigurationSetTlsPolicy | [[cdk.api.services.ses/configuration-set-tls-policy]] | `:tls-policy` |
 "
   [^ConfigurationSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set-name)]
+  (when-some [data (lookup-entry config id :configuration-set-name)]
     (. builder configurationSetName data))
-  (when-let [data (lookup-entry config id :custom-tracking-redirect-domain)]
+  (when-some [data (lookup-entry config id :custom-tracking-redirect-domain)]
     (. builder customTrackingRedirectDomain data))
-  (when-let [data (lookup-entry config id :dedicated-ip-pool)]
+  (when-some [data (lookup-entry config id :dedicated-ip-pool)]
     (. builder dedicatedIpPool data))
-  (when-let [data (lookup-entry config id :reputation-metrics)]
+  (when-some [data (lookup-entry config id :reputation-metrics)]
     (. builder reputationMetrics data))
-  (when-let [data (lookup-entry config id :sending-enabled)]
+  (when-some [data (lookup-entry config id :sending-enabled)]
     (. builder sendingEnabled data))
-  (when-let [data (suppression-reasons config id :suppression-reasons)]
+  (when-some [data (suppression-reasons config id :suppression-reasons)]
     (. builder suppressionReasons data))
-  (when-let [data (configuration-set-tls-policy config id :tls-policy)]
+  (when-some [data (configuration-set-tls-policy config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -2440,9 +2440,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingMode` | software.amazon.awscdk.services.ses.ScalingMode | [[cdk.api.services.ses/scaling-mode]] | `:scaling-mode` |
 "
   [^DedicatedIpPool$Builder builder id config]
-  (when-let [data (lookup-entry config id :dedicated-ip-pool-name)]
+  (when-some [data (lookup-entry config id :dedicated-ip-pool-name)]
     (. builder dedicatedIpPoolName data))
-  (when-let [data (scaling-mode config id :scaling-mode)]
+  (when-some [data (scaling-mode config id :scaling-mode)]
     (. builder scalingMode data))
   (.build builder))
 
@@ -2471,9 +2471,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingMode` | software.amazon.awscdk.services.ses.ScalingMode | [[cdk.api.services.ses/scaling-mode]] | `:scaling-mode` |
 "
   [^DedicatedIpPoolProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dedicated-ip-pool-name)]
+  (when-some [data (lookup-entry config id :dedicated-ip-pool-name)]
     (. builder dedicatedIpPoolName data))
-  (when-let [data (scaling-mode config id :scaling-mode)]
+  (when-some [data (scaling-mode config id :scaling-mode)]
     (. builder scalingMode data))
   (.build builder))
 
@@ -2503,11 +2503,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `nextSigningKeyLength` | software.amazon.awscdk.services.ses.EasyDkimSigningKeyLength | [[cdk.api.services.ses/easy-dkim-signing-key-length]] | `:next-signing-key-length` |
 "
   [^DkimIdentityConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-signing-private-key)]
+  (when-some [data (lookup-entry config id :domain-signing-private-key)]
     (. builder domainSigningPrivateKey data))
-  (when-let [data (lookup-entry config id :domain-signing-selector)]
+  (when-some [data (lookup-entry config id :domain-signing-selector)]
     (. builder domainSigningSelector data))
-  (when-let [data (easy-dkim-signing-key-length config id :next-signing-key-length)]
+  (when-some [data (easy-dkim-signing-key-length config id :next-signing-key-length)]
     (. builder nextSigningKeyLength data))
   (.build builder))
 
@@ -2536,9 +2536,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^DkimRecord$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -2573,21 +2573,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | software.amazon.awscdk.services.ses.TlsPolicy | [[cdk.api.services.ses/tls-policy]] | `:tls-policy` |
 "
   [^DropSpamReceiptRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :after)]
+  (when-some [data (lookup-entry config id :after)]
     (. builder after data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :receipt-rule-name)]
+  (when-some [data (lookup-entry config id :receipt-rule-name)]
     (. builder receiptRuleName data))
-  (when-let [data (lookup-entry config id :recipients)]
+  (when-some [data (lookup-entry config id :recipients)]
     (. builder recipients data))
-  (when-let [data (lookup-entry config id :rule-set)]
+  (when-some [data (lookup-entry config id :rule-set)]
     (. builder ruleSet data))
-  (when-let [data (lookup-entry config id :scan-enabled)]
+  (when-some [data (lookup-entry config id :scan-enabled)]
     (. builder scanEnabled data))
-  (when-let [data (tls-policy config id :tls-policy)]
+  (when-some [data (tls-policy config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -2622,21 +2622,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | software.amazon.awscdk.services.ses.TlsPolicy | [[cdk.api.services.ses/tls-policy]] | `:tls-policy` |
 "
   [^DropSpamReceiptRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :after)]
+  (when-some [data (lookup-entry config id :after)]
     (. builder after data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :receipt-rule-name)]
+  (when-some [data (lookup-entry config id :receipt-rule-name)]
     (. builder receiptRuleName data))
-  (when-let [data (lookup-entry config id :recipients)]
+  (when-some [data (lookup-entry config id :recipients)]
     (. builder recipients data))
-  (when-let [data (lookup-entry config id :rule-set)]
+  (when-some [data (lookup-entry config id :rule-set)]
     (. builder ruleSet data))
-  (when-let [data (lookup-entry config id :scan-enabled)]
+  (when-some [data (lookup-entry config id :scan-enabled)]
     (. builder scanEnabled data))
-  (when-let [data (tls-policy config id :tls-policy)]
+  (when-some [data (tls-policy config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -2670,19 +2670,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mailFromDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:mail-from-domain` |
 "
   [^EmailIdentity$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set)]
+  (when-some [data (lookup-entry config id :configuration-set)]
     (. builder configurationSet data))
-  (when-let [data (lookup-entry config id :dkim-identity)]
+  (when-some [data (lookup-entry config id :dkim-identity)]
     (. builder dkimIdentity data))
-  (when-let [data (lookup-entry config id :dkim-signing)]
+  (when-some [data (lookup-entry config id :dkim-signing)]
     (. builder dkimSigning data))
-  (when-let [data (lookup-entry config id :feedback-forwarding)]
+  (when-some [data (lookup-entry config id :feedback-forwarding)]
     (. builder feedbackForwarding data))
-  (when-let [data (lookup-entry config id :identity)]
+  (when-some [data (lookup-entry config id :identity)]
     (. builder identity data))
-  (when-let [data (mail-from-behavior-on-mx-failure config id :mail-from-behavior-on-mx-failure)]
+  (when-some [data (mail-from-behavior-on-mx-failure config id :mail-from-behavior-on-mx-failure)]
     (. builder mailFromBehaviorOnMxFailure data))
-  (when-let [data (lookup-entry config id :mail-from-domain)]
+  (when-some [data (lookup-entry config id :mail-from-domain)]
     (. builder mailFromDomain data))
   (.build builder))
 
@@ -2716,19 +2716,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mailFromDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:mail-from-domain` |
 "
   [^EmailIdentityProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-set)]
+  (when-some [data (lookup-entry config id :configuration-set)]
     (. builder configurationSet data))
-  (when-let [data (lookup-entry config id :dkim-identity)]
+  (when-some [data (lookup-entry config id :dkim-identity)]
     (. builder dkimIdentity data))
-  (when-let [data (lookup-entry config id :dkim-signing)]
+  (when-some [data (lookup-entry config id :dkim-signing)]
     (. builder dkimSigning data))
-  (when-let [data (lookup-entry config id :feedback-forwarding)]
+  (when-some [data (lookup-entry config id :feedback-forwarding)]
     (. builder feedbackForwarding data))
-  (when-let [data (lookup-entry config id :identity)]
+  (when-some [data (lookup-entry config id :identity)]
     (. builder identity data))
-  (when-let [data (mail-from-behavior-on-mx-failure config id :mail-from-behavior-on-mx-failure)]
+  (when-some [data (mail-from-behavior-on-mx-failure config id :mail-from-behavior-on-mx-failure)]
     (. builder mailFromBehaviorOnMxFailure data))
-  (when-let [data (lookup-entry config id :mail-from-domain)]
+  (when-some [data (lookup-entry config id :mail-from-domain)]
     (. builder mailFromDomain data))
   (.build builder))
 
@@ -2758,11 +2758,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^LambdaActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :invocation-type)]
+  (when-some [data (lookup-entry config id :invocation-type)]
     (. builder invocationType data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -2792,11 +2792,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `receiptFilterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:receipt-filter-name` |
 "
   [^ReceiptFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip)]
+  (when-some [data (lookup-entry config id :ip)]
     (. builder ip data))
-  (when-let [data (receipt-filter-policy config id :policy)]
+  (when-some [data (receipt-filter-policy config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :receipt-filter-name)]
+  (when-some [data (lookup-entry config id :receipt-filter-name)]
     (. builder receiptFilterName data))
   (.build builder))
 
@@ -2826,11 +2826,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `receiptFilterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:receipt-filter-name` |
 "
   [^ReceiptFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip)]
+  (when-some [data (lookup-entry config id :ip)]
     (. builder ip data))
-  (when-let [data (receipt-filter-policy config id :policy)]
+  (when-some [data (receipt-filter-policy config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :receipt-filter-name)]
+  (when-some [data (lookup-entry config id :receipt-filter-name)]
     (. builder receiptFilterName data))
   (.build builder))
 
@@ -2864,19 +2864,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `workmailAction` | software.amazon.awscdk.services.ses.WorkmailActionConfig | [[cdk.support/lookup-entry]] | `:workmail-action` |
 "
   [^ReceiptRuleActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :add-header-action)]
+  (when-some [data (lookup-entry config id :add-header-action)]
     (. builder addHeaderAction data))
-  (when-let [data (lookup-entry config id :bounce-action)]
+  (when-some [data (lookup-entry config id :bounce-action)]
     (. builder bounceAction data))
-  (when-let [data (lookup-entry config id :lambda-action)]
+  (when-some [data (lookup-entry config id :lambda-action)]
     (. builder lambdaAction data))
-  (when-let [data (lookup-entry config id :s3-action)]
+  (when-some [data (lookup-entry config id :s3-action)]
     (. builder s3Action data))
-  (when-let [data (lookup-entry config id :sns-action)]
+  (when-some [data (lookup-entry config id :sns-action)]
     (. builder snsAction data))
-  (when-let [data (lookup-entry config id :stop-action)]
+  (when-some [data (lookup-entry config id :stop-action)]
     (. builder stopAction data))
-  (when-let [data (lookup-entry config id :workmail-action)]
+  (when-some [data (lookup-entry config id :workmail-action)]
     (. builder workmailAction data))
   (.build builder))
 
@@ -2911,21 +2911,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | software.amazon.awscdk.services.ses.TlsPolicy | [[cdk.api.services.ses/tls-policy]] | `:tls-policy` |
 "
   [^ReceiptRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :after)]
+  (when-some [data (lookup-entry config id :after)]
     (. builder after data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :receipt-rule-name)]
+  (when-some [data (lookup-entry config id :receipt-rule-name)]
     (. builder receiptRuleName data))
-  (when-let [data (lookup-entry config id :recipients)]
+  (when-some [data (lookup-entry config id :recipients)]
     (. builder recipients data))
-  (when-let [data (lookup-entry config id :rule-set)]
+  (when-some [data (lookup-entry config id :rule-set)]
     (. builder ruleSet data))
-  (when-let [data (lookup-entry config id :scan-enabled)]
+  (when-some [data (lookup-entry config id :scan-enabled)]
     (. builder scanEnabled data))
-  (when-let [data (tls-policy config id :tls-policy)]
+  (when-some [data (tls-policy config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -2959,19 +2959,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | software.amazon.awscdk.services.ses.TlsPolicy | [[cdk.api.services.ses/tls-policy]] | `:tls-policy` |
 "
   [^ReceiptRuleOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :after)]
+  (when-some [data (lookup-entry config id :after)]
     (. builder after data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :receipt-rule-name)]
+  (when-some [data (lookup-entry config id :receipt-rule-name)]
     (. builder receiptRuleName data))
-  (when-let [data (lookup-entry config id :recipients)]
+  (when-some [data (lookup-entry config id :recipients)]
     (. builder recipients data))
-  (when-let [data (lookup-entry config id :scan-enabled)]
+  (when-some [data (lookup-entry config id :scan-enabled)]
     (. builder scanEnabled data))
-  (when-let [data (tls-policy config id :tls-policy)]
+  (when-some [data (tls-policy config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -3006,21 +3006,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsPolicy` | software.amazon.awscdk.services.ses.TlsPolicy | [[cdk.api.services.ses/tls-policy]] | `:tls-policy` |
 "
   [^ReceiptRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :after)]
+  (when-some [data (lookup-entry config id :after)]
     (. builder after data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :receipt-rule-name)]
+  (when-some [data (lookup-entry config id :receipt-rule-name)]
     (. builder receiptRuleName data))
-  (when-let [data (lookup-entry config id :recipients)]
+  (when-some [data (lookup-entry config id :recipients)]
     (. builder recipients data))
-  (when-let [data (lookup-entry config id :rule-set)]
+  (when-some [data (lookup-entry config id :rule-set)]
     (. builder ruleSet data))
-  (when-let [data (lookup-entry config id :scan-enabled)]
+  (when-some [data (lookup-entry config id :scan-enabled)]
     (. builder scanEnabled data))
-  (when-let [data (tls-policy config id :tls-policy)]
+  (when-some [data (tls-policy config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
 
@@ -3050,11 +3050,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^ReceiptRuleSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :drop-spam)]
+  (when-some [data (lookup-entry config id :drop-spam)]
     (. builder dropSpam data))
-  (when-let [data (lookup-entry config id :receipt-rule-set-name)]
+  (when-some [data (lookup-entry config id :receipt-rule-set-name)]
     (. builder receiptRuleSetName data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
 
@@ -3084,11 +3084,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^ReceiptRuleSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :drop-spam)]
+  (when-some [data (lookup-entry config id :drop-spam)]
     (. builder dropSpam data))
-  (when-let [data (lookup-entry config id :receipt-rule-set-name)]
+  (when-some [data (lookup-entry config id :receipt-rule-set-name)]
     (. builder receiptRuleSetName data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
 
@@ -3119,13 +3119,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^S3ActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :object-key-prefix)]
+  (when-some [data (lookup-entry config id :object-key-prefix)]
     (. builder objectKeyPrefix data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -3154,9 +3154,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^SNSActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :encoding)]
+  (when-some [data (lookup-entry config id :encoding)]
     (. builder encoding data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -3185,9 +3185,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^StopActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -3216,9 +3216,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `optimizedSharedDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:optimized-shared-delivery` |
 "
   [^VdmAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :engagement-metrics)]
+  (when-some [data (lookup-entry config id :engagement-metrics)]
     (. builder engagementMetrics data))
-  (when-let [data (lookup-entry config id :optimized-shared-delivery)]
+  (when-some [data (lookup-entry config id :optimized-shared-delivery)]
     (. builder optimizedSharedDelivery data))
   (.build builder))
 
@@ -3247,9 +3247,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `optimizedSharedDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:optimized-shared-delivery` |
 "
   [^VdmAttributesProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :engagement-metrics)]
+  (when-some [data (lookup-entry config id :engagement-metrics)]
     (. builder engagementMetrics data))
-  (when-let [data (lookup-entry config id :optimized-shared-delivery)]
+  (when-some [data (lookup-entry config id :optimized-shared-delivery)]
     (. builder optimizedSharedDelivery data))
   (.build builder))
 
@@ -3278,9 +3278,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^WorkmailActionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :organization-arn)]
+  (when-some [data (lookup-entry config id :organization-arn)]
     (. builder organizationArn data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 

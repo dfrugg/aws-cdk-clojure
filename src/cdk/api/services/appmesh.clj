@@ -455,9 +455,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeAccessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AccessLogProperty | [[cdk.support/lookup-entry]] | `:virtual-node-access-log` |
 "
   [^AccessLogConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-gateway-access-log)]
+  (when-some [data (lookup-entry config id :virtual-gateway-access-log)]
     (. builder virtualGatewayAccessLog data))
-  (when-let [data (lookup-entry config id :virtual-node-access-log)]
+  (when-some [data (lookup-entry config id :virtual-node-access-log)]
     (. builder virtualNodeAccessLog data))
   (.build builder))
 
@@ -485,7 +485,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualServiceBackend` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$BackendProperty | [[cdk.support/lookup-entry]] | `:virtual-service-backend` |
 "
   [^BackendConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-service-backend)]
+  (when-some [data (lookup-entry config id :virtual-service-backend)]
     (. builder virtualServiceBackend data))
   (.build builder))
 
@@ -513,7 +513,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsClientPolicy` | software.amazon.awscdk.services.appmesh.TlsClientPolicy | [[cdk.support/lookup-entry]] | `:tls-client-policy` |
 "
   [^BackendDefaults$Builder builder id config]
-  (when-let [data (lookup-entry config id :tls-client-policy)]
+  (when-some [data (lookup-entry config id :tls-client-policy)]
     (. builder tlsClientPolicy data))
   (.build builder))
 
@@ -546,17 +546,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
   [^CfnGatewayRoute$Builder builder id config]
-  (when-let [data (lookup-entry config id :gateway-route-name)]
+  (when-some [data (lookup-entry config id :gateway-route-name)]
     (. builder gatewayRouteName data))
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+  (when-some [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
 
@@ -585,9 +585,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
-  (when-let [data (lookup-entry config id :suffix)]
+  (when-some [data (lookup-entry config id :suffix)]
     (. builder suffix data))
   (.build builder))
 
@@ -615,7 +615,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `defaultTargetHostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-target-hostname` |
 "
   [^CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-target-hostname)]
+  (when-some [data (lookup-entry config id :default-target-hostname)]
     (. builder defaultTargetHostname data))
   (.build builder))
 
@@ -647,15 +647,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnGatewayRoute$GatewayRouteMetadataMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :range)]
+  (when-some [data (lookup-entry config id :range)]
     (. builder range data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
-  (when-let [data (lookup-entry config id :suffix)]
+  (when-some [data (lookup-entry config id :suffix)]
     (. builder suffix data))
   (.build builder))
 
@@ -684,9 +684,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `start` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start` |
 "
   [^CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
   (.build builder))
 
@@ -717,13 +717,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^CfnGatewayRoute$GatewayRouteSpecProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc-route)]
+  (when-some [data (lookup-entry config id :grpc-route)]
     (. builder grpcRoute data))
-  (when-let [data (lookup-entry config id :http2-route)]
+  (when-some [data (lookup-entry config id :http2-route)]
     (. builder http2Route data))
-  (when-let [data (lookup-entry config id :http-route)]
+  (when-some [data (lookup-entry config id :http-route)]
     (. builder httpRoute data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -752,9 +752,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualService` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteVirtualServiceProperty | [[cdk.support/lookup-entry]] | `:virtual-service` |
 "
   [^CfnGatewayRoute$GatewayRouteTargetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :virtual-service)]
+  (when-some [data (lookup-entry config id :virtual-service)]
     (. builder virtualService data))
   (.build builder))
 
@@ -782,7 +782,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
 "
   [^CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-service-name)]
+  (when-some [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
   (.build builder))
 
@@ -811,9 +811,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `target` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteTargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnGatewayRoute$GrpcGatewayRouteActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rewrite)]
+  (when-some [data (lookup-entry config id :rewrite)]
     (. builder rewrite data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -844,13 +844,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^CfnGatewayRoute$GrpcGatewayRouteMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hostname)]
+  (when-some [data (lookup-entry config id :hostname)]
     (. builder hostname data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -880,11 +880,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :invert)]
+  (when-some [data (lookup-entry config id :invert)]
     (. builder invert data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -913,9 +913,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
 "
   [^CfnGatewayRoute$GrpcGatewayRouteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
   (.build builder))
 
@@ -943,7 +943,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `hostname` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hostname` |
 "
   [^CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hostname)]
+  (when-some [data (lookup-entry config id :hostname)]
     (. builder hostname data))
   (.build builder))
 
@@ -972,9 +972,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `target` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteTargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rewrite)]
+  (when-some [data (lookup-entry config id :rewrite)]
     (. builder rewrite data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -1006,15 +1006,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :range)]
+  (when-some [data (lookup-entry config id :range)]
     (. builder range data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
-  (when-let [data (lookup-entry config id :suffix)]
+  (when-some [data (lookup-entry config id :suffix)]
     (. builder suffix data))
   (.build builder))
 
@@ -1044,11 +1044,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :invert)]
+  (when-some [data (lookup-entry config id :invert)]
     (. builder invert data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1082,19 +1082,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :hostname)]
+  (when-some [data (lookup-entry config id :hostname)]
     (. builder hostname data))
-  (when-let [data (lookup-entry config id :method)]
+  (when-some [data (lookup-entry config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
   (.build builder))
 
@@ -1122,7 +1122,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
 "
   [^CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
 
@@ -1151,9 +1151,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-prefix)]
+  (when-some [data (lookup-entry config id :default-prefix)]
     (. builder defaultPrefix data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1182,9 +1182,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `match` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
   (.build builder))
 
@@ -1214,11 +1214,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `prefix` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnGatewayRoute$HttpGatewayRouteRewriteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hostname)]
+  (when-some [data (lookup-entry config id :hostname)]
     (. builder hostname data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -1247,9 +1247,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 "
   [^CfnGatewayRoute$HttpPathMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
   (.build builder))
 
@@ -1277,7 +1277,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
 "
   [^CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
 
@@ -1310,17 +1310,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
   [^CfnGatewayRouteProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :gateway-route-name)]
+  (when-some [data (lookup-entry config id :gateway-route-name)]
     (. builder gatewayRouteName data))
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+  (when-some [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
 
@@ -1349,9 +1349,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnGatewayRoute$QueryParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1381,11 +1381,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMesh$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1413,7 +1413,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnMesh$EgressFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1441,7 +1441,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ipPreference` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-preference` |
 "
   [^CfnMesh$MeshServiceDiscoveryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip-preference)]
+  (when-some [data (lookup-entry config id :ip-preference)]
     (. builder ipPreference data))
   (.build builder))
 
@@ -1470,9 +1470,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceDiscovery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-discovery` |
 "
   [^CfnMesh$MeshSpecProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :egress-filter)]
+  (when-some [data (lookup-entry config id :egress-filter)]
     (. builder egressFilter data))
-  (when-let [data (lookup-entry config id :service-discovery)]
+  (when-some [data (lookup-entry config id :service-discovery)]
     (. builder serviceDiscovery data))
   (.build builder))
 
@@ -1502,11 +1502,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMeshProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1539,17 +1539,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^CfnRoute$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :route-name)]
+  (when-some [data (lookup-entry config id :route-name)]
     (. builder routeName data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -1578,9 +1578,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnRoute$DurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1612,15 +1612,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |
 "
   [^CfnRoute$GrpcRetryPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc-retry-events)]
+  (when-some [data (lookup-entry config id :grpc-retry-events)]
     (. builder grpcRetryEvents data))
-  (when-let [data (lookup-entry config id :http-retry-events)]
+  (when-some [data (lookup-entry config id :http-retry-events)]
     (. builder httpRetryEvents data))
-  (when-let [data (lookup-entry config id :max-retries)]
+  (when-some [data (lookup-entry config id :max-retries)]
     (. builder maxRetries data))
-  (when-let [data (lookup-entry config id :per-retry-timeout)]
+  (when-some [data (lookup-entry config id :per-retry-timeout)]
     (. builder perRetryTimeout data))
-  (when-let [data (lookup-entry config id :tcp-retry-events)]
+  (when-some [data (lookup-entry config id :tcp-retry-events)]
     (. builder tcpRetryEvents data))
   (.build builder))
 
@@ -1648,7 +1648,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^CfnRoute$GrpcRouteActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :weighted-targets)]
+  (when-some [data (lookup-entry config id :weighted-targets)]
     (. builder weightedTargets data))
   (.build builder))
 
@@ -1679,13 +1679,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^CfnRoute$GrpcRouteMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :method-name)]
+  (when-some [data (lookup-entry config id :method-name)]
     (. builder methodName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -1717,15 +1717,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnRoute$GrpcRouteMetadataMatchMethodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :range)]
+  (when-some [data (lookup-entry config id :range)]
     (. builder range data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
-  (when-let [data (lookup-entry config id :suffix)]
+  (when-some [data (lookup-entry config id :suffix)]
     (. builder suffix data))
   (.build builder))
 
@@ -1755,11 +1755,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRoute$GrpcRouteMetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :invert)]
+  (when-some [data (lookup-entry config id :invert)]
     (. builder invert data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1790,13 +1790,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnRoute$GrpcRouteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :retry-policy)]
+  (when-some [data (lookup-entry config id :retry-policy)]
     (. builder retryPolicy data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1825,9 +1825,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `perRequest` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^CfnRoute$GrpcTimeoutProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
-  (when-let [data (lookup-entry config id :per-request)]
+  (when-some [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
 
@@ -1859,15 +1859,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
 "
   [^CfnRoute$HeaderMatchMethodProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :range)]
+  (when-some [data (lookup-entry config id :range)]
     (. builder range data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
-  (when-let [data (lookup-entry config id :suffix)]
+  (when-some [data (lookup-entry config id :suffix)]
     (. builder suffix data))
   (.build builder))
 
@@ -1896,9 +1896,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 "
   [^CfnRoute$HttpPathMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
   (.build builder))
 
@@ -1926,7 +1926,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
 "
   [^CfnRoute$HttpQueryParameterMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
 
@@ -1957,13 +1957,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |
 "
   [^CfnRoute$HttpRetryPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :http-retry-events)]
+  (when-some [data (lookup-entry config id :http-retry-events)]
     (. builder httpRetryEvents data))
-  (when-let [data (lookup-entry config id :max-retries)]
+  (when-some [data (lookup-entry config id :max-retries)]
     (. builder maxRetries data))
-  (when-let [data (lookup-entry config id :per-retry-timeout)]
+  (when-some [data (lookup-entry config id :per-retry-timeout)]
     (. builder perRetryTimeout data))
-  (when-let [data (lookup-entry config id :tcp-retry-events)]
+  (when-some [data (lookup-entry config id :tcp-retry-events)]
     (. builder tcpRetryEvents data))
   (.build builder))
 
@@ -1991,7 +1991,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^CfnRoute$HttpRouteActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :weighted-targets)]
+  (when-some [data (lookup-entry config id :weighted-targets)]
     (. builder weightedTargets data))
   (.build builder))
 
@@ -2021,11 +2021,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRoute$HttpRouteHeaderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :invert)]
+  (when-some [data (lookup-entry config id :invert)]
     (. builder invert data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -2059,19 +2059,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |
 "
   [^CfnRoute$HttpRouteMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :method)]
+  (when-some [data (lookup-entry config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :scheme)]
+  (when-some [data (lookup-entry config id :scheme)]
     (. builder scheme data))
   (.build builder))
 
@@ -2102,13 +2102,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnRoute$HttpRouteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :retry-policy)]
+  (when-some [data (lookup-entry config id :retry-policy)]
     (. builder retryPolicy data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2137,9 +2137,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `perRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^CfnRoute$HttpTimeoutProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
-  (when-let [data (lookup-entry config id :per-request)]
+  (when-some [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
 
@@ -2168,9 +2168,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `start` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start` |
 "
   [^CfnRoute$MatchRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :end)]
+  (when-some [data (lookup-entry config id :end)]
     (. builder end data))
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
   (.build builder))
 
@@ -2203,17 +2203,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^CfnRouteProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :route-name)]
+  (when-some [data (lookup-entry config id :route-name)]
     (. builder routeName data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -2242,9 +2242,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRoute$QueryParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -2276,15 +2276,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tcpRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp-route` |
 "
   [^CfnRoute$RouteSpecProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc-route)]
+  (when-some [data (lookup-entry config id :grpc-route)]
     (. builder grpcRoute data))
-  (when-let [data (lookup-entry config id :http2-route)]
+  (when-some [data (lookup-entry config id :http2-route)]
     (. builder http2Route data))
-  (when-let [data (lookup-entry config id :http-route)]
+  (when-some [data (lookup-entry config id :http-route)]
     (. builder httpRoute data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :tcp-route)]
+  (when-some [data (lookup-entry config id :tcp-route)]
     (. builder tcpRoute data))
   (.build builder))
 
@@ -2312,7 +2312,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^CfnRoute$TcpRouteActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :weighted-targets)]
+  (when-some [data (lookup-entry config id :weighted-targets)]
     (. builder weightedTargets data))
   (.build builder))
 
@@ -2340,7 +2340,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 "
   [^CfnRoute$TcpRouteMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
 
@@ -2370,11 +2370,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CfnRoute$TcpRouteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2402,7 +2402,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
 "
   [^CfnRoute$TcpTimeoutProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
   (.build builder))
 
@@ -2432,11 +2432,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnRoute$WeightedTargetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :virtual-node)]
+  (when-some [data (lookup-entry config id :virtual-node)]
     (. builder virtualNode data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -2468,15 +2468,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
   [^CfnVirtualGateway$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+  (when-some [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
 
@@ -2505,9 +2505,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnVirtualGateway$JsonFormatRefProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -2536,9 +2536,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
 "
   [^CfnVirtualGateway$LoggingFormatProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :json)]
+  (when-some [data (lookup-entry config id :json)]
     (. builder json data))
-  (when-let [data (lookup-entry config id :text)]
+  (when-some [data (lookup-entry config id :text)]
     (. builder text data))
   (.build builder))
 
@@ -2570,15 +2570,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
   [^CfnVirtualGatewayProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+  (when-some [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
 
@@ -2606,7 +2606,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `exact` | java.util.List | [[cdk.support/lookup-entry]] | `:exact` |
 "
   [^CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
 
@@ -2634,7 +2634,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
 "
   [^CfnVirtualGateway$SubjectAlternativeNamesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
   (.build builder))
 
@@ -2662,7 +2662,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `file` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayFileAccessLogProperty | [[cdk.support/lookup-entry]] | `:file` |
 "
   [^CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
   (.build builder))
 
@@ -2690,7 +2690,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |
 "
   [^CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-policy)]
+  (when-some [data (lookup-entry config id :client-policy)]
     (. builder clientPolicy data))
   (.build builder))
 
@@ -2718,7 +2718,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -2749,13 +2749,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :enforce)]
+  (when-some [data (lookup-entry config id :enforce)]
     (. builder enforce data))
-  (when-let [data (lookup-entry config id :ports)]
+  (when-some [data (lookup-entry config id :ports)]
     (. builder ports data))
-  (when-let [data (lookup-entry config id :validation)]
+  (when-some [data (lookup-entry config id :validation)]
     (. builder validation data))
   (.build builder))
 
@@ -2784,9 +2784,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :sds)]
+  (when-some [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
 
@@ -2816,11 +2816,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `http2` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:http2` |
 "
   [^CfnVirtualGateway$VirtualGatewayConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc)]
+  (when-some [data (lookup-entry config id :grpc)]
     (. builder grpc data))
-  (when-let [data (lookup-entry config id :http)]
+  (when-some [data (lookup-entry config id :http)]
     (. builder http data))
-  (when-let [data (lookup-entry config id :http2)]
+  (when-some [data (lookup-entry config id :http2)]
     (. builder http2 data))
   (.build builder))
 
@@ -2849,9 +2849,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -2879,7 +2879,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
 "
   [^CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-requests)]
+  (when-some [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
 
@@ -2913,19 +2913,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
 "
   [^CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :healthy-threshold)]
+  (when-some [data (lookup-entry config id :healthy-threshold)]
     (. builder healthyThreshold data))
-  (when-let [data (lookup-entry config id :interval-millis)]
+  (when-some [data (lookup-entry config id :interval-millis)]
     (. builder intervalMillis data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :timeout-millis)]
+  (when-some [data (lookup-entry config id :timeout-millis)]
     (. builder timeoutMillis data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
 
@@ -2954,9 +2954,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |
 "
   [^CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-connections)]
+  (when-some [data (lookup-entry config id :max-connections)]
     (. builder maxConnections data))
-  (when-let [data (lookup-entry config id :max-pending-requests)]
+  (when-some [data (lookup-entry config id :max-pending-requests)]
     (. builder maxPendingRequests data))
   (.build builder))
 
@@ -2984,7 +2984,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
 "
   [^CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-requests)]
+  (when-some [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
 
@@ -3015,13 +3015,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :port-mapping)]
+  (when-some [data (lookup-entry config id :port-mapping)]
     (. builder portMapping data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -3049,7 +3049,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
   (.build builder))
 
@@ -3079,11 +3079,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acm)]
+  (when-some [data (lookup-entry config id :acm)]
     (. builder acm data))
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :sds)]
+  (when-some [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
 
@@ -3112,9 +3112,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-chain)]
+  (when-some [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
-  (when-let [data (lookup-entry config id :private-key)]
+  (when-some [data (lookup-entry config id :private-key)]
     (. builder privateKey data))
   (.build builder))
 
@@ -3144,11 +3144,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :validation)]
+  (when-some [data (lookup-entry config id :validation)]
     (. builder validation data))
   (.build builder))
 
@@ -3176,7 +3176,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret-name)]
+  (when-some [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
   (.build builder))
 
@@ -3205,9 +3205,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :trust)]
+  (when-some [data (lookup-entry config id :trust)]
     (. builder trust data))
   (.build builder))
 
@@ -3236,9 +3236,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :sds)]
+  (when-some [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
 
@@ -3266,7 +3266,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `accessLog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log` |
 "
   [^CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log)]
+  (when-some [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
   (.build builder))
 
@@ -3295,9 +3295,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnVirtualGateway$VirtualGatewayPortMappingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -3327,11 +3327,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
 "
   [^CfnVirtualGateway$VirtualGatewaySpecProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :backend-defaults)]
+  (when-some [data (lookup-entry config id :backend-defaults)]
     (. builder backendDefaults data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
   (.build builder))
 
@@ -3359,7 +3359,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateAuthorityArns` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-authority-arns` |
 "
   [^CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-authority-arns)]
+  (when-some [data (lookup-entry config id :certificate-authority-arns)]
     (. builder certificateAuthorityArns data))
   (.build builder))
 
@@ -3387,7 +3387,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateChain` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-chain` |
 "
   [^CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-chain)]
+  (when-some [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
   (.build builder))
 
@@ -3416,9 +3416,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :trust)]
+  (when-some [data (lookup-entry config id :trust)]
     (. builder trust data))
   (.build builder))
 
@@ -3446,7 +3446,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
 "
   [^CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret-name)]
+  (when-some [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
   (.build builder))
 
@@ -3476,11 +3476,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acm)]
+  (when-some [data (lookup-entry config id :acm)]
     (. builder acm data))
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :sds)]
+  (when-some [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
 
@@ -3508,7 +3508,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `file` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$FileAccessLogProperty | [[cdk.support/lookup-entry]] | `:file` |
 "
   [^CfnVirtualNode$AccessLogProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
   (.build builder))
 
@@ -3537,9 +3537,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnVirtualNode$AwsCloudMapInstanceAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -3570,13 +3570,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :ip-preference)]
+  (when-some [data (lookup-entry config id :ip-preference)]
     (. builder ipPreference data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -3604,7 +3604,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |
 "
   [^CfnVirtualNode$BackendDefaultsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-policy)]
+  (when-some [data (lookup-entry config id :client-policy)]
     (. builder clientPolicy data))
   (.build builder))
 
@@ -3632,7 +3632,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualService` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-service` |
 "
   [^CfnVirtualNode$BackendProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-service)]
+  (when-some [data (lookup-entry config id :virtual-service)]
     (. builder virtualService data))
   (.build builder))
 
@@ -3664,15 +3664,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
 "
   [^CfnVirtualNode$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-node-name)]
+  (when-some [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
 
@@ -3700,7 +3700,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnVirtualNode$ClientPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -3731,13 +3731,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^CfnVirtualNode$ClientPolicyTlsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :enforce)]
+  (when-some [data (lookup-entry config id :enforce)]
     (. builder enforce data))
-  (when-let [data (lookup-entry config id :ports)]
+  (when-some [data (lookup-entry config id :ports)]
     (. builder ports data))
-  (when-let [data (lookup-entry config id :validation)]
+  (when-some [data (lookup-entry config id :validation)]
     (. builder validation data))
   (.build builder))
 
@@ -3766,9 +3766,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualNode$ClientTlsCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :sds)]
+  (when-some [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
 
@@ -3798,11 +3798,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `responseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:response-type` |
 "
   [^CfnVirtualNode$DnsServiceDiscoveryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hostname)]
+  (when-some [data (lookup-entry config id :hostname)]
     (. builder hostname data))
-  (when-let [data (lookup-entry config id :ip-preference)]
+  (when-some [data (lookup-entry config id :ip-preference)]
     (. builder ipPreference data))
-  (when-let [data (lookup-entry config id :response-type)]
+  (when-some [data (lookup-entry config id :response-type)]
     (. builder responseType data))
   (.build builder))
 
@@ -3831,9 +3831,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnVirtualNode$DurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -3862,9 +3862,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^CfnVirtualNode$FileAccessLogProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -3893,9 +3893,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `perRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^CfnVirtualNode$GrpcTimeoutProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
-  (when-let [data (lookup-entry config id :per-request)]
+  (when-some [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
 
@@ -3929,19 +3929,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
 "
   [^CfnVirtualNode$HealthCheckProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :healthy-threshold)]
+  (when-some [data (lookup-entry config id :healthy-threshold)]
     (. builder healthyThreshold data))
-  (when-let [data (lookup-entry config id :interval-millis)]
+  (when-some [data (lookup-entry config id :interval-millis)]
     (. builder intervalMillis data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :timeout-millis)]
+  (when-some [data (lookup-entry config id :timeout-millis)]
     (. builder timeoutMillis data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
 
@@ -3970,9 +3970,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `perRequest` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^CfnVirtualNode$HttpTimeoutProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
-  (when-let [data (lookup-entry config id :per-request)]
+  (when-some [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
 
@@ -4001,9 +4001,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnVirtualNode$JsonFormatRefProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -4036,17 +4036,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^CfnVirtualNode$ListenerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :outlier-detection)]
+  (when-some [data (lookup-entry config id :outlier-detection)]
     (. builder outlierDetection data))
-  (when-let [data (lookup-entry config id :port-mapping)]
+  (when-some [data (lookup-entry config id :port-mapping)]
     (. builder portMapping data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -4077,13 +4077,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tcp` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TcpTimeoutProperty | [[cdk.support/lookup-entry]] | `:tcp` |
 "
   [^CfnVirtualNode$ListenerTimeoutProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc)]
+  (when-some [data (lookup-entry config id :grpc)]
     (. builder grpc data))
-  (when-let [data (lookup-entry config id :http)]
+  (when-some [data (lookup-entry config id :http)]
     (. builder http data))
-  (when-let [data (lookup-entry config id :http2)]
+  (when-some [data (lookup-entry config id :http2)]
     (. builder http2 data))
-  (when-let [data (lookup-entry config id :tcp)]
+  (when-some [data (lookup-entry config id :tcp)]
     (. builder tcp data))
   (.build builder))
 
@@ -4111,7 +4111,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 "
   [^CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
   (.build builder))
 
@@ -4141,11 +4141,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualNode$ListenerTlsCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acm)]
+  (when-some [data (lookup-entry config id :acm)]
     (. builder acm data))
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :sds)]
+  (when-some [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
 
@@ -4174,9 +4174,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 "
   [^CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-chain)]
+  (when-some [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
-  (when-let [data (lookup-entry config id :private-key)]
+  (when-some [data (lookup-entry config id :private-key)]
     (. builder privateKey data))
   (.build builder))
 
@@ -4206,11 +4206,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^CfnVirtualNode$ListenerTlsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :validation)]
+  (when-some [data (lookup-entry config id :validation)]
     (. builder validation data))
   (.build builder))
 
@@ -4238,7 +4238,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
 "
   [^CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret-name)]
+  (when-some [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
   (.build builder))
 
@@ -4267,9 +4267,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trust` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^CfnVirtualNode$ListenerTlsValidationContextProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :trust)]
+  (when-some [data (lookup-entry config id :trust)]
     (. builder trust data))
   (.build builder))
 
@@ -4298,9 +4298,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :sds)]
+  (when-some [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
 
@@ -4329,9 +4329,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
 "
   [^CfnVirtualNode$LoggingFormatProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :json)]
+  (when-some [data (lookup-entry config id :json)]
     (. builder json data))
-  (when-let [data (lookup-entry config id :text)]
+  (when-some [data (lookup-entry config id :text)]
     (. builder text data))
   (.build builder))
 
@@ -4359,7 +4359,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `accessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AccessLogProperty | [[cdk.support/lookup-entry]] | `:access-log` |
 "
   [^CfnVirtualNode$LoggingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log)]
+  (when-some [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
   (.build builder))
 
@@ -4390,13 +4390,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxServerErrors` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-server-errors` |
 "
   [^CfnVirtualNode$OutlierDetectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-ejection-duration)]
+  (when-some [data (lookup-entry config id :base-ejection-duration)]
     (. builder baseEjectionDuration data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :max-ejection-percent)]
+  (when-some [data (lookup-entry config id :max-ejection-percent)]
     (. builder maxEjectionPercent data))
-  (when-let [data (lookup-entry config id :max-server-errors)]
+  (when-some [data (lookup-entry config id :max-server-errors)]
     (. builder maxServerErrors data))
   (.build builder))
 
@@ -4425,9 +4425,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnVirtualNode$PortMappingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -4459,15 +4459,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
 "
   [^CfnVirtualNodeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-node-name)]
+  (when-some [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
 
@@ -4496,9 +4496,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns` |
 "
   [^CfnVirtualNode$ServiceDiscoveryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-cloud-map)]
+  (when-some [data (lookup-entry config id :aws-cloud-map)]
     (. builder awsCloudMap data))
-  (when-let [data (lookup-entry config id :dns)]
+  (when-some [data (lookup-entry config id :dns)]
     (. builder dns data))
   (.build builder))
 
@@ -4526,7 +4526,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `exact` | java.util.List | [[cdk.support/lookup-entry]] | `:exact` |
 "
   [^CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exact)]
+  (when-some [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
 
@@ -4554,7 +4554,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
 "
   [^CfnVirtualNode$SubjectAlternativeNamesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
   (.build builder))
 
@@ -4582,7 +4582,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `idle` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
 "
   [^CfnVirtualNode$TcpTimeoutProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
   (.build builder))
 
@@ -4610,7 +4610,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateAuthorityArns` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-authority-arns` |
 "
   [^CfnVirtualNode$TlsValidationContextAcmTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-authority-arns)]
+  (when-some [data (lookup-entry config id :certificate-authority-arns)]
     (. builder certificateAuthorityArns data))
   (.build builder))
 
@@ -4638,7 +4638,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `certificateChain` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-chain` |
 "
   [^CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-chain)]
+  (when-some [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
   (.build builder))
 
@@ -4667,9 +4667,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^CfnVirtualNode$TlsValidationContextProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :trust)]
+  (when-some [data (lookup-entry config id :trust)]
     (. builder trust data))
   (.build builder))
 
@@ -4697,7 +4697,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
 "
   [^CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :secret-name)]
+  (when-some [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
   (.build builder))
 
@@ -4727,11 +4727,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
 "
   [^CfnVirtualNode$TlsValidationContextTrustProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acm)]
+  (when-some [data (lookup-entry config id :acm)]
     (. builder acm data))
-  (when-let [data (lookup-entry config id :file)]
+  (when-some [data (lookup-entry config id :file)]
     (. builder file data))
-  (when-let [data (lookup-entry config id :sds)]
+  (when-some [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
 
@@ -4762,13 +4762,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tcp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp` |
 "
   [^CfnVirtualNode$VirtualNodeConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc)]
+  (when-some [data (lookup-entry config id :grpc)]
     (. builder grpc data))
-  (when-let [data (lookup-entry config id :http)]
+  (when-some [data (lookup-entry config id :http)]
     (. builder http data))
-  (when-let [data (lookup-entry config id :http2)]
+  (when-some [data (lookup-entry config id :http2)]
     (. builder http2 data))
-  (when-let [data (lookup-entry config id :tcp)]
+  (when-some [data (lookup-entry config id :tcp)]
     (. builder tcp data))
   (.build builder))
 
@@ -4796,7 +4796,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
 "
   [^CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-requests)]
+  (when-some [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
 
@@ -4825,9 +4825,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |
 "
   [^CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-connections)]
+  (when-some [data (lookup-entry config id :max-connections)]
     (. builder maxConnections data))
-  (when-let [data (lookup-entry config id :max-pending-requests)]
+  (when-some [data (lookup-entry config id :max-pending-requests)]
     (. builder maxPendingRequests data))
   (.build builder))
 
@@ -4855,7 +4855,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
 "
   [^CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-requests)]
+  (when-some [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
 
@@ -4887,15 +4887,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceDiscovery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-discovery` |
 "
   [^CfnVirtualNode$VirtualNodeSpecProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :backend-defaults)]
+  (when-some [data (lookup-entry config id :backend-defaults)]
     (. builder backendDefaults data))
-  (when-let [data (lookup-entry config id :backends)]
+  (when-some [data (lookup-entry config id :backends)]
     (. builder backends data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :service-discovery)]
+  (when-some [data (lookup-entry config id :service-discovery)]
     (. builder serviceDiscovery data))
   (.build builder))
 
@@ -4923,7 +4923,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |
 "
   [^CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-connections)]
+  (when-some [data (lookup-entry config id :max-connections)]
     (. builder maxConnections data))
   (.build builder))
 
@@ -4952,9 +4952,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
 "
   [^CfnVirtualNode$VirtualServiceBackendProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-policy)]
+  (when-some [data (lookup-entry config id :client-policy)]
     (. builder clientPolicy data))
-  (when-let [data (lookup-entry config id :virtual-service-name)]
+  (when-some [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
   (.build builder))
 
@@ -4986,15 +4986,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^CfnVirtualRouter$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -5023,9 +5023,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnVirtualRouter$PortMappingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -5057,15 +5057,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^CfnVirtualRouterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -5093,7 +5093,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `portMapping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-mapping` |
 "
   [^CfnVirtualRouter$VirtualRouterListenerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :port-mapping)]
+  (when-some [data (lookup-entry config id :port-mapping)]
     (. builder portMapping data))
   (.build builder))
 
@@ -5121,7 +5121,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listeners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:listeners` |
 "
   [^CfnVirtualRouter$VirtualRouterSpecProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
   (.build builder))
 
@@ -5153,15 +5153,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
 "
   [^CfnVirtualService$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-service-name)]
+  (when-some [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
   (.build builder))
 
@@ -5193,15 +5193,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
 "
   [^CfnVirtualServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :mesh-owner)]
+  (when-some [data (lookup-entry config id :mesh-owner)]
     (. builder meshOwner data))
-  (when-let [data (lookup-entry config id :spec)]
+  (when-some [data (lookup-entry config id :spec)]
     (. builder spec data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :virtual-service-name)]
+  (when-some [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
   (.build builder))
 
@@ -5229,7 +5229,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
 "
   [^CfnVirtualService$VirtualNodeServiceProviderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-node-name)]
+  (when-some [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
 
@@ -5257,7 +5257,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^CfnVirtualService$VirtualRouterServiceProviderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -5286,9 +5286,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-router` |
 "
   [^CfnVirtualService$VirtualServiceProviderProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-node)]
+  (when-some [data (lookup-entry config id :virtual-node)]
     (. builder virtualNode data))
-  (when-let [data (lookup-entry config id :virtual-router)]
+  (when-some [data (lookup-entry config id :virtual-router)]
     (. builder virtualRouter data))
   (.build builder))
 
@@ -5316,7 +5316,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `provider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provider` |
 "
   [^CfnVirtualService$VirtualServiceSpecProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :provider)]
+  (when-some [data (lookup-entry config id :provider)]
     (. builder provider data))
   (.build builder))
 
@@ -5344,7 +5344,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^CommonGatewayRouteSpecOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -5373,9 +5373,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |
 "
   [^GatewayRouteAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :gateway-route-name)]
+  (when-some [data (lookup-entry config id :gateway-route-name)]
     (. builder gatewayRouteName data))
-  (when-let [data (lookup-entry config id :virtual-gateway)]
+  (when-some [data (lookup-entry config id :virtual-gateway)]
     (. builder virtualGateway data))
   (.build builder))
 
@@ -5404,9 +5404,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `routeSpec` | software.amazon.awscdk.services.appmesh.GatewayRouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |
 "
   [^GatewayRouteBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :gateway-route-name)]
+  (when-some [data (lookup-entry config id :gateway-route-name)]
     (. builder gatewayRouteName data))
-  (when-let [data (lookup-entry config id :route-spec)]
+  (when-some [data (lookup-entry config id :route-spec)]
     (. builder routeSpec data))
   (.build builder))
 
@@ -5436,11 +5436,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |
 "
   [^GatewayRoute$Builder builder id config]
-  (when-let [data (lookup-entry config id :gateway-route-name)]
+  (when-some [data (lookup-entry config id :gateway-route-name)]
     (. builder gatewayRouteName data))
-  (when-let [data (lookup-entry config id :route-spec)]
+  (when-some [data (lookup-entry config id :route-spec)]
     (. builder routeSpec data))
-  (when-let [data (lookup-entry config id :virtual-gateway)]
+  (when-some [data (lookup-entry config id :virtual-gateway)]
     (. builder virtualGateway data))
   (.build builder))
 
@@ -5468,7 +5468,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `hostnameMatch` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteHostnameMatchProperty | [[cdk.support/lookup-entry]] | `:hostname-match` |
 "
   [^GatewayRouteHostnameMatchConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :hostname-match)]
+  (when-some [data (lookup-entry config id :hostname-match)]
     (. builder hostnameMatch data))
   (.build builder))
 
@@ -5498,11 +5498,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |
 "
   [^GatewayRouteProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :gateway-route-name)]
+  (when-some [data (lookup-entry config id :gateway-route-name)]
     (. builder gatewayRouteName data))
-  (when-let [data (lookup-entry config id :route-spec)]
+  (when-some [data (lookup-entry config id :route-spec)]
     (. builder routeSpec data))
-  (when-let [data (lookup-entry config id :virtual-gateway)]
+  (when-some [data (lookup-entry config id :virtual-gateway)]
     (. builder virtualGateway data))
   (.build builder))
 
@@ -5533,13 +5533,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^GatewayRouteSpecConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc-spec-config)]
+  (when-some [data (lookup-entry config id :grpc-spec-config)]
     (. builder grpcSpecConfig data))
-  (when-let [data (lookup-entry config id :http2-spec-config)]
+  (when-some [data (lookup-entry config id :http2-spec-config)]
     (. builder http2SpecConfig data))
-  (when-let [data (lookup-entry config id :http-spec-config)]
+  (when-some [data (lookup-entry config id :http-spec-config)]
     (. builder httpSpecConfig data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -5567,7 +5567,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
 "
   [^GrpcConnectionPool$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-requests)]
+  (when-some [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
 
@@ -5598,13 +5598,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^GrpcGatewayListenerOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -5636,15 +5636,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^GrpcGatewayRouteMatch$Builder builder id config]
-  (when-let [data (lookup-entry config id :hostname)]
+  (when-some [data (lookup-entry config id :hostname)]
     (. builder hostname data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :rewrite-request-hostname)]
+  (when-some [data (lookup-entry config id :rewrite-request-hostname)]
     (. builder rewriteRequestHostname data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -5674,11 +5674,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `routeTarget` | software.amazon.awscdk.services.appmesh.IVirtualService | [[cdk.support/lookup-entry]] | `:route-target` |
 "
   [^GrpcGatewayRouteSpecOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :route-target)]
+  (when-some [data (lookup-entry config id :route-target)]
     (. builder routeTarget data))
   (.build builder))
 
@@ -5709,13 +5709,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
 "
   [^GrpcHealthCheckOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :healthy-threshold)]
+  (when-some [data (lookup-entry config id :healthy-threshold)]
     (. builder healthyThreshold data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
 
@@ -5747,15 +5747,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |
 "
   [^GrpcRetryPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc-retry-events)]
+  (when-some [data (lookup-entry config id :grpc-retry-events)]
     (. builder grpcRetryEvents data))
-  (when-let [data (lookup-entry config id :http-retry-events)]
+  (when-some [data (lookup-entry config id :http-retry-events)]
     (. builder httpRetryEvents data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :retry-timeout)]
+  (when-some [data (lookup-entry config id :retry-timeout)]
     (. builder retryTimeout data))
-  (when-let [data (lookup-entry config id :tcp-retry-events)]
+  (when-some [data (lookup-entry config id :tcp-retry-events)]
     (. builder tcpRetryEvents data))
   (.build builder))
 
@@ -5786,13 +5786,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^GrpcRouteMatch$Builder builder id config]
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :method-name)]
+  (when-some [data (lookup-entry config id :method-name)]
     (. builder methodName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -5824,15 +5824,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^GrpcRouteSpecOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :retry-policy)]
+  (when-some [data (lookup-entry config id :retry-policy)]
     (. builder retryPolicy data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :weighted-targets)]
+  (when-some [data (lookup-entry config id :weighted-targets)]
     (. builder weightedTargets data))
   (.build builder))
 
@@ -5861,9 +5861,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `perRequest` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^GrpcTimeout$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
-  (when-let [data (lookup-entry config id :per-request)]
+  (when-some [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
 
@@ -5896,17 +5896,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^GrpcVirtualNodeListenerOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :outlier-detection)]
+  (when-some [data (lookup-entry config id :outlier-detection)]
     (. builder outlierDetection data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -5934,7 +5934,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `headerMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteHeaderProperty | [[cdk.support/lookup-entry]] | `:header-match` |
 "
   [^HeaderMatchConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :header-match)]
+  (when-some [data (lookup-entry config id :header-match)]
     (. builder headerMatch data))
   (.build builder))
 
@@ -5962,7 +5962,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `defaultPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-port` |
 "
   [^HealthCheckBindOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-port)]
+  (when-some [data (lookup-entry config id :default-port)]
     (. builder defaultPort data))
   (.build builder))
 
@@ -5991,9 +5991,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeHealthCheck` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$HealthCheckProperty | [[cdk.support/lookup-entry]] | `:virtual-node-health-check` |
 "
   [^HealthCheckConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-gateway-health-check)]
+  (when-some [data (lookup-entry config id :virtual-gateway-health-check)]
     (. builder virtualGatewayHealthCheck data))
-  (when-let [data (lookup-entry config id :virtual-node-health-check)]
+  (when-some [data (lookup-entry config id :virtual-node-health-check)]
     (. builder virtualNodeHealthCheck data))
   (.build builder))
 
@@ -6022,9 +6022,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |
 "
   [^HttpConnectionPool$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-connections)]
+  (when-some [data (lookup-entry config id :max-connections)]
     (. builder maxConnections data))
-  (when-let [data (lookup-entry config id :max-pending-requests)]
+  (when-some [data (lookup-entry config id :max-pending-requests)]
     (. builder maxPendingRequests data))
   (.build builder))
 
@@ -6055,13 +6055,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^HttpGatewayListenerOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -6095,19 +6095,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `rewriteRequestHostname` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rewrite-request-hostname` |
 "
   [^HttpGatewayRouteMatch$Builder builder id config]
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :hostname)]
+  (when-some [data (lookup-entry config id :hostname)]
     (. builder hostname data))
-  (when-let [data (http-route-method config id :method)]
+  (when-some [data (http-route-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :rewrite-request-hostname)]
+  (when-some [data (lookup-entry config id :rewrite-request-hostname)]
     (. builder rewriteRequestHostname data))
   (.build builder))
 
@@ -6138,13 +6138,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `wholePathRewrite` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty | [[cdk.support/lookup-entry]] | `:whole-path-rewrite` |
 "
   [^HttpGatewayRoutePathMatchConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :prefix-path-match)]
+  (when-some [data (lookup-entry config id :prefix-path-match)]
     (. builder prefixPathMatch data))
-  (when-let [data (lookup-entry config id :prefix-path-rewrite)]
+  (when-some [data (lookup-entry config id :prefix-path-rewrite)]
     (. builder prefixPathRewrite data))
-  (when-let [data (lookup-entry config id :whole-path-match)]
+  (when-some [data (lookup-entry config id :whole-path-match)]
     (. builder wholePathMatch data))
-  (when-let [data (lookup-entry config id :whole-path-rewrite)]
+  (when-some [data (lookup-entry config id :whole-path-rewrite)]
     (. builder wholePathRewrite data))
   (.build builder))
 
@@ -6174,11 +6174,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `routeTarget` | software.amazon.awscdk.services.appmesh.IVirtualService | [[cdk.support/lookup-entry]] | `:route-target` |
 "
   [^HttpGatewayRouteSpecOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :route-target)]
+  (when-some [data (lookup-entry config id :route-target)]
     (. builder routeTarget data))
   (.build builder))
 
@@ -6210,15 +6210,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
 "
   [^HttpHealthCheckOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :healthy-threshold)]
+  (when-some [data (lookup-entry config id :healthy-threshold)]
     (. builder healthyThreshold data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
 
@@ -6249,13 +6249,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |
 "
   [^HttpRetryPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :http-retry-events)]
+  (when-some [data (lookup-entry config id :http-retry-events)]
     (. builder httpRetryEvents data))
-  (when-let [data (lookup-entry config id :retry-attempts)]
+  (when-some [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
-  (when-let [data (lookup-entry config id :retry-timeout)]
+  (when-some [data (lookup-entry config id :retry-timeout)]
     (. builder retryTimeout data))
-  (when-let [data (lookup-entry config id :tcp-retry-events)]
+  (when-some [data (lookup-entry config id :tcp-retry-events)]
     (. builder tcpRetryEvents data))
   (.build builder))
 
@@ -6288,17 +6288,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |
 "
   [^HttpRouteMatch$Builder builder id config]
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (http-route-method config id :method)]
+  (when-some [data (http-route-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (http-route-protocol config id :protocol)]
+  (when-some [data (http-route-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
   (.build builder))
 
@@ -6327,9 +6327,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `wholePathMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpPathMatchProperty | [[cdk.support/lookup-entry]] | `:whole-path-match` |
 "
   [^HttpRoutePathMatchConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :prefix-path-match)]
+  (when-some [data (lookup-entry config id :prefix-path-match)]
     (. builder prefixPathMatch data))
-  (when-let [data (lookup-entry config id :whole-path-match)]
+  (when-some [data (lookup-entry config id :whole-path-match)]
     (. builder wholePathMatch data))
   (.build builder))
 
@@ -6361,15 +6361,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^HttpRouteSpecOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :match)]
+  (when-some [data (lookup-entry config id :match)]
     (. builder match data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :retry-policy)]
+  (when-some [data (lookup-entry config id :retry-policy)]
     (. builder retryPolicy data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :weighted-targets)]
+  (when-some [data (lookup-entry config id :weighted-targets)]
     (. builder weightedTargets data))
   (.build builder))
 
@@ -6398,9 +6398,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `perRequest` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:per-request` |
 "
   [^HttpTimeout$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
-  (when-let [data (lookup-entry config id :per-request)]
+  (when-some [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
 
@@ -6433,17 +6433,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^HttpVirtualNodeListenerOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :outlier-detection)]
+  (when-some [data (lookup-entry config id :outlier-detection)]
     (. builder outlierDetection data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -6471,7 +6471,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
 "
   [^Http2ConnectionPool$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-requests)]
+  (when-some [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
 
@@ -6502,13 +6502,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^Http2GatewayListenerOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -6541,17 +6541,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^Http2VirtualNodeListenerOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :outlier-detection)]
+  (when-some [data (lookup-entry config id :outlier-detection)]
     (. builder outlierDetection data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -6581,11 +6581,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `mutualTlsValidation` | software.amazon.awscdk.services.appmesh.MutualTlsValidation | [[cdk.support/lookup-entry]] | `:mutual-tls-validation` |
 "
   [^ListenerTlsOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate)]
+  (when-some [data (lookup-entry config id :certificate)]
     (. builder certificate data))
-  (when-let [data (tls-mode config id :mode)]
+  (when-some [data (tls-mode config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :mutual-tls-validation)]
+  (when-some [data (lookup-entry config id :mutual-tls-validation)]
     (. builder mutualTlsValidation data))
   (.build builder))
 
@@ -6613,7 +6613,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `formatConfig` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$LoggingFormatProperty | [[cdk.support/lookup-entry]] | `:format-config` |
 "
   [^LoggingFormatConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :format-config)]
+  (when-some [data (lookup-entry config id :format-config)]
     (. builder formatConfig data))
   (.build builder))
 
@@ -6643,11 +6643,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceDiscovery` | software.amazon.awscdk.services.appmesh.MeshServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |
 "
   [^Mesh$Builder builder id config]
-  (when-let [data (mesh-filter-type config id :egress-filter)]
+  (when-some [data (mesh-filter-type config id :egress-filter)]
     (. builder egressFilter data))
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :service-discovery)]
+  (when-some [data (lookup-entry config id :service-discovery)]
     (. builder serviceDiscovery data))
   (.build builder))
 
@@ -6677,11 +6677,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceDiscovery` | software.amazon.awscdk.services.appmesh.MeshServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |
 "
   [^MeshProps$Builder builder id config]
-  (when-let [data (mesh-filter-type config id :egress-filter)]
+  (when-some [data (mesh-filter-type config id :egress-filter)]
     (. builder egressFilter data))
-  (when-let [data (lookup-entry config id :mesh-name)]
+  (when-some [data (lookup-entry config id :mesh-name)]
     (. builder meshName data))
-  (when-let [data (lookup-entry config id :service-discovery)]
+  (when-some [data (lookup-entry config id :service-discovery)]
     (. builder serviceDiscovery data))
   (.build builder))
 
@@ -6709,7 +6709,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ipPreference` | software.amazon.awscdk.services.appmesh.IpPreference | [[cdk.api.services.appmesh/ip-preference]] | `:ip-preference` |
 "
   [^MeshServiceDiscovery$Builder builder id config]
-  (when-let [data (ip-preference config id :ip-preference)]
+  (when-some [data (ip-preference config id :ip-preference)]
     (. builder ipPreference data))
   (.build builder))
 
@@ -6738,9 +6738,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trust` | software.amazon.awscdk.services.appmesh.MutualTlsValidationTrust | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^MutualTlsValidation$Builder builder id config]
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :trust)]
+  (when-some [data (lookup-entry config id :trust)]
     (. builder trust data))
   (.build builder))
 
@@ -6771,13 +6771,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxServerErrors` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-server-errors` |
 "
   [^OutlierDetection$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-ejection-duration)]
+  (when-some [data (lookup-entry config id :base-ejection-duration)]
     (. builder baseEjectionDuration data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :max-ejection-percent)]
+  (when-some [data (lookup-entry config id :max-ejection-percent)]
     (. builder maxEjectionPercent data))
-  (when-let [data (lookup-entry config id :max-server-errors)]
+  (when-some [data (lookup-entry config id :max-server-errors)]
     (. builder maxServerErrors data))
   (.build builder))
 
@@ -6805,7 +6805,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queryParameterMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$QueryParameterProperty | [[cdk.support/lookup-entry]] | `:query-parameter-match` |
 "
   [^QueryParameterMatchConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :query-parameter-match)]
+  (when-some [data (lookup-entry config id :query-parameter-match)]
     (. builder queryParameterMatch data))
   (.build builder))
 
@@ -6834,9 +6834,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |
 "
   [^RouteAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :route-name)]
+  (when-some [data (lookup-entry config id :route-name)]
     (. builder routeName data))
-  (when-let [data (lookup-entry config id :virtual-router)]
+  (when-some [data (lookup-entry config id :virtual-router)]
     (. builder virtualRouter data))
   (.build builder))
 
@@ -6865,9 +6865,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `routeSpec` | software.amazon.awscdk.services.appmesh.RouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |
 "
   [^RouteBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :route-name)]
+  (when-some [data (lookup-entry config id :route-name)]
     (. builder routeName data))
-  (when-let [data (lookup-entry config id :route-spec)]
+  (when-some [data (lookup-entry config id :route-spec)]
     (. builder routeSpec data))
   (.build builder))
 
@@ -6898,13 +6898,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |
 "
   [^Route$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :route-name)]
+  (when-some [data (lookup-entry config id :route-name)]
     (. builder routeName data))
-  (when-let [data (lookup-entry config id :route-spec)]
+  (when-some [data (lookup-entry config id :route-spec)]
     (. builder routeSpec data))
-  (when-let [data (lookup-entry config id :virtual-router)]
+  (when-some [data (lookup-entry config id :virtual-router)]
     (. builder virtualRouter data))
   (.build builder))
 
@@ -6935,13 +6935,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |
 "
   [^RouteProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :route-name)]
+  (when-some [data (lookup-entry config id :route-name)]
     (. builder routeName data))
-  (when-let [data (lookup-entry config id :route-spec)]
+  (when-some [data (lookup-entry config id :route-spec)]
     (. builder routeSpec data))
-  (when-let [data (lookup-entry config id :virtual-router)]
+  (when-some [data (lookup-entry config id :virtual-router)]
     (. builder virtualRouter data))
   (.build builder))
 
@@ -6973,15 +6973,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tcpRouteSpec` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpRouteProperty | [[cdk.support/lookup-entry]] | `:tcp-route-spec` |
 "
   [^RouteSpecConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :grpc-route-spec)]
+  (when-some [data (lookup-entry config id :grpc-route-spec)]
     (. builder grpcRouteSpec data))
-  (when-let [data (lookup-entry config id :http2-route-spec)]
+  (when-some [data (lookup-entry config id :http2-route-spec)]
     (. builder http2RouteSpec data))
-  (when-let [data (lookup-entry config id :http-route-spec)]
+  (when-some [data (lookup-entry config id :http-route-spec)]
     (. builder httpRouteSpec data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :tcp-route-spec)]
+  (when-some [data (lookup-entry config id :tcp-route-spec)]
     (. builder tcpRouteSpec data))
   (.build builder))
 
@@ -7009,7 +7009,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 "
   [^RouteSpecOptionsBase$Builder builder id config]
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
 
@@ -7038,9 +7038,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `dns` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DnsServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:dns` |
 "
   [^ServiceDiscoveryConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloudmap)]
+  (when-some [data (lookup-entry config id :cloudmap)]
     (. builder cloudmap data))
-  (when-let [data (lookup-entry config id :dns)]
+  (when-some [data (lookup-entry config id :dns)]
     (. builder dns data))
   (.build builder))
 
@@ -7068,7 +7068,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subjectAlternativeNamesMatch` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$SubjectAlternativeNameMatchersProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names-match` |
 "
   [^SubjectAlternativeNamesMatcherConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :subject-alternative-names-match)]
+  (when-some [data (lookup-entry config id :subject-alternative-names-match)]
     (. builder subjectAlternativeNamesMatch data))
   (.build builder))
 
@@ -7096,7 +7096,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |
 "
   [^TcpConnectionPool$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-connections)]
+  (when-some [data (lookup-entry config id :max-connections)]
     (. builder maxConnections data))
   (.build builder))
 
@@ -7127,13 +7127,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
 "
   [^TcpHealthCheckOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :healthy-threshold)]
+  (when-some [data (lookup-entry config id :healthy-threshold)]
     (. builder healthyThreshold data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+  (when-some [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
 
@@ -7163,11 +7163,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
 "
   [^TcpRouteSpecOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :weighted-targets)]
+  (when-some [data (lookup-entry config id :weighted-targets)]
     (. builder weightedTargets data))
   (.build builder))
 
@@ -7195,7 +7195,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `idle` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:idle` |
 "
   [^TcpTimeout$Builder builder id config]
-  (when-let [data (lookup-entry config id :idle)]
+  (when-some [data (lookup-entry config id :idle)]
     (. builder idle data))
   (.build builder))
 
@@ -7228,17 +7228,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
 "
   [^TcpVirtualNodeListenerOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-pool)]
+  (when-some [data (lookup-entry config id :connection-pool)]
     (. builder connectionPool data))
-  (when-let [data (lookup-entry config id :health-check)]
+  (when-some [data (lookup-entry config id :health-check)]
     (. builder healthCheck data))
-  (when-let [data (lookup-entry config id :outlier-detection)]
+  (when-some [data (lookup-entry config id :outlier-detection)]
     (. builder outlierDetection data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :tls)]
+  (when-some [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
 
@@ -7266,7 +7266,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsCertificate` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:tls-certificate` |
 "
   [^TlsCertificateConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :tls-certificate)]
+  (when-some [data (lookup-entry config id :tls-certificate)]
     (. builder tlsCertificate data))
   (.build builder))
 
@@ -7297,13 +7297,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validation` | software.amazon.awscdk.services.appmesh.TlsValidation | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^TlsClientPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :enforce)]
+  (when-some [data (lookup-entry config id :enforce)]
     (. builder enforce data))
-  (when-let [data (lookup-entry config id :mutual-tls-certificate)]
+  (when-some [data (lookup-entry config id :mutual-tls-certificate)]
     (. builder mutualTlsCertificate data))
-  (when-let [data (lookup-entry config id :ports)]
+  (when-some [data (lookup-entry config id :ports)]
     (. builder ports data))
-  (when-let [data (lookup-entry config id :validation)]
+  (when-some [data (lookup-entry config id :validation)]
     (. builder validation data))
   (.build builder))
 
@@ -7332,9 +7332,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trust` | software.amazon.awscdk.services.appmesh.TlsValidationTrust | [[cdk.support/lookup-entry]] | `:trust` |
 "
   [^TlsValidation$Builder builder id config]
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :trust)]
+  (when-some [data (lookup-entry config id :trust)]
     (. builder trust data))
   (.build builder))
 
@@ -7362,7 +7362,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsValidationTrust` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:tls-validation-trust` |
 "
   [^TlsValidationTrustConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :tls-validation-trust)]
+  (when-some [data (lookup-entry config id :tls-validation-trust)]
     (. builder tlsValidationTrust data))
   (.build builder))
 
@@ -7391,9 +7391,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
   [^VirtualGatewayAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+  (when-some [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
 
@@ -7424,13 +7424,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
   [^VirtualGatewayBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log)]
+  (when-some [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
-  (when-let [data (lookup-entry config id :backend-defaults)]
+  (when-some [data (lookup-entry config id :backend-defaults)]
     (. builder backendDefaults data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+  (when-some [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
 
@@ -7462,15 +7462,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
   [^VirtualGateway$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log)]
+  (when-some [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
-  (when-let [data (lookup-entry config id :backend-defaults)]
+  (when-some [data (lookup-entry config id :backend-defaults)]
     (. builder backendDefaults data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+  (when-some [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
 
@@ -7498,7 +7498,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |
 "
   [^VirtualGatewayListenerConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
 
@@ -7530,15 +7530,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
 "
   [^VirtualGatewayProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log)]
+  (when-some [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
-  (when-let [data (lookup-entry config id :backend-defaults)]
+  (when-some [data (lookup-entry config id :backend-defaults)]
     (. builder backendDefaults data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+  (when-some [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
 
@@ -7567,9 +7567,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
 "
   [^VirtualNodeAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-node-name)]
+  (when-some [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
 
@@ -7602,17 +7602,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
 "
   [^VirtualNodeBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log)]
+  (when-some [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
-  (when-let [data (lookup-entry config id :backend-defaults)]
+  (when-some [data (lookup-entry config id :backend-defaults)]
     (. builder backendDefaults data))
-  (when-let [data (lookup-entry config id :backends)]
+  (when-some [data (lookup-entry config id :backends)]
     (. builder backends data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :service-discovery)]
+  (when-some [data (lookup-entry config id :service-discovery)]
     (. builder serviceDiscovery data))
-  (when-let [data (lookup-entry config id :virtual-node-name)]
+  (when-some [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
 
@@ -7646,19 +7646,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
 "
   [^VirtualNode$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log)]
+  (when-some [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
-  (when-let [data (lookup-entry config id :backend-defaults)]
+  (when-some [data (lookup-entry config id :backend-defaults)]
     (. builder backendDefaults data))
-  (when-let [data (lookup-entry config id :backends)]
+  (when-some [data (lookup-entry config id :backends)]
     (. builder backends data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :service-discovery)]
+  (when-some [data (lookup-entry config id :service-discovery)]
     (. builder serviceDiscovery data))
-  (when-let [data (lookup-entry config id :virtual-node-name)]
+  (when-some [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
 
@@ -7686,7 +7686,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |
 "
   [^VirtualNodeListenerConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
 
@@ -7720,19 +7720,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
 "
   [^VirtualNodeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-log)]
+  (when-some [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
-  (when-let [data (lookup-entry config id :backend-defaults)]
+  (when-some [data (lookup-entry config id :backend-defaults)]
     (. builder backendDefaults data))
-  (when-let [data (lookup-entry config id :backends)]
+  (when-some [data (lookup-entry config id :backends)]
     (. builder backends data))
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :service-discovery)]
+  (when-some [data (lookup-entry config id :service-discovery)]
     (. builder serviceDiscovery data))
-  (when-let [data (lookup-entry config id :virtual-node-name)]
+  (when-some [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
 
@@ -7761,9 +7761,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^VirtualRouterAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -7792,9 +7792,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^VirtualRouterBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -7824,11 +7824,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^VirtualRouter$Builder builder id config]
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -7856,7 +7856,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualRouter$VirtualRouterListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |
 "
   [^VirtualRouterListenerConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
 
@@ -7886,11 +7886,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
 "
   [^VirtualRouterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :listeners)]
+  (when-some [data (lookup-entry config id :listeners)]
     (. builder listeners data))
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-router-name)]
+  (when-some [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
 
@@ -7919,9 +7919,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
 "
   [^VirtualServiceAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-service-name)]
+  (when-some [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
   (.build builder))
 
@@ -7949,7 +7949,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tlsClientPolicy` | software.amazon.awscdk.services.appmesh.TlsClientPolicy | [[cdk.support/lookup-entry]] | `:tls-client-policy` |
 "
   [^VirtualServiceBackendOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :tls-client-policy)]
+  (when-some [data (lookup-entry config id :tls-client-policy)]
     (. builder tlsClientPolicy data))
   (.build builder))
 
@@ -7978,9 +7978,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualServiceProvider` | software.amazon.awscdk.services.appmesh.VirtualServiceProvider | [[cdk.support/lookup-entry]] | `:virtual-service-provider` |
 "
   [^VirtualService$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-service-name)]
+  (when-some [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
-  (when-let [data (lookup-entry config id :virtual-service-provider)]
+  (when-some [data (lookup-entry config id :virtual-service-provider)]
     (. builder virtualServiceProvider data))
   (.build builder))
 
@@ -8009,9 +8009,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualServiceProvider` | software.amazon.awscdk.services.appmesh.VirtualServiceProvider | [[cdk.support/lookup-entry]] | `:virtual-service-provider` |
 "
   [^VirtualServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :virtual-service-name)]
+  (when-some [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
-  (when-let [data (lookup-entry config id :virtual-service-provider)]
+  (when-some [data (lookup-entry config id :virtual-service-provider)]
     (. builder virtualServiceProvider data))
   (.build builder))
 
@@ -8041,11 +8041,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualRouterProvider` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualRouterServiceProviderProperty | [[cdk.support/lookup-entry]] | `:virtual-router-provider` |
 "
   [^VirtualServiceProviderConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :mesh)]
+  (when-some [data (lookup-entry config id :mesh)]
     (. builder mesh data))
-  (when-let [data (lookup-entry config id :virtual-node-provider)]
+  (when-some [data (lookup-entry config id :virtual-node-provider)]
     (. builder virtualNodeProvider data))
-  (when-let [data (lookup-entry config id :virtual-router-provider)]
+  (when-some [data (lookup-entry config id :virtual-router-provider)]
     (. builder virtualRouterProvider data))
   (.build builder))
 
@@ -8075,11 +8075,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^WeightedTarget$Builder builder id config]
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :virtual-node)]
+  (when-some [data (lookup-entry config id :virtual-node)]
     (. builder virtualNode data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 

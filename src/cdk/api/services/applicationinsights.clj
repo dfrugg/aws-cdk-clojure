@@ -32,7 +32,7 @@
 | `alarmMetricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-metric-name` |
 "
   [^CfnApplication$AlarmMetricProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-metric-name)]
+  (when-some [data (lookup-entry config id :alarm-metric-name)]
     (. builder alarmMetricName data))
   (.build builder))
 
@@ -61,9 +61,9 @@
 | `severity` | java.lang.String | [[cdk.support/lookup-entry]] | `:severity` |
 "
   [^CfnApplication$AlarmProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-name)]
+  (when-some [data (lookup-entry config id :alarm-name)]
     (. builder alarmName data))
-  (when-let [data (lookup-entry config id :severity)]
+  (when-some [data (lookup-entry config id :severity)]
     (. builder severity data))
   (.build builder))
 
@@ -101,27 +101,27 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :attach-missing-permission)]
+  (when-some [data (lookup-entry config id :attach-missing-permission)]
     (. builder attachMissingPermission data))
-  (when-let [data (lookup-entry config id :auto-configuration-enabled)]
+  (when-some [data (lookup-entry config id :auto-configuration-enabled)]
     (. builder autoConfigurationEnabled data))
-  (when-let [data (lookup-entry config id :component-monitoring-settings)]
+  (when-some [data (lookup-entry config id :component-monitoring-settings)]
     (. builder componentMonitoringSettings data))
-  (when-let [data (lookup-entry config id :custom-components)]
+  (when-some [data (lookup-entry config id :custom-components)]
     (. builder customComponents data))
-  (when-let [data (lookup-entry config id :cwe-monitor-enabled)]
+  (when-some [data (lookup-entry config id :cwe-monitor-enabled)]
     (. builder cweMonitorEnabled data))
-  (when-let [data (lookup-entry config id :grouping-type)]
+  (when-some [data (lookup-entry config id :grouping-type)]
     (. builder groupingType data))
-  (when-let [data (lookup-entry config id :log-pattern-sets)]
+  (when-some [data (lookup-entry config id :log-pattern-sets)]
     (. builder logPatternSets data))
-  (when-let [data (lookup-entry config id :ops-center-enabled)]
+  (when-some [data (lookup-entry config id :ops-center-enabled)]
     (. builder opsCenterEnabled data))
-  (when-let [data (lookup-entry config id :ops-item-sns-topic-arn)]
+  (when-some [data (lookup-entry config id :ops-item-sns-topic-arn)]
     (. builder opsItemSnsTopicArn data))
-  (when-let [data (lookup-entry config id :resource-group-name)]
+  (when-some [data (lookup-entry config id :resource-group-name)]
     (. builder resourceGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -150,9 +150,9 @@
 | `subComponentTypeConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sub-component-type-configurations` |
 "
   [^CfnApplication$ComponentConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-details)]
+  (when-some [data (lookup-entry config id :configuration-details)]
     (. builder configurationDetails data))
-  (when-let [data (lookup-entry config id :sub-component-type-configurations)]
+  (when-some [data (lookup-entry config id :sub-component-type-configurations)]
     (. builder subComponentTypeConfigurations data))
   (.build builder))
 
@@ -185,17 +185,17 @@
 | `tier` | java.lang.String | [[cdk.support/lookup-entry]] | `:tier` |
 "
   [^CfnApplication$ComponentMonitoringSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component-arn)]
+  (when-some [data (lookup-entry config id :component-arn)]
     (. builder componentArn data))
-  (when-let [data (lookup-entry config id :component-configuration-mode)]
+  (when-some [data (lookup-entry config id :component-configuration-mode)]
     (. builder componentConfigurationMode data))
-  (when-let [data (lookup-entry config id :component-name)]
+  (when-some [data (lookup-entry config id :component-name)]
     (. builder componentName data))
-  (when-let [data (lookup-entry config id :custom-component-configuration)]
+  (when-some [data (lookup-entry config id :custom-component-configuration)]
     (. builder customComponentConfiguration data))
-  (when-let [data (lookup-entry config id :default-overwrite-component-configuration)]
+  (when-some [data (lookup-entry config id :default-overwrite-component-configuration)]
     (. builder defaultOverwriteComponentConfiguration data))
-  (when-let [data (lookup-entry config id :tier)]
+  (when-some [data (lookup-entry config id :tier)]
     (. builder tier data))
   (.build builder))
 
@@ -229,19 +229,19 @@
 | `windowsEvents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:windows-events` |
 "
   [^CfnApplication$ConfigurationDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-metrics)]
+  (when-some [data (lookup-entry config id :alarm-metrics)]
     (. builder alarmMetrics data))
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :ha-cluster-prometheus-exporter)]
+  (when-some [data (lookup-entry config id :ha-cluster-prometheus-exporter)]
     (. builder haClusterPrometheusExporter data))
-  (when-let [data (lookup-entry config id :hana-prometheus-exporter)]
+  (when-some [data (lookup-entry config id :hana-prometheus-exporter)]
     (. builder hanaPrometheusExporter data))
-  (when-let [data (lookup-entry config id :jmx-prometheus-exporter)]
+  (when-some [data (lookup-entry config id :jmx-prometheus-exporter)]
     (. builder jmxPrometheusExporter data))
-  (when-let [data (lookup-entry config id :logs)]
+  (when-some [data (lookup-entry config id :logs)]
     (. builder logs data))
-  (when-let [data (lookup-entry config id :windows-events)]
+  (when-some [data (lookup-entry config id :windows-events)]
     (. builder windowsEvents data))
   (.build builder))
 
@@ -270,9 +270,9 @@
 | `resourceList` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-list` |
 "
   [^CfnApplication$CustomComponentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component-name)]
+  (when-some [data (lookup-entry config id :component-name)]
     (. builder componentName data))
-  (when-let [data (lookup-entry config id :resource-list)]
+  (when-some [data (lookup-entry config id :resource-list)]
     (. builder resourceList data))
   (.build builder))
 
@@ -300,7 +300,7 @@
 | `prometheusPort` | java.lang.String | [[cdk.support/lookup-entry]] | `:prometheus-port` |
 "
   [^CfnApplication$HAClusterPrometheusExporterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :prometheus-port)]
+  (when-some [data (lookup-entry config id :prometheus-port)]
     (. builder prometheusPort data))
   (.build builder))
 
@@ -332,15 +332,15 @@
 | `prometheusPort` | java.lang.String | [[cdk.support/lookup-entry]] | `:prometheus-port` |
 "
   [^CfnApplication$HANAPrometheusExporterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :agree-to-install-hanadb-client)]
+  (when-some [data (lookup-entry config id :agree-to-install-hanadb-client)]
     (. builder agreeToInstallHanadbClient data))
-  (when-let [data (lookup-entry config id :hana-port)]
+  (when-some [data (lookup-entry config id :hana-port)]
     (. builder hanaPort data))
-  (when-let [data (lookup-entry config id :hana-secret-name)]
+  (when-some [data (lookup-entry config id :hana-secret-name)]
     (. builder hanaSecretName data))
-  (when-let [data (lookup-entry config id :hanasid)]
+  (when-some [data (lookup-entry config id :hanasid)]
     (. builder hanasid data))
-  (when-let [data (lookup-entry config id :prometheus-port)]
+  (when-some [data (lookup-entry config id :prometheus-port)]
     (. builder prometheusPort data))
   (.build builder))
 
@@ -370,11 +370,11 @@
 | `prometheusPort` | java.lang.String | [[cdk.support/lookup-entry]] | `:prometheus-port` |
 "
   [^CfnApplication$JMXPrometheusExporterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :host-port)]
+  (when-some [data (lookup-entry config id :host-port)]
     (. builder hostPort data))
-  (when-let [data (lookup-entry config id :jmxurl)]
+  (when-some [data (lookup-entry config id :jmxurl)]
     (. builder jmxurl data))
-  (when-let [data (lookup-entry config id :prometheus-port)]
+  (when-some [data (lookup-entry config id :prometheus-port)]
     (. builder prometheusPort data))
   (.build builder))
 
@@ -404,11 +404,11 @@
 | `rank` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rank` |
 "
   [^CfnApplication$LogPatternProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :pattern-name)]
+  (when-some [data (lookup-entry config id :pattern-name)]
     (. builder patternName data))
-  (when-let [data (lookup-entry config id :rank)]
+  (when-some [data (lookup-entry config id :rank)]
     (. builder rank data))
   (.build builder))
 
@@ -437,9 +437,9 @@
 | `patternSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern-set-name` |
 "
   [^CfnApplication$LogPatternSetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-patterns)]
+  (when-some [data (lookup-entry config id :log-patterns)]
     (. builder logPatterns data))
-  (when-let [data (lookup-entry config id :pattern-set-name)]
+  (when-some [data (lookup-entry config id :pattern-set-name)]
     (. builder patternSetName data))
   (.build builder))
 
@@ -471,15 +471,15 @@
 | `patternSet` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern-set` |
 "
   [^CfnApplication$LogProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encoding)]
+  (when-some [data (lookup-entry config id :encoding)]
     (. builder encoding data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :log-path)]
+  (when-some [data (lookup-entry config id :log-path)]
     (. builder logPath data))
-  (when-let [data (lookup-entry config id :log-type)]
+  (when-some [data (lookup-entry config id :log-type)]
     (. builder logType data))
-  (when-let [data (lookup-entry config id :pattern-set)]
+  (when-some [data (lookup-entry config id :pattern-set)]
     (. builder patternSet data))
   (.build builder))
 
@@ -517,27 +517,27 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :attach-missing-permission)]
+  (when-some [data (lookup-entry config id :attach-missing-permission)]
     (. builder attachMissingPermission data))
-  (when-let [data (lookup-entry config id :auto-configuration-enabled)]
+  (when-some [data (lookup-entry config id :auto-configuration-enabled)]
     (. builder autoConfigurationEnabled data))
-  (when-let [data (lookup-entry config id :component-monitoring-settings)]
+  (when-some [data (lookup-entry config id :component-monitoring-settings)]
     (. builder componentMonitoringSettings data))
-  (when-let [data (lookup-entry config id :custom-components)]
+  (when-some [data (lookup-entry config id :custom-components)]
     (. builder customComponents data))
-  (when-let [data (lookup-entry config id :cwe-monitor-enabled)]
+  (when-some [data (lookup-entry config id :cwe-monitor-enabled)]
     (. builder cweMonitorEnabled data))
-  (when-let [data (lookup-entry config id :grouping-type)]
+  (when-some [data (lookup-entry config id :grouping-type)]
     (. builder groupingType data))
-  (when-let [data (lookup-entry config id :log-pattern-sets)]
+  (when-some [data (lookup-entry config id :log-pattern-sets)]
     (. builder logPatternSets data))
-  (when-let [data (lookup-entry config id :ops-center-enabled)]
+  (when-some [data (lookup-entry config id :ops-center-enabled)]
     (. builder opsCenterEnabled data))
-  (when-let [data (lookup-entry config id :ops-item-sns-topic-arn)]
+  (when-some [data (lookup-entry config id :ops-item-sns-topic-arn)]
     (. builder opsItemSnsTopicArn data))
-  (when-let [data (lookup-entry config id :resource-group-name)]
+  (when-some [data (lookup-entry config id :resource-group-name)]
     (. builder resourceGroupName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -567,11 +567,11 @@
 | `windowsEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:windows-events` |
 "
   [^CfnApplication$SubComponentConfigurationDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-metrics)]
+  (when-some [data (lookup-entry config id :alarm-metrics)]
     (. builder alarmMetrics data))
-  (when-let [data (lookup-entry config id :logs)]
+  (when-some [data (lookup-entry config id :logs)]
     (. builder logs data))
-  (when-let [data (lookup-entry config id :windows-events)]
+  (when-some [data (lookup-entry config id :windows-events)]
     (. builder windowsEvents data))
   (.build builder))
 
@@ -600,9 +600,9 @@
 | `subComponentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sub-component-type` |
 "
   [^CfnApplication$SubComponentTypeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sub-component-configuration-details)]
+  (when-some [data (lookup-entry config id :sub-component-configuration-details)]
     (. builder subComponentConfigurationDetails data))
-  (when-let [data (lookup-entry config id :sub-component-type)]
+  (when-some [data (lookup-entry config id :sub-component-type)]
     (. builder subComponentType data))
   (.build builder))
 
@@ -633,13 +633,13 @@
 | `patternSet` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern-set` |
 "
   [^CfnApplication$WindowsEventProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :event-levels)]
+  (when-some [data (lookup-entry config id :event-levels)]
     (. builder eventLevels data))
-  (when-let [data (lookup-entry config id :event-name)]
+  (when-some [data (lookup-entry config id :event-name)]
     (. builder eventName data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :pattern-set)]
+  (when-some [data (lookup-entry config id :pattern-set)]
     (. builder patternSet data))
   (.build builder))
 

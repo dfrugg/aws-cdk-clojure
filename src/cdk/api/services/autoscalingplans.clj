@@ -27,9 +27,9 @@
 | `tagFilters` | java.util.List | [[cdk.support/lookup-entry]] | `:tag-filters` |
 "
   [^CfnScalingPlan$ApplicationSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-formation-stack-arn)]
+  (when-some [data (lookup-entry config id :cloud-formation-stack-arn)]
     (. builder cloudFormationStackArn data))
-  (when-let [data (lookup-entry config id :tag-filters)]
+  (when-some [data (lookup-entry config id :tag-filters)]
     (. builder tagFilters data))
   (.build builder))
 
@@ -58,9 +58,9 @@
 | `scalingInstructions` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-instructions` |
 "
   [^CfnScalingPlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-source)]
+  (when-some [data (lookup-entry config id :application-source)]
     (. builder applicationSource data))
-  (when-let [data (lookup-entry config id :scaling-instructions)]
+  (when-some [data (lookup-entry config id :scaling-instructions)]
     (. builder scalingInstructions data))
   (.build builder))
 
@@ -92,15 +92,15 @@
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnScalingPlan$CustomizedLoadMetricSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -132,15 +132,15 @@
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnScalingPlan$CustomizedScalingMetricSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -169,9 +169,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnScalingPlan$MetricDimensionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -200,9 +200,9 @@
 | `resourceLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-label` |
 "
   [^CfnScalingPlan$PredefinedLoadMetricSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :predefined-load-metric-type)]
+  (when-some [data (lookup-entry config id :predefined-load-metric-type)]
     (. builder predefinedLoadMetricType data))
-  (when-let [data (lookup-entry config id :resource-label)]
+  (when-some [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
   (.build builder))
 
@@ -231,9 +231,9 @@
 | `resourceLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-label` |
 "
   [^CfnScalingPlan$PredefinedScalingMetricSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :predefined-scaling-metric-type)]
+  (when-some [data (lookup-entry config id :predefined-scaling-metric-type)]
     (. builder predefinedScalingMetricType data))
-  (when-let [data (lookup-entry config id :resource-label)]
+  (when-some [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
   (.build builder))
 
@@ -262,9 +262,9 @@
 | `scalingInstructions` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-instructions` |
 "
   [^CfnScalingPlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-source)]
+  (when-some [data (lookup-entry config id :application-source)]
     (. builder applicationSource data))
-  (when-let [data (lookup-entry config id :scaling-instructions)]
+  (when-some [data (lookup-entry config id :scaling-instructions)]
     (. builder scalingInstructions data))
   (.build builder))
 
@@ -305,33 +305,33 @@
 | `targetTrackingConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-configurations` |
 "
   [^CfnScalingPlan$ScalingInstructionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :customized-load-metric-specification)]
+  (when-some [data (lookup-entry config id :customized-load-metric-specification)]
     (. builder customizedLoadMetricSpecification data))
-  (when-let [data (lookup-entry config id :disable-dynamic-scaling)]
+  (when-some [data (lookup-entry config id :disable-dynamic-scaling)]
     (. builder disableDynamicScaling data))
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :predefined-load-metric-specification)]
+  (when-some [data (lookup-entry config id :predefined-load-metric-specification)]
     (. builder predefinedLoadMetricSpecification data))
-  (when-let [data (lookup-entry config id :predictive-scaling-max-capacity-behavior)]
+  (when-some [data (lookup-entry config id :predictive-scaling-max-capacity-behavior)]
     (. builder predictiveScalingMaxCapacityBehavior data))
-  (when-let [data (lookup-entry config id :predictive-scaling-max-capacity-buffer)]
+  (when-some [data (lookup-entry config id :predictive-scaling-max-capacity-buffer)]
     (. builder predictiveScalingMaxCapacityBuffer data))
-  (when-let [data (lookup-entry config id :predictive-scaling-mode)]
+  (when-some [data (lookup-entry config id :predictive-scaling-mode)]
     (. builder predictiveScalingMode data))
-  (when-let [data (lookup-entry config id :resource-id)]
+  (when-some [data (lookup-entry config id :resource-id)]
     (. builder resourceId data))
-  (when-let [data (lookup-entry config id :scalable-dimension)]
+  (when-some [data (lookup-entry config id :scalable-dimension)]
     (. builder scalableDimension data))
-  (when-let [data (lookup-entry config id :scaling-policy-update-behavior)]
+  (when-some [data (lookup-entry config id :scaling-policy-update-behavior)]
     (. builder scalingPolicyUpdateBehavior data))
-  (when-let [data (lookup-entry config id :scheduled-action-buffer-time)]
+  (when-some [data (lookup-entry config id :scheduled-action-buffer-time)]
     (. builder scheduledActionBufferTime data))
-  (when-let [data (lookup-entry config id :service-namespace)]
+  (when-some [data (lookup-entry config id :service-namespace)]
     (. builder serviceNamespace data))
-  (when-let [data (lookup-entry config id :target-tracking-configurations)]
+  (when-some [data (lookup-entry config id :target-tracking-configurations)]
     (. builder targetTrackingConfigurations data))
   (.build builder))
 
@@ -360,9 +360,9 @@
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnScalingPlan$TagFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -396,19 +396,19 @@
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^CfnScalingPlan$TargetTrackingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :customized-scaling-metric-specification)]
+  (when-some [data (lookup-entry config id :customized-scaling-metric-specification)]
     (. builder customizedScalingMetricSpecification data))
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :estimated-instance-warmup)]
+  (when-some [data (lookup-entry config id :estimated-instance-warmup)]
     (. builder estimatedInstanceWarmup data))
-  (when-let [data (lookup-entry config id :predefined-scaling-metric-specification)]
+  (when-some [data (lookup-entry config id :predefined-scaling-metric-specification)]
     (. builder predefinedScalingMetricSpecification data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 

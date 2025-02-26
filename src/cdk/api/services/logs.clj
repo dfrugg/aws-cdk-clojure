@@ -155,15 +155,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `selectionCriteria` | java.lang.String | [[cdk.support/lookup-entry]] | `:selection-criteria` |
 "
   [^CfnAccountPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :policy-type)]
+  (when-some [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :selection-criteria)]
+  (when-some [data (lookup-entry config id :selection-criteria)]
     (. builder selectionCriteria data))
   (.build builder))
 
@@ -195,15 +195,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `selectionCriteria` | java.lang.String | [[cdk.support/lookup-entry]] | `:selection-criteria` |
 "
   [^CfnAccountPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :policy-type)]
+  (when-some [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :selection-criteria)]
+  (when-some [data (lookup-entry config id :selection-criteria)]
     (. builder selectionCriteria data))
   (.build builder))
 
@@ -233,11 +233,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDelivery$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-destination-arn)]
+  (when-some [data (lookup-entry config id :delivery-destination-arn)]
     (. builder deliveryDestinationArn data))
-  (when-let [data (lookup-entry config id :delivery-source-name)]
+  (when-some [data (lookup-entry config id :delivery-source-name)]
     (. builder deliverySourceName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -268,13 +268,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeliveryDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-destination-policy)]
+  (when-some [data (lookup-entry config id :delivery-destination-policy)]
     (. builder deliveryDestinationPolicy data))
-  (when-let [data (lookup-entry config id :destination-resource-arn)]
+  (when-some [data (lookup-entry config id :destination-resource-arn)]
     (. builder destinationResourceArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -305,13 +305,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeliveryDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-destination-policy)]
+  (when-some [data (lookup-entry config id :delivery-destination-policy)]
     (. builder deliveryDestinationPolicy data))
-  (when-let [data (lookup-entry config id :destination-resource-arn)]
+  (when-some [data (lookup-entry config id :destination-resource-arn)]
     (. builder destinationResourceArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -341,11 +341,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeliveryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-destination-arn)]
+  (when-some [data (lookup-entry config id :delivery-destination-arn)]
     (. builder deliveryDestinationArn data))
-  (when-let [data (lookup-entry config id :delivery-source-name)]
+  (when-some [data (lookup-entry config id :delivery-source-name)]
     (. builder deliverySourceName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -376,13 +376,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeliverySource$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-type)]
+  (when-some [data (lookup-entry config id :log-type)]
     (. builder logType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -413,13 +413,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeliverySourceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-type)]
+  (when-some [data (lookup-entry config id :log-type)]
     (. builder logType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -450,13 +450,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-name)]
+  (when-some [data (lookup-entry config id :destination-name)]
     (. builder destinationName data))
-  (when-let [data (lookup-entry config id :destination-policy)]
+  (when-some [data (lookup-entry config id :destination-policy)]
     (. builder destinationPolicy data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -487,13 +487,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-name)]
+  (when-some [data (lookup-entry config id :destination-name)]
     (. builder destinationName data))
-  (when-let [data (lookup-entry config id :destination-policy)]
+  (when-some [data (lookup-entry config id :destination-policy)]
     (. builder destinationPolicy data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -527,19 +527,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `logGroupArnList` | java.util.List | [[cdk.support/lookup-entry]] | `:log-group-arn-list` |
 "
   [^CfnLogAnomalyDetector$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :anomaly-visibility-time)]
+  (when-some [data (lookup-entry config id :anomaly-visibility-time)]
     (. builder anomalyVisibilityTime data))
-  (when-let [data (lookup-entry config id :detector-name)]
+  (when-some [data (lookup-entry config id :detector-name)]
     (. builder detectorName data))
-  (when-let [data (lookup-entry config id :evaluation-frequency)]
+  (when-some [data (lookup-entry config id :evaluation-frequency)]
     (. builder evaluationFrequency data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :log-group-arn-list)]
+  (when-some [data (lookup-entry config id :log-group-arn-list)]
     (. builder logGroupArnList data))
   (.build builder))
 
@@ -573,19 +573,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `logGroupArnList` | java.util.List | [[cdk.support/lookup-entry]] | `:log-group-arn-list` |
 "
   [^CfnLogAnomalyDetectorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
-  (when-let [data (lookup-entry config id :anomaly-visibility-time)]
+  (when-some [data (lookup-entry config id :anomaly-visibility-time)]
     (. builder anomalyVisibilityTime data))
-  (when-let [data (lookup-entry config id :detector-name)]
+  (when-some [data (lookup-entry config id :detector-name)]
     (. builder detectorName data))
-  (when-let [data (lookup-entry config id :evaluation-frequency)]
+  (when-some [data (lookup-entry config id :evaluation-frequency)]
     (. builder evaluationFrequency data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :log-group-arn-list)]
+  (when-some [data (lookup-entry config id :log-group-arn-list)]
     (. builder logGroupArnList data))
   (.build builder))
 
@@ -618,17 +618,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLogGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-protection-policy)]
+  (when-some [data (lookup-entry config id :data-protection-policy)]
     (. builder dataProtectionPolicy data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :log-group-class)]
+  (when-some [data (lookup-entry config id :log-group-class)]
     (. builder logGroupClass data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :retention-in-days)]
+  (when-some [data (lookup-entry config id :retention-in-days)]
     (. builder retentionInDays data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -661,17 +661,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLogGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-protection-policy)]
+  (when-some [data (lookup-entry config id :data-protection-policy)]
     (. builder dataProtectionPolicy data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :log-group-class)]
+  (when-some [data (lookup-entry config id :log-group-class)]
     (. builder logGroupClass data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :retention-in-days)]
+  (when-some [data (lookup-entry config id :retention-in-days)]
     (. builder retentionInDays data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -700,9 +700,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `logStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name` |
 "
   [^CfnLogStream$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :log-stream-name)]
+  (when-some [data (lookup-entry config id :log-stream-name)]
     (. builder logStreamName data))
   (.build builder))
 
@@ -731,9 +731,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `logStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name` |
 "
   [^CfnLogStreamProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :log-stream-name)]
+  (when-some [data (lookup-entry config id :log-stream-name)]
     (. builder logStreamName data))
   (.build builder))
 
@@ -764,13 +764,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `metricTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-transformations` |
 "
   [^CfnMetricFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :metric-transformations)]
+  (when-some [data (lookup-entry config id :metric-transformations)]
     (. builder metricTransformations data))
   (.build builder))
 
@@ -799,9 +799,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnMetricFilter$DimensionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -834,17 +834,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
 "
   [^CfnMetricFilter$MetricTransformationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :metric-namespace)]
+  (when-some [data (lookup-entry config id :metric-namespace)]
     (. builder metricNamespace data))
-  (when-let [data (lookup-entry config id :metric-value)]
+  (when-some [data (lookup-entry config id :metric-value)]
     (. builder metricValue data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -875,13 +875,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `metricTransformations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-transformations` |
 "
   [^CfnMetricFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :metric-transformations)]
+  (when-some [data (lookup-entry config id :metric-transformations)]
     (. builder metricTransformations data))
   (.build builder))
 
@@ -911,11 +911,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
 "
   [^CfnQueryDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-names)]
+  (when-some [data (lookup-entry config id :log-group-names)]
     (. builder logGroupNames data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
   (.build builder))
 
@@ -945,11 +945,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
 "
   [^CfnQueryDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-names)]
+  (when-some [data (lookup-entry config id :log-group-names)]
     (. builder logGroupNames data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
   (.build builder))
 
@@ -978,9 +978,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnResourcePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -1009,9 +1009,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 "
   [^CfnResourcePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
 
@@ -1044,17 +1044,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnSubscriptionFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
-  (when-let [data (lookup-entry config id :distribution)]
+  (when-some [data (lookup-entry config id :distribution)]
     (. builder distribution data))
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -1087,17 +1087,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnSubscriptionFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
-  (when-let [data (lookup-entry config id :distribution)]
+  (when-some [data (lookup-entry config id :distribution)]
     (. builder distribution data))
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -1127,11 +1127,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stringValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:string-value` |
 "
   [^ColumnRestriction$Builder builder id config]
-  (when-let [data (lookup-entry config id :comparison)]
+  (when-some [data (lookup-entry config id :comparison)]
     (. builder comparison data))
-  (when-let [data (lookup-entry config id :number-value)]
+  (when-some [data (lookup-entry config id :number-value)]
     (. builder numberValue data))
-  (when-let [data (lookup-entry config id :string-value)]
+  (when-some [data (lookup-entry config id :string-value)]
     (. builder stringValue data))
   (.build builder))
 
@@ -1161,11 +1161,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CrossAccountDestination$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-name)]
+  (when-some [data (lookup-entry config id :destination-name)]
     (. builder destinationName data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -1195,11 +1195,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CrossAccountDestinationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-name)]
+  (when-some [data (lookup-entry config id :destination-name)]
     (. builder destinationName data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -1232,17 +1232,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3BucketAuditDestination` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:s3-bucket-audit-destination` |
 "
   [^DataProtectionPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-stream-name-audit-destination)]
+  (when-some [data (lookup-entry config id :delivery-stream-name-audit-destination)]
     (. builder deliveryStreamNameAuditDestination data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :identifiers)]
+  (when-some [data (lookup-entry config id :identifiers)]
     (. builder identifiers data))
-  (when-let [data (lookup-entry config id :log-group-audit-destination)]
+  (when-some [data (lookup-entry config id :log-group-audit-destination)]
     (. builder logGroupAuditDestination data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :s3-bucket-audit-destination)]
+  (when-some [data (lookup-entry config id :s3-bucket-audit-destination)]
     (. builder s3BucketAuditDestination data))
   (.build builder))
 
@@ -1275,17 +1275,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3BucketAuditDestination` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:s3-bucket-audit-destination` |
 "
   [^DataProtectionPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-stream-name-audit-destination)]
+  (when-some [data (lookup-entry config id :delivery-stream-name-audit-destination)]
     (. builder deliveryStreamNameAuditDestination data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :identifiers)]
+  (when-some [data (lookup-entry config id :identifiers)]
     (. builder identifiers data))
-  (when-let [data (lookup-entry config id :log-group-audit-destination)]
+  (when-some [data (lookup-entry config id :log-group-audit-destination)]
     (. builder logGroupAuditDestination data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :s3-bucket-audit-destination)]
+  (when-some [data (lookup-entry config id :s3-bucket-audit-destination)]
     (. builder s3BucketAuditDestination data))
   (.build builder))
 
@@ -1318,17 +1318,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `retention` | software.amazon.awscdk.services.logs.RetentionDays | [[cdk.api.services.logs/retention-days]] | `:retention` |
 "
   [^LogGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-protection-policy)]
+  (when-some [data (lookup-entry config id :data-protection-policy)]
     (. builder dataProtectionPolicy data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (log-group-class config id :log-group-class)]
+  (when-some [data (log-group-class config id :log-group-class)]
     (. builder logGroupClass data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (retention-days config id :retention)]
+  (when-some [data (retention-days config id :retention)]
     (. builder retention data))
   (.build builder))
 
@@ -1361,17 +1361,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `retention` | software.amazon.awscdk.services.logs.RetentionDays | [[cdk.api.services.logs/retention-days]] | `:retention` |
 "
   [^LogGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-protection-policy)]
+  (when-some [data (lookup-entry config id :data-protection-policy)]
     (. builder dataProtectionPolicy data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (log-group-class config id :log-group-class)]
+  (when-some [data (log-group-class config id :log-group-class)]
     (. builder logGroupClass data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (retention-days config id :retention)]
+  (when-some [data (retention-days config id :retention)]
     (. builder retention data))
   (.build builder))
 
@@ -1404,17 +1404,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^LogRetention$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :log-group-region)]
+  (when-some [data (lookup-entry config id :log-group-region)]
     (. builder logGroupRegion data))
-  (when-let [data (lookup-entry config id :log-retention-retry-options)]
+  (when-some [data (lookup-entry config id :log-retention-retry-options)]
     (. builder logRetentionRetryOptions data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (retention-days config id :retention)]
+  (when-some [data (retention-days config id :retention)]
     (. builder retention data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -1447,17 +1447,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^LogRetentionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :log-group-region)]
+  (when-some [data (lookup-entry config id :log-group-region)]
     (. builder logGroupRegion data))
-  (when-let [data (lookup-entry config id :log-retention-retry-options)]
+  (when-some [data (lookup-entry config id :log-retention-retry-options)]
     (. builder logRetentionRetryOptions data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (retention-days config id :retention)]
+  (when-some [data (retention-days config id :retention)]
     (. builder retention data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -1486,9 +1486,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-retries` |
 "
   [^LogRetentionRetryOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :base)]
+  (when-some [data (lookup-entry config id :base)]
     (. builder base data))
-  (when-let [data (lookup-entry config id :max-retries)]
+  (when-some [data (lookup-entry config id :max-retries)]
     (. builder maxRetries data))
   (.build builder))
 
@@ -1518,11 +1518,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
 "
   [^LogStream$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (lookup-entry config id :log-stream-name)]
+  (when-some [data (lookup-entry config id :log-stream-name)]
     (. builder logStreamName data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
   (.build builder))
 
@@ -1552,11 +1552,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
 "
   [^LogStreamProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (lookup-entry config id :log-stream-name)]
+  (when-some [data (lookup-entry config id :log-stream-name)]
     (. builder logStreamName data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
   (.build builder))
 
@@ -1585,9 +1585,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^LogSubscriptionDestinationConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -1623,23 +1623,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^MetricFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :metric-namespace)]
+  (when-some [data (lookup-entry config id :metric-namespace)]
     (. builder metricNamespace data))
-  (when-let [data (lookup-entry config id :metric-value)]
+  (when-some [data (lookup-entry config id :metric-value)]
     (. builder metricValue data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1674,21 +1674,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^MetricFilterOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :metric-namespace)]
+  (when-some [data (lookup-entry config id :metric-namespace)]
     (. builder metricNamespace data))
-  (when-let [data (lookup-entry config id :metric-value)]
+  (when-some [data (lookup-entry config id :metric-value)]
     (. builder metricValue data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1724,23 +1724,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^MetricFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :metric-namespace)]
+  (when-some [data (lookup-entry config id :metric-namespace)]
     (. builder metricNamespace data))
-  (when-let [data (lookup-entry config id :metric-value)]
+  (when-some [data (lookup-entry config id :metric-value)]
     (. builder metricValue data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -1770,11 +1770,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queryString` | software.amazon.awscdk.services.logs.QueryString | [[cdk.support/lookup-entry]] | `:query-string` |
 "
   [^QueryDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-groups)]
+  (when-some [data (lookup-entry config id :log-groups)]
     (. builder logGroups data))
-  (when-let [data (lookup-entry config id :query-definition-name)]
+  (when-some [data (lookup-entry config id :query-definition-name)]
     (. builder queryDefinitionName data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
   (.build builder))
 
@@ -1804,11 +1804,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `queryString` | software.amazon.awscdk.services.logs.QueryString | [[cdk.support/lookup-entry]] | `:query-string` |
 "
   [^QueryDefinitionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-groups)]
+  (when-some [data (lookup-entry config id :log-groups)]
     (. builder logGroups data))
-  (when-let [data (lookup-entry config id :query-definition-name)]
+  (when-some [data (lookup-entry config id :query-definition-name)]
     (. builder queryDefinitionName data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
   (.build builder))
 
@@ -1844,23 +1844,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stats` | java.lang.String | [[cdk.support/lookup-entry]] | `:stats` |
 "
   [^QueryString$Builder builder id config]
-  (when-let [data (lookup-entry config id :display)]
+  (when-some [data (lookup-entry config id :display)]
     (. builder display data))
-  (when-let [data (lookup-entry config id :fields)]
+  (when-some [data (lookup-entry config id :fields)]
     (. builder fields data))
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
-  (when-let [data (lookup-entry config id :filter-statements)]
+  (when-some [data (lookup-entry config id :filter-statements)]
     (. builder filterStatements data))
-  (when-let [data (lookup-entry config id :limit)]
+  (when-some [data (lookup-entry config id :limit)]
     (. builder limit data))
-  (when-let [data (lookup-entry config id :parse)]
+  (when-some [data (lookup-entry config id :parse)]
     (. builder parse data))
-  (when-let [data (lookup-entry config id :parse-statements)]
+  (when-some [data (lookup-entry config id :parse-statements)]
     (. builder parseStatements data))
-  (when-let [data (lookup-entry config id :sort)]
+  (when-some [data (lookup-entry config id :sort)]
     (. builder sort data))
-  (when-let [data (lookup-entry config id :stats)]
+  (when-some [data (lookup-entry config id :stats)]
     (. builder stats data))
   (.build builder))
 
@@ -1896,23 +1896,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stats` | java.lang.String | [[cdk.support/lookup-entry]] | `:stats` |
 "
   [^QueryStringProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :display)]
+  (when-some [data (lookup-entry config id :display)]
     (. builder display data))
-  (when-let [data (lookup-entry config id :fields)]
+  (when-some [data (lookup-entry config id :fields)]
     (. builder fields data))
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
-  (when-let [data (lookup-entry config id :filter-statements)]
+  (when-some [data (lookup-entry config id :filter-statements)]
     (. builder filterStatements data))
-  (when-let [data (lookup-entry config id :limit)]
+  (when-some [data (lookup-entry config id :limit)]
     (. builder limit data))
-  (when-let [data (lookup-entry config id :parse)]
+  (when-some [data (lookup-entry config id :parse)]
     (. builder parse data))
-  (when-let [data (lookup-entry config id :parse-statements)]
+  (when-some [data (lookup-entry config id :parse-statements)]
     (. builder parseStatements data))
-  (when-let [data (lookup-entry config id :sort)]
+  (when-some [data (lookup-entry config id :sort)]
     (. builder sort data))
-  (when-let [data (lookup-entry config id :stats)]
+  (when-some [data (lookup-entry config id :stats)]
     (. builder stats data))
   (.build builder))
 
@@ -1941,9 +1941,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourcePolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-policy-name` |
 "
   [^ResourcePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-statements)]
+  (when-some [data (lookup-entry config id :policy-statements)]
     (. builder policyStatements data))
-  (when-let [data (lookup-entry config id :resource-policy-name)]
+  (when-some [data (lookup-entry config id :resource-policy-name)]
     (. builder resourcePolicyName data))
   (.build builder))
 
@@ -1972,9 +1972,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourcePolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-policy-name` |
 "
   [^ResourcePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-statements)]
+  (when-some [data (lookup-entry config id :policy-statements)]
     (. builder policyStatements data))
-  (when-let [data (lookup-entry config id :resource-policy-name)]
+  (when-some [data (lookup-entry config id :resource-policy-name)]
     (. builder resourcePolicyName data))
   (.build builder))
 
@@ -2002,7 +2002,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `logStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name` |
 "
   [^StreamOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-stream-name)]
+  (when-some [data (lookup-entry config id :log-stream-name)]
     (. builder logStreamName data))
   (.build builder))
 
@@ -2033,13 +2033,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `logGroup` | software.amazon.awscdk.services.logs.ILogGroup | [[cdk.support/lookup-entry]] | `:log-group` |
 "
   [^SubscriptionFilter$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
   (.build builder))
 
@@ -2069,11 +2069,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `filterPattern` | software.amazon.awscdk.services.logs.IFilterPattern | [[cdk.support/lookup-entry]] | `:filter-pattern` |
 "
   [^SubscriptionFilterOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
   (.build builder))
 
@@ -2104,13 +2104,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `logGroup` | software.amazon.awscdk.services.logs.ILogGroup | [[cdk.support/lookup-entry]] | `:log-group` |
 "
   [^SubscriptionFilterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :filter-name)]
+  (when-some [data (lookup-entry config id :filter-name)]
     (. builder filterName data))
-  (when-let [data (lookup-entry config id :filter-pattern)]
+  (when-some [data (lookup-entry config id :filter-pattern)]
     (. builder filterPattern data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
   (.build builder))
 

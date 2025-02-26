@@ -41,27 +41,27 @@
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
 "
   [^CfnApp$AutoBranchCreationConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-branch-creation-patterns)]
+  (when-some [data (lookup-entry config id :auto-branch-creation-patterns)]
     (. builder autoBranchCreationPatterns data))
-  (when-let [data (lookup-entry config id :basic-auth-config)]
+  (when-some [data (lookup-entry config id :basic-auth-config)]
     (. builder basicAuthConfig data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :enable-auto-branch-creation)]
+  (when-some [data (lookup-entry config id :enable-auto-branch-creation)]
     (. builder enableAutoBranchCreation data))
-  (when-let [data (lookup-entry config id :enable-auto-build)]
+  (when-some [data (lookup-entry config id :enable-auto-build)]
     (. builder enableAutoBuild data))
-  (when-let [data (lookup-entry config id :enable-performance-mode)]
+  (when-some [data (lookup-entry config id :enable-performance-mode)]
     (. builder enablePerformanceMode data))
-  (when-let [data (lookup-entry config id :enable-pull-request-preview)]
+  (when-some [data (lookup-entry config id :enable-pull-request-preview)]
     (. builder enablePullRequestPreview data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :framework)]
+  (when-some [data (lookup-entry config id :framework)]
     (. builder framework data))
-  (when-let [data (lookup-entry config id :pull-request-environment-name)]
+  (when-some [data (lookup-entry config id :pull-request-environment-name)]
     (. builder pullRequestEnvironmentName data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
 
@@ -91,11 +91,11 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnApp$BasicAuthConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enable-basic-auth)]
+  (when-some [data (lookup-entry config id :enable-basic-auth)]
     (. builder enableBasicAuth data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -137,35 +137,35 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApp$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :auto-branch-creation-config)]
+  (when-some [data (lookup-entry config id :auto-branch-creation-config)]
     (. builder autoBranchCreationConfig data))
-  (when-let [data (lookup-entry config id :basic-auth-config)]
+  (when-some [data (lookup-entry config id :basic-auth-config)]
     (. builder basicAuthConfig data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :custom-rules)]
+  (when-some [data (lookup-entry config id :custom-rules)]
     (. builder customRules data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-branch-auto-deletion)]
+  (when-some [data (lookup-entry config id :enable-branch-auto-deletion)]
     (. builder enableBranchAutoDeletion data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :iam-service-role)]
+  (when-some [data (lookup-entry config id :iam-service-role)]
     (. builder iamServiceRole data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :oauth-token)]
+  (when-some [data (lookup-entry config id :oauth-token)]
     (. builder oauthToken data))
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :repository)]
+  (when-some [data (lookup-entry config id :repository)]
     (. builder repository data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -196,13 +196,13 @@
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnApp$CustomRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -231,9 +231,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnApp$EnvironmentVariableProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -275,35 +275,35 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAppProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-token)]
+  (when-some [data (lookup-entry config id :access-token)]
     (. builder accessToken data))
-  (when-let [data (lookup-entry config id :auto-branch-creation-config)]
+  (when-some [data (lookup-entry config id :auto-branch-creation-config)]
     (. builder autoBranchCreationConfig data))
-  (when-let [data (lookup-entry config id :basic-auth-config)]
+  (when-some [data (lookup-entry config id :basic-auth-config)]
     (. builder basicAuthConfig data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :custom-rules)]
+  (when-some [data (lookup-entry config id :custom-rules)]
     (. builder customRules data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-branch-auto-deletion)]
+  (when-some [data (lookup-entry config id :enable-branch-auto-deletion)]
     (. builder enableBranchAutoDeletion data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :iam-service-role)]
+  (when-some [data (lookup-entry config id :iam-service-role)]
     (. builder iamServiceRole data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :oauth-token)]
+  (when-some [data (lookup-entry config id :oauth-token)]
     (. builder oauthToken data))
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :repository)]
+  (when-some [data (lookup-entry config id :repository)]
     (. builder repository data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -331,7 +331,7 @@
 | `stackArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-arn` |
 "
   [^CfnBranch$BackendProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :stack-arn)]
+  (when-some [data (lookup-entry config id :stack-arn)]
     (. builder stackArn data))
   (.build builder))
 
@@ -361,11 +361,11 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnBranch$BasicAuthConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enable-basic-auth)]
+  (when-some [data (lookup-entry config id :enable-basic-auth)]
     (. builder enableBasicAuth data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -406,33 +406,33 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBranch$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :backend)]
+  (when-some [data (lookup-entry config id :backend)]
     (. builder backend data))
-  (when-let [data (lookup-entry config id :basic-auth-config)]
+  (when-some [data (lookup-entry config id :basic-auth-config)]
     (. builder basicAuthConfig data))
-  (when-let [data (lookup-entry config id :branch-name)]
+  (when-some [data (lookup-entry config id :branch-name)]
     (. builder branchName data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-auto-build)]
+  (when-some [data (lookup-entry config id :enable-auto-build)]
     (. builder enableAutoBuild data))
-  (when-let [data (lookup-entry config id :enable-performance-mode)]
+  (when-some [data (lookup-entry config id :enable-performance-mode)]
     (. builder enablePerformanceMode data))
-  (when-let [data (lookup-entry config id :enable-pull-request-preview)]
+  (when-some [data (lookup-entry config id :enable-pull-request-preview)]
     (. builder enablePullRequestPreview data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :framework)]
+  (when-some [data (lookup-entry config id :framework)]
     (. builder framework data))
-  (when-let [data (lookup-entry config id :pull-request-environment-name)]
+  (when-some [data (lookup-entry config id :pull-request-environment-name)]
     (. builder pullRequestEnvironmentName data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -461,9 +461,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnBranch$EnvironmentVariableProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -504,33 +504,33 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnBranchProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :backend)]
+  (when-some [data (lookup-entry config id :backend)]
     (. builder backend data))
-  (when-let [data (lookup-entry config id :basic-auth-config)]
+  (when-some [data (lookup-entry config id :basic-auth-config)]
     (. builder basicAuthConfig data))
-  (when-let [data (lookup-entry config id :branch-name)]
+  (when-some [data (lookup-entry config id :branch-name)]
     (. builder branchName data))
-  (when-let [data (lookup-entry config id :build-spec)]
+  (when-some [data (lookup-entry config id :build-spec)]
     (. builder buildSpec data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :enable-auto-build)]
+  (when-some [data (lookup-entry config id :enable-auto-build)]
     (. builder enableAutoBuild data))
-  (when-let [data (lookup-entry config id :enable-performance-mode)]
+  (when-some [data (lookup-entry config id :enable-performance-mode)]
     (. builder enablePerformanceMode data))
-  (when-let [data (lookup-entry config id :enable-pull-request-preview)]
+  (when-some [data (lookup-entry config id :enable-pull-request-preview)]
     (. builder enablePullRequestPreview data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :framework)]
+  (when-some [data (lookup-entry config id :framework)]
     (. builder framework data))
-  (when-let [data (lookup-entry config id :pull-request-environment-name)]
+  (when-some [data (lookup-entry config id :pull-request-environment-name)]
     (. builder pullRequestEnvironmentName data))
-  (when-let [data (lookup-entry config id :stage)]
+  (when-some [data (lookup-entry config id :stage)]
     (. builder stage data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -564,19 +564,19 @@
 | `subDomainSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |
 "
   [^CfnDomain$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :auto-sub-domain-creation-patterns)]
+  (when-some [data (lookup-entry config id :auto-sub-domain-creation-patterns)]
     (. builder autoSubDomainCreationPatterns data))
-  (when-let [data (lookup-entry config id :auto-sub-domain-iam-role)]
+  (when-some [data (lookup-entry config id :auto-sub-domain-iam-role)]
     (. builder autoSubDomainIamRole data))
-  (when-let [data (lookup-entry config id :certificate-settings)]
+  (when-some [data (lookup-entry config id :certificate-settings)]
     (. builder certificateSettings data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :enable-auto-sub-domain)]
+  (when-some [data (lookup-entry config id :enable-auto-sub-domain)]
     (. builder enableAutoSubDomain data))
-  (when-let [data (lookup-entry config id :sub-domain-settings)]
+  (when-some [data (lookup-entry config id :sub-domain-settings)]
     (. builder subDomainSettings data))
   (.build builder))
 
@@ -606,11 +606,11 @@
 | `certificateVerificationDnsRecord` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-verification-dns-record` |
 "
   [^CfnDomain$CertificateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-arn)]
+  (when-some [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
-  (when-let [data (lookup-entry config id :certificate-type)]
+  (when-some [data (lookup-entry config id :certificate-type)]
     (. builder certificateType data))
-  (when-let [data (lookup-entry config id :certificate-verification-dns-record)]
+  (when-some [data (lookup-entry config id :certificate-verification-dns-record)]
     (. builder certificateVerificationDnsRecord data))
   (.build builder))
 
@@ -639,9 +639,9 @@
 | `customCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-certificate-arn` |
 "
   [^CfnDomain$CertificateSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-type)]
+  (when-some [data (lookup-entry config id :certificate-type)]
     (. builder certificateType data))
-  (when-let [data (lookup-entry config id :custom-certificate-arn)]
+  (when-some [data (lookup-entry config id :custom-certificate-arn)]
     (. builder customCertificateArn data))
   (.build builder))
 
@@ -675,19 +675,19 @@
 | `subDomainSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |
 "
   [^CfnDomainProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-id)]
+  (when-some [data (lookup-entry config id :app-id)]
     (. builder appId data))
-  (when-let [data (lookup-entry config id :auto-sub-domain-creation-patterns)]
+  (when-some [data (lookup-entry config id :auto-sub-domain-creation-patterns)]
     (. builder autoSubDomainCreationPatterns data))
-  (when-let [data (lookup-entry config id :auto-sub-domain-iam-role)]
+  (when-some [data (lookup-entry config id :auto-sub-domain-iam-role)]
     (. builder autoSubDomainIamRole data))
-  (when-let [data (lookup-entry config id :certificate-settings)]
+  (when-some [data (lookup-entry config id :certificate-settings)]
     (. builder certificateSettings data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :enable-auto-sub-domain)]
+  (when-some [data (lookup-entry config id :enable-auto-sub-domain)]
     (. builder enableAutoSubDomain data))
-  (when-let [data (lookup-entry config id :sub-domain-settings)]
+  (when-some [data (lookup-entry config id :sub-domain-settings)]
     (. builder subDomainSettings data))
   (.build builder))
 
@@ -716,9 +716,9 @@
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnDomain$SubDomainSettingProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :branch-name)]
+  (when-some [data (lookup-entry config id :branch-name)]
     (. builder branchName data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 

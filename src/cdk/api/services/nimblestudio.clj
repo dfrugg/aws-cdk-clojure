@@ -45,21 +45,21 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLaunchProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ec2-subnet-ids)]
+  (when-some [data (lookup-entry config id :ec2-subnet-ids)]
     (. builder ec2SubnetIds data))
-  (when-let [data (lookup-entry config id :launch-profile-protocol-versions)]
+  (when-some [data (lookup-entry config id :launch-profile-protocol-versions)]
     (. builder launchProfileProtocolVersions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :stream-configuration)]
+  (when-some [data (lookup-entry config id :stream-configuration)]
     (. builder streamConfiguration data))
-  (when-let [data (lookup-entry config id :studio-component-ids)]
+  (when-some [data (lookup-entry config id :studio-component-ids)]
     (. builder studioComponentIds data))
-  (when-let [data (lookup-entry config id :studio-id)]
+  (when-some [data (lookup-entry config id :studio-id)]
     (. builder studioId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -94,21 +94,21 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLaunchProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ec2-subnet-ids)]
+  (when-some [data (lookup-entry config id :ec2-subnet-ids)]
     (. builder ec2SubnetIds data))
-  (when-let [data (lookup-entry config id :launch-profile-protocol-versions)]
+  (when-some [data (lookup-entry config id :launch-profile-protocol-versions)]
     (. builder launchProfileProtocolVersions data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :stream-configuration)]
+  (when-some [data (lookup-entry config id :stream-configuration)]
     (. builder streamConfiguration data))
-  (when-let [data (lookup-entry config id :studio-component-ids)]
+  (when-some [data (lookup-entry config id :studio-component-ids)]
     (. builder studioComponentIds data))
-  (when-let [data (lookup-entry config id :studio-id)]
+  (when-some [data (lookup-entry config id :studio-id)]
     (. builder studioId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -145,25 +145,25 @@
 | `volumeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volume-configuration` |
 "
   [^CfnLaunchProfile$StreamConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatic-termination-mode)]
+  (when-some [data (lookup-entry config id :automatic-termination-mode)]
     (. builder automaticTerminationMode data))
-  (when-let [data (lookup-entry config id :clipboard-mode)]
+  (when-some [data (lookup-entry config id :clipboard-mode)]
     (. builder clipboardMode data))
-  (when-let [data (lookup-entry config id :ec2-instance-types)]
+  (when-some [data (lookup-entry config id :ec2-instance-types)]
     (. builder ec2InstanceTypes data))
-  (when-let [data (lookup-entry config id :max-session-length-in-minutes)]
+  (when-some [data (lookup-entry config id :max-session-length-in-minutes)]
     (. builder maxSessionLengthInMinutes data))
-  (when-let [data (lookup-entry config id :max-stopped-session-length-in-minutes)]
+  (when-some [data (lookup-entry config id :max-stopped-session-length-in-minutes)]
     (. builder maxStoppedSessionLengthInMinutes data))
-  (when-let [data (lookup-entry config id :session-backup)]
+  (when-some [data (lookup-entry config id :session-backup)]
     (. builder sessionBackup data))
-  (when-let [data (lookup-entry config id :session-persistence-mode)]
+  (when-some [data (lookup-entry config id :session-persistence-mode)]
     (. builder sessionPersistenceMode data))
-  (when-let [data (lookup-entry config id :session-storage)]
+  (when-some [data (lookup-entry config id :session-storage)]
     (. builder sessionStorage data))
-  (when-let [data (lookup-entry config id :streaming-image-ids)]
+  (when-some [data (lookup-entry config id :streaming-image-ids)]
     (. builder streamingImageIds data))
-  (when-let [data (lookup-entry config id :volume-configuration)]
+  (when-some [data (lookup-entry config id :volume-configuration)]
     (. builder volumeConfiguration data))
   (.build builder))
 
@@ -192,9 +192,9 @@
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 "
   [^CfnLaunchProfile$StreamConfigurationSessionBackupProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-backups-to-retain)]
+  (when-some [data (lookup-entry config id :max-backups-to-retain)]
     (. builder maxBackupsToRetain data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
   (.build builder))
 
@@ -223,9 +223,9 @@
 | `root` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:root` |
 "
   [^CfnLaunchProfile$StreamConfigurationSessionStorageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :root)]
+  (when-some [data (lookup-entry config id :root)]
     (. builder root data))
   (.build builder))
 
@@ -254,9 +254,9 @@
 | `windows` | java.lang.String | [[cdk.support/lookup-entry]] | `:windows` |
 "
   [^CfnLaunchProfile$StreamingSessionStorageRootProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :linux)]
+  (when-some [data (lookup-entry config id :linux)]
     (. builder linux data))
-  (when-let [data (lookup-entry config id :windows)]
+  (when-some [data (lookup-entry config id :windows)]
     (. builder windows data))
   (.build builder))
 
@@ -286,11 +286,11 @@
 | `throughput` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput` |
 "
   [^CfnLaunchProfile$VolumeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :iops)]
+  (when-some [data (lookup-entry config id :iops)]
     (. builder iops data))
-  (when-let [data (lookup-entry config id :size)]
+  (when-some [data (lookup-entry config id :size)]
     (. builder size data))
-  (when-let [data (lookup-entry config id :throughput)]
+  (when-some [data (lookup-entry config id :throughput)]
     (. builder throughput data))
   (.build builder))
 
@@ -322,15 +322,15 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamingImage$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ec2-image-id)]
+  (when-some [data (lookup-entry config id :ec2-image-id)]
     (. builder ec2ImageId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :studio-id)]
+  (when-some [data (lookup-entry config id :studio-id)]
     (. builder studioId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -362,15 +362,15 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamingImageProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ec2-image-id)]
+  (when-some [data (lookup-entry config id :ec2-image-id)]
     (. builder ec2ImageId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :studio-id)]
+  (when-some [data (lookup-entry config id :studio-id)]
     (. builder studioId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -399,9 +399,9 @@
 | `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |
 "
   [^CfnStreamingImage$StreamingImageEncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-arn)]
+  (when-some [data (lookup-entry config id :key-arn)]
     (. builder keyArn data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
   (.build builder))
 
@@ -434,17 +434,17 @@
 | `userRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-role-arn` |
 "
   [^CfnStudio$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin-role-arn)]
+  (when-some [data (lookup-entry config id :admin-role-arn)]
     (. builder adminRoleArn data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :studio-encryption-configuration)]
+  (when-some [data (lookup-entry config id :studio-encryption-configuration)]
     (. builder studioEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :studio-name)]
+  (when-some [data (lookup-entry config id :studio-name)]
     (. builder studioName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-role-arn)]
+  (when-some [data (lookup-entry config id :user-role-arn)]
     (. builder userRoleArn data))
   (.build builder))
 
@@ -473,9 +473,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnStudioComponent$ActiveDirectoryComputerAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -505,11 +505,11 @@
 | `organizationalUnitDistinguishedName` | java.lang.String | [[cdk.support/lookup-entry]] | `:organizational-unit-distinguished-name` |
 "
   [^CfnStudioComponent$ActiveDirectoryConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :computer-attributes)]
+  (when-some [data (lookup-entry config id :computer-attributes)]
     (. builder computerAttributes data))
-  (when-let [data (lookup-entry config id :directory-id)]
+  (when-some [data (lookup-entry config id :directory-id)]
     (. builder directoryId data))
-  (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
+  (when-some [data (lookup-entry config id :organizational-unit-distinguished-name)]
     (. builder organizationalUnitDistinguishedName data))
   (.build builder))
 
@@ -548,29 +548,29 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnStudioComponent$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ec2-security-group-ids)]
+  (when-some [data (lookup-entry config id :ec2-security-group-ids)]
     (. builder ec2SecurityGroupIds data))
-  (when-let [data (lookup-entry config id :initialization-scripts)]
+  (when-some [data (lookup-entry config id :initialization-scripts)]
     (. builder initializationScripts data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :runtime-role-arn)]
+  (when-some [data (lookup-entry config id :runtime-role-arn)]
     (. builder runtimeRoleArn data))
-  (when-let [data (lookup-entry config id :script-parameters)]
+  (when-some [data (lookup-entry config id :script-parameters)]
     (. builder scriptParameters data))
-  (when-let [data (lookup-entry config id :secure-initialization-role-arn)]
+  (when-some [data (lookup-entry config id :secure-initialization-role-arn)]
     (. builder secureInitializationRoleArn data))
-  (when-let [data (lookup-entry config id :studio-id)]
+  (when-some [data (lookup-entry config id :studio-id)]
     (. builder studioId data))
-  (when-let [data (lookup-entry config id :subtype)]
+  (when-some [data (lookup-entry config id :subtype)]
     (. builder subtype data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -599,9 +599,9 @@
 | `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
 "
   [^CfnStudioComponent$ComputeFarmConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :active-directory-user)]
+  (when-some [data (lookup-entry config id :active-directory-user)]
     (. builder activeDirectoryUser data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
   (.build builder))
 
@@ -629,7 +629,7 @@
 | `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
 "
   [^CfnStudioComponent$LicenseServiceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
   (.build builder))
 
@@ -668,29 +668,29 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnStudioComponentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ec2-security-group-ids)]
+  (when-some [data (lookup-entry config id :ec2-security-group-ids)]
     (. builder ec2SecurityGroupIds data))
-  (when-let [data (lookup-entry config id :initialization-scripts)]
+  (when-some [data (lookup-entry config id :initialization-scripts)]
     (. builder initializationScripts data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :runtime-role-arn)]
+  (when-some [data (lookup-entry config id :runtime-role-arn)]
     (. builder runtimeRoleArn data))
-  (when-let [data (lookup-entry config id :script-parameters)]
+  (when-some [data (lookup-entry config id :script-parameters)]
     (. builder scriptParameters data))
-  (when-let [data (lookup-entry config id :secure-initialization-role-arn)]
+  (when-some [data (lookup-entry config id :secure-initialization-role-arn)]
     (. builder secureInitializationRoleArn data))
-  (when-let [data (lookup-entry config id :studio-id)]
+  (when-some [data (lookup-entry config id :studio-id)]
     (. builder studioId data))
-  (when-let [data (lookup-entry config id :subtype)]
+  (when-some [data (lookup-entry config id :subtype)]
     (. builder subtype data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -719,9 +719,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnStudioComponent$ScriptParameterKeyValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -753,15 +753,15 @@
 | `windowsMountDrive` | java.lang.String | [[cdk.support/lookup-entry]] | `:windows-mount-drive` |
 "
   [^CfnStudioComponent$SharedFileSystemConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :file-system-id)]
+  (when-some [data (lookup-entry config id :file-system-id)]
     (. builder fileSystemId data))
-  (when-let [data (lookup-entry config id :linux-mount-point)]
+  (when-some [data (lookup-entry config id :linux-mount-point)]
     (. builder linuxMountPoint data))
-  (when-let [data (lookup-entry config id :share-name)]
+  (when-some [data (lookup-entry config id :share-name)]
     (. builder shareName data))
-  (when-let [data (lookup-entry config id :windows-mount-drive)]
+  (when-some [data (lookup-entry config id :windows-mount-drive)]
     (. builder windowsMountDrive data))
   (.build builder))
 
@@ -792,13 +792,13 @@
 | `sharedFileSystemConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:shared-file-system-configuration` |
 "
   [^CfnStudioComponent$StudioComponentConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :active-directory-configuration)]
+  (when-some [data (lookup-entry config id :active-directory-configuration)]
     (. builder activeDirectoryConfiguration data))
-  (when-let [data (lookup-entry config id :compute-farm-configuration)]
+  (when-some [data (lookup-entry config id :compute-farm-configuration)]
     (. builder computeFarmConfiguration data))
-  (when-let [data (lookup-entry config id :license-service-configuration)]
+  (when-some [data (lookup-entry config id :license-service-configuration)]
     (. builder licenseServiceConfiguration data))
-  (when-let [data (lookup-entry config id :shared-file-system-configuration)]
+  (when-some [data (lookup-entry config id :shared-file-system-configuration)]
     (. builder sharedFileSystemConfiguration data))
   (.build builder))
 
@@ -829,13 +829,13 @@
 | `script` | java.lang.String | [[cdk.support/lookup-entry]] | `:script` |
 "
   [^CfnStudioComponent$StudioComponentInitializationScriptProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :launch-profile-protocol-version)]
+  (when-some [data (lookup-entry config id :launch-profile-protocol-version)]
     (. builder launchProfileProtocolVersion data))
-  (when-let [data (lookup-entry config id :platform)]
+  (when-some [data (lookup-entry config id :platform)]
     (. builder platform data))
-  (when-let [data (lookup-entry config id :run-context)]
+  (when-some [data (lookup-entry config id :run-context)]
     (. builder runContext data))
-  (when-let [data (lookup-entry config id :script)]
+  (when-some [data (lookup-entry config id :script)]
     (. builder script data))
   (.build builder))
 
@@ -868,17 +868,17 @@
 | `userRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-role-arn` |
 "
   [^CfnStudioProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin-role-arn)]
+  (when-some [data (lookup-entry config id :admin-role-arn)]
     (. builder adminRoleArn data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :studio-encryption-configuration)]
+  (when-some [data (lookup-entry config id :studio-encryption-configuration)]
     (. builder studioEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :studio-name)]
+  (when-some [data (lookup-entry config id :studio-name)]
     (. builder studioName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-role-arn)]
+  (when-some [data (lookup-entry config id :user-role-arn)]
     (. builder userRoleArn data))
   (.build builder))
 
@@ -907,9 +907,9 @@
 | `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |
 "
   [^CfnStudio$StudioEncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-arn)]
+  (when-some [data (lookup-entry config id :key-arn)]
     (. builder keyArn data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
   (.build builder))
 

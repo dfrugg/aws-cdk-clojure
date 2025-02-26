@@ -31,21 +31,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationInstance$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-instance-id-to-replace)]
+  (when-some [data (lookup-entry config id :application-instance-id-to-replace)]
     (. builder applicationInstanceIdToReplace data))
-  (when-let [data (lookup-entry config id :default-runtime-context-device)]
+  (when-some [data (lookup-entry config id :default-runtime-context-device)]
     (. builder defaultRuntimeContextDevice data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :manifest-overrides-payload)]
+  (when-some [data (lookup-entry config id :manifest-overrides-payload)]
     (. builder manifestOverridesPayload data))
-  (when-let [data (lookup-entry config id :manifest-payload)]
+  (when-some [data (lookup-entry config id :manifest-payload)]
     (. builder manifestPayload data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :runtime-role-arn)]
+  (when-some [data (lookup-entry config id :runtime-role-arn)]
     (. builder runtimeRoleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -73,7 +73,7 @@
 | `payloadData` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload-data` |
 "
   [^CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :payload-data)]
+  (when-some [data (lookup-entry config id :payload-data)]
     (. builder payloadData data))
   (.build builder))
 
@@ -101,7 +101,7 @@
 | `payloadData` | java.lang.String | [[cdk.support/lookup-entry]] | `:payload-data` |
 "
   [^CfnApplicationInstance$ManifestPayloadProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :payload-data)]
+  (when-some [data (lookup-entry config id :payload-data)]
     (. builder payloadData data))
   (.build builder))
 
@@ -136,21 +136,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationInstanceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-instance-id-to-replace)]
+  (when-some [data (lookup-entry config id :application-instance-id-to-replace)]
     (. builder applicationInstanceIdToReplace data))
-  (when-let [data (lookup-entry config id :default-runtime-context-device)]
+  (when-some [data (lookup-entry config id :default-runtime-context-device)]
     (. builder defaultRuntimeContextDevice data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :manifest-overrides-payload)]
+  (when-some [data (lookup-entry config id :manifest-overrides-payload)]
     (. builder manifestOverridesPayload data))
-  (when-let [data (lookup-entry config id :manifest-payload)]
+  (when-some [data (lookup-entry config id :manifest-payload)]
     (. builder manifestPayload data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :runtime-role-arn)]
+  (when-some [data (lookup-entry config id :runtime-role-arn)]
     (. builder runtimeRoleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -180,11 +180,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackage$Builder builder id config]
-  (when-let [data (lookup-entry config id :package-name)]
+  (when-some [data (lookup-entry config id :package-name)]
     (. builder packageName data))
-  (when-let [data (lookup-entry config id :storage-location)]
+  (when-some [data (lookup-entry config id :storage-location)]
     (. builder storageLocation data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -214,11 +214,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPackageProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :package-name)]
+  (when-some [data (lookup-entry config id :package-name)]
     (. builder packageName data))
-  (when-let [data (lookup-entry config id :storage-location)]
+  (when-some [data (lookup-entry config id :storage-location)]
     (. builder storageLocation data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -250,15 +250,15 @@
 | `repoPrefixLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:repo-prefix-location` |
 "
   [^CfnPackage$StorageLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :binary-prefix-location)]
+  (when-some [data (lookup-entry config id :binary-prefix-location)]
     (. builder binaryPrefixLocation data))
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :generated-prefix-location)]
+  (when-some [data (lookup-entry config id :generated-prefix-location)]
     (. builder generatedPrefixLocation data))
-  (when-let [data (lookup-entry config id :manifest-prefix-location)]
+  (when-some [data (lookup-entry config id :manifest-prefix-location)]
     (. builder manifestPrefixLocation data))
-  (when-let [data (lookup-entry config id :repo-prefix-location)]
+  (when-some [data (lookup-entry config id :repo-prefix-location)]
     (. builder repoPrefixLocation data))
   (.build builder))
 
@@ -291,17 +291,17 @@
 | `updatedLatestPatchVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:updated-latest-patch-version` |
 "
   [^CfnPackageVersion$Builder builder id config]
-  (when-let [data (lookup-entry config id :mark-latest)]
+  (when-some [data (lookup-entry config id :mark-latest)]
     (. builder markLatest data))
-  (when-let [data (lookup-entry config id :owner-account)]
+  (when-some [data (lookup-entry config id :owner-account)]
     (. builder ownerAccount data))
-  (when-let [data (lookup-entry config id :package-id)]
+  (when-some [data (lookup-entry config id :package-id)]
     (. builder packageId data))
-  (when-let [data (lookup-entry config id :package-version)]
+  (when-some [data (lookup-entry config id :package-version)]
     (. builder packageVersion data))
-  (when-let [data (lookup-entry config id :patch-version)]
+  (when-some [data (lookup-entry config id :patch-version)]
     (. builder patchVersion data))
-  (when-let [data (lookup-entry config id :updated-latest-patch-version)]
+  (when-some [data (lookup-entry config id :updated-latest-patch-version)]
     (. builder updatedLatestPatchVersion data))
   (.build builder))
 
@@ -334,17 +334,17 @@
 | `updatedLatestPatchVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:updated-latest-patch-version` |
 "
   [^CfnPackageVersionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :mark-latest)]
+  (when-some [data (lookup-entry config id :mark-latest)]
     (. builder markLatest data))
-  (when-let [data (lookup-entry config id :owner-account)]
+  (when-some [data (lookup-entry config id :owner-account)]
     (. builder ownerAccount data))
-  (when-let [data (lookup-entry config id :package-id)]
+  (when-some [data (lookup-entry config id :package-id)]
     (. builder packageId data))
-  (when-let [data (lookup-entry config id :package-version)]
+  (when-some [data (lookup-entry config id :package-version)]
     (. builder packageVersion data))
-  (when-let [data (lookup-entry config id :patch-version)]
+  (when-some [data (lookup-entry config id :patch-version)]
     (. builder patchVersion data))
-  (when-let [data (lookup-entry config id :updated-latest-patch-version)]
+  (when-some [data (lookup-entry config id :updated-latest-patch-version)]
     (. builder updatedLatestPatchVersion data))
   (.build builder))
 

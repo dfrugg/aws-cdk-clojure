@@ -28,9 +28,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -59,9 +59,9 @@
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^CfnCluster$ClusterEndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -90,9 +90,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -122,11 +122,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnControlPanel$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-arn)]
+  (when-some [data (lookup-entry config id :cluster-arn)]
     (. builder clusterArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -156,11 +156,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnControlPanelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-arn)]
+  (when-some [data (lookup-entry config id :cluster-arn)]
     (. builder clusterArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -190,11 +190,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRoutingControl$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-arn)]
+  (when-some [data (lookup-entry config id :cluster-arn)]
     (. builder clusterArn data))
-  (when-let [data (lookup-entry config id :control-panel-arn)]
+  (when-some [data (lookup-entry config id :control-panel-arn)]
     (. builder controlPanelArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -224,11 +224,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnRoutingControlProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-arn)]
+  (when-some [data (lookup-entry config id :cluster-arn)]
     (. builder clusterArn data))
-  (when-let [data (lookup-entry config id :control-panel-arn)]
+  (when-some [data (lookup-entry config id :control-panel-arn)]
     (. builder controlPanelArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -257,9 +257,9 @@
 | `waitPeriodMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-period-ms` |
 "
   [^CfnSafetyRule$AssertionRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :asserted-controls)]
+  (when-some [data (lookup-entry config id :asserted-controls)]
     (. builder assertedControls data))
-  (when-let [data (lookup-entry config id :wait-period-ms)]
+  (when-some [data (lookup-entry config id :wait-period-ms)]
     (. builder waitPeriodMs data))
   (.build builder))
 
@@ -292,17 +292,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSafetyRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :assertion-rule)]
+  (when-some [data (lookup-entry config id :assertion-rule)]
     (. builder assertionRule data))
-  (when-let [data (lookup-entry config id :control-panel-arn)]
+  (when-some [data (lookup-entry config id :control-panel-arn)]
     (. builder controlPanelArn data))
-  (when-let [data (lookup-entry config id :gating-rule)]
+  (when-some [data (lookup-entry config id :gating-rule)]
     (. builder gatingRule data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rule-config)]
+  (when-some [data (lookup-entry config id :rule-config)]
     (. builder ruleConfig data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -332,11 +332,11 @@
 | `waitPeriodMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-period-ms` |
 "
   [^CfnSafetyRule$GatingRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :gating-controls)]
+  (when-some [data (lookup-entry config id :gating-controls)]
     (. builder gatingControls data))
-  (when-let [data (lookup-entry config id :target-controls)]
+  (when-some [data (lookup-entry config id :target-controls)]
     (. builder targetControls data))
-  (when-let [data (lookup-entry config id :wait-period-ms)]
+  (when-some [data (lookup-entry config id :wait-period-ms)]
     (. builder waitPeriodMs data))
   (.build builder))
 
@@ -369,17 +369,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSafetyRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assertion-rule)]
+  (when-some [data (lookup-entry config id :assertion-rule)]
     (. builder assertionRule data))
-  (when-let [data (lookup-entry config id :control-panel-arn)]
+  (when-some [data (lookup-entry config id :control-panel-arn)]
     (. builder controlPanelArn data))
-  (when-let [data (lookup-entry config id :gating-rule)]
+  (when-some [data (lookup-entry config id :gating-rule)]
     (. builder gatingRule data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rule-config)]
+  (when-some [data (lookup-entry config id :rule-config)]
     (. builder ruleConfig data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -409,11 +409,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSafetyRule$RuleConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :inverted)]
+  (when-some [data (lookup-entry config id :inverted)]
     (. builder inverted data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 

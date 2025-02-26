@@ -139,9 +139,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stop` | java.lang.Number | [[cdk.support/lookup-entry]] | `:stop` |
 "
   [^BetweenCondition$Builder builder id config]
-  (when-let [data (lookup-entry config id :start)]
+  (when-some [data (lookup-entry config id :start)]
     (. builder start data))
-  (when-let [data (lookup-entry config id :stop)]
+  (when-some [data (lookup-entry config id :stop)]
     (. builder stop data))
   (.build builder))
 
@@ -179,27 +179,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnSubscription$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-policy)]
+  (when-some [data (lookup-entry config id :delivery-policy)]
     (. builder deliveryPolicy data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-scope)]
+  (when-some [data (lookup-entry config id :filter-policy-scope)]
     (. builder filterPolicyScope data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
-  (when-let [data (lookup-entry config id :redrive-policy)]
+  (when-some [data (lookup-entry config id :redrive-policy)]
     (. builder redrivePolicy data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :replay-policy)]
+  (when-some [data (lookup-entry config id :replay-policy)]
     (. builder replayPolicy data))
-  (when-let [data (lookup-entry config id :subscription-role-arn)]
+  (when-some [data (lookup-entry config id :subscription-role-arn)]
     (. builder subscriptionRoleArn data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -237,27 +237,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnSubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-policy)]
+  (when-some [data (lookup-entry config id :delivery-policy)]
     (. builder deliveryPolicy data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-scope)]
+  (when-some [data (lookup-entry config id :filter-policy-scope)]
     (. builder filterPolicyScope data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
-  (when-let [data (lookup-entry config id :redrive-policy)]
+  (when-some [data (lookup-entry config id :redrive-policy)]
     (. builder redrivePolicy data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :replay-policy)]
+  (when-some [data (lookup-entry config id :replay-policy)]
     (. builder replayPolicy data))
-  (when-let [data (lookup-entry config id :subscription-role-arn)]
+  (when-some [data (lookup-entry config id :subscription-role-arn)]
     (. builder subscriptionRoleArn data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -296,29 +296,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tracingConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing-config` |
 "
   [^CfnTopic$Builder builder id config]
-  (when-let [data (lookup-entry config id :archive-policy)]
+  (when-some [data (lookup-entry config id :archive-policy)]
     (. builder archivePolicy data))
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :data-protection-policy)]
+  (when-some [data (lookup-entry config id :data-protection-policy)]
     (. builder dataProtectionPolicy data))
-  (when-let [data (lookup-entry config id :delivery-status-logging)]
+  (when-some [data (lookup-entry config id :delivery-status-logging)]
     (. builder deliveryStatusLogging data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :fifo-topic)]
+  (when-some [data (lookup-entry config id :fifo-topic)]
     (. builder fifoTopic data))
-  (when-let [data (lookup-entry config id :kms-master-key-id)]
+  (when-some [data (lookup-entry config id :kms-master-key-id)]
     (. builder kmsMasterKeyId data))
-  (when-let [data (lookup-entry config id :signature-version)]
+  (when-some [data (lookup-entry config id :signature-version)]
     (. builder signatureVersion data))
-  (when-let [data (lookup-entry config id :subscription)]
+  (when-some [data (lookup-entry config id :subscription)]
     (. builder subscription data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :topic-name)]
+  (when-some [data (lookup-entry config id :topic-name)]
     (. builder topicName data))
-  (when-let [data (lookup-entry config id :tracing-config)]
+  (when-some [data (lookup-entry config id :tracing-config)]
     (. builder tracingConfig data))
   (.build builder))
 
@@ -347,9 +347,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnTopicInlinePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -378,9 +378,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^CfnTopicInlinePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -411,13 +411,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `successFeedbackSampleRate` | java.lang.String | [[cdk.support/lookup-entry]] | `:success-feedback-sample-rate` |
 "
   [^CfnTopic$LoggingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :failure-feedback-role-arn)]
+  (when-some [data (lookup-entry config id :failure-feedback-role-arn)]
     (. builder failureFeedbackRoleArn data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :success-feedback-role-arn)]
+  (when-some [data (lookup-entry config id :success-feedback-role-arn)]
     (. builder successFeedbackRoleArn data))
-  (when-let [data (lookup-entry config id :success-feedback-sample-rate)]
+  (when-some [data (lookup-entry config id :success-feedback-sample-rate)]
     (. builder successFeedbackSampleRate data))
   (.build builder))
 
@@ -446,9 +446,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^CfnTopicPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :topics)]
+  (when-some [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
 
@@ -477,9 +477,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^CfnTopicPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :topics)]
+  (when-some [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
 
@@ -518,29 +518,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tracingConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing-config` |
 "
   [^CfnTopicProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :archive-policy)]
+  (when-some [data (lookup-entry config id :archive-policy)]
     (. builder archivePolicy data))
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :data-protection-policy)]
+  (when-some [data (lookup-entry config id :data-protection-policy)]
     (. builder dataProtectionPolicy data))
-  (when-let [data (lookup-entry config id :delivery-status-logging)]
+  (when-some [data (lookup-entry config id :delivery-status-logging)]
     (. builder deliveryStatusLogging data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :fifo-topic)]
+  (when-some [data (lookup-entry config id :fifo-topic)]
     (. builder fifoTopic data))
-  (when-let [data (lookup-entry config id :kms-master-key-id)]
+  (when-some [data (lookup-entry config id :kms-master-key-id)]
     (. builder kmsMasterKeyId data))
-  (when-let [data (lookup-entry config id :signature-version)]
+  (when-some [data (lookup-entry config id :signature-version)]
     (. builder signatureVersion data))
-  (when-let [data (lookup-entry config id :subscription)]
+  (when-some [data (lookup-entry config id :subscription)]
     (. builder subscription data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :topic-name)]
+  (when-some [data (lookup-entry config id :topic-name)]
     (. builder topicName data))
-  (when-let [data (lookup-entry config id :tracing-config)]
+  (when-some [data (lookup-entry config id :tracing-config)]
     (. builder tracingConfig data))
   (.build builder))
 
@@ -569,9 +569,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnTopic$SubscriptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -602,13 +602,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `successFeedbackSampleRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:success-feedback-sample-rate` |
 "
   [^LoggingConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :failure-feedback-role)]
+  (when-some [data (lookup-entry config id :failure-feedback-role)]
     (. builder failureFeedbackRole data))
-  (when-let [data (logging-protocol config id :protocol)]
+  (when-some [data (logging-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :success-feedback-role)]
+  (when-some [data (lookup-entry config id :success-feedback-role)]
     (. builder successFeedbackRole data))
-  (when-let [data (lookup-entry config id :success-feedback-sample-rate)]
+  (when-some [data (lookup-entry config id :success-feedback-sample-rate)]
     (. builder successFeedbackSampleRate data))
   (.build builder))
 
@@ -642,19 +642,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `lessThanOrEqualTo` | java.lang.Number | [[cdk.support/lookup-entry]] | `:less-than-or-equal-to` |
 "
   [^NumericConditions$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowlist)]
+  (when-some [data (lookup-entry config id :allowlist)]
     (. builder allowlist data))
-  (when-let [data (lookup-entry config id :between)]
+  (when-some [data (lookup-entry config id :between)]
     (. builder between data))
-  (when-let [data (lookup-entry config id :between-strict)]
+  (when-some [data (lookup-entry config id :between-strict)]
     (. builder betweenStrict data))
-  (when-let [data (lookup-entry config id :greater-than)]
+  (when-some [data (lookup-entry config id :greater-than)]
     (. builder greaterThan data))
-  (when-let [data (lookup-entry config id :greater-than-or-equal-to)]
+  (when-some [data (lookup-entry config id :greater-than-or-equal-to)]
     (. builder greaterThanOrEqualTo data))
-  (when-let [data (lookup-entry config id :less-than)]
+  (when-some [data (lookup-entry config id :less-than)]
     (. builder lessThan data))
-  (when-let [data (lookup-entry config id :less-than-or-equal-to)]
+  (when-some [data (lookup-entry config id :less-than-or-equal-to)]
     (. builder lessThanOrEqualTo data))
   (.build builder))
 
@@ -685,13 +685,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `matchSuffixes` | java.util.List | [[cdk.support/lookup-entry]] | `:match-suffixes` |
 "
   [^StringConditions$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowlist)]
+  (when-some [data (lookup-entry config id :allowlist)]
     (. builder allowlist data))
-  (when-let [data (lookup-entry config id :denylist)]
+  (when-some [data (lookup-entry config id :denylist)]
     (. builder denylist data))
-  (when-let [data (lookup-entry config id :match-prefixes)]
+  (when-some [data (lookup-entry config id :match-prefixes)]
     (. builder matchPrefixes data))
-  (when-let [data (lookup-entry config id :match-suffixes)]
+  (when-some [data (lookup-entry config id :match-suffixes)]
     (. builder matchSuffixes data))
   (.build builder))
 
@@ -727,23 +727,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^Subscription$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (subscription-protocol config id :protocol)]
+  (when-some [data (subscription-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :subscription-role-arn)]
+  (when-some [data (lookup-entry config id :subscription-role-arn)]
     (. builder subscriptionRoleArn data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -778,21 +778,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
 "
   [^SubscriptionOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (subscription-protocol config id :protocol)]
+  (when-some [data (subscription-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :subscription-role-arn)]
+  (when-some [data (lookup-entry config id :subscription-role-arn)]
     (. builder subscriptionRoleArn data))
   (.build builder))
 
@@ -828,23 +828,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^SubscriptionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (subscription-protocol config id :protocol)]
+  (when-some [data (subscription-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :subscription-role-arn)]
+  (when-some [data (lookup-entry config id :subscription-role-arn)]
     (. builder subscriptionRoleArn data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -873,9 +873,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
 "
   [^TopicAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :topic-arn)]
+  (when-some [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
 
@@ -912,25 +912,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tracingConfig` | software.amazon.awscdk.services.sns.TracingConfig | [[cdk.api.services.sns/tracing-config]] | `:tracing-config` |
 "
   [^Topic$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :enforce-ssl)]
+  (when-some [data (lookup-entry config id :enforce-ssl)]
     (. builder enforceSsl data))
-  (when-let [data (lookup-entry config id :fifo)]
+  (when-some [data (lookup-entry config id :fifo)]
     (. builder fifo data))
-  (when-let [data (lookup-entry config id :logging-configs)]
+  (when-some [data (lookup-entry config id :logging-configs)]
     (. builder loggingConfigs data))
-  (when-let [data (lookup-entry config id :master-key)]
+  (when-some [data (lookup-entry config id :master-key)]
     (. builder masterKey data))
-  (when-let [data (lookup-entry config id :message-retention-period-in-days)]
+  (when-some [data (lookup-entry config id :message-retention-period-in-days)]
     (. builder messageRetentionPeriodInDays data))
-  (when-let [data (lookup-entry config id :signature-version)]
+  (when-some [data (lookup-entry config id :signature-version)]
     (. builder signatureVersion data))
-  (when-let [data (lookup-entry config id :topic-name)]
+  (when-some [data (lookup-entry config id :topic-name)]
     (. builder topicName data))
-  (when-let [data (tracing-config config id :tracing-config)]
+  (when-some [data (tracing-config config id :tracing-config)]
     (. builder tracingConfig data))
   (.build builder))
 
@@ -960,11 +960,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^TopicPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :enforce-ssl)]
+  (when-some [data (lookup-entry config id :enforce-ssl)]
     (. builder enforceSsl data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :topics)]
+  (when-some [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
 
@@ -994,11 +994,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
 "
   [^TopicPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :enforce-ssl)]
+  (when-some [data (lookup-entry config id :enforce-ssl)]
     (. builder enforceSsl data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
-  (when-let [data (lookup-entry config id :topics)]
+  (when-some [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
 
@@ -1035,25 +1035,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tracingConfig` | software.amazon.awscdk.services.sns.TracingConfig | [[cdk.api.services.sns/tracing-config]] | `:tracing-config` |
 "
   [^TopicProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :content-based-deduplication)]
+  (when-some [data (lookup-entry config id :content-based-deduplication)]
     (. builder contentBasedDeduplication data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :enforce-ssl)]
+  (when-some [data (lookup-entry config id :enforce-ssl)]
     (. builder enforceSsl data))
-  (when-let [data (lookup-entry config id :fifo)]
+  (when-some [data (lookup-entry config id :fifo)]
     (. builder fifo data))
-  (when-let [data (lookup-entry config id :logging-configs)]
+  (when-some [data (lookup-entry config id :logging-configs)]
     (. builder loggingConfigs data))
-  (when-let [data (lookup-entry config id :master-key)]
+  (when-some [data (lookup-entry config id :master-key)]
     (. builder masterKey data))
-  (when-let [data (lookup-entry config id :message-retention-period-in-days)]
+  (when-some [data (lookup-entry config id :message-retention-period-in-days)]
     (. builder messageRetentionPeriodInDays data))
-  (when-let [data (lookup-entry config id :signature-version)]
+  (when-some [data (lookup-entry config id :signature-version)]
     (. builder signatureVersion data))
-  (when-let [data (lookup-entry config id :topic-name)]
+  (when-some [data (lookup-entry config id :topic-name)]
     (. builder topicName data))
-  (when-let [data (tracing-config config id :tracing-config)]
+  (when-some [data (tracing-config config id :tracing-config)]
     (. builder tracingConfig data))
   (.build builder))
 
@@ -1091,27 +1091,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
 "
   [^TopicSubscriptionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :dead-letter-queue)]
+  (when-some [data (lookup-entry config id :dead-letter-queue)]
     (. builder deadLetterQueue data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :filter-policy)]
+  (when-some [data (lookup-entry config id :filter-policy)]
     (. builder filterPolicy data))
-  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+  (when-some [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
-  (when-let [data (subscription-protocol config id :protocol)]
+  (when-some [data (subscription-protocol config id :protocol)]
     (. builder protocol data))
-  (when-let [data (lookup-entry config id :raw-message-delivery)]
+  (when-some [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :subscriber-id)]
+  (when-some [data (lookup-entry config id :subscriber-id)]
     (. builder subscriberId data))
-  (when-let [data (lookup-entry config id :subscriber-scope)]
+  (when-some [data (lookup-entry config id :subscriber-scope)]
     (. builder subscriberScope data))
-  (when-let [data (lookup-entry config id :subscription-dependency)]
+  (when-some [data (lookup-entry config id :subscription-dependency)]
     (. builder subscriptionDependency data))
-  (when-let [data (lookup-entry config id :subscription-role-arn)]
+  (when-some [data (lookup-entry config id :subscription-role-arn)]
     (. builder subscriptionRoleArn data))
   (.build builder))
 

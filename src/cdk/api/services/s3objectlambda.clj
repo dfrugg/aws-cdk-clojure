@@ -27,9 +27,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnAccessPoint$AliasProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -58,9 +58,9 @@
 | `functionPayload` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-payload` |
 "
   [^CfnAccessPoint$AwsLambdaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :function-arn)]
+  (when-some [data (lookup-entry config id :function-arn)]
     (. builder functionArn data))
-  (when-let [data (lookup-entry config id :function-payload)]
+  (when-some [data (lookup-entry config id :function-payload)]
     (. builder functionPayload data))
   (.build builder))
 
@@ -89,9 +89,9 @@
 | `objectLambdaConfiguration` | software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint$ObjectLambdaConfigurationProperty | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
 "
   [^CfnAccessPoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :object-lambda-configuration)]
+  (when-some [data (lookup-entry config id :object-lambda-configuration)]
     (. builder objectLambdaConfiguration data))
   (.build builder))
 
@@ -119,7 +119,7 @@
 | `awsLambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-lambda` |
 "
   [^CfnAccessPoint$ContentTransformationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-lambda)]
+  (when-some [data (lookup-entry config id :aws-lambda)]
     (. builder awsLambda data))
   (.build builder))
 
@@ -150,13 +150,13 @@
 | `transformationConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:transformation-configurations` |
 "
   [^CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-features)]
+  (when-some [data (lookup-entry config id :allowed-features)]
     (. builder allowedFeatures data))
-  (when-let [data (lookup-entry config id :cloud-watch-metrics-enabled)]
+  (when-some [data (lookup-entry config id :cloud-watch-metrics-enabled)]
     (. builder cloudWatchMetricsEnabled data))
-  (when-let [data (lookup-entry config id :supporting-access-point)]
+  (when-some [data (lookup-entry config id :supporting-access-point)]
     (. builder supportingAccessPoint data))
-  (when-let [data (lookup-entry config id :transformation-configurations)]
+  (when-some [data (lookup-entry config id :transformation-configurations)]
     (. builder transformationConfigurations data))
   (.build builder))
 
@@ -185,9 +185,9 @@
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
 "
   [^CfnAccessPointPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :object-lambda-access-point)]
+  (when-some [data (lookup-entry config id :object-lambda-access-point)]
     (. builder objectLambdaAccessPoint data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
 
@@ -216,9 +216,9 @@
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
 "
   [^CfnAccessPointPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :object-lambda-access-point)]
+  (when-some [data (lookup-entry config id :object-lambda-access-point)]
     (. builder objectLambdaAccessPoint data))
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
 
@@ -246,7 +246,7 @@
 | `isPublic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-public` |
 "
   [^CfnAccessPoint$PolicyStatusProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :is-public)]
+  (when-some [data (lookup-entry config id :is-public)]
     (. builder isPublic data))
   (.build builder))
 
@@ -275,9 +275,9 @@
 | `objectLambdaConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
 "
   [^CfnAccessPointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :object-lambda-configuration)]
+  (when-some [data (lookup-entry config id :object-lambda-configuration)]
     (. builder objectLambdaConfiguration data))
   (.build builder))
 
@@ -308,13 +308,13 @@
 | `restrictPublicBuckets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrict-public-buckets` |
 "
   [^CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :block-public-acls)]
+  (when-some [data (lookup-entry config id :block-public-acls)]
     (. builder blockPublicAcls data))
-  (when-let [data (lookup-entry config id :block-public-policy)]
+  (when-some [data (lookup-entry config id :block-public-policy)]
     (. builder blockPublicPolicy data))
-  (when-let [data (lookup-entry config id :ignore-public-acls)]
+  (when-some [data (lookup-entry config id :ignore-public-acls)]
     (. builder ignorePublicAcls data))
-  (when-let [data (lookup-entry config id :restrict-public-buckets)]
+  (when-some [data (lookup-entry config id :restrict-public-buckets)]
     (. builder restrictPublicBuckets data))
   (.build builder))
 
@@ -343,9 +343,9 @@
 | `contentTransformation` | java.lang.Object | [[cdk.support/lookup-entry]] | `:content-transformation` |
 "
   [^CfnAccessPoint$TransformationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :content-transformation)]
+  (when-some [data (lookup-entry config id :content-transformation)]
     (. builder contentTransformation data))
   (.build builder))
 

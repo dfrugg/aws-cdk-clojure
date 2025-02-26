@@ -34,15 +34,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnCapability$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :instructions-documents)]
+  (when-some [data (lookup-entry config id :instructions-documents)]
     (. builder instructionsDocuments data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -70,7 +70,7 @@
 | `edi` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:edi` |
 "
   [^CfnCapability$CapabilityConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :edi)]
+  (when-some [data (lookup-entry config id :edi)]
     (. builder edi data))
   (.build builder))
 
@@ -101,13 +101,13 @@
 | `type` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnCapability$EdiConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-location)]
+  (when-some [data (lookup-entry config id :input-location)]
     (. builder inputLocation data))
-  (when-let [data (lookup-entry config id :output-location)]
+  (when-some [data (lookup-entry config id :output-location)]
     (. builder outputLocation data))
-  (when-let [data (lookup-entry config id :transformer-id)]
+  (when-some [data (lookup-entry config id :transformer-id)]
     (. builder transformerId data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -135,7 +135,7 @@
 | `x12Details` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:x12-details` |
 "
   [^CfnCapability$EdiTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :x12-details)]
+  (when-some [data (lookup-entry config id :x12-details)]
     (. builder x12Details data))
   (.build builder))
 
@@ -167,15 +167,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnCapabilityProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :instructions-documents)]
+  (when-some [data (lookup-entry config id :instructions-documents)]
     (. builder instructionsDocuments data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -204,9 +204,9 @@
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 "
   [^CfnCapability$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
 
@@ -235,9 +235,9 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnCapability$X12DetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :transaction-set)]
+  (when-some [data (lookup-entry config id :transaction-set)]
     (. builder transactionSet data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -270,17 +270,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPartnership$Builder builder id config]
-  (when-let [data (lookup-entry config id :capabilities)]
+  (when-some [data (lookup-entry config id :capabilities)]
     (. builder capabilities data))
-  (when-let [data (lookup-entry config id :email)]
+  (when-some [data (lookup-entry config id :email)]
     (. builder email data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :phone)]
+  (when-some [data (lookup-entry config id :phone)]
     (. builder phone data))
-  (when-let [data (lookup-entry config id :profile-id)]
+  (when-some [data (lookup-entry config id :profile-id)]
     (. builder profileId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -313,17 +313,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPartnershipProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :capabilities)]
+  (when-some [data (lookup-entry config id :capabilities)]
     (. builder capabilities data))
-  (when-let [data (lookup-entry config id :email)]
+  (when-some [data (lookup-entry config id :email)]
     (. builder email data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :phone)]
+  (when-some [data (lookup-entry config id :phone)]
     (. builder phone data))
-  (when-let [data (lookup-entry config id :profile-id)]
+  (when-some [data (lookup-entry config id :profile-id)]
     (. builder profileId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -356,17 +356,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :business-name)]
+  (when-some [data (lookup-entry config id :business-name)]
     (. builder businessName data))
-  (when-let [data (lookup-entry config id :email)]
+  (when-some [data (lookup-entry config id :email)]
     (. builder email data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :phone)]
+  (when-some [data (lookup-entry config id :phone)]
     (. builder phone data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -399,17 +399,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :business-name)]
+  (when-some [data (lookup-entry config id :business-name)]
     (. builder businessName data))
-  (when-let [data (lookup-entry config id :email)]
+  (when-some [data (lookup-entry config id :email)]
     (. builder email data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :phone)]
+  (when-some [data (lookup-entry config id :phone)]
     (. builder phone data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -443,19 +443,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTransformer$Builder builder id config]
-  (when-let [data (lookup-entry config id :edi-type)]
+  (when-some [data (lookup-entry config id :edi-type)]
     (. builder ediType data))
-  (when-let [data (lookup-entry config id :file-format)]
+  (when-some [data (lookup-entry config id :file-format)]
     (. builder fileFormat data))
-  (when-let [data (lookup-entry config id :mapping-template)]
+  (when-some [data (lookup-entry config id :mapping-template)]
     (. builder mappingTemplate data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sample-document)]
+  (when-some [data (lookup-entry config id :sample-document)]
     (. builder sampleDocument data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -483,7 +483,7 @@
 | `x12Details` | software.amazon.awscdk.services.b2bi.CfnTransformer$X12DetailsProperty | [[cdk.support/lookup-entry]] | `:x12-details` |
 "
   [^CfnTransformer$EdiTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :x12-details)]
+  (when-some [data (lookup-entry config id :x12-details)]
     (. builder x12Details data))
   (.build builder))
 
@@ -517,19 +517,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnTransformerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :edi-type)]
+  (when-some [data (lookup-entry config id :edi-type)]
     (. builder ediType data))
-  (when-let [data (lookup-entry config id :file-format)]
+  (when-some [data (lookup-entry config id :file-format)]
     (. builder fileFormat data))
-  (when-let [data (lookup-entry config id :mapping-template)]
+  (when-some [data (lookup-entry config id :mapping-template)]
     (. builder mappingTemplate data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sample-document)]
+  (when-some [data (lookup-entry config id :sample-document)]
     (. builder sampleDocument data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -558,9 +558,9 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnTransformer$X12DetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :transaction-set)]
+  (when-some [data (lookup-entry config id :transaction-set)]
     (. builder transactionSet data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 

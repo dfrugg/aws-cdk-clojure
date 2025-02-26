@@ -38,15 +38,15 @@
 | `schemaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-arn` |
 "
   [^CfnDataset$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-group-arn)]
+  (when-some [data (lookup-entry config id :dataset-group-arn)]
     (. builder datasetGroupArn data))
-  (when-let [data (lookup-entry config id :dataset-import-job)]
+  (when-some [data (lookup-entry config id :dataset-import-job)]
     (. builder datasetImportJob data))
-  (when-let [data (lookup-entry config id :dataset-type)]
+  (when-some [data (lookup-entry config id :dataset-type)]
     (. builder datasetType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :schema-arn)]
+  (when-some [data (lookup-entry config id :schema-arn)]
     (. builder schemaArn data))
   (.build builder))
 
@@ -74,7 +74,7 @@
 | `dataLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-location` |
 "
   [^CfnDataset$DataSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-location)]
+  (when-some [data (lookup-entry config id :data-location)]
     (. builder dataLocation data))
   (.build builder))
 
@@ -106,15 +106,15 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDataset$DatasetImportJobProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :dataset-arn)]
+  (when-some [data (lookup-entry config id :dataset-arn)]
     (. builder datasetArn data))
-  (when-let [data (lookup-entry config id :dataset-import-job-arn)]
+  (when-some [data (lookup-entry config id :dataset-import-job-arn)]
     (. builder datasetImportJobArn data))
-  (when-let [data (lookup-entry config id :job-name)]
+  (when-some [data (lookup-entry config id :job-name)]
     (. builder jobName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -145,13 +145,13 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDatasetGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -182,13 +182,13 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDatasetGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -220,15 +220,15 @@
 | `schemaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-arn` |
 "
   [^CfnDatasetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-group-arn)]
+  (when-some [data (lookup-entry config id :dataset-group-arn)]
     (. builder datasetGroupArn data))
-  (when-let [data (lookup-entry config id :dataset-import-job)]
+  (when-some [data (lookup-entry config id :dataset-import-job)]
     (. builder datasetImportJob data))
-  (when-let [data (lookup-entry config id :dataset-type)]
+  (when-some [data (lookup-entry config id :dataset-type)]
     (. builder datasetType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :schema-arn)]
+  (when-some [data (lookup-entry config id :schema-arn)]
     (. builder schemaArn data))
   (.build builder))
 
@@ -258,11 +258,11 @@
 | `schema` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^CfnSchema$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
 
@@ -292,11 +292,11 @@
 | `schema` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema` |
 "
   [^CfnSchemaProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
 
@@ -326,11 +326,11 @@
 | `integerHyperParameterRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:integer-hyper-parameter-ranges` |
 "
   [^CfnSolution$AlgorithmHyperParameterRangesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :categorical-hyper-parameter-ranges)]
+  (when-some [data (lookup-entry config id :categorical-hyper-parameter-ranges)]
     (. builder categoricalHyperParameterRanges data))
-  (when-let [data (lookup-entry config id :continuous-hyper-parameter-ranges)]
+  (when-some [data (lookup-entry config id :continuous-hyper-parameter-ranges)]
     (. builder continuousHyperParameterRanges data))
-  (when-let [data (lookup-entry config id :integer-hyper-parameter-ranges)]
+  (when-some [data (lookup-entry config id :integer-hyper-parameter-ranges)]
     (. builder integerHyperParameterRanges data))
   (.build builder))
 
@@ -359,9 +359,9 @@
 | `recipeList` | java.util.List | [[cdk.support/lookup-entry]] | `:recipe-list` |
 "
   [^CfnSolution$AutoMLConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :recipe-list)]
+  (when-some [data (lookup-entry config id :recipe-list)]
     (. builder recipeList data))
   (.build builder))
 
@@ -395,19 +395,19 @@
 | `solutionConfig` | software.amazon.awscdk.services.personalize.CfnSolution$SolutionConfigProperty | [[cdk.support/lookup-entry]] | `:solution-config` |
 "
   [^CfnSolution$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-group-arn)]
+  (when-some [data (lookup-entry config id :dataset-group-arn)]
     (. builder datasetGroupArn data))
-  (when-let [data (lookup-entry config id :event-type)]
+  (when-some [data (lookup-entry config id :event-type)]
     (. builder eventType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :perform-auto-ml)]
+  (when-some [data (lookup-entry config id :perform-auto-ml)]
     (. builder performAutoMl data))
-  (when-let [data (lookup-entry config id :perform-hpo)]
+  (when-some [data (lookup-entry config id :perform-hpo)]
     (. builder performHpo data))
-  (when-let [data (lookup-entry config id :recipe-arn)]
+  (when-some [data (lookup-entry config id :recipe-arn)]
     (. builder recipeArn data))
-  (when-let [data (lookup-entry config id :solution-config)]
+  (when-some [data (lookup-entry config id :solution-config)]
     (. builder solutionConfig data))
   (.build builder))
 
@@ -436,9 +436,9 @@
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnSolution$CategoricalHyperParameterRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 
@@ -468,11 +468,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnSolution$ContinuousHyperParameterRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-value)]
+  (when-some [data (lookup-entry config id :max-value)]
     (. builder maxValue data))
-  (when-let [data (lookup-entry config id :min-value)]
+  (when-some [data (lookup-entry config id :min-value)]
     (. builder minValue data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -502,11 +502,11 @@
 | `hpoResourceConfig` | software.amazon.awscdk.services.personalize.CfnSolution$HpoResourceConfigProperty | [[cdk.support/lookup-entry]] | `:hpo-resource-config` |
 "
   [^CfnSolution$HpoConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm-hyper-parameter-ranges)]
+  (when-some [data (lookup-entry config id :algorithm-hyper-parameter-ranges)]
     (. builder algorithmHyperParameterRanges data))
-  (when-let [data (lookup-entry config id :hpo-objective)]
+  (when-some [data (lookup-entry config id :hpo-objective)]
     (. builder hpoObjective data))
-  (when-let [data (lookup-entry config id :hpo-resource-config)]
+  (when-some [data (lookup-entry config id :hpo-resource-config)]
     (. builder hpoResourceConfig data))
   (.build builder))
 
@@ -536,11 +536,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSolution$HpoObjectiveProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :metric-regex)]
+  (when-some [data (lookup-entry config id :metric-regex)]
     (. builder metricRegex data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -569,9 +569,9 @@
 | `maxParallelTrainingJobs` | java.lang.String | [[cdk.support/lookup-entry]] | `:max-parallel-training-jobs` |
 "
   [^CfnSolution$HpoResourceConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-number-of-training-jobs)]
+  (when-some [data (lookup-entry config id :max-number-of-training-jobs)]
     (. builder maxNumberOfTrainingJobs data))
-  (when-let [data (lookup-entry config id :max-parallel-training-jobs)]
+  (when-some [data (lookup-entry config id :max-parallel-training-jobs)]
     (. builder maxParallelTrainingJobs data))
   (.build builder))
 
@@ -601,11 +601,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnSolution$IntegerHyperParameterRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-value)]
+  (when-some [data (lookup-entry config id :max-value)]
     (. builder maxValue data))
-  (when-let [data (lookup-entry config id :min-value)]
+  (when-some [data (lookup-entry config id :min-value)]
     (. builder minValue data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -639,19 +639,19 @@
 | `solutionConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:solution-config` |
 "
   [^CfnSolutionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-group-arn)]
+  (when-some [data (lookup-entry config id :dataset-group-arn)]
     (. builder datasetGroupArn data))
-  (when-let [data (lookup-entry config id :event-type)]
+  (when-some [data (lookup-entry config id :event-type)]
     (. builder eventType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :perform-auto-ml)]
+  (when-some [data (lookup-entry config id :perform-auto-ml)]
     (. builder performAutoMl data))
-  (when-let [data (lookup-entry config id :perform-hpo)]
+  (when-some [data (lookup-entry config id :perform-hpo)]
     (. builder performHpo data))
-  (when-let [data (lookup-entry config id :recipe-arn)]
+  (when-some [data (lookup-entry config id :recipe-arn)]
     (. builder recipeArn data))
-  (when-let [data (lookup-entry config id :solution-config)]
+  (when-some [data (lookup-entry config id :solution-config)]
     (. builder solutionConfig data))
   (.build builder))
 
@@ -683,15 +683,15 @@
 | `hpoConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:hpo-config` |
 "
   [^CfnSolution$SolutionConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm-hyper-parameters)]
+  (when-some [data (lookup-entry config id :algorithm-hyper-parameters)]
     (. builder algorithmHyperParameters data))
-  (when-let [data (lookup-entry config id :auto-ml-config)]
+  (when-some [data (lookup-entry config id :auto-ml-config)]
     (. builder autoMlConfig data))
-  (when-let [data (lookup-entry config id :event-value-threshold)]
+  (when-some [data (lookup-entry config id :event-value-threshold)]
     (. builder eventValueThreshold data))
-  (when-let [data (lookup-entry config id :feature-transformation-parameters)]
+  (when-some [data (lookup-entry config id :feature-transformation-parameters)]
     (. builder featureTransformationParameters data))
-  (when-let [data (lookup-entry config id :hpo-config)]
+  (when-some [data (lookup-entry config id :hpo-config)]
     (. builder hpoConfig data))
   (.build builder))
 

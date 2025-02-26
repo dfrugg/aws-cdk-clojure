@@ -72,17 +72,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStream$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :retention-period-hours)]
+  (when-some [data (lookup-entry config id :retention-period-hours)]
     (. builder retentionPeriodHours data))
-  (when-let [data (lookup-entry config id :shard-count)]
+  (when-some [data (lookup-entry config id :shard-count)]
     (. builder shardCount data))
-  (when-let [data (lookup-entry config id :stream-encryption)]
+  (when-some [data (lookup-entry config id :stream-encryption)]
     (. builder streamEncryption data))
-  (when-let [data (lookup-entry config id :stream-mode-details)]
+  (when-some [data (lookup-entry config id :stream-mode-details)]
     (. builder streamModeDetails data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -111,9 +111,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
 "
   [^CfnStreamConsumer$Builder builder id config]
-  (when-let [data (lookup-entry config id :consumer-name)]
+  (when-some [data (lookup-entry config id :consumer-name)]
     (. builder consumerName data))
-  (when-let [data (lookup-entry config id :stream-arn)]
+  (when-some [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
 
@@ -142,9 +142,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
 "
   [^CfnStreamConsumerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :consumer-name)]
+  (when-some [data (lookup-entry config id :consumer-name)]
     (. builder consumerName data))
-  (when-let [data (lookup-entry config id :stream-arn)]
+  (when-some [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
 
@@ -177,17 +177,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :retention-period-hours)]
+  (when-some [data (lookup-entry config id :retention-period-hours)]
     (. builder retentionPeriodHours data))
-  (when-let [data (lookup-entry config id :shard-count)]
+  (when-some [data (lookup-entry config id :shard-count)]
     (. builder shardCount data))
-  (when-let [data (lookup-entry config id :stream-encryption)]
+  (when-some [data (lookup-entry config id :stream-encryption)]
     (. builder streamEncryption data))
-  (when-let [data (lookup-entry config id :stream-mode-details)]
+  (when-some [data (lookup-entry config id :stream-mode-details)]
     (. builder streamModeDetails data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -216,9 +216,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `keyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-id` |
 "
   [^CfnStream$StreamEncryptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-type)]
+  (when-some [data (lookup-entry config id :encryption-type)]
     (. builder encryptionType data))
-  (when-let [data (lookup-entry config id :key-id)]
+  (when-some [data (lookup-entry config id :key-id)]
     (. builder keyId data))
   (.build builder))
 
@@ -246,7 +246,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-mode` |
 "
   [^CfnStream$StreamModeDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :stream-mode)]
+  (when-some [data (lookup-entry config id :stream-mode)]
     (. builder streamMode data))
   (.build builder))
 
@@ -275,9 +275,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
 "
   [^StreamAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :stream-arn)]
+  (when-some [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
 
@@ -311,19 +311,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |
 "
   [^Stream$Builder builder id config]
-  (when-let [data (stream-encryption config id :encryption)]
+  (when-some [data (stream-encryption config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :retention-period)]
+  (when-some [data (lookup-entry config id :retention-period)]
     (. builder retentionPeriod data))
-  (when-let [data (lookup-entry config id :shard-count)]
+  (when-some [data (lookup-entry config id :shard-count)]
     (. builder shardCount data))
-  (when-let [data (stream-mode config id :stream-mode)]
+  (when-some [data (stream-mode config id :stream-mode)]
     (. builder streamMode data))
-  (when-let [data (lookup-entry config id :stream-name)]
+  (when-some [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
   (.build builder))
 
@@ -357,19 +357,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |
 "
   [^StreamProps$Builder builder id config]
-  (when-let [data (stream-encryption config id :encryption)]
+  (when-some [data (stream-encryption config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :retention-period)]
+  (when-some [data (lookup-entry config id :retention-period)]
     (. builder retentionPeriod data))
-  (when-let [data (lookup-entry config id :shard-count)]
+  (when-some [data (lookup-entry config id :shard-count)]
     (. builder shardCount data))
-  (when-let [data (stream-mode config id :stream-mode)]
+  (when-some [data (stream-mode config id :stream-mode)]
     (. builder streamMode data))
-  (when-let [data (lookup-entry config id :stream-name)]
+  (when-some [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
   (.build builder))
 

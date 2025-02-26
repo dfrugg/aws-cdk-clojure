@@ -20,13 +20,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-description)]
+  (when-some [data (lookup-entry config id :application-description)]
     (. builder applicationDescription data))
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -57,13 +57,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-description)]
+  (when-some [data (lookup-entry config id :application-description)]
     (. builder applicationDescription data))
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

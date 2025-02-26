@@ -88,13 +88,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPublicRepository$Builder builder id config]
-  (when-let [data (lookup-entry config id :repository-catalog-data)]
+  (when-some [data (lookup-entry config id :repository-catalog-data)]
     (. builder repositoryCatalogData data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :repository-policy-text)]
+  (when-some [data (lookup-entry config id :repository-policy-text)]
     (. builder repositoryPolicyText data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -125,13 +125,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPublicRepositoryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :repository-catalog-data)]
+  (when-some [data (lookup-entry config id :repository-catalog-data)]
     (. builder repositoryCatalogData data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :repository-policy-text)]
+  (when-some [data (lookup-entry config id :repository-policy-text)]
     (. builder repositoryPolicyText data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -163,15 +163,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `usageText` | java.lang.String | [[cdk.support/lookup-entry]] | `:usage-text` |
 "
   [^CfnPublicRepository$RepositoryCatalogDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :about-text)]
+  (when-some [data (lookup-entry config id :about-text)]
     (. builder aboutText data))
-  (when-let [data (lookup-entry config id :architectures)]
+  (when-some [data (lookup-entry config id :architectures)]
     (. builder architectures data))
-  (when-let [data (lookup-entry config id :operating-systems)]
+  (when-some [data (lookup-entry config id :operating-systems)]
     (. builder operatingSystems data))
-  (when-let [data (lookup-entry config id :repository-description)]
+  (when-some [data (lookup-entry config id :repository-description)]
     (. builder repositoryDescription data))
-  (when-let [data (lookup-entry config id :usage-text)]
+  (when-some [data (lookup-entry config id :usage-text)]
     (. builder usageText data))
   (.build builder))
 
@@ -202,13 +202,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `upstreamRegistryUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:upstream-registry-url` |
 "
   [^CfnPullThroughCacheRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :credential-arn)]
+  (when-some [data (lookup-entry config id :credential-arn)]
     (. builder credentialArn data))
-  (when-let [data (lookup-entry config id :ecr-repository-prefix)]
+  (when-some [data (lookup-entry config id :ecr-repository-prefix)]
     (. builder ecrRepositoryPrefix data))
-  (when-let [data (lookup-entry config id :upstream-registry)]
+  (when-some [data (lookup-entry config id :upstream-registry)]
     (. builder upstreamRegistry data))
-  (when-let [data (lookup-entry config id :upstream-registry-url)]
+  (when-some [data (lookup-entry config id :upstream-registry-url)]
     (. builder upstreamRegistryUrl data))
   (.build builder))
 
@@ -239,13 +239,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `upstreamRegistryUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:upstream-registry-url` |
 "
   [^CfnPullThroughCacheRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :credential-arn)]
+  (when-some [data (lookup-entry config id :credential-arn)]
     (. builder credentialArn data))
-  (when-let [data (lookup-entry config id :ecr-repository-prefix)]
+  (when-some [data (lookup-entry config id :ecr-repository-prefix)]
     (. builder ecrRepositoryPrefix data))
-  (when-let [data (lookup-entry config id :upstream-registry)]
+  (when-some [data (lookup-entry config id :upstream-registry)]
     (. builder upstreamRegistry data))
-  (when-let [data (lookup-entry config id :upstream-registry-url)]
+  (when-some [data (lookup-entry config id :upstream-registry-url)]
     (. builder upstreamRegistryUrl data))
   (.build builder))
 
@@ -273,7 +273,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyText` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-text` |
 "
   [^CfnRegistryPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-text)]
+  (when-some [data (lookup-entry config id :policy-text)]
     (. builder policyText data))
   (.build builder))
 
@@ -301,7 +301,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyText` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-text` |
 "
   [^CfnRegistryPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-text)]
+  (when-some [data (lookup-entry config id :policy-text)]
     (. builder policyText data))
   (.build builder))
 
@@ -329,7 +329,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `replicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replication-configuration` |
 "
   [^CfnReplicationConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :replication-configuration)]
+  (when-some [data (lookup-entry config id :replication-configuration)]
     (. builder replicationConfiguration data))
   (.build builder))
 
@@ -357,7 +357,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `replicationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replication-configuration` |
 "
   [^CfnReplicationConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :replication-configuration)]
+  (when-some [data (lookup-entry config id :replication-configuration)]
     (. builder replicationConfiguration data))
   (.build builder))
 
@@ -385,7 +385,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnReplicationConfiguration$ReplicationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
 
@@ -414,9 +414,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `registryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-id` |
 "
   [^CfnReplicationConfiguration$ReplicationDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :registry-id)]
+  (when-some [data (lookup-entry config id :registry-id)]
     (. builder registryId data))
   (.build builder))
 
@@ -445,9 +445,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repositoryFilters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:repository-filters` |
 "
   [^CfnReplicationConfiguration$ReplicationRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destinations)]
+  (when-some [data (lookup-entry config id :destinations)]
     (. builder destinations data))
-  (when-let [data (lookup-entry config id :repository-filters)]
+  (when-some [data (lookup-entry config id :repository-filters)]
     (. builder repositoryFilters data))
   (.build builder))
 
@@ -476,9 +476,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `filterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-type` |
 "
   [^CfnReplicationConfiguration$RepositoryFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
-  (when-let [data (lookup-entry config id :filter-type)]
+  (when-some [data (lookup-entry config id :filter-type)]
     (. builder filterType data))
   (.build builder))
 
@@ -513,21 +513,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRepository$Builder builder id config]
-  (when-let [data (lookup-entry config id :empty-on-delete)]
+  (when-some [data (lookup-entry config id :empty-on-delete)]
     (. builder emptyOnDelete data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :image-scanning-configuration)]
+  (when-some [data (lookup-entry config id :image-scanning-configuration)]
     (. builder imageScanningConfiguration data))
-  (when-let [data (lookup-entry config id :image-tag-mutability)]
+  (when-some [data (lookup-entry config id :image-tag-mutability)]
     (. builder imageTagMutability data))
-  (when-let [data (lookup-entry config id :lifecycle-policy)]
+  (when-some [data (lookup-entry config id :lifecycle-policy)]
     (. builder lifecyclePolicy data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :repository-policy-text)]
+  (when-some [data (lookup-entry config id :repository-policy-text)]
     (. builder repositoryPolicyText data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -562,21 +562,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnRepositoryCreationTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :applied-for)]
+  (when-some [data (lookup-entry config id :applied-for)]
     (. builder appliedFor data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :image-tag-mutability)]
+  (when-some [data (lookup-entry config id :image-tag-mutability)]
     (. builder imageTagMutability data))
-  (when-let [data (lookup-entry config id :lifecycle-policy)]
+  (when-some [data (lookup-entry config id :lifecycle-policy)]
     (. builder lifecyclePolicy data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :repository-policy)]
+  (when-some [data (lookup-entry config id :repository-policy)]
     (. builder repositoryPolicy data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
   (.build builder))
 
@@ -605,9 +605,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 "
   [^CfnRepositoryCreationTemplate$EncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-type)]
+  (when-some [data (lookup-entry config id :encryption-type)]
     (. builder encryptionType data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
 
@@ -642,21 +642,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourceTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-tags` |
 "
   [^CfnRepositoryCreationTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :applied-for)]
+  (when-some [data (lookup-entry config id :applied-for)]
     (. builder appliedFor data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :image-tag-mutability)]
+  (when-some [data (lookup-entry config id :image-tag-mutability)]
     (. builder imageTagMutability data))
-  (when-let [data (lookup-entry config id :lifecycle-policy)]
+  (when-some [data (lookup-entry config id :lifecycle-policy)]
     (. builder lifecyclePolicy data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :repository-policy)]
+  (when-some [data (lookup-entry config id :repository-policy)]
     (. builder repositoryPolicy data))
-  (when-let [data (lookup-entry config id :resource-tags)]
+  (when-some [data (lookup-entry config id :resource-tags)]
     (. builder resourceTags data))
   (.build builder))
 
@@ -685,9 +685,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 "
   [^CfnRepository$EncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-type)]
+  (when-some [data (lookup-entry config id :encryption-type)]
     (. builder encryptionType data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
 
@@ -715,7 +715,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scanOnPush` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:scan-on-push` |
 "
   [^CfnRepository$ImageScanningConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :scan-on-push)]
+  (when-some [data (lookup-entry config id :scan-on-push)]
     (. builder scanOnPush data))
   (.build builder))
 
@@ -744,9 +744,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `registryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-id` |
 "
   [^CfnRepository$LifecyclePolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :lifecycle-policy-text)]
+  (when-some [data (lookup-entry config id :lifecycle-policy-text)]
     (. builder lifecyclePolicyText data))
-  (when-let [data (lookup-entry config id :registry-id)]
+  (when-some [data (lookup-entry config id :registry-id)]
     (. builder registryId data))
   (.build builder))
 
@@ -781,21 +781,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRepositoryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :empty-on-delete)]
+  (when-some [data (lookup-entry config id :empty-on-delete)]
     (. builder emptyOnDelete data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :image-scanning-configuration)]
+  (when-some [data (lookup-entry config id :image-scanning-configuration)]
     (. builder imageScanningConfiguration data))
-  (when-let [data (lookup-entry config id :image-tag-mutability)]
+  (when-some [data (lookup-entry config id :image-tag-mutability)]
     (. builder imageTagMutability data))
-  (when-let [data (lookup-entry config id :lifecycle-policy)]
+  (when-some [data (lookup-entry config id :lifecycle-policy)]
     (. builder lifecyclePolicy data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :repository-policy-text)]
+  (when-some [data (lookup-entry config id :repository-policy-text)]
     (. builder repositoryPolicyText data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -829,19 +829,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tagStatus` | software.amazon.awscdk.services.ecr.TagStatus | [[cdk.api.services.ecr/tag-status]] | `:tag-status` |
 "
   [^LifecycleRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :max-image-age)]
+  (when-some [data (lookup-entry config id :max-image-age)]
     (. builder maxImageAge data))
-  (when-let [data (lookup-entry config id :max-image-count)]
+  (when-some [data (lookup-entry config id :max-image-count)]
     (. builder maxImageCount data))
-  (when-let [data (lookup-entry config id :rule-priority)]
+  (when-some [data (lookup-entry config id :rule-priority)]
     (. builder rulePriority data))
-  (when-let [data (lookup-entry config id :tag-pattern-list)]
+  (when-some [data (lookup-entry config id :tag-pattern-list)]
     (. builder tagPatternList data))
-  (when-let [data (lookup-entry config id :tag-prefix-list)]
+  (when-some [data (lookup-entry config id :tag-prefix-list)]
     (. builder tagPrefixList data))
-  (when-let [data (tag-status config id :tag-status)]
+  (when-some [data (tag-status config id :tag-status)]
     (. builder tagStatus data))
   (.build builder))
 
@@ -874,17 +874,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `target` | software.amazon.awscdk.services.events.IRuleTarget | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^OnCloudTrailImagePushedOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :cross-stack-scope)]
+  (when-some [data (lookup-entry config id :cross-stack-scope)]
     (. builder crossStackScope data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-pattern)]
+  (when-some [data (lookup-entry config id :event-pattern)]
     (. builder eventPattern data))
-  (when-let [data (lookup-entry config id :image-tag)]
+  (when-some [data (lookup-entry config id :image-tag)]
     (. builder imageTag data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -917,17 +917,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `target` | software.amazon.awscdk.services.events.IRuleTarget | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^OnImageScanCompletedOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :cross-stack-scope)]
+  (when-some [data (lookup-entry config id :cross-stack-scope)]
     (. builder crossStackScope data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-pattern)]
+  (when-some [data (lookup-entry config id :event-pattern)]
     (. builder eventPattern data))
-  (when-let [data (lookup-entry config id :image-tags)]
+  (when-some [data (lookup-entry config id :image-tags)]
     (. builder imageTags data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -956,9 +956,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 "
   [^RepositoryAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :repository-arn)]
+  (when-some [data (lookup-entry config id :repository-arn)]
     (. builder repositoryArn data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
 
@@ -995,25 +995,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 "
   [^Repository$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-delete-images)]
+  (when-some [data (lookup-entry config id :auto-delete-images)]
     (. builder autoDeleteImages data))
-  (when-let [data (lookup-entry config id :empty-on-delete)]
+  (when-some [data (lookup-entry config id :empty-on-delete)]
     (. builder emptyOnDelete data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :image-scan-on-push)]
+  (when-some [data (lookup-entry config id :image-scan-on-push)]
     (. builder imageScanOnPush data))
-  (when-let [data (tag-mutability config id :image-tag-mutability)]
+  (when-some [data (tag-mutability config id :image-tag-mutability)]
     (. builder imageTagMutability data))
-  (when-let [data (lookup-entry config id :lifecycle-registry-id)]
+  (when-some [data (lookup-entry config id :lifecycle-registry-id)]
     (. builder lifecycleRegistryId data))
-  (when-let [data (lookup-entry config id :lifecycle-rules)]
+  (when-some [data (lookup-entry config id :lifecycle-rules)]
     (. builder lifecycleRules data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
 
@@ -1050,25 +1050,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 "
   [^RepositoryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-delete-images)]
+  (when-some [data (lookup-entry config id :auto-delete-images)]
     (. builder autoDeleteImages data))
-  (when-let [data (lookup-entry config id :empty-on-delete)]
+  (when-some [data (lookup-entry config id :empty-on-delete)]
     (. builder emptyOnDelete data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :image-scan-on-push)]
+  (when-some [data (lookup-entry config id :image-scan-on-push)]
     (. builder imageScanOnPush data))
-  (when-let [data (tag-mutability config id :image-tag-mutability)]
+  (when-some [data (tag-mutability config id :image-tag-mutability)]
     (. builder imageTagMutability data))
-  (when-let [data (lookup-entry config id :lifecycle-registry-id)]
+  (when-some [data (lookup-entry config id :lifecycle-registry-id)]
     (. builder lifecycleRegistryId data))
-  (when-let [data (lookup-entry config id :lifecycle-rules)]
+  (when-some [data (lookup-entry config id :lifecycle-rules)]
     (. builder lifecycleRules data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
 

@@ -25,9 +25,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnExport$Builder builder id config]
-  (when-let [data (lookup-entry config id :export)]
+  (when-some [data (lookup-entry config id :export)]
     (. builder export data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -56,9 +56,9 @@
 | `tableConfigurations` | java.util.Map | [[cdk.support/lookup-entry]] | `:table-configurations` |
 "
   [^CfnExport$DataQueryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :query-statement)]
+  (when-some [data (lookup-entry config id :query-statement)]
     (. builder queryStatement data))
-  (when-let [data (lookup-entry config id :table-configurations)]
+  (when-some [data (lookup-entry config id :table-configurations)]
     (. builder tableConfigurations data))
   (.build builder))
 
@@ -86,7 +86,7 @@
 | `s3Destination` | software.amazon.awscdk.services.bcmdataexports.CfnExport$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3-destination` |
 "
   [^CfnExport$DestinationConfigurationsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-destination)]
+  (when-some [data (lookup-entry config id :s3-destination)]
     (. builder s3Destination data))
   (.build builder))
 
@@ -119,17 +119,17 @@
 | `refreshCadence` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:refresh-cadence` |
 "
   [^CfnExport$ExportProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-query)]
+  (when-some [data (lookup-entry config id :data-query)]
     (. builder dataQuery data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :destination-configurations)]
+  (when-some [data (lookup-entry config id :destination-configurations)]
     (. builder destinationConfigurations data))
-  (when-let [data (lookup-entry config id :export-arn)]
+  (when-some [data (lookup-entry config id :export-arn)]
     (. builder exportArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :refresh-cadence)]
+  (when-some [data (lookup-entry config id :refresh-cadence)]
     (. builder refreshCadence data))
   (.build builder))
 
@@ -158,9 +158,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnExportProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :export)]
+  (when-some [data (lookup-entry config id :export)]
     (. builder export data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -188,7 +188,7 @@
 | `frequency` | java.lang.String | [[cdk.support/lookup-entry]] | `:frequency` |
 "
   [^CfnExport$RefreshCadenceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :frequency)]
+  (when-some [data (lookup-entry config id :frequency)]
     (. builder frequency data))
   (.build builder))
 
@@ -217,9 +217,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnExport$ResourceTagProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -250,13 +250,13 @@
 | `s3Region` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-region` |
 "
   [^CfnExport$S3DestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-output-configurations)]
+  (when-some [data (lookup-entry config id :s3-output-configurations)]
     (. builder s3OutputConfigurations data))
-  (when-let [data (lookup-entry config id :s3-prefix)]
+  (when-some [data (lookup-entry config id :s3-prefix)]
     (. builder s3Prefix data))
-  (when-let [data (lookup-entry config id :s3-region)]
+  (when-some [data (lookup-entry config id :s3-region)]
     (. builder s3Region data))
   (.build builder))
 
@@ -287,13 +287,13 @@
 | `overwrite` | java.lang.String | [[cdk.support/lookup-entry]] | `:overwrite` |
 "
   [^CfnExport$S3OutputConfigurationsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :compression)]
+  (when-some [data (lookup-entry config id :compression)]
     (. builder compression data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :output-type)]
+  (when-some [data (lookup-entry config id :output-type)]
     (. builder outputType data))
-  (when-let [data (lookup-entry config id :overwrite)]
+  (when-some [data (lookup-entry config id :overwrite)]
     (. builder overwrite data))
   (.build builder))
 

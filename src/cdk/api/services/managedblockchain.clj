@@ -32,11 +32,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAccessor$Builder builder id config]
-  (when-let [data (lookup-entry config id :accessor-type)]
+  (when-some [data (lookup-entry config id :accessor-type)]
     (. builder accessorType data))
-  (when-let [data (lookup-entry config id :network-type)]
+  (when-some [data (lookup-entry config id :network-type)]
     (. builder networkType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -66,11 +66,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAccessorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :accessor-type)]
+  (when-some [data (lookup-entry config id :accessor-type)]
     (. builder accessorType data))
-  (when-let [data (lookup-entry config id :network-type)]
+  (when-some [data (lookup-entry config id :network-type)]
     (. builder networkType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -100,11 +100,11 @@
 | `thresholdPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold-percentage` |
 "
   [^CfnMember$ApprovalThresholdPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :proposal-duration-in-hours)]
+  (when-some [data (lookup-entry config id :proposal-duration-in-hours)]
     (. builder proposalDurationInHours data))
-  (when-let [data (lookup-entry config id :threshold-comparator)]
+  (when-some [data (lookup-entry config id :threshold-comparator)]
     (. builder thresholdComparator data))
-  (when-let [data (lookup-entry config id :threshold-percentage)]
+  (when-some [data (lookup-entry config id :threshold-percentage)]
     (. builder thresholdPercentage data))
   (.build builder))
 
@@ -135,13 +135,13 @@
 | `networkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-id` |
 "
   [^CfnMember$Builder builder id config]
-  (when-let [data (lookup-entry config id :invitation-id)]
+  (when-some [data (lookup-entry config id :invitation-id)]
     (. builder invitationId data))
-  (when-let [data (lookup-entry config id :member-configuration)]
+  (when-some [data (lookup-entry config id :member-configuration)]
     (. builder memberConfiguration data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :network-id)]
+  (when-some [data (lookup-entry config id :network-id)]
     (. builder networkId data))
   (.build builder))
 
@@ -171,11 +171,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnMember$MemberConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :member-framework-configuration)]
+  (when-some [data (lookup-entry config id :member-framework-configuration)]
     (. builder memberFrameworkConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -204,9 +204,9 @@
 | `adminUsername` | java.lang.String | [[cdk.support/lookup-entry]] | `:admin-username` |
 "
   [^CfnMember$MemberFabricConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin-password)]
+  (when-some [data (lookup-entry config id :admin-password)]
     (. builder adminPassword data))
-  (when-let [data (lookup-entry config id :admin-username)]
+  (when-some [data (lookup-entry config id :admin-username)]
     (. builder adminUsername data))
   (.build builder))
 
@@ -234,7 +234,7 @@
 | `memberFabricConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$MemberFabricConfigurationProperty | [[cdk.support/lookup-entry]] | `:member-fabric-configuration` |
 "
   [^CfnMember$MemberFrameworkConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :member-fabric-configuration)]
+  (when-some [data (lookup-entry config id :member-fabric-configuration)]
     (. builder memberFabricConfiguration data))
   (.build builder))
 
@@ -267,17 +267,17 @@
 | `votingPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:voting-policy` |
 "
   [^CfnMember$NetworkConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :framework)]
+  (when-some [data (lookup-entry config id :framework)]
     (. builder framework data))
-  (when-let [data (lookup-entry config id :framework-version)]
+  (when-some [data (lookup-entry config id :framework-version)]
     (. builder frameworkVersion data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :network-framework-configuration)]
+  (when-some [data (lookup-entry config id :network-framework-configuration)]
     (. builder networkFrameworkConfiguration data))
-  (when-let [data (lookup-entry config id :voting-policy)]
+  (when-some [data (lookup-entry config id :voting-policy)]
     (. builder votingPolicy data))
   (.build builder))
 
@@ -305,7 +305,7 @@
 | `edition` | java.lang.String | [[cdk.support/lookup-entry]] | `:edition` |
 "
   [^CfnMember$NetworkFabricConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :edition)]
+  (when-some [data (lookup-entry config id :edition)]
     (. builder edition data))
   (.build builder))
 
@@ -333,7 +333,7 @@
 | `networkFabricConfiguration` | software.amazon.awscdk.services.managedblockchain.CfnMember$NetworkFabricConfigurationProperty | [[cdk.support/lookup-entry]] | `:network-fabric-configuration` |
 "
   [^CfnMember$NetworkFrameworkConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :network-fabric-configuration)]
+  (when-some [data (lookup-entry config id :network-fabric-configuration)]
     (. builder networkFabricConfiguration data))
   (.build builder))
 
@@ -364,13 +364,13 @@
 | `networkId` | java.lang.String | [[cdk.support/lookup-entry]] | `:network-id` |
 "
   [^CfnMemberProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :invitation-id)]
+  (when-some [data (lookup-entry config id :invitation-id)]
     (. builder invitationId data))
-  (when-let [data (lookup-entry config id :member-configuration)]
+  (when-some [data (lookup-entry config id :member-configuration)]
     (. builder memberConfiguration data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :network-id)]
+  (when-some [data (lookup-entry config id :network-id)]
     (. builder networkId data))
   (.build builder))
 
@@ -398,7 +398,7 @@
 | `approvalThresholdPolicy` | software.amazon.awscdk.services.managedblockchain.CfnMember$ApprovalThresholdPolicyProperty | [[cdk.support/lookup-entry]] | `:approval-threshold-policy` |
 "
   [^CfnMember$VotingPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :approval-threshold-policy)]
+  (when-some [data (lookup-entry config id :approval-threshold-policy)]
     (. builder approvalThresholdPolicy data))
   (.build builder))
 
@@ -428,11 +428,11 @@
 | `nodeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-configuration` |
 "
   [^CfnNode$Builder builder id config]
-  (when-let [data (lookup-entry config id :member-id)]
+  (when-some [data (lookup-entry config id :member-id)]
     (. builder memberId data))
-  (when-let [data (lookup-entry config id :network-id)]
+  (when-some [data (lookup-entry config id :network-id)]
     (. builder networkId data))
-  (when-let [data (lookup-entry config id :node-configuration)]
+  (when-some [data (lookup-entry config id :node-configuration)]
     (. builder nodeConfiguration data))
   (.build builder))
 
@@ -461,9 +461,9 @@
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 "
   [^CfnNode$NodeConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zone)]
+  (when-some [data (lookup-entry config id :availability-zone)]
     (. builder availabilityZone data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
   (.build builder))
 
@@ -493,11 +493,11 @@
 | `nodeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:node-configuration` |
 "
   [^CfnNodeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :member-id)]
+  (when-some [data (lookup-entry config id :member-id)]
     (. builder memberId data))
-  (when-let [data (lookup-entry config id :network-id)]
+  (when-some [data (lookup-entry config id :network-id)]
     (. builder networkId data))
-  (when-let [data (lookup-entry config id :node-configuration)]
+  (when-some [data (lookup-entry config id :node-configuration)]
     (. builder nodeConfiguration data))
   (.build builder))
 

@@ -40,23 +40,23 @@
 | `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
 "
   [^FunctionUrlOrigin$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :keepalive-timeout)]
+  (when-some [data (lookup-entry config id :keepalive-timeout)]
     (. builder keepaliveTimeout data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
-  (when-let [data (lookup-entry config id :read-timeout)]
+  (when-some [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
 
@@ -95,23 +95,23 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunctionUrl]___
 | `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
 "
   [^FunctionUrlOriginProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :keepalive-timeout)]
+  (when-some [data (lookup-entry config id :keepalive-timeout)]
     (. builder keepaliveTimeout data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
-  (when-let [data (lookup-entry config id :read-timeout)]
+  (when-some [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
 
@@ -151,31 +151,31 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunctionUrl]___
 | `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
 "
   [^HttpOrigin$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :http-port)]
+  (when-some [data (lookup-entry config id :http-port)]
     (. builder httpPort data))
-  (when-let [data (lookup-entry config id :https-port)]
+  (when-some [data (lookup-entry config id :https-port)]
     (. builder httpsPort data))
-  (when-let [data (lookup-entry config id :keepalive-timeout)]
+  (when-some [data (lookup-entry config id :keepalive-timeout)]
     (. builder keepaliveTimeout data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
-  (when-let [data (lookup-entry config id :origin-ssl-protocols)]
+  (when-some [data (lookup-entry config id :origin-ssl-protocols)]
     (. builder originSslProtocols data))
-  (when-let [data (origin-protocol-policy config id :protocol-policy)]
+  (when-some [data (origin-protocol-policy config id :protocol-policy)]
     (. builder protocolPolicy data))
-  (when-let [data (lookup-entry config id :read-timeout)]
+  (when-some [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
 
@@ -218,31 +218,31 @@ __Create Form:__ ____[java.lang.String]___
 | `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
 "
   [^HttpOriginProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :http-port)]
+  (when-some [data (lookup-entry config id :http-port)]
     (. builder httpPort data))
-  (when-let [data (lookup-entry config id :https-port)]
+  (when-some [data (lookup-entry config id :https-port)]
     (. builder httpsPort data))
-  (when-let [data (lookup-entry config id :keepalive-timeout)]
+  (when-some [data (lookup-entry config id :keepalive-timeout)]
     (. builder keepaliveTimeout data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
-  (when-let [data (lookup-entry config id :origin-ssl-protocols)]
+  (when-some [data (lookup-entry config id :origin-ssl-protocols)]
     (. builder originSslProtocols data))
-  (when-let [data (origin-protocol-policy config id :protocol-policy)]
+  (when-some [data (origin-protocol-policy config id :protocol-policy)]
     (. builder protocolPolicy data))
-  (when-let [data (lookup-entry config id :read-timeout)]
+  (when-some [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
 
@@ -282,31 +282,31 @@ __Create Form:__ ____[java.lang.String]___
 | `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
 "
   [^LoadBalancerV2Origin$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :http-port)]
+  (when-some [data (lookup-entry config id :http-port)]
     (. builder httpPort data))
-  (when-let [data (lookup-entry config id :https-port)]
+  (when-some [data (lookup-entry config id :https-port)]
     (. builder httpsPort data))
-  (when-let [data (lookup-entry config id :keepalive-timeout)]
+  (when-some [data (lookup-entry config id :keepalive-timeout)]
     (. builder keepaliveTimeout data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
-  (when-let [data (lookup-entry config id :origin-ssl-protocols)]
+  (when-some [data (lookup-entry config id :origin-ssl-protocols)]
     (. builder originSslProtocols data))
-  (when-let [data (origin-protocol-policy config id :protocol-policy)]
+  (when-some [data (origin-protocol-policy config id :protocol-policy)]
     (. builder protocolPolicy data))
-  (when-let [data (lookup-entry config id :read-timeout)]
+  (when-some [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
 
@@ -349,31 +349,31 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILo
 | `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
 "
   [^LoadBalancerV2OriginProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :http-port)]
+  (when-some [data (lookup-entry config id :http-port)]
     (. builder httpPort data))
-  (when-let [data (lookup-entry config id :https-port)]
+  (when-some [data (lookup-entry config id :https-port)]
     (. builder httpsPort data))
-  (when-let [data (lookup-entry config id :keepalive-timeout)]
+  (when-some [data (lookup-entry config id :keepalive-timeout)]
     (. builder keepaliveTimeout data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
-  (when-let [data (lookup-entry config id :origin-ssl-protocols)]
+  (when-some [data (lookup-entry config id :origin-ssl-protocols)]
     (. builder originSslProtocols data))
-  (when-let [data (origin-protocol-policy config id :protocol-policy)]
+  (when-some [data (origin-protocol-policy config id :protocol-policy)]
     (. builder protocolPolicy data))
-  (when-let [data (lookup-entry config id :read-timeout)]
+  (when-some [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
 
@@ -403,11 +403,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILo
 | `primaryOrigin` | software.amazon.awscdk.services.cloudfront.IOrigin | [[cdk.support/lookup-entry]] | `:primary-origin` |
 "
   [^OriginGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :fallback-origin)]
+  (when-some [data (lookup-entry config id :fallback-origin)]
     (. builder fallbackOrigin data))
-  (when-let [data (lookup-entry config id :fallback-status-codes)]
+  (when-some [data (lookup-entry config id :fallback-status-codes)]
     (. builder fallbackStatusCodes data))
-  (when-let [data (lookup-entry config id :primary-origin)]
+  (when-some [data (lookup-entry config id :primary-origin)]
     (. builder primaryOrigin data))
   (.build builder))
 
@@ -437,11 +437,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILo
 | `primaryOrigin` | software.amazon.awscdk.services.cloudfront.IOrigin | [[cdk.support/lookup-entry]] | `:primary-origin` |
 "
   [^OriginGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :fallback-origin)]
+  (when-some [data (lookup-entry config id :fallback-origin)]
     (. builder fallbackOrigin data))
-  (when-let [data (lookup-entry config id :fallback-status-codes)]
+  (when-some [data (lookup-entry config id :fallback-status-codes)]
     (. builder fallbackStatusCodes data))
-  (when-let [data (lookup-entry config id :primary-origin)]
+  (when-some [data (lookup-entry config id :primary-origin)]
     (. builder primaryOrigin data))
   (.build builder))
 
@@ -477,23 +477,23 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILo
 | `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
 "
   [^RestApiOrigin$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :keepalive-timeout)]
+  (when-some [data (lookup-entry config id :keepalive-timeout)]
     (. builder keepaliveTimeout data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
-  (when-let [data (lookup-entry config id :read-timeout)]
+  (when-some [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
 
@@ -532,23 +532,23 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.RestApiBase]___
 | `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
 "
   [^RestApiOriginProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :keepalive-timeout)]
+  (when-some [data (lookup-entry config id :keepalive-timeout)]
     (. builder keepaliveTimeout data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
-  (when-let [data (lookup-entry config id :read-timeout)]
+  (when-some [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
 
@@ -583,21 +583,21 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.RestApiBase]___
 | `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
 "
   [^S3Origin$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :origin-access-identity)]
+  (when-some [data (lookup-entry config id :origin-access-identity)]
     (. builder originAccessIdentity data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
   (.build builder))
 
@@ -635,21 +635,21 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
 | `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
 "
   [^S3OriginProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-attempts)]
+  (when-some [data (lookup-entry config id :connection-attempts)]
     (. builder connectionAttempts data))
-  (when-let [data (lookup-entry config id :connection-timeout)]
+  (when-some [data (lookup-entry config id :connection-timeout)]
     (. builder connectionTimeout data))
-  (when-let [data (lookup-entry config id :custom-headers)]
+  (when-some [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
-  (when-let [data (lookup-entry config id :origin-access-identity)]
+  (when-some [data (lookup-entry config id :origin-access-identity)]
     (. builder originAccessIdentity data))
-  (when-let [data (lookup-entry config id :origin-id)]
+  (when-some [data (lookup-entry config id :origin-id)]
     (. builder originId data))
-  (when-let [data (lookup-entry config id :origin-path)]
+  (when-some [data (lookup-entry config id :origin-path)]
     (. builder originPath data))
-  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+  (when-some [data (lookup-entry config id :origin-shield-enabled)]
     (. builder originShieldEnabled data))
-  (when-let [data (lookup-entry config id :origin-shield-region)]
+  (when-some [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
   (.build builder))
 

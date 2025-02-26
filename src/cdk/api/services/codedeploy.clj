@@ -130,11 +130,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `stoppedDeployment` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:stopped-deployment` |
 "
   [^AutoRollbackConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-in-alarm)]
+  (when-some [data (lookup-entry config id :deployment-in-alarm)]
     (. builder deploymentInAlarm data))
-  (when-let [data (lookup-entry config id :failed-deployment)]
+  (when-some [data (lookup-entry config id :failed-deployment)]
     (. builder failedDeployment data))
-  (when-let [data (lookup-entry config id :stopped-deployment)]
+  (when-some [data (lookup-entry config id :stopped-deployment)]
     (. builder stoppedDeployment data))
   (.build builder))
 
@@ -162,7 +162,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deploymentConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-config-name` |
 "
   [^BaseDeploymentConfigOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
   (.build builder))
 
@@ -193,13 +193,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficRouting` | software.amazon.awscdk.services.codedeploy.TrafficRouting | [[cdk.support/lookup-entry]] | `:traffic-routing` |
 "
   [^BaseDeploymentConfigProps$Builder builder id config]
-  (when-let [data (compute-platform config id :compute-platform)]
+  (when-some [data (compute-platform config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :minimum-healthy-hosts)]
+  (when-some [data (lookup-entry config id :minimum-healthy-hosts)]
     (. builder minimumHealthyHosts data))
-  (when-let [data (lookup-entry config id :traffic-routing)]
+  (when-some [data (lookup-entry config id :traffic-routing)]
     (. builder trafficRouting data))
   (.build builder))
 
@@ -228,9 +228,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `percentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percentage` |
 "
   [^BaseTrafficShiftingConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :percentage)]
+  (when-some [data (lookup-entry config id :percentage)]
     (. builder percentage data))
   (.build builder))
 
@@ -259,9 +259,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `canaryPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:canary-percentage` |
 "
   [^CanaryTrafficRoutingConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :canary-interval)]
+  (when-some [data (lookup-entry config id :canary-interval)]
     (. builder canaryInterval data))
-  (when-let [data (lookup-entry config id :canary-percentage)]
+  (when-some [data (lookup-entry config id :canary-percentage)]
     (. builder canaryPercentage data))
   (.build builder))
 
@@ -291,11 +291,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :compute-platform)]
+  (when-some [data (lookup-entry config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -325,11 +325,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :compute-platform)]
+  (when-some [data (lookup-entry config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -361,15 +361,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zonalConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zonal-config` |
 "
   [^CfnDeploymentConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :compute-platform)]
+  (when-some [data (lookup-entry config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :minimum-healthy-hosts)]
+  (when-some [data (lookup-entry config id :minimum-healthy-hosts)]
     (. builder minimumHealthyHosts data))
-  (when-let [data (lookup-entry config id :traffic-routing-config)]
+  (when-some [data (lookup-entry config id :traffic-routing-config)]
     (. builder trafficRoutingConfig data))
-  (when-let [data (lookup-entry config id :zonal-config)]
+  (when-some [data (lookup-entry config id :zonal-config)]
     (. builder zonalConfig data))
   (.build builder))
 
@@ -398,9 +398,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDeploymentConfig$MinimumHealthyHostsPerZoneProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -429,9 +429,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDeploymentConfig$MinimumHealthyHostsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -463,15 +463,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `zonalConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:zonal-config` |
 "
   [^CfnDeploymentConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :compute-platform)]
+  (when-some [data (lookup-entry config id :compute-platform)]
     (. builder computePlatform data))
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :minimum-healthy-hosts)]
+  (when-some [data (lookup-entry config id :minimum-healthy-hosts)]
     (. builder minimumHealthyHosts data))
-  (when-let [data (lookup-entry config id :traffic-routing-config)]
+  (when-some [data (lookup-entry config id :traffic-routing-config)]
     (. builder trafficRoutingConfig data))
-  (when-let [data (lookup-entry config id :zonal-config)]
+  (when-some [data (lookup-entry config id :zonal-config)]
     (. builder zonalConfig data))
   (.build builder))
 
@@ -500,9 +500,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `canaryPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:canary-percentage` |
 "
   [^CfnDeploymentConfig$TimeBasedCanaryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :canary-interval)]
+  (when-some [data (lookup-entry config id :canary-interval)]
     (. builder canaryInterval data))
-  (when-let [data (lookup-entry config id :canary-percentage)]
+  (when-some [data (lookup-entry config id :canary-percentage)]
     (. builder canaryPercentage data))
   (.build builder))
 
@@ -531,9 +531,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `linearPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:linear-percentage` |
 "
   [^CfnDeploymentConfig$TimeBasedLinearProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :linear-interval)]
+  (when-some [data (lookup-entry config id :linear-interval)]
     (. builder linearInterval data))
-  (when-let [data (lookup-entry config id :linear-percentage)]
+  (when-some [data (lookup-entry config id :linear-percentage)]
     (. builder linearPercentage data))
   (.build builder))
 
@@ -563,11 +563,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDeploymentConfig$TrafficRoutingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :time-based-canary)]
+  (when-some [data (lookup-entry config id :time-based-canary)]
     (. builder timeBasedCanary data))
-  (when-let [data (lookup-entry config id :time-based-linear)]
+  (when-some [data (lookup-entry config id :time-based-linear)]
     (. builder timeBasedLinear data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -597,11 +597,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `monitorDurationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:monitor-duration-in-seconds` |
 "
   [^CfnDeploymentConfig$ZonalConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :first-zone-monitor-duration-in-seconds)]
+  (when-some [data (lookup-entry config id :first-zone-monitor-duration-in-seconds)]
     (. builder firstZoneMonitorDurationInSeconds data))
-  (when-let [data (lookup-entry config id :minimum-healthy-hosts-per-zone)]
+  (when-some [data (lookup-entry config id :minimum-healthy-hosts-per-zone)]
     (. builder minimumHealthyHostsPerZone data))
-  (when-let [data (lookup-entry config id :monitor-duration-in-seconds)]
+  (when-some [data (lookup-entry config id :monitor-duration-in-seconds)]
     (. builder monitorDurationInSeconds data))
   (.build builder))
 
@@ -631,11 +631,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ignorePollAlarmFailure` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ignore-poll-alarm-failure` |
 "
   [^CfnDeploymentGroup$AlarmConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :ignore-poll-alarm-failure)]
+  (when-some [data (lookup-entry config id :ignore-poll-alarm-failure)]
     (. builder ignorePollAlarmFailure data))
   (.build builder))
 
@@ -663,7 +663,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnDeploymentGroup$AlarmProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -692,9 +692,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 "
   [^CfnDeploymentGroup$AutoRollbackConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :events)]
+  (when-some [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
 
@@ -724,11 +724,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `terminateBlueInstancesOnDeploymentSuccess` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:terminate-blue-instances-on-deployment-success` |
 "
   [^CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-ready-option)]
+  (when-some [data (lookup-entry config id :deployment-ready-option)]
     (. builder deploymentReadyOption data))
-  (when-let [data (lookup-entry config id :green-fleet-provisioning-option)]
+  (when-some [data (lookup-entry config id :green-fleet-provisioning-option)]
     (. builder greenFleetProvisioningOption data))
-  (when-let [data (lookup-entry config id :terminate-blue-instances-on-deployment-success)]
+  (when-some [data (lookup-entry config id :terminate-blue-instances-on-deployment-success)]
     (. builder terminateBlueInstancesOnDeploymentSuccess data))
   (.build builder))
 
@@ -757,9 +757,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `terminationWaitTimeInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:termination-wait-time-in-minutes` |
 "
   [^CfnDeploymentGroup$BlueInstanceTerminationOptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :termination-wait-time-in-minutes)]
+  (when-some [data (lookup-entry config id :termination-wait-time-in-minutes)]
     (. builder terminationWaitTimeInMinutes data))
   (.build builder))
 
@@ -806,45 +806,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `triggerConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:trigger-configurations` |
 "
   [^CfnDeploymentGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-configuration)]
+  (when-some [data (lookup-entry config id :alarm-configuration)]
     (. builder alarmConfiguration data))
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :auto-rollback-configuration)]
+  (when-some [data (lookup-entry config id :auto-rollback-configuration)]
     (. builder autoRollbackConfiguration data))
-  (when-let [data (lookup-entry config id :auto-scaling-groups)]
+  (when-some [data (lookup-entry config id :auto-scaling-groups)]
     (. builder autoScalingGroups data))
-  (when-let [data (lookup-entry config id :blue-green-deployment-configuration)]
+  (when-some [data (lookup-entry config id :blue-green-deployment-configuration)]
     (. builder blueGreenDeploymentConfiguration data))
-  (when-let [data (lookup-entry config id :deployment)]
+  (when-some [data (lookup-entry config id :deployment)]
     (. builder deployment data))
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
-  (when-let [data (lookup-entry config id :deployment-style)]
+  (when-some [data (lookup-entry config id :deployment-style)]
     (. builder deploymentStyle data))
-  (when-let [data (lookup-entry config id :ec2-tag-filters)]
+  (when-some [data (lookup-entry config id :ec2-tag-filters)]
     (. builder ec2TagFilters data))
-  (when-let [data (lookup-entry config id :ec2-tag-set)]
+  (when-some [data (lookup-entry config id :ec2-tag-set)]
     (. builder ec2TagSet data))
-  (when-let [data (lookup-entry config id :ecs-services)]
+  (when-some [data (lookup-entry config id :ecs-services)]
     (. builder ecsServices data))
-  (when-let [data (lookup-entry config id :load-balancer-info)]
+  (when-some [data (lookup-entry config id :load-balancer-info)]
     (. builder loadBalancerInfo data))
-  (when-let [data (lookup-entry config id :on-premises-instance-tag-filters)]
+  (when-some [data (lookup-entry config id :on-premises-instance-tag-filters)]
     (. builder onPremisesInstanceTagFilters data))
-  (when-let [data (lookup-entry config id :on-premises-tag-set)]
+  (when-some [data (lookup-entry config id :on-premises-tag-set)]
     (. builder onPremisesTagSet data))
-  (when-let [data (lookup-entry config id :outdated-instances-strategy)]
+  (when-some [data (lookup-entry config id :outdated-instances-strategy)]
     (. builder outdatedInstancesStrategy data))
-  (when-let [data (lookup-entry config id :service-role-arn)]
+  (when-some [data (lookup-entry config id :service-role-arn)]
     (. builder serviceRoleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :termination-hook-enabled)]
+  (when-some [data (lookup-entry config id :termination-hook-enabled)]
     (. builder terminationHookEnabled data))
-  (when-let [data (lookup-entry config id :trigger-configurations)]
+  (when-some [data (lookup-entry config id :trigger-configurations)]
     (. builder triggerConfigurations data))
   (.build builder))
 
@@ -874,11 +874,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `revision` | software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup$RevisionLocationProperty | [[cdk.support/lookup-entry]] | `:revision` |
 "
   [^CfnDeploymentGroup$DeploymentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :ignore-application-stop-failures)]
+  (when-some [data (lookup-entry config id :ignore-application-stop-failures)]
     (. builder ignoreApplicationStopFailures data))
-  (when-let [data (lookup-entry config id :revision)]
+  (when-some [data (lookup-entry config id :revision)]
     (. builder revision data))
   (.build builder))
 
@@ -907,9 +907,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `waitTimeInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-time-in-minutes` |
 "
   [^CfnDeploymentGroup$DeploymentReadyOptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action-on-timeout)]
+  (when-some [data (lookup-entry config id :action-on-timeout)]
     (. builder actionOnTimeout data))
-  (when-let [data (lookup-entry config id :wait-time-in-minutes)]
+  (when-some [data (lookup-entry config id :wait-time-in-minutes)]
     (. builder waitTimeInMinutes data))
   (.build builder))
 
@@ -938,9 +938,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deploymentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-type` |
 "
   [^CfnDeploymentGroup$DeploymentStyleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-option)]
+  (when-some [data (lookup-entry config id :deployment-option)]
     (. builder deploymentOption data))
-  (when-let [data (lookup-entry config id :deployment-type)]
+  (when-some [data (lookup-entry config id :deployment-type)]
     (. builder deploymentType data))
   (.build builder))
 
@@ -970,11 +970,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDeploymentGroup$EC2TagFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1002,7 +1002,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ec2TagGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ec2-tag-group` |
 "
   [^CfnDeploymentGroup$EC2TagSetListObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ec2-tag-group)]
+  (when-some [data (lookup-entry config id :ec2-tag-group)]
     (. builder ec2TagGroup data))
   (.build builder))
 
@@ -1030,7 +1030,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ec2TagSetList` | java.util.List | [[cdk.support/lookup-entry]] | `:ec2-tag-set-list` |
 "
   [^CfnDeploymentGroup$EC2TagSetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ec2-tag-set-list)]
+  (when-some [data (lookup-entry config id :ec2-tag-set-list)]
     (. builder ec2TagSetList data))
   (.build builder))
 
@@ -1059,9 +1059,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^CfnDeploymentGroup$ECSServiceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-name)]
+  (when-some [data (lookup-entry config id :cluster-name)]
     (. builder clusterName data))
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -1089,7 +1089,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnDeploymentGroup$ELBInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1118,9 +1118,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `repository` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository` |
 "
   [^CfnDeploymentGroup$GitHubLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :commit-id)]
+  (when-some [data (lookup-entry config id :commit-id)]
     (. builder commitId data))
-  (when-let [data (lookup-entry config id :repository)]
+  (when-some [data (lookup-entry config id :repository)]
     (. builder repository data))
   (.build builder))
 
@@ -1148,7 +1148,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `action` | java.lang.String | [[cdk.support/lookup-entry]] | `:action` |
 "
   [^CfnDeploymentGroup$GreenFleetProvisioningOptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
   (.build builder))
 
@@ -1178,11 +1178,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetGroupPairInfoList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-group-pair-info-list` |
 "
   [^CfnDeploymentGroup$LoadBalancerInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :elb-info-list)]
+  (when-some [data (lookup-entry config id :elb-info-list)]
     (. builder elbInfoList data))
-  (when-let [data (lookup-entry config id :target-group-info-list)]
+  (when-some [data (lookup-entry config id :target-group-info-list)]
     (. builder targetGroupInfoList data))
-  (when-let [data (lookup-entry config id :target-group-pair-info-list)]
+  (when-some [data (lookup-entry config id :target-group-pair-info-list)]
     (. builder targetGroupPairInfoList data))
   (.build builder))
 
@@ -1210,7 +1210,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `onPremisesTagGroup` | java.util.List | [[cdk.support/lookup-entry]] | `:on-premises-tag-group` |
 "
   [^CfnDeploymentGroup$OnPremisesTagSetListObjectProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :on-premises-tag-group)]
+  (when-some [data (lookup-entry config id :on-premises-tag-group)]
     (. builder onPremisesTagGroup data))
   (.build builder))
 
@@ -1238,7 +1238,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `onPremisesTagSetList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:on-premises-tag-set-list` |
 "
   [^CfnDeploymentGroup$OnPremisesTagSetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :on-premises-tag-set-list)]
+  (when-some [data (lookup-entry config id :on-premises-tag-set-list)]
     (. builder onPremisesTagSetList data))
   (.build builder))
 
@@ -1285,45 +1285,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `triggerConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trigger-configurations` |
 "
   [^CfnDeploymentGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-configuration)]
+  (when-some [data (lookup-entry config id :alarm-configuration)]
     (. builder alarmConfiguration data))
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
-  (when-let [data (lookup-entry config id :auto-rollback-configuration)]
+  (when-some [data (lookup-entry config id :auto-rollback-configuration)]
     (. builder autoRollbackConfiguration data))
-  (when-let [data (lookup-entry config id :auto-scaling-groups)]
+  (when-some [data (lookup-entry config id :auto-scaling-groups)]
     (. builder autoScalingGroups data))
-  (when-let [data (lookup-entry config id :blue-green-deployment-configuration)]
+  (when-some [data (lookup-entry config id :blue-green-deployment-configuration)]
     (. builder blueGreenDeploymentConfiguration data))
-  (when-let [data (lookup-entry config id :deployment)]
+  (when-some [data (lookup-entry config id :deployment)]
     (. builder deployment data))
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
-  (when-let [data (lookup-entry config id :deployment-style)]
+  (when-some [data (lookup-entry config id :deployment-style)]
     (. builder deploymentStyle data))
-  (when-let [data (lookup-entry config id :ec2-tag-filters)]
+  (when-some [data (lookup-entry config id :ec2-tag-filters)]
     (. builder ec2TagFilters data))
-  (when-let [data (lookup-entry config id :ec2-tag-set)]
+  (when-some [data (lookup-entry config id :ec2-tag-set)]
     (. builder ec2TagSet data))
-  (when-let [data (lookup-entry config id :ecs-services)]
+  (when-some [data (lookup-entry config id :ecs-services)]
     (. builder ecsServices data))
-  (when-let [data (lookup-entry config id :load-balancer-info)]
+  (when-some [data (lookup-entry config id :load-balancer-info)]
     (. builder loadBalancerInfo data))
-  (when-let [data (lookup-entry config id :on-premises-instance-tag-filters)]
+  (when-some [data (lookup-entry config id :on-premises-instance-tag-filters)]
     (. builder onPremisesInstanceTagFilters data))
-  (when-let [data (lookup-entry config id :on-premises-tag-set)]
+  (when-some [data (lookup-entry config id :on-premises-tag-set)]
     (. builder onPremisesTagSet data))
-  (when-let [data (lookup-entry config id :outdated-instances-strategy)]
+  (when-some [data (lookup-entry config id :outdated-instances-strategy)]
     (. builder outdatedInstancesStrategy data))
-  (when-let [data (lookup-entry config id :service-role-arn)]
+  (when-some [data (lookup-entry config id :service-role-arn)]
     (. builder serviceRoleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :termination-hook-enabled)]
+  (when-some [data (lookup-entry config id :termination-hook-enabled)]
     (. builder terminationHookEnabled data))
-  (when-let [data (lookup-entry config id :trigger-configurations)]
+  (when-some [data (lookup-entry config id :trigger-configurations)]
     (. builder triggerConfigurations data))
   (.build builder))
 
@@ -1353,11 +1353,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-location` |
 "
   [^CfnDeploymentGroup$RevisionLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :git-hub-location)]
+  (when-some [data (lookup-entry config id :git-hub-location)]
     (. builder gitHubLocation data))
-  (when-let [data (lookup-entry config id :revision-type)]
+  (when-some [data (lookup-entry config id :revision-type)]
     (. builder revisionType data))
-  (when-let [data (lookup-entry config id :s3-location)]
+  (when-some [data (lookup-entry config id :s3-location)]
     (. builder s3Location data))
   (.build builder))
 
@@ -1389,15 +1389,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnDeploymentGroup$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :bundle-type)]
+  (when-some [data (lookup-entry config id :bundle-type)]
     (. builder bundleType data))
-  (when-let [data (lookup-entry config id :e-tag)]
+  (when-some [data (lookup-entry config id :e-tag)]
     (. builder eTag data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -1427,11 +1427,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnDeploymentGroup$TagFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1459,7 +1459,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnDeploymentGroup$TargetGroupInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -1489,11 +1489,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `testTrafficRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:test-traffic-route` |
 "
   [^CfnDeploymentGroup$TargetGroupPairInfoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :prod-traffic-route)]
+  (when-some [data (lookup-entry config id :prod-traffic-route)]
     (. builder prodTrafficRoute data))
-  (when-let [data (lookup-entry config id :target-groups)]
+  (when-some [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
-  (when-let [data (lookup-entry config id :test-traffic-route)]
+  (when-some [data (lookup-entry config id :test-traffic-route)]
     (. builder testTrafficRoute data))
   (.build builder))
 
@@ -1521,7 +1521,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listenerArns` | java.util.List | [[cdk.support/lookup-entry]] | `:listener-arns` |
 "
   [^CfnDeploymentGroup$TrafficRouteProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :listener-arns)]
+  (when-some [data (lookup-entry config id :listener-arns)]
     (. builder listenerArns data))
   (.build builder))
 
@@ -1551,11 +1551,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `triggerTargetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-target-arn` |
 "
   [^CfnDeploymentGroup$TriggerConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :trigger-events)]
+  (when-some [data (lookup-entry config id :trigger-events)]
     (. builder triggerEvents data))
-  (when-let [data (lookup-entry config id :trigger-name)]
+  (when-some [data (lookup-entry config id :trigger-name)]
     (. builder triggerName data))
-  (when-let [data (lookup-entry config id :trigger-target-arn)]
+  (when-some [data (lookup-entry config id :trigger-target-arn)]
     (. builder triggerTargetArn data))
   (.build builder))
 
@@ -1583,7 +1583,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 "
   [^EcsApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
   (.build builder))
 
@@ -1611,7 +1611,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 "
   [^EcsApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
   (.build builder))
 
@@ -1644,17 +1644,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `testListener` | software.amazon.awscdk.services.elasticloadbalancingv2.IListener | [[cdk.support/lookup-entry]] | `:test-listener` |
 "
   [^EcsBlueGreenDeploymentConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :blue-target-group)]
+  (when-some [data (lookup-entry config id :blue-target-group)]
     (. builder blueTargetGroup data))
-  (when-let [data (lookup-entry config id :deployment-approval-wait-time)]
+  (when-some [data (lookup-entry config id :deployment-approval-wait-time)]
     (. builder deploymentApprovalWaitTime data))
-  (when-let [data (lookup-entry config id :green-target-group)]
+  (when-some [data (lookup-entry config id :green-target-group)]
     (. builder greenTargetGroup data))
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
-  (when-let [data (lookup-entry config id :termination-wait-time)]
+  (when-some [data (lookup-entry config id :termination-wait-time)]
     (. builder terminationWaitTime data))
-  (when-let [data (lookup-entry config id :test-listener)]
+  (when-some [data (lookup-entry config id :test-listener)]
     (. builder testListener data))
   (.build builder))
 
@@ -1683,9 +1683,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficRouting` | software.amazon.awscdk.services.codedeploy.TrafficRouting | [[cdk.support/lookup-entry]] | `:traffic-routing` |
 "
   [^EcsDeploymentConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :traffic-routing)]
+  (when-some [data (lookup-entry config id :traffic-routing)]
     (. builder trafficRouting data))
   (.build builder))
 
@@ -1714,9 +1714,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficRouting` | software.amazon.awscdk.services.codedeploy.TrafficRouting | [[cdk.support/lookup-entry]] | `:traffic-routing` |
 "
   [^EcsDeploymentConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :traffic-routing)]
+  (when-some [data (lookup-entry config id :traffic-routing)]
     (. builder trafficRouting data))
   (.build builder))
 
@@ -1746,11 +1746,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deploymentGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-group-name` |
 "
   [^EcsDeploymentGroupAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
   (.build builder))
 
@@ -1787,25 +1787,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.ecs.IBaseService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^EcsDeploymentGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :auto-rollback)]
+  (when-some [data (lookup-entry config id :auto-rollback)]
     (. builder autoRollback data))
-  (when-let [data (lookup-entry config id :blue-green-deployment-config)]
+  (when-some [data (lookup-entry config id :blue-green-deployment-config)]
     (. builder blueGreenDeploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
-  (when-let [data (lookup-entry config id :ignore-alarm-configuration)]
+  (when-some [data (lookup-entry config id :ignore-alarm-configuration)]
     (. builder ignoreAlarmConfiguration data))
-  (when-let [data (lookup-entry config id :ignore-poll-alarms-failure)]
+  (when-some [data (lookup-entry config id :ignore-poll-alarms-failure)]
     (. builder ignorePollAlarmsFailure data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -1842,25 +1842,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `service` | software.amazon.awscdk.services.ecs.IBaseService | [[cdk.support/lookup-entry]] | `:service` |
 "
   [^EcsDeploymentGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :auto-rollback)]
+  (when-some [data (lookup-entry config id :auto-rollback)]
     (. builder autoRollback data))
-  (when-let [data (lookup-entry config id :blue-green-deployment-config)]
+  (when-some [data (lookup-entry config id :blue-green-deployment-config)]
     (. builder blueGreenDeploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
-  (when-let [data (lookup-entry config id :ignore-alarm-configuration)]
+  (when-some [data (lookup-entry config id :ignore-alarm-configuration)]
     (. builder ignoreAlarmConfiguration data))
-  (when-let [data (lookup-entry config id :ignore-poll-alarms-failure)]
+  (when-some [data (lookup-entry config id :ignore-poll-alarms-failure)]
     (. builder ignorePollAlarmsFailure data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
 
@@ -1888,7 +1888,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 "
   [^LambdaApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
   (.build builder))
 
@@ -1916,7 +1916,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 "
   [^LambdaApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
   (.build builder))
 
@@ -1945,9 +1945,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficRouting` | software.amazon.awscdk.services.codedeploy.TrafficRouting | [[cdk.support/lookup-entry]] | `:traffic-routing` |
 "
   [^LambdaDeploymentConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :traffic-routing)]
+  (when-some [data (lookup-entry config id :traffic-routing)]
     (. builder trafficRouting data))
   (.build builder))
 
@@ -1975,7 +1975,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deploymentConfigName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-config-name` |
 "
   [^LambdaDeploymentConfigImportProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
   (.build builder))
 
@@ -2004,9 +2004,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficRouting` | software.amazon.awscdk.services.codedeploy.TrafficRouting | [[cdk.support/lookup-entry]] | `:traffic-routing` |
 "
   [^LambdaDeploymentConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :traffic-routing)]
+  (when-some [data (lookup-entry config id :traffic-routing)]
     (. builder trafficRouting data))
   (.build builder))
 
@@ -2036,11 +2036,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deploymentGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-group-name` |
 "
   [^LambdaDeploymentGroupAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
   (.build builder))
 
@@ -2078,27 +2078,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^LambdaDeploymentGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :auto-rollback)]
+  (when-some [data (lookup-entry config id :auto-rollback)]
     (. builder autoRollback data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
-  (when-let [data (lookup-entry config id :ignore-alarm-configuration)]
+  (when-some [data (lookup-entry config id :ignore-alarm-configuration)]
     (. builder ignoreAlarmConfiguration data))
-  (when-let [data (lookup-entry config id :ignore-poll-alarms-failure)]
+  (when-some [data (lookup-entry config id :ignore-poll-alarms-failure)]
     (. builder ignorePollAlarmsFailure data))
-  (when-let [data (lookup-entry config id :post-hook)]
+  (when-some [data (lookup-entry config id :post-hook)]
     (. builder postHook data))
-  (when-let [data (lookup-entry config id :pre-hook)]
+  (when-some [data (lookup-entry config id :pre-hook)]
     (. builder preHook data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -2136,27 +2136,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^LambdaDeploymentGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :alias)]
+  (when-some [data (lookup-entry config id :alias)]
     (. builder alias data))
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :auto-rollback)]
+  (when-some [data (lookup-entry config id :auto-rollback)]
     (. builder autoRollback data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
-  (when-let [data (lookup-entry config id :ignore-alarm-configuration)]
+  (when-some [data (lookup-entry config id :ignore-alarm-configuration)]
     (. builder ignoreAlarmConfiguration data))
-  (when-let [data (lookup-entry config id :ignore-poll-alarms-failure)]
+  (when-some [data (lookup-entry config id :ignore-poll-alarms-failure)]
     (. builder ignorePollAlarmsFailure data))
-  (when-let [data (lookup-entry config id :post-hook)]
+  (when-some [data (lookup-entry config id :post-hook)]
     (. builder postHook data))
-  (when-let [data (lookup-entry config id :pre-hook)]
+  (when-some [data (lookup-entry config id :pre-hook)]
     (. builder preHook data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -2185,9 +2185,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `linearPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:linear-percentage` |
 "
   [^LinearTrafficRoutingConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :linear-interval)]
+  (when-some [data (lookup-entry config id :linear-interval)]
     (. builder linearInterval data))
-  (when-let [data (lookup-entry config id :linear-percentage)]
+  (when-some [data (lookup-entry config id :linear-percentage)]
     (. builder linearPercentage data))
   (.build builder))
 
@@ -2215,7 +2215,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 "
   [^ServerApplication$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
   (.build builder))
 
@@ -2243,7 +2243,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
 "
   [^ServerApplicationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-name)]
+  (when-some [data (lookup-entry config id :application-name)]
     (. builder applicationName data))
   (.build builder))
 
@@ -2272,9 +2272,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minimumHealthyHosts` | software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts | [[cdk.support/lookup-entry]] | `:minimum-healthy-hosts` |
 "
   [^ServerDeploymentConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :minimum-healthy-hosts)]
+  (when-some [data (lookup-entry config id :minimum-healthy-hosts)]
     (. builder minimumHealthyHosts data))
   (.build builder))
 
@@ -2303,9 +2303,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minimumHealthyHosts` | software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts | [[cdk.support/lookup-entry]] | `:minimum-healthy-hosts` |
 "
   [^ServerDeploymentConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deployment-config-name)]
+  (when-some [data (lookup-entry config id :deployment-config-name)]
     (. builder deploymentConfigName data))
-  (when-let [data (lookup-entry config id :minimum-healthy-hosts)]
+  (when-some [data (lookup-entry config id :minimum-healthy-hosts)]
     (. builder minimumHealthyHosts data))
   (.build builder))
 
@@ -2335,11 +2335,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `deploymentGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-group-name` |
 "
   [^ServerDeploymentGroupAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
   (.build builder))
 
@@ -2380,33 +2380,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^ServerDeploymentGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :auto-rollback)]
+  (when-some [data (lookup-entry config id :auto-rollback)]
     (. builder autoRollback data))
-  (when-let [data (lookup-entry config id :auto-scaling-groups)]
+  (when-some [data (lookup-entry config id :auto-scaling-groups)]
     (. builder autoScalingGroups data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
-  (when-let [data (lookup-entry config id :ec2-instance-tags)]
+  (when-some [data (lookup-entry config id :ec2-instance-tags)]
     (. builder ec2InstanceTags data))
-  (when-let [data (lookup-entry config id :ignore-alarm-configuration)]
+  (when-some [data (lookup-entry config id :ignore-alarm-configuration)]
     (. builder ignoreAlarmConfiguration data))
-  (when-let [data (lookup-entry config id :ignore-poll-alarms-failure)]
+  (when-some [data (lookup-entry config id :ignore-poll-alarms-failure)]
     (. builder ignorePollAlarmsFailure data))
-  (when-let [data (lookup-entry config id :install-agent)]
+  (when-some [data (lookup-entry config id :install-agent)]
     (. builder installAgent data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :load-balancers)]
+  (when-some [data (lookup-entry config id :load-balancers)]
     (. builder loadBalancers data))
-  (when-let [data (lookup-entry config id :on-premise-instance-tags)]
+  (when-some [data (lookup-entry config id :on-premise-instance-tags)]
     (. builder onPremiseInstanceTags data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -2447,33 +2447,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 "
   [^ServerDeploymentGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarms)]
+  (when-some [data (lookup-entry config id :alarms)]
     (. builder alarms data))
-  (when-let [data (lookup-entry config id :application)]
+  (when-some [data (lookup-entry config id :application)]
     (. builder application data))
-  (when-let [data (lookup-entry config id :auto-rollback)]
+  (when-some [data (lookup-entry config id :auto-rollback)]
     (. builder autoRollback data))
-  (when-let [data (lookup-entry config id :auto-scaling-groups)]
+  (when-some [data (lookup-entry config id :auto-scaling-groups)]
     (. builder autoScalingGroups data))
-  (when-let [data (lookup-entry config id :deployment-config)]
+  (when-some [data (lookup-entry config id :deployment-config)]
     (. builder deploymentConfig data))
-  (when-let [data (lookup-entry config id :deployment-group-name)]
+  (when-some [data (lookup-entry config id :deployment-group-name)]
     (. builder deploymentGroupName data))
-  (when-let [data (lookup-entry config id :ec2-instance-tags)]
+  (when-some [data (lookup-entry config id :ec2-instance-tags)]
     (. builder ec2InstanceTags data))
-  (when-let [data (lookup-entry config id :ignore-alarm-configuration)]
+  (when-some [data (lookup-entry config id :ignore-alarm-configuration)]
     (. builder ignoreAlarmConfiguration data))
-  (when-let [data (lookup-entry config id :ignore-poll-alarms-failure)]
+  (when-some [data (lookup-entry config id :ignore-poll-alarms-failure)]
     (. builder ignorePollAlarmsFailure data))
-  (when-let [data (lookup-entry config id :install-agent)]
+  (when-some [data (lookup-entry config id :install-agent)]
     (. builder installAgent data))
-  (when-let [data (lookup-entry config id :load-balancer)]
+  (when-some [data (lookup-entry config id :load-balancer)]
     (. builder loadBalancer data))
-  (when-let [data (lookup-entry config id :load-balancers)]
+  (when-some [data (lookup-entry config id :load-balancers)]
     (. builder loadBalancers data))
-  (when-let [data (lookup-entry config id :on-premise-instance-tags)]
+  (when-some [data (lookup-entry config id :on-premise-instance-tags)]
     (. builder onPremiseInstanceTags data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
 
@@ -2502,9 +2502,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `percentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percentage` |
 "
   [^TimeBasedCanaryTrafficRouting$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :percentage)]
+  (when-some [data (lookup-entry config id :percentage)]
     (. builder percentage data))
   (.build builder))
 
@@ -2533,9 +2533,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `percentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percentage` |
 "
   [^TimeBasedCanaryTrafficRoutingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :percentage)]
+  (when-some [data (lookup-entry config id :percentage)]
     (. builder percentage data))
   (.build builder))
 
@@ -2564,9 +2564,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `percentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percentage` |
 "
   [^TimeBasedLinearTrafficRouting$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :percentage)]
+  (when-some [data (lookup-entry config id :percentage)]
     (. builder percentage data))
   (.build builder))
 
@@ -2595,9 +2595,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `percentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:percentage` |
 "
   [^TimeBasedLinearTrafficRoutingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :percentage)]
+  (when-some [data (lookup-entry config id :percentage)]
     (. builder percentage data))
   (.build builder))
 
@@ -2627,11 +2627,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^TrafficRoutingConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :time-based-canary)]
+  (when-some [data (lookup-entry config id :time-based-canary)]
     (. builder timeBasedCanary data))
-  (when-let [data (lookup-entry config id :time-based-linear)]
+  (when-some [data (lookup-entry config id :time-based-linear)]
     (. builder timeBasedLinear data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 

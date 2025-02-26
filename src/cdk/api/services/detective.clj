@@ -22,9 +22,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGraph$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-enable-members)]
+  (when-some [data (lookup-entry config id :auto-enable-members)]
     (. builder autoEnableMembers data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -53,9 +53,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGraphProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-enable-members)]
+  (when-some [data (lookup-entry config id :auto-enable-members)]
     (. builder autoEnableMembers data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -87,15 +87,15 @@
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
 "
   [^CfnMemberInvitation$Builder builder id config]
-  (when-let [data (lookup-entry config id :disable-email-notification)]
+  (when-some [data (lookup-entry config id :disable-email-notification)]
     (. builder disableEmailNotification data))
-  (when-let [data (lookup-entry config id :graph-arn)]
+  (when-some [data (lookup-entry config id :graph-arn)]
     (. builder graphArn data))
-  (when-let [data (lookup-entry config id :member-email-address)]
+  (when-some [data (lookup-entry config id :member-email-address)]
     (. builder memberEmailAddress data))
-  (when-let [data (lookup-entry config id :member-id)]
+  (when-some [data (lookup-entry config id :member-id)]
     (. builder memberId data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
   (.build builder))
 
@@ -127,15 +127,15 @@
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
 "
   [^CfnMemberInvitationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :disable-email-notification)]
+  (when-some [data (lookup-entry config id :disable-email-notification)]
     (. builder disableEmailNotification data))
-  (when-let [data (lookup-entry config id :graph-arn)]
+  (when-some [data (lookup-entry config id :graph-arn)]
     (. builder graphArn data))
-  (when-let [data (lookup-entry config id :member-email-address)]
+  (when-some [data (lookup-entry config id :member-email-address)]
     (. builder memberEmailAddress data))
-  (when-let [data (lookup-entry config id :member-id)]
+  (when-some [data (lookup-entry config id :member-id)]
     (. builder memberId data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
   (.build builder))
 
@@ -163,7 +163,7 @@
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 "
   [^CfnOrganizationAdmin$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
   (.build builder))
 
@@ -191,7 +191,7 @@
 | `accountId` | java.lang.String | [[cdk.support/lookup-entry]] | `:account-id` |
 "
   [^CfnOrganizationAdminProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-id)]
+  (when-some [data (lookup-entry config id :account-id)]
     (. builder accountId data))
   (.build builder))
 

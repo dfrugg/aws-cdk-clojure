@@ -30,25 +30,25 @@
 | `telemetries` | java.util.List | [[cdk.support/lookup-entry]] | `:telemetries` |
 "
   [^CfnAppMonitor$AppMonitorConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-cookies)]
+  (when-some [data (lookup-entry config id :allow-cookies)]
     (. builder allowCookies data))
-  (when-let [data (lookup-entry config id :enable-x-ray)]
+  (when-some [data (lookup-entry config id :enable-x-ray)]
     (. builder enableXRay data))
-  (when-let [data (lookup-entry config id :excluded-pages)]
+  (when-some [data (lookup-entry config id :excluded-pages)]
     (. builder excludedPages data))
-  (when-let [data (lookup-entry config id :favorite-pages)]
+  (when-some [data (lookup-entry config id :favorite-pages)]
     (. builder favoritePages data))
-  (when-let [data (lookup-entry config id :guest-role-arn)]
+  (when-some [data (lookup-entry config id :guest-role-arn)]
     (. builder guestRoleArn data))
-  (when-let [data (lookup-entry config id :identity-pool-id)]
+  (when-some [data (lookup-entry config id :identity-pool-id)]
     (. builder identityPoolId data))
-  (when-let [data (lookup-entry config id :included-pages)]
+  (when-some [data (lookup-entry config id :included-pages)]
     (. builder includedPages data))
-  (when-let [data (lookup-entry config id :metric-destinations)]
+  (when-some [data (lookup-entry config id :metric-destinations)]
     (. builder metricDestinations data))
-  (when-let [data (lookup-entry config id :session-sample-rate)]
+  (when-some [data (lookup-entry config id :session-sample-rate)]
     (. builder sessionSampleRate data))
-  (when-let [data (lookup-entry config id :telemetries)]
+  (when-some [data (lookup-entry config id :telemetries)]
     (. builder telemetries data))
   (.build builder))
 
@@ -81,17 +81,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAppMonitor$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-monitor-configuration)]
+  (when-some [data (lookup-entry config id :app-monitor-configuration)]
     (. builder appMonitorConfiguration data))
-  (when-let [data (lookup-entry config id :custom-events)]
+  (when-some [data (lookup-entry config id :custom-events)]
     (. builder customEvents data))
-  (when-let [data (lookup-entry config id :cw-log-enabled)]
+  (when-some [data (lookup-entry config id :cw-log-enabled)]
     (. builder cwLogEnabled data))
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -119,7 +119,7 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnAppMonitor$CustomEventsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -152,17 +152,17 @@
 | `valueKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-key` |
 "
   [^CfnAppMonitor$MetricDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dimension-keys)]
+  (when-some [data (lookup-entry config id :dimension-keys)]
     (. builder dimensionKeys data))
-  (when-let [data (lookup-entry config id :event-pattern)]
+  (when-some [data (lookup-entry config id :event-pattern)]
     (. builder eventPattern data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :unit-label)]
+  (when-some [data (lookup-entry config id :unit-label)]
     (. builder unitLabel data))
-  (when-let [data (lookup-entry config id :value-key)]
+  (when-some [data (lookup-entry config id :value-key)]
     (. builder valueKey data))
   (.build builder))
 
@@ -193,13 +193,13 @@
 | `metricDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-definitions` |
 "
   [^CfnAppMonitor$MetricDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :destination-arn)]
+  (when-some [data (lookup-entry config id :destination-arn)]
     (. builder destinationArn data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :metric-definitions)]
+  (when-some [data (lookup-entry config id :metric-definitions)]
     (. builder metricDefinitions data))
   (.build builder))
 
@@ -232,17 +232,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAppMonitorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :app-monitor-configuration)]
+  (when-some [data (lookup-entry config id :app-monitor-configuration)]
     (. builder appMonitorConfiguration data))
-  (when-let [data (lookup-entry config id :custom-events)]
+  (when-some [data (lookup-entry config id :custom-events)]
     (. builder customEvents data))
-  (when-let [data (lookup-entry config id :cw-log-enabled)]
+  (when-some [data (lookup-entry config id :cw-log-enabled)]
     (. builder cwLogEnabled data))
-  (when-let [data (lookup-entry config id :domain)]
+  (when-some [data (lookup-entry config id :domain)]
     (. builder domain data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

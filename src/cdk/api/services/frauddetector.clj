@@ -46,21 +46,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetector$Builder builder id config]
-  (when-let [data (lookup-entry config id :associated-models)]
+  (when-some [data (lookup-entry config id :associated-models)]
     (. builder associatedModels data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :detector-id)]
+  (when-some [data (lookup-entry config id :detector-id)]
     (. builder detectorId data))
-  (when-let [data (lookup-entry config id :detector-version-status)]
+  (when-some [data (lookup-entry config id :detector-version-status)]
     (. builder detectorVersionStatus data))
-  (when-let [data (lookup-entry config id :event-type)]
+  (when-some [data (lookup-entry config id :event-type)]
     (. builder eventType data))
-  (when-let [data (lookup-entry config id :rule-execution-mode)]
+  (when-some [data (lookup-entry config id :rule-execution-mode)]
     (. builder ruleExecutionMode data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -94,19 +94,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetector$EntityTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :inline)]
+  (when-some [data (lookup-entry config id :inline)]
     (. builder inline data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -143,25 +143,25 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetector$EventTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :entity-types)]
+  (when-some [data (lookup-entry config id :entity-types)]
     (. builder entityTypes data))
-  (when-let [data (lookup-entry config id :event-variables)]
+  (when-some [data (lookup-entry config id :event-variables)]
     (. builder eventVariables data))
-  (when-let [data (lookup-entry config id :inline)]
+  (when-some [data (lookup-entry config id :inline)]
     (. builder inline data))
-  (when-let [data (lookup-entry config id :labels)]
+  (when-some [data (lookup-entry config id :labels)]
     (. builder labels data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -199,27 +199,27 @@
 | `variableType` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable-type` |
 "
   [^CfnDetector$EventVariableProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :inline)]
+  (when-some [data (lookup-entry config id :inline)]
     (. builder inline data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variable-type)]
+  (when-some [data (lookup-entry config id :variable-type)]
     (. builder variableType data))
   (.build builder))
 
@@ -253,19 +253,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetector$LabelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :inline)]
+  (when-some [data (lookup-entry config id :inline)]
     (. builder inline data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -293,7 +293,7 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnDetector$ModelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -327,19 +327,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetector$OutcomeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :inline)]
+  (when-some [data (lookup-entry config id :inline)]
     (. builder inline data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -374,21 +374,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetectorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :associated-models)]
+  (when-some [data (lookup-entry config id :associated-models)]
     (. builder associatedModels data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :detector-id)]
+  (when-some [data (lookup-entry config id :detector-id)]
     (. builder detectorId data))
-  (when-let [data (lookup-entry config id :detector-version-status)]
+  (when-some [data (lookup-entry config id :detector-version-status)]
     (. builder detectorVersionStatus data))
-  (when-let [data (lookup-entry config id :event-type)]
+  (when-some [data (lookup-entry config id :event-type)]
     (. builder eventType data))
-  (when-let [data (lookup-entry config id :rule-execution-mode)]
+  (when-some [data (lookup-entry config id :rule-execution-mode)]
     (. builder ruleExecutionMode data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -426,27 +426,27 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDetector$RuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :detector-id)]
+  (when-some [data (lookup-entry config id :detector-id)]
     (. builder detectorId data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :language)]
+  (when-some [data (lookup-entry config id :language)]
     (. builder language data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :outcomes)]
+  (when-some [data (lookup-entry config id :outcomes)]
     (. builder outcomes data))
-  (when-let [data (lookup-entry config id :rule-id)]
+  (when-some [data (lookup-entry config id :rule-id)]
     (. builder ruleId data))
-  (when-let [data (lookup-entry config id :rule-version)]
+  (when-some [data (lookup-entry config id :rule-version)]
     (. builder ruleVersion data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -476,11 +476,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEntityType$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -510,11 +510,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEntityTypeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -547,17 +547,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEventType$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :entity-types)]
+  (when-some [data (lookup-entry config id :entity-types)]
     (. builder entityTypes data))
-  (when-let [data (lookup-entry config id :event-variables)]
+  (when-some [data (lookup-entry config id :event-variables)]
     (. builder eventVariables data))
-  (when-let [data (lookup-entry config id :labels)]
+  (when-some [data (lookup-entry config id :labels)]
     (. builder labels data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -591,19 +591,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEventType$EntityTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :inline)]
+  (when-some [data (lookup-entry config id :inline)]
     (. builder inline data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -641,27 +641,27 @@
 | `variableType` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable-type` |
 "
   [^CfnEventType$EventVariableProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :inline)]
+  (when-some [data (lookup-entry config id :inline)]
     (. builder inline data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variable-type)]
+  (when-some [data (lookup-entry config id :variable-type)]
     (. builder variableType data))
   (.build builder))
 
@@ -695,19 +695,19 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEventType$LabelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :created-time)]
+  (when-some [data (lookup-entry config id :created-time)]
     (. builder createdTime data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :inline)]
+  (when-some [data (lookup-entry config id :inline)]
     (. builder inline data))
-  (when-let [data (lookup-entry config id :last-updated-time)]
+  (when-some [data (lookup-entry config id :last-updated-time)]
     (. builder lastUpdatedTime data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -740,17 +740,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEventTypeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :entity-types)]
+  (when-some [data (lookup-entry config id :entity-types)]
     (. builder entityTypes data))
-  (when-let [data (lookup-entry config id :event-variables)]
+  (when-some [data (lookup-entry config id :event-variables)]
     (. builder eventVariables data))
-  (when-let [data (lookup-entry config id :labels)]
+  (when-some [data (lookup-entry config id :labels)]
     (. builder labels data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -780,11 +780,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLabel$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -814,11 +814,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLabelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -850,15 +850,15 @@
 | `variableType` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable-type` |
 "
   [^CfnList$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :elements)]
+  (when-some [data (lookup-entry config id :elements)]
     (. builder elements data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variable-type)]
+  (when-some [data (lookup-entry config id :variable-type)]
     (. builder variableType data))
   (.build builder))
 
@@ -890,15 +890,15 @@
 | `variableType` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable-type` |
 "
   [^CfnListProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :elements)]
+  (when-some [data (lookup-entry config id :elements)]
     (. builder elements data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variable-type)]
+  (when-some [data (lookup-entry config id :variable-type)]
     (. builder variableType data))
   (.build builder))
 
@@ -928,11 +928,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnOutcome$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -962,11 +962,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnOutcomeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1000,19 +1000,19 @@
 | `variableType` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable-type` |
 "
   [^CfnVariable$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variable-type)]
+  (when-some [data (lookup-entry config id :variable-type)]
     (. builder variableType data))
   (.build builder))
 
@@ -1046,19 +1046,19 @@
 | `variableType` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable-type` |
 "
   [^CfnVariableProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :data-type)]
+  (when-some [data (lookup-entry config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :default-value)]
+  (when-some [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :variable-type)]
+  (when-some [data (lookup-entry config id :variable-type)]
     (. builder variableType data))
   (.build builder))
 

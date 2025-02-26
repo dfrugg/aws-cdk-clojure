@@ -34,11 +34,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReplicationSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :deletion-protected)]
+  (when-some [data (lookup-entry config id :deletion-protected)]
     (. builder deletionProtected data))
-  (when-let [data (lookup-entry config id :regions)]
+  (when-some [data (lookup-entry config id :regions)]
     (. builder regions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -68,11 +68,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnReplicationSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :deletion-protected)]
+  (when-some [data (lookup-entry config id :deletion-protected)]
     (. builder deletionProtected data))
-  (when-let [data (lookup-entry config id :regions)]
+  (when-some [data (lookup-entry config id :regions)]
     (. builder regions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -100,7 +100,7 @@
 | `sseKmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-kms-key-id` |
 "
   [^CfnReplicationSet$RegionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sse-kms-key-id)]
+  (when-some [data (lookup-entry config id :sse-kms-key-id)]
     (. builder sseKmsKeyId data))
   (.build builder))
 
@@ -129,9 +129,9 @@
 | `regionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:region-name` |
 "
   [^CfnReplicationSet$ReplicationRegionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :region-configuration)]
+  (when-some [data (lookup-entry config id :region-configuration)]
     (. builder regionConfiguration data))
-  (when-let [data (lookup-entry config id :region-name)]
+  (when-some [data (lookup-entry config id :region-name)]
     (. builder regionName data))
   (.build builder))
 
@@ -159,7 +159,7 @@
 | `ssmAutomation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ssm-automation` |
 "
   [^CfnResponsePlan$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ssm-automation)]
+  (when-some [data (lookup-entry config id :ssm-automation)]
     (. builder ssmAutomation data))
   (.build builder))
 
@@ -194,21 +194,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResponsePlan$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :chat-channel)]
+  (when-some [data (lookup-entry config id :chat-channel)]
     (. builder chatChannel data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :engagements)]
+  (when-some [data (lookup-entry config id :engagements)]
     (. builder engagements data))
-  (when-let [data (lookup-entry config id :incident-template)]
+  (when-some [data (lookup-entry config id :incident-template)]
     (. builder incidentTemplate data))
-  (when-let [data (lookup-entry config id :integrations)]
+  (when-some [data (lookup-entry config id :integrations)]
     (. builder integrations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -236,7 +236,7 @@
 | `chatbotSns` | java.util.List | [[cdk.support/lookup-entry]] | `:chatbot-sns` |
 "
   [^CfnResponsePlan$ChatChannelProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :chatbot-sns)]
+  (when-some [data (lookup-entry config id :chatbot-sns)]
     (. builder chatbotSns data))
   (.build builder))
 
@@ -265,9 +265,9 @@
 | `value` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$DynamicSsmParameterValueProperty | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnResponsePlan$DynamicSsmParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -295,7 +295,7 @@
 | `variable` | java.lang.String | [[cdk.support/lookup-entry]] | `:variable` |
 "
   [^CfnResponsePlan$DynamicSsmParameterValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :variable)]
+  (when-some [data (lookup-entry config id :variable)]
     (. builder variable data))
   (.build builder))
 
@@ -328,17 +328,17 @@
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 "
   [^CfnResponsePlan$IncidentTemplateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dedupe-string)]
+  (when-some [data (lookup-entry config id :dedupe-string)]
     (. builder dedupeString data))
-  (when-let [data (lookup-entry config id :impact)]
+  (when-some [data (lookup-entry config id :impact)]
     (. builder impact data))
-  (when-let [data (lookup-entry config id :incident-tags)]
+  (when-some [data (lookup-entry config id :incident-tags)]
     (. builder incidentTags data))
-  (when-let [data (lookup-entry config id :notification-targets)]
+  (when-some [data (lookup-entry config id :notification-targets)]
     (. builder notificationTargets data))
-  (when-let [data (lookup-entry config id :summary)]
+  (when-some [data (lookup-entry config id :summary)]
     (. builder summary data))
-  (when-let [data (lookup-entry config id :title)]
+  (when-some [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
 
@@ -366,7 +366,7 @@
 | `pagerDutyConfiguration` | software.amazon.awscdk.services.ssmincidents.CfnResponsePlan$PagerDutyConfigurationProperty | [[cdk.support/lookup-entry]] | `:pager-duty-configuration` |
 "
   [^CfnResponsePlan$IntegrationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :pager-duty-configuration)]
+  (when-some [data (lookup-entry config id :pager-duty-configuration)]
     (. builder pagerDutyConfiguration data))
   (.build builder))
 
@@ -394,7 +394,7 @@
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 "
   [^CfnResponsePlan$NotificationTargetItemProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sns-topic-arn)]
+  (when-some [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
 
@@ -424,11 +424,11 @@
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 "
   [^CfnResponsePlan$PagerDutyConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :pager-duty-incident-configuration)]
+  (when-some [data (lookup-entry config id :pager-duty-incident-configuration)]
     (. builder pagerDutyIncidentConfiguration data))
-  (when-let [data (lookup-entry config id :secret-id)]
+  (when-some [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
 
@@ -456,7 +456,7 @@
 | `serviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-id` |
 "
   [^CfnResponsePlan$PagerDutyIncidentConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :service-id)]
+  (when-some [data (lookup-entry config id :service-id)]
     (. builder serviceId data))
   (.build builder))
 
@@ -491,21 +491,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnResponsePlanProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :chat-channel)]
+  (when-some [data (lookup-entry config id :chat-channel)]
     (. builder chatChannel data))
-  (when-let [data (lookup-entry config id :display-name)]
+  (when-some [data (lookup-entry config id :display-name)]
     (. builder displayName data))
-  (when-let [data (lookup-entry config id :engagements)]
+  (when-some [data (lookup-entry config id :engagements)]
     (. builder engagements data))
-  (when-let [data (lookup-entry config id :incident-template)]
+  (when-some [data (lookup-entry config id :incident-template)]
     (. builder incidentTemplate data))
-  (when-let [data (lookup-entry config id :integrations)]
+  (when-some [data (lookup-entry config id :integrations)]
     (. builder integrations data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -538,17 +538,17 @@
 | `targetAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-account` |
 "
   [^CfnResponsePlan$SsmAutomationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :document-name)]
+  (when-some [data (lookup-entry config id :document-name)]
     (. builder documentName data))
-  (when-let [data (lookup-entry config id :document-version)]
+  (when-some [data (lookup-entry config id :document-version)]
     (. builder documentVersion data))
-  (when-let [data (lookup-entry config id :dynamic-parameters)]
+  (when-some [data (lookup-entry config id :dynamic-parameters)]
     (. builder dynamicParameters data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :target-account)]
+  (when-some [data (lookup-entry config id :target-account)]
     (. builder targetAccount data))
   (.build builder))
 
@@ -577,9 +577,9 @@
 | `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
 "
   [^CfnResponsePlan$SsmParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :values)]
+  (when-some [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
 

@@ -47,11 +47,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `jwtAudience` | java.util.List | [[cdk.support/lookup-entry]] | `:jwt-audience` |
 "
   [^HttpJwtAuthorizer$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :jwt-audience)]
+  (when-some [data (lookup-entry config id :jwt-audience)]
     (. builder jwtAudience data))
   (.build builder))
 
@@ -84,11 +84,11 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `jwtAudience` | java.util.List | [[cdk.support/lookup-entry]] | `:jwt-audience` |
 "
   [^HttpJwtAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :jwt-audience)]
+  (when-some [data (lookup-entry config id :jwt-audience)]
     (. builder jwtAudience data))
   (.build builder))
 
@@ -119,13 +119,13 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | `resultsCacheTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:results-cache-ttl` |
 "
   [^HttpLambdaAuthorizer$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :response-types)]
+  (when-some [data (lookup-entry config id :response-types)]
     (. builder responseTypes data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
   (.build builder))
 
@@ -159,13 +159,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | `resultsCacheTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:results-cache-ttl` |
 "
   [^HttpLambdaAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :response-types)]
+  (when-some [data (lookup-entry config id :response-types)]
     (. builder responseTypes data))
-  (when-let [data (lookup-entry config id :results-cache-ttl)]
+  (when-some [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
   (.build builder))
 
@@ -196,13 +196,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | `userPoolRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-region` |
 "
   [^HttpUserPoolAuthorizer$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :user-pool-clients)]
+  (when-some [data (lookup-entry config id :user-pool-clients)]
     (. builder userPoolClients data))
-  (when-let [data (lookup-entry config id :user-pool-region)]
+  (when-some [data (lookup-entry config id :user-pool-region)]
     (. builder userPoolRegion data))
   (.build builder))
 
@@ -236,13 +236,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.cognito.I
 | `userPoolRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-region` |
 "
   [^HttpUserPoolAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
-  (when-let [data (lookup-entry config id :user-pool-clients)]
+  (when-some [data (lookup-entry config id :user-pool-clients)]
     (. builder userPoolClients data))
-  (when-let [data (lookup-entry config id :user-pool-region)]
+  (when-some [data (lookup-entry config id :user-pool-region)]
     (. builder userPoolRegion data))
   (.build builder))
 
@@ -271,9 +271,9 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.cognito.I
 | `identitySource` | java.util.List | [[cdk.support/lookup-entry]] | `:identity-source` |
 "
   [^WebSocketLambdaAuthorizer$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
   (.build builder))
 
@@ -305,9 +305,9 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | `identitySource` | java.util.List | [[cdk.support/lookup-entry]] | `:identity-source` |
 "
   [^WebSocketLambdaAuthorizerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorizer-name)]
+  (when-some [data (lookup-entry config id :authorizer-name)]
     (. builder authorizerName data))
-  (when-let [data (lookup-entry config id :identity-source)]
+  (when-some [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
   (.build builder))
 

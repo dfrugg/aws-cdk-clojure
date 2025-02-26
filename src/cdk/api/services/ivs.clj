@@ -44,21 +44,21 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnChannel$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorized)]
+  (when-some [data (lookup-entry config id :authorized)]
     (. builder authorized data))
-  (when-let [data (lookup-entry config id :insecure-ingest)]
+  (when-some [data (lookup-entry config id :insecure-ingest)]
     (. builder insecureIngest data))
-  (when-let [data (lookup-entry config id :latency-mode)]
+  (when-some [data (lookup-entry config id :latency-mode)]
     (. builder latencyMode data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :preset)]
+  (when-some [data (lookup-entry config id :preset)]
     (. builder preset data))
-  (when-let [data (lookup-entry config id :recording-configuration-arn)]
+  (when-some [data (lookup-entry config id :recording-configuration-arn)]
     (. builder recordingConfigurationArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -93,21 +93,21 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnChannelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorized)]
+  (when-some [data (lookup-entry config id :authorized)]
     (. builder authorized data))
-  (when-let [data (lookup-entry config id :insecure-ingest)]
+  (when-some [data (lookup-entry config id :insecure-ingest)]
     (. builder insecureIngest data))
-  (when-let [data (lookup-entry config id :latency-mode)]
+  (when-some [data (lookup-entry config id :latency-mode)]
     (. builder latencyMode data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :preset)]
+  (when-some [data (lookup-entry config id :preset)]
     (. builder preset data))
-  (when-let [data (lookup-entry config id :recording-configuration-arn)]
+  (when-some [data (lookup-entry config id :recording-configuration-arn)]
     (. builder recordingConfigurationArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -137,11 +137,11 @@
 | `video` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video` |
 "
   [^CfnEncoderConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :video)]
+  (when-some [data (lookup-entry config id :video)]
     (. builder video data))
   (.build builder))
 
@@ -171,11 +171,11 @@
 | `video` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:video` |
 "
   [^CfnEncoderConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :video)]
+  (when-some [data (lookup-entry config id :video)]
     (. builder video data))
   (.build builder))
 
@@ -206,13 +206,13 @@
 | `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
 "
   [^CfnEncoderConfiguration$VideoProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bitrate)]
+  (when-some [data (lookup-entry config id :bitrate)]
     (. builder bitrate data))
-  (when-let [data (lookup-entry config id :framerate)]
+  (when-some [data (lookup-entry config id :framerate)]
     (. builder framerate data))
-  (when-let [data (lookup-entry config id :height)]
+  (when-some [data (lookup-entry config id :height)]
     (. builder height data))
-  (when-let [data (lookup-entry config id :width)]
+  (when-some [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
 
@@ -242,11 +242,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPlaybackKeyPair$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :public-key-material)]
+  (when-some [data (lookup-entry config id :public-key-material)]
     (. builder publicKeyMaterial data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -276,11 +276,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPlaybackKeyPairProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :public-key-material)]
+  (when-some [data (lookup-entry config id :public-key-material)]
     (. builder publicKeyMaterial data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -312,15 +312,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPlaybackRestrictionPolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-countries)]
+  (when-some [data (lookup-entry config id :allowed-countries)]
     (. builder allowedCountries data))
-  (when-let [data (lookup-entry config id :allowed-origins)]
+  (when-some [data (lookup-entry config id :allowed-origins)]
     (. builder allowedOrigins data))
-  (when-let [data (lookup-entry config id :enable-strict-origin-enforcement)]
+  (when-some [data (lookup-entry config id :enable-strict-origin-enforcement)]
     (. builder enableStrictOriginEnforcement data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -352,15 +352,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPlaybackRestrictionPolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-countries)]
+  (when-some [data (lookup-entry config id :allowed-countries)]
     (. builder allowedCountries data))
-  (when-let [data (lookup-entry config id :allowed-origins)]
+  (when-some [data (lookup-entry config id :allowed-origins)]
     (. builder allowedOrigins data))
-  (when-let [data (lookup-entry config id :enable-strict-origin-enforcement)]
+  (when-some [data (lookup-entry config id :enable-strict-origin-enforcement)]
     (. builder enableStrictOriginEnforcement data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -393,17 +393,17 @@
 | `thumbnailConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:thumbnail-configuration` |
 "
   [^CfnRecordingConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-configuration)]
+  (when-some [data (lookup-entry config id :destination-configuration)]
     (. builder destinationConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recording-reconnect-window-seconds)]
+  (when-some [data (lookup-entry config id :recording-reconnect-window-seconds)]
     (. builder recordingReconnectWindowSeconds data))
-  (when-let [data (lookup-entry config id :rendition-configuration)]
+  (when-some [data (lookup-entry config id :rendition-configuration)]
     (. builder renditionConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :thumbnail-configuration)]
+  (when-some [data (lookup-entry config id :thumbnail-configuration)]
     (. builder thumbnailConfiguration data))
   (.build builder))
 
@@ -431,7 +431,7 @@
 | `s3` | software.amazon.awscdk.services.ivs.CfnRecordingConfiguration$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnRecordingConfiguration$DestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
 
@@ -464,17 +464,17 @@
 | `thumbnailConfiguration` | software.amazon.awscdk.services.ivs.CfnRecordingConfiguration$ThumbnailConfigurationProperty | [[cdk.support/lookup-entry]] | `:thumbnail-configuration` |
 "
   [^CfnRecordingConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-configuration)]
+  (when-some [data (lookup-entry config id :destination-configuration)]
     (. builder destinationConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recording-reconnect-window-seconds)]
+  (when-some [data (lookup-entry config id :recording-reconnect-window-seconds)]
     (. builder recordingReconnectWindowSeconds data))
-  (when-let [data (lookup-entry config id :rendition-configuration)]
+  (when-some [data (lookup-entry config id :rendition-configuration)]
     (. builder renditionConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :thumbnail-configuration)]
+  (when-some [data (lookup-entry config id :thumbnail-configuration)]
     (. builder thumbnailConfiguration data))
   (.build builder))
 
@@ -503,9 +503,9 @@
 | `renditions` | java.util.List | [[cdk.support/lookup-entry]] | `:renditions` |
 "
   [^CfnRecordingConfiguration$RenditionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :rendition-selection)]
+  (when-some [data (lookup-entry config id :rendition-selection)]
     (. builder renditionSelection data))
-  (when-let [data (lookup-entry config id :renditions)]
+  (when-some [data (lookup-entry config id :renditions)]
     (. builder renditions data))
   (.build builder))
 
@@ -533,7 +533,7 @@
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 "
   [^CfnRecordingConfiguration$S3DestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
   (.build builder))
 
@@ -564,13 +564,13 @@
 | `targetIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-interval-seconds` |
 "
   [^CfnRecordingConfiguration$ThumbnailConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :recording-mode)]
+  (when-some [data (lookup-entry config id :recording-mode)]
     (. builder recordingMode data))
-  (when-let [data (lookup-entry config id :resolution)]
+  (when-some [data (lookup-entry config id :resolution)]
     (. builder resolution data))
-  (when-let [data (lookup-entry config id :storage)]
+  (when-some [data (lookup-entry config id :storage)]
     (. builder storage data))
-  (when-let [data (lookup-entry config id :target-interval-seconds)]
+  (when-some [data (lookup-entry config id :target-interval-seconds)]
     (. builder targetIntervalSeconds data))
   (.build builder))
 
@@ -599,9 +599,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStage$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -630,9 +630,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStageProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -662,11 +662,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStorageConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -696,11 +696,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStorageConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -728,7 +728,7 @@
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 "
   [^CfnStorageConfiguration$S3StorageConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
   (.build builder))
 
@@ -757,9 +757,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-arn)]
+  (when-some [data (lookup-entry config id :channel-arn)]
     (. builder channelArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -788,9 +788,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnStreamKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-arn)]
+  (when-some [data (lookup-entry config id :channel-arn)]
     (. builder channelArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

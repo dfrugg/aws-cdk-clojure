@@ -47,7 +47,7 @@
 | `spectrumConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spectrum-config` |
 "
   [^CfnConfig$AntennaDownlinkConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :spectrum-config)]
+  (when-some [data (lookup-entry config id :spectrum-config)]
     (. builder spectrumConfig data))
   (.build builder))
 
@@ -77,11 +77,11 @@
 | `spectrumConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spectrum-config` |
 "
   [^CfnConfig$AntennaDownlinkDemodDecodeConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :decode-config)]
+  (when-some [data (lookup-entry config id :decode-config)]
     (. builder decodeConfig data))
-  (when-let [data (lookup-entry config id :demodulation-config)]
+  (when-some [data (lookup-entry config id :demodulation-config)]
     (. builder demodulationConfig data))
-  (when-let [data (lookup-entry config id :spectrum-config)]
+  (when-some [data (lookup-entry config id :spectrum-config)]
     (. builder spectrumConfig data))
   (.build builder))
 
@@ -111,11 +111,11 @@
 | `transmitDisabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:transmit-disabled` |
 "
   [^CfnConfig$AntennaUplinkConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :spectrum-config)]
+  (when-some [data (lookup-entry config id :spectrum-config)]
     (. builder spectrumConfig data))
-  (when-let [data (lookup-entry config id :target-eirp)]
+  (when-some [data (lookup-entry config id :target-eirp)]
     (. builder targetEirp data))
-  (when-let [data (lookup-entry config id :transmit-disabled)]
+  (when-some [data (lookup-entry config id :transmit-disabled)]
     (. builder transmitDisabled data))
   (.build builder))
 
@@ -145,11 +145,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-data)]
+  (when-some [data (lookup-entry config id :config-data)]
     (. builder configData data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -183,19 +183,19 @@
 | `uplinkEchoConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:uplink-echo-config` |
 "
   [^CfnConfig$ConfigDataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :antenna-downlink-config)]
+  (when-some [data (lookup-entry config id :antenna-downlink-config)]
     (. builder antennaDownlinkConfig data))
-  (when-let [data (lookup-entry config id :antenna-downlink-demod-decode-config)]
+  (when-some [data (lookup-entry config id :antenna-downlink-demod-decode-config)]
     (. builder antennaDownlinkDemodDecodeConfig data))
-  (when-let [data (lookup-entry config id :antenna-uplink-config)]
+  (when-some [data (lookup-entry config id :antenna-uplink-config)]
     (. builder antennaUplinkConfig data))
-  (when-let [data (lookup-entry config id :dataflow-endpoint-config)]
+  (when-some [data (lookup-entry config id :dataflow-endpoint-config)]
     (. builder dataflowEndpointConfig data))
-  (when-let [data (lookup-entry config id :s3-recording-config)]
+  (when-some [data (lookup-entry config id :s3-recording-config)]
     (. builder s3RecordingConfig data))
-  (when-let [data (lookup-entry config id :tracking-config)]
+  (when-some [data (lookup-entry config id :tracking-config)]
     (. builder trackingConfig data))
-  (when-let [data (lookup-entry config id :uplink-echo-config)]
+  (when-some [data (lookup-entry config id :uplink-echo-config)]
     (. builder uplinkEchoConfig data))
   (.build builder))
 
@@ -224,9 +224,9 @@
 | `dataflowEndpointRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:dataflow-endpoint-region` |
 "
   [^CfnConfig$DataflowEndpointConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataflow-endpoint-name)]
+  (when-some [data (lookup-entry config id :dataflow-endpoint-name)]
     (. builder dataflowEndpointName data))
-  (when-let [data (lookup-entry config id :dataflow-endpoint-region)]
+  (when-some [data (lookup-entry config id :dataflow-endpoint-region)]
     (. builder dataflowEndpointRegion data))
   (.build builder))
 
@@ -254,7 +254,7 @@
 | `unvalidatedJson` | java.lang.String | [[cdk.support/lookup-entry]] | `:unvalidated-json` |
 "
   [^CfnConfig$DecodeConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :unvalidated-json)]
+  (when-some [data (lookup-entry config id :unvalidated-json)]
     (. builder unvalidatedJson data))
   (.build builder))
 
@@ -282,7 +282,7 @@
 | `unvalidatedJson` | java.lang.String | [[cdk.support/lookup-entry]] | `:unvalidated-json` |
 "
   [^CfnConfig$DemodulationConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :unvalidated-json)]
+  (when-some [data (lookup-entry config id :unvalidated-json)]
     (. builder unvalidatedJson data))
   (.build builder))
 
@@ -311,9 +311,9 @@
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnConfig$EirpProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :units)]
+  (when-some [data (lookup-entry config id :units)]
     (. builder units data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -342,9 +342,9 @@
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnConfig$FrequencyBandwidthProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :units)]
+  (when-some [data (lookup-entry config id :units)]
     (. builder units data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -373,9 +373,9 @@
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnConfig$FrequencyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :units)]
+  (when-some [data (lookup-entry config id :units)]
     (. builder units data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -405,11 +405,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :config-data)]
+  (when-some [data (lookup-entry config id :config-data)]
     (. builder configData data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -439,11 +439,11 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnConfig$S3RecordingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-arn)]
+  (when-some [data (lookup-entry config id :bucket-arn)]
     (. builder bucketArn data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -473,11 +473,11 @@
 | `polarization` | java.lang.String | [[cdk.support/lookup-entry]] | `:polarization` |
 "
   [^CfnConfig$SpectrumConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bandwidth)]
+  (when-some [data (lookup-entry config id :bandwidth)]
     (. builder bandwidth data))
-  (when-let [data (lookup-entry config id :center-frequency)]
+  (when-some [data (lookup-entry config id :center-frequency)]
     (. builder centerFrequency data))
-  (when-let [data (lookup-entry config id :polarization)]
+  (when-some [data (lookup-entry config id :polarization)]
     (. builder polarization data))
   (.build builder))
 
@@ -505,7 +505,7 @@
 | `autotrack` | java.lang.String | [[cdk.support/lookup-entry]] | `:autotrack` |
 "
   [^CfnConfig$TrackingConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :autotrack)]
+  (when-some [data (lookup-entry config id :autotrack)]
     (. builder autotrack data))
   (.build builder))
 
@@ -534,9 +534,9 @@
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnConfig$UplinkEchoConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :antenna-uplink-config-arn)]
+  (when-some [data (lookup-entry config id :antenna-uplink-config-arn)]
     (. builder antennaUplinkConfigArn data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -565,9 +565,9 @@
 | `polarization` | java.lang.String | [[cdk.support/lookup-entry]] | `:polarization` |
 "
   [^CfnConfig$UplinkSpectrumConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :center-frequency)]
+  (when-some [data (lookup-entry config id :center-frequency)]
     (. builder centerFrequency data))
-  (when-let [data (lookup-entry config id :polarization)]
+  (when-some [data (lookup-entry config id :polarization)]
     (. builder polarization data))
   (.build builder))
 
@@ -599,15 +599,15 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnDataflowEndpointGroup$AwsGroundStationAgentEndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :agent-status)]
+  (when-some [data (lookup-entry config id :agent-status)]
     (. builder agentStatus data))
-  (when-let [data (lookup-entry config id :audit-results)]
+  (when-some [data (lookup-entry config id :audit-results)]
     (. builder auditResults data))
-  (when-let [data (lookup-entry config id :egress-address)]
+  (when-some [data (lookup-entry config id :egress-address)]
     (. builder egressAddress data))
-  (when-let [data (lookup-entry config id :ingress-address)]
+  (when-some [data (lookup-entry config id :ingress-address)]
     (. builder ingressAddress data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -638,13 +638,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataflowEndpointGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-post-pass-duration-seconds)]
+  (when-some [data (lookup-entry config id :contact-post-pass-duration-seconds)]
     (. builder contactPostPassDurationSeconds data))
-  (when-let [data (lookup-entry config id :contact-pre-pass-duration-seconds)]
+  (when-some [data (lookup-entry config id :contact-pre-pass-duration-seconds)]
     (. builder contactPrePassDurationSeconds data))
-  (when-let [data (lookup-entry config id :endpoint-details)]
+  (when-some [data (lookup-entry config id :endpoint-details)]
     (. builder endpointDetails data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -673,9 +673,9 @@
 | `socketAddress` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$SocketAddressProperty | [[cdk.support/lookup-entry]] | `:socket-address` |
 "
   [^CfnDataflowEndpointGroup$ConnectionDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mtu)]
+  (when-some [data (lookup-entry config id :mtu)]
     (. builder mtu data))
-  (when-let [data (lookup-entry config id :socket-address)]
+  (when-some [data (lookup-entry config id :socket-address)]
     (. builder socketAddress data))
   (.build builder))
 
@@ -705,11 +705,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnDataflowEndpointGroup$DataflowEndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :address)]
+  (when-some [data (lookup-entry config id :address)]
     (. builder address data))
-  (when-let [data (lookup-entry config id :mtu)]
+  (when-some [data (lookup-entry config id :mtu)]
     (. builder mtu data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -739,11 +739,11 @@
 | `securityDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-details` |
 "
   [^CfnDataflowEndpointGroup$EndpointDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-ground-station-agent-endpoint)]
+  (when-some [data (lookup-entry config id :aws-ground-station-agent-endpoint)]
     (. builder awsGroundStationAgentEndpoint data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :security-details)]
+  (when-some [data (lookup-entry config id :security-details)]
     (. builder securityDetails data))
   (.build builder))
 
@@ -772,9 +772,9 @@
 | `minimum` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minimum` |
 "
   [^CfnDataflowEndpointGroup$IntegerRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maximum)]
+  (when-some [data (lookup-entry config id :maximum)]
     (. builder maximum data))
-  (when-let [data (lookup-entry config id :minimum)]
+  (when-some [data (lookup-entry config id :minimum)]
     (. builder minimum data))
   (.build builder))
 
@@ -805,13 +805,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataflowEndpointGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-post-pass-duration-seconds)]
+  (when-some [data (lookup-entry config id :contact-post-pass-duration-seconds)]
     (. builder contactPostPassDurationSeconds data))
-  (when-let [data (lookup-entry config id :contact-pre-pass-duration-seconds)]
+  (when-some [data (lookup-entry config id :contact-pre-pass-duration-seconds)]
     (. builder contactPrePassDurationSeconds data))
-  (when-let [data (lookup-entry config id :endpoint-details)]
+  (when-some [data (lookup-entry config id :endpoint-details)]
     (. builder endpointDetails data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -840,9 +840,9 @@
 | `socketAddress` | software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup$RangedSocketAddressProperty | [[cdk.support/lookup-entry]] | `:socket-address` |
 "
   [^CfnDataflowEndpointGroup$RangedConnectionDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mtu)]
+  (when-some [data (lookup-entry config id :mtu)]
     (. builder mtu data))
-  (when-let [data (lookup-entry config id :socket-address)]
+  (when-some [data (lookup-entry config id :socket-address)]
     (. builder socketAddress data))
   (.build builder))
 
@@ -871,9 +871,9 @@
 | `portRange` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-range` |
 "
   [^CfnDataflowEndpointGroup$RangedSocketAddressProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :port-range)]
+  (when-some [data (lookup-entry config id :port-range)]
     (. builder portRange data))
   (.build builder))
 
@@ -903,11 +903,11 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnDataflowEndpointGroup$SecurityDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -936,9 +936,9 @@
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 "
   [^CfnDataflowEndpointGroup$SocketAddressProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
 
@@ -974,23 +974,23 @@
 | `trackingConfigArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracking-config-arn` |
 "
   [^CfnMissionProfile$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-post-pass-duration-seconds)]
+  (when-some [data (lookup-entry config id :contact-post-pass-duration-seconds)]
     (. builder contactPostPassDurationSeconds data))
-  (when-let [data (lookup-entry config id :contact-pre-pass-duration-seconds)]
+  (when-some [data (lookup-entry config id :contact-pre-pass-duration-seconds)]
     (. builder contactPrePassDurationSeconds data))
-  (when-let [data (lookup-entry config id :dataflow-edges)]
+  (when-some [data (lookup-entry config id :dataflow-edges)]
     (. builder dataflowEdges data))
-  (when-let [data (lookup-entry config id :minimum-viable-contact-duration-seconds)]
+  (when-some [data (lookup-entry config id :minimum-viable-contact-duration-seconds)]
     (. builder minimumViableContactDurationSeconds data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :streams-kms-key)]
+  (when-some [data (lookup-entry config id :streams-kms-key)]
     (. builder streamsKmsKey data))
-  (when-let [data (lookup-entry config id :streams-kms-role)]
+  (when-some [data (lookup-entry config id :streams-kms-role)]
     (. builder streamsKmsRole data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tracking-config-arn)]
+  (when-some [data (lookup-entry config id :tracking-config-arn)]
     (. builder trackingConfigArn data))
   (.build builder))
 
@@ -1019,9 +1019,9 @@
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnMissionProfile$DataflowEdgeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
 
@@ -1057,23 +1057,23 @@
 | `trackingConfigArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracking-config-arn` |
 "
   [^CfnMissionProfileProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-post-pass-duration-seconds)]
+  (when-some [data (lookup-entry config id :contact-post-pass-duration-seconds)]
     (. builder contactPostPassDurationSeconds data))
-  (when-let [data (lookup-entry config id :contact-pre-pass-duration-seconds)]
+  (when-some [data (lookup-entry config id :contact-pre-pass-duration-seconds)]
     (. builder contactPrePassDurationSeconds data))
-  (when-let [data (lookup-entry config id :dataflow-edges)]
+  (when-some [data (lookup-entry config id :dataflow-edges)]
     (. builder dataflowEdges data))
-  (when-let [data (lookup-entry config id :minimum-viable-contact-duration-seconds)]
+  (when-some [data (lookup-entry config id :minimum-viable-contact-duration-seconds)]
     (. builder minimumViableContactDurationSeconds data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :streams-kms-key)]
+  (when-some [data (lookup-entry config id :streams-kms-key)]
     (. builder streamsKmsKey data))
-  (when-let [data (lookup-entry config id :streams-kms-role)]
+  (when-some [data (lookup-entry config id :streams-kms-role)]
     (. builder streamsKmsRole data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tracking-config-arn)]
+  (when-some [data (lookup-entry config id :tracking-config-arn)]
     (. builder trackingConfigArn data))
   (.build builder))
 
@@ -1102,9 +1102,9 @@
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
 "
   [^CfnMissionProfile$StreamsKmsKeyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-alias-arn)]
+  (when-some [data (lookup-entry config id :kms-alias-arn)]
     (. builder kmsAliasArn data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
   (.build builder))
 

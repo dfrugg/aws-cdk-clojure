@@ -38,13 +38,13 @@
 | `targetDpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-dpus` |
 "
   [^CfnCapacityReservation$Builder builder id config]
-  (when-let [data (lookup-entry config id :capacity-assignment-configuration)]
+  (when-some [data (lookup-entry config id :capacity-assignment-configuration)]
     (. builder capacityAssignmentConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-dpus)]
+  (when-some [data (lookup-entry config id :target-dpus)]
     (. builder targetDpus data))
   (.build builder))
 
@@ -72,7 +72,7 @@
 | `capacityAssignments` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-assignments` |
 "
   [^CfnCapacityReservation$CapacityAssignmentConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :capacity-assignments)]
+  (when-some [data (lookup-entry config id :capacity-assignments)]
     (. builder capacityAssignments data))
   (.build builder))
 
@@ -100,7 +100,7 @@
 | `workgroupNames` | java.util.List | [[cdk.support/lookup-entry]] | `:workgroup-names` |
 "
   [^CfnCapacityReservation$CapacityAssignmentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :workgroup-names)]
+  (when-some [data (lookup-entry config id :workgroup-names)]
     (. builder workgroupNames data))
   (.build builder))
 
@@ -131,13 +131,13 @@
 | `targetDpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-dpus` |
 "
   [^CfnCapacityReservationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :capacity-assignment-configuration)]
+  (when-some [data (lookup-entry config id :capacity-assignment-configuration)]
     (. builder capacityAssignmentConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-dpus)]
+  (when-some [data (lookup-entry config id :target-dpus)]
     (. builder targetDpus data))
   (.build builder))
 
@@ -169,15 +169,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDataCatalog$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -209,15 +209,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDataCatalogProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -249,15 +249,15 @@
 | `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |
 "
   [^CfnNamedQuery$Builder builder id config]
-  (when-let [data (lookup-entry config id :database)]
+  (when-some [data (lookup-entry config id :database)]
     (. builder database data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
-  (when-let [data (lookup-entry config id :work-group)]
+  (when-some [data (lookup-entry config id :work-group)]
     (. builder workGroup data))
   (.build builder))
 
@@ -289,15 +289,15 @@
 | `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |
 "
   [^CfnNamedQueryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :database)]
+  (when-some [data (lookup-entry config id :database)]
     (. builder database data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
-  (when-let [data (lookup-entry config id :work-group)]
+  (when-some [data (lookup-entry config id :work-group)]
     (. builder workGroup data))
   (.build builder))
 
@@ -328,13 +328,13 @@
 | `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |
 "
   [^CfnPreparedStatement$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :query-statement)]
+  (when-some [data (lookup-entry config id :query-statement)]
     (. builder queryStatement data))
-  (when-let [data (lookup-entry config id :statement-name)]
+  (when-some [data (lookup-entry config id :statement-name)]
     (. builder statementName data))
-  (when-let [data (lookup-entry config id :work-group)]
+  (when-some [data (lookup-entry config id :work-group)]
     (. builder workGroup data))
   (.build builder))
 
@@ -365,13 +365,13 @@
 | `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |
 "
   [^CfnPreparedStatementProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :query-statement)]
+  (when-some [data (lookup-entry config id :query-statement)]
     (. builder queryStatement data))
-  (when-let [data (lookup-entry config id :statement-name)]
+  (when-some [data (lookup-entry config id :statement-name)]
     (. builder statementName data))
-  (when-let [data (lookup-entry config id :work-group)]
+  (when-some [data (lookup-entry config id :work-group)]
     (. builder workGroup data))
   (.build builder))
 
@@ -399,7 +399,7 @@
 | `s3AclOption` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-acl-option` |
 "
   [^CfnWorkGroup$AclConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-acl-option)]
+  (when-some [data (lookup-entry config id :s3-acl-option)]
     (. builder s3AclOption data))
   (.build builder))
 
@@ -433,19 +433,19 @@
 | `workGroupConfigurationUpdates` | software.amazon.awscdk.services.athena.CfnWorkGroup$WorkGroupConfigurationUpdatesProperty | [[cdk.support/lookup-entry]] | `:work-group-configuration-updates` |
 "
   [^CfnWorkGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recursive-delete-option)]
+  (when-some [data (lookup-entry config id :recursive-delete-option)]
     (. builder recursiveDeleteOption data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :work-group-configuration)]
+  (when-some [data (lookup-entry config id :work-group-configuration)]
     (. builder workGroupConfiguration data))
-  (when-let [data (lookup-entry config id :work-group-configuration-updates)]
+  (when-some [data (lookup-entry config id :work-group-configuration-updates)]
     (. builder workGroupConfigurationUpdates data))
   (.build builder))
 
@@ -473,7 +473,7 @@
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 "
   [^CfnWorkGroup$CustomerContentEncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
 
@@ -502,9 +502,9 @@
 | `kmsKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key` |
 "
   [^CfnWorkGroup$EncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-option)]
+  (when-some [data (lookup-entry config id :encryption-option)]
     (. builder encryptionOption data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
 
@@ -533,9 +533,9 @@
 | `selectedEngineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:selected-engine-version` |
 "
   [^CfnWorkGroup$EngineVersionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :effective-engine-version)]
+  (when-some [data (lookup-entry config id :effective-engine-version)]
     (. builder effectiveEngineVersion data))
-  (when-let [data (lookup-entry config id :selected-engine-version)]
+  (when-some [data (lookup-entry config id :selected-engine-version)]
     (. builder selectedEngineVersion data))
   (.build builder))
 
@@ -569,19 +569,19 @@
 | `workGroupConfigurationUpdates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:work-group-configuration-updates` |
 "
   [^CfnWorkGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recursive-delete-option)]
+  (when-some [data (lookup-entry config id :recursive-delete-option)]
     (. builder recursiveDeleteOption data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :work-group-configuration)]
+  (when-some [data (lookup-entry config id :work-group-configuration)]
     (. builder workGroupConfiguration data))
-  (when-let [data (lookup-entry config id :work-group-configuration-updates)]
+  (when-some [data (lookup-entry config id :work-group-configuration-updates)]
     (. builder workGroupConfigurationUpdates data))
   (.build builder))
 
@@ -612,13 +612,13 @@
 | `outputLocation` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-location` |
 "
   [^CfnWorkGroup$ResultConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acl-configuration)]
+  (when-some [data (lookup-entry config id :acl-configuration)]
     (. builder aclConfiguration data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :expected-bucket-owner)]
+  (when-some [data (lookup-entry config id :expected-bucket-owner)]
     (. builder expectedBucketOwner data))
-  (when-let [data (lookup-entry config id :output-location)]
+  (when-some [data (lookup-entry config id :output-location)]
     (. builder outputLocation data))
   (.build builder))
 
@@ -653,21 +653,21 @@
 | `removeOutputLocation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:remove-output-location` |
 "
   [^CfnWorkGroup$ResultConfigurationUpdatesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :acl-configuration)]
+  (when-some [data (lookup-entry config id :acl-configuration)]
     (. builder aclConfiguration data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :expected-bucket-owner)]
+  (when-some [data (lookup-entry config id :expected-bucket-owner)]
     (. builder expectedBucketOwner data))
-  (when-let [data (lookup-entry config id :output-location)]
+  (when-some [data (lookup-entry config id :output-location)]
     (. builder outputLocation data))
-  (when-let [data (lookup-entry config id :remove-acl-configuration)]
+  (when-some [data (lookup-entry config id :remove-acl-configuration)]
     (. builder removeAclConfiguration data))
-  (when-let [data (lookup-entry config id :remove-encryption-configuration)]
+  (when-some [data (lookup-entry config id :remove-encryption-configuration)]
     (. builder removeEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :remove-expected-bucket-owner)]
+  (when-some [data (lookup-entry config id :remove-expected-bucket-owner)]
     (. builder removeExpectedBucketOwner data))
-  (when-let [data (lookup-entry config id :remove-output-location)]
+  (when-some [data (lookup-entry config id :remove-output-location)]
     (. builder removeOutputLocation data))
   (.build builder))
 
@@ -703,23 +703,23 @@
 | `resultConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:result-configuration` |
 "
   [^CfnWorkGroup$WorkGroupConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-configuration)]
+  (when-some [data (lookup-entry config id :additional-configuration)]
     (. builder additionalConfiguration data))
-  (when-let [data (lookup-entry config id :bytes-scanned-cutoff-per-query)]
+  (when-some [data (lookup-entry config id :bytes-scanned-cutoff-per-query)]
     (. builder bytesScannedCutoffPerQuery data))
-  (when-let [data (lookup-entry config id :customer-content-encryption-configuration)]
+  (when-some [data (lookup-entry config id :customer-content-encryption-configuration)]
     (. builder customerContentEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :enforce-work-group-configuration)]
+  (when-some [data (lookup-entry config id :enforce-work-group-configuration)]
     (. builder enforceWorkGroupConfiguration data))
-  (when-let [data (lookup-entry config id :engine-version)]
+  (when-some [data (lookup-entry config id :engine-version)]
     (. builder engineVersion data))
-  (when-let [data (lookup-entry config id :execution-role)]
+  (when-some [data (lookup-entry config id :execution-role)]
     (. builder executionRole data))
-  (when-let [data (lookup-entry config id :publish-cloud-watch-metrics-enabled)]
+  (when-some [data (lookup-entry config id :publish-cloud-watch-metrics-enabled)]
     (. builder publishCloudWatchMetricsEnabled data))
-  (when-let [data (lookup-entry config id :requester-pays-enabled)]
+  (when-some [data (lookup-entry config id :requester-pays-enabled)]
     (. builder requesterPaysEnabled data))
-  (when-let [data (lookup-entry config id :result-configuration)]
+  (when-some [data (lookup-entry config id :result-configuration)]
     (. builder resultConfiguration data))
   (.build builder))
 
@@ -757,27 +757,27 @@
 | `resultConfigurationUpdates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:result-configuration-updates` |
 "
   [^CfnWorkGroup$WorkGroupConfigurationUpdatesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-configuration)]
+  (when-some [data (lookup-entry config id :additional-configuration)]
     (. builder additionalConfiguration data))
-  (when-let [data (lookup-entry config id :bytes-scanned-cutoff-per-query)]
+  (when-some [data (lookup-entry config id :bytes-scanned-cutoff-per-query)]
     (. builder bytesScannedCutoffPerQuery data))
-  (when-let [data (lookup-entry config id :customer-content-encryption-configuration)]
+  (when-some [data (lookup-entry config id :customer-content-encryption-configuration)]
     (. builder customerContentEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :enforce-work-group-configuration)]
+  (when-some [data (lookup-entry config id :enforce-work-group-configuration)]
     (. builder enforceWorkGroupConfiguration data))
-  (when-let [data (lookup-entry config id :engine-version)]
+  (when-some [data (lookup-entry config id :engine-version)]
     (. builder engineVersion data))
-  (when-let [data (lookup-entry config id :execution-role)]
+  (when-some [data (lookup-entry config id :execution-role)]
     (. builder executionRole data))
-  (when-let [data (lookup-entry config id :publish-cloud-watch-metrics-enabled)]
+  (when-some [data (lookup-entry config id :publish-cloud-watch-metrics-enabled)]
     (. builder publishCloudWatchMetricsEnabled data))
-  (when-let [data (lookup-entry config id :remove-bytes-scanned-cutoff-per-query)]
+  (when-some [data (lookup-entry config id :remove-bytes-scanned-cutoff-per-query)]
     (. builder removeBytesScannedCutoffPerQuery data))
-  (when-let [data (lookup-entry config id :remove-customer-content-encryption-configuration)]
+  (when-some [data (lookup-entry config id :remove-customer-content-encryption-configuration)]
     (. builder removeCustomerContentEncryptionConfiguration data))
-  (when-let [data (lookup-entry config id :requester-pays-enabled)]
+  (when-some [data (lookup-entry config id :requester-pays-enabled)]
     (. builder requesterPaysEnabled data))
-  (when-let [data (lookup-entry config id :result-configuration-updates)]
+  (when-some [data (lookup-entry config id :result-configuration-updates)]
     (. builder resultConfigurationUpdates data))
   (.build builder))
 

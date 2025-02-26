@@ -39,9 +39,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnLifecyclePolicy$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cross-region-copy)]
+  (when-some [data (lookup-entry config id :cross-region-copy)]
     (. builder crossRegionCopy data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -69,7 +69,7 @@
 | `retentionArchiveTier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retention-archive-tier` |
 "
   [^CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :retention-archive-tier)]
+  (when-some [data (lookup-entry config id :retention-archive-tier)]
     (. builder retentionArchiveTier data))
   (.build builder))
 
@@ -97,7 +97,7 @@
 | `retainRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$ArchiveRetainRuleProperty | [[cdk.support/lookup-entry]] | `:retain-rule` |
 "
   [^CfnLifecyclePolicy$ArchiveRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :retain-rule)]
+  (when-some [data (lookup-entry config id :retain-rule)]
     (. builder retainRule data))
   (.build builder))
 
@@ -136,29 +136,29 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLifecyclePolicy$Builder builder id config]
-  (when-let [data (lookup-entry config id :copy-tags)]
+  (when-some [data (lookup-entry config id :copy-tags)]
     (. builder copyTags data))
-  (when-let [data (lookup-entry config id :create-interval)]
+  (when-some [data (lookup-entry config id :create-interval)]
     (. builder createInterval data))
-  (when-let [data (lookup-entry config id :cross-region-copy-targets)]
+  (when-some [data (lookup-entry config id :cross-region-copy-targets)]
     (. builder crossRegionCopyTargets data))
-  (when-let [data (lookup-entry config id :default-policy)]
+  (when-some [data (lookup-entry config id :default-policy)]
     (. builder defaultPolicy data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :exclusions)]
+  (when-some [data (lookup-entry config id :exclusions)]
     (. builder exclusions data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :extend-deletion)]
+  (when-some [data (lookup-entry config id :extend-deletion)]
     (. builder extendDeletion data))
-  (when-let [data (lookup-entry config id :policy-details)]
+  (when-some [data (lookup-entry config id :policy-details)]
     (. builder policyDetails data))
-  (when-let [data (lookup-entry config id :retain-interval)]
+  (when-some [data (lookup-entry config id :retain-interval)]
     (. builder retainInterval data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -191,17 +191,17 @@
 | `times` | java.util.List | [[cdk.support/lookup-entry]] | `:times` |
 "
   [^CfnLifecyclePolicy$CreateRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cron-expression)]
+  (when-some [data (lookup-entry config id :cron-expression)]
     (. builder cronExpression data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :interval-unit)]
+  (when-some [data (lookup-entry config id :interval-unit)]
     (. builder intervalUnit data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :scripts)]
+  (when-some [data (lookup-entry config id :scripts)]
     (. builder scripts data))
-  (when-let [data (lookup-entry config id :times)]
+  (when-some [data (lookup-entry config id :times)]
     (. builder times data))
   (.build builder))
 
@@ -231,11 +231,11 @@
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :retain-rule)]
+  (when-some [data (lookup-entry config id :retain-rule)]
     (. builder retainRule data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -264,9 +264,9 @@
 | `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
 "
   [^CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :interval-unit)]
+  (when-some [data (lookup-entry config id :interval-unit)]
     (. builder intervalUnit data))
   (.build builder))
 
@@ -295,9 +295,9 @@
 | `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
 "
   [^CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :interval-unit)]
+  (when-some [data (lookup-entry config id :interval-unit)]
     (. builder intervalUnit data))
   (.build builder))
 
@@ -331,19 +331,19 @@
 | `targetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-region` |
 "
   [^CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cmk-arn)]
+  (when-some [data (lookup-entry config id :cmk-arn)]
     (. builder cmkArn data))
-  (when-let [data (lookup-entry config id :copy-tags)]
+  (when-some [data (lookup-entry config id :copy-tags)]
     (. builder copyTags data))
-  (when-let [data (lookup-entry config id :deprecate-rule)]
+  (when-some [data (lookup-entry config id :deprecate-rule)]
     (. builder deprecateRule data))
-  (when-let [data (lookup-entry config id :encrypted)]
+  (when-some [data (lookup-entry config id :encrypted)]
     (. builder encrypted data))
-  (when-let [data (lookup-entry config id :retain-rule)]
+  (when-some [data (lookup-entry config id :retain-rule)]
     (. builder retainRule data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
-  (when-let [data (lookup-entry config id :target-region)]
+  (when-some [data (lookup-entry config id :target-region)]
     (. builder targetRegion data))
   (.build builder))
 
@@ -373,11 +373,11 @@
 | `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
 "
   [^CfnLifecyclePolicy$DeprecateRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :count)]
+  (when-some [data (lookup-entry config id :count)]
     (. builder count data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :interval-unit)]
+  (when-some [data (lookup-entry config id :interval-unit)]
     (. builder intervalUnit data))
   (.build builder))
 
@@ -406,9 +406,9 @@
 | `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
 "
   [^CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cmk-arn)]
+  (when-some [data (lookup-entry config id :cmk-arn)]
     (. builder cmkArn data))
-  (when-let [data (lookup-entry config id :encrypted)]
+  (when-some [data (lookup-entry config id :encrypted)]
     (. builder encrypted data))
   (.build builder))
 
@@ -438,11 +438,11 @@
 | `snapshotOwner` | java.util.List | [[cdk.support/lookup-entry]] | `:snapshot-owner` |
 "
   [^CfnLifecyclePolicy$EventParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :description-regex)]
+  (when-some [data (lookup-entry config id :description-regex)]
     (. builder descriptionRegex data))
-  (when-let [data (lookup-entry config id :event-type)]
+  (when-some [data (lookup-entry config id :event-type)]
     (. builder eventType data))
-  (when-let [data (lookup-entry config id :snapshot-owner)]
+  (when-some [data (lookup-entry config id :snapshot-owner)]
     (. builder snapshotOwner data))
   (.build builder))
 
@@ -471,9 +471,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnLifecyclePolicy$EventSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -503,11 +503,11 @@
 | `excludeVolumeTypes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:exclude-volume-types` |
 "
   [^CfnLifecyclePolicy$ExclusionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-boot-volumes)]
+  (when-some [data (lookup-entry config id :exclude-boot-volumes)]
     (. builder excludeBootVolumes data))
-  (when-let [data (lookup-entry config id :exclude-tags)]
+  (when-some [data (lookup-entry config id :exclude-tags)]
     (. builder excludeTags data))
-  (when-let [data (lookup-entry config id :exclude-volume-types)]
+  (when-some [data (lookup-entry config id :exclude-volume-types)]
     (. builder excludeVolumeTypes data))
   (.build builder))
 
@@ -538,13 +538,13 @@
 | `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
 "
   [^CfnLifecyclePolicy$FastRestoreRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
-  (when-let [data (lookup-entry config id :count)]
+  (when-some [data (lookup-entry config id :count)]
     (. builder count data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :interval-unit)]
+  (when-some [data (lookup-entry config id :interval-unit)]
     (. builder intervalUnit data))
   (.build builder))
 
@@ -574,11 +574,11 @@
 | `noReboot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-reboot` |
 "
   [^CfnLifecyclePolicy$ParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :exclude-boot-volume)]
+  (when-some [data (lookup-entry config id :exclude-boot-volume)]
     (. builder excludeBootVolume data))
-  (when-let [data (lookup-entry config id :exclude-data-volume-tags)]
+  (when-some [data (lookup-entry config id :exclude-data-volume-tags)]
     (. builder excludeDataVolumeTags data))
-  (when-let [data (lookup-entry config id :no-reboot)]
+  (when-some [data (lookup-entry config id :no-reboot)]
     (. builder noReboot data))
   (.build builder))
 
@@ -621,37 +621,37 @@
 | `targetTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tags` |
 "
   [^CfnLifecyclePolicy$PolicyDetailsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :actions)]
+  (when-some [data (lookup-entry config id :actions)]
     (. builder actions data))
-  (when-let [data (lookup-entry config id :copy-tags)]
+  (when-some [data (lookup-entry config id :copy-tags)]
     (. builder copyTags data))
-  (when-let [data (lookup-entry config id :create-interval)]
+  (when-some [data (lookup-entry config id :create-interval)]
     (. builder createInterval data))
-  (when-let [data (lookup-entry config id :cross-region-copy-targets)]
+  (when-some [data (lookup-entry config id :cross-region-copy-targets)]
     (. builder crossRegionCopyTargets data))
-  (when-let [data (lookup-entry config id :event-source)]
+  (when-some [data (lookup-entry config id :event-source)]
     (. builder eventSource data))
-  (when-let [data (lookup-entry config id :exclusions)]
+  (when-some [data (lookup-entry config id :exclusions)]
     (. builder exclusions data))
-  (when-let [data (lookup-entry config id :extend-deletion)]
+  (when-some [data (lookup-entry config id :extend-deletion)]
     (. builder extendDeletion data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :policy-language)]
+  (when-some [data (lookup-entry config id :policy-language)]
     (. builder policyLanguage data))
-  (when-let [data (lookup-entry config id :policy-type)]
+  (when-some [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
-  (when-let [data (lookup-entry config id :resource-locations)]
+  (when-some [data (lookup-entry config id :resource-locations)]
     (. builder resourceLocations data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :resource-types)]
+  (when-some [data (lookup-entry config id :resource-types)]
     (. builder resourceTypes data))
-  (when-let [data (lookup-entry config id :retain-interval)]
+  (when-some [data (lookup-entry config id :retain-interval)]
     (. builder retainInterval data))
-  (when-let [data (lookup-entry config id :schedules)]
+  (when-some [data (lookup-entry config id :schedules)]
     (. builder schedules data))
-  (when-let [data (lookup-entry config id :target-tags)]
+  (when-some [data (lookup-entry config id :target-tags)]
     (. builder targetTags data))
   (.build builder))
 
@@ -690,29 +690,29 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLifecyclePolicyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :copy-tags)]
+  (when-some [data (lookup-entry config id :copy-tags)]
     (. builder copyTags data))
-  (when-let [data (lookup-entry config id :create-interval)]
+  (when-some [data (lookup-entry config id :create-interval)]
     (. builder createInterval data))
-  (when-let [data (lookup-entry config id :cross-region-copy-targets)]
+  (when-some [data (lookup-entry config id :cross-region-copy-targets)]
     (. builder crossRegionCopyTargets data))
-  (when-let [data (lookup-entry config id :default-policy)]
+  (when-some [data (lookup-entry config id :default-policy)]
     (. builder defaultPolicy data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :exclusions)]
+  (when-some [data (lookup-entry config id :exclusions)]
     (. builder exclusions data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :extend-deletion)]
+  (when-some [data (lookup-entry config id :extend-deletion)]
     (. builder extendDeletion data))
-  (when-let [data (lookup-entry config id :policy-details)]
+  (when-some [data (lookup-entry config id :policy-details)]
     (. builder policyDetails data))
-  (when-let [data (lookup-entry config id :retain-interval)]
+  (when-some [data (lookup-entry config id :retain-interval)]
     (. builder retainInterval data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -742,11 +742,11 @@
 | `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
 "
   [^CfnLifecyclePolicy$RetainRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :count)]
+  (when-some [data (lookup-entry config id :count)]
     (. builder count data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :interval-unit)]
+  (when-some [data (lookup-entry config id :interval-unit)]
     (. builder intervalUnit data))
   (.build builder))
 
@@ -776,11 +776,11 @@
 | `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
 "
   [^CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :count)]
+  (when-some [data (lookup-entry config id :count)]
     (. builder count data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :interval-unit)]
+  (when-some [data (lookup-entry config id :interval-unit)]
     (. builder intervalUnit data))
   (.build builder))
 
@@ -818,27 +818,27 @@
 | `variableTags` | java.util.List | [[cdk.support/lookup-entry]] | `:variable-tags` |
 "
   [^CfnLifecyclePolicy$ScheduleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :archive-rule)]
+  (when-some [data (lookup-entry config id :archive-rule)]
     (. builder archiveRule data))
-  (when-let [data (lookup-entry config id :copy-tags)]
+  (when-some [data (lookup-entry config id :copy-tags)]
     (. builder copyTags data))
-  (when-let [data (lookup-entry config id :create-rule)]
+  (when-some [data (lookup-entry config id :create-rule)]
     (. builder createRule data))
-  (when-let [data (lookup-entry config id :cross-region-copy-rules)]
+  (when-some [data (lookup-entry config id :cross-region-copy-rules)]
     (. builder crossRegionCopyRules data))
-  (when-let [data (lookup-entry config id :deprecate-rule)]
+  (when-some [data (lookup-entry config id :deprecate-rule)]
     (. builder deprecateRule data))
-  (when-let [data (lookup-entry config id :fast-restore-rule)]
+  (when-some [data (lookup-entry config id :fast-restore-rule)]
     (. builder fastRestoreRule data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :retain-rule)]
+  (when-some [data (lookup-entry config id :retain-rule)]
     (. builder retainRule data))
-  (when-let [data (lookup-entry config id :share-rules)]
+  (when-some [data (lookup-entry config id :share-rules)]
     (. builder shareRules data))
-  (when-let [data (lookup-entry config id :tags-to-add)]
+  (when-some [data (lookup-entry config id :tags-to-add)]
     (. builder tagsToAdd data))
-  (when-let [data (lookup-entry config id :variable-tags)]
+  (when-some [data (lookup-entry config id :variable-tags)]
     (. builder variableTags data))
   (.build builder))
 
@@ -871,17 +871,17 @@
 | `stages` | java.util.List | [[cdk.support/lookup-entry]] | `:stages` |
 "
   [^CfnLifecyclePolicy$ScriptProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :execute-operation-on-script-failure)]
+  (when-some [data (lookup-entry config id :execute-operation-on-script-failure)]
     (. builder executeOperationOnScriptFailure data))
-  (when-let [data (lookup-entry config id :execution-handler)]
+  (when-some [data (lookup-entry config id :execution-handler)]
     (. builder executionHandler data))
-  (when-let [data (lookup-entry config id :execution-handler-service)]
+  (when-some [data (lookup-entry config id :execution-handler-service)]
     (. builder executionHandlerService data))
-  (when-let [data (lookup-entry config id :execution-timeout)]
+  (when-some [data (lookup-entry config id :execution-timeout)]
     (. builder executionTimeout data))
-  (when-let [data (lookup-entry config id :maximum-retry-count)]
+  (when-some [data (lookup-entry config id :maximum-retry-count)]
     (. builder maximumRetryCount data))
-  (when-let [data (lookup-entry config id :stages)]
+  (when-some [data (lookup-entry config id :stages)]
     (. builder stages data))
   (.build builder))
 
@@ -911,11 +911,11 @@
 | `unshareIntervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unshare-interval-unit` |
 "
   [^CfnLifecyclePolicy$ShareRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :target-accounts)]
+  (when-some [data (lookup-entry config id :target-accounts)]
     (. builder targetAccounts data))
-  (when-let [data (lookup-entry config id :unshare-interval)]
+  (when-some [data (lookup-entry config id :unshare-interval)]
     (. builder unshareInterval data))
-  (when-let [data (lookup-entry config id :unshare-interval-unit)]
+  (when-some [data (lookup-entry config id :unshare-interval-unit)]
     (. builder unshareIntervalUnit data))
   (.build builder))
 

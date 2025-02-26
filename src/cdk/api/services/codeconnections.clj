@@ -20,13 +20,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnection$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-name)]
+  (when-some [data (lookup-entry config id :connection-name)]
     (. builder connectionName data))
-  (when-let [data (lookup-entry config id :host-arn)]
+  (when-some [data (lookup-entry config id :host-arn)]
     (. builder hostArn data))
-  (when-let [data (lookup-entry config id :provider-type)]
+  (when-some [data (lookup-entry config id :provider-type)]
     (. builder providerType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -57,13 +57,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnConnectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :connection-name)]
+  (when-some [data (lookup-entry config id :connection-name)]
     (. builder connectionName data))
-  (when-let [data (lookup-entry config id :host-arn)]
+  (when-some [data (lookup-entry config id :host-arn)]
     (. builder hostArn data))
-  (when-let [data (lookup-entry config id :provider-type)]
+  (when-some [data (lookup-entry config id :provider-type)]
     (. builder providerType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

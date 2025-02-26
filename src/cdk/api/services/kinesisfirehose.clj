@@ -68,9 +68,9 @@
 | `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
 "
   [^CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval-in-seconds)]
+  (when-some [data (lookup-entry config id :interval-in-seconds)]
     (. builder intervalInSeconds data))
-  (when-let [data (lookup-entry config id :size-in-m-bs)]
+  (when-some [data (lookup-entry config id :size-in-m-bs)]
     (. builder sizeInMBs data))
   (.build builder))
 
@@ -107,25 +107,25 @@
 | `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :buffering-hints)]
+  (when-some [data (lookup-entry config id :buffering-hints)]
     (. builder bufferingHints data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :collection-endpoint)]
+  (when-some [data (lookup-entry config id :collection-endpoint)]
     (. builder collectionEndpoint data))
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :processing-configuration)]
+  (when-some [data (lookup-entry config id :processing-configuration)]
     (. builder processingConfiguration data))
-  (when-let [data (lookup-entry config id :retry-options)]
+  (when-some [data (lookup-entry config id :retry-options)]
     (. builder retryOptions data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-backup-mode)]
+  (when-some [data (lookup-entry config id :s3-backup-mode)]
     (. builder s3BackupMode data))
-  (when-let [data (lookup-entry config id :s3-configuration)]
+  (when-some [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -153,7 +153,7 @@
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 "
   [^CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
   (.build builder))
 
@@ -182,9 +182,9 @@
 | `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
 "
   [^CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval-in-seconds)]
+  (when-some [data (lookup-entry config id :interval-in-seconds)]
     (. builder intervalInSeconds data))
-  (when-let [data (lookup-entry config id :size-in-m-bs)]
+  (when-some [data (lookup-entry config id :size-in-m-bs)]
     (. builder sizeInMBs data))
   (.build builder))
 
@@ -225,33 +225,33 @@
 | `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :buffering-hints)]
+  (when-some [data (lookup-entry config id :buffering-hints)]
     (. builder bufferingHints data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :cluster-endpoint)]
+  (when-some [data (lookup-entry config id :cluster-endpoint)]
     (. builder clusterEndpoint data))
-  (when-let [data (lookup-entry config id :document-id-options)]
+  (when-some [data (lookup-entry config id :document-id-options)]
     (. builder documentIdOptions data))
-  (when-let [data (lookup-entry config id :domain-arn)]
+  (when-some [data (lookup-entry config id :domain-arn)]
     (. builder domainArn data))
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :index-rotation-period)]
+  (when-some [data (lookup-entry config id :index-rotation-period)]
     (. builder indexRotationPeriod data))
-  (when-let [data (lookup-entry config id :processing-configuration)]
+  (when-some [data (lookup-entry config id :processing-configuration)]
     (. builder processingConfiguration data))
-  (when-let [data (lookup-entry config id :retry-options)]
+  (when-some [data (lookup-entry config id :retry-options)]
     (. builder retryOptions data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-backup-mode)]
+  (when-some [data (lookup-entry config id :s3-backup-mode)]
     (. builder s3BackupMode data))
-  (when-let [data (lookup-entry config id :s3-configuration)]
+  (when-some [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
-  (when-let [data (lookup-entry config id :type-name)]
+  (when-some [data (lookup-entry config id :type-name)]
     (. builder typeName data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -279,7 +279,7 @@
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 "
   [^CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
   (.build builder))
 
@@ -308,9 +308,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDeliveryStream$AuthenticationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :connectivity)]
+  (when-some [data (lookup-entry config id :connectivity)]
     (. builder connectivity data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -339,9 +339,9 @@
 | `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
 "
   [^CfnDeliveryStream$BufferingHintsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval-in-seconds)]
+  (when-some [data (lookup-entry config id :interval-in-seconds)]
     (. builder intervalInSeconds data))
-  (when-let [data (lookup-entry config id :size-in-m-bs)]
+  (when-some [data (lookup-entry config id :size-in-m-bs)]
     (. builder sizeInMBs data))
   (.build builder))
 
@@ -383,35 +383,35 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeliveryStream$Builder builder id config]
-  (when-let [data (lookup-entry config id :amazon-open-search-serverless-destination-configuration)]
+  (when-some [data (lookup-entry config id :amazon-open-search-serverless-destination-configuration)]
     (. builder amazonOpenSearchServerlessDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :amazonopensearchservice-destination-configuration)]
+  (when-some [data (lookup-entry config id :amazonopensearchservice-destination-configuration)]
     (. builder amazonopensearchserviceDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :delivery-stream-encryption-configuration-input)]
+  (when-some [data (lookup-entry config id :delivery-stream-encryption-configuration-input)]
     (. builder deliveryStreamEncryptionConfigurationInput data))
-  (when-let [data (lookup-entry config id :delivery-stream-name)]
+  (when-some [data (lookup-entry config id :delivery-stream-name)]
     (. builder deliveryStreamName data))
-  (when-let [data (lookup-entry config id :delivery-stream-type)]
+  (when-some [data (lookup-entry config id :delivery-stream-type)]
     (. builder deliveryStreamType data))
-  (when-let [data (lookup-entry config id :elasticsearch-destination-configuration)]
+  (when-some [data (lookup-entry config id :elasticsearch-destination-configuration)]
     (. builder elasticsearchDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :extended-s3-destination-configuration)]
+  (when-some [data (lookup-entry config id :extended-s3-destination-configuration)]
     (. builder extendedS3DestinationConfiguration data))
-  (when-let [data (lookup-entry config id :http-endpoint-destination-configuration)]
+  (when-some [data (lookup-entry config id :http-endpoint-destination-configuration)]
     (. builder httpEndpointDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :kinesis-stream-source-configuration)]
+  (when-some [data (lookup-entry config id :kinesis-stream-source-configuration)]
     (. builder kinesisStreamSourceConfiguration data))
-  (when-let [data (lookup-entry config id :msk-source-configuration)]
+  (when-some [data (lookup-entry config id :msk-source-configuration)]
     (. builder mskSourceConfiguration data))
-  (when-let [data (lookup-entry config id :redshift-destination-configuration)]
+  (when-some [data (lookup-entry config id :redshift-destination-configuration)]
     (. builder redshiftDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :s3-destination-configuration)]
+  (when-some [data (lookup-entry config id :s3-destination-configuration)]
     (. builder s3DestinationConfiguration data))
-  (when-let [data (lookup-entry config id :snowflake-destination-configuration)]
+  (when-some [data (lookup-entry config id :snowflake-destination-configuration)]
     (. builder snowflakeDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :splunk-destination-configuration)]
+  (when-some [data (lookup-entry config id :splunk-destination-configuration)]
     (. builder splunkDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -441,11 +441,11 @@
 | `logStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name` |
 "
   [^CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
-  (when-let [data (lookup-entry config id :log-stream-name)]
+  (when-some [data (lookup-entry config id :log-stream-name)]
     (. builder logStreamName data))
   (.build builder))
 
@@ -475,11 +475,11 @@
 | `dataTableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-table-name` |
 "
   [^CfnDeliveryStream$CopyCommandProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :copy-options)]
+  (when-some [data (lookup-entry config id :copy-options)]
     (. builder copyOptions data))
-  (when-let [data (lookup-entry config id :data-table-columns)]
+  (when-some [data (lookup-entry config id :data-table-columns)]
     (. builder dataTableColumns data))
-  (when-let [data (lookup-entry config id :data-table-name)]
+  (when-some [data (lookup-entry config id :data-table-name)]
     (. builder dataTableName data))
   (.build builder))
 
@@ -510,13 +510,13 @@
 | `schemaConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SchemaConfigurationProperty | [[cdk.support/lookup-entry]] | `:schema-configuration` |
 "
   [^CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :input-format-configuration)]
+  (when-some [data (lookup-entry config id :input-format-configuration)]
     (. builder inputFormatConfiguration data))
-  (when-let [data (lookup-entry config id :output-format-configuration)]
+  (when-some [data (lookup-entry config id :output-format-configuration)]
     (. builder outputFormatConfiguration data))
-  (when-let [data (lookup-entry config id :schema-configuration)]
+  (when-some [data (lookup-entry config id :schema-configuration)]
     (. builder schemaConfiguration data))
   (.build builder))
 
@@ -545,9 +545,9 @@
 | `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |
 "
   [^CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key-arn)]
+  (when-some [data (lookup-entry config id :key-arn)]
     (. builder keyArn data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
   (.build builder))
 
@@ -576,9 +576,9 @@
 | `openXJsonSerDe` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-x-json-ser-de` |
 "
   [^CfnDeliveryStream$DeserializerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :hive-json-ser-de)]
+  (when-some [data (lookup-entry config id :hive-json-ser-de)]
     (. builder hiveJsonSerDe data))
-  (when-let [data (lookup-entry config id :open-x-json-ser-de)]
+  (when-some [data (lookup-entry config id :open-x-json-ser-de)]
     (. builder openXJsonSerDe data))
   (.build builder))
 
@@ -606,7 +606,7 @@
 | `defaultDocumentIdFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-document-id-format` |
 "
   [^CfnDeliveryStream$DocumentIdOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-document-id-format)]
+  (when-some [data (lookup-entry config id :default-document-id-format)]
     (. builder defaultDocumentIdFormat data))
   (.build builder))
 
@@ -635,9 +635,9 @@
 | `retryOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-options` |
 "
   [^CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :retry-options)]
+  (when-some [data (lookup-entry config id :retry-options)]
     (. builder retryOptions data))
   (.build builder))
 
@@ -666,9 +666,9 @@
 | `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
 "
   [^CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval-in-seconds)]
+  (when-some [data (lookup-entry config id :interval-in-seconds)]
     (. builder intervalInSeconds data))
-  (when-let [data (lookup-entry config id :size-in-m-bs)]
+  (when-some [data (lookup-entry config id :size-in-m-bs)]
     (. builder sizeInMBs data))
   (.build builder))
 
@@ -709,33 +709,33 @@
 | `vpcConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
 "
   [^CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :buffering-hints)]
+  (when-some [data (lookup-entry config id :buffering-hints)]
     (. builder bufferingHints data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :cluster-endpoint)]
+  (when-some [data (lookup-entry config id :cluster-endpoint)]
     (. builder clusterEndpoint data))
-  (when-let [data (lookup-entry config id :document-id-options)]
+  (when-some [data (lookup-entry config id :document-id-options)]
     (. builder documentIdOptions data))
-  (when-let [data (lookup-entry config id :domain-arn)]
+  (when-some [data (lookup-entry config id :domain-arn)]
     (. builder domainArn data))
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :index-rotation-period)]
+  (when-some [data (lookup-entry config id :index-rotation-period)]
     (. builder indexRotationPeriod data))
-  (when-let [data (lookup-entry config id :processing-configuration)]
+  (when-some [data (lookup-entry config id :processing-configuration)]
     (. builder processingConfiguration data))
-  (when-let [data (lookup-entry config id :retry-options)]
+  (when-some [data (lookup-entry config id :retry-options)]
     (. builder retryOptions data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-backup-mode)]
+  (when-some [data (lookup-entry config id :s3-backup-mode)]
     (. builder s3BackupMode data))
-  (when-let [data (lookup-entry config id :s3-configuration)]
+  (when-some [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
-  (when-let [data (lookup-entry config id :type-name)]
+  (when-some [data (lookup-entry config id :type-name)]
     (. builder typeName data))
-  (when-let [data (lookup-entry config id :vpc-configuration)]
+  (when-some [data (lookup-entry config id :vpc-configuration)]
     (. builder vpcConfiguration data))
   (.build builder))
 
@@ -763,7 +763,7 @@
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 "
   [^CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
   (.build builder))
 
@@ -792,9 +792,9 @@
 | `noEncryptionConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:no-encryption-config` |
 "
   [^CfnDeliveryStream$EncryptionConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-encryption-config)]
+  (when-some [data (lookup-entry config id :kms-encryption-config)]
     (. builder kmsEncryptionConfig data))
-  (when-let [data (lookup-entry config id :no-encryption-config)]
+  (when-some [data (lookup-entry config id :no-encryption-config)]
     (. builder noEncryptionConfig data))
   (.build builder))
 
@@ -836,35 +836,35 @@
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
 "
   [^CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-arn)]
+  (when-some [data (lookup-entry config id :bucket-arn)]
     (. builder bucketArn data))
-  (when-let [data (lookup-entry config id :buffering-hints)]
+  (when-some [data (lookup-entry config id :buffering-hints)]
     (. builder bufferingHints data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :compression-format)]
+  (when-some [data (lookup-entry config id :compression-format)]
     (. builder compressionFormat data))
-  (when-let [data (lookup-entry config id :custom-time-zone)]
+  (when-some [data (lookup-entry config id :custom-time-zone)]
     (. builder customTimeZone data))
-  (when-let [data (lookup-entry config id :data-format-conversion-configuration)]
+  (when-some [data (lookup-entry config id :data-format-conversion-configuration)]
     (. builder dataFormatConversionConfiguration data))
-  (when-let [data (lookup-entry config id :dynamic-partitioning-configuration)]
+  (when-some [data (lookup-entry config id :dynamic-partitioning-configuration)]
     (. builder dynamicPartitioningConfiguration data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :error-output-prefix)]
+  (when-some [data (lookup-entry config id :error-output-prefix)]
     (. builder errorOutputPrefix data))
-  (when-let [data (lookup-entry config id :file-extension)]
+  (when-some [data (lookup-entry config id :file-extension)]
     (. builder fileExtension data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :processing-configuration)]
+  (when-some [data (lookup-entry config id :processing-configuration)]
     (. builder processingConfiguration data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-backup-configuration)]
+  (when-some [data (lookup-entry config id :s3-backup-configuration)]
     (. builder s3BackupConfiguration data))
-  (when-let [data (lookup-entry config id :s3-backup-mode)]
+  (when-some [data (lookup-entry config id :s3-backup-mode)]
     (. builder s3BackupMode data))
   (.build builder))
 
@@ -892,7 +892,7 @@
 | `timestampFormats` | java.util.List | [[cdk.support/lookup-entry]] | `:timestamp-formats` |
 "
   [^CfnDeliveryStream$HiveJsonSerDeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :timestamp-formats)]
+  (when-some [data (lookup-entry config id :timestamp-formats)]
     (. builder timestampFormats data))
   (.build builder))
 
@@ -921,9 +921,9 @@
 | `attributeValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-value` |
 "
   [^CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-name)]
+  (when-some [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
-  (when-let [data (lookup-entry config id :attribute-value)]
+  (when-some [data (lookup-entry config id :attribute-value)]
     (. builder attributeValue data))
   (.build builder))
 
@@ -953,11 +953,11 @@
 | `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
 "
   [^CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-key)]
+  (when-some [data (lookup-entry config id :access-key)]
     (. builder accessKey data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :url)]
+  (when-some [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
 
@@ -993,23 +993,23 @@
 | `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 "
   [^CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :buffering-hints)]
+  (when-some [data (lookup-entry config id :buffering-hints)]
     (. builder bufferingHints data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :endpoint-configuration)]
+  (when-some [data (lookup-entry config id :endpoint-configuration)]
     (. builder endpointConfiguration data))
-  (when-let [data (lookup-entry config id :processing-configuration)]
+  (when-some [data (lookup-entry config id :processing-configuration)]
     (. builder processingConfiguration data))
-  (when-let [data (lookup-entry config id :request-configuration)]
+  (when-some [data (lookup-entry config id :request-configuration)]
     (. builder requestConfiguration data))
-  (when-let [data (lookup-entry config id :retry-options)]
+  (when-some [data (lookup-entry config id :retry-options)]
     (. builder retryOptions data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-backup-mode)]
+  (when-some [data (lookup-entry config id :s3-backup-mode)]
     (. builder s3BackupMode data))
-  (when-let [data (lookup-entry config id :s3-configuration)]
+  (when-some [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
   (.build builder))
 
@@ -1038,9 +1038,9 @@
 | `contentEncoding` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-encoding` |
 "
   [^CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :common-attributes)]
+  (when-some [data (lookup-entry config id :common-attributes)]
     (. builder commonAttributes data))
-  (when-let [data (lookup-entry config id :content-encoding)]
+  (when-some [data (lookup-entry config id :content-encoding)]
     (. builder contentEncoding data))
   (.build builder))
 
@@ -1068,7 +1068,7 @@
 | `deserializer` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DeserializerProperty | [[cdk.support/lookup-entry]] | `:deserializer` |
 "
   [^CfnDeliveryStream$InputFormatConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :deserializer)]
+  (when-some [data (lookup-entry config id :deserializer)]
     (. builder deserializer data))
   (.build builder))
 
@@ -1097,9 +1097,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kinesis-stream-arn)]
+  (when-some [data (lookup-entry config id :kinesis-stream-arn)]
     (. builder kinesisStreamArn data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -1127,7 +1127,7 @@
 | `awskmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:awskms-key-arn` |
 "
   [^CfnDeliveryStream$KMSEncryptionConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :awskms-key-arn)]
+  (when-some [data (lookup-entry config id :awskms-key-arn)]
     (. builder awskmsKeyArn data))
   (.build builder))
 
@@ -1157,11 +1157,11 @@
 | `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |
 "
   [^CfnDeliveryStream$MSKSourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authentication-configuration)]
+  (when-some [data (lookup-entry config id :authentication-configuration)]
     (. builder authenticationConfiguration data))
-  (when-let [data (lookup-entry config id :msk-cluster-arn)]
+  (when-some [data (lookup-entry config id :msk-cluster-arn)]
     (. builder mskClusterArn data))
-  (when-let [data (lookup-entry config id :topic-name)]
+  (when-some [data (lookup-entry config id :topic-name)]
     (. builder topicName data))
   (.build builder))
 
@@ -1191,11 +1191,11 @@
 | `convertDotsInJsonKeysToUnderscores` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:convert-dots-in-json-keys-to-underscores` |
 "
   [^CfnDeliveryStream$OpenXJsonSerDeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :case-insensitive)]
+  (when-some [data (lookup-entry config id :case-insensitive)]
     (. builder caseInsensitive data))
-  (when-let [data (lookup-entry config id :column-to-json-key-mappings)]
+  (when-some [data (lookup-entry config id :column-to-json-key-mappings)]
     (. builder columnToJsonKeyMappings data))
-  (when-let [data (lookup-entry config id :convert-dots-in-json-keys-to-underscores)]
+  (when-some [data (lookup-entry config id :convert-dots-in-json-keys-to-underscores)]
     (. builder convertDotsInJsonKeysToUnderscores data))
   (.build builder))
 
@@ -1232,25 +1232,25 @@
 | `stripeSizeBytes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:stripe-size-bytes` |
 "
   [^CfnDeliveryStream$OrcSerDeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :block-size-bytes)]
+  (when-some [data (lookup-entry config id :block-size-bytes)]
     (. builder blockSizeBytes data))
-  (when-let [data (lookup-entry config id :bloom-filter-columns)]
+  (when-some [data (lookup-entry config id :bloom-filter-columns)]
     (. builder bloomFilterColumns data))
-  (when-let [data (lookup-entry config id :bloom-filter-false-positive-probability)]
+  (when-some [data (lookup-entry config id :bloom-filter-false-positive-probability)]
     (. builder bloomFilterFalsePositiveProbability data))
-  (when-let [data (lookup-entry config id :compression)]
+  (when-some [data (lookup-entry config id :compression)]
     (. builder compression data))
-  (when-let [data (lookup-entry config id :dictionary-key-threshold)]
+  (when-some [data (lookup-entry config id :dictionary-key-threshold)]
     (. builder dictionaryKeyThreshold data))
-  (when-let [data (lookup-entry config id :enable-padding)]
+  (when-some [data (lookup-entry config id :enable-padding)]
     (. builder enablePadding data))
-  (when-let [data (lookup-entry config id :format-version)]
+  (when-some [data (lookup-entry config id :format-version)]
     (. builder formatVersion data))
-  (when-let [data (lookup-entry config id :padding-tolerance)]
+  (when-some [data (lookup-entry config id :padding-tolerance)]
     (. builder paddingTolerance data))
-  (when-let [data (lookup-entry config id :row-index-stride)]
+  (when-some [data (lookup-entry config id :row-index-stride)]
     (. builder rowIndexStride data))
-  (when-let [data (lookup-entry config id :stripe-size-bytes)]
+  (when-some [data (lookup-entry config id :stripe-size-bytes)]
     (. builder stripeSizeBytes data))
   (.build builder))
 
@@ -1278,7 +1278,7 @@
 | `serializer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:serializer` |
 "
   [^CfnDeliveryStream$OutputFormatConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :serializer)]
+  (when-some [data (lookup-entry config id :serializer)]
     (. builder serializer data))
   (.build builder))
 
@@ -1311,17 +1311,17 @@
 | `writerVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:writer-version` |
 "
   [^CfnDeliveryStream$ParquetSerDeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :block-size-bytes)]
+  (when-some [data (lookup-entry config id :block-size-bytes)]
     (. builder blockSizeBytes data))
-  (when-let [data (lookup-entry config id :compression)]
+  (when-some [data (lookup-entry config id :compression)]
     (. builder compression data))
-  (when-let [data (lookup-entry config id :enable-dictionary-compression)]
+  (when-some [data (lookup-entry config id :enable-dictionary-compression)]
     (. builder enableDictionaryCompression data))
-  (when-let [data (lookup-entry config id :max-padding-bytes)]
+  (when-some [data (lookup-entry config id :max-padding-bytes)]
     (. builder maxPaddingBytes data))
-  (when-let [data (lookup-entry config id :page-size-bytes)]
+  (when-some [data (lookup-entry config id :page-size-bytes)]
     (. builder pageSizeBytes data))
-  (when-let [data (lookup-entry config id :writer-version)]
+  (when-some [data (lookup-entry config id :writer-version)]
     (. builder writerVersion data))
   (.build builder))
 
@@ -1350,9 +1350,9 @@
 | `processors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processors` |
 "
   [^CfnDeliveryStream$ProcessingConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :processors)]
+  (when-some [data (lookup-entry config id :processors)]
     (. builder processors data))
   (.build builder))
 
@@ -1381,9 +1381,9 @@
 | `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |
 "
   [^CfnDeliveryStream$ProcessorParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-name)]
+  (when-some [data (lookup-entry config id :parameter-name)]
     (. builder parameterName data))
-  (when-let [data (lookup-entry config id :parameter-value)]
+  (when-some [data (lookup-entry config id :parameter-value)]
     (. builder parameterValue data))
   (.build builder))
 
@@ -1412,9 +1412,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDeliveryStream$ProcessorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1456,35 +1456,35 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDeliveryStreamProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :amazon-open-search-serverless-destination-configuration)]
+  (when-some [data (lookup-entry config id :amazon-open-search-serverless-destination-configuration)]
     (. builder amazonOpenSearchServerlessDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :amazonopensearchservice-destination-configuration)]
+  (when-some [data (lookup-entry config id :amazonopensearchservice-destination-configuration)]
     (. builder amazonopensearchserviceDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :delivery-stream-encryption-configuration-input)]
+  (when-some [data (lookup-entry config id :delivery-stream-encryption-configuration-input)]
     (. builder deliveryStreamEncryptionConfigurationInput data))
-  (when-let [data (lookup-entry config id :delivery-stream-name)]
+  (when-some [data (lookup-entry config id :delivery-stream-name)]
     (. builder deliveryStreamName data))
-  (when-let [data (lookup-entry config id :delivery-stream-type)]
+  (when-some [data (lookup-entry config id :delivery-stream-type)]
     (. builder deliveryStreamType data))
-  (when-let [data (lookup-entry config id :elasticsearch-destination-configuration)]
+  (when-some [data (lookup-entry config id :elasticsearch-destination-configuration)]
     (. builder elasticsearchDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :extended-s3-destination-configuration)]
+  (when-some [data (lookup-entry config id :extended-s3-destination-configuration)]
     (. builder extendedS3DestinationConfiguration data))
-  (when-let [data (lookup-entry config id :http-endpoint-destination-configuration)]
+  (when-some [data (lookup-entry config id :http-endpoint-destination-configuration)]
     (. builder httpEndpointDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :kinesis-stream-source-configuration)]
+  (when-some [data (lookup-entry config id :kinesis-stream-source-configuration)]
     (. builder kinesisStreamSourceConfiguration data))
-  (when-let [data (lookup-entry config id :msk-source-configuration)]
+  (when-some [data (lookup-entry config id :msk-source-configuration)]
     (. builder mskSourceConfiguration data))
-  (when-let [data (lookup-entry config id :redshift-destination-configuration)]
+  (when-some [data (lookup-entry config id :redshift-destination-configuration)]
     (. builder redshiftDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :s3-destination-configuration)]
+  (when-some [data (lookup-entry config id :s3-destination-configuration)]
     (. builder s3DestinationConfiguration data))
-  (when-let [data (lookup-entry config id :snowflake-destination-configuration)]
+  (when-some [data (lookup-entry config id :snowflake-destination-configuration)]
     (. builder snowflakeDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :splunk-destination-configuration)]
+  (when-some [data (lookup-entry config id :splunk-destination-configuration)]
     (. builder splunkDestinationConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1522,27 +1522,27 @@
 | `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
 "
   [^CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :cluster-jdbcurl)]
+  (when-some [data (lookup-entry config id :cluster-jdbcurl)]
     (. builder clusterJdbcurl data))
-  (when-let [data (lookup-entry config id :copy-command)]
+  (when-some [data (lookup-entry config id :copy-command)]
     (. builder copyCommand data))
-  (when-let [data (lookup-entry config id :password)]
+  (when-some [data (lookup-entry config id :password)]
     (. builder password data))
-  (when-let [data (lookup-entry config id :processing-configuration)]
+  (when-some [data (lookup-entry config id :processing-configuration)]
     (. builder processingConfiguration data))
-  (when-let [data (lookup-entry config id :retry-options)]
+  (when-some [data (lookup-entry config id :retry-options)]
     (. builder retryOptions data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-backup-configuration)]
+  (when-some [data (lookup-entry config id :s3-backup-configuration)]
     (. builder s3BackupConfiguration data))
-  (when-let [data (lookup-entry config id :s3-backup-mode)]
+  (when-some [data (lookup-entry config id :s3-backup-mode)]
     (. builder s3BackupMode data))
-  (when-let [data (lookup-entry config id :s3-configuration)]
+  (when-some [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
-  (when-let [data (lookup-entry config id :username)]
+  (when-some [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
 
@@ -1570,7 +1570,7 @@
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 "
   [^CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
   (.build builder))
 
@@ -1598,7 +1598,7 @@
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 "
   [^CfnDeliveryStream$RetryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
   (.build builder))
 
@@ -1633,21 +1633,21 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDeliveryStream$S3DestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-arn)]
+  (when-some [data (lookup-entry config id :bucket-arn)]
     (. builder bucketArn data))
-  (when-let [data (lookup-entry config id :buffering-hints)]
+  (when-some [data (lookup-entry config id :buffering-hints)]
     (. builder bufferingHints data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :compression-format)]
+  (when-some [data (lookup-entry config id :compression-format)]
     (. builder compressionFormat data))
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :error-output-prefix)]
+  (when-some [data (lookup-entry config id :error-output-prefix)]
     (. builder errorOutputPrefix data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -1680,17 +1680,17 @@
 | `versionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-id` |
 "
   [^CfnDeliveryStream$SchemaConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :version-id)]
+  (when-some [data (lookup-entry config id :version-id)]
     (. builder versionId data))
   (.build builder))
 
@@ -1719,9 +1719,9 @@
 | `parquetSerDe` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parquet-ser-de` |
 "
   [^CfnDeliveryStream$SerializerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :orc-ser-de)]
+  (when-some [data (lookup-entry config id :orc-ser-de)]
     (. builder orcSerDe data))
-  (when-let [data (lookup-entry config id :parquet-ser-de)]
+  (when-some [data (lookup-entry config id :parquet-ser-de)]
     (. builder parquetSerDe data))
   (.build builder))
 
@@ -1766,41 +1766,41 @@
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 "
   [^CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :account-url)]
+  (when-some [data (lookup-entry config id :account-url)]
     (. builder accountUrl data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :content-column-name)]
+  (when-some [data (lookup-entry config id :content-column-name)]
     (. builder contentColumnName data))
-  (when-let [data (lookup-entry config id :data-loading-option)]
+  (when-some [data (lookup-entry config id :data-loading-option)]
     (. builder dataLoadingOption data))
-  (when-let [data (lookup-entry config id :database)]
+  (when-some [data (lookup-entry config id :database)]
     (. builder database data))
-  (when-let [data (lookup-entry config id :key-passphrase)]
+  (when-some [data (lookup-entry config id :key-passphrase)]
     (. builder keyPassphrase data))
-  (when-let [data (lookup-entry config id :meta-data-column-name)]
+  (when-some [data (lookup-entry config id :meta-data-column-name)]
     (. builder metaDataColumnName data))
-  (when-let [data (lookup-entry config id :private-key)]
+  (when-some [data (lookup-entry config id :private-key)]
     (. builder privateKey data))
-  (when-let [data (lookup-entry config id :processing-configuration)]
+  (when-some [data (lookup-entry config id :processing-configuration)]
     (. builder processingConfiguration data))
-  (when-let [data (lookup-entry config id :retry-options)]
+  (when-some [data (lookup-entry config id :retry-options)]
     (. builder retryOptions data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :s3-backup-mode)]
+  (when-some [data (lookup-entry config id :s3-backup-mode)]
     (. builder s3BackupMode data))
-  (when-let [data (lookup-entry config id :s3-configuration)]
+  (when-some [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
-  (when-let [data (lookup-entry config id :schema)]
+  (when-some [data (lookup-entry config id :schema)]
     (. builder schema data))
-  (when-let [data (lookup-entry config id :snowflake-role-configuration)]
+  (when-some [data (lookup-entry config id :snowflake-role-configuration)]
     (. builder snowflakeRoleConfiguration data))
-  (when-let [data (lookup-entry config id :snowflake-vpc-configuration)]
+  (when-some [data (lookup-entry config id :snowflake-vpc-configuration)]
     (. builder snowflakeVpcConfiguration data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :user)]
+  (when-some [data (lookup-entry config id :user)]
     (. builder user data))
   (.build builder))
 
@@ -1828,7 +1828,7 @@
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 "
   [^CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
   (.build builder))
 
@@ -1857,9 +1857,9 @@
 | `snowflakeRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:snowflake-role` |
 "
   [^CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :snowflake-role)]
+  (when-some [data (lookup-entry config id :snowflake-role)]
     (. builder snowflakeRole data))
   (.build builder))
 
@@ -1887,7 +1887,7 @@
 | `privateLinkVpceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-link-vpce-id` |
 "
   [^CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :private-link-vpce-id)]
+  (when-some [data (lookup-entry config id :private-link-vpce-id)]
     (. builder privateLinkVpceId data))
   (.build builder))
 
@@ -1916,9 +1916,9 @@
 | `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
 "
   [^CfnDeliveryStream$SplunkBufferingHintsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :interval-in-seconds)]
+  (when-some [data (lookup-entry config id :interval-in-seconds)]
     (. builder intervalInSeconds data))
-  (when-let [data (lookup-entry config id :size-in-m-bs)]
+  (when-some [data (lookup-entry config id :size-in-m-bs)]
     (. builder sizeInMBs data))
   (.build builder))
 
@@ -1955,25 +1955,25 @@
 | `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 "
   [^CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :buffering-hints)]
+  (when-some [data (lookup-entry config id :buffering-hints)]
     (. builder bufferingHints data))
-  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+  (when-some [data (lookup-entry config id :cloud-watch-logging-options)]
     (. builder cloudWatchLoggingOptions data))
-  (when-let [data (lookup-entry config id :hec-acknowledgment-timeout-in-seconds)]
+  (when-some [data (lookup-entry config id :hec-acknowledgment-timeout-in-seconds)]
     (. builder hecAcknowledgmentTimeoutInSeconds data))
-  (when-let [data (lookup-entry config id :hec-endpoint)]
+  (when-some [data (lookup-entry config id :hec-endpoint)]
     (. builder hecEndpoint data))
-  (when-let [data (lookup-entry config id :hec-endpoint-type)]
+  (when-some [data (lookup-entry config id :hec-endpoint-type)]
     (. builder hecEndpointType data))
-  (when-let [data (lookup-entry config id :hec-token)]
+  (when-some [data (lookup-entry config id :hec-token)]
     (. builder hecToken data))
-  (when-let [data (lookup-entry config id :processing-configuration)]
+  (when-some [data (lookup-entry config id :processing-configuration)]
     (. builder processingConfiguration data))
-  (when-let [data (lookup-entry config id :retry-options)]
+  (when-some [data (lookup-entry config id :retry-options)]
     (. builder retryOptions data))
-  (when-let [data (lookup-entry config id :s3-backup-mode)]
+  (when-some [data (lookup-entry config id :s3-backup-mode)]
     (. builder s3BackupMode data))
-  (when-let [data (lookup-entry config id :s3-configuration)]
+  (when-some [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
   (.build builder))
 
@@ -2001,7 +2001,7 @@
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 "
   [^CfnDeliveryStream$SplunkRetryOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
   (.build builder))
 
@@ -2031,11 +2031,11 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnDeliveryStream$VpcConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 

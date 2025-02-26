@@ -302,9 +302,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | software.amazon.awscdk.services.dynamodb.AttributeType | [[cdk.api.services.dynamodb/attribute-type]] | `:type` |
 "
   [^Attribute$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (attribute-type config id :type)]
+  (when-some [data (attribute-type config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -335,13 +335,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetUtilizationPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-utilization-percent` |
 "
   [^AutoscaledCapacityOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :seed-capacity)]
+  (when-some [data (lookup-entry config id :seed-capacity)]
     (. builder seedCapacity data))
-  (when-let [data (lookup-entry config id :target-utilization-percent)]
+  (when-some [data (lookup-entry config id :target-utilization-percent)]
     (. builder targetUtilizationPercent data))
   (.build builder))
 
@@ -370,9 +370,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |
 "
   [^CfnGlobalTable$AttributeDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-name)]
+  (when-some [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
-  (when-let [data (lookup-entry config id :attribute-type)]
+  (when-some [data (lookup-entry config id :attribute-type)]
     (. builder attributeType data))
   (.build builder))
 
@@ -411,29 +411,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeProvisionedThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
 "
   [^CfnGlobalTable$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-definitions)]
+  (when-some [data (lookup-entry config id :attribute-definitions)]
     (. builder attributeDefinitions data))
-  (when-let [data (lookup-entry config id :billing-mode)]
+  (when-some [data (lookup-entry config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+  (when-some [data (lookup-entry config id :global-secondary-indexes)]
     (. builder globalSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :key-schema)]
+  (when-some [data (lookup-entry config id :key-schema)]
     (. builder keySchema data))
-  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+  (when-some [data (lookup-entry config id :local-secondary-indexes)]
     (. builder localSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :replicas)]
+  (when-some [data (lookup-entry config id :replicas)]
     (. builder replicas data))
-  (when-let [data (lookup-entry config id :sse-specification)]
+  (when-some [data (lookup-entry config id :sse-specification)]
     (. builder sseSpecification data))
-  (when-let [data (lookup-entry config id :stream-specification)]
+  (when-some [data (lookup-entry config id :stream-specification)]
     (. builder streamSpecification data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :time-to-live-specification)]
+  (when-some [data (lookup-entry config id :time-to-live-specification)]
     (. builder timeToLiveSpecification data))
-  (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
+  (when-some [data (lookup-entry config id :write-on-demand-throughput-settings)]
     (. builder writeOnDemandThroughputSettings data))
-  (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
+  (when-some [data (lookup-entry config id :write-provisioned-throughput-settings)]
     (. builder writeProvisionedThroughputSettings data))
   (.build builder))
 
@@ -464,13 +464,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
 "
   [^CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
-  (when-let [data (lookup-entry config id :seed-capacity)]
+  (when-some [data (lookup-entry config id :seed-capacity)]
     (. builder seedCapacity data))
-  (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
+  (when-some [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
     (. builder targetTrackingScalingPolicyConfiguration data))
   (.build builder))
 
@@ -498,7 +498,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -530,15 +530,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeProvisionedThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$WriteProvisionedThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
 "
   [^CfnGlobalTable$GlobalSecondaryIndexProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :key-schema)]
+  (when-some [data (lookup-entry config id :key-schema)]
     (. builder keySchema data))
-  (when-let [data (lookup-entry config id :projection)]
+  (when-some [data (lookup-entry config id :projection)]
     (. builder projection data))
-  (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
+  (when-some [data (lookup-entry config id :write-on-demand-throughput-settings)]
     (. builder writeOnDemandThroughputSettings data))
-  (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
+  (when-some [data (lookup-entry config id :write-provisioned-throughput-settings)]
     (. builder writeProvisionedThroughputSettings data))
   (.build builder))
 
@@ -567,9 +567,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |
 "
   [^CfnGlobalTable$KeySchemaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-name)]
+  (when-some [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
   (.build builder))
 
@@ -598,9 +598,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
 "
   [^CfnGlobalTable$KinesisStreamSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :approximate-creation-date-time-precision)]
+  (when-some [data (lookup-entry config id :approximate-creation-date-time-precision)]
     (. builder approximateCreationDateTimePrecision data))
-  (when-let [data (lookup-entry config id :stream-arn)]
+  (when-some [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
 
@@ -630,11 +630,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `projection` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ProjectionProperty | [[cdk.support/lookup-entry]] | `:projection` |
 "
   [^CfnGlobalTable$LocalSecondaryIndexProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :key-schema)]
+  (when-some [data (lookup-entry config id :key-schema)]
     (. builder keySchema data))
-  (when-let [data (lookup-entry config id :projection)]
+  (when-some [data (lookup-entry config id :projection)]
     (. builder projection data))
   (.build builder))
 
@@ -662,7 +662,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `pointInTimeRecoveryEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |
 "
   [^CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery-enabled)]
     (. builder pointInTimeRecoveryEnabled data))
   (.build builder))
 
@@ -691,9 +691,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `projectionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:projection-type` |
 "
   [^CfnGlobalTable$ProjectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :non-key-attributes)]
+  (when-some [data (lookup-entry config id :non-key-attributes)]
     (. builder nonKeyAttributes data))
-  (when-let [data (lookup-entry config id :projection-type)]
+  (when-some [data (lookup-entry config id :projection-type)]
     (. builder projectionType data))
   (.build builder))
 
@@ -732,29 +732,29 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeProvisionedThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
 "
   [^CfnGlobalTableProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-definitions)]
+  (when-some [data (lookup-entry config id :attribute-definitions)]
     (. builder attributeDefinitions data))
-  (when-let [data (lookup-entry config id :billing-mode)]
+  (when-some [data (lookup-entry config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+  (when-some [data (lookup-entry config id :global-secondary-indexes)]
     (. builder globalSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :key-schema)]
+  (when-some [data (lookup-entry config id :key-schema)]
     (. builder keySchema data))
-  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+  (when-some [data (lookup-entry config id :local-secondary-indexes)]
     (. builder localSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :replicas)]
+  (when-some [data (lookup-entry config id :replicas)]
     (. builder replicas data))
-  (when-let [data (lookup-entry config id :sse-specification)]
+  (when-some [data (lookup-entry config id :sse-specification)]
     (. builder sseSpecification data))
-  (when-let [data (lookup-entry config id :stream-specification)]
+  (when-some [data (lookup-entry config id :stream-specification)]
     (. builder streamSpecification data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :time-to-live-specification)]
+  (when-some [data (lookup-entry config id :time-to-live-specification)]
     (. builder timeToLiveSpecification data))
-  (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
+  (when-some [data (lookup-entry config id :write-on-demand-throughput-settings)]
     (. builder writeOnDemandThroughputSettings data))
-  (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
+  (when-some [data (lookup-entry config id :write-provisioned-throughput-settings)]
     (. builder writeProvisionedThroughputSettings data))
   (.build builder))
 
@@ -782,7 +782,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxReadRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-read-request-units` |
 "
   [^CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-read-request-units)]
+  (when-some [data (lookup-entry config id :max-read-request-units)]
     (. builder maxReadRequestUnits data))
   (.build builder))
 
@@ -811,9 +811,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `readCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:read-capacity-units` |
 "
   [^CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :read-capacity-auto-scaling-settings)]
+  (when-some [data (lookup-entry config id :read-capacity-auto-scaling-settings)]
     (. builder readCapacityAutoScalingSettings data))
-  (when-let [data (lookup-entry config id :read-capacity-units)]
+  (when-some [data (lookup-entry config id :read-capacity-units)]
     (. builder readCapacityUnits data))
   (.build builder))
 
@@ -844,13 +844,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `readProvisionedThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReadProvisionedThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:read-provisioned-throughput-settings` |
 "
   [^CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+  (when-some [data (lookup-entry config id :contributor-insights-specification)]
     (. builder contributorInsightsSpecification data))
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :read-on-demand-throughput-settings)]
+  (when-some [data (lookup-entry config id :read-on-demand-throughput-settings)]
     (. builder readOnDemandThroughputSettings data))
-  (when-let [data (lookup-entry config id :read-provisioned-throughput-settings)]
+  (when-some [data (lookup-entry config id :read-provisioned-throughput-settings)]
     (. builder readProvisionedThroughputSettings data))
   (.build builder))
 
@@ -890,31 +890,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGlobalTable$ReplicaSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+  (when-some [data (lookup-entry config id :contributor-insights-specification)]
     (. builder contributorInsightsSpecification data))
-  (when-let [data (lookup-entry config id :deletion-protection-enabled)]
+  (when-some [data (lookup-entry config id :deletion-protection-enabled)]
     (. builder deletionProtectionEnabled data))
-  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+  (when-some [data (lookup-entry config id :global-secondary-indexes)]
     (. builder globalSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :kinesis-stream-specification)]
+  (when-some [data (lookup-entry config id :kinesis-stream-specification)]
     (. builder kinesisStreamSpecification data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery-specification)]
     (. builder pointInTimeRecoverySpecification data))
-  (when-let [data (lookup-entry config id :read-on-demand-throughput-settings)]
+  (when-some [data (lookup-entry config id :read-on-demand-throughput-settings)]
     (. builder readOnDemandThroughputSettings data))
-  (when-let [data (lookup-entry config id :read-provisioned-throughput-settings)]
+  (when-some [data (lookup-entry config id :read-provisioned-throughput-settings)]
     (. builder readProvisionedThroughputSettings data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :replica-stream-specification)]
+  (when-some [data (lookup-entry config id :replica-stream-specification)]
     (. builder replicaStreamSpecification data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :sse-specification)]
+  (when-some [data (lookup-entry config id :sse-specification)]
     (. builder sseSpecification data))
-  (when-let [data (lookup-entry config id :table-class)]
+  (when-some [data (lookup-entry config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -942,7 +942,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `kmsMasterKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-master-key-id` |
 "
   [^CfnGlobalTable$ReplicaSSESpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-master-key-id)]
+  (when-some [data (lookup-entry config id :kms-master-key-id)]
     (. builder kmsMasterKeyId data))
   (.build builder))
 
@@ -970,7 +970,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `resourcePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-policy` |
 "
   [^CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
   (.build builder))
 
@@ -998,7 +998,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
 "
   [^CfnGlobalTable$ResourcePolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
 
@@ -1027,9 +1027,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-type` |
 "
   [^CfnGlobalTable$SSESpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :sse-enabled)]
+  (when-some [data (lookup-entry config id :sse-enabled)]
     (. builder sseEnabled data))
-  (when-let [data (lookup-entry config id :sse-type)]
+  (when-some [data (lookup-entry config id :sse-type)]
     (. builder sseType data))
   (.build builder))
 
@@ -1057,7 +1057,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamViewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-view-type` |
 "
   [^CfnGlobalTable$StreamSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :stream-view-type)]
+  (when-some [data (lookup-entry config id :stream-view-type)]
     (. builder streamViewType data))
   (.build builder))
 
@@ -1088,13 +1088,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
 "
   [^CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
-  (when-let [data (lookup-entry config id :target-value)]
+  (when-some [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
 
@@ -1123,9 +1123,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnGlobalTable$TimeToLiveSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-name)]
+  (when-some [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -1153,7 +1153,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxWriteRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-write-request-units` |
 "
   [^CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-write-request-units)]
+  (when-some [data (lookup-entry config id :max-write-request-units)]
     (. builder maxWriteRequestUnits data))
   (.build builder))
 
@@ -1181,7 +1181,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeCapacityAutoScalingSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$CapacityAutoScalingSettingsProperty | [[cdk.support/lookup-entry]] | `:write-capacity-auto-scaling-settings` |
 "
   [^CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :write-capacity-auto-scaling-settings)]
+  (when-some [data (lookup-entry config id :write-capacity-auto-scaling-settings)]
     (. builder writeCapacityAutoScalingSettings data))
   (.build builder))
 
@@ -1210,9 +1210,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |
 "
   [^CfnTable$AttributeDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-name)]
+  (when-some [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
-  (when-let [data (lookup-entry config id :attribute-type)]
+  (when-some [data (lookup-entry config id :attribute-type)]
     (. builder attributeType data))
   (.build builder))
 
@@ -1258,43 +1258,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeToLiveSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
 "
   [^CfnTable$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-definitions)]
+  (when-some [data (lookup-entry config id :attribute-definitions)]
     (. builder attributeDefinitions data))
-  (when-let [data (lookup-entry config id :billing-mode)]
+  (when-some [data (lookup-entry config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+  (when-some [data (lookup-entry config id :contributor-insights-specification)]
     (. builder contributorInsightsSpecification data))
-  (when-let [data (lookup-entry config id :deletion-protection-enabled)]
+  (when-some [data (lookup-entry config id :deletion-protection-enabled)]
     (. builder deletionProtectionEnabled data))
-  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+  (when-some [data (lookup-entry config id :global-secondary-indexes)]
     (. builder globalSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :import-source-specification)]
+  (when-some [data (lookup-entry config id :import-source-specification)]
     (. builder importSourceSpecification data))
-  (when-let [data (lookup-entry config id :key-schema)]
+  (when-some [data (lookup-entry config id :key-schema)]
     (. builder keySchema data))
-  (when-let [data (lookup-entry config id :kinesis-stream-specification)]
+  (when-some [data (lookup-entry config id :kinesis-stream-specification)]
     (. builder kinesisStreamSpecification data))
-  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+  (when-some [data (lookup-entry config id :local-secondary-indexes)]
     (. builder localSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :on-demand-throughput)]
+  (when-some [data (lookup-entry config id :on-demand-throughput)]
     (. builder onDemandThroughput data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery-specification)]
     (. builder pointInTimeRecoverySpecification data))
-  (when-let [data (lookup-entry config id :provisioned-throughput)]
+  (when-some [data (lookup-entry config id :provisioned-throughput)]
     (. builder provisionedThroughput data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :sse-specification)]
+  (when-some [data (lookup-entry config id :sse-specification)]
     (. builder sseSpecification data))
-  (when-let [data (lookup-entry config id :stream-specification)]
+  (when-some [data (lookup-entry config id :stream-specification)]
     (. builder streamSpecification data))
-  (when-let [data (lookup-entry config id :table-class)]
+  (when-some [data (lookup-entry config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :time-to-live-specification)]
+  (when-some [data (lookup-entry config id :time-to-live-specification)]
     (. builder timeToLiveSpecification data))
   (.build builder))
 
@@ -1322,7 +1322,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnTable$ContributorInsightsSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -1351,9 +1351,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `headerList` | java.util.List | [[cdk.support/lookup-entry]] | `:header-list` |
 "
   [^CfnTable$CsvProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delimiter)]
+  (when-some [data (lookup-entry config id :delimiter)]
     (. builder delimiter data))
-  (when-let [data (lookup-entry config id :header-list)]
+  (when-some [data (lookup-entry config id :header-list)]
     (. builder headerList data))
   (.build builder))
 
@@ -1386,17 +1386,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `provisionedThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
 "
   [^CfnTable$GlobalSecondaryIndexProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+  (when-some [data (lookup-entry config id :contributor-insights-specification)]
     (. builder contributorInsightsSpecification data))
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :key-schema)]
+  (when-some [data (lookup-entry config id :key-schema)]
     (. builder keySchema data))
-  (when-let [data (lookup-entry config id :on-demand-throughput)]
+  (when-some [data (lookup-entry config id :on-demand-throughput)]
     (. builder onDemandThroughput data))
-  (when-let [data (lookup-entry config id :projection)]
+  (when-some [data (lookup-entry config id :projection)]
     (. builder projection data))
-  (when-let [data (lookup-entry config id :provisioned-throughput)]
+  (when-some [data (lookup-entry config id :provisioned-throughput)]
     (. builder provisionedThroughput data))
   (.build builder))
 
@@ -1427,13 +1427,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3BucketSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-bucket-source` |
 "
   [^CfnTable$ImportSourceSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :input-compression-type)]
+  (when-some [data (lookup-entry config id :input-compression-type)]
     (. builder inputCompressionType data))
-  (when-let [data (lookup-entry config id :input-format)]
+  (when-some [data (lookup-entry config id :input-format)]
     (. builder inputFormat data))
-  (when-let [data (lookup-entry config id :input-format-options)]
+  (when-some [data (lookup-entry config id :input-format-options)]
     (. builder inputFormatOptions data))
-  (when-let [data (lookup-entry config id :s3-bucket-source)]
+  (when-some [data (lookup-entry config id :s3-bucket-source)]
     (. builder s3BucketSource data))
   (.build builder))
 
@@ -1461,7 +1461,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `csv` | software.amazon.awscdk.services.dynamodb.CfnTable$CsvProperty | [[cdk.support/lookup-entry]] | `:csv` |
 "
   [^CfnTable$InputFormatOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :csv)]
+  (when-some [data (lookup-entry config id :csv)]
     (. builder csv data))
   (.build builder))
 
@@ -1490,9 +1490,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |
 "
   [^CfnTable$KeySchemaProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-name)]
+  (when-some [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
-  (when-let [data (lookup-entry config id :key-type)]
+  (when-some [data (lookup-entry config id :key-type)]
     (. builder keyType data))
   (.build builder))
 
@@ -1521,9 +1521,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
 "
   [^CfnTable$KinesisStreamSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :approximate-creation-date-time-precision)]
+  (when-some [data (lookup-entry config id :approximate-creation-date-time-precision)]
     (. builder approximateCreationDateTimePrecision data))
-  (when-let [data (lookup-entry config id :stream-arn)]
+  (when-some [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
 
@@ -1553,11 +1553,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `projection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:projection` |
 "
   [^CfnTable$LocalSecondaryIndexProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :key-schema)]
+  (when-some [data (lookup-entry config id :key-schema)]
     (. builder keySchema data))
-  (when-let [data (lookup-entry config id :projection)]
+  (when-some [data (lookup-entry config id :projection)]
     (. builder projection data))
   (.build builder))
 
@@ -1586,9 +1586,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxWriteRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-write-request-units` |
 "
   [^CfnTable$OnDemandThroughputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-read-request-units)]
+  (when-some [data (lookup-entry config id :max-read-request-units)]
     (. builder maxReadRequestUnits data))
-  (when-let [data (lookup-entry config id :max-write-request-units)]
+  (when-some [data (lookup-entry config id :max-write-request-units)]
     (. builder maxWriteRequestUnits data))
   (.build builder))
 
@@ -1616,7 +1616,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `pointInTimeRecoveryEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |
 "
   [^CfnTable$PointInTimeRecoverySpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery-enabled)]
     (. builder pointInTimeRecoveryEnabled data))
   (.build builder))
 
@@ -1645,9 +1645,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `projectionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:projection-type` |
 "
   [^CfnTable$ProjectionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :non-key-attributes)]
+  (when-some [data (lookup-entry config id :non-key-attributes)]
     (. builder nonKeyAttributes data))
-  (when-let [data (lookup-entry config id :projection-type)]
+  (when-some [data (lookup-entry config id :projection-type)]
     (. builder projectionType data))
   (.build builder))
 
@@ -1693,43 +1693,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeToLiveSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
 "
   [^CfnTableProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-definitions)]
+  (when-some [data (lookup-entry config id :attribute-definitions)]
     (. builder attributeDefinitions data))
-  (when-let [data (lookup-entry config id :billing-mode)]
+  (when-some [data (lookup-entry config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+  (when-some [data (lookup-entry config id :contributor-insights-specification)]
     (. builder contributorInsightsSpecification data))
-  (when-let [data (lookup-entry config id :deletion-protection-enabled)]
+  (when-some [data (lookup-entry config id :deletion-protection-enabled)]
     (. builder deletionProtectionEnabled data))
-  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+  (when-some [data (lookup-entry config id :global-secondary-indexes)]
     (. builder globalSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :import-source-specification)]
+  (when-some [data (lookup-entry config id :import-source-specification)]
     (. builder importSourceSpecification data))
-  (when-let [data (lookup-entry config id :key-schema)]
+  (when-some [data (lookup-entry config id :key-schema)]
     (. builder keySchema data))
-  (when-let [data (lookup-entry config id :kinesis-stream-specification)]
+  (when-some [data (lookup-entry config id :kinesis-stream-specification)]
     (. builder kinesisStreamSpecification data))
-  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+  (when-some [data (lookup-entry config id :local-secondary-indexes)]
     (. builder localSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :on-demand-throughput)]
+  (when-some [data (lookup-entry config id :on-demand-throughput)]
     (. builder onDemandThroughput data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery-specification)]
     (. builder pointInTimeRecoverySpecification data))
-  (when-let [data (lookup-entry config id :provisioned-throughput)]
+  (when-some [data (lookup-entry config id :provisioned-throughput)]
     (. builder provisionedThroughput data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :sse-specification)]
+  (when-some [data (lookup-entry config id :sse-specification)]
     (. builder sseSpecification data))
-  (when-let [data (lookup-entry config id :stream-specification)]
+  (when-some [data (lookup-entry config id :stream-specification)]
     (. builder streamSpecification data))
-  (when-let [data (lookup-entry config id :table-class)]
+  (when-some [data (lookup-entry config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :time-to-live-specification)]
+  (when-some [data (lookup-entry config id :time-to-live-specification)]
     (. builder timeToLiveSpecification data))
   (.build builder))
 
@@ -1758,9 +1758,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity-units` |
 "
   [^CfnTable$ProvisionedThroughputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :read-capacity-units)]
+  (when-some [data (lookup-entry config id :read-capacity-units)]
     (. builder readCapacityUnits data))
-  (when-let [data (lookup-entry config id :write-capacity-units)]
+  (when-some [data (lookup-entry config id :write-capacity-units)]
     (. builder writeCapacityUnits data))
   (.build builder))
 
@@ -1788,7 +1788,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
 "
   [^CfnTable$ResourcePolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :policy-document)]
+  (when-some [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
 
@@ -1818,11 +1818,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
 "
   [^CfnTable$S3BucketSourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-bucket-owner)]
+  (when-some [data (lookup-entry config id :s3-bucket-owner)]
     (. builder s3BucketOwner data))
-  (when-let [data (lookup-entry config id :s3-key-prefix)]
+  (when-some [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
   (.build builder))
 
@@ -1852,11 +1852,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-type` |
 "
   [^CfnTable$SSESpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-master-key-id)]
+  (when-some [data (lookup-entry config id :kms-master-key-id)]
     (. builder kmsMasterKeyId data))
-  (when-let [data (lookup-entry config id :sse-enabled)]
+  (when-some [data (lookup-entry config id :sse-enabled)]
     (. builder sseEnabled data))
-  (when-let [data (lookup-entry config id :sse-type)]
+  (when-some [data (lookup-entry config id :sse-type)]
     (. builder sseType data))
   (.build builder))
 
@@ -1885,9 +1885,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `streamViewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-view-type` |
 "
   [^CfnTable$StreamSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :stream-view-type)]
+  (when-some [data (lookup-entry config id :stream-view-type)]
     (. builder streamViewType data))
   (.build builder))
 
@@ -1916,9 +1916,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnTable$TimeToLiveSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-name)]
+  (when-some [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -1947,9 +1947,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `headerList` | java.util.List | [[cdk.support/lookup-entry]] | `:header-list` |
 "
   [^CsvOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :delimiter)]
+  (when-some [data (lookup-entry config id :delimiter)]
     (. builder delimiter data))
-  (when-let [data (lookup-entry config id :header-list)]
+  (when-some [data (lookup-entry config id :header-list)]
     (. builder headerList data))
   (.build builder))
 
@@ -1978,9 +1978,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 "
   [^EnableScalingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
   (.build builder))
 
@@ -2014,19 +2014,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |
 "
   [^GlobalSecondaryIndexProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :non-key-attributes)]
+  (when-some [data (lookup-entry config id :non-key-attributes)]
     (. builder nonKeyAttributes data))
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
-  (when-let [data (projection-type config id :projection-type)]
+  (when-some [data (projection-type config id :projection-type)]
     (. builder projectionType data))
-  (when-let [data (lookup-entry config id :read-capacity)]
+  (when-some [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
-  (when-let [data (lookup-entry config id :write-capacity)]
+  (when-some [data (lookup-entry config id :write-capacity)]
     (. builder writeCapacity data))
   (.build builder))
 
@@ -2060,19 +2060,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:write-capacity` |
 "
   [^GlobalSecondaryIndexPropsV2$Builder builder id config]
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :non-key-attributes)]
+  (when-some [data (lookup-entry config id :non-key-attributes)]
     (. builder nonKeyAttributes data))
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
-  (when-let [data (projection-type config id :projection-type)]
+  (when-some [data (projection-type config id :projection-type)]
     (. builder projectionType data))
-  (when-let [data (lookup-entry config id :read-capacity)]
+  (when-some [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
-  (when-let [data (lookup-entry config id :write-capacity)]
+  (when-some [data (lookup-entry config id :write-capacity)]
     (. builder writeCapacity data))
   (.build builder))
 
@@ -2104,15 +2104,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `keyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-prefix` |
 "
   [^ImportSourceSpecification$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :bucket-owner)]
+  (when-some [data (lookup-entry config id :bucket-owner)]
     (. builder bucketOwner data))
-  (when-let [data (input-compression-type config id :compression-type)]
+  (when-some [data (input-compression-type config id :compression-type)]
     (. builder compressionType data))
-  (when-let [data (lookup-entry config id :input-format)]
+  (when-some [data (lookup-entry config id :input-format)]
     (. builder inputFormat data))
-  (when-let [data (lookup-entry config id :key-prefix)]
+  (when-some [data (lookup-entry config id :key-prefix)]
     (. builder keyPrefix data))
   (.build builder))
 
@@ -2143,13 +2143,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sortKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:sort-key` |
 "
   [^LocalSecondaryIndexProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :non-key-attributes)]
+  (when-some [data (lookup-entry config id :non-key-attributes)]
     (. builder nonKeyAttributes data))
-  (when-let [data (projection-type config id :projection-type)]
+  (when-some [data (projection-type config id :projection-type)]
     (. builder projectionType data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
   (.build builder))
 
@@ -2185,23 +2185,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^OperationsMetricOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :dimensions-map)]
+  (when-some [data (lookup-entry config id :dimensions-map)]
     (. builder dimensionsMap data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :operations)]
+  (when-some [data (lookup-entry config id :operations)]
     (. builder operations data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -2230,9 +2230,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `readCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:read-capacity` |
 "
   [^ReplicaGlobalSecondaryIndexOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :contributor-insights)]
+  (when-some [data (lookup-entry config id :contributor-insights)]
     (. builder contributorInsights data))
-  (when-let [data (lookup-entry config id :read-capacity)]
+  (when-some [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
   (.build builder))
 
@@ -2269,25 +2269,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^ReplicaTableProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :contributor-insights)]
+  (when-some [data (lookup-entry config id :contributor-insights)]
     (. builder contributorInsights data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :global-secondary-index-options)]
+  (when-some [data (lookup-entry config id :global-secondary-index-options)]
     (. builder globalSecondaryIndexOptions data))
-  (when-let [data (lookup-entry config id :kinesis-stream)]
+  (when-some [data (lookup-entry config id :kinesis-stream)]
     (. builder kinesisStream data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery)]
     (. builder pointInTimeRecovery data))
-  (when-let [data (lookup-entry config id :read-capacity)]
+  (when-some [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (table-class config id :table-class)]
+  (when-some [data (table-class config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2316,9 +2316,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sortKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:sort-key` |
 "
   [^SchemaOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
   (.build builder))
 
@@ -2348,11 +2348,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `projectionType` | software.amazon.awscdk.services.dynamodb.ProjectionType | [[cdk.api.services.dynamodb/projection-type]] | `:projection-type` |
 "
   [^SecondaryIndexProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :non-key-attributes)]
+  (when-some [data (lookup-entry config id :non-key-attributes)]
     (. builder nonKeyAttributes data))
-  (when-let [data (projection-type config id :projection-type)]
+  (when-some [data (projection-type config id :projection-type)]
     (. builder projectionType data))
   (.build builder))
 
@@ -2388,23 +2388,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
 "
   [^SystemErrorsForOperationsMetricOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :account)]
+  (when-some [data (lookup-entry config id :account)]
     (. builder account data))
-  (when-let [data (lookup-entry config id :color)]
+  (when-some [data (lookup-entry config id :color)]
     (. builder color data))
-  (when-let [data (lookup-entry config id :dimensions-map)]
+  (when-some [data (lookup-entry config id :dimensions-map)]
     (. builder dimensionsMap data))
-  (when-let [data (lookup-entry config id :label)]
+  (when-some [data (lookup-entry config id :label)]
     (. builder label data))
-  (when-let [data (lookup-entry config id :operations)]
+  (when-some [data (lookup-entry config id :operations)]
     (. builder operations data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
-  (when-let [data (unit config id :unit)]
+  (when-some [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -2438,19 +2438,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tableStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-stream-arn` |
 "
   [^TableAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :global-indexes)]
+  (when-some [data (lookup-entry config id :global-indexes)]
     (. builder globalIndexes data))
-  (when-let [data (lookup-entry config id :grant-index-permissions)]
+  (when-some [data (lookup-entry config id :grant-index-permissions)]
     (. builder grantIndexPermissions data))
-  (when-let [data (lookup-entry config id :local-indexes)]
+  (when-some [data (lookup-entry config id :local-indexes)]
     (. builder localIndexes data))
-  (when-let [data (lookup-entry config id :table-arn)]
+  (when-some [data (lookup-entry config id :table-arn)]
     (. builder tableArn data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :table-stream-arn)]
+  (when-some [data (lookup-entry config id :table-stream-arn)]
     (. builder tableStreamArn data))
   (.build builder))
 
@@ -2485,21 +2485,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tableStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-stream-arn` |
 "
   [^TableAttributesV2$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :global-indexes)]
+  (when-some [data (lookup-entry config id :global-indexes)]
     (. builder globalIndexes data))
-  (when-let [data (lookup-entry config id :grant-index-permissions)]
+  (when-some [data (lookup-entry config id :grant-index-permissions)]
     (. builder grantIndexPermissions data))
-  (when-let [data (lookup-entry config id :local-indexes)]
+  (when-some [data (lookup-entry config id :local-indexes)]
     (. builder localIndexes data))
-  (when-let [data (lookup-entry config id :table-arn)]
+  (when-some [data (lookup-entry config id :table-arn)]
     (. builder tableArn data))
-  (when-let [data (lookup-entry config id :table-id)]
+  (when-some [data (lookup-entry config id :table-id)]
     (. builder tableId data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :table-stream-arn)]
+  (when-some [data (lookup-entry config id :table-stream-arn)]
     (. builder tableStreamArn data))
   (.build builder))
 
@@ -2547,47 +2547,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |
 "
   [^Table$Builder builder id config]
-  (when-let [data (billing-mode config id :billing-mode)]
+  (when-some [data (billing-mode config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :contributor-insights-enabled)]
+  (when-some [data (lookup-entry config id :contributor-insights-enabled)]
     (. builder contributorInsightsEnabled data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (table-encryption config id :encryption)]
+  (when-some [data (table-encryption config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :import-source)]
+  (when-some [data (lookup-entry config id :import-source)]
     (. builder importSource data))
-  (when-let [data (lookup-entry config id :kinesis-stream)]
+  (when-some [data (lookup-entry config id :kinesis-stream)]
     (. builder kinesisStream data))
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery)]
     (. builder pointInTimeRecovery data))
-  (when-let [data (lookup-entry config id :read-capacity)]
+  (when-some [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :replication-regions)]
+  (when-some [data (lookup-entry config id :replication-regions)]
     (. builder replicationRegions data))
-  (when-let [data (lookup-entry config id :replication-timeout)]
+  (when-some [data (lookup-entry config id :replication-timeout)]
     (. builder replicationTimeout data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
-  (when-let [data (stream-view-type config id :stream)]
+  (when-some [data (stream-view-type config id :stream)]
     (. builder stream data))
-  (when-let [data (table-class config id :table-class)]
+  (when-some [data (table-class config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+  (when-some [data (lookup-entry config id :time-to-live-attribute)]
     (. builder timeToLiveAttribute data))
-  (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
+  (when-some [data (lookup-entry config id :wait-for-replication-to-finish)]
     (. builder waitForReplicationToFinish data))
-  (when-let [data (lookup-entry config id :write-capacity)]
+  (when-some [data (lookup-entry config id :write-capacity)]
     (. builder writeCapacity data))
   (.build builder))
 
@@ -2633,43 +2633,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |
 "
   [^TableOptions$Builder builder id config]
-  (when-let [data (billing-mode config id :billing-mode)]
+  (when-some [data (billing-mode config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :contributor-insights-enabled)]
+  (when-some [data (lookup-entry config id :contributor-insights-enabled)]
     (. builder contributorInsightsEnabled data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (table-encryption config id :encryption)]
+  (when-some [data (table-encryption config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :import-source)]
+  (when-some [data (lookup-entry config id :import-source)]
     (. builder importSource data))
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery)]
     (. builder pointInTimeRecovery data))
-  (when-let [data (lookup-entry config id :read-capacity)]
+  (when-some [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :replication-regions)]
+  (when-some [data (lookup-entry config id :replication-regions)]
     (. builder replicationRegions data))
-  (when-let [data (lookup-entry config id :replication-timeout)]
+  (when-some [data (lookup-entry config id :replication-timeout)]
     (. builder replicationTimeout data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
-  (when-let [data (stream-view-type config id :stream)]
+  (when-some [data (stream-view-type config id :stream)]
     (. builder stream data))
-  (when-let [data (table-class config id :table-class)]
+  (when-some [data (table-class config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+  (when-some [data (lookup-entry config id :time-to-live-attribute)]
     (. builder timeToLiveAttribute data))
-  (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
+  (when-some [data (lookup-entry config id :wait-for-replication-to-finish)]
     (. builder waitForReplicationToFinish data))
-  (when-let [data (lookup-entry config id :write-capacity)]
+  (when-some [data (lookup-entry config id :write-capacity)]
     (. builder writeCapacity data))
   (.build builder))
 
@@ -2703,19 +2703,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^TableOptionsV2$Builder builder id config]
-  (when-let [data (lookup-entry config id :contributor-insights)]
+  (when-some [data (lookup-entry config id :contributor-insights)]
     (. builder contributorInsights data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (lookup-entry config id :kinesis-stream)]
+  (when-some [data (lookup-entry config id :kinesis-stream)]
     (. builder kinesisStream data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery)]
     (. builder pointInTimeRecovery data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (table-class config id :table-class)]
+  (when-some [data (table-class config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2763,47 +2763,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |
 "
   [^TableProps$Builder builder id config]
-  (when-let [data (billing-mode config id :billing-mode)]
+  (when-some [data (billing-mode config id :billing-mode)]
     (. builder billingMode data))
-  (when-let [data (lookup-entry config id :contributor-insights-enabled)]
+  (when-some [data (lookup-entry config id :contributor-insights-enabled)]
     (. builder contributorInsightsEnabled data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (table-encryption config id :encryption)]
+  (when-some [data (table-encryption config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :import-source)]
+  (when-some [data (lookup-entry config id :import-source)]
     (. builder importSource data))
-  (when-let [data (lookup-entry config id :kinesis-stream)]
+  (when-some [data (lookup-entry config id :kinesis-stream)]
     (. builder kinesisStream data))
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery)]
     (. builder pointInTimeRecovery data))
-  (when-let [data (lookup-entry config id :read-capacity)]
+  (when-some [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :replication-regions)]
+  (when-some [data (lookup-entry config id :replication-regions)]
     (. builder replicationRegions data))
-  (when-let [data (lookup-entry config id :replication-timeout)]
+  (when-some [data (lookup-entry config id :replication-timeout)]
     (. builder replicationTimeout data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
-  (when-let [data (stream-view-type config id :stream)]
+  (when-some [data (stream-view-type config id :stream)]
     (. builder stream data))
-  (when-let [data (table-class config id :table-class)]
+  (when-some [data (table-class config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+  (when-some [data (lookup-entry config id :time-to-live-attribute)]
     (. builder timeToLiveAttribute data))
-  (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
+  (when-some [data (lookup-entry config id :wait-for-replication-to-finish)]
     (. builder waitForReplicationToFinish data))
-  (when-let [data (lookup-entry config id :write-capacity)]
+  (when-some [data (lookup-entry config id :write-capacity)]
     (. builder writeCapacity data))
   (.build builder))
 
@@ -2848,41 +2848,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |
 "
   [^TablePropsV2$Builder builder id config]
-  (when-let [data (lookup-entry config id :billing)]
+  (when-some [data (lookup-entry config id :billing)]
     (. builder billing data))
-  (when-let [data (lookup-entry config id :contributor-insights)]
+  (when-some [data (lookup-entry config id :contributor-insights)]
     (. builder contributorInsights data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (stream-view-type config id :dynamo-stream)]
+  (when-some [data (stream-view-type config id :dynamo-stream)]
     (. builder dynamoStream data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+  (when-some [data (lookup-entry config id :global-secondary-indexes)]
     (. builder globalSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :kinesis-stream)]
+  (when-some [data (lookup-entry config id :kinesis-stream)]
     (. builder kinesisStream data))
-  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+  (when-some [data (lookup-entry config id :local-secondary-indexes)]
     (. builder localSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery)]
     (. builder pointInTimeRecovery data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :replicas)]
+  (when-some [data (lookup-entry config id :replicas)]
     (. builder replicas data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
-  (when-let [data (table-class config id :table-class)]
+  (when-some [data (table-class config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+  (when-some [data (lookup-entry config id :time-to-live-attribute)]
     (. builder timeToLiveAttribute data))
   (.build builder))
 
@@ -2927,41 +2927,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |
 "
   [^TableV2$Builder builder id config]
-  (when-let [data (lookup-entry config id :billing)]
+  (when-some [data (lookup-entry config id :billing)]
     (. builder billing data))
-  (when-let [data (lookup-entry config id :contributor-insights)]
+  (when-some [data (lookup-entry config id :contributor-insights)]
     (. builder contributorInsights data))
-  (when-let [data (lookup-entry config id :deletion-protection)]
+  (when-some [data (lookup-entry config id :deletion-protection)]
     (. builder deletionProtection data))
-  (when-let [data (stream-view-type config id :dynamo-stream)]
+  (when-some [data (stream-view-type config id :dynamo-stream)]
     (. builder dynamoStream data))
-  (when-let [data (lookup-entry config id :encryption)]
+  (when-some [data (lookup-entry config id :encryption)]
     (. builder encryption data))
-  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+  (when-some [data (lookup-entry config id :global-secondary-indexes)]
     (. builder globalSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :kinesis-stream)]
+  (when-some [data (lookup-entry config id :kinesis-stream)]
     (. builder kinesisStream data))
-  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+  (when-some [data (lookup-entry config id :local-secondary-indexes)]
     (. builder localSecondaryIndexes data))
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
-  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+  (when-some [data (lookup-entry config id :point-in-time-recovery)]
     (. builder pointInTimeRecovery data))
-  (when-let [data (removal-policy config id :removal-policy)]
+  (when-some [data (removal-policy config id :removal-policy)]
     (. builder removalPolicy data))
-  (when-let [data (lookup-entry config id :replicas)]
+  (when-some [data (lookup-entry config id :replicas)]
     (. builder replicas data))
-  (when-let [data (lookup-entry config id :resource-policy)]
+  (when-some [data (lookup-entry config id :resource-policy)]
     (. builder resourcePolicy data))
-  (when-let [data (lookup-entry config id :sort-key)]
+  (when-some [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
-  (when-let [data (table-class config id :table-class)]
+  (when-some [data (table-class config id :table-class)]
     (. builder tableClass data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+  (when-some [data (lookup-entry config id :time-to-live-attribute)]
     (. builder timeToLiveAttribute data))
   (.build builder))
 
@@ -2990,9 +2990,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `writeCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:write-capacity` |
 "
   [^ThroughputProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :read-capacity)]
+  (when-some [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
-  (when-let [data (lookup-entry config id :write-capacity)]
+  (when-some [data (lookup-entry config id :write-capacity)]
     (. builder writeCapacity data))
   (.build builder))
 
@@ -3024,15 +3024,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetUtilizationPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-utilization-percent` |
 "
   [^UtilizationScalingProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :disable-scale-in)]
+  (when-some [data (lookup-entry config id :disable-scale-in)]
     (. builder disableScaleIn data))
-  (when-let [data (lookup-entry config id :policy-name)]
+  (when-some [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
-  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+  (when-some [data (lookup-entry config id :scale-in-cooldown)]
     (. builder scaleInCooldown data))
-  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+  (when-some [data (lookup-entry config id :scale-out-cooldown)]
     (. builder scaleOutCooldown data))
-  (when-let [data (lookup-entry config id :target-utilization-percent)]
+  (when-some [data (lookup-entry config id :target-utilization-percent)]
     (. builder targetUtilizationPercent data))
   (.build builder))
 

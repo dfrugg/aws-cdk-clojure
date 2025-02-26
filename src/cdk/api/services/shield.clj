@@ -27,9 +27,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDRTAccess$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-bucket-list)]
+  (when-some [data (lookup-entry config id :log-bucket-list)]
     (. builder logBucketList data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -58,9 +58,9 @@
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 "
   [^CfnDRTAccessProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-bucket-list)]
+  (when-some [data (lookup-entry config id :log-bucket-list)]
     (. builder logBucketList data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
 
@@ -89,9 +89,9 @@
 | `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |
 "
   [^CfnProactiveEngagement$Builder builder id config]
-  (when-let [data (lookup-entry config id :emergency-contact-list)]
+  (when-some [data (lookup-entry config id :emergency-contact-list)]
     (. builder emergencyContactList data))
-  (when-let [data (lookup-entry config id :proactive-engagement-status)]
+  (when-some [data (lookup-entry config id :proactive-engagement-status)]
     (. builder proactiveEngagementStatus data))
   (.build builder))
 
@@ -121,11 +121,11 @@
 | `phoneNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:phone-number` |
 "
   [^CfnProactiveEngagement$EmergencyContactProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :contact-notes)]
+  (when-some [data (lookup-entry config id :contact-notes)]
     (. builder contactNotes data))
-  (when-let [data (lookup-entry config id :email-address)]
+  (when-some [data (lookup-entry config id :email-address)]
     (. builder emailAddress data))
-  (when-let [data (lookup-entry config id :phone-number)]
+  (when-some [data (lookup-entry config id :phone-number)]
     (. builder phoneNumber data))
   (.build builder))
 
@@ -154,9 +154,9 @@
 | `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |
 "
   [^CfnProactiveEngagementProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :emergency-contact-list)]
+  (when-some [data (lookup-entry config id :emergency-contact-list)]
     (. builder emergencyContactList data))
-  (when-let [data (lookup-entry config id :proactive-engagement-status)]
+  (when-some [data (lookup-entry config id :proactive-engagement-status)]
     (. builder proactiveEngagementStatus data))
   (.build builder))
 
@@ -185,9 +185,9 @@
 | `count` | java.lang.Object | [[cdk.support/lookup-entry]] | `:count` |
 "
   [^CfnProtection$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :block)]
+  (when-some [data (lookup-entry config id :block)]
     (. builder block data))
-  (when-let [data (lookup-entry config id :count)]
+  (when-some [data (lookup-entry config id :count)]
     (. builder count data))
   (.build builder))
 
@@ -216,9 +216,9 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -250,15 +250,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProtection$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-layer-automatic-response-configuration)]
+  (when-some [data (lookup-entry config id :application-layer-automatic-response-configuration)]
     (. builder applicationLayerAutomaticResponseConfiguration data))
-  (when-let [data (lookup-entry config id :health-check-arns)]
+  (when-some [data (lookup-entry config id :health-check-arns)]
     (. builder healthCheckArns data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -291,17 +291,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProtectionGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregation)]
+  (when-some [data (lookup-entry config id :aggregation)]
     (. builder aggregation data))
-  (when-let [data (lookup-entry config id :members)]
+  (when-some [data (lookup-entry config id :members)]
     (. builder members data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :protection-group-id)]
+  (when-some [data (lookup-entry config id :protection-group-id)]
     (. builder protectionGroupId data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -334,17 +334,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProtectionGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregation)]
+  (when-some [data (lookup-entry config id :aggregation)]
     (. builder aggregation data))
-  (when-let [data (lookup-entry config id :members)]
+  (when-some [data (lookup-entry config id :members)]
     (. builder members data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :protection-group-id)]
+  (when-some [data (lookup-entry config id :protection-group-id)]
     (. builder protectionGroupId data))
-  (when-let [data (lookup-entry config id :resource-type)]
+  (when-some [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -376,15 +376,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProtectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-layer-automatic-response-configuration)]
+  (when-some [data (lookup-entry config id :application-layer-automatic-response-configuration)]
     (. builder applicationLayerAutomaticResponseConfiguration data))
-  (when-let [data (lookup-entry config id :health-check-arns)]
+  (when-some [data (lookup-entry config id :health-check-arns)]
     (. builder healthCheckArns data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

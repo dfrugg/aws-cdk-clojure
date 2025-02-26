@@ -34,11 +34,11 @@
 | `allowResources` | java.util.List | [[cdk.support/lookup-entry]] | `:allow-resources` |
 "
   [^CfnAPIKey$ApiKeyRestrictionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allow-actions)]
+  (when-some [data (lookup-entry config id :allow-actions)]
     (. builder allowActions data))
-  (when-let [data (lookup-entry config id :allow-referers)]
+  (when-some [data (lookup-entry config id :allow-referers)]
     (. builder allowReferers data))
-  (when-let [data (lookup-entry config id :allow-resources)]
+  (when-some [data (lookup-entry config id :allow-resources)]
     (. builder allowResources data))
   (.build builder))
 
@@ -73,21 +73,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAPIKey$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :expire-time)]
+  (when-some [data (lookup-entry config id :expire-time)]
     (. builder expireTime data))
-  (when-let [data (lookup-entry config id :force-delete)]
+  (when-some [data (lookup-entry config id :force-delete)]
     (. builder forceDelete data))
-  (when-let [data (lookup-entry config id :force-update)]
+  (when-some [data (lookup-entry config id :force-update)]
     (. builder forceUpdate data))
-  (when-let [data (lookup-entry config id :key-name)]
+  (when-some [data (lookup-entry config id :key-name)]
     (. builder keyName data))
-  (when-let [data (lookup-entry config id :no-expiry)]
+  (when-some [data (lookup-entry config id :no-expiry)]
     (. builder noExpiry data))
-  (when-let [data (lookup-entry config id :restrictions)]
+  (when-some [data (lookup-entry config id :restrictions)]
     (. builder restrictions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -122,21 +122,21 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAPIKeyProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :expire-time)]
+  (when-some [data (lookup-entry config id :expire-time)]
     (. builder expireTime data))
-  (when-let [data (lookup-entry config id :force-delete)]
+  (when-some [data (lookup-entry config id :force-delete)]
     (. builder forceDelete data))
-  (when-let [data (lookup-entry config id :force-update)]
+  (when-some [data (lookup-entry config id :force-update)]
     (. builder forceUpdate data))
-  (when-let [data (lookup-entry config id :key-name)]
+  (when-some [data (lookup-entry config id :key-name)]
     (. builder keyName data))
-  (when-let [data (lookup-entry config id :no-expiry)]
+  (when-some [data (lookup-entry config id :no-expiry)]
     (. builder noExpiry data))
-  (when-let [data (lookup-entry config id :restrictions)]
+  (when-some [data (lookup-entry config id :restrictions)]
     (. builder restrictions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -169,17 +169,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGeofenceCollection$Builder builder id config]
-  (when-let [data (lookup-entry config id :collection-name)]
+  (when-some [data (lookup-entry config id :collection-name)]
     (. builder collectionName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :pricing-plan-data-source)]
+  (when-some [data (lookup-entry config id :pricing-plan-data-source)]
     (. builder pricingPlanDataSource data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -212,17 +212,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnGeofenceCollectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :collection-name)]
+  (when-some [data (lookup-entry config id :collection-name)]
     (. builder collectionName data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :pricing-plan-data-source)]
+  (when-some [data (lookup-entry config id :pricing-plan-data-source)]
     (. builder pricingPlanDataSource data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -254,15 +254,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMap$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :map-name)]
+  (when-some [data (lookup-entry config id :map-name)]
     (. builder mapName data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -292,11 +292,11 @@
 | `style` | java.lang.String | [[cdk.support/lookup-entry]] | `:style` |
 "
   [^CfnMap$MapConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-layers)]
+  (when-some [data (lookup-entry config id :custom-layers)]
     (. builder customLayers data))
-  (when-let [data (lookup-entry config id :political-view)]
+  (when-some [data (lookup-entry config id :political-view)]
     (. builder politicalView data))
-  (when-let [data (lookup-entry config id :style)]
+  (when-some [data (lookup-entry config id :style)]
     (. builder style data))
   (.build builder))
 
@@ -328,15 +328,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnMapProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration)]
+  (when-some [data (lookup-entry config id :configuration)]
     (. builder configuration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :map-name)]
+  (when-some [data (lookup-entry config id :map-name)]
     (. builder mapName data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -369,17 +369,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPlaceIndex$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :data-source-configuration)]
+  (when-some [data (lookup-entry config id :data-source-configuration)]
     (. builder dataSourceConfiguration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -407,7 +407,7 @@
 | `intendedUse` | java.lang.String | [[cdk.support/lookup-entry]] | `:intended-use` |
 "
   [^CfnPlaceIndex$DataSourceConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :intended-use)]
+  (when-some [data (lookup-entry config id :intended-use)]
     (. builder intendedUse data))
   (.build builder))
 
@@ -440,17 +440,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnPlaceIndexProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :data-source-configuration)]
+  (when-some [data (lookup-entry config id :data-source-configuration)]
     (. builder dataSourceConfiguration data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :index-name)]
+  (when-some [data (lookup-entry config id :index-name)]
     (. builder indexName data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -482,15 +482,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRouteCalculator$Builder builder id config]
-  (when-let [data (lookup-entry config id :calculator-name)]
+  (when-some [data (lookup-entry config id :calculator-name)]
     (. builder calculatorName data))
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -522,15 +522,15 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRouteCalculatorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :calculator-name)]
+  (when-some [data (lookup-entry config id :calculator-name)]
     (. builder calculatorName data))
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -566,23 +566,23 @@
 | `trackerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracker-name` |
 "
   [^CfnTracker$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-bridge-enabled)]
+  (when-some [data (lookup-entry config id :event-bridge-enabled)]
     (. builder eventBridgeEnabled data))
-  (when-let [data (lookup-entry config id :kms-key-enable-geospatial-queries)]
+  (when-some [data (lookup-entry config id :kms-key-enable-geospatial-queries)]
     (. builder kmsKeyEnableGeospatialQueries data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :position-filtering)]
+  (when-some [data (lookup-entry config id :position-filtering)]
     (. builder positionFiltering data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :pricing-plan-data-source)]
+  (when-some [data (lookup-entry config id :pricing-plan-data-source)]
     (. builder pricingPlanDataSource data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tracker-name)]
+  (when-some [data (lookup-entry config id :tracker-name)]
     (. builder trackerName data))
   (.build builder))
 
@@ -611,9 +611,9 @@
 | `trackerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracker-name` |
 "
   [^CfnTrackerConsumer$Builder builder id config]
-  (when-let [data (lookup-entry config id :consumer-arn)]
+  (when-some [data (lookup-entry config id :consumer-arn)]
     (. builder consumerArn data))
-  (when-let [data (lookup-entry config id :tracker-name)]
+  (when-some [data (lookup-entry config id :tracker-name)]
     (. builder trackerName data))
   (.build builder))
 
@@ -642,9 +642,9 @@
 | `trackerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracker-name` |
 "
   [^CfnTrackerConsumerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :consumer-arn)]
+  (when-some [data (lookup-entry config id :consumer-arn)]
     (. builder consumerArn data))
-  (when-let [data (lookup-entry config id :tracker-name)]
+  (when-some [data (lookup-entry config id :tracker-name)]
     (. builder trackerName data))
   (.build builder))
 
@@ -680,23 +680,23 @@
 | `trackerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracker-name` |
 "
   [^CfnTrackerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :event-bridge-enabled)]
+  (when-some [data (lookup-entry config id :event-bridge-enabled)]
     (. builder eventBridgeEnabled data))
-  (when-let [data (lookup-entry config id :kms-key-enable-geospatial-queries)]
+  (when-some [data (lookup-entry config id :kms-key-enable-geospatial-queries)]
     (. builder kmsKeyEnableGeospatialQueries data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :position-filtering)]
+  (when-some [data (lookup-entry config id :position-filtering)]
     (. builder positionFiltering data))
-  (when-let [data (lookup-entry config id :pricing-plan)]
+  (when-some [data (lookup-entry config id :pricing-plan)]
     (. builder pricingPlan data))
-  (when-let [data (lookup-entry config id :pricing-plan-data-source)]
+  (when-some [data (lookup-entry config id :pricing-plan-data-source)]
     (. builder pricingPlanDataSource data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :tracker-name)]
+  (when-some [data (lookup-entry config id :tracker-name)]
     (. builder trackerName data))
   (.build builder))
 

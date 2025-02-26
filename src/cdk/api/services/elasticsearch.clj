@@ -33,13 +33,13 @@
 | `masterUserOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:master-user-options` |
 "
   [^CfnDomain$AdvancedSecurityOptionsInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :anonymous-auth-enabled)]
+  (when-some [data (lookup-entry config id :anonymous-auth-enabled)]
     (. builder anonymousAuthEnabled data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :internal-user-database-enabled)]
+  (when-some [data (lookup-entry config id :internal-user-database-enabled)]
     (. builder internalUserDatabaseEnabled data))
-  (when-let [data (lookup-entry config id :master-user-options)]
+  (when-some [data (lookup-entry config id :master-user-options)]
     (. builder masterUserOptions data))
   (.build builder))
 
@@ -82,37 +82,37 @@
 | `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnDomain$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-policies)]
+  (when-some [data (lookup-entry config id :access-policies)]
     (. builder accessPolicies data))
-  (when-let [data (lookup-entry config id :advanced-options)]
+  (when-some [data (lookup-entry config id :advanced-options)]
     (. builder advancedOptions data))
-  (when-let [data (lookup-entry config id :advanced-security-options)]
+  (when-some [data (lookup-entry config id :advanced-security-options)]
     (. builder advancedSecurityOptions data))
-  (when-let [data (lookup-entry config id :cognito-options)]
+  (when-some [data (lookup-entry config id :cognito-options)]
     (. builder cognitoOptions data))
-  (when-let [data (lookup-entry config id :domain-arn)]
+  (when-some [data (lookup-entry config id :domain-arn)]
     (. builder domainArn data))
-  (when-let [data (lookup-entry config id :domain-endpoint-options)]
+  (when-some [data (lookup-entry config id :domain-endpoint-options)]
     (. builder domainEndpointOptions data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :ebs-options)]
+  (when-some [data (lookup-entry config id :ebs-options)]
     (. builder ebsOptions data))
-  (when-let [data (lookup-entry config id :elasticsearch-cluster-config)]
+  (when-some [data (lookup-entry config id :elasticsearch-cluster-config)]
     (. builder elasticsearchClusterConfig data))
-  (when-let [data (lookup-entry config id :elasticsearch-version)]
+  (when-some [data (lookup-entry config id :elasticsearch-version)]
     (. builder elasticsearchVersion data))
-  (when-let [data (lookup-entry config id :encryption-at-rest-options)]
+  (when-some [data (lookup-entry config id :encryption-at-rest-options)]
     (. builder encryptionAtRestOptions data))
-  (when-let [data (lookup-entry config id :log-publishing-options)]
+  (when-some [data (lookup-entry config id :log-publishing-options)]
     (. builder logPublishingOptions data))
-  (when-let [data (lookup-entry config id :node-to-node-encryption-options)]
+  (when-some [data (lookup-entry config id :node-to-node-encryption-options)]
     (. builder nodeToNodeEncryptionOptions data))
-  (when-let [data (lookup-entry config id :snapshot-options)]
+  (when-some [data (lookup-entry config id :snapshot-options)]
     (. builder snapshotOptions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-options)]
+  (when-some [data (lookup-entry config id :vpc-options)]
     (. builder vpcOptions data))
   (.build builder))
 
@@ -143,13 +143,13 @@
 | `userPoolId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-id` |
 "
   [^CfnDomain$CognitoOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :identity-pool-id)]
+  (when-some [data (lookup-entry config id :identity-pool-id)]
     (. builder identityPoolId data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :user-pool-id)]
+  (when-some [data (lookup-entry config id :user-pool-id)]
     (. builder userPoolId data))
   (.build builder))
 
@@ -177,7 +177,7 @@
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDomain$ColdStorageOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -209,15 +209,15 @@
 | `tlsSecurityPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:tls-security-policy` |
 "
   [^CfnDomain$DomainEndpointOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :custom-endpoint)]
+  (when-some [data (lookup-entry config id :custom-endpoint)]
     (. builder customEndpoint data))
-  (when-let [data (lookup-entry config id :custom-endpoint-certificate-arn)]
+  (when-some [data (lookup-entry config id :custom-endpoint-certificate-arn)]
     (. builder customEndpointCertificateArn data))
-  (when-let [data (lookup-entry config id :custom-endpoint-enabled)]
+  (when-some [data (lookup-entry config id :custom-endpoint-enabled)]
     (. builder customEndpointEnabled data))
-  (when-let [data (lookup-entry config id :enforce-https)]
+  (when-some [data (lookup-entry config id :enforce-https)]
     (. builder enforceHttps data))
-  (when-let [data (lookup-entry config id :tls-security-policy)]
+  (when-some [data (lookup-entry config id :tls-security-policy)]
     (. builder tlsSecurityPolicy data))
   (.build builder))
 
@@ -248,13 +248,13 @@
 | `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |
 "
   [^CfnDomain$EBSOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ebs-enabled)]
+  (when-some [data (lookup-entry config id :ebs-enabled)]
     (. builder ebsEnabled data))
-  (when-let [data (lookup-entry config id :iops)]
+  (when-some [data (lookup-entry config id :iops)]
     (. builder iops data))
-  (when-let [data (lookup-entry config id :volume-size)]
+  (when-some [data (lookup-entry config id :volume-size)]
     (. builder volumeSize data))
-  (when-let [data (lookup-entry config id :volume-type)]
+  (when-some [data (lookup-entry config id :volume-type)]
     (. builder volumeType data))
   (.build builder))
 
@@ -292,27 +292,27 @@
 | `zoneAwarenessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:zone-awareness-enabled` |
 "
   [^CfnDomain$ElasticsearchClusterConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cold-storage-options)]
+  (when-some [data (lookup-entry config id :cold-storage-options)]
     (. builder coldStorageOptions data))
-  (when-let [data (lookup-entry config id :dedicated-master-count)]
+  (when-some [data (lookup-entry config id :dedicated-master-count)]
     (. builder dedicatedMasterCount data))
-  (when-let [data (lookup-entry config id :dedicated-master-enabled)]
+  (when-some [data (lookup-entry config id :dedicated-master-enabled)]
     (. builder dedicatedMasterEnabled data))
-  (when-let [data (lookup-entry config id :dedicated-master-type)]
+  (when-some [data (lookup-entry config id :dedicated-master-type)]
     (. builder dedicatedMasterType data))
-  (when-let [data (lookup-entry config id :instance-count)]
+  (when-some [data (lookup-entry config id :instance-count)]
     (. builder instanceCount data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :warm-count)]
+  (when-some [data (lookup-entry config id :warm-count)]
     (. builder warmCount data))
-  (when-let [data (lookup-entry config id :warm-enabled)]
+  (when-some [data (lookup-entry config id :warm-enabled)]
     (. builder warmEnabled data))
-  (when-let [data (lookup-entry config id :warm-type)]
+  (when-some [data (lookup-entry config id :warm-type)]
     (. builder warmType data))
-  (when-let [data (lookup-entry config id :zone-awareness-config)]
+  (when-some [data (lookup-entry config id :zone-awareness-config)]
     (. builder zoneAwarenessConfig data))
-  (when-let [data (lookup-entry config id :zone-awareness-enabled)]
+  (when-some [data (lookup-entry config id :zone-awareness-enabled)]
     (. builder zoneAwarenessEnabled data))
   (.build builder))
 
@@ -341,9 +341,9 @@
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 "
   [^CfnDomain$EncryptionAtRestOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
 
@@ -372,9 +372,9 @@
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDomain$LogPublishingOptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
     (. builder cloudWatchLogsLogGroupArn data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -404,11 +404,11 @@
 | `masterUserPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:master-user-password` |
 "
   [^CfnDomain$MasterUserOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :master-user-arn)]
+  (when-some [data (lookup-entry config id :master-user-arn)]
     (. builder masterUserArn data))
-  (when-let [data (lookup-entry config id :master-user-name)]
+  (when-some [data (lookup-entry config id :master-user-name)]
     (. builder masterUserName data))
-  (when-let [data (lookup-entry config id :master-user-password)]
+  (when-some [data (lookup-entry config id :master-user-password)]
     (. builder masterUserPassword data))
   (.build builder))
 
@@ -436,7 +436,7 @@
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -479,37 +479,37 @@
 | `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
 "
   [^CfnDomainProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :access-policies)]
+  (when-some [data (lookup-entry config id :access-policies)]
     (. builder accessPolicies data))
-  (when-let [data (lookup-entry config id :advanced-options)]
+  (when-some [data (lookup-entry config id :advanced-options)]
     (. builder advancedOptions data))
-  (when-let [data (lookup-entry config id :advanced-security-options)]
+  (when-some [data (lookup-entry config id :advanced-security-options)]
     (. builder advancedSecurityOptions data))
-  (when-let [data (lookup-entry config id :cognito-options)]
+  (when-some [data (lookup-entry config id :cognito-options)]
     (. builder cognitoOptions data))
-  (when-let [data (lookup-entry config id :domain-arn)]
+  (when-some [data (lookup-entry config id :domain-arn)]
     (. builder domainArn data))
-  (when-let [data (lookup-entry config id :domain-endpoint-options)]
+  (when-some [data (lookup-entry config id :domain-endpoint-options)]
     (. builder domainEndpointOptions data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :ebs-options)]
+  (when-some [data (lookup-entry config id :ebs-options)]
     (. builder ebsOptions data))
-  (when-let [data (lookup-entry config id :elasticsearch-cluster-config)]
+  (when-some [data (lookup-entry config id :elasticsearch-cluster-config)]
     (. builder elasticsearchClusterConfig data))
-  (when-let [data (lookup-entry config id :elasticsearch-version)]
+  (when-some [data (lookup-entry config id :elasticsearch-version)]
     (. builder elasticsearchVersion data))
-  (when-let [data (lookup-entry config id :encryption-at-rest-options)]
+  (when-some [data (lookup-entry config id :encryption-at-rest-options)]
     (. builder encryptionAtRestOptions data))
-  (when-let [data (lookup-entry config id :log-publishing-options)]
+  (when-some [data (lookup-entry config id :log-publishing-options)]
     (. builder logPublishingOptions data))
-  (when-let [data (lookup-entry config id :node-to-node-encryption-options)]
+  (when-some [data (lookup-entry config id :node-to-node-encryption-options)]
     (. builder nodeToNodeEncryptionOptions data))
-  (when-let [data (lookup-entry config id :snapshot-options)]
+  (when-some [data (lookup-entry config id :snapshot-options)]
     (. builder snapshotOptions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :vpc-options)]
+  (when-some [data (lookup-entry config id :vpc-options)]
     (. builder vpcOptions data))
   (.build builder))
 
@@ -537,7 +537,7 @@
 | `automatedSnapshotStartHour` | java.lang.Number | [[cdk.support/lookup-entry]] | `:automated-snapshot-start-hour` |
 "
   [^CfnDomain$SnapshotOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :automated-snapshot-start-hour)]
+  (when-some [data (lookup-entry config id :automated-snapshot-start-hour)]
     (. builder automatedSnapshotStartHour data))
   (.build builder))
 
@@ -566,9 +566,9 @@
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 "
   [^CfnDomain$VPCOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
 
@@ -596,7 +596,7 @@
 | `availabilityZoneCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:availability-zone-count` |
 "
   [^CfnDomain$ZoneAwarenessConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zone-count)]
+  (when-some [data (lookup-entry config id :availability-zone-count)]
     (. builder availabilityZoneCount data))
   (.build builder))
 

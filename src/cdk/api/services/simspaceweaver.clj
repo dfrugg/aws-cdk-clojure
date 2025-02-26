@@ -22,15 +22,15 @@
 | `snapshotS3Location` | software.amazon.awscdk.services.simspaceweaver.CfnSimulation$S3LocationProperty | [[cdk.support/lookup-entry]] | `:snapshot-s3-location` |
 "
   [^CfnSimulation$Builder builder id config]
-  (when-let [data (lookup-entry config id :maximum-duration)]
+  (when-some [data (lookup-entry config id :maximum-duration)]
     (. builder maximumDuration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :schema-s3-location)]
+  (when-some [data (lookup-entry config id :schema-s3-location)]
     (. builder schemaS3Location data))
-  (when-let [data (lookup-entry config id :snapshot-s3-location)]
+  (when-some [data (lookup-entry config id :snapshot-s3-location)]
     (. builder snapshotS3Location data))
   (.build builder))
 
@@ -62,15 +62,15 @@
 | `snapshotS3Location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snapshot-s3-location` |
 "
   [^CfnSimulationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :maximum-duration)]
+  (when-some [data (lookup-entry config id :maximum-duration)]
     (. builder maximumDuration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :schema-s3-location)]
+  (when-some [data (lookup-entry config id :schema-s3-location)]
     (. builder schemaS3Location data))
-  (when-let [data (lookup-entry config id :snapshot-s3-location)]
+  (when-some [data (lookup-entry config id :snapshot-s3-location)]
     (. builder snapshotS3Location data))
   (.build builder))
 
@@ -99,9 +99,9 @@
 | `objectKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key` |
 "
   [^CfnSimulation$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
-  (when-let [data (lookup-entry config id :object-key)]
+  (when-some [data (lookup-entry config id :object-key)]
     (. builder objectKey data))
   (.build builder))
 

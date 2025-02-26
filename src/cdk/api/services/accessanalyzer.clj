@@ -21,7 +21,7 @@
 | `unusedAccessConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:unused-access-configuration` |
 "
   [^CfnAnalyzer$AnalyzerConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :unused-access-configuration)]
+  (when-some [data (lookup-entry config id :unused-access-configuration)]
     (. builder unusedAccessConfiguration data))
   (.build builder))
 
@@ -50,9 +50,9 @@
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
 "
   [^CfnAnalyzer$ArchiveRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
-  (when-let [data (lookup-entry config id :rule-name)]
+  (when-some [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
   (.build builder))
 
@@ -84,15 +84,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAnalyzer$Builder builder id config]
-  (when-let [data (lookup-entry config id :analyzer-configuration)]
+  (when-some [data (lookup-entry config id :analyzer-configuration)]
     (. builder analyzerConfiguration data))
-  (when-let [data (lookup-entry config id :analyzer-name)]
+  (when-some [data (lookup-entry config id :analyzer-name)]
     (. builder analyzerName data))
-  (when-let [data (lookup-entry config id :archive-rules)]
+  (when-some [data (lookup-entry config id :archive-rules)]
     (. builder archiveRules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -124,15 +124,15 @@
 | `property` | java.lang.String | [[cdk.support/lookup-entry]] | `:property` |
 "
   [^CfnAnalyzer$FilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :contains)]
+  (when-some [data (lookup-entry config id :contains)]
     (. builder contains data))
-  (when-let [data (lookup-entry config id :eq)]
+  (when-some [data (lookup-entry config id :eq)]
     (. builder eq data))
-  (when-let [data (lookup-entry config id :exists)]
+  (when-some [data (lookup-entry config id :exists)]
     (. builder exists data))
-  (when-let [data (lookup-entry config id :neq)]
+  (when-some [data (lookup-entry config id :neq)]
     (. builder neq data))
-  (when-let [data (lookup-entry config id :property)]
+  (when-some [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
 
@@ -164,15 +164,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnAnalyzerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :analyzer-configuration)]
+  (when-some [data (lookup-entry config id :analyzer-configuration)]
     (. builder analyzerConfiguration data))
-  (when-let [data (lookup-entry config id :analyzer-name)]
+  (when-some [data (lookup-entry config id :analyzer-name)]
     (. builder analyzerName data))
-  (when-let [data (lookup-entry config id :archive-rules)]
+  (when-some [data (lookup-entry config id :archive-rules)]
     (. builder archiveRules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -200,7 +200,7 @@
 | `unusedAccessAge` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unused-access-age` |
 "
   [^CfnAnalyzer$UnusedAccessConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :unused-access-age)]
+  (when-some [data (lookup-entry config id :unused-access-age)]
     (. builder unusedAccessAge data))
   (.build builder))
 

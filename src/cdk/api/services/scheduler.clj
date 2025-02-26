@@ -36,11 +36,11 @@
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
 "
   [^CfnSchedule$AwsVpcConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :assign-public-ip)]
+  (when-some [data (lookup-entry config id :assign-public-ip)]
     (. builder assignPublicIp data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
   (.build builder))
 
@@ -78,27 +78,27 @@
 | `target` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnSchedule$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :end-date)]
+  (when-some [data (lookup-entry config id :end-date)]
     (. builder endDate data))
-  (when-let [data (lookup-entry config id :flexible-time-window)]
+  (when-some [data (lookup-entry config id :flexible-time-window)]
     (. builder flexibleTimeWindow data))
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
-  (when-let [data (lookup-entry config id :schedule-expression-timezone)]
+  (when-some [data (lookup-entry config id :schedule-expression-timezone)]
     (. builder scheduleExpressionTimezone data))
-  (when-let [data (lookup-entry config id :start-date)]
+  (when-some [data (lookup-entry config id :start-date)]
     (. builder startDate data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -128,11 +128,11 @@
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnSchedule$CapacityProviderStrategyItemProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :base)]
+  (when-some [data (lookup-entry config id :base)]
     (. builder base data))
-  (when-let [data (lookup-entry config id :capacity-provider)]
+  (when-some [data (lookup-entry config id :capacity-provider)]
     (. builder capacityProvider data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -160,7 +160,7 @@
 | `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
 "
   [^CfnSchedule$DeadLetterConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
 
@@ -201,33 +201,33 @@
 | `taskDefinitionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition-arn` |
 "
   [^CfnSchedule$EcsParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :capacity-provider-strategy)]
+  (when-some [data (lookup-entry config id :capacity-provider-strategy)]
     (. builder capacityProviderStrategy data))
-  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+  (when-some [data (lookup-entry config id :enable-ecs-managed-tags)]
     (. builder enableEcsManagedTags data))
-  (when-let [data (lookup-entry config id :enable-execute-command)]
+  (when-some [data (lookup-entry config id :enable-execute-command)]
     (. builder enableExecuteCommand data))
-  (when-let [data (lookup-entry config id :group)]
+  (when-some [data (lookup-entry config id :group)]
     (. builder group data))
-  (when-let [data (lookup-entry config id :launch-type)]
+  (when-some [data (lookup-entry config id :launch-type)]
     (. builder launchType data))
-  (when-let [data (lookup-entry config id :network-configuration)]
+  (when-some [data (lookup-entry config id :network-configuration)]
     (. builder networkConfiguration data))
-  (when-let [data (lookup-entry config id :placement-constraints)]
+  (when-some [data (lookup-entry config id :placement-constraints)]
     (. builder placementConstraints data))
-  (when-let [data (lookup-entry config id :placement-strategy)]
+  (when-some [data (lookup-entry config id :placement-strategy)]
     (. builder placementStrategy data))
-  (when-let [data (lookup-entry config id :platform-version)]
+  (when-some [data (lookup-entry config id :platform-version)]
     (. builder platformVersion data))
-  (when-let [data (lookup-entry config id :propagate-tags)]
+  (when-some [data (lookup-entry config id :propagate-tags)]
     (. builder propagateTags data))
-  (when-let [data (lookup-entry config id :reference-id)]
+  (when-some [data (lookup-entry config id :reference-id)]
     (. builder referenceId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-count)]
+  (when-some [data (lookup-entry config id :task-count)]
     (. builder taskCount data))
-  (when-let [data (lookup-entry config id :task-definition-arn)]
+  (when-some [data (lookup-entry config id :task-definition-arn)]
     (. builder taskDefinitionArn data))
   (.build builder))
 
@@ -256,9 +256,9 @@
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^CfnSchedule$EventBridgeParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :detail-type)]
+  (when-some [data (lookup-entry config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
 
@@ -287,9 +287,9 @@
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
 "
   [^CfnSchedule$FlexibleTimeWindowProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maximum-window-in-minutes)]
+  (when-some [data (lookup-entry config id :maximum-window-in-minutes)]
     (. builder maximumWindowInMinutes data))
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
   (.build builder))
 
@@ -318,9 +318,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnScheduleGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -349,9 +349,9 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnScheduleGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -379,7 +379,7 @@
 | `partitionKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:partition-key` |
 "
   [^CfnSchedule$KinesisParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :partition-key)]
+  (when-some [data (lookup-entry config id :partition-key)]
     (. builder partitionKey data))
   (.build builder))
 
@@ -407,7 +407,7 @@
 | `awsvpcConfiguration` | software.amazon.awscdk.services.scheduler.CfnSchedule$AwsVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:awsvpc-configuration` |
 "
   [^CfnSchedule$NetworkConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :awsvpc-configuration)]
+  (when-some [data (lookup-entry config id :awsvpc-configuration)]
     (. builder awsvpcConfiguration data))
   (.build builder))
 
@@ -436,9 +436,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSchedule$PlacementConstraintProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -467,9 +467,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSchedule$PlacementStrategyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field)]
+  (when-some [data (lookup-entry config id :field)]
     (. builder field data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -507,27 +507,27 @@
 | `target` | software.amazon.awscdk.services.scheduler.CfnSchedule$TargetProperty | [[cdk.support/lookup-entry]] | `:target` |
 "
   [^CfnScheduleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :end-date)]
+  (when-some [data (lookup-entry config id :end-date)]
     (. builder endDate data))
-  (when-let [data (lookup-entry config id :flexible-time-window)]
+  (when-some [data (lookup-entry config id :flexible-time-window)]
     (. builder flexibleTimeWindow data))
-  (when-let [data (lookup-entry config id :group-name)]
+  (when-some [data (lookup-entry config id :group-name)]
     (. builder groupName data))
-  (when-let [data (lookup-entry config id :kms-key-arn)]
+  (when-some [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :schedule-expression)]
+  (when-some [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
-  (when-let [data (lookup-entry config id :schedule-expression-timezone)]
+  (when-some [data (lookup-entry config id :schedule-expression-timezone)]
     (. builder scheduleExpressionTimezone data))
-  (when-let [data (lookup-entry config id :start-date)]
+  (when-some [data (lookup-entry config id :start-date)]
     (. builder startDate data))
-  (when-let [data (lookup-entry config id :state)]
+  (when-some [data (lookup-entry config id :state)]
     (. builder state data))
-  (when-let [data (lookup-entry config id :target)]
+  (when-some [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
 
@@ -556,9 +556,9 @@
 | `maximumRetryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-retry-attempts` |
 "
   [^CfnSchedule$RetryPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :maximum-event-age-in-seconds)]
+  (when-some [data (lookup-entry config id :maximum-event-age-in-seconds)]
     (. builder maximumEventAgeInSeconds data))
-  (when-let [data (lookup-entry config id :maximum-retry-attempts)]
+  (when-some [data (lookup-entry config id :maximum-retry-attempts)]
     (. builder maximumRetryAttempts data))
   (.build builder))
 
@@ -587,9 +587,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnSchedule$SageMakerPipelineParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -617,7 +617,7 @@
 | `pipelineParameterList` | java.util.List | [[cdk.support/lookup-entry]] | `:pipeline-parameter-list` |
 "
   [^CfnSchedule$SageMakerPipelineParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :pipeline-parameter-list)]
+  (when-some [data (lookup-entry config id :pipeline-parameter-list)]
     (. builder pipelineParameterList data))
   (.build builder))
 
@@ -645,7 +645,7 @@
 | `messageGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-group-id` |
 "
   [^CfnSchedule$SqsParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :message-group-id)]
+  (when-some [data (lookup-entry config id :message-group-id)]
     (. builder messageGroupId data))
   (.build builder))
 
@@ -682,25 +682,25 @@
 | `sqsParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs-parameters` |
 "
   [^CfnSchedule$TargetProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :arn)]
+  (when-some [data (lookup-entry config id :arn)]
     (. builder arn data))
-  (when-let [data (lookup-entry config id :dead-letter-config)]
+  (when-some [data (lookup-entry config id :dead-letter-config)]
     (. builder deadLetterConfig data))
-  (when-let [data (lookup-entry config id :ecs-parameters)]
+  (when-some [data (lookup-entry config id :ecs-parameters)]
     (. builder ecsParameters data))
-  (when-let [data (lookup-entry config id :event-bridge-parameters)]
+  (when-some [data (lookup-entry config id :event-bridge-parameters)]
     (. builder eventBridgeParameters data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :kinesis-parameters)]
+  (when-some [data (lookup-entry config id :kinesis-parameters)]
     (. builder kinesisParameters data))
-  (when-let [data (lookup-entry config id :retry-policy)]
+  (when-some [data (lookup-entry config id :retry-policy)]
     (. builder retryPolicy data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :sage-maker-pipeline-parameters)]
+  (when-some [data (lookup-entry config id :sage-maker-pipeline-parameters)]
     (. builder sageMakerPipelineParameters data))
-  (when-let [data (lookup-entry config id :sqs-parameters)]
+  (when-some [data (lookup-entry config id :sqs-parameters)]
     (. builder sqsParameters data))
   (.build builder))
 

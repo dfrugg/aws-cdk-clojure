@@ -19,9 +19,9 @@
 | `definition` | software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate$DefinitionDocumentProperty | [[cdk.support/lookup-entry]] | `:definition` |
 "
   [^CfnFlowTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :compatible-namespace-version)]
+  (when-some [data (lookup-entry config id :compatible-namespace-version)]
     (. builder compatibleNamespaceVersion data))
-  (when-let [data (lookup-entry config id :definition)]
+  (when-some [data (lookup-entry config id :definition)]
     (. builder definition data))
   (.build builder))
 
@@ -50,9 +50,9 @@
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
 "
   [^CfnFlowTemplate$DefinitionDocumentProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :language)]
+  (when-some [data (lookup-entry config id :language)]
     (. builder language data))
-  (when-let [data (lookup-entry config id :text)]
+  (when-some [data (lookup-entry config id :text)]
     (. builder text data))
   (.build builder))
 
@@ -81,9 +81,9 @@
 | `definition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:definition` |
 "
   [^CfnFlowTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :compatible-namespace-version)]
+  (when-some [data (lookup-entry config id :compatible-namespace-version)]
     (. builder compatibleNamespaceVersion data))
-  (when-let [data (lookup-entry config id :definition)]
+  (when-some [data (lookup-entry config id :definition)]
     (. builder definition data))
   (.build builder))
 

@@ -53,25 +53,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userRoleRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-role-required` |
 "
   [^CfnMicrosoftTeamsChannelConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-name)]
+  (when-some [data (lookup-entry config id :configuration-name)]
     (. builder configurationName data))
-  (when-let [data (lookup-entry config id :guardrail-policies)]
+  (when-some [data (lookup-entry config id :guardrail-policies)]
     (. builder guardrailPolicies data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :logging-level)]
+  (when-some [data (lookup-entry config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :sns-topic-arns)]
+  (when-some [data (lookup-entry config id :sns-topic-arns)]
     (. builder snsTopicArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :team-id)]
+  (when-some [data (lookup-entry config id :team-id)]
     (. builder teamId data))
-  (when-let [data (lookup-entry config id :teams-channel-id)]
+  (when-some [data (lookup-entry config id :teams-channel-id)]
     (. builder teamsChannelId data))
-  (when-let [data (lookup-entry config id :teams-tenant-id)]
+  (when-some [data (lookup-entry config id :teams-tenant-id)]
     (. builder teamsTenantId data))
-  (when-let [data (lookup-entry config id :user-role-required)]
+  (when-some [data (lookup-entry config id :user-role-required)]
     (. builder userRoleRequired data))
   (.build builder))
 
@@ -108,25 +108,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userRoleRequired` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-role-required` |
 "
   [^CfnMicrosoftTeamsChannelConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-name)]
+  (when-some [data (lookup-entry config id :configuration-name)]
     (. builder configurationName data))
-  (when-let [data (lookup-entry config id :guardrail-policies)]
+  (when-some [data (lookup-entry config id :guardrail-policies)]
     (. builder guardrailPolicies data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :logging-level)]
+  (when-some [data (lookup-entry config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :sns-topic-arns)]
+  (when-some [data (lookup-entry config id :sns-topic-arns)]
     (. builder snsTopicArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :team-id)]
+  (when-some [data (lookup-entry config id :team-id)]
     (. builder teamId data))
-  (when-let [data (lookup-entry config id :teams-channel-id)]
+  (when-some [data (lookup-entry config id :teams-channel-id)]
     (. builder teamsChannelId data))
-  (when-let [data (lookup-entry config id :teams-tenant-id)]
+  (when-some [data (lookup-entry config id :teams-tenant-id)]
     (. builder teamsTenantId data))
-  (when-let [data (lookup-entry config id :user-role-required)]
+  (when-some [data (lookup-entry config id :user-role-required)]
     (. builder userRoleRequired data))
   (.build builder))
 
@@ -162,23 +162,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userRoleRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-role-required` |
 "
   [^CfnSlackChannelConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-name)]
+  (when-some [data (lookup-entry config id :configuration-name)]
     (. builder configurationName data))
-  (when-let [data (lookup-entry config id :guardrail-policies)]
+  (when-some [data (lookup-entry config id :guardrail-policies)]
     (. builder guardrailPolicies data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :logging-level)]
+  (when-some [data (lookup-entry config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :slack-channel-id)]
+  (when-some [data (lookup-entry config id :slack-channel-id)]
     (. builder slackChannelId data))
-  (when-let [data (lookup-entry config id :slack-workspace-id)]
+  (when-some [data (lookup-entry config id :slack-workspace-id)]
     (. builder slackWorkspaceId data))
-  (when-let [data (lookup-entry config id :sns-topic-arns)]
+  (when-some [data (lookup-entry config id :sns-topic-arns)]
     (. builder snsTopicArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-role-required)]
+  (when-some [data (lookup-entry config id :user-role-required)]
     (. builder userRoleRequired data))
   (.build builder))
 
@@ -214,23 +214,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `userRoleRequired` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:user-role-required` |
 "
   [^CfnSlackChannelConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :configuration-name)]
+  (when-some [data (lookup-entry config id :configuration-name)]
     (. builder configurationName data))
-  (when-let [data (lookup-entry config id :guardrail-policies)]
+  (when-some [data (lookup-entry config id :guardrail-policies)]
     (. builder guardrailPolicies data))
-  (when-let [data (lookup-entry config id :iam-role-arn)]
+  (when-some [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
-  (when-let [data (lookup-entry config id :logging-level)]
+  (when-some [data (lookup-entry config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :slack-channel-id)]
+  (when-some [data (lookup-entry config id :slack-channel-id)]
     (. builder slackChannelId data))
-  (when-let [data (lookup-entry config id :slack-workspace-id)]
+  (when-some [data (lookup-entry config id :slack-workspace-id)]
     (. builder slackWorkspaceId data))
-  (when-let [data (lookup-entry config id :sns-topic-arns)]
+  (when-some [data (lookup-entry config id :sns-topic-arns)]
     (. builder snsTopicArns data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :user-role-required)]
+  (when-some [data (lookup-entry config id :user-role-required)]
     (. builder userRoleRequired data))
   (.build builder))
 
@@ -267,25 +267,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `slackWorkspaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:slack-workspace-id` |
 "
   [^SlackChannelConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :guardrail-policies)]
+  (when-some [data (lookup-entry config id :guardrail-policies)]
     (. builder guardrailPolicies data))
-  (when-let [data (retention-days config id :log-retention)]
+  (when-some [data (retention-days config id :log-retention)]
     (. builder logRetention data))
-  (when-let [data (lookup-entry config id :log-retention-retry-options)]
+  (when-some [data (lookup-entry config id :log-retention-retry-options)]
     (. builder logRetentionRetryOptions data))
-  (when-let [data (lookup-entry config id :log-retention-role)]
+  (when-some [data (lookup-entry config id :log-retention-role)]
     (. builder logRetentionRole data))
-  (when-let [data (logging-level config id :logging-level)]
+  (when-some [data (logging-level config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :notification-topics)]
+  (when-some [data (lookup-entry config id :notification-topics)]
     (. builder notificationTopics data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :slack-channel-configuration-name)]
+  (when-some [data (lookup-entry config id :slack-channel-configuration-name)]
     (. builder slackChannelConfigurationName data))
-  (when-let [data (lookup-entry config id :slack-channel-id)]
+  (when-some [data (lookup-entry config id :slack-channel-id)]
     (. builder slackChannelId data))
-  (when-let [data (lookup-entry config id :slack-workspace-id)]
+  (when-some [data (lookup-entry config id :slack-workspace-id)]
     (. builder slackWorkspaceId data))
   (.build builder))
 
@@ -322,25 +322,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `slackWorkspaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:slack-workspace-id` |
 "
   [^SlackChannelConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :guardrail-policies)]
+  (when-some [data (lookup-entry config id :guardrail-policies)]
     (. builder guardrailPolicies data))
-  (when-let [data (retention-days config id :log-retention)]
+  (when-some [data (retention-days config id :log-retention)]
     (. builder logRetention data))
-  (when-let [data (lookup-entry config id :log-retention-retry-options)]
+  (when-some [data (lookup-entry config id :log-retention-retry-options)]
     (. builder logRetentionRetryOptions data))
-  (when-let [data (lookup-entry config id :log-retention-role)]
+  (when-some [data (lookup-entry config id :log-retention-role)]
     (. builder logRetentionRole data))
-  (when-let [data (logging-level config id :logging-level)]
+  (when-some [data (logging-level config id :logging-level)]
     (. builder loggingLevel data))
-  (when-let [data (lookup-entry config id :notification-topics)]
+  (when-some [data (lookup-entry config id :notification-topics)]
     (. builder notificationTopics data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :slack-channel-configuration-name)]
+  (when-some [data (lookup-entry config id :slack-channel-configuration-name)]
     (. builder slackChannelConfigurationName data))
-  (when-let [data (lookup-entry config id :slack-channel-id)]
+  (when-some [data (lookup-entry config id :slack-channel-id)]
     (. builder slackChannelId data))
-  (when-let [data (lookup-entry config id :slack-workspace-id)]
+  (when-some [data (lookup-entry config id :slack-workspace-id)]
     (. builder slackWorkspaceId data))
   (.build builder))
 

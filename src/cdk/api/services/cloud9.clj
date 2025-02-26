@@ -27,25 +27,25 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentEC2$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatic-stop-time-minutes)]
+  (when-some [data (lookup-entry config id :automatic-stop-time-minutes)]
     (. builder automaticStopTimeMinutes data))
-  (when-let [data (lookup-entry config id :connection-type)]
+  (when-some [data (lookup-entry config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :image-id)]
+  (when-some [data (lookup-entry config id :image-id)]
     (. builder imageId data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :owner-arn)]
+  (when-some [data (lookup-entry config id :owner-arn)]
     (. builder ownerArn data))
-  (when-let [data (lookup-entry config id :repositories)]
+  (when-some [data (lookup-entry config id :repositories)]
     (. builder repositories data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -82,25 +82,25 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnEnvironmentEC2Props$Builder builder id config]
-  (when-let [data (lookup-entry config id :automatic-stop-time-minutes)]
+  (when-some [data (lookup-entry config id :automatic-stop-time-minutes)]
     (. builder automaticStopTimeMinutes data))
-  (when-let [data (lookup-entry config id :connection-type)]
+  (when-some [data (lookup-entry config id :connection-type)]
     (. builder connectionType data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :image-id)]
+  (when-some [data (lookup-entry config id :image-id)]
     (. builder imageId data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :owner-arn)]
+  (when-some [data (lookup-entry config id :owner-arn)]
     (. builder ownerArn data))
-  (when-let [data (lookup-entry config id :repositories)]
+  (when-some [data (lookup-entry config id :repositories)]
     (. builder repositories data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -129,9 +129,9 @@
 | `repositoryUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-url` |
 "
   [^CfnEnvironmentEC2$RepositoryProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :path-component)]
+  (when-some [data (lookup-entry config id :path-component)]
     (. builder pathComponent data))
-  (when-let [data (lookup-entry config id :repository-url)]
+  (when-some [data (lookup-entry config id :repository-url)]
     (. builder repositoryUrl data))
   (.build builder))
 

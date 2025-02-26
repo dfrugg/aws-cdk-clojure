@@ -966,13 +966,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trainingInputMode` | software.amazon.awscdk.services.stepfunctions.tasks.InputMode | [[cdk.api.services.stepfunctions.tasks/input-mode]] | `:training-input-mode` |
 "
   [^AlgorithmSpecification$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm-name)]
+  (when-some [data (lookup-entry config id :algorithm-name)]
     (. builder algorithmName data))
-  (when-let [data (lookup-entry config id :metric-definitions)]
+  (when-some [data (lookup-entry config id :metric-definitions)]
     (. builder metricDefinitions data))
-  (when-let [data (lookup-entry config id :training-image)]
+  (when-some [data (lookup-entry config id :training-image)]
     (. builder trainingImage data))
-  (when-let [data (input-mode config id :training-input-mode)]
+  (when-some [data (input-mode config id :training-input-mode)]
     (. builder trainingInputMode data))
   (.build builder))
 
@@ -1002,11 +1002,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
 "
   [^ApplicationConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :classification)]
+  (when-some [data (lookup-entry config id :classification)]
     (. builder classification data))
-  (when-let [data (lookup-entry config id :nested-config)]
+  (when-some [data (lookup-entry config id :nested-config)]
     (. builder nestedConfig data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
   (.build builder))
 
@@ -1046,31 +1046,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^AthenaGetQueryExecution$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-execution-id)]
+  (when-some [data (lookup-entry config id :query-execution-id)]
     (. builder queryExecutionId data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1110,31 +1110,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^AthenaGetQueryExecutionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-execution-id)]
+  (when-some [data (lookup-entry config id :query-execution-id)]
     (. builder queryExecutionId data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1176,35 +1176,35 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^AthenaGetQueryResults$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :max-results)]
+  (when-some [data (lookup-entry config id :max-results)]
     (. builder maxResults data))
-  (when-let [data (lookup-entry config id :next-token)]
+  (when-some [data (lookup-entry config id :next-token)]
     (. builder nextToken data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-execution-id)]
+  (when-some [data (lookup-entry config id :query-execution-id)]
     (. builder queryExecutionId data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1246,35 +1246,35 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^AthenaGetQueryResultsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :max-results)]
+  (when-some [data (lookup-entry config id :max-results)]
     (. builder maxResults data))
-  (when-let [data (lookup-entry config id :next-token)]
+  (when-some [data (lookup-entry config id :next-token)]
     (. builder nextToken data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-execution-id)]
+  (when-some [data (lookup-entry config id :query-execution-id)]
     (. builder queryExecutionId data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1319,41 +1319,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |
 "
   [^AthenaStartQueryExecution$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-request-token)]
+  (when-some [data (lookup-entry config id :client-request-token)]
     (. builder clientRequestToken data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :execution-parameters)]
+  (when-some [data (lookup-entry config id :execution-parameters)]
     (. builder executionParameters data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-execution-context)]
+  (when-some [data (lookup-entry config id :query-execution-context)]
     (. builder queryExecutionContext data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
-  (when-let [data (lookup-entry config id :result-configuration)]
+  (when-some [data (lookup-entry config id :result-configuration)]
     (. builder resultConfiguration data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :work-group)]
+  (when-some [data (lookup-entry config id :work-group)]
     (. builder workGroup data))
   (.build builder))
 
@@ -1398,41 +1398,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |
 "
   [^AthenaStartQueryExecutionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-request-token)]
+  (when-some [data (lookup-entry config id :client-request-token)]
     (. builder clientRequestToken data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :execution-parameters)]
+  (when-some [data (lookup-entry config id :execution-parameters)]
     (. builder executionParameters data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-execution-context)]
+  (when-some [data (lookup-entry config id :query-execution-context)]
     (. builder queryExecutionContext data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
-  (when-let [data (lookup-entry config id :result-configuration)]
+  (when-some [data (lookup-entry config id :result-configuration)]
     (. builder resultConfiguration data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :work-group)]
+  (when-some [data (lookup-entry config id :work-group)]
     (. builder workGroup data))
   (.build builder))
 
@@ -1472,31 +1472,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^AthenaStopQueryExecution$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-execution-id)]
+  (when-some [data (lookup-entry config id :query-execution-id)]
     (. builder queryExecutionId data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1536,31 +1536,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^AthenaStopQueryExecutionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-execution-id)]
+  (when-some [data (lookup-entry config id :query-execution-id)]
     (. builder queryExecutionId data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1593,17 +1593,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vcpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vcpus` |
 "
   [^BatchContainerOverrides$Builder builder id config]
-  (when-let [data (lookup-entry config id :command)]
+  (when-some [data (lookup-entry config id :command)]
     (. builder command data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :gpu-count)]
+  (when-some [data (lookup-entry config id :gpu-count)]
     (. builder gpuCount data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :memory)]
+  (when-some [data (lookup-entry config id :memory)]
     (. builder memory data))
-  (when-let [data (lookup-entry config id :vcpus)]
+  (when-some [data (lookup-entry config id :vcpus)]
     (. builder vcpus data))
   (.build builder))
 
@@ -1632,9 +1632,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^BatchJobDependency$Builder builder id config]
-  (when-let [data (lookup-entry config id :job-id)]
+  (when-some [data (lookup-entry config id :job-id)]
     (. builder jobId data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1682,47 +1682,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^BatchSubmitJob$Builder builder id config]
-  (when-let [data (lookup-entry config id :array-size)]
+  (when-some [data (lookup-entry config id :array-size)]
     (. builder arraySize data))
-  (when-let [data (lookup-entry config id :attempts)]
+  (when-some [data (lookup-entry config id :attempts)]
     (. builder attempts data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :container-overrides)]
+  (when-some [data (lookup-entry config id :container-overrides)]
     (. builder containerOverrides data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :depends-on)]
+  (when-some [data (lookup-entry config id :depends-on)]
     (. builder dependsOn data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :job-definition-arn)]
+  (when-some [data (lookup-entry config id :job-definition-arn)]
     (. builder jobDefinitionArn data))
-  (when-let [data (lookup-entry config id :job-name)]
+  (when-some [data (lookup-entry config id :job-name)]
     (. builder jobName data))
-  (when-let [data (lookup-entry config id :job-queue-arn)]
+  (when-some [data (lookup-entry config id :job-queue-arn)]
     (. builder jobQueueArn data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1770,47 +1770,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^BatchSubmitJobProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :array-size)]
+  (when-some [data (lookup-entry config id :array-size)]
     (. builder arraySize data))
-  (when-let [data (lookup-entry config id :attempts)]
+  (when-some [data (lookup-entry config id :attempts)]
     (. builder attempts data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :container-overrides)]
+  (when-some [data (lookup-entry config id :container-overrides)]
     (. builder containerOverrides data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :depends-on)]
+  (when-some [data (lookup-entry config id :depends-on)]
     (. builder dependsOn data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :job-definition-arn)]
+  (when-some [data (lookup-entry config id :job-definition-arn)]
     (. builder jobDefinitionArn data))
-  (when-let [data (lookup-entry config id :job-name)]
+  (when-some [data (lookup-entry config id :job-name)]
     (. builder jobName data))
-  (when-let [data (lookup-entry config id :job-queue-arn)]
+  (when-some [data (lookup-entry config id :job-queue-arn)]
     (. builder jobQueueArn data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1855,41 +1855,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^BedrockInvokeModel$Builder builder id config]
-  (when-let [data (lookup-entry config id :accept)]
+  (when-some [data (lookup-entry config id :accept)]
     (. builder accept data))
-  (when-let [data (lookup-entry config id :body)]
+  (when-some [data (lookup-entry config id :body)]
     (. builder body data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :output)]
+  (when-some [data (lookup-entry config id :output)]
     (. builder output data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -1917,7 +1917,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Location` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:s3-location` |
 "
   [^BedrockInvokeModelInputProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-location)]
+  (when-some [data (lookup-entry config id :s3-location)]
     (. builder s3Location data))
   (.build builder))
 
@@ -1945,7 +1945,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Location` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:s3-location` |
 "
   [^BedrockInvokeModelOutputProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-location)]
+  (when-some [data (lookup-entry config id :s3-location)]
     (. builder s3Location data))
   (.build builder))
 
@@ -1990,41 +1990,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^BedrockInvokeModelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :accept)]
+  (when-some [data (lookup-entry config id :accept)]
     (. builder accept data))
-  (when-let [data (lookup-entry config id :body)]
+  (when-some [data (lookup-entry config id :body)]
     (. builder body data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :model)]
+  (when-some [data (lookup-entry config id :model)]
     (. builder model data))
-  (when-let [data (lookup-entry config id :output)]
+  (when-some [data (lookup-entry config id :output)]
     (. builder output data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2069,41 +2069,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CallApiGatewayEndpointBaseProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-path)]
+  (when-some [data (lookup-entry config id :api-path)]
     (. builder apiPath data))
-  (when-let [data (auth-type config id :auth-type)]
+  (when-some [data (auth-type config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :request-body)]
+  (when-some [data (lookup-entry config id :request-body)]
     (. builder requestBody data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2151,47 +2151,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CallApiGatewayHttpApiEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-id)]
+  (when-some [data (lookup-entry config id :api-id)]
     (. builder apiId data))
-  (when-let [data (lookup-entry config id :api-path)]
+  (when-some [data (lookup-entry config id :api-path)]
     (. builder apiPath data))
-  (when-let [data (lookup-entry config id :api-stack)]
+  (when-some [data (lookup-entry config id :api-stack)]
     (. builder apiStack data))
-  (when-let [data (auth-type config id :auth-type)]
+  (when-some [data (auth-type config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :request-body)]
+  (when-some [data (lookup-entry config id :request-body)]
     (. builder requestBody data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2239,47 +2239,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CallApiGatewayHttpApiEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-id)]
+  (when-some [data (lookup-entry config id :api-id)]
     (. builder apiId data))
-  (when-let [data (lookup-entry config id :api-path)]
+  (when-some [data (lookup-entry config id :api-path)]
     (. builder apiPath data))
-  (when-let [data (lookup-entry config id :api-stack)]
+  (when-some [data (lookup-entry config id :api-stack)]
     (. builder apiStack data))
-  (when-let [data (auth-type config id :auth-type)]
+  (when-some [data (auth-type config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :request-body)]
+  (when-some [data (lookup-entry config id :request-body)]
     (. builder requestBody data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2326,45 +2326,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CallApiGatewayRestApiEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :api)]
+  (when-some [data (lookup-entry config id :api)]
     (. builder api data))
-  (when-let [data (lookup-entry config id :api-path)]
+  (when-some [data (lookup-entry config id :api-path)]
     (. builder apiPath data))
-  (when-let [data (auth-type config id :auth-type)]
+  (when-some [data (auth-type config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :request-body)]
+  (when-some [data (lookup-entry config id :request-body)]
     (. builder requestBody data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2411,45 +2411,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CallApiGatewayRestApiEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api)]
+  (when-some [data (lookup-entry config id :api)]
     (. builder api data))
-  (when-let [data (lookup-entry config id :api-path)]
+  (when-some [data (lookup-entry config id :api-path)]
     (. builder apiPath data))
-  (when-let [data (auth-type config id :auth-type)]
+  (when-some [data (auth-type config id :auth-type)]
     (. builder authType data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (http-method config id :method)]
+  (when-some [data (http-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :request-body)]
+  (when-some [data (lookup-entry config id :request-body)]
     (. builder requestBody data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :stage-name)]
+  (when-some [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2494,41 +2494,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CallAwsService$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :additional-iam-statements)]
+  (when-some [data (lookup-entry config id :additional-iam-statements)]
     (. builder additionalIamStatements data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :iam-action)]
+  (when-some [data (lookup-entry config id :iam-action)]
     (. builder iamAction data))
-  (when-let [data (lookup-entry config id :iam-resources)]
+  (when-some [data (lookup-entry config id :iam-resources)]
     (. builder iamResources data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2573,41 +2573,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CallAwsServiceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :additional-iam-statements)]
+  (when-some [data (lookup-entry config id :additional-iam-statements)]
     (. builder additionalIamStatements data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :iam-action)]
+  (when-some [data (lookup-entry config id :iam-action)]
     (. builder iamAction data))
-  (when-let [data (lookup-entry config id :iam-resources)]
+  (when-some [data (lookup-entry config id :iam-resources)]
     (. builder iamResources data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :service)]
+  (when-some [data (lookup-entry config id :service)]
     (. builder service data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2641,19 +2641,19 @@ function on the data with the provided namespace id and item-key.  The found val
 | `shuffleConfig` | software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig | [[cdk.support/lookup-entry]] | `:shuffle-config` |
 "
   [^Channel$Builder builder id config]
-  (when-let [data (lookup-entry config id :channel-name)]
+  (when-some [data (lookup-entry config id :channel-name)]
     (. builder channelName data))
-  (when-let [data (compression-type config id :compression-type)]
+  (when-some [data (compression-type config id :compression-type)]
     (. builder compressionType data))
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (lookup-entry config id :data-source)]
+  (when-some [data (lookup-entry config id :data-source)]
     (. builder dataSource data))
-  (when-let [data (input-mode config id :input-mode)]
+  (when-some [data (input-mode config id :input-mode)]
     (. builder inputMode data))
-  (when-let [data (record-wrapper-type config id :record-wrapper-type)]
+  (when-some [data (record-wrapper-type config id :record-wrapper-type)]
     (. builder recordWrapperType data))
-  (when-let [data (lookup-entry config id :shuffle-config)]
+  (when-some [data (lookup-entry config id :shuffle-config)]
     (. builder shuffleConfig data))
   (.build builder))
 
@@ -2694,33 +2694,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CodeBuildStartBuildBatch$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :environment-variables-override)]
+  (when-some [data (lookup-entry config id :environment-variables-override)]
     (. builder environmentVariablesOverride data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2761,33 +2761,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CodeBuildStartBuildBatchProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :environment-variables-override)]
+  (when-some [data (lookup-entry config id :environment-variables-override)]
     (. builder environmentVariablesOverride data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2828,33 +2828,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CodeBuildStartBuild$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :environment-variables-override)]
+  (when-some [data (lookup-entry config id :environment-variables-override)]
     (. builder environmentVariablesOverride data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2895,33 +2895,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^CodeBuildStartBuildProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :environment-variables-override)]
+  (when-some [data (lookup-entry config id :environment-variables-override)]
     (. builder environmentVariablesOverride data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :project)]
+  (when-some [data (lookup-entry config id :project)]
     (. builder project data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -2952,13 +2952,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `taskDefinition` | software.amazon.awscdk.services.ecs.TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 "
   [^CommonEcsRunTaskProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster)]
+  (when-some [data (lookup-entry config id :cluster)]
     (. builder cluster data))
-  (when-let [data (lookup-entry config id :container-overrides)]
+  (when-some [data (lookup-entry config id :container-overrides)]
     (. builder containerOverrides data))
-  (when-let [data (service-integration-pattern config id :integration-pattern)]
+  (when-some [data (service-integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :task-definition)]
+  (when-some [data (lookup-entry config id :task-definition)]
     (. builder taskDefinition data))
   (.build builder))
 
@@ -2991,17 +2991,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `modelS3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:model-s3-location` |
 "
   [^ContainerDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-host-name)]
+  (when-some [data (lookup-entry config id :container-host-name)]
     (. builder containerHostName data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :image)]
+  (when-some [data (lookup-entry config id :image)]
     (. builder image data))
-  (when-let [data (mode config id :mode)]
+  (when-some [data (mode config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :model-package-name)]
+  (when-some [data (lookup-entry config id :model-package-name)]
     (. builder modelPackageName data))
-  (when-let [data (lookup-entry config id :model-s3-location)]
+  (when-some [data (lookup-entry config id :model-s3-location)]
     (. builder modelS3Location data))
   (.build builder))
 
@@ -3029,7 +3029,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^ContainerDefinitionConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
 
@@ -3062,17 +3062,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `modelS3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:model-s3-location` |
 "
   [^ContainerDefinitionOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :container-host-name)]
+  (when-some [data (lookup-entry config id :container-host-name)]
     (. builder containerHostName data))
-  (when-let [data (lookup-entry config id :environment-variables)]
+  (when-some [data (lookup-entry config id :environment-variables)]
     (. builder environmentVariables data))
-  (when-let [data (lookup-entry config id :image)]
+  (when-some [data (lookup-entry config id :image)]
     (. builder image data))
-  (when-let [data (mode config id :mode)]
+  (when-some [data (mode config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :model-package-name)]
+  (when-some [data (lookup-entry config id :model-package-name)]
     (. builder modelPackageName data))
-  (when-let [data (lookup-entry config id :model-s3-location)]
+  (when-some [data (lookup-entry config id :model-s3-location)]
     (. builder modelS3Location data))
   (.build builder))
 
@@ -3105,17 +3105,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `memoryReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation` |
 "
   [^ContainerOverride$Builder builder id config]
-  (when-let [data (lookup-entry config id :command)]
+  (when-some [data (lookup-entry config id :command)]
     (. builder command data))
-  (when-let [data (lookup-entry config id :container-definition)]
+  (when-some [data (lookup-entry config id :container-definition)]
     (. builder containerDefinition data))
-  (when-let [data (lookup-entry config id :cpu)]
+  (when-some [data (lookup-entry config id :cpu)]
     (. builder cpu data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :memory-limit)]
+  (when-some [data (lookup-entry config id :memory-limit)]
     (. builder memoryLimit data))
-  (when-let [data (lookup-entry config id :memory-reservation)]
+  (when-some [data (lookup-entry config id :memory-reservation)]
     (. builder memoryReservation data))
   (.build builder))
 
@@ -3148,17 +3148,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vcpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vcpus` |
 "
   [^ContainerOverrides$Builder builder id config]
-  (when-let [data (lookup-entry config id :command)]
+  (when-some [data (lookup-entry config id :command)]
     (. builder command data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :gpu-count)]
+  (when-some [data (lookup-entry config id :gpu-count)]
     (. builder gpuCount data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :memory)]
+  (when-some [data (lookup-entry config id :memory)]
     (. builder memory data))
-  (when-let [data (lookup-entry config id :vcpus)]
+  (when-some [data (lookup-entry config id :vcpus)]
     (. builder vcpus data))
   (.build builder))
 
@@ -3186,7 +3186,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3DataSource` | software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource | [[cdk.support/lookup-entry]] | `:s3-data-source` |
 "
   [^DataSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-data-source)]
+  (when-some [data (lookup-entry config id :s3-data-source)]
     (. builder s3DataSource data))
   (.build builder))
 
@@ -3214,7 +3214,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `imageUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-uri` |
 "
   [^DockerImageConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :image-uri)]
+  (when-some [data (lookup-entry config id :image-uri)]
     (. builder imageUri data))
   (.build builder))
 
@@ -3261,45 +3261,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^DynamoDeleteItem$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :condition-expression)]
+  (when-some [data (lookup-entry config id :condition-expression)]
     (. builder conditionExpression data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression-attribute-names)]
+  (when-some [data (lookup-entry config id :expression-attribute-names)]
     (. builder expressionAttributeNames data))
-  (when-let [data (lookup-entry config id :expression-attribute-values)]
+  (when-some [data (lookup-entry config id :expression-attribute-values)]
     (. builder expressionAttributeValues data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+  (when-some [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
     (. builder returnConsumedCapacity data))
-  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+  (when-some [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
     (. builder returnItemCollectionMetrics data))
-  (when-let [data (dynamo-return-values config id :return-values)]
+  (when-some [data (dynamo-return-values config id :return-values)]
     (. builder returnValues data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -3346,45 +3346,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^DynamoDeleteItemProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :condition-expression)]
+  (when-some [data (lookup-entry config id :condition-expression)]
     (. builder conditionExpression data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression-attribute-names)]
+  (when-some [data (lookup-entry config id :expression-attribute-names)]
     (. builder expressionAttributeNames data))
-  (when-let [data (lookup-entry config id :expression-attribute-values)]
+  (when-some [data (lookup-entry config id :expression-attribute-values)]
     (. builder expressionAttributeValues data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+  (when-some [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
     (. builder returnConsumedCapacity data))
-  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+  (when-some [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
     (. builder returnItemCollectionMetrics data))
-  (when-let [data (dynamo-return-values config id :return-values)]
+  (when-some [data (dynamo-return-values config id :return-values)]
     (. builder returnValues data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -3429,41 +3429,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^DynamoGetItem$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :consistent-read)]
+  (when-some [data (lookup-entry config id :consistent-read)]
     (. builder consistentRead data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression-attribute-names)]
+  (when-some [data (lookup-entry config id :expression-attribute-names)]
     (. builder expressionAttributeNames data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :projection-expression)]
+  (when-some [data (lookup-entry config id :projection-expression)]
     (. builder projectionExpression data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+  (when-some [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
     (. builder returnConsumedCapacity data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -3508,41 +3508,41 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^DynamoGetItemProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :consistent-read)]
+  (when-some [data (lookup-entry config id :consistent-read)]
     (. builder consistentRead data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression-attribute-names)]
+  (when-some [data (lookup-entry config id :expression-attribute-names)]
     (. builder expressionAttributeNames data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :projection-expression)]
+  (when-some [data (lookup-entry config id :projection-expression)]
     (. builder projectionExpression data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+  (when-some [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
     (. builder returnConsumedCapacity data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -3589,45 +3589,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^DynamoPutItem$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :condition-expression)]
+  (when-some [data (lookup-entry config id :condition-expression)]
     (. builder conditionExpression data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression-attribute-names)]
+  (when-some [data (lookup-entry config id :expression-attribute-names)]
     (. builder expressionAttributeNames data))
-  (when-let [data (lookup-entry config id :expression-attribute-values)]
+  (when-some [data (lookup-entry config id :expression-attribute-values)]
     (. builder expressionAttributeValues data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :item)]
+  (when-some [data (lookup-entry config id :item)]
     (. builder item data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+  (when-some [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
     (. builder returnConsumedCapacity data))
-  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+  (when-some [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
     (. builder returnItemCollectionMetrics data))
-  (when-let [data (dynamo-return-values config id :return-values)]
+  (when-some [data (dynamo-return-values config id :return-values)]
     (. builder returnValues data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -3674,45 +3674,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^DynamoPutItemProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :condition-expression)]
+  (when-some [data (lookup-entry config id :condition-expression)]
     (. builder conditionExpression data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression-attribute-names)]
+  (when-some [data (lookup-entry config id :expression-attribute-names)]
     (. builder expressionAttributeNames data))
-  (when-let [data (lookup-entry config id :expression-attribute-values)]
+  (when-some [data (lookup-entry config id :expression-attribute-values)]
     (. builder expressionAttributeValues data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :item)]
+  (when-some [data (lookup-entry config id :item)]
     (. builder item data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+  (when-some [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
     (. builder returnConsumedCapacity data))
-  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+  (when-some [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
     (. builder returnItemCollectionMetrics data))
-  (when-let [data (dynamo-return-values config id :return-values)]
+  (when-some [data (dynamo-return-values config id :return-values)]
     (. builder returnValues data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -3760,47 +3760,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `updateExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-expression` |
 "
   [^DynamoUpdateItem$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :condition-expression)]
+  (when-some [data (lookup-entry config id :condition-expression)]
     (. builder conditionExpression data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression-attribute-names)]
+  (when-some [data (lookup-entry config id :expression-attribute-names)]
     (. builder expressionAttributeNames data))
-  (when-let [data (lookup-entry config id :expression-attribute-values)]
+  (when-some [data (lookup-entry config id :expression-attribute-values)]
     (. builder expressionAttributeValues data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+  (when-some [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
     (. builder returnConsumedCapacity data))
-  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+  (when-some [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
     (. builder returnItemCollectionMetrics data))
-  (when-let [data (dynamo-return-values config id :return-values)]
+  (when-some [data (dynamo-return-values config id :return-values)]
     (. builder returnValues data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :update-expression)]
+  (when-some [data (lookup-entry config id :update-expression)]
     (. builder updateExpression data))
   (.build builder))
 
@@ -3848,47 +3848,47 @@ function on the data with the provided namespace id and item-key.  The found val
 | `updateExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-expression` |
 "
   [^DynamoUpdateItemProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :condition-expression)]
+  (when-some [data (lookup-entry config id :condition-expression)]
     (. builder conditionExpression data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression-attribute-names)]
+  (when-some [data (lookup-entry config id :expression-attribute-names)]
     (. builder expressionAttributeNames data))
-  (when-let [data (lookup-entry config id :expression-attribute-values)]
+  (when-some [data (lookup-entry config id :expression-attribute-values)]
     (. builder expressionAttributeValues data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+  (when-some [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
     (. builder returnConsumedCapacity data))
-  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+  (when-some [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
     (. builder returnItemCollectionMetrics data))
-  (when-let [data (dynamo-return-values config id :return-values)]
+  (when-some [data (dynamo-return-values config id :return-values)]
     (. builder returnValues data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :table)]
+  (when-some [data (lookup-entry config id :table)]
     (. builder table data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :update-expression)]
+  (when-some [data (lookup-entry config id :update-expression)]
     (. builder updateExpression data))
   (.build builder))
 
@@ -3917,9 +3917,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
 "
   [^EcsEc2LaunchTarget$Builder builder id config]
-  (when-let [data (lookup-entry config id :placement-constraints)]
+  (when-some [data (lookup-entry config id :placement-constraints)]
     (. builder placementConstraints data))
-  (when-let [data (lookup-entry config id :placement-strategies)]
+  (when-some [data (lookup-entry config id :placement-strategies)]
     (. builder placementStrategies data))
   (.build builder))
 
@@ -3948,9 +3948,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
 "
   [^EcsEc2LaunchTargetOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :placement-constraints)]
+  (when-some [data (lookup-entry config id :placement-constraints)]
     (. builder placementConstraints data))
-  (when-let [data (lookup-entry config id :placement-strategies)]
+  (when-some [data (lookup-entry config id :placement-strategies)]
     (. builder placementStrategies data))
   (.build builder))
 
@@ -3978,7 +3978,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `platformVersion` | software.amazon.awscdk.services.ecs.FargatePlatformVersion | [[cdk.api.services.ecs/fargate-platform-version]] | `:platform-version` |
 "
   [^EcsFargateLaunchTarget$Builder builder id config]
-  (when-let [data (fargate-platform-version config id :platform-version)]
+  (when-some [data (fargate-platform-version config id :platform-version)]
     (. builder platformVersion data))
   (.build builder))
 
@@ -4006,7 +4006,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `platformVersion` | software.amazon.awscdk.services.ecs.FargatePlatformVersion | [[cdk.api.services.ecs/fargate-platform-version]] | `:platform-version` |
 "
   [^EcsFargateLaunchTargetOptions$Builder builder id config]
-  (when-let [data (fargate-platform-version config id :platform-version)]
+  (when-some [data (fargate-platform-version config id :platform-version)]
     (. builder platformVersion data))
   (.build builder))
 
@@ -4034,7 +4034,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^EcsLaunchTargetConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
 
@@ -4083,49 +4083,49 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EcsRunTask$Builder builder id config]
-  (when-let [data (lookup-entry config id :assign-public-ip)]
+  (when-some [data (lookup-entry config id :assign-public-ip)]
     (. builder assignPublicIp data))
-  (when-let [data (lookup-entry config id :cluster)]
+  (when-some [data (lookup-entry config id :cluster)]
     (. builder cluster data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :container-overrides)]
+  (when-some [data (lookup-entry config id :container-overrides)]
     (. builder containerOverrides data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :enable-execute-command)]
+  (when-some [data (lookup-entry config id :enable-execute-command)]
     (. builder enableExecuteCommand data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :launch-target)]
+  (when-some [data (lookup-entry config id :launch-target)]
     (. builder launchTarget data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (propagated-tag-source config id :propagated-tag-source)]
+  (when-some [data (propagated-tag-source config id :propagated-tag-source)]
     (. builder propagatedTagSource data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :revision-number)]
+  (when-some [data (lookup-entry config id :revision-number)]
     (. builder revisionNumber data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :task-definition)]
+  (when-some [data (lookup-entry config id :task-definition)]
     (. builder taskDefinition data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -4174,49 +4174,49 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EcsRunTaskProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assign-public-ip)]
+  (when-some [data (lookup-entry config id :assign-public-ip)]
     (. builder assignPublicIp data))
-  (when-let [data (lookup-entry config id :cluster)]
+  (when-some [data (lookup-entry config id :cluster)]
     (. builder cluster data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :container-overrides)]
+  (when-some [data (lookup-entry config id :container-overrides)]
     (. builder containerOverrides data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :enable-execute-command)]
+  (when-some [data (lookup-entry config id :enable-execute-command)]
     (. builder enableExecuteCommand data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :launch-target)]
+  (when-some [data (lookup-entry config id :launch-target)]
     (. builder launchTarget data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (propagated-tag-source config id :propagated-tag-source)]
+  (when-some [data (propagated-tag-source config id :propagated-tag-source)]
     (. builder propagatedTagSource data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :revision-number)]
+  (when-some [data (lookup-entry config id :revision-number)]
     (. builder revisionNumber data))
-  (when-let [data (lookup-entry config id :security-groups)]
+  (when-some [data (lookup-entry config id :security-groups)]
     (. builder securityGroups data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :task-definition)]
+  (when-some [data (lookup-entry config id :task-definition)]
     (. builder taskDefinition data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -4260,39 +4260,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EksCall$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster)]
+  (when-some [data (lookup-entry config id :cluster)]
     (. builder cluster data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (http-methods config id :http-method)]
+  (when-some [data (http-methods config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :http-path)]
+  (when-some [data (lookup-entry config id :http-path)]
     (. builder httpPath data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :request-body)]
+  (when-some [data (lookup-entry config id :request-body)]
     (. builder requestBody data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -4336,39 +4336,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EksCallProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster)]
+  (when-some [data (lookup-entry config id :cluster)]
     (. builder cluster data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (http-methods config id :http-method)]
+  (when-some [data (http-methods config id :http-method)]
     (. builder httpMethod data))
-  (when-let [data (lookup-entry config id :http-path)]
+  (when-some [data (lookup-entry config id :http-path)]
     (. builder httpPath data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-parameters)]
+  (when-some [data (lookup-entry config id :query-parameters)]
     (. builder queryParameters data))
-  (when-let [data (lookup-entry config id :request-body)]
+  (when-some [data (lookup-entry config id :request-body)]
     (. builder requestBody data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -4415,45 +4415,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrAddStep$Builder builder id config]
-  (when-let [data (action-on-failure config id :action-on-failure)]
+  (when-some [data (action-on-failure config id :action-on-failure)]
     (. builder actionOnFailure data))
-  (when-let [data (lookup-entry config id :args)]
+  (when-some [data (lookup-entry config id :args)]
     (. builder args data))
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :jar)]
+  (when-some [data (lookup-entry config id :jar)]
     (. builder jar data))
-  (when-let [data (lookup-entry config id :main-class)]
+  (when-some [data (lookup-entry config id :main-class)]
     (. builder mainClass data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -4500,45 +4500,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrAddStepProps$Builder builder id config]
-  (when-let [data (action-on-failure config id :action-on-failure)]
+  (when-some [data (action-on-failure config id :action-on-failure)]
     (. builder actionOnFailure data))
-  (when-let [data (lookup-entry config id :args)]
+  (when-some [data (lookup-entry config id :args)]
     (. builder args data))
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :execution-role-arn)]
+  (when-some [data (lookup-entry config id :execution-role-arn)]
     (. builder executionRoleArn data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :jar)]
+  (when-some [data (lookup-entry config id :jar)]
     (. builder jar data))
-  (when-let [data (lookup-entry config id :main-class)]
+  (when-some [data (lookup-entry config id :main-class)]
     (. builder mainClass data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -4579,33 +4579,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrCancelStep$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :step-id)]
+  (when-some [data (lookup-entry config id :step-id)]
     (. builder stepId data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -4646,33 +4646,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrCancelStepProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :step-id)]
+  (when-some [data (lookup-entry config id :step-id)]
     (. builder stepId data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -4715,37 +4715,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualClusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-cluster-name` |
 "
   [^EmrContainersCreateVirtualCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :eks-cluster)]
+  (when-some [data (lookup-entry config id :eks-cluster)]
     (. builder eksCluster data))
-  (when-let [data (lookup-entry config id :eks-namespace)]
+  (when-some [data (lookup-entry config id :eks-namespace)]
     (. builder eksNamespace data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :virtual-cluster-name)]
+  (when-some [data (lookup-entry config id :virtual-cluster-name)]
     (. builder virtualClusterName data))
   (.build builder))
 
@@ -4788,37 +4788,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualClusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-cluster-name` |
 "
   [^EmrContainersCreateVirtualClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :eks-cluster)]
+  (when-some [data (lookup-entry config id :eks-cluster)]
     (. builder eksCluster data))
-  (when-let [data (lookup-entry config id :eks-namespace)]
+  (when-some [data (lookup-entry config id :eks-namespace)]
     (. builder eksNamespace data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :virtual-cluster-name)]
+  (when-some [data (lookup-entry config id :virtual-cluster-name)]
     (. builder virtualClusterName data))
   (.build builder))
 
@@ -4858,31 +4858,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualClusterId` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:virtual-cluster-id` |
 "
   [^EmrContainersDeleteVirtualCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :virtual-cluster-id)]
+  (when-some [data (lookup-entry config id :virtual-cluster-id)]
     (. builder virtualClusterId data))
   (.build builder))
 
@@ -4922,31 +4922,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualClusterId` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:virtual-cluster-id` |
 "
   [^EmrContainersDeleteVirtualClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :virtual-cluster-id)]
+  (when-some [data (lookup-entry config id :virtual-cluster-id)]
     (. builder virtualClusterId data))
   (.build builder))
 
@@ -4993,45 +4993,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualCluster` | software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput | [[cdk.support/lookup-entry]] | `:virtual-cluster` |
 "
   [^EmrContainersStartJobRun$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-config)]
+  (when-some [data (lookup-entry config id :application-config)]
     (. builder applicationConfig data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :execution-role)]
+  (when-some [data (lookup-entry config id :execution-role)]
     (. builder executionRole data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :job-driver)]
+  (when-some [data (lookup-entry config id :job-driver)]
     (. builder jobDriver data))
-  (when-let [data (lookup-entry config id :job-name)]
+  (when-some [data (lookup-entry config id :job-name)]
     (. builder jobName data))
-  (when-let [data (lookup-entry config id :monitoring)]
+  (when-some [data (lookup-entry config id :monitoring)]
     (. builder monitoring data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :release-label)]
+  (when-some [data (lookup-entry config id :release-label)]
     (. builder releaseLabel data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :virtual-cluster)]
+  (when-some [data (lookup-entry config id :virtual-cluster)]
     (. builder virtualCluster data))
   (.build builder))
 
@@ -5078,45 +5078,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `virtualCluster` | software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput | [[cdk.support/lookup-entry]] | `:virtual-cluster` |
 "
   [^EmrContainersStartJobRunProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :application-config)]
+  (when-some [data (lookup-entry config id :application-config)]
     (. builder applicationConfig data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :execution-role)]
+  (when-some [data (lookup-entry config id :execution-role)]
     (. builder executionRole data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :job-driver)]
+  (when-some [data (lookup-entry config id :job-driver)]
     (. builder jobDriver data))
-  (when-let [data (lookup-entry config id :job-name)]
+  (when-some [data (lookup-entry config id :job-name)]
     (. builder jobName data))
-  (when-let [data (lookup-entry config id :monitoring)]
+  (when-some [data (lookup-entry config id :monitoring)]
     (. builder monitoring data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :release-label)]
+  (when-some [data (lookup-entry config id :release-label)]
     (. builder releaseLabel data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :virtual-cluster)]
+  (when-some [data (lookup-entry config id :virtual-cluster)]
     (. builder virtualCluster data))
   (.build builder))
 
@@ -5147,13 +5147,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^EmrCreateCluster$ApplicationConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-info)]
+  (when-some [data (lookup-entry config id :additional-info)]
     (. builder additionalInfo data))
-  (when-let [data (lookup-entry config id :args)]
+  (when-some [data (lookup-entry config id :args)]
     (. builder args data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -5182,9 +5182,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^EmrCreateCluster$AutoScalingPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :constraints)]
+  (when-some [data (lookup-entry config id :constraints)]
     (. builder constraints data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
 
@@ -5213,9 +5213,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scriptBootstrapAction` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScriptBootstrapActionConfigProperty | [[cdk.support/lookup-entry]] | `:script-bootstrap-action` |
 "
   [^EmrCreateCluster$BootstrapActionConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :script-bootstrap-action)]
+  (when-some [data (lookup-entry config id :script-bootstrap-action)]
     (. builder scriptBootstrapAction data))
   (.build builder))
 
@@ -5273,67 +5273,67 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visibleToAllUsers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible-to-all-users` |
 "
   [^EmrCreateCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-info)]
+  (when-some [data (lookup-entry config id :additional-info)]
     (. builder additionalInfo data))
-  (when-let [data (lookup-entry config id :applications)]
+  (when-some [data (lookup-entry config id :applications)]
     (. builder applications data))
-  (when-let [data (lookup-entry config id :auto-scaling-role)]
+  (when-some [data (lookup-entry config id :auto-scaling-role)]
     (. builder autoScalingRole data))
-  (when-let [data (lookup-entry config id :bootstrap-actions)]
+  (when-some [data (lookup-entry config id :bootstrap-actions)]
     (. builder bootstrapActions data))
-  (when-let [data (lookup-entry config id :cluster-role)]
+  (when-some [data (lookup-entry config id :cluster-role)]
     (. builder clusterRole data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :configurations)]
+  (when-some [data (lookup-entry config id :configurations)]
     (. builder configurations data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :custom-ami-id)]
+  (when-some [data (lookup-entry config id :custom-ami-id)]
     (. builder customAmiId data))
-  (when-let [data (lookup-entry config id :ebs-root-volume-size)]
+  (when-some [data (lookup-entry config id :ebs-root-volume-size)]
     (. builder ebsRootVolumeSize data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (lookup-entry config id :instances)]
+  (when-some [data (lookup-entry config id :instances)]
     (. builder instances data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :kerberos-attributes)]
+  (when-some [data (lookup-entry config id :kerberos-attributes)]
     (. builder kerberosAttributes data))
-  (when-let [data (lookup-entry config id :log-uri)]
+  (when-some [data (lookup-entry config id :log-uri)]
     (. builder logUri data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :release-label)]
+  (when-some [data (lookup-entry config id :release-label)]
     (. builder releaseLabel data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (emr-create-cluster-emr-cluster-scale-down-behavior config id :scale-down-behavior)]
+  (when-some [data (emr-create-cluster-emr-cluster-scale-down-behavior config id :scale-down-behavior)]
     (. builder scaleDownBehavior data))
-  (when-let [data (lookup-entry config id :security-configuration)]
+  (when-some [data (lookup-entry config id :security-configuration)]
     (. builder securityConfiguration data))
-  (when-let [data (lookup-entry config id :service-role)]
+  (when-some [data (lookup-entry config id :service-role)]
     (. builder serviceRole data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :step-concurrency-level)]
+  (when-some [data (lookup-entry config id :step-concurrency-level)]
     (. builder stepConcurrencyLevel data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :visible-to-all-users)]
+  (when-some [data (lookup-entry config id :visible-to-all-users)]
     (. builder visibleToAllUsers data))
   (.build builder))
 
@@ -5369,23 +5369,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `unit` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$CloudWatchAlarmUnit | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-cloud-watch-alarm-unit]] | `:unit` |
 "
   [^EmrCreateCluster$CloudWatchAlarmDefinitionProperty$Builder builder id config]
-  (when-let [data (emr-create-cluster-cloud-watch-alarm-comparison-operator config id :comparison-operator)]
+  (when-some [data (emr-create-cluster-cloud-watch-alarm-comparison-operator config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :dimensions)]
+  (when-some [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
-  (when-let [data (lookup-entry config id :evaluation-periods)]
+  (when-some [data (lookup-entry config id :evaluation-periods)]
     (. builder evaluationPeriods data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :namespace)]
+  (when-some [data (lookup-entry config id :namespace)]
     (. builder namespace data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (emr-create-cluster-cloud-watch-alarm-statistic config id :statistic)]
+  (when-some [data (emr-create-cluster-cloud-watch-alarm-statistic config id :statistic)]
     (. builder statistic data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
-  (when-let [data (emr-create-cluster-cloud-watch-alarm-unit config id :unit)]
+  (when-some [data (emr-create-cluster-cloud-watch-alarm-unit config id :unit)]
     (. builder unit data))
   (.build builder))
 
@@ -5415,11 +5415,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
 "
   [^EmrCreateCluster$ConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :classification)]
+  (when-some [data (lookup-entry config id :classification)]
     (. builder classification data))
-  (when-let [data (lookup-entry config id :configurations)]
+  (when-some [data (lookup-entry config id :configurations)]
     (. builder configurations data))
-  (when-let [data (lookup-entry config id :properties)]
+  (when-some [data (lookup-entry config id :properties)]
     (. builder properties data))
   (.build builder))
 
@@ -5448,9 +5448,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumesPerInstance` | java.lang.Number | [[cdk.support/lookup-entry]] | `:volumes-per-instance` |
 "
   [^EmrCreateCluster$EbsBlockDeviceConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :volume-specification)]
+  (when-some [data (lookup-entry config id :volume-specification)]
     (. builder volumeSpecification data))
-  (when-let [data (lookup-entry config id :volumes-per-instance)]
+  (when-some [data (lookup-entry config id :volumes-per-instance)]
     (. builder volumesPerInstance data))
   (.build builder))
 
@@ -5479,9 +5479,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
 "
   [^EmrCreateCluster$EbsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ebs-block-device-configs)]
+  (when-some [data (lookup-entry config id :ebs-block-device-configs)]
     (. builder ebsBlockDeviceConfigs data))
-  (when-let [data (lookup-entry config id :ebs-optimized)]
+  (when-some [data (lookup-entry config id :ebs-optimized)]
     (. builder ebsOptimized data))
   (.build builder))
 
@@ -5514,17 +5514,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `targetSpotCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-spot-capacity` |
 "
   [^EmrCreateCluster$InstanceFleetConfigProperty$Builder builder id config]
-  (when-let [data (emr-create-cluster-instance-role-type config id :instance-fleet-type)]
+  (when-some [data (emr-create-cluster-instance-role-type config id :instance-fleet-type)]
     (. builder instanceFleetType data))
-  (when-let [data (lookup-entry config id :instance-type-configs)]
+  (when-some [data (lookup-entry config id :instance-type-configs)]
     (. builder instanceTypeConfigs data))
-  (when-let [data (lookup-entry config id :launch-specifications)]
+  (when-some [data (lookup-entry config id :launch-specifications)]
     (. builder launchSpecifications data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :target-on-demand-capacity)]
+  (when-some [data (lookup-entry config id :target-on-demand-capacity)]
     (. builder targetOnDemandCapacity data))
-  (when-let [data (lookup-entry config id :target-spot-capacity)]
+  (when-some [data (lookup-entry config id :target-spot-capacity)]
     (. builder targetSpotCapacity data))
   (.build builder))
 
@@ -5553,9 +5553,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `spotSpecification` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$SpotProvisioningSpecificationProperty | [[cdk.support/lookup-entry]] | `:spot-specification` |
 "
   [^EmrCreateCluster$InstanceFleetProvisioningSpecificationsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :on-demand-specification)]
+  (when-some [data (lookup-entry config id :on-demand-specification)]
     (. builder onDemandSpecification data))
-  (when-let [data (lookup-entry config id :spot-specification)]
+  (when-some [data (lookup-entry config id :spot-specification)]
     (. builder spotSpecification data))
   (.build builder))
 
@@ -5591,23 +5591,23 @@ function on the data with the provided namespace id and item-key.  The found val
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^EmrCreateCluster$InstanceGroupConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :auto-scaling-policy)]
+  (when-some [data (lookup-entry config id :auto-scaling-policy)]
     (. builder autoScalingPolicy data))
-  (when-let [data (lookup-entry config id :bid-price)]
+  (when-some [data (lookup-entry config id :bid-price)]
     (. builder bidPrice data))
-  (when-let [data (lookup-entry config id :configurations)]
+  (when-some [data (lookup-entry config id :configurations)]
     (. builder configurations data))
-  (when-let [data (lookup-entry config id :ebs-configuration)]
+  (when-some [data (lookup-entry config id :ebs-configuration)]
     (. builder ebsConfiguration data))
-  (when-let [data (lookup-entry config id :instance-count)]
+  (when-some [data (lookup-entry config id :instance-count)]
     (. builder instanceCount data))
-  (when-let [data (emr-create-cluster-instance-role-type config id :instance-role)]
+  (when-some [data (emr-create-cluster-instance-role-type config id :instance-role)]
     (. builder instanceRole data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (emr-create-cluster-instance-market config id :market)]
+  (when-some [data (emr-create-cluster-instance-market config id :market)]
     (. builder market data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -5640,17 +5640,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weightedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weighted-capacity` |
 "
   [^EmrCreateCluster$InstanceTypeConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bid-price)]
+  (when-some [data (lookup-entry config id :bid-price)]
     (. builder bidPrice data))
-  (when-let [data (lookup-entry config id :bid-price-as-percentage-of-on-demand-price)]
+  (when-some [data (lookup-entry config id :bid-price-as-percentage-of-on-demand-price)]
     (. builder bidPriceAsPercentageOfOnDemandPrice data))
-  (when-let [data (lookup-entry config id :configurations)]
+  (when-some [data (lookup-entry config id :configurations)]
     (. builder configurations data))
-  (when-let [data (lookup-entry config id :ebs-configuration)]
+  (when-some [data (lookup-entry config id :ebs-configuration)]
     (. builder ebsConfiguration data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :weighted-capacity)]
+  (when-some [data (lookup-entry config id :weighted-capacity)]
     (. builder weightedCapacity data))
   (.build builder))
 
@@ -5693,37 +5693,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `terminationProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protected` |
 "
   [^EmrCreateCluster$InstancesConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-master-security-groups)]
+  (when-some [data (lookup-entry config id :additional-master-security-groups)]
     (. builder additionalMasterSecurityGroups data))
-  (when-let [data (lookup-entry config id :additional-slave-security-groups)]
+  (when-some [data (lookup-entry config id :additional-slave-security-groups)]
     (. builder additionalSlaveSecurityGroups data))
-  (when-let [data (lookup-entry config id :ec2-key-name)]
+  (when-some [data (lookup-entry config id :ec2-key-name)]
     (. builder ec2KeyName data))
-  (when-let [data (lookup-entry config id :ec2-subnet-id)]
+  (when-some [data (lookup-entry config id :ec2-subnet-id)]
     (. builder ec2SubnetId data))
-  (when-let [data (lookup-entry config id :ec2-subnet-ids)]
+  (when-some [data (lookup-entry config id :ec2-subnet-ids)]
     (. builder ec2SubnetIds data))
-  (when-let [data (lookup-entry config id :emr-managed-master-security-group)]
+  (when-some [data (lookup-entry config id :emr-managed-master-security-group)]
     (. builder emrManagedMasterSecurityGroup data))
-  (when-let [data (lookup-entry config id :emr-managed-slave-security-group)]
+  (when-some [data (lookup-entry config id :emr-managed-slave-security-group)]
     (. builder emrManagedSlaveSecurityGroup data))
-  (when-let [data (lookup-entry config id :hadoop-version)]
+  (when-some [data (lookup-entry config id :hadoop-version)]
     (. builder hadoopVersion data))
-  (when-let [data (lookup-entry config id :instance-count)]
+  (when-some [data (lookup-entry config id :instance-count)]
     (. builder instanceCount data))
-  (when-let [data (lookup-entry config id :instance-fleets)]
+  (when-some [data (lookup-entry config id :instance-fleets)]
     (. builder instanceFleets data))
-  (when-let [data (lookup-entry config id :instance-groups)]
+  (when-some [data (lookup-entry config id :instance-groups)]
     (. builder instanceGroups data))
-  (when-let [data (lookup-entry config id :master-instance-type)]
+  (when-some [data (lookup-entry config id :master-instance-type)]
     (. builder masterInstanceType data))
-  (when-let [data (lookup-entry config id :placement)]
+  (when-some [data (lookup-entry config id :placement)]
     (. builder placement data))
-  (when-let [data (lookup-entry config id :service-access-security-group)]
+  (when-some [data (lookup-entry config id :service-access-security-group)]
     (. builder serviceAccessSecurityGroup data))
-  (when-let [data (lookup-entry config id :slave-instance-type)]
+  (when-some [data (lookup-entry config id :slave-instance-type)]
     (. builder slaveInstanceType data))
-  (when-let [data (lookup-entry config id :termination-protected)]
+  (when-some [data (lookup-entry config id :termination-protected)]
     (. builder terminationProtected data))
   (.build builder))
 
@@ -5755,15 +5755,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `realm` | java.lang.String | [[cdk.support/lookup-entry]] | `:realm` |
 "
   [^EmrCreateCluster$KerberosAttributesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ad-domain-join-password)]
+  (when-some [data (lookup-entry config id :ad-domain-join-password)]
     (. builder adDomainJoinPassword data))
-  (when-let [data (lookup-entry config id :ad-domain-join-user)]
+  (when-some [data (lookup-entry config id :ad-domain-join-user)]
     (. builder adDomainJoinUser data))
-  (when-let [data (lookup-entry config id :cross-realm-trust-principal-password)]
+  (when-some [data (lookup-entry config id :cross-realm-trust-principal-password)]
     (. builder crossRealmTrustPrincipalPassword data))
-  (when-let [data (lookup-entry config id :kdc-admin-password)]
+  (when-some [data (lookup-entry config id :kdc-admin-password)]
     (. builder kdcAdminPassword data))
-  (when-let [data (lookup-entry config id :realm)]
+  (when-some [data (lookup-entry config id :realm)]
     (. builder realm data))
   (.build builder))
 
@@ -5792,9 +5792,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^EmrCreateCluster$MetricDimensionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -5822,7 +5822,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `allocationStrategy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$OnDemandAllocationStrategy | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-on-demand-allocation-strategy]] | `:allocation-strategy` |
 "
   [^EmrCreateCluster$OnDemandProvisioningSpecificationProperty$Builder builder id config]
-  (when-let [data (emr-create-cluster-on-demand-allocation-strategy config id :allocation-strategy)]
+  (when-some [data (emr-create-cluster-on-demand-allocation-strategy config id :allocation-strategy)]
     (. builder allocationStrategy data))
   (.build builder))
 
@@ -5851,9 +5851,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
 "
   [^EmrCreateCluster$PlacementTypeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zone)]
+  (when-some [data (lookup-entry config id :availability-zone)]
     (. builder availabilityZone data))
-  (when-let [data (lookup-entry config id :availability-zones)]
+  (when-some [data (lookup-entry config id :availability-zones)]
     (. builder availabilityZones data))
   (.build builder))
 
@@ -5911,67 +5911,67 @@ function on the data with the provided namespace id and item-key.  The found val
 | `visibleToAllUsers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible-to-all-users` |
 "
   [^EmrCreateClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :additional-info)]
+  (when-some [data (lookup-entry config id :additional-info)]
     (. builder additionalInfo data))
-  (when-let [data (lookup-entry config id :applications)]
+  (when-some [data (lookup-entry config id :applications)]
     (. builder applications data))
-  (when-let [data (lookup-entry config id :auto-scaling-role)]
+  (when-some [data (lookup-entry config id :auto-scaling-role)]
     (. builder autoScalingRole data))
-  (when-let [data (lookup-entry config id :bootstrap-actions)]
+  (when-some [data (lookup-entry config id :bootstrap-actions)]
     (. builder bootstrapActions data))
-  (when-let [data (lookup-entry config id :cluster-role)]
+  (when-some [data (lookup-entry config id :cluster-role)]
     (. builder clusterRole data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :configurations)]
+  (when-some [data (lookup-entry config id :configurations)]
     (. builder configurations data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :custom-ami-id)]
+  (when-some [data (lookup-entry config id :custom-ami-id)]
     (. builder customAmiId data))
-  (when-let [data (lookup-entry config id :ebs-root-volume-size)]
+  (when-some [data (lookup-entry config id :ebs-root-volume-size)]
     (. builder ebsRootVolumeSize data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (lookup-entry config id :instances)]
+  (when-some [data (lookup-entry config id :instances)]
     (. builder instances data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :kerberos-attributes)]
+  (when-some [data (lookup-entry config id :kerberos-attributes)]
     (. builder kerberosAttributes data))
-  (when-let [data (lookup-entry config id :log-uri)]
+  (when-some [data (lookup-entry config id :log-uri)]
     (. builder logUri data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :release-label)]
+  (when-some [data (lookup-entry config id :release-label)]
     (. builder releaseLabel data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (emr-create-cluster-emr-cluster-scale-down-behavior config id :scale-down-behavior)]
+  (when-some [data (emr-create-cluster-emr-cluster-scale-down-behavior config id :scale-down-behavior)]
     (. builder scaleDownBehavior data))
-  (when-let [data (lookup-entry config id :security-configuration)]
+  (when-some [data (lookup-entry config id :security-configuration)]
     (. builder securityConfiguration data))
-  (when-let [data (lookup-entry config id :service-role)]
+  (when-some [data (lookup-entry config id :service-role)]
     (. builder serviceRole data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :step-concurrency-level)]
+  (when-some [data (lookup-entry config id :step-concurrency-level)]
     (. builder stepConcurrencyLevel data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :visible-to-all-users)]
+  (when-some [data (lookup-entry config id :visible-to-all-users)]
     (. builder visibleToAllUsers data))
   (.build builder))
 
@@ -6000,9 +6000,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `simpleScalingPolicyConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$SimpleScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:simple-scaling-policy-configuration` |
 "
   [^EmrCreateCluster$ScalingActionProperty$Builder builder id config]
-  (when-let [data (emr-create-cluster-instance-market config id :market)]
+  (when-some [data (emr-create-cluster-instance-market config id :market)]
     (. builder market data))
-  (when-let [data (lookup-entry config id :simple-scaling-policy-configuration)]
+  (when-some [data (lookup-entry config id :simple-scaling-policy-configuration)]
     (. builder simpleScalingPolicyConfiguration data))
   (.build builder))
 
@@ -6031,9 +6031,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 "
   [^EmrCreateCluster$ScalingConstraintsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :min-capacity)]
+  (when-some [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
   (.build builder))
 
@@ -6064,13 +6064,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trigger` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScalingTriggerProperty | [[cdk.support/lookup-entry]] | `:trigger` |
 "
   [^EmrCreateCluster$ScalingRuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :trigger)]
+  (when-some [data (lookup-entry config id :trigger)]
     (. builder trigger data))
   (.build builder))
 
@@ -6098,7 +6098,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `cloudWatchAlarmDefinition` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$CloudWatchAlarmDefinitionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-alarm-definition` |
 "
   [^EmrCreateCluster$ScalingTriggerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-alarm-definition)]
+  (when-some [data (lookup-entry config id :cloud-watch-alarm-definition)]
     (. builder cloudWatchAlarmDefinition data))
   (.build builder))
 
@@ -6127,9 +6127,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 "
   [^EmrCreateCluster$ScriptBootstrapActionConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :args)]
+  (when-some [data (lookup-entry config id :args)]
     (. builder args data))
-  (when-let [data (lookup-entry config id :path)]
+  (when-some [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
 
@@ -6159,11 +6159,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `scalingAdjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scaling-adjustment` |
 "
   [^EmrCreateCluster$SimpleScalingPolicyConfigurationProperty$Builder builder id config]
-  (when-let [data (emr-create-cluster-scaling-adjustment-type config id :adjustment-type)]
+  (when-some [data (emr-create-cluster-scaling-adjustment-type config id :adjustment-type)]
     (. builder adjustmentType data))
-  (when-let [data (lookup-entry config id :cool-down)]
+  (when-some [data (lookup-entry config id :cool-down)]
     (. builder coolDown data))
-  (when-let [data (lookup-entry config id :scaling-adjustment)]
+  (when-some [data (lookup-entry config id :scaling-adjustment)]
     (. builder scalingAdjustment data))
   (.build builder))
 
@@ -6195,15 +6195,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeoutDurationMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-duration-minutes` |
 "
   [^EmrCreateCluster$SpotProvisioningSpecificationProperty$Builder builder id config]
-  (when-let [data (emr-create-cluster-spot-allocation-strategy config id :allocation-strategy)]
+  (when-some [data (emr-create-cluster-spot-allocation-strategy config id :allocation-strategy)]
     (. builder allocationStrategy data))
-  (when-let [data (lookup-entry config id :block-duration-minutes)]
+  (when-some [data (lookup-entry config id :block-duration-minutes)]
     (. builder blockDurationMinutes data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (emr-create-cluster-spot-timeout-action config id :timeout-action)]
+  (when-some [data (emr-create-cluster-spot-timeout-action config id :timeout-action)]
     (. builder timeoutAction data))
-  (when-let [data (lookup-entry config id :timeout-duration-minutes)]
+  (when-some [data (lookup-entry config id :timeout-duration-minutes)]
     (. builder timeoutDurationMinutes data))
   (.build builder))
 
@@ -6233,11 +6233,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeType` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$EbsBlockDeviceVolumeType | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-ebs-block-device-volume-type]] | `:volume-type` |
 "
   [^EmrCreateCluster$VolumeSpecificationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :iops)]
+  (when-some [data (lookup-entry config id :iops)]
     (. builder iops data))
-  (when-let [data (lookup-entry config id :volume-size)]
+  (when-some [data (lookup-entry config id :volume-size)]
     (. builder volumeSize data))
-  (when-let [data (emr-create-cluster-ebs-block-device-volume-type config id :volume-type)]
+  (when-some [data (emr-create-cluster-ebs-block-device-volume-type config id :volume-type)]
     (. builder volumeType data))
   (.build builder))
 
@@ -6280,37 +6280,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrModifyInstanceFleetByName$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (lookup-entry config id :instance-fleet-name)]
+  (when-some [data (lookup-entry config id :instance-fleet-name)]
     (. builder instanceFleetName data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :target-on-demand-capacity)]
+  (when-some [data (lookup-entry config id :target-on-demand-capacity)]
     (. builder targetOnDemandCapacity data))
-  (when-let [data (lookup-entry config id :target-spot-capacity)]
+  (when-some [data (lookup-entry config id :target-spot-capacity)]
     (. builder targetSpotCapacity data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -6353,37 +6353,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrModifyInstanceFleetByNameProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (lookup-entry config id :instance-fleet-name)]
+  (when-some [data (lookup-entry config id :instance-fleet-name)]
     (. builder instanceFleetName data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :target-on-demand-capacity)]
+  (when-some [data (lookup-entry config id :target-on-demand-capacity)]
     (. builder targetOnDemandCapacity data))
-  (when-let [data (lookup-entry config id :target-spot-capacity)]
+  (when-some [data (lookup-entry config id :target-spot-capacity)]
     (. builder targetSpotCapacity data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -6425,35 +6425,35 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrModifyInstanceGroupByName$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (lookup-entry config id :instance-group)]
+  (when-some [data (lookup-entry config id :instance-group)]
     (. builder instanceGroup data))
-  (when-let [data (lookup-entry config id :instance-group-name)]
+  (when-some [data (lookup-entry config id :instance-group-name)]
     (. builder instanceGroupName data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -6484,13 +6484,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `shrinkPolicy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName$ShrinkPolicyProperty | [[cdk.support/lookup-entry]] | `:shrink-policy` |
 "
   [^EmrModifyInstanceGroupByName$InstanceGroupModifyConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :configurations)]
+  (when-some [data (lookup-entry config id :configurations)]
     (. builder configurations data))
-  (when-let [data (lookup-entry config id :e-c2-instance-ids-to-terminate)]
+  (when-some [data (lookup-entry config id :e-c2-instance-ids-to-terminate)]
     (. builder eC2InstanceIdsToTerminate data))
-  (when-let [data (lookup-entry config id :instance-count)]
+  (when-some [data (lookup-entry config id :instance-count)]
     (. builder instanceCount data))
-  (when-let [data (lookup-entry config id :shrink-policy)]
+  (when-some [data (lookup-entry config id :shrink-policy)]
     (. builder shrinkPolicy data))
   (.build builder))
 
@@ -6520,11 +6520,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `instancesToTerminate` | java.util.List | [[cdk.support/lookup-entry]] | `:instances-to-terminate` |
 "
   [^EmrModifyInstanceGroupByName$InstanceResizePolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-termination-timeout)]
+  (when-some [data (lookup-entry config id :instance-termination-timeout)]
     (. builder instanceTerminationTimeout data))
-  (when-let [data (lookup-entry config id :instances-to-protect)]
+  (when-some [data (lookup-entry config id :instances-to-protect)]
     (. builder instancesToProtect data))
-  (when-let [data (lookup-entry config id :instances-to-terminate)]
+  (when-some [data (lookup-entry config id :instances-to-terminate)]
     (. builder instancesToTerminate data))
   (.build builder))
 
@@ -6566,35 +6566,35 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrModifyInstanceGroupByNameProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (lookup-entry config id :instance-group)]
+  (when-some [data (lookup-entry config id :instance-group)]
     (. builder instanceGroup data))
-  (when-let [data (lookup-entry config id :instance-group-name)]
+  (when-some [data (lookup-entry config id :instance-group-name)]
     (. builder instanceGroupName data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -6623,9 +6623,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `instanceResizePolicy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName$InstanceResizePolicyProperty | [[cdk.support/lookup-entry]] | `:instance-resize-policy` |
 "
   [^EmrModifyInstanceGroupByName$ShrinkPolicyProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :decommission-timeout)]
+  (when-some [data (lookup-entry config id :decommission-timeout)]
     (. builder decommissionTimeout data))
-  (when-let [data (lookup-entry config id :instance-resize-policy)]
+  (when-some [data (lookup-entry config id :instance-resize-policy)]
     (. builder instanceResizePolicy data))
   (.build builder))
 
@@ -6666,33 +6666,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrSetClusterTerminationProtection$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :termination-protected)]
+  (when-some [data (lookup-entry config id :termination-protected)]
     (. builder terminationProtected data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -6733,33 +6733,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrSetClusterTerminationProtectionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :termination-protected)]
+  (when-some [data (lookup-entry config id :termination-protected)]
     (. builder terminationProtected data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -6799,31 +6799,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrTerminateCluster$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -6863,31 +6863,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EmrTerminateClusterProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster-id)]
+  (when-some [data (lookup-entry config id :cluster-id)]
     (. builder clusterId data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -6916,9 +6916,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `encryptionOption` | software.amazon.awscdk.services.stepfunctions.tasks.EncryptionOption | [[cdk.api.services.stepfunctions.tasks/encryption-option]] | `:encryption-option` |
 "
   [^EncryptionConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (encryption-option config id :encryption-option)]
+  (when-some [data (encryption-option config id :encryption-option)]
     (. builder encryptionOption data))
   (.build builder))
 
@@ -6959,33 +6959,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EvaluateExpression$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :runtime)]
+  (when-some [data (lookup-entry config id :runtime)]
     (. builder runtime data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7026,33 +7026,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EvaluateExpressionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :runtime)]
+  (when-some [data (lookup-entry config id :runtime)]
     (. builder runtime data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7092,31 +7092,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EventBridgePutEvents$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :entries)]
+  (when-some [data (lookup-entry config id :entries)]
     (. builder entries data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7147,13 +7147,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
 "
   [^EventBridgePutEventsEntry$Builder builder id config]
-  (when-let [data (lookup-entry config id :detail)]
+  (when-some [data (lookup-entry config id :detail)]
     (. builder detail data))
-  (when-let [data (lookup-entry config id :detail-type)]
+  (when-some [data (lookup-entry config id :detail-type)]
     (. builder detailType data))
-  (when-let [data (lookup-entry config id :event-bus)]
+  (when-some [data (lookup-entry config id :event-bus)]
     (. builder eventBus data))
-  (when-let [data (lookup-entry config id :source)]
+  (when-some [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
 
@@ -7193,31 +7193,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^EventBridgePutEventsProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :entries)]
+  (when-some [data (lookup-entry config id :entries)]
     (. builder entries data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7257,31 +7257,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^GlueDataBrewStartJobRun$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7321,31 +7321,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^GlueDataBrewStartJobRunProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7385,31 +7385,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^GlueStartCrawlerRun$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :crawler-name)]
+  (when-some [data (lookup-entry config id :crawler-name)]
     (. builder crawlerName data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7449,31 +7449,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^GlueStartCrawlerRunProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :crawler-name)]
+  (when-some [data (lookup-entry config id :crawler-name)]
     (. builder crawlerName data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7517,39 +7517,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `workerConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-configuration` |
 "
   [^GlueStartJobRun$Builder builder id config]
-  (when-let [data (lookup-entry config id :arguments)]
+  (when-some [data (lookup-entry config id :arguments)]
     (. builder arguments data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :glue-job-name)]
+  (when-some [data (lookup-entry config id :glue-job-name)]
     (. builder glueJobName data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :notify-delay-after)]
+  (when-some [data (lookup-entry config id :notify-delay-after)]
     (. builder notifyDelayAfter data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :security-configuration)]
+  (when-some [data (lookup-entry config id :security-configuration)]
     (. builder securityConfiguration data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :worker-configuration)]
+  (when-some [data (lookup-entry config id :worker-configuration)]
     (. builder workerConfiguration data))
   (.build builder))
 
@@ -7593,39 +7593,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `workerConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-configuration` |
 "
   [^GlueStartJobRunProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :arguments)]
+  (when-some [data (lookup-entry config id :arguments)]
     (. builder arguments data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :glue-job-name)]
+  (when-some [data (lookup-entry config id :glue-job-name)]
     (. builder glueJobName data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :notify-delay-after)]
+  (when-some [data (lookup-entry config id :notify-delay-after)]
     (. builder notifyDelayAfter data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :security-configuration)]
+  (when-some [data (lookup-entry config id :security-configuration)]
     (. builder securityConfiguration data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :worker-configuration)]
+  (when-some [data (lookup-entry config id :worker-configuration)]
     (. builder workerConfiguration data))
   (.build builder))
 
@@ -7672,45 +7672,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `urlEncodingFormat` | software.amazon.awscdk.services.stepfunctions.tasks.URLEncodingFormat | [[cdk.api.services.stepfunctions.tasks/url-encoding-format]] | `:url-encoding-format` |
 "
   [^HttpInvoke$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-endpoint)]
+  (when-some [data (lookup-entry config id :api-endpoint)]
     (. builder apiEndpoint data))
-  (when-let [data (lookup-entry config id :api-root)]
+  (when-some [data (lookup-entry config id :api-root)]
     (. builder apiRoot data))
-  (when-let [data (lookup-entry config id :body)]
+  (when-some [data (lookup-entry config id :body)]
     (. builder body data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :connection)]
+  (when-some [data (lookup-entry config id :connection)]
     (. builder connection data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :method)]
+  (when-some [data (lookup-entry config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-string-parameters)]
+  (when-some [data (lookup-entry config id :query-string-parameters)]
     (. builder queryStringParameters data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (url-encoding-format config id :url-encoding-format)]
+  (when-some [data (url-encoding-format config id :url-encoding-format)]
     (. builder urlEncodingFormat data))
   (.build builder))
 
@@ -7757,45 +7757,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `urlEncodingFormat` | software.amazon.awscdk.services.stepfunctions.tasks.URLEncodingFormat | [[cdk.api.services.stepfunctions.tasks/url-encoding-format]] | `:url-encoding-format` |
 "
   [^HttpInvokeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :api-endpoint)]
+  (when-some [data (lookup-entry config id :api-endpoint)]
     (. builder apiEndpoint data))
-  (when-let [data (lookup-entry config id :api-root)]
+  (when-some [data (lookup-entry config id :api-root)]
     (. builder apiRoot data))
-  (when-let [data (lookup-entry config id :body)]
+  (when-some [data (lookup-entry config id :body)]
     (. builder body data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :connection)]
+  (when-some [data (lookup-entry config id :connection)]
     (. builder connection data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :headers)]
+  (when-some [data (lookup-entry config id :headers)]
     (. builder headers data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :method)]
+  (when-some [data (lookup-entry config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :query-string-parameters)]
+  (when-some [data (lookup-entry config id :query-string-parameters)]
     (. builder queryStringParameters data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (url-encoding-format config id :url-encoding-format)]
+  (when-some [data (url-encoding-format config id :url-encoding-format)]
     (. builder urlEncodingFormat data))
   (.build builder))
 
@@ -7824,9 +7824,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^JobDependency$Builder builder id config]
-  (when-let [data (lookup-entry config id :job-id)]
+  (when-some [data (lookup-entry config id :job-id)]
     (. builder jobId data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -7854,7 +7854,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sparkSubmitJobDriver` | software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver | [[cdk.support/lookup-entry]] | `:spark-submit-job-driver` |
 "
   [^JobDriver$Builder builder id config]
-  (when-let [data (lookup-entry config id :spark-submit-job-driver)]
+  (when-some [data (lookup-entry config id :spark-submit-job-driver)]
     (. builder sparkSubmitJobDriver data))
   (.build builder))
 
@@ -7900,43 +7900,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^LambdaInvoke$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-context)]
+  (when-some [data (lookup-entry config id :client-context)]
     (. builder clientContext data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lambda-invocation-type config id :invocation-type)]
+  (when-some [data (lambda-invocation-type config id :invocation-type)]
     (. builder invocationType data))
-  (when-let [data (lookup-entry config id :lambda-function)]
+  (when-some [data (lookup-entry config id :lambda-function)]
     (. builder lambdaFunction data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :payload-response-only)]
+  (when-some [data (lookup-entry config id :payload-response-only)]
     (. builder payloadResponseOnly data))
-  (when-let [data (lookup-entry config id :qualifier)]
+  (when-some [data (lookup-entry config id :qualifier)]
     (. builder qualifier data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :retry-on-service-exceptions)]
+  (when-some [data (lookup-entry config id :retry-on-service-exceptions)]
     (. builder retryOnServiceExceptions data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -7982,43 +7982,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^LambdaInvokeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-context)]
+  (when-some [data (lookup-entry config id :client-context)]
     (. builder clientContext data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lambda-invocation-type config id :invocation-type)]
+  (when-some [data (lambda-invocation-type config id :invocation-type)]
     (. builder invocationType data))
-  (when-let [data (lookup-entry config id :lambda-function)]
+  (when-some [data (lookup-entry config id :lambda-function)]
     (. builder lambdaFunction data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :payload)]
+  (when-some [data (lookup-entry config id :payload)]
     (. builder payload data))
-  (when-let [data (lookup-entry config id :payload-response-only)]
+  (when-some [data (lookup-entry config id :payload-response-only)]
     (. builder payloadResponseOnly data))
-  (when-let [data (lookup-entry config id :qualifier)]
+  (when-some [data (lookup-entry config id :qualifier)]
     (. builder qualifier data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :retry-on-service-exceptions)]
+  (when-some [data (lookup-entry config id :retry-on-service-exceptions)]
     (. builder retryOnServiceExceptions data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -8047,9 +8047,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `taskDefinition` | software.amazon.awscdk.services.ecs.ITaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 "
   [^LaunchTargetBindOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :cluster)]
+  (when-some [data (lookup-entry config id :cluster)]
     (. builder cluster data))
-  (when-let [data (lookup-entry config id :task-definition)]
+  (when-some [data (lookup-entry config id :task-definition)]
     (. builder taskDefinition data))
   (.build builder))
 
@@ -8089,31 +8089,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^MediaConvertCreateJob$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :create-job-request)]
+  (when-some [data (lookup-entry config id :create-job-request)]
     (. builder createJobRequest data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -8153,31 +8153,31 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^MediaConvertCreateJobProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :create-job-request)]
+  (when-some [data (lookup-entry config id :create-job-request)]
     (. builder createJobRequest data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -8206,9 +8206,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^MessageAttribute$Builder builder id config]
-  (when-let [data (message-attribute-data-type config id :data-type)]
+  (when-some [data (message-attribute-data-type config id :data-type)]
     (. builder dataType data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -8237,9 +8237,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 "
   [^MetricDefinition$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
   (.build builder))
 
@@ -8268,9 +8268,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `invocationsTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:invocations-timeout` |
 "
   [^ModelClientOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :invocations-max-retries)]
+  (when-some [data (lookup-entry config id :invocations-max-retries)]
     (. builder invocationsMaxRetries data))
-  (when-let [data (lookup-entry config id :invocations-timeout)]
+  (when-some [data (lookup-entry config id :invocations-timeout)]
     (. builder invocationsTimeout data))
   (.build builder))
 
@@ -8302,15 +8302,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `persistentAppUi` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:persistent-app-ui` |
 "
   [^Monitoring$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-bucket)]
+  (when-some [data (lookup-entry config id :log-bucket)]
     (. builder logBucket data))
-  (when-let [data (lookup-entry config id :log-group)]
+  (when-some [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
-  (when-let [data (lookup-entry config id :log-stream-name-prefix)]
+  (when-some [data (lookup-entry config id :log-stream-name-prefix)]
     (. builder logStreamNamePrefix data))
-  (when-let [data (lookup-entry config id :logging)]
+  (when-some [data (lookup-entry config id :logging)]
     (. builder logging data))
-  (when-let [data (lookup-entry config id :persistent-app-ui)]
+  (when-some [data (lookup-entry config id :persistent-app-ui)]
     (. builder persistentAppUi data))
   (.build builder))
 
@@ -8339,9 +8339,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3OutputLocation` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:s3-output-location` |
 "
   [^OutputDataConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :s3-output-location)]
+  (when-some [data (lookup-entry config id :s3-output-location)]
     (. builder s3OutputLocation data))
   (.build builder))
 
@@ -8374,17 +8374,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `variantName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variant-name` |
 "
   [^ProductionVariant$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator-type)]
+  (when-some [data (lookup-entry config id :accelerator-type)]
     (. builder acceleratorType data))
-  (when-let [data (lookup-entry config id :initial-instance-count)]
+  (when-some [data (lookup-entry config id :initial-instance-count)]
     (. builder initialInstanceCount data))
-  (when-let [data (lookup-entry config id :initial-variant-weight)]
+  (when-some [data (lookup-entry config id :initial-variant-weight)]
     (. builder initialVariantWeight data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :variant-name)]
+  (when-some [data (lookup-entry config id :variant-name)]
     (. builder variantName data))
   (.build builder))
 
@@ -8413,9 +8413,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
 "
   [^QueryExecutionContext$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-name)]
+  (when-some [data (lookup-entry config id :catalog-name)]
     (. builder catalogName data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
   (.build builder))
 
@@ -8446,13 +8446,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeSize` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:volume-size` |
 "
   [^ResourceConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-count)]
+  (when-some [data (lookup-entry config id :instance-count)]
     (. builder instanceCount data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :volume-encryption-key)]
+  (when-some [data (lookup-entry config id :volume-encryption-key)]
     (. builder volumeEncryptionKey data))
-  (when-let [data (lookup-entry config id :volume-size)]
+  (when-some [data (lookup-entry config id :volume-size)]
     (. builder volumeSize data))
   (.build builder))
 
@@ -8481,9 +8481,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `outputLocation` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:output-location` |
 "
   [^ResultConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :encryption-configuration)]
+  (when-some [data (lookup-entry config id :encryption-configuration)]
     (. builder encryptionConfiguration data))
-  (when-let [data (lookup-entry config id :output-location)]
+  (when-some [data (lookup-entry config id :output-location)]
     (. builder outputLocation data))
   (.build builder))
 
@@ -8514,13 +8514,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:s3-location` |
 "
   [^S3DataSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :attribute-names)]
+  (when-some [data (lookup-entry config id :attribute-names)]
     (. builder attributeNames data))
-  (when-let [data (s3-data-distribution-type config id :s3-data-distribution-type)]
+  (when-some [data (s3-data-distribution-type config id :s3-data-distribution-type)]
     (. builder s3DataDistributionType data))
-  (when-let [data (s3-data-type config id :s3-data-type)]
+  (when-some [data (s3-data-type config id :s3-data-type)]
     (. builder s3DataType data))
-  (when-let [data (lookup-entry config id :s3-location)]
+  (when-some [data (lookup-entry config id :s3-location)]
     (. builder s3Location data))
   (.build builder))
 
@@ -8549,9 +8549,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `forWriting` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:for-writing` |
 "
   [^S3LocationBindOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :for-reading)]
+  (when-some [data (lookup-entry config id :for-reading)]
     (. builder forReading data))
-  (when-let [data (lookup-entry config id :for-writing)]
+  (when-some [data (lookup-entry config id :for-writing)]
     (. builder forWriting data))
   (.build builder))
 
@@ -8579,7 +8579,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
 "
   [^S3LocationConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :uri)]
+  (when-some [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
 
@@ -8621,35 +8621,35 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^SageMakerCreateEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :endpoint-config-name)]
+  (when-some [data (lookup-entry config id :endpoint-config-name)]
     (. builder endpointConfigName data))
-  (when-let [data (lookup-entry config id :endpoint-name)]
+  (when-some [data (lookup-entry config id :endpoint-name)]
     (. builder endpointName data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -8692,37 +8692,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^SageMakerCreateEndpointConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :endpoint-config-name)]
+  (when-some [data (lookup-entry config id :endpoint-config-name)]
     (. builder endpointConfigName data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :production-variants)]
+  (when-some [data (lookup-entry config id :production-variants)]
     (. builder productionVariants data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -8765,37 +8765,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^SageMakerCreateEndpointConfigProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :endpoint-config-name)]
+  (when-some [data (lookup-entry config id :endpoint-config-name)]
     (. builder endpointConfigName data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :kms-key)]
+  (when-some [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :production-variants)]
+  (when-some [data (lookup-entry config id :production-variants)]
     (. builder productionVariants data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -8837,35 +8837,35 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^SageMakerCreateEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :endpoint-config-name)]
+  (when-some [data (lookup-entry config id :endpoint-config-name)]
     (. builder endpointConfigName data))
-  (when-let [data (lookup-entry config id :endpoint-name)]
+  (when-some [data (lookup-entry config id :endpoint-name)]
     (. builder endpointName data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -8912,45 +8912,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^SageMakerCreateModel$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :containers)]
+  (when-some [data (lookup-entry config id :containers)]
     (. builder containers data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :enable-network-isolation)]
+  (when-some [data (lookup-entry config id :enable-network-isolation)]
     (. builder enableNetworkIsolation data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :primary-container)]
+  (when-some [data (lookup-entry config id :primary-container)]
     (. builder primaryContainer data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -8997,45 +8997,45 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^SageMakerCreateModelProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :containers)]
+  (when-some [data (lookup-entry config id :containers)]
     (. builder containers data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :enable-network-isolation)]
+  (when-some [data (lookup-entry config id :enable-network-isolation)]
     (. builder enableNetworkIsolation data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :primary-container)]
+  (when-some [data (lookup-entry config id :primary-container)]
     (. builder primaryContainer data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :subnet-selection)]
+  (when-some [data (lookup-entry config id :subnet-selection)]
     (. builder subnetSelection data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -9086,53 +9086,53 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcConfig` | software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^SageMakerCreateTrainingJob$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm-specification)]
+  (when-some [data (lookup-entry config id :algorithm-specification)]
     (. builder algorithmSpecification data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :enable-network-isolation)]
+  (when-some [data (lookup-entry config id :enable-network-isolation)]
     (. builder enableNetworkIsolation data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :hyperparameters)]
+  (when-some [data (lookup-entry config id :hyperparameters)]
     (. builder hyperparameters data))
-  (when-let [data (lookup-entry config id :input-data-config)]
+  (when-some [data (lookup-entry config id :input-data-config)]
     (. builder inputDataConfig data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-data-config)]
+  (when-some [data (lookup-entry config id :output-data-config)]
     (. builder outputDataConfig data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :resource-config)]
+  (when-some [data (lookup-entry config id :resource-config)]
     (. builder resourceConfig data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :stopping-condition)]
+  (when-some [data (lookup-entry config id :stopping-condition)]
     (. builder stoppingCondition data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :training-job-name)]
+  (when-some [data (lookup-entry config id :training-job-name)]
     (. builder trainingJobName data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -9183,53 +9183,53 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpcConfig` | software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig | [[cdk.support/lookup-entry]] | `:vpc-config` |
 "
   [^SageMakerCreateTrainingJobProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :algorithm-specification)]
+  (when-some [data (lookup-entry config id :algorithm-specification)]
     (. builder algorithmSpecification data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :enable-network-isolation)]
+  (when-some [data (lookup-entry config id :enable-network-isolation)]
     (. builder enableNetworkIsolation data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :hyperparameters)]
+  (when-some [data (lookup-entry config id :hyperparameters)]
     (. builder hyperparameters data))
-  (when-let [data (lookup-entry config id :input-data-config)]
+  (when-some [data (lookup-entry config id :input-data-config)]
     (. builder inputDataConfig data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-data-config)]
+  (when-some [data (lookup-entry config id :output-data-config)]
     (. builder outputDataConfig data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :resource-config)]
+  (when-some [data (lookup-entry config id :resource-config)]
     (. builder resourceConfig data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :stopping-condition)]
+  (when-some [data (lookup-entry config id :stopping-condition)]
     (. builder stoppingCondition data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :training-job-name)]
+  (when-some [data (lookup-entry config id :training-job-name)]
     (. builder trainingJobName data))
-  (when-let [data (lookup-entry config id :vpc-config)]
+  (when-some [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
 
@@ -9280,53 +9280,53 @@ function on the data with the provided namespace id and item-key.  The found val
 | `transformResources` | software.amazon.awscdk.services.stepfunctions.tasks.TransformResources | [[cdk.support/lookup-entry]] | `:transform-resources` |
 "
   [^SageMakerCreateTransformJob$Builder builder id config]
-  (when-let [data (batch-strategy config id :batch-strategy)]
+  (when-some [data (batch-strategy config id :batch-strategy)]
     (. builder batchStrategy data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :max-concurrent-transforms)]
+  (when-some [data (lookup-entry config id :max-concurrent-transforms)]
     (. builder maxConcurrentTransforms data))
-  (when-let [data (lookup-entry config id :max-payload)]
+  (when-some [data (lookup-entry config id :max-payload)]
     (. builder maxPayload data))
-  (when-let [data (lookup-entry config id :model-client-options)]
+  (when-some [data (lookup-entry config id :model-client-options)]
     (. builder modelClientOptions data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :transform-input)]
+  (when-some [data (lookup-entry config id :transform-input)]
     (. builder transformInput data))
-  (when-let [data (lookup-entry config id :transform-job-name)]
+  (when-some [data (lookup-entry config id :transform-job-name)]
     (. builder transformJobName data))
-  (when-let [data (lookup-entry config id :transform-output)]
+  (when-some [data (lookup-entry config id :transform-output)]
     (. builder transformOutput data))
-  (when-let [data (lookup-entry config id :transform-resources)]
+  (when-some [data (lookup-entry config id :transform-resources)]
     (. builder transformResources data))
   (.build builder))
 
@@ -9377,53 +9377,53 @@ function on the data with the provided namespace id and item-key.  The found val
 | `transformResources` | software.amazon.awscdk.services.stepfunctions.tasks.TransformResources | [[cdk.support/lookup-entry]] | `:transform-resources` |
 "
   [^SageMakerCreateTransformJobProps$Builder builder id config]
-  (when-let [data (batch-strategy config id :batch-strategy)]
+  (when-some [data (batch-strategy config id :batch-strategy)]
     (. builder batchStrategy data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :environment)]
+  (when-some [data (lookup-entry config id :environment)]
     (. builder environment data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :max-concurrent-transforms)]
+  (when-some [data (lookup-entry config id :max-concurrent-transforms)]
     (. builder maxConcurrentTransforms data))
-  (when-let [data (lookup-entry config id :max-payload)]
+  (when-some [data (lookup-entry config id :max-payload)]
     (. builder maxPayload data))
-  (when-let [data (lookup-entry config id :model-client-options)]
+  (when-some [data (lookup-entry config id :model-client-options)]
     (. builder modelClientOptions data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :role)]
+  (when-some [data (lookup-entry config id :role)]
     (. builder role data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :transform-input)]
+  (when-some [data (lookup-entry config id :transform-input)]
     (. builder transformInput data))
-  (when-let [data (lookup-entry config id :transform-job-name)]
+  (when-some [data (lookup-entry config id :transform-job-name)]
     (. builder transformJobName data))
-  (when-let [data (lookup-entry config id :transform-output)]
+  (when-some [data (lookup-entry config id :transform-output)]
     (. builder transformOutput data))
-  (when-let [data (lookup-entry config id :transform-resources)]
+  (when-some [data (lookup-entry config id :transform-resources)]
     (. builder transformResources data))
   (.build builder))
 
@@ -9464,33 +9464,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^SageMakerUpdateEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :endpoint-config-name)]
+  (when-some [data (lookup-entry config id :endpoint-config-name)]
     (. builder endpointConfigName data))
-  (when-let [data (lookup-entry config id :endpoint-name)]
+  (when-some [data (lookup-entry config id :endpoint-name)]
     (. builder endpointName data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -9531,33 +9531,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^SageMakerUpdateEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :endpoint-config-name)]
+  (when-some [data (lookup-entry config id :endpoint-config-name)]
     (. builder endpointConfigName data))
-  (when-let [data (lookup-entry config id :endpoint-name)]
+  (when-some [data (lookup-entry config id :endpoint-name)]
     (. builder endpointName data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -9585,7 +9585,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `seed` | java.lang.Number | [[cdk.support/lookup-entry]] | `:seed` |
 "
   [^ShuffleConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :seed)]
+  (when-some [data (lookup-entry config id :seed)]
     (. builder seed data))
   (.build builder))
 
@@ -9631,43 +9631,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^SnsPublish$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :message-attributes)]
+  (when-some [data (lookup-entry config id :message-attributes)]
     (. builder messageAttributes data))
-  (when-let [data (lookup-entry config id :message-deduplication-id)]
+  (when-some [data (lookup-entry config id :message-deduplication-id)]
     (. builder messageDeduplicationId data))
-  (when-let [data (lookup-entry config id :message-group-id)]
+  (when-some [data (lookup-entry config id :message-group-id)]
     (. builder messageGroupId data))
-  (when-let [data (lookup-entry config id :message-per-subscription-type)]
+  (when-some [data (lookup-entry config id :message-per-subscription-type)]
     (. builder messagePerSubscriptionType data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :subject)]
+  (when-some [data (lookup-entry config id :subject)]
     (. builder subject data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -9713,43 +9713,43 @@ function on the data with the provided namespace id and item-key.  The found val
 | `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
 "
   [^SnsPublishProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :message)]
+  (when-some [data (lookup-entry config id :message)]
     (. builder message data))
-  (when-let [data (lookup-entry config id :message-attributes)]
+  (when-some [data (lookup-entry config id :message-attributes)]
     (. builder messageAttributes data))
-  (when-let [data (lookup-entry config id :message-deduplication-id)]
+  (when-some [data (lookup-entry config id :message-deduplication-id)]
     (. builder messageDeduplicationId data))
-  (when-let [data (lookup-entry config id :message-group-id)]
+  (when-some [data (lookup-entry config id :message-group-id)]
     (. builder messageGroupId data))
-  (when-let [data (lookup-entry config id :message-per-subscription-type)]
+  (when-some [data (lookup-entry config id :message-per-subscription-type)]
     (. builder messagePerSubscriptionType data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :subject)]
+  (when-some [data (lookup-entry config id :subject)]
     (. builder subject data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :topic)]
+  (when-some [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
 
@@ -9779,11 +9779,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `sparkSubmitParameters` | java.lang.String | [[cdk.support/lookup-entry]] | `:spark-submit-parameters` |
 "
   [^SparkSubmitJobDriver$Builder builder id config]
-  (when-let [data (lookup-entry config id :entry-point)]
+  (when-some [data (lookup-entry config id :entry-point)]
     (. builder entryPoint data))
-  (when-let [data (lookup-entry config id :entry-point-arguments)]
+  (when-some [data (lookup-entry config id :entry-point-arguments)]
     (. builder entryPointArguments data))
-  (when-let [data (lookup-entry config id :spark-submit-parameters)]
+  (when-some [data (lookup-entry config id :spark-submit-parameters)]
     (. builder sparkSubmitParameters data))
   (.build builder))
 
@@ -9827,39 +9827,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^SqsSendMessage$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :delay)]
+  (when-some [data (lookup-entry config id :delay)]
     (. builder delay data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :message-body)]
+  (when-some [data (lookup-entry config id :message-body)]
     (. builder messageBody data))
-  (when-let [data (lookup-entry config id :message-deduplication-id)]
+  (when-some [data (lookup-entry config id :message-deduplication-id)]
     (. builder messageDeduplicationId data))
-  (when-let [data (lookup-entry config id :message-group-id)]
+  (when-some [data (lookup-entry config id :message-group-id)]
     (. builder messageGroupId data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :queue)]
+  (when-some [data (lookup-entry config id :queue)]
     (. builder queue data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -9903,39 +9903,39 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^SqsSendMessageProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :delay)]
+  (when-some [data (lookup-entry config id :delay)]
     (. builder delay data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :message-body)]
+  (when-some [data (lookup-entry config id :message-body)]
     (. builder messageBody data))
-  (when-let [data (lookup-entry config id :message-deduplication-id)]
+  (when-some [data (lookup-entry config id :message-deduplication-id)]
     (. builder messageDeduplicationId data))
-  (when-let [data (lookup-entry config id :message-group-id)]
+  (when-some [data (lookup-entry config id :message-group-id)]
     (. builder messageGroupId data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :queue)]
+  (when-some [data (lookup-entry config id :queue)]
     (. builder queue data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -9976,33 +9976,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^StepFunctionsInvokeActivity$Builder builder id config]
-  (when-let [data (lookup-entry config id :activity)]
+  (when-some [data (lookup-entry config id :activity)]
     (. builder activity data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -10043,33 +10043,33 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^StepFunctionsInvokeActivityProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :activity)]
+  (when-some [data (lookup-entry config id :activity)]
     (. builder activity data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -10112,37 +10112,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^StepFunctionsStartExecution$Builder builder id config]
-  (when-let [data (lookup-entry config id :associate-with-parent)]
+  (when-some [data (lookup-entry config id :associate-with-parent)]
     (. builder associateWithParent data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-machine)]
+  (when-some [data (lookup-entry config id :state-machine)]
     (. builder stateMachine data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -10185,37 +10185,37 @@ function on the data with the provided namespace id and item-key.  The found val
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 "
   [^StepFunctionsStartExecutionProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :associate-with-parent)]
+  (when-some [data (lookup-entry config id :associate-with-parent)]
     (. builder associateWithParent data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :credentials)]
+  (when-some [data (lookup-entry config id :credentials)]
     (. builder credentials data))
-  (when-let [data (lookup-entry config id :heartbeat)]
+  (when-some [data (lookup-entry config id :heartbeat)]
     (. builder heartbeat data))
-  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+  (when-some [data (lookup-entry config id :heartbeat-timeout)]
     (. builder heartbeatTimeout data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :input-path)]
+  (when-some [data (lookup-entry config id :input-path)]
     (. builder inputPath data))
-  (when-let [data (integration-pattern config id :integration-pattern)]
+  (when-some [data (integration-pattern config id :integration-pattern)]
     (. builder integrationPattern data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-path)]
+  (when-some [data (lookup-entry config id :output-path)]
     (. builder outputPath data))
-  (when-let [data (lookup-entry config id :result-path)]
+  (when-some [data (lookup-entry config id :result-path)]
     (. builder resultPath data))
-  (when-let [data (lookup-entry config id :result-selector)]
+  (when-some [data (lookup-entry config id :result-selector)]
     (. builder resultSelector data))
-  (when-let [data (lookup-entry config id :state-machine)]
+  (when-some [data (lookup-entry config id :state-machine)]
     (. builder stateMachine data))
-  (when-let [data (lookup-entry config id :state-name)]
+  (when-some [data (lookup-entry config id :state-name)]
     (. builder stateName data))
-  (when-let [data (lookup-entry config id :task-timeout)]
+  (when-some [data (lookup-entry config id :task-timeout)]
     (. builder taskTimeout data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
 
@@ -10243,7 +10243,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `maxRuntime` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-runtime` |
 "
   [^StoppingCondition$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-runtime)]
+  (when-some [data (lookup-entry config id :max-runtime)]
     (. builder maxRuntime data))
   (.build builder))
 
@@ -10272,9 +10272,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^TaskEnvironmentVariable$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -10302,7 +10302,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3DataSource` | software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource | [[cdk.support/lookup-entry]] | `:s3-data-source` |
 "
   [^TransformDataSource$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3-data-source)]
+  (when-some [data (lookup-entry config id :s3-data-source)]
     (. builder s3DataSource data))
   (.build builder))
 
@@ -10333,13 +10333,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `transformDataSource` | software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource | [[cdk.support/lookup-entry]] | `:transform-data-source` |
 "
   [^TransformInput$Builder builder id config]
-  (when-let [data (compression-type config id :compression-type)]
+  (when-some [data (compression-type config id :compression-type)]
     (. builder compressionType data))
-  (when-let [data (lookup-entry config id :content-type)]
+  (when-some [data (lookup-entry config id :content-type)]
     (. builder contentType data))
-  (when-let [data (split-type config id :split-type)]
+  (when-some [data (split-type config id :split-type)]
     (. builder splitType data))
-  (when-let [data (lookup-entry config id :transform-data-source)]
+  (when-some [data (lookup-entry config id :transform-data-source)]
     (. builder transformDataSource data))
   (.build builder))
 
@@ -10370,13 +10370,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3OutputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-output-path` |
 "
   [^TransformOutput$Builder builder id config]
-  (when-let [data (lookup-entry config id :accept)]
+  (when-some [data (lookup-entry config id :accept)]
     (. builder accept data))
-  (when-let [data (assemble-with config id :assemble-with)]
+  (when-some [data (assemble-with config id :assemble-with)]
     (. builder assembleWith data))
-  (when-let [data (lookup-entry config id :encryption-key)]
+  (when-some [data (lookup-entry config id :encryption-key)]
     (. builder encryptionKey data))
-  (when-let [data (lookup-entry config id :s3-output-path)]
+  (when-some [data (lookup-entry config id :s3-output-path)]
     (. builder s3OutputPath data))
   (.build builder))
 
@@ -10406,11 +10406,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `volumeEncryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:volume-encryption-key` |
 "
   [^TransformResources$Builder builder id config]
-  (when-let [data (lookup-entry config id :instance-count)]
+  (when-some [data (lookup-entry config id :instance-count)]
     (. builder instanceCount data))
-  (when-let [data (lookup-entry config id :instance-type)]
+  (when-some [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
-  (when-let [data (lookup-entry config id :volume-encryption-key)]
+  (when-some [data (lookup-entry config id :volume-encryption-key)]
     (. builder volumeEncryptionKey data))
   (.build builder))
 
@@ -10439,9 +10439,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `s3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-uri` |
 "
   [^TransformS3DataSource$Builder builder id config]
-  (when-let [data (s3-data-type config id :s3-data-type)]
+  (when-some [data (s3-data-type config id :s3-data-type)]
     (. builder s3DataType data))
-  (when-let [data (lookup-entry config id :s3-uri)]
+  (when-some [data (lookup-entry config id :s3-uri)]
     (. builder s3Uri data))
   (.build builder))
 
@@ -10470,9 +10470,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
 "
   [^VpcConfig$Builder builder id config]
-  (when-let [data (lookup-entry config id :subnets)]
+  (when-some [data (lookup-entry config id :subnets)]
     (. builder subnets data))
-  (when-let [data (lookup-entry config id :vpc)]
+  (when-some [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
 
@@ -10501,9 +10501,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `workerType` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerType | [[cdk.api.services.stepfunctions.tasks/worker-type]] | `:worker-type` |
 "
   [^WorkerConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :number-of-workers)]
+  (when-some [data (lookup-entry config id :number-of-workers)]
     (. builder numberOfWorkers data))
-  (when-let [data (worker-type config id :worker-type)]
+  (when-some [data (worker-type config id :worker-type)]
     (. builder workerType data))
   (.build builder))
 

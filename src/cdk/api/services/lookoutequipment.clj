@@ -30,23 +30,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInferenceScheduler$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-delay-offset-in-minutes)]
+  (when-some [data (lookup-entry config id :data-delay-offset-in-minutes)]
     (. builder dataDelayOffsetInMinutes data))
-  (when-let [data (lookup-entry config id :data-input-configuration)]
+  (when-some [data (lookup-entry config id :data-input-configuration)]
     (. builder dataInputConfiguration data))
-  (when-let [data (lookup-entry config id :data-output-configuration)]
+  (when-some [data (lookup-entry config id :data-output-configuration)]
     (. builder dataOutputConfiguration data))
-  (when-let [data (lookup-entry config id :data-upload-frequency)]
+  (when-some [data (lookup-entry config id :data-upload-frequency)]
     (. builder dataUploadFrequency data))
-  (when-let [data (lookup-entry config id :inference-scheduler-name)]
+  (when-some [data (lookup-entry config id :inference-scheduler-name)]
     (. builder inferenceSchedulerName data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :server-side-kms-key-id)]
+  (when-some [data (lookup-entry config id :server-side-kms-key-id)]
     (. builder serverSideKmsKeyId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -76,11 +76,11 @@
 | `s3InputConfiguration` | software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler$S3InputConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-input-configuration` |
 "
   [^CfnInferenceScheduler$DataInputConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :inference-input-name-configuration)]
+  (when-some [data (lookup-entry config id :inference-input-name-configuration)]
     (. builder inferenceInputNameConfiguration data))
-  (when-let [data (lookup-entry config id :input-time-zone-offset)]
+  (when-some [data (lookup-entry config id :input-time-zone-offset)]
     (. builder inputTimeZoneOffset data))
-  (when-let [data (lookup-entry config id :s3-input-configuration)]
+  (when-some [data (lookup-entry config id :s3-input-configuration)]
     (. builder s3InputConfiguration data))
   (.build builder))
 
@@ -109,9 +109,9 @@
 | `s3OutputConfiguration` | software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler$S3OutputConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-output-configuration` |
 "
   [^CfnInferenceScheduler$DataOutputConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :s3-output-configuration)]
+  (when-some [data (lookup-entry config id :s3-output-configuration)]
     (. builder s3OutputConfiguration data))
   (.build builder))
 
@@ -140,9 +140,9 @@
 | `timestampFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:timestamp-format` |
 "
   [^CfnInferenceScheduler$InputNameConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :component-timestamp-delimiter)]
+  (when-some [data (lookup-entry config id :component-timestamp-delimiter)]
     (. builder componentTimestampDelimiter data))
-  (when-let [data (lookup-entry config id :timestamp-format)]
+  (when-some [data (lookup-entry config id :timestamp-format)]
     (. builder timestampFormat data))
   (.build builder))
 
@@ -178,23 +178,23 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnInferenceSchedulerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-delay-offset-in-minutes)]
+  (when-some [data (lookup-entry config id :data-delay-offset-in-minutes)]
     (. builder dataDelayOffsetInMinutes data))
-  (when-let [data (lookup-entry config id :data-input-configuration)]
+  (when-some [data (lookup-entry config id :data-input-configuration)]
     (. builder dataInputConfiguration data))
-  (when-let [data (lookup-entry config id :data-output-configuration)]
+  (when-some [data (lookup-entry config id :data-output-configuration)]
     (. builder dataOutputConfiguration data))
-  (when-let [data (lookup-entry config id :data-upload-frequency)]
+  (when-some [data (lookup-entry config id :data-upload-frequency)]
     (. builder dataUploadFrequency data))
-  (when-let [data (lookup-entry config id :inference-scheduler-name)]
+  (when-some [data (lookup-entry config id :inference-scheduler-name)]
     (. builder inferenceSchedulerName data))
-  (when-let [data (lookup-entry config id :model-name)]
+  (when-some [data (lookup-entry config id :model-name)]
     (. builder modelName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :server-side-kms-key-id)]
+  (when-some [data (lookup-entry config id :server-side-kms-key-id)]
     (. builder serverSideKmsKeyId data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -223,9 +223,9 @@
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnInferenceScheduler$S3InputConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 
@@ -254,9 +254,9 @@
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 "
   [^CfnInferenceScheduler$S3OutputConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :prefix)]
+  (when-some [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
 

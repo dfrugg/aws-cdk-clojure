@@ -52,17 +52,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^Certificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-name)]
+  (when-some [data (lookup-entry config id :certificate-name)]
     (. builder certificateName data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :transparency-logging-enabled)]
+  (when-some [data (lookup-entry config id :transparency-logging-enabled)]
     (. builder transparencyLoggingEnabled data))
-  (when-let [data (lookup-entry config id :validation)]
+  (when-some [data (lookup-entry config id :validation)]
     (. builder validation data))
   (.build builder))
 
@@ -95,17 +95,17 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^CertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-name)]
+  (when-some [data (lookup-entry config id :certificate-name)]
     (. builder certificateName data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :transparency-logging-enabled)]
+  (when-some [data (lookup-entry config id :transparency-logging-enabled)]
     (. builder transparencyLoggingEnabled data))
-  (when-let [data (lookup-entry config id :validation)]
+  (when-some [data (lookup-entry config id :validation)]
     (. builder validation data))
   (.build builder))
 
@@ -136,13 +136,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validationDomains` | java.util.Map | [[cdk.support/lookup-entry]] | `:validation-domains` |
 "
   [^CertificationValidationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :hosted-zone)]
+  (when-some [data (lookup-entry config id :hosted-zone)]
     (. builder hostedZone data))
-  (when-let [data (lookup-entry config id :hosted-zones)]
+  (when-some [data (lookup-entry config id :hosted-zones)]
     (. builder hostedZones data))
-  (when-let [data (validation-method config id :method)]
+  (when-some [data (validation-method config id :method)]
     (. builder method data))
-  (when-let [data (lookup-entry config id :validation-domains)]
+  (when-some [data (lookup-entry config id :validation-domains)]
     (. builder validationDomains data))
   (.build builder))
 
@@ -170,7 +170,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `expiryEventsConfiguration` | software.amazon.awscdk.services.certificatemanager.CfnAccount$ExpiryEventsConfigurationProperty | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |
 "
   [^CfnAccount$Builder builder id config]
-  (when-let [data (lookup-entry config id :expiry-events-configuration)]
+  (when-some [data (lookup-entry config id :expiry-events-configuration)]
     (. builder expiryEventsConfiguration data))
   (.build builder))
 
@@ -198,7 +198,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `daysBeforeExpiry` | java.lang.Number | [[cdk.support/lookup-entry]] | `:days-before-expiry` |
 "
   [^CfnAccount$ExpiryEventsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :days-before-expiry)]
+  (when-some [data (lookup-entry config id :days-before-expiry)]
     (. builder daysBeforeExpiry data))
   (.build builder))
 
@@ -226,7 +226,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | `expiryEventsConfiguration` | software.amazon.awscdk.services.certificatemanager.CfnAccount$ExpiryEventsConfigurationProperty | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |
 "
   [^CfnAccountProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :expiry-events-configuration)]
+  (when-some [data (lookup-entry config id :expiry-events-configuration)]
     (. builder expiryEventsConfiguration data))
   (.build builder))
 
@@ -261,21 +261,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-method` |
 "
   [^CfnCertificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :certificate-transparency-logging-preference)]
+  (when-some [data (lookup-entry config id :certificate-transparency-logging-preference)]
     (. builder certificateTransparencyLoggingPreference data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :domain-validation-options)]
+  (when-some [data (lookup-entry config id :domain-validation-options)]
     (. builder domainValidationOptions data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :validation-method)]
+  (when-some [data (lookup-entry config id :validation-method)]
     (. builder validationMethod data))
   (.build builder))
 
@@ -305,11 +305,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validationDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-domain` |
 "
   [^CfnCertificate$DomainValidationOptionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :hosted-zone-id)]
+  (when-some [data (lookup-entry config id :hosted-zone-id)]
     (. builder hostedZoneId data))
-  (when-let [data (lookup-entry config id :validation-domain)]
+  (when-some [data (lookup-entry config id :validation-domain)]
     (. builder validationDomain data))
   (.build builder))
 
@@ -344,21 +344,21 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-method` |
 "
   [^CfnCertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+  (when-some [data (lookup-entry config id :certificate-authority-arn)]
     (. builder certificateAuthorityArn data))
-  (when-let [data (lookup-entry config id :certificate-transparency-logging-preference)]
+  (when-some [data (lookup-entry config id :certificate-transparency-logging-preference)]
     (. builder certificateTransparencyLoggingPreference data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :domain-validation-options)]
+  (when-some [data (lookup-entry config id :domain-validation-options)]
     (. builder domainValidationOptions data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :validation-method)]
+  (when-some [data (lookup-entry config id :validation-method)]
     (. builder validationMethod data))
   (.build builder))
 
@@ -396,27 +396,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |
 "
   [^DnsValidatedCertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-name)]
+  (when-some [data (lookup-entry config id :certificate-name)]
     (. builder certificateName data))
-  (when-let [data (lookup-entry config id :cleanup-route53-records)]
+  (when-some [data (lookup-entry config id :cleanup-route53-records)]
     (. builder cleanupRoute53Records data))
-  (when-let [data (lookup-entry config id :custom-resource-role)]
+  (when-some [data (lookup-entry config id :custom-resource-role)]
     (. builder customResourceRole data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :hosted-zone)]
+  (when-some [data (lookup-entry config id :hosted-zone)]
     (. builder hostedZone data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :route53-endpoint)]
+  (when-some [data (lookup-entry config id :route53-endpoint)]
     (. builder route53Endpoint data))
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
-  (when-let [data (lookup-entry config id :transparency-logging-enabled)]
+  (when-some [data (lookup-entry config id :transparency-logging-enabled)]
     (. builder transparencyLoggingEnabled data))
-  (when-let [data (lookup-entry config id :validation)]
+  (when-some [data (lookup-entry config id :validation)]
     (. builder validation data))
   (.build builder))
 
@@ -447,13 +447,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 "
   [^PrivateCertificate$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-authority)]
+  (when-some [data (lookup-entry config id :certificate-authority)]
     (. builder certificateAuthority data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
   (.build builder))
 
@@ -484,13 +484,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 "
   [^PrivateCertificateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :certificate-authority)]
+  (when-some [data (lookup-entry config id :certificate-authority)]
     (. builder certificateAuthority data))
-  (when-let [data (lookup-entry config id :domain-name)]
+  (when-some [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
-  (when-let [data (lookup-entry config id :key-algorithm)]
+  (when-some [data (lookup-entry config id :key-algorithm)]
     (. builder keyAlgorithm data))
-  (when-let [data (lookup-entry config id :subject-alternative-names)]
+  (when-some [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
   (.build builder))
 

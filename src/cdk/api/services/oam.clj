@@ -25,15 +25,15 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLink$Builder builder id config]
-  (when-let [data (lookup-entry config id :label-template)]
+  (when-some [data (lookup-entry config id :label-template)]
     (. builder labelTemplate data))
-  (when-let [data (lookup-entry config id :link-configuration)]
+  (when-some [data (lookup-entry config id :link-configuration)]
     (. builder linkConfiguration data))
-  (when-let [data (lookup-entry config id :resource-types)]
+  (when-some [data (lookup-entry config id :resource-types)]
     (. builder resourceTypes data))
-  (when-let [data (lookup-entry config id :sink-identifier)]
+  (when-some [data (lookup-entry config id :sink-identifier)]
     (. builder sinkIdentifier data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -62,9 +62,9 @@
 | `metricConfiguration` | software.amazon.awscdk.services.oam.CfnLink$LinkFilterProperty | [[cdk.support/lookup-entry]] | `:metric-configuration` |
 "
   [^CfnLink$LinkConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-configuration)]
+  (when-some [data (lookup-entry config id :log-group-configuration)]
     (. builder logGroupConfiguration data))
-  (when-let [data (lookup-entry config id :metric-configuration)]
+  (when-some [data (lookup-entry config id :metric-configuration)]
     (. builder metricConfiguration data))
   (.build builder))
 
@@ -92,7 +92,7 @@
 | `filter` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter` |
 "
   [^CfnLink$LinkFilterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
   (.build builder))
 
@@ -124,15 +124,15 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLinkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :label-template)]
+  (when-some [data (lookup-entry config id :label-template)]
     (. builder labelTemplate data))
-  (when-let [data (lookup-entry config id :link-configuration)]
+  (when-some [data (lookup-entry config id :link-configuration)]
     (. builder linkConfiguration data))
-  (when-let [data (lookup-entry config id :resource-types)]
+  (when-some [data (lookup-entry config id :resource-types)]
     (. builder resourceTypes data))
-  (when-let [data (lookup-entry config id :sink-identifier)]
+  (when-some [data (lookup-entry config id :sink-identifier)]
     (. builder sinkIdentifier data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -162,11 +162,11 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSink$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -196,11 +196,11 @@
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSinkProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :policy)]
+  (when-some [data (lookup-entry config id :policy)]
     (. builder policy data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

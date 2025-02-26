@@ -22,11 +22,11 @@
 | `refreshToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:refresh-token` |
 "
   [^CfnSkill$AuthenticationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :client-id)]
+  (when-some [data (lookup-entry config id :client-id)]
     (. builder clientId data))
-  (when-let [data (lookup-entry config id :client-secret)]
+  (when-some [data (lookup-entry config id :client-secret)]
     (. builder clientSecret data))
-  (when-let [data (lookup-entry config id :refresh-token)]
+  (when-some [data (lookup-entry config id :refresh-token)]
     (. builder refreshToken data))
   (.build builder))
 
@@ -56,11 +56,11 @@
 | `vendorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor-id` |
 "
   [^CfnSkill$Builder builder id config]
-  (when-let [data (lookup-entry config id :authentication-configuration)]
+  (when-some [data (lookup-entry config id :authentication-configuration)]
     (. builder authenticationConfiguration data))
-  (when-let [data (lookup-entry config id :skill-package)]
+  (when-some [data (lookup-entry config id :skill-package)]
     (. builder skillPackage data))
-  (when-let [data (lookup-entry config id :vendor-id)]
+  (when-some [data (lookup-entry config id :vendor-id)]
     (. builder vendorId data))
   (.build builder))
 
@@ -88,7 +88,7 @@
 | `manifest` | java.lang.Object | [[cdk.support/lookup-entry]] | `:manifest` |
 "
   [^CfnSkill$OverridesProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :manifest)]
+  (when-some [data (lookup-entry config id :manifest)]
     (. builder manifest data))
   (.build builder))
 
@@ -118,11 +118,11 @@
 | `vendorId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vendor-id` |
 "
   [^CfnSkillProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :authentication-configuration)]
+  (when-some [data (lookup-entry config id :authentication-configuration)]
     (. builder authenticationConfiguration data))
-  (when-let [data (lookup-entry config id :skill-package)]
+  (when-some [data (lookup-entry config id :skill-package)]
     (. builder skillPackage data))
-  (when-let [data (lookup-entry config id :vendor-id)]
+  (when-some [data (lookup-entry config id :vendor-id)]
     (. builder vendorId data))
   (.build builder))
 
@@ -154,15 +154,15 @@
 | `s3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-object-version` |
 "
   [^CfnSkill$SkillPackageProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :overrides)]
+  (when-some [data (lookup-entry config id :overrides)]
     (. builder overrides data))
-  (when-let [data (lookup-entry config id :s3-bucket)]
+  (when-some [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
-  (when-let [data (lookup-entry config id :s3-bucket-role)]
+  (when-some [data (lookup-entry config id :s3-bucket-role)]
     (. builder s3BucketRole data))
-  (when-let [data (lookup-entry config id :s3-key)]
+  (when-some [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
-  (when-let [data (lookup-entry config id :s3-object-version)]
+  (when-some [data (lookup-entry config id :s3-object-version)]
     (. builder s3ObjectVersion data))
   (.build builder))
 

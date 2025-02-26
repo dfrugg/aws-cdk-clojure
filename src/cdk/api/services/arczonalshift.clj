@@ -21,11 +21,11 @@
 | `zonalAutoshiftStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:zonal-autoshift-status` |
 "
   [^CfnZonalAutoshiftConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :practice-run-configuration)]
+  (when-some [data (lookup-entry config id :practice-run-configuration)]
     (. builder practiceRunConfiguration data))
-  (when-let [data (lookup-entry config id :resource-identifier)]
+  (when-some [data (lookup-entry config id :resource-identifier)]
     (. builder resourceIdentifier data))
-  (when-let [data (lookup-entry config id :zonal-autoshift-status)]
+  (when-some [data (lookup-entry config id :zonal-autoshift-status)]
     (. builder zonalAutoshiftStatus data))
   (.build builder))
 
@@ -54,9 +54,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :alarm-identifier)]
+  (when-some [data (lookup-entry config id :alarm-identifier)]
     (. builder alarmIdentifier data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -87,13 +87,13 @@
 | `outcomeAlarms` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:outcome-alarms` |
 "
   [^CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :blocked-dates)]
+  (when-some [data (lookup-entry config id :blocked-dates)]
     (. builder blockedDates data))
-  (when-let [data (lookup-entry config id :blocked-windows)]
+  (when-some [data (lookup-entry config id :blocked-windows)]
     (. builder blockedWindows data))
-  (when-let [data (lookup-entry config id :blocking-alarms)]
+  (when-some [data (lookup-entry config id :blocking-alarms)]
     (. builder blockingAlarms data))
-  (when-let [data (lookup-entry config id :outcome-alarms)]
+  (when-some [data (lookup-entry config id :outcome-alarms)]
     (. builder outcomeAlarms data))
   (.build builder))
 
@@ -123,11 +123,11 @@
 | `zonalAutoshiftStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:zonal-autoshift-status` |
 "
   [^CfnZonalAutoshiftConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :practice-run-configuration)]
+  (when-some [data (lookup-entry config id :practice-run-configuration)]
     (. builder practiceRunConfiguration data))
-  (when-let [data (lookup-entry config id :resource-identifier)]
+  (when-some [data (lookup-entry config id :resource-identifier)]
     (. builder resourceIdentifier data))
-  (when-let [data (lookup-entry config id :zonal-autoshift-status)]
+  (when-some [data (lookup-entry config id :zonal-autoshift-status)]
     (. builder zonalAutoshiftStatus data))
   (.build builder))
 

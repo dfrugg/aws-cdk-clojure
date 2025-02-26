@@ -52,9 +52,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnByteMatchSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :byte-match-tuples)]
+  (when-some [data (lookup-entry config id :byte-match-tuples)]
     (. builder byteMatchTuples data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -86,15 +86,15 @@
 | `textTransformation` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-transformation` |
 "
   [^CfnByteMatchSet$ByteMatchTupleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field-to-match)]
+  (when-some [data (lookup-entry config id :field-to-match)]
     (. builder fieldToMatch data))
-  (when-let [data (lookup-entry config id :positional-constraint)]
+  (when-some [data (lookup-entry config id :positional-constraint)]
     (. builder positionalConstraint data))
-  (when-let [data (lookup-entry config id :target-string)]
+  (when-some [data (lookup-entry config id :target-string)]
     (. builder targetString data))
-  (when-let [data (lookup-entry config id :target-string-base64)]
+  (when-some [data (lookup-entry config id :target-string-base64)]
     (. builder targetStringBase64 data))
-  (when-let [data (lookup-entry config id :text-transformation)]
+  (when-some [data (lookup-entry config id :text-transformation)]
     (. builder textTransformation data))
   (.build builder))
 
@@ -123,9 +123,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnByteMatchSet$FieldToMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data)]
+  (when-some [data (lookup-entry config id :data)]
     (. builder data data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -154,9 +154,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnByteMatchSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :byte-match-tuples)]
+  (when-some [data (lookup-entry config id :byte-match-tuples)]
     (. builder byteMatchTuples data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -185,9 +185,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnGeoMatchSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :geo-match-constraints)]
+  (when-some [data (lookup-entry config id :geo-match-constraints)]
     (. builder geoMatchConstraints data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -216,9 +216,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnGeoMatchSet$GeoMatchConstraintProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -247,9 +247,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnGeoMatchSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :geo-match-constraints)]
+  (when-some [data (lookup-entry config id :geo-match-constraints)]
     (. builder geoMatchConstraints data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -278,9 +278,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnIPSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip-set-descriptors)]
+  (when-some [data (lookup-entry config id :ip-set-descriptors)]
     (. builder ipSetDescriptors data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -309,9 +309,9 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnIPSet$IPSetDescriptorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -340,9 +340,9 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnIPSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :ip-set-descriptors)]
+  (when-some [data (lookup-entry config id :ip-set-descriptors)]
     (. builder ipSetDescriptors data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -374,15 +374,15 @@
 | `rateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rate-limit` |
 "
   [^CfnRateBasedRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :match-predicates)]
+  (when-some [data (lookup-entry config id :match-predicates)]
     (. builder matchPredicates data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rate-key)]
+  (when-some [data (lookup-entry config id :rate-key)]
     (. builder rateKey data))
-  (when-let [data (lookup-entry config id :rate-limit)]
+  (when-some [data (lookup-entry config id :rate-limit)]
     (. builder rateLimit data))
   (.build builder))
 
@@ -412,11 +412,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnRateBasedRule$PredicateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-id)]
+  (when-some [data (lookup-entry config id :data-id)]
     (. builder dataId data))
-  (when-let [data (lookup-entry config id :negated)]
+  (when-some [data (lookup-entry config id :negated)]
     (. builder negated data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -448,15 +448,15 @@
 | `rateLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rate-limit` |
 "
   [^CfnRateBasedRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :match-predicates)]
+  (when-some [data (lookup-entry config id :match-predicates)]
     (. builder matchPredicates data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rate-key)]
+  (when-some [data (lookup-entry config id :rate-key)]
     (. builder rateKey data))
-  (when-let [data (lookup-entry config id :rate-limit)]
+  (when-some [data (lookup-entry config id :rate-limit)]
     (. builder rateLimit data))
   (.build builder))
 
@@ -485,9 +485,9 @@
 | `regexPatternStrings` | java.util.List | [[cdk.support/lookup-entry]] | `:regex-pattern-strings` |
 "
   [^CfnRegexPatternSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :regex-pattern-strings)]
+  (when-some [data (lookup-entry config id :regex-pattern-strings)]
     (. builder regexPatternStrings data))
   (.build builder))
 
@@ -516,9 +516,9 @@
 | `regexPatternStrings` | java.util.List | [[cdk.support/lookup-entry]] | `:regex-pattern-strings` |
 "
   [^CfnRegexPatternSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :regex-pattern-strings)]
+  (when-some [data (lookup-entry config id :regex-pattern-strings)]
     (. builder regexPatternStrings data))
   (.build builder))
 
@@ -548,11 +548,11 @@
 | `predicates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predicates` |
 "
   [^CfnRule$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :predicates)]
+  (when-some [data (lookup-entry config id :predicates)]
     (. builder predicates data))
   (.build builder))
 
@@ -582,11 +582,11 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnRule$PredicateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-id)]
+  (when-some [data (lookup-entry config id :data-id)]
     (. builder dataId data))
-  (when-let [data (lookup-entry config id :negated)]
+  (when-some [data (lookup-entry config id :negated)]
     (. builder negated data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -616,11 +616,11 @@
 | `predicates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predicates` |
 "
   [^CfnRuleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :predicates)]
+  (when-some [data (lookup-entry config id :predicates)]
     (. builder predicates data))
   (.build builder))
 
@@ -649,9 +649,9 @@
 | `sizeConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:size-constraints` |
 "
   [^CfnSizeConstraintSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :size-constraints)]
+  (when-some [data (lookup-entry config id :size-constraints)]
     (. builder sizeConstraints data))
   (.build builder))
 
@@ -680,9 +680,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSizeConstraintSet$FieldToMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data)]
+  (when-some [data (lookup-entry config id :data)]
     (. builder data data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -711,9 +711,9 @@
 | `sizeConstraints` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:size-constraints` |
 "
   [^CfnSizeConstraintSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :size-constraints)]
+  (when-some [data (lookup-entry config id :size-constraints)]
     (. builder sizeConstraints data))
   (.build builder))
 
@@ -744,13 +744,13 @@
 | `textTransformation` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-transformation` |
 "
   [^CfnSizeConstraintSet$SizeConstraintProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :comparison-operator)]
+  (when-some [data (lookup-entry config id :comparison-operator)]
     (. builder comparisonOperator data))
-  (when-let [data (lookup-entry config id :field-to-match)]
+  (when-some [data (lookup-entry config id :field-to-match)]
     (. builder fieldToMatch data))
-  (when-let [data (lookup-entry config id :size)]
+  (when-some [data (lookup-entry config id :size)]
     (. builder size data))
-  (when-let [data (lookup-entry config id :text-transformation)]
+  (when-some [data (lookup-entry config id :text-transformation)]
     (. builder textTransformation data))
   (.build builder))
 
@@ -779,9 +779,9 @@
 | `sqlInjectionMatchTuples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sql-injection-match-tuples` |
 "
   [^CfnSqlInjectionMatchSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sql-injection-match-tuples)]
+  (when-some [data (lookup-entry config id :sql-injection-match-tuples)]
     (. builder sqlInjectionMatchTuples data))
   (.build builder))
 
@@ -810,9 +810,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnSqlInjectionMatchSet$FieldToMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data)]
+  (when-some [data (lookup-entry config id :data)]
     (. builder data data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -841,9 +841,9 @@
 | `sqlInjectionMatchTuples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sql-injection-match-tuples` |
 "
   [^CfnSqlInjectionMatchSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :sql-injection-match-tuples)]
+  (when-some [data (lookup-entry config id :sql-injection-match-tuples)]
     (. builder sqlInjectionMatchTuples data))
   (.build builder))
 
@@ -872,9 +872,9 @@
 | `textTransformation` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-transformation` |
 "
   [^CfnSqlInjectionMatchSet$SqlInjectionMatchTupleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field-to-match)]
+  (when-some [data (lookup-entry config id :field-to-match)]
     (. builder fieldToMatch data))
-  (when-let [data (lookup-entry config id :text-transformation)]
+  (when-some [data (lookup-entry config id :text-transformation)]
     (. builder textTransformation data))
   (.build builder))
 
@@ -902,7 +902,7 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnWebACL$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -931,9 +931,9 @@
 | `webAclId` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-acl-id` |
 "
   [^CfnWebACLAssociation$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :web-acl-id)]
+  (when-some [data (lookup-entry config id :web-acl-id)]
     (. builder webAclId data))
   (.build builder))
 
@@ -962,9 +962,9 @@
 | `webAclId` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-acl-id` |
 "
   [^CfnWebACLAssociationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-arn)]
+  (when-some [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
-  (when-let [data (lookup-entry config id :web-acl-id)]
+  (when-some [data (lookup-entry config id :web-acl-id)]
     (. builder webAclId data))
   (.build builder))
 
@@ -995,13 +995,13 @@
 | `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnWebACL$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-action)]
+  (when-some [data (lookup-entry config id :default-action)]
     (. builder defaultAction data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
 
@@ -1032,13 +1032,13 @@
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
 "
   [^CfnWebACLProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-action)]
+  (when-some [data (lookup-entry config id :default-action)]
     (. builder defaultAction data))
-  (when-let [data (lookup-entry config id :metric-name)]
+  (when-some [data (lookup-entry config id :metric-name)]
     (. builder metricName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
 
@@ -1068,11 +1068,11 @@
 | `ruleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-id` |
 "
   [^CfnWebACL$RuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :priority)]
+  (when-some [data (lookup-entry config id :priority)]
     (. builder priority data))
-  (when-let [data (lookup-entry config id :rule-id)]
+  (when-some [data (lookup-entry config id :rule-id)]
     (. builder ruleId data))
   (.build builder))
 
@@ -1101,9 +1101,9 @@
 | `xssMatchTuples` | java.util.List | [[cdk.support/lookup-entry]] | `:xss-match-tuples` |
 "
   [^CfnXssMatchSet$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :xss-match-tuples)]
+  (when-some [data (lookup-entry config id :xss-match-tuples)]
     (. builder xssMatchTuples data))
   (.build builder))
 
@@ -1132,9 +1132,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnXssMatchSet$FieldToMatchProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data)]
+  (when-some [data (lookup-entry config id :data)]
     (. builder data data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1163,9 +1163,9 @@
 | `xssMatchTuples` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:xss-match-tuples` |
 "
   [^CfnXssMatchSetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :xss-match-tuples)]
+  (when-some [data (lookup-entry config id :xss-match-tuples)]
     (. builder xssMatchTuples data))
   (.build builder))
 
@@ -1194,9 +1194,9 @@
 | `textTransformation` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-transformation` |
 "
   [^CfnXssMatchSet$XssMatchTupleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :field-to-match)]
+  (when-some [data (lookup-entry config id :field-to-match)]
     (. builder fieldToMatch data))
-  (when-let [data (lookup-entry config id :text-transformation)]
+  (when-some [data (lookup-entry config id :text-transformation)]
     (. builder textTransformation data))
   (.build builder))
 

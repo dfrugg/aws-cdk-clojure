@@ -26,11 +26,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLoggingConfiguration$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-configuration)]
+  (when-some [data (lookup-entry config id :destination-configuration)]
     (. builder destinationConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -58,7 +58,7 @@
 | `logGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-name` |
 "
   [^CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :log-group-name)]
+  (when-some [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
   (.build builder))
 
@@ -88,11 +88,11 @@
 | `s3` | software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnLoggingConfiguration$DestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cloud-watch-logs)]
+  (when-some [data (lookup-entry config id :cloud-watch-logs)]
     (. builder cloudWatchLogs data))
-  (when-let [data (lookup-entry config id :firehose)]
+  (when-some [data (lookup-entry config id :firehose)]
     (. builder firehose data))
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
 
@@ -120,7 +120,7 @@
 | `deliveryStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-stream-name` |
 "
   [^CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delivery-stream-name)]
+  (when-some [data (lookup-entry config id :delivery-stream-name)]
     (. builder deliveryStreamName data))
   (.build builder))
 
@@ -150,11 +150,11 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnLoggingConfigurationProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-configuration)]
+  (when-some [data (lookup-entry config id :destination-configuration)]
     (. builder destinationConfiguration data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -182,7 +182,7 @@
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 "
   [^CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket-name)]
+  (when-some [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
   (.build builder))
 
@@ -215,17 +215,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRoom$Builder builder id config]
-  (when-let [data (lookup-entry config id :logging-configuration-identifiers)]
+  (when-some [data (lookup-entry config id :logging-configuration-identifiers)]
     (. builder loggingConfigurationIdentifiers data))
-  (when-let [data (lookup-entry config id :maximum-message-length)]
+  (when-some [data (lookup-entry config id :maximum-message-length)]
     (. builder maximumMessageLength data))
-  (when-let [data (lookup-entry config id :maximum-message-rate-per-second)]
+  (when-some [data (lookup-entry config id :maximum-message-rate-per-second)]
     (. builder maximumMessageRatePerSecond data))
-  (when-let [data (lookup-entry config id :message-review-handler)]
+  (when-some [data (lookup-entry config id :message-review-handler)]
     (. builder messageReviewHandler data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -254,9 +254,9 @@
 | `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
 "
   [^CfnRoom$MessageReviewHandlerProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :fallback-result)]
+  (when-some [data (lookup-entry config id :fallback-result)]
     (. builder fallbackResult data))
-  (when-let [data (lookup-entry config id :uri)]
+  (when-some [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
 
@@ -289,17 +289,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRoomProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :logging-configuration-identifiers)]
+  (when-some [data (lookup-entry config id :logging-configuration-identifiers)]
     (. builder loggingConfigurationIdentifiers data))
-  (when-let [data (lookup-entry config id :maximum-message-length)]
+  (when-some [data (lookup-entry config id :maximum-message-length)]
     (. builder maximumMessageLength data))
-  (when-let [data (lookup-entry config id :maximum-message-rate-per-second)]
+  (when-some [data (lookup-entry config id :maximum-message-rate-per-second)]
     (. builder maximumMessageRatePerSecond data))
-  (when-let [data (lookup-entry config id :message-review-handler)]
+  (when-some [data (lookup-entry config id :message-review-handler)]
     (. builder messageReviewHandler data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

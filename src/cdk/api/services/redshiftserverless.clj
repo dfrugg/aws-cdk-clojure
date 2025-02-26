@@ -41,37 +41,37 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnNamespace$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin-password-secret-kms-key-id)]
+  (when-some [data (lookup-entry config id :admin-password-secret-kms-key-id)]
     (. builder adminPasswordSecretKmsKeyId data))
-  (when-let [data (lookup-entry config id :admin-user-password)]
+  (when-some [data (lookup-entry config id :admin-user-password)]
     (. builder adminUserPassword data))
-  (when-let [data (lookup-entry config id :admin-username)]
+  (when-some [data (lookup-entry config id :admin-username)]
     (. builder adminUsername data))
-  (when-let [data (lookup-entry config id :db-name)]
+  (when-some [data (lookup-entry config id :db-name)]
     (. builder dbName data))
-  (when-let [data (lookup-entry config id :default-iam-role-arn)]
+  (when-some [data (lookup-entry config id :default-iam-role-arn)]
     (. builder defaultIamRoleArn data))
-  (when-let [data (lookup-entry config id :final-snapshot-name)]
+  (when-some [data (lookup-entry config id :final-snapshot-name)]
     (. builder finalSnapshotName data))
-  (when-let [data (lookup-entry config id :final-snapshot-retention-period)]
+  (when-some [data (lookup-entry config id :final-snapshot-retention-period)]
     (. builder finalSnapshotRetentionPeriod data))
-  (when-let [data (lookup-entry config id :iam-roles)]
+  (when-some [data (lookup-entry config id :iam-roles)]
     (. builder iamRoles data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :log-exports)]
+  (when-some [data (lookup-entry config id :log-exports)]
     (. builder logExports data))
-  (when-let [data (lookup-entry config id :manage-admin-password)]
+  (when-some [data (lookup-entry config id :manage-admin-password)]
     (. builder manageAdminPassword data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
-  (when-let [data (lookup-entry config id :namespace-resource-policy)]
+  (when-some [data (lookup-entry config id :namespace-resource-policy)]
     (. builder namespaceResourcePolicy data))
-  (when-let [data (lookup-entry config id :redshift-idc-application-arn)]
+  (when-some [data (lookup-entry config id :redshift-idc-application-arn)]
     (. builder redshiftIdcApplicationArn data))
-  (when-let [data (lookup-entry config id :snapshot-copy-configurations)]
+  (when-some [data (lookup-entry config id :snapshot-copy-configurations)]
     (. builder snapshotCopyConfigurations data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -111,31 +111,31 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnNamespace$NamespaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin-password-secret-arn)]
+  (when-some [data (lookup-entry config id :admin-password-secret-arn)]
     (. builder adminPasswordSecretArn data))
-  (when-let [data (lookup-entry config id :admin-password-secret-kms-key-id)]
+  (when-some [data (lookup-entry config id :admin-password-secret-kms-key-id)]
     (. builder adminPasswordSecretKmsKeyId data))
-  (when-let [data (lookup-entry config id :admin-username)]
+  (when-some [data (lookup-entry config id :admin-username)]
     (. builder adminUsername data))
-  (when-let [data (lookup-entry config id :creation-date)]
+  (when-some [data (lookup-entry config id :creation-date)]
     (. builder creationDate data))
-  (when-let [data (lookup-entry config id :db-name)]
+  (when-some [data (lookup-entry config id :db-name)]
     (. builder dbName data))
-  (when-let [data (lookup-entry config id :default-iam-role-arn)]
+  (when-some [data (lookup-entry config id :default-iam-role-arn)]
     (. builder defaultIamRoleArn data))
-  (when-let [data (lookup-entry config id :iam-roles)]
+  (when-some [data (lookup-entry config id :iam-roles)]
     (. builder iamRoles data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :log-exports)]
+  (when-some [data (lookup-entry config id :log-exports)]
     (. builder logExports data))
-  (when-let [data (lookup-entry config id :namespace-arn)]
+  (when-some [data (lookup-entry config id :namespace-arn)]
     (. builder namespaceArn data))
-  (when-let [data (lookup-entry config id :namespace-id)]
+  (when-some [data (lookup-entry config id :namespace-id)]
     (. builder namespaceId data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -178,37 +178,37 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnNamespaceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :admin-password-secret-kms-key-id)]
+  (when-some [data (lookup-entry config id :admin-password-secret-kms-key-id)]
     (. builder adminPasswordSecretKmsKeyId data))
-  (when-let [data (lookup-entry config id :admin-user-password)]
+  (when-some [data (lookup-entry config id :admin-user-password)]
     (. builder adminUserPassword data))
-  (when-let [data (lookup-entry config id :admin-username)]
+  (when-some [data (lookup-entry config id :admin-username)]
     (. builder adminUsername data))
-  (when-let [data (lookup-entry config id :db-name)]
+  (when-some [data (lookup-entry config id :db-name)]
     (. builder dbName data))
-  (when-let [data (lookup-entry config id :default-iam-role-arn)]
+  (when-some [data (lookup-entry config id :default-iam-role-arn)]
     (. builder defaultIamRoleArn data))
-  (when-let [data (lookup-entry config id :final-snapshot-name)]
+  (when-some [data (lookup-entry config id :final-snapshot-name)]
     (. builder finalSnapshotName data))
-  (when-let [data (lookup-entry config id :final-snapshot-retention-period)]
+  (when-some [data (lookup-entry config id :final-snapshot-retention-period)]
     (. builder finalSnapshotRetentionPeriod data))
-  (when-let [data (lookup-entry config id :iam-roles)]
+  (when-some [data (lookup-entry config id :iam-roles)]
     (. builder iamRoles data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
-  (when-let [data (lookup-entry config id :log-exports)]
+  (when-some [data (lookup-entry config id :log-exports)]
     (. builder logExports data))
-  (when-let [data (lookup-entry config id :manage-admin-password)]
+  (when-some [data (lookup-entry config id :manage-admin-password)]
     (. builder manageAdminPassword data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
-  (when-let [data (lookup-entry config id :namespace-resource-policy)]
+  (when-some [data (lookup-entry config id :namespace-resource-policy)]
     (. builder namespaceResourcePolicy data))
-  (when-let [data (lookup-entry config id :redshift-idc-application-arn)]
+  (when-some [data (lookup-entry config id :redshift-idc-application-arn)]
     (. builder redshiftIdcApplicationArn data))
-  (when-let [data (lookup-entry config id :snapshot-copy-configurations)]
+  (when-some [data (lookup-entry config id :snapshot-copy-configurations)]
     (. builder snapshotCopyConfigurations data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -238,11 +238,11 @@
 | `snapshotRetentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:snapshot-retention-period` |
 "
   [^CfnNamespace$SnapshotCopyConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination-kms-key-id)]
+  (when-some [data (lookup-entry config id :destination-kms-key-id)]
     (. builder destinationKmsKeyId data))
-  (when-let [data (lookup-entry config id :destination-region)]
+  (when-some [data (lookup-entry config id :destination-region)]
     (. builder destinationRegion data))
-  (when-let [data (lookup-entry config id :snapshot-retention-period)]
+  (when-some [data (lookup-entry config id :snapshot-retention-period)]
     (. builder snapshotRetentionPeriod data))
   (.build builder))
 
@@ -280,27 +280,27 @@
 | `workgroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workgroup-name` |
 "
   [^CfnWorkgroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-capacity)]
+  (when-some [data (lookup-entry config id :base-capacity)]
     (. builder baseCapacity data))
-  (when-let [data (lookup-entry config id :config-parameters)]
+  (when-some [data (lookup-entry config id :config-parameters)]
     (. builder configParameters data))
-  (when-let [data (lookup-entry config id :enhanced-vpc-routing)]
+  (when-some [data (lookup-entry config id :enhanced-vpc-routing)]
     (. builder enhancedVpcRouting data))
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :publicly-accessible)]
+  (when-some [data (lookup-entry config id :publicly-accessible)]
     (. builder publiclyAccessible data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :workgroup-name)]
+  (when-some [data (lookup-entry config id :workgroup-name)]
     (. builder workgroupName data))
   (.build builder))
 
@@ -329,9 +329,9 @@
 | `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |
 "
   [^CfnWorkgroup$ConfigParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameter-key)]
+  (when-some [data (lookup-entry config id :parameter-key)]
     (. builder parameterKey data))
-  (when-let [data (lookup-entry config id :parameter-value)]
+  (when-some [data (lookup-entry config id :parameter-value)]
     (. builder parameterValue data))
   (.build builder))
 
@@ -361,11 +361,11 @@
 | `vpcEndpoints` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-endpoints` |
 "
   [^CfnWorkgroup$EndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :address)]
+  (when-some [data (lookup-entry config id :address)]
     (. builder address data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :vpc-endpoints)]
+  (when-some [data (lookup-entry config id :vpc-endpoints)]
     (. builder vpcEndpoints data))
   (.build builder))
 
@@ -396,13 +396,13 @@
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
 "
   [^CfnWorkgroup$NetworkInterfaceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :availability-zone)]
+  (when-some [data (lookup-entry config id :availability-zone)]
     (. builder availabilityZone data))
-  (when-let [data (lookup-entry config id :network-interface-id)]
+  (when-some [data (lookup-entry config id :network-interface-id)]
     (. builder networkInterfaceId data))
-  (when-let [data (lookup-entry config id :private-ip-address)]
+  (when-some [data (lookup-entry config id :private-ip-address)]
     (. builder privateIpAddress data))
-  (when-let [data (lookup-entry config id :subnet-id)]
+  (when-some [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
 
@@ -440,27 +440,27 @@
 | `workgroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workgroup-name` |
 "
   [^CfnWorkgroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-capacity)]
+  (when-some [data (lookup-entry config id :base-capacity)]
     (. builder baseCapacity data))
-  (when-let [data (lookup-entry config id :config-parameters)]
+  (when-some [data (lookup-entry config id :config-parameters)]
     (. builder configParameters data))
-  (when-let [data (lookup-entry config id :enhanced-vpc-routing)]
+  (when-some [data (lookup-entry config id :enhanced-vpc-routing)]
     (. builder enhancedVpcRouting data))
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
-  (when-let [data (lookup-entry config id :port)]
+  (when-some [data (lookup-entry config id :port)]
     (. builder port data))
-  (when-let [data (lookup-entry config id :publicly-accessible)]
+  (when-some [data (lookup-entry config id :publicly-accessible)]
     (. builder publiclyAccessible data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :workgroup-name)]
+  (when-some [data (lookup-entry config id :workgroup-name)]
     (. builder workgroupName data))
   (.build builder))
 
@@ -490,11 +490,11 @@
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
 "
   [^CfnWorkgroup$VpcEndpointProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :network-interfaces)]
+  (when-some [data (lookup-entry config id :network-interfaces)]
     (. builder networkInterfaces data))
-  (when-let [data (lookup-entry config id :vpc-endpoint-id)]
+  (when-some [data (lookup-entry config id :vpc-endpoint-id)]
     (. builder vpcEndpointId data))
-  (when-let [data (lookup-entry config id :vpc-id)]
+  (when-some [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
 
@@ -535,33 +535,33 @@
 | `workgroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:workgroup-name` |
 "
   [^CfnWorkgroup$WorkgroupProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :base-capacity)]
+  (when-some [data (lookup-entry config id :base-capacity)]
     (. builder baseCapacity data))
-  (when-let [data (lookup-entry config id :config-parameters)]
+  (when-some [data (lookup-entry config id :config-parameters)]
     (. builder configParameters data))
-  (when-let [data (lookup-entry config id :creation-date)]
+  (when-some [data (lookup-entry config id :creation-date)]
     (. builder creationDate data))
-  (when-let [data (lookup-entry config id :endpoint)]
+  (when-some [data (lookup-entry config id :endpoint)]
     (. builder endpoint data))
-  (when-let [data (lookup-entry config id :enhanced-vpc-routing)]
+  (when-some [data (lookup-entry config id :enhanced-vpc-routing)]
     (. builder enhancedVpcRouting data))
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :namespace-name)]
+  (when-some [data (lookup-entry config id :namespace-name)]
     (. builder namespaceName data))
-  (when-let [data (lookup-entry config id :publicly-accessible)]
+  (when-some [data (lookup-entry config id :publicly-accessible)]
     (. builder publiclyAccessible data))
-  (when-let [data (lookup-entry config id :security-group-ids)]
+  (when-some [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :subnet-ids)]
+  (when-some [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
-  (when-let [data (lookup-entry config id :workgroup-arn)]
+  (when-some [data (lookup-entry config id :workgroup-arn)]
     (. builder workgroupArn data))
-  (when-let [data (lookup-entry config id :workgroup-id)]
+  (when-some [data (lookup-entry config id :workgroup-id)]
     (. builder workgroupId data))
-  (when-let [data (lookup-entry config id :workgroup-name)]
+  (when-some [data (lookup-entry config id :workgroup-name)]
     (. builder workgroupName data))
   (.build builder))
 

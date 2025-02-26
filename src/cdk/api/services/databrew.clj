@@ -80,17 +80,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDataset$Builder builder id config]
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :format-options)]
+  (when-some [data (lookup-entry config id :format-options)]
     (. builder formatOptions data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :path-options)]
+  (when-some [data (lookup-entry config id :path-options)]
     (. builder pathOptions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -119,9 +119,9 @@
 | `headerRow` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:header-row` |
 "
   [^CfnDataset$CsvOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delimiter)]
+  (when-some [data (lookup-entry config id :delimiter)]
     (. builder delimiter data))
-  (when-let [data (lookup-entry config id :header-row)]
+  (when-some [data (lookup-entry config id :header-row)]
     (. builder headerRow data))
   (.build builder))
 
@@ -152,13 +152,13 @@
 | `tempDirectory` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temp-directory` |
 "
   [^CfnDataset$DataCatalogInputDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :temp-directory)]
+  (when-some [data (lookup-entry config id :temp-directory)]
     (. builder tempDirectory data))
   (.build builder))
 
@@ -189,13 +189,13 @@
 | `tempDirectory` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:temp-directory` |
 "
   [^CfnDataset$DatabaseInputDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :database-table-name)]
+  (when-some [data (lookup-entry config id :database-table-name)]
     (. builder databaseTableName data))
-  (when-let [data (lookup-entry config id :glue-connection-name)]
+  (when-some [data (lookup-entry config id :glue-connection-name)]
     (. builder glueConnectionName data))
-  (when-let [data (lookup-entry config id :query-string)]
+  (when-some [data (lookup-entry config id :query-string)]
     (. builder queryString data))
-  (when-let [data (lookup-entry config id :temp-directory)]
+  (when-some [data (lookup-entry config id :temp-directory)]
     (. builder tempDirectory data))
   (.build builder))
 
@@ -227,15 +227,15 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnDataset$DatasetParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :create-column)]
+  (when-some [data (lookup-entry config id :create-column)]
     (. builder createColumn data))
-  (when-let [data (lookup-entry config id :datetime-options)]
+  (when-some [data (lookup-entry config id :datetime-options)]
     (. builder datetimeOptions data))
-  (when-let [data (lookup-entry config id :filter)]
+  (when-some [data (lookup-entry config id :filter)]
     (. builder filter data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -265,11 +265,11 @@
 | `timezoneOffset` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone-offset` |
 "
   [^CfnDataset$DatetimeOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :locale-code)]
+  (when-some [data (lookup-entry config id :locale-code)]
     (. builder localeCode data))
-  (when-let [data (lookup-entry config id :timezone-offset)]
+  (when-some [data (lookup-entry config id :timezone-offset)]
     (. builder timezoneOffset data))
   (.build builder))
 
@@ -299,11 +299,11 @@
 | `sheetNames` | java.util.List | [[cdk.support/lookup-entry]] | `:sheet-names` |
 "
   [^CfnDataset$ExcelOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :header-row)]
+  (when-some [data (lookup-entry config id :header-row)]
     (. builder headerRow data))
-  (when-let [data (lookup-entry config id :sheet-indexes)]
+  (when-some [data (lookup-entry config id :sheet-indexes)]
     (. builder sheetIndexes data))
-  (when-let [data (lookup-entry config id :sheet-names)]
+  (when-some [data (lookup-entry config id :sheet-names)]
     (. builder sheetNames data))
   (.build builder))
 
@@ -333,11 +333,11 @@
 | `orderedBy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ordered-by` |
 "
   [^CfnDataset$FilesLimitProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :max-files)]
+  (when-some [data (lookup-entry config id :max-files)]
     (. builder maxFiles data))
-  (when-let [data (lookup-entry config id :order)]
+  (when-some [data (lookup-entry config id :order)]
     (. builder order data))
-  (when-let [data (lookup-entry config id :ordered-by)]
+  (when-some [data (lookup-entry config id :ordered-by)]
     (. builder orderedBy data))
   (.build builder))
 
@@ -366,9 +366,9 @@
 | `valuesMap` | java.util.List | [[cdk.support/lookup-entry]] | `:values-map` |
 "
   [^CfnDataset$FilterExpressionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :expression)]
+  (when-some [data (lookup-entry config id :expression)]
     (. builder expression data))
-  (when-let [data (lookup-entry config id :values-map)]
+  (when-some [data (lookup-entry config id :values-map)]
     (. builder valuesMap data))
   (.build builder))
 
@@ -397,9 +397,9 @@
 | `valueReference` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-reference` |
 "
   [^CfnDataset$FilterValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :value-reference)]
+  (when-some [data (lookup-entry config id :value-reference)]
     (. builder valueReference data))
   (.build builder))
 
@@ -429,11 +429,11 @@
 | `json` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:json` |
 "
   [^CfnDataset$FormatOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :csv)]
+  (when-some [data (lookup-entry config id :csv)]
     (. builder csv data))
-  (when-let [data (lookup-entry config id :excel)]
+  (when-some [data (lookup-entry config id :excel)]
     (. builder excel data))
-  (when-let [data (lookup-entry config id :json)]
+  (when-some [data (lookup-entry config id :json)]
     (. builder json data))
   (.build builder))
 
@@ -464,13 +464,13 @@
 | `s3InputDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-input-definition` |
 "
   [^CfnDataset$InputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-catalog-input-definition)]
+  (when-some [data (lookup-entry config id :data-catalog-input-definition)]
     (. builder dataCatalogInputDefinition data))
-  (when-let [data (lookup-entry config id :database-input-definition)]
+  (when-some [data (lookup-entry config id :database-input-definition)]
     (. builder databaseInputDefinition data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
-  (when-let [data (lookup-entry config id :s3-input-definition)]
+  (when-some [data (lookup-entry config id :s3-input-definition)]
     (. builder s3InputDefinition data))
   (.build builder))
 
@@ -498,7 +498,7 @@
 | `multiLine` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:multi-line` |
 "
   [^CfnDataset$JsonOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :multi-line)]
+  (when-some [data (lookup-entry config id :multi-line)]
     (. builder multiLine data))
   (.build builder))
 
@@ -526,7 +526,7 @@
 | `sourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-arn` |
 "
   [^CfnDataset$MetadataProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :source-arn)]
+  (when-some [data (lookup-entry config id :source-arn)]
     (. builder sourceArn data))
   (.build builder))
 
@@ -556,11 +556,11 @@
 | `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnDataset$PathOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :files-limit)]
+  (when-some [data (lookup-entry config id :files-limit)]
     (. builder filesLimit data))
-  (when-let [data (lookup-entry config id :last-modified-date-condition)]
+  (when-some [data (lookup-entry config id :last-modified-date-condition)]
     (. builder lastModifiedDateCondition data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
 
@@ -589,9 +589,9 @@
 | `pathParameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:path-parameter-name` |
 "
   [^CfnDataset$PathParameterProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-parameter)]
+  (when-some [data (lookup-entry config id :dataset-parameter)]
     (. builder datasetParameter data))
-  (when-let [data (lookup-entry config id :path-parameter-name)]
+  (when-some [data (lookup-entry config id :path-parameter-name)]
     (. builder pathParameterName data))
   (.build builder))
 
@@ -624,17 +624,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnDatasetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :format-options)]
+  (when-some [data (lookup-entry config id :format-options)]
     (. builder formatOptions data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :path-options)]
+  (when-some [data (lookup-entry config id :path-options)]
     (. builder pathOptions data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -663,9 +663,9 @@
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 "
   [^CfnDataset$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
 
@@ -693,7 +693,7 @@
 | `statistics` | java.util.List | [[cdk.support/lookup-entry]] | `:statistics` |
 "
   [^CfnJob$AllowedStatisticsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :statistics)]
+  (when-some [data (lookup-entry config id :statistics)]
     (. builder statistics data))
   (.build builder))
 
@@ -740,45 +740,45 @@
 | `validationConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation-configurations` |
 "
   [^CfnJob$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-catalog-outputs)]
+  (when-some [data (lookup-entry config id :data-catalog-outputs)]
     (. builder dataCatalogOutputs data))
-  (when-let [data (lookup-entry config id :database-outputs)]
+  (when-some [data (lookup-entry config id :database-outputs)]
     (. builder databaseOutputs data))
-  (when-let [data (lookup-entry config id :dataset-name)]
+  (when-some [data (lookup-entry config id :dataset-name)]
     (. builder datasetName data))
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
-  (when-let [data (lookup-entry config id :encryption-mode)]
+  (when-some [data (lookup-entry config id :encryption-mode)]
     (. builder encryptionMode data))
-  (when-let [data (lookup-entry config id :job-sample)]
+  (when-some [data (lookup-entry config id :job-sample)]
     (. builder jobSample data))
-  (when-let [data (lookup-entry config id :log-subscription)]
+  (when-some [data (lookup-entry config id :log-subscription)]
     (. builder logSubscription data))
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :max-retries)]
+  (when-some [data (lookup-entry config id :max-retries)]
     (. builder maxRetries data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-location)]
+  (when-some [data (lookup-entry config id :output-location)]
     (. builder outputLocation data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
-  (when-let [data (lookup-entry config id :profile-configuration)]
+  (when-some [data (lookup-entry config id :profile-configuration)]
     (. builder profileConfiguration data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
-  (when-let [data (lookup-entry config id :recipe)]
+  (when-some [data (lookup-entry config id :recipe)]
     (. builder recipe data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :validation-configurations)]
+  (when-some [data (lookup-entry config id :validation-configurations)]
     (. builder validationConfigurations data))
   (.build builder))
 
@@ -807,9 +807,9 @@
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 "
   [^CfnJob$ColumnSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
   (.build builder))
 
@@ -838,9 +838,9 @@
 | `statistics` | software.amazon.awscdk.services.databrew.CfnJob$StatisticsConfigurationProperty | [[cdk.support/lookup-entry]] | `:statistics` |
 "
   [^CfnJob$ColumnStatisticsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :selectors)]
+  (when-some [data (lookup-entry config id :selectors)]
     (. builder selectors data))
-  (when-let [data (lookup-entry config id :statistics)]
+  (when-some [data (lookup-entry config id :statistics)]
     (. builder statistics data))
   (.build builder))
 
@@ -868,7 +868,7 @@
 | `delimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:delimiter` |
 "
   [^CfnJob$CsvOutputOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :delimiter)]
+  (when-some [data (lookup-entry config id :delimiter)]
     (. builder delimiter data))
   (.build builder))
 
@@ -901,17 +901,17 @@
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 "
   [^CfnJob$DataCatalogOutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :database-options)]
+  (when-some [data (lookup-entry config id :database-options)]
     (. builder databaseOptions data))
-  (when-let [data (lookup-entry config id :overwrite)]
+  (when-some [data (lookup-entry config id :overwrite)]
     (. builder overwrite data))
-  (when-let [data (lookup-entry config id :s3-options)]
+  (when-some [data (lookup-entry config id :s3-options)]
     (. builder s3Options data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
 
@@ -941,11 +941,11 @@
 | `glueConnectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:glue-connection-name` |
 "
   [^CfnJob$DatabaseOutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :database-options)]
+  (when-some [data (lookup-entry config id :database-options)]
     (. builder databaseOptions data))
-  (when-let [data (lookup-entry config id :database-output-mode)]
+  (when-some [data (lookup-entry config id :database-output-mode)]
     (. builder databaseOutputMode data))
-  (when-let [data (lookup-entry config id :glue-connection-name)]
+  (when-some [data (lookup-entry config id :glue-connection-name)]
     (. builder glueConnectionName data))
   (.build builder))
 
@@ -974,9 +974,9 @@
 | `tempDirectory` | software.amazon.awscdk.services.databrew.CfnJob$S3LocationProperty | [[cdk.support/lookup-entry]] | `:temp-directory` |
 "
   [^CfnJob$DatabaseTableOutputOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :temp-directory)]
+  (when-some [data (lookup-entry config id :temp-directory)]
     (. builder tempDirectory data))
   (.build builder))
 
@@ -1005,9 +1005,9 @@
 | `entityTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:entity-types` |
 "
   [^CfnJob$EntityDetectorConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :allowed-statistics)]
+  (when-some [data (lookup-entry config id :allowed-statistics)]
     (. builder allowedStatistics data))
-  (when-let [data (lookup-entry config id :entity-types)]
+  (when-some [data (lookup-entry config id :entity-types)]
     (. builder entityTypes data))
   (.build builder))
 
@@ -1036,9 +1036,9 @@
 | `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |
 "
   [^CfnJob$JobSampleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :mode)]
+  (when-some [data (lookup-entry config id :mode)]
     (. builder mode data))
-  (when-let [data (lookup-entry config id :size)]
+  (when-some [data (lookup-entry config id :size)]
     (. builder size data))
   (.build builder))
 
@@ -1066,7 +1066,7 @@
 | `csv` | software.amazon.awscdk.services.databrew.CfnJob$CsvOutputOptionsProperty | [[cdk.support/lookup-entry]] | `:csv` |
 "
   [^CfnJob$OutputFormatOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :csv)]
+  (when-some [data (lookup-entry config id :csv)]
     (. builder csv data))
   (.build builder))
 
@@ -1096,11 +1096,11 @@
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 "
   [^CfnJob$OutputLocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :bucket-owner)]
+  (when-some [data (lookup-entry config id :bucket-owner)]
     (. builder bucketOwner data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
 
@@ -1134,19 +1134,19 @@
 | `partitionColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:partition-columns` |
 "
   [^CfnJob$OutputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :compression-format)]
+  (when-some [data (lookup-entry config id :compression-format)]
     (. builder compressionFormat data))
-  (when-let [data (lookup-entry config id :format)]
+  (when-some [data (lookup-entry config id :format)]
     (. builder format data))
-  (when-let [data (lookup-entry config id :format-options)]
+  (when-some [data (lookup-entry config id :format-options)]
     (. builder formatOptions data))
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
-  (when-let [data (lookup-entry config id :max-output-files)]
+  (when-some [data (lookup-entry config id :max-output-files)]
     (. builder maxOutputFiles data))
-  (when-let [data (lookup-entry config id :overwrite)]
+  (when-some [data (lookup-entry config id :overwrite)]
     (. builder overwrite data))
-  (when-let [data (lookup-entry config id :partition-columns)]
+  (when-some [data (lookup-entry config id :partition-columns)]
     (. builder partitionColumns data))
   (.build builder))
 
@@ -1177,13 +1177,13 @@
 | `profileColumns` | java.util.List | [[cdk.support/lookup-entry]] | `:profile-columns` |
 "
   [^CfnJob$ProfileConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :column-statistics-configurations)]
+  (when-some [data (lookup-entry config id :column-statistics-configurations)]
     (. builder columnStatisticsConfigurations data))
-  (when-let [data (lookup-entry config id :dataset-statistics-configuration)]
+  (when-some [data (lookup-entry config id :dataset-statistics-configuration)]
     (. builder datasetStatisticsConfiguration data))
-  (when-let [data (lookup-entry config id :entity-detector-configuration)]
+  (when-some [data (lookup-entry config id :entity-detector-configuration)]
     (. builder entityDetectorConfiguration data))
-  (when-let [data (lookup-entry config id :profile-columns)]
+  (when-some [data (lookup-entry config id :profile-columns)]
     (. builder profileColumns data))
   (.build builder))
 
@@ -1230,45 +1230,45 @@
 | `validationConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:validation-configurations` |
 "
   [^CfnJobProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-catalog-outputs)]
+  (when-some [data (lookup-entry config id :data-catalog-outputs)]
     (. builder dataCatalogOutputs data))
-  (when-let [data (lookup-entry config id :database-outputs)]
+  (when-some [data (lookup-entry config id :database-outputs)]
     (. builder databaseOutputs data))
-  (when-let [data (lookup-entry config id :dataset-name)]
+  (when-some [data (lookup-entry config id :dataset-name)]
     (. builder datasetName data))
-  (when-let [data (lookup-entry config id :encryption-key-arn)]
+  (when-some [data (lookup-entry config id :encryption-key-arn)]
     (. builder encryptionKeyArn data))
-  (when-let [data (lookup-entry config id :encryption-mode)]
+  (when-some [data (lookup-entry config id :encryption-mode)]
     (. builder encryptionMode data))
-  (when-let [data (lookup-entry config id :job-sample)]
+  (when-some [data (lookup-entry config id :job-sample)]
     (. builder jobSample data))
-  (when-let [data (lookup-entry config id :log-subscription)]
+  (when-some [data (lookup-entry config id :log-subscription)]
     (. builder logSubscription data))
-  (when-let [data (lookup-entry config id :max-capacity)]
+  (when-some [data (lookup-entry config id :max-capacity)]
     (. builder maxCapacity data))
-  (when-let [data (lookup-entry config id :max-retries)]
+  (when-some [data (lookup-entry config id :max-retries)]
     (. builder maxRetries data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :output-location)]
+  (when-some [data (lookup-entry config id :output-location)]
     (. builder outputLocation data))
-  (when-let [data (lookup-entry config id :outputs)]
+  (when-some [data (lookup-entry config id :outputs)]
     (. builder outputs data))
-  (when-let [data (lookup-entry config id :profile-configuration)]
+  (when-some [data (lookup-entry config id :profile-configuration)]
     (. builder profileConfiguration data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
-  (when-let [data (lookup-entry config id :recipe)]
+  (when-some [data (lookup-entry config id :recipe)]
     (. builder recipe data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :timeout)]
+  (when-some [data (lookup-entry config id :timeout)]
     (. builder timeout data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :validation-configurations)]
+  (when-some [data (lookup-entry config id :validation-configurations)]
     (. builder validationConfigurations data))
   (.build builder))
 
@@ -1297,9 +1297,9 @@
 | `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
 "
   [^CfnJob$RecipeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :version)]
+  (when-some [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
 
@@ -1329,11 +1329,11 @@
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 "
   [^CfnJob$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :bucket-owner)]
+  (when-some [data (lookup-entry config id :bucket-owner)]
     (. builder bucketOwner data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
 
@@ -1361,7 +1361,7 @@
 | `location` | software.amazon.awscdk.services.databrew.CfnJob$S3LocationProperty | [[cdk.support/lookup-entry]] | `:location` |
 "
   [^CfnJob$S3TableOutputOptionsProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :location)]
+  (when-some [data (lookup-entry config id :location)]
     (. builder location data))
   (.build builder))
 
@@ -1390,9 +1390,9 @@
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
 "
   [^CfnJob$StatisticOverrideProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
-  (when-let [data (lookup-entry config id :statistic)]
+  (when-some [data (lookup-entry config id :statistic)]
     (. builder statistic data))
   (.build builder))
 
@@ -1421,9 +1421,9 @@
 | `overrides` | java.util.List | [[cdk.support/lookup-entry]] | `:overrides` |
 "
   [^CfnJob$StatisticsConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :included-statistics)]
+  (when-some [data (lookup-entry config id :included-statistics)]
     (. builder includedStatistics data))
-  (when-let [data (lookup-entry config id :overrides)]
+  (when-some [data (lookup-entry config id :overrides)]
     (. builder overrides data))
   (.build builder))
 
@@ -1452,9 +1452,9 @@
 | `validationMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-mode` |
 "
   [^CfnJob$ValidationConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :ruleset-arn)]
+  (when-some [data (lookup-entry config id :ruleset-arn)]
     (. builder rulesetArn data))
-  (when-let [data (lookup-entry config id :validation-mode)]
+  (when-some [data (lookup-entry config id :validation-mode)]
     (. builder validationMode data))
   (.build builder))
 
@@ -1487,17 +1487,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-name)]
+  (when-some [data (lookup-entry config id :dataset-name)]
     (. builder datasetName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recipe-name)]
+  (when-some [data (lookup-entry config id :recipe-name)]
     (. builder recipeName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :sample)]
+  (when-some [data (lookup-entry config id :sample)]
     (. builder sample data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1530,17 +1530,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :dataset-name)]
+  (when-some [data (lookup-entry config id :dataset-name)]
     (. builder datasetName data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :recipe-name)]
+  (when-some [data (lookup-entry config id :recipe-name)]
     (. builder recipeName data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :sample)]
+  (when-some [data (lookup-entry config id :sample)]
     (. builder sample data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1569,9 +1569,9 @@
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 "
   [^CfnProject$SampleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :size)]
+  (when-some [data (lookup-entry config id :size)]
     (. builder size data))
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
 
@@ -1600,9 +1600,9 @@
 | `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 "
   [^CfnRecipe$ActionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :operation)]
+  (when-some [data (lookup-entry config id :operation)]
     (. builder operation data))
-  (when-let [data (lookup-entry config id :parameters)]
+  (when-some [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
 
@@ -1633,13 +1633,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRecipe$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :steps)]
+  (when-some [data (lookup-entry config id :steps)]
     (. builder steps data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1669,11 +1669,11 @@
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnRecipe$ConditionExpressionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :condition)]
+  (when-some [data (lookup-entry config id :condition)]
     (. builder condition data))
-  (when-let [data (lookup-entry config id :target-column)]
+  (when-some [data (lookup-entry config id :target-column)]
     (. builder targetColumn data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -1704,13 +1704,13 @@
 | `tempDirectory` | software.amazon.awscdk.services.databrew.CfnRecipe$S3LocationProperty | [[cdk.support/lookup-entry]] | `:temp-directory` |
 "
   [^CfnRecipe$DataCatalogInputDefinitionProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :catalog-id)]
+  (when-some [data (lookup-entry config id :catalog-id)]
     (. builder catalogId data))
-  (when-let [data (lookup-entry config id :database-name)]
+  (when-some [data (lookup-entry config id :database-name)]
     (. builder databaseName data))
-  (when-let [data (lookup-entry config id :table-name)]
+  (when-some [data (lookup-entry config id :table-name)]
     (. builder tableName data))
-  (when-let [data (lookup-entry config id :temp-directory)]
+  (when-some [data (lookup-entry config id :temp-directory)]
     (. builder tempDirectory data))
   (.build builder))
 
@@ -1739,9 +1739,9 @@
 | `s3InputDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-input-definition` |
 "
   [^CfnRecipe$InputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-catalog-input-definition)]
+  (when-some [data (lookup-entry config id :data-catalog-input-definition)]
     (. builder dataCatalogInputDefinition data))
-  (when-let [data (lookup-entry config id :s3-input-definition)]
+  (when-some [data (lookup-entry config id :s3-input-definition)]
     (. builder s3InputDefinition data))
   (.build builder))
 
@@ -1772,13 +1772,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnRecipeProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :steps)]
+  (when-some [data (lookup-entry config id :steps)]
     (. builder steps data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -1906,207 +1906,207 @@
 | `viewFrame` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-frame` |
 "
   [^CfnRecipe$RecipeParametersProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aggregate-function)]
+  (when-some [data (lookup-entry config id :aggregate-function)]
     (. builder aggregateFunction data))
-  (when-let [data (lookup-entry config id :base)]
+  (when-some [data (lookup-entry config id :base)]
     (. builder base data))
-  (when-let [data (lookup-entry config id :case-statement)]
+  (when-some [data (lookup-entry config id :case-statement)]
     (. builder caseStatement data))
-  (when-let [data (lookup-entry config id :category-map)]
+  (when-some [data (lookup-entry config id :category-map)]
     (. builder categoryMap data))
-  (when-let [data (lookup-entry config id :chars-to-remove)]
+  (when-some [data (lookup-entry config id :chars-to-remove)]
     (. builder charsToRemove data))
-  (when-let [data (lookup-entry config id :collapse-consecutive-whitespace)]
+  (when-some [data (lookup-entry config id :collapse-consecutive-whitespace)]
     (. builder collapseConsecutiveWhitespace data))
-  (when-let [data (lookup-entry config id :column-data-type)]
+  (when-some [data (lookup-entry config id :column-data-type)]
     (. builder columnDataType data))
-  (when-let [data (lookup-entry config id :column-range)]
+  (when-some [data (lookup-entry config id :column-range)]
     (. builder columnRange data))
-  (when-let [data (lookup-entry config id :count)]
+  (when-some [data (lookup-entry config id :count)]
     (. builder count data))
-  (when-let [data (lookup-entry config id :custom-characters)]
+  (when-some [data (lookup-entry config id :custom-characters)]
     (. builder customCharacters data))
-  (when-let [data (lookup-entry config id :custom-stop-words)]
+  (when-some [data (lookup-entry config id :custom-stop-words)]
     (. builder customStopWords data))
-  (when-let [data (lookup-entry config id :custom-value)]
+  (when-some [data (lookup-entry config id :custom-value)]
     (. builder customValue data))
-  (when-let [data (lookup-entry config id :datasets-columns)]
+  (when-some [data (lookup-entry config id :datasets-columns)]
     (. builder datasetsColumns data))
-  (when-let [data (lookup-entry config id :date-add-value)]
+  (when-some [data (lookup-entry config id :date-add-value)]
     (. builder dateAddValue data))
-  (when-let [data (lookup-entry config id :date-time-format)]
+  (when-some [data (lookup-entry config id :date-time-format)]
     (. builder dateTimeFormat data))
-  (when-let [data (lookup-entry config id :date-time-parameters)]
+  (when-some [data (lookup-entry config id :date-time-parameters)]
     (. builder dateTimeParameters data))
-  (when-let [data (lookup-entry config id :delete-other-rows)]
+  (when-some [data (lookup-entry config id :delete-other-rows)]
     (. builder deleteOtherRows data))
-  (when-let [data (lookup-entry config id :delimiter)]
+  (when-some [data (lookup-entry config id :delimiter)]
     (. builder delimiter data))
-  (when-let [data (lookup-entry config id :end-pattern)]
+  (when-some [data (lookup-entry config id :end-pattern)]
     (. builder endPattern data))
-  (when-let [data (lookup-entry config id :end-position)]
+  (when-some [data (lookup-entry config id :end-position)]
     (. builder endPosition data))
-  (when-let [data (lookup-entry config id :end-value)]
+  (when-some [data (lookup-entry config id :end-value)]
     (. builder endValue data))
-  (when-let [data (lookup-entry config id :expand-contractions)]
+  (when-some [data (lookup-entry config id :expand-contractions)]
     (. builder expandContractions data))
-  (when-let [data (lookup-entry config id :exponent)]
+  (when-some [data (lookup-entry config id :exponent)]
     (. builder exponent data))
-  (when-let [data (lookup-entry config id :false-string)]
+  (when-some [data (lookup-entry config id :false-string)]
     (. builder falseString data))
-  (when-let [data (lookup-entry config id :group-by-agg-function-options)]
+  (when-some [data (lookup-entry config id :group-by-agg-function-options)]
     (. builder groupByAggFunctionOptions data))
-  (when-let [data (lookup-entry config id :group-by-columns)]
+  (when-some [data (lookup-entry config id :group-by-columns)]
     (. builder groupByColumns data))
-  (when-let [data (lookup-entry config id :hidden-columns)]
+  (when-some [data (lookup-entry config id :hidden-columns)]
     (. builder hiddenColumns data))
-  (when-let [data (lookup-entry config id :ignore-case)]
+  (when-some [data (lookup-entry config id :ignore-case)]
     (. builder ignoreCase data))
-  (when-let [data (lookup-entry config id :include-in-split)]
+  (when-some [data (lookup-entry config id :include-in-split)]
     (. builder includeInSplit data))
-  (when-let [data (lookup-entry config id :input)]
+  (when-some [data (lookup-entry config id :input)]
     (. builder input data))
-  (when-let [data (lookup-entry config id :interval)]
+  (when-some [data (lookup-entry config id :interval)]
     (. builder interval data))
-  (when-let [data (lookup-entry config id :is-text)]
+  (when-some [data (lookup-entry config id :is-text)]
     (. builder isText data))
-  (when-let [data (lookup-entry config id :join-keys)]
+  (when-some [data (lookup-entry config id :join-keys)]
     (. builder joinKeys data))
-  (when-let [data (lookup-entry config id :join-type)]
+  (when-some [data (lookup-entry config id :join-type)]
     (. builder joinType data))
-  (when-let [data (lookup-entry config id :left-columns)]
+  (when-some [data (lookup-entry config id :left-columns)]
     (. builder leftColumns data))
-  (when-let [data (lookup-entry config id :limit)]
+  (when-some [data (lookup-entry config id :limit)]
     (. builder limit data))
-  (when-let [data (lookup-entry config id :lower-bound)]
+  (when-some [data (lookup-entry config id :lower-bound)]
     (. builder lowerBound data))
-  (when-let [data (lookup-entry config id :map-type)]
+  (when-some [data (lookup-entry config id :map-type)]
     (. builder mapType data))
-  (when-let [data (lookup-entry config id :mode-type)]
+  (when-some [data (lookup-entry config id :mode-type)]
     (. builder modeType data))
-  (when-let [data (lookup-entry config id :multi-line)]
+  (when-some [data (lookup-entry config id :multi-line)]
     (. builder multiLine data))
-  (when-let [data (lookup-entry config id :num-rows)]
+  (when-some [data (lookup-entry config id :num-rows)]
     (. builder numRows data))
-  (when-let [data (lookup-entry config id :num-rows-after)]
+  (when-some [data (lookup-entry config id :num-rows-after)]
     (. builder numRowsAfter data))
-  (when-let [data (lookup-entry config id :num-rows-before)]
+  (when-some [data (lookup-entry config id :num-rows-before)]
     (. builder numRowsBefore data))
-  (when-let [data (lookup-entry config id :order-by-column)]
+  (when-some [data (lookup-entry config id :order-by-column)]
     (. builder orderByColumn data))
-  (when-let [data (lookup-entry config id :order-by-columns)]
+  (when-some [data (lookup-entry config id :order-by-columns)]
     (. builder orderByColumns data))
-  (when-let [data (lookup-entry config id :other)]
+  (when-some [data (lookup-entry config id :other)]
     (. builder other data))
-  (when-let [data (lookup-entry config id :pattern)]
+  (when-some [data (lookup-entry config id :pattern)]
     (. builder pattern data))
-  (when-let [data (lookup-entry config id :pattern-option1)]
+  (when-some [data (lookup-entry config id :pattern-option1)]
     (. builder patternOption1 data))
-  (when-let [data (lookup-entry config id :pattern-option2)]
+  (when-some [data (lookup-entry config id :pattern-option2)]
     (. builder patternOption2 data))
-  (when-let [data (lookup-entry config id :pattern-options)]
+  (when-some [data (lookup-entry config id :pattern-options)]
     (. builder patternOptions data))
-  (when-let [data (lookup-entry config id :period)]
+  (when-some [data (lookup-entry config id :period)]
     (. builder period data))
-  (when-let [data (lookup-entry config id :position)]
+  (when-some [data (lookup-entry config id :position)]
     (. builder position data))
-  (when-let [data (lookup-entry config id :remove-all-punctuation)]
+  (when-some [data (lookup-entry config id :remove-all-punctuation)]
     (. builder removeAllPunctuation data))
-  (when-let [data (lookup-entry config id :remove-all-quotes)]
+  (when-some [data (lookup-entry config id :remove-all-quotes)]
     (. builder removeAllQuotes data))
-  (when-let [data (lookup-entry config id :remove-all-whitespace)]
+  (when-some [data (lookup-entry config id :remove-all-whitespace)]
     (. builder removeAllWhitespace data))
-  (when-let [data (lookup-entry config id :remove-custom-characters)]
+  (when-some [data (lookup-entry config id :remove-custom-characters)]
     (. builder removeCustomCharacters data))
-  (when-let [data (lookup-entry config id :remove-custom-value)]
+  (when-some [data (lookup-entry config id :remove-custom-value)]
     (. builder removeCustomValue data))
-  (when-let [data (lookup-entry config id :remove-leading-and-trailing-punctuation)]
+  (when-some [data (lookup-entry config id :remove-leading-and-trailing-punctuation)]
     (. builder removeLeadingAndTrailingPunctuation data))
-  (when-let [data (lookup-entry config id :remove-leading-and-trailing-quotes)]
+  (when-some [data (lookup-entry config id :remove-leading-and-trailing-quotes)]
     (. builder removeLeadingAndTrailingQuotes data))
-  (when-let [data (lookup-entry config id :remove-leading-and-trailing-whitespace)]
+  (when-some [data (lookup-entry config id :remove-leading-and-trailing-whitespace)]
     (. builder removeLeadingAndTrailingWhitespace data))
-  (when-let [data (lookup-entry config id :remove-letters)]
+  (when-some [data (lookup-entry config id :remove-letters)]
     (. builder removeLetters data))
-  (when-let [data (lookup-entry config id :remove-numbers)]
+  (when-some [data (lookup-entry config id :remove-numbers)]
     (. builder removeNumbers data))
-  (when-let [data (lookup-entry config id :remove-source-column)]
+  (when-some [data (lookup-entry config id :remove-source-column)]
     (. builder removeSourceColumn data))
-  (when-let [data (lookup-entry config id :remove-special-characters)]
+  (when-some [data (lookup-entry config id :remove-special-characters)]
     (. builder removeSpecialCharacters data))
-  (when-let [data (lookup-entry config id :right-columns)]
+  (when-some [data (lookup-entry config id :right-columns)]
     (. builder rightColumns data))
-  (when-let [data (lookup-entry config id :sample-size)]
+  (when-some [data (lookup-entry config id :sample-size)]
     (. builder sampleSize data))
-  (when-let [data (lookup-entry config id :sample-type)]
+  (when-some [data (lookup-entry config id :sample-type)]
     (. builder sampleType data))
-  (when-let [data (lookup-entry config id :second-input)]
+  (when-some [data (lookup-entry config id :second-input)]
     (. builder secondInput data))
-  (when-let [data (lookup-entry config id :secondary-inputs)]
+  (when-some [data (lookup-entry config id :secondary-inputs)]
     (. builder secondaryInputs data))
-  (when-let [data (lookup-entry config id :sheet-indexes)]
+  (when-some [data (lookup-entry config id :sheet-indexes)]
     (. builder sheetIndexes data))
-  (when-let [data (lookup-entry config id :sheet-names)]
+  (when-some [data (lookup-entry config id :sheet-names)]
     (. builder sheetNames data))
-  (when-let [data (lookup-entry config id :source-column)]
+  (when-some [data (lookup-entry config id :source-column)]
     (. builder sourceColumn data))
-  (when-let [data (lookup-entry config id :source-column1)]
+  (when-some [data (lookup-entry config id :source-column1)]
     (. builder sourceColumn1 data))
-  (when-let [data (lookup-entry config id :source-column2)]
+  (when-some [data (lookup-entry config id :source-column2)]
     (. builder sourceColumn2 data))
-  (when-let [data (lookup-entry config id :source-columns)]
+  (when-some [data (lookup-entry config id :source-columns)]
     (. builder sourceColumns data))
-  (when-let [data (lookup-entry config id :start-column-index)]
+  (when-some [data (lookup-entry config id :start-column-index)]
     (. builder startColumnIndex data))
-  (when-let [data (lookup-entry config id :start-pattern)]
+  (when-some [data (lookup-entry config id :start-pattern)]
     (. builder startPattern data))
-  (when-let [data (lookup-entry config id :start-position)]
+  (when-some [data (lookup-entry config id :start-position)]
     (. builder startPosition data))
-  (when-let [data (lookup-entry config id :start-value)]
+  (when-some [data (lookup-entry config id :start-value)]
     (. builder startValue data))
-  (when-let [data (lookup-entry config id :stemming-mode)]
+  (when-some [data (lookup-entry config id :stemming-mode)]
     (. builder stemmingMode data))
-  (when-let [data (lookup-entry config id :step-count)]
+  (when-some [data (lookup-entry config id :step-count)]
     (. builder stepCount data))
-  (when-let [data (lookup-entry config id :step-index)]
+  (when-some [data (lookup-entry config id :step-index)]
     (. builder stepIndex data))
-  (when-let [data (lookup-entry config id :stop-words-mode)]
+  (when-some [data (lookup-entry config id :stop-words-mode)]
     (. builder stopWordsMode data))
-  (when-let [data (lookup-entry config id :strategy)]
+  (when-some [data (lookup-entry config id :strategy)]
     (. builder strategy data))
-  (when-let [data (lookup-entry config id :target-column)]
+  (when-some [data (lookup-entry config id :target-column)]
     (. builder targetColumn data))
-  (when-let [data (lookup-entry config id :target-column-names)]
+  (when-some [data (lookup-entry config id :target-column-names)]
     (. builder targetColumnNames data))
-  (when-let [data (lookup-entry config id :target-date-format)]
+  (when-some [data (lookup-entry config id :target-date-format)]
     (. builder targetDateFormat data))
-  (when-let [data (lookup-entry config id :target-index)]
+  (when-some [data (lookup-entry config id :target-index)]
     (. builder targetIndex data))
-  (when-let [data (lookup-entry config id :time-zone)]
+  (when-some [data (lookup-entry config id :time-zone)]
     (. builder timeZone data))
-  (when-let [data (lookup-entry config id :tokenizer-pattern)]
+  (when-some [data (lookup-entry config id :tokenizer-pattern)]
     (. builder tokenizerPattern data))
-  (when-let [data (lookup-entry config id :true-string)]
+  (when-some [data (lookup-entry config id :true-string)]
     (. builder trueString data))
-  (when-let [data (lookup-entry config id :udf-lang)]
+  (when-some [data (lookup-entry config id :udf-lang)]
     (. builder udfLang data))
-  (when-let [data (lookup-entry config id :units)]
+  (when-some [data (lookup-entry config id :units)]
     (. builder units data))
-  (when-let [data (lookup-entry config id :unpivot-column)]
+  (when-some [data (lookup-entry config id :unpivot-column)]
     (. builder unpivotColumn data))
-  (when-let [data (lookup-entry config id :upper-bound)]
+  (when-some [data (lookup-entry config id :upper-bound)]
     (. builder upperBound data))
-  (when-let [data (lookup-entry config id :use-new-data-frame)]
+  (when-some [data (lookup-entry config id :use-new-data-frame)]
     (. builder useNewDataFrame data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :value1)]
+  (when-some [data (lookup-entry config id :value1)]
     (. builder value1 data))
-  (when-let [data (lookup-entry config id :value2)]
+  (when-some [data (lookup-entry config id :value2)]
     (. builder value2 data))
-  (when-let [data (lookup-entry config id :value-column)]
+  (when-some [data (lookup-entry config id :value-column)]
     (. builder valueColumn data))
-  (when-let [data (lookup-entry config id :view-frame)]
+  (when-some [data (lookup-entry config id :view-frame)]
     (. builder viewFrame data))
   (.build builder))
 
@@ -2135,9 +2135,9 @@
 | `conditionExpressions` | java.util.List | [[cdk.support/lookup-entry]] | `:condition-expressions` |
 "
   [^CfnRecipe$RecipeStepProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :action)]
+  (when-some [data (lookup-entry config id :action)]
     (. builder action data))
-  (when-let [data (lookup-entry config id :condition-expressions)]
+  (when-some [data (lookup-entry config id :condition-expressions)]
     (. builder conditionExpressions data))
   (.build builder))
 
@@ -2166,9 +2166,9 @@
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
 "
   [^CfnRecipe$S3LocationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
 
@@ -2197,9 +2197,9 @@
 | `s3InputDefinition` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-input-definition` |
 "
   [^CfnRecipe$SecondaryInputProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :data-catalog-input-definition)]
+  (when-some [data (lookup-entry config id :data-catalog-input-definition)]
     (. builder dataCatalogInputDefinition data))
-  (when-let [data (lookup-entry config id :s3-input-definition)]
+  (when-some [data (lookup-entry config id :s3-input-definition)]
     (. builder s3InputDefinition data))
   (.build builder))
 
@@ -2231,15 +2231,15 @@
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnRuleset$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -2268,9 +2268,9 @@
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
 "
   [^CfnRuleset$ColumnSelectorProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :regex)]
+  (when-some [data (lookup-entry config id :regex)]
     (. builder regex data))
   (.build builder))
 
@@ -2302,15 +2302,15 @@
 | `targetArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-arn` |
 "
   [^CfnRulesetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :rules)]
+  (when-some [data (lookup-entry config id :rules)]
     (. builder rules data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
-  (when-let [data (lookup-entry config id :target-arn)]
+  (when-some [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
 
@@ -2343,17 +2343,17 @@
 | `threshold` | software.amazon.awscdk.services.databrew.CfnRuleset$ThresholdProperty | [[cdk.support/lookup-entry]] | `:threshold` |
 "
   [^CfnRuleset$RuleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :check-expression)]
+  (when-some [data (lookup-entry config id :check-expression)]
     (. builder checkExpression data))
-  (when-let [data (lookup-entry config id :column-selectors)]
+  (when-some [data (lookup-entry config id :column-selectors)]
     (. builder columnSelectors data))
-  (when-let [data (lookup-entry config id :disabled)]
+  (when-some [data (lookup-entry config id :disabled)]
     (. builder disabled data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :substitution-map)]
+  (when-some [data (lookup-entry config id :substitution-map)]
     (. builder substitutionMap data))
-  (when-let [data (lookup-entry config id :threshold)]
+  (when-some [data (lookup-entry config id :threshold)]
     (. builder threshold data))
   (.build builder))
 
@@ -2382,9 +2382,9 @@
 | `valueReference` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-reference` |
 "
   [^CfnRuleset$SubstitutionValueProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
-  (when-let [data (lookup-entry config id :value-reference)]
+  (when-some [data (lookup-entry config id :value-reference)]
     (. builder valueReference data))
   (.build builder))
 
@@ -2414,11 +2414,11 @@
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
 "
   [^CfnRuleset$ThresholdProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :type)]
+  (when-some [data (lookup-entry config id :type)]
     (. builder type data))
-  (when-let [data (lookup-entry config id :unit)]
+  (when-some [data (lookup-entry config id :unit)]
     (. builder unit data))
-  (when-let [data (lookup-entry config id :value)]
+  (when-some [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
 
@@ -2449,13 +2449,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnSchedule$Builder builder id config]
-  (when-let [data (lookup-entry config id :cron-expression)]
+  (when-some [data (lookup-entry config id :cron-expression)]
     (. builder cronExpression data))
-  (when-let [data (lookup-entry config id :job-names)]
+  (when-some [data (lookup-entry config id :job-names)]
     (. builder jobNames data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -2486,13 +2486,13 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnScheduleProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :cron-expression)]
+  (when-some [data (lookup-entry config id :cron-expression)]
     (. builder cronExpression data))
-  (when-let [data (lookup-entry config id :job-names)]
+  (when-some [data (lookup-entry config id :job-names)]
     (. builder jobNames data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 

@@ -24,9 +24,9 @@
 | `destinationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-type` |
 "
   [^CfnAssessment$AssessmentReportsDestinationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :destination)]
+  (when-some [data (lookup-entry config id :destination)]
     (. builder destination data))
-  (when-let [data (lookup-entry config id :destination-type)]
+  (when-some [data (lookup-entry config id :destination-type)]
     (. builder destinationType data))
   (.build builder))
 
@@ -56,11 +56,11 @@
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 "
   [^CfnAssessment$AWSAccountProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :email-address)]
+  (when-some [data (lookup-entry config id :email-address)]
     (. builder emailAddress data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
 
@@ -88,7 +88,7 @@
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 "
   [^CfnAssessment$AWSServiceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :service-name)]
+  (when-some [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
 
@@ -125,25 +125,25 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAssessment$Builder builder id config]
-  (when-let [data (lookup-entry config id :assessment-reports-destination)]
+  (when-some [data (lookup-entry config id :assessment-reports-destination)]
     (. builder assessmentReportsDestination data))
-  (when-let [data (lookup-entry config id :aws-account)]
+  (when-some [data (lookup-entry config id :aws-account)]
     (. builder awsAccount data))
-  (when-let [data (lookup-entry config id :delegations)]
+  (when-some [data (lookup-entry config id :delegations)]
     (. builder delegations data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :framework-id)]
+  (when-some [data (lookup-entry config id :framework-id)]
     (. builder frameworkId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -181,27 +181,27 @@
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 "
   [^CfnAssessment$DelegationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :assessment-id)]
+  (when-some [data (lookup-entry config id :assessment-id)]
     (. builder assessmentId data))
-  (when-let [data (lookup-entry config id :assessment-name)]
+  (when-some [data (lookup-entry config id :assessment-name)]
     (. builder assessmentName data))
-  (when-let [data (lookup-entry config id :comment)]
+  (when-some [data (lookup-entry config id :comment)]
     (. builder comment data))
-  (when-let [data (lookup-entry config id :control-set-id)]
+  (when-some [data (lookup-entry config id :control-set-id)]
     (. builder controlSetId data))
-  (when-let [data (lookup-entry config id :created-by)]
+  (when-some [data (lookup-entry config id :created-by)]
     (. builder createdBy data))
-  (when-let [data (lookup-entry config id :creation-time)]
+  (when-some [data (lookup-entry config id :creation-time)]
     (. builder creationTime data))
-  (when-let [data (lookup-entry config id :id)]
+  (when-some [data (lookup-entry config id :id)]
     (. builder id data))
-  (when-let [data (lookup-entry config id :last-updated)]
+  (when-some [data (lookup-entry config id :last-updated)]
     (. builder lastUpdated data))
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :role-type)]
+  (when-some [data (lookup-entry config id :role-type)]
     (. builder roleType data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
 
@@ -238,25 +238,25 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAssessmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assessment-reports-destination)]
+  (when-some [data (lookup-entry config id :assessment-reports-destination)]
     (. builder assessmentReportsDestination data))
-  (when-let [data (lookup-entry config id :aws-account)]
+  (when-some [data (lookup-entry config id :aws-account)]
     (. builder awsAccount data))
-  (when-let [data (lookup-entry config id :delegations)]
+  (when-some [data (lookup-entry config id :delegations)]
     (. builder delegations data))
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :framework-id)]
+  (when-some [data (lookup-entry config id :framework-id)]
     (. builder frameworkId data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :roles)]
+  (when-some [data (lookup-entry config id :roles)]
     (. builder roles data))
-  (when-let [data (lookup-entry config id :scope)]
+  (when-some [data (lookup-entry config id :scope)]
     (. builder scope data))
-  (when-let [data (lookup-entry config id :status)]
+  (when-some [data (lookup-entry config id :status)]
     (. builder status data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -285,9 +285,9 @@
 | `roleType` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-type` |
 "
   [^CfnAssessment$RoleProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :role-arn)]
+  (when-some [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
-  (when-let [data (lookup-entry config id :role-type)]
+  (when-some [data (lookup-entry config id :role-type)]
     (. builder roleType data))
   (.build builder))
 
@@ -316,9 +316,9 @@
 | `awsServices` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-services` |
 "
   [^CfnAssessment$ScopeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :aws-accounts)]
+  (when-some [data (lookup-entry config id :aws-accounts)]
     (. builder awsAccounts data))
-  (when-let [data (lookup-entry config id :aws-services)]
+  (when-some [data (lookup-entry config id :aws-services)]
     (. builder awsServices data))
   (.build builder))
 

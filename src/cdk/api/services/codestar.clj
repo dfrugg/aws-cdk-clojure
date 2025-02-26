@@ -26,21 +26,21 @@
 | `repositoryOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-owner` |
 "
   [^CfnGitHubRepository$Builder builder id config]
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :connection-arn)]
+  (when-some [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
-  (when-let [data (lookup-entry config id :enable-issues)]
+  (when-some [data (lookup-entry config id :enable-issues)]
     (. builder enableIssues data))
-  (when-let [data (lookup-entry config id :is-private)]
+  (when-some [data (lookup-entry config id :is-private)]
     (. builder isPrivate data))
-  (when-let [data (lookup-entry config id :repository-access-token)]
+  (when-some [data (lookup-entry config id :repository-access-token)]
     (. builder repositoryAccessToken data))
-  (when-let [data (lookup-entry config id :repository-description)]
+  (when-some [data (lookup-entry config id :repository-description)]
     (. builder repositoryDescription data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :repository-owner)]
+  (when-some [data (lookup-entry config id :repository-owner)]
     (. builder repositoryOwner data))
   (.build builder))
 
@@ -68,7 +68,7 @@
 | `s3` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3` |
 "
   [^CfnGitHubRepository$CodeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :s3)]
+  (when-some [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
 
@@ -103,21 +103,21 @@
 | `repositoryOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-owner` |
 "
   [^CfnGitHubRepositoryProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :code)]
+  (when-some [data (lookup-entry config id :code)]
     (. builder code data))
-  (when-let [data (lookup-entry config id :connection-arn)]
+  (when-some [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
-  (when-let [data (lookup-entry config id :enable-issues)]
+  (when-some [data (lookup-entry config id :enable-issues)]
     (. builder enableIssues data))
-  (when-let [data (lookup-entry config id :is-private)]
+  (when-some [data (lookup-entry config id :is-private)]
     (. builder isPrivate data))
-  (when-let [data (lookup-entry config id :repository-access-token)]
+  (when-some [data (lookup-entry config id :repository-access-token)]
     (. builder repositoryAccessToken data))
-  (when-let [data (lookup-entry config id :repository-description)]
+  (when-some [data (lookup-entry config id :repository-description)]
     (. builder repositoryDescription data))
-  (when-let [data (lookup-entry config id :repository-name)]
+  (when-some [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
-  (when-let [data (lookup-entry config id :repository-owner)]
+  (when-some [data (lookup-entry config id :repository-owner)]
     (. builder repositoryOwner data))
   (.build builder))
 
@@ -147,11 +147,11 @@
 | `objectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-version` |
 "
   [^CfnGitHubRepository$S3Property$Builder builder id config]
-  (when-let [data (lookup-entry config id :bucket)]
+  (when-some [data (lookup-entry config id :bucket)]
     (. builder bucket data))
-  (when-let [data (lookup-entry config id :key)]
+  (when-some [data (lookup-entry config id :key)]
     (. builder key data))
-  (when-let [data (lookup-entry config id :object-version)]
+  (when-some [data (lookup-entry config id :object-version)]
     (. builder objectVersion data))
   (.build builder))
 

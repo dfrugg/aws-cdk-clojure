@@ -22,9 +22,9 @@
 | `resourceGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-group-arn` |
 "
   [^CfnAssessmentTarget$Builder builder id config]
-  (when-let [data (lookup-entry config id :assessment-target-name)]
+  (when-some [data (lookup-entry config id :assessment-target-name)]
     (. builder assessmentTargetName data))
-  (when-let [data (lookup-entry config id :resource-group-arn)]
+  (when-some [data (lookup-entry config id :resource-group-arn)]
     (. builder resourceGroupArn data))
   (.build builder))
 
@@ -53,9 +53,9 @@
 | `resourceGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-group-arn` |
 "
   [^CfnAssessmentTargetProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assessment-target-name)]
+  (when-some [data (lookup-entry config id :assessment-target-name)]
     (. builder assessmentTargetName data))
-  (when-let [data (lookup-entry config id :resource-group-arn)]
+  (when-some [data (lookup-entry config id :resource-group-arn)]
     (. builder resourceGroupArn data))
   (.build builder))
 
@@ -87,15 +87,15 @@
 | `userAttributesForFindings` | java.util.List | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |
 "
   [^CfnAssessmentTemplate$Builder builder id config]
-  (when-let [data (lookup-entry config id :assessment-target-arn)]
+  (when-some [data (lookup-entry config id :assessment-target-arn)]
     (. builder assessmentTargetArn data))
-  (when-let [data (lookup-entry config id :assessment-template-name)]
+  (when-some [data (lookup-entry config id :assessment-template-name)]
     (. builder assessmentTemplateName data))
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
-  (when-let [data (lookup-entry config id :rules-package-arns)]
+  (when-some [data (lookup-entry config id :rules-package-arns)]
     (. builder rulesPackageArns data))
-  (when-let [data (lookup-entry config id :user-attributes-for-findings)]
+  (when-some [data (lookup-entry config id :user-attributes-for-findings)]
     (. builder userAttributesForFindings data))
   (.build builder))
 
@@ -127,15 +127,15 @@
 | `userAttributesForFindings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |
 "
   [^CfnAssessmentTemplateProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :assessment-target-arn)]
+  (when-some [data (lookup-entry config id :assessment-target-arn)]
     (. builder assessmentTargetArn data))
-  (when-let [data (lookup-entry config id :assessment-template-name)]
+  (when-some [data (lookup-entry config id :assessment-template-name)]
     (. builder assessmentTemplateName data))
-  (when-let [data (lookup-entry config id :duration-in-seconds)]
+  (when-some [data (lookup-entry config id :duration-in-seconds)]
     (. builder durationInSeconds data))
-  (when-let [data (lookup-entry config id :rules-package-arns)]
+  (when-some [data (lookup-entry config id :rules-package-arns)]
     (. builder rulesPackageArns data))
-  (when-let [data (lookup-entry config id :user-attributes-for-findings)]
+  (when-some [data (lookup-entry config id :user-attributes-for-findings)]
     (. builder userAttributesForFindings data))
   (.build builder))
 
@@ -163,7 +163,7 @@
 | `resourceGroupTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-group-tags` |
 "
   [^CfnResourceGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-group-tags)]
+  (when-some [data (lookup-entry config id :resource-group-tags)]
     (. builder resourceGroupTags data))
   (.build builder))
 
@@ -191,7 +191,7 @@
 | `resourceGroupTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-group-tags` |
 "
   [^CfnResourceGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :resource-group-tags)]
+  (when-some [data (lookup-entry config id :resource-group-tags)]
     (. builder resourceGroupTags data))
   (.build builder))
 

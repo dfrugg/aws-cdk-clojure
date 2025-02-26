@@ -27,17 +27,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFHIRDatastore$Builder builder id config]
-  (when-let [data (lookup-entry config id :datastore-name)]
+  (when-some [data (lookup-entry config id :datastore-name)]
     (. builder datastoreName data))
-  (when-let [data (lookup-entry config id :datastore-type-version)]
+  (when-some [data (lookup-entry config id :datastore-type-version)]
     (. builder datastoreTypeVersion data))
-  (when-let [data (lookup-entry config id :identity-provider-configuration)]
+  (when-some [data (lookup-entry config id :identity-provider-configuration)]
     (. builder identityProviderConfiguration data))
-  (when-let [data (lookup-entry config id :preload-data-config)]
+  (when-some [data (lookup-entry config id :preload-data-config)]
     (. builder preloadDataConfig data))
-  (when-let [data (lookup-entry config id :sse-configuration)]
+  (when-some [data (lookup-entry config id :sse-configuration)]
     (. builder sseConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -66,9 +66,9 @@
 | `seconds` | java.lang.String | [[cdk.support/lookup-entry]] | `:seconds` |
 "
   [^CfnFHIRDatastore$CreatedAtProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :nanos)]
+  (when-some [data (lookup-entry config id :nanos)]
     (. builder nanos data))
-  (when-let [data (lookup-entry config id :seconds)]
+  (when-some [data (lookup-entry config id :seconds)]
     (. builder seconds data))
   (.build builder))
 
@@ -99,13 +99,13 @@
 | `metadata` | java.lang.String | [[cdk.support/lookup-entry]] | `:metadata` |
 "
   [^CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :authorization-strategy)]
+  (when-some [data (lookup-entry config id :authorization-strategy)]
     (. builder authorizationStrategy data))
-  (when-let [data (lookup-entry config id :fine-grained-authorization-enabled)]
+  (when-some [data (lookup-entry config id :fine-grained-authorization-enabled)]
     (. builder fineGrainedAuthorizationEnabled data))
-  (when-let [data (lookup-entry config id :idp-lambda-arn)]
+  (when-some [data (lookup-entry config id :idp-lambda-arn)]
     (. builder idpLambdaArn data))
-  (when-let [data (lookup-entry config id :metadata)]
+  (when-some [data (lookup-entry config id :metadata)]
     (. builder metadata data))
   (.build builder))
 
@@ -134,9 +134,9 @@
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
 "
   [^CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :cmk-type)]
+  (when-some [data (lookup-entry config id :cmk-type)]
     (. builder cmkType data))
-  (when-let [data (lookup-entry config id :kms-key-id)]
+  (when-some [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
 
@@ -164,7 +164,7 @@
 | `preloadDataType` | java.lang.String | [[cdk.support/lookup-entry]] | `:preload-data-type` |
 "
   [^CfnFHIRDatastore$PreloadDataConfigProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :preload-data-type)]
+  (when-some [data (lookup-entry config id :preload-data-type)]
     (. builder preloadDataType data))
   (.build builder))
 
@@ -197,17 +197,17 @@
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnFHIRDatastoreProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :datastore-name)]
+  (when-some [data (lookup-entry config id :datastore-name)]
     (. builder datastoreName data))
-  (when-let [data (lookup-entry config id :datastore-type-version)]
+  (when-some [data (lookup-entry config id :datastore-type-version)]
     (. builder datastoreTypeVersion data))
-  (when-let [data (lookup-entry config id :identity-provider-configuration)]
+  (when-some [data (lookup-entry config id :identity-provider-configuration)]
     (. builder identityProviderConfiguration data))
-  (when-let [data (lookup-entry config id :preload-data-config)]
+  (when-some [data (lookup-entry config id :preload-data-config)]
     (. builder preloadDataConfig data))
-  (when-let [data (lookup-entry config id :sse-configuration)]
+  (when-some [data (lookup-entry config id :sse-configuration)]
     (. builder sseConfiguration data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -235,7 +235,7 @@
 | `kmsEncryptionConfig` | software.amazon.awscdk.services.healthlake.CfnFHIRDatastore$KmsEncryptionConfigProperty | [[cdk.support/lookup-entry]] | `:kms-encryption-config` |
 "
   [^CfnFHIRDatastore$SseConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :kms-encryption-config)]
+  (when-some [data (lookup-entry config id :kms-encryption-config)]
     (. builder kmsEncryptionConfig data))
   (.build builder))
 

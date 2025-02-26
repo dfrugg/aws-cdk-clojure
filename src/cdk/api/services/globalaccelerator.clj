@@ -126,15 +126,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ipv6Addresses` | java.util.List | [[cdk.support/lookup-entry]] | `:ipv6-addresses` |
 "
   [^AcceleratorAttributes$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator-arn)]
+  (when-some [data (lookup-entry config id :accelerator-arn)]
     (. builder acceleratorArn data))
-  (when-let [data (lookup-entry config id :dns-name)]
+  (when-some [data (lookup-entry config id :dns-name)]
     (. builder dnsName data))
-  (when-let [data (lookup-entry config id :dual-stack-dns-name)]
+  (when-some [data (lookup-entry config id :dual-stack-dns-name)]
     (. builder dualStackDnsName data))
-  (when-let [data (lookup-entry config id :ipv4-addresses)]
+  (when-some [data (lookup-entry config id :ipv4-addresses)]
     (. builder ipv4Addresses data))
-  (when-let [data (lookup-entry config id :ipv6-addresses)]
+  (when-some [data (lookup-entry config id :ipv6-addresses)]
     (. builder ipv6Addresses data))
   (.build builder))
 
@@ -165,13 +165,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ipAddresses` | java.util.List | [[cdk.support/lookup-entry]] | `:ip-addresses` |
 "
   [^Accelerator$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator-name)]
+  (when-some [data (lookup-entry config id :accelerator-name)]
     (. builder acceleratorName data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (ip-address-type config id :ip-address-type)]
+  (when-some [data (ip-address-type config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :ip-addresses)]
+  (when-some [data (lookup-entry config id :ip-addresses)]
     (. builder ipAddresses data))
   (.build builder))
 
@@ -202,13 +202,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `ipAddresses` | java.util.List | [[cdk.support/lookup-entry]] | `:ip-addresses` |
 "
   [^AcceleratorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator-name)]
+  (when-some [data (lookup-entry config id :accelerator-name)]
     (. builder acceleratorName data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (ip-address-type config id :ip-address-type)]
+  (when-some [data (ip-address-type config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :ip-addresses)]
+  (when-some [data (lookup-entry config id :ip-addresses)]
     (. builder ipAddresses data))
   (.build builder))
 
@@ -240,15 +240,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAccelerator$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :ip-address-type)]
+  (when-some [data (lookup-entry config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :ip-addresses)]
+  (when-some [data (lookup-entry config id :ip-addresses)]
     (. builder ipAddresses data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -280,15 +280,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnAcceleratorProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
-  (when-let [data (lookup-entry config id :ip-address-type)]
+  (when-some [data (lookup-entry config id :ip-address-type)]
     (. builder ipAddressType data))
-  (when-let [data (lookup-entry config id :ip-addresses)]
+  (when-some [data (lookup-entry config id :ip-addresses)]
     (. builder ipAddresses data))
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -319,13 +319,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCrossAccountAttachment$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -356,13 +356,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 "
   [^CfnCrossAccountAttachmentProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :name)]
+  (when-some [data (lookup-entry config id :name)]
     (. builder name data))
-  (when-let [data (lookup-entry config id :principals)]
+  (when-some [data (lookup-entry config id :principals)]
     (. builder principals data))
-  (when-let [data (lookup-entry config id :resources)]
+  (when-some [data (lookup-entry config id :resources)]
     (. builder resources data))
-  (when-let [data (lookup-entry config id :tags)]
+  (when-some [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
 
@@ -391,9 +391,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 "
   [^CfnCrossAccountAttachment$ResourceProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-id)]
+  (when-some [data (lookup-entry config id :endpoint-id)]
     (. builder endpointId data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
 
@@ -430,25 +430,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficDialPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-dial-percentage` |
 "
   [^CfnEndpointGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-configurations)]
+  (when-some [data (lookup-entry config id :endpoint-configurations)]
     (. builder endpointConfigurations data))
-  (when-let [data (lookup-entry config id :endpoint-group-region)]
+  (when-some [data (lookup-entry config id :endpoint-group-region)]
     (. builder endpointGroupRegion data))
-  (when-let [data (lookup-entry config id :health-check-interval-seconds)]
+  (when-some [data (lookup-entry config id :health-check-interval-seconds)]
     (. builder healthCheckIntervalSeconds data))
-  (when-let [data (lookup-entry config id :health-check-path)]
+  (when-some [data (lookup-entry config id :health-check-path)]
     (. builder healthCheckPath data))
-  (when-let [data (lookup-entry config id :health-check-port)]
+  (when-some [data (lookup-entry config id :health-check-port)]
     (. builder healthCheckPort data))
-  (when-let [data (lookup-entry config id :health-check-protocol)]
+  (when-some [data (lookup-entry config id :health-check-protocol)]
     (. builder healthCheckProtocol data))
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
-  (when-let [data (lookup-entry config id :port-overrides)]
+  (when-some [data (lookup-entry config id :port-overrides)]
     (. builder portOverrides data))
-  (when-let [data (lookup-entry config id :threshold-count)]
+  (when-some [data (lookup-entry config id :threshold-count)]
     (. builder thresholdCount data))
-  (when-let [data (lookup-entry config id :traffic-dial-percentage)]
+  (when-some [data (lookup-entry config id :traffic-dial-percentage)]
     (. builder trafficDialPercentage data))
   (.build builder))
 
@@ -479,13 +479,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^CfnEndpointGroup$EndpointConfigurationProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :attachment-arn)]
+  (when-some [data (lookup-entry config id :attachment-arn)]
     (. builder attachmentArn data))
-  (when-let [data (lookup-entry config id :client-ip-preservation-enabled)]
+  (when-some [data (lookup-entry config id :client-ip-preservation-enabled)]
     (. builder clientIpPreservationEnabled data))
-  (when-let [data (lookup-entry config id :endpoint-id)]
+  (when-some [data (lookup-entry config id :endpoint-id)]
     (. builder endpointId data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -514,9 +514,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listenerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:listener-port` |
 "
   [^CfnEndpointGroup$PortOverrideProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-port)]
+  (when-some [data (lookup-entry config id :endpoint-port)]
     (. builder endpointPort data))
-  (when-let [data (lookup-entry config id :listener-port)]
+  (when-some [data (lookup-entry config id :listener-port)]
     (. builder listenerPort data))
   (.build builder))
 
@@ -553,25 +553,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficDialPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-dial-percentage` |
 "
   [^CfnEndpointGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-configurations)]
+  (when-some [data (lookup-entry config id :endpoint-configurations)]
     (. builder endpointConfigurations data))
-  (when-let [data (lookup-entry config id :endpoint-group-region)]
+  (when-some [data (lookup-entry config id :endpoint-group-region)]
     (. builder endpointGroupRegion data))
-  (when-let [data (lookup-entry config id :health-check-interval-seconds)]
+  (when-some [data (lookup-entry config id :health-check-interval-seconds)]
     (. builder healthCheckIntervalSeconds data))
-  (when-let [data (lookup-entry config id :health-check-path)]
+  (when-some [data (lookup-entry config id :health-check-path)]
     (. builder healthCheckPath data))
-  (when-let [data (lookup-entry config id :health-check-port)]
+  (when-some [data (lookup-entry config id :health-check-port)]
     (. builder healthCheckPort data))
-  (when-let [data (lookup-entry config id :health-check-protocol)]
+  (when-some [data (lookup-entry config id :health-check-protocol)]
     (. builder healthCheckProtocol data))
-  (when-let [data (lookup-entry config id :listener-arn)]
+  (when-some [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
-  (when-let [data (lookup-entry config id :port-overrides)]
+  (when-some [data (lookup-entry config id :port-overrides)]
     (. builder portOverrides data))
-  (when-let [data (lookup-entry config id :threshold-count)]
+  (when-some [data (lookup-entry config id :threshold-count)]
     (. builder thresholdCount data))
-  (when-let [data (lookup-entry config id :traffic-dial-percentage)]
+  (when-some [data (lookup-entry config id :traffic-dial-percentage)]
     (. builder trafficDialPercentage data))
   (.build builder))
 
@@ -602,13 +602,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnListener$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator-arn)]
+  (when-some [data (lookup-entry config id :accelerator-arn)]
     (. builder acceleratorArn data))
-  (when-let [data (lookup-entry config id :client-affinity)]
+  (when-some [data (lookup-entry config id :client-affinity)]
     (. builder clientAffinity data))
-  (when-let [data (lookup-entry config id :port-ranges)]
+  (when-some [data (lookup-entry config id :port-ranges)]
     (. builder portRanges data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -637,9 +637,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `toPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:to-port` |
 "
   [^CfnListener$PortRangeProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :from-port)]
+  (when-some [data (lookup-entry config id :from-port)]
     (. builder fromPort data))
-  (when-let [data (lookup-entry config id :to-port)]
+  (when-some [data (lookup-entry config id :to-port)]
     (. builder toPort data))
   (.build builder))
 
@@ -670,13 +670,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 "
   [^CfnListenerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator-arn)]
+  (when-some [data (lookup-entry config id :accelerator-arn)]
     (. builder acceleratorArn data))
-  (when-let [data (lookup-entry config id :client-affinity)]
+  (when-some [data (lookup-entry config id :client-affinity)]
     (. builder clientAffinity data))
-  (when-let [data (lookup-entry config id :port-ranges)]
+  (when-some [data (lookup-entry config id :port-ranges)]
     (. builder portRanges data))
-  (when-let [data (lookup-entry config id :protocol)]
+  (when-some [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -714,27 +714,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficDialPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-dial-percentage` |
 "
   [^EndpointGroup$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-group-name)]
+  (when-some [data (lookup-entry config id :endpoint-group-name)]
     (. builder endpointGroupName data))
-  (when-let [data (lookup-entry config id :endpoints)]
+  (when-some [data (lookup-entry config id :endpoints)]
     (. builder endpoints data))
-  (when-let [data (lookup-entry config id :health-check-interval)]
+  (when-some [data (lookup-entry config id :health-check-interval)]
     (. builder healthCheckInterval data))
-  (when-let [data (lookup-entry config id :health-check-path)]
+  (when-some [data (lookup-entry config id :health-check-path)]
     (. builder healthCheckPath data))
-  (when-let [data (lookup-entry config id :health-check-port)]
+  (when-some [data (lookup-entry config id :health-check-port)]
     (. builder healthCheckPort data))
-  (when-let [data (health-check-protocol config id :health-check-protocol)]
+  (when-some [data (health-check-protocol config id :health-check-protocol)]
     (. builder healthCheckProtocol data))
-  (when-let [data (lookup-entry config id :health-check-threshold)]
+  (when-some [data (lookup-entry config id :health-check-threshold)]
     (. builder healthCheckThreshold data))
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
-  (when-let [data (lookup-entry config id :port-overrides)]
+  (when-some [data (lookup-entry config id :port-overrides)]
     (. builder portOverrides data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :traffic-dial-percentage)]
+  (when-some [data (lookup-entry config id :traffic-dial-percentage)]
     (. builder trafficDialPercentage data))
   (.build builder))
 
@@ -771,25 +771,25 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficDialPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-dial-percentage` |
 "
   [^EndpointGroupOptions$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-group-name)]
+  (when-some [data (lookup-entry config id :endpoint-group-name)]
     (. builder endpointGroupName data))
-  (when-let [data (lookup-entry config id :endpoints)]
+  (when-some [data (lookup-entry config id :endpoints)]
     (. builder endpoints data))
-  (when-let [data (lookup-entry config id :health-check-interval)]
+  (when-some [data (lookup-entry config id :health-check-interval)]
     (. builder healthCheckInterval data))
-  (when-let [data (lookup-entry config id :health-check-path)]
+  (when-some [data (lookup-entry config id :health-check-path)]
     (. builder healthCheckPath data))
-  (when-let [data (lookup-entry config id :health-check-port)]
+  (when-some [data (lookup-entry config id :health-check-port)]
     (. builder healthCheckPort data))
-  (when-let [data (health-check-protocol config id :health-check-protocol)]
+  (when-some [data (health-check-protocol config id :health-check-protocol)]
     (. builder healthCheckProtocol data))
-  (when-let [data (lookup-entry config id :health-check-threshold)]
+  (when-some [data (lookup-entry config id :health-check-threshold)]
     (. builder healthCheckThreshold data))
-  (when-let [data (lookup-entry config id :port-overrides)]
+  (when-some [data (lookup-entry config id :port-overrides)]
     (. builder portOverrides data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :traffic-dial-percentage)]
+  (when-some [data (lookup-entry config id :traffic-dial-percentage)]
     (. builder trafficDialPercentage data))
   (.build builder))
 
@@ -827,27 +827,27 @@ function on the data with the provided namespace id and item-key.  The found val
 | `trafficDialPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-dial-percentage` |
 "
   [^EndpointGroupProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-group-name)]
+  (when-some [data (lookup-entry config id :endpoint-group-name)]
     (. builder endpointGroupName data))
-  (when-let [data (lookup-entry config id :endpoints)]
+  (when-some [data (lookup-entry config id :endpoints)]
     (. builder endpoints data))
-  (when-let [data (lookup-entry config id :health-check-interval)]
+  (when-some [data (lookup-entry config id :health-check-interval)]
     (. builder healthCheckInterval data))
-  (when-let [data (lookup-entry config id :health-check-path)]
+  (when-some [data (lookup-entry config id :health-check-path)]
     (. builder healthCheckPath data))
-  (when-let [data (lookup-entry config id :health-check-port)]
+  (when-some [data (lookup-entry config id :health-check-port)]
     (. builder healthCheckPort data))
-  (when-let [data (health-check-protocol config id :health-check-protocol)]
+  (when-some [data (health-check-protocol config id :health-check-protocol)]
     (. builder healthCheckProtocol data))
-  (when-let [data (lookup-entry config id :health-check-threshold)]
+  (when-some [data (lookup-entry config id :health-check-threshold)]
     (. builder healthCheckThreshold data))
-  (when-let [data (lookup-entry config id :listener)]
+  (when-some [data (lookup-entry config id :listener)]
     (. builder listener data))
-  (when-let [data (lookup-entry config id :port-overrides)]
+  (when-some [data (lookup-entry config id :port-overrides)]
     (. builder portOverrides data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :traffic-dial-percentage)]
+  (when-some [data (lookup-entry config id :traffic-dial-percentage)]
     (. builder trafficDialPercentage data))
   (.build builder))
 
@@ -879,15 +879,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | software.amazon.awscdk.services.globalaccelerator.ConnectionProtocol | [[cdk.api.services.globalaccelerator/connection-protocol]] | `:protocol` |
 "
   [^Listener$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator)]
+  (when-some [data (lookup-entry config id :accelerator)]
     (. builder accelerator data))
-  (when-let [data (client-affinity config id :client-affinity)]
+  (when-some [data (client-affinity config id :client-affinity)]
     (. builder clientAffinity data))
-  (when-let [data (lookup-entry config id :listener-name)]
+  (when-some [data (lookup-entry config id :listener-name)]
     (. builder listenerName data))
-  (when-let [data (lookup-entry config id :port-ranges)]
+  (when-some [data (lookup-entry config id :port-ranges)]
     (. builder portRanges data))
-  (when-let [data (connection-protocol config id :protocol)]
+  (when-some [data (connection-protocol config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -918,13 +918,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | software.amazon.awscdk.services.globalaccelerator.ConnectionProtocol | [[cdk.api.services.globalaccelerator/connection-protocol]] | `:protocol` |
 "
   [^ListenerOptions$Builder builder id config]
-  (when-let [data (client-affinity config id :client-affinity)]
+  (when-some [data (client-affinity config id :client-affinity)]
     (. builder clientAffinity data))
-  (when-let [data (lookup-entry config id :listener-name)]
+  (when-some [data (lookup-entry config id :listener-name)]
     (. builder listenerName data))
-  (when-let [data (lookup-entry config id :port-ranges)]
+  (when-some [data (lookup-entry config id :port-ranges)]
     (. builder portRanges data))
-  (when-let [data (connection-protocol config id :protocol)]
+  (when-some [data (connection-protocol config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -956,15 +956,15 @@ function on the data with the provided namespace id and item-key.  The found val
 | `protocol` | software.amazon.awscdk.services.globalaccelerator.ConnectionProtocol | [[cdk.api.services.globalaccelerator/connection-protocol]] | `:protocol` |
 "
   [^ListenerProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :accelerator)]
+  (when-some [data (lookup-entry config id :accelerator)]
     (. builder accelerator data))
-  (when-let [data (client-affinity config id :client-affinity)]
+  (when-some [data (client-affinity config id :client-affinity)]
     (. builder clientAffinity data))
-  (when-let [data (lookup-entry config id :listener-name)]
+  (when-some [data (lookup-entry config id :listener-name)]
     (. builder listenerName data))
-  (when-let [data (lookup-entry config id :port-ranges)]
+  (when-some [data (lookup-entry config id :port-ranges)]
     (. builder portRanges data))
-  (when-let [data (connection-protocol config id :protocol)]
+  (when-some [data (connection-protocol config id :protocol)]
     (. builder protocol data))
   (.build builder))
 
@@ -993,9 +993,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `listenerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:listener-port` |
 "
   [^PortOverride$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-port)]
+  (when-some [data (lookup-entry config id :endpoint-port)]
     (. builder endpointPort data))
-  (when-let [data (lookup-entry config id :listener-port)]
+  (when-some [data (lookup-entry config id :listener-port)]
     (. builder listenerPort data))
   (.build builder))
 
@@ -1024,9 +1024,9 @@ function on the data with the provided namespace id and item-key.  The found val
 | `toPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:to-port` |
 "
   [^PortRange$Builder builder id config]
-  (when-let [data (lookup-entry config id :from-port)]
+  (when-some [data (lookup-entry config id :from-port)]
     (. builder fromPort data))
-  (when-let [data (lookup-entry config id :to-port)]
+  (when-some [data (lookup-entry config id :to-port)]
     (. builder toPort data))
   (.build builder))
 
@@ -1057,13 +1057,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^RawEndpoint$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-id)]
+  (when-some [data (lookup-entry config id :endpoint-id)]
     (. builder endpointId data))
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 
@@ -1094,13 +1094,13 @@ function on the data with the provided namespace id and item-key.  The found val
 | `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
 "
   [^RawEndpointProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :endpoint-id)]
+  (when-some [data (lookup-entry config id :endpoint-id)]
     (. builder endpointId data))
-  (when-let [data (lookup-entry config id :preserve-client-ip)]
+  (when-some [data (lookup-entry config id :preserve-client-ip)]
     (. builder preserveClientIp data))
-  (when-let [data (lookup-entry config id :region)]
+  (when-some [data (lookup-entry config id :region)]
     (. builder region data))
-  (when-let [data (lookup-entry config id :weight)]
+  (when-some [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
 

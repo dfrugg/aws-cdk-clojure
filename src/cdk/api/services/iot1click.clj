@@ -24,9 +24,9 @@
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDevice$Builder builder id config]
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -55,9 +55,9 @@
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 "
   [^CfnDeviceProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :device-id)]
+  (when-some [data (lookup-entry config id :device-id)]
     (. builder deviceId data))
-  (when-let [data (lookup-entry config id :enabled)]
+  (when-some [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
 
@@ -88,13 +88,13 @@
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnPlacement$Builder builder id config]
-  (when-let [data (lookup-entry config id :associated-devices)]
+  (when-some [data (lookup-entry config id :associated-devices)]
     (. builder associatedDevices data))
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :placement-name)]
+  (when-some [data (lookup-entry config id :placement-name)]
     (. builder placementName data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
 
@@ -125,13 +125,13 @@
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnPlacementProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :associated-devices)]
+  (when-some [data (lookup-entry config id :associated-devices)]
     (. builder associatedDevices data))
-  (when-let [data (lookup-entry config id :attributes)]
+  (when-some [data (lookup-entry config id :attributes)]
     (. builder attributes data))
-  (when-let [data (lookup-entry config id :placement-name)]
+  (when-some [data (lookup-entry config id :placement-name)]
     (. builder placementName data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
 
@@ -161,11 +161,11 @@
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnProject$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :placement-template)]
+  (when-some [data (lookup-entry config id :placement-template)]
     (. builder placementTemplate data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
 
@@ -194,9 +194,9 @@
 | `deviceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:device-type` |
 "
   [^CfnProject$DeviceTemplateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :callback-overrides)]
+  (when-some [data (lookup-entry config id :callback-overrides)]
     (. builder callbackOverrides data))
-  (when-let [data (lookup-entry config id :device-type)]
+  (when-some [data (lookup-entry config id :device-type)]
     (. builder deviceType data))
   (.build builder))
 
@@ -225,9 +225,9 @@
 | `deviceTemplates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:device-templates` |
 "
   [^CfnProject$PlacementTemplateProperty$Builder builder id config]
-  (when-let [data (lookup-entry config id :default-attributes)]
+  (when-some [data (lookup-entry config id :default-attributes)]
     (. builder defaultAttributes data))
-  (when-let [data (lookup-entry config id :device-templates)]
+  (when-some [data (lookup-entry config id :device-templates)]
     (. builder deviceTemplates data))
   (.build builder))
 
@@ -257,11 +257,11 @@
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 "
   [^CfnProjectProps$Builder builder id config]
-  (when-let [data (lookup-entry config id :description)]
+  (when-some [data (lookup-entry config id :description)]
     (. builder description data))
-  (when-let [data (lookup-entry config id :placement-template)]
+  (when-some [data (lookup-entry config id :placement-template)]
     (. builder placementTemplate data))
-  (when-let [data (lookup-entry config id :project-name)]
+  (when-some [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
 
