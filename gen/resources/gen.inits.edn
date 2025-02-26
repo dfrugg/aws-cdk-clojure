@@ -1,6 +1,9 @@
 {; Package software.amazon.awscdk
  software.amazon.awscdk
- {RemoveTag$Builder {[java.lang.String] {:fn-args "^String tag-key"
+ {Intrinsic$Builder {[java.lang.Object] {:fn-args "^Object value"
+                                         :init-args "value"}}
+
+  RemoveTag$Builder {[java.lang.String] {:fn-args "^String tag-key"
                                          :init-args "tag-key"}}
 
   SecretValue$Builder {[java.lang.Object] {:fn-args "^Object protected-value"
@@ -36,7 +39,7 @@
  {HttpAlbIntegration$Builder {[java.lang.String software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener] {:fn-args "^IApplicationListener listener"
                                                                                                                               :init-args "(name id) listener"}}
 
-  HttpLambdaIntegration$Builder {[java.lang.String software.amazon.awscdk.services.lambda.IFunction] {:fn-args "IFunction handler"
+  HttpLambdaIntegration$Builder {[java.lang.String software.amazon.awscdk.services.lambda.IFunction] {:fn-args "^IFunction handler"
                                                                                                       :init-args "(name id) handler"}}
 
   HttpNlbIntegration$Builder {[java.lang.String software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener] {:fn-args "^INetworkListener listener"
@@ -182,20 +185,20 @@
 
  ; Package software.amazon.awscdk.services.events.targets
  software.amazon.awscdk.services.events.targets
- {ApiDestination$Builder {[software.amazon.awscdk.services.events.IApiDestination] {:fn-args " api-destination"
+ {ApiDestination$Builder {[software.amazon.awscdk.services.events.IApiDestination] {:fn-args "^IApiDestination api-destination"
                                                                                     :init-args "api-destination"}}
 
-  ApiGateway$Builder {[software.amazon.awscdk.services.apigateway.IRestApi] {:fn-args " rest-api"
+  ApiGateway$Builder {[software.amazon.awscdk.services.apigateway.IRestApi] {:fn-args "^IRestApi rest-api"
                                                                              :init-args "rest-api"}}
 
-  AppSync$Builder {[software.amazon.awscdk.services.appsync.IGraphqlApi] {:fn-args " graphql-api"
+  AppSync$Builder {[software.amazon.awscdk.services.appsync.IGraphqlApi] {:fn-args "^IGraphqlApi graphql-api"
                                                                           :init-args "graphql-api"}}
 
   BatchJob$Builder {[java.lang.String software.constructs.IConstruct java.lang.String software.constructs.IConstruct]
                     {:fn-args "^String job-queue-arn ^IConstruct job-queue-scope ^String job-definition-arn ^IConstruct job-definition-scope"
                      :init-args "job-queue-arn job-queue-scope job-definition-arn job-definition-scope"}}
 
-  CloudWatchLogGroup$Builder {[software.amazon.awscdk.services.logs.ILogGroup] {:fn-args " log-group"
+  CloudWatchLogGroup$Builder {[software.amazon.awscdk.services.logs.ILogGroup] {:fn-args "^ILogGroup log-group"
                                                                                 :init-args "log-group"}}
 
   CodeBuildProject$Builder {[software.amazon.awscdk.services.codebuild.IProject] {:fn-args "^IProject project"

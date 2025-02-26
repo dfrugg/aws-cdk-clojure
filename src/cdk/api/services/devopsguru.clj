@@ -15,54 +15,21 @@
                                                        CfnResourceCollectionProps$Builder]))
 
 
-(defn build-cfn-log-anomaly-detection-integration-builder
-  "The build-cfn-log-anomaly-detection-integration-builder function updates a CfnLogAnomalyDetectionIntegration$Builder instance using the provided configuration.
-  The function takes the CfnLogAnomalyDetectionIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnLogAnomalyDetectionIntegration$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-log-anomaly-detection-integration-builder
-  "Creates a  `CfnLogAnomalyDetectionIntegration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLogAnomalyDetectionIntegration$Builder` instance using a parent scope and ID, then builds it.  Takes the following arguments: 
+
 | Argument | DataType | Description |
 |---|---|---|
 | scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [^software.constructs.Construct scope id config]
-  (build-cfn-log-anomaly-detection-integration-builder (CfnLogAnomalyDetectionIntegration$Builder/create scope (name id)) id config))
-
-
-(defn build-cfn-log-anomaly-detection-integration-props-builder
-  "The build-cfn-log-anomaly-detection-integration-props-builder function updates a CfnLogAnomalyDetectionIntegrationProps$Builder instance using the provided configuration.
-  The function takes the CfnLogAnomalyDetectionIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnLogAnomalyDetectionIntegrationProps$Builder builder id config]
-  (.build builder))
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |"
+  [^software.constructs.Construct scope id]
+  (.build (CfnLogAnomalyDetectionIntegration$Builder/create scope (name id))))
 
 
 (defn cfn-log-anomaly-detection-integration-props-builder
-  "Creates a  `CfnLogAnomalyDetectionIntegrationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-log-anomaly-detection-integration-props-builder (new CfnLogAnomalyDetectionIntegrationProps$Builder) id config))
+  "Creates a  `CfnLogAnomalyDetectionIntegrationProps$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnLogAnomalyDetectionIntegrationProps$Builder)))
 
 
 (defn build-cfn-notification-channel-builder

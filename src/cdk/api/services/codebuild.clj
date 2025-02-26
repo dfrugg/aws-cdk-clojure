@@ -635,54 +635,16 @@ function on the data with the provided namespace id and item-key.  The found val
   (build-build-environment-variable-builder (new BuildEnvironmentVariable$Builder) id config))
 
 
-(defn build-build-image-bind-options-builder
-  "The build-build-image-bind-options-builder function updates a BuildImageBindOptions$Builder instance using the provided configuration.
-  The function takes the BuildImageBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^BuildImageBindOptions$Builder builder id config]
-  (.build builder))
-
-
 (defn build-image-bind-options-builder
-  "Creates a  `BuildImageBindOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-build-image-bind-options-builder (new BuildImageBindOptions$Builder) id config))
-
-
-(defn build-build-image-config-builder
-  "The build-build-image-config-builder function updates a BuildImageConfig$Builder instance using the provided configuration.
-  The function takes the BuildImageConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^BuildImageConfig$Builder builder id config]
-  (.build builder))
+  "Creates a  `BuildImageBindOptions$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new BuildImageBindOptions$Builder)))
 
 
 (defn build-image-config-builder
-  "Creates a  `BuildImageConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-build-image-config-builder (new BuildImageConfig$Builder) id config))
+  "Creates a  `BuildImageConfig$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new BuildImageConfig$Builder)))
 
 
 (defn build-cfn-fleet-builder

@@ -1444,29 +1444,10 @@
   (build-cfn-function-dynamo-db-event-property-builder (new CfnFunction$DynamoDBEventProperty$Builder) id config))
 
 
-(defn build-cfn-function-empty-sampt-property-builder
-  "The build-cfn-function-empty-sampt-property-builder function updates a CfnFunction$EmptySAMPTProperty$Builder instance using the provided configuration.
-  The function takes the CfnFunction$EmptySAMPTProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnFunction$EmptySAMPTProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-function-empty-sampt-property-builder
-  "Creates a  `CfnFunction$EmptySAMPTProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-function-empty-sampt-property-builder (new CfnFunction$EmptySAMPTProperty$Builder) id config))
+  "Creates a  `CfnFunction$EmptySAMPTProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnFunction$EmptySAMPTProperty$Builder)))
 
 
 (defn build-cfn-function-ephemeral-storage-property-builder

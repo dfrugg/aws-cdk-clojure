@@ -3909,29 +3909,10 @@ __Create Form:__ ____[java.lang.String]___
   (build-runtime-config-builder (new RuntimeConfig$Builder) id config))
 
 
-(defn build-schema-bind-options-builder
-  "The build-schema-bind-options-builder function updates a SchemaBindOptions$Builder instance using the provided configuration.
-  The function takes the SchemaBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^SchemaBindOptions$Builder builder id config]
-  (.build builder))
-
-
 (defn schema-bind-options-builder
-  "Creates a  `SchemaBindOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-schema-bind-options-builder (new SchemaBindOptions$Builder) id config))
+  "Creates a  `SchemaBindOptions$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new SchemaBindOptions$Builder)))
 
 
 (defn build-schema-file-builder

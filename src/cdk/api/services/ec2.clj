@@ -7319,29 +7319,10 @@ function on the data with the provided namespace id and item-key.  The found val
   (build-cfn-instance-network-interface-property-builder (new CfnInstance$NetworkInterfaceProperty$Builder) id config))
 
 
-(defn build-cfn-instance-no-device-property-builder
-  "The build-cfn-instance-no-device-property-builder function updates a CfnInstance$NoDeviceProperty$Builder instance using the provided configuration.
-  The function takes the CfnInstance$NoDeviceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnInstance$NoDeviceProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-instance-no-device-property-builder
-  "Creates a  `CfnInstance$NoDeviceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-instance-no-device-property-builder (new CfnInstance$NoDeviceProperty$Builder) id config))
+  "Creates a  `CfnInstance$NoDeviceProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnInstance$NoDeviceProperty$Builder)))
 
 
 (defn build-cfn-instance-private-dns-name-options-property-builder

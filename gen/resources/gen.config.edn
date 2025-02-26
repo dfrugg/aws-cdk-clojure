@@ -3,4 +3,4 @@
  :test-path "test/clj"
  :base-package-namespace "cdk.api"
  :base-package "software.amazon.awscdk"
- :ignored {software.amazon.awscdk #{Intrinsic$Builder}}}
+ :ignored {package.path #{Class$Builder}}}

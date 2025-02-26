@@ -90,29 +90,10 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :private data) VpcSubnetGroupType/PRIVATE)))
 
 
-(defn build-assembly-build-options-builder
-  "The build-assembly-build-options-builder function updates a AssemblyBuildOptions$Builder instance using the provided configuration.
-  The function takes the AssemblyBuildOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^AssemblyBuildOptions$Builder builder id config]
-  (.build builder))
-
-
 (defn assembly-build-options-builder
-  "Creates a  `AssemblyBuildOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-assembly-build-options-builder (new AssemblyBuildOptions$Builder) id config))
+  "Creates a  `AssemblyBuildOptions$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new AssemblyBuildOptions$Builder)))
 
 
 (defn build-asset-manifest-artifact-builder

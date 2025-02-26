@@ -106,7 +106,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IApiDestination]___
 | api-destination | software.amazon.awscdk.services.events.IApiDestination |  |
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
-  [ api-destination id config]
+  [^IApiDestination api-destination id config]
   (build-api-destination-builder (ApiDestination$Builder/create api-destination) id config))
 
 
@@ -216,7 +216,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.IRestApi]___
 | rest-api | software.amazon.awscdk.services.apigateway.IRestApi |  |
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
-  [ rest-api id config]
+  [^IRestApi rest-api id config]
   (build-api-gateway-builder (ApiGateway$Builder/create rest-api) id config))
 
 
@@ -320,7 +320,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | graphql-api | software.amazon.awscdk.services.appsync.IGraphqlApi |  |
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
-  [ graphql-api id config]
+  [^IGraphqlApi graphql-api id config]
   (build-app-sync-builder (AppSync$Builder/create graphql-api) id config))
 
 
@@ -633,7 +633,7 @@ __Create Form:__ ____[software.amazon.awscdk.services.logs.ILogGroup]___
 | log-group | software.amazon.awscdk.services.logs.ILogGroup |  |
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
-  [ log-group id config]
+  [^ILogGroup log-group id config]
   (build-cloud-watch-log-group-builder (CloudWatchLogGroup$Builder/create log-group) id config))
 
 

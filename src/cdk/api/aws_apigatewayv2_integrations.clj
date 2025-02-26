@@ -135,7 +135,7 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | handler | software.amazon.awscdk.services.lambda.IFunction |  |
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
-  [IFunction handler id config]
+  [^IFunction handler id config]
   (build-http-lambda-integration-builder (HttpLambdaIntegration$Builder/create (name id) handler) id config))
 
 

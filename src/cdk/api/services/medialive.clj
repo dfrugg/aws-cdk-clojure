@@ -477,54 +477,16 @@
   (build-cfn-channel-archive-s3-settings-property-builder (new CfnChannel$ArchiveS3SettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-arib-destination-settings-property-builder
-  "The build-cfn-channel-arib-destination-settings-property-builder function updates a CfnChannel$AribDestinationSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$AribDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$AribDestinationSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-arib-destination-settings-property-builder
-  "Creates a  `CfnChannel$AribDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-arib-destination-settings-property-builder (new CfnChannel$AribDestinationSettingsProperty$Builder) id config))
-
-
-(defn build-cfn-channel-arib-source-settings-property-builder
-  "The build-cfn-channel-arib-source-settings-property-builder function updates a CfnChannel$AribSourceSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$AribSourceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$AribSourceSettingsProperty$Builder builder id config]
-  (.build builder))
+  "Creates a  `CfnChannel$AribDestinationSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$AribDestinationSettingsProperty$Builder)))
 
 
 (defn cfn-channel-arib-source-settings-property-builder
-  "Creates a  `CfnChannel$AribSourceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-arib-source-settings-property-builder (new CfnChannel$AribSourceSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$AribSourceSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$AribSourceSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-audio-channel-mapping-property-builder
@@ -1778,54 +1740,16 @@
   (build-cfn-channel-color-correction-settings-property-builder (new CfnChannel$ColorCorrectionSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-color-space-passthrough-settings-property-builder
-  "The build-cfn-channel-color-space-passthrough-settings-property-builder function updates a CfnChannel$ColorSpacePassthroughSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$ColorSpacePassthroughSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$ColorSpacePassthroughSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-color-space-passthrough-settings-property-builder
-  "Creates a  `CfnChannel$ColorSpacePassthroughSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-color-space-passthrough-settings-property-builder (new CfnChannel$ColorSpacePassthroughSettingsProperty$Builder) id config))
-
-
-(defn build-cfn-channel-dolby-vision81-settings-property-builder
-  "The build-cfn-channel-dolby-vision81-settings-property-builder function updates a CfnChannel$DolbyVision81SettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$DolbyVision81SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$DolbyVision81SettingsProperty$Builder builder id config]
-  (.build builder))
+  "Creates a  `CfnChannel$ColorSpacePassthroughSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$ColorSpacePassthroughSettingsProperty$Builder)))
 
 
 (defn cfn-channel-dolby-vision81-settings-property-builder
-  "Creates a  `CfnChannel$DolbyVision81SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-dolby-vision81-settings-property-builder (new CfnChannel$DolbyVision81SettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$DolbyVision81SettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$DolbyVision81SettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-dvb-nit-settings-property-builder
@@ -2202,54 +2126,16 @@
   (build-cfn-channel-ebu-tt-d-destination-settings-property-builder (new CfnChannel$EbuTtDDestinationSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-embedded-destination-settings-property-builder
-  "The build-cfn-channel-embedded-destination-settings-property-builder function updates a CfnChannel$EmbeddedDestinationSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$EmbeddedDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$EmbeddedDestinationSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-embedded-destination-settings-property-builder
-  "Creates a  `CfnChannel$EmbeddedDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-embedded-destination-settings-property-builder (new CfnChannel$EmbeddedDestinationSettingsProperty$Builder) id config))
-
-
-(defn build-cfn-channel-embedded-plus-scte20-destination-settings-property-builder
-  "The build-cfn-channel-embedded-plus-scte20-destination-settings-property-builder function updates a CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder builder id config]
-  (.build builder))
+  "Creates a  `CfnChannel$EmbeddedDestinationSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$EmbeddedDestinationSettingsProperty$Builder)))
 
 
 (defn cfn-channel-embedded-plus-scte20-destination-settings-property-builder
-  "Creates a  `CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-embedded-plus-scte20-destination-settings-property-builder (new CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-embedded-source-settings-property-builder
@@ -2650,29 +2536,10 @@
   (build-cfn-channel-frame-capture-group-settings-property-builder (new CfnChannel$FrameCaptureGroupSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-frame-capture-hls-settings-property-builder
-  "The build-cfn-channel-frame-capture-hls-settings-property-builder function updates a CfnChannel$FrameCaptureHlsSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$FrameCaptureHlsSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$FrameCaptureHlsSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-frame-capture-hls-settings-property-builder
-  "Creates a  `CfnChannel$FrameCaptureHlsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-frame-capture-hls-settings-property-builder (new CfnChannel$FrameCaptureHlsSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$FrameCaptureHlsSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$FrameCaptureHlsSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-frame-capture-output-settings-property-builder
@@ -3755,29 +3622,10 @@
   (build-cfn-channel-hls-webdav-settings-property-builder (new CfnChannel$HlsWebdavSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-html-motion-graphics-settings-property-builder
-  "The build-cfn-channel-html-motion-graphics-settings-property-builder function updates a CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-html-motion-graphics-settings-property-builder
-  "Creates a  `CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-html-motion-graphics-settings-property-builder (new CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-input-attachment-property-builder
@@ -4442,29 +4290,10 @@
   (build-cfn-channel-media-package-output-destination-settings-property-builder (new CfnChannel$MediaPackageOutputDestinationSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-media-package-output-settings-property-builder
-  "The build-cfn-channel-media-package-output-settings-property-builder function updates a CfnChannel$MediaPackageOutputSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$MediaPackageOutputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$MediaPackageOutputSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-media-package-output-settings-property-builder
-  "Creates a  `CfnChannel$MediaPackageOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-media-package-output-settings-property-builder (new CfnChannel$MediaPackageOutputSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$MediaPackageOutputSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$MediaPackageOutputSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-motion-graphics-configuration-property-builder
@@ -4777,29 +4606,10 @@
   (build-cfn-channel-ms-smooth-output-settings-property-builder (new CfnChannel$MsSmoothOutputSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-multiplex-group-settings-property-builder
-  "The build-cfn-channel-multiplex-group-settings-property-builder function updates a CfnChannel$MultiplexGroupSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$MultiplexGroupSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$MultiplexGroupSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-multiplex-group-settings-property-builder
-  "Creates a  `CfnChannel$MultiplexGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-multiplex-group-settings-property-builder (new CfnChannel$MultiplexGroupSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$MultiplexGroupSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$MultiplexGroupSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-multiplex-output-settings-property-builder
@@ -5336,29 +5146,10 @@
   (build-cfn-channel-output-settings-property-builder (new CfnChannel$OutputSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-pass-through-settings-property-builder
-  "The build-cfn-channel-pass-through-settings-property-builder function updates a CfnChannel$PassThroughSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$PassThroughSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$PassThroughSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-pass-through-settings-property-builder
-  "Creates a  `CfnChannel$PassThroughSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-pass-through-settings-property-builder (new CfnChannel$PassThroughSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$PassThroughSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$PassThroughSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-props-builder
@@ -5422,79 +5213,22 @@
   (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
 
 
-(defn build-cfn-channel-raw-settings-property-builder
-  "The build-cfn-channel-raw-settings-property-builder function updates a CfnChannel$RawSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$RawSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$RawSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-raw-settings-property-builder
-  "Creates a  `CfnChannel$RawSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-raw-settings-property-builder (new CfnChannel$RawSettingsProperty$Builder) id config))
-
-
-(defn build-cfn-channel-rec601-settings-property-builder
-  "The build-cfn-channel-rec601-settings-property-builder function updates a CfnChannel$Rec601SettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$Rec601SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$Rec601SettingsProperty$Builder builder id config]
-  (.build builder))
+  "Creates a  `CfnChannel$RawSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$RawSettingsProperty$Builder)))
 
 
 (defn cfn-channel-rec601-settings-property-builder
-  "Creates a  `CfnChannel$Rec601SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-rec601-settings-property-builder (new CfnChannel$Rec601SettingsProperty$Builder) id config))
-
-
-(defn build-cfn-channel-rec709-settings-property-builder
-  "The build-cfn-channel-rec709-settings-property-builder function updates a CfnChannel$Rec709SettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$Rec709SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$Rec709SettingsProperty$Builder builder id config]
-  (.build builder))
+  "Creates a  `CfnChannel$Rec601SettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$Rec601SettingsProperty$Builder)))
 
 
 (defn cfn-channel-rec709-settings-property-builder
-  "Creates a  `CfnChannel$Rec709SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-rec709-settings-property-builder (new CfnChannel$Rec709SettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$Rec709SettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$Rec709SettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-remix-settings-property-builder
@@ -5531,29 +5265,10 @@
   (build-cfn-channel-remix-settings-property-builder (new CfnChannel$RemixSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-rtmp-caption-info-destination-settings-property-builder
-  "The build-cfn-channel-rtmp-caption-info-destination-settings-property-builder function updates a CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-rtmp-caption-info-destination-settings-property-builder
-  "Creates a  `CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-rtmp-caption-info-destination-settings-property-builder (new CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-rtmp-group-settings-property-builder
@@ -5642,29 +5357,10 @@
   (build-cfn-channel-rtmp-output-settings-property-builder (new CfnChannel$RtmpOutputSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-scte20-plus-embedded-destination-settings-property-builder
-  "The build-cfn-channel-scte20-plus-embedded-destination-settings-property-builder function updates a CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-scte20-plus-embedded-destination-settings-property-builder
-  "Creates a  `CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-scte20-plus-embedded-destination-settings-property-builder (new CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-scte20-source-settings-property-builder
@@ -5698,29 +5394,10 @@
   (build-cfn-channel-scte20-source-settings-property-builder (new CfnChannel$Scte20SourceSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-scte27-destination-settings-property-builder
-  "The build-cfn-channel-scte27-destination-settings-property-builder function updates a CfnChannel$Scte27DestinationSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$Scte27DestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$Scte27DestinationSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-scte27-destination-settings-property-builder
-  "Creates a  `CfnChannel$Scte27DestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-scte27-destination-settings-property-builder (new CfnChannel$Scte27DestinationSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$Scte27DestinationSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$Scte27DestinationSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-scte27-source-settings-property-builder
@@ -5822,29 +5499,10 @@
   (build-cfn-channel-scte35-time-signal-apos-property-builder (new CfnChannel$Scte35TimeSignalAposProperty$Builder) id config))
 
 
-(defn build-cfn-channel-smpte-tt-destination-settings-property-builder
-  "The build-cfn-channel-smpte-tt-destination-settings-property-builder function updates a CfnChannel$SmpteTtDestinationSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$SmpteTtDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$SmpteTtDestinationSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-smpte-tt-destination-settings-property-builder
-  "Creates a  `CfnChannel$SmpteTtDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-smpte-tt-destination-settings-property-builder (new CfnChannel$SmpteTtDestinationSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$SmpteTtDestinationSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$SmpteTtDestinationSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-standard-hls-settings-property-builder
@@ -5909,29 +5567,10 @@
   (build-cfn-channel-static-key-settings-property-builder (new CfnChannel$StaticKeySettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-teletext-destination-settings-property-builder
-  "The build-cfn-channel-teletext-destination-settings-property-builder function updates a CfnChannel$TeletextDestinationSettingsProperty$Builder instance using the provided configuration.
-  The function takes the CfnChannel$TeletextDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnChannel$TeletextDestinationSettingsProperty$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-channel-teletext-destination-settings-property-builder
-  "Creates a  `CfnChannel$TeletextDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-channel-teletext-destination-settings-property-builder (new CfnChannel$TeletextDestinationSettingsProperty$Builder) id config))
+  "Creates a  `CfnChannel$TeletextDestinationSettingsProperty$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnChannel$TeletextDestinationSettingsProperty$Builder)))
 
 
 (defn build-cfn-channel-teletext-source-settings-property-builder

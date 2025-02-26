@@ -133,6 +133,7 @@
                                    GetContextValueOptions$Builder
                                    GetContextValueResult$Builder
                                    IgnoreMode
+                                   Intrinsic$Builder
                                    IntrinsicProps$Builder
                                    LazyAnyValueOptions$Builder
                                    LazyListValueOptions$Builder
@@ -3834,54 +3835,21 @@ function on the data with the provided namespace id and item-key.  The found val
   (build-cfn-wait-condition-builder (CfnWaitCondition$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-wait-condition-handle-builder
-  "The build-cfn-wait-condition-handle-builder function updates a CfnWaitConditionHandle$Builder instance using the provided configuration.
-  The function takes the CfnWaitConditionHandle$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnWaitConditionHandle$Builder builder id config]
-  (.build builder))
-
-
 (defn cfn-wait-condition-handle-builder
-  "Creates a  `CfnWaitConditionHandle$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnWaitConditionHandle$Builder` instance using a parent scope and ID, then builds it.  Takes the following arguments: 
+
 | Argument | DataType | Description |
 |---|---|---|
 | scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [^software.constructs.Construct scope id config]
-  (build-cfn-wait-condition-handle-builder (CfnWaitConditionHandle$Builder/create scope (name id)) id config))
-
-
-(defn build-cfn-wait-condition-handle-props-builder
-  "The build-cfn-wait-condition-handle-props-builder function updates a CfnWaitConditionHandleProps$Builder instance using the provided configuration.
-  The function takes the CfnWaitConditionHandleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^CfnWaitConditionHandleProps$Builder builder id config]
-  (.build builder))
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |"
+  [^software.constructs.Construct scope id]
+  (.build (CfnWaitConditionHandle$Builder/create scope (name id))))
 
 
 (defn cfn-wait-condition-handle-props-builder
-  "Creates a  `CfnWaitConditionHandleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-cfn-wait-condition-handle-props-builder (new CfnWaitConditionHandleProps$Builder) id config))
+  "Creates a  `CfnWaitConditionHandleProps$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new CfnWaitConditionHandleProps$Builder)))
 
 
 (defn build-cfn-wait-condition-props-builder
@@ -5086,6 +5054,40 @@ function on the data with the provided namespace id and item-key.  The found val
   (build-get-context-value-result-builder (new GetContextValueResult$Builder) id config))
 
 
+(defn build-intrinsic-builder
+  "The build-intrinsic-builder function updates a Intrinsic$Builder instance using the provided configuration.
+  The function takes the Intrinsic$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `stackTrace` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:stack-trace` |
+| `typeHint` | software.amazon.awscdk.ResolutionTypeHint | [[cdk.api/resolution-type-hint]] | `:type-hint` |
+"
+  [^Intrinsic$Builder builder id config]
+  (when-let [data (lookup-entry config id :stack-trace)]
+    (. builder stackTrace data))
+  (when-let [data (resolution-type-hint config id :type-hint)]
+    (. builder typeHint data))
+  (.build builder))
+
+
+(defn intrinsic-builder
+  "Creates a  `Intrinsic$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.Object]___
+| Argument | DataType | Description |
+|---|---|---|
+| value | java.lang.Object |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^Object value id config]
+  (build-intrinsic-builder (Intrinsic$Builder/create value) id config))
+
+
 (defn build-intrinsic-props-builder
   "The build-intrinsic-props-builder function updates a IntrinsicProps$Builder instance using the provided configuration.
   The function takes the IntrinsicProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5287,29 +5289,10 @@ function on the data with the provided namespace id and item-key.  The found val
   (build-nested-stack-props-builder (new NestedStackProps$Builder) id config))
 
 
-(defn build-permissions-boundary-bind-options-builder
-  "The build-permissions-boundary-bind-options-builder function updates a PermissionsBoundaryBindOptions$Builder instance using the provided configuration.
-  The function takes the PermissionsBoundaryBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
-  and the configuration itself.
-
-  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-"
-  [^PermissionsBoundaryBindOptions$Builder builder id config]
-  (.build builder))
-
-
 (defn permissions-boundary-bind-options-builder
-  "Creates a  `PermissionsBoundaryBindOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
-
-| Argument | DataType | Description |
-|---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
-  [id config]
-  (build-permissions-boundary-bind-options-builder (new PermissionsBoundaryBindOptions$Builder) id config))
+  "Creates a  `PermissionsBoundaryBindOptions$Builder` instance using a no-argument construct,then builds it."
+  []
+  (.build (new PermissionsBoundaryBindOptions$Builder)))
 
 
 (defn build-policy-validation-plugin-report-beta1-builder

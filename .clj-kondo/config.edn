@@ -1,3 +1,4 @@
 
 {:linter {:unresolved-symbol {:exclude []}
-          :clojure-lsp/unused-public-var {:level :off}}}
+          :clojure-lsp/unused-public-var {:level :off}}
+ :ignore [:clojure-lsp/unused-public-var]}

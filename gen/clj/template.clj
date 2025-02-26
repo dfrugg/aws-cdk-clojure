@@ -254,6 +254,23 @@
        arg-header "\n" arg-id "\n" arg-config))
 
 
+(defn template-init-docstring-no-arg-no-config
+  [{:keys [class-name]} type]
+  (str "Creates a  `" class-name "` instance using a no-argument " (name type) ",then builds it."))
+
+
+(defn template-init-docstring-scope-arg-no-config
+  [{:keys [class-name]}]
+  (str "Creates a  `" class-name "` instance using a parent scope, then builds it.  Takes the following arguments: \n\n"
+       arg-header "\n" arg-scope))
+
+
+(defn template-init-docstring-scope-id-arg-no-config
+  [{:keys [class-name]}]
+  (str "Creates a  `" class-name "` instance using a parent scope and ID, then builds it.  Takes the following arguments: \n\n"
+       arg-header "\n" arg-scope "\n" arg-id-of-scope))
+
+
 (defn template-init-docstring-scope-id
   [{:keys [class-name]}]
   (str "Creates a  `" class-name "` instance using a scope and ID, applies the data configuration, then builds it.  "
@@ -293,6 +310,27 @@
   (build-%s (new %s) id config))")
 
 
+(def template-init-no-arg-construct-no-config
+  "(defn %s
+  \"%s\"
+  []
+  (.build (new %s)))")
+
+
+(def template-init-scope-arg-create-no-config
+  "(defn %s
+  \"%s\"
+  [^software.constructs.Construct scope]
+  (.build (%s/create scope)))")
+
+
+(def template-init-scope-id-arg-create-no-config
+  "(defn %s
+  \"%s\"
+  [^software.constructs.Construct scope id]
+  (.build (%s/create scope (name id))))")
+
+
 (def template-init-scope-id-create
   "(defn %s
   \"%s\"
@@ -328,44 +366,89 @@
        (format template-init-multi-defn fn-name (template-init-docstring-hint builder-data))))
 
 
+(defn single? [inits] (= 1 (count inits)))
+(defn multi? [inits] (< 1 (count inits)))
+(defn create? [inits] (= :create (-> inits first :init-type)))
+(defn construct? [inits] (= :construct (-> inits first :init-type)))
+(defn no-args? [inits] (= 0 (-> inits first :parameter-types count)))
+(defn scope-id-args? [inits] (-> inits first scope-id?))
+(defn scope-args? [inits] (= [construct-sym] (-> inits first :parameter-types)))
+(defn hinted? [inits] (every? :hint inits))
+
+(def single-no-args-create? (every-pred single? no-args? create?))
+(def single-no-args-construct? (every-pred single? no-args? construct?))
+(def single-hinted-create? (every-pred single? hinted? create?))
+(def multi-hinted-create? (every-pred multi? hinted? create?))
+(def single-scope-id-args-create? (every-pred single? scope-id-args? create?))
+(def single-scope-args-create? (every-pred single? scope-args? create?))
+
+
+(defn record-unknown-builder
+  [{:keys [inits fn-name class-name]}]
+  (spit "INITS_UNKNOWN.txt" (str "fn-name: " fn-name "\nclass-name: " class-name "\ninits: " (pr-str inits) "\n\n") :append true))
+
+
+(defn record-no-config-builder
+  [{:keys [inits fn-name class-name methods] :as builder-data}]
+  (spit "NO_CONFIG.txt" (str "fn-name: " fn-name "\nclass-name: " class-name "\ninits: " (pr-str inits) "\n\n") :append true))
+
+
+
+(defn builder-source-no-config-function
+  "Generates the function to build when no configuration is needed."
+  [{:keys [inits fn-name class-name] :as builder-data}]
+  (cond
+    ; No arg constructors.  These are probably flags.
+    (single-no-args-construct? inits)
+    (format template-init-no-arg-construct-no-config fn-name (template-init-docstring-no-arg-no-config builder-data :construct) class-name)
+
+    (single-scope-args-create? inits)
+    (format template-init-scope-arg-create-no-config fn-name (template-init-docstring-scope-arg-no-config builder-data) class-name)
+
+    (single-scope-id-args-create? inits)
+    (format template-init-scope-id-arg-create-no-config fn-name (template-init-docstring-scope-id-arg-no-config builder-data) class-name)
+
+    :else
+    (do
+      (record-no-config-builder builder-data)
+      nil)))
+
+
+
 (defn builder-source-function
   "Builds out the source code for for the builders on a package"
-  [{:keys [inits fn-name class-name] :as builder-data}]
-  (let [build (build-builder-source-function builder-data)]
+  [{:keys [inits fn-name class-name methods] :as builder-data}]
+  (let [builder? (some? (seq methods))
+        build  (if builder?
+                 (build-builder-source-function builder-data)
+                 (builder-source-no-config-function builder-data))]
     (cond
+      ; Return just the builder
+      (not builder?) [build]
+
       ; The rare no arg creates, like the
-      (and (= 1 (count inits))
-           (= :create (-> inits first :init-type))
-           (= 0 (-> inits first :parameter-types count)))
+      (single-no-args-create? inits)
       [build (format template-init-no-arg-create fn-name (template-init-docstring-no-arg builder-data :create) fn-name class-name)]
 
       ; Process A Single Hinted Creator
-      (and (= 1 (count inits))
-           (= :create (-> inits first :init-type))
-           (-> inits first :hint some?))
+      (single-hinted-create? inits)
       (let [{:keys [fn-args init-args]} (-> inits first :hint)]
         [build (format template-init-hint fn-name (template-init-docstring-hint builder-data) (pad-right fn-args) fn-name class-name (pad-left init-args))])
 
       ; The rare no arg construct, like the
-      (and (= 1 (count inits))
-           (= :construct (-> inits first :init-type))
-           (= 0 (-> inits first :parameter-types count)))
+      (single-no-args-construct? inits)
       [build (format template-init-no-arg-construct fn-name (template-init-docstring-no-arg builder-data :constructor) fn-name class-name)]
 
       ; The very common scope ID combination
-      (and (= 1 (count inits))
-           (= :create (-> inits first :init-type))
-           (-> inits first scope-id?))
+      (single-scope-id-args-create? inits)
       [build (format template-init-scope-id-create fn-name (template-init-docstring-scope-id builder-data) fn-name class-name)]
 
       ; Process Multi Inits
-      (and (< 1 (count inits))
-           (= :create (-> inits first :init-type))
-           (every? :hint inits))
+      (multi-hinted-create? inits)
       [build (builder-source-multi-init builder-data)]
 
       ; Begin Catch All
       :else
       (do
-        (spit "inits.txt" (str "fn-name: " fn-name "\nclass-name: " class-name "\ninits: " (pr-str inits) "\n\n") :append true)
+        (record-unknown-builder builder-data)
         [build]))))
