@@ -389,7 +389,7 @@
 
 
 (defn record-no-config-builder
-  [{:keys [inits fn-name class-name methods] :as builder-data}]
+  [{:keys [inits fn-name class-name]}]
   (spit "NO_CONFIG.txt" (str "fn-name: " fn-name "\nclass-name: " class-name "\ninits: " (pr-str inits) "\n\n") :append true))
 
 
