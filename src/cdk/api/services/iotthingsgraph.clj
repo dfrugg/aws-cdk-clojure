@@ -27,12 +27,12 @@
 
 
 (defn cfn-flow-template-builder
-  "Creates a  `CfnFlowTemplate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlowTemplate$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-flow-template-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-flow-template-builder> (CfnFlowTemplate$Builder/create scope (name id)) id config))
 
@@ -58,12 +58,12 @@
 
 
 (defn cfn-flow-template-definition-document-property-builder
-  "Creates a  `CfnFlowTemplate$DefinitionDocumentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlowTemplate$DefinitionDocumentProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flow-template-definition-document-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flow-template-definition-document-property-builder> (new CfnFlowTemplate$DefinitionDocumentProperty$Builder) id config))
 
@@ -89,11 +89,11 @@
 
 
 (defn cfn-flow-template-props-builder
-  "Creates a  `CfnFlowTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlowTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flow-template-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flow-template-props-builder> (new CfnFlowTemplateProps$Builder) id config))

@@ -32,12 +32,12 @@
 
 
 (defn cfn-group-builder
-  "Creates a  `CfnGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroup$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-group-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-group-builder> (CfnGroup$Builder/create scope (name id)) id config))
 
@@ -66,12 +66,12 @@
 
 
 (defn cfn-group-membership-builder
-  "Creates a  `CfnGroupMembership$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroupMembership$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-group-membership-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-group-membership-builder> (CfnGroupMembership$Builder/create scope (name id)) id config))
 
@@ -94,12 +94,12 @@
 
 
 (defn cfn-group-membership-member-id-property-builder
-  "Creates a  `CfnGroupMembership$MemberIdProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroupMembership$MemberIdProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-membership-member-id-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-membership-member-id-property-builder> (new CfnGroupMembership$MemberIdProperty$Builder) id config))
 
@@ -128,12 +128,12 @@
 
 
 (defn cfn-group-membership-props-builder
-  "Creates a  `CfnGroupMembershipProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroupMembershipProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-membership-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-membership-props-builder> (new CfnGroupMembershipProps$Builder) id config))
 
@@ -162,11 +162,11 @@
 
 
 (defn cfn-group-props-builder
-  "Creates a  `CfnGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroupProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-props-builder> (new CfnGroupProps$Builder) id config))

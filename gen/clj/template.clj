@@ -241,22 +241,23 @@
 ; init defn docstrings
 
 (def arg-header "| Argument | DataType | Description |\n|---|---|---|")
-(def arg-id "| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |")
-(def arg-id-of-scope "| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |")
-(def arg-scope (str "| scope | " construct-sym " | The parent scope construct of the object being built. |"))
-(def arg-config "| config | map | Data configuration |")
+(def arg-id "| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |")
+(def arg-id-of-scope "| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |")
+(def arg-scope (str "| `scope` | " construct-sym " | The parent scope construct of the object being built. |"))
+(def arg-config "| `config` | map | Data configuration |")
 
 
 (defn template-init-docstring-no-arg
-  [{:keys [class-name]} type]
-  (str "Creates a  `" class-name "` instance using a no-argument " (name type) ", applies the data configuration, then builds it.  "
+  [{:keys [fn-name class-name]} type]
+  (str "Creates a  `" class-name "` instance using a no-argument " (name type)
+       ", applies the data configuration using the [[" fn-name ">]] function, then builds it.  "
        "Takes the following arguments: \n\n"
        arg-header "\n" arg-id "\n" arg-config))
 
 
 (defn template-init-docstring-no-arg-no-config
   [{:keys [class-name]} type]
-  (str "Creates a  `" class-name "` instance using a no-argument " (name type) ",then builds it."))
+  (str "Creates a  `" class-name "` instance using a no-argument " (name type) ", then builds it."))
 
 
 (defn template-init-docstring-scope-arg-no-config
@@ -272,18 +273,20 @@
 
 
 (defn template-init-docstring-scope-id
-  [{:keys [class-name]}]
-  (str "Creates a  `" class-name "` instance using a scope and ID, applies the data configuration, then builds it.  "
+  [{:keys [fn-name class-name]}]
+  (str "Creates a  `" class-name "` instance using a scope and ID"
+       ", applies the data configuration using the [[" fn-name ">]] function, then builds it.  "
        "Takes the following arguments: \n"
        arg-header "\n" arg-scope "\n" arg-id-of-scope "\n" arg-config))
 
 
 (defn template-init-docstring-hint-block
   [{:keys [parameter-types hint]}]
-  (let [hint-block (->> (map #(str "| " %1 " | " %2 " |  |") (-> hint :init-args tokenize) parameter-types)
+  (let [{:keys [init-args arg-descriptions]} hint
+        hint-block (->> (map #(str "| `" %1 "` | " %2 " | " (get arg-descriptions %1) " |") (tokenize init-args) parameter-types)
                         (remove #(str/includes? % "(name id)"))
                         (str/join "\n"))]
-    (str "\n\n__Create Form:__ ____" parameter-types "___\n" arg-header "\n" hint-block (when hint-block "\n") arg-id "\n" arg-config)))
+    (str "\n\n__Create Form:__ ___" parameter-types "___\n\n" arg-header "\n" hint-block (when hint-block "\n") arg-id "\n" arg-config)))
 
 
 (defn template-init-docstring-hint

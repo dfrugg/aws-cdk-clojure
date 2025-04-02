@@ -43,12 +43,12 @@
 
 
 (defn cfn-group-builder
-  "Creates a  `CfnGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroup$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-group-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-group-builder> (CfnGroup$Builder/create scope (name id)) id config))
 
@@ -74,12 +74,12 @@
 
 
 (defn cfn-group-configuration-item-property-builder
-  "Creates a  `CfnGroup$ConfigurationItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroup$ConfigurationItemProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-configuration-item-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-configuration-item-property-builder> (new CfnGroup$ConfigurationItemProperty$Builder) id config))
 
@@ -105,12 +105,12 @@
 
 
 (defn cfn-group-configuration-parameter-property-builder
-  "Creates a  `CfnGroup$ConfigurationParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroup$ConfigurationParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-configuration-parameter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-configuration-parameter-property-builder> (new CfnGroup$ConfigurationParameterProperty$Builder) id config))
 
@@ -148,12 +148,12 @@
 
 
 (defn cfn-group-props-builder
-  "Creates a  `CfnGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroupProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-props-builder> (new CfnGroupProps$Builder) id config))
 
@@ -182,12 +182,12 @@
 
 
 (defn cfn-group-query-property-builder
-  "Creates a  `CfnGroup$QueryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroup$QueryProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-query-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-query-property-builder> (new CfnGroup$QueryProperty$Builder) id config))
 
@@ -213,12 +213,12 @@
 
 
 (defn cfn-group-resource-query-property-builder
-  "Creates a  `CfnGroup$ResourceQueryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroup$ResourceQueryProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-resource-query-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-resource-query-property-builder> (new CfnGroup$ResourceQueryProperty$Builder) id config))
 
@@ -244,11 +244,11 @@
 
 
 (defn cfn-group-tag-filter-property-builder
-  "Creates a  `CfnGroup$TagFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGroup$TagFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-group-tag-filter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-group-tag-filter-property-builder> (new CfnGroup$TagFilterProperty$Builder) id config))

@@ -100,12 +100,13 @@
   "Creates a  `ApiDestination$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.events.IApiDestination]___
+__Create Form:__ ___[software.amazon.awscdk.services.events.IApiDestination]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| api-destination | software.amazon.awscdk.services.events.IApiDestination |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `api-destination` | software.amazon.awscdk.services.events.IApiDestination |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IApiDestination api-destination id config]
   (api-destination-builder> (ApiDestination$Builder/create api-destination) id config))
 
@@ -149,12 +150,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IApiDestination]___
 
 
 (defn api-destination-props-builder
-  "Creates a  `ApiDestinationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApiDestinationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[api-destination-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (api-destination-props-builder> (new ApiDestinationProps$Builder) id config))
 
@@ -210,12 +211,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IApiDestination]___
   "Creates a  `ApiGateway$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.apigateway.IRestApi]___
+__Create Form:__ ___[software.amazon.awscdk.services.apigateway.IRestApi]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| rest-api | software.amazon.awscdk.services.apigateway.IRestApi |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `rest-api` | software.amazon.awscdk.services.apigateway.IRestApi |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IRestApi rest-api id config]
   (api-gateway-builder> (ApiGateway$Builder/create rest-api) id config))
 
@@ -268,12 +270,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.IRestApi]___
 
 
 (defn api-gateway-props-builder
-  "Creates a  `ApiGatewayProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApiGatewayProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[api-gateway-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (api-gateway-props-builder> (new ApiGatewayProps$Builder) id config))
 
@@ -314,12 +316,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.IRestApi]___
   "Creates a  `AppSync$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
+__Create Form:__ ___[software.amazon.awscdk.services.appsync.IGraphqlApi]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| graphql-api | software.amazon.awscdk.services.appsync.IGraphqlApi |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `graphql-api` | software.amazon.awscdk.services.appsync.IGraphqlApi |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IGraphqlApi graphql-api id config]
   (app-sync-builder> (AppSync$Builder/create graphql-api) id config))
 
@@ -357,12 +360,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 
 
 (defn app-sync-graph-ql-api-props-builder
-  "Creates a  `AppSyncGraphQLApiProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AppSyncGraphQLApiProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[app-sync-graph-ql-api-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (app-sync-graph-ql-api-props-builder> (new AppSyncGraphQLApiProps$Builder) id config))
 
@@ -400,12 +403,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 
 
 (defn aws-api-builder
-  "Creates a  `AwsApi$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsApi$Builder` instance using a no-argument create, applies the data configuration using the [[aws-api-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-api-builder> (AwsApi$Builder/create) id config))
 
@@ -440,12 +443,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 
 
 (defn aws-api-input-builder
-  "Creates a  `AwsApiInput$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsApiInput$Builder` instance using a no-argument constructor, applies the data configuration using the [[aws-api-input-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-api-input-builder> (new AwsApiInput$Builder) id config))
 
@@ -483,12 +486,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 
 
 (defn aws-api-props-builder
-  "Creates a  `AwsApiProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsApiProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[aws-api-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-api-props-builder> (new AwsApiProps$Builder) id config))
 
@@ -532,15 +535,16 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
   "Creates a  `BatchJob$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String software.constructs.IConstruct java.lang.String software.constructs.IConstruct]___
+__Create Form:__ ___[java.lang.String software.constructs.IConstruct java.lang.String software.constructs.IConstruct]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| job-queue-arn | java.lang.String |  |
-| job-queue-scope | software.constructs.IConstruct |  |
-| job-definition-arn | java.lang.String |  |
-| job-definition-scope | software.constructs.IConstruct |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `job-queue-arn` | java.lang.String |  |
+| `job-queue-scope` | software.constructs.IConstruct |  |
+| `job-definition-arn` | java.lang.String |  |
+| `job-definition-scope` | software.constructs.IConstruct |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String job-queue-arn ^IConstruct job-queue-scope ^String job-definition-arn ^IConstruct job-definition-scope id config]
   (batch-job-builder> (BatchJob$Builder/create job-queue-arn job-queue-scope job-definition-arn job-definition-scope) id config))
 
@@ -581,12 +585,12 @@ __Create Form:__ ____[java.lang.String software.constructs.IConstruct java.lang.
 
 
 (defn batch-job-props-builder
-  "Creates a  `BatchJobProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BatchJobProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[batch-job-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (batch-job-props-builder> (new BatchJobProps$Builder) id config))
 
@@ -627,12 +631,13 @@ __Create Form:__ ____[java.lang.String software.constructs.IConstruct java.lang.
   "Creates a  `CloudWatchLogGroup$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.logs.ILogGroup]___
+__Create Form:__ ___[software.amazon.awscdk.services.logs.ILogGroup]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| log-group | software.amazon.awscdk.services.logs.ILogGroup |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `log-group` | software.amazon.awscdk.services.logs.ILogGroup |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^ILogGroup log-group id config]
   (cloud-watch-log-group-builder> (CloudWatchLogGroup$Builder/create log-group) id config))
 
@@ -670,12 +675,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.logs.ILogGroup]___
   "Creates a  `CodeBuildProject$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.codebuild.IProject]___
+__Create Form:__ ___[software.amazon.awscdk.services.codebuild.IProject]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| project | software.amazon.awscdk.services.codebuild.IProject |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `project` | software.amazon.awscdk.services.codebuild.IProject |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IProject project id config]
   (code-build-project-builder> (CodeBuildProject$Builder/create project) id config))
 
@@ -710,12 +716,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.codebuild.IProject]___
 
 
 (defn code-build-project-props-builder
-  "Creates a  `CodeBuildProjectProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CodeBuildProjectProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[code-build-project-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (code-build-project-props-builder> (new CodeBuildProjectProps$Builder) id config))
 
@@ -750,12 +756,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.codebuild.IProject]___
   "Creates a  `CodePipeline$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
+__Create Form:__ ___[software.amazon.awscdk.services.codepipeline.IPipeline]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| pipeline | software.amazon.awscdk.services.codepipeline.IPipeline |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `pipeline` | software.amazon.awscdk.services.codepipeline.IPipeline |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IPipeline pipeline id config]
   (code-pipeline-builder> (CodePipeline$Builder/create pipeline) id config))
 
@@ -787,12 +794,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 
 
 (defn code-pipeline-target-options-builder
-  "Creates a  `CodePipelineTargetOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CodePipelineTargetOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[code-pipeline-target-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (code-pipeline-target-options-builder> (new CodePipelineTargetOptions$Builder) id config))
 
@@ -830,12 +837,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 
 
 (defn container-override-builder
-  "Creates a  `ContainerOverride$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ContainerOverride$Builder` instance using a no-argument constructor, applies the data configuration using the [[container-override-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (container-override-builder> (new ContainerOverride$Builder) id config))
 
@@ -903,12 +910,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 
 
 (defn ecs-task-builder
-  "Creates a  `EcsTask$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsTask$Builder` instance using a no-argument create, applies the data configuration using the [[ecs-task-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecs-task-builder> (EcsTask$Builder/create) id config))
 
@@ -976,12 +983,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 
 
 (defn ecs-task-props-builder
-  "Creates a  `EcsTaskProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsTaskProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecs-task-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecs-task-props-builder> (new EcsTaskProps$Builder) id config))
 
@@ -1010,12 +1017,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
   "Creates a  `EventBus$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
+__Create Form:__ ___[software.amazon.awscdk.services.events.IEventBus]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| event-bus | software.amazon.awscdk.services.events.IEventBus |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `event-bus` | software.amazon.awscdk.services.events.IEventBus |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IEventBus event-bus id config]
   (event-bus-builder> (EventBus$Builder/create event-bus) id config))
 
@@ -1041,12 +1049,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
 
 
 (defn event-bus-props-builder
-  "Creates a  `EventBusProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EventBusProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[event-bus-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (event-bus-props-builder> (new EventBusProps$Builder) id config))
 
@@ -1069,12 +1077,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
 
 
 (defn kinesis-firehose-stream-props-builder
-  "Creates a  `KinesisFirehoseStreamProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `KinesisFirehoseStreamProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[kinesis-firehose-stream-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (kinesis-firehose-stream-props-builder> (new KinesisFirehoseStreamProps$Builder) id config))
 
@@ -1100,12 +1108,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
   "Creates a  `KinesisFirehoseStreamV2$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.events.targets.IDeliveryStream]___
+__Create Form:__ ___[software.amazon.awscdk.services.events.targets.IDeliveryStream]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| delivery-stream | software.amazon.awscdk.services.events.targets.IDeliveryStream |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `delivery-stream` | software.amazon.awscdk.services.events.targets.IDeliveryStream |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IDeliveryStream delivery-stream id config]
   (kinesis-firehose-stream-v2-builder> (KinesisFirehoseStreamV2$Builder/create delivery-stream) id config))
 
@@ -1134,12 +1143,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.targets.IDeliverySt
   "Creates a  `KinesisStream$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
+__Create Form:__ ___[software.amazon.awscdk.services.kinesis.IStream]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| stream | software.amazon.awscdk.services.kinesis.IStream |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `stream` | software.amazon.awscdk.services.kinesis.IStream |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IStream stream id config]
   (kinesis-stream-builder> (KinesisStream$Builder/create stream) id config))
 
@@ -1165,12 +1175,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 
 
 (defn kinesis-stream-props-builder
-  "Creates a  `KinesisStreamProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `KinesisStreamProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[kinesis-stream-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (kinesis-stream-props-builder> (new KinesisStreamProps$Builder) id config))
 
@@ -1205,12 +1215,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
   "Creates a  `LambdaFunction$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
+__Create Form:__ ___[software.amazon.awscdk.services.lambda.IFunction]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| handler | software.amazon.awscdk.services.lambda.IFunction |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `handler` | software.amazon.awscdk.services.lambda.IFunction |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IFunction handler id config]
   (lambda-function-builder> (LambdaFunction$Builder/create handler) id config))
 
@@ -1242,12 +1253,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn lambda-function-props-builder
-  "Creates a  `LambdaFunctionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LambdaFunctionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[lambda-function-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (lambda-function-props-builder> (new LambdaFunctionProps$Builder) id config))
 
@@ -1285,12 +1296,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn log-group-props-builder
-  "Creates a  `LogGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LogGroupProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[log-group-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (log-group-props-builder> (new LogGroupProps$Builder) id config))
 
@@ -1316,12 +1327,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn log-group-target-input-options-builder
-  "Creates a  `LogGroupTargetInputOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LogGroupTargetInputOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[log-group-target-input-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (log-group-target-input-options-builder> (new LogGroupTargetInputOptions$Builder) id config))
 
@@ -1359,12 +1370,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
   "Creates a  `SfnStateMachine$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.stepfunctions.IStateMachine]___
+__Create Form:__ ___[software.amazon.awscdk.services.stepfunctions.IStateMachine]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| state-machine | software.amazon.awscdk.services.stepfunctions.IStateMachine |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `state-machine` | software.amazon.awscdk.services.stepfunctions.IStateMachine |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IStateMachine state-machine id config]
   (sfn-state-machine-builder> (SfnStateMachine$Builder/create state-machine) id config))
 
@@ -1399,12 +1411,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.stepfunctions.IStateMachin
 
 
 (defn sfn-state-machine-props-builder
-  "Creates a  `SfnStateMachineProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SfnStateMachineProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[sfn-state-machine-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sfn-state-machine-props-builder> (new SfnStateMachineProps$Builder) id config))
 
@@ -1439,12 +1451,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.stepfunctions.IStateMachin
   "Creates a  `SnsTopic$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
+__Create Form:__ ___[software.amazon.awscdk.services.sns.ITopic]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| topic | software.amazon.awscdk.services.sns.ITopic |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `topic` | software.amazon.awscdk.services.sns.ITopic |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^ITopic topic id config]
   (sns-topic-builder> (SnsTopic$Builder/create topic) id config))
 
@@ -1476,12 +1489,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
 
 
 (defn sns-topic-props-builder
-  "Creates a  `SnsTopicProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SnsTopicProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[sns-topic-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sns-topic-props-builder> (new SnsTopicProps$Builder) id config))
 
@@ -1519,12 +1532,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
   "Creates a  `SqsQueue$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
+__Create Form:__ ___[software.amazon.awscdk.services.sqs.IQueue]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| queue | software.amazon.awscdk.services.sqs.IQueue |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `queue` | software.amazon.awscdk.services.sqs.IQueue |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IQueue queue id config]
   (sqs-queue-builder> (SqsQueue$Builder/create queue) id config))
 
@@ -1559,12 +1573,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 
 
 (defn sqs-queue-props-builder
-  "Creates a  `SqsQueueProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SqsQueueProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[sqs-queue-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sqs-queue-props-builder> (new SqsQueueProps$Builder) id config))
 
@@ -1590,12 +1604,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 
 
 (defn tag-builder
-  "Creates a  `Tag$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Tag$Builder` instance using a no-argument constructor, applies the data configuration using the [[tag-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (tag-builder> (new Tag$Builder) id config))
 
@@ -1624,12 +1638,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 
 
 (defn target-base-props-builder
-  "Creates a  `TargetBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TargetBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[target-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (target-base-props-builder> (new TargetBaseProps$Builder) id config))
 
@@ -1655,11 +1669,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 
 
 (defn task-environment-variable-builder
-  "Creates a  `TaskEnvironmentVariable$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TaskEnvironmentVariable$Builder` instance using a no-argument constructor, applies the data configuration using the [[task-environment-variable-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (task-environment-variable-builder> (new TaskEnvironmentVariable$Builder) id config))

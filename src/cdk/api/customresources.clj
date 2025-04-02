@@ -76,12 +76,12 @@
 
 
 (defn aws-custom-resource-builder
-  "Creates a  `AwsCustomResource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsCustomResource$Builder` instance using a scope and ID, applies the data configuration using the [[aws-custom-resource-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (aws-custom-resource-builder> (AwsCustomResource$Builder/create scope (name id)) id config))
 
@@ -146,12 +146,12 @@
 
 
 (defn aws-custom-resource-props-builder
-  "Creates a  `AwsCustomResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsCustomResourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[aws-custom-resource-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-custom-resource-props-builder> (new AwsCustomResourceProps$Builder) id config))
 
@@ -201,12 +201,12 @@
 
 
 (defn aws-sdk-call-builder
-  "Creates a  `AwsSdkCall$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsSdkCall$Builder` instance using a no-argument constructor, applies the data configuration using the [[aws-sdk-call-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-sdk-call-builder> (new AwsSdkCall$Builder) id config))
 
@@ -235,12 +235,12 @@
 
 
 (defn log-options-builder
-  "Creates a  `LogOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LogOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[log-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (log-options-builder> (new LogOptions$Builder) id config))
 
@@ -263,12 +263,12 @@
 
 
 (defn logging-props-builder
-  "Creates a  `LoggingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoggingProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[logging-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (logging-props-builder> (new LoggingProps$Builder) id config))
 
@@ -330,12 +330,12 @@
 
 
 (defn provider-builder
-  "Creates a  `Provider$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Provider$Builder` instance using a scope and ID, applies the data configuration using the [[provider-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (provider-builder> (Provider$Builder/create scope (name id)) id config))
 
@@ -397,12 +397,12 @@
 
 
 (defn provider-props-builder
-  "Creates a  `ProviderProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ProviderProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[provider-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (provider-props-builder> (new ProviderProps$Builder) id config))
 
@@ -425,12 +425,12 @@
 
 
 (defn sdk-calls-policy-options-builder
-  "Creates a  `SdkCallsPolicyOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SdkCallsPolicyOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[sdk-calls-policy-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sdk-calls-policy-options-builder> (new SdkCallsPolicyOptions$Builder) id config))
 
@@ -471,12 +471,12 @@
 
 
 (defn waiter-state-machine-builder
-  "Creates a  `WaiterStateMachine$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `WaiterStateMachine$Builder` instance using a scope and ID, applies the data configuration using the [[waiter-state-machine-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (waiter-state-machine-builder> (WaiterStateMachine$Builder/create scope (name id)) id config))
 
@@ -517,11 +517,11 @@
 
 
 (defn waiter-state-machine-props-builder
-  "Creates a  `WaiterStateMachineProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `WaiterStateMachineProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[waiter-state-machine-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (waiter-state-machine-props-builder> (new WaiterStateMachineProps$Builder) id config))

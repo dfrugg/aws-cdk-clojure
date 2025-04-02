@@ -51,12 +51,12 @@
 
 
 (defn cfn-environment-ec2-builder
-  "Creates a  `CfnEnvironmentEC2$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEnvironmentEC2$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-environment-ec2-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-environment-ec2-builder> (CfnEnvironmentEC2$Builder/create scope (name id)) id config))
 
@@ -106,12 +106,12 @@
 
 
 (defn cfn-environment-ec2-props-builder
-  "Creates a  `CfnEnvironmentEC2Props$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEnvironmentEC2Props$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-environment-ec2-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-environment-ec2-props-builder> (new CfnEnvironmentEC2Props$Builder) id config))
 
@@ -137,11 +137,11 @@
 
 
 (defn cfn-environment-ec2-repository-property-builder
-  "Creates a  `CfnEnvironmentEC2$RepositoryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEnvironmentEC2$RepositoryProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-environment-ec2-repository-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-environment-ec2-repository-property-builder> (new CfnEnvironmentEC2$RepositoryProperty$Builder) id config))

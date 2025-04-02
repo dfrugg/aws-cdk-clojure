@@ -32,12 +32,12 @@
 
 
 (defn cfn-virtual-cluster-builder
-  "Creates a  `CfnVirtualCluster$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnVirtualCluster$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-virtual-cluster-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-virtual-cluster-builder> (CfnVirtualCluster$Builder/create scope (name id)) id config))
 
@@ -60,12 +60,12 @@
 
 
 (defn cfn-virtual-cluster-container-info-property-builder
-  "Creates a  `CfnVirtualCluster$ContainerInfoProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnVirtualCluster$ContainerInfoProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-virtual-cluster-container-info-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-virtual-cluster-container-info-property-builder> (new CfnVirtualCluster$ContainerInfoProperty$Builder) id config))
 
@@ -94,12 +94,12 @@
 
 
 (defn cfn-virtual-cluster-container-provider-property-builder
-  "Creates a  `CfnVirtualCluster$ContainerProviderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnVirtualCluster$ContainerProviderProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-virtual-cluster-container-provider-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-virtual-cluster-container-provider-property-builder> (new CfnVirtualCluster$ContainerProviderProperty$Builder) id config))
 
@@ -122,12 +122,12 @@
 
 
 (defn cfn-virtual-cluster-eks-info-property-builder
-  "Creates a  `CfnVirtualCluster$EksInfoProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnVirtualCluster$EksInfoProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-virtual-cluster-eks-info-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-virtual-cluster-eks-info-property-builder> (new CfnVirtualCluster$EksInfoProperty$Builder) id config))
 
@@ -156,11 +156,11 @@
 
 
 (defn cfn-virtual-cluster-props-builder
-  "Creates a  `CfnVirtualClusterProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnVirtualClusterProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-virtual-cluster-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-virtual-cluster-props-builder> (new CfnVirtualClusterProps$Builder) id config))

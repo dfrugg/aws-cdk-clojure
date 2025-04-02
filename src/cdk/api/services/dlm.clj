@@ -47,12 +47,12 @@
 
 
 (defn cfn-lifecycle-policy-action-property-builder
-  "Creates a  `CfnLifecyclePolicy$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-action-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-action-property-builder> (new CfnLifecyclePolicy$ActionProperty$Builder) id config))
 
@@ -75,12 +75,12 @@
 
 
 (defn cfn-lifecycle-policy-archive-retain-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-archive-retain-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-archive-retain-rule-property-builder> (new CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder) id config))
 
@@ -103,12 +103,12 @@
 
 
 (defn cfn-lifecycle-policy-archive-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$ArchiveRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$ArchiveRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-archive-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-archive-rule-property-builder> (new CfnLifecyclePolicy$ArchiveRuleProperty$Builder) id config))
 
@@ -164,12 +164,12 @@
 
 
 (defn cfn-lifecycle-policy-builder
-  "Creates a  `CfnLifecyclePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-lifecycle-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-lifecycle-policy-builder> (CfnLifecyclePolicy$Builder/create scope (name id)) id config))
 
@@ -207,12 +207,12 @@
 
 
 (defn cfn-lifecycle-policy-create-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$CreateRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$CreateRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-create-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-create-rule-property-builder> (new CfnLifecyclePolicy$CreateRuleProperty$Builder) id config))
 
@@ -241,12 +241,12 @@
 
 
 (defn cfn-lifecycle-policy-cross-region-copy-action-property-builder
-  "Creates a  `CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-cross-region-copy-action-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-cross-region-copy-action-property-builder> (new CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder) id config))
 
@@ -272,12 +272,12 @@
 
 
 (defn cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder> (new CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder) id config))
 
@@ -303,12 +303,12 @@
 
 
 (defn cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder> (new CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder) id config))
 
@@ -349,12 +349,12 @@
 
 
 (defn cfn-lifecycle-policy-cross-region-copy-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-cross-region-copy-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-cross-region-copy-rule-property-builder> (new CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder) id config))
 
@@ -383,12 +383,12 @@
 
 
 (defn cfn-lifecycle-policy-deprecate-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$DeprecateRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$DeprecateRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-deprecate-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-deprecate-rule-property-builder> (new CfnLifecyclePolicy$DeprecateRuleProperty$Builder) id config))
 
@@ -414,12 +414,12 @@
 
 
 (defn cfn-lifecycle-policy-encryption-configuration-property-builder
-  "Creates a  `CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-encryption-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-encryption-configuration-property-builder> (new CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder) id config))
 
@@ -448,12 +448,12 @@
 
 
 (defn cfn-lifecycle-policy-event-parameters-property-builder
-  "Creates a  `CfnLifecyclePolicy$EventParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$EventParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-event-parameters-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-event-parameters-property-builder> (new CfnLifecyclePolicy$EventParametersProperty$Builder) id config))
 
@@ -479,12 +479,12 @@
 
 
 (defn cfn-lifecycle-policy-event-source-property-builder
-  "Creates a  `CfnLifecyclePolicy$EventSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$EventSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-event-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-event-source-property-builder> (new CfnLifecyclePolicy$EventSourceProperty$Builder) id config))
 
@@ -513,12 +513,12 @@
 
 
 (defn cfn-lifecycle-policy-exclusions-property-builder
-  "Creates a  `CfnLifecyclePolicy$ExclusionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$ExclusionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-exclusions-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-exclusions-property-builder> (new CfnLifecyclePolicy$ExclusionsProperty$Builder) id config))
 
@@ -550,12 +550,12 @@
 
 
 (defn cfn-lifecycle-policy-fast-restore-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$FastRestoreRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$FastRestoreRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-fast-restore-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-fast-restore-rule-property-builder> (new CfnLifecyclePolicy$FastRestoreRuleProperty$Builder) id config))
 
@@ -584,12 +584,12 @@
 
 
 (defn cfn-lifecycle-policy-parameters-property-builder
-  "Creates a  `CfnLifecyclePolicy$ParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$ParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-parameters-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-parameters-property-builder> (new CfnLifecyclePolicy$ParametersProperty$Builder) id config))
 
@@ -657,12 +657,12 @@
 
 
 (defn cfn-lifecycle-policy-policy-details-property-builder
-  "Creates a  `CfnLifecyclePolicy$PolicyDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$PolicyDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-policy-details-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-policy-details-property-builder> (new CfnLifecyclePolicy$PolicyDetailsProperty$Builder) id config))
 
@@ -718,12 +718,12 @@
 
 
 (defn cfn-lifecycle-policy-props-builder
-  "Creates a  `CfnLifecyclePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-props-builder> (new CfnLifecyclePolicyProps$Builder) id config))
 
@@ -752,12 +752,12 @@
 
 
 (defn cfn-lifecycle-policy-retain-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$RetainRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$RetainRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-retain-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-retain-rule-property-builder> (new CfnLifecyclePolicy$RetainRuleProperty$Builder) id config))
 
@@ -786,12 +786,12 @@
 
 
 (defn cfn-lifecycle-policy-retention-archive-tier-property-builder
-  "Creates a  `CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-retention-archive-tier-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-retention-archive-tier-property-builder> (new CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder) id config))
 
@@ -844,12 +844,12 @@
 
 
 (defn cfn-lifecycle-policy-schedule-property-builder
-  "Creates a  `CfnLifecyclePolicy$ScheduleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$ScheduleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-schedule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-schedule-property-builder> (new CfnLifecyclePolicy$ScheduleProperty$Builder) id config))
 
@@ -887,12 +887,12 @@
 
 
 (defn cfn-lifecycle-policy-script-property-builder
-  "Creates a  `CfnLifecyclePolicy$ScriptProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$ScriptProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-script-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-script-property-builder> (new CfnLifecyclePolicy$ScriptProperty$Builder) id config))
 
@@ -921,11 +921,11 @@
 
 
 (defn cfn-lifecycle-policy-share-rule-property-builder
-  "Creates a  `CfnLifecyclePolicy$ShareRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLifecyclePolicy$ShareRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-lifecycle-policy-share-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-lifecycle-policy-share-rule-property-builder> (new CfnLifecyclePolicy$ShareRuleProperty$Builder) id config))

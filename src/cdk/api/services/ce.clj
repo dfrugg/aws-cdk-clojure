@@ -42,12 +42,12 @@
 
 
 (defn cfn-anomaly-monitor-builder
-  "Creates a  `CfnAnomalyMonitor$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyMonitor$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-anomaly-monitor-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-anomaly-monitor-builder> (CfnAnomalyMonitor$Builder/create scope (name id)) id config))
 
@@ -82,12 +82,12 @@
 
 
 (defn cfn-anomaly-monitor-props-builder
-  "Creates a  `CfnAnomalyMonitorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyMonitorProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-monitor-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-monitor-props-builder> (new CfnAnomalyMonitorProps$Builder) id config))
 
@@ -113,12 +113,12 @@
 
 
 (defn cfn-anomaly-monitor-resource-tag-property-builder
-  "Creates a  `CfnAnomalyMonitor$ResourceTagProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyMonitor$ResourceTagProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-monitor-resource-tag-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-monitor-resource-tag-property-builder> (new CfnAnomalyMonitor$ResourceTagProperty$Builder) id config))
 
@@ -159,12 +159,12 @@
 
 
 (defn cfn-anomaly-subscription-builder
-  "Creates a  `CfnAnomalySubscription$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalySubscription$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-anomaly-subscription-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-anomaly-subscription-builder> (CfnAnomalySubscription$Builder/create scope (name id)) id config))
 
@@ -205,12 +205,12 @@
 
 
 (defn cfn-anomaly-subscription-props-builder
-  "Creates a  `CfnAnomalySubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalySubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-subscription-props-builder> (new CfnAnomalySubscriptionProps$Builder) id config))
 
@@ -236,12 +236,12 @@
 
 
 (defn cfn-anomaly-subscription-resource-tag-property-builder
-  "Creates a  `CfnAnomalySubscription$ResourceTagProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalySubscription$ResourceTagProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-subscription-resource-tag-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-subscription-resource-tag-property-builder> (new CfnAnomalySubscription$ResourceTagProperty$Builder) id config))
 
@@ -270,12 +270,12 @@
 
 
 (defn cfn-anomaly-subscription-subscriber-property-builder
-  "Creates a  `CfnAnomalySubscription$SubscriberProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalySubscription$SubscriberProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-subscription-subscriber-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-subscription-subscriber-property-builder> (new CfnAnomalySubscription$SubscriberProperty$Builder) id config))
 
@@ -310,12 +310,12 @@
 
 
 (defn cfn-cost-category-builder
-  "Creates a  `CfnCostCategory$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCostCategory$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-cost-category-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-cost-category-builder> (CfnCostCategory$Builder/create scope (name id)) id config))
 
@@ -350,11 +350,11 @@
 
 
 (defn cfn-cost-category-props-builder
-  "Creates a  `CfnCostCategoryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCostCategoryProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-cost-category-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-cost-category-props-builder> (new CfnCostCategoryProps$Builder) id config))

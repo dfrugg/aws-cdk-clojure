@@ -60,12 +60,12 @@
 
 
 (defn cfn-monitor-builder
-  "Creates a  `CfnMonitor$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMonitor$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-monitor-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-monitor-builder> (CfnMonitor$Builder/create scope (name id)) id config))
 
@@ -97,12 +97,12 @@
 
 
 (defn cfn-monitor-health-events-config-property-builder
-  "Creates a  `CfnMonitor$HealthEventsConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMonitor$HealthEventsConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-monitor-health-events-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-monitor-health-events-config-property-builder> (new CfnMonitor$HealthEventsConfigProperty$Builder) id config))
 
@@ -125,12 +125,12 @@
 
 
 (defn cfn-monitor-internet-measurements-log-delivery-property-builder
-  "Creates a  `CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-monitor-internet-measurements-log-delivery-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-monitor-internet-measurements-log-delivery-property-builder> (new CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder) id config))
 
@@ -159,12 +159,12 @@
 
 
 (defn cfn-monitor-local-health-events-config-property-builder
-  "Creates a  `CfnMonitor$LocalHealthEventsConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMonitor$LocalHealthEventsConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-monitor-local-health-events-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-monitor-local-health-events-config-property-builder> (new CfnMonitor$LocalHealthEventsConfigProperty$Builder) id config))
 
@@ -220,12 +220,12 @@
 
 
 (defn cfn-monitor-props-builder
-  "Creates a  `CfnMonitorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMonitorProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-monitor-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-monitor-props-builder> (new CfnMonitorProps$Builder) id config))
 
@@ -254,11 +254,11 @@
 
 
 (defn cfn-monitor-s3-config-property-builder
-  "Creates a  `CfnMonitor$S3ConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMonitor$S3ConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-monitor-s3-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-monitor-s3-config-property-builder> (new CfnMonitor$S3ConfigProperty$Builder) id config))

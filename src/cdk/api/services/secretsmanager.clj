@@ -82,12 +82,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn attached-secret-options-builder
-  "Creates a  `AttachedSecretOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AttachedSecretOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[attached-secret-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (attached-secret-options-builder> (new AttachedSecretOptions$Builder) id config))
 
@@ -116,12 +116,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-policy-builder
-  "Creates a  `CfnResourcePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourcePolicy$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-resource-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-resource-policy-builder> (CfnResourcePolicy$Builder/create scope (name id)) id config))
 
@@ -150,12 +150,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-policy-props-builder
-  "Creates a  `CfnResourcePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourcePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-policy-props-builder> (new CfnResourcePolicyProps$Builder) id config))
 
@@ -190,12 +190,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-rotation-schedule-builder
-  "Creates a  `CfnRotationSchedule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRotationSchedule$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-rotation-schedule-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-rotation-schedule-builder> (CfnRotationSchedule$Builder/create scope (name id)) id config))
 
@@ -248,12 +248,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-rotation-schedule-hosted-rotation-lambda-property-builder
-  "Creates a  `CfnRotationSchedule$HostedRotationLambdaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRotationSchedule$HostedRotationLambdaProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-rotation-schedule-hosted-rotation-lambda-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-rotation-schedule-hosted-rotation-lambda-property-builder> (new CfnRotationSchedule$HostedRotationLambdaProperty$Builder) id config))
 
@@ -288,12 +288,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-rotation-schedule-props-builder
-  "Creates a  `CfnRotationScheduleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRotationScheduleProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-rotation-schedule-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-rotation-schedule-props-builder> (new CfnRotationScheduleProps$Builder) id config))
 
@@ -322,12 +322,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-rotation-schedule-rotation-rules-property-builder
-  "Creates a  `CfnRotationSchedule$RotationRulesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRotationSchedule$RotationRulesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-rotation-schedule-rotation-rules-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-rotation-schedule-rotation-rules-property-builder> (new CfnRotationSchedule$RotationRulesProperty$Builder) id config))
 
@@ -368,12 +368,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-secret-builder
-  "Creates a  `CfnSecret$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSecret$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-secret-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-secret-builder> (CfnSecret$Builder/create scope (name id)) id config))
 
@@ -423,12 +423,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-secret-generate-secret-string-property-builder
-  "Creates a  `CfnSecret$GenerateSecretStringProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSecret$GenerateSecretStringProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-secret-generate-secret-string-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-secret-generate-secret-string-property-builder> (new CfnSecret$GenerateSecretStringProperty$Builder) id config))
 
@@ -469,12 +469,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-secret-props-builder
-  "Creates a  `CfnSecretProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSecretProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-secret-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-secret-props-builder> (new CfnSecretProps$Builder) id config))
 
@@ -500,12 +500,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-secret-replica-region-property-builder
-  "Creates a  `CfnSecret$ReplicaRegionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSecret$ReplicaRegionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-secret-replica-region-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-secret-replica-region-property-builder> (new CfnSecret$ReplicaRegionProperty$Builder) id config))
 
@@ -534,12 +534,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-secret-target-attachment-builder
-  "Creates a  `CfnSecretTargetAttachment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSecretTargetAttachment$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-secret-target-attachment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-secret-target-attachment-builder> (CfnSecretTargetAttachment$Builder/create scope (name id)) id config))
 
@@ -568,12 +568,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-secret-target-attachment-props-builder
-  "Creates a  `CfnSecretTargetAttachmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSecretTargetAttachmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-secret-target-attachment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-secret-target-attachment-props-builder> (new CfnSecretTargetAttachmentProps$Builder) id config))
 
@@ -611,12 +611,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn multi-user-hosted-rotation-options-builder
-  "Creates a  `MultiUserHostedRotationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MultiUserHostedRotationOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[multi-user-hosted-rotation-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (multi-user-hosted-rotation-options-builder> (new MultiUserHostedRotationOptions$Builder) id config))
 
@@ -642,12 +642,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn replica-region-builder
-  "Creates a  `ReplicaRegion$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ReplicaRegion$Builder` instance using a no-argument constructor, applies the data configuration using the [[replica-region-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (replica-region-builder> (new ReplicaRegion$Builder) id config))
 
@@ -670,12 +670,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn resource-policy-builder
-  "Creates a  `ResourcePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ResourcePolicy$Builder` instance using a scope and ID, applies the data configuration using the [[resource-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (resource-policy-builder> (ResourcePolicy$Builder/create scope (name id)) id config))
 
@@ -698,12 +698,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn resource-policy-props-builder
-  "Creates a  `ResourcePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ResourcePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[resource-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (resource-policy-props-builder> (new ResourcePolicyProps$Builder) id config))
 
@@ -738,12 +738,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn rotation-schedule-builder
-  "Creates a  `RotationSchedule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RotationSchedule$Builder` instance using a scope and ID, applies the data configuration using the [[rotation-schedule-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (rotation-schedule-builder> (RotationSchedule$Builder/create scope (name id)) id config))
 
@@ -775,12 +775,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn rotation-schedule-options-builder
-  "Creates a  `RotationScheduleOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RotationScheduleOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[rotation-schedule-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (rotation-schedule-options-builder> (new RotationScheduleOptions$Builder) id config))
 
@@ -815,12 +815,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn rotation-schedule-props-builder
-  "Creates a  `RotationScheduleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RotationScheduleProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[rotation-schedule-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (rotation-schedule-props-builder> (new RotationScheduleProps$Builder) id config))
 
@@ -846,12 +846,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secret-attachment-target-props-builder
-  "Creates a  `SecretAttachmentTargetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretAttachmentTargetProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-attachment-target-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-attachment-target-props-builder> (new SecretAttachmentTargetProps$Builder) id config))
 
@@ -880,12 +880,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secret-attributes-builder
-  "Creates a  `SecretAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretAttributes$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-attributes-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-attributes-builder> (new SecretAttributes$Builder) id config))
 
@@ -932,12 +932,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secret-builder
-  "Creates a  `Secret$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Secret$Builder` instance using a scope and ID, applies the data configuration using the [[secret-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (secret-builder> (Secret$Builder/create scope (name id)) id config))
 
@@ -984,12 +984,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secret-props-builder
-  "Creates a  `SecretProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-props-builder> (new SecretProps$Builder) id config))
 
@@ -1015,13 +1015,14 @@ function on the data with the provided namespace id and item-key.  The found val
   "Creates a  `SecretRotationApplication$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String java.lang.String]___
+__Create Form:__ ___[java.lang.String java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| application-id | java.lang.String |  |
-| semantic-version | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `application-id` | java.lang.String |  |
+| `semantic-version` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String application-id ^String semantic-version id config]
   (secret-rotation-application-builder> (SecretRotationApplication$Builder/create application-id semantic-version) id config))
 
@@ -1044,12 +1045,12 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn secret-rotation-application-options-builder
-  "Creates a  `SecretRotationApplicationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretRotationApplicationOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-rotation-application-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-rotation-application-options-builder> (new SecretRotationApplicationOptions$Builder) id config))
 
@@ -1102,12 +1103,12 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn secret-rotation-builder
-  "Creates a  `SecretRotation$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretRotation$Builder` instance using a scope and ID, applies the data configuration using the [[secret-rotation-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (secret-rotation-builder> (SecretRotation$Builder/create scope (name id)) id config))
 
@@ -1160,12 +1161,12 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn secret-rotation-props-builder
-  "Creates a  `SecretRotationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretRotationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-rotation-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-rotation-props-builder> (new SecretRotationProps$Builder) id config))
 
@@ -1215,12 +1216,12 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn secret-string-generator-builder
-  "Creates a  `SecretStringGenerator$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretStringGenerator$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-string-generator-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-string-generator-builder> (new SecretStringGenerator$Builder) id config))
 
@@ -1246,12 +1247,12 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn secret-target-attachment-builder
-  "Creates a  `SecretTargetAttachment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretTargetAttachment$Builder` instance using a scope and ID, applies the data configuration using the [[secret-target-attachment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (secret-target-attachment-builder> (SecretTargetAttachment$Builder/create scope (name id)) id config))
 
@@ -1277,12 +1278,12 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn secret-target-attachment-props-builder
-  "Creates a  `SecretTargetAttachmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretTargetAttachmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-target-attachment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-target-attachment-props-builder> (new SecretTargetAttachmentProps$Builder) id config))
 
@@ -1317,11 +1318,11 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn single-user-hosted-rotation-options-builder
-  "Creates a  `SingleUserHostedRotationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SingleUserHostedRotationOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[single-user-hosted-rotation-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (single-user-hosted-rotation-options-builder> (new SingleUserHostedRotationOptions$Builder) id config))

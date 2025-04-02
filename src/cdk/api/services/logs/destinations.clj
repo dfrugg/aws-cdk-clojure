@@ -30,12 +30,13 @@
   "Creates a  `KinesisDestination$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
+__Create Form:__ ___[software.amazon.awscdk.services.kinesis.IStream]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| stream | software.amazon.awscdk.services.kinesis.IStream |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `stream` | software.amazon.awscdk.services.kinesis.IStream |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IStream stream id config]
   (kinesis-destination-builder> (KinesisDestination$Builder/create stream) id config))
 
@@ -58,12 +59,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 
 
 (defn kinesis-destination-props-builder
-  "Creates a  `KinesisDestinationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `KinesisDestinationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[kinesis-destination-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (kinesis-destination-props-builder> (new KinesisDestinationProps$Builder) id config))
 
@@ -89,12 +90,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
   "Creates a  `LambdaDestination$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
+__Create Form:__ ___[software.amazon.awscdk.services.lambda.IFunction]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| handler | software.amazon.awscdk.services.lambda.IFunction |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `handler` | software.amazon.awscdk.services.lambda.IFunction |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IFunction handler id config]
   (lambda-destination-builder> (LambdaDestination$Builder/create handler) id config))
 
@@ -117,11 +119,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn lambda-destination-options-builder
-  "Creates a  `LambdaDestinationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LambdaDestinationOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[lambda-destination-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (lambda-destination-options-builder> (new LambdaDestinationOptions$Builder) id config))

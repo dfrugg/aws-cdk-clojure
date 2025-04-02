@@ -47,12 +47,12 @@
 
 
 (defn cfn-grant-builder
-  "Creates a  `CfnGrant$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGrant$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-grant-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-grant-builder> (CfnGrant$Builder/create scope (name id)) id config))
 
@@ -90,12 +90,12 @@
 
 
 (defn cfn-grant-props-builder
-  "Creates a  `CfnGrantProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGrantProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-grant-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-grant-props-builder> (new CfnGrantProps$Builder) id config))
 
@@ -121,12 +121,12 @@
 
 
 (defn cfn-license-borrow-configuration-property-builder
-  "Creates a  `CfnLicense$BorrowConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicense$BorrowConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-license-borrow-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-license-borrow-configuration-property-builder> (new CfnLicense$BorrowConfigurationProperty$Builder) id config))
 
@@ -179,12 +179,12 @@
 
 
 (defn cfn-license-builder
-  "Creates a  `CfnLicense$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicense$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-license-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-license-builder> (CfnLicense$Builder/create scope (name id)) id config))
 
@@ -213,12 +213,12 @@
 
 
 (defn cfn-license-consumption-configuration-property-builder
-  "Creates a  `CfnLicense$ConsumptionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicense$ConsumptionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-license-consumption-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-license-consumption-configuration-property-builder> (new CfnLicense$ConsumptionConfigurationProperty$Builder) id config))
 
@@ -256,12 +256,12 @@
 
 
 (defn cfn-license-entitlement-property-builder
-  "Creates a  `CfnLicense$EntitlementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicense$EntitlementProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-license-entitlement-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-license-entitlement-property-builder> (new CfnLicense$EntitlementProperty$Builder) id config))
 
@@ -287,12 +287,12 @@
 
 
 (defn cfn-license-issuer-data-property-builder
-  "Creates a  `CfnLicense$IssuerDataProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicense$IssuerDataProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-license-issuer-data-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-license-issuer-data-property-builder> (new CfnLicense$IssuerDataProperty$Builder) id config))
 
@@ -318,12 +318,12 @@
 
 
 (defn cfn-license-metadata-property-builder
-  "Creates a  `CfnLicense$MetadataProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicense$MetadataProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-license-metadata-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-license-metadata-property-builder> (new CfnLicense$MetadataProperty$Builder) id config))
 
@@ -376,12 +376,12 @@
 
 
 (defn cfn-license-props-builder
-  "Creates a  `CfnLicenseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicenseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-license-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-license-props-builder> (new CfnLicenseProps$Builder) id config))
 
@@ -404,12 +404,12 @@
 
 
 (defn cfn-license-provisional-configuration-property-builder
-  "Creates a  `CfnLicense$ProvisionalConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicense$ProvisionalConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-license-provisional-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-license-provisional-configuration-property-builder> (new CfnLicense$ProvisionalConfigurationProperty$Builder) id config))
 
@@ -435,11 +435,11 @@
 
 
 (defn cfn-license-validity-date-format-property-builder
-  "Creates a  `CfnLicense$ValidityDateFormatProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLicense$ValidityDateFormatProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-license-validity-date-format-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-license-validity-date-format-property-builder> (new CfnLicense$ValidityDateFormatProperty$Builder) id config))

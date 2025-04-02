@@ -38,12 +38,12 @@
 
 
 (defn cfn-ledger-builder
-  "Creates a  `CfnLedger$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLedger$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-ledger-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-ledger-builder> (CfnLedger$Builder/create scope (name id)) id config))
 
@@ -78,12 +78,12 @@
 
 
 (defn cfn-ledger-props-builder
-  "Creates a  `CfnLedgerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLedgerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-ledger-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-ledger-props-builder> (new CfnLedgerProps$Builder) id config))
 
@@ -124,12 +124,12 @@
 
 
 (defn cfn-stream-builder
-  "Creates a  `CfnStream$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnStream$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-stream-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-stream-builder> (CfnStream$Builder/create scope (name id)) id config))
 
@@ -155,12 +155,12 @@
 
 
 (defn cfn-stream-kinesis-configuration-property-builder
-  "Creates a  `CfnStream$KinesisConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnStream$KinesisConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-stream-kinesis-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-stream-kinesis-configuration-property-builder> (new CfnStream$KinesisConfigurationProperty$Builder) id config))
 
@@ -201,11 +201,11 @@
 
 
 (defn cfn-stream-props-builder
-  "Creates a  `CfnStreamProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnStreamProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-stream-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-stream-props-builder> (new CfnStreamProps$Builder) id config))

@@ -102,13 +102,14 @@ function on the data with the provided namespace id and item-key.  The found val
   "Creates a  `ApiEventSource$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String java.lang.String]___
+__Create Form:__ ___[java.lang.String java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| method | java.lang.String |  |
-| path | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `method` | java.lang.String |  |
+| `path` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String method ^String path id config]
   (api-event-source-builder> (ApiEventSource$Builder/create method path) id config))
 
@@ -140,12 +141,12 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn base-stream-event-source-props-builder
-  "Creates a  `BaseStreamEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BaseStreamEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[base-stream-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (base-stream-event-source-props-builder> (new BaseStreamEventSourceProps$Builder) id config))
 
@@ -204,12 +205,13 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
   "Creates a  `DynamoEventSource$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.dynamodb.ITable]___
+__Create Form:__ ___[software.amazon.awscdk.services.dynamodb.ITable]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| table | software.amazon.awscdk.services.dynamodb.ITable |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `table` | software.amazon.awscdk.services.dynamodb.ITable |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^ITable table id config]
   (dynamo-event-source-builder> (DynamoEventSource$Builder/create table) id config))
 
@@ -265,12 +267,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.dynamodb.ITable]___
 
 
 (defn dynamo-event-source-props-builder
-  "Creates a  `DynamoEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DynamoEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[dynamo-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (dynamo-event-source-props-builder> (new DynamoEventSourceProps$Builder) id config))
 
@@ -317,12 +319,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.dynamodb.ITable]___
 
 
 (defn kafka-event-source-props-builder
-  "Creates a  `KafkaEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `KafkaEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[kafka-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (kafka-event-source-props-builder> (new KafkaEventSourceProps$Builder) id config))
 
@@ -384,12 +386,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.dynamodb.ITable]___
   "Creates a  `KinesisEventSource$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
+__Create Form:__ ___[software.amazon.awscdk.services.kinesis.IStream]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| stream | software.amazon.awscdk.services.kinesis.IStream |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `stream` | software.amazon.awscdk.services.kinesis.IStream |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IStream stream id config]
   (kinesis-event-source-builder> (KinesisEventSource$Builder/create stream) id config))
 
@@ -448,12 +451,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 
 
 (defn kinesis-event-source-props-builder
-  "Creates a  `KinesisEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `KinesisEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[kinesis-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (kinesis-event-source-props-builder> (new KinesisEventSourceProps$Builder) id config))
 
@@ -503,12 +506,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 
 
 (defn managed-kafka-event-source-builder
-  "Creates a  `ManagedKafkaEventSource$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ManagedKafkaEventSource$Builder` instance using a no-argument create, applies the data configuration using the [[managed-kafka-event-source-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (managed-kafka-event-source-builder> (ManagedKafkaEventSource$Builder/create) id config))
 
@@ -558,12 +561,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 
 
 (defn managed-kafka-event-source-props-builder
-  "Creates a  `ManagedKafkaEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ManagedKafkaEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[managed-kafka-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (managed-kafka-event-source-props-builder> (new ManagedKafkaEventSourceProps$Builder) id config))
 
@@ -592,12 +595,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
   "Creates a  `S3EventSource$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.s3.Bucket]___
+__Create Form:__ ___[software.amazon.awscdk.services.s3.Bucket]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| bucket | software.amazon.awscdk.services.s3.Bucket |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `bucket` | software.amazon.awscdk.services.s3.Bucket |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^Bucket bucket id config]
   (s3-event-source-builder> (S3EventSource$Builder/create bucket) id config))
 
@@ -623,12 +627,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.Bucket]___
 
 
 (defn s3-event-source-props-builder
-  "Creates a  `S3EventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `S3EventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[s3-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (s3-event-source-props-builder> (new S3EventSourceProps$Builder) id config))
 
@@ -657,12 +661,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.Bucket]___
   "Creates a  `S3EventSourceV2$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
+__Create Form:__ ___[software.amazon.awscdk.services.s3.IBucket]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| bucket | software.amazon.awscdk.services.s3.IBucket |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `bucket` | software.amazon.awscdk.services.s3.IBucket |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IBucket bucket id config]
   (s3-event-source-v2-builder> (S3EventSourceV2$Builder/create bucket) id config))
 
@@ -727,12 +732,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
 
 
 (defn self-managed-kafka-event-source-builder
-  "Creates a  `SelfManagedKafkaEventSource$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SelfManagedKafkaEventSource$Builder` instance using a no-argument create, applies the data configuration using the [[self-managed-kafka-event-source-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (self-managed-kafka-event-source-builder> (SelfManagedKafkaEventSource$Builder/create) id config))
 
@@ -797,12 +802,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
 
 
 (defn self-managed-kafka-event-source-props-builder
-  "Creates a  `SelfManagedKafkaEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SelfManagedKafkaEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[self-managed-kafka-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (self-managed-kafka-event-source-props-builder> (new SelfManagedKafkaEventSourceProps$Builder) id config))
 
@@ -834,12 +839,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
   "Creates a  `SnsEventSource$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
+__Create Form:__ ___[software.amazon.awscdk.services.sns.ITopic]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| topic | software.amazon.awscdk.services.sns.ITopic |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `topic` | software.amazon.awscdk.services.sns.ITopic |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^ITopic topic id config]
   (sns-event-source-builder> (SnsEventSource$Builder/create topic) id config))
 
@@ -868,12 +874,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
 
 
 (defn sns-event-source-props-builder
-  "Creates a  `SnsEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SnsEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[sns-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sns-event-source-props-builder> (new SnsEventSourceProps$Builder) id config))
 
@@ -914,12 +920,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
   "Creates a  `SqsEventSource$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
+__Create Form:__ ___[software.amazon.awscdk.services.sqs.IQueue]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| queue | software.amazon.awscdk.services.sqs.IQueue |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `queue` | software.amazon.awscdk.services.sqs.IQueue |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IQueue queue id config]
   (sqs-event-source-builder> (SqsEventSource$Builder/create queue) id config))
 
@@ -957,12 +964,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 
 
 (defn sqs-event-source-props-builder
-  "Creates a  `SqsEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SqsEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[sqs-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sqs-event-source-props-builder> (new SqsEventSourceProps$Builder) id config))
 
@@ -1018,11 +1025,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 
 
 (defn stream-event-source-props-builder
-  "Creates a  `StreamEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StreamEventSourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[stream-event-source-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stream-event-source-props-builder> (new StreamEventSourceProps$Builder) id config))

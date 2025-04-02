@@ -32,12 +32,12 @@
 
 
 (defn cfn-assessment-assessment-reports-destination-property-builder
-  "Creates a  `CfnAssessment$AssessmentReportsDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssessment$AssessmentReportsDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-assessment-assessment-reports-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-assessment-assessment-reports-destination-property-builder> (new CfnAssessment$AssessmentReportsDestinationProperty$Builder) id config))
 
@@ -66,12 +66,12 @@
 
 
 (defn cfn-assessment-aws-account-property-builder
-  "Creates a  `CfnAssessment$AWSAccountProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssessment$AWSAccountProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-assessment-aws-account-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-assessment-aws-account-property-builder> (new CfnAssessment$AWSAccountProperty$Builder) id config))
 
@@ -94,12 +94,12 @@
 
 
 (defn cfn-assessment-aws-service-property-builder
-  "Creates a  `CfnAssessment$AWSServiceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssessment$AWSServiceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-assessment-aws-service-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-assessment-aws-service-property-builder> (new CfnAssessment$AWSServiceProperty$Builder) id config))
 
@@ -149,12 +149,12 @@
 
 
 (defn cfn-assessment-builder
-  "Creates a  `CfnAssessment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssessment$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-assessment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-assessment-builder> (CfnAssessment$Builder/create scope (name id)) id config))
 
@@ -207,12 +207,12 @@
 
 
 (defn cfn-assessment-delegation-property-builder
-  "Creates a  `CfnAssessment$DelegationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssessment$DelegationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-assessment-delegation-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-assessment-delegation-property-builder> (new CfnAssessment$DelegationProperty$Builder) id config))
 
@@ -262,12 +262,12 @@
 
 
 (defn cfn-assessment-props-builder
-  "Creates a  `CfnAssessmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssessmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-assessment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-assessment-props-builder> (new CfnAssessmentProps$Builder) id config))
 
@@ -293,12 +293,12 @@
 
 
 (defn cfn-assessment-role-property-builder
-  "Creates a  `CfnAssessment$RoleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssessment$RoleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-assessment-role-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-assessment-role-property-builder> (new CfnAssessment$RoleProperty$Builder) id config))
 
@@ -324,11 +324,11 @@
 
 
 (defn cfn-assessment-scope-property-builder
-  "Creates a  `CfnAssessment$ScopeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssessment$ScopeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-assessment-scope-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-assessment-scope-property-builder> (new CfnAssessment$ScopeProperty$Builder) id config))

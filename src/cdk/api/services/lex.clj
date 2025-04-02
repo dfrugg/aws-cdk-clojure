@@ -124,12 +124,12 @@
 
 
 (defn cfn-bot-advanced-recognition-setting-property-builder
-  "Creates a  `CfnBot$AdvancedRecognitionSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$AdvancedRecognitionSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-advanced-recognition-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-advanced-recognition-setting-property-builder> (new CfnBot$AdvancedRecognitionSettingProperty$Builder) id config))
 
@@ -152,12 +152,12 @@
 
 
 (defn cfn-bot-alias-audio-log-destination-property-builder
-  "Creates a  `CfnBotAlias$AudioLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$AudioLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-audio-log-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-audio-log-destination-property-builder> (new CfnBotAlias$AudioLogDestinationProperty$Builder) id config))
 
@@ -183,12 +183,12 @@
 
 
 (defn cfn-bot-alias-audio-log-setting-property-builder
-  "Creates a  `CfnBotAlias$AudioLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$AudioLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-audio-log-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-audio-log-setting-property-builder> (new CfnBotAlias$AudioLogSettingProperty$Builder) id config))
 
@@ -214,12 +214,12 @@
 
 
 (defn cfn-bot-alias-bot-alias-locale-settings-item-property-builder
-  "Creates a  `CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-bot-alias-locale-settings-item-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-bot-alias-locale-settings-item-property-builder> (new CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder) id config))
 
@@ -245,12 +245,12 @@
 
 
 (defn cfn-bot-alias-bot-alias-locale-settings-property-builder
-  "Creates a  `CfnBotAlias$BotAliasLocaleSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$BotAliasLocaleSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-bot-alias-locale-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-bot-alias-locale-settings-property-builder> (new CfnBotAlias$BotAliasLocaleSettingsProperty$Builder) id config))
 
@@ -294,12 +294,12 @@
 
 
 (defn cfn-bot-alias-builder
-  "Creates a  `CfnBotAlias$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-bot-alias-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-bot-alias-builder> (CfnBotAlias$Builder/create scope (name id)) id config))
 
@@ -325,12 +325,12 @@
 
 
 (defn cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder
-  "Creates a  `CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder> (new CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder) id config))
 
@@ -353,12 +353,12 @@
 
 
 (defn cfn-bot-alias-code-hook-specification-property-builder
-  "Creates a  `CfnBotAlias$CodeHookSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$CodeHookSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-code-hook-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-code-hook-specification-property-builder> (new CfnBotAlias$CodeHookSpecificationProperty$Builder) id config))
 
@@ -384,12 +384,12 @@
 
 
 (defn cfn-bot-alias-conversation-log-settings-property-builder
-  "Creates a  `CfnBotAlias$ConversationLogSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$ConversationLogSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-conversation-log-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-conversation-log-settings-property-builder> (new CfnBotAlias$ConversationLogSettingsProperty$Builder) id config))
 
@@ -415,12 +415,12 @@
 
 
 (defn cfn-bot-alias-lambda-code-hook-property-builder
-  "Creates a  `CfnBotAlias$LambdaCodeHookProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$LambdaCodeHookProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-lambda-code-hook-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-lambda-code-hook-property-builder> (new CfnBotAlias$LambdaCodeHookProperty$Builder) id config))
 
@@ -464,12 +464,12 @@
 
 
 (defn cfn-bot-alias-props-builder
-  "Creates a  `CfnBotAliasProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAliasProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-props-builder> (new CfnBotAliasProps$Builder) id config))
 
@@ -498,12 +498,12 @@
 
 
 (defn cfn-bot-alias-s3-bucket-log-destination-property-builder
-  "Creates a  `CfnBotAlias$S3BucketLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$S3BucketLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-s3-bucket-log-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-s3-bucket-log-destination-property-builder> (new CfnBotAlias$S3BucketLogDestinationProperty$Builder) id config))
 
@@ -526,12 +526,12 @@
 
 
 (defn cfn-bot-alias-sentiment-analysis-settings-property-builder
-  "Creates a  `CfnBotAlias$SentimentAnalysisSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$SentimentAnalysisSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-sentiment-analysis-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-sentiment-analysis-settings-property-builder> (new CfnBotAlias$SentimentAnalysisSettingsProperty$Builder) id config))
 
@@ -554,12 +554,12 @@
 
 
 (defn cfn-bot-alias-text-log-destination-property-builder
-  "Creates a  `CfnBotAlias$TextLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$TextLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-text-log-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-text-log-destination-property-builder> (new CfnBotAlias$TextLogDestinationProperty$Builder) id config))
 
@@ -585,12 +585,12 @@
 
 
 (defn cfn-bot-alias-text-log-setting-property-builder
-  "Creates a  `CfnBotAlias$TextLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotAlias$TextLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-alias-text-log-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-alias-text-log-setting-property-builder> (new CfnBotAlias$TextLogSettingProperty$Builder) id config))
 
@@ -616,12 +616,12 @@
 
 
 (defn cfn-bot-allowed-input-types-property-builder
-  "Creates a  `CfnBot$AllowedInputTypesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$AllowedInputTypesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-allowed-input-types-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-allowed-input-types-property-builder> (new CfnBot$AllowedInputTypesProperty$Builder) id config))
 
@@ -650,12 +650,12 @@
 
 
 (defn cfn-bot-audio-and-dtmf-input-specification-property-builder
-  "Creates a  `CfnBot$AudioAndDTMFInputSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$AudioAndDTMFInputSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-audio-and-dtmf-input-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-audio-and-dtmf-input-specification-property-builder> (new CfnBot$AudioAndDTMFInputSpecificationProperty$Builder) id config))
 
@@ -678,12 +678,12 @@
 
 
 (defn cfn-bot-audio-log-destination-property-builder
-  "Creates a  `CfnBot$AudioLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$AudioLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-audio-log-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-audio-log-destination-property-builder> (new CfnBot$AudioLogDestinationProperty$Builder) id config))
 
@@ -709,12 +709,12 @@
 
 
 (defn cfn-bot-audio-log-setting-property-builder
-  "Creates a  `CfnBot$AudioLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$AudioLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-audio-log-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-audio-log-setting-property-builder> (new CfnBot$AudioLogSettingProperty$Builder) id config))
 
@@ -740,12 +740,12 @@
 
 
 (defn cfn-bot-audio-specification-property-builder
-  "Creates a  `CfnBot$AudioSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$AudioSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-audio-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-audio-specification-property-builder> (new CfnBot$AudioSpecificationProperty$Builder) id config))
 
@@ -771,12 +771,12 @@
 
 
 (defn cfn-bot-bot-alias-locale-settings-item-property-builder
-  "Creates a  `CfnBot$BotAliasLocaleSettingsItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$BotAliasLocaleSettingsItemProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-bot-alias-locale-settings-item-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-bot-alias-locale-settings-item-property-builder> (new CfnBot$BotAliasLocaleSettingsItemProperty$Builder) id config))
 
@@ -802,12 +802,12 @@
 
 
 (defn cfn-bot-bot-alias-locale-settings-property-builder
-  "Creates a  `CfnBot$BotAliasLocaleSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$BotAliasLocaleSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-bot-alias-locale-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-bot-alias-locale-settings-property-builder> (new CfnBot$BotAliasLocaleSettingsProperty$Builder) id config))
 
@@ -848,12 +848,12 @@
 
 
 (defn cfn-bot-bot-locale-property-builder
-  "Creates a  `CfnBot$BotLocaleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$BotLocaleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-bot-locale-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-bot-locale-property-builder> (new CfnBot$BotLocaleProperty$Builder) id config))
 
@@ -906,12 +906,12 @@
 
 
 (defn cfn-bot-builder
-  "Creates a  `CfnBot$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-bot-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-bot-builder> (CfnBot$Builder/create scope (name id)) id config))
 
@@ -937,12 +937,12 @@
 
 
 (defn cfn-bot-button-property-builder
-  "Creates a  `CfnBot$ButtonProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ButtonProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-button-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-button-property-builder> (new CfnBot$ButtonProperty$Builder) id config))
 
@@ -968,12 +968,12 @@
 
 
 (defn cfn-bot-cloud-watch-log-group-log-destination-property-builder
-  "Creates a  `CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-cloud-watch-log-group-log-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-cloud-watch-log-group-log-destination-property-builder> (new CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder) id config))
 
@@ -996,12 +996,12 @@
 
 
 (defn cfn-bot-code-hook-specification-property-builder
-  "Creates a  `CfnBot$CodeHookSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$CodeHookSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-code-hook-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-code-hook-specification-property-builder> (new CfnBot$CodeHookSpecificationProperty$Builder) id config))
 
@@ -1024,12 +1024,12 @@
 
 
 (defn cfn-bot-condition-property-builder
-  "Creates a  `CfnBot$ConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-condition-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-condition-property-builder> (new CfnBot$ConditionProperty$Builder) id config))
 
@@ -1061,12 +1061,12 @@
 
 
 (defn cfn-bot-conditional-branch-property-builder
-  "Creates a  `CfnBot$ConditionalBranchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ConditionalBranchProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-conditional-branch-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-conditional-branch-property-builder> (new CfnBot$ConditionalBranchProperty$Builder) id config))
 
@@ -1095,12 +1095,12 @@
 
 
 (defn cfn-bot-conditional-specification-property-builder
-  "Creates a  `CfnBot$ConditionalSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ConditionalSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-conditional-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-conditional-specification-property-builder> (new CfnBot$ConditionalSpecificationProperty$Builder) id config))
 
@@ -1126,12 +1126,12 @@
 
 
 (defn cfn-bot-conversation-log-settings-property-builder
-  "Creates a  `CfnBot$ConversationLogSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ConversationLogSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-conversation-log-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-conversation-log-settings-property-builder> (new CfnBot$ConversationLogSettingsProperty$Builder) id config))
 
@@ -1154,12 +1154,12 @@
 
 
 (defn cfn-bot-custom-payload-property-builder
-  "Creates a  `CfnBot$CustomPayloadProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$CustomPayloadProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-custom-payload-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-custom-payload-property-builder> (new CfnBot$CustomPayloadProperty$Builder) id config))
 
@@ -1188,12 +1188,12 @@
 
 
 (defn cfn-bot-custom-vocabulary-item-property-builder
-  "Creates a  `CfnBot$CustomVocabularyItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$CustomVocabularyItemProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-custom-vocabulary-item-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-custom-vocabulary-item-property-builder> (new CfnBot$CustomVocabularyItemProperty$Builder) id config))
 
@@ -1216,12 +1216,12 @@
 
 
 (defn cfn-bot-custom-vocabulary-property-builder
-  "Creates a  `CfnBot$CustomVocabularyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$CustomVocabularyProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-custom-vocabulary-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-custom-vocabulary-property-builder> (new CfnBot$CustomVocabularyProperty$Builder) id config))
 
@@ -1244,12 +1244,12 @@
 
 
 (defn cfn-bot-data-privacy-property-builder
-  "Creates a  `CfnBot$DataPrivacyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$DataPrivacyProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-data-privacy-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-data-privacy-property-builder> (new CfnBot$DataPrivacyProperty$Builder) id config))
 
@@ -1275,12 +1275,12 @@
 
 
 (defn cfn-bot-default-conditional-branch-property-builder
-  "Creates a  `CfnBot$DefaultConditionalBranchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$DefaultConditionalBranchProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-default-conditional-branch-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-default-conditional-branch-property-builder> (new CfnBot$DefaultConditionalBranchProperty$Builder) id config))
 
@@ -1309,12 +1309,12 @@
 
 
 (defn cfn-bot-dialog-action-property-builder
-  "Creates a  `CfnBot$DialogActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$DialogActionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-dialog-action-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-dialog-action-property-builder> (new CfnBot$DialogActionProperty$Builder) id config))
 
@@ -1346,12 +1346,12 @@
 
 
 (defn cfn-bot-dialog-code-hook-invocation-setting-property-builder
-  "Creates a  `CfnBot$DialogCodeHookInvocationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$DialogCodeHookInvocationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-dialog-code-hook-invocation-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-dialog-code-hook-invocation-setting-property-builder> (new CfnBot$DialogCodeHookInvocationSettingProperty$Builder) id config))
 
@@ -1374,12 +1374,12 @@
 
 
 (defn cfn-bot-dialog-code-hook-setting-property-builder
-  "Creates a  `CfnBot$DialogCodeHookSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$DialogCodeHookSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-dialog-code-hook-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-dialog-code-hook-setting-property-builder> (new CfnBot$DialogCodeHookSettingProperty$Builder) id config))
 
@@ -1408,12 +1408,12 @@
 
 
 (defn cfn-bot-dialog-state-property-builder
-  "Creates a  `CfnBot$DialogStateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$DialogStateProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-dialog-state-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-dialog-state-property-builder> (new CfnBot$DialogStateProperty$Builder) id config))
 
@@ -1445,12 +1445,12 @@
 
 
 (defn cfn-bot-dtmf-specification-property-builder
-  "Creates a  `CfnBot$DTMFSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$DTMFSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-dtmf-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-dtmf-specification-property-builder> (new CfnBot$DTMFSpecificationProperty$Builder) id config))
 
@@ -1476,12 +1476,12 @@
 
 
 (defn cfn-bot-elicitation-code-hook-invocation-setting-property-builder
-  "Creates a  `CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-elicitation-code-hook-invocation-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-elicitation-code-hook-invocation-setting-property-builder> (new CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder) id config))
 
@@ -1504,12 +1504,12 @@
 
 
 (defn cfn-bot-external-source-setting-property-builder
-  "Creates a  `CfnBot$ExternalSourceSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ExternalSourceSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-external-source-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-external-source-setting-property-builder> (new CfnBot$ExternalSourceSettingProperty$Builder) id config))
 
@@ -1541,12 +1541,12 @@
 
 
 (defn cfn-bot-fulfillment-code-hook-setting-property-builder
-  "Creates a  `CfnBot$FulfillmentCodeHookSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$FulfillmentCodeHookSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-fulfillment-code-hook-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-fulfillment-code-hook-setting-property-builder> (new CfnBot$FulfillmentCodeHookSettingProperty$Builder) id config))
 
@@ -1575,12 +1575,12 @@
 
 
 (defn cfn-bot-fulfillment-start-response-specification-property-builder
-  "Creates a  `CfnBot$FulfillmentStartResponseSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$FulfillmentStartResponseSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-fulfillment-start-response-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-fulfillment-start-response-specification-property-builder> (new CfnBot$FulfillmentStartResponseSpecificationProperty$Builder) id config))
 
@@ -1609,12 +1609,12 @@
 
 
 (defn cfn-bot-fulfillment-update-response-specification-property-builder
-  "Creates a  `CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-fulfillment-update-response-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-fulfillment-update-response-specification-property-builder> (new CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder) id config))
 
@@ -1646,12 +1646,12 @@
 
 
 (defn cfn-bot-fulfillment-updates-specification-property-builder
-  "Creates a  `CfnBot$FulfillmentUpdatesSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$FulfillmentUpdatesSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-fulfillment-updates-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-fulfillment-updates-specification-property-builder> (new CfnBot$FulfillmentUpdatesSpecificationProperty$Builder) id config))
 
@@ -1674,12 +1674,12 @@
 
 
 (defn cfn-bot-grammar-slot-type-setting-property-builder
-  "Creates a  `CfnBot$GrammarSlotTypeSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$GrammarSlotTypeSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-grammar-slot-type-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-grammar-slot-type-setting-property-builder> (new CfnBot$GrammarSlotTypeSettingProperty$Builder) id config))
 
@@ -1708,12 +1708,12 @@
 
 
 (defn cfn-bot-grammar-slot-type-source-property-builder
-  "Creates a  `CfnBot$GrammarSlotTypeSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$GrammarSlotTypeSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-grammar-slot-type-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-grammar-slot-type-source-property-builder> (new CfnBot$GrammarSlotTypeSourceProperty$Builder) id config))
 
@@ -1745,12 +1745,12 @@
 
 
 (defn cfn-bot-image-response-card-property-builder
-  "Creates a  `CfnBot$ImageResponseCardProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ImageResponseCardProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-image-response-card-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-image-response-card-property-builder> (new CfnBot$ImageResponseCardProperty$Builder) id config))
 
@@ -1782,12 +1782,12 @@
 
 
 (defn cfn-bot-initial-response-setting-property-builder
-  "Creates a  `CfnBot$InitialResponseSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$InitialResponseSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-initial-response-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-initial-response-setting-property-builder> (new CfnBot$InitialResponseSettingProperty$Builder) id config))
 
@@ -1810,12 +1810,12 @@
 
 
 (defn cfn-bot-input-context-property-builder
-  "Creates a  `CfnBot$InputContextProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$InputContextProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-input-context-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-input-context-property-builder> (new CfnBot$InputContextProperty$Builder) id config))
 
@@ -1847,12 +1847,12 @@
 
 
 (defn cfn-bot-intent-closing-setting-property-builder
-  "Creates a  `CfnBot$IntentClosingSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$IntentClosingSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-intent-closing-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-intent-closing-setting-property-builder> (new CfnBot$IntentClosingSettingProperty$Builder) id config))
 
@@ -1911,12 +1911,12 @@
 
 
 (defn cfn-bot-intent-confirmation-setting-property-builder
-  "Creates a  `CfnBot$IntentConfirmationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$IntentConfirmationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-intent-confirmation-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-intent-confirmation-setting-property-builder> (new CfnBot$IntentConfirmationSettingProperty$Builder) id config))
 
@@ -1942,12 +1942,12 @@
 
 
 (defn cfn-bot-intent-override-property-builder
-  "Creates a  `CfnBot$IntentOverrideProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$IntentOverrideProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-intent-override-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-intent-override-property-builder> (new CfnBot$IntentOverrideProperty$Builder) id config))
 
@@ -2009,12 +2009,12 @@
 
 
 (defn cfn-bot-intent-property-builder
-  "Creates a  `CfnBot$IntentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$IntentProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-intent-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-intent-property-builder> (new CfnBot$IntentProperty$Builder) id config))
 
@@ -2043,12 +2043,12 @@
 
 
 (defn cfn-bot-kendra-configuration-property-builder
-  "Creates a  `CfnBot$KendraConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$KendraConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-kendra-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-kendra-configuration-property-builder> (new CfnBot$KendraConfigurationProperty$Builder) id config))
 
@@ -2074,12 +2074,12 @@
 
 
 (defn cfn-bot-lambda-code-hook-property-builder
-  "Creates a  `CfnBot$LambdaCodeHookProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$LambdaCodeHookProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-lambda-code-hook-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-lambda-code-hook-property-builder> (new CfnBot$LambdaCodeHookProperty$Builder) id config))
 
@@ -2105,12 +2105,12 @@
 
 
 (defn cfn-bot-message-group-property-builder
-  "Creates a  `CfnBot$MessageGroupProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$MessageGroupProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-message-group-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-message-group-property-builder> (new CfnBot$MessageGroupProperty$Builder) id config))
 
@@ -2142,12 +2142,12 @@
 
 
 (defn cfn-bot-message-property-builder
-  "Creates a  `CfnBot$MessageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$MessageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-message-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-message-property-builder> (new CfnBot$MessageProperty$Builder) id config))
 
@@ -2170,12 +2170,12 @@
 
 
 (defn cfn-bot-multiple-values-setting-property-builder
-  "Creates a  `CfnBot$MultipleValuesSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$MultipleValuesSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-multiple-values-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-multiple-values-setting-property-builder> (new CfnBot$MultipleValuesSettingProperty$Builder) id config))
 
@@ -2198,12 +2198,12 @@
 
 
 (defn cfn-bot-obfuscation-setting-property-builder
-  "Creates a  `CfnBot$ObfuscationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ObfuscationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-obfuscation-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-obfuscation-setting-property-builder> (new CfnBot$ObfuscationSettingProperty$Builder) id config))
 
@@ -2232,12 +2232,12 @@
 
 
 (defn cfn-bot-output-context-property-builder
-  "Creates a  `CfnBot$OutputContextProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$OutputContextProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-output-context-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-output-context-property-builder> (new CfnBot$OutputContextProperty$Builder) id config))
 
@@ -2260,12 +2260,12 @@
 
 
 (defn cfn-bot-plain-text-message-property-builder
-  "Creates a  `CfnBot$PlainTextMessageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$PlainTextMessageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-plain-text-message-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-plain-text-message-property-builder> (new CfnBot$PlainTextMessageProperty$Builder) id config))
 
@@ -2312,12 +2312,12 @@
 
 
 (defn cfn-bot-post-dialog-code-hook-invocation-specification-property-builder
-  "Creates a  `CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-post-dialog-code-hook-invocation-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-post-dialog-code-hook-invocation-specification-property-builder> (new CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder) id config))
 
@@ -2364,12 +2364,12 @@
 
 
 (defn cfn-bot-post-fulfillment-status-specification-property-builder
-  "Creates a  `CfnBot$PostFulfillmentStatusSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$PostFulfillmentStatusSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-post-fulfillment-status-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-post-fulfillment-status-specification-property-builder> (new CfnBot$PostFulfillmentStatusSpecificationProperty$Builder) id config))
 
@@ -2401,12 +2401,12 @@
 
 
 (defn cfn-bot-prompt-attempt-specification-property-builder
-  "Creates a  `CfnBot$PromptAttemptSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$PromptAttemptSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-prompt-attempt-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-prompt-attempt-specification-property-builder> (new CfnBot$PromptAttemptSpecificationProperty$Builder) id config))
 
@@ -2441,12 +2441,12 @@
 
 
 (defn cfn-bot-prompt-specification-property-builder
-  "Creates a  `CfnBot$PromptSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$PromptSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-prompt-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-prompt-specification-property-builder> (new CfnBot$PromptSpecificationProperty$Builder) id config))
 
@@ -2499,12 +2499,12 @@
 
 
 (defn cfn-bot-props-builder
-  "Creates a  `CfnBotProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-props-builder> (new CfnBotProps$Builder) id config))
 
@@ -2530,12 +2530,12 @@
 
 
 (defn cfn-bot-response-specification-property-builder
-  "Creates a  `CfnBot$ResponseSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$ResponseSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-response-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-response-specification-property-builder> (new CfnBot$ResponseSpecificationProperty$Builder) id config))
 
@@ -2564,12 +2564,12 @@
 
 
 (defn cfn-bot-s3-bucket-log-destination-property-builder
-  "Creates a  `CfnBot$S3BucketLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$S3BucketLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-s3-bucket-log-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-s3-bucket-log-destination-property-builder> (new CfnBot$S3BucketLogDestinationProperty$Builder) id config))
 
@@ -2598,12 +2598,12 @@
 
 
 (defn cfn-bot-s3-location-property-builder
-  "Creates a  `CfnBot$S3LocationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$S3LocationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-s3-location-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-s3-location-property-builder> (new CfnBot$S3LocationProperty$Builder) id config))
 
@@ -2626,12 +2626,12 @@
 
 
 (defn cfn-bot-sample-utterance-property-builder
-  "Creates a  `CfnBot$SampleUtteranceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SampleUtteranceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-sample-utterance-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-sample-utterance-property-builder> (new CfnBot$SampleUtteranceProperty$Builder) id config))
 
@@ -2654,12 +2654,12 @@
 
 
 (defn cfn-bot-sample-value-property-builder
-  "Creates a  `CfnBot$SampleValueProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SampleValueProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-sample-value-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-sample-value-property-builder> (new CfnBot$SampleValueProperty$Builder) id config))
 
@@ -2682,12 +2682,12 @@
 
 
 (defn cfn-bot-sentiment-analysis-settings-property-builder
-  "Creates a  `CfnBot$SentimentAnalysisSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SentimentAnalysisSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-sentiment-analysis-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-sentiment-analysis-settings-property-builder> (new CfnBot$SentimentAnalysisSettingsProperty$Builder) id config))
 
@@ -2713,12 +2713,12 @@
 
 
 (defn cfn-bot-session-attribute-property-builder
-  "Creates a  `CfnBot$SessionAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SessionAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-session-attribute-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-session-attribute-property-builder> (new CfnBot$SessionAttributeProperty$Builder) id config))
 
@@ -2762,12 +2762,12 @@
 
 
 (defn cfn-bot-slot-capture-setting-property-builder
-  "Creates a  `CfnBot$SlotCaptureSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotCaptureSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-capture-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-capture-setting-property-builder> (new CfnBot$SlotCaptureSettingProperty$Builder) id config))
 
@@ -2790,12 +2790,12 @@
 
 
 (defn cfn-bot-slot-default-value-property-builder
-  "Creates a  `CfnBot$SlotDefaultValueProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotDefaultValueProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-default-value-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-default-value-property-builder> (new CfnBot$SlotDefaultValueProperty$Builder) id config))
 
@@ -2818,12 +2818,12 @@
 
 
 (defn cfn-bot-slot-default-value-specification-property-builder
-  "Creates a  `CfnBot$SlotDefaultValueSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotDefaultValueSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-default-value-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-default-value-specification-property-builder> (new CfnBot$SlotDefaultValueSpecificationProperty$Builder) id config))
 
@@ -2849,12 +2849,12 @@
 
 
 (defn cfn-bot-slot-priority-property-builder
-  "Creates a  `CfnBot$SlotPriorityProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotPriorityProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-priority-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-priority-property-builder> (new CfnBot$SlotPriorityProperty$Builder) id config))
 
@@ -2892,12 +2892,12 @@
 
 
 (defn cfn-bot-slot-property-builder
-  "Creates a  `CfnBot$SlotProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-property-builder> (new CfnBot$SlotProperty$Builder) id config))
 
@@ -2935,12 +2935,12 @@
 
 
 (defn cfn-bot-slot-type-property-builder
-  "Creates a  `CfnBot$SlotTypeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotTypeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-type-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-type-property-builder> (new CfnBot$SlotTypeProperty$Builder) id config))
 
@@ -2966,12 +2966,12 @@
 
 
 (defn cfn-bot-slot-type-value-property-builder
-  "Creates a  `CfnBot$SlotTypeValueProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotTypeValueProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-type-value-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-type-value-property-builder> (new CfnBot$SlotTypeValueProperty$Builder) id config))
 
@@ -3009,12 +3009,12 @@
 
 
 (defn cfn-bot-slot-value-elicitation-setting-property-builder
-  "Creates a  `CfnBot$SlotValueElicitationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotValueElicitationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-value-elicitation-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-value-elicitation-setting-property-builder> (new CfnBot$SlotValueElicitationSettingProperty$Builder) id config))
 
@@ -3040,12 +3040,12 @@
 
 
 (defn cfn-bot-slot-value-override-map-property-builder
-  "Creates a  `CfnBot$SlotValueOverrideMapProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotValueOverrideMapProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-value-override-map-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-value-override-map-property-builder> (new CfnBot$SlotValueOverrideMapProperty$Builder) id config))
 
@@ -3074,12 +3074,12 @@
 
 
 (defn cfn-bot-slot-value-override-property-builder
-  "Creates a  `CfnBot$SlotValueOverrideProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotValueOverrideProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-value-override-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-value-override-property-builder> (new CfnBot$SlotValueOverrideProperty$Builder) id config))
 
@@ -3102,12 +3102,12 @@
 
 
 (defn cfn-bot-slot-value-property-builder
-  "Creates a  `CfnBot$SlotValueProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotValueProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-value-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-value-property-builder> (new CfnBot$SlotValueProperty$Builder) id config))
 
@@ -3130,12 +3130,12 @@
 
 
 (defn cfn-bot-slot-value-regex-filter-property-builder
-  "Creates a  `CfnBot$SlotValueRegexFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotValueRegexFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-value-regex-filter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-value-regex-filter-property-builder> (new CfnBot$SlotValueRegexFilterProperty$Builder) id config))
 
@@ -3164,12 +3164,12 @@
 
 
 (defn cfn-bot-slot-value-selection-setting-property-builder
-  "Creates a  `CfnBot$SlotValueSelectionSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SlotValueSelectionSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-slot-value-selection-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-slot-value-selection-setting-property-builder> (new CfnBot$SlotValueSelectionSettingProperty$Builder) id config))
 
@@ -3192,12 +3192,12 @@
 
 
 (defn cfn-bot-ssml-message-property-builder
-  "Creates a  `CfnBot$SSMLMessageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$SSMLMessageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-ssml-message-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-ssml-message-property-builder> (new CfnBot$SSMLMessageProperty$Builder) id config))
 
@@ -3229,12 +3229,12 @@
 
 
 (defn cfn-bot-still-waiting-response-specification-property-builder
-  "Creates a  `CfnBot$StillWaitingResponseSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$StillWaitingResponseSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-still-waiting-response-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-still-waiting-response-specification-property-builder> (new CfnBot$StillWaitingResponseSpecificationProperty$Builder) id config))
 
@@ -3266,12 +3266,12 @@
 
 
 (defn cfn-bot-test-bot-alias-settings-property-builder
-  "Creates a  `CfnBot$TestBotAliasSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$TestBotAliasSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-test-bot-alias-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-test-bot-alias-settings-property-builder> (new CfnBot$TestBotAliasSettingsProperty$Builder) id config))
 
@@ -3294,12 +3294,12 @@
 
 
 (defn cfn-bot-text-input-specification-property-builder
-  "Creates a  `CfnBot$TextInputSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$TextInputSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-text-input-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-text-input-specification-property-builder> (new CfnBot$TextInputSpecificationProperty$Builder) id config))
 
@@ -3322,12 +3322,12 @@
 
 
 (defn cfn-bot-text-log-destination-property-builder
-  "Creates a  `CfnBot$TextLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$TextLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-text-log-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-text-log-destination-property-builder> (new CfnBot$TextLogDestinationProperty$Builder) id config))
 
@@ -3353,12 +3353,12 @@
 
 
 (defn cfn-bot-text-log-setting-property-builder
-  "Creates a  `CfnBot$TextLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$TextLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-text-log-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-text-log-setting-property-builder> (new CfnBot$TextLogSettingProperty$Builder) id config))
 
@@ -3381,12 +3381,12 @@
 
 
 (defn cfn-bot-version-bot-version-locale-details-property-builder
-  "Creates a  `CfnBotVersion$BotVersionLocaleDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotVersion$BotVersionLocaleDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-version-bot-version-locale-details-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-version-bot-version-locale-details-property-builder> (new CfnBotVersion$BotVersionLocaleDetailsProperty$Builder) id config))
 
@@ -3412,12 +3412,12 @@
 
 
 (defn cfn-bot-version-bot-version-locale-specification-property-builder
-  "Creates a  `CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-version-bot-version-locale-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-version-bot-version-locale-specification-property-builder> (new CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder) id config))
 
@@ -3446,12 +3446,12 @@
 
 
 (defn cfn-bot-version-builder
-  "Creates a  `CfnBotVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotVersion$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-bot-version-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-bot-version-builder> (CfnBotVersion$Builder/create scope (name id)) id config))
 
@@ -3480,12 +3480,12 @@
 
 
 (defn cfn-bot-version-props-builder
-  "Creates a  `CfnBotVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBotVersionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-version-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-version-props-builder> (new CfnBotVersionProps$Builder) id config))
 
@@ -3511,12 +3511,12 @@
 
 
 (defn cfn-bot-voice-settings-property-builder
-  "Creates a  `CfnBot$VoiceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$VoiceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-voice-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-voice-settings-property-builder> (new CfnBot$VoiceSettingsProperty$Builder) id config))
 
@@ -3548,12 +3548,12 @@
 
 
 (defn cfn-bot-wait-and-continue-specification-property-builder
-  "Creates a  `CfnBot$WaitAndContinueSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBot$WaitAndContinueSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-bot-wait-and-continue-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-bot-wait-and-continue-specification-property-builder> (new CfnBot$WaitAndContinueSpecificationProperty$Builder) id config))
 
@@ -3579,12 +3579,12 @@
 
 
 (defn cfn-resource-policy-builder
-  "Creates a  `CfnResourcePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourcePolicy$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-resource-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-resource-policy-builder> (CfnResourcePolicy$Builder/create scope (name id)) id config))
 
@@ -3610,11 +3610,11 @@
 
 
 (defn cfn-resource-policy-props-builder
-  "Creates a  `CfnResourcePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourcePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-policy-props-builder> (new CfnResourcePolicyProps$Builder) id config))

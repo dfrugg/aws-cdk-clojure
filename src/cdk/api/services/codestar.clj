@@ -46,12 +46,12 @@
 
 
 (defn cfn-git-hub-repository-builder
-  "Creates a  `CfnGitHubRepository$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGitHubRepository$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-git-hub-repository-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-git-hub-repository-builder> (CfnGitHubRepository$Builder/create scope (name id)) id config))
 
@@ -74,12 +74,12 @@
 
 
 (defn cfn-git-hub-repository-code-property-builder
-  "Creates a  `CfnGitHubRepository$CodeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGitHubRepository$CodeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-git-hub-repository-code-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-git-hub-repository-code-property-builder> (new CfnGitHubRepository$CodeProperty$Builder) id config))
 
@@ -123,12 +123,12 @@
 
 
 (defn cfn-git-hub-repository-props-builder
-  "Creates a  `CfnGitHubRepositoryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGitHubRepositoryProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-git-hub-repository-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-git-hub-repository-props-builder> (new CfnGitHubRepositoryProps$Builder) id config))
 
@@ -157,11 +157,11 @@
 
 
 (defn cfn-git-hub-repository-s3-property-builder
-  "Creates a  `CfnGitHubRepository$S3Property$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGitHubRepository$S3Property$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-git-hub-repository-s3-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-git-hub-repository-s3-property-builder> (new CfnGitHubRepository$S3Property$Builder) id config))

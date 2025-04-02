@@ -45,12 +45,12 @@
 
 
 (defn cfn-alert-action-property-builder
-  "Creates a  `CfnAlert$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAlert$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-alert-action-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-alert-action-property-builder> (new CfnAlert$ActionProperty$Builder) id config))
 
@@ -85,12 +85,12 @@
 
 
 (defn cfn-alert-builder
-  "Creates a  `CfnAlert$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAlert$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-alert-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-alert-builder> (CfnAlert$Builder/create scope (name id)) id config))
 
@@ -116,12 +116,12 @@
 
 
 (defn cfn-alert-lambda-configuration-property-builder
-  "Creates a  `CfnAlert$LambdaConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAlert$LambdaConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-alert-lambda-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-alert-lambda-configuration-property-builder> (new CfnAlert$LambdaConfigurationProperty$Builder) id config))
 
@@ -156,12 +156,12 @@
 
 
 (defn cfn-alert-props-builder
-  "Creates a  `CfnAlertProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAlertProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-alert-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-alert-props-builder> (new CfnAlertProps$Builder) id config))
 
@@ -187,12 +187,12 @@
 
 
 (defn cfn-alert-sns-configuration-property-builder
-  "Creates a  `CfnAlert$SNSConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAlert$SNSConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-alert-sns-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-alert-sns-configuration-property-builder> (new CfnAlert$SNSConfigurationProperty$Builder) id config))
 
@@ -215,12 +215,12 @@
 
 
 (defn cfn-anomaly-detector-anomaly-detector-config-property-builder
-  "Creates a  `CfnAnomalyDetector$AnomalyDetectorConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$AnomalyDetectorConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-anomaly-detector-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-anomaly-detector-config-property-builder> (new CfnAnomalyDetector$AnomalyDetectorConfigProperty$Builder) id config))
 
@@ -246,12 +246,12 @@
 
 
 (defn cfn-anomaly-detector-app-flow-config-property-builder
-  "Creates a  `CfnAnomalyDetector$AppFlowConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$AppFlowConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-app-flow-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-app-flow-config-property-builder> (new CfnAnomalyDetector$AppFlowConfigProperty$Builder) id config))
 
@@ -286,12 +286,12 @@
 
 
 (defn cfn-anomaly-detector-builder
-  "Creates a  `CfnAnomalyDetector$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-anomaly-detector-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-anomaly-detector-builder> (CfnAnomalyDetector$Builder/create scope (name id)) id config))
 
@@ -314,12 +314,12 @@
 
 
 (defn cfn-anomaly-detector-cloudwatch-config-property-builder
-  "Creates a  `CfnAnomalyDetector$CloudwatchConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$CloudwatchConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-cloudwatch-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-cloudwatch-config-property-builder> (new CfnAnomalyDetector$CloudwatchConfigProperty$Builder) id config))
 
@@ -357,12 +357,12 @@
 
 
 (defn cfn-anomaly-detector-csv-format-descriptor-property-builder
-  "Creates a  `CfnAnomalyDetector$CsvFormatDescriptorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$CsvFormatDescriptorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-csv-format-descriptor-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-csv-format-descriptor-property-builder> (new CfnAnomalyDetector$CsvFormatDescriptorProperty$Builder) id config))
 
@@ -388,12 +388,12 @@
 
 
 (defn cfn-anomaly-detector-file-format-descriptor-property-builder
-  "Creates a  `CfnAnomalyDetector$FileFormatDescriptorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$FileFormatDescriptorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-file-format-descriptor-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-file-format-descriptor-property-builder> (new CfnAnomalyDetector$FileFormatDescriptorProperty$Builder) id config))
 
@@ -419,12 +419,12 @@
 
 
 (defn cfn-anomaly-detector-json-format-descriptor-property-builder
-  "Creates a  `CfnAnomalyDetector$JsonFormatDescriptorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$JsonFormatDescriptorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-json-format-descriptor-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-json-format-descriptor-property-builder> (new CfnAnomalyDetector$JsonFormatDescriptorProperty$Builder) id config))
 
@@ -453,12 +453,12 @@
 
 
 (defn cfn-anomaly-detector-metric-property-builder
-  "Creates a  `CfnAnomalyDetector$MetricProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$MetricProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-metric-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-metric-property-builder> (new CfnAnomalyDetector$MetricProperty$Builder) id config))
 
@@ -505,12 +505,12 @@
 
 
 (defn cfn-anomaly-detector-metric-set-property-builder
-  "Creates a  `CfnAnomalyDetector$MetricSetProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$MetricSetProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-metric-set-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-metric-set-property-builder> (new CfnAnomalyDetector$MetricSetProperty$Builder) id config))
 
@@ -545,12 +545,12 @@
 
 
 (defn cfn-anomaly-detector-metric-source-property-builder
-  "Creates a  `CfnAnomalyDetector$MetricSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$MetricSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-metric-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-metric-source-property-builder> (new CfnAnomalyDetector$MetricSourceProperty$Builder) id config))
 
@@ -585,12 +585,12 @@
 
 
 (defn cfn-anomaly-detector-props-builder
-  "Creates a  `CfnAnomalyDetectorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetectorProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-props-builder> (new CfnAnomalyDetectorProps$Builder) id config))
 
@@ -634,12 +634,12 @@
 
 
 (defn cfn-anomaly-detector-rds-source-config-property-builder
-  "Creates a  `CfnAnomalyDetector$RDSSourceConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$RDSSourceConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-rds-source-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-rds-source-config-property-builder> (new CfnAnomalyDetector$RDSSourceConfigProperty$Builder) id config))
 
@@ -683,12 +683,12 @@
 
 
 (defn cfn-anomaly-detector-redshift-source-config-property-builder
-  "Creates a  `CfnAnomalyDetector$RedshiftSourceConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$RedshiftSourceConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-redshift-source-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-redshift-source-config-property-builder> (new CfnAnomalyDetector$RedshiftSourceConfigProperty$Builder) id config))
 
@@ -720,12 +720,12 @@
 
 
 (defn cfn-anomaly-detector-s3-source-config-property-builder
-  "Creates a  `CfnAnomalyDetector$S3SourceConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$S3SourceConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-s3-source-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-s3-source-config-property-builder> (new CfnAnomalyDetector$S3SourceConfigProperty$Builder) id config))
 
@@ -751,12 +751,12 @@
 
 
 (defn cfn-anomaly-detector-timestamp-column-property-builder
-  "Creates a  `CfnAnomalyDetector$TimestampColumnProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$TimestampColumnProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-timestamp-column-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-timestamp-column-property-builder> (new CfnAnomalyDetector$TimestampColumnProperty$Builder) id config))
 
@@ -782,11 +782,11 @@
 
 
 (defn cfn-anomaly-detector-vpc-configuration-property-builder
-  "Creates a  `CfnAnomalyDetector$VpcConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnomalyDetector$VpcConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-anomaly-detector-vpc-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-anomaly-detector-vpc-configuration-property-builder> (new CfnAnomalyDetector$VpcConfigurationProperty$Builder) id config))

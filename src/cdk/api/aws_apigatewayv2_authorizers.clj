@@ -60,12 +60,13 @@ function on the data with the provided namespace id and item-key.  The found val
   "Creates a  `HttpJwtAuthorizer$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String java.lang.String]___
+__Create Form:__ ___[java.lang.String java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| jwt-issuer | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `jwt-issuer` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String jwt-issuer id config]
   (http-jwt-authorizer-builder> (HttpJwtAuthorizer$Builder/create (name id) jwt-issuer) id config))
 
@@ -94,12 +95,12 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 
 
 (defn http-jwt-authorizer-props-builder
-  "Creates a  `HttpJwtAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HttpJwtAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[http-jwt-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (http-jwt-authorizer-props-builder> (new HttpJwtAuthorizerProps$Builder) id config))
 
@@ -134,12 +135,13 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
   "Creates a  `HttpLambdaAuthorizer$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IFunction]___
+__Create Form:__ ___[java.lang.String software.amazon.awscdk.services.lambda.IFunction]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| handler-function | software.amazon.awscdk.services.lambda.IFunction |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `handler-function` | software.amazon.awscdk.services.lambda.IFunction |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IFunction handler-function id config]
   (http-lambda-authorizer-builder> (HttpLambdaAuthorizer$Builder/create (name id) handler-function) id config))
 
@@ -171,12 +173,12 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 
 
 (defn http-lambda-authorizer-props-builder
-  "Creates a  `HttpLambdaAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HttpLambdaAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[http-lambda-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (http-lambda-authorizer-props-builder> (new HttpLambdaAuthorizerProps$Builder) id config))
 
@@ -211,12 +213,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
   "Creates a  `HttpUserPoolAuthorizer$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String software.amazon.awscdk.services.cognito.IUserPool]___
+__Create Form:__ ___[java.lang.String software.amazon.awscdk.services.cognito.IUserPool]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| user-pool | software.amazon.awscdk.services.cognito.IUserPool |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `user-pool` | software.amazon.awscdk.services.cognito.IUserPool |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IUserPool user-pool id config]
   (http-user-pool-authorizer-builder> (HttpUserPoolAuthorizer$Builder/create (name id) user-pool) id config))
 
@@ -248,12 +251,12 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.cognito.I
 
 
 (defn http-user-pool-authorizer-props-builder
-  "Creates a  `HttpUserPoolAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HttpUserPoolAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[http-user-pool-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (http-user-pool-authorizer-props-builder> (new HttpUserPoolAuthorizerProps$Builder) id config))
 
@@ -282,12 +285,13 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.cognito.I
   "Creates a  `WebSocketLambdaAuthorizer$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IFunction]___
+__Create Form:__ ___[java.lang.String software.amazon.awscdk.services.lambda.IFunction]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| handler-function | software.amazon.awscdk.services.lambda.IFunction |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `handler-function` | software.amazon.awscdk.services.lambda.IFunction |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IFunction handler-function id config]
   (web-socket-lambda-authorizer-builder> (WebSocketLambdaAuthorizer$Builder/create (name id) handler-function) id config))
 
@@ -313,11 +317,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 
 
 (defn web-socket-lambda-authorizer-props-builder
-  "Creates a  `WebSocketLambdaAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `WebSocketLambdaAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[web-socket-lambda-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (web-socket-lambda-authorizer-props-builder> (new WebSocketLambdaAuthorizerProps$Builder) id config))

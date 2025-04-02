@@ -44,12 +44,12 @@
 
 
 (defn cfn-replication-set-builder
-  "Creates a  `CfnReplicationSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnReplicationSet$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-replication-set-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-replication-set-builder> (CfnReplicationSet$Builder/create scope (name id)) id config))
 
@@ -78,12 +78,12 @@
 
 
 (defn cfn-replication-set-props-builder
-  "Creates a  `CfnReplicationSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnReplicationSetProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-replication-set-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-replication-set-props-builder> (new CfnReplicationSetProps$Builder) id config))
 
@@ -106,12 +106,12 @@
 
 
 (defn cfn-replication-set-region-configuration-property-builder
-  "Creates a  `CfnReplicationSet$RegionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnReplicationSet$RegionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-replication-set-region-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-replication-set-region-configuration-property-builder> (new CfnReplicationSet$RegionConfigurationProperty$Builder) id config))
 
@@ -137,12 +137,12 @@
 
 
 (defn cfn-replication-set-replication-region-property-builder
-  "Creates a  `CfnReplicationSet$ReplicationRegionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnReplicationSet$ReplicationRegionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-replication-set-replication-region-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-replication-set-replication-region-property-builder> (new CfnReplicationSet$ReplicationRegionProperty$Builder) id config))
 
@@ -165,12 +165,12 @@
 
 
 (defn cfn-response-plan-action-property-builder
-  "Creates a  `CfnResponsePlan$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-action-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-action-property-builder> (new CfnResponsePlan$ActionProperty$Builder) id config))
 
@@ -214,12 +214,12 @@
 
 
 (defn cfn-response-plan-builder
-  "Creates a  `CfnResponsePlan$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-response-plan-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-response-plan-builder> (CfnResponsePlan$Builder/create scope (name id)) id config))
 
@@ -242,12 +242,12 @@
 
 
 (defn cfn-response-plan-chat-channel-property-builder
-  "Creates a  `CfnResponsePlan$ChatChannelProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$ChatChannelProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-chat-channel-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-chat-channel-property-builder> (new CfnResponsePlan$ChatChannelProperty$Builder) id config))
 
@@ -273,12 +273,12 @@
 
 
 (defn cfn-response-plan-dynamic-ssm-parameter-property-builder
-  "Creates a  `CfnResponsePlan$DynamicSsmParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$DynamicSsmParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-dynamic-ssm-parameter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-dynamic-ssm-parameter-property-builder> (new CfnResponsePlan$DynamicSsmParameterProperty$Builder) id config))
 
@@ -301,12 +301,12 @@
 
 
 (defn cfn-response-plan-dynamic-ssm-parameter-value-property-builder
-  "Creates a  `CfnResponsePlan$DynamicSsmParameterValueProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$DynamicSsmParameterValueProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-dynamic-ssm-parameter-value-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-dynamic-ssm-parameter-value-property-builder> (new CfnResponsePlan$DynamicSsmParameterValueProperty$Builder) id config))
 
@@ -344,12 +344,12 @@
 
 
 (defn cfn-response-plan-incident-template-property-builder
-  "Creates a  `CfnResponsePlan$IncidentTemplateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$IncidentTemplateProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-incident-template-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-incident-template-property-builder> (new CfnResponsePlan$IncidentTemplateProperty$Builder) id config))
 
@@ -372,12 +372,12 @@
 
 
 (defn cfn-response-plan-integration-property-builder
-  "Creates a  `CfnResponsePlan$IntegrationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$IntegrationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-integration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-integration-property-builder> (new CfnResponsePlan$IntegrationProperty$Builder) id config))
 
@@ -400,12 +400,12 @@
 
 
 (defn cfn-response-plan-notification-target-item-property-builder
-  "Creates a  `CfnResponsePlan$NotificationTargetItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$NotificationTargetItemProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-notification-target-item-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-notification-target-item-property-builder> (new CfnResponsePlan$NotificationTargetItemProperty$Builder) id config))
 
@@ -434,12 +434,12 @@
 
 
 (defn cfn-response-plan-pager-duty-configuration-property-builder
-  "Creates a  `CfnResponsePlan$PagerDutyConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$PagerDutyConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-pager-duty-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-pager-duty-configuration-property-builder> (new CfnResponsePlan$PagerDutyConfigurationProperty$Builder) id config))
 
@@ -462,12 +462,12 @@
 
 
 (defn cfn-response-plan-pager-duty-incident-configuration-property-builder
-  "Creates a  `CfnResponsePlan$PagerDutyIncidentConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$PagerDutyIncidentConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-pager-duty-incident-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-pager-duty-incident-configuration-property-builder> (new CfnResponsePlan$PagerDutyIncidentConfigurationProperty$Builder) id config))
 
@@ -511,12 +511,12 @@
 
 
 (defn cfn-response-plan-props-builder
-  "Creates a  `CfnResponsePlanProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlanProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-props-builder> (new CfnResponsePlanProps$Builder) id config))
 
@@ -554,12 +554,12 @@
 
 
 (defn cfn-response-plan-ssm-automation-property-builder
-  "Creates a  `CfnResponsePlan$SsmAutomationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$SsmAutomationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-ssm-automation-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-ssm-automation-property-builder> (new CfnResponsePlan$SsmAutomationProperty$Builder) id config))
 
@@ -585,11 +585,11 @@
 
 
 (defn cfn-response-plan-ssm-parameter-property-builder
-  "Creates a  `CfnResponsePlan$SsmParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResponsePlan$SsmParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-response-plan-ssm-parameter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-response-plan-ssm-parameter-property-builder> (new CfnResponsePlan$SsmParameterProperty$Builder) id config))

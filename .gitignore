@@ -4,6 +4,7 @@
 .lsp*
 .calva*
 profiles.clj
+.cljdoc-preview
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,linux,eclipse,intellij,visualstudiocode,emacs,maven,leiningen,clojure
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,linux,eclipse,intellij,visualstudiocode,emacs,maven,leiningen,clojure

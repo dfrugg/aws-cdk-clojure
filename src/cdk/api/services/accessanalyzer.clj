@@ -27,12 +27,12 @@
 
 
 (defn cfn-analyzer-analyzer-configuration-property-builder
-  "Creates a  `CfnAnalyzer$AnalyzerConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnalyzer$AnalyzerConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-analyzer-analyzer-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-analyzer-analyzer-configuration-property-builder> (new CfnAnalyzer$AnalyzerConfigurationProperty$Builder) id config))
 
@@ -58,12 +58,12 @@
 
 
 (defn cfn-analyzer-archive-rule-property-builder
-  "Creates a  `CfnAnalyzer$ArchiveRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnalyzer$ArchiveRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-analyzer-archive-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-analyzer-archive-rule-property-builder> (new CfnAnalyzer$ArchiveRuleProperty$Builder) id config))
 
@@ -98,12 +98,12 @@
 
 
 (defn cfn-analyzer-builder
-  "Creates a  `CfnAnalyzer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnalyzer$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-analyzer-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-analyzer-builder> (CfnAnalyzer$Builder/create scope (name id)) id config))
 
@@ -138,12 +138,12 @@
 
 
 (defn cfn-analyzer-filter-property-builder
-  "Creates a  `CfnAnalyzer$FilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnalyzer$FilterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-analyzer-filter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-analyzer-filter-property-builder> (new CfnAnalyzer$FilterProperty$Builder) id config))
 
@@ -178,12 +178,12 @@
 
 
 (defn cfn-analyzer-props-builder
-  "Creates a  `CfnAnalyzerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnalyzerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-analyzer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-analyzer-props-builder> (new CfnAnalyzerProps$Builder) id config))
 
@@ -206,11 +206,11 @@
 
 
 (defn cfn-analyzer-unused-access-configuration-property-builder
-  "Creates a  `CfnAnalyzer$UnusedAccessConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAnalyzer$UnusedAccessConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-analyzer-unused-access-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-analyzer-unused-access-configuration-property-builder> (new CfnAnalyzer$UnusedAccessConfigurationProperty$Builder) id config))

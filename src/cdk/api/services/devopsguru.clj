@@ -20,14 +20,14 @@
 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |"
   [^software.constructs.Construct scope id]
   (.build (CfnLogAnomalyDetectionIntegration$Builder/create scope (name id))))
 
 
 (defn cfn-log-anomaly-detection-integration-props-builder
-  "Creates a  `CfnLogAnomalyDetectionIntegrationProps$Builder` instance using a no-argument construct,then builds it."
+  "Creates a  `CfnLogAnomalyDetectionIntegrationProps$Builder` instance using a no-argument construct, then builds it."
   []
   (.build (new CfnLogAnomalyDetectionIntegrationProps$Builder)))
 
@@ -50,12 +50,12 @@
 
 
 (defn cfn-notification-channel-builder
-  "Creates a  `CfnNotificationChannel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnNotificationChannel$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-notification-channel-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-notification-channel-builder> (CfnNotificationChannel$Builder/create scope (name id)) id config))
 
@@ -81,12 +81,12 @@
 
 
 (defn cfn-notification-channel-notification-channel-config-property-builder
-  "Creates a  `CfnNotificationChannel$NotificationChannelConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnNotificationChannel$NotificationChannelConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-notification-channel-notification-channel-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-notification-channel-notification-channel-config-property-builder> (new CfnNotificationChannel$NotificationChannelConfigProperty$Builder) id config))
 
@@ -112,12 +112,12 @@
 
 
 (defn cfn-notification-channel-notification-filter-config-property-builder
-  "Creates a  `CfnNotificationChannel$NotificationFilterConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnNotificationChannel$NotificationFilterConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-notification-channel-notification-filter-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-notification-channel-notification-filter-config-property-builder> (new CfnNotificationChannel$NotificationFilterConfigProperty$Builder) id config))
 
@@ -140,12 +140,12 @@
 
 
 (defn cfn-notification-channel-props-builder
-  "Creates a  `CfnNotificationChannelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnNotificationChannelProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-notification-channel-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-notification-channel-props-builder> (new CfnNotificationChannelProps$Builder) id config))
 
@@ -168,12 +168,12 @@
 
 
 (defn cfn-notification-channel-sns-channel-config-property-builder
-  "Creates a  `CfnNotificationChannel$SnsChannelConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnNotificationChannel$SnsChannelConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-notification-channel-sns-channel-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-notification-channel-sns-channel-config-property-builder> (new CfnNotificationChannel$SnsChannelConfigProperty$Builder) id config))
 
@@ -196,12 +196,12 @@
 
 
 (defn cfn-resource-collection-builder
-  "Creates a  `CfnResourceCollection$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourceCollection$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-resource-collection-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-resource-collection-builder> (CfnResourceCollection$Builder/create scope (name id)) id config))
 
@@ -224,12 +224,12 @@
 
 
 (defn cfn-resource-collection-cloud-formation-collection-filter-property-builder
-  "Creates a  `CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-collection-cloud-formation-collection-filter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-collection-cloud-formation-collection-filter-property-builder> (new CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder) id config))
 
@@ -252,12 +252,12 @@
 
 
 (defn cfn-resource-collection-props-builder
-  "Creates a  `CfnResourceCollectionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourceCollectionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-collection-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-collection-props-builder> (new CfnResourceCollectionProps$Builder) id config))
 
@@ -283,12 +283,12 @@
 
 
 (defn cfn-resource-collection-resource-collection-filter-property-builder
-  "Creates a  `CfnResourceCollection$ResourceCollectionFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourceCollection$ResourceCollectionFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-collection-resource-collection-filter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-collection-resource-collection-filter-property-builder> (new CfnResourceCollection$ResourceCollectionFilterProperty$Builder) id config))
 
@@ -314,11 +314,11 @@
 
 
 (defn cfn-resource-collection-tag-collection-property-builder
-  "Creates a  `CfnResourceCollection$TagCollectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourceCollection$TagCollectionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-collection-tag-collection-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-collection-tag-collection-property-builder> (new CfnResourceCollection$TagCollectionProperty$Builder) id config))

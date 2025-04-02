@@ -54,12 +54,12 @@
 
 
 (defn cfn-experiment-template-builder
-  "Creates a  `CfnExperimentTemplate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-experiment-template-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-experiment-template-builder> (CfnExperimentTemplate$Builder/create scope (name id)) id config))
 
@@ -82,12 +82,12 @@
 
 
 (defn cfn-experiment-template-cloud-watch-logs-configuration-property-builder
-  "Creates a  `CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-cloud-watch-logs-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-cloud-watch-logs-configuration-property-builder> (new CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder) id config))
 
@@ -122,12 +122,12 @@
 
 
 (defn cfn-experiment-template-experiment-template-action-property-builder
-  "Creates a  `CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-experiment-template-action-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-experiment-template-action-property-builder> (new CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder) id config))
 
@@ -153,12 +153,12 @@
 
 
 (defn cfn-experiment-template-experiment-template-experiment-options-property-builder
-  "Creates a  `CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-experiment-template-experiment-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-experiment-template-experiment-options-property-builder> (new CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder) id config))
 
@@ -187,12 +187,12 @@
 
 
 (defn cfn-experiment-template-experiment-template-log-configuration-property-builder
-  "Creates a  `CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-experiment-template-log-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-experiment-template-log-configuration-property-builder> (new CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder) id config))
 
@@ -218,12 +218,12 @@
 
 
 (defn cfn-experiment-template-experiment-template-stop-condition-property-builder
-  "Creates a  `CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-experiment-template-stop-condition-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-experiment-template-stop-condition-property-builder> (new CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder) id config))
 
@@ -249,12 +249,12 @@
 
 
 (defn cfn-experiment-template-experiment-template-target-filter-property-builder
-  "Creates a  `CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-experiment-template-target-filter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-experiment-template-target-filter-property-builder> (new CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder) id config))
 
@@ -292,12 +292,12 @@
 
 
 (defn cfn-experiment-template-experiment-template-target-property-builder
-  "Creates a  `CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-experiment-template-target-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-experiment-template-target-property-builder> (new CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder) id config))
 
@@ -341,12 +341,12 @@
 
 
 (defn cfn-experiment-template-props-builder
-  "Creates a  `CfnExperimentTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-props-builder> (new CfnExperimentTemplateProps$Builder) id config))
 
@@ -372,12 +372,12 @@
 
 
 (defn cfn-experiment-template-s3-configuration-property-builder
-  "Creates a  `CfnExperimentTemplate$S3ConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnExperimentTemplate$S3ConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-experiment-template-s3-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-experiment-template-s3-configuration-property-builder> (new CfnExperimentTemplate$S3ConfigurationProperty$Builder) id config))
 
@@ -409,12 +409,12 @@
 
 
 (defn cfn-target-account-configuration-builder
-  "Creates a  `CfnTargetAccountConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTargetAccountConfiguration$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-target-account-configuration-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-target-account-configuration-builder> (CfnTargetAccountConfiguration$Builder/create scope (name id)) id config))
 
@@ -446,11 +446,11 @@
 
 
 (defn cfn-target-account-configuration-props-builder
-  "Creates a  `CfnTargetAccountConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTargetAccountConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-target-account-configuration-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-target-account-configuration-props-builder> (new CfnTargetAccountConfigurationProps$Builder) id config))

@@ -528,12 +528,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-compute-environment-builder
-  "Creates a  `CfnComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-compute-environment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-compute-environment-builder> (CfnComputeEnvironment$Builder/create scope (name id)) id config))
 
@@ -607,12 +607,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-compute-environment-compute-resources-property-builder
-  "Creates a  `CfnComputeEnvironment$ComputeResourcesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnComputeEnvironment$ComputeResourcesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-compute-environment-compute-resources-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-compute-environment-compute-resources-property-builder> (new CfnComputeEnvironment$ComputeResourcesProperty$Builder) id config))
 
@@ -641,12 +641,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-compute-environment-ec2-configuration-object-property-builder
-  "Creates a  `CfnComputeEnvironment$Ec2ConfigurationObjectProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnComputeEnvironment$Ec2ConfigurationObjectProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-compute-environment-ec2-configuration-object-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-compute-environment-ec2-configuration-object-property-builder> (new CfnComputeEnvironment$Ec2ConfigurationObjectProperty$Builder) id config))
 
@@ -672,12 +672,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-compute-environment-eks-configuration-property-builder
-  "Creates a  `CfnComputeEnvironment$EksConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnComputeEnvironment$EksConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-compute-environment-eks-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-compute-environment-eks-configuration-property-builder> (new CfnComputeEnvironment$EksConfigurationProperty$Builder) id config))
 
@@ -706,12 +706,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-compute-environment-launch-template-specification-property-builder
-  "Creates a  `CfnComputeEnvironment$LaunchTemplateSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnComputeEnvironment$LaunchTemplateSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-compute-environment-launch-template-specification-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-compute-environment-launch-template-specification-property-builder> (new CfnComputeEnvironment$LaunchTemplateSpecificationProperty$Builder) id config))
 
@@ -761,12 +761,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-compute-environment-props-builder
-  "Creates a  `CfnComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-compute-environment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-compute-environment-props-builder> (new CfnComputeEnvironmentProps$Builder) id config))
 
@@ -792,12 +792,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-compute-environment-update-policy-property-builder
-  "Creates a  `CfnComputeEnvironment$UpdatePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnComputeEnvironment$UpdatePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-compute-environment-update-policy-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-compute-environment-update-policy-property-builder> (new CfnComputeEnvironment$UpdatePolicyProperty$Builder) id config))
 
@@ -823,12 +823,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-authorization-config-property-builder
-  "Creates a  `CfnJobDefinition$AuthorizationConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$AuthorizationConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-authorization-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-authorization-config-property-builder> (new CfnJobDefinition$AuthorizationConfigProperty$Builder) id config))
 
@@ -887,12 +887,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-builder
-  "Creates a  `CfnJobDefinition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-job-definition-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-job-definition-builder> (CfnJobDefinition$Builder/create scope (name id)) id config))
 
@@ -981,12 +981,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-container-properties-property-builder
-  "Creates a  `CfnJobDefinition$ContainerPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$ContainerPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-container-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-container-properties-property-builder> (new CfnJobDefinition$ContainerPropertiesProperty$Builder) id config))
 
@@ -1015,12 +1015,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-device-property-builder
-  "Creates a  `CfnJobDefinition$DeviceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$DeviceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-device-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-device-property-builder> (new CfnJobDefinition$DeviceProperty$Builder) id config))
 
@@ -1043,12 +1043,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-ecs-properties-property-builder
-  "Creates a  `CfnJobDefinition$EcsPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EcsPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-ecs-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-ecs-properties-property-builder> (new CfnJobDefinition$EcsPropertiesProperty$Builder) id config))
 
@@ -1098,12 +1098,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-ecs-task-properties-property-builder
-  "Creates a  `CfnJobDefinition$EcsTaskPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EcsTaskPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-ecs-task-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-ecs-task-properties-property-builder> (new CfnJobDefinition$EcsTaskPropertiesProperty$Builder) id config))
 
@@ -1138,12 +1138,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-efs-volume-configuration-property-builder
-  "Creates a  `CfnJobDefinition$EfsVolumeConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EfsVolumeConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-efs-volume-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-efs-volume-configuration-property-builder> (new CfnJobDefinition$EfsVolumeConfigurationProperty$Builder) id config))
 
@@ -1169,12 +1169,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-eks-container-environment-variable-property-builder
-  "Creates a  `CfnJobDefinition$EksContainerEnvironmentVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EksContainerEnvironmentVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-eks-container-environment-variable-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-eks-container-environment-variable-property-builder> (new CfnJobDefinition$EksContainerEnvironmentVariableProperty$Builder) id config))
 
@@ -1221,12 +1221,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-eks-container-property-builder
-  "Creates a  `CfnJobDefinition$EksContainerProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EksContainerProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-eks-container-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-eks-container-property-builder> (new CfnJobDefinition$EksContainerProperty$Builder) id config))
 
@@ -1255,12 +1255,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-eks-container-volume-mount-property-builder
-  "Creates a  `CfnJobDefinition$EksContainerVolumeMountProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EksContainerVolumeMountProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-eks-container-volume-mount-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-eks-container-volume-mount-property-builder> (new CfnJobDefinition$EksContainerVolumeMountProperty$Builder) id config))
 
@@ -1283,12 +1283,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-eks-properties-property-builder
-  "Creates a  `CfnJobDefinition$EksPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EksPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-eks-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-eks-properties-property-builder> (new CfnJobDefinition$EksPropertiesProperty$Builder) id config))
 
@@ -1314,12 +1314,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-eks-secret-property-builder
-  "Creates a  `CfnJobDefinition$EksSecretProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EksSecretProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-eks-secret-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-eks-secret-property-builder> (new CfnJobDefinition$EksSecretProperty$Builder) id config))
 
@@ -1351,12 +1351,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-eks-volume-property-builder
-  "Creates a  `CfnJobDefinition$EksVolumeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EksVolumeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-eks-volume-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-eks-volume-property-builder> (new CfnJobDefinition$EksVolumeProperty$Builder) id config))
 
@@ -1382,12 +1382,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-empty-dir-property-builder
-  "Creates a  `CfnJobDefinition$EmptyDirProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EmptyDirProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-empty-dir-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-empty-dir-property-builder> (new CfnJobDefinition$EmptyDirProperty$Builder) id config))
 
@@ -1413,12 +1413,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-environment-property-builder
-  "Creates a  `CfnJobDefinition$EnvironmentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EnvironmentProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-environment-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-environment-property-builder> (new CfnJobDefinition$EnvironmentProperty$Builder) id config))
 
@@ -1441,12 +1441,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-ephemeral-storage-property-builder
-  "Creates a  `CfnJobDefinition$EphemeralStorageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EphemeralStorageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-ephemeral-storage-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-ephemeral-storage-property-builder> (new CfnJobDefinition$EphemeralStorageProperty$Builder) id config))
 
@@ -1478,12 +1478,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-evaluate-on-exit-property-builder
-  "Creates a  `CfnJobDefinition$EvaluateOnExitProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$EvaluateOnExitProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-evaluate-on-exit-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-evaluate-on-exit-property-builder> (new CfnJobDefinition$EvaluateOnExitProperty$Builder) id config))
 
@@ -1506,12 +1506,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-fargate-platform-configuration-property-builder
-  "Creates a  `CfnJobDefinition$FargatePlatformConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$FargatePlatformConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-fargate-platform-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-fargate-platform-configuration-property-builder> (new CfnJobDefinition$FargatePlatformConfigurationProperty$Builder) id config))
 
@@ -1534,12 +1534,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-host-path-property-builder
-  "Creates a  `CfnJobDefinition$HostPathProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$HostPathProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-host-path-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-host-path-property-builder> (new CfnJobDefinition$HostPathProperty$Builder) id config))
 
@@ -1562,12 +1562,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-image-pull-secret-property-builder
-  "Creates a  `CfnJobDefinition$ImagePullSecretProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$ImagePullSecretProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-image-pull-secret-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-image-pull-secret-property-builder> (new CfnJobDefinition$ImagePullSecretProperty$Builder) id config))
 
@@ -1605,12 +1605,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-linux-parameters-property-builder
-  "Creates a  `CfnJobDefinition$LinuxParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$LinuxParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-linux-parameters-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-linux-parameters-property-builder> (new CfnJobDefinition$LinuxParametersProperty$Builder) id config))
 
@@ -1639,12 +1639,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-log-configuration-property-builder
-  "Creates a  `CfnJobDefinition$LogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$LogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-log-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-log-configuration-property-builder> (new CfnJobDefinition$LogConfigurationProperty$Builder) id config))
 
@@ -1667,12 +1667,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-metadata-property-builder
-  "Creates a  `CfnJobDefinition$MetadataProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$MetadataProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-metadata-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-metadata-property-builder> (new CfnJobDefinition$MetadataProperty$Builder) id config))
 
@@ -1701,12 +1701,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-mount-points-property-builder
-  "Creates a  `CfnJobDefinition$MountPointsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$MountPointsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-mount-points-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-mount-points-property-builder> (new CfnJobDefinition$MountPointsProperty$Builder) id config))
 
@@ -1729,12 +1729,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-network-configuration-property-builder
-  "Creates a  `CfnJobDefinition$NetworkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$NetworkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-network-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-network-configuration-property-builder> (new CfnJobDefinition$NetworkConfigurationProperty$Builder) id config))
 
@@ -1763,12 +1763,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-node-properties-property-builder
-  "Creates a  `CfnJobDefinition$NodePropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$NodePropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-node-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-node-properties-property-builder> (new CfnJobDefinition$NodePropertiesProperty$Builder) id config))
 
@@ -1800,12 +1800,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-node-range-property-property-builder
-  "Creates a  `CfnJobDefinition$NodeRangePropertyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$NodeRangePropertyProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-node-range-property-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-node-range-property-property-builder> (new CfnJobDefinition$NodeRangePropertyProperty$Builder) id config))
 
@@ -1852,12 +1852,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-pod-properties-property-builder
-  "Creates a  `CfnJobDefinition$PodPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$PodPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-pod-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-pod-properties-property-builder> (new CfnJobDefinition$PodPropertiesProperty$Builder) id config))
 
@@ -1916,12 +1916,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-props-builder
-  "Creates a  `CfnJobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-props-builder> (new CfnJobDefinitionProps$Builder) id config))
 
@@ -1944,12 +1944,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-repository-credentials-property-builder
-  "Creates a  `CfnJobDefinition$RepositoryCredentialsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$RepositoryCredentialsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-repository-credentials-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-repository-credentials-property-builder> (new CfnJobDefinition$RepositoryCredentialsProperty$Builder) id config))
 
@@ -1975,12 +1975,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-resource-requirement-property-builder
-  "Creates a  `CfnJobDefinition$ResourceRequirementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$ResourceRequirementProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-resource-requirement-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-resource-requirement-property-builder> (new CfnJobDefinition$ResourceRequirementProperty$Builder) id config))
 
@@ -2006,12 +2006,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-resources-property-builder
-  "Creates a  `CfnJobDefinition$ResourcesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$ResourcesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-resources-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-resources-property-builder> (new CfnJobDefinition$ResourcesProperty$Builder) id config))
 
@@ -2037,12 +2037,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-retry-strategy-property-builder
-  "Creates a  `CfnJobDefinition$RetryStrategyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$RetryStrategyProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-retry-strategy-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-retry-strategy-property-builder> (new CfnJobDefinition$RetryStrategyProperty$Builder) id config))
 
@@ -2068,12 +2068,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-runtime-platform-property-builder
-  "Creates a  `CfnJobDefinition$RuntimePlatformProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$RuntimePlatformProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-runtime-platform-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-runtime-platform-property-builder> (new CfnJobDefinition$RuntimePlatformProperty$Builder) id config))
 
@@ -2099,12 +2099,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-secret-property-builder
-  "Creates a  `CfnJobDefinition$SecretProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$SecretProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-secret-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-secret-property-builder> (new CfnJobDefinition$SecretProperty$Builder) id config))
 
@@ -2142,12 +2142,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-security-context-property-builder
-  "Creates a  `CfnJobDefinition$SecurityContextProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$SecurityContextProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-security-context-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-security-context-property-builder> (new CfnJobDefinition$SecurityContextProperty$Builder) id config))
 
@@ -2173,12 +2173,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-task-container-dependency-property-builder
-  "Creates a  `CfnJobDefinition$TaskContainerDependencyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$TaskContainerDependencyProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-task-container-dependency-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-task-container-dependency-property-builder> (new CfnJobDefinition$TaskContainerDependencyProperty$Builder) id config))
 
@@ -2246,12 +2246,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-task-container-properties-property-builder
-  "Creates a  `CfnJobDefinition$TaskContainerPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$TaskContainerPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-task-container-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-task-container-properties-property-builder> (new CfnJobDefinition$TaskContainerPropertiesProperty$Builder) id config))
 
@@ -2274,12 +2274,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-timeout-property-builder
-  "Creates a  `CfnJobDefinition$TimeoutProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$TimeoutProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-timeout-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-timeout-property-builder> (new CfnJobDefinition$TimeoutProperty$Builder) id config))
 
@@ -2308,12 +2308,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-tmpfs-property-builder
-  "Creates a  `CfnJobDefinition$TmpfsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$TmpfsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-tmpfs-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-tmpfs-property-builder> (new CfnJobDefinition$TmpfsProperty$Builder) id config))
 
@@ -2342,12 +2342,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-ulimit-property-builder
-  "Creates a  `CfnJobDefinition$UlimitProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$UlimitProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-ulimit-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-ulimit-property-builder> (new CfnJobDefinition$UlimitProperty$Builder) id config))
 
@@ -2370,12 +2370,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-volumes-host-property-builder
-  "Creates a  `CfnJobDefinition$VolumesHostProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$VolumesHostProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-volumes-host-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-volumes-host-property-builder> (new CfnJobDefinition$VolumesHostProperty$Builder) id config))
 
@@ -2404,12 +2404,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-definition-volumes-property-builder
-  "Creates a  `CfnJobDefinition$VolumesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobDefinition$VolumesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-definition-volumes-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-definition-volumes-property-builder> (new CfnJobDefinition$VolumesProperty$Builder) id config))
 
@@ -2450,12 +2450,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-queue-builder
-  "Creates a  `CfnJobQueue$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobQueue$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-job-queue-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-job-queue-builder> (CfnJobQueue$Builder/create scope (name id)) id config))
 
@@ -2481,12 +2481,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-queue-compute-environment-order-property-builder
-  "Creates a  `CfnJobQueue$ComputeEnvironmentOrderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobQueue$ComputeEnvironmentOrderProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-queue-compute-environment-order-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-queue-compute-environment-order-property-builder> (new CfnJobQueue$ComputeEnvironmentOrderProperty$Builder) id config))
 
@@ -2518,12 +2518,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-queue-job-state-time-limit-action-property-builder
-  "Creates a  `CfnJobQueue$JobStateTimeLimitActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobQueue$JobStateTimeLimitActionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-queue-job-state-time-limit-action-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-queue-job-state-time-limit-action-property-builder> (new CfnJobQueue$JobStateTimeLimitActionProperty$Builder) id config))
 
@@ -2564,12 +2564,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-job-queue-props-builder
-  "Creates a  `CfnJobQueueProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnJobQueueProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-job-queue-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-job-queue-props-builder> (new CfnJobQueueProps$Builder) id config))
 
@@ -2598,12 +2598,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scheduling-policy-builder
-  "Creates a  `CfnSchedulingPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSchedulingPolicy$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-scheduling-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-scheduling-policy-builder> (CfnSchedulingPolicy$Builder/create scope (name id)) id config))
 
@@ -2632,12 +2632,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scheduling-policy-fairshare-policy-property-builder
-  "Creates a  `CfnSchedulingPolicy$FairsharePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSchedulingPolicy$FairsharePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-scheduling-policy-fairshare-policy-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-scheduling-policy-fairshare-policy-property-builder> (new CfnSchedulingPolicy$FairsharePolicyProperty$Builder) id config))
 
@@ -2666,12 +2666,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scheduling-policy-props-builder
-  "Creates a  `CfnSchedulingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSchedulingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-scheduling-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-scheduling-policy-props-builder> (new CfnSchedulingPolicyProps$Builder) id config))
 
@@ -2697,12 +2697,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scheduling-policy-share-attributes-property-builder
-  "Creates a  `CfnSchedulingPolicy$ShareAttributesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSchedulingPolicy$ShareAttributesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-scheduling-policy-share-attributes-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-scheduling-policy-share-attributes-property-builder> (new CfnSchedulingPolicy$ShareAttributesProperty$Builder) id config))
 
@@ -2731,12 +2731,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn compute-environment-props-builder
-  "Creates a  `ComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[compute-environment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (compute-environment-props-builder> (new ComputeEnvironmentProps$Builder) id config))
 
@@ -2765,12 +2765,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn custom-reason-builder
-  "Creates a  `CustomReason$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CustomReason$Builder` instance using a no-argument constructor, applies the data configuration using the [[custom-reason-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (custom-reason-builder> (new CustomReason$Builder) id config))
 
@@ -2799,12 +2799,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn device-builder
-  "Creates a  `Device$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Device$Builder` instance using a no-argument constructor, applies the data configuration using the [[device-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (device-builder> (new Device$Builder) id config))
 
@@ -2863,12 +2863,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-container-definition-props-builder
-  "Creates a  `EcsContainerDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsContainerDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecs-container-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecs-container-definition-props-builder> (new EcsContainerDefinitionProps$Builder) id config))
 
@@ -2936,12 +2936,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-ec2-container-definition-builder
-  "Creates a  `EcsEc2ContainerDefinition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsEc2ContainerDefinition$Builder` instance using a scope and ID, applies the data configuration using the [[ecs-ec2-container-definition-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (ecs-ec2-container-definition-builder> (EcsEc2ContainerDefinition$Builder/create scope (name id)) id config))
 
@@ -3009,12 +3009,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-ec2-container-definition-props-builder
-  "Creates a  `EcsEc2ContainerDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsEc2ContainerDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecs-ec2-container-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecs-ec2-container-definition-props-builder> (new EcsEc2ContainerDefinitionProps$Builder) id config))
 
@@ -3088,12 +3088,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-fargate-container-definition-builder
-  "Creates a  `EcsFargateContainerDefinition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsFargateContainerDefinition$Builder` instance using a scope and ID, applies the data configuration using the [[ecs-fargate-container-definition-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (ecs-fargate-container-definition-builder> (EcsFargateContainerDefinition$Builder/create scope (name id)) id config))
 
@@ -3167,12 +3167,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-fargate-container-definition-props-builder
-  "Creates a  `EcsFargateContainerDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsFargateContainerDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecs-fargate-container-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecs-fargate-container-definition-props-builder> (new EcsFargateContainerDefinitionProps$Builder) id config))
 
@@ -3216,12 +3216,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-job-definition-builder
-  "Creates a  `EcsJobDefinition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsJobDefinition$Builder` instance using a scope and ID, applies the data configuration using the [[ecs-job-definition-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (ecs-job-definition-builder> (EcsJobDefinition$Builder/create scope (name id)) id config))
 
@@ -3265,12 +3265,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-job-definition-props-builder
-  "Creates a  `EcsJobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsJobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecs-job-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecs-job-definition-props-builder> (new EcsJobDefinitionProps$Builder) id config))
 
@@ -3296,12 +3296,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-machine-image-builder
-  "Creates a  `EcsMachineImage$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsMachineImage$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecs-machine-image-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecs-machine-image-builder> (new EcsMachineImage$Builder) id config))
 
@@ -3330,12 +3330,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-volume-options-builder
-  "Creates a  `EcsVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcsVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecs-volume-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecs-volume-options-builder> (new EcsVolumeOptions$Builder) id config))
 
@@ -3382,12 +3382,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn efs-volume-builder
-  "Creates a  `EfsVolume$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EfsVolume$Builder` instance using a no-argument create, applies the data configuration using the [[efs-volume-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (efs-volume-builder> (EfsVolume$Builder/create) id config))
 
@@ -3434,12 +3434,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn efs-volume-options-builder
-  "Creates a  `EfsVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EfsVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[efs-volume-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (efs-volume-options-builder> (new EfsVolumeOptions$Builder) id config))
 
@@ -3513,12 +3513,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn eks-container-definition-builder
-  "Creates a  `EksContainerDefinition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EksContainerDefinition$Builder` instance using a scope and ID, applies the data configuration using the [[eks-container-definition-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (eks-container-definition-builder> (EksContainerDefinition$Builder/create scope (name id)) id config))
 
@@ -3592,12 +3592,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn eks-container-definition-props-builder
-  "Creates a  `EksContainerDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EksContainerDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[eks-container-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (eks-container-definition-props-builder> (new EksContainerDefinitionProps$Builder) id config))
 
@@ -3647,12 +3647,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn eks-job-definition-builder
-  "Creates a  `EksJobDefinition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EksJobDefinition$Builder` instance using a scope and ID, applies the data configuration using the [[eks-job-definition-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (eks-job-definition-builder> (EksJobDefinition$Builder/create scope (name id)) id config))
 
@@ -3702,12 +3702,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn eks-job-definition-props-builder
-  "Creates a  `EksJobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EksJobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[eks-job-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (eks-job-definition-props-builder> (new EksJobDefinitionProps$Builder) id config))
 
@@ -3733,12 +3733,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn eks-machine-image-builder
-  "Creates a  `EksMachineImage$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EksMachineImage$Builder` instance using a no-argument constructor, applies the data configuration using the [[eks-machine-image-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (eks-machine-image-builder> (new EksMachineImage$Builder) id config))
 
@@ -3767,12 +3767,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn eks-volume-options-builder
-  "Creates a  `EksVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EksVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[eks-volume-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (eks-volume-options-builder> (new EksVolumeOptions$Builder) id config))
 
@@ -3807,12 +3807,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn empty-dir-volume-builder
-  "Creates a  `EmptyDirVolume$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EmptyDirVolume$Builder` instance using a no-argument create, applies the data configuration using the [[empty-dir-volume-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (empty-dir-volume-builder> (EmptyDirVolume$Builder/create) id config))
 
@@ -3847,12 +3847,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn empty-dir-volume-options-builder
-  "Creates a  `EmptyDirVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EmptyDirVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[empty-dir-volume-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (empty-dir-volume-options-builder> (new EmptyDirVolumeOptions$Builder) id config))
 
@@ -3884,12 +3884,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn fairshare-scheduling-policy-builder
-  "Creates a  `FairshareSchedulingPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FairshareSchedulingPolicy$Builder` instance using a scope and ID, applies the data configuration using the [[fairshare-scheduling-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (fairshare-scheduling-policy-builder> (FairshareSchedulingPolicy$Builder/create scope (name id)) id config))
 
@@ -3921,12 +3921,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn fairshare-scheduling-policy-props-builder
-  "Creates a  `FairshareSchedulingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FairshareSchedulingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[fairshare-scheduling-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (fairshare-scheduling-policy-props-builder> (new FairshareSchedulingPolicyProps$Builder) id config))
 
@@ -3982,12 +3982,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn fargate-compute-environment-builder
-  "Creates a  `FargateComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FargateComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration using the [[fargate-compute-environment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (fargate-compute-environment-builder> (FargateComputeEnvironment$Builder/create scope (name id)) id config))
 
@@ -4043,12 +4043,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn fargate-compute-environment-props-builder
-  "Creates a  `FargateComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FargateComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[fargate-compute-environment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (fargate-compute-environment-props-builder> (new FargateComputeEnvironmentProps$Builder) id config))
 
@@ -4080,12 +4080,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn host-path-volume-builder
-  "Creates a  `HostPathVolume$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HostPathVolume$Builder` instance using a no-argument create, applies the data configuration using the [[host-path-volume-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (host-path-volume-builder> (HostPathVolume$Builder/create) id config))
 
@@ -4117,12 +4117,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn host-path-volume-options-builder
-  "Creates a  `HostPathVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HostPathVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[host-path-volume-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (host-path-volume-options-builder> (new HostPathVolumeOptions$Builder) id config))
 
@@ -4154,12 +4154,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn host-volume-builder
-  "Creates a  `HostVolume$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HostVolume$Builder` instance using a no-argument create, applies the data configuration using the [[host-volume-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (host-volume-builder> (HostVolume$Builder/create) id config))
 
@@ -4191,12 +4191,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn host-volume-options-builder
-  "Creates a  `HostVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HostVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[host-volume-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (host-volume-options-builder> (new HostVolumeOptions$Builder) id config))
 
@@ -4234,12 +4234,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn job-definition-props-builder
-  "Creates a  `JobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `JobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[job-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (job-definition-props-builder> (new JobDefinitionProps$Builder) id config))
 
@@ -4277,12 +4277,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn job-queue-builder
-  "Creates a  `JobQueue$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `JobQueue$Builder` instance using a scope and ID, applies the data configuration using the [[job-queue-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (job-queue-builder> (JobQueue$Builder/create scope (name id)) id config))
 
@@ -4320,12 +4320,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn job-queue-props-builder
-  "Creates a  `JobQueueProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `JobQueueProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[job-queue-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (job-queue-props-builder> (new JobQueueProps$Builder) id config))
 
@@ -4357,12 +4357,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn job-state-time-limit-action-builder
-  "Creates a  `JobStateTimeLimitAction$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `JobStateTimeLimitAction$Builder` instance using a no-argument constructor, applies the data configuration using the [[job-state-time-limit-action-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (job-state-time-limit-action-builder> (new JobStateTimeLimitAction$Builder) id config))
 
@@ -4394,12 +4394,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn linux-parameters-builder
-  "Creates a  `LinuxParameters$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LinuxParameters$Builder` instance using a scope and ID, applies the data configuration using the [[linux-parameters-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (linux-parameters-builder> (LinuxParameters$Builder/create scope (name id)) id config))
 
@@ -4431,12 +4431,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn linux-parameters-props-builder
-  "Creates a  `LinuxParametersProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LinuxParametersProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[linux-parameters-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (linux-parameters-props-builder> (new LinuxParametersProps$Builder) id config))
 
@@ -4492,12 +4492,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn managed-compute-environment-props-builder
-  "Creates a  `ManagedComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ManagedComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[managed-compute-environment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (managed-compute-environment-props-builder> (new ManagedComputeEnvironmentProps$Builder) id config))
 
@@ -4586,12 +4586,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn managed-ec2-ecs-compute-environment-builder
-  "Creates a  `ManagedEc2EcsComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ManagedEc2EcsComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration using the [[managed-ec2-ecs-compute-environment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (managed-ec2-ecs-compute-environment-builder> (ManagedEc2EcsComputeEnvironment$Builder/create scope (name id)) id config))
 
@@ -4680,12 +4680,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn managed-ec2-ecs-compute-environment-props-builder
-  "Creates a  `ManagedEc2EcsComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ManagedEc2EcsComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[managed-ec2-ecs-compute-environment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (managed-ec2-ecs-compute-environment-props-builder> (new ManagedEc2EcsComputeEnvironmentProps$Builder) id config))
 
@@ -4777,12 +4777,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn managed-ec2-eks-compute-environment-builder
-  "Creates a  `ManagedEc2EksComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ManagedEc2EksComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration using the [[managed-ec2-eks-compute-environment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (managed-ec2-eks-compute-environment-builder> (ManagedEc2EksComputeEnvironment$Builder/create scope (name id)) id config))
 
@@ -4874,12 +4874,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn managed-ec2-eks-compute-environment-props-builder
-  "Creates a  `ManagedEc2EksComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ManagedEc2EksComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[managed-ec2-eks-compute-environment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (managed-ec2-eks-compute-environment-props-builder> (new ManagedEc2EksComputeEnvironmentProps$Builder) id config))
 
@@ -4908,12 +4908,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn multi-node-container-builder
-  "Creates a  `MultiNodeContainer$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MultiNodeContainer$Builder` instance using a no-argument constructor, applies the data configuration using the [[multi-node-container-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (multi-node-container-builder> (new MultiNodeContainer$Builder) id config))
 
@@ -4963,12 +4963,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn multi-node-job-definition-builder
-  "Creates a  `MultiNodeJobDefinition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MultiNodeJobDefinition$Builder` instance using a scope and ID, applies the data configuration using the [[multi-node-job-definition-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (multi-node-job-definition-builder> (MultiNodeJobDefinition$Builder/create scope (name id)) id config))
 
@@ -5018,12 +5018,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn multi-node-job-definition-props-builder
-  "Creates a  `MultiNodeJobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MultiNodeJobDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[multi-node-job-definition-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (multi-node-job-definition-props-builder> (new MultiNodeJobDefinitionProps$Builder) id config))
 
@@ -5049,12 +5049,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ordered-compute-environment-builder
-  "Creates a  `OrderedComputeEnvironment$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `OrderedComputeEnvironment$Builder` instance using a no-argument constructor, applies the data configuration using the [[ordered-compute-environment-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ordered-compute-environment-builder> (new OrderedComputeEnvironment$Builder) id config))
 
@@ -5089,12 +5089,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secret-path-volume-builder
-  "Creates a  `SecretPathVolume$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretPathVolume$Builder` instance using a no-argument create, applies the data configuration using the [[secret-path-volume-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-path-volume-builder> (SecretPathVolume$Builder/create) id config))
 
@@ -5129,12 +5129,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secret-path-volume-options-builder
-  "Creates a  `SecretPathVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretPathVolumeOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-path-volume-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-path-volume-options-builder> (new SecretPathVolumeOptions$Builder) id config))
 
@@ -5160,12 +5160,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secret-version-info-builder
-  "Creates a  `SecretVersionInfo$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecretVersionInfo$Builder` instance using a no-argument constructor, applies the data configuration using the [[secret-version-info-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (secret-version-info-builder> (new SecretVersionInfo$Builder) id config))
 
@@ -5191,12 +5191,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn share-builder
-  "Creates a  `Share$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Share$Builder` instance using a no-argument constructor, applies the data configuration using the [[share-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (share-builder> (new Share$Builder) id config))
 
@@ -5225,12 +5225,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn tmpfs-builder
-  "Creates a  `Tmpfs$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Tmpfs$Builder` instance using a no-argument constructor, applies the data configuration using the [[tmpfs-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (tmpfs-builder> (new Tmpfs$Builder) id config))
 
@@ -5259,12 +5259,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ulimit-builder
-  "Creates a  `Ulimit$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Ulimit$Builder` instance using a no-argument constructor, applies the data configuration using the [[ulimit-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ulimit-builder> (new Ulimit$Builder) id config))
 
@@ -5296,12 +5296,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn unmanaged-compute-environment-builder
-  "Creates a  `UnmanagedComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `UnmanagedComputeEnvironment$Builder` instance using a scope and ID, applies the data configuration using the [[unmanaged-compute-environment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (unmanaged-compute-environment-builder> (UnmanagedComputeEnvironment$Builder/create scope (name id)) id config))
 
@@ -5333,11 +5333,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn unmanaged-compute-environment-props-builder
-  "Creates a  `UnmanagedComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `UnmanagedComputeEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[unmanaged-compute-environment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (unmanaged-compute-environment-props-builder> (new UnmanagedComputeEnvironmentProps$Builder) id config))

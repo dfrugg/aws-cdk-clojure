@@ -82,12 +82,12 @@
 
 
 (defn cfn-asset-builder
-  "Creates a  `CfnAsset$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAsset$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-asset-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-asset-builder> (CfnAsset$Builder/create scope (name id)) id config))
 
@@ -113,12 +113,12 @@
 
 
 (defn cfn-asset-egress-endpoint-property-builder
-  "Creates a  `CfnAsset$EgressEndpointProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAsset$EgressEndpointProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-asset-egress-endpoint-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-asset-egress-endpoint-property-builder> (new CfnAsset$EgressEndpointProperty$Builder) id config))
 
@@ -159,12 +159,12 @@
 
 
 (defn cfn-asset-props-builder
-  "Creates a  `CfnAssetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAssetProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-asset-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-asset-props-builder> (new CfnAssetProps$Builder) id config))
 
@@ -202,12 +202,12 @@
 
 
 (defn cfn-channel-builder
-  "Creates a  `CfnChannel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnChannel$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-channel-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-channel-builder> (CfnChannel$Builder/create scope (name id)) id config))
 
@@ -230,12 +230,12 @@
 
 
 (defn cfn-channel-hls-ingest-property-builder
-  "Creates a  `CfnChannel$HlsIngestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnChannel$HlsIngestProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-channel-hls-ingest-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-channel-hls-ingest-property-builder> (new CfnChannel$HlsIngestProperty$Builder) id config))
 
@@ -267,12 +267,12 @@
 
 
 (defn cfn-channel-ingest-endpoint-property-builder
-  "Creates a  `CfnChannel$IngestEndpointProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnChannel$IngestEndpointProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-channel-ingest-endpoint-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-channel-ingest-endpoint-property-builder> (new CfnChannel$IngestEndpointProperty$Builder) id config))
 
@@ -295,12 +295,12 @@
 
 
 (defn cfn-channel-log-configuration-property-builder
-  "Creates a  `CfnChannel$LogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnChannel$LogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-channel-log-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-channel-log-configuration-property-builder> (new CfnChannel$LogConfigurationProperty$Builder) id config))
 
@@ -338,12 +338,12 @@
 
 
 (defn cfn-channel-props-builder
-  "Creates a  `CfnChannelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnChannelProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-channel-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-channel-props-builder> (new CfnChannelProps$Builder) id config))
 
@@ -369,12 +369,12 @@
 
 
 (defn cfn-origin-endpoint-authorization-property-builder
-  "Creates a  `CfnOriginEndpoint$AuthorizationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$AuthorizationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-authorization-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-authorization-property-builder> (new CfnOriginEndpoint$AuthorizationProperty$Builder) id config))
 
@@ -436,12 +436,12 @@
 
 
 (defn cfn-origin-endpoint-builder
-  "Creates a  `CfnOriginEndpoint$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-origin-endpoint-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-origin-endpoint-builder> (CfnOriginEndpoint$Builder/create scope (name id)) id config))
 
@@ -473,12 +473,12 @@
 
 
 (defn cfn-origin-endpoint-cmaf-encryption-property-builder
-  "Creates a  `CfnOriginEndpoint$CmafEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$CmafEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-cmaf-encryption-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-cmaf-encryption-property-builder> (new CfnOriginEndpoint$CmafEncryptionProperty$Builder) id config))
 
@@ -513,12 +513,12 @@
 
 
 (defn cfn-origin-endpoint-cmaf-package-property-builder
-  "Creates a  `CfnOriginEndpoint$CmafPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$CmafPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-cmaf-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-cmaf-package-property-builder> (new CfnOriginEndpoint$CmafPackageProperty$Builder) id config))
 
@@ -544,12 +544,12 @@
 
 
 (defn cfn-origin-endpoint-dash-encryption-property-builder
-  "Creates a  `CfnOriginEndpoint$DashEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$DashEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-dash-encryption-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-dash-encryption-property-builder> (new CfnOriginEndpoint$DashEncryptionProperty$Builder) id config))
 
@@ -617,12 +617,12 @@
 
 
 (defn cfn-origin-endpoint-dash-package-property-builder
-  "Creates a  `CfnOriginEndpoint$DashPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$DashPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-dash-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-dash-package-property-builder> (new CfnOriginEndpoint$DashPackageProperty$Builder) id config))
 
@@ -648,12 +648,12 @@
 
 
 (defn cfn-origin-endpoint-encryption-contract-configuration-property-builder
-  "Creates a  `CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-encryption-contract-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-encryption-contract-configuration-property-builder> (new CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder) id config))
 
@@ -688,12 +688,12 @@
 
 
 (defn cfn-origin-endpoint-hls-encryption-property-builder
-  "Creates a  `CfnOriginEndpoint$HlsEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$HlsEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-hls-encryption-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-hls-encryption-property-builder> (new CfnOriginEndpoint$HlsEncryptionProperty$Builder) id config))
 
@@ -743,12 +743,12 @@
 
 
 (defn cfn-origin-endpoint-hls-manifest-property-builder
-  "Creates a  `CfnOriginEndpoint$HlsManifestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$HlsManifestProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-hls-manifest-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-hls-manifest-property-builder> (new CfnOriginEndpoint$HlsManifestProperty$Builder) id config))
 
@@ -804,12 +804,12 @@
 
 
 (defn cfn-origin-endpoint-hls-package-property-builder
-  "Creates a  `CfnOriginEndpoint$HlsPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$HlsPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-hls-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-hls-package-property-builder> (new CfnOriginEndpoint$HlsPackageProperty$Builder) id config))
 
@@ -832,12 +832,12 @@
 
 
 (defn cfn-origin-endpoint-mss-encryption-property-builder
-  "Creates a  `CfnOriginEndpoint$MssEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$MssEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-mss-encryption-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-mss-encryption-property-builder> (new CfnOriginEndpoint$MssEncryptionProperty$Builder) id config))
 
@@ -869,12 +869,12 @@
 
 
 (defn cfn-origin-endpoint-mss-package-property-builder
-  "Creates a  `CfnOriginEndpoint$MssPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$MssPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-mss-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-mss-package-property-builder> (new CfnOriginEndpoint$MssPackageProperty$Builder) id config))
 
@@ -936,12 +936,12 @@
 
 
 (defn cfn-origin-endpoint-props-builder
-  "Creates a  `CfnOriginEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-props-builder> (new CfnOriginEndpointProps$Builder) id config))
 
@@ -979,12 +979,12 @@
 
 
 (defn cfn-origin-endpoint-speke-key-provider-property-builder
-  "Creates a  `CfnOriginEndpoint$SpekeKeyProviderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$SpekeKeyProviderProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-speke-key-provider-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-speke-key-provider-property-builder> (new CfnOriginEndpoint$SpekeKeyProviderProperty$Builder) id config))
 
@@ -1013,12 +1013,12 @@
 
 
 (defn cfn-origin-endpoint-stream-selection-property-builder
-  "Creates a  `CfnOriginEndpoint$StreamSelectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnOriginEndpoint$StreamSelectionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-origin-endpoint-stream-selection-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-origin-endpoint-stream-selection-property-builder> (new CfnOriginEndpoint$StreamSelectionProperty$Builder) id config))
 
@@ -1059,12 +1059,12 @@
 
 
 (defn cfn-packaging-configuration-builder
-  "Creates a  `CfnPackagingConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-packaging-configuration-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-packaging-configuration-builder> (CfnPackagingConfiguration$Builder/create scope (name id)) id config))
 
@@ -1087,12 +1087,12 @@
 
 
 (defn cfn-packaging-configuration-cmaf-encryption-property-builder
-  "Creates a  `CfnPackagingConfiguration$CmafEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$CmafEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-cmaf-encryption-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-cmaf-encryption-property-builder> (new CfnPackagingConfiguration$CmafEncryptionProperty$Builder) id config))
 
@@ -1124,12 +1124,12 @@
 
 
 (defn cfn-packaging-configuration-cmaf-package-property-builder
-  "Creates a  `CfnPackagingConfiguration$CmafPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$CmafPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-cmaf-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-cmaf-package-property-builder> (new CfnPackagingConfiguration$CmafPackageProperty$Builder) id config))
 
@@ -1152,12 +1152,12 @@
 
 
 (defn cfn-packaging-configuration-dash-encryption-property-builder
-  "Creates a  `CfnPackagingConfiguration$DashEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$DashEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-dash-encryption-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-dash-encryption-property-builder> (new CfnPackagingConfiguration$DashEncryptionProperty$Builder) id config))
 
@@ -1195,12 +1195,12 @@
 
 
 (defn cfn-packaging-configuration-dash-manifest-property-builder
-  "Creates a  `CfnPackagingConfiguration$DashManifestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$DashManifestProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-dash-manifest-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-dash-manifest-property-builder> (new CfnPackagingConfiguration$DashManifestProperty$Builder) id config))
 
@@ -1241,12 +1241,12 @@
 
 
 (defn cfn-packaging-configuration-dash-package-property-builder
-  "Creates a  `CfnPackagingConfiguration$DashPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$DashPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-dash-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-dash-package-property-builder> (new CfnPackagingConfiguration$DashPackageProperty$Builder) id config))
 
@@ -1272,12 +1272,12 @@
 
 
 (defn cfn-packaging-configuration-encryption-contract-configuration-property-builder
-  "Creates a  `CfnPackagingConfiguration$EncryptionContractConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$EncryptionContractConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-encryption-contract-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-encryption-contract-configuration-property-builder> (new CfnPackagingConfiguration$EncryptionContractConfigurationProperty$Builder) id config))
 
@@ -1306,12 +1306,12 @@
 
 
 (defn cfn-packaging-configuration-hls-encryption-property-builder
-  "Creates a  `CfnPackagingConfiguration$HlsEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$HlsEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-hls-encryption-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-hls-encryption-property-builder> (new CfnPackagingConfiguration$HlsEncryptionProperty$Builder) id config))
 
@@ -1349,12 +1349,12 @@
 
 
 (defn cfn-packaging-configuration-hls-manifest-property-builder
-  "Creates a  `CfnPackagingConfiguration$HlsManifestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$HlsManifestProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-hls-manifest-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-hls-manifest-property-builder> (new CfnPackagingConfiguration$HlsManifestProperty$Builder) id config))
 
@@ -1389,12 +1389,12 @@
 
 
 (defn cfn-packaging-configuration-hls-package-property-builder
-  "Creates a  `CfnPackagingConfiguration$HlsPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$HlsPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-hls-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-hls-package-property-builder> (new CfnPackagingConfiguration$HlsPackageProperty$Builder) id config))
 
@@ -1417,12 +1417,12 @@
 
 
 (defn cfn-packaging-configuration-mss-encryption-property-builder
-  "Creates a  `CfnPackagingConfiguration$MssEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$MssEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-mss-encryption-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-mss-encryption-property-builder> (new CfnPackagingConfiguration$MssEncryptionProperty$Builder) id config))
 
@@ -1448,12 +1448,12 @@
 
 
 (defn cfn-packaging-configuration-mss-manifest-property-builder
-  "Creates a  `CfnPackagingConfiguration$MssManifestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$MssManifestProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-mss-manifest-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-mss-manifest-property-builder> (new CfnPackagingConfiguration$MssManifestProperty$Builder) id config))
 
@@ -1482,12 +1482,12 @@
 
 
 (defn cfn-packaging-configuration-mss-package-property-builder
-  "Creates a  `CfnPackagingConfiguration$MssPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$MssPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-mss-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-mss-package-property-builder> (new CfnPackagingConfiguration$MssPackageProperty$Builder) id config))
 
@@ -1528,12 +1528,12 @@
 
 
 (defn cfn-packaging-configuration-props-builder
-  "Creates a  `CfnPackagingConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-props-builder> (new CfnPackagingConfigurationProps$Builder) id config))
 
@@ -1565,12 +1565,12 @@
 
 
 (defn cfn-packaging-configuration-speke-key-provider-property-builder
-  "Creates a  `CfnPackagingConfiguration$SpekeKeyProviderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$SpekeKeyProviderProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-speke-key-provider-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-speke-key-provider-property-builder> (new CfnPackagingConfiguration$SpekeKeyProviderProperty$Builder) id config))
 
@@ -1599,12 +1599,12 @@
 
 
 (defn cfn-packaging-configuration-stream-selection-property-builder
-  "Creates a  `CfnPackagingConfiguration$StreamSelectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingConfiguration$StreamSelectionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-configuration-stream-selection-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-configuration-stream-selection-property-builder> (new CfnPackagingConfiguration$StreamSelectionProperty$Builder) id config))
 
@@ -1630,12 +1630,12 @@
 
 
 (defn cfn-packaging-group-authorization-property-builder
-  "Creates a  `CfnPackagingGroup$AuthorizationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingGroup$AuthorizationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-group-authorization-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-group-authorization-property-builder> (new CfnPackagingGroup$AuthorizationProperty$Builder) id config))
 
@@ -1667,12 +1667,12 @@
 
 
 (defn cfn-packaging-group-builder
-  "Creates a  `CfnPackagingGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingGroup$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-packaging-group-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-packaging-group-builder> (CfnPackagingGroup$Builder/create scope (name id)) id config))
 
@@ -1695,12 +1695,12 @@
 
 
 (defn cfn-packaging-group-log-configuration-property-builder
-  "Creates a  `CfnPackagingGroup$LogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingGroup$LogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-group-log-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-group-log-configuration-property-builder> (new CfnPackagingGroup$LogConfigurationProperty$Builder) id config))
 
@@ -1732,11 +1732,11 @@
 
 
 (defn cfn-packaging-group-props-builder
-  "Creates a  `CfnPackagingGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPackagingGroupProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-packaging-group-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-packaging-group-props-builder> (new CfnPackagingGroupProps$Builder) id config))

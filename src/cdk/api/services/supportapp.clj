@@ -27,12 +27,12 @@
 
 
 (defn cfn-account-alias-builder
-  "Creates a  `CfnAccountAlias$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccountAlias$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-account-alias-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-account-alias-builder> (CfnAccountAlias$Builder/create scope (name id)) id config))
 
@@ -55,12 +55,12 @@
 
 
 (defn cfn-account-alias-props-builder
-  "Creates a  `CfnAccountAliasProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccountAliasProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-account-alias-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-account-alias-props-builder> (new CfnAccountAliasProps$Builder) id config))
 
@@ -104,12 +104,12 @@
 
 
 (defn cfn-slack-channel-configuration-builder
-  "Creates a  `CfnSlackChannelConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSlackChannelConfiguration$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-slack-channel-configuration-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-slack-channel-configuration-builder> (CfnSlackChannelConfiguration$Builder/create scope (name id)) id config))
 
@@ -153,12 +153,12 @@
 
 
 (defn cfn-slack-channel-configuration-props-builder
-  "Creates a  `CfnSlackChannelConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSlackChannelConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-slack-channel-configuration-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-slack-channel-configuration-props-builder> (new CfnSlackChannelConfigurationProps$Builder) id config))
 
@@ -184,12 +184,12 @@
 
 
 (defn cfn-slack-workspace-configuration-builder
-  "Creates a  `CfnSlackWorkspaceConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSlackWorkspaceConfiguration$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-slack-workspace-configuration-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-slack-workspace-configuration-builder> (CfnSlackWorkspaceConfiguration$Builder/create scope (name id)) id config))
 
@@ -215,11 +215,11 @@
 
 
 (defn cfn-slack-workspace-configuration-props-builder
-  "Creates a  `CfnSlackWorkspaceConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSlackWorkspaceConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-slack-workspace-configuration-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-slack-workspace-configuration-props-builder> (new CfnSlackWorkspaceConfigurationProps$Builder) id config))

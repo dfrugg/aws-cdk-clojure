@@ -91,7 +91,7 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn assembly-build-options-builder
-  "Creates a  `AssemblyBuildOptions$Builder` instance using a no-argument construct,then builds it."
+  "Creates a  `AssemblyBuildOptions$Builder` instance using a no-argument construct, then builds it."
   []
   (.build (new AssemblyBuildOptions$Builder)))
 
@@ -132,13 +132,14 @@ function on the data with the provided namespace id and item-key.  The found val
   "Creates a  `AssetManifestArtifact$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String]___
+__Create Form:__ ___[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| assembly | software.amazon.awscdk.cxapi.CloudAssembly |  |
-| artifact-name | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `assembly` | software.amazon.awscdk.cxapi.CloudAssembly |  |
+| `artifact-name` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^CloudAssembly assembly ^String artifact-name id config]
   (asset-manifest-artifact-builder> (AssetManifestArtifact$Builder/create assembly artifact-name) id config))
 
@@ -170,12 +171,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn aws-cloud-formation-stack-properties-builder
-  "Creates a  `AwsCloudFormationStackProperties$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsCloudFormationStackProperties$Builder` instance using a no-argument constructor, applies the data configuration using the [[aws-cloud-formation-stack-properties-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-cloud-formation-stack-properties-builder> (new AwsCloudFormationStackProperties$Builder) id config))
 
@@ -207,12 +208,13 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
   "Creates a  `CloudAssembly$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| directory | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `directory` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String directory id config]
   (cloud-assembly-builder> (CloudAssembly$Builder/create directory) id config))
 
@@ -241,20 +243,22 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `CloudAssemblyBuilder$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| out-dir | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |
+| `out-dir` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |
 
 
-__Create Form:__ ____[]___
+__Create Form:__ ___[]___
+
 | Argument | DataType | Description |
 |---|---|---|
 
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   ([^String out-dir id config]
    (cloud-assembly-builder-builder> (CloudAssemblyBuilder$Builder/create out-dir) id config))
   ([id config]
@@ -282,12 +286,12 @@ __Create Form:__ ____[]___
 
 
 (defn cloud-assembly-builder-props-builder
-  "Creates a  `CloudAssemblyBuilderProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CloudAssemblyBuilderProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cloud-assembly-builder-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cloud-assembly-builder-props-builder> (new CloudAssemblyBuilderProps$Builder) id config))
 
@@ -328,13 +332,14 @@ __Create Form:__ ____[]___
   "Creates a  `CloudFormationStackArtifact$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String]___
+__Create Form:__ ___[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| assembly | software.amazon.awscdk.cxapi.CloudAssembly |  |
-| artifact-id | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `assembly` | software.amazon.awscdk.cxapi.CloudAssembly |  |
+| `artifact-id` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^CloudAssembly assembly ^String artifact-id id config]
   (cloud-formation-stack-artifact-builder> (CloudFormationStackArtifact$Builder/create assembly artifact-id) id config))
 
@@ -363,12 +368,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn endpoint-service-availability-zones-context-query-builder
-  "Creates a  `EndpointServiceAvailabilityZonesContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EndpointServiceAvailabilityZonesContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[endpoint-service-availability-zones-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (endpoint-service-availability-zones-context-query-builder> (new EndpointServiceAvailabilityZonesContextQuery$Builder) id config))
 
@@ -397,12 +402,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn environment-builder
-  "Creates a  `Environment$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Environment$Builder` instance using a no-argument constructor, applies the data configuration using the [[environment-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (environment-builder> (new Environment$Builder) id config))
 
@@ -431,12 +436,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn environment-placeholder-values-builder
-  "Creates a  `EnvironmentPlaceholderValues$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EnvironmentPlaceholderValues$Builder` instance using a no-argument constructor, applies the data configuration using the [[environment-placeholder-values-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (environment-placeholder-values-builder> (new EnvironmentPlaceholderValues$Builder) id config))
 
@@ -459,12 +464,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn key-context-response-builder
-  "Creates a  `KeyContextResponse$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `KeyContextResponse$Builder` instance using a no-argument constructor, applies the data configuration using the [[key-context-response-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (key-context-response-builder> (new KeyContextResponse$Builder) id config))
 
@@ -502,12 +507,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn load-balancer-context-response-builder
-  "Creates a  `LoadBalancerContextResponse$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoadBalancerContextResponse$Builder` instance using a no-argument constructor, applies the data configuration using the [[load-balancer-context-response-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (load-balancer-context-response-builder> (new LoadBalancerContextResponse$Builder) id config))
 
@@ -536,12 +541,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn load-balancer-listener-context-response-builder
-  "Creates a  `LoadBalancerListenerContextResponse$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoadBalancerListenerContextResponse$Builder` instance using a no-argument constructor, applies the data configuration using the [[load-balancer-listener-context-response-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (load-balancer-listener-context-response-builder> (new LoadBalancerListenerContextResponse$Builder) id config))
 
@@ -573,12 +578,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn metadata-entry-result-builder
-  "Creates a  `MetadataEntryResult$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MetadataEntryResult$Builder` instance using a no-argument constructor, applies the data configuration using the [[metadata-entry-result-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (metadata-entry-result-builder> (new MetadataEntryResult$Builder) id config))
 
@@ -619,13 +624,14 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
   "Creates a  `NestedCloudAssemblyArtifact$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String]___
+__Create Form:__ ___[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| assembly | software.amazon.awscdk.cxapi.CloudAssembly |  |
-| artifact-name | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `assembly` | software.amazon.awscdk.cxapi.CloudAssembly |  |
+| `artifact-name` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^CloudAssembly assembly ^String artifact-name id config]
   (nested-cloud-assembly-artifact-builder> (NestedCloudAssemblyArtifact$Builder/create assembly artifact-name) id config))
 
@@ -651,12 +657,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn security-group-context-response-builder
-  "Creates a  `SecurityGroupContextResponse$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecurityGroupContextResponse$Builder` instance using a no-argument constructor, applies the data configuration using the [[security-group-context-response-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (security-group-context-response-builder> (new SecurityGroupContextResponse$Builder) id config))
 
@@ -685,12 +691,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn synthesis-message-builder
-  "Creates a  `SynthesisMessage$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SynthesisMessage$Builder` instance using a no-argument constructor, applies the data configuration using the [[synthesis-message-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (synthesis-message-builder> (new SynthesisMessage$Builder) id config))
 
@@ -731,13 +737,14 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
   "Creates a  `TreeCloudArtifact$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String]___
+__Create Form:__ ___[software.amazon.awscdk.cxapi.CloudAssembly java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| assembly | software.amazon.awscdk.cxapi.CloudAssembly |  |
-| artifact-name | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `assembly` | software.amazon.awscdk.cxapi.CloudAssembly |  |
+| `artifact-name` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^CloudAssembly assembly ^String artifact-name id config]
   (tree-cloud-artifact-builder> (TreeCloudArtifact$Builder/create assembly artifact-name) id config))
 
@@ -805,12 +812,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn vpc-context-response-builder
-  "Creates a  `VpcContextResponse$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `VpcContextResponse$Builder` instance using a no-argument constructor, applies the data configuration using the [[vpc-context-response-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (vpc-context-response-builder> (new VpcContextResponse$Builder) id config))
 
@@ -842,12 +849,12 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn vpc-subnet-builder
-  "Creates a  `VpcSubnet$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `VpcSubnet$Builder` instance using a no-argument constructor, applies the data configuration using the [[vpc-subnet-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (vpc-subnet-builder> (new VpcSubnet$Builder) id config))
 
@@ -876,11 +883,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 
 
 (defn vpc-subnet-group-builder
-  "Creates a  `VpcSubnetGroup$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `VpcSubnetGroup$Builder` instance using a no-argument constructor, applies the data configuration using the [[vpc-subnet-group-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (vpc-subnet-group-builder> (new VpcSubnetGroup$Builder) id config))

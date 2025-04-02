@@ -102,12 +102,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn add-stage-opts-builder
-  "Creates a  `AddStageOpts$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AddStageOpts$Builder` instance using a no-argument constructor, applies the data configuration using the [[add-stage-opts-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (add-stage-opts-builder> (new AddStageOpts$Builder) id config))
 
@@ -157,12 +157,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-build-options-builder
-  "Creates a  `CodeBuildOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CodeBuildOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[code-build-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (code-build-options-builder> (new CodeBuildOptions$Builder) id config))
 
@@ -245,12 +245,13 @@ function on the data with the provided namespace id and item-key.  The found val
   "Creates a  `CodeBuildStep$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
 
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (code-build-step-builder> (CodeBuildStep$Builder/create (name id)) id config))
 
@@ -330,12 +331,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn code-build-step-props-builder
-  "Creates a  `CodeBuildStepProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CodeBuildStepProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[code-build-step-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (code-build-step-props-builder> (new CodeBuildStepProps$Builder) id config))
 
@@ -367,12 +368,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn code-commit-source-options-builder
-  "Creates a  `CodeCommitSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CodeCommitSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[code-commit-source-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (code-commit-source-options-builder> (new CodeCommitSourceOptions$Builder) id config))
 
@@ -398,12 +399,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn code-pipeline-action-factory-result-builder
-  "Creates a  `CodePipelineActionFactoryResult$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CodePipelineActionFactoryResult$Builder` instance using a no-argument constructor, applies the data configuration using the [[code-pipeline-action-factory-result-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (code-pipeline-action-factory-result-builder> (new CodePipelineActionFactoryResult$Builder) id config))
 
@@ -483,12 +484,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn code-pipeline-builder
-  "Creates a  `CodePipeline$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CodePipeline$Builder` instance using a scope and ID, applies the data configuration using the [[code-pipeline-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (code-pipeline-builder> (CodePipeline$Builder/create scope (name id)) id config))
 
@@ -568,12 +569,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn code-pipeline-props-builder
-  "Creates a  `CodePipelineProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CodePipelineProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[code-pipeline-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (code-pipeline-props-builder> (new CodePipelineProps$Builder) id config))
 
@@ -602,12 +603,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `ConfirmPermissionsBroadening$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
 
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (confirm-permissions-broadening-builder> (ConfirmPermissionsBroadening$Builder/create (name id)) id config))
 
@@ -639,12 +641,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn connection-source-options-builder
-  "Creates a  `ConnectionSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ConnectionSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[connection-source-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (connection-source-options-builder> (new ConnectionSourceOptions$Builder) id config))
 
@@ -670,12 +672,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn ecr-docker-credential-options-builder
-  "Creates a  `EcrDockerCredentialOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EcrDockerCredentialOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecr-docker-credential-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecr-docker-credential-options-builder> (new EcrDockerCredentialOptions$Builder) id config))
 
@@ -701,12 +703,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn ecr-source-options-builder
-  "Creates a  `ECRSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ECRSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[ecr-source-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ecr-source-options-builder> (new ECRSourceOptions$Builder) id config))
 
@@ -738,12 +740,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn external-docker-credential-options-builder
-  "Creates a  `ExternalDockerCredentialOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ExternalDockerCredentialOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[external-docker-credential-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (external-docker-credential-options-builder> (new ExternalDockerCredentialOptions$Builder) id config))
 
@@ -769,12 +771,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn file-set-location-builder
-  "Creates a  `FileSetLocation$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FileSetLocation$Builder` instance using a no-argument constructor, applies the data configuration using the [[file-set-location-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (file-set-location-builder> (new FileSetLocation$Builder) id config))
 
@@ -803,12 +805,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn git-hub-source-options-builder
-  "Creates a  `GitHubSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `GitHubSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[git-hub-source-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (git-hub-source-options-builder> (new GitHubSourceOptions$Builder) id config))
 
@@ -834,12 +836,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `ManualApprovalStep$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
 
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (manual-approval-step-builder> (ManualApprovalStep$Builder/create (name id)) id config))
 
@@ -862,12 +865,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn manual-approval-step-props-builder
-  "Creates a  `ManualApprovalStepProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ManualApprovalStepProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[manual-approval-step-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (manual-approval-step-props-builder> (new ManualApprovalStepProps$Builder) id config))
 
@@ -893,12 +896,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn permissions-broadening-check-props-builder
-  "Creates a  `PermissionsBroadeningCheckProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `PermissionsBroadeningCheckProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[permissions-broadening-check-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (permissions-broadening-check-props-builder> (new PermissionsBroadeningCheckProps$Builder) id config))
 
@@ -921,12 +924,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn pipeline-base-props-builder
-  "Creates a  `PipelineBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `PipelineBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[pipeline-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (pipeline-base-props-builder> (new PipelineBaseProps$Builder) id config))
 
@@ -976,12 +979,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn produce-action-options-builder
-  "Creates a  `ProduceActionOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ProduceActionOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[produce-action-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (produce-action-options-builder> (new ProduceActionOptions$Builder) id config))
 
@@ -1010,12 +1013,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn s3-source-options-builder
-  "Creates a  `S3SourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `S3SourceOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[s3-source-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (s3-source-options-builder> (new S3SourceOptions$Builder) id config))
 
@@ -1059,12 +1062,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `ShellStep$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
 
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (shell-step-builder> (ShellStep$Builder/create (name id)) id config))
 
@@ -1105,12 +1109,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn shell-step-props-builder
-  "Creates a  `ShellStepProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ShellStepProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[shell-step-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (shell-step-props-builder> (new ShellStepProps$Builder) id config))
 
@@ -1148,12 +1152,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn stack-asset-builder
-  "Creates a  `StackAsset$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StackAsset$Builder` instance using a no-argument constructor, applies the data configuration using the [[stack-asset-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stack-asset-builder> (new StackAsset$Builder) id config))
 
@@ -1206,12 +1210,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn stack-deployment-props-builder
-  "Creates a  `StackDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StackDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[stack-deployment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stack-deployment-props-builder> (new StackDeploymentProps$Builder) id config))
 
@@ -1243,12 +1247,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn stack-steps-builder
-  "Creates a  `StackSteps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StackSteps$Builder` instance using a no-argument constructor, applies the data configuration using the [[stack-steps-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stack-steps-builder> (new StackSteps$Builder) id config))
 
@@ -1280,12 +1284,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn stage-deployment-props-builder
-  "Creates a  `StageDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StageDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[stage-deployment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stage-deployment-props-builder> (new StageDeploymentProps$Builder) id config))
 
@@ -1314,12 +1318,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `Wave$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
 
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (wave-builder> (Wave$Builder/create (name id)) id config))
 
@@ -1345,12 +1350,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn wave-options-builder
-  "Creates a  `WaveOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `WaveOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[wave-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (wave-options-builder> (new WaveOptions$Builder) id config))
 
@@ -1376,11 +1381,11 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn wave-props-builder
-  "Creates a  `WaveProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `WaveProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[wave-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (wave-props-builder> (new WaveProps$Builder) id config))

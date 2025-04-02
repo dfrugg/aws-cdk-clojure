@@ -35,12 +35,12 @@
 
 
 (defn cfn-access-point-alias-property-builder
-  "Creates a  `CfnAccessPoint$AliasProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPoint$AliasProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-alias-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-alias-property-builder> (new CfnAccessPoint$AliasProperty$Builder) id config))
 
@@ -66,12 +66,12 @@
 
 
 (defn cfn-access-point-aws-lambda-property-builder
-  "Creates a  `CfnAccessPoint$AwsLambdaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPoint$AwsLambdaProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-aws-lambda-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-aws-lambda-property-builder> (new CfnAccessPoint$AwsLambdaProperty$Builder) id config))
 
@@ -97,12 +97,12 @@
 
 
 (defn cfn-access-point-builder
-  "Creates a  `CfnAccessPoint$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPoint$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-access-point-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-access-point-builder> (CfnAccessPoint$Builder/create scope (name id)) id config))
 
@@ -125,12 +125,12 @@
 
 
 (defn cfn-access-point-content-transformation-property-builder
-  "Creates a  `CfnAccessPoint$ContentTransformationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPoint$ContentTransformationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-content-transformation-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-content-transformation-property-builder> (new CfnAccessPoint$ContentTransformationProperty$Builder) id config))
 
@@ -162,12 +162,12 @@
 
 
 (defn cfn-access-point-object-lambda-configuration-property-builder
-  "Creates a  `CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-object-lambda-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-object-lambda-configuration-property-builder> (new CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder) id config))
 
@@ -193,12 +193,12 @@
 
 
 (defn cfn-access-point-policy-builder
-  "Creates a  `CfnAccessPointPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPointPolicy$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-access-point-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-access-point-policy-builder> (CfnAccessPointPolicy$Builder/create scope (name id)) id config))
 
@@ -224,12 +224,12 @@
 
 
 (defn cfn-access-point-policy-props-builder
-  "Creates a  `CfnAccessPointPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPointPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-policy-props-builder> (new CfnAccessPointPolicyProps$Builder) id config))
 
@@ -252,12 +252,12 @@
 
 
 (defn cfn-access-point-policy-status-property-builder
-  "Creates a  `CfnAccessPoint$PolicyStatusProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPoint$PolicyStatusProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-policy-status-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-policy-status-property-builder> (new CfnAccessPoint$PolicyStatusProperty$Builder) id config))
 
@@ -283,12 +283,12 @@
 
 
 (defn cfn-access-point-props-builder
-  "Creates a  `CfnAccessPointProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPointProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-props-builder> (new CfnAccessPointProps$Builder) id config))
 
@@ -320,12 +320,12 @@
 
 
 (defn cfn-access-point-public-access-block-configuration-property-builder
-  "Creates a  `CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-public-access-block-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-public-access-block-configuration-property-builder> (new CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder) id config))
 
@@ -351,11 +351,11 @@
 
 
 (defn cfn-access-point-transformation-configuration-property-builder
-  "Creates a  `CfnAccessPoint$TransformationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccessPoint$TransformationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-access-point-transformation-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-access-point-transformation-configuration-property-builder> (new CfnAccessPoint$TransformationConfigurationProperty$Builder) id config))

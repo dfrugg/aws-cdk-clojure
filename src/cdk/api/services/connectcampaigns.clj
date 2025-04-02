@@ -29,12 +29,12 @@
 
 
 (defn cfn-campaign-agentless-dialer-config-property-builder
-  "Creates a  `CfnCampaign$AgentlessDialerConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCampaign$AgentlessDialerConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-campaign-agentless-dialer-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-campaign-agentless-dialer-config-property-builder> (new CfnCampaign$AgentlessDialerConfigProperty$Builder) id config))
 
@@ -60,12 +60,12 @@
 
 
 (defn cfn-campaign-answer-machine-detection-config-property-builder
-  "Creates a  `CfnCampaign$AnswerMachineDetectionConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCampaign$AnswerMachineDetectionConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-campaign-answer-machine-detection-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-campaign-answer-machine-detection-config-property-builder> (new CfnCampaign$AnswerMachineDetectionConfigProperty$Builder) id config))
 
@@ -100,12 +100,12 @@
 
 
 (defn cfn-campaign-builder
-  "Creates a  `CfnCampaign$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCampaign$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-campaign-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-campaign-builder> (CfnCampaign$Builder/create scope (name id)) id config))
 
@@ -134,12 +134,12 @@
 
 
 (defn cfn-campaign-dialer-config-property-builder
-  "Creates a  `CfnCampaign$DialerConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCampaign$DialerConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-campaign-dialer-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-campaign-dialer-config-property-builder> (new CfnCampaign$DialerConfigProperty$Builder) id config))
 
@@ -171,12 +171,12 @@
 
 
 (defn cfn-campaign-outbound-call-config-property-builder
-  "Creates a  `CfnCampaign$OutboundCallConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCampaign$OutboundCallConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-campaign-outbound-call-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-campaign-outbound-call-config-property-builder> (new CfnCampaign$OutboundCallConfigProperty$Builder) id config))
 
@@ -202,12 +202,12 @@
 
 
 (defn cfn-campaign-predictive-dialer-config-property-builder
-  "Creates a  `CfnCampaign$PredictiveDialerConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCampaign$PredictiveDialerConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-campaign-predictive-dialer-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-campaign-predictive-dialer-config-property-builder> (new CfnCampaign$PredictiveDialerConfigProperty$Builder) id config))
 
@@ -233,12 +233,12 @@
 
 
 (defn cfn-campaign-progressive-dialer-config-property-builder
-  "Creates a  `CfnCampaign$ProgressiveDialerConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCampaign$ProgressiveDialerConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-campaign-progressive-dialer-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-campaign-progressive-dialer-config-property-builder> (new CfnCampaign$ProgressiveDialerConfigProperty$Builder) id config))
 
@@ -273,11 +273,11 @@
 
 
 (defn cfn-campaign-props-builder
-  "Creates a  `CfnCampaignProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCampaignProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-campaign-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-campaign-props-builder> (new CfnCampaignProps$Builder) id config))

@@ -66,12 +66,12 @@
 
 
 (defn cfn-id-mapping-workflow-builder
-  "Creates a  `CfnIdMappingWorkflow$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdMappingWorkflow$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-id-mapping-workflow-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-id-mapping-workflow-builder> (CfnIdMappingWorkflow$Builder/create scope (name id)) id config))
 
@@ -97,12 +97,12 @@
 
 
 (defn cfn-id-mapping-workflow-id-mapping-techniques-property-builder
-  "Creates a  `CfnIdMappingWorkflow$IdMappingTechniquesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdMappingWorkflow$IdMappingTechniquesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-mapping-workflow-id-mapping-techniques-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-mapping-workflow-id-mapping-techniques-property-builder> (new CfnIdMappingWorkflow$IdMappingTechniquesProperty$Builder) id config))
 
@@ -131,12 +131,12 @@
 
 
 (defn cfn-id-mapping-workflow-id-mapping-workflow-input-source-property-builder
-  "Creates a  `CfnIdMappingWorkflow$IdMappingWorkflowInputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdMappingWorkflow$IdMappingWorkflowInputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-mapping-workflow-id-mapping-workflow-input-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-mapping-workflow-id-mapping-workflow-input-source-property-builder> (new CfnIdMappingWorkflow$IdMappingWorkflowInputSourceProperty$Builder) id config))
 
@@ -162,12 +162,12 @@
 
 
 (defn cfn-id-mapping-workflow-id-mapping-workflow-output-source-property-builder
-  "Creates a  `CfnIdMappingWorkflow$IdMappingWorkflowOutputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdMappingWorkflow$IdMappingWorkflowOutputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-mapping-workflow-id-mapping-workflow-output-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-mapping-workflow-id-mapping-workflow-output-source-property-builder> (new CfnIdMappingWorkflow$IdMappingWorkflowOutputSourceProperty$Builder) id config))
 
@@ -190,12 +190,12 @@
 
 
 (defn cfn-id-mapping-workflow-intermediate-source-configuration-property-builder
-  "Creates a  `CfnIdMappingWorkflow$IntermediateSourceConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdMappingWorkflow$IntermediateSourceConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-mapping-workflow-intermediate-source-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-mapping-workflow-intermediate-source-configuration-property-builder> (new CfnIdMappingWorkflow$IntermediateSourceConfigurationProperty$Builder) id config))
 
@@ -236,12 +236,12 @@
 
 
 (defn cfn-id-mapping-workflow-props-builder
-  "Creates a  `CfnIdMappingWorkflowProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdMappingWorkflowProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-mapping-workflow-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-mapping-workflow-props-builder> (new CfnIdMappingWorkflowProps$Builder) id config))
 
@@ -270,12 +270,12 @@
 
 
 (defn cfn-id-mapping-workflow-provider-properties-property-builder
-  "Creates a  `CfnIdMappingWorkflow$ProviderPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdMappingWorkflow$ProviderPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-mapping-workflow-provider-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-mapping-workflow-provider-properties-property-builder> (new CfnIdMappingWorkflow$ProviderPropertiesProperty$Builder) id config))
 
@@ -316,12 +316,12 @@
 
 
 (defn cfn-id-namespace-builder
-  "Creates a  `CfnIdNamespace$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdNamespace$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-id-namespace-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-id-namespace-builder> (CfnIdNamespace$Builder/create scope (name id)) id config))
 
@@ -347,12 +347,12 @@
 
 
 (defn cfn-id-namespace-id-namespace-id-mapping-workflow-properties-property-builder
-  "Creates a  `CfnIdNamespace$IdNamespaceIdMappingWorkflowPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdNamespace$IdNamespaceIdMappingWorkflowPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-namespace-id-namespace-id-mapping-workflow-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-namespace-id-namespace-id-mapping-workflow-properties-property-builder> (new CfnIdNamespace$IdNamespaceIdMappingWorkflowPropertiesProperty$Builder) id config))
 
@@ -378,12 +378,12 @@
 
 
 (defn cfn-id-namespace-id-namespace-input-source-property-builder
-  "Creates a  `CfnIdNamespace$IdNamespaceInputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdNamespace$IdNamespaceInputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-namespace-id-namespace-input-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-namespace-id-namespace-input-source-property-builder> (new CfnIdNamespace$IdNamespaceInputSourceProperty$Builder) id config))
 
@@ -409,12 +409,12 @@
 
 
 (defn cfn-id-namespace-namespace-provider-properties-property-builder
-  "Creates a  `CfnIdNamespace$NamespaceProviderPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdNamespace$NamespaceProviderPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-namespace-namespace-provider-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-namespace-namespace-provider-properties-property-builder> (new CfnIdNamespace$NamespaceProviderPropertiesProperty$Builder) id config))
 
@@ -455,12 +455,12 @@
 
 
 (defn cfn-id-namespace-props-builder
-  "Creates a  `CfnIdNamespaceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnIdNamespaceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-id-namespace-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-id-namespace-props-builder> (new CfnIdNamespaceProps$Builder) id config))
 
@@ -501,12 +501,12 @@
 
 
 (defn cfn-matching-workflow-builder
-  "Creates a  `CfnMatchingWorkflow$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-matching-workflow-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-matching-workflow-builder> (CfnMatchingWorkflow$Builder/create scope (name id)) id config))
 
@@ -535,12 +535,12 @@
 
 
 (defn cfn-matching-workflow-input-source-property-builder
-  "Creates a  `CfnMatchingWorkflow$InputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$InputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-input-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-input-source-property-builder> (new CfnMatchingWorkflow$InputSourceProperty$Builder) id config))
 
@@ -563,12 +563,12 @@
 
 
 (defn cfn-matching-workflow-intermediate-source-configuration-property-builder
-  "Creates a  `CfnMatchingWorkflow$IntermediateSourceConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$IntermediateSourceConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-intermediate-source-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-intermediate-source-configuration-property-builder> (new CfnMatchingWorkflow$IntermediateSourceConfigurationProperty$Builder) id config))
 
@@ -594,12 +594,12 @@
 
 
 (defn cfn-matching-workflow-output-attribute-property-builder
-  "Creates a  `CfnMatchingWorkflow$OutputAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$OutputAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-output-attribute-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-output-attribute-property-builder> (new CfnMatchingWorkflow$OutputAttributeProperty$Builder) id config))
 
@@ -631,12 +631,12 @@
 
 
 (defn cfn-matching-workflow-output-source-property-builder
-  "Creates a  `CfnMatchingWorkflow$OutputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$OutputSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-output-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-output-source-property-builder> (new CfnMatchingWorkflow$OutputSourceProperty$Builder) id config))
 
@@ -677,12 +677,12 @@
 
 
 (defn cfn-matching-workflow-props-builder
-  "Creates a  `CfnMatchingWorkflowProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflowProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-props-builder> (new CfnMatchingWorkflowProps$Builder) id config))
 
@@ -711,12 +711,12 @@
 
 
 (defn cfn-matching-workflow-provider-properties-property-builder
-  "Creates a  `CfnMatchingWorkflow$ProviderPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$ProviderPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-provider-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-provider-properties-property-builder> (new CfnMatchingWorkflow$ProviderPropertiesProperty$Builder) id config))
 
@@ -745,12 +745,12 @@
 
 
 (defn cfn-matching-workflow-resolution-techniques-property-builder
-  "Creates a  `CfnMatchingWorkflow$ResolutionTechniquesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$ResolutionTechniquesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-resolution-techniques-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-resolution-techniques-property-builder> (new CfnMatchingWorkflow$ResolutionTechniquesProperty$Builder) id config))
 
@@ -776,12 +776,12 @@
 
 
 (defn cfn-matching-workflow-rule-based-properties-property-builder
-  "Creates a  `CfnMatchingWorkflow$RuleBasedPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$RuleBasedPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-rule-based-properties-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-rule-based-properties-property-builder> (new CfnMatchingWorkflow$RuleBasedPropertiesProperty$Builder) id config))
 
@@ -807,12 +807,12 @@
 
 
 (defn cfn-matching-workflow-rule-property-builder
-  "Creates a  `CfnMatchingWorkflow$RuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMatchingWorkflow$RuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-matching-workflow-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-matching-workflow-rule-property-builder> (new CfnMatchingWorkflow$RuleProperty$Builder) id config))
 
@@ -850,12 +850,12 @@
 
 
 (defn cfn-policy-statement-builder
-  "Creates a  `CfnPolicyStatement$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPolicyStatement$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-policy-statement-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-policy-statement-builder> (CfnPolicyStatement$Builder/create scope (name id)) id config))
 
@@ -893,12 +893,12 @@
 
 
 (defn cfn-policy-statement-props-builder
-  "Creates a  `CfnPolicyStatementProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPolicyStatementProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-policy-statement-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-policy-statement-props-builder> (new CfnPolicyStatementProps$Builder) id config))
 
@@ -930,12 +930,12 @@
 
 
 (defn cfn-schema-mapping-builder
-  "Creates a  `CfnSchemaMapping$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSchemaMapping$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-schema-mapping-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-schema-mapping-builder> (CfnSchemaMapping$Builder/create scope (name id)) id config))
 
@@ -967,12 +967,12 @@
 
 
 (defn cfn-schema-mapping-props-builder
-  "Creates a  `CfnSchemaMappingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSchemaMappingProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-schema-mapping-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-schema-mapping-props-builder> (new CfnSchemaMappingProps$Builder) id config))
 
@@ -1007,11 +1007,11 @@
 
 
 (defn cfn-schema-mapping-schema-input-attribute-property-builder
-  "Creates a  `CfnSchemaMapping$SchemaInputAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSchemaMapping$SchemaInputAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-schema-mapping-schema-input-attribute-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-schema-mapping-schema-input-attribute-property-builder> (new CfnSchemaMapping$SchemaInputAttributeProperty$Builder) id config))

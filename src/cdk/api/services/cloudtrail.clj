@@ -113,12 +113,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn add-event-selector-options-builder
-  "Creates a  `AddEventSelectorOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AddEventSelectorOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[add-event-selector-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (add-event-selector-options-builder> (new AddEventSelectorOptions$Builder) id config))
 
@@ -150,12 +150,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-channel-builder
-  "Creates a  `CfnChannel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnChannel$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-channel-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-channel-builder> (CfnChannel$Builder/create scope (name id)) id config))
 
@@ -181,12 +181,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-channel-destination-property-builder
-  "Creates a  `CfnChannel$DestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnChannel$DestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-channel-destination-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-channel-destination-property-builder> (new CfnChannel$DestinationProperty$Builder) id config))
 
@@ -218,12 +218,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-channel-props-builder
-  "Creates a  `CfnChannelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnChannelProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-channel-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-channel-props-builder> (new CfnChannelProps$Builder) id config))
 
@@ -249,12 +249,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-event-data-store-advanced-event-selector-property-builder
-  "Creates a  `CfnEventDataStore$AdvancedEventSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEventDataStore$AdvancedEventSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-event-data-store-advanced-event-selector-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-event-data-store-advanced-event-selector-property-builder> (new CfnEventDataStore$AdvancedEventSelectorProperty$Builder) id config))
 
@@ -295,12 +295,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-event-data-store-advanced-field-selector-property-builder
-  "Creates a  `CfnEventDataStore$AdvancedFieldSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEventDataStore$AdvancedFieldSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-event-data-store-advanced-field-selector-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-event-data-store-advanced-field-selector-property-builder> (new CfnEventDataStore$AdvancedFieldSelectorProperty$Builder) id config))
 
@@ -362,12 +362,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-event-data-store-builder
-  "Creates a  `CfnEventDataStore$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEventDataStore$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-event-data-store-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-event-data-store-builder> (CfnEventDataStore$Builder/create scope (name id)) id config))
 
@@ -390,12 +390,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-event-data-store-insight-selector-property-builder
-  "Creates a  `CfnEventDataStore$InsightSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEventDataStore$InsightSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-event-data-store-insight-selector-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-event-data-store-insight-selector-property-builder> (new CfnEventDataStore$InsightSelectorProperty$Builder) id config))
 
@@ -457,12 +457,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-event-data-store-props-builder
-  "Creates a  `CfnEventDataStoreProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEventDataStoreProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-event-data-store-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-event-data-store-props-builder> (new CfnEventDataStoreProps$Builder) id config))
 
@@ -488,12 +488,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-policy-builder
-  "Creates a  `CfnResourcePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourcePolicy$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-resource-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-resource-policy-builder> (CfnResourcePolicy$Builder/create scope (name id)) id config))
 
@@ -519,12 +519,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-policy-props-builder
-  "Creates a  `CfnResourcePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourcePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-policy-props-builder> (new CfnResourcePolicyProps$Builder) id config))
 
@@ -550,12 +550,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-trail-advanced-event-selector-property-builder
-  "Creates a  `CfnTrail$AdvancedEventSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrail$AdvancedEventSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-trail-advanced-event-selector-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-trail-advanced-event-selector-property-builder> (new CfnTrail$AdvancedEventSelectorProperty$Builder) id config))
 
@@ -596,12 +596,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-trail-advanced-field-selector-property-builder
-  "Creates a  `CfnTrail$AdvancedFieldSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrail$AdvancedFieldSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-trail-advanced-field-selector-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-trail-advanced-field-selector-property-builder> (new CfnTrail$AdvancedFieldSelectorProperty$Builder) id config))
 
@@ -669,12 +669,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-trail-builder
-  "Creates a  `CfnTrail$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrail$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-trail-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-trail-builder> (CfnTrail$Builder/create scope (name id)) id config))
 
@@ -700,12 +700,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-trail-data-resource-property-builder
-  "Creates a  `CfnTrail$DataResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrail$DataResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-trail-data-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-trail-data-resource-property-builder> (new CfnTrail$DataResourceProperty$Builder) id config))
 
@@ -737,12 +737,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-trail-event-selector-property-builder
-  "Creates a  `CfnTrail$EventSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrail$EventSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-trail-event-selector-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-trail-event-selector-property-builder> (new CfnTrail$EventSelectorProperty$Builder) id config))
 
@@ -765,12 +765,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-trail-insight-selector-property-builder
-  "Creates a  `CfnTrail$InsightSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrail$InsightSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-trail-insight-selector-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-trail-insight-selector-property-builder> (new CfnTrail$InsightSelectorProperty$Builder) id config))
 
@@ -838,12 +838,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-trail-props-builder
-  "Creates a  `CfnTrailProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrailProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-trail-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-trail-props-builder> (new CfnTrailProps$Builder) id config))
 
@@ -869,12 +869,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-event-selector-builder
-  "Creates a  `S3EventSelector$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `S3EventSelector$Builder` instance using a no-argument constructor, applies the data configuration using the [[s3-event-selector-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (s3-event-selector-builder> (new S3EventSelector$Builder) id config))
 
@@ -939,12 +939,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn trail-builder
-  "Creates a  `Trail$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Trail$Builder` instance using a scope and ID, applies the data configuration using the [[trail-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (trail-builder> (Trail$Builder/create scope (name id)) id config))
 
@@ -1009,11 +1009,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn trail-props-builder
-  "Creates a  `TrailProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TrailProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[trail-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (trail-props-builder> (new TrailProps$Builder) id config))

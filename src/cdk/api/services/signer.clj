@@ -41,12 +41,12 @@
 
 
 (defn cfn-profile-permission-builder
-  "Creates a  `CfnProfilePermission$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnProfilePermission$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-profile-permission-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-profile-permission-builder> (CfnProfilePermission$Builder/create scope (name id)) id config))
 
@@ -81,12 +81,12 @@
 
 
 (defn cfn-profile-permission-props-builder
-  "Creates a  `CfnProfilePermissionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnProfilePermissionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-profile-permission-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-profile-permission-props-builder> (new CfnProfilePermissionProps$Builder) id config))
 
@@ -115,12 +115,12 @@
 
 
 (defn cfn-signing-profile-builder
-  "Creates a  `CfnSigningProfile$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSigningProfile$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-signing-profile-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-signing-profile-builder> (CfnSigningProfile$Builder/create scope (name id)) id config))
 
@@ -149,12 +149,12 @@
 
 
 (defn cfn-signing-profile-props-builder
-  "Creates a  `CfnSigningProfileProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSigningProfileProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-signing-profile-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-signing-profile-props-builder> (new CfnSigningProfileProps$Builder) id config))
 
@@ -180,12 +180,12 @@
 
 
 (defn cfn-signing-profile-signature-validity-period-property-builder
-  "Creates a  `CfnSigningProfile$SignatureValidityPeriodProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSigningProfile$SignatureValidityPeriodProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-signing-profile-signature-validity-period-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-signing-profile-signature-validity-period-property-builder> (new CfnSigningProfile$SignatureValidityPeriodProperty$Builder) id config))
 
@@ -211,12 +211,12 @@
 
 
 (defn signing-profile-attributes-builder
-  "Creates a  `SigningProfileAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SigningProfileAttributes$Builder` instance using a no-argument constructor, applies the data configuration using the [[signing-profile-attributes-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (signing-profile-attributes-builder> (new SigningProfileAttributes$Builder) id config))
 
@@ -245,12 +245,12 @@
 
 
 (defn signing-profile-builder
-  "Creates a  `SigningProfile$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SigningProfile$Builder` instance using a scope and ID, applies the data configuration using the [[signing-profile-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (signing-profile-builder> (SigningProfile$Builder/create scope (name id)) id config))
 
@@ -279,11 +279,11 @@
 
 
 (defn signing-profile-props-builder
-  "Creates a  `SigningProfileProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SigningProfileProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[signing-profile-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (signing-profile-props-builder> (new SigningProfileProps$Builder) id config))

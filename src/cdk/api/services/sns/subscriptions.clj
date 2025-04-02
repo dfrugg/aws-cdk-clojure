@@ -47,12 +47,13 @@
   "Creates a  `EmailSubscription$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| email | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `email` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String email id config]
   (email-subscription-builder> (EmailSubscription$Builder/create email) id config))
 
@@ -84,12 +85,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn email-subscription-props-builder
-  "Creates a  `EmailSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EmailSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[email-subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (email-subscription-props-builder> (new EmailSubscriptionProps$Builder) id config))
 
@@ -121,12 +122,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `LambdaSubscription$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
+__Create Form:__ ___[software.amazon.awscdk.services.lambda.IFunction]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| handler | software.amazon.awscdk.services.lambda.IFunction |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `handler` | software.amazon.awscdk.services.lambda.IFunction |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IFunction handler id config]
   (lambda-subscription-builder> (LambdaSubscription$Builder/create handler) id config))
 
@@ -155,12 +157,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn lambda-subscription-props-builder
-  "Creates a  `LambdaSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LambdaSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[lambda-subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (lambda-subscription-props-builder> (new LambdaSubscriptionProps$Builder) id config))
 
@@ -192,12 +194,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
   "Creates a  `SmsSubscription$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| phone-number | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `phone-number` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String phone-number id config]
   (sms-subscription-builder> (SmsSubscription$Builder/create phone-number) id config))
 
@@ -226,12 +229,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn sms-subscription-props-builder
-  "Creates a  `SmsSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SmsSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[sms-subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sms-subscription-props-builder> (new SmsSubscriptionProps$Builder) id config))
 
@@ -266,12 +269,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `SqsSubscription$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
+__Create Form:__ ___[software.amazon.awscdk.services.sqs.IQueue]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| queue | software.amazon.awscdk.services.sqs.IQueue |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `queue` | software.amazon.awscdk.services.sqs.IQueue |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IQueue queue id config]
   (sqs-subscription-builder> (SqsSubscription$Builder/create queue) id config))
 
@@ -303,12 +307,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 
 
 (defn sqs-subscription-props-builder
-  "Creates a  `SqsSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SqsSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[sqs-subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sqs-subscription-props-builder> (new SqsSubscriptionProps$Builder) id config))
 
@@ -337,12 +341,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 
 
 (defn subscription-props-builder
-  "Creates a  `SubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (subscription-props-builder> (new SubscriptionProps$Builder) id config))
 
@@ -380,12 +384,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
   "Creates a  `UrlSubscription$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| url | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `url` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String url id config]
   (url-subscription-builder> (UrlSubscription$Builder/create url) id config))
 
@@ -420,11 +425,11 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn url-subscription-props-builder
-  "Creates a  `UrlSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `UrlSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[url-subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (url-subscription-props-builder> (new UrlSubscriptionProps$Builder) id config))

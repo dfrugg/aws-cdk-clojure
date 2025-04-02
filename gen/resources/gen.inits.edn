@@ -7,7 +7,8 @@
                                          :init-args "tag-key"}}
 
   SecretValue$Builder {[java.lang.Object] {:fn-args "^Object protected-value"
-                                           :init-args "protected-value"}}
+                                           :init-args "protected-value"
+                                           :arg-descriptions {"protected-value" "Either a plain text builder, or an instance of [[cfn-dynamic-reference-service]]"}}}
 
   Stack$Builder {[] {:fn-args "" :init-args ""}
                  [software.constructs.Construct] {:discard? true}

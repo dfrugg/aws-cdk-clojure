@@ -444,12 +444,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn access-log-destination-config-builder
-  "Creates a  `AccessLogDestinationConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AccessLogDestinationConfig$Builder` instance using a no-argument constructor, applies the data configuration using the [[access-log-destination-config-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (access-log-destination-config-builder> (new AccessLogDestinationConfig$Builder) id config))
 
@@ -472,12 +472,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn add-api-key-options-builder
-  "Creates a  `AddApiKeyOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AddApiKeyOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[add-api-key-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (add-api-key-options-builder> (new AddApiKeyOptions$Builder) id config))
 
@@ -503,12 +503,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn api-definition-config-builder
-  "Creates a  `ApiDefinitionConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApiDefinitionConfig$Builder` instance using a no-argument constructor, applies the data configuration using the [[api-definition-config-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (api-definition-config-builder> (new ApiDefinitionConfig$Builder) id config))
 
@@ -537,12 +537,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn api-definition-s3-location-builder
-  "Creates a  `ApiDefinitionS3Location$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApiDefinitionS3Location$Builder` instance using a no-argument constructor, applies the data configuration using the [[api-definition-s3-location-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (api-definition-s3-location-builder> (new ApiDefinitionS3Location$Builder) id config))
 
@@ -595,12 +595,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn api-key-builder
-  "Creates a  `ApiKey$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApiKey$Builder` instance using a scope and ID, applies the data configuration using the [[api-key-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (api-key-builder> (ApiKey$Builder/create scope (name id)) id config))
 
@@ -638,12 +638,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn api-key-options-builder
-  "Creates a  `ApiKeyOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApiKeyOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[api-key-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (api-key-options-builder> (new ApiKeyOptions$Builder) id config))
 
@@ -696,12 +696,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn api-key-props-builder
-  "Creates a  `ApiKeyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApiKeyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[api-key-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (api-key-props-builder> (new ApiKeyProps$Builder) id config))
 
@@ -724,12 +724,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn api-mapping-options-builder
-  "Creates a  `ApiMappingOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApiMappingOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[api-mapping-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (api-mapping-options-builder> (new ApiMappingOptions$Builder) id config))
 
@@ -776,12 +776,13 @@ function on the data with the provided namespace id and item-key.  The found val
   "Creates a  `AssetApiDefinition$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| path | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `path` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String path id config]
   (asset-api-definition-builder> (AssetApiDefinition$Builder/create path) id config))
 
@@ -828,12 +829,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn aws-integration-builder
-  "Creates a  `AwsIntegration$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsIntegration$Builder` instance using a no-argument create, applies the data configuration using the [[aws-integration-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-integration-builder> (AwsIntegration$Builder/create) id config))
 
@@ -880,12 +881,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn aws-integration-props-builder
-  "Creates a  `AwsIntegrationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsIntegrationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[aws-integration-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-integration-props-builder> (new AwsIntegrationProps$Builder) id config))
 
@@ -920,12 +921,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn base-path-mapping-builder
-  "Creates a  `BasePathMapping$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BasePathMapping$Builder` instance using a scope and ID, applies the data configuration using the [[base-path-mapping-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (base-path-mapping-builder> (BasePathMapping$Builder/create scope (name id)) id config))
 
@@ -954,12 +955,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn base-path-mapping-options-builder
-  "Creates a  `BasePathMappingOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BasePathMappingOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[base-path-mapping-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (base-path-mapping-options-builder> (new BasePathMappingOptions$Builder) id config))
 
@@ -994,12 +995,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn base-path-mapping-props-builder
-  "Creates a  `BasePathMappingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BasePathMappingProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[base-path-mapping-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (base-path-mapping-props-builder> (new BasePathMappingProps$Builder) id config))
 
@@ -1022,12 +1023,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-account-builder
-  "Creates a  `CfnAccount$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccount$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-account-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-account-builder> (CfnAccount$Builder/create scope (name id)) id config))
 
@@ -1050,12 +1051,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-account-props-builder
-  "Creates a  `CfnAccountProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccountProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-account-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-account-props-builder> (new CfnAccountProps$Builder) id config))
 
@@ -1099,12 +1100,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-api-key-builder
-  "Creates a  `CfnApiKey$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnApiKey$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-api-key-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-api-key-builder> (CfnApiKey$Builder/create scope (name id)) id config))
 
@@ -1148,12 +1149,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-api-key-props-builder
-  "Creates a  `CfnApiKeyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnApiKeyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-api-key-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-api-key-props-builder> (new CfnApiKeyProps$Builder) id config))
 
@@ -1179,12 +1180,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-api-key-stage-key-property-builder
-  "Creates a  `CfnApiKey$StageKeyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnApiKey$StageKeyProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-api-key-stage-key-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-api-key-stage-key-property-builder> (new CfnApiKey$StageKeyProperty$Builder) id config))
 
@@ -1234,12 +1235,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-authorizer-builder
-  "Creates a  `CfnAuthorizer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAuthorizer$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-authorizer-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-authorizer-builder> (CfnAuthorizer$Builder/create scope (name id)) id config))
 
@@ -1289,12 +1290,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-authorizer-props-builder
-  "Creates a  `CfnAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-authorizer-props-builder> (new CfnAuthorizerProps$Builder) id config))
 
@@ -1329,12 +1330,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-base-path-mapping-builder
-  "Creates a  `CfnBasePathMapping$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBasePathMapping$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-base-path-mapping-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-base-path-mapping-builder> (CfnBasePathMapping$Builder/create scope (name id)) id config))
 
@@ -1369,12 +1370,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-base-path-mapping-props-builder
-  "Creates a  `CfnBasePathMappingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBasePathMappingProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-base-path-mapping-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-base-path-mapping-props-builder> (new CfnBasePathMappingProps$Builder) id config))
 
@@ -1400,12 +1401,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-client-certificate-builder
-  "Creates a  `CfnClientCertificate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnClientCertificate$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-client-certificate-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-client-certificate-builder> (CfnClientCertificate$Builder/create scope (name id)) id config))
 
@@ -1431,12 +1432,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-client-certificate-props-builder
-  "Creates a  `CfnClientCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnClientCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-client-certificate-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-client-certificate-props-builder> (new CfnClientCertificateProps$Builder) id config))
 
@@ -1462,12 +1463,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-deployment-access-log-setting-property-builder
-  "Creates a  `CfnDeployment$AccessLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDeployment$AccessLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-deployment-access-log-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-deployment-access-log-setting-property-builder> (new CfnDeployment$AccessLogSettingProperty$Builder) id config))
 
@@ -1502,12 +1503,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-deployment-builder
-  "Creates a  `CfnDeployment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDeployment$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-deployment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-deployment-builder> (CfnDeployment$Builder/create scope (name id)) id config))
 
@@ -1536,12 +1537,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-deployment-canary-setting-property-builder
-  "Creates a  `CfnDeployment$CanarySettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDeployment$CanarySettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-deployment-canary-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-deployment-canary-setting-property-builder> (new CfnDeployment$CanarySettingProperty$Builder) id config))
 
@@ -1570,12 +1571,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-deployment-deployment-canary-settings-property-builder
-  "Creates a  `CfnDeployment$DeploymentCanarySettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDeployment$DeploymentCanarySettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-deployment-deployment-canary-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-deployment-deployment-canary-settings-property-builder> (new CfnDeployment$DeploymentCanarySettingsProperty$Builder) id config))
 
@@ -1625,12 +1626,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-deployment-method-setting-property-builder
-  "Creates a  `CfnDeployment$MethodSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDeployment$MethodSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-deployment-method-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-deployment-method-setting-property-builder> (new CfnDeployment$MethodSettingProperty$Builder) id config))
 
@@ -1665,12 +1666,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-deployment-props-builder
-  "Creates a  `CfnDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-deployment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-deployment-props-builder> (new CfnDeploymentProps$Builder) id config))
 
@@ -1747,12 +1748,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-deployment-stage-description-property-builder
-  "Creates a  `CfnDeployment$StageDescriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDeployment$StageDescriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-deployment-stage-description-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-deployment-stage-description-property-builder> (new CfnDeployment$StageDescriptionProperty$Builder) id config))
 
@@ -1781,12 +1782,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-documentation-part-builder
-  "Creates a  `CfnDocumentationPart$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentationPart$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-documentation-part-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-documentation-part-builder> (CfnDocumentationPart$Builder/create scope (name id)) id config))
 
@@ -1821,12 +1822,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-documentation-part-location-property-builder
-  "Creates a  `CfnDocumentationPart$LocationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentationPart$LocationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-documentation-part-location-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-documentation-part-location-property-builder> (new CfnDocumentationPart$LocationProperty$Builder) id config))
 
@@ -1855,12 +1856,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-documentation-part-props-builder
-  "Creates a  `CfnDocumentationPartProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentationPartProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-documentation-part-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-documentation-part-props-builder> (new CfnDocumentationPartProps$Builder) id config))
 
@@ -1889,12 +1890,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-documentation-version-builder
-  "Creates a  `CfnDocumentationVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentationVersion$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-documentation-version-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-documentation-version-builder> (CfnDocumentationVersion$Builder/create scope (name id)) id config))
 
@@ -1923,12 +1924,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-documentation-version-props-builder
-  "Creates a  `CfnDocumentationVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentationVersionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-documentation-version-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-documentation-version-props-builder> (new CfnDocumentationVersionProps$Builder) id config))
 
@@ -1972,12 +1973,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-domain-name-builder
-  "Creates a  `CfnDomainName$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomainName$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-domain-name-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-domain-name-builder> (CfnDomainName$Builder/create scope (name id)) id config))
 
@@ -2000,12 +2001,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-domain-name-endpoint-configuration-property-builder
-  "Creates a  `CfnDomainName$EndpointConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomainName$EndpointConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-name-endpoint-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-name-endpoint-configuration-property-builder> (new CfnDomainName$EndpointConfigurationProperty$Builder) id config))
 
@@ -2031,12 +2032,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-domain-name-mutual-tls-authentication-property-builder
-  "Creates a  `CfnDomainName$MutualTlsAuthenticationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomainName$MutualTlsAuthenticationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-name-mutual-tls-authentication-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-name-mutual-tls-authentication-property-builder> (new CfnDomainName$MutualTlsAuthenticationProperty$Builder) id config))
 
@@ -2080,12 +2081,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-domain-name-props-builder
-  "Creates a  `CfnDomainNameProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomainNameProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-name-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-name-props-builder> (new CfnDomainNameProps$Builder) id config))
 
@@ -2120,12 +2121,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-gateway-response-builder
-  "Creates a  `CfnGatewayResponse$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGatewayResponse$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-gateway-response-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-gateway-response-builder> (CfnGatewayResponse$Builder/create scope (name id)) id config))
 
@@ -2160,12 +2161,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-gateway-response-props-builder
-  "Creates a  `CfnGatewayResponseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnGatewayResponseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-gateway-response-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-gateway-response-props-builder> (new CfnGatewayResponseProps$Builder) id config))
 
@@ -2224,12 +2225,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-method-builder
-  "Creates a  `CfnMethod$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMethod$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-method-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-method-builder> (CfnMethod$Builder/create scope (name id)) id config))
 
@@ -2291,12 +2292,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-method-integration-property-builder
-  "Creates a  `CfnMethod$IntegrationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMethod$IntegrationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-method-integration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-method-integration-property-builder> (new CfnMethod$IntegrationProperty$Builder) id config))
 
@@ -2331,12 +2332,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-method-integration-response-property-builder
-  "Creates a  `CfnMethod$IntegrationResponseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMethod$IntegrationResponseProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-method-integration-response-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-method-integration-response-property-builder> (new CfnMethod$IntegrationResponseProperty$Builder) id config))
 
@@ -2365,12 +2366,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-method-method-response-property-builder
-  "Creates a  `CfnMethod$MethodResponseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMethod$MethodResponseProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-method-method-response-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-method-method-response-property-builder> (new CfnMethod$MethodResponseProperty$Builder) id config))
 
@@ -2429,12 +2430,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-method-props-builder
-  "Creates a  `CfnMethodProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMethodProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-method-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-method-props-builder> (new CfnMethodProps$Builder) id config))
 
@@ -2469,12 +2470,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-model-builder
-  "Creates a  `CfnModel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnModel$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-model-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-model-builder> (CfnModel$Builder/create scope (name id)) id config))
 
@@ -2509,12 +2510,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-model-props-builder
-  "Creates a  `CfnModelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnModelProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-model-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-model-props-builder> (new CfnModelProps$Builder) id config))
 
@@ -2546,12 +2547,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-request-validator-builder
-  "Creates a  `CfnRequestValidator$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRequestValidator$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-request-validator-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-request-validator-builder> (CfnRequestValidator$Builder/create scope (name id)) id config))
 
@@ -2583,12 +2584,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-request-validator-props-builder
-  "Creates a  `CfnRequestValidatorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRequestValidatorProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-request-validator-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-request-validator-props-builder> (new CfnRequestValidatorProps$Builder) id config))
 
@@ -2617,12 +2618,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-resource-builder
-  "Creates a  `CfnResource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResource$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-resource-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-resource-builder> (CfnResource$Builder/create scope (name id)) id config))
 
@@ -2651,12 +2652,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-resource-props-builder
-  "Creates a  `CfnResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-props-builder> (new CfnResourceProps$Builder) id config))
 
@@ -2721,12 +2722,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-rest-api-builder
-  "Creates a  `CfnRestApi$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRestApi$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-rest-api-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-rest-api-builder> (CfnRestApi$Builder/create scope (name id)) id config))
 
@@ -2752,12 +2753,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-rest-api-endpoint-configuration-property-builder
-  "Creates a  `CfnRestApi$EndpointConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRestApi$EndpointConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-rest-api-endpoint-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-rest-api-endpoint-configuration-property-builder> (new CfnRestApi$EndpointConfigurationProperty$Builder) id config))
 
@@ -2822,12 +2823,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-rest-api-props-builder
-  "Creates a  `CfnRestApiProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRestApiProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-rest-api-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-rest-api-props-builder> (new CfnRestApiProps$Builder) id config))
 
@@ -2859,12 +2860,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-rest-api-s3-location-property-builder
-  "Creates a  `CfnRestApi$S3LocationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRestApi$S3LocationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-rest-api-s3-location-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-rest-api-s3-location-property-builder> (new CfnRestApi$S3LocationProperty$Builder) id config))
 
@@ -2890,12 +2891,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-stage-access-log-setting-property-builder
-  "Creates a  `CfnStage$AccessLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnStage$AccessLogSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-stage-access-log-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-stage-access-log-setting-property-builder> (new CfnStage$AccessLogSettingProperty$Builder) id config))
 
@@ -2957,12 +2958,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-stage-builder
-  "Creates a  `CfnStage$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnStage$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-stage-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-stage-builder> (CfnStage$Builder/create scope (name id)) id config))
 
@@ -2994,12 +2995,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-stage-canary-setting-property-builder
-  "Creates a  `CfnStage$CanarySettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnStage$CanarySettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-stage-canary-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-stage-canary-setting-property-builder> (new CfnStage$CanarySettingProperty$Builder) id config))
 
@@ -3049,12 +3050,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-stage-method-setting-property-builder
-  "Creates a  `CfnStage$MethodSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnStage$MethodSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-stage-method-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-stage-method-setting-property-builder> (new CfnStage$MethodSettingProperty$Builder) id config))
 
@@ -3116,12 +3117,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-stage-props-builder
-  "Creates a  `CfnStageProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnStageProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-stage-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-stage-props-builder> (new CfnStageProps$Builder) id config))
 
@@ -3150,12 +3151,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-usage-plan-api-stage-property-builder
-  "Creates a  `CfnUsagePlan$ApiStageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnUsagePlan$ApiStageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-usage-plan-api-stage-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-usage-plan-api-stage-property-builder> (new CfnUsagePlan$ApiStageProperty$Builder) id config))
 
@@ -3193,12 +3194,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-usage-plan-builder
-  "Creates a  `CfnUsagePlan$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnUsagePlan$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-usage-plan-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-usage-plan-builder> (CfnUsagePlan$Builder/create scope (name id)) id config))
 
@@ -3227,12 +3228,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-usage-plan-key-builder
-  "Creates a  `CfnUsagePlanKey$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnUsagePlanKey$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-usage-plan-key-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-usage-plan-key-builder> (CfnUsagePlanKey$Builder/create scope (name id)) id config))
 
@@ -3261,12 +3262,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-usage-plan-key-props-builder
-  "Creates a  `CfnUsagePlanKeyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnUsagePlanKeyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-usage-plan-key-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-usage-plan-key-props-builder> (new CfnUsagePlanKeyProps$Builder) id config))
 
@@ -3304,12 +3305,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-usage-plan-props-builder
-  "Creates a  `CfnUsagePlanProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnUsagePlanProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-usage-plan-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-usage-plan-props-builder> (new CfnUsagePlanProps$Builder) id config))
 
@@ -3338,12 +3339,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-usage-plan-quota-settings-property-builder
-  "Creates a  `CfnUsagePlan$QuotaSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnUsagePlan$QuotaSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-usage-plan-quota-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-usage-plan-quota-settings-property-builder> (new CfnUsagePlan$QuotaSettingsProperty$Builder) id config))
 
@@ -3369,12 +3370,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-usage-plan-throttle-settings-property-builder
-  "Creates a  `CfnUsagePlan$ThrottleSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnUsagePlan$ThrottleSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-usage-plan-throttle-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-usage-plan-throttle-settings-property-builder> (new CfnUsagePlan$ThrottleSettingsProperty$Builder) id config))
 
@@ -3406,12 +3407,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-vpc-link-builder
-  "Creates a  `CfnVpcLink$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnVpcLink$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-vpc-link-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-vpc-link-builder> (CfnVpcLink$Builder/create scope (name id)) id config))
 
@@ -3443,12 +3444,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cfn-vpc-link-props-builder
-  "Creates a  `CfnVpcLinkProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnVpcLinkProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-vpc-link-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-vpc-link-props-builder> (new CfnVpcLinkProps$Builder) id config))
 
@@ -3480,12 +3481,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cognito-user-pools-authorizer-builder
-  "Creates a  `CognitoUserPoolsAuthorizer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CognitoUserPoolsAuthorizer$Builder` instance using a scope and ID, applies the data configuration using the [[cognito-user-pools-authorizer-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cognito-user-pools-authorizer-builder> (CognitoUserPoolsAuthorizer$Builder/create scope (name id)) id config))
 
@@ -3517,12 +3518,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cognito-user-pools-authorizer-props-builder
-  "Creates a  `CognitoUserPoolsAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CognitoUserPoolsAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cognito-user-pools-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cognito-user-pools-authorizer-props-builder> (new CognitoUserPoolsAuthorizerProps$Builder) id config))
 
@@ -3566,12 +3567,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn cors-options-builder
-  "Creates a  `CorsOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CorsOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[cors-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cors-options-builder> (new CorsOptions$Builder) id config))
 
@@ -3603,12 +3604,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn deployment-builder
-  "Creates a  `Deployment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Deployment$Builder` instance using a scope and ID, applies the data configuration using the [[deployment-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (deployment-builder> (Deployment$Builder/create scope (name id)) id config))
 
@@ -3640,12 +3641,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn deployment-props-builder
-  "Creates a  `DeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[deployment-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (deployment-props-builder> (new DeploymentProps$Builder) id config))
 
@@ -3674,12 +3675,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn domain-name-attributes-builder
-  "Creates a  `DomainNameAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DomainNameAttributes$Builder` instance using a no-argument constructor, applies the data configuration using the [[domain-name-attributes-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (domain-name-attributes-builder> (new DomainNameAttributes$Builder) id config))
 
@@ -3720,12 +3721,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn domain-name-builder
-  "Creates a  `DomainName$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DomainName$Builder` instance using a scope and ID, applies the data configuration using the [[domain-name-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (domain-name-builder> (DomainName$Builder/create scope (name id)) id config))
 
@@ -3763,12 +3764,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn domain-name-options-builder
-  "Creates a  `DomainNameOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DomainNameOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[domain-name-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (domain-name-options-builder> (new DomainNameOptions$Builder) id config))
 
@@ -3809,12 +3810,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn domain-name-props-builder
-  "Creates a  `DomainNameProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DomainNameProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[domain-name-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (domain-name-props-builder> (new DomainNameProps$Builder) id config))
 
@@ -3840,12 +3841,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn endpoint-configuration-builder
-  "Creates a  `EndpointConfiguration$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EndpointConfiguration$Builder` instance using a no-argument constructor, applies the data configuration using the [[endpoint-configuration-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (endpoint-configuration-builder> (new EndpointConfiguration$Builder) id config))
 
@@ -3880,12 +3881,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn gateway-response-builder
-  "Creates a  `GatewayResponse$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `GatewayResponse$Builder` instance using a scope and ID, applies the data configuration using the [[gateway-response-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (gateway-response-builder> (GatewayResponse$Builder/create scope (name id)) id config))
 
@@ -3917,12 +3918,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn gateway-response-options-builder
-  "Creates a  `GatewayResponseOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `GatewayResponseOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[gateway-response-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (gateway-response-options-builder> (new GatewayResponseOptions$Builder) id config))
 
@@ -3957,12 +3958,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn gateway-response-props-builder
-  "Creates a  `GatewayResponseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `GatewayResponseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[gateway-response-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (gateway-response-props-builder> (new GatewayResponseProps$Builder) id config))
 
@@ -3994,12 +3995,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `HttpIntegration$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| url | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `url` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String url id config]
   (http-integration-builder> (HttpIntegration$Builder/create url) id config))
 
@@ -4028,12 +4030,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn http-integration-props-builder
-  "Creates a  `HttpIntegrationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HttpIntegrationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[http-integration-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (http-integration-props-builder> (new HttpIntegrationProps$Builder) id config))
 
@@ -4065,12 +4067,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn integration-builder
-  "Creates a  `Integration$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Integration$Builder` instance using a no-argument create, applies the data configuration using the [[integration-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (integration-builder> (Integration$Builder/create) id config))
 
@@ -4105,12 +4107,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn integration-config-builder
-  "Creates a  `IntegrationConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `IntegrationConfig$Builder` instance using a no-argument constructor, applies the data configuration using the [[integration-config-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (integration-config-builder> (new IntegrationConfig$Builder) id config))
 
@@ -4166,12 +4168,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn integration-options-builder
-  "Creates a  `IntegrationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `IntegrationOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[integration-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (integration-options-builder> (new IntegrationOptions$Builder) id config))
 
@@ -4203,12 +4205,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn integration-props-builder
-  "Creates a  `IntegrationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `IntegrationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[integration-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (integration-props-builder> (new IntegrationProps$Builder) id config))
 
@@ -4243,12 +4245,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn integration-response-builder
-  "Creates a  `IntegrationResponse$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `IntegrationResponse$Builder` instance using a no-argument constructor, applies the data configuration using the [[integration-response-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (integration-response-builder> (new IntegrationResponse$Builder) id config))
 
@@ -4376,12 +4378,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn json-schema-builder
-  "Creates a  `JsonSchema$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `JsonSchema$Builder` instance using a no-argument constructor, applies the data configuration using the [[json-schema-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (json-schema-builder> (new JsonSchema$Builder) id config))
 
@@ -4428,12 +4430,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn json-with-standard-field-props-builder
-  "Creates a  `JsonWithStandardFieldProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `JsonWithStandardFieldProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[json-with-standard-field-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (json-with-standard-field-props-builder> (new JsonWithStandardFieldProps$Builder) id config))
 
@@ -4465,12 +4467,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn lambda-authorizer-props-builder
-  "Creates a  `LambdaAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LambdaAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[lambda-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (lambda-authorizer-props-builder> (new LambdaAuthorizerProps$Builder) id config))
 
@@ -4535,12 +4537,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `LambdaIntegration$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
+__Create Form:__ ___[software.amazon.awscdk.services.lambda.IFunction]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| handler | software.amazon.awscdk.services.lambda.IFunction |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `handler` | software.amazon.awscdk.services.lambda.IFunction |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IFunction handler id config]
   (lambda-integration-builder> (LambdaIntegration$Builder/create handler) id config))
 
@@ -4602,12 +4605,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn lambda-integration-options-builder
-  "Creates a  `LambdaIntegrationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LambdaIntegrationOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[lambda-integration-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (lambda-integration-options-builder> (new LambdaIntegrationOptions$Builder) id config))
 
@@ -4705,12 +4708,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn lambda-rest-api-builder
-  "Creates a  `LambdaRestApi$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LambdaRestApi$Builder` instance using a scope and ID, applies the data configuration using the [[lambda-rest-api-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (lambda-rest-api-builder> (LambdaRestApi$Builder/create scope (name id)) id config))
 
@@ -4808,12 +4811,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn lambda-rest-api-props-builder
-  "Creates a  `LambdaRestApiProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LambdaRestApiProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[lambda-rest-api-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (lambda-rest-api-props-builder> (new LambdaRestApiProps$Builder) id config))
 
@@ -4845,12 +4848,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn method-builder
-  "Creates a  `Method$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Method$Builder` instance using a scope and ID, applies the data configuration using the [[method-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (method-builder> (Method$Builder/create scope (name id)) id config))
 
@@ -4894,12 +4897,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn method-deployment-options-builder
-  "Creates a  `MethodDeploymentOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MethodDeploymentOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[method-deployment-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (method-deployment-options-builder> (new MethodDeploymentOptions$Builder) id config))
 
@@ -4949,12 +4952,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn method-options-builder
-  "Creates a  `MethodOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MethodOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[method-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (method-options-builder> (new MethodOptions$Builder) id config))
 
@@ -4986,12 +4989,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn method-props-builder
-  "Creates a  `MethodProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MethodProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[method-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (method-props-builder> (new MethodProps$Builder) id config))
 
@@ -5020,12 +5023,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn method-response-builder
-  "Creates a  `MethodResponse$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MethodResponse$Builder` instance using a no-argument constructor, applies the data configuration using the [[method-response-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (method-response-builder> (new MethodResponse$Builder) id config))
 
@@ -5081,12 +5084,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn mock-integration-builder
-  "Creates a  `MockIntegration$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MockIntegration$Builder` instance using a no-argument create, applies the data configuration using the [[mock-integration-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (mock-integration-builder> (MockIntegration$Builder/create) id config))
 
@@ -5121,12 +5124,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn model-builder
-  "Creates a  `Model$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Model$Builder` instance using a scope and ID, applies the data configuration using the [[model-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (model-builder> (Model$Builder/create scope (name id)) id config))
 
@@ -5158,12 +5161,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn model-options-builder
-  "Creates a  `ModelOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ModelOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[model-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (model-options-builder> (new ModelOptions$Builder) id config))
 
@@ -5198,12 +5201,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn model-props-builder
-  "Creates a  `ModelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ModelProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[model-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (model-props-builder> (new ModelProps$Builder) id config))
 
@@ -5232,12 +5235,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn mtls-config-builder
-  "Creates a  `MTLSConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MTLSConfig$Builder` instance using a no-argument constructor, applies the data configuration using the [[mtls-config-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (mtls-config-builder> (new MTLSConfig$Builder) id config))
 
@@ -5272,12 +5275,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn proxy-resource-builder
-  "Creates a  `ProxyResource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ProxyResource$Builder` instance using a scope and ID, applies the data configuration using the [[proxy-resource-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (proxy-resource-builder> (ProxyResource$Builder/create scope (name id)) id config))
 
@@ -5309,12 +5312,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn proxy-resource-options-builder
-  "Creates a  `ProxyResourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ProxyResourceOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[proxy-resource-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (proxy-resource-options-builder> (new ProxyResourceOptions$Builder) id config))
 
@@ -5349,12 +5352,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn proxy-resource-props-builder
-  "Creates a  `ProxyResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ProxyResourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[proxy-resource-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (proxy-resource-props-builder> (new ProxyResourceProps$Builder) id config))
 
@@ -5383,12 +5386,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn quota-settings-builder
-  "Creates a  `QuotaSettings$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `QuotaSettings$Builder` instance using a no-argument constructor, applies the data configuration using the [[quota-settings-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (quota-settings-builder> (new QuotaSettings$Builder) id config))
 
@@ -5450,12 +5453,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn rate-limited-api-key-builder
-  "Creates a  `RateLimitedApiKey$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RateLimitedApiKey$Builder` instance using a scope and ID, applies the data configuration using the [[rate-limited-api-key-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (rate-limited-api-key-builder> (RateLimitedApiKey$Builder/create scope (name id)) id config))
 
@@ -5517,12 +5520,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn rate-limited-api-key-props-builder
-  "Creates a  `RateLimitedApiKeyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RateLimitedApiKeyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[rate-limited-api-key-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (rate-limited-api-key-props-builder> (new RateLimitedApiKeyProps$Builder) id config))
 
@@ -5557,12 +5560,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn request-authorizer-builder
-  "Creates a  `RequestAuthorizer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RequestAuthorizer$Builder` instance using a scope and ID, applies the data configuration using the [[request-authorizer-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (request-authorizer-builder> (RequestAuthorizer$Builder/create scope (name id)) id config))
 
@@ -5597,12 +5600,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn request-authorizer-props-builder
-  "Creates a  `RequestAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RequestAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[request-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (request-authorizer-props-builder> (new RequestAuthorizerProps$Builder) id config))
 
@@ -5676,12 +5679,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn request-context-builder
-  "Creates a  `RequestContext$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RequestContext$Builder` instance using a no-argument constructor, applies the data configuration using the [[request-context-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (request-context-builder> (new RequestContext$Builder) id config))
 
@@ -5713,12 +5716,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn request-validator-builder
-  "Creates a  `RequestValidator$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RequestValidator$Builder` instance using a scope and ID, applies the data configuration using the [[request-validator-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (request-validator-builder> (RequestValidator$Builder/create scope (name id)) id config))
 
@@ -5747,12 +5750,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn request-validator-options-builder
-  "Creates a  `RequestValidatorOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RequestValidatorOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[request-validator-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (request-validator-options-builder> (new RequestValidatorOptions$Builder) id config))
 
@@ -5784,12 +5787,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn request-validator-props-builder
-  "Creates a  `RequestValidatorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RequestValidatorProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[request-validator-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (request-validator-props-builder> (new RequestValidatorProps$Builder) id config))
 
@@ -5818,12 +5821,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn resource-attributes-builder
-  "Creates a  `ResourceAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ResourceAttributes$Builder` instance using a no-argument constructor, applies the data configuration using the [[resource-attributes-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (resource-attributes-builder> (new ResourceAttributes$Builder) id config))
 
@@ -5858,12 +5861,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn resource-builder
-  "Creates a  `Resource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Resource$Builder` instance using a scope and ID, applies the data configuration using the [[resource-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (resource-builder> (Resource$Builder/create scope (name id)) id config))
 
@@ -5892,12 +5895,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn resource-options-builder
-  "Creates a  `ResourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ResourceOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[resource-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (resource-options-builder> (new ResourceOptions$Builder) id config))
 
@@ -5932,12 +5935,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn resource-props-builder
-  "Creates a  `ResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ResourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[resource-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (resource-props-builder> (new ResourceProps$Builder) id config))
 
@@ -5966,12 +5969,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn rest-api-attributes-builder
-  "Creates a  `RestApiAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RestApiAttributes$Builder` instance using a no-argument constructor, applies the data configuration using the [[rest-api-attributes-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (rest-api-attributes-builder> (new RestApiAttributes$Builder) id config))
 
@@ -6033,12 +6036,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn rest-api-base-props-builder
-  "Creates a  `RestApiBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RestApiBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[rest-api-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (rest-api-base-props-builder> (new RestApiBaseProps$Builder) id config))
 
@@ -6127,12 +6130,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn rest-api-builder
-  "Creates a  `RestApi$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RestApi$Builder` instance using a scope and ID, applies the data configuration using the [[rest-api-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (rest-api-builder> (RestApi$Builder/create scope (name id)) id config))
 
@@ -6221,12 +6224,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 
 
 (defn rest-api-props-builder
-  "Creates a  `RestApiProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RestApiProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[rest-api-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (rest-api-props-builder> (new RestApiProps$Builder) id config))
 
@@ -6285,12 +6288,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
   "Creates a  `SagemakerIntegration$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
+__Create Form:__ ___[software.amazon.awscdk.services.sagemaker.IEndpoint]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| endpoint | software.amazon.awscdk.services.sagemaker.IEndpoint |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `endpoint` | software.amazon.awscdk.services.sagemaker.IEndpoint |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IEndpoint endpoint id config]
   (sagemaker-integration-builder> (SagemakerIntegration$Builder/create endpoint) id config))
 
@@ -6346,12 +6350,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn sagemaker-integration-options-builder
-  "Creates a  `SagemakerIntegrationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SagemakerIntegrationOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[sagemaker-integration-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sagemaker-integration-options-builder> (new SagemakerIntegrationOptions$Builder) id config))
 
@@ -6419,12 +6423,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn spec-rest-api-builder
-  "Creates a  `SpecRestApi$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SpecRestApi$Builder` instance using a scope and ID, applies the data configuration using the [[spec-rest-api-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (spec-rest-api-builder> (SpecRestApi$Builder/create scope (name id)) id config))
 
@@ -6492,12 +6496,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn spec-rest-api-props-builder
-  "Creates a  `SpecRestApiProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SpecRestApiProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[spec-rest-api-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (spec-rest-api-props-builder> (new SpecRestApiProps$Builder) id config))
 
@@ -6523,12 +6527,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn stage-attributes-builder
-  "Creates a  `StageAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StageAttributes$Builder` instance using a no-argument constructor, applies the data configuration using the [[stage-attributes-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stage-attributes-builder> (new StageAttributes$Builder) id config))
 
@@ -6608,12 +6612,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn stage-builder
-  "Creates a  `Stage$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Stage$Builder` instance using a scope and ID, applies the data configuration using the [[stage-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (stage-builder> (Stage$Builder/create scope (name id)) id config))
 
@@ -6690,12 +6694,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn stage-options-builder
-  "Creates a  `StageOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StageOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[stage-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stage-options-builder> (new StageOptions$Builder) id config))
 
@@ -6775,12 +6779,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn stage-props-builder
-  "Creates a  `StageProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StageProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[stage-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stage-props-builder> (new StageProps$Builder) id config))
 
@@ -6854,12 +6858,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn step-functions-execution-integration-options-builder
-  "Creates a  `StepFunctionsExecutionIntegrationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StepFunctionsExecutionIntegrationOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[step-functions-execution-integration-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (step-functions-execution-integration-options-builder> (new StepFunctionsExecutionIntegrationOptions$Builder) id config))
 
@@ -6972,12 +6976,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn step-functions-rest-api-builder
-  "Creates a  `StepFunctionsRestApi$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StepFunctionsRestApi$Builder` instance using a scope and ID, applies the data configuration using the [[step-functions-rest-api-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (step-functions-rest-api-builder> (StepFunctionsRestApi$Builder/create scope (name id)) id config))
 
@@ -7090,12 +7094,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn step-functions-rest-api-props-builder
-  "Creates a  `StepFunctionsRestApiProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StepFunctionsRestApiProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[step-functions-rest-api-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (step-functions-rest-api-props-builder> (new StepFunctionsRestApiProps$Builder) id config))
 
@@ -7121,12 +7125,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn throttle-settings-builder
-  "Creates a  `ThrottleSettings$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ThrottleSettings$Builder` instance using a no-argument constructor, applies the data configuration using the [[throttle-settings-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (throttle-settings-builder> (new ThrottleSettings$Builder) id config))
 
@@ -7152,12 +7156,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn throttling-per-method-builder
-  "Creates a  `ThrottlingPerMethod$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ThrottlingPerMethod$Builder` instance using a no-argument constructor, applies the data configuration using the [[throttling-per-method-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (throttling-per-method-builder> (new ThrottlingPerMethod$Builder) id config))
 
@@ -7195,12 +7199,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn token-authorizer-builder
-  "Creates a  `TokenAuthorizer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TokenAuthorizer$Builder` instance using a scope and ID, applies the data configuration using the [[token-authorizer-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (token-authorizer-builder> (TokenAuthorizer$Builder/create scope (name id)) id config))
 
@@ -7238,12 +7242,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn token-authorizer-props-builder
-  "Creates a  `TokenAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TokenAuthorizerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[token-authorizer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (token-authorizer-props-builder> (new TokenAuthorizerProps$Builder) id config))
 
@@ -7278,12 +7282,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn usage-plan-builder
-  "Creates a  `UsagePlan$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `UsagePlan$Builder` instance using a scope and ID, applies the data configuration using the [[usage-plan-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (usage-plan-builder> (UsagePlan$Builder/create scope (name id)) id config))
 
@@ -7312,12 +7316,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn usage-plan-per-api-stage-builder
-  "Creates a  `UsagePlanPerApiStage$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `UsagePlanPerApiStage$Builder` instance using a no-argument constructor, applies the data configuration using the [[usage-plan-per-api-stage-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (usage-plan-per-api-stage-builder> (new UsagePlanPerApiStage$Builder) id config))
 
@@ -7352,12 +7356,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn usage-plan-props-builder
-  "Creates a  `UsagePlanProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `UsagePlanProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[usage-plan-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (usage-plan-props-builder> (new UsagePlanProps$Builder) id config))
 
@@ -7386,12 +7390,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn vpc-link-builder
-  "Creates a  `VpcLink$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `VpcLink$Builder` instance using a scope and ID, applies the data configuration using the [[vpc-link-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (vpc-link-builder> (VpcLink$Builder/create scope (name id)) id config))
 
@@ -7420,11 +7424,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sagemaker.IEndpoint]___
 
 
 (defn vpc-link-props-builder
-  "Creates a  `VpcLinkProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `VpcLinkProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[vpc-link-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (vpc-link-props-builder> (new VpcLinkProps$Builder) id config))

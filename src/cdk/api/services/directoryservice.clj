@@ -45,12 +45,12 @@
 
 
 (defn cfn-microsoft-ad-builder
-  "Creates a  `CfnMicrosoftAD$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMicrosoftAD$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-microsoft-ad-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-microsoft-ad-builder> (CfnMicrosoftAD$Builder/create scope (name id)) id config))
 
@@ -91,12 +91,12 @@
 
 
 (defn cfn-microsoft-ad-props-builder
-  "Creates a  `CfnMicrosoftADProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMicrosoftADProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-microsoft-ad-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-microsoft-ad-props-builder> (new CfnMicrosoftADProps$Builder) id config))
 
@@ -122,12 +122,12 @@
 
 
 (defn cfn-microsoft-ad-vpc-settings-property-builder
-  "Creates a  `CfnMicrosoftAD$VpcSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnMicrosoftAD$VpcSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-microsoft-ad-vpc-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-microsoft-ad-vpc-settings-property-builder> (new CfnMicrosoftAD$VpcSettingsProperty$Builder) id config))
 
@@ -171,12 +171,12 @@
 
 
 (defn cfn-simple-ad-builder
-  "Creates a  `CfnSimpleAD$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSimpleAD$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-simple-ad-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-simple-ad-builder> (CfnSimpleAD$Builder/create scope (name id)) id config))
 
@@ -220,12 +220,12 @@
 
 
 (defn cfn-simple-ad-props-builder
-  "Creates a  `CfnSimpleADProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSimpleADProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-simple-ad-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-simple-ad-props-builder> (new CfnSimpleADProps$Builder) id config))
 
@@ -251,11 +251,11 @@
 
 
 (defn cfn-simple-ad-vpc-settings-property-builder
-  "Creates a  `CfnSimpleAD$VpcSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSimpleAD$VpcSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-simple-ad-vpc-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-simple-ad-vpc-settings-property-builder> (new CfnSimpleAD$VpcSettingsProperty$Builder) id config))

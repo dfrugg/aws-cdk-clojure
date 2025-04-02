@@ -130,12 +130,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-listener-props-builder
-  "Creates a  `ApplicationListenerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationListenerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-listener-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-listener-props-builder> (new ApplicationListenerProps$Builder) id config))
 
@@ -263,12 +263,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-load-balanced-ec2-service-builder
-  "Creates a  `ApplicationLoadBalancedEc2Service$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancedEc2Service$Builder` instance using a scope and ID, applies the data configuration using the [[application-load-balanced-ec2-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (application-load-balanced-ec2-service-builder> (ApplicationLoadBalancedEc2Service$Builder/create scope (name id)) id config))
 
@@ -396,12 +396,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-load-balanced-ec2-service-props-builder
-  "Creates a  `ApplicationLoadBalancedEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancedEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-load-balanced-ec2-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-load-balanced-ec2-service-props-builder> (new ApplicationLoadBalancedEc2ServiceProps$Builder) id config))
 
@@ -541,12 +541,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-load-balanced-fargate-service-builder
-  "Creates a  `ApplicationLoadBalancedFargateService$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancedFargateService$Builder` instance using a scope and ID, applies the data configuration using the [[application-load-balanced-fargate-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (application-load-balanced-fargate-service-builder> (ApplicationLoadBalancedFargateService$Builder/create scope (name id)) id config))
 
@@ -686,12 +686,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-load-balanced-fargate-service-props-builder
-  "Creates a  `ApplicationLoadBalancedFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancedFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-load-balanced-fargate-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-load-balanced-fargate-service-props-builder> (new ApplicationLoadBalancedFargateServiceProps$Builder) id config))
 
@@ -801,12 +801,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-load-balanced-service-base-props-builder
-  "Creates a  `ApplicationLoadBalancedServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancedServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-load-balanced-service-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-load-balanced-service-base-props-builder> (new ApplicationLoadBalancedServiceBaseProps$Builder) id config))
 
@@ -865,12 +865,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-load-balanced-task-image-options-builder
-  "Creates a  `ApplicationLoadBalancedTaskImageOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancedTaskImageOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-load-balanced-task-image-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-load-balanced-task-image-options-builder> (new ApplicationLoadBalancedTaskImageOptions$Builder) id config))
 
@@ -923,12 +923,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-load-balanced-task-image-props-builder
-  "Creates a  `ApplicationLoadBalancedTaskImageProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancedTaskImageProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-load-balanced-task-image-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-load-balanced-task-image-props-builder> (new ApplicationLoadBalancedTaskImageProps$Builder) id config))
 
@@ -966,12 +966,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-load-balancer-props-builder
-  "Creates a  `ApplicationLoadBalancerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-load-balancer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-load-balancer-props-builder> (new ApplicationLoadBalancerProps$Builder) id config))
 
@@ -1045,12 +1045,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-multiple-target-groups-ec2-service-builder
-  "Creates a  `ApplicationMultipleTargetGroupsEc2Service$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationMultipleTargetGroupsEc2Service$Builder` instance using a scope and ID, applies the data configuration using the [[application-multiple-target-groups-ec2-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (application-multiple-target-groups-ec2-service-builder> (ApplicationMultipleTargetGroupsEc2Service$Builder/create scope (name id)) id config))
 
@@ -1124,12 +1124,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-multiple-target-groups-ec2-service-props-builder
-  "Creates a  `ApplicationMultipleTargetGroupsEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationMultipleTargetGroupsEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-multiple-target-groups-ec2-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-multiple-target-groups-ec2-service-props-builder> (new ApplicationMultipleTargetGroupsEc2ServiceProps$Builder) id config))
 
@@ -1206,12 +1206,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-multiple-target-groups-fargate-service-builder
-  "Creates a  `ApplicationMultipleTargetGroupsFargateService$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationMultipleTargetGroupsFargateService$Builder` instance using a scope and ID, applies the data configuration using the [[application-multiple-target-groups-fargate-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (application-multiple-target-groups-fargate-service-builder> (ApplicationMultipleTargetGroupsFargateService$Builder/create scope (name id)) id config))
 
@@ -1288,12 +1288,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-multiple-target-groups-fargate-service-props-builder
-  "Creates a  `ApplicationMultipleTargetGroupsFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationMultipleTargetGroupsFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-multiple-target-groups-fargate-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-multiple-target-groups-fargate-service-props-builder> (new ApplicationMultipleTargetGroupsFargateServiceProps$Builder) id config))
 
@@ -1349,12 +1349,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-multiple-target-groups-service-base-props-builder
-  "Creates a  `ApplicationMultipleTargetGroupsServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationMultipleTargetGroupsServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-multiple-target-groups-service-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-multiple-target-groups-service-base-props-builder> (new ApplicationMultipleTargetGroupsServiceBaseProps$Builder) id config))
 
@@ -1392,12 +1392,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn application-target-props-builder
-  "Creates a  `ApplicationTargetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationTargetProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-target-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-target-props-builder> (new ApplicationTargetProps$Builder) id config))
 
@@ -1435,12 +1435,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn fargate-service-base-props-builder
-  "Creates a  `FargateServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FargateServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[fargate-service-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (fargate-service-base-props-builder> (new FargateServiceBaseProps$Builder) id config))
 
@@ -1466,12 +1466,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-listener-props-builder
-  "Creates a  `NetworkListenerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkListenerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-listener-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-listener-props-builder> (new NetworkListenerProps$Builder) id config))
 
@@ -1575,12 +1575,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-load-balanced-ec2-service-builder
-  "Creates a  `NetworkLoadBalancedEc2Service$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancedEc2Service$Builder` instance using a scope and ID, applies the data configuration using the [[network-load-balanced-ec2-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (network-load-balanced-ec2-service-builder> (NetworkLoadBalancedEc2Service$Builder/create scope (name id)) id config))
 
@@ -1684,12 +1684,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-load-balanced-ec2-service-props-builder
-  "Creates a  `NetworkLoadBalancedEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancedEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-load-balanced-ec2-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-load-balanced-ec2-service-props-builder> (new NetworkLoadBalancedEc2ServiceProps$Builder) id config))
 
@@ -1802,12 +1802,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-load-balanced-fargate-service-builder
-  "Creates a  `NetworkLoadBalancedFargateService$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancedFargateService$Builder` instance using a scope and ID, applies the data configuration using the [[network-load-balanced-fargate-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (network-load-balanced-fargate-service-builder> (NetworkLoadBalancedFargateService$Builder/create scope (name id)) id config))
 
@@ -1920,12 +1920,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-load-balanced-fargate-service-props-builder
-  "Creates a  `NetworkLoadBalancedFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancedFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-load-balanced-fargate-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-load-balanced-fargate-service-props-builder> (new NetworkLoadBalancedFargateServiceProps$Builder) id config))
 
@@ -2011,12 +2011,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-load-balanced-service-base-props-builder
-  "Creates a  `NetworkLoadBalancedServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancedServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-load-balanced-service-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-load-balanced-service-base-props-builder> (new NetworkLoadBalancedServiceBaseProps$Builder) id config))
 
@@ -2069,12 +2069,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-load-balanced-task-image-options-builder
-  "Creates a  `NetworkLoadBalancedTaskImageOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancedTaskImageOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-load-balanced-task-image-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-load-balanced-task-image-options-builder> (new NetworkLoadBalancedTaskImageOptions$Builder) id config))
 
@@ -2127,12 +2127,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-load-balanced-task-image-props-builder
-  "Creates a  `NetworkLoadBalancedTaskImageProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancedTaskImageProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-load-balanced-task-image-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-load-balanced-task-image-props-builder> (new NetworkLoadBalancedTaskImageProps$Builder) id config))
 
@@ -2167,12 +2167,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-load-balancer-props-builder
-  "Creates a  `NetworkLoadBalancerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-load-balancer-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-load-balancer-props-builder> (new NetworkLoadBalancerProps$Builder) id config))
 
@@ -2246,12 +2246,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-multiple-target-groups-ec2-service-builder
-  "Creates a  `NetworkMultipleTargetGroupsEc2Service$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkMultipleTargetGroupsEc2Service$Builder` instance using a scope and ID, applies the data configuration using the [[network-multiple-target-groups-ec2-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (network-multiple-target-groups-ec2-service-builder> (NetworkMultipleTargetGroupsEc2Service$Builder/create scope (name id)) id config))
 
@@ -2325,12 +2325,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-multiple-target-groups-ec2-service-props-builder
-  "Creates a  `NetworkMultipleTargetGroupsEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkMultipleTargetGroupsEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-multiple-target-groups-ec2-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-multiple-target-groups-ec2-service-props-builder> (new NetworkMultipleTargetGroupsEc2ServiceProps$Builder) id config))
 
@@ -2407,12 +2407,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-multiple-target-groups-fargate-service-builder
-  "Creates a  `NetworkMultipleTargetGroupsFargateService$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkMultipleTargetGroupsFargateService$Builder` instance using a scope and ID, applies the data configuration using the [[network-multiple-target-groups-fargate-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (network-multiple-target-groups-fargate-service-builder> (NetworkMultipleTargetGroupsFargateService$Builder/create scope (name id)) id config))
 
@@ -2489,12 +2489,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-multiple-target-groups-fargate-service-props-builder
-  "Creates a  `NetworkMultipleTargetGroupsFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkMultipleTargetGroupsFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-multiple-target-groups-fargate-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-multiple-target-groups-fargate-service-props-builder> (new NetworkMultipleTargetGroupsFargateServiceProps$Builder) id config))
 
@@ -2550,12 +2550,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-multiple-target-groups-service-base-props-builder
-  "Creates a  `NetworkMultipleTargetGroupsServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkMultipleTargetGroupsServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-multiple-target-groups-service-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-multiple-target-groups-service-base-props-builder> (new NetworkMultipleTargetGroupsServiceBaseProps$Builder) id config))
 
@@ -2581,12 +2581,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn network-target-props-builder
-  "Creates a  `NetworkTargetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkTargetProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-target-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-target-props-builder> (new NetworkTargetProps$Builder) id config))
 
@@ -2711,12 +2711,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-processing-ec2-service-builder
-  "Creates a  `QueueProcessingEc2Service$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `QueueProcessingEc2Service$Builder` instance using a scope and ID, applies the data configuration using the [[queue-processing-ec2-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (queue-processing-ec2-service-builder> (QueueProcessingEc2Service$Builder/create scope (name id)) id config))
 
@@ -2841,12 +2841,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-processing-ec2-service-props-builder
-  "Creates a  `QueueProcessingEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `QueueProcessingEc2ServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[queue-processing-ec2-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (queue-processing-ec2-service-props-builder> (new QueueProcessingEc2ServiceProps$Builder) id config))
 
@@ -2983,12 +2983,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-processing-fargate-service-builder
-  "Creates a  `QueueProcessingFargateService$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `QueueProcessingFargateService$Builder` instance using a scope and ID, applies the data configuration using the [[queue-processing-fargate-service-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (queue-processing-fargate-service-builder> (QueueProcessingFargateService$Builder/create scope (name id)) id config))
 
@@ -3125,12 +3125,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-processing-fargate-service-props-builder
-  "Creates a  `QueueProcessingFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `QueueProcessingFargateServiceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[queue-processing-fargate-service-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (queue-processing-fargate-service-props-builder> (new QueueProcessingFargateServiceProps$Builder) id config))
 
@@ -3234,12 +3234,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-processing-service-base-props-builder
-  "Creates a  `QueueProcessingServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `QueueProcessingServiceBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[queue-processing-service-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (queue-processing-service-base-props-builder> (new QueueProcessingServiceBaseProps$Builder) id config))
 
@@ -3295,12 +3295,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-ec2-task-builder
-  "Creates a  `ScheduledEc2Task$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledEc2Task$Builder` instance using a scope and ID, applies the data configuration using the [[scheduled-ec2-task-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (scheduled-ec2-task-builder> (ScheduledEc2Task$Builder/create scope (name id)) id config))
 
@@ -3323,12 +3323,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-ec2-task-definition-options-builder
-  "Creates a  `ScheduledEc2TaskDefinitionOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledEc2TaskDefinitionOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[scheduled-ec2-task-definition-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (scheduled-ec2-task-definition-options-builder> (new ScheduledEc2TaskDefinitionOptions$Builder) id config))
 
@@ -3375,12 +3375,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-ec2-task-image-options-builder
-  "Creates a  `ScheduledEc2TaskImageOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledEc2TaskImageOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[scheduled-ec2-task-image-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (scheduled-ec2-task-image-options-builder> (new ScheduledEc2TaskImageOptions$Builder) id config))
 
@@ -3436,12 +3436,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-ec2-task-props-builder
-  "Creates a  `ScheduledEc2TaskProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledEc2TaskProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[scheduled-ec2-task-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (scheduled-ec2-task-props-builder> (new ScheduledEc2TaskProps$Builder) id config))
 
@@ -3515,12 +3515,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-fargate-task-builder
-  "Creates a  `ScheduledFargateTask$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledFargateTask$Builder` instance using a scope and ID, applies the data configuration using the [[scheduled-fargate-task-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (scheduled-fargate-task-builder> (ScheduledFargateTask$Builder/create scope (name id)) id config))
 
@@ -3543,12 +3543,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-fargate-task-definition-options-builder
-  "Creates a  `ScheduledFargateTaskDefinitionOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledFargateTaskDefinitionOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[scheduled-fargate-task-definition-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (scheduled-fargate-task-definition-options-builder> (new ScheduledFargateTaskDefinitionOptions$Builder) id config))
 
@@ -3604,12 +3604,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-fargate-task-image-options-builder
-  "Creates a  `ScheduledFargateTaskImageOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledFargateTaskImageOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[scheduled-fargate-task-image-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (scheduled-fargate-task-image-options-builder> (new ScheduledFargateTaskImageOptions$Builder) id config))
 
@@ -3683,12 +3683,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-fargate-task-props-builder
-  "Creates a  `ScheduledFargateTaskProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledFargateTaskProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[scheduled-fargate-task-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (scheduled-fargate-task-props-builder> (new ScheduledFargateTaskProps$Builder) id config))
 
@@ -3738,12 +3738,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-task-base-props-builder
-  "Creates a  `ScheduledTaskBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledTaskBaseProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[scheduled-task-base-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (scheduled-task-base-props-builder> (new ScheduledTaskBaseProps$Builder) id config))
 
@@ -3781,11 +3781,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scheduled-task-image-props-builder
-  "Creates a  `ScheduledTaskImageProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ScheduledTaskImageProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[scheduled-task-image-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (scheduled-task-image-props-builder> (new ScheduledTaskImageProps$Builder) id config))

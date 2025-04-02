@@ -81,12 +81,12 @@
 
 
 (defn cfn-data-cells-filter-builder
-  "Creates a  `CfnDataCellsFilter$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDataCellsFilter$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-data-cells-filter-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-data-cells-filter-builder> (CfnDataCellsFilter$Builder/create scope (name id)) id config))
 
@@ -109,12 +109,12 @@
 
 
 (defn cfn-data-cells-filter-column-wildcard-property-builder
-  "Creates a  `CfnDataCellsFilter$ColumnWildcardProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDataCellsFilter$ColumnWildcardProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-data-cells-filter-column-wildcard-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-data-cells-filter-column-wildcard-property-builder> (new CfnDataCellsFilter$ColumnWildcardProperty$Builder) id config))
 
@@ -155,12 +155,12 @@
 
 
 (defn cfn-data-cells-filter-props-builder
-  "Creates a  `CfnDataCellsFilterProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDataCellsFilterProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-data-cells-filter-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-data-cells-filter-props-builder> (new CfnDataCellsFilterProps$Builder) id config))
 
@@ -186,12 +186,12 @@
 
 
 (defn cfn-data-cells-filter-row-filter-property-builder
-  "Creates a  `CfnDataCellsFilter$RowFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDataCellsFilter$RowFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-data-cells-filter-row-filter-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-data-cells-filter-row-filter-property-builder> (new CfnDataCellsFilter$RowFilterProperty$Builder) id config))
 
@@ -241,12 +241,12 @@
 
 
 (defn cfn-data-lake-settings-builder
-  "Creates a  `CfnDataLakeSettings$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDataLakeSettings$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-data-lake-settings-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-data-lake-settings-builder> (CfnDataLakeSettings$Builder/create scope (name id)) id config))
 
@@ -269,12 +269,12 @@
 
 
 (defn cfn-data-lake-settings-data-lake-principal-property-builder
-  "Creates a  `CfnDataLakeSettings$DataLakePrincipalProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDataLakeSettings$DataLakePrincipalProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-data-lake-settings-data-lake-principal-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-data-lake-settings-data-lake-principal-property-builder> (new CfnDataLakeSettings$DataLakePrincipalProperty$Builder) id config))
 
@@ -300,12 +300,12 @@
 
 
 (defn cfn-data-lake-settings-principal-permissions-property-builder
-  "Creates a  `CfnDataLakeSettings$PrincipalPermissionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDataLakeSettings$PrincipalPermissionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-data-lake-settings-principal-permissions-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-data-lake-settings-principal-permissions-property-builder> (new CfnDataLakeSettings$PrincipalPermissionsProperty$Builder) id config))
 
@@ -355,12 +355,12 @@
 
 
 (defn cfn-data-lake-settings-props-builder
-  "Creates a  `CfnDataLakeSettingsProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDataLakeSettingsProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-data-lake-settings-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-data-lake-settings-props-builder> (new CfnDataLakeSettingsProps$Builder) id config))
 
@@ -392,12 +392,12 @@
 
 
 (defn cfn-permissions-builder
-  "Creates a  `CfnPermissions$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissions$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-permissions-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-permissions-builder> (CfnPermissions$Builder/create scope (name id)) id config))
 
@@ -420,12 +420,12 @@
 
 
 (defn cfn-permissions-column-wildcard-property-builder
-  "Creates a  `CfnPermissions$ColumnWildcardProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissions$ColumnWildcardProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-permissions-column-wildcard-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-permissions-column-wildcard-property-builder> (new CfnPermissions$ColumnWildcardProperty$Builder) id config))
 
@@ -448,12 +448,12 @@
 
 
 (defn cfn-permissions-data-lake-principal-property-builder
-  "Creates a  `CfnPermissions$DataLakePrincipalProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissions$DataLakePrincipalProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-permissions-data-lake-principal-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-permissions-data-lake-principal-property-builder> (new CfnPermissions$DataLakePrincipalProperty$Builder) id config))
 
@@ -479,12 +479,12 @@
 
 
 (defn cfn-permissions-data-location-resource-property-builder
-  "Creates a  `CfnPermissions$DataLocationResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissions$DataLocationResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-permissions-data-location-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-permissions-data-location-resource-property-builder> (new CfnPermissions$DataLocationResourceProperty$Builder) id config))
 
@@ -510,12 +510,12 @@
 
 
 (defn cfn-permissions-database-resource-property-builder
-  "Creates a  `CfnPermissions$DatabaseResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissions$DatabaseResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-permissions-database-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-permissions-database-resource-property-builder> (new CfnPermissions$DatabaseResourceProperty$Builder) id config))
 
@@ -547,12 +547,12 @@
 
 
 (defn cfn-permissions-props-builder
-  "Creates a  `CfnPermissionsProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissionsProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-permissions-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-permissions-props-builder> (new CfnPermissionsProps$Builder) id config))
 
@@ -584,12 +584,12 @@
 
 
 (defn cfn-permissions-resource-property-builder
-  "Creates a  `CfnPermissions$ResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissions$ResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-permissions-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-permissions-resource-property-builder> (new CfnPermissions$ResourceProperty$Builder) id config))
 
@@ -621,18 +621,18 @@
 
 
 (defn cfn-permissions-table-resource-property-builder
-  "Creates a  `CfnPermissions$TableResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissions$TableResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-permissions-table-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-permissions-table-resource-property-builder> (new CfnPermissions$TableResourceProperty$Builder) id config))
 
 
 (defn cfn-permissions-table-wildcard-property-builder
-  "Creates a  `CfnPermissions$TableWildcardProperty$Builder` instance using a no-argument construct,then builds it."
+  "Creates a  `CfnPermissions$TableWildcardProperty$Builder` instance using a no-argument construct, then builds it."
   []
   (.build (new CfnPermissions$TableWildcardProperty$Builder)))
 
@@ -667,12 +667,12 @@
 
 
 (defn cfn-permissions-table-with-columns-resource-property-builder
-  "Creates a  `CfnPermissions$TableWithColumnsResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPermissions$TableWithColumnsResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-permissions-table-with-columns-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-permissions-table-with-columns-resource-property-builder> (new CfnPermissions$TableWithColumnsResourceProperty$Builder) id config))
 
@@ -707,12 +707,12 @@
 
 
 (defn cfn-principal-permissions-builder
-  "Creates a  `CfnPrincipalPermissions$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-principal-permissions-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-principal-permissions-builder> (CfnPrincipalPermissions$Builder/create scope (name id)) id config))
 
@@ -735,12 +735,12 @@
 
 
 (defn cfn-principal-permissions-column-wildcard-property-builder
-  "Creates a  `CfnPrincipalPermissions$ColumnWildcardProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$ColumnWildcardProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-column-wildcard-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-column-wildcard-property-builder> (new CfnPrincipalPermissions$ColumnWildcardProperty$Builder) id config))
 
@@ -772,12 +772,12 @@
 
 
 (defn cfn-principal-permissions-data-cells-filter-resource-property-builder
-  "Creates a  `CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-data-cells-filter-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-data-cells-filter-resource-property-builder> (new CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder) id config))
 
@@ -800,12 +800,12 @@
 
 
 (defn cfn-principal-permissions-data-lake-principal-property-builder
-  "Creates a  `CfnPrincipalPermissions$DataLakePrincipalProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$DataLakePrincipalProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-data-lake-principal-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-data-lake-principal-property-builder> (new CfnPrincipalPermissions$DataLakePrincipalProperty$Builder) id config))
 
@@ -831,12 +831,12 @@
 
 
 (defn cfn-principal-permissions-data-location-resource-property-builder
-  "Creates a  `CfnPrincipalPermissions$DataLocationResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$DataLocationResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-data-location-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-data-location-resource-property-builder> (new CfnPrincipalPermissions$DataLocationResourceProperty$Builder) id config))
 
@@ -862,12 +862,12 @@
 
 
 (defn cfn-principal-permissions-database-resource-property-builder
-  "Creates a  `CfnPrincipalPermissions$DatabaseResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$DatabaseResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-database-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-database-resource-property-builder> (new CfnPrincipalPermissions$DatabaseResourceProperty$Builder) id config))
 
@@ -896,12 +896,12 @@
 
 
 (defn cfn-principal-permissions-lf-tag-key-resource-property-builder
-  "Creates a  `CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-lf-tag-key-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-lf-tag-key-resource-property-builder> (new CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder) id config))
 
@@ -930,12 +930,12 @@
 
 
 (defn cfn-principal-permissions-lf-tag-policy-resource-property-builder
-  "Creates a  `CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-lf-tag-policy-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-lf-tag-policy-resource-property-builder> (new CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder) id config))
 
@@ -961,12 +961,12 @@
 
 
 (defn cfn-principal-permissions-lf-tag-property-builder
-  "Creates a  `CfnPrincipalPermissions$LFTagProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$LFTagProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-lf-tag-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-lf-tag-property-builder> (new CfnPrincipalPermissions$LFTagProperty$Builder) id config))
 
@@ -1001,12 +1001,12 @@
 
 
 (defn cfn-principal-permissions-props-builder
-  "Creates a  `CfnPrincipalPermissionsProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissionsProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-props-builder> (new CfnPrincipalPermissionsProps$Builder) id config))
 
@@ -1050,12 +1050,12 @@
 
 
 (defn cfn-principal-permissions-resource-property-builder
-  "Creates a  `CfnPrincipalPermissions$ResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$ResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-resource-property-builder> (new CfnPrincipalPermissions$ResourceProperty$Builder) id config))
 
@@ -1087,12 +1087,12 @@
 
 
 (defn cfn-principal-permissions-table-resource-property-builder
-  "Creates a  `CfnPrincipalPermissions$TableResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$TableResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-table-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-table-resource-property-builder> (new CfnPrincipalPermissions$TableResourceProperty$Builder) id config))
 
@@ -1127,12 +1127,12 @@
 
 
 (defn cfn-principal-permissions-table-with-columns-resource-property-builder
-  "Creates a  `CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-principal-permissions-table-with-columns-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-principal-permissions-table-with-columns-resource-property-builder> (new CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder) id config))
 
@@ -1167,12 +1167,12 @@
 
 
 (defn cfn-resource-builder
-  "Creates a  `CfnResource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResource$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-resource-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-resource-builder> (CfnResource$Builder/create scope (name id)) id config))
 
@@ -1207,12 +1207,12 @@
 
 
 (defn cfn-resource-props-builder
-  "Creates a  `CfnResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnResourceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-resource-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-resource-props-builder> (new CfnResourceProps$Builder) id config))
 
@@ -1238,12 +1238,12 @@
 
 
 (defn cfn-tag-association-builder
-  "Creates a  `CfnTagAssociation$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTagAssociation$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-tag-association-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-tag-association-builder> (CfnTagAssociation$Builder/create scope (name id)) id config))
 
@@ -1269,12 +1269,12 @@
 
 
 (defn cfn-tag-association-database-resource-property-builder
-  "Creates a  `CfnTagAssociation$DatabaseResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTagAssociation$DatabaseResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-tag-association-database-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-tag-association-database-resource-property-builder> (new CfnTagAssociation$DatabaseResourceProperty$Builder) id config))
 
@@ -1303,12 +1303,12 @@
 
 
 (defn cfn-tag-association-lf-tag-pair-property-builder
-  "Creates a  `CfnTagAssociation$LFTagPairProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTagAssociation$LFTagPairProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-tag-association-lf-tag-pair-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-tag-association-lf-tag-pair-property-builder> (new CfnTagAssociation$LFTagPairProperty$Builder) id config))
 
@@ -1334,12 +1334,12 @@
 
 
 (defn cfn-tag-association-props-builder
-  "Creates a  `CfnTagAssociationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTagAssociationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-tag-association-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-tag-association-props-builder> (new CfnTagAssociationProps$Builder) id config))
 
@@ -1371,12 +1371,12 @@
 
 
 (defn cfn-tag-association-resource-property-builder
-  "Creates a  `CfnTagAssociation$ResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTagAssociation$ResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-tag-association-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-tag-association-resource-property-builder> (new CfnTagAssociation$ResourceProperty$Builder) id config))
 
@@ -1408,12 +1408,12 @@
 
 
 (defn cfn-tag-association-table-resource-property-builder
-  "Creates a  `CfnTagAssociation$TableResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTagAssociation$TableResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-tag-association-table-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-tag-association-table-resource-property-builder> (new CfnTagAssociation$TableResourceProperty$Builder) id config))
 
@@ -1445,12 +1445,12 @@
 
 
 (defn cfn-tag-association-table-with-columns-resource-property-builder
-  "Creates a  `CfnTagAssociation$TableWithColumnsResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTagAssociation$TableWithColumnsResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-tag-association-table-with-columns-resource-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-tag-association-table-with-columns-resource-property-builder> (new CfnTagAssociation$TableWithColumnsResourceProperty$Builder) id config))
 
@@ -1479,12 +1479,12 @@
 
 
 (defn cfn-tag-builder
-  "Creates a  `CfnTag$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTag$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-tag-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-tag-builder> (CfnTag$Builder/create scope (name id)) id config))
 
@@ -1513,11 +1513,11 @@
 
 
 (defn cfn-tag-props-builder
-  "Creates a  `CfnTagProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTagProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-tag-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-tag-props-builder> (new CfnTagProps$Builder) id config))

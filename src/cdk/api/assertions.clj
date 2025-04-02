@@ -27,12 +27,12 @@
 
 
 (defn match-capture-builder
-  "Creates a  `MatchCapture$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MatchCapture$Builder` instance using a no-argument constructor, applies the data configuration using the [[match-capture-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (match-capture-builder> (new MatchCapture$Builder) id config))
 
@@ -64,12 +64,12 @@
 
 
 (defn match-failure-builder
-  "Creates a  `MatchFailure$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MatchFailure$Builder` instance using a no-argument constructor, applies the data configuration using the [[match-failure-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (match-failure-builder> (new MatchFailure$Builder) id config))
 
@@ -92,11 +92,11 @@
 
 
 (defn template-parsing-options-builder
-  "Creates a  `TemplateParsingOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TemplateParsingOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[template-parsing-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (template-parsing-options-builder> (new TemplateParsingOptions$Builder) id config))

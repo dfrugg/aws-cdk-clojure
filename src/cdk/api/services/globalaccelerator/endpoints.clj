@@ -39,12 +39,13 @@
   "Creates a  `ApplicationLoadBalancerEndpoint$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer]___
+__Create Form:__ ___[software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| load-balancer | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `load-balancer` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IApplicationLoadBalancer load-balancer id config]
   (application-load-balancer-endpoint-builder> (ApplicationLoadBalancerEndpoint$Builder/create load-balancer) id config))
 
@@ -70,12 +71,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.IAp
 
 
 (defn application-load-balancer-endpoint-options-builder
-  "Creates a  `ApplicationLoadBalancerEndpointOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ApplicationLoadBalancerEndpointOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[application-load-balancer-endpoint-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (application-load-balancer-endpoint-options-builder> (new ApplicationLoadBalancerEndpointOptions$Builder) id config))
 
@@ -101,12 +102,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.IAp
   "Creates a  `CfnEipEndpoint$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.ec2.CfnEIP]___
+__Create Form:__ ___[software.amazon.awscdk.services.ec2.CfnEIP]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| eip | software.amazon.awscdk.services.ec2.CfnEIP |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `eip` | software.amazon.awscdk.services.ec2.CfnEIP |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^CfnEIP eip id config]
   (cfn-eip-endpoint-builder> (CfnEipEndpoint$Builder/create eip) id config))
 
@@ -129,12 +131,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.CfnEIP]___
 
 
 (defn cfn-eip-endpoint-props-builder
-  "Creates a  `CfnEipEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnEipEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-eip-endpoint-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-eip-endpoint-props-builder> (new CfnEipEndpointProps$Builder) id config))
 
@@ -163,12 +165,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.CfnEIP]___
   "Creates a  `InstanceEndpoint$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.ec2.IInstance]___
+__Create Form:__ ___[software.amazon.awscdk.services.ec2.IInstance]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| endpoint-instance | software.amazon.awscdk.services.ec2.IInstance |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `endpoint-instance` | software.amazon.awscdk.services.ec2.IInstance |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IInstance endpoint-instance id config]
   (instance-endpoint-builder> (InstanceEndpoint$Builder/create endpoint-instance) id config))
 
@@ -194,12 +197,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.IInstance]___
 
 
 (defn instance-endpoint-props-builder
-  "Creates a  `InstanceEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `InstanceEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[instance-endpoint-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (instance-endpoint-props-builder> (new InstanceEndpointProps$Builder) id config))
 
@@ -225,12 +228,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.IInstance]___
   "Creates a  `NetworkLoadBalancerEndpoint$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer]___
+__Create Form:__ ___[software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| load-balancer | software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `load-balancer` | software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^INetworkLoadBalancer load-balancer id config]
   (network-load-balancer-endpoint-builder> (NetworkLoadBalancerEndpoint$Builder/create load-balancer) id config))
 
@@ -253,11 +257,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.INe
 
 
 (defn network-load-balancer-endpoint-props-builder
-  "Creates a  `NetworkLoadBalancerEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NetworkLoadBalancerEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[network-load-balancer-endpoint-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (network-load-balancer-endpoint-props-builder> (new NetworkLoadBalancerEndpointProps$Builder) id config))

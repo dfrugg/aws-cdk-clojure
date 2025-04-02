@@ -36,12 +36,12 @@
 
 
 (defn cfn-logging-configuration-builder
-  "Creates a  `CfnLoggingConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLoggingConfiguration$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-logging-configuration-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-logging-configuration-builder> (CfnLoggingConfiguration$Builder/create scope (name id)) id config))
 
@@ -64,12 +64,12 @@
 
 
 (defn cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder
-  "Creates a  `CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder> (new CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder) id config))
 
@@ -98,12 +98,12 @@
 
 
 (defn cfn-logging-configuration-destination-configuration-property-builder
-  "Creates a  `CfnLoggingConfiguration$DestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLoggingConfiguration$DestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-logging-configuration-destination-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-logging-configuration-destination-configuration-property-builder> (new CfnLoggingConfiguration$DestinationConfigurationProperty$Builder) id config))
 
@@ -126,12 +126,12 @@
 
 
 (defn cfn-logging-configuration-firehose-destination-configuration-property-builder
-  "Creates a  `CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-logging-configuration-firehose-destination-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-logging-configuration-firehose-destination-configuration-property-builder> (new CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder) id config))
 
@@ -160,12 +160,12 @@
 
 
 (defn cfn-logging-configuration-props-builder
-  "Creates a  `CfnLoggingConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLoggingConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-logging-configuration-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-logging-configuration-props-builder> (new CfnLoggingConfigurationProps$Builder) id config))
 
@@ -188,12 +188,12 @@
 
 
 (defn cfn-logging-configuration-s3-destination-configuration-property-builder
-  "Creates a  `CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-logging-configuration-s3-destination-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-logging-configuration-s3-destination-configuration-property-builder> (new CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder) id config))
 
@@ -231,12 +231,12 @@
 
 
 (defn cfn-room-builder
-  "Creates a  `CfnRoom$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRoom$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-room-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-room-builder> (CfnRoom$Builder/create scope (name id)) id config))
 
@@ -262,12 +262,12 @@
 
 
 (defn cfn-room-message-review-handler-property-builder
-  "Creates a  `CfnRoom$MessageReviewHandlerProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRoom$MessageReviewHandlerProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-room-message-review-handler-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-room-message-review-handler-property-builder> (new CfnRoom$MessageReviewHandlerProperty$Builder) id config))
 
@@ -305,11 +305,11 @@
 
 
 (defn cfn-room-props-builder
-  "Creates a  `CfnRoomProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnRoomProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-room-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-room-props-builder> (new CfnRoomProps$Builder) id config))

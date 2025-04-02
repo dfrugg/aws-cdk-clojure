@@ -80,12 +80,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn add-header-builder
-  "Creates a  `AddHeader$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AddHeader$Builder` instance using a no-argument create, applies the data configuration using the [[add-header-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (add-header-builder> (AddHeader$Builder/create) id config))
 
@@ -111,12 +111,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn add-header-props-builder
-  "Creates a  `AddHeaderProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AddHeaderProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[add-header-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (add-header-props-builder> (new AddHeaderProps$Builder) id config))
 
@@ -145,12 +145,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bounce-builder
-  "Creates a  `Bounce$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Bounce$Builder` instance using a no-argument create, applies the data configuration using the [[bounce-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (bounce-builder> (Bounce$Builder/create) id config))
 
@@ -179,12 +179,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bounce-props-builder
-  "Creates a  `BounceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BounceProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[bounce-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (bounce-props-builder> (new BounceProps$Builder) id config))
 
@@ -213,12 +213,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bounce-template-builder
-  "Creates a  `BounceTemplate$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BounceTemplate$Builder` instance using a no-argument create, applies the data configuration using the [[bounce-template-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (bounce-template-builder> (BounceTemplate$Builder/create) id config))
 
@@ -247,12 +247,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bounce-template-props-builder
-  "Creates a  `BounceTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BounceTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[bounce-template-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (bounce-template-props-builder> (new BounceTemplateProps$Builder) id config))
 
@@ -281,12 +281,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn lambda-builder
-  "Creates a  `Lambda$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Lambda$Builder` instance using a no-argument create, applies the data configuration using the [[lambda-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (lambda-builder> (Lambda$Builder/create) id config))
 
@@ -315,12 +315,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn lambda-props-builder
-  "Creates a  `LambdaProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LambdaProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[lambda-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (lambda-props-builder> (new LambdaProps$Builder) id config))
 
@@ -352,12 +352,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-builder
-  "Creates a  `S3$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `S3$Builder` instance using a no-argument create, applies the data configuration using the [[s3-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (s3-builder> (S3$Builder/create) id config))
 
@@ -389,12 +389,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-props-builder
-  "Creates a  `S3Props$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `S3Props$Builder` instance using a no-argument constructor, applies the data configuration using the [[s3-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (s3-props-builder> (new S3Props$Builder) id config))
 
@@ -420,12 +420,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn sns-builder
-  "Creates a  `Sns$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Sns$Builder` instance using a no-argument create, applies the data configuration using the [[sns-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sns-builder> (Sns$Builder/create) id config))
 
@@ -451,12 +451,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn sns-props-builder
-  "Creates a  `SnsProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SnsProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[sns-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (sns-props-builder> (new SnsProps$Builder) id config))
 
@@ -479,12 +479,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stop-builder
-  "Creates a  `Stop$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Stop$Builder` instance using a no-argument create, applies the data configuration using the [[stop-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stop-builder> (Stop$Builder/create) id config))
 
@@ -507,12 +507,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stop-props-builder
-  "Creates a  `StopProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StopProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[stop-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (stop-props-builder> (new StopProps$Builder) id config))
 
@@ -538,12 +538,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn work-mail-builder
-  "Creates a  `WorkMail$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `WorkMail$Builder` instance using a no-argument create, applies the data configuration using the [[work-mail-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (work-mail-builder> (WorkMail$Builder/create) id config))
 
@@ -569,11 +569,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn work-mail-props-builder
-  "Creates a  `WorkMailProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `WorkMailProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[work-mail-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (work-mail-props-builder> (new WorkMailProps$Builder) id config))

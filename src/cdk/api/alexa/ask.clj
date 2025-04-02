@@ -32,12 +32,12 @@
 
 
 (defn cfn-skill-authentication-configuration-property-builder
-  "Creates a  `CfnSkill$AuthenticationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSkill$AuthenticationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-skill-authentication-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-skill-authentication-configuration-property-builder> (new CfnSkill$AuthenticationConfigurationProperty$Builder) id config))
 
@@ -66,12 +66,12 @@
 
 
 (defn cfn-skill-builder
-  "Creates a  `CfnSkill$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSkill$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-skill-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-skill-builder> (CfnSkill$Builder/create scope (name id)) id config))
 
@@ -94,12 +94,12 @@
 
 
 (defn cfn-skill-overrides-property-builder
-  "Creates a  `CfnSkill$OverridesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSkill$OverridesProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-skill-overrides-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-skill-overrides-property-builder> (new CfnSkill$OverridesProperty$Builder) id config))
 
@@ -128,12 +128,12 @@
 
 
 (defn cfn-skill-props-builder
-  "Creates a  `CfnSkillProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSkillProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-skill-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-skill-props-builder> (new CfnSkillProps$Builder) id config))
 
@@ -168,11 +168,11 @@
 
 
 (defn cfn-skill-skill-package-property-builder
-  "Creates a  `CfnSkill$SkillPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSkill$SkillPackageProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-skill-skill-package-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-skill-skill-package-property-builder> (new CfnSkill$SkillPackageProperty$Builder) id config))

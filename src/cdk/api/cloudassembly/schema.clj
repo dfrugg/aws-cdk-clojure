@@ -263,12 +263,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ami-context-query-builder
-  "Creates a  `AmiContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AmiContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[ami-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ami-context-query-builder> (new AmiContextQuery$Builder) id config))
 
@@ -306,12 +306,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn artifact-manifest-builder
-  "Creates a  `ArtifactManifest$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ArtifactManifest$Builder` instance using a no-argument constructor, applies the data configuration using the [[artifact-manifest-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (artifact-manifest-builder> (new ArtifactManifest$Builder) id config))
 
@@ -343,12 +343,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn assembly-manifest-builder
-  "Creates a  `AssemblyManifest$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AssemblyManifest$Builder` instance using a no-argument constructor, applies the data configuration using the [[assembly-manifest-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (assembly-manifest-builder> (new AssemblyManifest$Builder) id config))
 
@@ -377,12 +377,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn asset-manifest-builder
-  "Creates a  `AssetManifest$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AssetManifest$Builder` instance using a no-argument constructor, applies the data configuration using the [[asset-manifest-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (asset-manifest-builder> (new AssetManifest$Builder) id config))
 
@@ -408,12 +408,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn asset-manifest-options-builder
-  "Creates a  `AssetManifestOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AssetManifestOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[asset-manifest-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (asset-manifest-options-builder> (new AssetManifestOptions$Builder) id config))
 
@@ -442,12 +442,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn asset-manifest-properties-builder
-  "Creates a  `AssetManifestProperties$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AssetManifestProperties$Builder` instance using a no-argument constructor, applies the data configuration using the [[asset-manifest-properties-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (asset-manifest-properties-builder> (new AssetManifestProperties$Builder) id config))
 
@@ -476,12 +476,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn availability-zones-context-query-builder
-  "Creates a  `AvailabilityZonesContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AvailabilityZonesContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[availability-zones-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (availability-zones-context-query-builder> (new AvailabilityZonesContextQuery$Builder) id config))
 
@@ -540,12 +540,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn aws-cloud-formation-stack-properties-builder
-  "Creates a  `AwsCloudFormationStackProperties$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsCloudFormationStackProperties$Builder` instance using a no-argument constructor, applies the data configuration using the [[aws-cloud-formation-stack-properties-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-cloud-formation-stack-properties-builder> (new AwsCloudFormationStackProperties$Builder) id config))
 
@@ -574,12 +574,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn aws-destination-builder
-  "Creates a  `AwsDestination$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AwsDestination$Builder` instance using a no-argument constructor, applies the data configuration using the [[aws-destination-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (aws-destination-builder> (new AwsDestination$Builder) id config))
 
@@ -611,12 +611,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bootstrap-role-builder
-  "Creates a  `BootstrapRole$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BootstrapRole$Builder` instance using a no-argument constructor, applies the data configuration using the [[bootstrap-role-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (bootstrap-role-builder> (new BootstrapRole$Builder) id config))
 
@@ -645,12 +645,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cdk-command-builder
-  "Creates a  `CdkCommand$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CdkCommand$Builder` instance using a no-argument constructor, applies the data configuration using the [[cdk-command-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cdk-command-builder> (new CdkCommand$Builder) id config))
 
@@ -676,12 +676,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cdk-commands-builder
-  "Creates a  `CdkCommands$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CdkCommands$Builder` instance using a no-argument constructor, applies the data configuration using the [[cdk-commands-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cdk-commands-builder> (new CdkCommands$Builder) id config))
 
@@ -707,12 +707,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn container-image-asset-cache-option-builder
-  "Creates a  `ContainerImageAssetCacheOption$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ContainerImageAssetCacheOption$Builder` instance using a no-argument constructor, applies the data configuration using the [[container-image-asset-cache-option-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (container-image-asset-cache-option-builder> (new ContainerImageAssetCacheOption$Builder) id config))
 
@@ -783,12 +783,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn container-image-asset-metadata-entry-builder
-  "Creates a  `ContainerImageAssetMetadataEntry$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ContainerImageAssetMetadataEntry$Builder` instance using a no-argument constructor, applies the data configuration using the [[container-image-asset-metadata-entry-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (container-image-asset-metadata-entry-builder> (new ContainerImageAssetMetadataEntry$Builder) id config))
 
@@ -877,12 +877,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn default-cdk-options-builder
-  "Creates a  `DefaultCdkOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DefaultCdkOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[default-cdk-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (default-cdk-options-builder> (new DefaultCdkOptions$Builder) id config))
 
@@ -914,12 +914,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn deploy-command-builder
-  "Creates a  `DeployCommand$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DeployCommand$Builder` instance using a no-argument constructor, applies the data configuration using the [[deploy-command-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (deploy-command-builder> (new DeployCommand$Builder) id config))
 
@@ -1050,12 +1050,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn deploy-options-builder
-  "Creates a  `DeployOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DeployOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[deploy-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (deploy-options-builder> (new DeployOptions$Builder) id config))
 
@@ -1087,12 +1087,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn destroy-command-builder
-  "Creates a  `DestroyCommand$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DestroyCommand$Builder` instance using a no-argument constructor, applies the data configuration using the [[destroy-command-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (destroy-command-builder> (new DestroyCommand$Builder) id config))
 
@@ -1187,12 +1187,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn destroy-options-builder
-  "Creates a  `DestroyOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DestroyOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[destroy-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (destroy-options-builder> (new DestroyOptions$Builder) id config))
 
@@ -1218,12 +1218,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-cache-option-builder
-  "Creates a  `DockerCacheOption$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DockerCacheOption$Builder` instance using a no-argument constructor, applies the data configuration using the [[docker-cache-option-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (docker-cache-option-builder> (new DockerCacheOption$Builder) id config))
 
@@ -1249,12 +1249,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-image-asset-builder
-  "Creates a  `DockerImageAsset$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DockerImageAsset$Builder` instance using a no-argument constructor, applies the data configuration using the [[docker-image-asset-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (docker-image-asset-builder> (new DockerImageAsset$Builder) id config))
 
@@ -1289,12 +1289,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-image-destination-builder
-  "Creates a  `DockerImageDestination$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DockerImageDestination$Builder` instance using a no-argument constructor, applies the data configuration using the [[docker-image-destination-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (docker-image-destination-builder> (new DockerImageDestination$Builder) id config))
 
@@ -1353,12 +1353,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-image-source-builder
-  "Creates a  `DockerImageSource$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DockerImageSource$Builder` instance using a no-argument constructor, applies the data configuration using the [[docker-image-source-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (docker-image-source-builder> (new DockerImageSource$Builder) id config))
 
@@ -1390,12 +1390,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn endpoint-service-availability-zones-context-query-builder
-  "Creates a  `EndpointServiceAvailabilityZonesContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EndpointServiceAvailabilityZonesContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[endpoint-service-availability-zones-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (endpoint-service-availability-zones-context-query-builder> (new EndpointServiceAvailabilityZonesContextQuery$Builder) id config))
 
@@ -1421,12 +1421,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-asset-builder
-  "Creates a  `FileAsset$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FileAsset$Builder` instance using a no-argument constructor, applies the data configuration using the [[file-asset-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (file-asset-builder> (new FileAsset$Builder) id config))
 
@@ -1467,12 +1467,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-asset-metadata-entry-builder
-  "Creates a  `FileAssetMetadataEntry$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FileAssetMetadataEntry$Builder` instance using a no-argument constructor, applies the data configuration using the [[file-asset-metadata-entry-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (file-asset-metadata-entry-builder> (new FileAssetMetadataEntry$Builder) id config))
 
@@ -1507,12 +1507,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-destination-builder
-  "Creates a  `FileDestination$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FileDestination$Builder` instance using a no-argument constructor, applies the data configuration using the [[file-destination-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (file-destination-builder> (new FileDestination$Builder) id config))
 
@@ -1541,12 +1541,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-source-builder
-  "Creates a  `FileSource$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FileSource$Builder` instance using a no-argument constructor, applies the data configuration using the [[file-source-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (file-source-builder> (new FileSource$Builder) id config))
 
@@ -1578,12 +1578,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn hooks-builder
-  "Creates a  `Hooks$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Hooks$Builder` instance using a no-argument constructor, applies the data configuration using the [[hooks-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (hooks-builder> (new Hooks$Builder) id config))
 
@@ -1621,12 +1621,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn hosted-zone-context-query-builder
-  "Creates a  `HostedZoneContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HostedZoneContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[hosted-zone-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (hosted-zone-context-query-builder> (new HostedZoneContextQuery$Builder) id config))
 
@@ -1658,12 +1658,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn integ-manifest-builder
-  "Creates a  `IntegManifest$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `IntegManifest$Builder` instance using a no-argument constructor, applies the data configuration using the [[integ-manifest-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (integ-manifest-builder> (new IntegManifest$Builder) id config))
 
@@ -1695,12 +1695,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn key-context-query-builder
-  "Creates a  `KeyContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `KeyContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[key-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (key-context-query-builder> (new KeyContextQuery$Builder) id config))
 
@@ -1738,12 +1738,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn load-balancer-context-query-builder
-  "Creates a  `LoadBalancerContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoadBalancerContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[load-balancer-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (load-balancer-context-query-builder> (new LoadBalancerContextQuery$Builder) id config))
 
@@ -1772,12 +1772,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn load-balancer-filter-builder
-  "Creates a  `LoadBalancerFilter$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoadBalancerFilter$Builder` instance using a no-argument constructor, applies the data configuration using the [[load-balancer-filter-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (load-balancer-filter-builder> (new LoadBalancerFilter$Builder) id config))
 
@@ -1824,12 +1824,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn load-balancer-listener-context-query-builder
-  "Creates a  `LoadBalancerListenerContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoadBalancerListenerContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[load-balancer-listener-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (load-balancer-listener-context-query-builder> (new LoadBalancerListenerContextQuery$Builder) id config))
 
@@ -1858,12 +1858,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn load-manifest-options-builder
-  "Creates a  `LoadManifestOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoadManifestOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[load-manifest-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (load-manifest-options-builder> (new LoadManifestOptions$Builder) id config))
 
@@ -1892,12 +1892,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn metadata-entry-builder
-  "Creates a  `MetadataEntry$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MetadataEntry$Builder` instance using a no-argument constructor, applies the data configuration using the [[metadata-entry-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (metadata-entry-builder> (new MetadataEntry$Builder) id config))
 
@@ -1926,12 +1926,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn missing-context-builder
-  "Creates a  `MissingContext$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `MissingContext$Builder` instance using a no-argument constructor, applies the data configuration using the [[missing-context-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (missing-context-builder> (new MissingContext$Builder) id config))
 
@@ -1957,12 +1957,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn nested-cloud-assembly-properties-builder
-  "Creates a  `NestedCloudAssemblyProperties$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NestedCloudAssemblyProperties$Builder` instance using a no-argument constructor, applies the data configuration using the [[nested-cloud-assembly-properties-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (nested-cloud-assembly-properties-builder> (new NestedCloudAssemblyProperties$Builder) id config))
 
@@ -1985,12 +1985,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn plugin-context-query-builder
-  "Creates a  `PluginContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `PluginContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[plugin-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (plugin-context-query-builder> (new PluginContextQuery$Builder) id config))
 
@@ -2013,12 +2013,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn runtime-info-builder
-  "Creates a  `RuntimeInfo$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RuntimeInfo$Builder` instance using a no-argument constructor, applies the data configuration using the [[runtime-info-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (runtime-info-builder> (new RuntimeInfo$Builder) id config))
 
@@ -2056,12 +2056,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn security-group-context-query-builder
-  "Creates a  `SecurityGroupContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SecurityGroupContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[security-group-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (security-group-context-query-builder> (new SecurityGroupContextQuery$Builder) id config))
 
@@ -2093,12 +2093,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ssm-parameter-context-query-builder
-  "Creates a  `SSMParameterContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SSMParameterContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[ssm-parameter-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ssm-parameter-context-query-builder> (new SSMParameterContextQuery$Builder) id config))
 
@@ -2124,12 +2124,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn tag-builder
-  "Creates a  `Tag$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Tag$Builder` instance using a no-argument constructor, applies the data configuration using the [[tag-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (tag-builder> (new Tag$Builder) id config))
 
@@ -2176,12 +2176,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn test-case-builder
-  "Creates a  `TestCase$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TestCase$Builder` instance using a no-argument constructor, applies the data configuration using the [[test-case-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (test-case-builder> (new TestCase$Builder) id config))
 
@@ -2219,12 +2219,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn test-options-builder
-  "Creates a  `TestOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TestOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[test-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (test-options-builder> (new TestOptions$Builder) id config))
 
@@ -2247,12 +2247,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn tree-artifact-properties-builder
-  "Creates a  `TreeArtifactProperties$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TreeArtifactProperties$Builder` instance using a no-argument constructor, applies the data configuration using the [[tree-artifact-properties-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (tree-artifact-properties-builder> (new TreeArtifactProperties$Builder) id config))
 
@@ -2293,11 +2293,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn vpc-context-query-builder
-  "Creates a  `VpcContextQuery$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `VpcContextQuery$Builder` instance using a no-argument constructor, applies the data configuration using the [[vpc-context-query-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (vpc-context-query-builder> (new VpcContextQuery$Builder) id config))

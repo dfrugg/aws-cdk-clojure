@@ -47,12 +47,12 @@
 
 
 (defn cfn-pipeline-builder
-  "Creates a  `CfnPipeline$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPipeline$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-pipeline-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-pipeline-builder> (CfnPipeline$Builder/create scope (name id)) id config))
 
@@ -81,12 +81,12 @@
 
 
 (defn cfn-pipeline-field-property-builder
-  "Creates a  `CfnPipeline$FieldProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPipeline$FieldProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-pipeline-field-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-pipeline-field-property-builder> (new CfnPipeline$FieldProperty$Builder) id config))
 
@@ -112,12 +112,12 @@
 
 
 (defn cfn-pipeline-parameter-attribute-property-builder
-  "Creates a  `CfnPipeline$ParameterAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPipeline$ParameterAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-pipeline-parameter-attribute-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-pipeline-parameter-attribute-property-builder> (new CfnPipeline$ParameterAttributeProperty$Builder) id config))
 
@@ -143,12 +143,12 @@
 
 
 (defn cfn-pipeline-parameter-object-property-builder
-  "Creates a  `CfnPipeline$ParameterObjectProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPipeline$ParameterObjectProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-pipeline-parameter-object-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-pipeline-parameter-object-property-builder> (new CfnPipeline$ParameterObjectProperty$Builder) id config))
 
@@ -174,12 +174,12 @@
 
 
 (defn cfn-pipeline-parameter-value-property-builder
-  "Creates a  `CfnPipeline$ParameterValueProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPipeline$ParameterValueProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-pipeline-parameter-value-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-pipeline-parameter-value-property-builder> (new CfnPipeline$ParameterValueProperty$Builder) id config))
 
@@ -208,12 +208,12 @@
 
 
 (defn cfn-pipeline-pipeline-object-property-builder
-  "Creates a  `CfnPipeline$PipelineObjectProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPipeline$PipelineObjectProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-pipeline-pipeline-object-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-pipeline-pipeline-object-property-builder> (new CfnPipeline$PipelineObjectProperty$Builder) id config))
 
@@ -239,12 +239,12 @@
 
 
 (defn cfn-pipeline-pipeline-tag-property-builder
-  "Creates a  `CfnPipeline$PipelineTagProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPipeline$PipelineTagProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-pipeline-pipeline-tag-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-pipeline-pipeline-tag-property-builder> (new CfnPipeline$PipelineTagProperty$Builder) id config))
 
@@ -285,11 +285,11 @@
 
 
 (defn cfn-pipeline-props-builder
-  "Creates a  `CfnPipelineProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnPipelineProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-pipeline-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-pipeline-props-builder> (new CfnPipelineProps$Builder) id config))

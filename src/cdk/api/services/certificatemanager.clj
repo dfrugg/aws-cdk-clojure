@@ -68,12 +68,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn certificate-builder
-  "Creates a  `Certificate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Certificate$Builder` instance using a scope and ID, applies the data configuration using the [[certificate-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (certificate-builder> (Certificate$Builder/create scope (name id)) id config))
 
@@ -111,12 +111,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn certificate-props-builder
-  "Creates a  `CertificateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CertificateProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[certificate-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (certificate-props-builder> (new CertificateProps$Builder) id config))
 
@@ -148,12 +148,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn certification-validation-props-builder
-  "Creates a  `CertificationValidationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CertificationValidationProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[certification-validation-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (certification-validation-props-builder> (new CertificationValidationProps$Builder) id config))
 
@@ -176,12 +176,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-account-builder
-  "Creates a  `CfnAccount$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccount$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-account-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-account-builder> (CfnAccount$Builder/create scope (name id)) id config))
 
@@ -204,12 +204,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-account-expiry-events-configuration-property-builder
-  "Creates a  `CfnAccount$ExpiryEventsConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccount$ExpiryEventsConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-account-expiry-events-configuration-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-account-expiry-events-configuration-property-builder> (new CfnAccount$ExpiryEventsConfigurationProperty$Builder) id config))
 
@@ -232,12 +232,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-account-props-builder
-  "Creates a  `CfnAccountProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAccountProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-account-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-account-props-builder> (new CfnAccountProps$Builder) id config))
 
@@ -281,12 +281,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-certificate-builder
-  "Creates a  `CfnCertificate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCertificate$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-certificate-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-certificate-builder> (CfnCertificate$Builder/create scope (name id)) id config))
 
@@ -315,12 +315,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-certificate-domain-validation-option-property-builder
-  "Creates a  `CfnCertificate$DomainValidationOptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCertificate$DomainValidationOptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-certificate-domain-validation-option-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-certificate-domain-validation-option-property-builder> (new CfnCertificate$DomainValidationOptionProperty$Builder) id config))
 
@@ -364,12 +364,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-certificate-props-builder
-  "Creates a  `CfnCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-certificate-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-certificate-props-builder> (new CfnCertificateProps$Builder) id config))
 
@@ -422,12 +422,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn dns-validated-certificate-props-builder
-  "Creates a  `DnsValidatedCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DnsValidatedCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[dns-validated-certificate-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (dns-validated-certificate-props-builder> (new DnsValidatedCertificateProps$Builder) id config))
 
@@ -459,12 +459,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn private-certificate-builder
-  "Creates a  `PrivateCertificate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `PrivateCertificate$Builder` instance using a scope and ID, applies the data configuration using the [[private-certificate-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (private-certificate-builder> (PrivateCertificate$Builder/create scope (name id)) id config))
 
@@ -496,11 +496,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn private-certificate-props-builder
-  "Creates a  `PrivateCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `PrivateCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[private-certificate-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (private-certificate-props-builder> (new PrivateCertificateProps$Builder) id config))

@@ -65,12 +65,13 @@
   "Creates a  `FunctionUrlOrigin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunctionUrl]___
+__Create Form:__ ___[software.amazon.awscdk.services.lambda.IFunctionUrl]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| function-url | software.amazon.awscdk.services.lambda.IFunctionUrl |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `function-url` | software.amazon.awscdk.services.lambda.IFunctionUrl |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IFunctionUrl function-url id config]
   (function-url-origin-builder> (FunctionUrlOrigin$Builder/create function-url) id config))
 
@@ -117,12 +118,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunctionUrl]___
 
 
 (defn function-url-origin-props-builder
-  "Creates a  `FunctionUrlOriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `FunctionUrlOriginProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[function-url-origin-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (function-url-origin-props-builder> (new FunctionUrlOriginProps$Builder) id config))
 
@@ -184,12 +185,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunctionUrl]___
   "Creates a  `HttpOrigin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[java.lang.String]___
+__Create Form:__ ___[java.lang.String]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| domain-name | java.lang.String |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `domain-name` | java.lang.String |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^String domain-name id config]
   (http-origin-builder> (HttpOrigin$Builder/create domain-name) id config))
 
@@ -248,12 +250,12 @@ __Create Form:__ ____[java.lang.String]___
 
 
 (defn http-origin-props-builder
-  "Creates a  `HttpOriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `HttpOriginProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[http-origin-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (http-origin-props-builder> (new HttpOriginProps$Builder) id config))
 
@@ -315,12 +317,13 @@ __Create Form:__ ____[java.lang.String]___
   "Creates a  `LoadBalancerV2Origin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2]___
+__Create Form:__ ___[software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| load-balancer | software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2 |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `load-balancer` | software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2 |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^ILoadBalancerV2 load-balancer id config]
   (load-balancer-v2-origin-builder> (LoadBalancerV2Origin$Builder/create load-balancer) id config))
 
@@ -379,12 +382,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILo
 
 
 (defn load-balancer-v2-origin-props-builder
-  "Creates a  `LoadBalancerV2OriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoadBalancerV2OriginProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[load-balancer-v2-origin-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (load-balancer-v2-origin-props-builder> (new LoadBalancerV2OriginProps$Builder) id config))
 
@@ -413,12 +416,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILo
 
 
 (defn origin-group-builder
-  "Creates a  `OriginGroup$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `OriginGroup$Builder` instance using a no-argument create, applies the data configuration using the [[origin-group-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (origin-group-builder> (OriginGroup$Builder/create) id config))
 
@@ -447,12 +450,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILo
 
 
 (defn origin-group-props-builder
-  "Creates a  `OriginGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `OriginGroupProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[origin-group-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (origin-group-props-builder> (new OriginGroupProps$Builder) id config))
 
@@ -502,12 +505,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILo
   "Creates a  `RestApiOrigin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.apigateway.RestApiBase]___
+__Create Form:__ ___[software.amazon.awscdk.services.apigateway.RestApiBase]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| rest-api | software.amazon.awscdk.services.apigateway.RestApiBase |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `rest-api` | software.amazon.awscdk.services.apigateway.RestApiBase |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^RestApiBase rest-api id config]
   (rest-api-origin-builder> (RestApiOrigin$Builder/create rest-api) id config))
 
@@ -554,12 +558,12 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.RestApiBase]___
 
 
 (defn rest-api-origin-props-builder
-  "Creates a  `RestApiOriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `RestApiOriginProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[rest-api-origin-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (rest-api-origin-props-builder> (new RestApiOriginProps$Builder) id config))
 
@@ -606,12 +610,13 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.RestApiBase]___
   "Creates a  `S3Origin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
 
 
-__Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
+__Create Form:__ ___[software.amazon.awscdk.services.s3.IBucket]___
+
 | Argument | DataType | Description |
 |---|---|---|
-| bucket | software.amazon.awscdk.services.s3.IBucket |  |
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `bucket` | software.amazon.awscdk.services.s3.IBucket |  |
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^IBucket bucket id config]
   (s3-origin-builder> (S3Origin$Builder/create bucket) id config))
 
@@ -655,11 +660,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
 
 
 (defn s3-origin-props-builder
-  "Creates a  `S3OriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `S3OriginProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[s3-origin-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (s3-origin-props-builder> (new S3OriginProps$Builder) id config))

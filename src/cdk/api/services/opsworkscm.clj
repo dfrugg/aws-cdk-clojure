@@ -84,12 +84,12 @@
 
 
 (defn cfn-server-builder
-  "Creates a  `CfnServer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnServer$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-server-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-server-builder> (CfnServer$Builder/create scope (name id)) id config))
 
@@ -115,12 +115,12 @@
 
 
 (defn cfn-server-engine-attribute-property-builder
-  "Creates a  `CfnServer$EngineAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnServer$EngineAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-server-engine-attribute-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-server-engine-attribute-property-builder> (new CfnServer$EngineAttributeProperty$Builder) id config))
 
@@ -203,11 +203,11 @@
 
 
 (defn cfn-server-props-builder
-  "Creates a  `CfnServerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnServerProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-server-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-server-props-builder> (new CfnServerProps$Builder) id config))

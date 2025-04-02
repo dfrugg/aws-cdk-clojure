@@ -43,12 +43,12 @@
 
 
 (defn cfn-document-classifier-augmented-manifests-list-item-property-builder
-  "Creates a  `CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-document-classifier-augmented-manifests-list-item-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-document-classifier-augmented-manifests-list-item-property-builder> (new CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder) id config))
 
@@ -104,12 +104,12 @@
 
 
 (defn cfn-document-classifier-builder
-  "Creates a  `CfnDocumentClassifier$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentClassifier$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-document-classifier-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-document-classifier-builder> (CfnDocumentClassifier$Builder/create scope (name id)) id config))
 
@@ -135,12 +135,12 @@
 
 
 (defn cfn-document-classifier-document-classifier-documents-property-builder
-  "Creates a  `CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-document-classifier-document-classifier-documents-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-document-classifier-document-classifier-documents-property-builder> (new CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder) id config))
 
@@ -184,12 +184,12 @@
 
 
 (defn cfn-document-classifier-document-classifier-input-data-config-property-builder
-  "Creates a  `CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-document-classifier-document-classifier-input-data-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-document-classifier-document-classifier-input-data-config-property-builder> (new CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder) id config))
 
@@ -215,12 +215,12 @@
 
 
 (defn cfn-document-classifier-document-classifier-output-data-config-property-builder
-  "Creates a  `CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-document-classifier-document-classifier-output-data-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-document-classifier-document-classifier-output-data-config-property-builder> (new CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder) id config))
 
@@ -249,12 +249,12 @@
 
 
 (defn cfn-document-classifier-document-reader-config-property-builder
-  "Creates a  `CfnDocumentClassifier$DocumentReaderConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentClassifier$DocumentReaderConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-document-classifier-document-reader-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-document-classifier-document-reader-config-property-builder> (new CfnDocumentClassifier$DocumentReaderConfigProperty$Builder) id config))
 
@@ -310,12 +310,12 @@
 
 
 (defn cfn-document-classifier-props-builder
-  "Creates a  `CfnDocumentClassifierProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentClassifierProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-document-classifier-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-document-classifier-props-builder> (new CfnDocumentClassifierProps$Builder) id config))
 
@@ -341,12 +341,12 @@
 
 
 (defn cfn-document-classifier-vpc-config-property-builder
-  "Creates a  `CfnDocumentClassifier$VpcConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDocumentClassifier$VpcConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-document-classifier-vpc-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-document-classifier-vpc-config-property-builder> (new CfnDocumentClassifier$VpcConfigProperty$Builder) id config))
 
@@ -390,12 +390,12 @@
 
 
 (defn cfn-flywheel-builder
-  "Creates a  `CfnFlywheel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlywheel$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-flywheel-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-flywheel-builder> (CfnFlywheel$Builder/create scope (name id)) id config))
 
@@ -427,12 +427,12 @@
 
 
 (defn cfn-flywheel-data-security-config-property-builder
-  "Creates a  `CfnFlywheel$DataSecurityConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlywheel$DataSecurityConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flywheel-data-security-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flywheel-data-security-config-property-builder> (new CfnFlywheel$DataSecurityConfigProperty$Builder) id config))
 
@@ -458,12 +458,12 @@
 
 
 (defn cfn-flywheel-document-classification-config-property-builder
-  "Creates a  `CfnFlywheel$DocumentClassificationConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlywheel$DocumentClassificationConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flywheel-document-classification-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flywheel-document-classification-config-property-builder> (new CfnFlywheel$DocumentClassificationConfigProperty$Builder) id config))
 
@@ -486,12 +486,12 @@
 
 
 (defn cfn-flywheel-entity-recognition-config-property-builder
-  "Creates a  `CfnFlywheel$EntityRecognitionConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlywheel$EntityRecognitionConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flywheel-entity-recognition-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flywheel-entity-recognition-config-property-builder> (new CfnFlywheel$EntityRecognitionConfigProperty$Builder) id config))
 
@@ -514,12 +514,12 @@
 
 
 (defn cfn-flywheel-entity-types-list-item-property-builder
-  "Creates a  `CfnFlywheel$EntityTypesListItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlywheel$EntityTypesListItemProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flywheel-entity-types-list-item-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flywheel-entity-types-list-item-property-builder> (new CfnFlywheel$EntityTypesListItemProperty$Builder) id config))
 
@@ -563,12 +563,12 @@
 
 
 (defn cfn-flywheel-props-builder
-  "Creates a  `CfnFlywheelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlywheelProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flywheel-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flywheel-props-builder> (new CfnFlywheelProps$Builder) id config))
 
@@ -597,12 +597,12 @@
 
 
 (defn cfn-flywheel-task-config-property-builder
-  "Creates a  `CfnFlywheel$TaskConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlywheel$TaskConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flywheel-task-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flywheel-task-config-property-builder> (new CfnFlywheel$TaskConfigProperty$Builder) id config))
 
@@ -628,11 +628,11 @@
 
 
 (defn cfn-flywheel-vpc-config-property-builder
-  "Creates a  `CfnFlywheel$VpcConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnFlywheel$VpcConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-flywheel-vpc-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-flywheel-vpc-config-property-builder> (new CfnFlywheel$VpcConfigProperty$Builder) id config))

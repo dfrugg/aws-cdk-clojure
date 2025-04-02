@@ -147,12 +147,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn between-condition-builder
-  "Creates a  `BetweenCondition$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `BetweenCondition$Builder` instance using a no-argument constructor, applies the data configuration using the [[between-condition-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (between-condition-builder> (new BetweenCondition$Builder) id config))
 
@@ -205,12 +205,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-subscription-builder
-  "Creates a  `CfnSubscription$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSubscription$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-subscription-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-subscription-builder> (CfnSubscription$Builder/create scope (name id)) id config))
 
@@ -263,12 +263,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-subscription-props-builder
-  "Creates a  `CfnSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnSubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-subscription-props-builder> (new CfnSubscriptionProps$Builder) id config))
 
@@ -324,12 +324,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-topic-builder
-  "Creates a  `CfnTopic$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTopic$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-topic-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-topic-builder> (CfnTopic$Builder/create scope (name id)) id config))
 
@@ -355,12 +355,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-topic-inline-policy-builder
-  "Creates a  `CfnTopicInlinePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTopicInlinePolicy$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-topic-inline-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-topic-inline-policy-builder> (CfnTopicInlinePolicy$Builder/create scope (name id)) id config))
 
@@ -386,12 +386,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-topic-inline-policy-props-builder
-  "Creates a  `CfnTopicInlinePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTopicInlinePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-topic-inline-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-topic-inline-policy-props-builder> (new CfnTopicInlinePolicyProps$Builder) id config))
 
@@ -423,12 +423,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-topic-logging-config-property-builder
-  "Creates a  `CfnTopic$LoggingConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTopic$LoggingConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-topic-logging-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-topic-logging-config-property-builder> (new CfnTopic$LoggingConfigProperty$Builder) id config))
 
@@ -454,12 +454,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-topic-policy-builder
-  "Creates a  `CfnTopicPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTopicPolicy$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-topic-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-topic-policy-builder> (CfnTopicPolicy$Builder/create scope (name id)) id config))
 
@@ -485,12 +485,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-topic-policy-props-builder
-  "Creates a  `CfnTopicPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTopicPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-topic-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-topic-policy-props-builder> (new CfnTopicPolicyProps$Builder) id config))
 
@@ -546,12 +546,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-topic-props-builder
-  "Creates a  `CfnTopicProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTopicProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-topic-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-topic-props-builder> (new CfnTopicProps$Builder) id config))
 
@@ -577,12 +577,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-topic-subscription-property-builder
-  "Creates a  `CfnTopic$SubscriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTopic$SubscriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-topic-subscription-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-topic-subscription-property-builder> (new CfnTopic$SubscriptionProperty$Builder) id config))
 
@@ -614,12 +614,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn logging-config-builder
-  "Creates a  `LoggingConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoggingConfig$Builder` instance using a no-argument constructor, applies the data configuration using the [[logging-config-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (logging-config-builder> (new LoggingConfig$Builder) id config))
 
@@ -660,12 +660,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn numeric-conditions-builder
-  "Creates a  `NumericConditions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `NumericConditions$Builder` instance using a no-argument constructor, applies the data configuration using the [[numeric-conditions-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (numeric-conditions-builder> (new NumericConditions$Builder) id config))
 
@@ -697,12 +697,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn string-conditions-builder
-  "Creates a  `StringConditions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `StringConditions$Builder` instance using a no-argument constructor, applies the data configuration using the [[string-conditions-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (string-conditions-builder> (new StringConditions$Builder) id config))
 
@@ -749,12 +749,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn subscription-builder
-  "Creates a  `Subscription$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Subscription$Builder` instance using a scope and ID, applies the data configuration using the [[subscription-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (subscription-builder> (Subscription$Builder/create scope (name id)) id config))
 
@@ -798,12 +798,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn subscription-options-builder
-  "Creates a  `SubscriptionOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SubscriptionOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[subscription-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (subscription-options-builder> (new SubscriptionOptions$Builder) id config))
 
@@ -850,12 +850,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn subscription-props-builder
-  "Creates a  `SubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SubscriptionProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[subscription-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (subscription-props-builder> (new SubscriptionProps$Builder) id config))
 
@@ -881,12 +881,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn topic-attributes-builder
-  "Creates a  `TopicAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TopicAttributes$Builder` instance using a no-argument constructor, applies the data configuration using the [[topic-attributes-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (topic-attributes-builder> (new TopicAttributes$Builder) id config))
 
@@ -936,12 +936,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn topic-builder
-  "Creates a  `Topic$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Topic$Builder` instance using a scope and ID, applies the data configuration using the [[topic-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (topic-builder> (Topic$Builder/create scope (name id)) id config))
 
@@ -970,12 +970,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn topic-policy-builder
-  "Creates a  `TopicPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TopicPolicy$Builder` instance using a scope and ID, applies the data configuration using the [[topic-policy-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (topic-policy-builder> (TopicPolicy$Builder/create scope (name id)) id config))
 
@@ -1004,12 +1004,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn topic-policy-props-builder
-  "Creates a  `TopicPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TopicPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[topic-policy-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (topic-policy-props-builder> (new TopicPolicyProps$Builder) id config))
 
@@ -1059,12 +1059,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn topic-props-builder
-  "Creates a  `TopicProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TopicProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[topic-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (topic-props-builder> (new TopicProps$Builder) id config))
 
@@ -1117,11 +1117,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn topic-subscription-config-builder
-  "Creates a  `TopicSubscriptionConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `TopicSubscriptionConfig$Builder` instance using a no-argument constructor, applies the data configuration using the [[topic-subscription-config-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (topic-subscription-config-builder> (new TopicSubscriptionConfig$Builder) id config))

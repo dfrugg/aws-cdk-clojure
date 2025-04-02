@@ -40,12 +40,12 @@
 
 
 (defn cfn-training-dataset-builder
-  "Creates a  `CfnTrainingDataset$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrainingDataset$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-training-dataset-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-training-dataset-builder> (CfnTrainingDataset$Builder/create scope (name id)) id config))
 
@@ -71,12 +71,12 @@
 
 
 (defn cfn-training-dataset-column-schema-property-builder
-  "Creates a  `CfnTrainingDataset$ColumnSchemaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrainingDataset$ColumnSchemaProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-training-dataset-column-schema-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-training-dataset-column-schema-property-builder> (new CfnTrainingDataset$ColumnSchemaProperty$Builder) id config))
 
@@ -99,12 +99,12 @@
 
 
 (defn cfn-training-dataset-data-source-property-builder
-  "Creates a  `CfnTrainingDataset$DataSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrainingDataset$DataSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-training-dataset-data-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-training-dataset-data-source-property-builder> (new CfnTrainingDataset$DataSourceProperty$Builder) id config))
 
@@ -130,12 +130,12 @@
 
 
 (defn cfn-training-dataset-dataset-input-config-property-builder
-  "Creates a  `CfnTrainingDataset$DatasetInputConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrainingDataset$DatasetInputConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-training-dataset-dataset-input-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-training-dataset-dataset-input-config-property-builder> (new CfnTrainingDataset$DatasetInputConfigProperty$Builder) id config))
 
@@ -161,12 +161,12 @@
 
 
 (defn cfn-training-dataset-dataset-property-builder
-  "Creates a  `CfnTrainingDataset$DatasetProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrainingDataset$DatasetProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-training-dataset-dataset-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-training-dataset-dataset-property-builder> (new CfnTrainingDataset$DatasetProperty$Builder) id config))
 
@@ -195,12 +195,12 @@
 
 
 (defn cfn-training-dataset-glue-data-source-property-builder
-  "Creates a  `CfnTrainingDataset$GlueDataSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrainingDataset$GlueDataSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-training-dataset-glue-data-source-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-training-dataset-glue-data-source-property-builder> (new CfnTrainingDataset$GlueDataSourceProperty$Builder) id config))
 
@@ -235,11 +235,11 @@
 
 
 (defn cfn-training-dataset-props-builder
-  "Creates a  `CfnTrainingDatasetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnTrainingDatasetProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-training-dataset-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-training-dataset-props-builder> (new CfnTrainingDatasetProps$Builder) id config))

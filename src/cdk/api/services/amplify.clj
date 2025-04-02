@@ -67,12 +67,12 @@
 
 
 (defn cfn-app-auto-branch-creation-config-property-builder
-  "Creates a  `CfnApp$AutoBranchCreationConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnApp$AutoBranchCreationConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-app-auto-branch-creation-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-app-auto-branch-creation-config-property-builder> (new CfnApp$AutoBranchCreationConfigProperty$Builder) id config))
 
@@ -101,12 +101,12 @@
 
 
 (defn cfn-app-basic-auth-config-property-builder
-  "Creates a  `CfnApp$BasicAuthConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnApp$BasicAuthConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-app-basic-auth-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-app-basic-auth-config-property-builder> (new CfnApp$BasicAuthConfigProperty$Builder) id config))
 
@@ -171,12 +171,12 @@
 
 
 (defn cfn-app-builder
-  "Creates a  `CfnApp$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnApp$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-app-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-app-builder> (CfnApp$Builder/create scope (name id)) id config))
 
@@ -208,12 +208,12 @@
 
 
 (defn cfn-app-custom-rule-property-builder
-  "Creates a  `CfnApp$CustomRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnApp$CustomRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-app-custom-rule-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-app-custom-rule-property-builder> (new CfnApp$CustomRuleProperty$Builder) id config))
 
@@ -239,12 +239,12 @@
 
 
 (defn cfn-app-environment-variable-property-builder
-  "Creates a  `CfnApp$EnvironmentVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnApp$EnvironmentVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-app-environment-variable-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-app-environment-variable-property-builder> (new CfnApp$EnvironmentVariableProperty$Builder) id config))
 
@@ -309,12 +309,12 @@
 
 
 (defn cfn-app-props-builder
-  "Creates a  `CfnAppProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnAppProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-app-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-app-props-builder> (new CfnAppProps$Builder) id config))
 
@@ -337,12 +337,12 @@
 
 
 (defn cfn-branch-backend-property-builder
-  "Creates a  `CfnBranch$BackendProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBranch$BackendProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-branch-backend-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-branch-backend-property-builder> (new CfnBranch$BackendProperty$Builder) id config))
 
@@ -371,12 +371,12 @@
 
 
 (defn cfn-branch-basic-auth-config-property-builder
-  "Creates a  `CfnBranch$BasicAuthConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBranch$BasicAuthConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-branch-basic-auth-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-branch-basic-auth-config-property-builder> (new CfnBranch$BasicAuthConfigProperty$Builder) id config))
 
@@ -438,12 +438,12 @@
 
 
 (defn cfn-branch-builder
-  "Creates a  `CfnBranch$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBranch$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-branch-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-branch-builder> (CfnBranch$Builder/create scope (name id)) id config))
 
@@ -469,12 +469,12 @@
 
 
 (defn cfn-branch-environment-variable-property-builder
-  "Creates a  `CfnBranch$EnvironmentVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBranch$EnvironmentVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-branch-environment-variable-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-branch-environment-variable-property-builder> (new CfnBranch$EnvironmentVariableProperty$Builder) id config))
 
@@ -536,12 +536,12 @@
 
 
 (defn cfn-branch-props-builder
-  "Creates a  `CfnBranchProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnBranchProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-branch-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-branch-props-builder> (new CfnBranchProps$Builder) id config))
 
@@ -582,12 +582,12 @@
 
 
 (defn cfn-domain-builder
-  "Creates a  `CfnDomain$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-domain-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-domain-builder> (CfnDomain$Builder/create scope (name id)) id config))
 
@@ -616,12 +616,12 @@
 
 
 (defn cfn-domain-certificate-property-builder
-  "Creates a  `CfnDomain$CertificateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$CertificateProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-certificate-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-certificate-property-builder> (new CfnDomain$CertificateProperty$Builder) id config))
 
@@ -647,12 +647,12 @@
 
 
 (defn cfn-domain-certificate-settings-property-builder
-  "Creates a  `CfnDomain$CertificateSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$CertificateSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-certificate-settings-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-certificate-settings-property-builder> (new CfnDomain$CertificateSettingsProperty$Builder) id config))
 
@@ -693,12 +693,12 @@
 
 
 (defn cfn-domain-props-builder
-  "Creates a  `CfnDomainProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomainProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-props-builder> (new CfnDomainProps$Builder) id config))
 
@@ -724,11 +724,11 @@
 
 
 (defn cfn-domain-sub-domain-setting-property-builder
-  "Creates a  `CfnDomain$SubDomainSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$SubDomainSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-sub-domain-setting-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-sub-domain-setting-property-builder> (new CfnDomain$SubDomainSettingProperty$Builder) id config))

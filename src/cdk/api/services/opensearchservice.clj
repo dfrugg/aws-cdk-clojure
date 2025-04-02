@@ -112,12 +112,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn advanced-security-options-builder
-  "Creates a  `AdvancedSecurityOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `AdvancedSecurityOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[advanced-security-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (advanced-security-options-builder> (new AdvancedSecurityOptions$Builder) id config))
 
@@ -158,12 +158,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn capacity-config-builder
-  "Creates a  `CapacityConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CapacityConfig$Builder` instance using a no-argument constructor, applies the data configuration using the [[capacity-config-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (capacity-config-builder> (new CapacityConfig$Builder) id config))
 
@@ -201,12 +201,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-advanced-security-options-input-property-builder
-  "Creates a  `CfnDomain$AdvancedSecurityOptionsInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$AdvancedSecurityOptionsInputProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-advanced-security-options-input-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-advanced-security-options-input-property-builder> (new CfnDomain$AdvancedSecurityOptionsInputProperty$Builder) id config))
 
@@ -283,12 +283,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-builder
-  "Creates a  `CfnDomain$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$Builder` instance using a scope and ID, applies the data configuration using the [[cfn-domain-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (cfn-domain-builder> (CfnDomain$Builder/create scope (name id)) id config))
 
@@ -344,12 +344,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-cluster-config-property-builder
-  "Creates a  `CfnDomain$ClusterConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$ClusterConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-cluster-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-cluster-config-property-builder> (new CfnDomain$ClusterConfigProperty$Builder) id config))
 
@@ -381,12 +381,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-cognito-options-property-builder
-  "Creates a  `CfnDomain$CognitoOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$CognitoOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-cognito-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-cognito-options-property-builder> (new CfnDomain$CognitoOptionsProperty$Builder) id config))
 
@@ -409,12 +409,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-cold-storage-options-property-builder
-  "Creates a  `CfnDomain$ColdStorageOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$ColdStorageOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-cold-storage-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-cold-storage-options-property-builder> (new CfnDomain$ColdStorageOptionsProperty$Builder) id config))
 
@@ -449,12 +449,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-domain-endpoint-options-property-builder
-  "Creates a  `CfnDomain$DomainEndpointOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$DomainEndpointOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-domain-endpoint-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-domain-endpoint-options-property-builder> (new CfnDomain$DomainEndpointOptionsProperty$Builder) id config))
 
@@ -489,12 +489,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-ebs-options-property-builder
-  "Creates a  `CfnDomain$EBSOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$EBSOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-ebs-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-ebs-options-property-builder> (new CfnDomain$EBSOptionsProperty$Builder) id config))
 
@@ -520,12 +520,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-encryption-at-rest-options-property-builder
-  "Creates a  `CfnDomain$EncryptionAtRestOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$EncryptionAtRestOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-encryption-at-rest-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-encryption-at-rest-options-property-builder> (new CfnDomain$EncryptionAtRestOptionsProperty$Builder) id config))
 
@@ -551,12 +551,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-idp-property-builder
-  "Creates a  `CfnDomain$IdpProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$IdpProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-idp-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-idp-property-builder> (new CfnDomain$IdpProperty$Builder) id config))
 
@@ -582,12 +582,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-log-publishing-option-property-builder
-  "Creates a  `CfnDomain$LogPublishingOptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$LogPublishingOptionProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-log-publishing-option-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-log-publishing-option-property-builder> (new CfnDomain$LogPublishingOptionProperty$Builder) id config))
 
@@ -616,12 +616,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-master-user-options-property-builder
-  "Creates a  `CfnDomain$MasterUserOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$MasterUserOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-master-user-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-master-user-options-property-builder> (new CfnDomain$MasterUserOptionsProperty$Builder) id config))
 
@@ -644,12 +644,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-node-to-node-encryption-options-property-builder
-  "Creates a  `CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-node-to-node-encryption-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-node-to-node-encryption-options-property-builder> (new CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder) id config))
 
@@ -675,12 +675,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-off-peak-window-options-property-builder
-  "Creates a  `CfnDomain$OffPeakWindowOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$OffPeakWindowOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-off-peak-window-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-off-peak-window-options-property-builder> (new CfnDomain$OffPeakWindowOptionsProperty$Builder) id config))
 
@@ -703,12 +703,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-off-peak-window-property-builder
-  "Creates a  `CfnDomain$OffPeakWindowProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$OffPeakWindowProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-off-peak-window-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-off-peak-window-property-builder> (new CfnDomain$OffPeakWindowProperty$Builder) id config))
 
@@ -785,12 +785,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-props-builder
-  "Creates a  `CfnDomainProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomainProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-props-builder> (new CfnDomainProps$Builder) id config))
 
@@ -831,12 +831,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-saml-options-property-builder
-  "Creates a  `CfnDomain$SAMLOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$SAMLOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-saml-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-saml-options-property-builder> (new CfnDomain$SAMLOptionsProperty$Builder) id config))
 
@@ -880,12 +880,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-service-software-options-property-builder
-  "Creates a  `CfnDomain$ServiceSoftwareOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$ServiceSoftwareOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-service-software-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-service-software-options-property-builder> (new CfnDomain$ServiceSoftwareOptionsProperty$Builder) id config))
 
@@ -908,12 +908,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-snapshot-options-property-builder
-  "Creates a  `CfnDomain$SnapshotOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$SnapshotOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-snapshot-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-snapshot-options-property-builder> (new CfnDomain$SnapshotOptionsProperty$Builder) id config))
 
@@ -936,12 +936,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-software-update-options-property-builder
-  "Creates a  `CfnDomain$SoftwareUpdateOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$SoftwareUpdateOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-software-update-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-software-update-options-property-builder> (new CfnDomain$SoftwareUpdateOptionsProperty$Builder) id config))
 
@@ -967,12 +967,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-vpc-options-property-builder
-  "Creates a  `CfnDomain$VPCOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$VPCOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-vpc-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-vpc-options-property-builder> (new CfnDomain$VPCOptionsProperty$Builder) id config))
 
@@ -998,12 +998,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-window-start-time-property-builder
-  "Creates a  `CfnDomain$WindowStartTimeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$WindowStartTimeProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-window-start-time-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-window-start-time-property-builder> (new CfnDomain$WindowStartTimeProperty$Builder) id config))
 
@@ -1026,12 +1026,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-domain-zone-awareness-config-property-builder
-  "Creates a  `CfnDomain$ZoneAwarenessConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CfnDomain$ZoneAwarenessConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[cfn-domain-zone-awareness-config-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cfn-domain-zone-awareness-config-property-builder> (new CfnDomain$ZoneAwarenessConfigProperty$Builder) id config))
 
@@ -1060,12 +1060,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cognito-options-builder
-  "Creates a  `CognitoOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CognitoOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[cognito-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (cognito-options-builder> (new CognitoOptions$Builder) id config))
 
@@ -1094,12 +1094,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn custom-endpoint-options-builder
-  "Creates a  `CustomEndpointOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `CustomEndpointOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[custom-endpoint-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (custom-endpoint-options-builder> (new CustomEndpointOptions$Builder) id config))
 
@@ -1125,12 +1125,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn domain-attributes-builder
-  "Creates a  `DomainAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DomainAttributes$Builder` instance using a no-argument constructor, applies the data configuration using the [[domain-attributes-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (domain-attributes-builder> (new DomainAttributes$Builder) id config))
 
@@ -1234,12 +1234,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn domain-builder
-  "Creates a  `Domain$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `Domain$Builder` instance using a scope and ID, applies the data configuration using the [[domain-builder>]] function, then builds it.  Takes the following arguments: 
 | Argument | DataType | Description |
 |---|---|---|
-| scope | software.constructs.Construct | The parent scope construct of the object being built. |
-| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `scope` | software.constructs.Construct | The parent scope construct of the object being built. |
+| `id` | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (domain-builder> (Domain$Builder/create scope (name id)) id config))
 
@@ -1343,12 +1343,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn domain-props-builder
-  "Creates a  `DomainProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `DomainProps$Builder` instance using a no-argument constructor, applies the data configuration using the [[domain-props-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (domain-props-builder> (new DomainProps$Builder) id config))
 
@@ -1383,12 +1383,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ebs-options-builder
-  "Creates a  `EbsOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EbsOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[ebs-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (ebs-options-builder> (new EbsOptions$Builder) id config))
 
@@ -1414,12 +1414,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn encryption-at-rest-options-builder
-  "Creates a  `EncryptionAtRestOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `EncryptionAtRestOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[encryption-at-rest-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (encryption-at-rest-options-builder> (new EncryptionAtRestOptions$Builder) id config))
 
@@ -1463,12 +1463,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn logging-options-builder
-  "Creates a  `LoggingOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `LoggingOptions$Builder` instance using a no-argument constructor, applies the data configuration using the [[logging-options-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (logging-options-builder> (new LoggingOptions$Builder) id config))
 
@@ -1509,12 +1509,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn saml-options-property-builder
-  "Creates a  `SAMLOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `SAMLOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration using the [[saml-options-property-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (saml-options-property-builder> (new SAMLOptionsProperty$Builder) id config))
 
@@ -1540,12 +1540,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn window-start-time-builder
-  "Creates a  `WindowStartTime$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `WindowStartTime$Builder` instance using a no-argument constructor, applies the data configuration using the [[window-start-time-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (window-start-time-builder> (new WindowStartTime$Builder) id config))
 
@@ -1571,11 +1571,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn zone-awareness-config-builder
-  "Creates a  `ZoneAwarenessConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+  "Creates a  `ZoneAwarenessConfig$Builder` instance using a no-argument constructor, applies the data configuration using the [[zone-awareness-config-builder>]] function, then builds it.  Takes the following arguments: 
 
 | Argument | DataType | Description |
 |---|---|---|
-| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
-| config | map | Data configuration |"
+| `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| `config` | map | Data configuration |"
   [id config]
   (zone-awareness-config-builder> (new ZoneAwarenessConfig$Builder) id config))
