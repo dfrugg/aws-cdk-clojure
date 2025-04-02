@@ -9,8 +9,8 @@
                                                              CfnSimpleADProps$Builder]))
 
 
-(defn build-cfn-microsoft-ad-builder
-  "The build-cfn-microsoft-ad-builder function updates a CfnMicrosoftAD$Builder instance using the provided configuration.
+(defn cfn-microsoft-ad-builder>
+  "The cfn-microsoft-ad-builder> function updates a CfnMicrosoftAD$Builder instance using the provided configuration.
   The function takes the CfnMicrosoftAD$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -52,11 +52,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-microsoft-ad-builder (CfnMicrosoftAD$Builder/create scope (name id)) id config))
+  (cfn-microsoft-ad-builder> (CfnMicrosoftAD$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-microsoft-ad-props-builder
-  "The build-cfn-microsoft-ad-props-builder function updates a CfnMicrosoftADProps$Builder instance using the provided configuration.
+(defn cfn-microsoft-ad-props-builder>
+  "The cfn-microsoft-ad-props-builder> function updates a CfnMicrosoftADProps$Builder instance using the provided configuration.
   The function takes the CfnMicrosoftADProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -98,11 +98,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-microsoft-ad-props-builder (new CfnMicrosoftADProps$Builder) id config))
+  (cfn-microsoft-ad-props-builder> (new CfnMicrosoftADProps$Builder) id config))
 
 
-(defn build-cfn-microsoft-ad-vpc-settings-property-builder
-  "The build-cfn-microsoft-ad-vpc-settings-property-builder function updates a CfnMicrosoftAD$VpcSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-microsoft-ad-vpc-settings-property-builder>
+  "The cfn-microsoft-ad-vpc-settings-property-builder> function updates a CfnMicrosoftAD$VpcSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnMicrosoftAD$VpcSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -129,11 +129,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-microsoft-ad-vpc-settings-property-builder (new CfnMicrosoftAD$VpcSettingsProperty$Builder) id config))
+  (cfn-microsoft-ad-vpc-settings-property-builder> (new CfnMicrosoftAD$VpcSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-simple-ad-builder
-  "The build-cfn-simple-ad-builder function updates a CfnSimpleAD$Builder instance using the provided configuration.
+(defn cfn-simple-ad-builder>
+  "The cfn-simple-ad-builder> function updates a CfnSimpleAD$Builder instance using the provided configuration.
   The function takes the CfnSimpleAD$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -178,11 +178,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-simple-ad-builder (CfnSimpleAD$Builder/create scope (name id)) id config))
+  (cfn-simple-ad-builder> (CfnSimpleAD$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-simple-ad-props-builder
-  "The build-cfn-simple-ad-props-builder function updates a CfnSimpleADProps$Builder instance using the provided configuration.
+(defn cfn-simple-ad-props-builder>
+  "The cfn-simple-ad-props-builder> function updates a CfnSimpleADProps$Builder instance using the provided configuration.
   The function takes the CfnSimpleADProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -227,11 +227,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simple-ad-props-builder (new CfnSimpleADProps$Builder) id config))
+  (cfn-simple-ad-props-builder> (new CfnSimpleADProps$Builder) id config))
 
 
-(defn build-cfn-simple-ad-vpc-settings-property-builder
-  "The build-cfn-simple-ad-vpc-settings-property-builder function updates a CfnSimpleAD$VpcSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-simple-ad-vpc-settings-property-builder>
+  "The cfn-simple-ad-vpc-settings-property-builder> function updates a CfnSimpleAD$VpcSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnSimpleAD$VpcSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -258,4 +258,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simple-ad-vpc-settings-property-builder (new CfnSimpleAD$VpcSettingsProperty$Builder) id config))
+  (cfn-simple-ad-vpc-settings-property-builder> (new CfnSimpleAD$VpcSettingsProperty$Builder) id config))

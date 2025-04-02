@@ -53,8 +53,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :handler-change data) TriggerInvalidation/HANDLER_CHANGE)))
 
 
-(defn build-trigger-builder
-  "The build-trigger-builder function updates a Trigger$Builder instance using the provided configuration.
+(defn trigger-builder>
+  "The trigger-builder> function updates a Trigger$Builder instance using the provided configuration.
   The function takes the Trigger$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -93,11 +93,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-trigger-builder (Trigger$Builder/create scope (name id)) id config))
+  (trigger-builder> (Trigger$Builder/create scope (name id)) id config))
 
 
-(defn build-trigger-function-builder
-  "The build-trigger-function-builder function updates a TriggerFunction$Builder instance using the provided configuration.
+(defn trigger-function-builder>
+  "The trigger-function-builder> function updates a TriggerFunction$Builder instance using the provided configuration.
   The function takes the TriggerFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -277,11 +277,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-trigger-function-builder (TriggerFunction$Builder/create scope (name id)) id config))
+  (trigger-function-builder> (TriggerFunction$Builder/create scope (name id)) id config))
 
 
-(defn build-trigger-function-props-builder
-  "The build-trigger-function-props-builder function updates a TriggerFunctionProps$Builder instance using the provided configuration.
+(defn trigger-function-props-builder>
+  "The trigger-function-props-builder> function updates a TriggerFunctionProps$Builder instance using the provided configuration.
   The function takes the TriggerFunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -461,11 +461,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-trigger-function-props-builder (new TriggerFunctionProps$Builder) id config))
+  (trigger-function-props-builder> (new TriggerFunctionProps$Builder) id config))
 
 
-(defn build-trigger-options-builder
-  "The build-trigger-options-builder function updates a TriggerOptions$Builder instance using the provided configuration.
+(defn trigger-options-builder>
+  "The trigger-options-builder> function updates a TriggerOptions$Builder instance using the provided configuration.
   The function takes the TriggerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -495,11 +495,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-trigger-options-builder (new TriggerOptions$Builder) id config))
+  (trigger-options-builder> (new TriggerOptions$Builder) id config))
 
 
-(defn build-trigger-props-builder
-  "The build-trigger-props-builder function updates a TriggerProps$Builder instance using the provided configuration.
+(defn trigger-props-builder>
+  "The trigger-props-builder> function updates a TriggerProps$Builder instance using the provided configuration.
   The function takes the TriggerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -538,4 +538,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-trigger-props-builder (new TriggerProps$Builder) id config))
+  (trigger-props-builder> (new TriggerProps$Builder) id config))

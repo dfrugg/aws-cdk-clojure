@@ -9,8 +9,8 @@
                                                        CfnSlackWorkspaceConfigurationProps$Builder]))
 
 
-(defn build-cfn-account-alias-builder
-  "The build-cfn-account-alias-builder function updates a CfnAccountAlias$Builder instance using the provided configuration.
+(defn cfn-account-alias-builder>
+  "The cfn-account-alias-builder> function updates a CfnAccountAlias$Builder instance using the provided configuration.
   The function takes the CfnAccountAlias$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -34,11 +34,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-account-alias-builder (CfnAccountAlias$Builder/create scope (name id)) id config))
+  (cfn-account-alias-builder> (CfnAccountAlias$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-account-alias-props-builder
-  "The build-cfn-account-alias-props-builder function updates a CfnAccountAliasProps$Builder instance using the provided configuration.
+(defn cfn-account-alias-props-builder>
+  "The cfn-account-alias-props-builder> function updates a CfnAccountAliasProps$Builder instance using the provided configuration.
   The function takes the CfnAccountAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -62,11 +62,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-account-alias-props-builder (new CfnAccountAliasProps$Builder) id config))
+  (cfn-account-alias-props-builder> (new CfnAccountAliasProps$Builder) id config))
 
 
-(defn build-cfn-slack-channel-configuration-builder
-  "The build-cfn-slack-channel-configuration-builder function updates a CfnSlackChannelConfiguration$Builder instance using the provided configuration.
+(defn cfn-slack-channel-configuration-builder>
+  "The cfn-slack-channel-configuration-builder> function updates a CfnSlackChannelConfiguration$Builder instance using the provided configuration.
   The function takes the CfnSlackChannelConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -111,11 +111,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-slack-channel-configuration-builder (CfnSlackChannelConfiguration$Builder/create scope (name id)) id config))
+  (cfn-slack-channel-configuration-builder> (CfnSlackChannelConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-slack-channel-configuration-props-builder
-  "The build-cfn-slack-channel-configuration-props-builder function updates a CfnSlackChannelConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-slack-channel-configuration-props-builder>
+  "The cfn-slack-channel-configuration-props-builder> function updates a CfnSlackChannelConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnSlackChannelConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -160,11 +160,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-slack-channel-configuration-props-builder (new CfnSlackChannelConfigurationProps$Builder) id config))
+  (cfn-slack-channel-configuration-props-builder> (new CfnSlackChannelConfigurationProps$Builder) id config))
 
 
-(defn build-cfn-slack-workspace-configuration-builder
-  "The build-cfn-slack-workspace-configuration-builder function updates a CfnSlackWorkspaceConfiguration$Builder instance using the provided configuration.
+(defn cfn-slack-workspace-configuration-builder>
+  "The cfn-slack-workspace-configuration-builder> function updates a CfnSlackWorkspaceConfiguration$Builder instance using the provided configuration.
   The function takes the CfnSlackWorkspaceConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -191,11 +191,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-slack-workspace-configuration-builder (CfnSlackWorkspaceConfiguration$Builder/create scope (name id)) id config))
+  (cfn-slack-workspace-configuration-builder> (CfnSlackWorkspaceConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-slack-workspace-configuration-props-builder
-  "The build-cfn-slack-workspace-configuration-props-builder function updates a CfnSlackWorkspaceConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-slack-workspace-configuration-props-builder>
+  "The cfn-slack-workspace-configuration-props-builder> function updates a CfnSlackWorkspaceConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnSlackWorkspaceConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -222,4 +222,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-slack-workspace-configuration-props-builder (new CfnSlackWorkspaceConfigurationProps$Builder) id config))
+  (cfn-slack-workspace-configuration-props-builder> (new CfnSlackWorkspaceConfigurationProps$Builder) id config))

@@ -5,8 +5,8 @@
                                                              HttpsRedirectProps$Builder]))
 
 
-(defn build-https-redirect-builder
-  "The build-https-redirect-builder function updates a HttpsRedirect$Builder instance using the provided configuration.
+(defn https-redirect-builder>
+  "The https-redirect-builder> function updates a HttpsRedirect$Builder instance using the provided configuration.
   The function takes the HttpsRedirect$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -39,11 +39,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-https-redirect-builder (HttpsRedirect$Builder/create scope (name id)) id config))
+  (https-redirect-builder> (HttpsRedirect$Builder/create scope (name id)) id config))
 
 
-(defn build-https-redirect-props-builder
-  "The build-https-redirect-props-builder function updates a HttpsRedirectProps$Builder instance using the provided configuration.
+(defn https-redirect-props-builder>
+  "The https-redirect-props-builder> function updates a HttpsRedirectProps$Builder instance using the provided configuration.
   The function takes the HttpsRedirectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -76,4 +76,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-https-redirect-props-builder (new HttpsRedirectProps$Builder) id config))
+  (https-redirect-props-builder> (new HttpsRedirectProps$Builder) id config))

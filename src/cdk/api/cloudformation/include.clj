@@ -6,8 +6,8 @@
                                                           IncludedNestedStack$Builder]))
 
 
-(defn build-cfn-include-builder
-  "The build-cfn-include-builder function updates a CfnInclude$Builder instance using the provided configuration.
+(defn cfn-include-builder>
+  "The cfn-include-builder> function updates a CfnInclude$Builder instance using the provided configuration.
   The function takes the CfnInclude$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -43,11 +43,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-include-builder (CfnInclude$Builder/create scope (name id)) id config))
+  (cfn-include-builder> (CfnInclude$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-include-props-builder
-  "The build-cfn-include-props-builder function updates a CfnIncludeProps$Builder instance using the provided configuration.
+(defn cfn-include-props-builder>
+  "The cfn-include-props-builder> function updates a CfnIncludeProps$Builder instance using the provided configuration.
   The function takes the CfnIncludeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -83,11 +83,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-include-props-builder (new CfnIncludeProps$Builder) id config))
+  (cfn-include-props-builder> (new CfnIncludeProps$Builder) id config))
 
 
-(defn build-included-nested-stack-builder
-  "The build-included-nested-stack-builder function updates a IncludedNestedStack$Builder instance using the provided configuration.
+(defn included-nested-stack-builder>
+  "The included-nested-stack-builder> function updates a IncludedNestedStack$Builder instance using the provided configuration.
   The function takes the IncludedNestedStack$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -114,4 +114,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-included-nested-stack-builder (new IncludedNestedStack$Builder) id config))
+  (included-nested-stack-builder> (new IncludedNestedStack$Builder) id config))

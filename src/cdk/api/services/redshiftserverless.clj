@@ -14,8 +14,8 @@
                                                                CfnWorkgroupProps$Builder]))
 
 
-(defn build-cfn-namespace-builder
-  "The build-cfn-namespace-builder function updates a CfnNamespace$Builder instance using the provided configuration.
+(defn cfn-namespace-builder>
+  "The cfn-namespace-builder> function updates a CfnNamespace$Builder instance using the provided configuration.
   The function takes the CfnNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -84,11 +84,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-namespace-builder (CfnNamespace$Builder/create scope (name id)) id config))
+  (cfn-namespace-builder> (CfnNamespace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-namespace-namespace-property-builder
-  "The build-cfn-namespace-namespace-property-builder function updates a CfnNamespace$NamespaceProperty$Builder instance using the provided configuration.
+(defn cfn-namespace-namespace-property-builder>
+  "The cfn-namespace-namespace-property-builder> function updates a CfnNamespace$NamespaceProperty$Builder instance using the provided configuration.
   The function takes the CfnNamespace$NamespaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -148,11 +148,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-namespace-namespace-property-builder (new CfnNamespace$NamespaceProperty$Builder) id config))
+  (cfn-namespace-namespace-property-builder> (new CfnNamespace$NamespaceProperty$Builder) id config))
 
 
-(defn build-cfn-namespace-props-builder
-  "The build-cfn-namespace-props-builder function updates a CfnNamespaceProps$Builder instance using the provided configuration.
+(defn cfn-namespace-props-builder>
+  "The cfn-namespace-props-builder> function updates a CfnNamespaceProps$Builder instance using the provided configuration.
   The function takes the CfnNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -221,11 +221,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-namespace-props-builder (new CfnNamespaceProps$Builder) id config))
+  (cfn-namespace-props-builder> (new CfnNamespaceProps$Builder) id config))
 
 
-(defn build-cfn-namespace-snapshot-copy-configuration-property-builder
-  "The build-cfn-namespace-snapshot-copy-configuration-property-builder function updates a CfnNamespace$SnapshotCopyConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-namespace-snapshot-copy-configuration-property-builder>
+  "The cfn-namespace-snapshot-copy-configuration-property-builder> function updates a CfnNamespace$SnapshotCopyConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnNamespace$SnapshotCopyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -255,11 +255,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-namespace-snapshot-copy-configuration-property-builder (new CfnNamespace$SnapshotCopyConfigurationProperty$Builder) id config))
+  (cfn-namespace-snapshot-copy-configuration-property-builder> (new CfnNamespace$SnapshotCopyConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-workgroup-builder
-  "The build-cfn-workgroup-builder function updates a CfnWorkgroup$Builder instance using the provided configuration.
+(defn cfn-workgroup-builder>
+  "The cfn-workgroup-builder> function updates a CfnWorkgroup$Builder instance using the provided configuration.
   The function takes the CfnWorkgroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -313,11 +313,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-workgroup-builder (CfnWorkgroup$Builder/create scope (name id)) id config))
+  (cfn-workgroup-builder> (CfnWorkgroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-workgroup-config-parameter-property-builder
-  "The build-cfn-workgroup-config-parameter-property-builder function updates a CfnWorkgroup$ConfigParameterProperty$Builder instance using the provided configuration.
+(defn cfn-workgroup-config-parameter-property-builder>
+  "The cfn-workgroup-config-parameter-property-builder> function updates a CfnWorkgroup$ConfigParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkgroup$ConfigParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -344,11 +344,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workgroup-config-parameter-property-builder (new CfnWorkgroup$ConfigParameterProperty$Builder) id config))
+  (cfn-workgroup-config-parameter-property-builder> (new CfnWorkgroup$ConfigParameterProperty$Builder) id config))
 
 
-(defn build-cfn-workgroup-endpoint-property-builder
-  "The build-cfn-workgroup-endpoint-property-builder function updates a CfnWorkgroup$EndpointProperty$Builder instance using the provided configuration.
+(defn cfn-workgroup-endpoint-property-builder>
+  "The cfn-workgroup-endpoint-property-builder> function updates a CfnWorkgroup$EndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkgroup$EndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -378,11 +378,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workgroup-endpoint-property-builder (new CfnWorkgroup$EndpointProperty$Builder) id config))
+  (cfn-workgroup-endpoint-property-builder> (new CfnWorkgroup$EndpointProperty$Builder) id config))
 
 
-(defn build-cfn-workgroup-network-interface-property-builder
-  "The build-cfn-workgroup-network-interface-property-builder function updates a CfnWorkgroup$NetworkInterfaceProperty$Builder instance using the provided configuration.
+(defn cfn-workgroup-network-interface-property-builder>
+  "The cfn-workgroup-network-interface-property-builder> function updates a CfnWorkgroup$NetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkgroup$NetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -415,11 +415,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workgroup-network-interface-property-builder (new CfnWorkgroup$NetworkInterfaceProperty$Builder) id config))
+  (cfn-workgroup-network-interface-property-builder> (new CfnWorkgroup$NetworkInterfaceProperty$Builder) id config))
 
 
-(defn build-cfn-workgroup-props-builder
-  "The build-cfn-workgroup-props-builder function updates a CfnWorkgroupProps$Builder instance using the provided configuration.
+(defn cfn-workgroup-props-builder>
+  "The cfn-workgroup-props-builder> function updates a CfnWorkgroupProps$Builder instance using the provided configuration.
   The function takes the CfnWorkgroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -473,11 +473,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workgroup-props-builder (new CfnWorkgroupProps$Builder) id config))
+  (cfn-workgroup-props-builder> (new CfnWorkgroupProps$Builder) id config))
 
 
-(defn build-cfn-workgroup-vpc-endpoint-property-builder
-  "The build-cfn-workgroup-vpc-endpoint-property-builder function updates a CfnWorkgroup$VpcEndpointProperty$Builder instance using the provided configuration.
+(defn cfn-workgroup-vpc-endpoint-property-builder>
+  "The cfn-workgroup-vpc-endpoint-property-builder> function updates a CfnWorkgroup$VpcEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkgroup$VpcEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -507,11 +507,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workgroup-vpc-endpoint-property-builder (new CfnWorkgroup$VpcEndpointProperty$Builder) id config))
+  (cfn-workgroup-vpc-endpoint-property-builder> (new CfnWorkgroup$VpcEndpointProperty$Builder) id config))
 
 
-(defn build-cfn-workgroup-workgroup-property-builder
-  "The build-cfn-workgroup-workgroup-property-builder function updates a CfnWorkgroup$WorkgroupProperty$Builder instance using the provided configuration.
+(defn cfn-workgroup-workgroup-property-builder>
+  "The cfn-workgroup-workgroup-property-builder> function updates a CfnWorkgroup$WorkgroupProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkgroup$WorkgroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -574,4 +574,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workgroup-workgroup-property-builder (new CfnWorkgroup$WorkgroupProperty$Builder) id config))
+  (cfn-workgroup-workgroup-property-builder> (new CfnWorkgroup$WorkgroupProperty$Builder) id config))

@@ -12,8 +12,8 @@
                                                        TarballImageAssetProps$Builder]))
 
 
-(defn build-docker-cache-option-builder
-  "The build-docker-cache-option-builder function updates a DockerCacheOption$Builder instance using the provided configuration.
+(defn docker-cache-option-builder>
+  "The docker-cache-option-builder> function updates a DockerCacheOption$Builder instance using the provided configuration.
   The function takes the DockerCacheOption$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -40,11 +40,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-docker-cache-option-builder (new DockerCacheOption$Builder) id config))
+  (docker-cache-option-builder> (new DockerCacheOption$Builder) id config))
 
 
-(defn build-docker-image-asset-builder
-  "The build-docker-image-asset-builder function updates a DockerImageAsset$Builder instance using the provided configuration.
+(defn docker-image-asset-builder>
+  "The docker-image-asset-builder> function updates a DockerImageAsset$Builder instance using the provided configuration.
   The function takes the DockerImageAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -119,11 +119,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-docker-image-asset-builder (DockerImageAsset$Builder/create scope (name id)) id config))
+  (docker-image-asset-builder> (DockerImageAsset$Builder/create scope (name id)) id config))
 
 
-(defn build-docker-image-asset-invalidation-options-builder
-  "The build-docker-image-asset-invalidation-options-builder function updates a DockerImageAssetInvalidationOptions$Builder instance using the provided configuration.
+(defn docker-image-asset-invalidation-options-builder>
+  "The docker-image-asset-invalidation-options-builder> function updates a DockerImageAssetInvalidationOptions$Builder instance using the provided configuration.
   The function takes the DockerImageAssetInvalidationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -174,11 +174,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-docker-image-asset-invalidation-options-builder (new DockerImageAssetInvalidationOptions$Builder) id config))
+  (docker-image-asset-invalidation-options-builder> (new DockerImageAssetInvalidationOptions$Builder) id config))
 
 
-(defn build-docker-image-asset-options-builder
-  "The build-docker-image-asset-options-builder function updates a DockerImageAssetOptions$Builder instance using the provided configuration.
+(defn docker-image-asset-options-builder>
+  "The docker-image-asset-options-builder> function updates a DockerImageAssetOptions$Builder instance using the provided configuration.
   The function takes the DockerImageAssetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -250,11 +250,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-docker-image-asset-options-builder (new DockerImageAssetOptions$Builder) id config))
+  (docker-image-asset-options-builder> (new DockerImageAssetOptions$Builder) id config))
 
 
-(defn build-docker-image-asset-props-builder
-  "The build-docker-image-asset-props-builder function updates a DockerImageAssetProps$Builder instance using the provided configuration.
+(defn docker-image-asset-props-builder>
+  "The docker-image-asset-props-builder> function updates a DockerImageAssetProps$Builder instance using the provided configuration.
   The function takes the DockerImageAssetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -329,11 +329,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-docker-image-asset-props-builder (new DockerImageAssetProps$Builder) id config))
+  (docker-image-asset-props-builder> (new DockerImageAssetProps$Builder) id config))
 
 
-(defn build-tarball-image-asset-builder
-  "The build-tarball-image-asset-builder function updates a TarballImageAsset$Builder instance using the provided configuration.
+(defn tarball-image-asset-builder>
+  "The tarball-image-asset-builder> function updates a TarballImageAsset$Builder instance using the provided configuration.
   The function takes the TarballImageAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -357,11 +357,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-tarball-image-asset-builder (TarballImageAsset$Builder/create scope (name id)) id config))
+  (tarball-image-asset-builder> (TarballImageAsset$Builder/create scope (name id)) id config))
 
 
-(defn build-tarball-image-asset-props-builder
-  "The build-tarball-image-asset-props-builder function updates a TarballImageAssetProps$Builder instance using the provided configuration.
+(defn tarball-image-asset-props-builder>
+  "The tarball-image-asset-props-builder> function updates a TarballImageAssetProps$Builder instance using the provided configuration.
   The function takes the TarballImageAssetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -385,4 +385,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-tarball-image-asset-props-builder (new TarballImageAssetProps$Builder) id config))
+  (tarball-image-asset-props-builder> (new TarballImageAssetProps$Builder) id config))

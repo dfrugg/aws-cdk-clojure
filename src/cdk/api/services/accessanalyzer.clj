@@ -9,8 +9,8 @@
                                                            CfnAnalyzerProps$Builder]))
 
 
-(defn build-cfn-analyzer-analyzer-configuration-property-builder
-  "The build-cfn-analyzer-analyzer-configuration-property-builder function updates a CfnAnalyzer$AnalyzerConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-analyzer-analyzer-configuration-property-builder>
+  "The cfn-analyzer-analyzer-configuration-property-builder> function updates a CfnAnalyzer$AnalyzerConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalyzer$AnalyzerConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -34,11 +34,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analyzer-analyzer-configuration-property-builder (new CfnAnalyzer$AnalyzerConfigurationProperty$Builder) id config))
+  (cfn-analyzer-analyzer-configuration-property-builder> (new CfnAnalyzer$AnalyzerConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-analyzer-archive-rule-property-builder
-  "The build-cfn-analyzer-archive-rule-property-builder function updates a CfnAnalyzer$ArchiveRuleProperty$Builder instance using the provided configuration.
+(defn cfn-analyzer-archive-rule-property-builder>
+  "The cfn-analyzer-archive-rule-property-builder> function updates a CfnAnalyzer$ArchiveRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalyzer$ArchiveRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -65,11 +65,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analyzer-archive-rule-property-builder (new CfnAnalyzer$ArchiveRuleProperty$Builder) id config))
+  (cfn-analyzer-archive-rule-property-builder> (new CfnAnalyzer$ArchiveRuleProperty$Builder) id config))
 
 
-(defn build-cfn-analyzer-builder
-  "The build-cfn-analyzer-builder function updates a CfnAnalyzer$Builder instance using the provided configuration.
+(defn cfn-analyzer-builder>
+  "The cfn-analyzer-builder> function updates a CfnAnalyzer$Builder instance using the provided configuration.
   The function takes the CfnAnalyzer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -105,11 +105,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-analyzer-builder (CfnAnalyzer$Builder/create scope (name id)) id config))
+  (cfn-analyzer-builder> (CfnAnalyzer$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-analyzer-filter-property-builder
-  "The build-cfn-analyzer-filter-property-builder function updates a CfnAnalyzer$FilterProperty$Builder instance using the provided configuration.
+(defn cfn-analyzer-filter-property-builder>
+  "The cfn-analyzer-filter-property-builder> function updates a CfnAnalyzer$FilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalyzer$FilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -145,11 +145,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analyzer-filter-property-builder (new CfnAnalyzer$FilterProperty$Builder) id config))
+  (cfn-analyzer-filter-property-builder> (new CfnAnalyzer$FilterProperty$Builder) id config))
 
 
-(defn build-cfn-analyzer-props-builder
-  "The build-cfn-analyzer-props-builder function updates a CfnAnalyzerProps$Builder instance using the provided configuration.
+(defn cfn-analyzer-props-builder>
+  "The cfn-analyzer-props-builder> function updates a CfnAnalyzerProps$Builder instance using the provided configuration.
   The function takes the CfnAnalyzerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -185,11 +185,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analyzer-props-builder (new CfnAnalyzerProps$Builder) id config))
+  (cfn-analyzer-props-builder> (new CfnAnalyzerProps$Builder) id config))
 
 
-(defn build-cfn-analyzer-unused-access-configuration-property-builder
-  "The build-cfn-analyzer-unused-access-configuration-property-builder function updates a CfnAnalyzer$UnusedAccessConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-analyzer-unused-access-configuration-property-builder>
+  "The cfn-analyzer-unused-access-configuration-property-builder> function updates a CfnAnalyzer$UnusedAccessConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalyzer$UnusedAccessConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -213,4 +213,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analyzer-unused-access-configuration-property-builder (new CfnAnalyzer$UnusedAccessConfigurationProperty$Builder) id config))
+  (cfn-analyzer-unused-access-configuration-property-builder> (new CfnAnalyzer$UnusedAccessConfigurationProperty$Builder) id config))

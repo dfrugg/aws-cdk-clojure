@@ -9,8 +9,8 @@
                                                        CfnWorkspaceProps$Builder]))
 
 
-(defn build-cfn-connection-alias-builder
-  "The build-cfn-connection-alias-builder function updates a CfnConnectionAlias$Builder instance using the provided configuration.
+(defn cfn-connection-alias-builder>
+  "The cfn-connection-alias-builder> function updates a CfnConnectionAlias$Builder instance using the provided configuration.
   The function takes the CfnConnectionAlias$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -37,11 +37,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-connection-alias-builder (CfnConnectionAlias$Builder/create scope (name id)) id config))
+  (cfn-connection-alias-builder> (CfnConnectionAlias$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-connection-alias-connection-alias-association-property-builder
-  "The build-cfn-connection-alias-connection-alias-association-property-builder function updates a CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder instance using the provided configuration.
+(defn cfn-connection-alias-connection-alias-association-property-builder>
+  "The cfn-connection-alias-connection-alias-association-property-builder> function updates a CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder instance using the provided configuration.
   The function takes the CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -74,11 +74,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connection-alias-connection-alias-association-property-builder (new CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder) id config))
+  (cfn-connection-alias-connection-alias-association-property-builder> (new CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder) id config))
 
 
-(defn build-cfn-connection-alias-props-builder
-  "The build-cfn-connection-alias-props-builder function updates a CfnConnectionAliasProps$Builder instance using the provided configuration.
+(defn cfn-connection-alias-props-builder>
+  "The cfn-connection-alias-props-builder> function updates a CfnConnectionAliasProps$Builder instance using the provided configuration.
   The function takes the CfnConnectionAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -105,11 +105,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connection-alias-props-builder (new CfnConnectionAliasProps$Builder) id config))
+  (cfn-connection-alias-props-builder> (new CfnConnectionAliasProps$Builder) id config))
 
 
-(defn build-cfn-workspace-builder
-  "The build-cfn-workspace-builder function updates a CfnWorkspace$Builder instance using the provided configuration.
+(defn cfn-workspace-builder>
+  "The cfn-workspace-builder> function updates a CfnWorkspace$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -154,11 +154,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-workspace-builder (CfnWorkspace$Builder/create scope (name id)) id config))
+  (cfn-workspace-builder> (CfnWorkspace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-workspace-props-builder
-  "The build-cfn-workspace-props-builder function updates a CfnWorkspaceProps$Builder instance using the provided configuration.
+(defn cfn-workspace-props-builder>
+  "The cfn-workspace-props-builder> function updates a CfnWorkspaceProps$Builder instance using the provided configuration.
   The function takes the CfnWorkspaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -203,11 +203,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-props-builder (new CfnWorkspaceProps$Builder) id config))
+  (cfn-workspace-props-builder> (new CfnWorkspaceProps$Builder) id config))
 
 
-(defn build-cfn-workspace-workspace-properties-property-builder
-  "The build-cfn-workspace-workspace-properties-property-builder function updates a CfnWorkspace$WorkspacePropertiesProperty$Builder instance using the provided configuration.
+(defn cfn-workspace-workspace-properties-property-builder>
+  "The cfn-workspace-workspace-properties-property-builder> function updates a CfnWorkspace$WorkspacePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$WorkspacePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -243,4 +243,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-workspace-properties-property-builder (new CfnWorkspace$WorkspacePropertiesProperty$Builder) id config))
+  (cfn-workspace-workspace-properties-property-builder> (new CfnWorkspace$WorkspacePropertiesProperty$Builder) id config))

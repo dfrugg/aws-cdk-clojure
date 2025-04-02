@@ -58,8 +58,8 @@
            [software.constructs IConstruct]))
 
 
-(defn build-api-destination-builder
-  "The build-api-destination-builder function updates a ApiDestination$Builder instance using the provided configuration.
+(defn api-destination-builder>
+  "The api-destination-builder> function updates a ApiDestination$Builder instance using the provided configuration.
   The function takes the ApiDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -107,11 +107,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IApiDestination]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IApiDestination api-destination id config]
-  (build-api-destination-builder (ApiDestination$Builder/create api-destination) id config))
+  (api-destination-builder> (ApiDestination$Builder/create api-destination) id config))
 
 
-(defn build-api-destination-props-builder
-  "The build-api-destination-props-builder function updates a ApiDestinationProps$Builder instance using the provided configuration.
+(defn api-destination-props-builder>
+  "The api-destination-props-builder> function updates a ApiDestinationProps$Builder instance using the provided configuration.
   The function takes the ApiDestinationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -156,11 +156,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IApiDestination]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-api-destination-props-builder (new ApiDestinationProps$Builder) id config))
+  (api-destination-props-builder> (new ApiDestinationProps$Builder) id config))
 
 
-(defn build-api-gateway-builder
-  "The build-api-gateway-builder function updates a ApiGateway$Builder instance using the provided configuration.
+(defn api-gateway-builder>
+  "The api-gateway-builder> function updates a ApiGateway$Builder instance using the provided configuration.
   The function takes the ApiGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -217,11 +217,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.IRestApi]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IRestApi rest-api id config]
-  (build-api-gateway-builder (ApiGateway$Builder/create rest-api) id config))
+  (api-gateway-builder> (ApiGateway$Builder/create rest-api) id config))
 
 
-(defn build-api-gateway-props-builder
-  "The build-api-gateway-props-builder function updates a ApiGatewayProps$Builder instance using the provided configuration.
+(defn api-gateway-props-builder>
+  "The api-gateway-props-builder> function updates a ApiGatewayProps$Builder instance using the provided configuration.
   The function takes the ApiGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -275,11 +275,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.apigateway.IRestApi]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-api-gateway-props-builder (new ApiGatewayProps$Builder) id config))
+  (api-gateway-props-builder> (new ApiGatewayProps$Builder) id config))
 
 
-(defn build-app-sync-builder
-  "The build-app-sync-builder function updates a AppSync$Builder instance using the provided configuration.
+(defn app-sync-builder>
+  "The app-sync-builder> function updates a AppSync$Builder instance using the provided configuration.
   The function takes the AppSync$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -321,11 +321,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IGraphqlApi graphql-api id config]
-  (build-app-sync-builder (AppSync$Builder/create graphql-api) id config))
+  (app-sync-builder> (AppSync$Builder/create graphql-api) id config))
 
 
-(defn build-app-sync-graph-ql-api-props-builder
-  "The build-app-sync-graph-ql-api-props-builder function updates a AppSyncGraphQLApiProps$Builder instance using the provided configuration.
+(defn app-sync-graph-ql-api-props-builder>
+  "The app-sync-graph-ql-api-props-builder> function updates a AppSyncGraphQLApiProps$Builder instance using the provided configuration.
   The function takes the AppSyncGraphQLApiProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -364,11 +364,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-app-sync-graph-ql-api-props-builder (new AppSyncGraphQLApiProps$Builder) id config))
+  (app-sync-graph-ql-api-props-builder> (new AppSyncGraphQLApiProps$Builder) id config))
 
 
-(defn build-aws-api-builder
-  "The build-aws-api-builder function updates a AwsApi$Builder instance using the provided configuration.
+(defn aws-api-builder>
+  "The aws-api-builder> function updates a AwsApi$Builder instance using the provided configuration.
   The function takes the AwsApi$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -407,11 +407,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-api-builder (AwsApi$Builder/create) id config))
+  (aws-api-builder> (AwsApi$Builder/create) id config))
 
 
-(defn build-aws-api-input-builder
-  "The build-aws-api-input-builder function updates a AwsApiInput$Builder instance using the provided configuration.
+(defn aws-api-input-builder>
+  "The aws-api-input-builder> function updates a AwsApiInput$Builder instance using the provided configuration.
   The function takes the AwsApiInput$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -447,11 +447,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-api-input-builder (new AwsApiInput$Builder) id config))
+  (aws-api-input-builder> (new AwsApiInput$Builder) id config))
 
 
-(defn build-aws-api-props-builder
-  "The build-aws-api-props-builder function updates a AwsApiProps$Builder instance using the provided configuration.
+(defn aws-api-props-builder>
+  "The aws-api-props-builder> function updates a AwsApiProps$Builder instance using the provided configuration.
   The function takes the AwsApiProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -490,11 +490,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.appsync.IGraphqlApi]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-api-props-builder (new AwsApiProps$Builder) id config))
+  (aws-api-props-builder> (new AwsApiProps$Builder) id config))
 
 
-(defn build-batch-job-builder
-  "The build-batch-job-builder function updates a BatchJob$Builder instance using the provided configuration.
+(defn batch-job-builder>
+  "The batch-job-builder> function updates a BatchJob$Builder instance using the provided configuration.
   The function takes the BatchJob$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -542,11 +542,11 @@ __Create Form:__ ____[java.lang.String software.constructs.IConstruct java.lang.
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String job-queue-arn ^IConstruct job-queue-scope ^String job-definition-arn ^IConstruct job-definition-scope id config]
-  (build-batch-job-builder (BatchJob$Builder/create job-queue-arn job-queue-scope job-definition-arn job-definition-scope) id config))
+  (batch-job-builder> (BatchJob$Builder/create job-queue-arn job-queue-scope job-definition-arn job-definition-scope) id config))
 
 
-(defn build-batch-job-props-builder
-  "The build-batch-job-props-builder function updates a BatchJobProps$Builder instance using the provided configuration.
+(defn batch-job-props-builder>
+  "The batch-job-props-builder> function updates a BatchJobProps$Builder instance using the provided configuration.
   The function takes the BatchJobProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -588,11 +588,11 @@ __Create Form:__ ____[java.lang.String software.constructs.IConstruct java.lang.
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-batch-job-props-builder (new BatchJobProps$Builder) id config))
+  (batch-job-props-builder> (new BatchJobProps$Builder) id config))
 
 
-(defn build-cloud-watch-log-group-builder
-  "The build-cloud-watch-log-group-builder function updates a CloudWatchLogGroup$Builder instance using the provided configuration.
+(defn cloud-watch-log-group-builder>
+  "The cloud-watch-log-group-builder> function updates a CloudWatchLogGroup$Builder instance using the provided configuration.
   The function takes the CloudWatchLogGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -634,11 +634,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.logs.ILogGroup]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^ILogGroup log-group id config]
-  (build-cloud-watch-log-group-builder (CloudWatchLogGroup$Builder/create log-group) id config))
+  (cloud-watch-log-group-builder> (CloudWatchLogGroup$Builder/create log-group) id config))
 
 
-(defn build-code-build-project-builder
-  "The build-code-build-project-builder function updates a CodeBuildProject$Builder instance using the provided configuration.
+(defn code-build-project-builder>
+  "The code-build-project-builder> function updates a CodeBuildProject$Builder instance using the provided configuration.
   The function takes the CodeBuildProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -677,11 +677,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.codebuild.IProject]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IProject project id config]
-  (build-code-build-project-builder (CodeBuildProject$Builder/create project) id config))
+  (code-build-project-builder> (CodeBuildProject$Builder/create project) id config))
 
 
-(defn build-code-build-project-props-builder
-  "The build-code-build-project-props-builder function updates a CodeBuildProjectProps$Builder instance using the provided configuration.
+(defn code-build-project-props-builder>
+  "The code-build-project-props-builder> function updates a CodeBuildProjectProps$Builder instance using the provided configuration.
   The function takes the CodeBuildProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -717,11 +717,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.codebuild.IProject]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-build-project-props-builder (new CodeBuildProjectProps$Builder) id config))
+  (code-build-project-props-builder> (new CodeBuildProjectProps$Builder) id config))
 
 
-(defn build-code-pipeline-builder
-  "The build-code-pipeline-builder function updates a CodePipeline$Builder instance using the provided configuration.
+(defn code-pipeline-builder>
+  "The code-pipeline-builder> function updates a CodePipeline$Builder instance using the provided configuration.
   The function takes the CodePipeline$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -757,11 +757,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IPipeline pipeline id config]
-  (build-code-pipeline-builder (CodePipeline$Builder/create pipeline) id config))
+  (code-pipeline-builder> (CodePipeline$Builder/create pipeline) id config))
 
 
-(defn build-code-pipeline-target-options-builder
-  "The build-code-pipeline-target-options-builder function updates a CodePipelineTargetOptions$Builder instance using the provided configuration.
+(defn code-pipeline-target-options-builder>
+  "The code-pipeline-target-options-builder> function updates a CodePipelineTargetOptions$Builder instance using the provided configuration.
   The function takes the CodePipelineTargetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -794,11 +794,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-pipeline-target-options-builder (new CodePipelineTargetOptions$Builder) id config))
+  (code-pipeline-target-options-builder> (new CodePipelineTargetOptions$Builder) id config))
 
 
-(defn build-container-override-builder
-  "The build-container-override-builder function updates a ContainerOverride$Builder instance using the provided configuration.
+(defn container-override-builder>
+  "The container-override-builder> function updates a ContainerOverride$Builder instance using the provided configuration.
   The function takes the ContainerOverride$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -837,11 +837,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-container-override-builder (new ContainerOverride$Builder) id config))
+  (container-override-builder> (new ContainerOverride$Builder) id config))
 
 
-(defn build-ecs-task-builder
-  "The build-ecs-task-builder function updates a EcsTask$Builder instance using the provided configuration.
+(defn ecs-task-builder>
+  "The ecs-task-builder> function updates a EcsTask$Builder instance using the provided configuration.
   The function takes the EcsTask$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -910,11 +910,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-task-builder (EcsTask$Builder/create) id config))
+  (ecs-task-builder> (EcsTask$Builder/create) id config))
 
 
-(defn build-ecs-task-props-builder
-  "The build-ecs-task-props-builder function updates a EcsTaskProps$Builder instance using the provided configuration.
+(defn ecs-task-props-builder>
+  "The ecs-task-props-builder> function updates a EcsTaskProps$Builder instance using the provided configuration.
   The function takes the EcsTaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -983,11 +983,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.codepipeline.IPipeline]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-task-props-builder (new EcsTaskProps$Builder) id config))
+  (ecs-task-props-builder> (new EcsTaskProps$Builder) id config))
 
 
-(defn build-event-bus-builder
-  "The build-event-bus-builder function updates a EventBus$Builder instance using the provided configuration.
+(defn event-bus-builder>
+  "The event-bus-builder> function updates a EventBus$Builder instance using the provided configuration.
   The function takes the EventBus$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1017,11 +1017,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IEventBus event-bus id config]
-  (build-event-bus-builder (EventBus$Builder/create event-bus) id config))
+  (event-bus-builder> (EventBus$Builder/create event-bus) id config))
 
 
-(defn build-event-bus-props-builder
-  "The build-event-bus-props-builder function updates a EventBusProps$Builder instance using the provided configuration.
+(defn event-bus-props-builder>
+  "The event-bus-props-builder> function updates a EventBusProps$Builder instance using the provided configuration.
   The function takes the EventBusProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1048,11 +1048,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-event-bus-props-builder (new EventBusProps$Builder) id config))
+  (event-bus-props-builder> (new EventBusProps$Builder) id config))
 
 
-(defn build-kinesis-firehose-stream-props-builder
-  "The build-kinesis-firehose-stream-props-builder function updates a KinesisFirehoseStreamProps$Builder instance using the provided configuration.
+(defn kinesis-firehose-stream-props-builder>
+  "The kinesis-firehose-stream-props-builder> function updates a KinesisFirehoseStreamProps$Builder instance using the provided configuration.
   The function takes the KinesisFirehoseStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1076,11 +1076,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.IEventBus]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-kinesis-firehose-stream-props-builder (new KinesisFirehoseStreamProps$Builder) id config))
+  (kinesis-firehose-stream-props-builder> (new KinesisFirehoseStreamProps$Builder) id config))
 
 
-(defn build-kinesis-firehose-stream-v2-builder
-  "The build-kinesis-firehose-stream-v2-builder function updates a KinesisFirehoseStreamV2$Builder instance using the provided configuration.
+(defn kinesis-firehose-stream-v2-builder>
+  "The kinesis-firehose-stream-v2-builder> function updates a KinesisFirehoseStreamV2$Builder instance using the provided configuration.
   The function takes the KinesisFirehoseStreamV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1107,11 +1107,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.events.targets.IDeliverySt
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IDeliveryStream delivery-stream id config]
-  (build-kinesis-firehose-stream-v2-builder (KinesisFirehoseStreamV2$Builder/create delivery-stream) id config))
+  (kinesis-firehose-stream-v2-builder> (KinesisFirehoseStreamV2$Builder/create delivery-stream) id config))
 
 
-(defn build-kinesis-stream-builder
-  "The build-kinesis-stream-builder function updates a KinesisStream$Builder instance using the provided configuration.
+(defn kinesis-stream-builder>
+  "The kinesis-stream-builder> function updates a KinesisStream$Builder instance using the provided configuration.
   The function takes the KinesisStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1141,11 +1141,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IStream stream id config]
-  (build-kinesis-stream-builder (KinesisStream$Builder/create stream) id config))
+  (kinesis-stream-builder> (KinesisStream$Builder/create stream) id config))
 
 
-(defn build-kinesis-stream-props-builder
-  "The build-kinesis-stream-props-builder function updates a KinesisStreamProps$Builder instance using the provided configuration.
+(defn kinesis-stream-props-builder>
+  "The kinesis-stream-props-builder> function updates a KinesisStreamProps$Builder instance using the provided configuration.
   The function takes the KinesisStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1172,11 +1172,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.kinesis.IStream]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-kinesis-stream-props-builder (new KinesisStreamProps$Builder) id config))
+  (kinesis-stream-props-builder> (new KinesisStreamProps$Builder) id config))
 
 
-(defn build-lambda-function-builder
-  "The build-lambda-function-builder function updates a LambdaFunction$Builder instance using the provided configuration.
+(defn lambda-function-builder>
+  "The lambda-function-builder> function updates a LambdaFunction$Builder instance using the provided configuration.
   The function takes the LambdaFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1212,11 +1212,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IFunction handler id config]
-  (build-lambda-function-builder (LambdaFunction$Builder/create handler) id config))
+  (lambda-function-builder> (LambdaFunction$Builder/create handler) id config))
 
 
-(defn build-lambda-function-props-builder
-  "The build-lambda-function-props-builder function updates a LambdaFunctionProps$Builder instance using the provided configuration.
+(defn lambda-function-props-builder>
+  "The lambda-function-props-builder> function updates a LambdaFunctionProps$Builder instance using the provided configuration.
   The function takes the LambdaFunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1249,11 +1249,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-function-props-builder (new LambdaFunctionProps$Builder) id config))
+  (lambda-function-props-builder> (new LambdaFunctionProps$Builder) id config))
 
 
-(defn build-log-group-props-builder
-  "The build-log-group-props-builder function updates a LogGroupProps$Builder instance using the provided configuration.
+(defn log-group-props-builder>
+  "The log-group-props-builder> function updates a LogGroupProps$Builder instance using the provided configuration.
   The function takes the LogGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1292,11 +1292,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-log-group-props-builder (new LogGroupProps$Builder) id config))
+  (log-group-props-builder> (new LogGroupProps$Builder) id config))
 
 
-(defn build-log-group-target-input-options-builder
-  "The build-log-group-target-input-options-builder function updates a LogGroupTargetInputOptions$Builder instance using the provided configuration.
+(defn log-group-target-input-options-builder>
+  "The log-group-target-input-options-builder> function updates a LogGroupTargetInputOptions$Builder instance using the provided configuration.
   The function takes the LogGroupTargetInputOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1323,11 +1323,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-log-group-target-input-options-builder (new LogGroupTargetInputOptions$Builder) id config))
+  (log-group-target-input-options-builder> (new LogGroupTargetInputOptions$Builder) id config))
 
 
-(defn build-sfn-state-machine-builder
-  "The build-sfn-state-machine-builder function updates a SfnStateMachine$Builder instance using the provided configuration.
+(defn sfn-state-machine-builder>
+  "The sfn-state-machine-builder> function updates a SfnStateMachine$Builder instance using the provided configuration.
   The function takes the SfnStateMachine$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1366,11 +1366,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.stepfunctions.IStateMachin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IStateMachine state-machine id config]
-  (build-sfn-state-machine-builder (SfnStateMachine$Builder/create state-machine) id config))
+  (sfn-state-machine-builder> (SfnStateMachine$Builder/create state-machine) id config))
 
 
-(defn build-sfn-state-machine-props-builder
-  "The build-sfn-state-machine-props-builder function updates a SfnStateMachineProps$Builder instance using the provided configuration.
+(defn sfn-state-machine-props-builder>
+  "The sfn-state-machine-props-builder> function updates a SfnStateMachineProps$Builder instance using the provided configuration.
   The function takes the SfnStateMachineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1406,11 +1406,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.stepfunctions.IStateMachin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-sfn-state-machine-props-builder (new SfnStateMachineProps$Builder) id config))
+  (sfn-state-machine-props-builder> (new SfnStateMachineProps$Builder) id config))
 
 
-(defn build-sns-topic-builder
-  "The build-sns-topic-builder function updates a SnsTopic$Builder instance using the provided configuration.
+(defn sns-topic-builder>
+  "The sns-topic-builder> function updates a SnsTopic$Builder instance using the provided configuration.
   The function takes the SnsTopic$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1446,11 +1446,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^ITopic topic id config]
-  (build-sns-topic-builder (SnsTopic$Builder/create topic) id config))
+  (sns-topic-builder> (SnsTopic$Builder/create topic) id config))
 
 
-(defn build-sns-topic-props-builder
-  "The build-sns-topic-props-builder function updates a SnsTopicProps$Builder instance using the provided configuration.
+(defn sns-topic-props-builder>
+  "The sns-topic-props-builder> function updates a SnsTopicProps$Builder instance using the provided configuration.
   The function takes the SnsTopicProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1483,11 +1483,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sns.ITopic]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-sns-topic-props-builder (new SnsTopicProps$Builder) id config))
+  (sns-topic-props-builder> (new SnsTopicProps$Builder) id config))
 
 
-(defn build-sqs-queue-builder
-  "The build-sqs-queue-builder function updates a SqsQueue$Builder instance using the provided configuration.
+(defn sqs-queue-builder>
+  "The sqs-queue-builder> function updates a SqsQueue$Builder instance using the provided configuration.
   The function takes the SqsQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1526,11 +1526,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IQueue queue id config]
-  (build-sqs-queue-builder (SqsQueue$Builder/create queue) id config))
+  (sqs-queue-builder> (SqsQueue$Builder/create queue) id config))
 
 
-(defn build-sqs-queue-props-builder
-  "The build-sqs-queue-props-builder function updates a SqsQueueProps$Builder instance using the provided configuration.
+(defn sqs-queue-props-builder>
+  "The sqs-queue-props-builder> function updates a SqsQueueProps$Builder instance using the provided configuration.
   The function takes the SqsQueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1566,11 +1566,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-sqs-queue-props-builder (new SqsQueueProps$Builder) id config))
+  (sqs-queue-props-builder> (new SqsQueueProps$Builder) id config))
 
 
-(defn build-tag-builder
-  "The build-tag-builder function updates a Tag$Builder instance using the provided configuration.
+(defn tag-builder>
+  "The tag-builder> function updates a Tag$Builder instance using the provided configuration.
   The function takes the Tag$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1597,11 +1597,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-tag-builder (new Tag$Builder) id config))
+  (tag-builder> (new Tag$Builder) id config))
 
 
-(defn build-target-base-props-builder
-  "The build-target-base-props-builder function updates a TargetBaseProps$Builder instance using the provided configuration.
+(defn target-base-props-builder>
+  "The target-base-props-builder> function updates a TargetBaseProps$Builder instance using the provided configuration.
   The function takes the TargetBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1631,11 +1631,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-target-base-props-builder (new TargetBaseProps$Builder) id config))
+  (target-base-props-builder> (new TargetBaseProps$Builder) id config))
 
 
-(defn build-task-environment-variable-builder
-  "The build-task-environment-variable-builder function updates a TaskEnvironmentVariable$Builder instance using the provided configuration.
+(defn task-environment-variable-builder>
+  "The task-environment-variable-builder> function updates a TaskEnvironmentVariable$Builder instance using the provided configuration.
   The function takes the TaskEnvironmentVariable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1662,4 +1662,4 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-task-environment-variable-builder (new TaskEnvironmentVariable$Builder) id config))
+  (task-environment-variable-builder> (new TaskEnvironmentVariable$Builder) id config))

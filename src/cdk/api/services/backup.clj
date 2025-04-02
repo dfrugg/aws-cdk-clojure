@@ -121,8 +121,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :dummy data) TagOperation/DUMMY)))
 
 
-(defn build-backup-plan-builder
-  "The build-backup-plan-builder function updates a BackupPlan$Builder instance using the provided configuration.
+(defn backup-plan-builder>
+  "The backup-plan-builder> function updates a BackupPlan$Builder instance using the provided configuration.
   The function takes the BackupPlan$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -155,11 +155,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-backup-plan-builder (BackupPlan$Builder/create scope (name id)) id config))
+  (backup-plan-builder> (BackupPlan$Builder/create scope (name id)) id config))
 
 
-(defn build-backup-plan-copy-action-props-builder
-  "The build-backup-plan-copy-action-props-builder function updates a BackupPlanCopyActionProps$Builder instance using the provided configuration.
+(defn backup-plan-copy-action-props-builder>
+  "The backup-plan-copy-action-props-builder> function updates a BackupPlanCopyActionProps$Builder instance using the provided configuration.
   The function takes the BackupPlanCopyActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -189,11 +189,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-backup-plan-copy-action-props-builder (new BackupPlanCopyActionProps$Builder) id config))
+  (backup-plan-copy-action-props-builder> (new BackupPlanCopyActionProps$Builder) id config))
 
 
-(defn build-backup-plan-props-builder
-  "The build-backup-plan-props-builder function updates a BackupPlanProps$Builder instance using the provided configuration.
+(defn backup-plan-props-builder>
+  "The backup-plan-props-builder> function updates a BackupPlanProps$Builder instance using the provided configuration.
   The function takes the BackupPlanProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -226,11 +226,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-backup-plan-props-builder (new BackupPlanProps$Builder) id config))
+  (backup-plan-props-builder> (new BackupPlanProps$Builder) id config))
 
 
-(defn build-backup-plan-rule-builder
-  "The build-backup-plan-rule-builder function updates a BackupPlanRule$Builder instance using the provided configuration.
+(defn backup-plan-rule-builder>
+  "The backup-plan-rule-builder> function updates a BackupPlanRule$Builder instance using the provided configuration.
   The function takes the BackupPlanRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -281,11 +281,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-backup-plan-rule-builder (BackupPlanRule$Builder/create) id config))
+  (backup-plan-rule-builder> (BackupPlanRule$Builder/create) id config))
 
 
-(defn build-backup-plan-rule-props-builder
-  "The build-backup-plan-rule-props-builder function updates a BackupPlanRuleProps$Builder instance using the provided configuration.
+(defn backup-plan-rule-props-builder>
+  "The backup-plan-rule-props-builder> function updates a BackupPlanRuleProps$Builder instance using the provided configuration.
   The function takes the BackupPlanRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -336,11 +336,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-backup-plan-rule-props-builder (new BackupPlanRuleProps$Builder) id config))
+  (backup-plan-rule-props-builder> (new BackupPlanRuleProps$Builder) id config))
 
 
-(defn build-backup-resource-builder
-  "The build-backup-resource-builder function updates a BackupResource$Builder instance using the provided configuration.
+(defn backup-resource-builder>
+  "The backup-resource-builder> function updates a BackupResource$Builder instance using the provided configuration.
   The function takes the BackupResource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -390,15 +390,15 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   ([^String resource ^Construct construct id config]
-   (build-backup-resource-builder (BackupResource$Builder/create resource construct) id config))
+   (backup-resource-builder> (BackupResource$Builder/create resource construct) id config))
   ([^String resource id config]
-   (build-backup-resource-builder (BackupResource$Builder/create resource) id config))
+   (backup-resource-builder> (BackupResource$Builder/create resource) id config))
   ([id config]
-   (build-backup-resource-builder (BackupResource$Builder/create) id config)))
+   (backup-resource-builder> (BackupResource$Builder/create) id config)))
 
 
-(defn build-backup-selection-builder
-  "The build-backup-selection-builder function updates a BackupSelection$Builder instance using the provided configuration.
+(defn backup-selection-builder>
+  "The backup-selection-builder> function updates a BackupSelection$Builder instance using the provided configuration.
   The function takes the BackupSelection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -437,11 +437,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-backup-selection-builder (BackupSelection$Builder/create scope (name id)) id config))
+  (backup-selection-builder> (BackupSelection$Builder/create scope (name id)) id config))
 
 
-(defn build-backup-selection-options-builder
-  "The build-backup-selection-options-builder function updates a BackupSelectionOptions$Builder instance using the provided configuration.
+(defn backup-selection-options-builder>
+  "The backup-selection-options-builder> function updates a BackupSelectionOptions$Builder instance using the provided configuration.
   The function takes the BackupSelectionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -477,11 +477,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-backup-selection-options-builder (new BackupSelectionOptions$Builder) id config))
+  (backup-selection-options-builder> (new BackupSelectionOptions$Builder) id config))
 
 
-(defn build-backup-selection-props-builder
-  "The build-backup-selection-props-builder function updates a BackupSelectionProps$Builder instance using the provided configuration.
+(defn backup-selection-props-builder>
+  "The backup-selection-props-builder> function updates a BackupSelectionProps$Builder instance using the provided configuration.
   The function takes the BackupSelectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -520,11 +520,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-backup-selection-props-builder (new BackupSelectionProps$Builder) id config))
+  (backup-selection-props-builder> (new BackupSelectionProps$Builder) id config))
 
 
-(defn build-backup-vault-builder
-  "The build-backup-vault-builder function updates a BackupVault$Builder instance using the provided configuration.
+(defn backup-vault-builder>
+  "The backup-vault-builder> function updates a BackupVault$Builder instance using the provided configuration.
   The function takes the BackupVault$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -569,11 +569,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-backup-vault-builder (BackupVault$Builder/create scope (name id)) id config))
+  (backup-vault-builder> (BackupVault$Builder/create scope (name id)) id config))
 
 
-(defn build-backup-vault-props-builder
-  "The build-backup-vault-props-builder function updates a BackupVaultProps$Builder instance using the provided configuration.
+(defn backup-vault-props-builder>
+  "The backup-vault-props-builder> function updates a BackupVaultProps$Builder instance using the provided configuration.
   The function takes the BackupVaultProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -618,11 +618,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-backup-vault-props-builder (new BackupVaultProps$Builder) id config))
+  (backup-vault-props-builder> (new BackupVaultProps$Builder) id config))
 
 
-(defn build-cfn-backup-plan-advanced-backup-setting-resource-type-property-builder
-  "The build-cfn-backup-plan-advanced-backup-setting-resource-type-property-builder function updates a CfnBackupPlan$AdvancedBackupSettingResourceTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-plan-advanced-backup-setting-resource-type-property-builder>
+  "The cfn-backup-plan-advanced-backup-setting-resource-type-property-builder> function updates a CfnBackupPlan$AdvancedBackupSettingResourceTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupPlan$AdvancedBackupSettingResourceTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -649,11 +649,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-plan-advanced-backup-setting-resource-type-property-builder (new CfnBackupPlan$AdvancedBackupSettingResourceTypeProperty$Builder) id config))
+  (cfn-backup-plan-advanced-backup-setting-resource-type-property-builder> (new CfnBackupPlan$AdvancedBackupSettingResourceTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-plan-backup-plan-resource-type-property-builder
-  "The build-cfn-backup-plan-backup-plan-resource-type-property-builder function updates a CfnBackupPlan$BackupPlanResourceTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-plan-backup-plan-resource-type-property-builder>
+  "The cfn-backup-plan-backup-plan-resource-type-property-builder> function updates a CfnBackupPlan$BackupPlanResourceTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupPlan$BackupPlanResourceTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -683,11 +683,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-plan-backup-plan-resource-type-property-builder (new CfnBackupPlan$BackupPlanResourceTypeProperty$Builder) id config))
+  (cfn-backup-plan-backup-plan-resource-type-property-builder> (new CfnBackupPlan$BackupPlanResourceTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-plan-backup-rule-resource-type-property-builder
-  "The build-cfn-backup-plan-backup-rule-resource-type-property-builder function updates a CfnBackupPlan$BackupRuleResourceTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-plan-backup-rule-resource-type-property-builder>
+  "The cfn-backup-plan-backup-rule-resource-type-property-builder> function updates a CfnBackupPlan$BackupRuleResourceTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupPlan$BackupRuleResourceTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -738,11 +738,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-plan-backup-rule-resource-type-property-builder (new CfnBackupPlan$BackupRuleResourceTypeProperty$Builder) id config))
+  (cfn-backup-plan-backup-rule-resource-type-property-builder> (new CfnBackupPlan$BackupRuleResourceTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-plan-builder
-  "The build-cfn-backup-plan-builder function updates a CfnBackupPlan$Builder instance using the provided configuration.
+(defn cfn-backup-plan-builder>
+  "The cfn-backup-plan-builder> function updates a CfnBackupPlan$Builder instance using the provided configuration.
   The function takes the CfnBackupPlan$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -769,11 +769,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-backup-plan-builder (CfnBackupPlan$Builder/create scope (name id)) id config))
+  (cfn-backup-plan-builder> (CfnBackupPlan$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-backup-plan-copy-action-resource-type-property-builder
-  "The build-cfn-backup-plan-copy-action-resource-type-property-builder function updates a CfnBackupPlan$CopyActionResourceTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-plan-copy-action-resource-type-property-builder>
+  "The cfn-backup-plan-copy-action-resource-type-property-builder> function updates a CfnBackupPlan$CopyActionResourceTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupPlan$CopyActionResourceTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -800,11 +800,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-plan-copy-action-resource-type-property-builder (new CfnBackupPlan$CopyActionResourceTypeProperty$Builder) id config))
+  (cfn-backup-plan-copy-action-resource-type-property-builder> (new CfnBackupPlan$CopyActionResourceTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-plan-lifecycle-resource-type-property-builder
-  "The build-cfn-backup-plan-lifecycle-resource-type-property-builder function updates a CfnBackupPlan$LifecycleResourceTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-plan-lifecycle-resource-type-property-builder>
+  "The cfn-backup-plan-lifecycle-resource-type-property-builder> function updates a CfnBackupPlan$LifecycleResourceTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupPlan$LifecycleResourceTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -834,11 +834,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-plan-lifecycle-resource-type-property-builder (new CfnBackupPlan$LifecycleResourceTypeProperty$Builder) id config))
+  (cfn-backup-plan-lifecycle-resource-type-property-builder> (new CfnBackupPlan$LifecycleResourceTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-plan-props-builder
-  "The build-cfn-backup-plan-props-builder function updates a CfnBackupPlanProps$Builder instance using the provided configuration.
+(defn cfn-backup-plan-props-builder>
+  "The cfn-backup-plan-props-builder> function updates a CfnBackupPlanProps$Builder instance using the provided configuration.
   The function takes the CfnBackupPlanProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -865,11 +865,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-plan-props-builder (new CfnBackupPlanProps$Builder) id config))
+  (cfn-backup-plan-props-builder> (new CfnBackupPlanProps$Builder) id config))
 
 
-(defn build-cfn-backup-selection-backup-selection-resource-type-property-builder
-  "The build-cfn-backup-selection-backup-selection-resource-type-property-builder function updates a CfnBackupSelection$BackupSelectionResourceTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-selection-backup-selection-resource-type-property-builder>
+  "The cfn-backup-selection-backup-selection-resource-type-property-builder> function updates a CfnBackupSelection$BackupSelectionResourceTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupSelection$BackupSelectionResourceTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -908,11 +908,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-selection-backup-selection-resource-type-property-builder (new CfnBackupSelection$BackupSelectionResourceTypeProperty$Builder) id config))
+  (cfn-backup-selection-backup-selection-resource-type-property-builder> (new CfnBackupSelection$BackupSelectionResourceTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-selection-builder
-  "The build-cfn-backup-selection-builder function updates a CfnBackupSelection$Builder instance using the provided configuration.
+(defn cfn-backup-selection-builder>
+  "The cfn-backup-selection-builder> function updates a CfnBackupSelection$Builder instance using the provided configuration.
   The function takes the CfnBackupSelection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -939,11 +939,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-backup-selection-builder (CfnBackupSelection$Builder/create scope (name id)) id config))
+  (cfn-backup-selection-builder> (CfnBackupSelection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-backup-selection-condition-parameter-property-builder
-  "The build-cfn-backup-selection-condition-parameter-property-builder function updates a CfnBackupSelection$ConditionParameterProperty$Builder instance using the provided configuration.
+(defn cfn-backup-selection-condition-parameter-property-builder>
+  "The cfn-backup-selection-condition-parameter-property-builder> function updates a CfnBackupSelection$ConditionParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupSelection$ConditionParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -970,11 +970,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-selection-condition-parameter-property-builder (new CfnBackupSelection$ConditionParameterProperty$Builder) id config))
+  (cfn-backup-selection-condition-parameter-property-builder> (new CfnBackupSelection$ConditionParameterProperty$Builder) id config))
 
 
-(defn build-cfn-backup-selection-condition-resource-type-property-builder
-  "The build-cfn-backup-selection-condition-resource-type-property-builder function updates a CfnBackupSelection$ConditionResourceTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-selection-condition-resource-type-property-builder>
+  "The cfn-backup-selection-condition-resource-type-property-builder> function updates a CfnBackupSelection$ConditionResourceTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupSelection$ConditionResourceTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1004,11 +1004,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-selection-condition-resource-type-property-builder (new CfnBackupSelection$ConditionResourceTypeProperty$Builder) id config))
+  (cfn-backup-selection-condition-resource-type-property-builder> (new CfnBackupSelection$ConditionResourceTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-selection-conditions-property-builder
-  "The build-cfn-backup-selection-conditions-property-builder function updates a CfnBackupSelection$ConditionsProperty$Builder instance using the provided configuration.
+(defn cfn-backup-selection-conditions-property-builder>
+  "The cfn-backup-selection-conditions-property-builder> function updates a CfnBackupSelection$ConditionsProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupSelection$ConditionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1041,11 +1041,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-selection-conditions-property-builder (new CfnBackupSelection$ConditionsProperty$Builder) id config))
+  (cfn-backup-selection-conditions-property-builder> (new CfnBackupSelection$ConditionsProperty$Builder) id config))
 
 
-(defn build-cfn-backup-selection-props-builder
-  "The build-cfn-backup-selection-props-builder function updates a CfnBackupSelectionProps$Builder instance using the provided configuration.
+(defn cfn-backup-selection-props-builder>
+  "The cfn-backup-selection-props-builder> function updates a CfnBackupSelectionProps$Builder instance using the provided configuration.
   The function takes the CfnBackupSelectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1072,11 +1072,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-selection-props-builder (new CfnBackupSelectionProps$Builder) id config))
+  (cfn-backup-selection-props-builder> (new CfnBackupSelectionProps$Builder) id config))
 
 
-(defn build-cfn-backup-vault-builder
-  "The build-cfn-backup-vault-builder function updates a CfnBackupVault$Builder instance using the provided configuration.
+(defn cfn-backup-vault-builder>
+  "The cfn-backup-vault-builder> function updates a CfnBackupVault$Builder instance using the provided configuration.
   The function takes the CfnBackupVault$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1115,11 +1115,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-backup-vault-builder (CfnBackupVault$Builder/create scope (name id)) id config))
+  (cfn-backup-vault-builder> (CfnBackupVault$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-backup-vault-lock-configuration-type-property-builder
-  "The build-cfn-backup-vault-lock-configuration-type-property-builder function updates a CfnBackupVault$LockConfigurationTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-vault-lock-configuration-type-property-builder>
+  "The cfn-backup-vault-lock-configuration-type-property-builder> function updates a CfnBackupVault$LockConfigurationTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupVault$LockConfigurationTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1149,11 +1149,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-vault-lock-configuration-type-property-builder (new CfnBackupVault$LockConfigurationTypeProperty$Builder) id config))
+  (cfn-backup-vault-lock-configuration-type-property-builder> (new CfnBackupVault$LockConfigurationTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-vault-notification-object-type-property-builder
-  "The build-cfn-backup-vault-notification-object-type-property-builder function updates a CfnBackupVault$NotificationObjectTypeProperty$Builder instance using the provided configuration.
+(defn cfn-backup-vault-notification-object-type-property-builder>
+  "The cfn-backup-vault-notification-object-type-property-builder> function updates a CfnBackupVault$NotificationObjectTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBackupVault$NotificationObjectTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1180,11 +1180,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-vault-notification-object-type-property-builder (new CfnBackupVault$NotificationObjectTypeProperty$Builder) id config))
+  (cfn-backup-vault-notification-object-type-property-builder> (new CfnBackupVault$NotificationObjectTypeProperty$Builder) id config))
 
 
-(defn build-cfn-backup-vault-props-builder
-  "The build-cfn-backup-vault-props-builder function updates a CfnBackupVaultProps$Builder instance using the provided configuration.
+(defn cfn-backup-vault-props-builder>
+  "The cfn-backup-vault-props-builder> function updates a CfnBackupVaultProps$Builder instance using the provided configuration.
   The function takes the CfnBackupVaultProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1223,11 +1223,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-backup-vault-props-builder (new CfnBackupVaultProps$Builder) id config))
+  (cfn-backup-vault-props-builder> (new CfnBackupVaultProps$Builder) id config))
 
 
-(defn build-cfn-framework-builder
-  "The build-cfn-framework-builder function updates a CfnFramework$Builder instance using the provided configuration.
+(defn cfn-framework-builder>
+  "The cfn-framework-builder> function updates a CfnFramework$Builder instance using the provided configuration.
   The function takes the CfnFramework$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1260,11 +1260,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-framework-builder (CfnFramework$Builder/create scope (name id)) id config))
+  (cfn-framework-builder> (CfnFramework$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-framework-control-input-parameter-property-builder
-  "The build-cfn-framework-control-input-parameter-property-builder function updates a CfnFramework$ControlInputParameterProperty$Builder instance using the provided configuration.
+(defn cfn-framework-control-input-parameter-property-builder>
+  "The cfn-framework-control-input-parameter-property-builder> function updates a CfnFramework$ControlInputParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnFramework$ControlInputParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1291,11 +1291,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-framework-control-input-parameter-property-builder (new CfnFramework$ControlInputParameterProperty$Builder) id config))
+  (cfn-framework-control-input-parameter-property-builder> (new CfnFramework$ControlInputParameterProperty$Builder) id config))
 
 
-(defn build-cfn-framework-control-scope-property-builder
-  "The build-cfn-framework-control-scope-property-builder function updates a CfnFramework$ControlScopeProperty$Builder instance using the provided configuration.
+(defn cfn-framework-control-scope-property-builder>
+  "The cfn-framework-control-scope-property-builder> function updates a CfnFramework$ControlScopeProperty$Builder instance using the provided configuration.
   The function takes the CfnFramework$ControlScopeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1325,11 +1325,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-framework-control-scope-property-builder (new CfnFramework$ControlScopeProperty$Builder) id config))
+  (cfn-framework-control-scope-property-builder> (new CfnFramework$ControlScopeProperty$Builder) id config))
 
 
-(defn build-cfn-framework-framework-control-property-builder
-  "The build-cfn-framework-framework-control-property-builder function updates a CfnFramework$FrameworkControlProperty$Builder instance using the provided configuration.
+(defn cfn-framework-framework-control-property-builder>
+  "The cfn-framework-framework-control-property-builder> function updates a CfnFramework$FrameworkControlProperty$Builder instance using the provided configuration.
   The function takes the CfnFramework$FrameworkControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1359,11 +1359,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-framework-framework-control-property-builder (new CfnFramework$FrameworkControlProperty$Builder) id config))
+  (cfn-framework-framework-control-property-builder> (new CfnFramework$FrameworkControlProperty$Builder) id config))
 
 
-(defn build-cfn-framework-props-builder
-  "The build-cfn-framework-props-builder function updates a CfnFrameworkProps$Builder instance using the provided configuration.
+(defn cfn-framework-props-builder>
+  "The cfn-framework-props-builder> function updates a CfnFrameworkProps$Builder instance using the provided configuration.
   The function takes the CfnFrameworkProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1396,11 +1396,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-framework-props-builder (new CfnFrameworkProps$Builder) id config))
+  (cfn-framework-props-builder> (new CfnFrameworkProps$Builder) id config))
 
 
-(defn build-cfn-report-plan-builder
-  "The build-cfn-report-plan-builder function updates a CfnReportPlan$Builder instance using the provided configuration.
+(defn cfn-report-plan-builder>
+  "The cfn-report-plan-builder> function updates a CfnReportPlan$Builder instance using the provided configuration.
   The function takes the CfnReportPlan$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1436,11 +1436,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-report-plan-builder (CfnReportPlan$Builder/create scope (name id)) id config))
+  (cfn-report-plan-builder> (CfnReportPlan$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-report-plan-props-builder
-  "The build-cfn-report-plan-props-builder function updates a CfnReportPlanProps$Builder instance using the provided configuration.
+(defn cfn-report-plan-props-builder>
+  "The cfn-report-plan-props-builder> function updates a CfnReportPlanProps$Builder instance using the provided configuration.
   The function takes the CfnReportPlanProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1476,11 +1476,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-report-plan-props-builder (new CfnReportPlanProps$Builder) id config))
+  (cfn-report-plan-props-builder> (new CfnReportPlanProps$Builder) id config))
 
 
-(defn build-cfn-report-plan-report-delivery-channel-property-builder
-  "The build-cfn-report-plan-report-delivery-channel-property-builder function updates a CfnReportPlan$ReportDeliveryChannelProperty$Builder instance using the provided configuration.
+(defn cfn-report-plan-report-delivery-channel-property-builder>
+  "The cfn-report-plan-report-delivery-channel-property-builder> function updates a CfnReportPlan$ReportDeliveryChannelProperty$Builder instance using the provided configuration.
   The function takes the CfnReportPlan$ReportDeliveryChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1510,11 +1510,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-report-plan-report-delivery-channel-property-builder (new CfnReportPlan$ReportDeliveryChannelProperty$Builder) id config))
+  (cfn-report-plan-report-delivery-channel-property-builder> (new CfnReportPlan$ReportDeliveryChannelProperty$Builder) id config))
 
 
-(defn build-cfn-report-plan-report-setting-property-builder
-  "The build-cfn-report-plan-report-setting-property-builder function updates a CfnReportPlan$ReportSettingProperty$Builder instance using the provided configuration.
+(defn cfn-report-plan-report-setting-property-builder>
+  "The cfn-report-plan-report-setting-property-builder> function updates a CfnReportPlan$ReportSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnReportPlan$ReportSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1550,11 +1550,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-report-plan-report-setting-property-builder (new CfnReportPlan$ReportSettingProperty$Builder) id config))
+  (cfn-report-plan-report-setting-property-builder> (new CfnReportPlan$ReportSettingProperty$Builder) id config))
 
 
-(defn build-cfn-restore-testing-plan-builder
-  "The build-cfn-restore-testing-plan-builder function updates a CfnRestoreTestingPlan$Builder instance using the provided configuration.
+(defn cfn-restore-testing-plan-builder>
+  "The cfn-restore-testing-plan-builder> function updates a CfnRestoreTestingPlan$Builder instance using the provided configuration.
   The function takes the CfnRestoreTestingPlan$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1593,11 +1593,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-restore-testing-plan-builder (CfnRestoreTestingPlan$Builder/create scope (name id)) id config))
+  (cfn-restore-testing-plan-builder> (CfnRestoreTestingPlan$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-restore-testing-plan-props-builder
-  "The build-cfn-restore-testing-plan-props-builder function updates a CfnRestoreTestingPlanProps$Builder instance using the provided configuration.
+(defn cfn-restore-testing-plan-props-builder>
+  "The cfn-restore-testing-plan-props-builder> function updates a CfnRestoreTestingPlanProps$Builder instance using the provided configuration.
   The function takes the CfnRestoreTestingPlanProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1636,11 +1636,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-restore-testing-plan-props-builder (new CfnRestoreTestingPlanProps$Builder) id config))
+  (cfn-restore-testing-plan-props-builder> (new CfnRestoreTestingPlanProps$Builder) id config))
 
 
-(defn build-cfn-restore-testing-plan-restore-testing-recovery-point-selection-property-builder
-  "The build-cfn-restore-testing-plan-restore-testing-recovery-point-selection-property-builder function updates a CfnRestoreTestingPlan$RestoreTestingRecoveryPointSelectionProperty$Builder instance using the provided configuration.
+(defn cfn-restore-testing-plan-restore-testing-recovery-point-selection-property-builder>
+  "The cfn-restore-testing-plan-restore-testing-recovery-point-selection-property-builder> function updates a CfnRestoreTestingPlan$RestoreTestingRecoveryPointSelectionProperty$Builder instance using the provided configuration.
   The function takes the CfnRestoreTestingPlan$RestoreTestingRecoveryPointSelectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1676,11 +1676,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-restore-testing-plan-restore-testing-recovery-point-selection-property-builder (new CfnRestoreTestingPlan$RestoreTestingRecoveryPointSelectionProperty$Builder) id config))
+  (cfn-restore-testing-plan-restore-testing-recovery-point-selection-property-builder> (new CfnRestoreTestingPlan$RestoreTestingRecoveryPointSelectionProperty$Builder) id config))
 
 
-(defn build-cfn-restore-testing-selection-builder
-  "The build-cfn-restore-testing-selection-builder function updates a CfnRestoreTestingSelection$Builder instance using the provided configuration.
+(defn cfn-restore-testing-selection-builder>
+  "The cfn-restore-testing-selection-builder> function updates a CfnRestoreTestingSelection$Builder instance using the provided configuration.
   The function takes the CfnRestoreTestingSelection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1725,11 +1725,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-restore-testing-selection-builder (CfnRestoreTestingSelection$Builder/create scope (name id)) id config))
+  (cfn-restore-testing-selection-builder> (CfnRestoreTestingSelection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-restore-testing-selection-key-value-property-builder
-  "The build-cfn-restore-testing-selection-key-value-property-builder function updates a CfnRestoreTestingSelection$KeyValueProperty$Builder instance using the provided configuration.
+(defn cfn-restore-testing-selection-key-value-property-builder>
+  "The cfn-restore-testing-selection-key-value-property-builder> function updates a CfnRestoreTestingSelection$KeyValueProperty$Builder instance using the provided configuration.
   The function takes the CfnRestoreTestingSelection$KeyValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1756,11 +1756,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-restore-testing-selection-key-value-property-builder (new CfnRestoreTestingSelection$KeyValueProperty$Builder) id config))
+  (cfn-restore-testing-selection-key-value-property-builder> (new CfnRestoreTestingSelection$KeyValueProperty$Builder) id config))
 
 
-(defn build-cfn-restore-testing-selection-props-builder
-  "The build-cfn-restore-testing-selection-props-builder function updates a CfnRestoreTestingSelectionProps$Builder instance using the provided configuration.
+(defn cfn-restore-testing-selection-props-builder>
+  "The cfn-restore-testing-selection-props-builder> function updates a CfnRestoreTestingSelectionProps$Builder instance using the provided configuration.
   The function takes the CfnRestoreTestingSelectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1805,11 +1805,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-restore-testing-selection-props-builder (new CfnRestoreTestingSelectionProps$Builder) id config))
+  (cfn-restore-testing-selection-props-builder> (new CfnRestoreTestingSelectionProps$Builder) id config))
 
 
-(defn build-cfn-restore-testing-selection-protected-resource-conditions-property-builder
-  "The build-cfn-restore-testing-selection-protected-resource-conditions-property-builder function updates a CfnRestoreTestingSelection$ProtectedResourceConditionsProperty$Builder instance using the provided configuration.
+(defn cfn-restore-testing-selection-protected-resource-conditions-property-builder>
+  "The cfn-restore-testing-selection-protected-resource-conditions-property-builder> function updates a CfnRestoreTestingSelection$ProtectedResourceConditionsProperty$Builder instance using the provided configuration.
   The function takes the CfnRestoreTestingSelection$ProtectedResourceConditionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1836,11 +1836,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-restore-testing-selection-protected-resource-conditions-property-builder (new CfnRestoreTestingSelection$ProtectedResourceConditionsProperty$Builder) id config))
+  (cfn-restore-testing-selection-protected-resource-conditions-property-builder> (new CfnRestoreTestingSelection$ProtectedResourceConditionsProperty$Builder) id config))
 
 
-(defn build-lock-configuration-builder
-  "The build-lock-configuration-builder function updates a LockConfiguration$Builder instance using the provided configuration.
+(defn lock-configuration-builder>
+  "The lock-configuration-builder> function updates a LockConfiguration$Builder instance using the provided configuration.
   The function takes the LockConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1870,11 +1870,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lock-configuration-builder (new LockConfiguration$Builder) id config))
+  (lock-configuration-builder> (new LockConfiguration$Builder) id config))
 
 
-(defn build-tag-condition-builder
-  "The build-tag-condition-builder function updates a TagCondition$Builder instance using the provided configuration.
+(defn tag-condition-builder>
+  "The tag-condition-builder> function updates a TagCondition$Builder instance using the provided configuration.
   The function takes the TagCondition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1904,4 +1904,4 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-tag-condition-builder (new TagCondition$Builder) id config))
+  (tag-condition-builder> (new TagCondition$Builder) id config))

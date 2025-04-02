@@ -45,8 +45,8 @@
                                                            CfnWaitConditionProps$Builder]))
 
 
-(defn build-cfn-custom-resource-builder
-  "The build-cfn-custom-resource-builder function updates a CfnCustomResource$Builder instance using the provided configuration.
+(defn cfn-custom-resource-builder>
+  "The cfn-custom-resource-builder> function updates a CfnCustomResource$Builder instance using the provided configuration.
   The function takes the CfnCustomResource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -70,11 +70,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-custom-resource-builder (CfnCustomResource$Builder/create scope (name id)) id config))
+  (cfn-custom-resource-builder> (CfnCustomResource$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-custom-resource-props-builder
-  "The build-cfn-custom-resource-props-builder function updates a CfnCustomResourceProps$Builder instance using the provided configuration.
+(defn cfn-custom-resource-props-builder>
+  "The cfn-custom-resource-props-builder> function updates a CfnCustomResourceProps$Builder instance using the provided configuration.
   The function takes the CfnCustomResourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -98,11 +98,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-resource-props-builder (new CfnCustomResourceProps$Builder) id config))
+  (cfn-custom-resource-props-builder> (new CfnCustomResourceProps$Builder) id config))
 
 
-(defn build-cfn-hook-default-version-builder
-  "The build-cfn-hook-default-version-builder function updates a CfnHookDefaultVersion$Builder instance using the provided configuration.
+(defn cfn-hook-default-version-builder>
+  "The cfn-hook-default-version-builder> function updates a CfnHookDefaultVersion$Builder instance using the provided configuration.
   The function takes the CfnHookDefaultVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -132,11 +132,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-hook-default-version-builder (CfnHookDefaultVersion$Builder/create scope (name id)) id config))
+  (cfn-hook-default-version-builder> (CfnHookDefaultVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-hook-default-version-props-builder
-  "The build-cfn-hook-default-version-props-builder function updates a CfnHookDefaultVersionProps$Builder instance using the provided configuration.
+(defn cfn-hook-default-version-props-builder>
+  "The cfn-hook-default-version-props-builder> function updates a CfnHookDefaultVersionProps$Builder instance using the provided configuration.
   The function takes the CfnHookDefaultVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -166,11 +166,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-hook-default-version-props-builder (new CfnHookDefaultVersionProps$Builder) id config))
+  (cfn-hook-default-version-props-builder> (new CfnHookDefaultVersionProps$Builder) id config))
 
 
-(defn build-cfn-hook-type-config-builder
-  "The build-cfn-hook-type-config-builder function updates a CfnHookTypeConfig$Builder instance using the provided configuration.
+(defn cfn-hook-type-config-builder>
+  "The cfn-hook-type-config-builder> function updates a CfnHookTypeConfig$Builder instance using the provided configuration.
   The function takes the CfnHookTypeConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -203,11 +203,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-hook-type-config-builder (CfnHookTypeConfig$Builder/create scope (name id)) id config))
+  (cfn-hook-type-config-builder> (CfnHookTypeConfig$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-hook-type-config-props-builder
-  "The build-cfn-hook-type-config-props-builder function updates a CfnHookTypeConfigProps$Builder instance using the provided configuration.
+(defn cfn-hook-type-config-props-builder>
+  "The cfn-hook-type-config-props-builder> function updates a CfnHookTypeConfigProps$Builder instance using the provided configuration.
   The function takes the CfnHookTypeConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -240,11 +240,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-hook-type-config-props-builder (new CfnHookTypeConfigProps$Builder) id config))
+  (cfn-hook-type-config-props-builder> (new CfnHookTypeConfigProps$Builder) id config))
 
 
-(defn build-cfn-hook-version-builder
-  "The build-cfn-hook-version-builder function updates a CfnHookVersion$Builder instance using the provided configuration.
+(defn cfn-hook-version-builder>
+  "The cfn-hook-version-builder> function updates a CfnHookVersion$Builder instance using the provided configuration.
   The function takes the CfnHookVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -277,11 +277,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-hook-version-builder (CfnHookVersion$Builder/create scope (name id)) id config))
+  (cfn-hook-version-builder> (CfnHookVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-hook-version-logging-config-property-builder
-  "The build-cfn-hook-version-logging-config-property-builder function updates a CfnHookVersion$LoggingConfigProperty$Builder instance using the provided configuration.
+(defn cfn-hook-version-logging-config-property-builder>
+  "The cfn-hook-version-logging-config-property-builder> function updates a CfnHookVersion$LoggingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnHookVersion$LoggingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -308,11 +308,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-hook-version-logging-config-property-builder (new CfnHookVersion$LoggingConfigProperty$Builder) id config))
+  (cfn-hook-version-logging-config-property-builder> (new CfnHookVersion$LoggingConfigProperty$Builder) id config))
 
 
-(defn build-cfn-hook-version-props-builder
-  "The build-cfn-hook-version-props-builder function updates a CfnHookVersionProps$Builder instance using the provided configuration.
+(defn cfn-hook-version-props-builder>
+  "The cfn-hook-version-props-builder> function updates a CfnHookVersionProps$Builder instance using the provided configuration.
   The function takes the CfnHookVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -345,11 +345,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-hook-version-props-builder (new CfnHookVersionProps$Builder) id config))
+  (cfn-hook-version-props-builder> (new CfnHookVersionProps$Builder) id config))
 
 
-(defn build-cfn-macro-builder
-  "The build-cfn-macro-builder function updates a CfnMacro$Builder instance using the provided configuration.
+(defn cfn-macro-builder>
+  "The cfn-macro-builder> function updates a CfnMacro$Builder instance using the provided configuration.
   The function takes the CfnMacro$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -385,11 +385,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-macro-builder (CfnMacro$Builder/create scope (name id)) id config))
+  (cfn-macro-builder> (CfnMacro$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-macro-props-builder
-  "The build-cfn-macro-props-builder function updates a CfnMacroProps$Builder instance using the provided configuration.
+(defn cfn-macro-props-builder>
+  "The cfn-macro-props-builder> function updates a CfnMacroProps$Builder instance using the provided configuration.
   The function takes the CfnMacroProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -425,11 +425,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-macro-props-builder (new CfnMacroProps$Builder) id config))
+  (cfn-macro-props-builder> (new CfnMacroProps$Builder) id config))
 
 
-(defn build-cfn-module-default-version-builder
-  "The build-cfn-module-default-version-builder function updates a CfnModuleDefaultVersion$Builder instance using the provided configuration.
+(defn cfn-module-default-version-builder>
+  "The cfn-module-default-version-builder> function updates a CfnModuleDefaultVersion$Builder instance using the provided configuration.
   The function takes the CfnModuleDefaultVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -459,11 +459,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-module-default-version-builder (CfnModuleDefaultVersion$Builder/create scope (name id)) id config))
+  (cfn-module-default-version-builder> (CfnModuleDefaultVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-module-default-version-props-builder
-  "The build-cfn-module-default-version-props-builder function updates a CfnModuleDefaultVersionProps$Builder instance using the provided configuration.
+(defn cfn-module-default-version-props-builder>
+  "The cfn-module-default-version-props-builder> function updates a CfnModuleDefaultVersionProps$Builder instance using the provided configuration.
   The function takes the CfnModuleDefaultVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -493,11 +493,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-module-default-version-props-builder (new CfnModuleDefaultVersionProps$Builder) id config))
+  (cfn-module-default-version-props-builder> (new CfnModuleDefaultVersionProps$Builder) id config))
 
 
-(defn build-cfn-module-version-builder
-  "The build-cfn-module-version-builder function updates a CfnModuleVersion$Builder instance using the provided configuration.
+(defn cfn-module-version-builder>
+  "The cfn-module-version-builder> function updates a CfnModuleVersion$Builder instance using the provided configuration.
   The function takes the CfnModuleVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -524,11 +524,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-module-version-builder (CfnModuleVersion$Builder/create scope (name id)) id config))
+  (cfn-module-version-builder> (CfnModuleVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-module-version-props-builder
-  "The build-cfn-module-version-props-builder function updates a CfnModuleVersionProps$Builder instance using the provided configuration.
+(defn cfn-module-version-props-builder>
+  "The cfn-module-version-props-builder> function updates a CfnModuleVersionProps$Builder instance using the provided configuration.
   The function takes the CfnModuleVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -555,11 +555,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-module-version-props-builder (new CfnModuleVersionProps$Builder) id config))
+  (cfn-module-version-props-builder> (new CfnModuleVersionProps$Builder) id config))
 
 
-(defn build-cfn-public-type-version-builder
-  "The build-cfn-public-type-version-builder function updates a CfnPublicTypeVersion$Builder instance using the provided configuration.
+(defn cfn-public-type-version-builder>
+  "The cfn-public-type-version-builder> function updates a CfnPublicTypeVersion$Builder instance using the provided configuration.
   The function takes the CfnPublicTypeVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -595,11 +595,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-public-type-version-builder (CfnPublicTypeVersion$Builder/create scope (name id)) id config))
+  (cfn-public-type-version-builder> (CfnPublicTypeVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-public-type-version-props-builder
-  "The build-cfn-public-type-version-props-builder function updates a CfnPublicTypeVersionProps$Builder instance using the provided configuration.
+(defn cfn-public-type-version-props-builder>
+  "The cfn-public-type-version-props-builder> function updates a CfnPublicTypeVersionProps$Builder instance using the provided configuration.
   The function takes the CfnPublicTypeVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -635,11 +635,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-public-type-version-props-builder (new CfnPublicTypeVersionProps$Builder) id config))
+  (cfn-public-type-version-props-builder> (new CfnPublicTypeVersionProps$Builder) id config))
 
 
-(defn build-cfn-publisher-builder
-  "The build-cfn-publisher-builder function updates a CfnPublisher$Builder instance using the provided configuration.
+(defn cfn-publisher-builder>
+  "The cfn-publisher-builder> function updates a CfnPublisher$Builder instance using the provided configuration.
   The function takes the CfnPublisher$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -666,11 +666,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-publisher-builder (CfnPublisher$Builder/create scope (name id)) id config))
+  (cfn-publisher-builder> (CfnPublisher$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-publisher-props-builder
-  "The build-cfn-publisher-props-builder function updates a CfnPublisherProps$Builder instance using the provided configuration.
+(defn cfn-publisher-props-builder>
+  "The cfn-publisher-props-builder> function updates a CfnPublisherProps$Builder instance using the provided configuration.
   The function takes the CfnPublisherProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -697,11 +697,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-publisher-props-builder (new CfnPublisherProps$Builder) id config))
+  (cfn-publisher-props-builder> (new CfnPublisherProps$Builder) id config))
 
 
-(defn build-cfn-resource-default-version-builder
-  "The build-cfn-resource-default-version-builder function updates a CfnResourceDefaultVersion$Builder instance using the provided configuration.
+(defn cfn-resource-default-version-builder>
+  "The cfn-resource-default-version-builder> function updates a CfnResourceDefaultVersion$Builder instance using the provided configuration.
   The function takes the CfnResourceDefaultVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -731,11 +731,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-default-version-builder (CfnResourceDefaultVersion$Builder/create scope (name id)) id config))
+  (cfn-resource-default-version-builder> (CfnResourceDefaultVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-default-version-props-builder
-  "The build-cfn-resource-default-version-props-builder function updates a CfnResourceDefaultVersionProps$Builder instance using the provided configuration.
+(defn cfn-resource-default-version-props-builder>
+  "The cfn-resource-default-version-props-builder> function updates a CfnResourceDefaultVersionProps$Builder instance using the provided configuration.
   The function takes the CfnResourceDefaultVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -765,11 +765,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-default-version-props-builder (new CfnResourceDefaultVersionProps$Builder) id config))
+  (cfn-resource-default-version-props-builder> (new CfnResourceDefaultVersionProps$Builder) id config))
 
 
-(defn build-cfn-resource-version-builder
-  "The build-cfn-resource-version-builder function updates a CfnResourceVersion$Builder instance using the provided configuration.
+(defn cfn-resource-version-builder>
+  "The cfn-resource-version-builder> function updates a CfnResourceVersion$Builder instance using the provided configuration.
   The function takes the CfnResourceVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -802,11 +802,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-version-builder (CfnResourceVersion$Builder/create scope (name id)) id config))
+  (cfn-resource-version-builder> (CfnResourceVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-version-logging-config-property-builder
-  "The build-cfn-resource-version-logging-config-property-builder function updates a CfnResourceVersion$LoggingConfigProperty$Builder instance using the provided configuration.
+(defn cfn-resource-version-logging-config-property-builder>
+  "The cfn-resource-version-logging-config-property-builder> function updates a CfnResourceVersion$LoggingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceVersion$LoggingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -833,11 +833,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-version-logging-config-property-builder (new CfnResourceVersion$LoggingConfigProperty$Builder) id config))
+  (cfn-resource-version-logging-config-property-builder> (new CfnResourceVersion$LoggingConfigProperty$Builder) id config))
 
 
-(defn build-cfn-resource-version-props-builder
-  "The build-cfn-resource-version-props-builder function updates a CfnResourceVersionProps$Builder instance using the provided configuration.
+(defn cfn-resource-version-props-builder>
+  "The cfn-resource-version-props-builder> function updates a CfnResourceVersionProps$Builder instance using the provided configuration.
   The function takes the CfnResourceVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -870,11 +870,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-version-props-builder (new CfnResourceVersionProps$Builder) id config))
+  (cfn-resource-version-props-builder> (new CfnResourceVersionProps$Builder) id config))
 
 
-(defn build-cfn-stack-builder
-  "The build-cfn-stack-builder function updates a CfnStack$Builder instance using the provided configuration.
+(defn cfn-stack-builder>
+  "The cfn-stack-builder> function updates a CfnStack$Builder instance using the provided configuration.
   The function takes the CfnStack$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -910,11 +910,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-stack-builder (CfnStack$Builder/create scope (name id)) id config))
+  (cfn-stack-builder> (CfnStack$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-stack-output-property-builder
-  "The build-cfn-stack-output-property-builder function updates a CfnStack$OutputProperty$Builder instance using the provided configuration.
+(defn cfn-stack-output-property-builder>
+  "The cfn-stack-output-property-builder> function updates a CfnStack$OutputProperty$Builder instance using the provided configuration.
   The function takes the CfnStack$OutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -947,11 +947,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-output-property-builder (new CfnStack$OutputProperty$Builder) id config))
+  (cfn-stack-output-property-builder> (new CfnStack$OutputProperty$Builder) id config))
 
 
-(defn build-cfn-stack-props-builder
-  "The build-cfn-stack-props-builder function updates a CfnStackProps$Builder instance using the provided configuration.
+(defn cfn-stack-props-builder>
+  "The cfn-stack-props-builder> function updates a CfnStackProps$Builder instance using the provided configuration.
   The function takes the CfnStackProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -987,11 +987,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-props-builder (new CfnStackProps$Builder) id config))
+  (cfn-stack-props-builder> (new CfnStackProps$Builder) id config))
 
 
-(defn build-cfn-stack-set-auto-deployment-property-builder
-  "The build-cfn-stack-set-auto-deployment-property-builder function updates a CfnStackSet$AutoDeploymentProperty$Builder instance using the provided configuration.
+(defn cfn-stack-set-auto-deployment-property-builder>
+  "The cfn-stack-set-auto-deployment-property-builder> function updates a CfnStackSet$AutoDeploymentProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$AutoDeploymentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1018,11 +1018,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-set-auto-deployment-property-builder (new CfnStackSet$AutoDeploymentProperty$Builder) id config))
+  (cfn-stack-set-auto-deployment-property-builder> (new CfnStackSet$AutoDeploymentProperty$Builder) id config))
 
 
-(defn build-cfn-stack-set-builder
-  "The build-cfn-stack-set-builder function updates a CfnStackSet$Builder instance using the provided configuration.
+(defn cfn-stack-set-builder>
+  "The cfn-stack-set-builder> function updates a CfnStackSet$Builder instance using the provided configuration.
   The function takes the CfnStackSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1088,11 +1088,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-stack-set-builder (CfnStackSet$Builder/create scope (name id)) id config))
+  (cfn-stack-set-builder> (CfnStackSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-stack-set-deployment-targets-property-builder
-  "The build-cfn-stack-set-deployment-targets-property-builder function updates a CfnStackSet$DeploymentTargetsProperty$Builder instance using the provided configuration.
+(defn cfn-stack-set-deployment-targets-property-builder>
+  "The cfn-stack-set-deployment-targets-property-builder> function updates a CfnStackSet$DeploymentTargetsProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$DeploymentTargetsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1125,11 +1125,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-set-deployment-targets-property-builder (new CfnStackSet$DeploymentTargetsProperty$Builder) id config))
+  (cfn-stack-set-deployment-targets-property-builder> (new CfnStackSet$DeploymentTargetsProperty$Builder) id config))
 
 
-(defn build-cfn-stack-set-managed-execution-property-builder
-  "The build-cfn-stack-set-managed-execution-property-builder function updates a CfnStackSet$ManagedExecutionProperty$Builder instance using the provided configuration.
+(defn cfn-stack-set-managed-execution-property-builder>
+  "The cfn-stack-set-managed-execution-property-builder> function updates a CfnStackSet$ManagedExecutionProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$ManagedExecutionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1153,11 +1153,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-set-managed-execution-property-builder (new CfnStackSet$ManagedExecutionProperty$Builder) id config))
+  (cfn-stack-set-managed-execution-property-builder> (new CfnStackSet$ManagedExecutionProperty$Builder) id config))
 
 
-(defn build-cfn-stack-set-operation-preferences-property-builder
-  "The build-cfn-stack-set-operation-preferences-property-builder function updates a CfnStackSet$OperationPreferencesProperty$Builder instance using the provided configuration.
+(defn cfn-stack-set-operation-preferences-property-builder>
+  "The cfn-stack-set-operation-preferences-property-builder> function updates a CfnStackSet$OperationPreferencesProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$OperationPreferencesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1196,11 +1196,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-set-operation-preferences-property-builder (new CfnStackSet$OperationPreferencesProperty$Builder) id config))
+  (cfn-stack-set-operation-preferences-property-builder> (new CfnStackSet$OperationPreferencesProperty$Builder) id config))
 
 
-(defn build-cfn-stack-set-parameter-property-builder
-  "The build-cfn-stack-set-parameter-property-builder function updates a CfnStackSet$ParameterProperty$Builder instance using the provided configuration.
+(defn cfn-stack-set-parameter-property-builder>
+  "The cfn-stack-set-parameter-property-builder> function updates a CfnStackSet$ParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$ParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1227,11 +1227,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-set-parameter-property-builder (new CfnStackSet$ParameterProperty$Builder) id config))
+  (cfn-stack-set-parameter-property-builder> (new CfnStackSet$ParameterProperty$Builder) id config))
 
 
-(defn build-cfn-stack-set-props-builder
-  "The build-cfn-stack-set-props-builder function updates a CfnStackSetProps$Builder instance using the provided configuration.
+(defn cfn-stack-set-props-builder>
+  "The cfn-stack-set-props-builder> function updates a CfnStackSetProps$Builder instance using the provided configuration.
   The function takes the CfnStackSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1297,11 +1297,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-set-props-builder (new CfnStackSetProps$Builder) id config))
+  (cfn-stack-set-props-builder> (new CfnStackSetProps$Builder) id config))
 
 
-(defn build-cfn-stack-set-stack-instances-property-builder
-  "The build-cfn-stack-set-stack-instances-property-builder function updates a CfnStackSet$StackInstancesProperty$Builder instance using the provided configuration.
+(defn cfn-stack-set-stack-instances-property-builder>
+  "The cfn-stack-set-stack-instances-property-builder> function updates a CfnStackSet$StackInstancesProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$StackInstancesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1331,11 +1331,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stack-set-stack-instances-property-builder (new CfnStackSet$StackInstancesProperty$Builder) id config))
+  (cfn-stack-set-stack-instances-property-builder> (new CfnStackSet$StackInstancesProperty$Builder) id config))
 
 
-(defn build-cfn-type-activation-builder
-  "The build-cfn-type-activation-builder function updates a CfnTypeActivation$Builder instance using the provided configuration.
+(defn cfn-type-activation-builder>
+  "The cfn-type-activation-builder> function updates a CfnTypeActivation$Builder instance using the provided configuration.
   The function takes the CfnTypeActivation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1386,11 +1386,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-type-activation-builder (CfnTypeActivation$Builder/create scope (name id)) id config))
+  (cfn-type-activation-builder> (CfnTypeActivation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-type-activation-logging-config-property-builder
-  "The build-cfn-type-activation-logging-config-property-builder function updates a CfnTypeActivation$LoggingConfigProperty$Builder instance using the provided configuration.
+(defn cfn-type-activation-logging-config-property-builder>
+  "The cfn-type-activation-logging-config-property-builder> function updates a CfnTypeActivation$LoggingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnTypeActivation$LoggingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1417,11 +1417,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-type-activation-logging-config-property-builder (new CfnTypeActivation$LoggingConfigProperty$Builder) id config))
+  (cfn-type-activation-logging-config-property-builder> (new CfnTypeActivation$LoggingConfigProperty$Builder) id config))
 
 
-(defn build-cfn-type-activation-props-builder
-  "The build-cfn-type-activation-props-builder function updates a CfnTypeActivationProps$Builder instance using the provided configuration.
+(defn cfn-type-activation-props-builder>
+  "The cfn-type-activation-props-builder> function updates a CfnTypeActivationProps$Builder instance using the provided configuration.
   The function takes the CfnTypeActivationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1472,11 +1472,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-type-activation-props-builder (new CfnTypeActivationProps$Builder) id config))
+  (cfn-type-activation-props-builder> (new CfnTypeActivationProps$Builder) id config))
 
 
-(defn build-cfn-wait-condition-builder
-  "The build-cfn-wait-condition-builder function updates a CfnWaitCondition$Builder instance using the provided configuration.
+(defn cfn-wait-condition-builder>
+  "The cfn-wait-condition-builder> function updates a CfnWaitCondition$Builder instance using the provided configuration.
   The function takes the CfnWaitCondition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1506,7 +1506,7 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-wait-condition-builder (CfnWaitCondition$Builder/create scope (name id)) id config))
+  (cfn-wait-condition-builder> (CfnWaitCondition$Builder/create scope (name id)) id config))
 
 
 (defn cfn-wait-condition-handle-builder
@@ -1526,8 +1526,8 @@
   (.build (new CfnWaitConditionHandleProps$Builder)))
 
 
-(defn build-cfn-wait-condition-props-builder
-  "The build-cfn-wait-condition-props-builder function updates a CfnWaitConditionProps$Builder instance using the provided configuration.
+(defn cfn-wait-condition-props-builder>
+  "The cfn-wait-condition-props-builder> function updates a CfnWaitConditionProps$Builder instance using the provided configuration.
   The function takes the CfnWaitConditionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1557,4 +1557,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wait-condition-props-builder (new CfnWaitConditionProps$Builder) id config))
+  (cfn-wait-condition-props-builder> (new CfnWaitConditionProps$Builder) id config))

@@ -6,8 +6,8 @@
                                                               CfnApplicationProps$Builder]))
 
 
-(defn build-cfn-application-builder
-  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+(defn cfn-application-builder>
+  "The cfn-application-builder> function updates a CfnApplication$Builder instance using the provided configuration.
   The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -49,11 +49,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+  (cfn-application-builder> (CfnApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-credential-property-builder
-  "The build-cfn-application-credential-property-builder function updates a CfnApplication$CredentialProperty$Builder instance using the provided configuration.
+(defn cfn-application-credential-property-builder>
+  "The cfn-application-credential-property-builder> function updates a CfnApplication$CredentialProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$CredentialProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -83,11 +83,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-credential-property-builder (new CfnApplication$CredentialProperty$Builder) id config))
+  (cfn-application-credential-property-builder> (new CfnApplication$CredentialProperty$Builder) id config))
 
 
-(defn build-cfn-application-props-builder
-  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+(defn cfn-application-props-builder>
+  "The cfn-application-props-builder> function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -129,4 +129,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+  (cfn-application-props-builder> (new CfnApplicationProps$Builder) id config))

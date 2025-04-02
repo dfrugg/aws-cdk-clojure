@@ -5,8 +5,8 @@
                                                             CfnConnectionProps$Builder]))
 
 
-(defn build-cfn-connection-builder
-  "The build-cfn-connection-builder function updates a CfnConnection$Builder instance using the provided configuration.
+(defn cfn-connection-builder>
+  "The cfn-connection-builder> function updates a CfnConnection$Builder instance using the provided configuration.
   The function takes the CfnConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -39,11 +39,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-connection-builder (CfnConnection$Builder/create scope (name id)) id config))
+  (cfn-connection-builder> (CfnConnection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-connection-props-builder
-  "The build-cfn-connection-props-builder function updates a CfnConnectionProps$Builder instance using the provided configuration.
+(defn cfn-connection-props-builder>
+  "The cfn-connection-props-builder> function updates a CfnConnectionProps$Builder instance using the provided configuration.
   The function takes the CfnConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -76,4 +76,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connection-props-builder (new CfnConnectionProps$Builder) id config))
+  (cfn-connection-props-builder> (new CfnConnectionProps$Builder) id config))

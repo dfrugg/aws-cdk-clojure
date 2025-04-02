@@ -21,8 +21,8 @@
                                                                 CfnPolicyTemplateProps$Builder]))
 
 
-(defn build-cfn-identity-source-builder
-  "The build-cfn-identity-source-builder function updates a CfnIdentitySource$Builder instance using the provided configuration.
+(defn cfn-identity-source-builder>
+  "The cfn-identity-source-builder> function updates a CfnIdentitySource$Builder instance using the provided configuration.
   The function takes the CfnIdentitySource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -52,11 +52,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-identity-source-builder (CfnIdentitySource$Builder/create scope (name id)) id config))
+  (cfn-identity-source-builder> (CfnIdentitySource$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-identity-source-cognito-group-configuration-property-builder
-  "The build-cfn-identity-source-cognito-group-configuration-property-builder function updates a CfnIdentitySource$CognitoGroupConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-identity-source-cognito-group-configuration-property-builder>
+  "The cfn-identity-source-cognito-group-configuration-property-builder> function updates a CfnIdentitySource$CognitoGroupConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnIdentitySource$CognitoGroupConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -80,11 +80,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-identity-source-cognito-group-configuration-property-builder (new CfnIdentitySource$CognitoGroupConfigurationProperty$Builder) id config))
+  (cfn-identity-source-cognito-group-configuration-property-builder> (new CfnIdentitySource$CognitoGroupConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-identity-source-cognito-user-pool-configuration-property-builder
-  "The build-cfn-identity-source-cognito-user-pool-configuration-property-builder function updates a CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-identity-source-cognito-user-pool-configuration-property-builder>
+  "The cfn-identity-source-cognito-user-pool-configuration-property-builder> function updates a CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -114,11 +114,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-identity-source-cognito-user-pool-configuration-property-builder (new CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder) id config))
+  (cfn-identity-source-cognito-user-pool-configuration-property-builder> (new CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-identity-source-identity-source-configuration-property-builder
-  "The build-cfn-identity-source-identity-source-configuration-property-builder function updates a CfnIdentitySource$IdentitySourceConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-identity-source-identity-source-configuration-property-builder>
+  "The cfn-identity-source-identity-source-configuration-property-builder> function updates a CfnIdentitySource$IdentitySourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnIdentitySource$IdentitySourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -142,11 +142,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-identity-source-identity-source-configuration-property-builder (new CfnIdentitySource$IdentitySourceConfigurationProperty$Builder) id config))
+  (cfn-identity-source-identity-source-configuration-property-builder> (new CfnIdentitySource$IdentitySourceConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-identity-source-identity-source-details-property-builder
-  "The build-cfn-identity-source-identity-source-details-property-builder function updates a CfnIdentitySource$IdentitySourceDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-identity-source-identity-source-details-property-builder>
+  "The cfn-identity-source-identity-source-details-property-builder> function updates a CfnIdentitySource$IdentitySourceDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnIdentitySource$IdentitySourceDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -179,11 +179,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-identity-source-identity-source-details-property-builder (new CfnIdentitySource$IdentitySourceDetailsProperty$Builder) id config))
+  (cfn-identity-source-identity-source-details-property-builder> (new CfnIdentitySource$IdentitySourceDetailsProperty$Builder) id config))
 
 
-(defn build-cfn-identity-source-props-builder
-  "The build-cfn-identity-source-props-builder function updates a CfnIdentitySourceProps$Builder instance using the provided configuration.
+(defn cfn-identity-source-props-builder>
+  "The cfn-identity-source-props-builder> function updates a CfnIdentitySourceProps$Builder instance using the provided configuration.
   The function takes the CfnIdentitySourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -213,11 +213,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-identity-source-props-builder (new CfnIdentitySourceProps$Builder) id config))
+  (cfn-identity-source-props-builder> (new CfnIdentitySourceProps$Builder) id config))
 
 
-(defn build-cfn-policy-builder
-  "The build-cfn-policy-builder function updates a CfnPolicy$Builder instance using the provided configuration.
+(defn cfn-policy-builder>
+  "The cfn-policy-builder> function updates a CfnPolicy$Builder instance using the provided configuration.
   The function takes the CfnPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -244,11 +244,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-policy-builder (CfnPolicy$Builder/create scope (name id)) id config))
+  (cfn-policy-builder> (CfnPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-policy-entity-identifier-property-builder
-  "The build-cfn-policy-entity-identifier-property-builder function updates a CfnPolicy$EntityIdentifierProperty$Builder instance using the provided configuration.
+(defn cfn-policy-entity-identifier-property-builder>
+  "The cfn-policy-entity-identifier-property-builder> function updates a CfnPolicy$EntityIdentifierProperty$Builder instance using the provided configuration.
   The function takes the CfnPolicy$EntityIdentifierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -275,11 +275,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-entity-identifier-property-builder (new CfnPolicy$EntityIdentifierProperty$Builder) id config))
+  (cfn-policy-entity-identifier-property-builder> (new CfnPolicy$EntityIdentifierProperty$Builder) id config))
 
 
-(defn build-cfn-policy-policy-definition-property-builder
-  "The build-cfn-policy-policy-definition-property-builder function updates a CfnPolicy$PolicyDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-policy-policy-definition-property-builder>
+  "The cfn-policy-policy-definition-property-builder> function updates a CfnPolicy$PolicyDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnPolicy$PolicyDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -306,11 +306,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-policy-definition-property-builder (new CfnPolicy$PolicyDefinitionProperty$Builder) id config))
+  (cfn-policy-policy-definition-property-builder> (new CfnPolicy$PolicyDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-policy-props-builder
-  "The build-cfn-policy-props-builder function updates a CfnPolicyProps$Builder instance using the provided configuration.
+(defn cfn-policy-props-builder>
+  "The cfn-policy-props-builder> function updates a CfnPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -337,11 +337,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-props-builder (new CfnPolicyProps$Builder) id config))
+  (cfn-policy-props-builder> (new CfnPolicyProps$Builder) id config))
 
 
-(defn build-cfn-policy-static-policy-definition-property-builder
-  "The build-cfn-policy-static-policy-definition-property-builder function updates a CfnPolicy$StaticPolicyDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-policy-static-policy-definition-property-builder>
+  "The cfn-policy-static-policy-definition-property-builder> function updates a CfnPolicy$StaticPolicyDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnPolicy$StaticPolicyDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -368,11 +368,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-static-policy-definition-property-builder (new CfnPolicy$StaticPolicyDefinitionProperty$Builder) id config))
+  (cfn-policy-static-policy-definition-property-builder> (new CfnPolicy$StaticPolicyDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-policy-store-builder
-  "The build-cfn-policy-store-builder function updates a CfnPolicyStore$Builder instance using the provided configuration.
+(defn cfn-policy-store-builder>
+  "The cfn-policy-store-builder> function updates a CfnPolicyStore$Builder instance using the provided configuration.
   The function takes the CfnPolicyStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -402,11 +402,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-policy-store-builder (CfnPolicyStore$Builder/create scope (name id)) id config))
+  (cfn-policy-store-builder> (CfnPolicyStore$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-policy-store-props-builder
-  "The build-cfn-policy-store-props-builder function updates a CfnPolicyStoreProps$Builder instance using the provided configuration.
+(defn cfn-policy-store-props-builder>
+  "The cfn-policy-store-props-builder> function updates a CfnPolicyStoreProps$Builder instance using the provided configuration.
   The function takes the CfnPolicyStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -436,11 +436,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-store-props-builder (new CfnPolicyStoreProps$Builder) id config))
+  (cfn-policy-store-props-builder> (new CfnPolicyStoreProps$Builder) id config))
 
 
-(defn build-cfn-policy-store-schema-definition-property-builder
-  "The build-cfn-policy-store-schema-definition-property-builder function updates a CfnPolicyStore$SchemaDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-policy-store-schema-definition-property-builder>
+  "The cfn-policy-store-schema-definition-property-builder> function updates a CfnPolicyStore$SchemaDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnPolicyStore$SchemaDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -464,11 +464,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-store-schema-definition-property-builder (new CfnPolicyStore$SchemaDefinitionProperty$Builder) id config))
+  (cfn-policy-store-schema-definition-property-builder> (new CfnPolicyStore$SchemaDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-policy-store-validation-settings-property-builder
-  "The build-cfn-policy-store-validation-settings-property-builder function updates a CfnPolicyStore$ValidationSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-policy-store-validation-settings-property-builder>
+  "The cfn-policy-store-validation-settings-property-builder> function updates a CfnPolicyStore$ValidationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnPolicyStore$ValidationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -492,11 +492,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-store-validation-settings-property-builder (new CfnPolicyStore$ValidationSettingsProperty$Builder) id config))
+  (cfn-policy-store-validation-settings-property-builder> (new CfnPolicyStore$ValidationSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-policy-template-builder
-  "The build-cfn-policy-template-builder function updates a CfnPolicyTemplate$Builder instance using the provided configuration.
+(defn cfn-policy-template-builder>
+  "The cfn-policy-template-builder> function updates a CfnPolicyTemplate$Builder instance using the provided configuration.
   The function takes the CfnPolicyTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -526,11 +526,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-policy-template-builder (CfnPolicyTemplate$Builder/create scope (name id)) id config))
+  (cfn-policy-template-builder> (CfnPolicyTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-policy-template-linked-policy-definition-property-builder
-  "The build-cfn-policy-template-linked-policy-definition-property-builder function updates a CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-policy-template-linked-policy-definition-property-builder>
+  "The cfn-policy-template-linked-policy-definition-property-builder> function updates a CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -560,11 +560,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-template-linked-policy-definition-property-builder (new CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder) id config))
+  (cfn-policy-template-linked-policy-definition-property-builder> (new CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-policy-template-props-builder
-  "The build-cfn-policy-template-props-builder function updates a CfnPolicyTemplateProps$Builder instance using the provided configuration.
+(defn cfn-policy-template-props-builder>
+  "The cfn-policy-template-props-builder> function updates a CfnPolicyTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnPolicyTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -594,4 +594,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-template-props-builder (new CfnPolicyTemplateProps$Builder) id config))
+  (cfn-policy-template-props-builder> (new CfnPolicyTemplateProps$Builder) id config))

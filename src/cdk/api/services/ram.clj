@@ -7,8 +7,8 @@
                                                 CfnResourceShareProps$Builder]))
 
 
-(defn build-cfn-permission-builder
-  "The build-cfn-permission-builder function updates a CfnPermission$Builder instance using the provided configuration.
+(defn cfn-permission-builder>
+  "The cfn-permission-builder> function updates a CfnPermission$Builder instance using the provided configuration.
   The function takes the CfnPermission$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -41,11 +41,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-permission-builder (CfnPermission$Builder/create scope (name id)) id config))
+  (cfn-permission-builder> (CfnPermission$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-permission-props-builder
-  "The build-cfn-permission-props-builder function updates a CfnPermissionProps$Builder instance using the provided configuration.
+(defn cfn-permission-props-builder>
+  "The cfn-permission-props-builder> function updates a CfnPermissionProps$Builder instance using the provided configuration.
   The function takes the CfnPermissionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -78,11 +78,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permission-props-builder (new CfnPermissionProps$Builder) id config))
+  (cfn-permission-props-builder> (new CfnPermissionProps$Builder) id config))
 
 
-(defn build-cfn-resource-share-builder
-  "The build-cfn-resource-share-builder function updates a CfnResourceShare$Builder instance using the provided configuration.
+(defn cfn-resource-share-builder>
+  "The cfn-resource-share-builder> function updates a CfnResourceShare$Builder instance using the provided configuration.
   The function takes the CfnResourceShare$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -124,11 +124,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-share-builder (CfnResourceShare$Builder/create scope (name id)) id config))
+  (cfn-resource-share-builder> (CfnResourceShare$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-share-props-builder
-  "The build-cfn-resource-share-props-builder function updates a CfnResourceShareProps$Builder instance using the provided configuration.
+(defn cfn-resource-share-props-builder>
+  "The cfn-resource-share-props-builder> function updates a CfnResourceShareProps$Builder instance using the provided configuration.
   The function takes the CfnResourceShareProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -170,4 +170,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-share-props-builder (new CfnResourceShareProps$Builder) id config))
+  (cfn-resource-share-props-builder> (new CfnResourceShareProps$Builder) id config))

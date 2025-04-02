@@ -15,8 +15,8 @@
                                                 CfnWorkspaceProps$Builder]))
 
 
-(defn build-cfn-rule-groups-namespace-builder
-  "The build-cfn-rule-groups-namespace-builder function updates a CfnRuleGroupsNamespace$Builder instance using the provided configuration.
+(defn cfn-rule-groups-namespace-builder>
+  "The cfn-rule-groups-namespace-builder> function updates a CfnRuleGroupsNamespace$Builder instance using the provided configuration.
   The function takes the CfnRuleGroupsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -49,11 +49,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-rule-groups-namespace-builder (CfnRuleGroupsNamespace$Builder/create scope (name id)) id config))
+  (cfn-rule-groups-namespace-builder> (CfnRuleGroupsNamespace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-rule-groups-namespace-props-builder
-  "The build-cfn-rule-groups-namespace-props-builder function updates a CfnRuleGroupsNamespaceProps$Builder instance using the provided configuration.
+(defn cfn-rule-groups-namespace-props-builder>
+  "The cfn-rule-groups-namespace-props-builder> function updates a CfnRuleGroupsNamespaceProps$Builder instance using the provided configuration.
   The function takes the CfnRuleGroupsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -86,11 +86,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-rule-groups-namespace-props-builder (new CfnRuleGroupsNamespaceProps$Builder) id config))
+  (cfn-rule-groups-namespace-props-builder> (new CfnRuleGroupsNamespaceProps$Builder) id config))
 
 
-(defn build-cfn-scraper-amp-configuration-property-builder
-  "The build-cfn-scraper-amp-configuration-property-builder function updates a CfnScraper$AmpConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-scraper-amp-configuration-property-builder>
+  "The cfn-scraper-amp-configuration-property-builder> function updates a CfnScraper$AmpConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$AmpConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -114,11 +114,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scraper-amp-configuration-property-builder (new CfnScraper$AmpConfigurationProperty$Builder) id config))
+  (cfn-scraper-amp-configuration-property-builder> (new CfnScraper$AmpConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-scraper-builder
-  "The build-cfn-scraper-builder function updates a CfnScraper$Builder instance using the provided configuration.
+(defn cfn-scraper-builder>
+  "The cfn-scraper-builder> function updates a CfnScraper$Builder instance using the provided configuration.
   The function takes the CfnScraper$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -154,11 +154,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-scraper-builder (CfnScraper$Builder/create scope (name id)) id config))
+  (cfn-scraper-builder> (CfnScraper$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-scraper-destination-property-builder
-  "The build-cfn-scraper-destination-property-builder function updates a CfnScraper$DestinationProperty$Builder instance using the provided configuration.
+(defn cfn-scraper-destination-property-builder>
+  "The cfn-scraper-destination-property-builder> function updates a CfnScraper$DestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -182,11 +182,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scraper-destination-property-builder (new CfnScraper$DestinationProperty$Builder) id config))
+  (cfn-scraper-destination-property-builder> (new CfnScraper$DestinationProperty$Builder) id config))
 
 
-(defn build-cfn-scraper-eks-configuration-property-builder
-  "The build-cfn-scraper-eks-configuration-property-builder function updates a CfnScraper$EksConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-scraper-eks-configuration-property-builder>
+  "The cfn-scraper-eks-configuration-property-builder> function updates a CfnScraper$EksConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$EksConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -216,11 +216,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scraper-eks-configuration-property-builder (new CfnScraper$EksConfigurationProperty$Builder) id config))
+  (cfn-scraper-eks-configuration-property-builder> (new CfnScraper$EksConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-scraper-props-builder
-  "The build-cfn-scraper-props-builder function updates a CfnScraperProps$Builder instance using the provided configuration.
+(defn cfn-scraper-props-builder>
+  "The cfn-scraper-props-builder> function updates a CfnScraperProps$Builder instance using the provided configuration.
   The function takes the CfnScraperProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -256,11 +256,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scraper-props-builder (new CfnScraperProps$Builder) id config))
+  (cfn-scraper-props-builder> (new CfnScraperProps$Builder) id config))
 
 
-(defn build-cfn-scraper-scrape-configuration-property-builder
-  "The build-cfn-scraper-scrape-configuration-property-builder function updates a CfnScraper$ScrapeConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-scraper-scrape-configuration-property-builder>
+  "The cfn-scraper-scrape-configuration-property-builder> function updates a CfnScraper$ScrapeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$ScrapeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -284,11 +284,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scraper-scrape-configuration-property-builder (new CfnScraper$ScrapeConfigurationProperty$Builder) id config))
+  (cfn-scraper-scrape-configuration-property-builder> (new CfnScraper$ScrapeConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-scraper-source-property-builder
-  "The build-cfn-scraper-source-property-builder function updates a CfnScraper$SourceProperty$Builder instance using the provided configuration.
+(defn cfn-scraper-source-property-builder>
+  "The cfn-scraper-source-property-builder> function updates a CfnScraper$SourceProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$SourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -312,11 +312,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scraper-source-property-builder (new CfnScraper$SourceProperty$Builder) id config))
+  (cfn-scraper-source-property-builder> (new CfnScraper$SourceProperty$Builder) id config))
 
 
-(defn build-cfn-workspace-builder
-  "The build-cfn-workspace-builder function updates a CfnWorkspace$Builder instance using the provided configuration.
+(defn cfn-workspace-builder>
+  "The cfn-workspace-builder> function updates a CfnWorkspace$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -352,11 +352,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-workspace-builder (CfnWorkspace$Builder/create scope (name id)) id config))
+  (cfn-workspace-builder> (CfnWorkspace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-workspace-logging-configuration-property-builder
-  "The build-cfn-workspace-logging-configuration-property-builder function updates a CfnWorkspace$LoggingConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-workspace-logging-configuration-property-builder>
+  "The cfn-workspace-logging-configuration-property-builder> function updates a CfnWorkspace$LoggingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$LoggingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -380,11 +380,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-logging-configuration-property-builder (new CfnWorkspace$LoggingConfigurationProperty$Builder) id config))
+  (cfn-workspace-logging-configuration-property-builder> (new CfnWorkspace$LoggingConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-workspace-props-builder
-  "The build-cfn-workspace-props-builder function updates a CfnWorkspaceProps$Builder instance using the provided configuration.
+(defn cfn-workspace-props-builder>
+  "The cfn-workspace-props-builder> function updates a CfnWorkspaceProps$Builder instance using the provided configuration.
   The function takes the CfnWorkspaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -420,4 +420,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-props-builder (new CfnWorkspaceProps$Builder) id config))
+  (cfn-workspace-props-builder> (new CfnWorkspaceProps$Builder) id config))

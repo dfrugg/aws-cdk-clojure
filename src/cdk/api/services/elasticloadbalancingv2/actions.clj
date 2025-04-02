@@ -6,8 +6,8 @@
                                                                            AuthenticateCognitoActionProps$Builder]))
 
 
-(defn build-authenticate-cognito-action-builder
-  "The build-authenticate-cognito-action-builder function updates a AuthenticateCognitoAction$Builder instance using the provided configuration.
+(defn authenticate-cognito-action-builder>
+  "The authenticate-cognito-action-builder> function updates a AuthenticateCognitoAction$Builder instance using the provided configuration.
   The function takes the AuthenticateCognitoAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -58,11 +58,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-authenticate-cognito-action-builder (AuthenticateCognitoAction$Builder/create) id config))
+  (authenticate-cognito-action-builder> (AuthenticateCognitoAction$Builder/create) id config))
 
 
-(defn build-authenticate-cognito-action-props-builder
-  "The build-authenticate-cognito-action-props-builder function updates a AuthenticateCognitoActionProps$Builder instance using the provided configuration.
+(defn authenticate-cognito-action-props-builder>
+  "The authenticate-cognito-action-props-builder> function updates a AuthenticateCognitoActionProps$Builder instance using the provided configuration.
   The function takes the AuthenticateCognitoActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -113,4 +113,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-authenticate-cognito-action-props-builder (new AuthenticateCognitoActionProps$Builder) id config))
+  (authenticate-cognito-action-props-builder> (new AuthenticateCognitoActionProps$Builder) id config))

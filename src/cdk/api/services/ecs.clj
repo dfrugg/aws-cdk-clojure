@@ -1037,8 +1037,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :server-2016 data) WindowsOptimizedVersion/SERVER_2016)))
 
 
-(defn build-add-auto-scaling-group-capacity-options-builder
-  "The build-add-auto-scaling-group-capacity-options-builder function updates a AddAutoScalingGroupCapacityOptions$Builder instance using the provided configuration.
+(defn add-auto-scaling-group-capacity-options-builder>
+  "The add-auto-scaling-group-capacity-options-builder> function updates a AddAutoScalingGroupCapacityOptions$Builder instance using the provided configuration.
   The function takes the AddAutoScalingGroupCapacityOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1071,11 +1071,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-auto-scaling-group-capacity-options-builder (new AddAutoScalingGroupCapacityOptions$Builder) id config))
+  (add-auto-scaling-group-capacity-options-builder> (new AddAutoScalingGroupCapacityOptions$Builder) id config))
 
 
-(defn build-add-capacity-options-builder
-  "The build-add-capacity-options-builder function updates a AddCapacityOptions$Builder instance using the provided configuration.
+(defn add-capacity-options-builder>
+  "The add-capacity-options-builder> function updates a AddCapacityOptions$Builder instance using the provided configuration.
   The function takes the AddCapacityOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1192,11 +1192,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-capacity-options-builder (new AddCapacityOptions$Builder) id config))
+  (add-capacity-options-builder> (new AddCapacityOptions$Builder) id config))
 
 
-(defn build-app-mesh-proxy-configuration-builder
-  "The build-app-mesh-proxy-configuration-builder function updates a AppMeshProxyConfiguration$Builder instance using the provided configuration.
+(defn app-mesh-proxy-configuration-builder>
+  "The app-mesh-proxy-configuration-builder> function updates a AppMeshProxyConfiguration$Builder instance using the provided configuration.
   The function takes the AppMeshProxyConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1223,11 +1223,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-app-mesh-proxy-configuration-builder (AppMeshProxyConfiguration$Builder/create) id config))
+  (app-mesh-proxy-configuration-builder> (AppMeshProxyConfiguration$Builder/create) id config))
 
 
-(defn build-app-mesh-proxy-configuration-config-props-builder
-  "The build-app-mesh-proxy-configuration-config-props-builder function updates a AppMeshProxyConfigurationConfigProps$Builder instance using the provided configuration.
+(defn app-mesh-proxy-configuration-config-props-builder>
+  "The app-mesh-proxy-configuration-config-props-builder> function updates a AppMeshProxyConfigurationConfigProps$Builder instance using the provided configuration.
   The function takes the AppMeshProxyConfigurationConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1254,11 +1254,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-app-mesh-proxy-configuration-config-props-builder (new AppMeshProxyConfigurationConfigProps$Builder) id config))
+  (app-mesh-proxy-configuration-config-props-builder> (new AppMeshProxyConfigurationConfigProps$Builder) id config))
 
 
-(defn build-app-mesh-proxy-configuration-props-builder
-  "The build-app-mesh-proxy-configuration-props-builder function updates a AppMeshProxyConfigurationProps$Builder instance using the provided configuration.
+(defn app-mesh-proxy-configuration-props-builder>
+  "The app-mesh-proxy-configuration-props-builder> function updates a AppMeshProxyConfigurationProps$Builder instance using the provided configuration.
   The function takes the AppMeshProxyConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1300,11 +1300,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-app-mesh-proxy-configuration-props-builder (new AppMeshProxyConfigurationProps$Builder) id config))
+  (app-mesh-proxy-configuration-props-builder> (new AppMeshProxyConfigurationProps$Builder) id config))
 
 
-(defn build-asg-capacity-provider-builder
-  "The build-asg-capacity-provider-builder function updates a AsgCapacityProvider$Builder instance using the provided configuration.
+(defn asg-capacity-provider-builder>
+  "The asg-capacity-provider-builder> function updates a AsgCapacityProvider$Builder instance using the provided configuration.
   The function takes the AsgCapacityProvider$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1364,11 +1364,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-asg-capacity-provider-builder (AsgCapacityProvider$Builder/create scope (name id)) id config))
+  (asg-capacity-provider-builder> (AsgCapacityProvider$Builder/create scope (name id)) id config))
 
 
-(defn build-asg-capacity-provider-props-builder
-  "The build-asg-capacity-provider-props-builder function updates a AsgCapacityProviderProps$Builder instance using the provided configuration.
+(defn asg-capacity-provider-props-builder>
+  "The asg-capacity-provider-props-builder> function updates a AsgCapacityProviderProps$Builder instance using the provided configuration.
   The function takes the AsgCapacityProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1428,11 +1428,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-asg-capacity-provider-props-builder (new AsgCapacityProviderProps$Builder) id config))
+  (asg-capacity-provider-props-builder> (new AsgCapacityProviderProps$Builder) id config))
 
 
-(defn build-asset-environment-file-builder
-  "The build-asset-environment-file-builder function updates a AssetEnvironmentFile$Builder instance using the provided configuration.
+(defn asset-environment-file-builder>
+  "The asset-environment-file-builder> function updates a AssetEnvironmentFile$Builder instance using the provided configuration.
   The function takes the AssetEnvironmentFile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1480,11 +1480,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String path id config]
-  (build-asset-environment-file-builder (AssetEnvironmentFile$Builder/create path) id config))
+  (asset-environment-file-builder> (AssetEnvironmentFile$Builder/create path) id config))
 
 
-(defn build-asset-image-builder
-  "The build-asset-image-builder function updates a AssetImage$Builder instance using the provided configuration.
+(defn asset-image-builder>
+  "The asset-image-builder> function updates a AssetImage$Builder instance using the provided configuration.
   The function takes the AssetImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1559,11 +1559,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String directory id config]
-  (build-asset-image-builder (AssetImage$Builder/create directory) id config))
+  (asset-image-builder> (AssetImage$Builder/create directory) id config))
 
 
-(defn build-asset-image-props-builder
-  "The build-asset-image-props-builder function updates a AssetImageProps$Builder instance using the provided configuration.
+(defn asset-image-props-builder>
+  "The asset-image-props-builder> function updates a AssetImageProps$Builder instance using the provided configuration.
   The function takes the AssetImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1635,11 +1635,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-asset-image-props-builder (new AssetImageProps$Builder) id config))
+  (asset-image-props-builder> (new AssetImageProps$Builder) id config))
 
 
-(defn build-associate-cloud-map-service-options-builder
-  "The build-associate-cloud-map-service-options-builder function updates a AssociateCloudMapServiceOptions$Builder instance using the provided configuration.
+(defn associate-cloud-map-service-options-builder>
+  "The associate-cloud-map-service-options-builder> function updates a AssociateCloudMapServiceOptions$Builder instance using the provided configuration.
   The function takes the AssociateCloudMapServiceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1669,11 +1669,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-associate-cloud-map-service-options-builder (new AssociateCloudMapServiceOptions$Builder) id config))
+  (associate-cloud-map-service-options-builder> (new AssociateCloudMapServiceOptions$Builder) id config))
 
 
-(defn build-authorization-config-builder
-  "The build-authorization-config-builder function updates a AuthorizationConfig$Builder instance using the provided configuration.
+(defn authorization-config-builder>
+  "The authorization-config-builder> function updates a AuthorizationConfig$Builder instance using the provided configuration.
   The function takes the AuthorizationConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1700,11 +1700,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-authorization-config-builder (new AuthorizationConfig$Builder) id config))
+  (authorization-config-builder> (new AuthorizationConfig$Builder) id config))
 
 
-(defn build-aws-log-driver-builder
-  "The build-aws-log-driver-builder function updates a AwsLogDriver$Builder instance using the provided configuration.
+(defn aws-log-driver-builder>
+  "The aws-log-driver-builder> function updates a AwsLogDriver$Builder instance using the provided configuration.
   The function takes the AwsLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1746,11 +1746,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-log-driver-builder (AwsLogDriver$Builder/create) id config))
+  (aws-log-driver-builder> (AwsLogDriver$Builder/create) id config))
 
 
-(defn build-aws-log-driver-props-builder
-  "The build-aws-log-driver-props-builder function updates a AwsLogDriverProps$Builder instance using the provided configuration.
+(defn aws-log-driver-props-builder>
+  "The aws-log-driver-props-builder> function updates a AwsLogDriverProps$Builder instance using the provided configuration.
   The function takes the AwsLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1792,11 +1792,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-log-driver-props-builder (new AwsLogDriverProps$Builder) id config))
+  (aws-log-driver-props-builder> (new AwsLogDriverProps$Builder) id config))
 
 
-(defn build-base-log-driver-props-builder
-  "The build-base-log-driver-props-builder function updates a BaseLogDriverProps$Builder instance using the provided configuration.
+(defn base-log-driver-props-builder>
+  "The base-log-driver-props-builder> function updates a BaseLogDriverProps$Builder instance using the provided configuration.
   The function takes the BaseLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1829,11 +1829,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-log-driver-props-builder (new BaseLogDriverProps$Builder) id config))
+  (base-log-driver-props-builder> (new BaseLogDriverProps$Builder) id config))
 
 
-(defn build-base-mount-point-builder
-  "The build-base-mount-point-builder function updates a BaseMountPoint$Builder instance using the provided configuration.
+(defn base-mount-point-builder>
+  "The base-mount-point-builder> function updates a BaseMountPoint$Builder instance using the provided configuration.
   The function takes the BaseMountPoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1860,11 +1860,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-mount-point-builder (new BaseMountPoint$Builder) id config))
+  (base-mount-point-builder> (new BaseMountPoint$Builder) id config))
 
 
-(defn build-base-service-options-builder
-  "The build-base-service-options-builder function updates a BaseServiceOptions$Builder instance using the provided configuration.
+(defn base-service-options-builder>
+  "The base-service-options-builder> function updates a BaseServiceOptions$Builder instance using the provided configuration.
   The function takes the BaseServiceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1936,11 +1936,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-service-options-builder (new BaseServiceOptions$Builder) id config))
+  (base-service-options-builder> (new BaseServiceOptions$Builder) id config))
 
 
-(defn build-base-service-props-builder
-  "The build-base-service-props-builder function updates a BaseServiceProps$Builder instance using the provided configuration.
+(defn base-service-props-builder>
+  "The base-service-props-builder> function updates a BaseServiceProps$Builder instance using the provided configuration.
   The function takes the BaseServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2015,11 +2015,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-service-props-builder (new BaseServiceProps$Builder) id config))
+  (base-service-props-builder> (new BaseServiceProps$Builder) id config))
 
 
-(defn build-bottle-rocket-image-builder
-  "The build-bottle-rocket-image-builder function updates a BottleRocketImage$Builder instance using the provided configuration.
+(defn bottle-rocket-image-builder>
+  "The bottle-rocket-image-builder> function updates a BottleRocketImage$Builder instance using the provided configuration.
   The function takes the BottleRocketImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2049,11 +2049,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bottle-rocket-image-builder (BottleRocketImage$Builder/create) id config))
+  (bottle-rocket-image-builder> (BottleRocketImage$Builder/create) id config))
 
 
-(defn build-bottle-rocket-image-props-builder
-  "The build-bottle-rocket-image-props-builder function updates a BottleRocketImageProps$Builder instance using the provided configuration.
+(defn bottle-rocket-image-props-builder>
+  "The bottle-rocket-image-props-builder> function updates a BottleRocketImageProps$Builder instance using the provided configuration.
   The function takes the BottleRocketImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2083,11 +2083,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bottle-rocket-image-props-builder (new BottleRocketImageProps$Builder) id config))
+  (bottle-rocket-image-props-builder> (new BottleRocketImageProps$Builder) id config))
 
 
-(defn build-capacity-provider-strategy-builder
-  "The build-capacity-provider-strategy-builder function updates a CapacityProviderStrategy$Builder instance using the provided configuration.
+(defn capacity-provider-strategy-builder>
+  "The capacity-provider-strategy-builder> function updates a CapacityProviderStrategy$Builder instance using the provided configuration.
   The function takes the CapacityProviderStrategy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2117,11 +2117,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-capacity-provider-strategy-builder (new CapacityProviderStrategy$Builder) id config))
+  (capacity-provider-strategy-builder> (new CapacityProviderStrategy$Builder) id config))
 
 
-(defn build-cfn-capacity-provider-auto-scaling-group-provider-property-builder
-  "The build-cfn-capacity-provider-auto-scaling-group-provider-property-builder function updates a CfnCapacityProvider$AutoScalingGroupProviderProperty$Builder instance using the provided configuration.
+(defn cfn-capacity-provider-auto-scaling-group-provider-property-builder>
+  "The cfn-capacity-provider-auto-scaling-group-provider-property-builder> function updates a CfnCapacityProvider$AutoScalingGroupProviderProperty$Builder instance using the provided configuration.
   The function takes the CfnCapacityProvider$AutoScalingGroupProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2154,11 +2154,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-capacity-provider-auto-scaling-group-provider-property-builder (new CfnCapacityProvider$AutoScalingGroupProviderProperty$Builder) id config))
+  (cfn-capacity-provider-auto-scaling-group-provider-property-builder> (new CfnCapacityProvider$AutoScalingGroupProviderProperty$Builder) id config))
 
 
-(defn build-cfn-capacity-provider-builder
-  "The build-cfn-capacity-provider-builder function updates a CfnCapacityProvider$Builder instance using the provided configuration.
+(defn cfn-capacity-provider-builder>
+  "The cfn-capacity-provider-builder> function updates a CfnCapacityProvider$Builder instance using the provided configuration.
   The function takes the CfnCapacityProvider$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2188,11 +2188,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-capacity-provider-builder (CfnCapacityProvider$Builder/create scope (name id)) id config))
+  (cfn-capacity-provider-builder> (CfnCapacityProvider$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-capacity-provider-managed-scaling-property-builder
-  "The build-cfn-capacity-provider-managed-scaling-property-builder function updates a CfnCapacityProvider$ManagedScalingProperty$Builder instance using the provided configuration.
+(defn cfn-capacity-provider-managed-scaling-property-builder>
+  "The cfn-capacity-provider-managed-scaling-property-builder> function updates a CfnCapacityProvider$ManagedScalingProperty$Builder instance using the provided configuration.
   The function takes the CfnCapacityProvider$ManagedScalingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2228,11 +2228,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-capacity-provider-managed-scaling-property-builder (new CfnCapacityProvider$ManagedScalingProperty$Builder) id config))
+  (cfn-capacity-provider-managed-scaling-property-builder> (new CfnCapacityProvider$ManagedScalingProperty$Builder) id config))
 
 
-(defn build-cfn-capacity-provider-props-builder
-  "The build-cfn-capacity-provider-props-builder function updates a CfnCapacityProviderProps$Builder instance using the provided configuration.
+(defn cfn-capacity-provider-props-builder>
+  "The cfn-capacity-provider-props-builder> function updates a CfnCapacityProviderProps$Builder instance using the provided configuration.
   The function takes the CfnCapacityProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2262,11 +2262,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-capacity-provider-props-builder (new CfnCapacityProviderProps$Builder) id config))
+  (cfn-capacity-provider-props-builder> (new CfnCapacityProviderProps$Builder) id config))
 
 
-(defn build-cfn-cluster-builder
-  "The build-cfn-cluster-builder function updates a CfnCluster$Builder instance using the provided configuration.
+(defn cfn-cluster-builder>
+  "The cfn-cluster-builder> function updates a CfnCluster$Builder instance using the provided configuration.
   The function takes the CfnCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2308,11 +2308,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+  (cfn-cluster-builder> (CfnCluster$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cluster-capacity-provider-associations-builder
-  "The build-cfn-cluster-capacity-provider-associations-builder function updates a CfnClusterCapacityProviderAssociations$Builder instance using the provided configuration.
+(defn cfn-cluster-capacity-provider-associations-builder>
+  "The cfn-cluster-capacity-provider-associations-builder> function updates a CfnClusterCapacityProviderAssociations$Builder instance using the provided configuration.
   The function takes the CfnClusterCapacityProviderAssociations$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2342,11 +2342,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cluster-capacity-provider-associations-builder (CfnClusterCapacityProviderAssociations$Builder/create scope (name id)) id config))
+  (cfn-cluster-capacity-provider-associations-builder> (CfnClusterCapacityProviderAssociations$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cluster-capacity-provider-associations-capacity-provider-strategy-property-builder
-  "The build-cfn-cluster-capacity-provider-associations-capacity-provider-strategy-property-builder function updates a CfnClusterCapacityProviderAssociations$CapacityProviderStrategyProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-capacity-provider-associations-capacity-provider-strategy-property-builder>
+  "The cfn-cluster-capacity-provider-associations-capacity-provider-strategy-property-builder> function updates a CfnClusterCapacityProviderAssociations$CapacityProviderStrategyProperty$Builder instance using the provided configuration.
   The function takes the CfnClusterCapacityProviderAssociations$CapacityProviderStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2376,11 +2376,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-capacity-provider-associations-capacity-provider-strategy-property-builder (new CfnClusterCapacityProviderAssociations$CapacityProviderStrategyProperty$Builder) id config))
+  (cfn-cluster-capacity-provider-associations-capacity-provider-strategy-property-builder> (new CfnClusterCapacityProviderAssociations$CapacityProviderStrategyProperty$Builder) id config))
 
 
-(defn build-cfn-cluster-capacity-provider-associations-props-builder
-  "The build-cfn-cluster-capacity-provider-associations-props-builder function updates a CfnClusterCapacityProviderAssociationsProps$Builder instance using the provided configuration.
+(defn cfn-cluster-capacity-provider-associations-props-builder>
+  "The cfn-cluster-capacity-provider-associations-props-builder> function updates a CfnClusterCapacityProviderAssociationsProps$Builder instance using the provided configuration.
   The function takes the CfnClusterCapacityProviderAssociationsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2410,11 +2410,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-capacity-provider-associations-props-builder (new CfnClusterCapacityProviderAssociationsProps$Builder) id config))
+  (cfn-cluster-capacity-provider-associations-props-builder> (new CfnClusterCapacityProviderAssociationsProps$Builder) id config))
 
 
-(defn build-cfn-cluster-capacity-provider-strategy-item-property-builder
-  "The build-cfn-cluster-capacity-provider-strategy-item-property-builder function updates a CfnCluster$CapacityProviderStrategyItemProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-capacity-provider-strategy-item-property-builder>
+  "The cfn-cluster-capacity-provider-strategy-item-property-builder> function updates a CfnCluster$CapacityProviderStrategyItemProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$CapacityProviderStrategyItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2444,11 +2444,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-capacity-provider-strategy-item-property-builder (new CfnCluster$CapacityProviderStrategyItemProperty$Builder) id config))
+  (cfn-cluster-capacity-provider-strategy-item-property-builder> (new CfnCluster$CapacityProviderStrategyItemProperty$Builder) id config))
 
 
-(defn build-cfn-cluster-cluster-configuration-property-builder
-  "The build-cfn-cluster-cluster-configuration-property-builder function updates a CfnCluster$ClusterConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-cluster-configuration-property-builder>
+  "The cfn-cluster-cluster-configuration-property-builder> function updates a CfnCluster$ClusterConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ClusterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2472,11 +2472,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-cluster-configuration-property-builder (new CfnCluster$ClusterConfigurationProperty$Builder) id config))
+  (cfn-cluster-cluster-configuration-property-builder> (new CfnCluster$ClusterConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-cluster-cluster-settings-property-builder
-  "The build-cfn-cluster-cluster-settings-property-builder function updates a CfnCluster$ClusterSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-cluster-settings-property-builder>
+  "The cfn-cluster-cluster-settings-property-builder> function updates a CfnCluster$ClusterSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ClusterSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2503,11 +2503,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-cluster-settings-property-builder (new CfnCluster$ClusterSettingsProperty$Builder) id config))
+  (cfn-cluster-cluster-settings-property-builder> (new CfnCluster$ClusterSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-cluster-execute-command-configuration-property-builder
-  "The build-cfn-cluster-execute-command-configuration-property-builder function updates a CfnCluster$ExecuteCommandConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-execute-command-configuration-property-builder>
+  "The cfn-cluster-execute-command-configuration-property-builder> function updates a CfnCluster$ExecuteCommandConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ExecuteCommandConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2537,11 +2537,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-execute-command-configuration-property-builder (new CfnCluster$ExecuteCommandConfigurationProperty$Builder) id config))
+  (cfn-cluster-execute-command-configuration-property-builder> (new CfnCluster$ExecuteCommandConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-cluster-execute-command-log-configuration-property-builder
-  "The build-cfn-cluster-execute-command-log-configuration-property-builder function updates a CfnCluster$ExecuteCommandLogConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-execute-command-log-configuration-property-builder>
+  "The cfn-cluster-execute-command-log-configuration-property-builder> function updates a CfnCluster$ExecuteCommandLogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ExecuteCommandLogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2577,11 +2577,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-execute-command-log-configuration-property-builder (new CfnCluster$ExecuteCommandLogConfigurationProperty$Builder) id config))
+  (cfn-cluster-execute-command-log-configuration-property-builder> (new CfnCluster$ExecuteCommandLogConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-cluster-props-builder
-  "The build-cfn-cluster-props-builder function updates a CfnClusterProps$Builder instance using the provided configuration.
+(defn cfn-cluster-props-builder>
+  "The cfn-cluster-props-builder> function updates a CfnClusterProps$Builder instance using the provided configuration.
   The function takes the CfnClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2623,11 +2623,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
+  (cfn-cluster-props-builder> (new CfnClusterProps$Builder) id config))
 
 
-(defn build-cfn-cluster-service-connect-defaults-property-builder
-  "The build-cfn-cluster-service-connect-defaults-property-builder function updates a CfnCluster$ServiceConnectDefaultsProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-service-connect-defaults-property-builder>
+  "The cfn-cluster-service-connect-defaults-property-builder> function updates a CfnCluster$ServiceConnectDefaultsProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ServiceConnectDefaultsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2651,11 +2651,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-service-connect-defaults-property-builder (new CfnCluster$ServiceConnectDefaultsProperty$Builder) id config))
+  (cfn-cluster-service-connect-defaults-property-builder> (new CfnCluster$ServiceConnectDefaultsProperty$Builder) id config))
 
 
-(defn build-cfn-primary-task-set-builder
-  "The build-cfn-primary-task-set-builder function updates a CfnPrimaryTaskSet$Builder instance using the provided configuration.
+(defn cfn-primary-task-set-builder>
+  "The cfn-primary-task-set-builder> function updates a CfnPrimaryTaskSet$Builder instance using the provided configuration.
   The function takes the CfnPrimaryTaskSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2685,11 +2685,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-primary-task-set-builder (CfnPrimaryTaskSet$Builder/create scope (name id)) id config))
+  (cfn-primary-task-set-builder> (CfnPrimaryTaskSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-primary-task-set-props-builder
-  "The build-cfn-primary-task-set-props-builder function updates a CfnPrimaryTaskSetProps$Builder instance using the provided configuration.
+(defn cfn-primary-task-set-props-builder>
+  "The cfn-primary-task-set-props-builder> function updates a CfnPrimaryTaskSetProps$Builder instance using the provided configuration.
   The function takes the CfnPrimaryTaskSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2719,11 +2719,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-primary-task-set-props-builder (new CfnPrimaryTaskSetProps$Builder) id config))
+  (cfn-primary-task-set-props-builder> (new CfnPrimaryTaskSetProps$Builder) id config))
 
 
-(defn build-cfn-service-aws-vpc-configuration-property-builder
-  "The build-cfn-service-aws-vpc-configuration-property-builder function updates a CfnService$AwsVpcConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-aws-vpc-configuration-property-builder>
+  "The cfn-service-aws-vpc-configuration-property-builder> function updates a CfnService$AwsVpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$AwsVpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2753,11 +2753,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-aws-vpc-configuration-property-builder (new CfnService$AwsVpcConfigurationProperty$Builder) id config))
+  (cfn-service-aws-vpc-configuration-property-builder> (new CfnService$AwsVpcConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-service-builder
-  "The build-cfn-service-builder function updates a CfnService$Builder instance using the provided configuration.
+(defn cfn-service-builder>
+  "The cfn-service-builder> function updates a CfnService$Builder instance using the provided configuration.
   The function takes the CfnService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2847,11 +2847,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-service-builder (CfnService$Builder/create scope (name id)) id config))
+  (cfn-service-builder> (CfnService$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-service-capacity-provider-strategy-item-property-builder
-  "The build-cfn-service-capacity-provider-strategy-item-property-builder function updates a CfnService$CapacityProviderStrategyItemProperty$Builder instance using the provided configuration.
+(defn cfn-service-capacity-provider-strategy-item-property-builder>
+  "The cfn-service-capacity-provider-strategy-item-property-builder> function updates a CfnService$CapacityProviderStrategyItemProperty$Builder instance using the provided configuration.
   The function takes the CfnService$CapacityProviderStrategyItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2881,11 +2881,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-capacity-provider-strategy-item-property-builder (new CfnService$CapacityProviderStrategyItemProperty$Builder) id config))
+  (cfn-service-capacity-provider-strategy-item-property-builder> (new CfnService$CapacityProviderStrategyItemProperty$Builder) id config))
 
 
-(defn build-cfn-service-deployment-alarms-property-builder
-  "The build-cfn-service-deployment-alarms-property-builder function updates a CfnService$DeploymentAlarmsProperty$Builder instance using the provided configuration.
+(defn cfn-service-deployment-alarms-property-builder>
+  "The cfn-service-deployment-alarms-property-builder> function updates a CfnService$DeploymentAlarmsProperty$Builder instance using the provided configuration.
   The function takes the CfnService$DeploymentAlarmsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2915,11 +2915,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-deployment-alarms-property-builder (new CfnService$DeploymentAlarmsProperty$Builder) id config))
+  (cfn-service-deployment-alarms-property-builder> (new CfnService$DeploymentAlarmsProperty$Builder) id config))
 
 
-(defn build-cfn-service-deployment-circuit-breaker-property-builder
-  "The build-cfn-service-deployment-circuit-breaker-property-builder function updates a CfnService$DeploymentCircuitBreakerProperty$Builder instance using the provided configuration.
+(defn cfn-service-deployment-circuit-breaker-property-builder>
+  "The cfn-service-deployment-circuit-breaker-property-builder> function updates a CfnService$DeploymentCircuitBreakerProperty$Builder instance using the provided configuration.
   The function takes the CfnService$DeploymentCircuitBreakerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2946,11 +2946,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-deployment-circuit-breaker-property-builder (new CfnService$DeploymentCircuitBreakerProperty$Builder) id config))
+  (cfn-service-deployment-circuit-breaker-property-builder> (new CfnService$DeploymentCircuitBreakerProperty$Builder) id config))
 
 
-(defn build-cfn-service-deployment-configuration-property-builder
-  "The build-cfn-service-deployment-configuration-property-builder function updates a CfnService$DeploymentConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-deployment-configuration-property-builder>
+  "The cfn-service-deployment-configuration-property-builder> function updates a CfnService$DeploymentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$DeploymentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2983,11 +2983,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-deployment-configuration-property-builder (new CfnService$DeploymentConfigurationProperty$Builder) id config))
+  (cfn-service-deployment-configuration-property-builder> (new CfnService$DeploymentConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-service-deployment-controller-property-builder
-  "The build-cfn-service-deployment-controller-property-builder function updates a CfnService$DeploymentControllerProperty$Builder instance using the provided configuration.
+(defn cfn-service-deployment-controller-property-builder>
+  "The cfn-service-deployment-controller-property-builder> function updates a CfnService$DeploymentControllerProperty$Builder instance using the provided configuration.
   The function takes the CfnService$DeploymentControllerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3011,11 +3011,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-deployment-controller-property-builder (new CfnService$DeploymentControllerProperty$Builder) id config))
+  (cfn-service-deployment-controller-property-builder> (new CfnService$DeploymentControllerProperty$Builder) id config))
 
 
-(defn build-cfn-service-ebs-tag-specification-property-builder
-  "The build-cfn-service-ebs-tag-specification-property-builder function updates a CfnService$EBSTagSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-service-ebs-tag-specification-property-builder>
+  "The cfn-service-ebs-tag-specification-property-builder> function updates a CfnService$EBSTagSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$EBSTagSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3045,11 +3045,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-ebs-tag-specification-property-builder (new CfnService$EBSTagSpecificationProperty$Builder) id config))
+  (cfn-service-ebs-tag-specification-property-builder> (new CfnService$EBSTagSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-service-load-balancer-property-builder
-  "The build-cfn-service-load-balancer-property-builder function updates a CfnService$LoadBalancerProperty$Builder instance using the provided configuration.
+(defn cfn-service-load-balancer-property-builder>
+  "The cfn-service-load-balancer-property-builder> function updates a CfnService$LoadBalancerProperty$Builder instance using the provided configuration.
   The function takes the CfnService$LoadBalancerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3082,11 +3082,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-load-balancer-property-builder (new CfnService$LoadBalancerProperty$Builder) id config))
+  (cfn-service-load-balancer-property-builder> (new CfnService$LoadBalancerProperty$Builder) id config))
 
 
-(defn build-cfn-service-log-configuration-property-builder
-  "The build-cfn-service-log-configuration-property-builder function updates a CfnService$LogConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-log-configuration-property-builder>
+  "The cfn-service-log-configuration-property-builder> function updates a CfnService$LogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$LogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3116,11 +3116,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-log-configuration-property-builder (new CfnService$LogConfigurationProperty$Builder) id config))
+  (cfn-service-log-configuration-property-builder> (new CfnService$LogConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-service-network-configuration-property-builder
-  "The build-cfn-service-network-configuration-property-builder function updates a CfnService$NetworkConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-network-configuration-property-builder>
+  "The cfn-service-network-configuration-property-builder> function updates a CfnService$NetworkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$NetworkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3144,11 +3144,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-network-configuration-property-builder (new CfnService$NetworkConfigurationProperty$Builder) id config))
+  (cfn-service-network-configuration-property-builder> (new CfnService$NetworkConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-service-placement-constraint-property-builder
-  "The build-cfn-service-placement-constraint-property-builder function updates a CfnService$PlacementConstraintProperty$Builder instance using the provided configuration.
+(defn cfn-service-placement-constraint-property-builder>
+  "The cfn-service-placement-constraint-property-builder> function updates a CfnService$PlacementConstraintProperty$Builder instance using the provided configuration.
   The function takes the CfnService$PlacementConstraintProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3175,11 +3175,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-placement-constraint-property-builder (new CfnService$PlacementConstraintProperty$Builder) id config))
+  (cfn-service-placement-constraint-property-builder> (new CfnService$PlacementConstraintProperty$Builder) id config))
 
 
-(defn build-cfn-service-placement-strategy-property-builder
-  "The build-cfn-service-placement-strategy-property-builder function updates a CfnService$PlacementStrategyProperty$Builder instance using the provided configuration.
+(defn cfn-service-placement-strategy-property-builder>
+  "The cfn-service-placement-strategy-property-builder> function updates a CfnService$PlacementStrategyProperty$Builder instance using the provided configuration.
   The function takes the CfnService$PlacementStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3206,11 +3206,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-placement-strategy-property-builder (new CfnService$PlacementStrategyProperty$Builder) id config))
+  (cfn-service-placement-strategy-property-builder> (new CfnService$PlacementStrategyProperty$Builder) id config))
 
 
-(defn build-cfn-service-props-builder
-  "The build-cfn-service-props-builder function updates a CfnServiceProps$Builder instance using the provided configuration.
+(defn cfn-service-props-builder>
+  "The cfn-service-props-builder> function updates a CfnServiceProps$Builder instance using the provided configuration.
   The function takes the CfnServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3300,11 +3300,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-props-builder (new CfnServiceProps$Builder) id config))
+  (cfn-service-props-builder> (new CfnServiceProps$Builder) id config))
 
 
-(defn build-cfn-service-secret-property-builder
-  "The build-cfn-service-secret-property-builder function updates a CfnService$SecretProperty$Builder instance using the provided configuration.
+(defn cfn-service-secret-property-builder>
+  "The cfn-service-secret-property-builder> function updates a CfnService$SecretProperty$Builder instance using the provided configuration.
   The function takes the CfnService$SecretProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3331,11 +3331,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-secret-property-builder (new CfnService$SecretProperty$Builder) id config))
+  (cfn-service-secret-property-builder> (new CfnService$SecretProperty$Builder) id config))
 
 
-(defn build-cfn-service-service-connect-client-alias-property-builder
-  "The build-cfn-service-service-connect-client-alias-property-builder function updates a CfnService$ServiceConnectClientAliasProperty$Builder instance using the provided configuration.
+(defn cfn-service-service-connect-client-alias-property-builder>
+  "The cfn-service-service-connect-client-alias-property-builder> function updates a CfnService$ServiceConnectClientAliasProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceConnectClientAliasProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3362,11 +3362,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-service-connect-client-alias-property-builder (new CfnService$ServiceConnectClientAliasProperty$Builder) id config))
+  (cfn-service-service-connect-client-alias-property-builder> (new CfnService$ServiceConnectClientAliasProperty$Builder) id config))
 
 
-(defn build-cfn-service-service-connect-configuration-property-builder
-  "The build-cfn-service-service-connect-configuration-property-builder function updates a CfnService$ServiceConnectConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-service-connect-configuration-property-builder>
+  "The cfn-service-service-connect-configuration-property-builder> function updates a CfnService$ServiceConnectConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceConnectConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3399,11 +3399,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-service-connect-configuration-property-builder (new CfnService$ServiceConnectConfigurationProperty$Builder) id config))
+  (cfn-service-service-connect-configuration-property-builder> (new CfnService$ServiceConnectConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-service-service-connect-service-property-builder
-  "The build-cfn-service-service-connect-service-property-builder function updates a CfnService$ServiceConnectServiceProperty$Builder instance using the provided configuration.
+(defn cfn-service-service-connect-service-property-builder>
+  "The cfn-service-service-connect-service-property-builder> function updates a CfnService$ServiceConnectServiceProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceConnectServiceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3442,11 +3442,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-service-connect-service-property-builder (new CfnService$ServiceConnectServiceProperty$Builder) id config))
+  (cfn-service-service-connect-service-property-builder> (new CfnService$ServiceConnectServiceProperty$Builder) id config))
 
 
-(defn build-cfn-service-service-connect-tls-certificate-authority-property-builder
-  "The build-cfn-service-service-connect-tls-certificate-authority-property-builder function updates a CfnService$ServiceConnectTlsCertificateAuthorityProperty$Builder instance using the provided configuration.
+(defn cfn-service-service-connect-tls-certificate-authority-property-builder>
+  "The cfn-service-service-connect-tls-certificate-authority-property-builder> function updates a CfnService$ServiceConnectTlsCertificateAuthorityProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceConnectTlsCertificateAuthorityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3470,11 +3470,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-service-connect-tls-certificate-authority-property-builder (new CfnService$ServiceConnectTlsCertificateAuthorityProperty$Builder) id config))
+  (cfn-service-service-connect-tls-certificate-authority-property-builder> (new CfnService$ServiceConnectTlsCertificateAuthorityProperty$Builder) id config))
 
 
-(defn build-cfn-service-service-connect-tls-configuration-property-builder
-  "The build-cfn-service-service-connect-tls-configuration-property-builder function updates a CfnService$ServiceConnectTlsConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-service-connect-tls-configuration-property-builder>
+  "The cfn-service-service-connect-tls-configuration-property-builder> function updates a CfnService$ServiceConnectTlsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceConnectTlsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3504,11 +3504,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-service-connect-tls-configuration-property-builder (new CfnService$ServiceConnectTlsConfigurationProperty$Builder) id config))
+  (cfn-service-service-connect-tls-configuration-property-builder> (new CfnService$ServiceConnectTlsConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-service-service-managed-ebs-volume-configuration-property-builder
-  "The build-cfn-service-service-managed-ebs-volume-configuration-property-builder function updates a CfnService$ServiceManagedEBSVolumeConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-service-managed-ebs-volume-configuration-property-builder>
+  "The cfn-service-service-managed-ebs-volume-configuration-property-builder> function updates a CfnService$ServiceManagedEBSVolumeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceManagedEBSVolumeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3559,11 +3559,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-service-managed-ebs-volume-configuration-property-builder (new CfnService$ServiceManagedEBSVolumeConfigurationProperty$Builder) id config))
+  (cfn-service-service-managed-ebs-volume-configuration-property-builder> (new CfnService$ServiceManagedEBSVolumeConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-service-service-registry-property-builder
-  "The build-cfn-service-service-registry-property-builder function updates a CfnService$ServiceRegistryProperty$Builder instance using the provided configuration.
+(defn cfn-service-service-registry-property-builder>
+  "The cfn-service-service-registry-property-builder> function updates a CfnService$ServiceRegistryProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceRegistryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3596,11 +3596,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-service-registry-property-builder (new CfnService$ServiceRegistryProperty$Builder) id config))
+  (cfn-service-service-registry-property-builder> (new CfnService$ServiceRegistryProperty$Builder) id config))
 
 
-(defn build-cfn-service-service-volume-configuration-property-builder
-  "The build-cfn-service-service-volume-configuration-property-builder function updates a CfnService$ServiceVolumeConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-service-volume-configuration-property-builder>
+  "The cfn-service-service-volume-configuration-property-builder> function updates a CfnService$ServiceVolumeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceVolumeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3627,11 +3627,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-service-volume-configuration-property-builder (new CfnService$ServiceVolumeConfigurationProperty$Builder) id config))
+  (cfn-service-service-volume-configuration-property-builder> (new CfnService$ServiceVolumeConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-service-timeout-configuration-property-builder
-  "The build-cfn-service-timeout-configuration-property-builder function updates a CfnService$TimeoutConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-service-timeout-configuration-property-builder>
+  "The cfn-service-timeout-configuration-property-builder> function updates a CfnService$TimeoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$TimeoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3658,11 +3658,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-timeout-configuration-property-builder (new CfnService$TimeoutConfigurationProperty$Builder) id config))
+  (cfn-service-timeout-configuration-property-builder> (new CfnService$TimeoutConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-authorization-config-property-builder
-  "The build-cfn-task-definition-authorization-config-property-builder function updates a CfnTaskDefinition$AuthorizationConfigProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-authorization-config-property-builder>
+  "The cfn-task-definition-authorization-config-property-builder> function updates a CfnTaskDefinition$AuthorizationConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$AuthorizationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3689,11 +3689,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-authorization-config-property-builder (new CfnTaskDefinition$AuthorizationConfigProperty$Builder) id config))
+  (cfn-task-definition-authorization-config-property-builder> (new CfnTaskDefinition$AuthorizationConfigProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-builder
-  "The build-cfn-task-definition-builder function updates a CfnTaskDefinition$Builder instance using the provided configuration.
+(defn cfn-task-definition-builder>
+  "The cfn-task-definition-builder> function updates a CfnTaskDefinition$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3765,11 +3765,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-task-definition-builder (CfnTaskDefinition$Builder/create scope (name id)) id config))
+  (cfn-task-definition-builder> (CfnTaskDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-task-definition-container-definition-property-builder
-  "The build-cfn-task-definition-container-definition-property-builder function updates a CfnTaskDefinition$ContainerDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-container-definition-property-builder>
+  "The cfn-task-definition-container-definition-property-builder> function updates a CfnTaskDefinition$ContainerDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$ContainerDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3910,11 +3910,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-container-definition-property-builder (new CfnTaskDefinition$ContainerDefinitionProperty$Builder) id config))
+  (cfn-task-definition-container-definition-property-builder> (new CfnTaskDefinition$ContainerDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-container-dependency-property-builder
-  "The build-cfn-task-definition-container-dependency-property-builder function updates a CfnTaskDefinition$ContainerDependencyProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-container-dependency-property-builder>
+  "The cfn-task-definition-container-dependency-property-builder> function updates a CfnTaskDefinition$ContainerDependencyProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$ContainerDependencyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3941,11 +3941,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-container-dependency-property-builder (new CfnTaskDefinition$ContainerDependencyProperty$Builder) id config))
+  (cfn-task-definition-container-dependency-property-builder> (new CfnTaskDefinition$ContainerDependencyProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-device-property-builder
-  "The build-cfn-task-definition-device-property-builder function updates a CfnTaskDefinition$DeviceProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-device-property-builder>
+  "The cfn-task-definition-device-property-builder> function updates a CfnTaskDefinition$DeviceProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$DeviceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3975,11 +3975,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-device-property-builder (new CfnTaskDefinition$DeviceProperty$Builder) id config))
+  (cfn-task-definition-device-property-builder> (new CfnTaskDefinition$DeviceProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-docker-volume-configuration-property-builder
-  "The build-cfn-task-definition-docker-volume-configuration-property-builder function updates a CfnTaskDefinition$DockerVolumeConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-docker-volume-configuration-property-builder>
+  "The cfn-task-definition-docker-volume-configuration-property-builder> function updates a CfnTaskDefinition$DockerVolumeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$DockerVolumeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4015,11 +4015,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-docker-volume-configuration-property-builder (new CfnTaskDefinition$DockerVolumeConfigurationProperty$Builder) id config))
+  (cfn-task-definition-docker-volume-configuration-property-builder> (new CfnTaskDefinition$DockerVolumeConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-efs-volume-configuration-property-builder
-  "The build-cfn-task-definition-efs-volume-configuration-property-builder function updates a CfnTaskDefinition$EFSVolumeConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-efs-volume-configuration-property-builder>
+  "The cfn-task-definition-efs-volume-configuration-property-builder> function updates a CfnTaskDefinition$EFSVolumeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$EFSVolumeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4055,11 +4055,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-efs-volume-configuration-property-builder (new CfnTaskDefinition$EFSVolumeConfigurationProperty$Builder) id config))
+  (cfn-task-definition-efs-volume-configuration-property-builder> (new CfnTaskDefinition$EFSVolumeConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-environment-file-property-builder
-  "The build-cfn-task-definition-environment-file-property-builder function updates a CfnTaskDefinition$EnvironmentFileProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-environment-file-property-builder>
+  "The cfn-task-definition-environment-file-property-builder> function updates a CfnTaskDefinition$EnvironmentFileProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$EnvironmentFileProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4086,11 +4086,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-environment-file-property-builder (new CfnTaskDefinition$EnvironmentFileProperty$Builder) id config))
+  (cfn-task-definition-environment-file-property-builder> (new CfnTaskDefinition$EnvironmentFileProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-ephemeral-storage-property-builder
-  "The build-cfn-task-definition-ephemeral-storage-property-builder function updates a CfnTaskDefinition$EphemeralStorageProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-ephemeral-storage-property-builder>
+  "The cfn-task-definition-ephemeral-storage-property-builder> function updates a CfnTaskDefinition$EphemeralStorageProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$EphemeralStorageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4114,11 +4114,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-ephemeral-storage-property-builder (new CfnTaskDefinition$EphemeralStorageProperty$Builder) id config))
+  (cfn-task-definition-ephemeral-storage-property-builder> (new CfnTaskDefinition$EphemeralStorageProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-f-sx-authorization-config-property-builder
-  "The build-cfn-task-definition-f-sx-authorization-config-property-builder function updates a CfnTaskDefinition$FSxAuthorizationConfigProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-f-sx-authorization-config-property-builder>
+  "The cfn-task-definition-f-sx-authorization-config-property-builder> function updates a CfnTaskDefinition$FSxAuthorizationConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$FSxAuthorizationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4145,11 +4145,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-f-sx-authorization-config-property-builder (new CfnTaskDefinition$FSxAuthorizationConfigProperty$Builder) id config))
+  (cfn-task-definition-f-sx-authorization-config-property-builder> (new CfnTaskDefinition$FSxAuthorizationConfigProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-f-sx-windows-file-server-volume-configuration-property-builder
-  "The build-cfn-task-definition-f-sx-windows-file-server-volume-configuration-property-builder function updates a CfnTaskDefinition$FSxWindowsFileServerVolumeConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-f-sx-windows-file-server-volume-configuration-property-builder>
+  "The cfn-task-definition-f-sx-windows-file-server-volume-configuration-property-builder> function updates a CfnTaskDefinition$FSxWindowsFileServerVolumeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$FSxWindowsFileServerVolumeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4179,11 +4179,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-f-sx-windows-file-server-volume-configuration-property-builder (new CfnTaskDefinition$FSxWindowsFileServerVolumeConfigurationProperty$Builder) id config))
+  (cfn-task-definition-f-sx-windows-file-server-volume-configuration-property-builder> (new CfnTaskDefinition$FSxWindowsFileServerVolumeConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-firelens-configuration-property-builder
-  "The build-cfn-task-definition-firelens-configuration-property-builder function updates a CfnTaskDefinition$FirelensConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-firelens-configuration-property-builder>
+  "The cfn-task-definition-firelens-configuration-property-builder> function updates a CfnTaskDefinition$FirelensConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$FirelensConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4210,11 +4210,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-firelens-configuration-property-builder (new CfnTaskDefinition$FirelensConfigurationProperty$Builder) id config))
+  (cfn-task-definition-firelens-configuration-property-builder> (new CfnTaskDefinition$FirelensConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-health-check-property-builder
-  "The build-cfn-task-definition-health-check-property-builder function updates a CfnTaskDefinition$HealthCheckProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-health-check-property-builder>
+  "The cfn-task-definition-health-check-property-builder> function updates a CfnTaskDefinition$HealthCheckProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$HealthCheckProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4250,11 +4250,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-health-check-property-builder (new CfnTaskDefinition$HealthCheckProperty$Builder) id config))
+  (cfn-task-definition-health-check-property-builder> (new CfnTaskDefinition$HealthCheckProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-host-entry-property-builder
-  "The build-cfn-task-definition-host-entry-property-builder function updates a CfnTaskDefinition$HostEntryProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-host-entry-property-builder>
+  "The cfn-task-definition-host-entry-property-builder> function updates a CfnTaskDefinition$HostEntryProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$HostEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4281,11 +4281,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-host-entry-property-builder (new CfnTaskDefinition$HostEntryProperty$Builder) id config))
+  (cfn-task-definition-host-entry-property-builder> (new CfnTaskDefinition$HostEntryProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-host-volume-properties-property-builder
-  "The build-cfn-task-definition-host-volume-properties-property-builder function updates a CfnTaskDefinition$HostVolumePropertiesProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-host-volume-properties-property-builder>
+  "The cfn-task-definition-host-volume-properties-property-builder> function updates a CfnTaskDefinition$HostVolumePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$HostVolumePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4309,11 +4309,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-host-volume-properties-property-builder (new CfnTaskDefinition$HostVolumePropertiesProperty$Builder) id config))
+  (cfn-task-definition-host-volume-properties-property-builder> (new CfnTaskDefinition$HostVolumePropertiesProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-inference-accelerator-property-builder
-  "The build-cfn-task-definition-inference-accelerator-property-builder function updates a CfnTaskDefinition$InferenceAcceleratorProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-inference-accelerator-property-builder>
+  "The cfn-task-definition-inference-accelerator-property-builder> function updates a CfnTaskDefinition$InferenceAcceleratorProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$InferenceAcceleratorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4340,11 +4340,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-inference-accelerator-property-builder (new CfnTaskDefinition$InferenceAcceleratorProperty$Builder) id config))
+  (cfn-task-definition-inference-accelerator-property-builder> (new CfnTaskDefinition$InferenceAcceleratorProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-kernel-capabilities-property-builder
-  "The build-cfn-task-definition-kernel-capabilities-property-builder function updates a CfnTaskDefinition$KernelCapabilitiesProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-kernel-capabilities-property-builder>
+  "The cfn-task-definition-kernel-capabilities-property-builder> function updates a CfnTaskDefinition$KernelCapabilitiesProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$KernelCapabilitiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4371,11 +4371,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-kernel-capabilities-property-builder (new CfnTaskDefinition$KernelCapabilitiesProperty$Builder) id config))
+  (cfn-task-definition-kernel-capabilities-property-builder> (new CfnTaskDefinition$KernelCapabilitiesProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-key-value-pair-property-builder
-  "The build-cfn-task-definition-key-value-pair-property-builder function updates a CfnTaskDefinition$KeyValuePairProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-key-value-pair-property-builder>
+  "The cfn-task-definition-key-value-pair-property-builder> function updates a CfnTaskDefinition$KeyValuePairProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$KeyValuePairProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4402,11 +4402,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-key-value-pair-property-builder (new CfnTaskDefinition$KeyValuePairProperty$Builder) id config))
+  (cfn-task-definition-key-value-pair-property-builder> (new CfnTaskDefinition$KeyValuePairProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-linux-parameters-property-builder
-  "The build-cfn-task-definition-linux-parameters-property-builder function updates a CfnTaskDefinition$LinuxParametersProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-linux-parameters-property-builder>
+  "The cfn-task-definition-linux-parameters-property-builder> function updates a CfnTaskDefinition$LinuxParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$LinuxParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4448,11 +4448,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-linux-parameters-property-builder (new CfnTaskDefinition$LinuxParametersProperty$Builder) id config))
+  (cfn-task-definition-linux-parameters-property-builder> (new CfnTaskDefinition$LinuxParametersProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-log-configuration-property-builder
-  "The build-cfn-task-definition-log-configuration-property-builder function updates a CfnTaskDefinition$LogConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-log-configuration-property-builder>
+  "The cfn-task-definition-log-configuration-property-builder> function updates a CfnTaskDefinition$LogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$LogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4482,11 +4482,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-log-configuration-property-builder (new CfnTaskDefinition$LogConfigurationProperty$Builder) id config))
+  (cfn-task-definition-log-configuration-property-builder> (new CfnTaskDefinition$LogConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-mount-point-property-builder
-  "The build-cfn-task-definition-mount-point-property-builder function updates a CfnTaskDefinition$MountPointProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-mount-point-property-builder>
+  "The cfn-task-definition-mount-point-property-builder> function updates a CfnTaskDefinition$MountPointProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$MountPointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4516,11 +4516,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-mount-point-property-builder (new CfnTaskDefinition$MountPointProperty$Builder) id config))
+  (cfn-task-definition-mount-point-property-builder> (new CfnTaskDefinition$MountPointProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-port-mapping-property-builder
-  "The build-cfn-task-definition-port-mapping-property-builder function updates a CfnTaskDefinition$PortMappingProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-port-mapping-property-builder>
+  "The cfn-task-definition-port-mapping-property-builder> function updates a CfnTaskDefinition$PortMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$PortMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4559,11 +4559,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-port-mapping-property-builder (new CfnTaskDefinition$PortMappingProperty$Builder) id config))
+  (cfn-task-definition-port-mapping-property-builder> (new CfnTaskDefinition$PortMappingProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-props-builder
-  "The build-cfn-task-definition-props-builder function updates a CfnTaskDefinitionProps$Builder instance using the provided configuration.
+(defn cfn-task-definition-props-builder>
+  "The cfn-task-definition-props-builder> function updates a CfnTaskDefinitionProps$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4635,11 +4635,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-props-builder (new CfnTaskDefinitionProps$Builder) id config))
+  (cfn-task-definition-props-builder> (new CfnTaskDefinitionProps$Builder) id config))
 
 
-(defn build-cfn-task-definition-proxy-configuration-property-builder
-  "The build-cfn-task-definition-proxy-configuration-property-builder function updates a CfnTaskDefinition$ProxyConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-proxy-configuration-property-builder>
+  "The cfn-task-definition-proxy-configuration-property-builder> function updates a CfnTaskDefinition$ProxyConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$ProxyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4669,11 +4669,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-proxy-configuration-property-builder (new CfnTaskDefinition$ProxyConfigurationProperty$Builder) id config))
+  (cfn-task-definition-proxy-configuration-property-builder> (new CfnTaskDefinition$ProxyConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-repository-credentials-property-builder
-  "The build-cfn-task-definition-repository-credentials-property-builder function updates a CfnTaskDefinition$RepositoryCredentialsProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-repository-credentials-property-builder>
+  "The cfn-task-definition-repository-credentials-property-builder> function updates a CfnTaskDefinition$RepositoryCredentialsProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$RepositoryCredentialsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4697,11 +4697,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-repository-credentials-property-builder (new CfnTaskDefinition$RepositoryCredentialsProperty$Builder) id config))
+  (cfn-task-definition-repository-credentials-property-builder> (new CfnTaskDefinition$RepositoryCredentialsProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-resource-requirement-property-builder
-  "The build-cfn-task-definition-resource-requirement-property-builder function updates a CfnTaskDefinition$ResourceRequirementProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-resource-requirement-property-builder>
+  "The cfn-task-definition-resource-requirement-property-builder> function updates a CfnTaskDefinition$ResourceRequirementProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$ResourceRequirementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4728,11 +4728,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-resource-requirement-property-builder (new CfnTaskDefinition$ResourceRequirementProperty$Builder) id config))
+  (cfn-task-definition-resource-requirement-property-builder> (new CfnTaskDefinition$ResourceRequirementProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-runtime-platform-property-builder
-  "The build-cfn-task-definition-runtime-platform-property-builder function updates a CfnTaskDefinition$RuntimePlatformProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-runtime-platform-property-builder>
+  "The cfn-task-definition-runtime-platform-property-builder> function updates a CfnTaskDefinition$RuntimePlatformProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$RuntimePlatformProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4759,11 +4759,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-runtime-platform-property-builder (new CfnTaskDefinition$RuntimePlatformProperty$Builder) id config))
+  (cfn-task-definition-runtime-platform-property-builder> (new CfnTaskDefinition$RuntimePlatformProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-secret-property-builder
-  "The build-cfn-task-definition-secret-property-builder function updates a CfnTaskDefinition$SecretProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-secret-property-builder>
+  "The cfn-task-definition-secret-property-builder> function updates a CfnTaskDefinition$SecretProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$SecretProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4790,11 +4790,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-secret-property-builder (new CfnTaskDefinition$SecretProperty$Builder) id config))
+  (cfn-task-definition-secret-property-builder> (new CfnTaskDefinition$SecretProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-system-control-property-builder
-  "The build-cfn-task-definition-system-control-property-builder function updates a CfnTaskDefinition$SystemControlProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-system-control-property-builder>
+  "The cfn-task-definition-system-control-property-builder> function updates a CfnTaskDefinition$SystemControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$SystemControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4821,11 +4821,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-system-control-property-builder (new CfnTaskDefinition$SystemControlProperty$Builder) id config))
+  (cfn-task-definition-system-control-property-builder> (new CfnTaskDefinition$SystemControlProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-task-definition-placement-constraint-property-builder
-  "The build-cfn-task-definition-task-definition-placement-constraint-property-builder function updates a CfnTaskDefinition$TaskDefinitionPlacementConstraintProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-task-definition-placement-constraint-property-builder>
+  "The cfn-task-definition-task-definition-placement-constraint-property-builder> function updates a CfnTaskDefinition$TaskDefinitionPlacementConstraintProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$TaskDefinitionPlacementConstraintProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4852,11 +4852,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-task-definition-placement-constraint-property-builder (new CfnTaskDefinition$TaskDefinitionPlacementConstraintProperty$Builder) id config))
+  (cfn-task-definition-task-definition-placement-constraint-property-builder> (new CfnTaskDefinition$TaskDefinitionPlacementConstraintProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-tmpfs-property-builder
-  "The build-cfn-task-definition-tmpfs-property-builder function updates a CfnTaskDefinition$TmpfsProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-tmpfs-property-builder>
+  "The cfn-task-definition-tmpfs-property-builder> function updates a CfnTaskDefinition$TmpfsProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$TmpfsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4886,11 +4886,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-tmpfs-property-builder (new CfnTaskDefinition$TmpfsProperty$Builder) id config))
+  (cfn-task-definition-tmpfs-property-builder> (new CfnTaskDefinition$TmpfsProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-ulimit-property-builder
-  "The build-cfn-task-definition-ulimit-property-builder function updates a CfnTaskDefinition$UlimitProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-ulimit-property-builder>
+  "The cfn-task-definition-ulimit-property-builder> function updates a CfnTaskDefinition$UlimitProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$UlimitProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4920,11 +4920,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-ulimit-property-builder (new CfnTaskDefinition$UlimitProperty$Builder) id config))
+  (cfn-task-definition-ulimit-property-builder> (new CfnTaskDefinition$UlimitProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-volume-from-property-builder
-  "The build-cfn-task-definition-volume-from-property-builder function updates a CfnTaskDefinition$VolumeFromProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-volume-from-property-builder>
+  "The cfn-task-definition-volume-from-property-builder> function updates a CfnTaskDefinition$VolumeFromProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$VolumeFromProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4951,11 +4951,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-volume-from-property-builder (new CfnTaskDefinition$VolumeFromProperty$Builder) id config))
+  (cfn-task-definition-volume-from-property-builder> (new CfnTaskDefinition$VolumeFromProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-volume-property-builder
-  "The build-cfn-task-definition-volume-property-builder function updates a CfnTaskDefinition$VolumeProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-volume-property-builder>
+  "The cfn-task-definition-volume-property-builder> function updates a CfnTaskDefinition$VolumeProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$VolumeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4994,11 +4994,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-volume-property-builder (new CfnTaskDefinition$VolumeProperty$Builder) id config))
+  (cfn-task-definition-volume-property-builder> (new CfnTaskDefinition$VolumeProperty$Builder) id config))
 
 
-(defn build-cfn-task-set-aws-vpc-configuration-property-builder
-  "The build-cfn-task-set-aws-vpc-configuration-property-builder function updates a CfnTaskSet$AwsVpcConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-task-set-aws-vpc-configuration-property-builder>
+  "The cfn-task-set-aws-vpc-configuration-property-builder> function updates a CfnTaskSet$AwsVpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskSet$AwsVpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5028,11 +5028,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-set-aws-vpc-configuration-property-builder (new CfnTaskSet$AwsVpcConfigurationProperty$Builder) id config))
+  (cfn-task-set-aws-vpc-configuration-property-builder> (new CfnTaskSet$AwsVpcConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-set-builder
-  "The build-cfn-task-set-builder function updates a CfnTaskSet$Builder instance using the provided configuration.
+(defn cfn-task-set-builder>
+  "The cfn-task-set-builder> function updates a CfnTaskSet$Builder instance using the provided configuration.
   The function takes the CfnTaskSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5086,11 +5086,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-task-set-builder (CfnTaskSet$Builder/create scope (name id)) id config))
+  (cfn-task-set-builder> (CfnTaskSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-task-set-load-balancer-property-builder
-  "The build-cfn-task-set-load-balancer-property-builder function updates a CfnTaskSet$LoadBalancerProperty$Builder instance using the provided configuration.
+(defn cfn-task-set-load-balancer-property-builder>
+  "The cfn-task-set-load-balancer-property-builder> function updates a CfnTaskSet$LoadBalancerProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskSet$LoadBalancerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5120,11 +5120,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-set-load-balancer-property-builder (new CfnTaskSet$LoadBalancerProperty$Builder) id config))
+  (cfn-task-set-load-balancer-property-builder> (new CfnTaskSet$LoadBalancerProperty$Builder) id config))
 
 
-(defn build-cfn-task-set-network-configuration-property-builder
-  "The build-cfn-task-set-network-configuration-property-builder function updates a CfnTaskSet$NetworkConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-task-set-network-configuration-property-builder>
+  "The cfn-task-set-network-configuration-property-builder> function updates a CfnTaskSet$NetworkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskSet$NetworkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5148,11 +5148,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-set-network-configuration-property-builder (new CfnTaskSet$NetworkConfigurationProperty$Builder) id config))
+  (cfn-task-set-network-configuration-property-builder> (new CfnTaskSet$NetworkConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-task-set-props-builder
-  "The build-cfn-task-set-props-builder function updates a CfnTaskSetProps$Builder instance using the provided configuration.
+(defn cfn-task-set-props-builder>
+  "The cfn-task-set-props-builder> function updates a CfnTaskSetProps$Builder instance using the provided configuration.
   The function takes the CfnTaskSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5206,11 +5206,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-set-props-builder (new CfnTaskSetProps$Builder) id config))
+  (cfn-task-set-props-builder> (new CfnTaskSetProps$Builder) id config))
 
 
-(defn build-cfn-task-set-scale-property-builder
-  "The build-cfn-task-set-scale-property-builder function updates a CfnTaskSet$ScaleProperty$Builder instance using the provided configuration.
+(defn cfn-task-set-scale-property-builder>
+  "The cfn-task-set-scale-property-builder> function updates a CfnTaskSet$ScaleProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskSet$ScaleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5237,11 +5237,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-set-scale-property-builder (new CfnTaskSet$ScaleProperty$Builder) id config))
+  (cfn-task-set-scale-property-builder> (new CfnTaskSet$ScaleProperty$Builder) id config))
 
 
-(defn build-cfn-task-set-service-registry-property-builder
-  "The build-cfn-task-set-service-registry-property-builder function updates a CfnTaskSet$ServiceRegistryProperty$Builder instance using the provided configuration.
+(defn cfn-task-set-service-registry-property-builder>
+  "The cfn-task-set-service-registry-property-builder> function updates a CfnTaskSet$ServiceRegistryProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskSet$ServiceRegistryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5274,11 +5274,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-set-service-registry-property-builder (new CfnTaskSet$ServiceRegistryProperty$Builder) id config))
+  (cfn-task-set-service-registry-property-builder> (new CfnTaskSet$ServiceRegistryProperty$Builder) id config))
 
 
-(defn build-cloud-map-namespace-options-builder
-  "The build-cloud-map-namespace-options-builder function updates a CloudMapNamespaceOptions$Builder instance using the provided configuration.
+(defn cloud-map-namespace-options-builder>
+  "The cloud-map-namespace-options-builder> function updates a CloudMapNamespaceOptions$Builder instance using the provided configuration.
   The function takes the CloudMapNamespaceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5311,11 +5311,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cloud-map-namespace-options-builder (new CloudMapNamespaceOptions$Builder) id config))
+  (cloud-map-namespace-options-builder> (new CloudMapNamespaceOptions$Builder) id config))
 
 
-(defn build-cloud-map-options-builder
-  "The build-cloud-map-options-builder function updates a CloudMapOptions$Builder instance using the provided configuration.
+(defn cloud-map-options-builder>
+  "The cloud-map-options-builder> function updates a CloudMapOptions$Builder instance using the provided configuration.
   The function takes the CloudMapOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5357,11 +5357,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cloud-map-options-builder (new CloudMapOptions$Builder) id config))
+  (cloud-map-options-builder> (new CloudMapOptions$Builder) id config))
 
 
-(defn build-cluster-attributes-builder
-  "The build-cluster-attributes-builder function updates a ClusterAttributes$Builder instance using the provided configuration.
+(defn cluster-attributes-builder>
+  "The cluster-attributes-builder> function updates a ClusterAttributes$Builder instance using the provided configuration.
   The function takes the ClusterAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5406,11 +5406,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cluster-attributes-builder (new ClusterAttributes$Builder) id config))
+  (cluster-attributes-builder> (new ClusterAttributes$Builder) id config))
 
 
-(defn build-cluster-builder
-  "The build-cluster-builder function updates a Cluster$Builder instance using the provided configuration.
+(defn cluster-builder>
+  "The cluster-builder> function updates a Cluster$Builder instance using the provided configuration.
   The function takes the Cluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5452,11 +5452,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cluster-builder (Cluster$Builder/create scope (name id)) id config))
+  (cluster-builder> (Cluster$Builder/create scope (name id)) id config))
 
 
-(defn build-cluster-props-builder
-  "The build-cluster-props-builder function updates a ClusterProps$Builder instance using the provided configuration.
+(defn cluster-props-builder>
+  "The cluster-props-builder> function updates a ClusterProps$Builder instance using the provided configuration.
   The function takes the ClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5498,11 +5498,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cluster-props-builder (new ClusterProps$Builder) id config))
+  (cluster-props-builder> (new ClusterProps$Builder) id config))
 
 
-(defn build-common-task-definition-attributes-builder
-  "The build-common-task-definition-attributes-builder function updates a CommonTaskDefinitionAttributes$Builder instance using the provided configuration.
+(defn common-task-definition-attributes-builder>
+  "The common-task-definition-attributes-builder> function updates a CommonTaskDefinitionAttributes$Builder instance using the provided configuration.
   The function takes the CommonTaskDefinitionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5535,11 +5535,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-common-task-definition-attributes-builder (new CommonTaskDefinitionAttributes$Builder) id config))
+  (common-task-definition-attributes-builder> (new CommonTaskDefinitionAttributes$Builder) id config))
 
 
-(defn build-common-task-definition-props-builder
-  "The build-common-task-definition-props-builder function updates a CommonTaskDefinitionProps$Builder instance using the provided configuration.
+(defn common-task-definition-props-builder>
+  "The common-task-definition-props-builder> function updates a CommonTaskDefinitionProps$Builder instance using the provided configuration.
   The function takes the CommonTaskDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5575,11 +5575,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-common-task-definition-props-builder (new CommonTaskDefinitionProps$Builder) id config))
+  (common-task-definition-props-builder> (new CommonTaskDefinitionProps$Builder) id config))
 
 
-(defn build-container-definition-builder
-  "The build-container-definition-builder function updates a ContainerDefinition$Builder instance using the provided configuration.
+(defn container-definition-builder>
+  "The container-definition-builder> function updates a ContainerDefinition$Builder instance using the provided configuration.
   The function takes the ContainerDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5708,11 +5708,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-container-definition-builder (ContainerDefinition$Builder/create scope (name id)) id config))
+  (container-definition-builder> (ContainerDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-container-definition-options-builder
-  "The build-container-definition-options-builder function updates a ContainerDefinitionOptions$Builder instance using the provided configuration.
+(defn container-definition-options-builder>
+  "The container-definition-options-builder> function updates a ContainerDefinitionOptions$Builder instance using the provided configuration.
   The function takes the ContainerDefinitionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5838,11 +5838,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-container-definition-options-builder (new ContainerDefinitionOptions$Builder) id config))
+  (container-definition-options-builder> (new ContainerDefinitionOptions$Builder) id config))
 
 
-(defn build-container-definition-props-builder
-  "The build-container-definition-props-builder function updates a ContainerDefinitionProps$Builder instance using the provided configuration.
+(defn container-definition-props-builder>
+  "The container-definition-props-builder> function updates a ContainerDefinitionProps$Builder instance using the provided configuration.
   The function takes the ContainerDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5971,11 +5971,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-container-definition-props-builder (new ContainerDefinitionProps$Builder) id config))
+  (container-definition-props-builder> (new ContainerDefinitionProps$Builder) id config))
 
 
-(defn build-container-dependency-builder
-  "The build-container-dependency-builder function updates a ContainerDependency$Builder instance using the provided configuration.
+(defn container-dependency-builder>
+  "The container-dependency-builder> function updates a ContainerDependency$Builder instance using the provided configuration.
   The function takes the ContainerDependency$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6002,11 +6002,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-container-dependency-builder (new ContainerDependency$Builder) id config))
+  (container-dependency-builder> (new ContainerDependency$Builder) id config))
 
 
-(defn build-container-image-config-builder
-  "The build-container-image-config-builder function updates a ContainerImageConfig$Builder instance using the provided configuration.
+(defn container-image-config-builder>
+  "The container-image-config-builder> function updates a ContainerImageConfig$Builder instance using the provided configuration.
   The function takes the ContainerImageConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6033,11 +6033,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-container-image-config-builder (new ContainerImageConfig$Builder) id config))
+  (container-image-config-builder> (new ContainerImageConfig$Builder) id config))
 
 
-(defn build-container-mount-point-builder
-  "The build-container-mount-point-builder function updates a ContainerMountPoint$Builder instance using the provided configuration.
+(defn container-mount-point-builder>
+  "The container-mount-point-builder> function updates a ContainerMountPoint$Builder instance using the provided configuration.
   The function takes the ContainerMountPoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6064,11 +6064,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-container-mount-point-builder (new ContainerMountPoint$Builder) id config))
+  (container-mount-point-builder> (new ContainerMountPoint$Builder) id config))
 
 
-(defn build-cpu-utilization-scaling-props-builder
-  "The build-cpu-utilization-scaling-props-builder function updates a CpuUtilizationScalingProps$Builder instance using the provided configuration.
+(defn cpu-utilization-scaling-props-builder>
+  "The cpu-utilization-scaling-props-builder> function updates a CpuUtilizationScalingProps$Builder instance using the provided configuration.
   The function takes the CpuUtilizationScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6104,11 +6104,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cpu-utilization-scaling-props-builder (new CpuUtilizationScalingProps$Builder) id config))
+  (cpu-utilization-scaling-props-builder> (new CpuUtilizationScalingProps$Builder) id config))
 
 
-(defn build-credential-spec-config-builder
-  "The build-credential-spec-config-builder function updates a CredentialSpecConfig$Builder instance using the provided configuration.
+(defn credential-spec-config-builder>
+  "The credential-spec-config-builder> function updates a CredentialSpecConfig$Builder instance using the provided configuration.
   The function takes the CredentialSpecConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6135,11 +6135,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-credential-spec-config-builder (new CredentialSpecConfig$Builder) id config))
+  (credential-spec-config-builder> (new CredentialSpecConfig$Builder) id config))
 
 
-(defn build-deployment-alarm-config-builder
-  "The build-deployment-alarm-config-builder function updates a DeploymentAlarmConfig$Builder instance using the provided configuration.
+(defn deployment-alarm-config-builder>
+  "The deployment-alarm-config-builder> function updates a DeploymentAlarmConfig$Builder instance using the provided configuration.
   The function takes the DeploymentAlarmConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6166,11 +6166,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-deployment-alarm-config-builder (new DeploymentAlarmConfig$Builder) id config))
+  (deployment-alarm-config-builder> (new DeploymentAlarmConfig$Builder) id config))
 
 
-(defn build-deployment-alarm-options-builder
-  "The build-deployment-alarm-options-builder function updates a DeploymentAlarmOptions$Builder instance using the provided configuration.
+(defn deployment-alarm-options-builder>
+  "The deployment-alarm-options-builder> function updates a DeploymentAlarmOptions$Builder instance using the provided configuration.
   The function takes the DeploymentAlarmOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6194,11 +6194,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-deployment-alarm-options-builder (new DeploymentAlarmOptions$Builder) id config))
+  (deployment-alarm-options-builder> (new DeploymentAlarmOptions$Builder) id config))
 
 
-(defn build-deployment-circuit-breaker-builder
-  "The build-deployment-circuit-breaker-builder function updates a DeploymentCircuitBreaker$Builder instance using the provided configuration.
+(defn deployment-circuit-breaker-builder>
+  "The deployment-circuit-breaker-builder> function updates a DeploymentCircuitBreaker$Builder instance using the provided configuration.
   The function takes the DeploymentCircuitBreaker$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6225,11 +6225,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-deployment-circuit-breaker-builder (new DeploymentCircuitBreaker$Builder) id config))
+  (deployment-circuit-breaker-builder> (new DeploymentCircuitBreaker$Builder) id config))
 
 
-(defn build-deployment-controller-builder
-  "The build-deployment-controller-builder function updates a DeploymentController$Builder instance using the provided configuration.
+(defn deployment-controller-builder>
+  "The deployment-controller-builder> function updates a DeploymentController$Builder instance using the provided configuration.
   The function takes the DeploymentController$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6253,11 +6253,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-deployment-controller-builder (new DeploymentController$Builder) id config))
+  (deployment-controller-builder> (new DeploymentController$Builder) id config))
 
 
-(defn build-device-builder
-  "The build-device-builder function updates a Device$Builder instance using the provided configuration.
+(defn device-builder>
+  "The device-builder> function updates a Device$Builder instance using the provided configuration.
   The function takes the Device$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6287,11 +6287,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-device-builder (new Device$Builder) id config))
+  (device-builder> (new Device$Builder) id config))
 
 
-(defn build-docker-volume-configuration-builder
-  "The build-docker-volume-configuration-builder function updates a DockerVolumeConfiguration$Builder instance using the provided configuration.
+(defn docker-volume-configuration-builder>
+  "The docker-volume-configuration-builder> function updates a DockerVolumeConfiguration$Builder instance using the provided configuration.
   The function takes the DockerVolumeConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6327,11 +6327,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-docker-volume-configuration-builder (new DockerVolumeConfiguration$Builder) id config))
+  (docker-volume-configuration-builder> (new DockerVolumeConfiguration$Builder) id config))
 
 
-(defn build-ebs-tag-specification-builder
-  "The build-ebs-tag-specification-builder function updates a EBSTagSpecification$Builder instance using the provided configuration.
+(defn ebs-tag-specification-builder>
+  "The ebs-tag-specification-builder> function updates a EBSTagSpecification$Builder instance using the provided configuration.
   The function takes the EBSTagSpecification$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6358,11 +6358,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ebs-tag-specification-builder (new EBSTagSpecification$Builder) id config))
+  (ebs-tag-specification-builder> (new EBSTagSpecification$Builder) id config))
 
 
-(defn build-ec2-service-attributes-builder
-  "The build-ec2-service-attributes-builder function updates a Ec2ServiceAttributes$Builder instance using the provided configuration.
+(defn ec2-service-attributes-builder>
+  "The ec2-service-attributes-builder> function updates a Ec2ServiceAttributes$Builder instance using the provided configuration.
   The function takes the Ec2ServiceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6392,11 +6392,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ec2-service-attributes-builder (new Ec2ServiceAttributes$Builder) id config))
+  (ec2-service-attributes-builder> (new Ec2ServiceAttributes$Builder) id config))
 
 
-(defn build-ec2-service-builder
-  "The build-ec2-service-builder function updates a Ec2Service$Builder instance using the provided configuration.
+(defn ec2-service-builder>
+  "The ec2-service-builder> function updates a Ec2Service$Builder instance using the provided configuration.
   The function takes the Ec2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6489,11 +6489,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-ec2-service-builder (Ec2Service$Builder/create scope (name id)) id config))
+  (ec2-service-builder> (Ec2Service$Builder/create scope (name id)) id config))
 
 
-(defn build-ec2-service-props-builder
-  "The build-ec2-service-props-builder function updates a Ec2ServiceProps$Builder instance using the provided configuration.
+(defn ec2-service-props-builder>
+  "The ec2-service-props-builder> function updates a Ec2ServiceProps$Builder instance using the provided configuration.
   The function takes the Ec2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6586,11 +6586,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ec2-service-props-builder (new Ec2ServiceProps$Builder) id config))
+  (ec2-service-props-builder> (new Ec2ServiceProps$Builder) id config))
 
 
-(defn build-ec2-task-definition-attributes-builder
-  "The build-ec2-task-definition-attributes-builder function updates a Ec2TaskDefinitionAttributes$Builder instance using the provided configuration.
+(defn ec2-task-definition-attributes-builder>
+  "The ec2-task-definition-attributes-builder> function updates a Ec2TaskDefinitionAttributes$Builder instance using the provided configuration.
   The function takes the Ec2TaskDefinitionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6623,11 +6623,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ec2-task-definition-attributes-builder (new Ec2TaskDefinitionAttributes$Builder) id config))
+  (ec2-task-definition-attributes-builder> (new Ec2TaskDefinitionAttributes$Builder) id config))
 
 
-(defn build-ec2-task-definition-builder
-  "The build-ec2-task-definition-builder function updates a Ec2TaskDefinition$Builder instance using the provided configuration.
+(defn ec2-task-definition-builder>
+  "The ec2-task-definition-builder> function updates a Ec2TaskDefinition$Builder instance using the provided configuration.
   The function takes the Ec2TaskDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6678,11 +6678,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-ec2-task-definition-builder (Ec2TaskDefinition$Builder/create scope (name id)) id config))
+  (ec2-task-definition-builder> (Ec2TaskDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-ec2-task-definition-props-builder
-  "The build-ec2-task-definition-props-builder function updates a Ec2TaskDefinitionProps$Builder instance using the provided configuration.
+(defn ec2-task-definition-props-builder>
+  "The ec2-task-definition-props-builder> function updates a Ec2TaskDefinitionProps$Builder instance using the provided configuration.
   The function takes the Ec2TaskDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6733,11 +6733,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ec2-task-definition-props-builder (new Ec2TaskDefinitionProps$Builder) id config))
+  (ec2-task-definition-props-builder> (new Ec2TaskDefinitionProps$Builder) id config))
 
 
-(defn build-ecs-optimized-image-options-builder
-  "The build-ecs-optimized-image-options-builder function updates a EcsOptimizedImageOptions$Builder instance using the provided configuration.
+(defn ecs-optimized-image-options-builder>
+  "The ecs-optimized-image-options-builder> function updates a EcsOptimizedImageOptions$Builder instance using the provided configuration.
   The function takes the EcsOptimizedImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6761,11 +6761,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-optimized-image-options-builder (new EcsOptimizedImageOptions$Builder) id config))
+  (ecs-optimized-image-options-builder> (new EcsOptimizedImageOptions$Builder) id config))
 
 
-(defn build-ecs-target-builder
-  "The build-ecs-target-builder function updates a EcsTarget$Builder instance using the provided configuration.
+(defn ecs-target-builder>
+  "The ecs-target-builder> function updates a EcsTarget$Builder instance using the provided configuration.
   The function takes the EcsTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6801,11 +6801,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-target-builder (new EcsTarget$Builder) id config))
+  (ecs-target-builder> (new EcsTarget$Builder) id config))
 
 
-(defn build-efs-volume-configuration-builder
-  "The build-efs-volume-configuration-builder function updates a EfsVolumeConfiguration$Builder instance using the provided configuration.
+(defn efs-volume-configuration-builder>
+  "The efs-volume-configuration-builder> function updates a EfsVolumeConfiguration$Builder instance using the provided configuration.
   The function takes the EfsVolumeConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6841,11 +6841,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-efs-volume-configuration-builder (new EfsVolumeConfiguration$Builder) id config))
+  (efs-volume-configuration-builder> (new EfsVolumeConfiguration$Builder) id config))
 
 
-(defn build-environment-file-config-builder
-  "The build-environment-file-config-builder function updates a EnvironmentFileConfig$Builder instance using the provided configuration.
+(defn environment-file-config-builder>
+  "The environment-file-config-builder> function updates a EnvironmentFileConfig$Builder instance using the provided configuration.
   The function takes the EnvironmentFileConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6872,11 +6872,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-environment-file-config-builder (new EnvironmentFileConfig$Builder) id config))
+  (environment-file-config-builder> (new EnvironmentFileConfig$Builder) id config))
 
 
-(defn build-execute-command-configuration-builder
-  "The build-execute-command-configuration-builder function updates a ExecuteCommandConfiguration$Builder instance using the provided configuration.
+(defn execute-command-configuration-builder>
+  "The execute-command-configuration-builder> function updates a ExecuteCommandConfiguration$Builder instance using the provided configuration.
   The function takes the ExecuteCommandConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6906,11 +6906,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-execute-command-configuration-builder (new ExecuteCommandConfiguration$Builder) id config))
+  (execute-command-configuration-builder> (new ExecuteCommandConfiguration$Builder) id config))
 
 
-(defn build-execute-command-log-configuration-builder
-  "The build-execute-command-log-configuration-builder function updates a ExecuteCommandLogConfiguration$Builder instance using the provided configuration.
+(defn execute-command-log-configuration-builder>
+  "The execute-command-log-configuration-builder> function updates a ExecuteCommandLogConfiguration$Builder instance using the provided configuration.
   The function takes the ExecuteCommandLogConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6946,11 +6946,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-execute-command-log-configuration-builder (new ExecuteCommandLogConfiguration$Builder) id config))
+  (execute-command-log-configuration-builder> (new ExecuteCommandLogConfiguration$Builder) id config))
 
 
-(defn build-external-service-attributes-builder
-  "The build-external-service-attributes-builder function updates a ExternalServiceAttributes$Builder instance using the provided configuration.
+(defn external-service-attributes-builder>
+  "The external-service-attributes-builder> function updates a ExternalServiceAttributes$Builder instance using the provided configuration.
   The function takes the ExternalServiceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6980,11 +6980,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-external-service-attributes-builder (new ExternalServiceAttributes$Builder) id config))
+  (external-service-attributes-builder> (new ExternalServiceAttributes$Builder) id config))
 
 
-(defn build-external-service-builder
-  "The build-external-service-builder function updates a ExternalService$Builder instance using the provided configuration.
+(defn external-service-builder>
+  "The external-service-builder> function updates a ExternalService$Builder instance using the provided configuration.
   The function takes the ExternalService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7062,11 +7062,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-external-service-builder (ExternalService$Builder/create scope (name id)) id config))
+  (external-service-builder> (ExternalService$Builder/create scope (name id)) id config))
 
 
-(defn build-external-service-props-builder
-  "The build-external-service-props-builder function updates a ExternalServiceProps$Builder instance using the provided configuration.
+(defn external-service-props-builder>
+  "The external-service-props-builder> function updates a ExternalServiceProps$Builder instance using the provided configuration.
   The function takes the ExternalServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7144,11 +7144,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-external-service-props-builder (new ExternalServiceProps$Builder) id config))
+  (external-service-props-builder> (new ExternalServiceProps$Builder) id config))
 
 
-(defn build-external-task-definition-attributes-builder
-  "The build-external-task-definition-attributes-builder function updates a ExternalTaskDefinitionAttributes$Builder instance using the provided configuration.
+(defn external-task-definition-attributes-builder>
+  "The external-task-definition-attributes-builder> function updates a ExternalTaskDefinitionAttributes$Builder instance using the provided configuration.
   The function takes the ExternalTaskDefinitionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7181,11 +7181,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-external-task-definition-attributes-builder (new ExternalTaskDefinitionAttributes$Builder) id config))
+  (external-task-definition-attributes-builder> (new ExternalTaskDefinitionAttributes$Builder) id config))
 
 
-(defn build-external-task-definition-builder
-  "The build-external-task-definition-builder function updates a ExternalTaskDefinition$Builder instance using the provided configuration.
+(defn external-task-definition-builder>
+  "The external-task-definition-builder> function updates a ExternalTaskDefinition$Builder instance using the provided configuration.
   The function takes the ExternalTaskDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7224,11 +7224,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-external-task-definition-builder (ExternalTaskDefinition$Builder/create scope (name id)) id config))
+  (external-task-definition-builder> (ExternalTaskDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-external-task-definition-props-builder
-  "The build-external-task-definition-props-builder function updates a ExternalTaskDefinitionProps$Builder instance using the provided configuration.
+(defn external-task-definition-props-builder>
+  "The external-task-definition-props-builder> function updates a ExternalTaskDefinitionProps$Builder instance using the provided configuration.
   The function takes the ExternalTaskDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7267,11 +7267,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-external-task-definition-props-builder (new ExternalTaskDefinitionProps$Builder) id config))
+  (external-task-definition-props-builder> (new ExternalTaskDefinitionProps$Builder) id config))
 
 
-(defn build-fargate-service-attributes-builder
-  "The build-fargate-service-attributes-builder function updates a FargateServiceAttributes$Builder instance using the provided configuration.
+(defn fargate-service-attributes-builder>
+  "The fargate-service-attributes-builder> function updates a FargateServiceAttributes$Builder instance using the provided configuration.
   The function takes the FargateServiceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7301,11 +7301,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fargate-service-attributes-builder (new FargateServiceAttributes$Builder) id config))
+  (fargate-service-attributes-builder> (new FargateServiceAttributes$Builder) id config))
 
 
-(defn build-fargate-service-builder
-  "The build-fargate-service-builder function updates a FargateService$Builder instance using the provided configuration.
+(defn fargate-service-builder>
+  "The fargate-service-builder> function updates a FargateService$Builder instance using the provided configuration.
   The function takes the FargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7392,11 +7392,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-fargate-service-builder (FargateService$Builder/create scope (name id)) id config))
+  (fargate-service-builder> (FargateService$Builder/create scope (name id)) id config))
 
 
-(defn build-fargate-service-props-builder
-  "The build-fargate-service-props-builder function updates a FargateServiceProps$Builder instance using the provided configuration.
+(defn fargate-service-props-builder>
+  "The fargate-service-props-builder> function updates a FargateServiceProps$Builder instance using the provided configuration.
   The function takes the FargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7483,11 +7483,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fargate-service-props-builder (new FargateServiceProps$Builder) id config))
+  (fargate-service-props-builder> (new FargateServiceProps$Builder) id config))
 
 
-(defn build-fargate-task-definition-attributes-builder
-  "The build-fargate-task-definition-attributes-builder function updates a FargateTaskDefinitionAttributes$Builder instance using the provided configuration.
+(defn fargate-task-definition-attributes-builder>
+  "The fargate-task-definition-attributes-builder> function updates a FargateTaskDefinitionAttributes$Builder instance using the provided configuration.
   The function takes the FargateTaskDefinitionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7520,11 +7520,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fargate-task-definition-attributes-builder (new FargateTaskDefinitionAttributes$Builder) id config))
+  (fargate-task-definition-attributes-builder> (new FargateTaskDefinitionAttributes$Builder) id config))
 
 
-(defn build-fargate-task-definition-builder
-  "The build-fargate-task-definition-builder function updates a FargateTaskDefinition$Builder instance using the provided configuration.
+(defn fargate-task-definition-builder>
+  "The fargate-task-definition-builder> function updates a FargateTaskDefinition$Builder instance using the provided configuration.
   The function takes the FargateTaskDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7575,11 +7575,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-fargate-task-definition-builder (FargateTaskDefinition$Builder/create scope (name id)) id config))
+  (fargate-task-definition-builder> (FargateTaskDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-fargate-task-definition-props-builder
-  "The build-fargate-task-definition-props-builder function updates a FargateTaskDefinitionProps$Builder instance using the provided configuration.
+(defn fargate-task-definition-props-builder>
+  "The fargate-task-definition-props-builder> function updates a FargateTaskDefinitionProps$Builder instance using the provided configuration.
   The function takes the FargateTaskDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7630,11 +7630,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fargate-task-definition-props-builder (new FargateTaskDefinitionProps$Builder) id config))
+  (fargate-task-definition-props-builder> (new FargateTaskDefinitionProps$Builder) id config))
 
 
-(defn build-fire-lens-log-driver-builder
-  "The build-fire-lens-log-driver-builder function updates a FireLensLogDriver$Builder instance using the provided configuration.
+(defn fire-lens-log-driver-builder>
+  "The fire-lens-log-driver-builder> function updates a FireLensLogDriver$Builder instance using the provided configuration.
   The function takes the FireLensLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7673,11 +7673,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fire-lens-log-driver-builder (FireLensLogDriver$Builder/create) id config))
+  (fire-lens-log-driver-builder> (FireLensLogDriver$Builder/create) id config))
 
 
-(defn build-fire-lens-log-driver-props-builder
-  "The build-fire-lens-log-driver-props-builder function updates a FireLensLogDriverProps$Builder instance using the provided configuration.
+(defn fire-lens-log-driver-props-builder>
+  "The fire-lens-log-driver-props-builder> function updates a FireLensLogDriverProps$Builder instance using the provided configuration.
   The function takes the FireLensLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7716,11 +7716,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fire-lens-log-driver-props-builder (new FireLensLogDriverProps$Builder) id config))
+  (fire-lens-log-driver-props-builder> (new FireLensLogDriverProps$Builder) id config))
 
 
-(defn build-firelens-config-builder
-  "The build-firelens-config-builder function updates a FirelensConfig$Builder instance using the provided configuration.
+(defn firelens-config-builder>
+  "The firelens-config-builder> function updates a FirelensConfig$Builder instance using the provided configuration.
   The function takes the FirelensConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7747,11 +7747,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-firelens-config-builder (new FirelensConfig$Builder) id config))
+  (firelens-config-builder> (new FirelensConfig$Builder) id config))
 
 
-(defn build-firelens-log-router-builder
-  "The build-firelens-log-router-builder function updates a FirelensLogRouter$Builder instance using the provided configuration.
+(defn firelens-log-router-builder>
+  "The firelens-log-router-builder> function updates a FirelensLogRouter$Builder instance using the provided configuration.
   The function takes the FirelensLogRouter$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7883,11 +7883,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-firelens-log-router-builder (FirelensLogRouter$Builder/create scope (name id)) id config))
+  (firelens-log-router-builder> (FirelensLogRouter$Builder/create scope (name id)) id config))
 
 
-(defn build-firelens-log-router-definition-options-builder
-  "The build-firelens-log-router-definition-options-builder function updates a FirelensLogRouterDefinitionOptions$Builder instance using the provided configuration.
+(defn firelens-log-router-definition-options-builder>
+  "The firelens-log-router-definition-options-builder> function updates a FirelensLogRouterDefinitionOptions$Builder instance using the provided configuration.
   The function takes the FirelensLogRouterDefinitionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8016,11 +8016,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-firelens-log-router-definition-options-builder (new FirelensLogRouterDefinitionOptions$Builder) id config))
+  (firelens-log-router-definition-options-builder> (new FirelensLogRouterDefinitionOptions$Builder) id config))
 
 
-(defn build-firelens-log-router-props-builder
-  "The build-firelens-log-router-props-builder function updates a FirelensLogRouterProps$Builder instance using the provided configuration.
+(defn firelens-log-router-props-builder>
+  "The firelens-log-router-props-builder> function updates a FirelensLogRouterProps$Builder instance using the provided configuration.
   The function takes the FirelensLogRouterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8152,11 +8152,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-firelens-log-router-props-builder (new FirelensLogRouterProps$Builder) id config))
+  (firelens-log-router-props-builder> (new FirelensLogRouterProps$Builder) id config))
 
 
-(defn build-firelens-options-builder
-  "The build-firelens-options-builder function updates a FirelensOptions$Builder instance using the provided configuration.
+(defn firelens-options-builder>
+  "The firelens-options-builder> function updates a FirelensOptions$Builder instance using the provided configuration.
   The function takes the FirelensOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8186,11 +8186,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-firelens-options-builder (new FirelensOptions$Builder) id config))
+  (firelens-options-builder> (new FirelensOptions$Builder) id config))
 
 
-(defn build-fluentd-log-driver-builder
-  "The build-fluentd-log-driver-builder function updates a FluentdLogDriver$Builder instance using the provided configuration.
+(defn fluentd-log-driver-builder>
+  "The fluentd-log-driver-builder> function updates a FluentdLogDriver$Builder instance using the provided configuration.
   The function takes the FluentdLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8241,11 +8241,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fluentd-log-driver-builder (FluentdLogDriver$Builder/create) id config))
+  (fluentd-log-driver-builder> (FluentdLogDriver$Builder/create) id config))
 
 
-(defn build-fluentd-log-driver-props-builder
-  "The build-fluentd-log-driver-props-builder function updates a FluentdLogDriverProps$Builder instance using the provided configuration.
+(defn fluentd-log-driver-props-builder>
+  "The fluentd-log-driver-props-builder> function updates a FluentdLogDriverProps$Builder instance using the provided configuration.
   The function takes the FluentdLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8296,11 +8296,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fluentd-log-driver-props-builder (new FluentdLogDriverProps$Builder) id config))
+  (fluentd-log-driver-props-builder> (new FluentdLogDriverProps$Builder) id config))
 
 
-(defn build-gelf-log-driver-builder
-  "The build-gelf-log-driver-builder function updates a GelfLogDriver$Builder instance using the provided configuration.
+(defn gelf-log-driver-builder>
+  "The gelf-log-driver-builder> function updates a GelfLogDriver$Builder instance using the provided configuration.
   The function takes the GelfLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8348,11 +8348,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-gelf-log-driver-builder (GelfLogDriver$Builder/create) id config))
+  (gelf-log-driver-builder> (GelfLogDriver$Builder/create) id config))
 
 
-(defn build-gelf-log-driver-props-builder
-  "The build-gelf-log-driver-props-builder function updates a GelfLogDriverProps$Builder instance using the provided configuration.
+(defn gelf-log-driver-props-builder>
+  "The gelf-log-driver-props-builder> function updates a GelfLogDriverProps$Builder instance using the provided configuration.
   The function takes the GelfLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8400,11 +8400,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-gelf-log-driver-props-builder (new GelfLogDriverProps$Builder) id config))
+  (gelf-log-driver-props-builder> (new GelfLogDriverProps$Builder) id config))
 
 
-(defn build-generic-log-driver-builder
-  "The build-generic-log-driver-builder function updates a GenericLogDriver$Builder instance using the provided configuration.
+(defn generic-log-driver-builder>
+  "The generic-log-driver-builder> function updates a GenericLogDriver$Builder instance using the provided configuration.
   The function takes the GenericLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8434,11 +8434,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-generic-log-driver-builder (GenericLogDriver$Builder/create) id config))
+  (generic-log-driver-builder> (GenericLogDriver$Builder/create) id config))
 
 
-(defn build-generic-log-driver-props-builder
-  "The build-generic-log-driver-props-builder function updates a GenericLogDriverProps$Builder instance using the provided configuration.
+(defn generic-log-driver-props-builder>
+  "The generic-log-driver-props-builder> function updates a GenericLogDriverProps$Builder instance using the provided configuration.
   The function takes the GenericLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8468,11 +8468,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-generic-log-driver-props-builder (new GenericLogDriverProps$Builder) id config))
+  (generic-log-driver-props-builder> (new GenericLogDriverProps$Builder) id config))
 
 
-(defn build-health-check-builder
-  "The build-health-check-builder function updates a HealthCheck$Builder instance using the provided configuration.
+(defn health-check-builder>
+  "The health-check-builder> function updates a HealthCheck$Builder instance using the provided configuration.
   The function takes the HealthCheck$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8508,11 +8508,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-health-check-builder (new HealthCheck$Builder) id config))
+  (health-check-builder> (new HealthCheck$Builder) id config))
 
 
-(defn build-host-builder
-  "The build-host-builder function updates a Host$Builder instance using the provided configuration.
+(defn host-builder>
+  "The host-builder> function updates a Host$Builder instance using the provided configuration.
   The function takes the Host$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8536,11 +8536,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-host-builder (new Host$Builder) id config))
+  (host-builder> (new Host$Builder) id config))
 
 
-(defn build-inference-accelerator-builder
-  "The build-inference-accelerator-builder function updates a InferenceAccelerator$Builder instance using the provided configuration.
+(defn inference-accelerator-builder>
+  "The inference-accelerator-builder> function updates a InferenceAccelerator$Builder instance using the provided configuration.
   The function takes the InferenceAccelerator$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8567,11 +8567,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-inference-accelerator-builder (new InferenceAccelerator$Builder) id config))
+  (inference-accelerator-builder> (new InferenceAccelerator$Builder) id config))
 
 
-(defn build-journald-log-driver-builder
-  "The build-journald-log-driver-builder function updates a JournaldLogDriver$Builder instance using the provided configuration.
+(defn journald-log-driver-builder>
+  "The journald-log-driver-builder> function updates a JournaldLogDriver$Builder instance using the provided configuration.
   The function takes the JournaldLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8604,11 +8604,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-journald-log-driver-builder (JournaldLogDriver$Builder/create) id config))
+  (journald-log-driver-builder> (JournaldLogDriver$Builder/create) id config))
 
 
-(defn build-journald-log-driver-props-builder
-  "The build-journald-log-driver-props-builder function updates a JournaldLogDriverProps$Builder instance using the provided configuration.
+(defn journald-log-driver-props-builder>
+  "The journald-log-driver-props-builder> function updates a JournaldLogDriverProps$Builder instance using the provided configuration.
   The function takes the JournaldLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8641,11 +8641,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-journald-log-driver-props-builder (new JournaldLogDriverProps$Builder) id config))
+  (journald-log-driver-props-builder> (new JournaldLogDriverProps$Builder) id config))
 
 
-(defn build-json-file-log-driver-builder
-  "The build-json-file-log-driver-builder function updates a JsonFileLogDriver$Builder instance using the provided configuration.
+(defn json-file-log-driver-builder>
+  "The json-file-log-driver-builder> function updates a JsonFileLogDriver$Builder instance using the provided configuration.
   The function takes the JsonFileLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8687,11 +8687,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-json-file-log-driver-builder (JsonFileLogDriver$Builder/create) id config))
+  (json-file-log-driver-builder> (JsonFileLogDriver$Builder/create) id config))
 
 
-(defn build-json-file-log-driver-props-builder
-  "The build-json-file-log-driver-props-builder function updates a JsonFileLogDriverProps$Builder instance using the provided configuration.
+(defn json-file-log-driver-props-builder>
+  "The json-file-log-driver-props-builder> function updates a JsonFileLogDriverProps$Builder instance using the provided configuration.
   The function takes the JsonFileLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8733,11 +8733,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-json-file-log-driver-props-builder (new JsonFileLogDriverProps$Builder) id config))
+  (json-file-log-driver-props-builder> (new JsonFileLogDriverProps$Builder) id config))
 
 
-(defn build-linux-parameters-builder
-  "The build-linux-parameters-builder function updates a LinuxParameters$Builder instance using the provided configuration.
+(defn linux-parameters-builder>
+  "The linux-parameters-builder> function updates a LinuxParameters$Builder instance using the provided configuration.
   The function takes the LinuxParameters$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8770,11 +8770,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-linux-parameters-builder (LinuxParameters$Builder/create scope (name id)) id config))
+  (linux-parameters-builder> (LinuxParameters$Builder/create scope (name id)) id config))
 
 
-(defn build-linux-parameters-props-builder
-  "The build-linux-parameters-props-builder function updates a LinuxParametersProps$Builder instance using the provided configuration.
+(defn linux-parameters-props-builder>
+  "The linux-parameters-props-builder> function updates a LinuxParametersProps$Builder instance using the provided configuration.
   The function takes the LinuxParametersProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8807,11 +8807,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-linux-parameters-props-builder (new LinuxParametersProps$Builder) id config))
+  (linux-parameters-props-builder> (new LinuxParametersProps$Builder) id config))
 
 
-(defn build-load-balancer-target-options-builder
-  "The build-load-balancer-target-options-builder function updates a LoadBalancerTargetOptions$Builder instance using the provided configuration.
+(defn load-balancer-target-options-builder>
+  "The load-balancer-target-options-builder> function updates a LoadBalancerTargetOptions$Builder instance using the provided configuration.
   The function takes the LoadBalancerTargetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8841,11 +8841,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-load-balancer-target-options-builder (new LoadBalancerTargetOptions$Builder) id config))
+  (load-balancer-target-options-builder> (new LoadBalancerTargetOptions$Builder) id config))
 
 
-(defn build-log-driver-config-builder
-  "The build-log-driver-config-builder function updates a LogDriverConfig$Builder instance using the provided configuration.
+(defn log-driver-config-builder>
+  "The log-driver-config-builder> function updates a LogDriverConfig$Builder instance using the provided configuration.
   The function takes the LogDriverConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8875,11 +8875,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-log-driver-config-builder (new LogDriverConfig$Builder) id config))
+  (log-driver-config-builder> (new LogDriverConfig$Builder) id config))
 
 
-(defn build-memory-utilization-scaling-props-builder
-  "The build-memory-utilization-scaling-props-builder function updates a MemoryUtilizationScalingProps$Builder instance using the provided configuration.
+(defn memory-utilization-scaling-props-builder>
+  "The memory-utilization-scaling-props-builder> function updates a MemoryUtilizationScalingProps$Builder instance using the provided configuration.
   The function takes the MemoryUtilizationScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8915,11 +8915,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-memory-utilization-scaling-props-builder (new MemoryUtilizationScalingProps$Builder) id config))
+  (memory-utilization-scaling-props-builder> (new MemoryUtilizationScalingProps$Builder) id config))
 
 
-(defn build-mount-point-builder
-  "The build-mount-point-builder function updates a MountPoint$Builder instance using the provided configuration.
+(defn mount-point-builder>
+  "The mount-point-builder> function updates a MountPoint$Builder instance using the provided configuration.
   The function takes the MountPoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8949,11 +8949,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-mount-point-builder (new MountPoint$Builder) id config))
+  (mount-point-builder> (new MountPoint$Builder) id config))
 
 
-(defn build-port-map-builder
-  "The build-port-map-builder function updates a PortMap$Builder instance using the provided configuration.
+(defn port-map-builder>
+  "The port-map-builder> function updates a PortMap$Builder instance using the provided configuration.
   The function takes the PortMap$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8995,11 +8995,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^NetworkMode network-mode id config]
-  (build-port-map-builder (PortMap$Builder/create network-mode) id config))
+  (port-map-builder> (PortMap$Builder/create network-mode) id config))
 
 
-(defn build-port-mapping-builder
-  "The build-port-mapping-builder function updates a PortMapping$Builder instance using the provided configuration.
+(defn port-mapping-builder>
+  "The port-mapping-builder> function updates a PortMapping$Builder instance using the provided configuration.
   The function takes the PortMapping$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9038,11 +9038,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-port-mapping-builder (new PortMapping$Builder) id config))
+  (port-mapping-builder> (new PortMapping$Builder) id config))
 
 
-(defn build-repository-image-builder
-  "The build-repository-image-builder function updates a RepositoryImage$Builder instance using the provided configuration.
+(defn repository-image-builder>
+  "The repository-image-builder> function updates a RepositoryImage$Builder instance using the provided configuration.
   The function takes the RepositoryImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9069,11 +9069,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String image-name id config]
-  (build-repository-image-builder (RepositoryImage$Builder/create image-name) id config))
+  (repository-image-builder> (RepositoryImage$Builder/create image-name) id config))
 
 
-(defn build-repository-image-props-builder
-  "The build-repository-image-props-builder function updates a RepositoryImageProps$Builder instance using the provided configuration.
+(defn repository-image-props-builder>
+  "The repository-image-props-builder> function updates a RepositoryImageProps$Builder instance using the provided configuration.
   The function takes the RepositoryImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9097,11 +9097,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-repository-image-props-builder (new RepositoryImageProps$Builder) id config))
+  (repository-image-props-builder> (new RepositoryImageProps$Builder) id config))
 
 
-(defn build-request-count-scaling-props-builder
-  "The build-request-count-scaling-props-builder function updates a RequestCountScalingProps$Builder instance using the provided configuration.
+(defn request-count-scaling-props-builder>
+  "The request-count-scaling-props-builder> function updates a RequestCountScalingProps$Builder instance using the provided configuration.
   The function takes the RequestCountScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9140,11 +9140,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-request-count-scaling-props-builder (new RequestCountScalingProps$Builder) id config))
+  (request-count-scaling-props-builder> (new RequestCountScalingProps$Builder) id config))
 
 
-(defn build-runtime-platform-builder
-  "The build-runtime-platform-builder function updates a RuntimePlatform$Builder instance using the provided configuration.
+(defn runtime-platform-builder>
+  "The runtime-platform-builder> function updates a RuntimePlatform$Builder instance using the provided configuration.
   The function takes the RuntimePlatform$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9171,11 +9171,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-runtime-platform-builder (new RuntimePlatform$Builder) id config))
+  (runtime-platform-builder> (new RuntimePlatform$Builder) id config))
 
 
-(defn build-scalable-task-count-builder
-  "The build-scalable-task-count-builder function updates a ScalableTaskCount$Builder instance using the provided configuration.
+(defn scalable-task-count-builder>
+  "The scalable-task-count-builder> function updates a ScalableTaskCount$Builder instance using the provided configuration.
   The function takes the ScalableTaskCount$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9214,11 +9214,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-scalable-task-count-builder (ScalableTaskCount$Builder/create scope (name id)) id config))
+  (scalable-task-count-builder> (ScalableTaskCount$Builder/create scope (name id)) id config))
 
 
-(defn build-scalable-task-count-props-builder
-  "The build-scalable-task-count-props-builder function updates a ScalableTaskCountProps$Builder instance using the provided configuration.
+(defn scalable-task-count-props-builder>
+  "The scalable-task-count-props-builder> function updates a ScalableTaskCountProps$Builder instance using the provided configuration.
   The function takes the ScalableTaskCountProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9257,11 +9257,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scalable-task-count-props-builder (new ScalableTaskCountProps$Builder) id config))
+  (scalable-task-count-props-builder> (new ScalableTaskCountProps$Builder) id config))
 
 
-(defn build-scratch-space-builder
-  "The build-scratch-space-builder function updates a ScratchSpace$Builder instance using the provided configuration.
+(defn scratch-space-builder>
+  "The scratch-space-builder> function updates a ScratchSpace$Builder instance using the provided configuration.
   The function takes the ScratchSpace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9294,11 +9294,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scratch-space-builder (new ScratchSpace$Builder) id config))
+  (scratch-space-builder> (new ScratchSpace$Builder) id config))
 
 
-(defn build-secret-version-info-builder
-  "The build-secret-version-info-builder function updates a SecretVersionInfo$Builder instance using the provided configuration.
+(defn secret-version-info-builder>
+  "The secret-version-info-builder> function updates a SecretVersionInfo$Builder instance using the provided configuration.
   The function takes the SecretVersionInfo$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9325,11 +9325,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-secret-version-info-builder (new SecretVersionInfo$Builder) id config))
+  (secret-version-info-builder> (new SecretVersionInfo$Builder) id config))
 
 
-(defn build-service-connect-builder
-  "The build-service-connect-builder function updates a ServiceConnect$Builder instance using the provided configuration.
+(defn service-connect-builder>
+  "The service-connect-builder> function updates a ServiceConnect$Builder instance using the provided configuration.
   The function takes the ServiceConnect$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9371,11 +9371,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^NetworkMode network-mode id config]
-  (build-service-connect-builder (ServiceConnect$Builder/create network-mode) id config))
+  (service-connect-builder> (ServiceConnect$Builder/create network-mode) id config))
 
 
-(defn build-service-connect-props-builder
-  "The build-service-connect-props-builder function updates a ServiceConnectProps$Builder instance using the provided configuration.
+(defn service-connect-props-builder>
+  "The service-connect-props-builder> function updates a ServiceConnectProps$Builder instance using the provided configuration.
   The function takes the ServiceConnectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9405,11 +9405,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-service-connect-props-builder (new ServiceConnectProps$Builder) id config))
+  (service-connect-props-builder> (new ServiceConnectProps$Builder) id config))
 
 
-(defn build-service-connect-service-builder
-  "The build-service-connect-service-builder function updates a ServiceConnectService$Builder instance using the provided configuration.
+(defn service-connect-service-builder>
+  "The service-connect-service-builder> function updates a ServiceConnectService$Builder instance using the provided configuration.
   The function takes the ServiceConnectService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9451,11 +9451,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-service-connect-service-builder (new ServiceConnectService$Builder) id config))
+  (service-connect-service-builder> (new ServiceConnectService$Builder) id config))
 
 
-(defn build-service-managed-ebs-volume-configuration-builder
-  "The build-service-managed-ebs-volume-configuration-builder function updates a ServiceManagedEBSVolumeConfiguration$Builder instance using the provided configuration.
+(defn service-managed-ebs-volume-configuration-builder>
+  "The service-managed-ebs-volume-configuration-builder> function updates a ServiceManagedEBSVolumeConfiguration$Builder instance using the provided configuration.
   The function takes the ServiceManagedEBSVolumeConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9506,11 +9506,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-service-managed-ebs-volume-configuration-builder (new ServiceManagedEBSVolumeConfiguration$Builder) id config))
+  (service-managed-ebs-volume-configuration-builder> (new ServiceManagedEBSVolumeConfiguration$Builder) id config))
 
 
-(defn build-service-managed-volume-builder
-  "The build-service-managed-volume-builder function updates a ServiceManagedVolume$Builder instance using the provided configuration.
+(defn service-managed-volume-builder>
+  "The service-managed-volume-builder> function updates a ServiceManagedVolume$Builder instance using the provided configuration.
   The function takes the ServiceManagedVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9537,11 +9537,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-service-managed-volume-builder (ServiceManagedVolume$Builder/create scope (name id)) id config))
+  (service-managed-volume-builder> (ServiceManagedVolume$Builder/create scope (name id)) id config))
 
 
-(defn build-service-managed-volume-props-builder
-  "The build-service-managed-volume-props-builder function updates a ServiceManagedVolumeProps$Builder instance using the provided configuration.
+(defn service-managed-volume-props-builder>
+  "The service-managed-volume-props-builder> function updates a ServiceManagedVolumeProps$Builder instance using the provided configuration.
   The function takes the ServiceManagedVolumeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9568,11 +9568,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-service-managed-volume-props-builder (new ServiceManagedVolumeProps$Builder) id config))
+  (service-managed-volume-props-builder> (new ServiceManagedVolumeProps$Builder) id config))
 
 
-(defn build-splunk-log-driver-builder
-  "The build-splunk-log-driver-builder function updates a SplunkLogDriver$Builder instance using the provided configuration.
+(defn splunk-log-driver-builder>
+  "The splunk-log-driver-builder> function updates a SplunkLogDriver$Builder instance using the provided configuration.
   The function takes the SplunkLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9641,11 +9641,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-splunk-log-driver-builder (SplunkLogDriver$Builder/create) id config))
+  (splunk-log-driver-builder> (SplunkLogDriver$Builder/create) id config))
 
 
-(defn build-splunk-log-driver-props-builder
-  "The build-splunk-log-driver-props-builder function updates a SplunkLogDriverProps$Builder instance using the provided configuration.
+(defn splunk-log-driver-props-builder>
+  "The splunk-log-driver-props-builder> function updates a SplunkLogDriverProps$Builder instance using the provided configuration.
   The function takes the SplunkLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9714,11 +9714,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-splunk-log-driver-props-builder (new SplunkLogDriverProps$Builder) id config))
+  (splunk-log-driver-props-builder> (new SplunkLogDriverProps$Builder) id config))
 
 
-(defn build-syslog-log-driver-builder
-  "The build-syslog-log-driver-builder function updates a SyslogLogDriver$Builder instance using the provided configuration.
+(defn syslog-log-driver-builder>
+  "The syslog-log-driver-builder> function updates a SyslogLogDriver$Builder instance using the provided configuration.
   The function takes the SyslogLogDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9772,11 +9772,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-syslog-log-driver-builder (SyslogLogDriver$Builder/create) id config))
+  (syslog-log-driver-builder> (SyslogLogDriver$Builder/create) id config))
 
 
-(defn build-syslog-log-driver-props-builder
-  "The build-syslog-log-driver-props-builder function updates a SyslogLogDriverProps$Builder instance using the provided configuration.
+(defn syslog-log-driver-props-builder>
+  "The syslog-log-driver-props-builder> function updates a SyslogLogDriverProps$Builder instance using the provided configuration.
   The function takes the SyslogLogDriverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9830,11 +9830,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-syslog-log-driver-props-builder (new SyslogLogDriverProps$Builder) id config))
+  (syslog-log-driver-props-builder> (new SyslogLogDriverProps$Builder) id config))
 
 
-(defn build-system-control-builder
-  "The build-system-control-builder function updates a SystemControl$Builder instance using the provided configuration.
+(defn system-control-builder>
+  "The system-control-builder> function updates a SystemControl$Builder instance using the provided configuration.
   The function takes the SystemControl$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9861,11 +9861,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-system-control-builder (new SystemControl$Builder) id config))
+  (system-control-builder> (new SystemControl$Builder) id config))
 
 
-(defn build-task-definition-attributes-builder
-  "The build-task-definition-attributes-builder function updates a TaskDefinitionAttributes$Builder instance using the provided configuration.
+(defn task-definition-attributes-builder>
+  "The task-definition-attributes-builder> function updates a TaskDefinitionAttributes$Builder instance using the provided configuration.
   The function takes the TaskDefinitionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9901,11 +9901,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-task-definition-attributes-builder (new TaskDefinitionAttributes$Builder) id config))
+  (task-definition-attributes-builder> (new TaskDefinitionAttributes$Builder) id config))
 
 
-(defn build-task-definition-builder
-  "The build-task-definition-builder function updates a TaskDefinition$Builder instance using the provided configuration.
+(defn task-definition-builder>
+  "The task-definition-builder> function updates a TaskDefinition$Builder instance using the provided configuration.
   The function takes the TaskDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9971,11 +9971,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-task-definition-builder (TaskDefinition$Builder/create scope (name id)) id config))
+  (task-definition-builder> (TaskDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-task-definition-props-builder
-  "The build-task-definition-props-builder function updates a TaskDefinitionProps$Builder instance using the provided configuration.
+(defn task-definition-props-builder>
+  "The task-definition-props-builder> function updates a TaskDefinitionProps$Builder instance using the provided configuration.
   The function takes the TaskDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10041,11 +10041,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-task-definition-props-builder (new TaskDefinitionProps$Builder) id config))
+  (task-definition-props-builder> (new TaskDefinitionProps$Builder) id config))
 
 
-(defn build-tmpfs-builder
-  "The build-tmpfs-builder function updates a Tmpfs$Builder instance using the provided configuration.
+(defn tmpfs-builder>
+  "The tmpfs-builder> function updates a Tmpfs$Builder instance using the provided configuration.
   The function takes the Tmpfs$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10075,11 +10075,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-tmpfs-builder (new Tmpfs$Builder) id config))
+  (tmpfs-builder> (new Tmpfs$Builder) id config))
 
 
-(defn build-track-custom-metric-props-builder
-  "The build-track-custom-metric-props-builder function updates a TrackCustomMetricProps$Builder instance using the provided configuration.
+(defn track-custom-metric-props-builder>
+  "The track-custom-metric-props-builder> function updates a TrackCustomMetricProps$Builder instance using the provided configuration.
   The function takes the TrackCustomMetricProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10118,11 +10118,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-track-custom-metric-props-builder (new TrackCustomMetricProps$Builder) id config))
+  (track-custom-metric-props-builder> (new TrackCustomMetricProps$Builder) id config))
 
 
-(defn build-ulimit-builder
-  "The build-ulimit-builder function updates a Ulimit$Builder instance using the provided configuration.
+(defn ulimit-builder>
+  "The ulimit-builder> function updates a Ulimit$Builder instance using the provided configuration.
   The function takes the Ulimit$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10152,11 +10152,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ulimit-builder (new Ulimit$Builder) id config))
+  (ulimit-builder> (new Ulimit$Builder) id config))
 
 
-(defn build-volume-builder
-  "The build-volume-builder function updates a Volume$Builder instance using the provided configuration.
+(defn volume-builder>
+  "The volume-builder> function updates a Volume$Builder instance using the provided configuration.
   The function takes the Volume$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10192,11 +10192,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-volume-builder (new Volume$Builder) id config))
+  (volume-builder> (new Volume$Builder) id config))
 
 
-(defn build-volume-from-builder
-  "The build-volume-from-builder function updates a VolumeFrom$Builder instance using the provided configuration.
+(defn volume-from-builder>
+  "The volume-from-builder> function updates a VolumeFrom$Builder instance using the provided configuration.
   The function takes the VolumeFrom$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10223,4 +10223,4 @@ __Create Form:__ ____[software.amazon.awscdk.services.ecs.NetworkMode]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-volume-from-builder (new VolumeFrom$Builder) id config))
+  (volume-from-builder> (new VolumeFrom$Builder) id config))

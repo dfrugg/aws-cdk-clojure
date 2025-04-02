@@ -33,8 +33,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :iam data) HttpLambdaResponseType/IAM)))
 
 
-(defn build-http-jwt-authorizer-builder
-  "The build-http-jwt-authorizer-builder function updates a HttpJwtAuthorizer$Builder instance using the provided configuration.
+(defn http-jwt-authorizer-builder>
+  "The http-jwt-authorizer-builder> function updates a HttpJwtAuthorizer$Builder instance using the provided configuration.
   The function takes the HttpJwtAuthorizer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -67,11 +67,11 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String jwt-issuer id config]
-  (build-http-jwt-authorizer-builder (HttpJwtAuthorizer$Builder/create (name id) jwt-issuer) id config))
+  (http-jwt-authorizer-builder> (HttpJwtAuthorizer$Builder/create (name id) jwt-issuer) id config))
 
 
-(defn build-http-jwt-authorizer-props-builder
-  "The build-http-jwt-authorizer-props-builder function updates a HttpJwtAuthorizerProps$Builder instance using the provided configuration.
+(defn http-jwt-authorizer-props-builder>
+  "The http-jwt-authorizer-props-builder> function updates a HttpJwtAuthorizerProps$Builder instance using the provided configuration.
   The function takes the HttpJwtAuthorizerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -101,11 +101,11 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-jwt-authorizer-props-builder (new HttpJwtAuthorizerProps$Builder) id config))
+  (http-jwt-authorizer-props-builder> (new HttpJwtAuthorizerProps$Builder) id config))
 
 
-(defn build-http-lambda-authorizer-builder
-  "The build-http-lambda-authorizer-builder function updates a HttpLambdaAuthorizer$Builder instance using the provided configuration.
+(defn http-lambda-authorizer-builder>
+  "The http-lambda-authorizer-builder> function updates a HttpLambdaAuthorizer$Builder instance using the provided configuration.
   The function takes the HttpLambdaAuthorizer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -141,11 +141,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IFunction handler-function id config]
-  (build-http-lambda-authorizer-builder (HttpLambdaAuthorizer$Builder/create (name id) handler-function) id config))
+  (http-lambda-authorizer-builder> (HttpLambdaAuthorizer$Builder/create (name id) handler-function) id config))
 
 
-(defn build-http-lambda-authorizer-props-builder
-  "The build-http-lambda-authorizer-props-builder function updates a HttpLambdaAuthorizerProps$Builder instance using the provided configuration.
+(defn http-lambda-authorizer-props-builder>
+  "The http-lambda-authorizer-props-builder> function updates a HttpLambdaAuthorizerProps$Builder instance using the provided configuration.
   The function takes the HttpLambdaAuthorizerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -178,11 +178,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-lambda-authorizer-props-builder (new HttpLambdaAuthorizerProps$Builder) id config))
+  (http-lambda-authorizer-props-builder> (new HttpLambdaAuthorizerProps$Builder) id config))
 
 
-(defn build-http-user-pool-authorizer-builder
-  "The build-http-user-pool-authorizer-builder function updates a HttpUserPoolAuthorizer$Builder instance using the provided configuration.
+(defn http-user-pool-authorizer-builder>
+  "The http-user-pool-authorizer-builder> function updates a HttpUserPoolAuthorizer$Builder instance using the provided configuration.
   The function takes the HttpUserPoolAuthorizer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -218,11 +218,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.cognito.I
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IUserPool user-pool id config]
-  (build-http-user-pool-authorizer-builder (HttpUserPoolAuthorizer$Builder/create (name id) user-pool) id config))
+  (http-user-pool-authorizer-builder> (HttpUserPoolAuthorizer$Builder/create (name id) user-pool) id config))
 
 
-(defn build-http-user-pool-authorizer-props-builder
-  "The build-http-user-pool-authorizer-props-builder function updates a HttpUserPoolAuthorizerProps$Builder instance using the provided configuration.
+(defn http-user-pool-authorizer-props-builder>
+  "The http-user-pool-authorizer-props-builder> function updates a HttpUserPoolAuthorizerProps$Builder instance using the provided configuration.
   The function takes the HttpUserPoolAuthorizerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -255,11 +255,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.cognito.I
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-user-pool-authorizer-props-builder (new HttpUserPoolAuthorizerProps$Builder) id config))
+  (http-user-pool-authorizer-props-builder> (new HttpUserPoolAuthorizerProps$Builder) id config))
 
 
-(defn build-web-socket-lambda-authorizer-builder
-  "The build-web-socket-lambda-authorizer-builder function updates a WebSocketLambdaAuthorizer$Builder instance using the provided configuration.
+(defn web-socket-lambda-authorizer-builder>
+  "The web-socket-lambda-authorizer-builder> function updates a WebSocketLambdaAuthorizer$Builder instance using the provided configuration.
   The function takes the WebSocketLambdaAuthorizer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -289,11 +289,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IFunction handler-function id config]
-  (build-web-socket-lambda-authorizer-builder (WebSocketLambdaAuthorizer$Builder/create (name id) handler-function) id config))
+  (web-socket-lambda-authorizer-builder> (WebSocketLambdaAuthorizer$Builder/create (name id) handler-function) id config))
 
 
-(defn build-web-socket-lambda-authorizer-props-builder
-  "The build-web-socket-lambda-authorizer-props-builder function updates a WebSocketLambdaAuthorizerProps$Builder instance using the provided configuration.
+(defn web-socket-lambda-authorizer-props-builder>
+  "The web-socket-lambda-authorizer-props-builder> function updates a WebSocketLambdaAuthorizerProps$Builder instance using the provided configuration.
   The function takes the WebSocketLambdaAuthorizerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -320,4 +320,4 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-web-socket-lambda-authorizer-props-builder (new WebSocketLambdaAuthorizerProps$Builder) id config))
+  (web-socket-lambda-authorizer-props-builder> (new WebSocketLambdaAuthorizerProps$Builder) id config))

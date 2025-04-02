@@ -10,8 +10,8 @@
                                                                     EdgeFunctionProps$Builder]))
 
 
-(defn build-edge-function-builder
-  "The build-edge-function-builder function updates a EdgeFunction$Builder instance using the provided configuration.
+(defn edge-function-builder>
+  "The edge-function-builder> function updates a EdgeFunction$Builder instance using the provided configuration.
   The function takes the EdgeFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -185,11 +185,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-edge-function-builder (EdgeFunction$Builder/create scope (name id)) id config))
+  (edge-function-builder> (EdgeFunction$Builder/create scope (name id)) id config))
 
 
-(defn build-edge-function-props-builder
-  "The build-edge-function-props-builder function updates a EdgeFunctionProps$Builder instance using the provided configuration.
+(defn edge-function-props-builder>
+  "The edge-function-props-builder> function updates a EdgeFunctionProps$Builder instance using the provided configuration.
   The function takes the EdgeFunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -363,4 +363,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-edge-function-props-builder (new EdgeFunctionProps$Builder) id config))
+  (edge-function-props-builder> (new EdgeFunctionProps$Builder) id config))

@@ -46,8 +46,8 @@
                                                         CfnWirelessGatewayProps$Builder]))
 
 
-(defn build-cfn-destination-builder
-  "The build-cfn-destination-builder function updates a CfnDestination$Builder instance using the provided configuration.
+(defn cfn-destination-builder>
+  "The cfn-destination-builder> function updates a CfnDestination$Builder instance using the provided configuration.
   The function takes the CfnDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -86,11 +86,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-destination-builder (CfnDestination$Builder/create scope (name id)) id config))
+  (cfn-destination-builder> (CfnDestination$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-destination-props-builder
-  "The build-cfn-destination-props-builder function updates a CfnDestinationProps$Builder instance using the provided configuration.
+(defn cfn-destination-props-builder>
+  "The cfn-destination-props-builder> function updates a CfnDestinationProps$Builder instance using the provided configuration.
   The function takes the CfnDestinationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -129,11 +129,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-destination-props-builder (new CfnDestinationProps$Builder) id config))
+  (cfn-destination-props-builder> (new CfnDestinationProps$Builder) id config))
 
 
-(defn build-cfn-device-profile-builder
-  "The build-cfn-device-profile-builder function updates a CfnDeviceProfile$Builder instance using the provided configuration.
+(defn cfn-device-profile-builder>
+  "The cfn-device-profile-builder> function updates a CfnDeviceProfile$Builder instance using the provided configuration.
   The function takes the CfnDeviceProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -163,11 +163,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-device-profile-builder (CfnDeviceProfile$Builder/create scope (name id)) id config))
+  (cfn-device-profile-builder> (CfnDeviceProfile$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-device-profile-lo-ra-wan-device-profile-property-builder
-  "The build-cfn-device-profile-lo-ra-wan-device-profile-property-builder function updates a CfnDeviceProfile$LoRaWANDeviceProfileProperty$Builder instance using the provided configuration.
+(defn cfn-device-profile-lo-ra-wan-device-profile-property-builder>
+  "The cfn-device-profile-lo-ra-wan-device-profile-property-builder> function updates a CfnDeviceProfile$LoRaWANDeviceProfileProperty$Builder instance using the provided configuration.
   The function takes the CfnDeviceProfile$LoRaWANDeviceProfileProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -245,11 +245,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-device-profile-lo-ra-wan-device-profile-property-builder (new CfnDeviceProfile$LoRaWANDeviceProfileProperty$Builder) id config))
+  (cfn-device-profile-lo-ra-wan-device-profile-property-builder> (new CfnDeviceProfile$LoRaWANDeviceProfileProperty$Builder) id config))
 
 
-(defn build-cfn-device-profile-props-builder
-  "The build-cfn-device-profile-props-builder function updates a CfnDeviceProfileProps$Builder instance using the provided configuration.
+(defn cfn-device-profile-props-builder>
+  "The cfn-device-profile-props-builder> function updates a CfnDeviceProfileProps$Builder instance using the provided configuration.
   The function takes the CfnDeviceProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -279,11 +279,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-device-profile-props-builder (new CfnDeviceProfileProps$Builder) id config))
+  (cfn-device-profile-props-builder> (new CfnDeviceProfileProps$Builder) id config))
 
 
-(defn build-cfn-fuota-task-builder
-  "The build-cfn-fuota-task-builder function updates a CfnFuotaTask$Builder instance using the provided configuration.
+(defn cfn-fuota-task-builder>
+  "The cfn-fuota-task-builder> function updates a CfnFuotaTask$Builder instance using the provided configuration.
   The function takes the CfnFuotaTask$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -334,11 +334,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-fuota-task-builder (CfnFuotaTask$Builder/create scope (name id)) id config))
+  (cfn-fuota-task-builder> (CfnFuotaTask$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-fuota-task-lo-ra-wan-property-builder
-  "The build-cfn-fuota-task-lo-ra-wan-property-builder function updates a CfnFuotaTask$LoRaWANProperty$Builder instance using the provided configuration.
+(defn cfn-fuota-task-lo-ra-wan-property-builder>
+  "The cfn-fuota-task-lo-ra-wan-property-builder> function updates a CfnFuotaTask$LoRaWANProperty$Builder instance using the provided configuration.
   The function takes the CfnFuotaTask$LoRaWANProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -365,11 +365,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fuota-task-lo-ra-wan-property-builder (new CfnFuotaTask$LoRaWANProperty$Builder) id config))
+  (cfn-fuota-task-lo-ra-wan-property-builder> (new CfnFuotaTask$LoRaWANProperty$Builder) id config))
 
 
-(defn build-cfn-fuota-task-props-builder
-  "The build-cfn-fuota-task-props-builder function updates a CfnFuotaTaskProps$Builder instance using the provided configuration.
+(defn cfn-fuota-task-props-builder>
+  "The cfn-fuota-task-props-builder> function updates a CfnFuotaTaskProps$Builder instance using the provided configuration.
   The function takes the CfnFuotaTaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -420,11 +420,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fuota-task-props-builder (new CfnFuotaTaskProps$Builder) id config))
+  (cfn-fuota-task-props-builder> (new CfnFuotaTaskProps$Builder) id config))
 
 
-(defn build-cfn-multicast-group-builder
-  "The build-cfn-multicast-group-builder function updates a CfnMulticastGroup$Builder instance using the provided configuration.
+(defn cfn-multicast-group-builder>
+  "The cfn-multicast-group-builder> function updates a CfnMulticastGroup$Builder instance using the provided configuration.
   The function takes the CfnMulticastGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -463,11 +463,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-multicast-group-builder (CfnMulticastGroup$Builder/create scope (name id)) id config))
+  (cfn-multicast-group-builder> (CfnMulticastGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-multicast-group-lo-ra-wan-property-builder
-  "The build-cfn-multicast-group-lo-ra-wan-property-builder function updates a CfnMulticastGroup$LoRaWANProperty$Builder instance using the provided configuration.
+(defn cfn-multicast-group-lo-ra-wan-property-builder>
+  "The cfn-multicast-group-lo-ra-wan-property-builder> function updates a CfnMulticastGroup$LoRaWANProperty$Builder instance using the provided configuration.
   The function takes the CfnMulticastGroup$LoRaWANProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -500,11 +500,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-multicast-group-lo-ra-wan-property-builder (new CfnMulticastGroup$LoRaWANProperty$Builder) id config))
+  (cfn-multicast-group-lo-ra-wan-property-builder> (new CfnMulticastGroup$LoRaWANProperty$Builder) id config))
 
 
-(defn build-cfn-multicast-group-props-builder
-  "The build-cfn-multicast-group-props-builder function updates a CfnMulticastGroupProps$Builder instance using the provided configuration.
+(defn cfn-multicast-group-props-builder>
+  "The cfn-multicast-group-props-builder> function updates a CfnMulticastGroupProps$Builder instance using the provided configuration.
   The function takes the CfnMulticastGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -543,11 +543,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-multicast-group-props-builder (new CfnMulticastGroupProps$Builder) id config))
+  (cfn-multicast-group-props-builder> (new CfnMulticastGroupProps$Builder) id config))
 
 
-(defn build-cfn-network-analyzer-configuration-builder
-  "The build-cfn-network-analyzer-configuration-builder function updates a CfnNetworkAnalyzerConfiguration$Builder instance using the provided configuration.
+(defn cfn-network-analyzer-configuration-builder>
+  "The cfn-network-analyzer-configuration-builder> function updates a CfnNetworkAnalyzerConfiguration$Builder instance using the provided configuration.
   The function takes the CfnNetworkAnalyzerConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -586,11 +586,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-analyzer-configuration-builder (CfnNetworkAnalyzerConfiguration$Builder/create scope (name id)) id config))
+  (cfn-network-analyzer-configuration-builder> (CfnNetworkAnalyzerConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-analyzer-configuration-props-builder
-  "The build-cfn-network-analyzer-configuration-props-builder function updates a CfnNetworkAnalyzerConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-network-analyzer-configuration-props-builder>
+  "The cfn-network-analyzer-configuration-props-builder> function updates a CfnNetworkAnalyzerConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkAnalyzerConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -629,11 +629,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-analyzer-configuration-props-builder (new CfnNetworkAnalyzerConfigurationProps$Builder) id config))
+  (cfn-network-analyzer-configuration-props-builder> (new CfnNetworkAnalyzerConfigurationProps$Builder) id config))
 
 
-(defn build-cfn-network-analyzer-configuration-trace-content-property-builder
-  "The build-cfn-network-analyzer-configuration-trace-content-property-builder function updates a CfnNetworkAnalyzerConfiguration$TraceContentProperty$Builder instance using the provided configuration.
+(defn cfn-network-analyzer-configuration-trace-content-property-builder>
+  "The cfn-network-analyzer-configuration-trace-content-property-builder> function updates a CfnNetworkAnalyzerConfiguration$TraceContentProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkAnalyzerConfiguration$TraceContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -660,11 +660,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-analyzer-configuration-trace-content-property-builder (new CfnNetworkAnalyzerConfiguration$TraceContentProperty$Builder) id config))
+  (cfn-network-analyzer-configuration-trace-content-property-builder> (new CfnNetworkAnalyzerConfiguration$TraceContentProperty$Builder) id config))
 
 
-(defn build-cfn-partner-account-builder
-  "The build-cfn-partner-account-builder function updates a CfnPartnerAccount$Builder instance using the provided configuration.
+(defn cfn-partner-account-builder>
+  "The cfn-partner-account-builder> function updates a CfnPartnerAccount$Builder instance using the provided configuration.
   The function takes the CfnPartnerAccount$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -706,11 +706,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-partner-account-builder (CfnPartnerAccount$Builder/create scope (name id)) id config))
+  (cfn-partner-account-builder> (CfnPartnerAccount$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-partner-account-props-builder
-  "The build-cfn-partner-account-props-builder function updates a CfnPartnerAccountProps$Builder instance using the provided configuration.
+(defn cfn-partner-account-props-builder>
+  "The cfn-partner-account-props-builder> function updates a CfnPartnerAccountProps$Builder instance using the provided configuration.
   The function takes the CfnPartnerAccountProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -752,11 +752,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-partner-account-props-builder (new CfnPartnerAccountProps$Builder) id config))
+  (cfn-partner-account-props-builder> (new CfnPartnerAccountProps$Builder) id config))
 
 
-(defn build-cfn-partner-account-sidewalk-account-info-property-builder
-  "The build-cfn-partner-account-sidewalk-account-info-property-builder function updates a CfnPartnerAccount$SidewalkAccountInfoProperty$Builder instance using the provided configuration.
+(defn cfn-partner-account-sidewalk-account-info-property-builder>
+  "The cfn-partner-account-sidewalk-account-info-property-builder> function updates a CfnPartnerAccount$SidewalkAccountInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnPartnerAccount$SidewalkAccountInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -780,11 +780,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-partner-account-sidewalk-account-info-property-builder (new CfnPartnerAccount$SidewalkAccountInfoProperty$Builder) id config))
+  (cfn-partner-account-sidewalk-account-info-property-builder> (new CfnPartnerAccount$SidewalkAccountInfoProperty$Builder) id config))
 
 
-(defn build-cfn-partner-account-sidewalk-account-info-with-fingerprint-property-builder
-  "The build-cfn-partner-account-sidewalk-account-info-with-fingerprint-property-builder function updates a CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty$Builder instance using the provided configuration.
+(defn cfn-partner-account-sidewalk-account-info-with-fingerprint-property-builder>
+  "The cfn-partner-account-sidewalk-account-info-with-fingerprint-property-builder> function updates a CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty$Builder instance using the provided configuration.
   The function takes the CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -814,11 +814,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-partner-account-sidewalk-account-info-with-fingerprint-property-builder (new CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty$Builder) id config))
+  (cfn-partner-account-sidewalk-account-info-with-fingerprint-property-builder> (new CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty$Builder) id config))
 
 
-(defn build-cfn-partner-account-sidewalk-update-account-property-builder
-  "The build-cfn-partner-account-sidewalk-update-account-property-builder function updates a CfnPartnerAccount$SidewalkUpdateAccountProperty$Builder instance using the provided configuration.
+(defn cfn-partner-account-sidewalk-update-account-property-builder>
+  "The cfn-partner-account-sidewalk-update-account-property-builder> function updates a CfnPartnerAccount$SidewalkUpdateAccountProperty$Builder instance using the provided configuration.
   The function takes the CfnPartnerAccount$SidewalkUpdateAccountProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -842,11 +842,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-partner-account-sidewalk-update-account-property-builder (new CfnPartnerAccount$SidewalkUpdateAccountProperty$Builder) id config))
+  (cfn-partner-account-sidewalk-update-account-property-builder> (new CfnPartnerAccount$SidewalkUpdateAccountProperty$Builder) id config))
 
 
-(defn build-cfn-service-profile-builder
-  "The build-cfn-service-profile-builder function updates a CfnServiceProfile$Builder instance using the provided configuration.
+(defn cfn-service-profile-builder>
+  "The cfn-service-profile-builder> function updates a CfnServiceProfile$Builder instance using the provided configuration.
   The function takes the CfnServiceProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -876,11 +876,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-service-profile-builder (CfnServiceProfile$Builder/create scope (name id)) id config))
+  (cfn-service-profile-builder> (CfnServiceProfile$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-service-profile-lo-ra-wan-service-profile-property-builder
-  "The build-cfn-service-profile-lo-ra-wan-service-profile-property-builder function updates a CfnServiceProfile$LoRaWANServiceProfileProperty$Builder instance using the provided configuration.
+(defn cfn-service-profile-lo-ra-wan-service-profile-property-builder>
+  "The cfn-service-profile-lo-ra-wan-service-profile-property-builder> function updates a CfnServiceProfile$LoRaWANServiceProfileProperty$Builder instance using the provided configuration.
   The function takes the CfnServiceProfile$LoRaWANServiceProfileProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -958,11 +958,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-profile-lo-ra-wan-service-profile-property-builder (new CfnServiceProfile$LoRaWANServiceProfileProperty$Builder) id config))
+  (cfn-service-profile-lo-ra-wan-service-profile-property-builder> (new CfnServiceProfile$LoRaWANServiceProfileProperty$Builder) id config))
 
 
-(defn build-cfn-service-profile-props-builder
-  "The build-cfn-service-profile-props-builder function updates a CfnServiceProfileProps$Builder instance using the provided configuration.
+(defn cfn-service-profile-props-builder>
+  "The cfn-service-profile-props-builder> function updates a CfnServiceProfileProps$Builder instance using the provided configuration.
   The function takes the CfnServiceProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -992,11 +992,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-profile-props-builder (new CfnServiceProfileProps$Builder) id config))
+  (cfn-service-profile-props-builder> (new CfnServiceProfileProps$Builder) id config))
 
 
-(defn build-cfn-task-definition-builder
-  "The build-cfn-task-definition-builder function updates a CfnTaskDefinition$Builder instance using the provided configuration.
+(defn cfn-task-definition-builder>
+  "The cfn-task-definition-builder> function updates a CfnTaskDefinition$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1035,11 +1035,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-task-definition-builder (CfnTaskDefinition$Builder/create scope (name id)) id config))
+  (cfn-task-definition-builder> (CfnTaskDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-task-definition-lo-ra-wan-gateway-version-property-builder
-  "The build-cfn-task-definition-lo-ra-wan-gateway-version-property-builder function updates a CfnTaskDefinition$LoRaWANGatewayVersionProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-lo-ra-wan-gateway-version-property-builder>
+  "The cfn-task-definition-lo-ra-wan-gateway-version-property-builder> function updates a CfnTaskDefinition$LoRaWANGatewayVersionProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$LoRaWANGatewayVersionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1069,11 +1069,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-lo-ra-wan-gateway-version-property-builder (new CfnTaskDefinition$LoRaWANGatewayVersionProperty$Builder) id config))
+  (cfn-task-definition-lo-ra-wan-gateway-version-property-builder> (new CfnTaskDefinition$LoRaWANGatewayVersionProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-lo-ra-wan-update-gateway-task-create-property-builder
-  "The build-cfn-task-definition-lo-ra-wan-update-gateway-task-create-property-builder function updates a CfnTaskDefinition$LoRaWANUpdateGatewayTaskCreateProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-lo-ra-wan-update-gateway-task-create-property-builder>
+  "The cfn-task-definition-lo-ra-wan-update-gateway-task-create-property-builder> function updates a CfnTaskDefinition$LoRaWANUpdateGatewayTaskCreateProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$LoRaWANUpdateGatewayTaskCreateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1106,11 +1106,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-lo-ra-wan-update-gateway-task-create-property-builder (new CfnTaskDefinition$LoRaWANUpdateGatewayTaskCreateProperty$Builder) id config))
+  (cfn-task-definition-lo-ra-wan-update-gateway-task-create-property-builder> (new CfnTaskDefinition$LoRaWANUpdateGatewayTaskCreateProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-lo-ra-wan-update-gateway-task-entry-property-builder
-  "The build-cfn-task-definition-lo-ra-wan-update-gateway-task-entry-property-builder function updates a CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-lo-ra-wan-update-gateway-task-entry-property-builder>
+  "The cfn-task-definition-lo-ra-wan-update-gateway-task-entry-property-builder> function updates a CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1137,11 +1137,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-lo-ra-wan-update-gateway-task-entry-property-builder (new CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder) id config))
+  (cfn-task-definition-lo-ra-wan-update-gateway-task-entry-property-builder> (new CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder) id config))
 
 
-(defn build-cfn-task-definition-props-builder
-  "The build-cfn-task-definition-props-builder function updates a CfnTaskDefinitionProps$Builder instance using the provided configuration.
+(defn cfn-task-definition-props-builder>
+  "The cfn-task-definition-props-builder> function updates a CfnTaskDefinitionProps$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1180,11 +1180,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-props-builder (new CfnTaskDefinitionProps$Builder) id config))
+  (cfn-task-definition-props-builder> (new CfnTaskDefinitionProps$Builder) id config))
 
 
-(defn build-cfn-task-definition-update-wireless-gateway-task-create-property-builder
-  "The build-cfn-task-definition-update-wireless-gateway-task-create-property-builder function updates a CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty$Builder instance using the provided configuration.
+(defn cfn-task-definition-update-wireless-gateway-task-create-property-builder>
+  "The cfn-task-definition-update-wireless-gateway-task-create-property-builder> function updates a CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty$Builder instance using the provided configuration.
   The function takes the CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1214,11 +1214,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-task-definition-update-wireless-gateway-task-create-property-builder (new CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty$Builder) id config))
+  (cfn-task-definition-update-wireless-gateway-task-create-property-builder> (new CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty$Builder) id config))
 
 
-(defn build-cfn-wireless-device-abp-v10x-property-builder
-  "The build-cfn-wireless-device-abp-v10x-property-builder function updates a CfnWirelessDevice$AbpV10xProperty$Builder instance using the provided configuration.
+(defn cfn-wireless-device-abp-v10x-property-builder>
+  "The cfn-wireless-device-abp-v10x-property-builder> function updates a CfnWirelessDevice$AbpV10xProperty$Builder instance using the provided configuration.
   The function takes the CfnWirelessDevice$AbpV10xProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1245,11 +1245,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-abp-v10x-property-builder (new CfnWirelessDevice$AbpV10xProperty$Builder) id config))
+  (cfn-wireless-device-abp-v10x-property-builder> (new CfnWirelessDevice$AbpV10xProperty$Builder) id config))
 
 
-(defn build-cfn-wireless-device-abp-v11-property-builder
-  "The build-cfn-wireless-device-abp-v11-property-builder function updates a CfnWirelessDevice$AbpV11Property$Builder instance using the provided configuration.
+(defn cfn-wireless-device-abp-v11-property-builder>
+  "The cfn-wireless-device-abp-v11-property-builder> function updates a CfnWirelessDevice$AbpV11Property$Builder instance using the provided configuration.
   The function takes the CfnWirelessDevice$AbpV11Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1276,11 +1276,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-abp-v11-property-builder (new CfnWirelessDevice$AbpV11Property$Builder) id config))
+  (cfn-wireless-device-abp-v11-property-builder> (new CfnWirelessDevice$AbpV11Property$Builder) id config))
 
 
-(defn build-cfn-wireless-device-builder
-  "The build-cfn-wireless-device-builder function updates a CfnWirelessDevice$Builder instance using the provided configuration.
+(defn cfn-wireless-device-builder>
+  "The cfn-wireless-device-builder> function updates a CfnWirelessDevice$Builder instance using the provided configuration.
   The function takes the CfnWirelessDevice$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1328,11 +1328,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-wireless-device-builder (CfnWirelessDevice$Builder/create scope (name id)) id config))
+  (cfn-wireless-device-builder> (CfnWirelessDevice$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-wireless-device-import-task-builder
-  "The build-cfn-wireless-device-import-task-builder function updates a CfnWirelessDeviceImportTask$Builder instance using the provided configuration.
+(defn cfn-wireless-device-import-task-builder>
+  "The cfn-wireless-device-import-task-builder> function updates a CfnWirelessDeviceImportTask$Builder instance using the provided configuration.
   The function takes the CfnWirelessDeviceImportTask$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1362,11 +1362,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-wireless-device-import-task-builder (CfnWirelessDeviceImportTask$Builder/create scope (name id)) id config))
+  (cfn-wireless-device-import-task-builder> (CfnWirelessDeviceImportTask$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-wireless-device-import-task-props-builder
-  "The build-cfn-wireless-device-import-task-props-builder function updates a CfnWirelessDeviceImportTaskProps$Builder instance using the provided configuration.
+(defn cfn-wireless-device-import-task-props-builder>
+  "The cfn-wireless-device-import-task-props-builder> function updates a CfnWirelessDeviceImportTaskProps$Builder instance using the provided configuration.
   The function takes the CfnWirelessDeviceImportTaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1396,11 +1396,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-import-task-props-builder (new CfnWirelessDeviceImportTaskProps$Builder) id config))
+  (cfn-wireless-device-import-task-props-builder> (new CfnWirelessDeviceImportTaskProps$Builder) id config))
 
 
-(defn build-cfn-wireless-device-import-task-sidewalk-property-builder
-  "The build-cfn-wireless-device-import-task-sidewalk-property-builder function updates a CfnWirelessDeviceImportTask$SidewalkProperty$Builder instance using the provided configuration.
+(defn cfn-wireless-device-import-task-sidewalk-property-builder>
+  "The cfn-wireless-device-import-task-sidewalk-property-builder> function updates a CfnWirelessDeviceImportTask$SidewalkProperty$Builder instance using the provided configuration.
   The function takes the CfnWirelessDeviceImportTask$SidewalkProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1433,11 +1433,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-import-task-sidewalk-property-builder (new CfnWirelessDeviceImportTask$SidewalkProperty$Builder) id config))
+  (cfn-wireless-device-import-task-sidewalk-property-builder> (new CfnWirelessDeviceImportTask$SidewalkProperty$Builder) id config))
 
 
-(defn build-cfn-wireless-device-lo-ra-wan-device-property-builder
-  "The build-cfn-wireless-device-lo-ra-wan-device-property-builder function updates a CfnWirelessDevice$LoRaWANDeviceProperty$Builder instance using the provided configuration.
+(defn cfn-wireless-device-lo-ra-wan-device-property-builder>
+  "The cfn-wireless-device-lo-ra-wan-device-property-builder> function updates a CfnWirelessDevice$LoRaWANDeviceProperty$Builder instance using the provided configuration.
   The function takes the CfnWirelessDevice$LoRaWANDeviceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1479,11 +1479,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-lo-ra-wan-device-property-builder (new CfnWirelessDevice$LoRaWANDeviceProperty$Builder) id config))
+  (cfn-wireless-device-lo-ra-wan-device-property-builder> (new CfnWirelessDevice$LoRaWANDeviceProperty$Builder) id config))
 
 
-(defn build-cfn-wireless-device-otaa-v10x-property-builder
-  "The build-cfn-wireless-device-otaa-v10x-property-builder function updates a CfnWirelessDevice$OtaaV10xProperty$Builder instance using the provided configuration.
+(defn cfn-wireless-device-otaa-v10x-property-builder>
+  "The cfn-wireless-device-otaa-v10x-property-builder> function updates a CfnWirelessDevice$OtaaV10xProperty$Builder instance using the provided configuration.
   The function takes the CfnWirelessDevice$OtaaV10xProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1510,11 +1510,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-otaa-v10x-property-builder (new CfnWirelessDevice$OtaaV10xProperty$Builder) id config))
+  (cfn-wireless-device-otaa-v10x-property-builder> (new CfnWirelessDevice$OtaaV10xProperty$Builder) id config))
 
 
-(defn build-cfn-wireless-device-otaa-v11-property-builder
-  "The build-cfn-wireless-device-otaa-v11-property-builder function updates a CfnWirelessDevice$OtaaV11Property$Builder instance using the provided configuration.
+(defn cfn-wireless-device-otaa-v11-property-builder>
+  "The cfn-wireless-device-otaa-v11-property-builder> function updates a CfnWirelessDevice$OtaaV11Property$Builder instance using the provided configuration.
   The function takes the CfnWirelessDevice$OtaaV11Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1544,11 +1544,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-otaa-v11-property-builder (new CfnWirelessDevice$OtaaV11Property$Builder) id config))
+  (cfn-wireless-device-otaa-v11-property-builder> (new CfnWirelessDevice$OtaaV11Property$Builder) id config))
 
 
-(defn build-cfn-wireless-device-props-builder
-  "The build-cfn-wireless-device-props-builder function updates a CfnWirelessDeviceProps$Builder instance using the provided configuration.
+(defn cfn-wireless-device-props-builder>
+  "The cfn-wireless-device-props-builder> function updates a CfnWirelessDeviceProps$Builder instance using the provided configuration.
   The function takes the CfnWirelessDeviceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1596,11 +1596,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-props-builder (new CfnWirelessDeviceProps$Builder) id config))
+  (cfn-wireless-device-props-builder> (new CfnWirelessDeviceProps$Builder) id config))
 
 
-(defn build-cfn-wireless-device-session-keys-abp-v10x-property-builder
-  "The build-cfn-wireless-device-session-keys-abp-v10x-property-builder function updates a CfnWirelessDevice$SessionKeysAbpV10xProperty$Builder instance using the provided configuration.
+(defn cfn-wireless-device-session-keys-abp-v10x-property-builder>
+  "The cfn-wireless-device-session-keys-abp-v10x-property-builder> function updates a CfnWirelessDevice$SessionKeysAbpV10xProperty$Builder instance using the provided configuration.
   The function takes the CfnWirelessDevice$SessionKeysAbpV10xProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1627,11 +1627,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-session-keys-abp-v10x-property-builder (new CfnWirelessDevice$SessionKeysAbpV10xProperty$Builder) id config))
+  (cfn-wireless-device-session-keys-abp-v10x-property-builder> (new CfnWirelessDevice$SessionKeysAbpV10xProperty$Builder) id config))
 
 
-(defn build-cfn-wireless-device-session-keys-abp-v11-property-builder
-  "The build-cfn-wireless-device-session-keys-abp-v11-property-builder function updates a CfnWirelessDevice$SessionKeysAbpV11Property$Builder instance using the provided configuration.
+(defn cfn-wireless-device-session-keys-abp-v11-property-builder>
+  "The cfn-wireless-device-session-keys-abp-v11-property-builder> function updates a CfnWirelessDevice$SessionKeysAbpV11Property$Builder instance using the provided configuration.
   The function takes the CfnWirelessDevice$SessionKeysAbpV11Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1664,11 +1664,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-device-session-keys-abp-v11-property-builder (new CfnWirelessDevice$SessionKeysAbpV11Property$Builder) id config))
+  (cfn-wireless-device-session-keys-abp-v11-property-builder> (new CfnWirelessDevice$SessionKeysAbpV11Property$Builder) id config))
 
 
-(defn build-cfn-wireless-gateway-builder
-  "The build-cfn-wireless-gateway-builder function updates a CfnWirelessGateway$Builder instance using the provided configuration.
+(defn cfn-wireless-gateway-builder>
+  "The cfn-wireless-gateway-builder> function updates a CfnWirelessGateway$Builder instance using the provided configuration.
   The function takes the CfnWirelessGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1710,11 +1710,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-wireless-gateway-builder (CfnWirelessGateway$Builder/create scope (name id)) id config))
+  (cfn-wireless-gateway-builder> (CfnWirelessGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-wireless-gateway-lo-ra-wan-gateway-property-builder
-  "The build-cfn-wireless-gateway-lo-ra-wan-gateway-property-builder function updates a CfnWirelessGateway$LoRaWANGatewayProperty$Builder instance using the provided configuration.
+(defn cfn-wireless-gateway-lo-ra-wan-gateway-property-builder>
+  "The cfn-wireless-gateway-lo-ra-wan-gateway-property-builder> function updates a CfnWirelessGateway$LoRaWANGatewayProperty$Builder instance using the provided configuration.
   The function takes the CfnWirelessGateway$LoRaWANGatewayProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1741,11 +1741,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-gateway-lo-ra-wan-gateway-property-builder (new CfnWirelessGateway$LoRaWANGatewayProperty$Builder) id config))
+  (cfn-wireless-gateway-lo-ra-wan-gateway-property-builder> (new CfnWirelessGateway$LoRaWANGatewayProperty$Builder) id config))
 
 
-(defn build-cfn-wireless-gateway-props-builder
-  "The build-cfn-wireless-gateway-props-builder function updates a CfnWirelessGatewayProps$Builder instance using the provided configuration.
+(defn cfn-wireless-gateway-props-builder>
+  "The cfn-wireless-gateway-props-builder> function updates a CfnWirelessGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnWirelessGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1787,4 +1787,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-wireless-gateway-props-builder (new CfnWirelessGatewayProps$Builder) id config))
+  (cfn-wireless-gateway-props-builder> (new CfnWirelessGatewayProps$Builder) id config))

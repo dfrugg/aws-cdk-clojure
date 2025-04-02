@@ -8,8 +8,8 @@
                                                        CfnContainerProps$Builder]))
 
 
-(defn build-cfn-container-builder
-  "The build-cfn-container-builder function updates a CfnContainer$Builder instance using the provided configuration.
+(defn cfn-container-builder>
+  "The cfn-container-builder> function updates a CfnContainer$Builder instance using the provided configuration.
   The function takes the CfnContainer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -51,11 +51,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-container-builder (CfnContainer$Builder/create scope (name id)) id config))
+  (cfn-container-builder> (CfnContainer$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-container-cors-rule-property-builder
-  "The build-cfn-container-cors-rule-property-builder function updates a CfnContainer$CorsRuleProperty$Builder instance using the provided configuration.
+(defn cfn-container-cors-rule-property-builder>
+  "The cfn-container-cors-rule-property-builder> function updates a CfnContainer$CorsRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnContainer$CorsRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -91,11 +91,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-container-cors-rule-property-builder (new CfnContainer$CorsRuleProperty$Builder) id config))
+  (cfn-container-cors-rule-property-builder> (new CfnContainer$CorsRuleProperty$Builder) id config))
 
 
-(defn build-cfn-container-metric-policy-property-builder
-  "The build-cfn-container-metric-policy-property-builder function updates a CfnContainer$MetricPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-container-metric-policy-property-builder>
+  "The cfn-container-metric-policy-property-builder> function updates a CfnContainer$MetricPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnContainer$MetricPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -122,11 +122,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-container-metric-policy-property-builder (new CfnContainer$MetricPolicyProperty$Builder) id config))
+  (cfn-container-metric-policy-property-builder> (new CfnContainer$MetricPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-container-metric-policy-rule-property-builder
-  "The build-cfn-container-metric-policy-rule-property-builder function updates a CfnContainer$MetricPolicyRuleProperty$Builder instance using the provided configuration.
+(defn cfn-container-metric-policy-rule-property-builder>
+  "The cfn-container-metric-policy-rule-property-builder> function updates a CfnContainer$MetricPolicyRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnContainer$MetricPolicyRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -153,11 +153,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-container-metric-policy-rule-property-builder (new CfnContainer$MetricPolicyRuleProperty$Builder) id config))
+  (cfn-container-metric-policy-rule-property-builder> (new CfnContainer$MetricPolicyRuleProperty$Builder) id config))
 
 
-(defn build-cfn-container-props-builder
-  "The build-cfn-container-props-builder function updates a CfnContainerProps$Builder instance using the provided configuration.
+(defn cfn-container-props-builder>
+  "The cfn-container-props-builder> function updates a CfnContainerProps$Builder instance using the provided configuration.
   The function takes the CfnContainerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -199,4 +199,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-container-props-builder (new CfnContainerProps$Builder) id config))
+  (cfn-container-props-builder> (new CfnContainerProps$Builder) id config))

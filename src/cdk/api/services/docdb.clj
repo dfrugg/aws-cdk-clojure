@@ -28,8 +28,8 @@
                                                   RotationMultiUserOptions$Builder]))
 
 
-(defn build-backup-props-builder
-  "The build-backup-props-builder function updates a BackupProps$Builder instance using the provided configuration.
+(defn backup-props-builder>
+  "The backup-props-builder> function updates a BackupProps$Builder instance using the provided configuration.
   The function takes the BackupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -56,11 +56,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-backup-props-builder (new BackupProps$Builder) id config))
+  (backup-props-builder> (new BackupProps$Builder) id config))
 
 
-(defn build-cfn-db-cluster-builder
-  "The build-cfn-db-cluster-builder function updates a CfnDBCluster$Builder instance using the provided configuration.
+(defn cfn-db-cluster-builder>
+  "The cfn-db-cluster-builder> function updates a CfnDBCluster$Builder instance using the provided configuration.
   The function takes the CfnDBCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -153,11 +153,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-cluster-builder (CfnDBCluster$Builder/create scope (name id)) id config))
+  (cfn-db-cluster-builder> (CfnDBCluster$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-cluster-parameter-group-builder
-  "The build-cfn-db-cluster-parameter-group-builder function updates a CfnDBClusterParameterGroup$Builder instance using the provided configuration.
+(defn cfn-db-cluster-parameter-group-builder>
+  "The cfn-db-cluster-parameter-group-builder> function updates a CfnDBClusterParameterGroup$Builder instance using the provided configuration.
   The function takes the CfnDBClusterParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -193,11 +193,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-cluster-parameter-group-builder (CfnDBClusterParameterGroup$Builder/create scope (name id)) id config))
+  (cfn-db-cluster-parameter-group-builder> (CfnDBClusterParameterGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-cluster-parameter-group-props-builder
-  "The build-cfn-db-cluster-parameter-group-props-builder function updates a CfnDBClusterParameterGroupProps$Builder instance using the provided configuration.
+(defn cfn-db-cluster-parameter-group-props-builder>
+  "The cfn-db-cluster-parameter-group-props-builder> function updates a CfnDBClusterParameterGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDBClusterParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -233,11 +233,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-cluster-parameter-group-props-builder (new CfnDBClusterParameterGroupProps$Builder) id config))
+  (cfn-db-cluster-parameter-group-props-builder> (new CfnDBClusterParameterGroupProps$Builder) id config))
 
 
-(defn build-cfn-db-cluster-props-builder
-  "The build-cfn-db-cluster-props-builder function updates a CfnDBClusterProps$Builder instance using the provided configuration.
+(defn cfn-db-cluster-props-builder>
+  "The cfn-db-cluster-props-builder> function updates a CfnDBClusterProps$Builder instance using the provided configuration.
   The function takes the CfnDBClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -330,11 +330,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-cluster-props-builder (new CfnDBClusterProps$Builder) id config))
+  (cfn-db-cluster-props-builder> (new CfnDBClusterProps$Builder) id config))
 
 
-(defn build-cfn-db-instance-builder
-  "The build-cfn-db-instance-builder function updates a CfnDBInstance$Builder instance using the provided configuration.
+(defn cfn-db-instance-builder>
+  "The cfn-db-instance-builder> function updates a CfnDBInstance$Builder instance using the provided configuration.
   The function takes the CfnDBInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -385,11 +385,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-instance-builder (CfnDBInstance$Builder/create scope (name id)) id config))
+  (cfn-db-instance-builder> (CfnDBInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-instance-props-builder
-  "The build-cfn-db-instance-props-builder function updates a CfnDBInstanceProps$Builder instance using the provided configuration.
+(defn cfn-db-instance-props-builder>
+  "The cfn-db-instance-props-builder> function updates a CfnDBInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnDBInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -440,11 +440,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-instance-props-builder (new CfnDBInstanceProps$Builder) id config))
+  (cfn-db-instance-props-builder> (new CfnDBInstanceProps$Builder) id config))
 
 
-(defn build-cfn-db-subnet-group-builder
-  "The build-cfn-db-subnet-group-builder function updates a CfnDBSubnetGroup$Builder instance using the provided configuration.
+(defn cfn-db-subnet-group-builder>
+  "The cfn-db-subnet-group-builder> function updates a CfnDBSubnetGroup$Builder instance using the provided configuration.
   The function takes the CfnDBSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -477,11 +477,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-subnet-group-builder (CfnDBSubnetGroup$Builder/create scope (name id)) id config))
+  (cfn-db-subnet-group-builder> (CfnDBSubnetGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-subnet-group-props-builder
-  "The build-cfn-db-subnet-group-props-builder function updates a CfnDBSubnetGroupProps$Builder instance using the provided configuration.
+(defn cfn-db-subnet-group-props-builder>
+  "The cfn-db-subnet-group-props-builder> function updates a CfnDBSubnetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDBSubnetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -514,11 +514,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-subnet-group-props-builder (new CfnDBSubnetGroupProps$Builder) id config))
+  (cfn-db-subnet-group-props-builder> (new CfnDBSubnetGroupProps$Builder) id config))
 
 
-(defn build-cfn-event-subscription-builder
-  "The build-cfn-event-subscription-builder function updates a CfnEventSubscription$Builder instance using the provided configuration.
+(defn cfn-event-subscription-builder>
+  "The cfn-event-subscription-builder> function updates a CfnEventSubscription$Builder instance using the provided configuration.
   The function takes the CfnEventSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -557,11 +557,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-event-subscription-builder (CfnEventSubscription$Builder/create scope (name id)) id config))
+  (cfn-event-subscription-builder> (CfnEventSubscription$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-event-subscription-props-builder
-  "The build-cfn-event-subscription-props-builder function updates a CfnEventSubscriptionProps$Builder instance using the provided configuration.
+(defn cfn-event-subscription-props-builder>
+  "The cfn-event-subscription-props-builder> function updates a CfnEventSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnEventSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -600,11 +600,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-subscription-props-builder (new CfnEventSubscriptionProps$Builder) id config))
+  (cfn-event-subscription-props-builder> (new CfnEventSubscriptionProps$Builder) id config))
 
 
-(defn build-cluster-parameter-group-builder
-  "The build-cluster-parameter-group-builder function updates a ClusterParameterGroup$Builder instance using the provided configuration.
+(defn cluster-parameter-group-builder>
+  "The cluster-parameter-group-builder> function updates a ClusterParameterGroup$Builder instance using the provided configuration.
   The function takes the ClusterParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -637,11 +637,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cluster-parameter-group-builder (ClusterParameterGroup$Builder/create scope (name id)) id config))
+  (cluster-parameter-group-builder> (ClusterParameterGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cluster-parameter-group-props-builder
-  "The build-cluster-parameter-group-props-builder function updates a ClusterParameterGroupProps$Builder instance using the provided configuration.
+(defn cluster-parameter-group-props-builder>
+  "The cluster-parameter-group-props-builder> function updates a ClusterParameterGroupProps$Builder instance using the provided configuration.
   The function takes the ClusterParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -674,11 +674,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cluster-parameter-group-props-builder (new ClusterParameterGroupProps$Builder) id config))
+  (cluster-parameter-group-props-builder> (new ClusterParameterGroupProps$Builder) id config))
 
 
-(defn build-database-cluster-attributes-builder
-  "The build-database-cluster-attributes-builder function updates a DatabaseClusterAttributes$Builder instance using the provided configuration.
+(defn database-cluster-attributes-builder>
+  "The database-cluster-attributes-builder> function updates a DatabaseClusterAttributes$Builder instance using the provided configuration.
   The function takes the DatabaseClusterAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -720,11 +720,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-database-cluster-attributes-builder (new DatabaseClusterAttributes$Builder) id config))
+  (database-cluster-attributes-builder> (new DatabaseClusterAttributes$Builder) id config))
 
 
-(defn build-database-cluster-builder
-  "The build-database-cluster-builder function updates a DatabaseCluster$Builder instance using the provided configuration.
+(defn database-cluster-builder>
+  "The database-cluster-builder> function updates a DatabaseCluster$Builder instance using the provided configuration.
   The function takes the DatabaseCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -823,11 +823,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-database-cluster-builder (DatabaseCluster$Builder/create scope (name id)) id config))
+  (database-cluster-builder> (DatabaseCluster$Builder/create scope (name id)) id config))
 
 
-(defn build-database-cluster-props-builder
-  "The build-database-cluster-props-builder function updates a DatabaseClusterProps$Builder instance using the provided configuration.
+(defn database-cluster-props-builder>
+  "The database-cluster-props-builder> function updates a DatabaseClusterProps$Builder instance using the provided configuration.
   The function takes the DatabaseClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -926,11 +926,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-database-cluster-props-builder (new DatabaseClusterProps$Builder) id config))
+  (database-cluster-props-builder> (new DatabaseClusterProps$Builder) id config))
 
 
-(defn build-database-instance-attributes-builder
-  "The build-database-instance-attributes-builder function updates a DatabaseInstanceAttributes$Builder instance using the provided configuration.
+(defn database-instance-attributes-builder>
+  "The database-instance-attributes-builder> function updates a DatabaseInstanceAttributes$Builder instance using the provided configuration.
   The function takes the DatabaseInstanceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -960,11 +960,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-database-instance-attributes-builder (new DatabaseInstanceAttributes$Builder) id config))
+  (database-instance-attributes-builder> (new DatabaseInstanceAttributes$Builder) id config))
 
 
-(defn build-database-instance-builder
-  "The build-database-instance-builder function updates a DatabaseInstance$Builder instance using the provided configuration.
+(defn database-instance-builder>
+  "The database-instance-builder> function updates a DatabaseInstance$Builder instance using the provided configuration.
   The function takes the DatabaseInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1012,11 +1012,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-database-instance-builder (DatabaseInstance$Builder/create scope (name id)) id config))
+  (database-instance-builder> (DatabaseInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-database-instance-props-builder
-  "The build-database-instance-props-builder function updates a DatabaseInstanceProps$Builder instance using the provided configuration.
+(defn database-instance-props-builder>
+  "The database-instance-props-builder> function updates a DatabaseInstanceProps$Builder instance using the provided configuration.
   The function takes the DatabaseInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1064,11 +1064,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-database-instance-props-builder (new DatabaseInstanceProps$Builder) id config))
+  (database-instance-props-builder> (new DatabaseInstanceProps$Builder) id config))
 
 
-(defn build-database-secret-builder
-  "The build-database-secret-builder function updates a DatabaseSecret$Builder instance using the provided configuration.
+(defn database-secret-builder>
+  "The database-secret-builder> function updates a DatabaseSecret$Builder instance using the provided configuration.
   The function takes the DatabaseSecret$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1104,11 +1104,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-database-secret-builder (DatabaseSecret$Builder/create scope (name id)) id config))
+  (database-secret-builder> (DatabaseSecret$Builder/create scope (name id)) id config))
 
 
-(defn build-database-secret-props-builder
-  "The build-database-secret-props-builder function updates a DatabaseSecretProps$Builder instance using the provided configuration.
+(defn database-secret-props-builder>
+  "The database-secret-props-builder> function updates a DatabaseSecretProps$Builder instance using the provided configuration.
   The function takes the DatabaseSecretProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1144,11 +1144,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-database-secret-props-builder (new DatabaseSecretProps$Builder) id config))
+  (database-secret-props-builder> (new DatabaseSecretProps$Builder) id config))
 
 
-(defn build-login-builder
-  "The build-login-builder function updates a Login$Builder instance using the provided configuration.
+(defn login-builder>
+  "The login-builder> function updates a Login$Builder instance using the provided configuration.
   The function takes the Login$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1184,11 +1184,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-login-builder (new Login$Builder) id config))
+  (login-builder> (new Login$Builder) id config))
 
 
-(defn build-rotation-multi-user-options-builder
-  "The build-rotation-multi-user-options-builder function updates a RotationMultiUserOptions$Builder instance using the provided configuration.
+(defn rotation-multi-user-options-builder>
+  "The rotation-multi-user-options-builder> function updates a RotationMultiUserOptions$Builder instance using the provided configuration.
   The function takes the RotationMultiUserOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1215,4 +1215,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-rotation-multi-user-options-builder (new RotationMultiUserOptions$Builder) id config))
+  (rotation-multi-user-options-builder> (new RotationMultiUserOptions$Builder) id config))

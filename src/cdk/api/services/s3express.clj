@@ -7,8 +7,8 @@
                                                       CfnDirectoryBucketProps$Builder]))
 
 
-(defn build-cfn-bucket-policy-builder
-  "The build-cfn-bucket-policy-builder function updates a CfnBucketPolicy$Builder instance using the provided configuration.
+(defn cfn-bucket-policy-builder>
+  "The cfn-bucket-policy-builder> function updates a CfnBucketPolicy$Builder instance using the provided configuration.
   The function takes the CfnBucketPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -35,11 +35,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bucket-policy-builder (CfnBucketPolicy$Builder/create scope (name id)) id config))
+  (cfn-bucket-policy-builder> (CfnBucketPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bucket-policy-props-builder
-  "The build-cfn-bucket-policy-props-builder function updates a CfnBucketPolicyProps$Builder instance using the provided configuration.
+(defn cfn-bucket-policy-props-builder>
+  "The cfn-bucket-policy-props-builder> function updates a CfnBucketPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnBucketPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -66,11 +66,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-policy-props-builder (new CfnBucketPolicyProps$Builder) id config))
+  (cfn-bucket-policy-props-builder> (new CfnBucketPolicyProps$Builder) id config))
 
 
-(defn build-cfn-directory-bucket-builder
-  "The build-cfn-directory-bucket-builder function updates a CfnDirectoryBucket$Builder instance using the provided configuration.
+(defn cfn-directory-bucket-builder>
+  "The cfn-directory-bucket-builder> function updates a CfnDirectoryBucket$Builder instance using the provided configuration.
   The function takes the CfnDirectoryBucket$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -100,11 +100,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-directory-bucket-builder (CfnDirectoryBucket$Builder/create scope (name id)) id config))
+  (cfn-directory-bucket-builder> (CfnDirectoryBucket$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-directory-bucket-props-builder
-  "The build-cfn-directory-bucket-props-builder function updates a CfnDirectoryBucketProps$Builder instance using the provided configuration.
+(defn cfn-directory-bucket-props-builder>
+  "The cfn-directory-bucket-props-builder> function updates a CfnDirectoryBucketProps$Builder instance using the provided configuration.
   The function takes the CfnDirectoryBucketProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -134,4 +134,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-directory-bucket-props-builder (new CfnDirectoryBucketProps$Builder) id config))
+  (cfn-directory-bucket-props-builder> (new CfnDirectoryBucketProps$Builder) id config))

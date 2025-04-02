@@ -9,8 +9,8 @@
                                                       AssetProps$Builder]))
 
 
-(defn build-asset-builder
-  "The build-asset-builder function updates a Asset$Builder instance using the provided configuration.
+(defn asset-builder>
+  "The asset-builder> function updates a Asset$Builder instance using the provided configuration.
   The function takes the Asset$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -58,11 +58,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-asset-builder (Asset$Builder/create scope (name id)) id config))
+  (asset-builder> (Asset$Builder/create scope (name id)) id config))
 
 
-(defn build-asset-options-builder
-  "The build-asset-options-builder function updates a AssetOptions$Builder instance using the provided configuration.
+(defn asset-options-builder>
+  "The asset-options-builder> function updates a AssetOptions$Builder instance using the provided configuration.
   The function takes the AssetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -107,11 +107,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-asset-options-builder (new AssetOptions$Builder) id config))
+  (asset-options-builder> (new AssetOptions$Builder) id config))
 
 
-(defn build-asset-props-builder
-  "The build-asset-props-builder function updates a AssetProps$Builder instance using the provided configuration.
+(defn asset-props-builder>
+  "The asset-props-builder> function updates a AssetProps$Builder instance using the provided configuration.
   The function takes the AssetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -159,4 +159,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-asset-props-builder (new AssetProps$Builder) id config))
+  (asset-props-builder> (new AssetProps$Builder) id config))

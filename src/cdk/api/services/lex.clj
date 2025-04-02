@@ -106,8 +106,8 @@
                                                 CfnResourcePolicyProps$Builder]))
 
 
-(defn build-cfn-bot-advanced-recognition-setting-property-builder
-  "The build-cfn-bot-advanced-recognition-setting-property-builder function updates a CfnBot$AdvancedRecognitionSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-advanced-recognition-setting-property-builder>
+  "The cfn-bot-advanced-recognition-setting-property-builder> function updates a CfnBot$AdvancedRecognitionSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AdvancedRecognitionSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -131,11 +131,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-advanced-recognition-setting-property-builder (new CfnBot$AdvancedRecognitionSettingProperty$Builder) id config))
+  (cfn-bot-advanced-recognition-setting-property-builder> (new CfnBot$AdvancedRecognitionSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-audio-log-destination-property-builder
-  "The build-cfn-bot-alias-audio-log-destination-property-builder function updates a CfnBotAlias$AudioLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-audio-log-destination-property-builder>
+  "The cfn-bot-alias-audio-log-destination-property-builder> function updates a CfnBotAlias$AudioLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$AudioLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -159,11 +159,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-audio-log-destination-property-builder (new CfnBotAlias$AudioLogDestinationProperty$Builder) id config))
+  (cfn-bot-alias-audio-log-destination-property-builder> (new CfnBotAlias$AudioLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-audio-log-setting-property-builder
-  "The build-cfn-bot-alias-audio-log-setting-property-builder function updates a CfnBotAlias$AudioLogSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-audio-log-setting-property-builder>
+  "The cfn-bot-alias-audio-log-setting-property-builder> function updates a CfnBotAlias$AudioLogSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$AudioLogSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -190,11 +190,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-audio-log-setting-property-builder (new CfnBotAlias$AudioLogSettingProperty$Builder) id config))
+  (cfn-bot-alias-audio-log-setting-property-builder> (new CfnBotAlias$AudioLogSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-bot-alias-locale-settings-item-property-builder
-  "The build-cfn-bot-alias-bot-alias-locale-settings-item-property-builder function updates a CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-bot-alias-locale-settings-item-property-builder>
+  "The cfn-bot-alias-bot-alias-locale-settings-item-property-builder> function updates a CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -221,11 +221,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-bot-alias-locale-settings-item-property-builder (new CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder) id config))
+  (cfn-bot-alias-bot-alias-locale-settings-item-property-builder> (new CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-bot-alias-locale-settings-property-builder
-  "The build-cfn-bot-alias-bot-alias-locale-settings-property-builder function updates a CfnBotAlias$BotAliasLocaleSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-bot-alias-locale-settings-property-builder>
+  "The cfn-bot-alias-bot-alias-locale-settings-property-builder> function updates a CfnBotAlias$BotAliasLocaleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$BotAliasLocaleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -252,11 +252,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-bot-alias-locale-settings-property-builder (new CfnBotAlias$BotAliasLocaleSettingsProperty$Builder) id config))
+  (cfn-bot-alias-bot-alias-locale-settings-property-builder> (new CfnBotAlias$BotAliasLocaleSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-builder
-  "The build-cfn-bot-alias-builder function updates a CfnBotAlias$Builder instance using the provided configuration.
+(defn cfn-bot-alias-builder>
+  "The cfn-bot-alias-builder> function updates a CfnBotAlias$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -301,11 +301,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bot-alias-builder (CfnBotAlias$Builder/create scope (name id)) id config))
+  (cfn-bot-alias-builder> (CfnBotAlias$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder
-  "The build-cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder function updates a CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder>
+  "The cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder> function updates a CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -332,11 +332,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder (new CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder) id config))
+  (cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder> (new CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-code-hook-specification-property-builder
-  "The build-cfn-bot-alias-code-hook-specification-property-builder function updates a CfnBotAlias$CodeHookSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-code-hook-specification-property-builder>
+  "The cfn-bot-alias-code-hook-specification-property-builder> function updates a CfnBotAlias$CodeHookSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$CodeHookSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -360,11 +360,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-code-hook-specification-property-builder (new CfnBotAlias$CodeHookSpecificationProperty$Builder) id config))
+  (cfn-bot-alias-code-hook-specification-property-builder> (new CfnBotAlias$CodeHookSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-conversation-log-settings-property-builder
-  "The build-cfn-bot-alias-conversation-log-settings-property-builder function updates a CfnBotAlias$ConversationLogSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-conversation-log-settings-property-builder>
+  "The cfn-bot-alias-conversation-log-settings-property-builder> function updates a CfnBotAlias$ConversationLogSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$ConversationLogSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -391,11 +391,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-conversation-log-settings-property-builder (new CfnBotAlias$ConversationLogSettingsProperty$Builder) id config))
+  (cfn-bot-alias-conversation-log-settings-property-builder> (new CfnBotAlias$ConversationLogSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-lambda-code-hook-property-builder
-  "The build-cfn-bot-alias-lambda-code-hook-property-builder function updates a CfnBotAlias$LambdaCodeHookProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-lambda-code-hook-property-builder>
+  "The cfn-bot-alias-lambda-code-hook-property-builder> function updates a CfnBotAlias$LambdaCodeHookProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$LambdaCodeHookProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -422,11 +422,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-lambda-code-hook-property-builder (new CfnBotAlias$LambdaCodeHookProperty$Builder) id config))
+  (cfn-bot-alias-lambda-code-hook-property-builder> (new CfnBotAlias$LambdaCodeHookProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-props-builder
-  "The build-cfn-bot-alias-props-builder function updates a CfnBotAliasProps$Builder instance using the provided configuration.
+(defn cfn-bot-alias-props-builder>
+  "The cfn-bot-alias-props-builder> function updates a CfnBotAliasProps$Builder instance using the provided configuration.
   The function takes the CfnBotAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -471,11 +471,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-props-builder (new CfnBotAliasProps$Builder) id config))
+  (cfn-bot-alias-props-builder> (new CfnBotAliasProps$Builder) id config))
 
 
-(defn build-cfn-bot-alias-s3-bucket-log-destination-property-builder
-  "The build-cfn-bot-alias-s3-bucket-log-destination-property-builder function updates a CfnBotAlias$S3BucketLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-s3-bucket-log-destination-property-builder>
+  "The cfn-bot-alias-s3-bucket-log-destination-property-builder> function updates a CfnBotAlias$S3BucketLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$S3BucketLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -505,11 +505,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-s3-bucket-log-destination-property-builder (new CfnBotAlias$S3BucketLogDestinationProperty$Builder) id config))
+  (cfn-bot-alias-s3-bucket-log-destination-property-builder> (new CfnBotAlias$S3BucketLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-sentiment-analysis-settings-property-builder
-  "The build-cfn-bot-alias-sentiment-analysis-settings-property-builder function updates a CfnBotAlias$SentimentAnalysisSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-sentiment-analysis-settings-property-builder>
+  "The cfn-bot-alias-sentiment-analysis-settings-property-builder> function updates a CfnBotAlias$SentimentAnalysisSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$SentimentAnalysisSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -533,11 +533,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-sentiment-analysis-settings-property-builder (new CfnBotAlias$SentimentAnalysisSettingsProperty$Builder) id config))
+  (cfn-bot-alias-sentiment-analysis-settings-property-builder> (new CfnBotAlias$SentimentAnalysisSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-text-log-destination-property-builder
-  "The build-cfn-bot-alias-text-log-destination-property-builder function updates a CfnBotAlias$TextLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-text-log-destination-property-builder>
+  "The cfn-bot-alias-text-log-destination-property-builder> function updates a CfnBotAlias$TextLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$TextLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -561,11 +561,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-text-log-destination-property-builder (new CfnBotAlias$TextLogDestinationProperty$Builder) id config))
+  (cfn-bot-alias-text-log-destination-property-builder> (new CfnBotAlias$TextLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-alias-text-log-setting-property-builder
-  "The build-cfn-bot-alias-text-log-setting-property-builder function updates a CfnBotAlias$TextLogSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-alias-text-log-setting-property-builder>
+  "The cfn-bot-alias-text-log-setting-property-builder> function updates a CfnBotAlias$TextLogSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$TextLogSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -592,11 +592,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-alias-text-log-setting-property-builder (new CfnBotAlias$TextLogSettingProperty$Builder) id config))
+  (cfn-bot-alias-text-log-setting-property-builder> (new CfnBotAlias$TextLogSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-allowed-input-types-property-builder
-  "The build-cfn-bot-allowed-input-types-property-builder function updates a CfnBot$AllowedInputTypesProperty$Builder instance using the provided configuration.
+(defn cfn-bot-allowed-input-types-property-builder>
+  "The cfn-bot-allowed-input-types-property-builder> function updates a CfnBot$AllowedInputTypesProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AllowedInputTypesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -623,11 +623,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-allowed-input-types-property-builder (new CfnBot$AllowedInputTypesProperty$Builder) id config))
+  (cfn-bot-allowed-input-types-property-builder> (new CfnBot$AllowedInputTypesProperty$Builder) id config))
 
 
-(defn build-cfn-bot-audio-and-dtmf-input-specification-property-builder
-  "The build-cfn-bot-audio-and-dtmf-input-specification-property-builder function updates a CfnBot$AudioAndDTMFInputSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-audio-and-dtmf-input-specification-property-builder>
+  "The cfn-bot-audio-and-dtmf-input-specification-property-builder> function updates a CfnBot$AudioAndDTMFInputSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AudioAndDTMFInputSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -657,11 +657,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-audio-and-dtmf-input-specification-property-builder (new CfnBot$AudioAndDTMFInputSpecificationProperty$Builder) id config))
+  (cfn-bot-audio-and-dtmf-input-specification-property-builder> (new CfnBot$AudioAndDTMFInputSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-audio-log-destination-property-builder
-  "The build-cfn-bot-audio-log-destination-property-builder function updates a CfnBot$AudioLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-audio-log-destination-property-builder>
+  "The cfn-bot-audio-log-destination-property-builder> function updates a CfnBot$AudioLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AudioLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -685,11 +685,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-audio-log-destination-property-builder (new CfnBot$AudioLogDestinationProperty$Builder) id config))
+  (cfn-bot-audio-log-destination-property-builder> (new CfnBot$AudioLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-audio-log-setting-property-builder
-  "The build-cfn-bot-audio-log-setting-property-builder function updates a CfnBot$AudioLogSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-audio-log-setting-property-builder>
+  "The cfn-bot-audio-log-setting-property-builder> function updates a CfnBot$AudioLogSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AudioLogSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -716,11 +716,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-audio-log-setting-property-builder (new CfnBot$AudioLogSettingProperty$Builder) id config))
+  (cfn-bot-audio-log-setting-property-builder> (new CfnBot$AudioLogSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-audio-specification-property-builder
-  "The build-cfn-bot-audio-specification-property-builder function updates a CfnBot$AudioSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-audio-specification-property-builder>
+  "The cfn-bot-audio-specification-property-builder> function updates a CfnBot$AudioSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AudioSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -747,11 +747,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-audio-specification-property-builder (new CfnBot$AudioSpecificationProperty$Builder) id config))
+  (cfn-bot-audio-specification-property-builder> (new CfnBot$AudioSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-bot-alias-locale-settings-item-property-builder
-  "The build-cfn-bot-bot-alias-locale-settings-item-property-builder function updates a CfnBot$BotAliasLocaleSettingsItemProperty$Builder instance using the provided configuration.
+(defn cfn-bot-bot-alias-locale-settings-item-property-builder>
+  "The cfn-bot-bot-alias-locale-settings-item-property-builder> function updates a CfnBot$BotAliasLocaleSettingsItemProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$BotAliasLocaleSettingsItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -778,11 +778,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-bot-alias-locale-settings-item-property-builder (new CfnBot$BotAliasLocaleSettingsItemProperty$Builder) id config))
+  (cfn-bot-bot-alias-locale-settings-item-property-builder> (new CfnBot$BotAliasLocaleSettingsItemProperty$Builder) id config))
 
 
-(defn build-cfn-bot-bot-alias-locale-settings-property-builder
-  "The build-cfn-bot-bot-alias-locale-settings-property-builder function updates a CfnBot$BotAliasLocaleSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-bot-alias-locale-settings-property-builder>
+  "The cfn-bot-bot-alias-locale-settings-property-builder> function updates a CfnBot$BotAliasLocaleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$BotAliasLocaleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -809,11 +809,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-bot-alias-locale-settings-property-builder (new CfnBot$BotAliasLocaleSettingsProperty$Builder) id config))
+  (cfn-bot-bot-alias-locale-settings-property-builder> (new CfnBot$BotAliasLocaleSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-bot-locale-property-builder
-  "The build-cfn-bot-bot-locale-property-builder function updates a CfnBot$BotLocaleProperty$Builder instance using the provided configuration.
+(defn cfn-bot-bot-locale-property-builder>
+  "The cfn-bot-bot-locale-property-builder> function updates a CfnBot$BotLocaleProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$BotLocaleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -855,11 +855,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-bot-locale-property-builder (new CfnBot$BotLocaleProperty$Builder) id config))
+  (cfn-bot-bot-locale-property-builder> (new CfnBot$BotLocaleProperty$Builder) id config))
 
 
-(defn build-cfn-bot-builder
-  "The build-cfn-bot-builder function updates a CfnBot$Builder instance using the provided configuration.
+(defn cfn-bot-builder>
+  "The cfn-bot-builder> function updates a CfnBot$Builder instance using the provided configuration.
   The function takes the CfnBot$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -913,11 +913,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bot-builder (CfnBot$Builder/create scope (name id)) id config))
+  (cfn-bot-builder> (CfnBot$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bot-button-property-builder
-  "The build-cfn-bot-button-property-builder function updates a CfnBot$ButtonProperty$Builder instance using the provided configuration.
+(defn cfn-bot-button-property-builder>
+  "The cfn-bot-button-property-builder> function updates a CfnBot$ButtonProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ButtonProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -944,11 +944,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-button-property-builder (new CfnBot$ButtonProperty$Builder) id config))
+  (cfn-bot-button-property-builder> (new CfnBot$ButtonProperty$Builder) id config))
 
 
-(defn build-cfn-bot-cloud-watch-log-group-log-destination-property-builder
-  "The build-cfn-bot-cloud-watch-log-group-log-destination-property-builder function updates a CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-cloud-watch-log-group-log-destination-property-builder>
+  "The cfn-bot-cloud-watch-log-group-log-destination-property-builder> function updates a CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -975,11 +975,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-cloud-watch-log-group-log-destination-property-builder (new CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder) id config))
+  (cfn-bot-cloud-watch-log-group-log-destination-property-builder> (new CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-code-hook-specification-property-builder
-  "The build-cfn-bot-code-hook-specification-property-builder function updates a CfnBot$CodeHookSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-code-hook-specification-property-builder>
+  "The cfn-bot-code-hook-specification-property-builder> function updates a CfnBot$CodeHookSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$CodeHookSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1003,11 +1003,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-code-hook-specification-property-builder (new CfnBot$CodeHookSpecificationProperty$Builder) id config))
+  (cfn-bot-code-hook-specification-property-builder> (new CfnBot$CodeHookSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-condition-property-builder
-  "The build-cfn-bot-condition-property-builder function updates a CfnBot$ConditionProperty$Builder instance using the provided configuration.
+(defn cfn-bot-condition-property-builder>
+  "The cfn-bot-condition-property-builder> function updates a CfnBot$ConditionProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1031,11 +1031,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-condition-property-builder (new CfnBot$ConditionProperty$Builder) id config))
+  (cfn-bot-condition-property-builder> (new CfnBot$ConditionProperty$Builder) id config))
 
 
-(defn build-cfn-bot-conditional-branch-property-builder
-  "The build-cfn-bot-conditional-branch-property-builder function updates a CfnBot$ConditionalBranchProperty$Builder instance using the provided configuration.
+(defn cfn-bot-conditional-branch-property-builder>
+  "The cfn-bot-conditional-branch-property-builder> function updates a CfnBot$ConditionalBranchProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ConditionalBranchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1068,11 +1068,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-conditional-branch-property-builder (new CfnBot$ConditionalBranchProperty$Builder) id config))
+  (cfn-bot-conditional-branch-property-builder> (new CfnBot$ConditionalBranchProperty$Builder) id config))
 
 
-(defn build-cfn-bot-conditional-specification-property-builder
-  "The build-cfn-bot-conditional-specification-property-builder function updates a CfnBot$ConditionalSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-conditional-specification-property-builder>
+  "The cfn-bot-conditional-specification-property-builder> function updates a CfnBot$ConditionalSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ConditionalSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1102,11 +1102,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-conditional-specification-property-builder (new CfnBot$ConditionalSpecificationProperty$Builder) id config))
+  (cfn-bot-conditional-specification-property-builder> (new CfnBot$ConditionalSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-conversation-log-settings-property-builder
-  "The build-cfn-bot-conversation-log-settings-property-builder function updates a CfnBot$ConversationLogSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-conversation-log-settings-property-builder>
+  "The cfn-bot-conversation-log-settings-property-builder> function updates a CfnBot$ConversationLogSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ConversationLogSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1133,11 +1133,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-conversation-log-settings-property-builder (new CfnBot$ConversationLogSettingsProperty$Builder) id config))
+  (cfn-bot-conversation-log-settings-property-builder> (new CfnBot$ConversationLogSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-custom-payload-property-builder
-  "The build-cfn-bot-custom-payload-property-builder function updates a CfnBot$CustomPayloadProperty$Builder instance using the provided configuration.
+(defn cfn-bot-custom-payload-property-builder>
+  "The cfn-bot-custom-payload-property-builder> function updates a CfnBot$CustomPayloadProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$CustomPayloadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1161,11 +1161,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-custom-payload-property-builder (new CfnBot$CustomPayloadProperty$Builder) id config))
+  (cfn-bot-custom-payload-property-builder> (new CfnBot$CustomPayloadProperty$Builder) id config))
 
 
-(defn build-cfn-bot-custom-vocabulary-item-property-builder
-  "The build-cfn-bot-custom-vocabulary-item-property-builder function updates a CfnBot$CustomVocabularyItemProperty$Builder instance using the provided configuration.
+(defn cfn-bot-custom-vocabulary-item-property-builder>
+  "The cfn-bot-custom-vocabulary-item-property-builder> function updates a CfnBot$CustomVocabularyItemProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$CustomVocabularyItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1195,11 +1195,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-custom-vocabulary-item-property-builder (new CfnBot$CustomVocabularyItemProperty$Builder) id config))
+  (cfn-bot-custom-vocabulary-item-property-builder> (new CfnBot$CustomVocabularyItemProperty$Builder) id config))
 
 
-(defn build-cfn-bot-custom-vocabulary-property-builder
-  "The build-cfn-bot-custom-vocabulary-property-builder function updates a CfnBot$CustomVocabularyProperty$Builder instance using the provided configuration.
+(defn cfn-bot-custom-vocabulary-property-builder>
+  "The cfn-bot-custom-vocabulary-property-builder> function updates a CfnBot$CustomVocabularyProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$CustomVocabularyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1223,11 +1223,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-custom-vocabulary-property-builder (new CfnBot$CustomVocabularyProperty$Builder) id config))
+  (cfn-bot-custom-vocabulary-property-builder> (new CfnBot$CustomVocabularyProperty$Builder) id config))
 
 
-(defn build-cfn-bot-data-privacy-property-builder
-  "The build-cfn-bot-data-privacy-property-builder function updates a CfnBot$DataPrivacyProperty$Builder instance using the provided configuration.
+(defn cfn-bot-data-privacy-property-builder>
+  "The cfn-bot-data-privacy-property-builder> function updates a CfnBot$DataPrivacyProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DataPrivacyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1251,11 +1251,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-data-privacy-property-builder (new CfnBot$DataPrivacyProperty$Builder) id config))
+  (cfn-bot-data-privacy-property-builder> (new CfnBot$DataPrivacyProperty$Builder) id config))
 
 
-(defn build-cfn-bot-default-conditional-branch-property-builder
-  "The build-cfn-bot-default-conditional-branch-property-builder function updates a CfnBot$DefaultConditionalBranchProperty$Builder instance using the provided configuration.
+(defn cfn-bot-default-conditional-branch-property-builder>
+  "The cfn-bot-default-conditional-branch-property-builder> function updates a CfnBot$DefaultConditionalBranchProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DefaultConditionalBranchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1282,11 +1282,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-default-conditional-branch-property-builder (new CfnBot$DefaultConditionalBranchProperty$Builder) id config))
+  (cfn-bot-default-conditional-branch-property-builder> (new CfnBot$DefaultConditionalBranchProperty$Builder) id config))
 
 
-(defn build-cfn-bot-dialog-action-property-builder
-  "The build-cfn-bot-dialog-action-property-builder function updates a CfnBot$DialogActionProperty$Builder instance using the provided configuration.
+(defn cfn-bot-dialog-action-property-builder>
+  "The cfn-bot-dialog-action-property-builder> function updates a CfnBot$DialogActionProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DialogActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1316,11 +1316,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-dialog-action-property-builder (new CfnBot$DialogActionProperty$Builder) id config))
+  (cfn-bot-dialog-action-property-builder> (new CfnBot$DialogActionProperty$Builder) id config))
 
 
-(defn build-cfn-bot-dialog-code-hook-invocation-setting-property-builder
-  "The build-cfn-bot-dialog-code-hook-invocation-setting-property-builder function updates a CfnBot$DialogCodeHookInvocationSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-dialog-code-hook-invocation-setting-property-builder>
+  "The cfn-bot-dialog-code-hook-invocation-setting-property-builder> function updates a CfnBot$DialogCodeHookInvocationSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DialogCodeHookInvocationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1353,11 +1353,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-dialog-code-hook-invocation-setting-property-builder (new CfnBot$DialogCodeHookInvocationSettingProperty$Builder) id config))
+  (cfn-bot-dialog-code-hook-invocation-setting-property-builder> (new CfnBot$DialogCodeHookInvocationSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-dialog-code-hook-setting-property-builder
-  "The build-cfn-bot-dialog-code-hook-setting-property-builder function updates a CfnBot$DialogCodeHookSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-dialog-code-hook-setting-property-builder>
+  "The cfn-bot-dialog-code-hook-setting-property-builder> function updates a CfnBot$DialogCodeHookSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DialogCodeHookSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1381,11 +1381,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-dialog-code-hook-setting-property-builder (new CfnBot$DialogCodeHookSettingProperty$Builder) id config))
+  (cfn-bot-dialog-code-hook-setting-property-builder> (new CfnBot$DialogCodeHookSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-dialog-state-property-builder
-  "The build-cfn-bot-dialog-state-property-builder function updates a CfnBot$DialogStateProperty$Builder instance using the provided configuration.
+(defn cfn-bot-dialog-state-property-builder>
+  "The cfn-bot-dialog-state-property-builder> function updates a CfnBot$DialogStateProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DialogStateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1415,11 +1415,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-dialog-state-property-builder (new CfnBot$DialogStateProperty$Builder) id config))
+  (cfn-bot-dialog-state-property-builder> (new CfnBot$DialogStateProperty$Builder) id config))
 
 
-(defn build-cfn-bot-dtmf-specification-property-builder
-  "The build-cfn-bot-dtmf-specification-property-builder function updates a CfnBot$DTMFSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-dtmf-specification-property-builder>
+  "The cfn-bot-dtmf-specification-property-builder> function updates a CfnBot$DTMFSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DTMFSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1452,11 +1452,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-dtmf-specification-property-builder (new CfnBot$DTMFSpecificationProperty$Builder) id config))
+  (cfn-bot-dtmf-specification-property-builder> (new CfnBot$DTMFSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-elicitation-code-hook-invocation-setting-property-builder
-  "The build-cfn-bot-elicitation-code-hook-invocation-setting-property-builder function updates a CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-elicitation-code-hook-invocation-setting-property-builder>
+  "The cfn-bot-elicitation-code-hook-invocation-setting-property-builder> function updates a CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1483,11 +1483,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-elicitation-code-hook-invocation-setting-property-builder (new CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder) id config))
+  (cfn-bot-elicitation-code-hook-invocation-setting-property-builder> (new CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-external-source-setting-property-builder
-  "The build-cfn-bot-external-source-setting-property-builder function updates a CfnBot$ExternalSourceSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-external-source-setting-property-builder>
+  "The cfn-bot-external-source-setting-property-builder> function updates a CfnBot$ExternalSourceSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ExternalSourceSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1511,11 +1511,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-external-source-setting-property-builder (new CfnBot$ExternalSourceSettingProperty$Builder) id config))
+  (cfn-bot-external-source-setting-property-builder> (new CfnBot$ExternalSourceSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-fulfillment-code-hook-setting-property-builder
-  "The build-cfn-bot-fulfillment-code-hook-setting-property-builder function updates a CfnBot$FulfillmentCodeHookSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-fulfillment-code-hook-setting-property-builder>
+  "The cfn-bot-fulfillment-code-hook-setting-property-builder> function updates a CfnBot$FulfillmentCodeHookSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$FulfillmentCodeHookSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1548,11 +1548,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-fulfillment-code-hook-setting-property-builder (new CfnBot$FulfillmentCodeHookSettingProperty$Builder) id config))
+  (cfn-bot-fulfillment-code-hook-setting-property-builder> (new CfnBot$FulfillmentCodeHookSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-fulfillment-start-response-specification-property-builder
-  "The build-cfn-bot-fulfillment-start-response-specification-property-builder function updates a CfnBot$FulfillmentStartResponseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-fulfillment-start-response-specification-property-builder>
+  "The cfn-bot-fulfillment-start-response-specification-property-builder> function updates a CfnBot$FulfillmentStartResponseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$FulfillmentStartResponseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1582,11 +1582,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-fulfillment-start-response-specification-property-builder (new CfnBot$FulfillmentStartResponseSpecificationProperty$Builder) id config))
+  (cfn-bot-fulfillment-start-response-specification-property-builder> (new CfnBot$FulfillmentStartResponseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-fulfillment-update-response-specification-property-builder
-  "The build-cfn-bot-fulfillment-update-response-specification-property-builder function updates a CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-fulfillment-update-response-specification-property-builder>
+  "The cfn-bot-fulfillment-update-response-specification-property-builder> function updates a CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1616,11 +1616,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-fulfillment-update-response-specification-property-builder (new CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder) id config))
+  (cfn-bot-fulfillment-update-response-specification-property-builder> (new CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-fulfillment-updates-specification-property-builder
-  "The build-cfn-bot-fulfillment-updates-specification-property-builder function updates a CfnBot$FulfillmentUpdatesSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-fulfillment-updates-specification-property-builder>
+  "The cfn-bot-fulfillment-updates-specification-property-builder> function updates a CfnBot$FulfillmentUpdatesSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$FulfillmentUpdatesSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1653,11 +1653,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-fulfillment-updates-specification-property-builder (new CfnBot$FulfillmentUpdatesSpecificationProperty$Builder) id config))
+  (cfn-bot-fulfillment-updates-specification-property-builder> (new CfnBot$FulfillmentUpdatesSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-grammar-slot-type-setting-property-builder
-  "The build-cfn-bot-grammar-slot-type-setting-property-builder function updates a CfnBot$GrammarSlotTypeSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-grammar-slot-type-setting-property-builder>
+  "The cfn-bot-grammar-slot-type-setting-property-builder> function updates a CfnBot$GrammarSlotTypeSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$GrammarSlotTypeSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1681,11 +1681,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-grammar-slot-type-setting-property-builder (new CfnBot$GrammarSlotTypeSettingProperty$Builder) id config))
+  (cfn-bot-grammar-slot-type-setting-property-builder> (new CfnBot$GrammarSlotTypeSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-grammar-slot-type-source-property-builder
-  "The build-cfn-bot-grammar-slot-type-source-property-builder function updates a CfnBot$GrammarSlotTypeSourceProperty$Builder instance using the provided configuration.
+(defn cfn-bot-grammar-slot-type-source-property-builder>
+  "The cfn-bot-grammar-slot-type-source-property-builder> function updates a CfnBot$GrammarSlotTypeSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$GrammarSlotTypeSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1715,11 +1715,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-grammar-slot-type-source-property-builder (new CfnBot$GrammarSlotTypeSourceProperty$Builder) id config))
+  (cfn-bot-grammar-slot-type-source-property-builder> (new CfnBot$GrammarSlotTypeSourceProperty$Builder) id config))
 
 
-(defn build-cfn-bot-image-response-card-property-builder
-  "The build-cfn-bot-image-response-card-property-builder function updates a CfnBot$ImageResponseCardProperty$Builder instance using the provided configuration.
+(defn cfn-bot-image-response-card-property-builder>
+  "The cfn-bot-image-response-card-property-builder> function updates a CfnBot$ImageResponseCardProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ImageResponseCardProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1752,11 +1752,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-image-response-card-property-builder (new CfnBot$ImageResponseCardProperty$Builder) id config))
+  (cfn-bot-image-response-card-property-builder> (new CfnBot$ImageResponseCardProperty$Builder) id config))
 
 
-(defn build-cfn-bot-initial-response-setting-property-builder
-  "The build-cfn-bot-initial-response-setting-property-builder function updates a CfnBot$InitialResponseSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-initial-response-setting-property-builder>
+  "The cfn-bot-initial-response-setting-property-builder> function updates a CfnBot$InitialResponseSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$InitialResponseSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1789,11 +1789,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-initial-response-setting-property-builder (new CfnBot$InitialResponseSettingProperty$Builder) id config))
+  (cfn-bot-initial-response-setting-property-builder> (new CfnBot$InitialResponseSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-input-context-property-builder
-  "The build-cfn-bot-input-context-property-builder function updates a CfnBot$InputContextProperty$Builder instance using the provided configuration.
+(defn cfn-bot-input-context-property-builder>
+  "The cfn-bot-input-context-property-builder> function updates a CfnBot$InputContextProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$InputContextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1817,11 +1817,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-input-context-property-builder (new CfnBot$InputContextProperty$Builder) id config))
+  (cfn-bot-input-context-property-builder> (new CfnBot$InputContextProperty$Builder) id config))
 
 
-(defn build-cfn-bot-intent-closing-setting-property-builder
-  "The build-cfn-bot-intent-closing-setting-property-builder function updates a CfnBot$IntentClosingSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-intent-closing-setting-property-builder>
+  "The cfn-bot-intent-closing-setting-property-builder> function updates a CfnBot$IntentClosingSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$IntentClosingSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1854,11 +1854,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-intent-closing-setting-property-builder (new CfnBot$IntentClosingSettingProperty$Builder) id config))
+  (cfn-bot-intent-closing-setting-property-builder> (new CfnBot$IntentClosingSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-intent-confirmation-setting-property-builder
-  "The build-cfn-bot-intent-confirmation-setting-property-builder function updates a CfnBot$IntentConfirmationSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-intent-confirmation-setting-property-builder>
+  "The cfn-bot-intent-confirmation-setting-property-builder> function updates a CfnBot$IntentConfirmationSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$IntentConfirmationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1918,11 +1918,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-intent-confirmation-setting-property-builder (new CfnBot$IntentConfirmationSettingProperty$Builder) id config))
+  (cfn-bot-intent-confirmation-setting-property-builder> (new CfnBot$IntentConfirmationSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-intent-override-property-builder
-  "The build-cfn-bot-intent-override-property-builder function updates a CfnBot$IntentOverrideProperty$Builder instance using the provided configuration.
+(defn cfn-bot-intent-override-property-builder>
+  "The cfn-bot-intent-override-property-builder> function updates a CfnBot$IntentOverrideProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$IntentOverrideProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1949,11 +1949,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-intent-override-property-builder (new CfnBot$IntentOverrideProperty$Builder) id config))
+  (cfn-bot-intent-override-property-builder> (new CfnBot$IntentOverrideProperty$Builder) id config))
 
 
-(defn build-cfn-bot-intent-property-builder
-  "The build-cfn-bot-intent-property-builder function updates a CfnBot$IntentProperty$Builder instance using the provided configuration.
+(defn cfn-bot-intent-property-builder>
+  "The cfn-bot-intent-property-builder> function updates a CfnBot$IntentProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$IntentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2016,11 +2016,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-intent-property-builder (new CfnBot$IntentProperty$Builder) id config))
+  (cfn-bot-intent-property-builder> (new CfnBot$IntentProperty$Builder) id config))
 
 
-(defn build-cfn-bot-kendra-configuration-property-builder
-  "The build-cfn-bot-kendra-configuration-property-builder function updates a CfnBot$KendraConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-kendra-configuration-property-builder>
+  "The cfn-bot-kendra-configuration-property-builder> function updates a CfnBot$KendraConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$KendraConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2050,11 +2050,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-kendra-configuration-property-builder (new CfnBot$KendraConfigurationProperty$Builder) id config))
+  (cfn-bot-kendra-configuration-property-builder> (new CfnBot$KendraConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-lambda-code-hook-property-builder
-  "The build-cfn-bot-lambda-code-hook-property-builder function updates a CfnBot$LambdaCodeHookProperty$Builder instance using the provided configuration.
+(defn cfn-bot-lambda-code-hook-property-builder>
+  "The cfn-bot-lambda-code-hook-property-builder> function updates a CfnBot$LambdaCodeHookProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$LambdaCodeHookProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2081,11 +2081,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-lambda-code-hook-property-builder (new CfnBot$LambdaCodeHookProperty$Builder) id config))
+  (cfn-bot-lambda-code-hook-property-builder> (new CfnBot$LambdaCodeHookProperty$Builder) id config))
 
 
-(defn build-cfn-bot-message-group-property-builder
-  "The build-cfn-bot-message-group-property-builder function updates a CfnBot$MessageGroupProperty$Builder instance using the provided configuration.
+(defn cfn-bot-message-group-property-builder>
+  "The cfn-bot-message-group-property-builder> function updates a CfnBot$MessageGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$MessageGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2112,11 +2112,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-message-group-property-builder (new CfnBot$MessageGroupProperty$Builder) id config))
+  (cfn-bot-message-group-property-builder> (new CfnBot$MessageGroupProperty$Builder) id config))
 
 
-(defn build-cfn-bot-message-property-builder
-  "The build-cfn-bot-message-property-builder function updates a CfnBot$MessageProperty$Builder instance using the provided configuration.
+(defn cfn-bot-message-property-builder>
+  "The cfn-bot-message-property-builder> function updates a CfnBot$MessageProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$MessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2149,11 +2149,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-message-property-builder (new CfnBot$MessageProperty$Builder) id config))
+  (cfn-bot-message-property-builder> (new CfnBot$MessageProperty$Builder) id config))
 
 
-(defn build-cfn-bot-multiple-values-setting-property-builder
-  "The build-cfn-bot-multiple-values-setting-property-builder function updates a CfnBot$MultipleValuesSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-multiple-values-setting-property-builder>
+  "The cfn-bot-multiple-values-setting-property-builder> function updates a CfnBot$MultipleValuesSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$MultipleValuesSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2177,11 +2177,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-multiple-values-setting-property-builder (new CfnBot$MultipleValuesSettingProperty$Builder) id config))
+  (cfn-bot-multiple-values-setting-property-builder> (new CfnBot$MultipleValuesSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-obfuscation-setting-property-builder
-  "The build-cfn-bot-obfuscation-setting-property-builder function updates a CfnBot$ObfuscationSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-obfuscation-setting-property-builder>
+  "The cfn-bot-obfuscation-setting-property-builder> function updates a CfnBot$ObfuscationSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ObfuscationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2205,11 +2205,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-obfuscation-setting-property-builder (new CfnBot$ObfuscationSettingProperty$Builder) id config))
+  (cfn-bot-obfuscation-setting-property-builder> (new CfnBot$ObfuscationSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-output-context-property-builder
-  "The build-cfn-bot-output-context-property-builder function updates a CfnBot$OutputContextProperty$Builder instance using the provided configuration.
+(defn cfn-bot-output-context-property-builder>
+  "The cfn-bot-output-context-property-builder> function updates a CfnBot$OutputContextProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$OutputContextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2239,11 +2239,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-output-context-property-builder (new CfnBot$OutputContextProperty$Builder) id config))
+  (cfn-bot-output-context-property-builder> (new CfnBot$OutputContextProperty$Builder) id config))
 
 
-(defn build-cfn-bot-plain-text-message-property-builder
-  "The build-cfn-bot-plain-text-message-property-builder function updates a CfnBot$PlainTextMessageProperty$Builder instance using the provided configuration.
+(defn cfn-bot-plain-text-message-property-builder>
+  "The cfn-bot-plain-text-message-property-builder> function updates a CfnBot$PlainTextMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$PlainTextMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2267,11 +2267,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-plain-text-message-property-builder (new CfnBot$PlainTextMessageProperty$Builder) id config))
+  (cfn-bot-plain-text-message-property-builder> (new CfnBot$PlainTextMessageProperty$Builder) id config))
 
 
-(defn build-cfn-bot-post-dialog-code-hook-invocation-specification-property-builder
-  "The build-cfn-bot-post-dialog-code-hook-invocation-specification-property-builder function updates a CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-post-dialog-code-hook-invocation-specification-property-builder>
+  "The cfn-bot-post-dialog-code-hook-invocation-specification-property-builder> function updates a CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2319,11 +2319,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-post-dialog-code-hook-invocation-specification-property-builder (new CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder) id config))
+  (cfn-bot-post-dialog-code-hook-invocation-specification-property-builder> (new CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-post-fulfillment-status-specification-property-builder
-  "The build-cfn-bot-post-fulfillment-status-specification-property-builder function updates a CfnBot$PostFulfillmentStatusSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-post-fulfillment-status-specification-property-builder>
+  "The cfn-bot-post-fulfillment-status-specification-property-builder> function updates a CfnBot$PostFulfillmentStatusSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$PostFulfillmentStatusSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2371,11 +2371,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-post-fulfillment-status-specification-property-builder (new CfnBot$PostFulfillmentStatusSpecificationProperty$Builder) id config))
+  (cfn-bot-post-fulfillment-status-specification-property-builder> (new CfnBot$PostFulfillmentStatusSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-prompt-attempt-specification-property-builder
-  "The build-cfn-bot-prompt-attempt-specification-property-builder function updates a CfnBot$PromptAttemptSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-prompt-attempt-specification-property-builder>
+  "The cfn-bot-prompt-attempt-specification-property-builder> function updates a CfnBot$PromptAttemptSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$PromptAttemptSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2408,11 +2408,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-prompt-attempt-specification-property-builder (new CfnBot$PromptAttemptSpecificationProperty$Builder) id config))
+  (cfn-bot-prompt-attempt-specification-property-builder> (new CfnBot$PromptAttemptSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-prompt-specification-property-builder
-  "The build-cfn-bot-prompt-specification-property-builder function updates a CfnBot$PromptSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-prompt-specification-property-builder>
+  "The cfn-bot-prompt-specification-property-builder> function updates a CfnBot$PromptSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$PromptSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2448,11 +2448,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-prompt-specification-property-builder (new CfnBot$PromptSpecificationProperty$Builder) id config))
+  (cfn-bot-prompt-specification-property-builder> (new CfnBot$PromptSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-props-builder
-  "The build-cfn-bot-props-builder function updates a CfnBotProps$Builder instance using the provided configuration.
+(defn cfn-bot-props-builder>
+  "The cfn-bot-props-builder> function updates a CfnBotProps$Builder instance using the provided configuration.
   The function takes the CfnBotProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2506,11 +2506,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-props-builder (new CfnBotProps$Builder) id config))
+  (cfn-bot-props-builder> (new CfnBotProps$Builder) id config))
 
 
-(defn build-cfn-bot-response-specification-property-builder
-  "The build-cfn-bot-response-specification-property-builder function updates a CfnBot$ResponseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-response-specification-property-builder>
+  "The cfn-bot-response-specification-property-builder> function updates a CfnBot$ResponseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ResponseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2537,11 +2537,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-response-specification-property-builder (new CfnBot$ResponseSpecificationProperty$Builder) id config))
+  (cfn-bot-response-specification-property-builder> (new CfnBot$ResponseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-s3-bucket-log-destination-property-builder
-  "The build-cfn-bot-s3-bucket-log-destination-property-builder function updates a CfnBot$S3BucketLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-s3-bucket-log-destination-property-builder>
+  "The cfn-bot-s3-bucket-log-destination-property-builder> function updates a CfnBot$S3BucketLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$S3BucketLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2571,11 +2571,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-s3-bucket-log-destination-property-builder (new CfnBot$S3BucketLogDestinationProperty$Builder) id config))
+  (cfn-bot-s3-bucket-log-destination-property-builder> (new CfnBot$S3BucketLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-s3-location-property-builder
-  "The build-cfn-bot-s3-location-property-builder function updates a CfnBot$S3LocationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-s3-location-property-builder>
+  "The cfn-bot-s3-location-property-builder> function updates a CfnBot$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2605,11 +2605,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-s3-location-property-builder (new CfnBot$S3LocationProperty$Builder) id config))
+  (cfn-bot-s3-location-property-builder> (new CfnBot$S3LocationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-sample-utterance-property-builder
-  "The build-cfn-bot-sample-utterance-property-builder function updates a CfnBot$SampleUtteranceProperty$Builder instance using the provided configuration.
+(defn cfn-bot-sample-utterance-property-builder>
+  "The cfn-bot-sample-utterance-property-builder> function updates a CfnBot$SampleUtteranceProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SampleUtteranceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2633,11 +2633,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-sample-utterance-property-builder (new CfnBot$SampleUtteranceProperty$Builder) id config))
+  (cfn-bot-sample-utterance-property-builder> (new CfnBot$SampleUtteranceProperty$Builder) id config))
 
 
-(defn build-cfn-bot-sample-value-property-builder
-  "The build-cfn-bot-sample-value-property-builder function updates a CfnBot$SampleValueProperty$Builder instance using the provided configuration.
+(defn cfn-bot-sample-value-property-builder>
+  "The cfn-bot-sample-value-property-builder> function updates a CfnBot$SampleValueProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SampleValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2661,11 +2661,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-sample-value-property-builder (new CfnBot$SampleValueProperty$Builder) id config))
+  (cfn-bot-sample-value-property-builder> (new CfnBot$SampleValueProperty$Builder) id config))
 
 
-(defn build-cfn-bot-sentiment-analysis-settings-property-builder
-  "The build-cfn-bot-sentiment-analysis-settings-property-builder function updates a CfnBot$SentimentAnalysisSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-sentiment-analysis-settings-property-builder>
+  "The cfn-bot-sentiment-analysis-settings-property-builder> function updates a CfnBot$SentimentAnalysisSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SentimentAnalysisSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2689,11 +2689,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-sentiment-analysis-settings-property-builder (new CfnBot$SentimentAnalysisSettingsProperty$Builder) id config))
+  (cfn-bot-sentiment-analysis-settings-property-builder> (new CfnBot$SentimentAnalysisSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-session-attribute-property-builder
-  "The build-cfn-bot-session-attribute-property-builder function updates a CfnBot$SessionAttributeProperty$Builder instance using the provided configuration.
+(defn cfn-bot-session-attribute-property-builder>
+  "The cfn-bot-session-attribute-property-builder> function updates a CfnBot$SessionAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SessionAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2720,11 +2720,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-session-attribute-property-builder (new CfnBot$SessionAttributeProperty$Builder) id config))
+  (cfn-bot-session-attribute-property-builder> (new CfnBot$SessionAttributeProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-capture-setting-property-builder
-  "The build-cfn-bot-slot-capture-setting-property-builder function updates a CfnBot$SlotCaptureSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-capture-setting-property-builder>
+  "The cfn-bot-slot-capture-setting-property-builder> function updates a CfnBot$SlotCaptureSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotCaptureSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2769,11 +2769,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-capture-setting-property-builder (new CfnBot$SlotCaptureSettingProperty$Builder) id config))
+  (cfn-bot-slot-capture-setting-property-builder> (new CfnBot$SlotCaptureSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-default-value-property-builder
-  "The build-cfn-bot-slot-default-value-property-builder function updates a CfnBot$SlotDefaultValueProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-default-value-property-builder>
+  "The cfn-bot-slot-default-value-property-builder> function updates a CfnBot$SlotDefaultValueProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotDefaultValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2797,11 +2797,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-default-value-property-builder (new CfnBot$SlotDefaultValueProperty$Builder) id config))
+  (cfn-bot-slot-default-value-property-builder> (new CfnBot$SlotDefaultValueProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-default-value-specification-property-builder
-  "The build-cfn-bot-slot-default-value-specification-property-builder function updates a CfnBot$SlotDefaultValueSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-default-value-specification-property-builder>
+  "The cfn-bot-slot-default-value-specification-property-builder> function updates a CfnBot$SlotDefaultValueSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotDefaultValueSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2825,11 +2825,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-default-value-specification-property-builder (new CfnBot$SlotDefaultValueSpecificationProperty$Builder) id config))
+  (cfn-bot-slot-default-value-specification-property-builder> (new CfnBot$SlotDefaultValueSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-priority-property-builder
-  "The build-cfn-bot-slot-priority-property-builder function updates a CfnBot$SlotPriorityProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-priority-property-builder>
+  "The cfn-bot-slot-priority-property-builder> function updates a CfnBot$SlotPriorityProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotPriorityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2856,11 +2856,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-priority-property-builder (new CfnBot$SlotPriorityProperty$Builder) id config))
+  (cfn-bot-slot-priority-property-builder> (new CfnBot$SlotPriorityProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-property-builder
-  "The build-cfn-bot-slot-property-builder function updates a CfnBot$SlotProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-property-builder>
+  "The cfn-bot-slot-property-builder> function updates a CfnBot$SlotProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2899,11 +2899,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-property-builder (new CfnBot$SlotProperty$Builder) id config))
+  (cfn-bot-slot-property-builder> (new CfnBot$SlotProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-type-property-builder
-  "The build-cfn-bot-slot-type-property-builder function updates a CfnBot$SlotTypeProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-type-property-builder>
+  "The cfn-bot-slot-type-property-builder> function updates a CfnBot$SlotTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2942,11 +2942,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-type-property-builder (new CfnBot$SlotTypeProperty$Builder) id config))
+  (cfn-bot-slot-type-property-builder> (new CfnBot$SlotTypeProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-type-value-property-builder
-  "The build-cfn-bot-slot-type-value-property-builder function updates a CfnBot$SlotTypeValueProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-type-value-property-builder>
+  "The cfn-bot-slot-type-value-property-builder> function updates a CfnBot$SlotTypeValueProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotTypeValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2973,11 +2973,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-type-value-property-builder (new CfnBot$SlotTypeValueProperty$Builder) id config))
+  (cfn-bot-slot-type-value-property-builder> (new CfnBot$SlotTypeValueProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-value-elicitation-setting-property-builder
-  "The build-cfn-bot-slot-value-elicitation-setting-property-builder function updates a CfnBot$SlotValueElicitationSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-value-elicitation-setting-property-builder>
+  "The cfn-bot-slot-value-elicitation-setting-property-builder> function updates a CfnBot$SlotValueElicitationSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueElicitationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3016,11 +3016,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-value-elicitation-setting-property-builder (new CfnBot$SlotValueElicitationSettingProperty$Builder) id config))
+  (cfn-bot-slot-value-elicitation-setting-property-builder> (new CfnBot$SlotValueElicitationSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-value-override-map-property-builder
-  "The build-cfn-bot-slot-value-override-map-property-builder function updates a CfnBot$SlotValueOverrideMapProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-value-override-map-property-builder>
+  "The cfn-bot-slot-value-override-map-property-builder> function updates a CfnBot$SlotValueOverrideMapProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueOverrideMapProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3047,11 +3047,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-value-override-map-property-builder (new CfnBot$SlotValueOverrideMapProperty$Builder) id config))
+  (cfn-bot-slot-value-override-map-property-builder> (new CfnBot$SlotValueOverrideMapProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-value-override-property-builder
-  "The build-cfn-bot-slot-value-override-property-builder function updates a CfnBot$SlotValueOverrideProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-value-override-property-builder>
+  "The cfn-bot-slot-value-override-property-builder> function updates a CfnBot$SlotValueOverrideProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueOverrideProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3081,11 +3081,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-value-override-property-builder (new CfnBot$SlotValueOverrideProperty$Builder) id config))
+  (cfn-bot-slot-value-override-property-builder> (new CfnBot$SlotValueOverrideProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-value-property-builder
-  "The build-cfn-bot-slot-value-property-builder function updates a CfnBot$SlotValueProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-value-property-builder>
+  "The cfn-bot-slot-value-property-builder> function updates a CfnBot$SlotValueProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3109,11 +3109,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-value-property-builder (new CfnBot$SlotValueProperty$Builder) id config))
+  (cfn-bot-slot-value-property-builder> (new CfnBot$SlotValueProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-value-regex-filter-property-builder
-  "The build-cfn-bot-slot-value-regex-filter-property-builder function updates a CfnBot$SlotValueRegexFilterProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-value-regex-filter-property-builder>
+  "The cfn-bot-slot-value-regex-filter-property-builder> function updates a CfnBot$SlotValueRegexFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueRegexFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3137,11 +3137,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-value-regex-filter-property-builder (new CfnBot$SlotValueRegexFilterProperty$Builder) id config))
+  (cfn-bot-slot-value-regex-filter-property-builder> (new CfnBot$SlotValueRegexFilterProperty$Builder) id config))
 
 
-(defn build-cfn-bot-slot-value-selection-setting-property-builder
-  "The build-cfn-bot-slot-value-selection-setting-property-builder function updates a CfnBot$SlotValueSelectionSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-slot-value-selection-setting-property-builder>
+  "The cfn-bot-slot-value-selection-setting-property-builder> function updates a CfnBot$SlotValueSelectionSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueSelectionSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3171,11 +3171,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-slot-value-selection-setting-property-builder (new CfnBot$SlotValueSelectionSettingProperty$Builder) id config))
+  (cfn-bot-slot-value-selection-setting-property-builder> (new CfnBot$SlotValueSelectionSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-ssml-message-property-builder
-  "The build-cfn-bot-ssml-message-property-builder function updates a CfnBot$SSMLMessageProperty$Builder instance using the provided configuration.
+(defn cfn-bot-ssml-message-property-builder>
+  "The cfn-bot-ssml-message-property-builder> function updates a CfnBot$SSMLMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SSMLMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3199,11 +3199,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-ssml-message-property-builder (new CfnBot$SSMLMessageProperty$Builder) id config))
+  (cfn-bot-ssml-message-property-builder> (new CfnBot$SSMLMessageProperty$Builder) id config))
 
 
-(defn build-cfn-bot-still-waiting-response-specification-property-builder
-  "The build-cfn-bot-still-waiting-response-specification-property-builder function updates a CfnBot$StillWaitingResponseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-still-waiting-response-specification-property-builder>
+  "The cfn-bot-still-waiting-response-specification-property-builder> function updates a CfnBot$StillWaitingResponseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$StillWaitingResponseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3236,11 +3236,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-still-waiting-response-specification-property-builder (new CfnBot$StillWaitingResponseSpecificationProperty$Builder) id config))
+  (cfn-bot-still-waiting-response-specification-property-builder> (new CfnBot$StillWaitingResponseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-test-bot-alias-settings-property-builder
-  "The build-cfn-bot-test-bot-alias-settings-property-builder function updates a CfnBot$TestBotAliasSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-test-bot-alias-settings-property-builder>
+  "The cfn-bot-test-bot-alias-settings-property-builder> function updates a CfnBot$TestBotAliasSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$TestBotAliasSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3273,11 +3273,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-test-bot-alias-settings-property-builder (new CfnBot$TestBotAliasSettingsProperty$Builder) id config))
+  (cfn-bot-test-bot-alias-settings-property-builder> (new CfnBot$TestBotAliasSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-text-input-specification-property-builder
-  "The build-cfn-bot-text-input-specification-property-builder function updates a CfnBot$TextInputSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-text-input-specification-property-builder>
+  "The cfn-bot-text-input-specification-property-builder> function updates a CfnBot$TextInputSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$TextInputSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3301,11 +3301,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-text-input-specification-property-builder (new CfnBot$TextInputSpecificationProperty$Builder) id config))
+  (cfn-bot-text-input-specification-property-builder> (new CfnBot$TextInputSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-text-log-destination-property-builder
-  "The build-cfn-bot-text-log-destination-property-builder function updates a CfnBot$TextLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-text-log-destination-property-builder>
+  "The cfn-bot-text-log-destination-property-builder> function updates a CfnBot$TextLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$TextLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3329,11 +3329,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-text-log-destination-property-builder (new CfnBot$TextLogDestinationProperty$Builder) id config))
+  (cfn-bot-text-log-destination-property-builder> (new CfnBot$TextLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-text-log-setting-property-builder
-  "The build-cfn-bot-text-log-setting-property-builder function updates a CfnBot$TextLogSettingProperty$Builder instance using the provided configuration.
+(defn cfn-bot-text-log-setting-property-builder>
+  "The cfn-bot-text-log-setting-property-builder> function updates a CfnBot$TextLogSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$TextLogSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3360,11 +3360,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-text-log-setting-property-builder (new CfnBot$TextLogSettingProperty$Builder) id config))
+  (cfn-bot-text-log-setting-property-builder> (new CfnBot$TextLogSettingProperty$Builder) id config))
 
 
-(defn build-cfn-bot-version-bot-version-locale-details-property-builder
-  "The build-cfn-bot-version-bot-version-locale-details-property-builder function updates a CfnBotVersion$BotVersionLocaleDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-version-bot-version-locale-details-property-builder>
+  "The cfn-bot-version-bot-version-locale-details-property-builder> function updates a CfnBotVersion$BotVersionLocaleDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnBotVersion$BotVersionLocaleDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3388,11 +3388,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-version-bot-version-locale-details-property-builder (new CfnBotVersion$BotVersionLocaleDetailsProperty$Builder) id config))
+  (cfn-bot-version-bot-version-locale-details-property-builder> (new CfnBotVersion$BotVersionLocaleDetailsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-version-bot-version-locale-specification-property-builder
-  "The build-cfn-bot-version-bot-version-locale-specification-property-builder function updates a CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-version-bot-version-locale-specification-property-builder>
+  "The cfn-bot-version-bot-version-locale-specification-property-builder> function updates a CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3419,11 +3419,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-version-bot-version-locale-specification-property-builder (new CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder) id config))
+  (cfn-bot-version-bot-version-locale-specification-property-builder> (new CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-bot-version-builder
-  "The build-cfn-bot-version-builder function updates a CfnBotVersion$Builder instance using the provided configuration.
+(defn cfn-bot-version-builder>
+  "The cfn-bot-version-builder> function updates a CfnBotVersion$Builder instance using the provided configuration.
   The function takes the CfnBotVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3453,11 +3453,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bot-version-builder (CfnBotVersion$Builder/create scope (name id)) id config))
+  (cfn-bot-version-builder> (CfnBotVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bot-version-props-builder
-  "The build-cfn-bot-version-props-builder function updates a CfnBotVersionProps$Builder instance using the provided configuration.
+(defn cfn-bot-version-props-builder>
+  "The cfn-bot-version-props-builder> function updates a CfnBotVersionProps$Builder instance using the provided configuration.
   The function takes the CfnBotVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3487,11 +3487,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-version-props-builder (new CfnBotVersionProps$Builder) id config))
+  (cfn-bot-version-props-builder> (new CfnBotVersionProps$Builder) id config))
 
 
-(defn build-cfn-bot-voice-settings-property-builder
-  "The build-cfn-bot-voice-settings-property-builder function updates a CfnBot$VoiceSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-bot-voice-settings-property-builder>
+  "The cfn-bot-voice-settings-property-builder> function updates a CfnBot$VoiceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$VoiceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3518,11 +3518,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-voice-settings-property-builder (new CfnBot$VoiceSettingsProperty$Builder) id config))
+  (cfn-bot-voice-settings-property-builder> (new CfnBot$VoiceSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-bot-wait-and-continue-specification-property-builder
-  "The build-cfn-bot-wait-and-continue-specification-property-builder function updates a CfnBot$WaitAndContinueSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-bot-wait-and-continue-specification-property-builder>
+  "The cfn-bot-wait-and-continue-specification-property-builder> function updates a CfnBot$WaitAndContinueSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$WaitAndContinueSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3555,11 +3555,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bot-wait-and-continue-specification-property-builder (new CfnBot$WaitAndContinueSpecificationProperty$Builder) id config))
+  (cfn-bot-wait-and-continue-specification-property-builder> (new CfnBot$WaitAndContinueSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-resource-policy-builder
-  "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
+(defn cfn-resource-policy-builder>
+  "The cfn-resource-policy-builder> function updates a CfnResourcePolicy$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3586,11 +3586,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-policy-builder (CfnResourcePolicy$Builder/create scope (name id)) id config))
+  (cfn-resource-policy-builder> (CfnResourcePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-policy-props-builder
-  "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
+(defn cfn-resource-policy-props-builder>
+  "The cfn-resource-policy-props-builder> function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3617,4 +3617,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-policy-props-builder (new CfnResourcePolicyProps$Builder) id config))
+  (cfn-resource-policy-props-builder> (new CfnResourcePolicyProps$Builder) id config))

@@ -14,8 +14,8 @@
                                                            CfnAccessPointProps$Builder]))
 
 
-(defn build-cfn-access-point-alias-property-builder
-  "The build-cfn-access-point-alias-property-builder function updates a CfnAccessPoint$AliasProperty$Builder instance using the provided configuration.
+(defn cfn-access-point-alias-property-builder>
+  "The cfn-access-point-alias-property-builder> function updates a CfnAccessPoint$AliasProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$AliasProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -42,11 +42,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-alias-property-builder (new CfnAccessPoint$AliasProperty$Builder) id config))
+  (cfn-access-point-alias-property-builder> (new CfnAccessPoint$AliasProperty$Builder) id config))
 
 
-(defn build-cfn-access-point-aws-lambda-property-builder
-  "The build-cfn-access-point-aws-lambda-property-builder function updates a CfnAccessPoint$AwsLambdaProperty$Builder instance using the provided configuration.
+(defn cfn-access-point-aws-lambda-property-builder>
+  "The cfn-access-point-aws-lambda-property-builder> function updates a CfnAccessPoint$AwsLambdaProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$AwsLambdaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -73,11 +73,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-aws-lambda-property-builder (new CfnAccessPoint$AwsLambdaProperty$Builder) id config))
+  (cfn-access-point-aws-lambda-property-builder> (new CfnAccessPoint$AwsLambdaProperty$Builder) id config))
 
 
-(defn build-cfn-access-point-builder
-  "The build-cfn-access-point-builder function updates a CfnAccessPoint$Builder instance using the provided configuration.
+(defn cfn-access-point-builder>
+  "The cfn-access-point-builder> function updates a CfnAccessPoint$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -104,11 +104,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-access-point-builder (CfnAccessPoint$Builder/create scope (name id)) id config))
+  (cfn-access-point-builder> (CfnAccessPoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-access-point-content-transformation-property-builder
-  "The build-cfn-access-point-content-transformation-property-builder function updates a CfnAccessPoint$ContentTransformationProperty$Builder instance using the provided configuration.
+(defn cfn-access-point-content-transformation-property-builder>
+  "The cfn-access-point-content-transformation-property-builder> function updates a CfnAccessPoint$ContentTransformationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$ContentTransformationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -132,11 +132,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-content-transformation-property-builder (new CfnAccessPoint$ContentTransformationProperty$Builder) id config))
+  (cfn-access-point-content-transformation-property-builder> (new CfnAccessPoint$ContentTransformationProperty$Builder) id config))
 
 
-(defn build-cfn-access-point-object-lambda-configuration-property-builder
-  "The build-cfn-access-point-object-lambda-configuration-property-builder function updates a CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-access-point-object-lambda-configuration-property-builder>
+  "The cfn-access-point-object-lambda-configuration-property-builder> function updates a CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -169,11 +169,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-object-lambda-configuration-property-builder (new CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder) id config))
+  (cfn-access-point-object-lambda-configuration-property-builder> (new CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-access-point-policy-builder
-  "The build-cfn-access-point-policy-builder function updates a CfnAccessPointPolicy$Builder instance using the provided configuration.
+(defn cfn-access-point-policy-builder>
+  "The cfn-access-point-policy-builder> function updates a CfnAccessPointPolicy$Builder instance using the provided configuration.
   The function takes the CfnAccessPointPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -200,11 +200,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-access-point-policy-builder (CfnAccessPointPolicy$Builder/create scope (name id)) id config))
+  (cfn-access-point-policy-builder> (CfnAccessPointPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-access-point-policy-props-builder
-  "The build-cfn-access-point-policy-props-builder function updates a CfnAccessPointPolicyProps$Builder instance using the provided configuration.
+(defn cfn-access-point-policy-props-builder>
+  "The cfn-access-point-policy-props-builder> function updates a CfnAccessPointPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnAccessPointPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -231,11 +231,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-policy-props-builder (new CfnAccessPointPolicyProps$Builder) id config))
+  (cfn-access-point-policy-props-builder> (new CfnAccessPointPolicyProps$Builder) id config))
 
 
-(defn build-cfn-access-point-policy-status-property-builder
-  "The build-cfn-access-point-policy-status-property-builder function updates a CfnAccessPoint$PolicyStatusProperty$Builder instance using the provided configuration.
+(defn cfn-access-point-policy-status-property-builder>
+  "The cfn-access-point-policy-status-property-builder> function updates a CfnAccessPoint$PolicyStatusProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$PolicyStatusProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -259,11 +259,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-policy-status-property-builder (new CfnAccessPoint$PolicyStatusProperty$Builder) id config))
+  (cfn-access-point-policy-status-property-builder> (new CfnAccessPoint$PolicyStatusProperty$Builder) id config))
 
 
-(defn build-cfn-access-point-props-builder
-  "The build-cfn-access-point-props-builder function updates a CfnAccessPointProps$Builder instance using the provided configuration.
+(defn cfn-access-point-props-builder>
+  "The cfn-access-point-props-builder> function updates a CfnAccessPointProps$Builder instance using the provided configuration.
   The function takes the CfnAccessPointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -290,11 +290,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-props-builder (new CfnAccessPointProps$Builder) id config))
+  (cfn-access-point-props-builder> (new CfnAccessPointProps$Builder) id config))
 
 
-(defn build-cfn-access-point-public-access-block-configuration-property-builder
-  "The build-cfn-access-point-public-access-block-configuration-property-builder function updates a CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-access-point-public-access-block-configuration-property-builder>
+  "The cfn-access-point-public-access-block-configuration-property-builder> function updates a CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -327,11 +327,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-public-access-block-configuration-property-builder (new CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder) id config))
+  (cfn-access-point-public-access-block-configuration-property-builder> (new CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-access-point-transformation-configuration-property-builder
-  "The build-cfn-access-point-transformation-configuration-property-builder function updates a CfnAccessPoint$TransformationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-access-point-transformation-configuration-property-builder>
+  "The cfn-access-point-transformation-configuration-property-builder> function updates a CfnAccessPoint$TransformationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$TransformationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -358,4 +358,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-transformation-configuration-property-builder (new CfnAccessPoint$TransformationConfigurationProperty$Builder) id config))
+  (cfn-access-point-transformation-configuration-property-builder> (new CfnAccessPoint$TransformationConfigurationProperty$Builder) id config))

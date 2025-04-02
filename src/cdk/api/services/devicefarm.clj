@@ -18,8 +18,8 @@
                                                        CfnVPCEConfigurationProps$Builder]))
 
 
-(defn build-cfn-device-pool-builder
-  "The build-cfn-device-pool-builder function updates a CfnDevicePool$Builder instance using the provided configuration.
+(defn cfn-device-pool-builder>
+  "The cfn-device-pool-builder> function updates a CfnDevicePool$Builder instance using the provided configuration.
   The function takes the CfnDevicePool$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -58,11 +58,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-device-pool-builder (CfnDevicePool$Builder/create scope (name id)) id config))
+  (cfn-device-pool-builder> (CfnDevicePool$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-device-pool-props-builder
-  "The build-cfn-device-pool-props-builder function updates a CfnDevicePoolProps$Builder instance using the provided configuration.
+(defn cfn-device-pool-props-builder>
+  "The cfn-device-pool-props-builder> function updates a CfnDevicePoolProps$Builder instance using the provided configuration.
   The function takes the CfnDevicePoolProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -101,11 +101,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-device-pool-props-builder (new CfnDevicePoolProps$Builder) id config))
+  (cfn-device-pool-props-builder> (new CfnDevicePoolProps$Builder) id config))
 
 
-(defn build-cfn-device-pool-rule-property-builder
-  "The build-cfn-device-pool-rule-property-builder function updates a CfnDevicePool$RuleProperty$Builder instance using the provided configuration.
+(defn cfn-device-pool-rule-property-builder>
+  "The cfn-device-pool-rule-property-builder> function updates a CfnDevicePool$RuleProperty$Builder instance using the provided configuration.
   The function takes the CfnDevicePool$RuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -135,11 +135,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-device-pool-rule-property-builder (new CfnDevicePool$RuleProperty$Builder) id config))
+  (cfn-device-pool-rule-property-builder> (new CfnDevicePool$RuleProperty$Builder) id config))
 
 
-(defn build-cfn-instance-profile-builder
-  "The build-cfn-instance-profile-builder function updates a CfnInstanceProfile$Builder instance using the provided configuration.
+(defn cfn-instance-profile-builder>
+  "The cfn-instance-profile-builder> function updates a CfnInstanceProfile$Builder instance using the provided configuration.
   The function takes the CfnInstanceProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -178,11 +178,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-instance-profile-builder (CfnInstanceProfile$Builder/create scope (name id)) id config))
+  (cfn-instance-profile-builder> (CfnInstanceProfile$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-instance-profile-props-builder
-  "The build-cfn-instance-profile-props-builder function updates a CfnInstanceProfileProps$Builder instance using the provided configuration.
+(defn cfn-instance-profile-props-builder>
+  "The cfn-instance-profile-props-builder> function updates a CfnInstanceProfileProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -221,11 +221,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-profile-props-builder (new CfnInstanceProfileProps$Builder) id config))
+  (cfn-instance-profile-props-builder> (new CfnInstanceProfileProps$Builder) id config))
 
 
-(defn build-cfn-network-profile-builder
-  "The build-cfn-network-profile-builder function updates a CfnNetworkProfile$Builder instance using the provided configuration.
+(defn cfn-network-profile-builder>
+  "The cfn-network-profile-builder> function updates a CfnNetworkProfile$Builder instance using the provided configuration.
   The function takes the CfnNetworkProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -282,11 +282,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-profile-builder (CfnNetworkProfile$Builder/create scope (name id)) id config))
+  (cfn-network-profile-builder> (CfnNetworkProfile$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-profile-props-builder
-  "The build-cfn-network-profile-props-builder function updates a CfnNetworkProfileProps$Builder instance using the provided configuration.
+(defn cfn-network-profile-props-builder>
+  "The cfn-network-profile-props-builder> function updates a CfnNetworkProfileProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -343,11 +343,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-profile-props-builder (new CfnNetworkProfileProps$Builder) id config))
+  (cfn-network-profile-props-builder> (new CfnNetworkProfileProps$Builder) id config))
 
 
-(defn build-cfn-project-builder
-  "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
+(defn cfn-project-builder>
+  "The cfn-project-builder> function updates a CfnProject$Builder instance using the provided configuration.
   The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -380,11 +380,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+  (cfn-project-builder> (CfnProject$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-project-props-builder
-  "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
+(defn cfn-project-props-builder>
+  "The cfn-project-props-builder> function updates a CfnProjectProps$Builder instance using the provided configuration.
   The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -417,11 +417,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))
+  (cfn-project-props-builder> (new CfnProjectProps$Builder) id config))
 
 
-(defn build-cfn-project-vpc-config-property-builder
-  "The build-cfn-project-vpc-config-property-builder function updates a CfnProject$VpcConfigProperty$Builder instance using the provided configuration.
+(defn cfn-project-vpc-config-property-builder>
+  "The cfn-project-vpc-config-property-builder> function updates a CfnProject$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -451,11 +451,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-project-vpc-config-property-builder (new CfnProject$VpcConfigProperty$Builder) id config))
+  (cfn-project-vpc-config-property-builder> (new CfnProject$VpcConfigProperty$Builder) id config))
 
 
-(defn build-cfn-test-grid-project-builder
-  "The build-cfn-test-grid-project-builder function updates a CfnTestGridProject$Builder instance using the provided configuration.
+(defn cfn-test-grid-project-builder>
+  "The cfn-test-grid-project-builder> function updates a CfnTestGridProject$Builder instance using the provided configuration.
   The function takes the CfnTestGridProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -488,11 +488,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-test-grid-project-builder (CfnTestGridProject$Builder/create scope (name id)) id config))
+  (cfn-test-grid-project-builder> (CfnTestGridProject$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-test-grid-project-props-builder
-  "The build-cfn-test-grid-project-props-builder function updates a CfnTestGridProjectProps$Builder instance using the provided configuration.
+(defn cfn-test-grid-project-props-builder>
+  "The cfn-test-grid-project-props-builder> function updates a CfnTestGridProjectProps$Builder instance using the provided configuration.
   The function takes the CfnTestGridProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -525,11 +525,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-test-grid-project-props-builder (new CfnTestGridProjectProps$Builder) id config))
+  (cfn-test-grid-project-props-builder> (new CfnTestGridProjectProps$Builder) id config))
 
 
-(defn build-cfn-test-grid-project-vpc-config-property-builder
-  "The build-cfn-test-grid-project-vpc-config-property-builder function updates a CfnTestGridProject$VpcConfigProperty$Builder instance using the provided configuration.
+(defn cfn-test-grid-project-vpc-config-property-builder>
+  "The cfn-test-grid-project-vpc-config-property-builder> function updates a CfnTestGridProject$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnTestGridProject$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -559,11 +559,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-test-grid-project-vpc-config-property-builder (new CfnTestGridProject$VpcConfigProperty$Builder) id config))
+  (cfn-test-grid-project-vpc-config-property-builder> (new CfnTestGridProject$VpcConfigProperty$Builder) id config))
 
 
-(defn build-cfn-vpce-configuration-builder
-  "The build-cfn-vpce-configuration-builder function updates a CfnVPCEConfiguration$Builder instance using the provided configuration.
+(defn cfn-vpce-configuration-builder>
+  "The cfn-vpce-configuration-builder> function updates a CfnVPCEConfiguration$Builder instance using the provided configuration.
   The function takes the CfnVPCEConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -599,11 +599,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpce-configuration-builder (CfnVPCEConfiguration$Builder/create scope (name id)) id config))
+  (cfn-vpce-configuration-builder> (CfnVPCEConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpce-configuration-props-builder
-  "The build-cfn-vpce-configuration-props-builder function updates a CfnVPCEConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-vpce-configuration-props-builder>
+  "The cfn-vpce-configuration-props-builder> function updates a CfnVPCEConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnVPCEConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -639,4 +639,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpce-configuration-props-builder (new CfnVPCEConfigurationProps$Builder) id config))
+  (cfn-vpce-configuration-props-builder> (new CfnVPCEConfigurationProps$Builder) id config))

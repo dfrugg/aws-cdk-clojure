@@ -11,8 +11,8 @@
                                                              CfnCampaignProps$Builder]))
 
 
-(defn build-cfn-campaign-agentless-dialer-config-property-builder
-  "The build-cfn-campaign-agentless-dialer-config-property-builder function updates a CfnCampaign$AgentlessDialerConfigProperty$Builder instance using the provided configuration.
+(defn cfn-campaign-agentless-dialer-config-property-builder>
+  "The cfn-campaign-agentless-dialer-config-property-builder> function updates a CfnCampaign$AgentlessDialerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$AgentlessDialerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -36,11 +36,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-campaign-agentless-dialer-config-property-builder (new CfnCampaign$AgentlessDialerConfigProperty$Builder) id config))
+  (cfn-campaign-agentless-dialer-config-property-builder> (new CfnCampaign$AgentlessDialerConfigProperty$Builder) id config))
 
 
-(defn build-cfn-campaign-answer-machine-detection-config-property-builder
-  "The build-cfn-campaign-answer-machine-detection-config-property-builder function updates a CfnCampaign$AnswerMachineDetectionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-campaign-answer-machine-detection-config-property-builder>
+  "The cfn-campaign-answer-machine-detection-config-property-builder> function updates a CfnCampaign$AnswerMachineDetectionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$AnswerMachineDetectionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -67,11 +67,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-campaign-answer-machine-detection-config-property-builder (new CfnCampaign$AnswerMachineDetectionConfigProperty$Builder) id config))
+  (cfn-campaign-answer-machine-detection-config-property-builder> (new CfnCampaign$AnswerMachineDetectionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-campaign-builder
-  "The build-cfn-campaign-builder function updates a CfnCampaign$Builder instance using the provided configuration.
+(defn cfn-campaign-builder>
+  "The cfn-campaign-builder> function updates a CfnCampaign$Builder instance using the provided configuration.
   The function takes the CfnCampaign$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -107,11 +107,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-campaign-builder (CfnCampaign$Builder/create scope (name id)) id config))
+  (cfn-campaign-builder> (CfnCampaign$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-campaign-dialer-config-property-builder
-  "The build-cfn-campaign-dialer-config-property-builder function updates a CfnCampaign$DialerConfigProperty$Builder instance using the provided configuration.
+(defn cfn-campaign-dialer-config-property-builder>
+  "The cfn-campaign-dialer-config-property-builder> function updates a CfnCampaign$DialerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$DialerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -141,11 +141,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-campaign-dialer-config-property-builder (new CfnCampaign$DialerConfigProperty$Builder) id config))
+  (cfn-campaign-dialer-config-property-builder> (new CfnCampaign$DialerConfigProperty$Builder) id config))
 
 
-(defn build-cfn-campaign-outbound-call-config-property-builder
-  "The build-cfn-campaign-outbound-call-config-property-builder function updates a CfnCampaign$OutboundCallConfigProperty$Builder instance using the provided configuration.
+(defn cfn-campaign-outbound-call-config-property-builder>
+  "The cfn-campaign-outbound-call-config-property-builder> function updates a CfnCampaign$OutboundCallConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$OutboundCallConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -178,11 +178,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-campaign-outbound-call-config-property-builder (new CfnCampaign$OutboundCallConfigProperty$Builder) id config))
+  (cfn-campaign-outbound-call-config-property-builder> (new CfnCampaign$OutboundCallConfigProperty$Builder) id config))
 
 
-(defn build-cfn-campaign-predictive-dialer-config-property-builder
-  "The build-cfn-campaign-predictive-dialer-config-property-builder function updates a CfnCampaign$PredictiveDialerConfigProperty$Builder instance using the provided configuration.
+(defn cfn-campaign-predictive-dialer-config-property-builder>
+  "The cfn-campaign-predictive-dialer-config-property-builder> function updates a CfnCampaign$PredictiveDialerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$PredictiveDialerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -209,11 +209,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-campaign-predictive-dialer-config-property-builder (new CfnCampaign$PredictiveDialerConfigProperty$Builder) id config))
+  (cfn-campaign-predictive-dialer-config-property-builder> (new CfnCampaign$PredictiveDialerConfigProperty$Builder) id config))
 
 
-(defn build-cfn-campaign-progressive-dialer-config-property-builder
-  "The build-cfn-campaign-progressive-dialer-config-property-builder function updates a CfnCampaign$ProgressiveDialerConfigProperty$Builder instance using the provided configuration.
+(defn cfn-campaign-progressive-dialer-config-property-builder>
+  "The cfn-campaign-progressive-dialer-config-property-builder> function updates a CfnCampaign$ProgressiveDialerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$ProgressiveDialerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -240,11 +240,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-campaign-progressive-dialer-config-property-builder (new CfnCampaign$ProgressiveDialerConfigProperty$Builder) id config))
+  (cfn-campaign-progressive-dialer-config-property-builder> (new CfnCampaign$ProgressiveDialerConfigProperty$Builder) id config))
 
 
-(defn build-cfn-campaign-props-builder
-  "The build-cfn-campaign-props-builder function updates a CfnCampaignProps$Builder instance using the provided configuration.
+(defn cfn-campaign-props-builder>
+  "The cfn-campaign-props-builder> function updates a CfnCampaignProps$Builder instance using the provided configuration.
   The function takes the CfnCampaignProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -280,4 +280,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-campaign-props-builder (new CfnCampaignProps$Builder) id config))
+  (cfn-campaign-props-builder> (new CfnCampaignProps$Builder) id config))

@@ -12,8 +12,8 @@
                                                          CfnRepositoryProps$Builder]))
 
 
-(defn build-cfn-domain-builder
-  "The build-cfn-domain-builder function updates a CfnDomain$Builder instance using the provided configuration.
+(defn cfn-domain-builder>
+  "The cfn-domain-builder> function updates a CfnDomain$Builder instance using the provided configuration.
   The function takes the CfnDomain$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -46,11 +46,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+  (cfn-domain-builder> (CfnDomain$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-domain-props-builder
-  "The build-cfn-domain-props-builder function updates a CfnDomainProps$Builder instance using the provided configuration.
+(defn cfn-domain-props-builder>
+  "The cfn-domain-props-builder> function updates a CfnDomainProps$Builder instance using the provided configuration.
   The function takes the CfnDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -83,11 +83,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
+  (cfn-domain-props-builder> (new CfnDomainProps$Builder) id config))
 
 
-(defn build-cfn-package-group-builder
-  "The build-cfn-package-group-builder function updates a CfnPackageGroup$Builder instance using the provided configuration.
+(defn cfn-package-group-builder>
+  "The cfn-package-group-builder> function updates a CfnPackageGroup$Builder instance using the provided configuration.
   The function takes the CfnPackageGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -129,11 +129,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-package-group-builder (CfnPackageGroup$Builder/create scope (name id)) id config))
+  (cfn-package-group-builder> (CfnPackageGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-package-group-origin-configuration-property-builder
-  "The build-cfn-package-group-origin-configuration-property-builder function updates a CfnPackageGroup$OriginConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-package-group-origin-configuration-property-builder>
+  "The cfn-package-group-origin-configuration-property-builder> function updates a CfnPackageGroup$OriginConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPackageGroup$OriginConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -157,11 +157,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-package-group-origin-configuration-property-builder (new CfnPackageGroup$OriginConfigurationProperty$Builder) id config))
+  (cfn-package-group-origin-configuration-property-builder> (new CfnPackageGroup$OriginConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-package-group-props-builder
-  "The build-cfn-package-group-props-builder function updates a CfnPackageGroupProps$Builder instance using the provided configuration.
+(defn cfn-package-group-props-builder>
+  "The cfn-package-group-props-builder> function updates a CfnPackageGroupProps$Builder instance using the provided configuration.
   The function takes the CfnPackageGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -203,11 +203,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-package-group-props-builder (new CfnPackageGroupProps$Builder) id config))
+  (cfn-package-group-props-builder> (new CfnPackageGroupProps$Builder) id config))
 
 
-(defn build-cfn-package-group-restriction-type-property-builder
-  "The build-cfn-package-group-restriction-type-property-builder function updates a CfnPackageGroup$RestrictionTypeProperty$Builder instance using the provided configuration.
+(defn cfn-package-group-restriction-type-property-builder>
+  "The cfn-package-group-restriction-type-property-builder> function updates a CfnPackageGroup$RestrictionTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnPackageGroup$RestrictionTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -234,11 +234,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-package-group-restriction-type-property-builder (new CfnPackageGroup$RestrictionTypeProperty$Builder) id config))
+  (cfn-package-group-restriction-type-property-builder> (new CfnPackageGroup$RestrictionTypeProperty$Builder) id config))
 
 
-(defn build-cfn-package-group-restrictions-property-builder
-  "The build-cfn-package-group-restrictions-property-builder function updates a CfnPackageGroup$RestrictionsProperty$Builder instance using the provided configuration.
+(defn cfn-package-group-restrictions-property-builder>
+  "The cfn-package-group-restrictions-property-builder> function updates a CfnPackageGroup$RestrictionsProperty$Builder instance using the provided configuration.
   The function takes the CfnPackageGroup$RestrictionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -268,11 +268,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-package-group-restrictions-property-builder (new CfnPackageGroup$RestrictionsProperty$Builder) id config))
+  (cfn-package-group-restrictions-property-builder> (new CfnPackageGroup$RestrictionsProperty$Builder) id config))
 
 
-(defn build-cfn-repository-builder
-  "The build-cfn-repository-builder function updates a CfnRepository$Builder instance using the provided configuration.
+(defn cfn-repository-builder>
+  "The cfn-repository-builder> function updates a CfnRepository$Builder instance using the provided configuration.
   The function takes the CfnRepository$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -317,11 +317,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-repository-builder (CfnRepository$Builder/create scope (name id)) id config))
+  (cfn-repository-builder> (CfnRepository$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-repository-props-builder
-  "The build-cfn-repository-props-builder function updates a CfnRepositoryProps$Builder instance using the provided configuration.
+(defn cfn-repository-props-builder>
+  "The cfn-repository-props-builder> function updates a CfnRepositoryProps$Builder instance using the provided configuration.
   The function takes the CfnRepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -366,4 +366,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-repository-props-builder (new CfnRepositoryProps$Builder) id config))
+  (cfn-repository-props-builder> (new CfnRepositoryProps$Builder) id config))

@@ -30,8 +30,8 @@
                                                          CfnWorkerConfigurationProps$Builder]))
 
 
-(defn build-cfn-connector-apache-kafka-cluster-property-builder
-  "The build-cfn-connector-apache-kafka-cluster-property-builder function updates a CfnConnector$ApacheKafkaClusterProperty$Builder instance using the provided configuration.
+(defn cfn-connector-apache-kafka-cluster-property-builder>
+  "The cfn-connector-apache-kafka-cluster-property-builder> function updates a CfnConnector$ApacheKafkaClusterProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$ApacheKafkaClusterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -58,11 +58,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-apache-kafka-cluster-property-builder (new CfnConnector$ApacheKafkaClusterProperty$Builder) id config))
+  (cfn-connector-apache-kafka-cluster-property-builder> (new CfnConnector$ApacheKafkaClusterProperty$Builder) id config))
 
 
-(defn build-cfn-connector-auto-scaling-property-builder
-  "The build-cfn-connector-auto-scaling-property-builder function updates a CfnConnector$AutoScalingProperty$Builder instance using the provided configuration.
+(defn cfn-connector-auto-scaling-property-builder>
+  "The cfn-connector-auto-scaling-property-builder> function updates a CfnConnector$AutoScalingProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$AutoScalingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -98,11 +98,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-auto-scaling-property-builder (new CfnConnector$AutoScalingProperty$Builder) id config))
+  (cfn-connector-auto-scaling-property-builder> (new CfnConnector$AutoScalingProperty$Builder) id config))
 
 
-(defn build-cfn-connector-builder
-  "The build-cfn-connector-builder function updates a CfnConnector$Builder instance using the provided configuration.
+(defn cfn-connector-builder>
+  "The cfn-connector-builder> function updates a CfnConnector$Builder instance using the provided configuration.
   The function takes the CfnConnector$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -162,11 +162,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-connector-builder (CfnConnector$Builder/create scope (name id)) id config))
+  (cfn-connector-builder> (CfnConnector$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-connector-capacity-property-builder
-  "The build-cfn-connector-capacity-property-builder function updates a CfnConnector$CapacityProperty$Builder instance using the provided configuration.
+(defn cfn-connector-capacity-property-builder>
+  "The cfn-connector-capacity-property-builder> function updates a CfnConnector$CapacityProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$CapacityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -193,11 +193,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-capacity-property-builder (new CfnConnector$CapacityProperty$Builder) id config))
+  (cfn-connector-capacity-property-builder> (new CfnConnector$CapacityProperty$Builder) id config))
 
 
-(defn build-cfn-connector-cloud-watch-logs-log-delivery-property-builder
-  "The build-cfn-connector-cloud-watch-logs-log-delivery-property-builder function updates a CfnConnector$CloudWatchLogsLogDeliveryProperty$Builder instance using the provided configuration.
+(defn cfn-connector-cloud-watch-logs-log-delivery-property-builder>
+  "The cfn-connector-cloud-watch-logs-log-delivery-property-builder> function updates a CfnConnector$CloudWatchLogsLogDeliveryProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$CloudWatchLogsLogDeliveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -224,11 +224,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-cloud-watch-logs-log-delivery-property-builder (new CfnConnector$CloudWatchLogsLogDeliveryProperty$Builder) id config))
+  (cfn-connector-cloud-watch-logs-log-delivery-property-builder> (new CfnConnector$CloudWatchLogsLogDeliveryProperty$Builder) id config))
 
 
-(defn build-cfn-connector-custom-plugin-property-builder
-  "The build-cfn-connector-custom-plugin-property-builder function updates a CfnConnector$CustomPluginProperty$Builder instance using the provided configuration.
+(defn cfn-connector-custom-plugin-property-builder>
+  "The cfn-connector-custom-plugin-property-builder> function updates a CfnConnector$CustomPluginProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$CustomPluginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -255,11 +255,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-custom-plugin-property-builder (new CfnConnector$CustomPluginProperty$Builder) id config))
+  (cfn-connector-custom-plugin-property-builder> (new CfnConnector$CustomPluginProperty$Builder) id config))
 
 
-(defn build-cfn-connector-firehose-log-delivery-property-builder
-  "The build-cfn-connector-firehose-log-delivery-property-builder function updates a CfnConnector$FirehoseLogDeliveryProperty$Builder instance using the provided configuration.
+(defn cfn-connector-firehose-log-delivery-property-builder>
+  "The cfn-connector-firehose-log-delivery-property-builder> function updates a CfnConnector$FirehoseLogDeliveryProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$FirehoseLogDeliveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -286,11 +286,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-firehose-log-delivery-property-builder (new CfnConnector$FirehoseLogDeliveryProperty$Builder) id config))
+  (cfn-connector-firehose-log-delivery-property-builder> (new CfnConnector$FirehoseLogDeliveryProperty$Builder) id config))
 
 
-(defn build-cfn-connector-kafka-cluster-client-authentication-property-builder
-  "The build-cfn-connector-kafka-cluster-client-authentication-property-builder function updates a CfnConnector$KafkaClusterClientAuthenticationProperty$Builder instance using the provided configuration.
+(defn cfn-connector-kafka-cluster-client-authentication-property-builder>
+  "The cfn-connector-kafka-cluster-client-authentication-property-builder> function updates a CfnConnector$KafkaClusterClientAuthenticationProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$KafkaClusterClientAuthenticationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -314,11 +314,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-kafka-cluster-client-authentication-property-builder (new CfnConnector$KafkaClusterClientAuthenticationProperty$Builder) id config))
+  (cfn-connector-kafka-cluster-client-authentication-property-builder> (new CfnConnector$KafkaClusterClientAuthenticationProperty$Builder) id config))
 
 
-(defn build-cfn-connector-kafka-cluster-encryption-in-transit-property-builder
-  "The build-cfn-connector-kafka-cluster-encryption-in-transit-property-builder function updates a CfnConnector$KafkaClusterEncryptionInTransitProperty$Builder instance using the provided configuration.
+(defn cfn-connector-kafka-cluster-encryption-in-transit-property-builder>
+  "The cfn-connector-kafka-cluster-encryption-in-transit-property-builder> function updates a CfnConnector$KafkaClusterEncryptionInTransitProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$KafkaClusterEncryptionInTransitProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -342,11 +342,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-kafka-cluster-encryption-in-transit-property-builder (new CfnConnector$KafkaClusterEncryptionInTransitProperty$Builder) id config))
+  (cfn-connector-kafka-cluster-encryption-in-transit-property-builder> (new CfnConnector$KafkaClusterEncryptionInTransitProperty$Builder) id config))
 
 
-(defn build-cfn-connector-kafka-cluster-property-builder
-  "The build-cfn-connector-kafka-cluster-property-builder function updates a CfnConnector$KafkaClusterProperty$Builder instance using the provided configuration.
+(defn cfn-connector-kafka-cluster-property-builder>
+  "The cfn-connector-kafka-cluster-property-builder> function updates a CfnConnector$KafkaClusterProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$KafkaClusterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -370,11 +370,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-kafka-cluster-property-builder (new CfnConnector$KafkaClusterProperty$Builder) id config))
+  (cfn-connector-kafka-cluster-property-builder> (new CfnConnector$KafkaClusterProperty$Builder) id config))
 
 
-(defn build-cfn-connector-log-delivery-property-builder
-  "The build-cfn-connector-log-delivery-property-builder function updates a CfnConnector$LogDeliveryProperty$Builder instance using the provided configuration.
+(defn cfn-connector-log-delivery-property-builder>
+  "The cfn-connector-log-delivery-property-builder> function updates a CfnConnector$LogDeliveryProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$LogDeliveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -398,11 +398,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-log-delivery-property-builder (new CfnConnector$LogDeliveryProperty$Builder) id config))
+  (cfn-connector-log-delivery-property-builder> (new CfnConnector$LogDeliveryProperty$Builder) id config))
 
 
-(defn build-cfn-connector-plugin-property-builder
-  "The build-cfn-connector-plugin-property-builder function updates a CfnConnector$PluginProperty$Builder instance using the provided configuration.
+(defn cfn-connector-plugin-property-builder>
+  "The cfn-connector-plugin-property-builder> function updates a CfnConnector$PluginProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$PluginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -426,11 +426,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-plugin-property-builder (new CfnConnector$PluginProperty$Builder) id config))
+  (cfn-connector-plugin-property-builder> (new CfnConnector$PluginProperty$Builder) id config))
 
 
-(defn build-cfn-connector-props-builder
-  "The build-cfn-connector-props-builder function updates a CfnConnectorProps$Builder instance using the provided configuration.
+(defn cfn-connector-props-builder>
+  "The cfn-connector-props-builder> function updates a CfnConnectorProps$Builder instance using the provided configuration.
   The function takes the CfnConnectorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -490,11 +490,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-props-builder (new CfnConnectorProps$Builder) id config))
+  (cfn-connector-props-builder> (new CfnConnectorProps$Builder) id config))
 
 
-(defn build-cfn-connector-provisioned-capacity-property-builder
-  "The build-cfn-connector-provisioned-capacity-property-builder function updates a CfnConnector$ProvisionedCapacityProperty$Builder instance using the provided configuration.
+(defn cfn-connector-provisioned-capacity-property-builder>
+  "The cfn-connector-provisioned-capacity-property-builder> function updates a CfnConnector$ProvisionedCapacityProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$ProvisionedCapacityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -521,11 +521,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-provisioned-capacity-property-builder (new CfnConnector$ProvisionedCapacityProperty$Builder) id config))
+  (cfn-connector-provisioned-capacity-property-builder> (new CfnConnector$ProvisionedCapacityProperty$Builder) id config))
 
 
-(defn build-cfn-connector-s3-log-delivery-property-builder
-  "The build-cfn-connector-s3-log-delivery-property-builder function updates a CfnConnector$S3LogDeliveryProperty$Builder instance using the provided configuration.
+(defn cfn-connector-s3-log-delivery-property-builder>
+  "The cfn-connector-s3-log-delivery-property-builder> function updates a CfnConnector$S3LogDeliveryProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$S3LogDeliveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -555,11 +555,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-s3-log-delivery-property-builder (new CfnConnector$S3LogDeliveryProperty$Builder) id config))
+  (cfn-connector-s3-log-delivery-property-builder> (new CfnConnector$S3LogDeliveryProperty$Builder) id config))
 
 
-(defn build-cfn-connector-scale-in-policy-property-builder
-  "The build-cfn-connector-scale-in-policy-property-builder function updates a CfnConnector$ScaleInPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-connector-scale-in-policy-property-builder>
+  "The cfn-connector-scale-in-policy-property-builder> function updates a CfnConnector$ScaleInPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$ScaleInPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -583,11 +583,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-scale-in-policy-property-builder (new CfnConnector$ScaleInPolicyProperty$Builder) id config))
+  (cfn-connector-scale-in-policy-property-builder> (new CfnConnector$ScaleInPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-connector-scale-out-policy-property-builder
-  "The build-cfn-connector-scale-out-policy-property-builder function updates a CfnConnector$ScaleOutPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-connector-scale-out-policy-property-builder>
+  "The cfn-connector-scale-out-policy-property-builder> function updates a CfnConnector$ScaleOutPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$ScaleOutPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -611,11 +611,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-scale-out-policy-property-builder (new CfnConnector$ScaleOutPolicyProperty$Builder) id config))
+  (cfn-connector-scale-out-policy-property-builder> (new CfnConnector$ScaleOutPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-connector-vpc-property-builder
-  "The build-cfn-connector-vpc-property-builder function updates a CfnConnector$VpcProperty$Builder instance using the provided configuration.
+(defn cfn-connector-vpc-property-builder>
+  "The cfn-connector-vpc-property-builder> function updates a CfnConnector$VpcProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$VpcProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -642,11 +642,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-vpc-property-builder (new CfnConnector$VpcProperty$Builder) id config))
+  (cfn-connector-vpc-property-builder> (new CfnConnector$VpcProperty$Builder) id config))
 
 
-(defn build-cfn-connector-worker-configuration-property-builder
-  "The build-cfn-connector-worker-configuration-property-builder function updates a CfnConnector$WorkerConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-connector-worker-configuration-property-builder>
+  "The cfn-connector-worker-configuration-property-builder> function updates a CfnConnector$WorkerConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$WorkerConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -673,11 +673,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-worker-configuration-property-builder (new CfnConnector$WorkerConfigurationProperty$Builder) id config))
+  (cfn-connector-worker-configuration-property-builder> (new CfnConnector$WorkerConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-connector-worker-log-delivery-property-builder
-  "The build-cfn-connector-worker-log-delivery-property-builder function updates a CfnConnector$WorkerLogDeliveryProperty$Builder instance using the provided configuration.
+(defn cfn-connector-worker-log-delivery-property-builder>
+  "The cfn-connector-worker-log-delivery-property-builder> function updates a CfnConnector$WorkerLogDeliveryProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$WorkerLogDeliveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -707,11 +707,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connector-worker-log-delivery-property-builder (new CfnConnector$WorkerLogDeliveryProperty$Builder) id config))
+  (cfn-connector-worker-log-delivery-property-builder> (new CfnConnector$WorkerLogDeliveryProperty$Builder) id config))
 
 
-(defn build-cfn-custom-plugin-builder
-  "The build-cfn-custom-plugin-builder function updates a CfnCustomPlugin$Builder instance using the provided configuration.
+(defn cfn-custom-plugin-builder>
+  "The cfn-custom-plugin-builder> function updates a CfnCustomPlugin$Builder instance using the provided configuration.
   The function takes the CfnCustomPlugin$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -747,11 +747,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-custom-plugin-builder (CfnCustomPlugin$Builder/create scope (name id)) id config))
+  (cfn-custom-plugin-builder> (CfnCustomPlugin$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-custom-plugin-custom-plugin-file-description-property-builder
-  "The build-cfn-custom-plugin-custom-plugin-file-description-property-builder function updates a CfnCustomPlugin$CustomPluginFileDescriptionProperty$Builder instance using the provided configuration.
+(defn cfn-custom-plugin-custom-plugin-file-description-property-builder>
+  "The cfn-custom-plugin-custom-plugin-file-description-property-builder> function updates a CfnCustomPlugin$CustomPluginFileDescriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomPlugin$CustomPluginFileDescriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -778,11 +778,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-plugin-custom-plugin-file-description-property-builder (new CfnCustomPlugin$CustomPluginFileDescriptionProperty$Builder) id config))
+  (cfn-custom-plugin-custom-plugin-file-description-property-builder> (new CfnCustomPlugin$CustomPluginFileDescriptionProperty$Builder) id config))
 
 
-(defn build-cfn-custom-plugin-custom-plugin-location-property-builder
-  "The build-cfn-custom-plugin-custom-plugin-location-property-builder function updates a CfnCustomPlugin$CustomPluginLocationProperty$Builder instance using the provided configuration.
+(defn cfn-custom-plugin-custom-plugin-location-property-builder>
+  "The cfn-custom-plugin-custom-plugin-location-property-builder> function updates a CfnCustomPlugin$CustomPluginLocationProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomPlugin$CustomPluginLocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -806,11 +806,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-plugin-custom-plugin-location-property-builder (new CfnCustomPlugin$CustomPluginLocationProperty$Builder) id config))
+  (cfn-custom-plugin-custom-plugin-location-property-builder> (new CfnCustomPlugin$CustomPluginLocationProperty$Builder) id config))
 
 
-(defn build-cfn-custom-plugin-props-builder
-  "The build-cfn-custom-plugin-props-builder function updates a CfnCustomPluginProps$Builder instance using the provided configuration.
+(defn cfn-custom-plugin-props-builder>
+  "The cfn-custom-plugin-props-builder> function updates a CfnCustomPluginProps$Builder instance using the provided configuration.
   The function takes the CfnCustomPluginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -846,11 +846,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-plugin-props-builder (new CfnCustomPluginProps$Builder) id config))
+  (cfn-custom-plugin-props-builder> (new CfnCustomPluginProps$Builder) id config))
 
 
-(defn build-cfn-custom-plugin-s3-location-property-builder
-  "The build-cfn-custom-plugin-s3-location-property-builder function updates a CfnCustomPlugin$S3LocationProperty$Builder instance using the provided configuration.
+(defn cfn-custom-plugin-s3-location-property-builder>
+  "The cfn-custom-plugin-s3-location-property-builder> function updates a CfnCustomPlugin$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomPlugin$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -880,11 +880,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-plugin-s3-location-property-builder (new CfnCustomPlugin$S3LocationProperty$Builder) id config))
+  (cfn-custom-plugin-s3-location-property-builder> (new CfnCustomPlugin$S3LocationProperty$Builder) id config))
 
 
-(defn build-cfn-worker-configuration-builder
-  "The build-cfn-worker-configuration-builder function updates a CfnWorkerConfiguration$Builder instance using the provided configuration.
+(defn cfn-worker-configuration-builder>
+  "The cfn-worker-configuration-builder> function updates a CfnWorkerConfiguration$Builder instance using the provided configuration.
   The function takes the CfnWorkerConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -917,11 +917,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-worker-configuration-builder (CfnWorkerConfiguration$Builder/create scope (name id)) id config))
+  (cfn-worker-configuration-builder> (CfnWorkerConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-worker-configuration-props-builder
-  "The build-cfn-worker-configuration-props-builder function updates a CfnWorkerConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-worker-configuration-props-builder>
+  "The cfn-worker-configuration-props-builder> function updates a CfnWorkerConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnWorkerConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -954,4 +954,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-worker-configuration-props-builder (new CfnWorkerConfigurationProps$Builder) id config))
+  (cfn-worker-configuration-props-builder> (new CfnWorkerConfigurationProps$Builder) id config))

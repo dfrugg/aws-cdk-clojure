@@ -10,8 +10,8 @@
                                                              CfnInferenceSchedulerProps$Builder]))
 
 
-(defn build-cfn-inference-scheduler-builder
-  "The build-cfn-inference-scheduler-builder function updates a CfnInferenceScheduler$Builder instance using the provided configuration.
+(defn cfn-inference-scheduler-builder>
+  "The cfn-inference-scheduler-builder> function updates a CfnInferenceScheduler$Builder instance using the provided configuration.
   The function takes the CfnInferenceScheduler$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -59,11 +59,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-inference-scheduler-builder (CfnInferenceScheduler$Builder/create scope (name id)) id config))
+  (cfn-inference-scheduler-builder> (CfnInferenceScheduler$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-inference-scheduler-data-input-configuration-property-builder
-  "The build-cfn-inference-scheduler-data-input-configuration-property-builder function updates a CfnInferenceScheduler$DataInputConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-inference-scheduler-data-input-configuration-property-builder>
+  "The cfn-inference-scheduler-data-input-configuration-property-builder> function updates a CfnInferenceScheduler$DataInputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInferenceScheduler$DataInputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -93,11 +93,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-inference-scheduler-data-input-configuration-property-builder (new CfnInferenceScheduler$DataInputConfigurationProperty$Builder) id config))
+  (cfn-inference-scheduler-data-input-configuration-property-builder> (new CfnInferenceScheduler$DataInputConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-inference-scheduler-data-output-configuration-property-builder
-  "The build-cfn-inference-scheduler-data-output-configuration-property-builder function updates a CfnInferenceScheduler$DataOutputConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-inference-scheduler-data-output-configuration-property-builder>
+  "The cfn-inference-scheduler-data-output-configuration-property-builder> function updates a CfnInferenceScheduler$DataOutputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInferenceScheduler$DataOutputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -124,11 +124,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-inference-scheduler-data-output-configuration-property-builder (new CfnInferenceScheduler$DataOutputConfigurationProperty$Builder) id config))
+  (cfn-inference-scheduler-data-output-configuration-property-builder> (new CfnInferenceScheduler$DataOutputConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-inference-scheduler-input-name-configuration-property-builder
-  "The build-cfn-inference-scheduler-input-name-configuration-property-builder function updates a CfnInferenceScheduler$InputNameConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-inference-scheduler-input-name-configuration-property-builder>
+  "The cfn-inference-scheduler-input-name-configuration-property-builder> function updates a CfnInferenceScheduler$InputNameConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInferenceScheduler$InputNameConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -155,11 +155,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-inference-scheduler-input-name-configuration-property-builder (new CfnInferenceScheduler$InputNameConfigurationProperty$Builder) id config))
+  (cfn-inference-scheduler-input-name-configuration-property-builder> (new CfnInferenceScheduler$InputNameConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-inference-scheduler-props-builder
-  "The build-cfn-inference-scheduler-props-builder function updates a CfnInferenceSchedulerProps$Builder instance using the provided configuration.
+(defn cfn-inference-scheduler-props-builder>
+  "The cfn-inference-scheduler-props-builder> function updates a CfnInferenceSchedulerProps$Builder instance using the provided configuration.
   The function takes the CfnInferenceSchedulerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -207,11 +207,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-inference-scheduler-props-builder (new CfnInferenceSchedulerProps$Builder) id config))
+  (cfn-inference-scheduler-props-builder> (new CfnInferenceSchedulerProps$Builder) id config))
 
 
-(defn build-cfn-inference-scheduler-s3-input-configuration-property-builder
-  "The build-cfn-inference-scheduler-s3-input-configuration-property-builder function updates a CfnInferenceScheduler$S3InputConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-inference-scheduler-s3-input-configuration-property-builder>
+  "The cfn-inference-scheduler-s3-input-configuration-property-builder> function updates a CfnInferenceScheduler$S3InputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInferenceScheduler$S3InputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -238,11 +238,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-inference-scheduler-s3-input-configuration-property-builder (new CfnInferenceScheduler$S3InputConfigurationProperty$Builder) id config))
+  (cfn-inference-scheduler-s3-input-configuration-property-builder> (new CfnInferenceScheduler$S3InputConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-inference-scheduler-s3-output-configuration-property-builder
-  "The build-cfn-inference-scheduler-s3-output-configuration-property-builder function updates a CfnInferenceScheduler$S3OutputConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-inference-scheduler-s3-output-configuration-property-builder>
+  "The cfn-inference-scheduler-s3-output-configuration-property-builder> function updates a CfnInferenceScheduler$S3OutputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInferenceScheduler$S3OutputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -269,4 +269,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-inference-scheduler-s3-output-configuration-property-builder (new CfnInferenceScheduler$S3OutputConfigurationProperty$Builder) id config))
+  (cfn-inference-scheduler-s3-output-configuration-property-builder> (new CfnInferenceScheduler$S3OutputConfigurationProperty$Builder) id config))

@@ -6,8 +6,8 @@
                                                            CfnSimulationProps$Builder]))
 
 
-(defn build-cfn-simulation-builder
-  "The build-cfn-simulation-builder function updates a CfnSimulation$Builder instance using the provided configuration.
+(defn cfn-simulation-builder>
+  "The cfn-simulation-builder> function updates a CfnSimulation$Builder instance using the provided configuration.
   The function takes the CfnSimulation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -43,11 +43,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-simulation-builder (CfnSimulation$Builder/create scope (name id)) id config))
+  (cfn-simulation-builder> (CfnSimulation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-simulation-props-builder
-  "The build-cfn-simulation-props-builder function updates a CfnSimulationProps$Builder instance using the provided configuration.
+(defn cfn-simulation-props-builder>
+  "The cfn-simulation-props-builder> function updates a CfnSimulationProps$Builder instance using the provided configuration.
   The function takes the CfnSimulationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -83,11 +83,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simulation-props-builder (new CfnSimulationProps$Builder) id config))
+  (cfn-simulation-props-builder> (new CfnSimulationProps$Builder) id config))
 
 
-(defn build-cfn-simulation-s3-location-property-builder
-  "The build-cfn-simulation-s3-location-property-builder function updates a CfnSimulation$S3LocationProperty$Builder instance using the provided configuration.
+(defn cfn-simulation-s3-location-property-builder>
+  "The cfn-simulation-s3-location-property-builder> function updates a CfnSimulation$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnSimulation$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -114,4 +114,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simulation-s3-location-property-builder (new CfnSimulation$S3LocationProperty$Builder) id config))
+  (cfn-simulation-s3-location-property-builder> (new CfnSimulation$S3LocationProperty$Builder) id config))

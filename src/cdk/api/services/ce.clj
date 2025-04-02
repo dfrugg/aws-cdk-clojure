@@ -12,8 +12,8 @@
                                                CfnCostCategoryProps$Builder]))
 
 
-(defn build-cfn-anomaly-monitor-builder
-  "The build-cfn-anomaly-monitor-builder function updates a CfnAnomalyMonitor$Builder instance using the provided configuration.
+(defn cfn-anomaly-monitor-builder>
+  "The cfn-anomaly-monitor-builder> function updates a CfnAnomalyMonitor$Builder instance using the provided configuration.
   The function takes the CfnAnomalyMonitor$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -49,11 +49,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-anomaly-monitor-builder (CfnAnomalyMonitor$Builder/create scope (name id)) id config))
+  (cfn-anomaly-monitor-builder> (CfnAnomalyMonitor$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-anomaly-monitor-props-builder
-  "The build-cfn-anomaly-monitor-props-builder function updates a CfnAnomalyMonitorProps$Builder instance using the provided configuration.
+(defn cfn-anomaly-monitor-props-builder>
+  "The cfn-anomaly-monitor-props-builder> function updates a CfnAnomalyMonitorProps$Builder instance using the provided configuration.
   The function takes the CfnAnomalyMonitorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -89,11 +89,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-anomaly-monitor-props-builder (new CfnAnomalyMonitorProps$Builder) id config))
+  (cfn-anomaly-monitor-props-builder> (new CfnAnomalyMonitorProps$Builder) id config))
 
 
-(defn build-cfn-anomaly-monitor-resource-tag-property-builder
-  "The build-cfn-anomaly-monitor-resource-tag-property-builder function updates a CfnAnomalyMonitor$ResourceTagProperty$Builder instance using the provided configuration.
+(defn cfn-anomaly-monitor-resource-tag-property-builder>
+  "The cfn-anomaly-monitor-resource-tag-property-builder> function updates a CfnAnomalyMonitor$ResourceTagProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyMonitor$ResourceTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -120,11 +120,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-anomaly-monitor-resource-tag-property-builder (new CfnAnomalyMonitor$ResourceTagProperty$Builder) id config))
+  (cfn-anomaly-monitor-resource-tag-property-builder> (new CfnAnomalyMonitor$ResourceTagProperty$Builder) id config))
 
 
-(defn build-cfn-anomaly-subscription-builder
-  "The build-cfn-anomaly-subscription-builder function updates a CfnAnomalySubscription$Builder instance using the provided configuration.
+(defn cfn-anomaly-subscription-builder>
+  "The cfn-anomaly-subscription-builder> function updates a CfnAnomalySubscription$Builder instance using the provided configuration.
   The function takes the CfnAnomalySubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -166,11 +166,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-anomaly-subscription-builder (CfnAnomalySubscription$Builder/create scope (name id)) id config))
+  (cfn-anomaly-subscription-builder> (CfnAnomalySubscription$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-anomaly-subscription-props-builder
-  "The build-cfn-anomaly-subscription-props-builder function updates a CfnAnomalySubscriptionProps$Builder instance using the provided configuration.
+(defn cfn-anomaly-subscription-props-builder>
+  "The cfn-anomaly-subscription-props-builder> function updates a CfnAnomalySubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnAnomalySubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -212,11 +212,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-anomaly-subscription-props-builder (new CfnAnomalySubscriptionProps$Builder) id config))
+  (cfn-anomaly-subscription-props-builder> (new CfnAnomalySubscriptionProps$Builder) id config))
 
 
-(defn build-cfn-anomaly-subscription-resource-tag-property-builder
-  "The build-cfn-anomaly-subscription-resource-tag-property-builder function updates a CfnAnomalySubscription$ResourceTagProperty$Builder instance using the provided configuration.
+(defn cfn-anomaly-subscription-resource-tag-property-builder>
+  "The cfn-anomaly-subscription-resource-tag-property-builder> function updates a CfnAnomalySubscription$ResourceTagProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalySubscription$ResourceTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -243,11 +243,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-anomaly-subscription-resource-tag-property-builder (new CfnAnomalySubscription$ResourceTagProperty$Builder) id config))
+  (cfn-anomaly-subscription-resource-tag-property-builder> (new CfnAnomalySubscription$ResourceTagProperty$Builder) id config))
 
 
-(defn build-cfn-anomaly-subscription-subscriber-property-builder
-  "The build-cfn-anomaly-subscription-subscriber-property-builder function updates a CfnAnomalySubscription$SubscriberProperty$Builder instance using the provided configuration.
+(defn cfn-anomaly-subscription-subscriber-property-builder>
+  "The cfn-anomaly-subscription-subscriber-property-builder> function updates a CfnAnomalySubscription$SubscriberProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalySubscription$SubscriberProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -277,11 +277,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-anomaly-subscription-subscriber-property-builder (new CfnAnomalySubscription$SubscriberProperty$Builder) id config))
+  (cfn-anomaly-subscription-subscriber-property-builder> (new CfnAnomalySubscription$SubscriberProperty$Builder) id config))
 
 
-(defn build-cfn-cost-category-builder
-  "The build-cfn-cost-category-builder function updates a CfnCostCategory$Builder instance using the provided configuration.
+(defn cfn-cost-category-builder>
+  "The cfn-cost-category-builder> function updates a CfnCostCategory$Builder instance using the provided configuration.
   The function takes the CfnCostCategory$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -317,11 +317,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cost-category-builder (CfnCostCategory$Builder/create scope (name id)) id config))
+  (cfn-cost-category-builder> (CfnCostCategory$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cost-category-props-builder
-  "The build-cfn-cost-category-props-builder function updates a CfnCostCategoryProps$Builder instance using the provided configuration.
+(defn cfn-cost-category-props-builder>
+  "The cfn-cost-category-props-builder> function updates a CfnCostCategoryProps$Builder instance using the provided configuration.
   The function takes the CfnCostCategoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -357,4 +357,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cost-category-props-builder (new CfnCostCategoryProps$Builder) id config))
+  (cfn-cost-category-props-builder> (new CfnCostCategoryProps$Builder) id config))

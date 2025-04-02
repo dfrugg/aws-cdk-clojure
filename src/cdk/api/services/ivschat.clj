@@ -12,8 +12,8 @@
                                                     CfnRoomProps$Builder]))
 
 
-(defn build-cfn-logging-configuration-builder
-  "The build-cfn-logging-configuration-builder function updates a CfnLoggingConfiguration$Builder instance using the provided configuration.
+(defn cfn-logging-configuration-builder>
+  "The cfn-logging-configuration-builder> function updates a CfnLoggingConfiguration$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -43,11 +43,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-logging-configuration-builder (CfnLoggingConfiguration$Builder/create scope (name id)) id config))
+  (cfn-logging-configuration-builder> (CfnLoggingConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder
-  "The build-cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder function updates a CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder>
+  "The cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder> function updates a CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -71,11 +71,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder (new CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder) id config))
+  (cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder> (new CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-logging-configuration-destination-configuration-property-builder
-  "The build-cfn-logging-configuration-destination-configuration-property-builder function updates a CfnLoggingConfiguration$DestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-logging-configuration-destination-configuration-property-builder>
+  "The cfn-logging-configuration-destination-configuration-property-builder> function updates a CfnLoggingConfiguration$DestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -105,11 +105,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-logging-configuration-destination-configuration-property-builder (new CfnLoggingConfiguration$DestinationConfigurationProperty$Builder) id config))
+  (cfn-logging-configuration-destination-configuration-property-builder> (new CfnLoggingConfiguration$DestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-logging-configuration-firehose-destination-configuration-property-builder
-  "The build-cfn-logging-configuration-firehose-destination-configuration-property-builder function updates a CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-logging-configuration-firehose-destination-configuration-property-builder>
+  "The cfn-logging-configuration-firehose-destination-configuration-property-builder> function updates a CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -133,11 +133,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-logging-configuration-firehose-destination-configuration-property-builder (new CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder) id config))
+  (cfn-logging-configuration-firehose-destination-configuration-property-builder> (new CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-logging-configuration-props-builder
-  "The build-cfn-logging-configuration-props-builder function updates a CfnLoggingConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-logging-configuration-props-builder>
+  "The cfn-logging-configuration-props-builder> function updates a CfnLoggingConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -167,11 +167,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-logging-configuration-props-builder (new CfnLoggingConfigurationProps$Builder) id config))
+  (cfn-logging-configuration-props-builder> (new CfnLoggingConfigurationProps$Builder) id config))
 
 
-(defn build-cfn-logging-configuration-s3-destination-configuration-property-builder
-  "The build-cfn-logging-configuration-s3-destination-configuration-property-builder function updates a CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-logging-configuration-s3-destination-configuration-property-builder>
+  "The cfn-logging-configuration-s3-destination-configuration-property-builder> function updates a CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -195,11 +195,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-logging-configuration-s3-destination-configuration-property-builder (new CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder) id config))
+  (cfn-logging-configuration-s3-destination-configuration-property-builder> (new CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-room-builder
-  "The build-cfn-room-builder function updates a CfnRoom$Builder instance using the provided configuration.
+(defn cfn-room-builder>
+  "The cfn-room-builder> function updates a CfnRoom$Builder instance using the provided configuration.
   The function takes the CfnRoom$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -238,11 +238,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-room-builder (CfnRoom$Builder/create scope (name id)) id config))
+  (cfn-room-builder> (CfnRoom$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-room-message-review-handler-property-builder
-  "The build-cfn-room-message-review-handler-property-builder function updates a CfnRoom$MessageReviewHandlerProperty$Builder instance using the provided configuration.
+(defn cfn-room-message-review-handler-property-builder>
+  "The cfn-room-message-review-handler-property-builder> function updates a CfnRoom$MessageReviewHandlerProperty$Builder instance using the provided configuration.
   The function takes the CfnRoom$MessageReviewHandlerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -269,11 +269,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-room-message-review-handler-property-builder (new CfnRoom$MessageReviewHandlerProperty$Builder) id config))
+  (cfn-room-message-review-handler-property-builder> (new CfnRoom$MessageReviewHandlerProperty$Builder) id config))
 
 
-(defn build-cfn-room-props-builder
-  "The build-cfn-room-props-builder function updates a CfnRoomProps$Builder instance using the provided configuration.
+(defn cfn-room-props-builder>
+  "The cfn-room-props-builder> function updates a CfnRoomProps$Builder instance using the provided configuration.
   The function takes the CfnRoomProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -312,4 +312,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-room-props-builder (new CfnRoomProps$Builder) id config))
+  (cfn-room-props-builder> (new CfnRoomProps$Builder) id config))

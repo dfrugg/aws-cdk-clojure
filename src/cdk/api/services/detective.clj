@@ -9,8 +9,8 @@
                                                       CfnOrganizationAdminProps$Builder]))
 
 
-(defn build-cfn-graph-builder
-  "The build-cfn-graph-builder function updates a CfnGraph$Builder instance using the provided configuration.
+(defn cfn-graph-builder>
+  "The cfn-graph-builder> function updates a CfnGraph$Builder instance using the provided configuration.
   The function takes the CfnGraph$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -37,11 +37,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-graph-builder (CfnGraph$Builder/create scope (name id)) id config))
+  (cfn-graph-builder> (CfnGraph$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-graph-props-builder
-  "The build-cfn-graph-props-builder function updates a CfnGraphProps$Builder instance using the provided configuration.
+(defn cfn-graph-props-builder>
+  "The cfn-graph-props-builder> function updates a CfnGraphProps$Builder instance using the provided configuration.
   The function takes the CfnGraphProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -68,11 +68,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-graph-props-builder (new CfnGraphProps$Builder) id config))
+  (cfn-graph-props-builder> (new CfnGraphProps$Builder) id config))
 
 
-(defn build-cfn-member-invitation-builder
-  "The build-cfn-member-invitation-builder function updates a CfnMemberInvitation$Builder instance using the provided configuration.
+(defn cfn-member-invitation-builder>
+  "The cfn-member-invitation-builder> function updates a CfnMemberInvitation$Builder instance using the provided configuration.
   The function takes the CfnMemberInvitation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -108,11 +108,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-member-invitation-builder (CfnMemberInvitation$Builder/create scope (name id)) id config))
+  (cfn-member-invitation-builder> (CfnMemberInvitation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-member-invitation-props-builder
-  "The build-cfn-member-invitation-props-builder function updates a CfnMemberInvitationProps$Builder instance using the provided configuration.
+(defn cfn-member-invitation-props-builder>
+  "The cfn-member-invitation-props-builder> function updates a CfnMemberInvitationProps$Builder instance using the provided configuration.
   The function takes the CfnMemberInvitationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -148,11 +148,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-member-invitation-props-builder (new CfnMemberInvitationProps$Builder) id config))
+  (cfn-member-invitation-props-builder> (new CfnMemberInvitationProps$Builder) id config))
 
 
-(defn build-cfn-organization-admin-builder
-  "The build-cfn-organization-admin-builder function updates a CfnOrganizationAdmin$Builder instance using the provided configuration.
+(defn cfn-organization-admin-builder>
+  "The cfn-organization-admin-builder> function updates a CfnOrganizationAdmin$Builder instance using the provided configuration.
   The function takes the CfnOrganizationAdmin$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -176,11 +176,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-organization-admin-builder (CfnOrganizationAdmin$Builder/create scope (name id)) id config))
+  (cfn-organization-admin-builder> (CfnOrganizationAdmin$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-organization-admin-props-builder
-  "The build-cfn-organization-admin-props-builder function updates a CfnOrganizationAdminProps$Builder instance using the provided configuration.
+(defn cfn-organization-admin-props-builder>
+  "The cfn-organization-admin-props-builder> function updates a CfnOrganizationAdminProps$Builder instance using the provided configuration.
   The function takes the CfnOrganizationAdminProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -204,4 +204,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-organization-admin-props-builder (new CfnOrganizationAdminProps$Builder) id config))
+  (cfn-organization-admin-props-builder> (new CfnOrganizationAdminProps$Builder) id config))

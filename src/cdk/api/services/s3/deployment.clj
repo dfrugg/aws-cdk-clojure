@@ -61,8 +61,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :deep-archive data) StorageClass/DEEP_ARCHIVE)))
 
 
-(defn build-bucket-deployment-builder
-  "The build-bucket-deployment-builder function updates a BucketDeployment$Builder instance using the provided configuration.
+(defn bucket-deployment-builder>
+  "The bucket-deployment-builder> function updates a BucketDeployment$Builder instance using the provided configuration.
   The function takes the BucketDeployment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -179,11 +179,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-bucket-deployment-builder (BucketDeployment$Builder/create scope (name id)) id config))
+  (bucket-deployment-builder> (BucketDeployment$Builder/create scope (name id)) id config))
 
 
-(defn build-bucket-deployment-props-builder
-  "The build-bucket-deployment-props-builder function updates a BucketDeploymentProps$Builder instance using the provided configuration.
+(defn bucket-deployment-props-builder>
+  "The bucket-deployment-props-builder> function updates a BucketDeploymentProps$Builder instance using the provided configuration.
   The function takes the BucketDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -300,11 +300,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bucket-deployment-props-builder (new BucketDeploymentProps$Builder) id config))
+  (bucket-deployment-props-builder> (new BucketDeploymentProps$Builder) id config))
 
 
-(defn build-deploy-time-substituted-file-builder
-  "The build-deploy-time-substituted-file-builder function updates a DeployTimeSubstitutedFile$Builder instance using the provided configuration.
+(defn deploy-time-substituted-file-builder>
+  "The deploy-time-substituted-file-builder> function updates a DeployTimeSubstitutedFile$Builder instance using the provided configuration.
   The function takes the DeployTimeSubstitutedFile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -340,11 +340,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-deploy-time-substituted-file-builder (DeployTimeSubstitutedFile$Builder/create scope (name id)) id config))
+  (deploy-time-substituted-file-builder> (DeployTimeSubstitutedFile$Builder/create scope (name id)) id config))
 
 
-(defn build-deploy-time-substituted-file-props-builder
-  "The build-deploy-time-substituted-file-props-builder function updates a DeployTimeSubstitutedFileProps$Builder instance using the provided configuration.
+(defn deploy-time-substituted-file-props-builder>
+  "The deploy-time-substituted-file-props-builder> function updates a DeployTimeSubstitutedFileProps$Builder instance using the provided configuration.
   The function takes the DeployTimeSubstitutedFileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -380,11 +380,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-deploy-time-substituted-file-props-builder (new DeployTimeSubstitutedFileProps$Builder) id config))
+  (deploy-time-substituted-file-props-builder> (new DeployTimeSubstitutedFileProps$Builder) id config))
 
 
-(defn build-deployment-source-context-builder
-  "The build-deployment-source-context-builder function updates a DeploymentSourceContext$Builder instance using the provided configuration.
+(defn deployment-source-context-builder>
+  "The deployment-source-context-builder> function updates a DeploymentSourceContext$Builder instance using the provided configuration.
   The function takes the DeploymentSourceContext$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -408,11 +408,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-deployment-source-context-builder (new DeploymentSourceContext$Builder) id config))
+  (deployment-source-context-builder> (new DeploymentSourceContext$Builder) id config))
 
 
-(defn build-source-config-builder
-  "The build-source-config-builder function updates a SourceConfig$Builder instance using the provided configuration.
+(defn source-config-builder>
+  "The source-config-builder> function updates a SourceConfig$Builder instance using the provided configuration.
   The function takes the SourceConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -442,4 +442,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-source-config-builder (new SourceConfig$Builder) id config))
+  (source-config-builder> (new SourceConfig$Builder) id config))

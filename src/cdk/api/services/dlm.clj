@@ -26,8 +26,8 @@
                                                 CfnLifecyclePolicyProps$Builder]))
 
 
-(defn build-cfn-lifecycle-policy-action-property-builder
-  "The build-cfn-lifecycle-policy-action-property-builder function updates a CfnLifecyclePolicy$ActionProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-action-property-builder>
+  "The cfn-lifecycle-policy-action-property-builder> function updates a CfnLifecyclePolicy$ActionProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -54,11 +54,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-action-property-builder (new CfnLifecyclePolicy$ActionProperty$Builder) id config))
+  (cfn-lifecycle-policy-action-property-builder> (new CfnLifecyclePolicy$ActionProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-archive-retain-rule-property-builder
-  "The build-cfn-lifecycle-policy-archive-retain-rule-property-builder function updates a CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-archive-retain-rule-property-builder>
+  "The cfn-lifecycle-policy-archive-retain-rule-property-builder> function updates a CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -82,11 +82,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-archive-retain-rule-property-builder (new CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-archive-retain-rule-property-builder> (new CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-archive-rule-property-builder
-  "The build-cfn-lifecycle-policy-archive-rule-property-builder function updates a CfnLifecyclePolicy$ArchiveRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-archive-rule-property-builder>
+  "The cfn-lifecycle-policy-archive-rule-property-builder> function updates a CfnLifecyclePolicy$ArchiveRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ArchiveRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -110,11 +110,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-archive-rule-property-builder (new CfnLifecyclePolicy$ArchiveRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-archive-rule-property-builder> (new CfnLifecyclePolicy$ArchiveRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-builder
-  "The build-cfn-lifecycle-policy-builder function updates a CfnLifecyclePolicy$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-builder>
+  "The cfn-lifecycle-policy-builder> function updates a CfnLifecyclePolicy$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -171,11 +171,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-lifecycle-policy-builder (CfnLifecyclePolicy$Builder/create scope (name id)) id config))
+  (cfn-lifecycle-policy-builder> (CfnLifecyclePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-lifecycle-policy-create-rule-property-builder
-  "The build-cfn-lifecycle-policy-create-rule-property-builder function updates a CfnLifecyclePolicy$CreateRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-create-rule-property-builder>
+  "The cfn-lifecycle-policy-create-rule-property-builder> function updates a CfnLifecyclePolicy$CreateRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$CreateRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -214,11 +214,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-create-rule-property-builder (new CfnLifecyclePolicy$CreateRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-create-rule-property-builder> (new CfnLifecyclePolicy$CreateRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-cross-region-copy-action-property-builder
-  "The build-cfn-lifecycle-policy-cross-region-copy-action-property-builder function updates a CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-cross-region-copy-action-property-builder>
+  "The cfn-lifecycle-policy-cross-region-copy-action-property-builder> function updates a CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -248,11 +248,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-cross-region-copy-action-property-builder (new CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder) id config))
+  (cfn-lifecycle-policy-cross-region-copy-action-property-builder> (new CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder
-  "The build-cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder function updates a CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder>
+  "The cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder> function updates a CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -279,11 +279,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder (new CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder> (new CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder
-  "The build-cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder function updates a CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder>
+  "The cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder> function updates a CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -310,11 +310,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder (new CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder> (new CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-cross-region-copy-rule-property-builder
-  "The build-cfn-lifecycle-policy-cross-region-copy-rule-property-builder function updates a CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-cross-region-copy-rule-property-builder>
+  "The cfn-lifecycle-policy-cross-region-copy-rule-property-builder> function updates a CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -356,11 +356,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-cross-region-copy-rule-property-builder (new CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-cross-region-copy-rule-property-builder> (new CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-deprecate-rule-property-builder
-  "The build-cfn-lifecycle-policy-deprecate-rule-property-builder function updates a CfnLifecyclePolicy$DeprecateRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-deprecate-rule-property-builder>
+  "The cfn-lifecycle-policy-deprecate-rule-property-builder> function updates a CfnLifecyclePolicy$DeprecateRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$DeprecateRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -390,11 +390,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-deprecate-rule-property-builder (new CfnLifecyclePolicy$DeprecateRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-deprecate-rule-property-builder> (new CfnLifecyclePolicy$DeprecateRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-encryption-configuration-property-builder
-  "The build-cfn-lifecycle-policy-encryption-configuration-property-builder function updates a CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-encryption-configuration-property-builder>
+  "The cfn-lifecycle-policy-encryption-configuration-property-builder> function updates a CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -421,11 +421,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-encryption-configuration-property-builder (new CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder) id config))
+  (cfn-lifecycle-policy-encryption-configuration-property-builder> (new CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-event-parameters-property-builder
-  "The build-cfn-lifecycle-policy-event-parameters-property-builder function updates a CfnLifecyclePolicy$EventParametersProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-event-parameters-property-builder>
+  "The cfn-lifecycle-policy-event-parameters-property-builder> function updates a CfnLifecyclePolicy$EventParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$EventParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -455,11 +455,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-event-parameters-property-builder (new CfnLifecyclePolicy$EventParametersProperty$Builder) id config))
+  (cfn-lifecycle-policy-event-parameters-property-builder> (new CfnLifecyclePolicy$EventParametersProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-event-source-property-builder
-  "The build-cfn-lifecycle-policy-event-source-property-builder function updates a CfnLifecyclePolicy$EventSourceProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-event-source-property-builder>
+  "The cfn-lifecycle-policy-event-source-property-builder> function updates a CfnLifecyclePolicy$EventSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$EventSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -486,11 +486,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-event-source-property-builder (new CfnLifecyclePolicy$EventSourceProperty$Builder) id config))
+  (cfn-lifecycle-policy-event-source-property-builder> (new CfnLifecyclePolicy$EventSourceProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-exclusions-property-builder
-  "The build-cfn-lifecycle-policy-exclusions-property-builder function updates a CfnLifecyclePolicy$ExclusionsProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-exclusions-property-builder>
+  "The cfn-lifecycle-policy-exclusions-property-builder> function updates a CfnLifecyclePolicy$ExclusionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ExclusionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -520,11 +520,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-exclusions-property-builder (new CfnLifecyclePolicy$ExclusionsProperty$Builder) id config))
+  (cfn-lifecycle-policy-exclusions-property-builder> (new CfnLifecyclePolicy$ExclusionsProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-fast-restore-rule-property-builder
-  "The build-cfn-lifecycle-policy-fast-restore-rule-property-builder function updates a CfnLifecyclePolicy$FastRestoreRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-fast-restore-rule-property-builder>
+  "The cfn-lifecycle-policy-fast-restore-rule-property-builder> function updates a CfnLifecyclePolicy$FastRestoreRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$FastRestoreRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -557,11 +557,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-fast-restore-rule-property-builder (new CfnLifecyclePolicy$FastRestoreRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-fast-restore-rule-property-builder> (new CfnLifecyclePolicy$FastRestoreRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-parameters-property-builder
-  "The build-cfn-lifecycle-policy-parameters-property-builder function updates a CfnLifecyclePolicy$ParametersProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-parameters-property-builder>
+  "The cfn-lifecycle-policy-parameters-property-builder> function updates a CfnLifecyclePolicy$ParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -591,11 +591,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-parameters-property-builder (new CfnLifecyclePolicy$ParametersProperty$Builder) id config))
+  (cfn-lifecycle-policy-parameters-property-builder> (new CfnLifecyclePolicy$ParametersProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-policy-details-property-builder
-  "The build-cfn-lifecycle-policy-policy-details-property-builder function updates a CfnLifecyclePolicy$PolicyDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-policy-details-property-builder>
+  "The cfn-lifecycle-policy-policy-details-property-builder> function updates a CfnLifecyclePolicy$PolicyDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$PolicyDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -664,11 +664,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-policy-details-property-builder (new CfnLifecyclePolicy$PolicyDetailsProperty$Builder) id config))
+  (cfn-lifecycle-policy-policy-details-property-builder> (new CfnLifecyclePolicy$PolicyDetailsProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-props-builder
-  "The build-cfn-lifecycle-policy-props-builder function updates a CfnLifecyclePolicyProps$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-props-builder>
+  "The cfn-lifecycle-policy-props-builder> function updates a CfnLifecyclePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -725,11 +725,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-props-builder (new CfnLifecyclePolicyProps$Builder) id config))
+  (cfn-lifecycle-policy-props-builder> (new CfnLifecyclePolicyProps$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-retain-rule-property-builder
-  "The build-cfn-lifecycle-policy-retain-rule-property-builder function updates a CfnLifecyclePolicy$RetainRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-retain-rule-property-builder>
+  "The cfn-lifecycle-policy-retain-rule-property-builder> function updates a CfnLifecyclePolicy$RetainRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$RetainRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -759,11 +759,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-retain-rule-property-builder (new CfnLifecyclePolicy$RetainRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-retain-rule-property-builder> (new CfnLifecyclePolicy$RetainRuleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-retention-archive-tier-property-builder
-  "The build-cfn-lifecycle-policy-retention-archive-tier-property-builder function updates a CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-retention-archive-tier-property-builder>
+  "The cfn-lifecycle-policy-retention-archive-tier-property-builder> function updates a CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -793,11 +793,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-retention-archive-tier-property-builder (new CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder) id config))
+  (cfn-lifecycle-policy-retention-archive-tier-property-builder> (new CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-schedule-property-builder
-  "The build-cfn-lifecycle-policy-schedule-property-builder function updates a CfnLifecyclePolicy$ScheduleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-schedule-property-builder>
+  "The cfn-lifecycle-policy-schedule-property-builder> function updates a CfnLifecyclePolicy$ScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -851,11 +851,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-schedule-property-builder (new CfnLifecyclePolicy$ScheduleProperty$Builder) id config))
+  (cfn-lifecycle-policy-schedule-property-builder> (new CfnLifecyclePolicy$ScheduleProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-script-property-builder
-  "The build-cfn-lifecycle-policy-script-property-builder function updates a CfnLifecyclePolicy$ScriptProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-script-property-builder>
+  "The cfn-lifecycle-policy-script-property-builder> function updates a CfnLifecyclePolicy$ScriptProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ScriptProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -894,11 +894,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-script-property-builder (new CfnLifecyclePolicy$ScriptProperty$Builder) id config))
+  (cfn-lifecycle-policy-script-property-builder> (new CfnLifecyclePolicy$ScriptProperty$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-share-rule-property-builder
-  "The build-cfn-lifecycle-policy-share-rule-property-builder function updates a CfnLifecyclePolicy$ShareRuleProperty$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-share-rule-property-builder>
+  "The cfn-lifecycle-policy-share-rule-property-builder> function updates a CfnLifecyclePolicy$ShareRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ShareRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -928,4 +928,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-share-rule-property-builder (new CfnLifecyclePolicy$ShareRuleProperty$Builder) id config))
+  (cfn-lifecycle-policy-share-rule-property-builder> (new CfnLifecyclePolicy$ShareRuleProperty$Builder) id config))

@@ -60,8 +60,8 @@
                                                          CfnGatewayProps$Builder]))
 
 
-(defn build-cfn-bridge-bridge-flow-source-property-builder
-  "The build-cfn-bridge-bridge-flow-source-property-builder function updates a CfnBridge$BridgeFlowSourceProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-bridge-flow-source-property-builder>
+  "The cfn-bridge-bridge-flow-source-property-builder> function updates a CfnBridge$BridgeFlowSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$BridgeFlowSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -91,11 +91,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-bridge-flow-source-property-builder (new CfnBridge$BridgeFlowSourceProperty$Builder) id config))
+  (cfn-bridge-bridge-flow-source-property-builder> (new CfnBridge$BridgeFlowSourceProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-bridge-network-output-property-builder
-  "The build-cfn-bridge-bridge-network-output-property-builder function updates a CfnBridge$BridgeNetworkOutputProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-bridge-network-output-property-builder>
+  "The cfn-bridge-bridge-network-output-property-builder> function updates a CfnBridge$BridgeNetworkOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$BridgeNetworkOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -134,11 +134,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-bridge-network-output-property-builder (new CfnBridge$BridgeNetworkOutputProperty$Builder) id config))
+  (cfn-bridge-bridge-network-output-property-builder> (new CfnBridge$BridgeNetworkOutputProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-bridge-network-source-property-builder
-  "The build-cfn-bridge-bridge-network-source-property-builder function updates a CfnBridge$BridgeNetworkSourceProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-bridge-network-source-property-builder>
+  "The cfn-bridge-bridge-network-source-property-builder> function updates a CfnBridge$BridgeNetworkSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$BridgeNetworkSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -174,11 +174,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-bridge-network-source-property-builder (new CfnBridge$BridgeNetworkSourceProperty$Builder) id config))
+  (cfn-bridge-bridge-network-source-property-builder> (new CfnBridge$BridgeNetworkSourceProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-bridge-output-property-builder
-  "The build-cfn-bridge-bridge-output-property-builder function updates a CfnBridge$BridgeOutputProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-bridge-output-property-builder>
+  "The cfn-bridge-bridge-output-property-builder> function updates a CfnBridge$BridgeOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$BridgeOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -202,11 +202,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-bridge-output-property-builder (new CfnBridge$BridgeOutputProperty$Builder) id config))
+  (cfn-bridge-bridge-output-property-builder> (new CfnBridge$BridgeOutputProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-bridge-source-property-builder
-  "The build-cfn-bridge-bridge-source-property-builder function updates a CfnBridge$BridgeSourceProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-bridge-source-property-builder>
+  "The cfn-bridge-bridge-source-property-builder> function updates a CfnBridge$BridgeSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$BridgeSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -233,11 +233,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-bridge-source-property-builder (new CfnBridge$BridgeSourceProperty$Builder) id config))
+  (cfn-bridge-bridge-source-property-builder> (new CfnBridge$BridgeSourceProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-builder
-  "The build-cfn-bridge-builder function updates a CfnBridge$Builder instance using the provided configuration.
+(defn cfn-bridge-builder>
+  "The cfn-bridge-builder> function updates a CfnBridge$Builder instance using the provided configuration.
   The function takes the CfnBridge$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -279,11 +279,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bridge-builder (CfnBridge$Builder/create scope (name id)) id config))
+  (cfn-bridge-builder> (CfnBridge$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bridge-egress-gateway-bridge-property-builder
-  "The build-cfn-bridge-egress-gateway-bridge-property-builder function updates a CfnBridge$EgressGatewayBridgeProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-egress-gateway-bridge-property-builder>
+  "The cfn-bridge-egress-gateway-bridge-property-builder> function updates a CfnBridge$EgressGatewayBridgeProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$EgressGatewayBridgeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -307,11 +307,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-egress-gateway-bridge-property-builder (new CfnBridge$EgressGatewayBridgeProperty$Builder) id config))
+  (cfn-bridge-egress-gateway-bridge-property-builder> (new CfnBridge$EgressGatewayBridgeProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-failover-config-property-builder
-  "The build-cfn-bridge-failover-config-property-builder function updates a CfnBridge$FailoverConfigProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-failover-config-property-builder>
+  "The cfn-bridge-failover-config-property-builder> function updates a CfnBridge$FailoverConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$FailoverConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -341,11 +341,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-failover-config-property-builder (new CfnBridge$FailoverConfigProperty$Builder) id config))
+  (cfn-bridge-failover-config-property-builder> (new CfnBridge$FailoverConfigProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-ingress-gateway-bridge-property-builder
-  "The build-cfn-bridge-ingress-gateway-bridge-property-builder function updates a CfnBridge$IngressGatewayBridgeProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-ingress-gateway-bridge-property-builder>
+  "The cfn-bridge-ingress-gateway-bridge-property-builder> function updates a CfnBridge$IngressGatewayBridgeProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$IngressGatewayBridgeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -372,11 +372,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-ingress-gateway-bridge-property-builder (new CfnBridge$IngressGatewayBridgeProperty$Builder) id config))
+  (cfn-bridge-ingress-gateway-bridge-property-builder> (new CfnBridge$IngressGatewayBridgeProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-output-bridge-network-output-property-builder
-  "The build-cfn-bridge-output-bridge-network-output-property-builder function updates a CfnBridgeOutput$BridgeNetworkOutputProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-output-bridge-network-output-property-builder>
+  "The cfn-bridge-output-bridge-network-output-property-builder> function updates a CfnBridgeOutput$BridgeNetworkOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnBridgeOutput$BridgeNetworkOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -412,11 +412,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-output-bridge-network-output-property-builder (new CfnBridgeOutput$BridgeNetworkOutputProperty$Builder) id config))
+  (cfn-bridge-output-bridge-network-output-property-builder> (new CfnBridgeOutput$BridgeNetworkOutputProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-output-builder
-  "The build-cfn-bridge-output-builder function updates a CfnBridgeOutput$Builder instance using the provided configuration.
+(defn cfn-bridge-output-builder>
+  "The cfn-bridge-output-builder> function updates a CfnBridgeOutput$Builder instance using the provided configuration.
   The function takes the CfnBridgeOutput$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -446,11 +446,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bridge-output-builder (CfnBridgeOutput$Builder/create scope (name id)) id config))
+  (cfn-bridge-output-builder> (CfnBridgeOutput$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bridge-output-props-builder
-  "The build-cfn-bridge-output-props-builder function updates a CfnBridgeOutputProps$Builder instance using the provided configuration.
+(defn cfn-bridge-output-props-builder>
+  "The cfn-bridge-output-props-builder> function updates a CfnBridgeOutputProps$Builder instance using the provided configuration.
   The function takes the CfnBridgeOutputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -480,11 +480,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-output-props-builder (new CfnBridgeOutputProps$Builder) id config))
+  (cfn-bridge-output-props-builder> (new CfnBridgeOutputProps$Builder) id config))
 
 
-(defn build-cfn-bridge-props-builder
-  "The build-cfn-bridge-props-builder function updates a CfnBridgeProps$Builder instance using the provided configuration.
+(defn cfn-bridge-props-builder>
+  "The cfn-bridge-props-builder> function updates a CfnBridgeProps$Builder instance using the provided configuration.
   The function takes the CfnBridgeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -526,11 +526,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-props-builder (new CfnBridgeProps$Builder) id config))
+  (cfn-bridge-props-builder> (new CfnBridgeProps$Builder) id config))
 
 
-(defn build-cfn-bridge-source-bridge-flow-source-property-builder
-  "The build-cfn-bridge-source-bridge-flow-source-property-builder function updates a CfnBridgeSource$BridgeFlowSourceProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-source-bridge-flow-source-property-builder>
+  "The cfn-bridge-source-bridge-flow-source-property-builder> function updates a CfnBridgeSource$BridgeFlowSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnBridgeSource$BridgeFlowSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -557,11 +557,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-source-bridge-flow-source-property-builder (new CfnBridgeSource$BridgeFlowSourceProperty$Builder) id config))
+  (cfn-bridge-source-bridge-flow-source-property-builder> (new CfnBridgeSource$BridgeFlowSourceProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-source-bridge-network-source-property-builder
-  "The build-cfn-bridge-source-bridge-network-source-property-builder function updates a CfnBridgeSource$BridgeNetworkSourceProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-source-bridge-network-source-property-builder>
+  "The cfn-bridge-source-bridge-network-source-property-builder> function updates a CfnBridgeSource$BridgeNetworkSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnBridgeSource$BridgeNetworkSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -594,11 +594,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-source-bridge-network-source-property-builder (new CfnBridgeSource$BridgeNetworkSourceProperty$Builder) id config))
+  (cfn-bridge-source-bridge-network-source-property-builder> (new CfnBridgeSource$BridgeNetworkSourceProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-source-builder
-  "The build-cfn-bridge-source-builder function updates a CfnBridgeSource$Builder instance using the provided configuration.
+(defn cfn-bridge-source-builder>
+  "The cfn-bridge-source-builder> function updates a CfnBridgeSource$Builder instance using the provided configuration.
   The function takes the CfnBridgeSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -631,11 +631,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bridge-source-builder (CfnBridgeSource$Builder/create scope (name id)) id config))
+  (cfn-bridge-source-builder> (CfnBridgeSource$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bridge-source-priority-property-builder
-  "The build-cfn-bridge-source-priority-property-builder function updates a CfnBridge$SourcePriorityProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-source-priority-property-builder>
+  "The cfn-bridge-source-priority-property-builder> function updates a CfnBridge$SourcePriorityProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$SourcePriorityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -659,11 +659,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-source-priority-property-builder (new CfnBridge$SourcePriorityProperty$Builder) id config))
+  (cfn-bridge-source-priority-property-builder> (new CfnBridge$SourcePriorityProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-source-props-builder
-  "The build-cfn-bridge-source-props-builder function updates a CfnBridgeSourceProps$Builder instance using the provided configuration.
+(defn cfn-bridge-source-props-builder>
+  "The cfn-bridge-source-props-builder> function updates a CfnBridgeSourceProps$Builder instance using the provided configuration.
   The function takes the CfnBridgeSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -696,11 +696,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-source-props-builder (new CfnBridgeSourceProps$Builder) id config))
+  (cfn-bridge-source-props-builder> (new CfnBridgeSourceProps$Builder) id config))
 
 
-(defn build-cfn-bridge-source-vpc-interface-attachment-property-builder
-  "The build-cfn-bridge-source-vpc-interface-attachment-property-builder function updates a CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-source-vpc-interface-attachment-property-builder>
+  "The cfn-bridge-source-vpc-interface-attachment-property-builder> function updates a CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -724,11 +724,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-source-vpc-interface-attachment-property-builder (new CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder) id config))
+  (cfn-bridge-source-vpc-interface-attachment-property-builder> (new CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder) id config))
 
 
-(defn build-cfn-bridge-vpc-interface-attachment-property-builder
-  "The build-cfn-bridge-vpc-interface-attachment-property-builder function updates a CfnBridge$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
+(defn cfn-bridge-vpc-interface-attachment-property-builder>
+  "The cfn-bridge-vpc-interface-attachment-property-builder> function updates a CfnBridge$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -752,11 +752,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bridge-vpc-interface-attachment-property-builder (new CfnBridge$VpcInterfaceAttachmentProperty$Builder) id config))
+  (cfn-bridge-vpc-interface-attachment-property-builder> (new CfnBridge$VpcInterfaceAttachmentProperty$Builder) id config))
 
 
-(defn build-cfn-flow-builder
-  "The build-cfn-flow-builder function updates a CfnFlow$Builder instance using the provided configuration.
+(defn cfn-flow-builder>
+  "The cfn-flow-builder> function updates a CfnFlow$Builder instance using the provided configuration.
   The function takes the CfnFlow$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -798,11 +798,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-flow-builder (CfnFlow$Builder/create scope (name id)) id config))
+  (cfn-flow-builder> (CfnFlow$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-flow-encryption-property-builder
-  "The build-cfn-flow-encryption-property-builder function updates a CfnFlow$EncryptionProperty$Builder instance using the provided configuration.
+(defn cfn-flow-encryption-property-builder>
+  "The cfn-flow-encryption-property-builder> function updates a CfnFlow$EncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$EncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -850,11 +850,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-encryption-property-builder (new CfnFlow$EncryptionProperty$Builder) id config))
+  (cfn-flow-encryption-property-builder> (new CfnFlow$EncryptionProperty$Builder) id config))
 
 
-(defn build-cfn-flow-entitlement-builder
-  "The build-cfn-flow-entitlement-builder function updates a CfnFlowEntitlement$Builder instance using the provided configuration.
+(defn cfn-flow-entitlement-builder>
+  "The cfn-flow-entitlement-builder> function updates a CfnFlowEntitlement$Builder instance using the provided configuration.
   The function takes the CfnFlowEntitlement$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -896,11 +896,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-flow-entitlement-builder (CfnFlowEntitlement$Builder/create scope (name id)) id config))
+  (cfn-flow-entitlement-builder> (CfnFlowEntitlement$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-flow-entitlement-encryption-property-builder
-  "The build-cfn-flow-entitlement-encryption-property-builder function updates a CfnFlowEntitlement$EncryptionProperty$Builder instance using the provided configuration.
+(defn cfn-flow-entitlement-encryption-property-builder>
+  "The cfn-flow-entitlement-encryption-property-builder> function updates a CfnFlowEntitlement$EncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowEntitlement$EncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -948,11 +948,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-entitlement-encryption-property-builder (new CfnFlowEntitlement$EncryptionProperty$Builder) id config))
+  (cfn-flow-entitlement-encryption-property-builder> (new CfnFlowEntitlement$EncryptionProperty$Builder) id config))
 
 
-(defn build-cfn-flow-entitlement-props-builder
-  "The build-cfn-flow-entitlement-props-builder function updates a CfnFlowEntitlementProps$Builder instance using the provided configuration.
+(defn cfn-flow-entitlement-props-builder>
+  "The cfn-flow-entitlement-props-builder> function updates a CfnFlowEntitlementProps$Builder instance using the provided configuration.
   The function takes the CfnFlowEntitlementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -994,11 +994,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-entitlement-props-builder (new CfnFlowEntitlementProps$Builder) id config))
+  (cfn-flow-entitlement-props-builder> (new CfnFlowEntitlementProps$Builder) id config))
 
 
-(defn build-cfn-flow-failover-config-property-builder
-  "The build-cfn-flow-failover-config-property-builder function updates a CfnFlow$FailoverConfigProperty$Builder instance using the provided configuration.
+(defn cfn-flow-failover-config-property-builder>
+  "The cfn-flow-failover-config-property-builder> function updates a CfnFlow$FailoverConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$FailoverConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1031,11 +1031,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-failover-config-property-builder (new CfnFlow$FailoverConfigProperty$Builder) id config))
+  (cfn-flow-failover-config-property-builder> (new CfnFlow$FailoverConfigProperty$Builder) id config))
 
 
-(defn build-cfn-flow-fmtp-property-builder
-  "The build-cfn-flow-fmtp-property-builder function updates a CfnFlow$FmtpProperty$Builder instance using the provided configuration.
+(defn cfn-flow-fmtp-property-builder>
+  "The cfn-flow-fmtp-property-builder> function updates a CfnFlow$FmtpProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$FmtpProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1077,11 +1077,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-fmtp-property-builder (new CfnFlow$FmtpProperty$Builder) id config))
+  (cfn-flow-fmtp-property-builder> (new CfnFlow$FmtpProperty$Builder) id config))
 
 
-(defn build-cfn-flow-gateway-bridge-source-property-builder
-  "The build-cfn-flow-gateway-bridge-source-property-builder function updates a CfnFlow$GatewayBridgeSourceProperty$Builder instance using the provided configuration.
+(defn cfn-flow-gateway-bridge-source-property-builder>
+  "The cfn-flow-gateway-bridge-source-property-builder> function updates a CfnFlow$GatewayBridgeSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$GatewayBridgeSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1108,11 +1108,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-gateway-bridge-source-property-builder (new CfnFlow$GatewayBridgeSourceProperty$Builder) id config))
+  (cfn-flow-gateway-bridge-source-property-builder> (new CfnFlow$GatewayBridgeSourceProperty$Builder) id config))
 
 
-(defn build-cfn-flow-input-configuration-property-builder
-  "The build-cfn-flow-input-configuration-property-builder function updates a CfnFlow$InputConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-flow-input-configuration-property-builder>
+  "The cfn-flow-input-configuration-property-builder> function updates a CfnFlow$InputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$InputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1139,11 +1139,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-input-configuration-property-builder (new CfnFlow$InputConfigurationProperty$Builder) id config))
+  (cfn-flow-input-configuration-property-builder> (new CfnFlow$InputConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-flow-interface-property-builder
-  "The build-cfn-flow-interface-property-builder function updates a CfnFlow$InterfaceProperty$Builder instance using the provided configuration.
+(defn cfn-flow-interface-property-builder>
+  "The cfn-flow-interface-property-builder> function updates a CfnFlow$InterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$InterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1167,11 +1167,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-interface-property-builder (new CfnFlow$InterfaceProperty$Builder) id config))
+  (cfn-flow-interface-property-builder> (new CfnFlow$InterfaceProperty$Builder) id config))
 
 
-(defn build-cfn-flow-maintenance-property-builder
-  "The build-cfn-flow-maintenance-property-builder function updates a CfnFlow$MaintenanceProperty$Builder instance using the provided configuration.
+(defn cfn-flow-maintenance-property-builder>
+  "The cfn-flow-maintenance-property-builder> function updates a CfnFlow$MaintenanceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$MaintenanceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1198,11 +1198,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-maintenance-property-builder (new CfnFlow$MaintenanceProperty$Builder) id config))
+  (cfn-flow-maintenance-property-builder> (new CfnFlow$MaintenanceProperty$Builder) id config))
 
 
-(defn build-cfn-flow-media-stream-attributes-property-builder
-  "The build-cfn-flow-media-stream-attributes-property-builder function updates a CfnFlow$MediaStreamAttributesProperty$Builder instance using the provided configuration.
+(defn cfn-flow-media-stream-attributes-property-builder>
+  "The cfn-flow-media-stream-attributes-property-builder> function updates a CfnFlow$MediaStreamAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$MediaStreamAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1229,11 +1229,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-media-stream-attributes-property-builder (new CfnFlow$MediaStreamAttributesProperty$Builder) id config))
+  (cfn-flow-media-stream-attributes-property-builder> (new CfnFlow$MediaStreamAttributesProperty$Builder) id config))
 
 
-(defn build-cfn-flow-media-stream-property-builder
-  "The build-cfn-flow-media-stream-property-builder function updates a CfnFlow$MediaStreamProperty$Builder instance using the provided configuration.
+(defn cfn-flow-media-stream-property-builder>
+  "The cfn-flow-media-stream-property-builder> function updates a CfnFlow$MediaStreamProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$MediaStreamProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1278,11 +1278,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-media-stream-property-builder (new CfnFlow$MediaStreamProperty$Builder) id config))
+  (cfn-flow-media-stream-property-builder> (new CfnFlow$MediaStreamProperty$Builder) id config))
 
 
-(defn build-cfn-flow-media-stream-source-configuration-property-builder
-  "The build-cfn-flow-media-stream-source-configuration-property-builder function updates a CfnFlow$MediaStreamSourceConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-flow-media-stream-source-configuration-property-builder>
+  "The cfn-flow-media-stream-source-configuration-property-builder> function updates a CfnFlow$MediaStreamSourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$MediaStreamSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1312,11 +1312,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-media-stream-source-configuration-property-builder (new CfnFlow$MediaStreamSourceConfigurationProperty$Builder) id config))
+  (cfn-flow-media-stream-source-configuration-property-builder> (new CfnFlow$MediaStreamSourceConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-flow-output-builder
-  "The build-cfn-flow-output-builder function updates a CfnFlowOutput$Builder instance using the provided configuration.
+(defn cfn-flow-output-builder>
+  "The cfn-flow-output-builder> function updates a CfnFlowOutput$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1382,11 +1382,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-flow-output-builder (CfnFlowOutput$Builder/create scope (name id)) id config))
+  (cfn-flow-output-builder> (CfnFlowOutput$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-flow-output-destination-configuration-property-builder
-  "The build-cfn-flow-output-destination-configuration-property-builder function updates a CfnFlowOutput$DestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-flow-output-destination-configuration-property-builder>
+  "The cfn-flow-output-destination-configuration-property-builder> function updates a CfnFlowOutput$DestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1416,11 +1416,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-output-destination-configuration-property-builder (new CfnFlowOutput$DestinationConfigurationProperty$Builder) id config))
+  (cfn-flow-output-destination-configuration-property-builder> (new CfnFlowOutput$DestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-flow-output-encoding-parameters-property-builder
-  "The build-cfn-flow-output-encoding-parameters-property-builder function updates a CfnFlowOutput$EncodingParametersProperty$Builder instance using the provided configuration.
+(defn cfn-flow-output-encoding-parameters-property-builder>
+  "The cfn-flow-output-encoding-parameters-property-builder> function updates a CfnFlowOutput$EncodingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$EncodingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1447,11 +1447,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-output-encoding-parameters-property-builder (new CfnFlowOutput$EncodingParametersProperty$Builder) id config))
+  (cfn-flow-output-encoding-parameters-property-builder> (new CfnFlowOutput$EncodingParametersProperty$Builder) id config))
 
 
-(defn build-cfn-flow-output-encryption-property-builder
-  "The build-cfn-flow-output-encryption-property-builder function updates a CfnFlowOutput$EncryptionProperty$Builder instance using the provided configuration.
+(defn cfn-flow-output-encryption-property-builder>
+  "The cfn-flow-output-encryption-property-builder> function updates a CfnFlowOutput$EncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$EncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1484,11 +1484,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-output-encryption-property-builder (new CfnFlowOutput$EncryptionProperty$Builder) id config))
+  (cfn-flow-output-encryption-property-builder> (new CfnFlowOutput$EncryptionProperty$Builder) id config))
 
 
-(defn build-cfn-flow-output-interface-property-builder
-  "The build-cfn-flow-output-interface-property-builder function updates a CfnFlowOutput$InterfaceProperty$Builder instance using the provided configuration.
+(defn cfn-flow-output-interface-property-builder>
+  "The cfn-flow-output-interface-property-builder> function updates a CfnFlowOutput$InterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$InterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1512,11 +1512,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-output-interface-property-builder (new CfnFlowOutput$InterfaceProperty$Builder) id config))
+  (cfn-flow-output-interface-property-builder> (new CfnFlowOutput$InterfaceProperty$Builder) id config))
 
 
-(defn build-cfn-flow-output-media-stream-output-configuration-property-builder
-  "The build-cfn-flow-output-media-stream-output-configuration-property-builder function updates a CfnFlowOutput$MediaStreamOutputConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-flow-output-media-stream-output-configuration-property-builder>
+  "The cfn-flow-output-media-stream-output-configuration-property-builder> function updates a CfnFlowOutput$MediaStreamOutputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$MediaStreamOutputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1549,11 +1549,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-output-media-stream-output-configuration-property-builder (new CfnFlowOutput$MediaStreamOutputConfigurationProperty$Builder) id config))
+  (cfn-flow-output-media-stream-output-configuration-property-builder> (new CfnFlowOutput$MediaStreamOutputConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-flow-output-props-builder
-  "The build-cfn-flow-output-props-builder function updates a CfnFlowOutputProps$Builder instance using the provided configuration.
+(defn cfn-flow-output-props-builder>
+  "The cfn-flow-output-props-builder> function updates a CfnFlowOutputProps$Builder instance using the provided configuration.
   The function takes the CfnFlowOutputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1619,11 +1619,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-output-props-builder (new CfnFlowOutputProps$Builder) id config))
+  (cfn-flow-output-props-builder> (new CfnFlowOutputProps$Builder) id config))
 
 
-(defn build-cfn-flow-output-vpc-interface-attachment-property-builder
-  "The build-cfn-flow-output-vpc-interface-attachment-property-builder function updates a CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
+(defn cfn-flow-output-vpc-interface-attachment-property-builder>
+  "The cfn-flow-output-vpc-interface-attachment-property-builder> function updates a CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1647,11 +1647,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-output-vpc-interface-attachment-property-builder (new CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder) id config))
+  (cfn-flow-output-vpc-interface-attachment-property-builder> (new CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder) id config))
 
 
-(defn build-cfn-flow-props-builder
-  "The build-cfn-flow-props-builder function updates a CfnFlowProps$Builder instance using the provided configuration.
+(defn cfn-flow-props-builder>
+  "The cfn-flow-props-builder> function updates a CfnFlowProps$Builder instance using the provided configuration.
   The function takes the CfnFlowProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1693,11 +1693,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-props-builder (new CfnFlowProps$Builder) id config))
+  (cfn-flow-props-builder> (new CfnFlowProps$Builder) id config))
 
 
-(defn build-cfn-flow-source-builder
-  "The build-cfn-flow-source-builder function updates a CfnFlowSource$Builder instance using the provided configuration.
+(defn cfn-flow-source-builder>
+  "The cfn-flow-source-builder> function updates a CfnFlowSource$Builder instance using the provided configuration.
   The function takes the CfnFlowSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1772,11 +1772,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-flow-source-builder (CfnFlowSource$Builder/create scope (name id)) id config))
+  (cfn-flow-source-builder> (CfnFlowSource$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-flow-source-encryption-property-builder
-  "The build-cfn-flow-source-encryption-property-builder function updates a CfnFlowSource$EncryptionProperty$Builder instance using the provided configuration.
+(defn cfn-flow-source-encryption-property-builder>
+  "The cfn-flow-source-encryption-property-builder> function updates a CfnFlowSource$EncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowSource$EncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1824,11 +1824,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-source-encryption-property-builder (new CfnFlowSource$EncryptionProperty$Builder) id config))
+  (cfn-flow-source-encryption-property-builder> (new CfnFlowSource$EncryptionProperty$Builder) id config))
 
 
-(defn build-cfn-flow-source-gateway-bridge-source-property-builder
-  "The build-cfn-flow-source-gateway-bridge-source-property-builder function updates a CfnFlowSource$GatewayBridgeSourceProperty$Builder instance using the provided configuration.
+(defn cfn-flow-source-gateway-bridge-source-property-builder>
+  "The cfn-flow-source-gateway-bridge-source-property-builder> function updates a CfnFlowSource$GatewayBridgeSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowSource$GatewayBridgeSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1855,11 +1855,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-source-gateway-bridge-source-property-builder (new CfnFlowSource$GatewayBridgeSourceProperty$Builder) id config))
+  (cfn-flow-source-gateway-bridge-source-property-builder> (new CfnFlowSource$GatewayBridgeSourceProperty$Builder) id config))
 
 
-(defn build-cfn-flow-source-priority-property-builder
-  "The build-cfn-flow-source-priority-property-builder function updates a CfnFlow$SourcePriorityProperty$Builder instance using the provided configuration.
+(defn cfn-flow-source-priority-property-builder>
+  "The cfn-flow-source-priority-property-builder> function updates a CfnFlow$SourcePriorityProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$SourcePriorityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1883,11 +1883,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-source-priority-property-builder (new CfnFlow$SourcePriorityProperty$Builder) id config))
+  (cfn-flow-source-priority-property-builder> (new CfnFlow$SourcePriorityProperty$Builder) id config))
 
 
-(defn build-cfn-flow-source-property-builder
-  "The build-cfn-flow-source-property-builder function updates a CfnFlow$SourceProperty$Builder instance using the provided configuration.
+(defn cfn-flow-source-property-builder>
+  "The cfn-flow-source-property-builder> function updates a CfnFlow$SourceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$SourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1974,11 +1974,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-source-property-builder (new CfnFlow$SourceProperty$Builder) id config))
+  (cfn-flow-source-property-builder> (new CfnFlow$SourceProperty$Builder) id config))
 
 
-(defn build-cfn-flow-source-props-builder
-  "The build-cfn-flow-source-props-builder function updates a CfnFlowSourceProps$Builder instance using the provided configuration.
+(defn cfn-flow-source-props-builder>
+  "The cfn-flow-source-props-builder> function updates a CfnFlowSourceProps$Builder instance using the provided configuration.
   The function takes the CfnFlowSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2053,11 +2053,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-source-props-builder (new CfnFlowSourceProps$Builder) id config))
+  (cfn-flow-source-props-builder> (new CfnFlowSourceProps$Builder) id config))
 
 
-(defn build-cfn-flow-source-vpc-interface-attachment-property-builder
-  "The build-cfn-flow-source-vpc-interface-attachment-property-builder function updates a CfnFlowSource$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
+(defn cfn-flow-source-vpc-interface-attachment-property-builder>
+  "The cfn-flow-source-vpc-interface-attachment-property-builder> function updates a CfnFlowSource$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowSource$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2081,11 +2081,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-source-vpc-interface-attachment-property-builder (new CfnFlowSource$VpcInterfaceAttachmentProperty$Builder) id config))
+  (cfn-flow-source-vpc-interface-attachment-property-builder> (new CfnFlowSource$VpcInterfaceAttachmentProperty$Builder) id config))
 
 
-(defn build-cfn-flow-vpc-interface-attachment-property-builder
-  "The build-cfn-flow-vpc-interface-attachment-property-builder function updates a CfnFlow$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
+(defn cfn-flow-vpc-interface-attachment-property-builder>
+  "The cfn-flow-vpc-interface-attachment-property-builder> function updates a CfnFlow$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2109,11 +2109,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-vpc-interface-attachment-property-builder (new CfnFlow$VpcInterfaceAttachmentProperty$Builder) id config))
+  (cfn-flow-vpc-interface-attachment-property-builder> (new CfnFlow$VpcInterfaceAttachmentProperty$Builder) id config))
 
 
-(defn build-cfn-flow-vpc-interface-builder
-  "The build-cfn-flow-vpc-interface-builder function updates a CfnFlowVpcInterface$Builder instance using the provided configuration.
+(defn cfn-flow-vpc-interface-builder>
+  "The cfn-flow-vpc-interface-builder> function updates a CfnFlowVpcInterface$Builder instance using the provided configuration.
   The function takes the CfnFlowVpcInterface$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2149,11 +2149,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-flow-vpc-interface-builder (CfnFlowVpcInterface$Builder/create scope (name id)) id config))
+  (cfn-flow-vpc-interface-builder> (CfnFlowVpcInterface$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-flow-vpc-interface-property-builder
-  "The build-cfn-flow-vpc-interface-property-builder function updates a CfnFlow$VpcInterfaceProperty$Builder instance using the provided configuration.
+(defn cfn-flow-vpc-interface-property-builder>
+  "The cfn-flow-vpc-interface-property-builder> function updates a CfnFlow$VpcInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$VpcInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2192,11 +2192,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-vpc-interface-property-builder (new CfnFlow$VpcInterfaceProperty$Builder) id config))
+  (cfn-flow-vpc-interface-property-builder> (new CfnFlow$VpcInterfaceProperty$Builder) id config))
 
 
-(defn build-cfn-flow-vpc-interface-props-builder
-  "The build-cfn-flow-vpc-interface-props-builder function updates a CfnFlowVpcInterfaceProps$Builder instance using the provided configuration.
+(defn cfn-flow-vpc-interface-props-builder>
+  "The cfn-flow-vpc-interface-props-builder> function updates a CfnFlowVpcInterfaceProps$Builder instance using the provided configuration.
   The function takes the CfnFlowVpcInterfaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2232,11 +2232,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-vpc-interface-props-builder (new CfnFlowVpcInterfaceProps$Builder) id config))
+  (cfn-flow-vpc-interface-props-builder> (new CfnFlowVpcInterfaceProps$Builder) id config))
 
 
-(defn build-cfn-gateway-builder
-  "The build-cfn-gateway-builder function updates a CfnGateway$Builder instance using the provided configuration.
+(defn cfn-gateway-builder>
+  "The cfn-gateway-builder> function updates a CfnGateway$Builder instance using the provided configuration.
   The function takes the CfnGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2266,11 +2266,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-gateway-builder (CfnGateway$Builder/create scope (name id)) id config))
+  (cfn-gateway-builder> (CfnGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-gateway-gateway-network-property-builder
-  "The build-cfn-gateway-gateway-network-property-builder function updates a CfnGateway$GatewayNetworkProperty$Builder instance using the provided configuration.
+(defn cfn-gateway-gateway-network-property-builder>
+  "The cfn-gateway-gateway-network-property-builder> function updates a CfnGateway$GatewayNetworkProperty$Builder instance using the provided configuration.
   The function takes the CfnGateway$GatewayNetworkProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2297,11 +2297,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-gateway-gateway-network-property-builder (new CfnGateway$GatewayNetworkProperty$Builder) id config))
+  (cfn-gateway-gateway-network-property-builder> (new CfnGateway$GatewayNetworkProperty$Builder) id config))
 
 
-(defn build-cfn-gateway-props-builder
-  "The build-cfn-gateway-props-builder function updates a CfnGatewayProps$Builder instance using the provided configuration.
+(defn cfn-gateway-props-builder>
+  "The cfn-gateway-props-builder> function updates a CfnGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2331,4 +2331,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-gateway-props-builder (new CfnGatewayProps$Builder) id config))
+  (cfn-gateway-props-builder> (new CfnGatewayProps$Builder) id config))

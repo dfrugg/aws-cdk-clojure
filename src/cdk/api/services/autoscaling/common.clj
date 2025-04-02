@@ -7,8 +7,8 @@
                                                                ScalingInterval$Builder]))
 
 
-(defn build-alarms-builder
-  "The build-alarms-builder function updates a Alarms$Builder instance using the provided configuration.
+(defn alarms-builder>
+  "The alarms-builder> function updates a Alarms$Builder instance using the provided configuration.
   The function takes the Alarms$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -35,11 +35,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-alarms-builder (new Alarms$Builder) id config))
+  (alarms-builder> (new Alarms$Builder) id config))
 
 
-(defn build-arbitrary-intervals-builder
-  "The build-arbitrary-intervals-builder function updates a ArbitraryIntervals$Builder instance using the provided configuration.
+(defn arbitrary-intervals-builder>
+  "The arbitrary-intervals-builder> function updates a ArbitraryIntervals$Builder instance using the provided configuration.
   The function takes the ArbitraryIntervals$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -66,11 +66,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-arbitrary-intervals-builder (new ArbitraryIntervals$Builder) id config))
+  (arbitrary-intervals-builder> (new ArbitraryIntervals$Builder) id config))
 
 
-(defn build-complete-scaling-interval-builder
-  "The build-complete-scaling-interval-builder function updates a CompleteScalingInterval$Builder instance using the provided configuration.
+(defn complete-scaling-interval-builder>
+  "The complete-scaling-interval-builder> function updates a CompleteScalingInterval$Builder instance using the provided configuration.
   The function takes the CompleteScalingInterval$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -100,11 +100,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-complete-scaling-interval-builder (new CompleteScalingInterval$Builder) id config))
+  (complete-scaling-interval-builder> (new CompleteScalingInterval$Builder) id config))
 
 
-(defn build-scaling-interval-builder
-  "The build-scaling-interval-builder function updates a ScalingInterval$Builder instance using the provided configuration.
+(defn scaling-interval-builder>
+  "The scaling-interval-builder> function updates a ScalingInterval$Builder instance using the provided configuration.
   The function takes the ScalingInterval$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -134,4 +134,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scaling-interval-builder (new ScalingInterval$Builder) id config))
+  (scaling-interval-builder> (new ScalingInterval$Builder) id config))

@@ -10,8 +10,8 @@
                                                          CfnTrainingDatasetProps$Builder]))
 
 
-(defn build-cfn-training-dataset-builder
-  "The build-cfn-training-dataset-builder function updates a CfnTrainingDataset$Builder instance using the provided configuration.
+(defn cfn-training-dataset-builder>
+  "The cfn-training-dataset-builder> function updates a CfnTrainingDataset$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -47,11 +47,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-training-dataset-builder (CfnTrainingDataset$Builder/create scope (name id)) id config))
+  (cfn-training-dataset-builder> (CfnTrainingDataset$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-training-dataset-column-schema-property-builder
-  "The build-cfn-training-dataset-column-schema-property-builder function updates a CfnTrainingDataset$ColumnSchemaProperty$Builder instance using the provided configuration.
+(defn cfn-training-dataset-column-schema-property-builder>
+  "The cfn-training-dataset-column-schema-property-builder> function updates a CfnTrainingDataset$ColumnSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$ColumnSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -78,11 +78,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-training-dataset-column-schema-property-builder (new CfnTrainingDataset$ColumnSchemaProperty$Builder) id config))
+  (cfn-training-dataset-column-schema-property-builder> (new CfnTrainingDataset$ColumnSchemaProperty$Builder) id config))
 
 
-(defn build-cfn-training-dataset-data-source-property-builder
-  "The build-cfn-training-dataset-data-source-property-builder function updates a CfnTrainingDataset$DataSourceProperty$Builder instance using the provided configuration.
+(defn cfn-training-dataset-data-source-property-builder>
+  "The cfn-training-dataset-data-source-property-builder> function updates a CfnTrainingDataset$DataSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$DataSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -106,11 +106,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-training-dataset-data-source-property-builder (new CfnTrainingDataset$DataSourceProperty$Builder) id config))
+  (cfn-training-dataset-data-source-property-builder> (new CfnTrainingDataset$DataSourceProperty$Builder) id config))
 
 
-(defn build-cfn-training-dataset-dataset-input-config-property-builder
-  "The build-cfn-training-dataset-dataset-input-config-property-builder function updates a CfnTrainingDataset$DatasetInputConfigProperty$Builder instance using the provided configuration.
+(defn cfn-training-dataset-dataset-input-config-property-builder>
+  "The cfn-training-dataset-dataset-input-config-property-builder> function updates a CfnTrainingDataset$DatasetInputConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$DatasetInputConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -137,11 +137,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-training-dataset-dataset-input-config-property-builder (new CfnTrainingDataset$DatasetInputConfigProperty$Builder) id config))
+  (cfn-training-dataset-dataset-input-config-property-builder> (new CfnTrainingDataset$DatasetInputConfigProperty$Builder) id config))
 
 
-(defn build-cfn-training-dataset-dataset-property-builder
-  "The build-cfn-training-dataset-dataset-property-builder function updates a CfnTrainingDataset$DatasetProperty$Builder instance using the provided configuration.
+(defn cfn-training-dataset-dataset-property-builder>
+  "The cfn-training-dataset-dataset-property-builder> function updates a CfnTrainingDataset$DatasetProperty$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$DatasetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -168,11 +168,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-training-dataset-dataset-property-builder (new CfnTrainingDataset$DatasetProperty$Builder) id config))
+  (cfn-training-dataset-dataset-property-builder> (new CfnTrainingDataset$DatasetProperty$Builder) id config))
 
 
-(defn build-cfn-training-dataset-glue-data-source-property-builder
-  "The build-cfn-training-dataset-glue-data-source-property-builder function updates a CfnTrainingDataset$GlueDataSourceProperty$Builder instance using the provided configuration.
+(defn cfn-training-dataset-glue-data-source-property-builder>
+  "The cfn-training-dataset-glue-data-source-property-builder> function updates a CfnTrainingDataset$GlueDataSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$GlueDataSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -202,11 +202,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-training-dataset-glue-data-source-property-builder (new CfnTrainingDataset$GlueDataSourceProperty$Builder) id config))
+  (cfn-training-dataset-glue-data-source-property-builder> (new CfnTrainingDataset$GlueDataSourceProperty$Builder) id config))
 
 
-(defn build-cfn-training-dataset-props-builder
-  "The build-cfn-training-dataset-props-builder function updates a CfnTrainingDatasetProps$Builder instance using the provided configuration.
+(defn cfn-training-dataset-props-builder>
+  "The cfn-training-dataset-props-builder> function updates a CfnTrainingDatasetProps$Builder instance using the provided configuration.
   The function takes the CfnTrainingDatasetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -242,4 +242,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-training-dataset-props-builder (new CfnTrainingDatasetProps$Builder) id config))
+  (cfn-training-dataset-props-builder> (new CfnTrainingDatasetProps$Builder) id config))

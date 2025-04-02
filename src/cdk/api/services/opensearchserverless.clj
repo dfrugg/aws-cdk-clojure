@@ -16,8 +16,8 @@
                                                                  CfnVpcEndpointProps$Builder]))
 
 
-(defn build-cfn-access-policy-builder
-  "The build-cfn-access-policy-builder function updates a CfnAccessPolicy$Builder instance using the provided configuration.
+(defn cfn-access-policy-builder>
+  "The cfn-access-policy-builder> function updates a CfnAccessPolicy$Builder instance using the provided configuration.
   The function takes the CfnAccessPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -50,11 +50,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-access-policy-builder (CfnAccessPolicy$Builder/create scope (name id)) id config))
+  (cfn-access-policy-builder> (CfnAccessPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-access-policy-props-builder
-  "The build-cfn-access-policy-props-builder function updates a CfnAccessPolicyProps$Builder instance using the provided configuration.
+(defn cfn-access-policy-props-builder>
+  "The cfn-access-policy-props-builder> function updates a CfnAccessPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnAccessPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -87,11 +87,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-policy-props-builder (new CfnAccessPolicyProps$Builder) id config))
+  (cfn-access-policy-props-builder> (new CfnAccessPolicyProps$Builder) id config))
 
 
-(defn build-cfn-collection-builder
-  "The build-cfn-collection-builder function updates a CfnCollection$Builder instance using the provided configuration.
+(defn cfn-collection-builder>
+  "The cfn-collection-builder> function updates a CfnCollection$Builder instance using the provided configuration.
   The function takes the CfnCollection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -127,11 +127,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-collection-builder (CfnCollection$Builder/create scope (name id)) id config))
+  (cfn-collection-builder> (CfnCollection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-collection-props-builder
-  "The build-cfn-collection-props-builder function updates a CfnCollectionProps$Builder instance using the provided configuration.
+(defn cfn-collection-props-builder>
+  "The cfn-collection-props-builder> function updates a CfnCollectionProps$Builder instance using the provided configuration.
   The function takes the CfnCollectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -167,11 +167,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-collection-props-builder (new CfnCollectionProps$Builder) id config))
+  (cfn-collection-props-builder> (new CfnCollectionProps$Builder) id config))
 
 
-(defn build-cfn-lifecycle-policy-builder
-  "The build-cfn-lifecycle-policy-builder function updates a CfnLifecyclePolicy$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-builder>
+  "The cfn-lifecycle-policy-builder> function updates a CfnLifecyclePolicy$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -204,11 +204,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-lifecycle-policy-builder (CfnLifecyclePolicy$Builder/create scope (name id)) id config))
+  (cfn-lifecycle-policy-builder> (CfnLifecyclePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-lifecycle-policy-props-builder
-  "The build-cfn-lifecycle-policy-props-builder function updates a CfnLifecyclePolicyProps$Builder instance using the provided configuration.
+(defn cfn-lifecycle-policy-props-builder>
+  "The cfn-lifecycle-policy-props-builder> function updates a CfnLifecyclePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -241,11 +241,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-lifecycle-policy-props-builder (new CfnLifecyclePolicyProps$Builder) id config))
+  (cfn-lifecycle-policy-props-builder> (new CfnLifecyclePolicyProps$Builder) id config))
 
 
-(defn build-cfn-security-config-builder
-  "The build-cfn-security-config-builder function updates a CfnSecurityConfig$Builder instance using the provided configuration.
+(defn cfn-security-config-builder>
+  "The cfn-security-config-builder> function updates a CfnSecurityConfig$Builder instance using the provided configuration.
   The function takes the CfnSecurityConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -278,11 +278,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-security-config-builder (CfnSecurityConfig$Builder/create scope (name id)) id config))
+  (cfn-security-config-builder> (CfnSecurityConfig$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-security-config-props-builder
-  "The build-cfn-security-config-props-builder function updates a CfnSecurityConfigProps$Builder instance using the provided configuration.
+(defn cfn-security-config-props-builder>
+  "The cfn-security-config-props-builder> function updates a CfnSecurityConfigProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -315,11 +315,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-config-props-builder (new CfnSecurityConfigProps$Builder) id config))
+  (cfn-security-config-props-builder> (new CfnSecurityConfigProps$Builder) id config))
 
 
-(defn build-cfn-security-config-saml-config-options-property-builder
-  "The build-cfn-security-config-saml-config-options-property-builder function updates a CfnSecurityConfig$SamlConfigOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-security-config-saml-config-options-property-builder>
+  "The cfn-security-config-saml-config-options-property-builder> function updates a CfnSecurityConfig$SamlConfigOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnSecurityConfig$SamlConfigOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -352,11 +352,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-config-saml-config-options-property-builder (new CfnSecurityConfig$SamlConfigOptionsProperty$Builder) id config))
+  (cfn-security-config-saml-config-options-property-builder> (new CfnSecurityConfig$SamlConfigOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-security-policy-builder
-  "The build-cfn-security-policy-builder function updates a CfnSecurityPolicy$Builder instance using the provided configuration.
+(defn cfn-security-policy-builder>
+  "The cfn-security-policy-builder> function updates a CfnSecurityPolicy$Builder instance using the provided configuration.
   The function takes the CfnSecurityPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -389,11 +389,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-security-policy-builder (CfnSecurityPolicy$Builder/create scope (name id)) id config))
+  (cfn-security-policy-builder> (CfnSecurityPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-security-policy-props-builder
-  "The build-cfn-security-policy-props-builder function updates a CfnSecurityPolicyProps$Builder instance using the provided configuration.
+(defn cfn-security-policy-props-builder>
+  "The cfn-security-policy-props-builder> function updates a CfnSecurityPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -426,11 +426,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-policy-props-builder (new CfnSecurityPolicyProps$Builder) id config))
+  (cfn-security-policy-props-builder> (new CfnSecurityPolicyProps$Builder) id config))
 
 
-(defn build-cfn-vpc-endpoint-builder
-  "The build-cfn-vpc-endpoint-builder function updates a CfnVpcEndpoint$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-builder>
+  "The cfn-vpc-endpoint-builder> function updates a CfnVpcEndpoint$Builder instance using the provided configuration.
   The function takes the CfnVpcEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -463,11 +463,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-endpoint-builder (CfnVpcEndpoint$Builder/create scope (name id)) id config))
+  (cfn-vpc-endpoint-builder> (CfnVpcEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-endpoint-props-builder
-  "The build-cfn-vpc-endpoint-props-builder function updates a CfnVpcEndpointProps$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-props-builder>
+  "The cfn-vpc-endpoint-props-builder> function updates a CfnVpcEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnVpcEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -500,4 +500,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-endpoint-props-builder (new CfnVpcEndpointProps$Builder) id config))
+  (cfn-vpc-endpoint-props-builder> (new CfnVpcEndpointProps$Builder) id config))

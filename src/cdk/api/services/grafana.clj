@@ -11,8 +11,8 @@
                                                     CfnWorkspaceProps$Builder]))
 
 
-(defn build-cfn-workspace-assertion-attributes-property-builder
-  "The build-cfn-workspace-assertion-attributes-property-builder function updates a CfnWorkspace$AssertionAttributesProperty$Builder instance using the provided configuration.
+(defn cfn-workspace-assertion-attributes-property-builder>
+  "The cfn-workspace-assertion-attributes-property-builder> function updates a CfnWorkspace$AssertionAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$AssertionAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -51,11 +51,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-assertion-attributes-property-builder (new CfnWorkspace$AssertionAttributesProperty$Builder) id config))
+  (cfn-workspace-assertion-attributes-property-builder> (new CfnWorkspace$AssertionAttributesProperty$Builder) id config))
 
 
-(defn build-cfn-workspace-builder
-  "The build-cfn-workspace-builder function updates a CfnWorkspace$Builder instance using the provided configuration.
+(defn cfn-workspace-builder>
+  "The cfn-workspace-builder> function updates a CfnWorkspace$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -127,11 +127,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-workspace-builder (CfnWorkspace$Builder/create scope (name id)) id config))
+  (cfn-workspace-builder> (CfnWorkspace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-workspace-idp-metadata-property-builder
-  "The build-cfn-workspace-idp-metadata-property-builder function updates a CfnWorkspace$IdpMetadataProperty$Builder instance using the provided configuration.
+(defn cfn-workspace-idp-metadata-property-builder>
+  "The cfn-workspace-idp-metadata-property-builder> function updates a CfnWorkspace$IdpMetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$IdpMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -158,11 +158,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-idp-metadata-property-builder (new CfnWorkspace$IdpMetadataProperty$Builder) id config))
+  (cfn-workspace-idp-metadata-property-builder> (new CfnWorkspace$IdpMetadataProperty$Builder) id config))
 
 
-(defn build-cfn-workspace-network-access-control-property-builder
-  "The build-cfn-workspace-network-access-control-property-builder function updates a CfnWorkspace$NetworkAccessControlProperty$Builder instance using the provided configuration.
+(defn cfn-workspace-network-access-control-property-builder>
+  "The cfn-workspace-network-access-control-property-builder> function updates a CfnWorkspace$NetworkAccessControlProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$NetworkAccessControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -189,11 +189,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-network-access-control-property-builder (new CfnWorkspace$NetworkAccessControlProperty$Builder) id config))
+  (cfn-workspace-network-access-control-property-builder> (new CfnWorkspace$NetworkAccessControlProperty$Builder) id config))
 
 
-(defn build-cfn-workspace-props-builder
-  "The build-cfn-workspace-props-builder function updates a CfnWorkspaceProps$Builder instance using the provided configuration.
+(defn cfn-workspace-props-builder>
+  "The cfn-workspace-props-builder> function updates a CfnWorkspaceProps$Builder instance using the provided configuration.
   The function takes the CfnWorkspaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -265,11 +265,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-props-builder (new CfnWorkspaceProps$Builder) id config))
+  (cfn-workspace-props-builder> (new CfnWorkspaceProps$Builder) id config))
 
 
-(defn build-cfn-workspace-role-values-property-builder
-  "The build-cfn-workspace-role-values-property-builder function updates a CfnWorkspace$RoleValuesProperty$Builder instance using the provided configuration.
+(defn cfn-workspace-role-values-property-builder>
+  "The cfn-workspace-role-values-property-builder> function updates a CfnWorkspace$RoleValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$RoleValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -296,11 +296,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-role-values-property-builder (new CfnWorkspace$RoleValuesProperty$Builder) id config))
+  (cfn-workspace-role-values-property-builder> (new CfnWorkspace$RoleValuesProperty$Builder) id config))
 
 
-(defn build-cfn-workspace-saml-configuration-property-builder
-  "The build-cfn-workspace-saml-configuration-property-builder function updates a CfnWorkspace$SamlConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-workspace-saml-configuration-property-builder>
+  "The cfn-workspace-saml-configuration-property-builder> function updates a CfnWorkspace$SamlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$SamlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -336,11 +336,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-saml-configuration-property-builder (new CfnWorkspace$SamlConfigurationProperty$Builder) id config))
+  (cfn-workspace-saml-configuration-property-builder> (new CfnWorkspace$SamlConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-workspace-vpc-configuration-property-builder
-  "The build-cfn-workspace-vpc-configuration-property-builder function updates a CfnWorkspace$VpcConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-workspace-vpc-configuration-property-builder>
+  "The cfn-workspace-vpc-configuration-property-builder> function updates a CfnWorkspace$VpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$VpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -367,4 +367,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workspace-vpc-configuration-property-builder (new CfnWorkspace$VpcConfigurationProperty$Builder) id config))
+  (cfn-workspace-vpc-configuration-property-builder> (new CfnWorkspace$VpcConfigurationProperty$Builder) id config))

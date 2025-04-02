@@ -78,8 +78,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :asset-publishing data) DockerCredentialUsage/ASSET_PUBLISHING)))
 
 
-(defn build-add-stage-opts-builder
-  "The build-add-stage-opts-builder function updates a AddStageOpts$Builder instance using the provided configuration.
+(defn add-stage-opts-builder>
+  "The add-stage-opts-builder> function updates a AddStageOpts$Builder instance using the provided configuration.
   The function takes the AddStageOpts$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -109,11 +109,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-stage-opts-builder (new AddStageOpts$Builder) id config))
+  (add-stage-opts-builder> (new AddStageOpts$Builder) id config))
 
 
-(defn build-code-build-options-builder
-  "The build-code-build-options-builder function updates a CodeBuildOptions$Builder instance using the provided configuration.
+(defn code-build-options-builder>
+  "The code-build-options-builder> function updates a CodeBuildOptions$Builder instance using the provided configuration.
   The function takes the CodeBuildOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -164,11 +164,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-build-options-builder (new CodeBuildOptions$Builder) id config))
+  (code-build-options-builder> (new CodeBuildOptions$Builder) id config))
 
 
-(defn build-code-build-step-builder
-  "The build-code-build-step-builder function updates a CodeBuildStep$Builder instance using the provided configuration.
+(defn code-build-step-builder>
+  "The code-build-step-builder> function updates a CodeBuildStep$Builder instance using the provided configuration.
   The function takes the CodeBuildStep$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -252,11 +252,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-build-step-builder (CodeBuildStep$Builder/create (name id)) id config))
+  (code-build-step-builder> (CodeBuildStep$Builder/create (name id)) id config))
 
 
-(defn build-code-build-step-props-builder
-  "The build-code-build-step-props-builder function updates a CodeBuildStepProps$Builder instance using the provided configuration.
+(defn code-build-step-props-builder>
+  "The code-build-step-props-builder> function updates a CodeBuildStepProps$Builder instance using the provided configuration.
   The function takes the CodeBuildStepProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -337,11 +337,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-build-step-props-builder (new CodeBuildStepProps$Builder) id config))
+  (code-build-step-props-builder> (new CodeBuildStepProps$Builder) id config))
 
 
-(defn build-code-commit-source-options-builder
-  "The build-code-commit-source-options-builder function updates a CodeCommitSourceOptions$Builder instance using the provided configuration.
+(defn code-commit-source-options-builder>
+  "The code-commit-source-options-builder> function updates a CodeCommitSourceOptions$Builder instance using the provided configuration.
   The function takes the CodeCommitSourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -374,11 +374,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-commit-source-options-builder (new CodeCommitSourceOptions$Builder) id config))
+  (code-commit-source-options-builder> (new CodeCommitSourceOptions$Builder) id config))
 
 
-(defn build-code-pipeline-action-factory-result-builder
-  "The build-code-pipeline-action-factory-result-builder function updates a CodePipelineActionFactoryResult$Builder instance using the provided configuration.
+(defn code-pipeline-action-factory-result-builder>
+  "The code-pipeline-action-factory-result-builder> function updates a CodePipelineActionFactoryResult$Builder instance using the provided configuration.
   The function takes the CodePipelineActionFactoryResult$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -405,11 +405,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-pipeline-action-factory-result-builder (new CodePipelineActionFactoryResult$Builder) id config))
+  (code-pipeline-action-factory-result-builder> (new CodePipelineActionFactoryResult$Builder) id config))
 
 
-(defn build-code-pipeline-builder
-  "The build-code-pipeline-builder function updates a CodePipeline$Builder instance using the provided configuration.
+(defn code-pipeline-builder>
+  "The code-pipeline-builder> function updates a CodePipeline$Builder instance using the provided configuration.
   The function takes the CodePipeline$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -490,11 +490,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-code-pipeline-builder (CodePipeline$Builder/create scope (name id)) id config))
+  (code-pipeline-builder> (CodePipeline$Builder/create scope (name id)) id config))
 
 
-(defn build-code-pipeline-props-builder
-  "The build-code-pipeline-props-builder function updates a CodePipelineProps$Builder instance using the provided configuration.
+(defn code-pipeline-props-builder>
+  "The code-pipeline-props-builder> function updates a CodePipelineProps$Builder instance using the provided configuration.
   The function takes the CodePipelineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -575,11 +575,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-pipeline-props-builder (new CodePipelineProps$Builder) id config))
+  (code-pipeline-props-builder> (new CodePipelineProps$Builder) id config))
 
 
-(defn build-confirm-permissions-broadening-builder
-  "The build-confirm-permissions-broadening-builder function updates a ConfirmPermissionsBroadening$Builder instance using the provided configuration.
+(defn confirm-permissions-broadening-builder>
+  "The confirm-permissions-broadening-builder> function updates a ConfirmPermissionsBroadening$Builder instance using the provided configuration.
   The function takes the ConfirmPermissionsBroadening$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -609,11 +609,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-confirm-permissions-broadening-builder (ConfirmPermissionsBroadening$Builder/create (name id)) id config))
+  (confirm-permissions-broadening-builder> (ConfirmPermissionsBroadening$Builder/create (name id)) id config))
 
 
-(defn build-connection-source-options-builder
-  "The build-connection-source-options-builder function updates a ConnectionSourceOptions$Builder instance using the provided configuration.
+(defn connection-source-options-builder>
+  "The connection-source-options-builder> function updates a ConnectionSourceOptions$Builder instance using the provided configuration.
   The function takes the ConnectionSourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -646,11 +646,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-connection-source-options-builder (new ConnectionSourceOptions$Builder) id config))
+  (connection-source-options-builder> (new ConnectionSourceOptions$Builder) id config))
 
 
-(defn build-ecr-docker-credential-options-builder
-  "The build-ecr-docker-credential-options-builder function updates a EcrDockerCredentialOptions$Builder instance using the provided configuration.
+(defn ecr-docker-credential-options-builder>
+  "The ecr-docker-credential-options-builder> function updates a EcrDockerCredentialOptions$Builder instance using the provided configuration.
   The function takes the EcrDockerCredentialOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -677,11 +677,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecr-docker-credential-options-builder (new EcrDockerCredentialOptions$Builder) id config))
+  (ecr-docker-credential-options-builder> (new EcrDockerCredentialOptions$Builder) id config))
 
 
-(defn build-ecr-source-options-builder
-  "The build-ecr-source-options-builder function updates a ECRSourceOptions$Builder instance using the provided configuration.
+(defn ecr-source-options-builder>
+  "The ecr-source-options-builder> function updates a ECRSourceOptions$Builder instance using the provided configuration.
   The function takes the ECRSourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -708,11 +708,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecr-source-options-builder (new ECRSourceOptions$Builder) id config))
+  (ecr-source-options-builder> (new ECRSourceOptions$Builder) id config))
 
 
-(defn build-external-docker-credential-options-builder
-  "The build-external-docker-credential-options-builder function updates a ExternalDockerCredentialOptions$Builder instance using the provided configuration.
+(defn external-docker-credential-options-builder>
+  "The external-docker-credential-options-builder> function updates a ExternalDockerCredentialOptions$Builder instance using the provided configuration.
   The function takes the ExternalDockerCredentialOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -745,11 +745,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-external-docker-credential-options-builder (new ExternalDockerCredentialOptions$Builder) id config))
+  (external-docker-credential-options-builder> (new ExternalDockerCredentialOptions$Builder) id config))
 
 
-(defn build-file-set-location-builder
-  "The build-file-set-location-builder function updates a FileSetLocation$Builder instance using the provided configuration.
+(defn file-set-location-builder>
+  "The file-set-location-builder> function updates a FileSetLocation$Builder instance using the provided configuration.
   The function takes the FileSetLocation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -776,11 +776,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-file-set-location-builder (new FileSetLocation$Builder) id config))
+  (file-set-location-builder> (new FileSetLocation$Builder) id config))
 
 
-(defn build-git-hub-source-options-builder
-  "The build-git-hub-source-options-builder function updates a GitHubSourceOptions$Builder instance using the provided configuration.
+(defn git-hub-source-options-builder>
+  "The git-hub-source-options-builder> function updates a GitHubSourceOptions$Builder instance using the provided configuration.
   The function takes the GitHubSourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -810,11 +810,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-git-hub-source-options-builder (new GitHubSourceOptions$Builder) id config))
+  (git-hub-source-options-builder> (new GitHubSourceOptions$Builder) id config))
 
 
-(defn build-manual-approval-step-builder
-  "The build-manual-approval-step-builder function updates a ManualApprovalStep$Builder instance using the provided configuration.
+(defn manual-approval-step-builder>
+  "The manual-approval-step-builder> function updates a ManualApprovalStep$Builder instance using the provided configuration.
   The function takes the ManualApprovalStep$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -841,11 +841,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-manual-approval-step-builder (ManualApprovalStep$Builder/create (name id)) id config))
+  (manual-approval-step-builder> (ManualApprovalStep$Builder/create (name id)) id config))
 
 
-(defn build-manual-approval-step-props-builder
-  "The build-manual-approval-step-props-builder function updates a ManualApprovalStepProps$Builder instance using the provided configuration.
+(defn manual-approval-step-props-builder>
+  "The manual-approval-step-props-builder> function updates a ManualApprovalStepProps$Builder instance using the provided configuration.
   The function takes the ManualApprovalStepProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -869,11 +869,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-manual-approval-step-props-builder (new ManualApprovalStepProps$Builder) id config))
+  (manual-approval-step-props-builder> (new ManualApprovalStepProps$Builder) id config))
 
 
-(defn build-permissions-broadening-check-props-builder
-  "The build-permissions-broadening-check-props-builder function updates a PermissionsBroadeningCheckProps$Builder instance using the provided configuration.
+(defn permissions-broadening-check-props-builder>
+  "The permissions-broadening-check-props-builder> function updates a PermissionsBroadeningCheckProps$Builder instance using the provided configuration.
   The function takes the PermissionsBroadeningCheckProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -900,11 +900,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-permissions-broadening-check-props-builder (new PermissionsBroadeningCheckProps$Builder) id config))
+  (permissions-broadening-check-props-builder> (new PermissionsBroadeningCheckProps$Builder) id config))
 
 
-(defn build-pipeline-base-props-builder
-  "The build-pipeline-base-props-builder function updates a PipelineBaseProps$Builder instance using the provided configuration.
+(defn pipeline-base-props-builder>
+  "The pipeline-base-props-builder> function updates a PipelineBaseProps$Builder instance using the provided configuration.
   The function takes the PipelineBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -928,11 +928,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-pipeline-base-props-builder (new PipelineBaseProps$Builder) id config))
+  (pipeline-base-props-builder> (new PipelineBaseProps$Builder) id config))
 
 
-(defn build-produce-action-options-builder
-  "The build-produce-action-options-builder function updates a ProduceActionOptions$Builder instance using the provided configuration.
+(defn produce-action-options-builder>
+  "The produce-action-options-builder> function updates a ProduceActionOptions$Builder instance using the provided configuration.
   The function takes the ProduceActionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -983,11 +983,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-produce-action-options-builder (new ProduceActionOptions$Builder) id config))
+  (produce-action-options-builder> (new ProduceActionOptions$Builder) id config))
 
 
-(defn build-s3-source-options-builder
-  "The build-s3-source-options-builder function updates a S3SourceOptions$Builder instance using the provided configuration.
+(defn s3-source-options-builder>
+  "The s3-source-options-builder> function updates a S3SourceOptions$Builder instance using the provided configuration.
   The function takes the S3SourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1017,11 +1017,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-s3-source-options-builder (new S3SourceOptions$Builder) id config))
+  (s3-source-options-builder> (new S3SourceOptions$Builder) id config))
 
 
-(defn build-shell-step-builder
-  "The build-shell-step-builder function updates a ShellStep$Builder instance using the provided configuration.
+(defn shell-step-builder>
+  "The shell-step-builder> function updates a ShellStep$Builder instance using the provided configuration.
   The function takes the ShellStep$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1066,11 +1066,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-shell-step-builder (ShellStep$Builder/create (name id)) id config))
+  (shell-step-builder> (ShellStep$Builder/create (name id)) id config))
 
 
-(defn build-shell-step-props-builder
-  "The build-shell-step-props-builder function updates a ShellStepProps$Builder instance using the provided configuration.
+(defn shell-step-props-builder>
+  "The shell-step-props-builder> function updates a ShellStepProps$Builder instance using the provided configuration.
   The function takes the ShellStepProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1112,11 +1112,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-shell-step-props-builder (new ShellStepProps$Builder) id config))
+  (shell-step-props-builder> (new ShellStepProps$Builder) id config))
 
 
-(defn build-stack-asset-builder
-  "The build-stack-asset-builder function updates a StackAsset$Builder instance using the provided configuration.
+(defn stack-asset-builder>
+  "The stack-asset-builder> function updates a StackAsset$Builder instance using the provided configuration.
   The function takes the StackAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1155,11 +1155,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-stack-asset-builder (new StackAsset$Builder) id config))
+  (stack-asset-builder> (new StackAsset$Builder) id config))
 
 
-(defn build-stack-deployment-props-builder
-  "The build-stack-deployment-props-builder function updates a StackDeploymentProps$Builder instance using the provided configuration.
+(defn stack-deployment-props-builder>
+  "The stack-deployment-props-builder> function updates a StackDeploymentProps$Builder instance using the provided configuration.
   The function takes the StackDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1213,11 +1213,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-stack-deployment-props-builder (new StackDeploymentProps$Builder) id config))
+  (stack-deployment-props-builder> (new StackDeploymentProps$Builder) id config))
 
 
-(defn build-stack-steps-builder
-  "The build-stack-steps-builder function updates a StackSteps$Builder instance using the provided configuration.
+(defn stack-steps-builder>
+  "The stack-steps-builder> function updates a StackSteps$Builder instance using the provided configuration.
   The function takes the StackSteps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1250,11 +1250,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-stack-steps-builder (new StackSteps$Builder) id config))
+  (stack-steps-builder> (new StackSteps$Builder) id config))
 
 
-(defn build-stage-deployment-props-builder
-  "The build-stage-deployment-props-builder function updates a StageDeploymentProps$Builder instance using the provided configuration.
+(defn stage-deployment-props-builder>
+  "The stage-deployment-props-builder> function updates a StageDeploymentProps$Builder instance using the provided configuration.
   The function takes the StageDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1287,11 +1287,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-stage-deployment-props-builder (new StageDeploymentProps$Builder) id config))
+  (stage-deployment-props-builder> (new StageDeploymentProps$Builder) id config))
 
 
-(defn build-wave-builder
-  "The build-wave-builder function updates a Wave$Builder instance using the provided configuration.
+(defn wave-builder>
+  "The wave-builder> function updates a Wave$Builder instance using the provided configuration.
   The function takes the Wave$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1321,11 +1321,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-wave-builder (Wave$Builder/create (name id)) id config))
+  (wave-builder> (Wave$Builder/create (name id)) id config))
 
 
-(defn build-wave-options-builder
-  "The build-wave-options-builder function updates a WaveOptions$Builder instance using the provided configuration.
+(defn wave-options-builder>
+  "The wave-options-builder> function updates a WaveOptions$Builder instance using the provided configuration.
   The function takes the WaveOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1352,11 +1352,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-wave-options-builder (new WaveOptions$Builder) id config))
+  (wave-options-builder> (new WaveOptions$Builder) id config))
 
 
-(defn build-wave-props-builder
-  "The build-wave-props-builder function updates a WaveProps$Builder instance using the provided configuration.
+(defn wave-props-builder>
+  "The wave-props-builder> function updates a WaveProps$Builder instance using the provided configuration.
   The function takes the WaveProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1383,4 +1383,4 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-wave-props-builder (new WaveProps$Builder) id config))
+  (wave-props-builder> (new WaveProps$Builder) id config))

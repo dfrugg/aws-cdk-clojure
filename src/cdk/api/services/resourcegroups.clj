@@ -10,8 +10,8 @@
                                                            CfnGroupProps$Builder]))
 
 
-(defn build-cfn-group-builder
-  "The build-cfn-group-builder function updates a CfnGroup$Builder instance using the provided configuration.
+(defn cfn-group-builder>
+  "The cfn-group-builder> function updates a CfnGroup$Builder instance using the provided configuration.
   The function takes the CfnGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -50,11 +50,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
+  (cfn-group-builder> (CfnGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-group-configuration-item-property-builder
-  "The build-cfn-group-configuration-item-property-builder function updates a CfnGroup$ConfigurationItemProperty$Builder instance using the provided configuration.
+(defn cfn-group-configuration-item-property-builder>
+  "The cfn-group-configuration-item-property-builder> function updates a CfnGroup$ConfigurationItemProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$ConfigurationItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -81,11 +81,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-configuration-item-property-builder (new CfnGroup$ConfigurationItemProperty$Builder) id config))
+  (cfn-group-configuration-item-property-builder> (new CfnGroup$ConfigurationItemProperty$Builder) id config))
 
 
-(defn build-cfn-group-configuration-parameter-property-builder
-  "The build-cfn-group-configuration-parameter-property-builder function updates a CfnGroup$ConfigurationParameterProperty$Builder instance using the provided configuration.
+(defn cfn-group-configuration-parameter-property-builder>
+  "The cfn-group-configuration-parameter-property-builder> function updates a CfnGroup$ConfigurationParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$ConfigurationParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -112,11 +112,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-configuration-parameter-property-builder (new CfnGroup$ConfigurationParameterProperty$Builder) id config))
+  (cfn-group-configuration-parameter-property-builder> (new CfnGroup$ConfigurationParameterProperty$Builder) id config))
 
 
-(defn build-cfn-group-props-builder
-  "The build-cfn-group-props-builder function updates a CfnGroupProps$Builder instance using the provided configuration.
+(defn cfn-group-props-builder>
+  "The cfn-group-props-builder> function updates a CfnGroupProps$Builder instance using the provided configuration.
   The function takes the CfnGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -155,11 +155,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
+  (cfn-group-props-builder> (new CfnGroupProps$Builder) id config))
 
 
-(defn build-cfn-group-query-property-builder
-  "The build-cfn-group-query-property-builder function updates a CfnGroup$QueryProperty$Builder instance using the provided configuration.
+(defn cfn-group-query-property-builder>
+  "The cfn-group-query-property-builder> function updates a CfnGroup$QueryProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$QueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -189,11 +189,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-query-property-builder (new CfnGroup$QueryProperty$Builder) id config))
+  (cfn-group-query-property-builder> (new CfnGroup$QueryProperty$Builder) id config))
 
 
-(defn build-cfn-group-resource-query-property-builder
-  "The build-cfn-group-resource-query-property-builder function updates a CfnGroup$ResourceQueryProperty$Builder instance using the provided configuration.
+(defn cfn-group-resource-query-property-builder>
+  "The cfn-group-resource-query-property-builder> function updates a CfnGroup$ResourceQueryProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$ResourceQueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -220,11 +220,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-resource-query-property-builder (new CfnGroup$ResourceQueryProperty$Builder) id config))
+  (cfn-group-resource-query-property-builder> (new CfnGroup$ResourceQueryProperty$Builder) id config))
 
 
-(defn build-cfn-group-tag-filter-property-builder
-  "The build-cfn-group-tag-filter-property-builder function updates a CfnGroup$TagFilterProperty$Builder instance using the provided configuration.
+(defn cfn-group-tag-filter-property-builder>
+  "The cfn-group-tag-filter-property-builder> function updates a CfnGroup$TagFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$TagFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -251,4 +251,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-tag-filter-property-builder (new CfnGroup$TagFilterProperty$Builder) id config))
+  (cfn-group-tag-filter-property-builder> (new CfnGroup$TagFilterProperty$Builder) id config))

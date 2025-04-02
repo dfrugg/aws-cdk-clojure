@@ -6,8 +6,8 @@
                                                           CfnExecutionPlanProps$Builder]))
 
 
-(defn build-cfn-execution-plan-builder
-  "The build-cfn-execution-plan-builder function updates a CfnExecutionPlan$Builder instance using the provided configuration.
+(defn cfn-execution-plan-builder>
+  "The cfn-execution-plan-builder> function updates a CfnExecutionPlan$Builder instance using the provided configuration.
   The function takes the CfnExecutionPlan$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -40,11 +40,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-execution-plan-builder (CfnExecutionPlan$Builder/create scope (name id)) id config))
+  (cfn-execution-plan-builder> (CfnExecutionPlan$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-execution-plan-capacity-units-configuration-property-builder
-  "The build-cfn-execution-plan-capacity-units-configuration-property-builder function updates a CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-execution-plan-capacity-units-configuration-property-builder>
+  "The cfn-execution-plan-capacity-units-configuration-property-builder> function updates a CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -68,11 +68,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-execution-plan-capacity-units-configuration-property-builder (new CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder) id config))
+  (cfn-execution-plan-capacity-units-configuration-property-builder> (new CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-execution-plan-props-builder
-  "The build-cfn-execution-plan-props-builder function updates a CfnExecutionPlanProps$Builder instance using the provided configuration.
+(defn cfn-execution-plan-props-builder>
+  "The cfn-execution-plan-props-builder> function updates a CfnExecutionPlanProps$Builder instance using the provided configuration.
   The function takes the CfnExecutionPlanProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -105,4 +105,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-execution-plan-props-builder (new CfnExecutionPlanProps$Builder) id config))
+  (cfn-execution-plan-props-builder> (new CfnExecutionPlanProps$Builder) id config))

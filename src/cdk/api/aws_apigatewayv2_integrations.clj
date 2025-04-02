@@ -28,8 +28,8 @@
            [software.amazon.awscdk.services.servicediscovery IService]))
 
 
-(defn build-http-alb-integration-builder
-  "The build-http-alb-integration-builder function updates a HttpAlbIntegration$Builder instance using the provided configuration.
+(defn http-alb-integration-builder>
+  "The http-alb-integration-builder> function updates a HttpAlbIntegration$Builder instance using the provided configuration.
   The function takes the HttpAlbIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -65,11 +65,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IApplicationListener listener id config]
-  (build-http-alb-integration-builder (HttpAlbIntegration$Builder/create (name id) listener) id config))
+  (http-alb-integration-builder> (HttpAlbIntegration$Builder/create (name id) listener) id config))
 
 
-(defn build-http-alb-integration-props-builder
-  "The build-http-alb-integration-props-builder function updates a HttpAlbIntegrationProps$Builder instance using the provided configuration.
+(defn http-alb-integration-props-builder>
+  "The http-alb-integration-props-builder> function updates a HttpAlbIntegrationProps$Builder instance using the provided configuration.
   The function takes the HttpAlbIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -102,11 +102,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-alb-integration-props-builder (new HttpAlbIntegrationProps$Builder) id config))
+  (http-alb-integration-props-builder> (new HttpAlbIntegrationProps$Builder) id config))
 
 
-(defn build-http-lambda-integration-builder
-  "The build-http-lambda-integration-builder function updates a HttpLambdaIntegration$Builder instance using the provided configuration.
+(defn http-lambda-integration-builder>
+  "The http-lambda-integration-builder> function updates a HttpLambdaIntegration$Builder instance using the provided configuration.
   The function takes the HttpLambdaIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -136,11 +136,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IFunction handler id config]
-  (build-http-lambda-integration-builder (HttpLambdaIntegration$Builder/create (name id) handler) id config))
+  (http-lambda-integration-builder> (HttpLambdaIntegration$Builder/create (name id) handler) id config))
 
 
-(defn build-http-lambda-integration-props-builder
-  "The build-http-lambda-integration-props-builder function updates a HttpLambdaIntegrationProps$Builder instance using the provided configuration.
+(defn http-lambda-integration-props-builder>
+  "The http-lambda-integration-props-builder> function updates a HttpLambdaIntegrationProps$Builder instance using the provided configuration.
   The function takes the HttpLambdaIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -167,11 +167,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-lambda-integration-props-builder (new HttpLambdaIntegrationProps$Builder) id config))
+  (http-lambda-integration-props-builder> (new HttpLambdaIntegrationProps$Builder) id config))
 
 
-(defn build-http-nlb-integration-builder
-  "The build-http-nlb-integration-builder function updates a HttpNlbIntegration$Builder instance using the provided configuration.
+(defn http-nlb-integration-builder>
+  "The http-nlb-integration-builder> function updates a HttpNlbIntegration$Builder instance using the provided configuration.
   The function takes the HttpNlbIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -207,11 +207,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^INetworkListener listener id config]
-  (build-http-nlb-integration-builder (HttpNlbIntegration$Builder/create (name id) listener) id config))
+  (http-nlb-integration-builder> (HttpNlbIntegration$Builder/create (name id) listener) id config))
 
 
-(defn build-http-nlb-integration-props-builder
-  "The build-http-nlb-integration-props-builder function updates a HttpNlbIntegrationProps$Builder instance using the provided configuration.
+(defn http-nlb-integration-props-builder>
+  "The http-nlb-integration-props-builder> function updates a HttpNlbIntegrationProps$Builder instance using the provided configuration.
   The function takes the HttpNlbIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -244,11 +244,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-nlb-integration-props-builder (new HttpNlbIntegrationProps$Builder) id config))
+  (http-nlb-integration-props-builder> (new HttpNlbIntegrationProps$Builder) id config))
 
 
-(defn build-http-private-integration-options-builder
-  "The build-http-private-integration-options-builder function updates a HttpPrivateIntegrationOptions$Builder instance using the provided configuration.
+(defn http-private-integration-options-builder>
+  "The http-private-integration-options-builder> function updates a HttpPrivateIntegrationOptions$Builder instance using the provided configuration.
   The function takes the HttpPrivateIntegrationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -281,11 +281,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.elasticlo
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-private-integration-options-builder (new HttpPrivateIntegrationOptions$Builder) id config))
+  (http-private-integration-options-builder> (new HttpPrivateIntegrationOptions$Builder) id config))
 
 
-(defn build-http-service-discovery-integration-builder
-  "The build-http-service-discovery-integration-builder function updates a HttpServiceDiscoveryIntegration$Builder instance using the provided configuration.
+(defn http-service-discovery-integration-builder>
+  "The http-service-discovery-integration-builder> function updates a HttpServiceDiscoveryIntegration$Builder instance using the provided configuration.
   The function takes the HttpServiceDiscoveryIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -321,11 +321,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.servicedi
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IService service id config]
-  (build-http-service-discovery-integration-builder (HttpServiceDiscoveryIntegration$Builder/create (name id) service) id config))
+  (http-service-discovery-integration-builder> (HttpServiceDiscoveryIntegration$Builder/create (name id) service) id config))
 
 
-(defn build-http-service-discovery-integration-props-builder
-  "The build-http-service-discovery-integration-props-builder function updates a HttpServiceDiscoveryIntegrationProps$Builder instance using the provided configuration.
+(defn http-service-discovery-integration-props-builder>
+  "The http-service-discovery-integration-props-builder> function updates a HttpServiceDiscoveryIntegrationProps$Builder instance using the provided configuration.
   The function takes the HttpServiceDiscoveryIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -358,11 +358,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.servicedi
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-service-discovery-integration-props-builder (new HttpServiceDiscoveryIntegrationProps$Builder) id config))
+  (http-service-discovery-integration-props-builder> (new HttpServiceDiscoveryIntegrationProps$Builder) id config))
 
 
-(defn build-http-step-functions-integration-builder
-  "The build-http-step-functions-integration-builder function updates a HttpStepFunctionsIntegration$Builder instance using the provided configuration.
+(defn http-step-functions-integration-builder>
+  "The http-step-functions-integration-builder> function updates a HttpStepFunctionsIntegration$Builder instance using the provided configuration.
   The function takes the HttpStepFunctionsIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -395,11 +395,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-step-functions-integration-builder (HttpStepFunctionsIntegration$Builder/create (name id)) id config))
+  (http-step-functions-integration-builder> (HttpStepFunctionsIntegration$Builder/create (name id)) id config))
 
 
-(defn build-http-step-functions-integration-props-builder
-  "The build-http-step-functions-integration-props-builder function updates a HttpStepFunctionsIntegrationProps$Builder instance using the provided configuration.
+(defn http-step-functions-integration-props-builder>
+  "The http-step-functions-integration-props-builder> function updates a HttpStepFunctionsIntegrationProps$Builder instance using the provided configuration.
   The function takes the HttpStepFunctionsIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -429,11 +429,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-step-functions-integration-props-builder (new HttpStepFunctionsIntegrationProps$Builder) id config))
+  (http-step-functions-integration-props-builder> (new HttpStepFunctionsIntegrationProps$Builder) id config))
 
 
-(defn build-http-url-integration-builder
-  "The build-http-url-integration-builder function updates a HttpUrlIntegration$Builder instance using the provided configuration.
+(defn http-url-integration-builder>
+  "The http-url-integration-builder> function updates a HttpUrlIntegration$Builder instance using the provided configuration.
   The function takes the HttpUrlIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -463,11 +463,11 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String url id config]
-  (build-http-url-integration-builder (HttpUrlIntegration$Builder/create (name id) url) id config))
+  (http-url-integration-builder> (HttpUrlIntegration$Builder/create (name id) url) id config))
 
 
-(defn build-http-url-integration-props-builder
-  "The build-http-url-integration-props-builder function updates a HttpUrlIntegrationProps$Builder instance using the provided configuration.
+(defn http-url-integration-props-builder>
+  "The http-url-integration-props-builder> function updates a HttpUrlIntegrationProps$Builder instance using the provided configuration.
   The function takes the HttpUrlIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -494,11 +494,11 @@ __Create Form:__ ____[java.lang.String java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-url-integration-props-builder (new HttpUrlIntegrationProps$Builder) id config))
+  (http-url-integration-props-builder> (new HttpUrlIntegrationProps$Builder) id config))
 
 
-(defn build-web-socket-aws-integration-builder
-  "The build-web-socket-aws-integration-builder function updates a WebSocketAwsIntegration$Builder instance using the provided configuration.
+(defn web-socket-aws-integration-builder>
+  "The web-socket-aws-integration-builder> function updates a WebSocketAwsIntegration$Builder instance using the provided configuration.
   The function takes the WebSocketAwsIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -549,11 +549,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-web-socket-aws-integration-builder (WebSocketAwsIntegration$Builder/create (name id)) id config))
+  (web-socket-aws-integration-builder> (WebSocketAwsIntegration$Builder/create (name id)) id config))
 
 
-(defn build-web-socket-aws-integration-props-builder
-  "The build-web-socket-aws-integration-props-builder function updates a WebSocketAwsIntegrationProps$Builder instance using the provided configuration.
+(defn web-socket-aws-integration-props-builder>
+  "The web-socket-aws-integration-props-builder> function updates a WebSocketAwsIntegrationProps$Builder instance using the provided configuration.
   The function takes the WebSocketAwsIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -601,11 +601,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-web-socket-aws-integration-props-builder (new WebSocketAwsIntegrationProps$Builder) id config))
+  (web-socket-aws-integration-props-builder> (new WebSocketAwsIntegrationProps$Builder) id config))
 
 
-(defn build-web-socket-lambda-integration-builder
-  "The build-web-socket-lambda-integration-builder function updates a WebSocketLambdaIntegration$Builder instance using the provided configuration.
+(defn web-socket-lambda-integration-builder>
+  "The web-socket-lambda-integration-builder> function updates a WebSocketLambdaIntegration$Builder instance using the provided configuration.
   The function takes the WebSocketLambdaIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -635,11 +635,11 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IFunction handler id config]
-  (build-web-socket-lambda-integration-builder (WebSocketLambdaIntegration$Builder/create (name id) handler) id config))
+  (web-socket-lambda-integration-builder> (WebSocketLambdaIntegration$Builder/create (name id) handler) id config))
 
 
-(defn build-web-socket-lambda-integration-props-builder
-  "The build-web-socket-lambda-integration-props-builder function updates a WebSocketLambdaIntegrationProps$Builder instance using the provided configuration.
+(defn web-socket-lambda-integration-props-builder>
+  "The web-socket-lambda-integration-props-builder> function updates a WebSocketLambdaIntegrationProps$Builder instance using the provided configuration.
   The function takes the WebSocketLambdaIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -666,4 +666,4 @@ __Create Form:__ ____[java.lang.String software.amazon.awscdk.services.lambda.IF
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-web-socket-lambda-integration-props-builder (new WebSocketLambdaIntegrationProps$Builder) id config))
+  (web-socket-lambda-integration-props-builder> (new WebSocketLambdaIntegrationProps$Builder) id config))

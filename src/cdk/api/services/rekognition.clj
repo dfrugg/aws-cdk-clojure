@@ -18,8 +18,8 @@
                                                         CfnStreamProcessorProps$Builder]))
 
 
-(defn build-cfn-collection-builder
-  "The build-cfn-collection-builder function updates a CfnCollection$Builder instance using the provided configuration.
+(defn cfn-collection-builder>
+  "The cfn-collection-builder> function updates a CfnCollection$Builder instance using the provided configuration.
   The function takes the CfnCollection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -46,11 +46,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-collection-builder (CfnCollection$Builder/create scope (name id)) id config))
+  (cfn-collection-builder> (CfnCollection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-collection-props-builder
-  "The build-cfn-collection-props-builder function updates a CfnCollectionProps$Builder instance using the provided configuration.
+(defn cfn-collection-props-builder>
+  "The cfn-collection-props-builder> function updates a CfnCollectionProps$Builder instance using the provided configuration.
   The function takes the CfnCollectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -77,11 +77,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-collection-props-builder (new CfnCollectionProps$Builder) id config))
+  (cfn-collection-props-builder> (new CfnCollectionProps$Builder) id config))
 
 
-(defn build-cfn-project-builder
-  "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
+(defn cfn-project-builder>
+  "The cfn-project-builder> function updates a CfnProject$Builder instance using the provided configuration.
   The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -105,11 +105,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+  (cfn-project-builder> (CfnProject$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-project-props-builder
-  "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
+(defn cfn-project-props-builder>
+  "The cfn-project-props-builder> function updates a CfnProjectProps$Builder instance using the provided configuration.
   The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -133,11 +133,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))
+  (cfn-project-props-builder> (new CfnProjectProps$Builder) id config))
 
 
-(defn build-cfn-stream-processor-bounding-box-property-builder
-  "The build-cfn-stream-processor-bounding-box-property-builder function updates a CfnStreamProcessor$BoundingBoxProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-bounding-box-property-builder>
+  "The cfn-stream-processor-bounding-box-property-builder> function updates a CfnStreamProcessor$BoundingBoxProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$BoundingBoxProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -170,11 +170,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-bounding-box-property-builder (new CfnStreamProcessor$BoundingBoxProperty$Builder) id config))
+  (cfn-stream-processor-bounding-box-property-builder> (new CfnStreamProcessor$BoundingBoxProperty$Builder) id config))
 
 
-(defn build-cfn-stream-processor-builder
-  "The build-cfn-stream-processor-builder function updates a CfnStreamProcessor$Builder instance using the provided configuration.
+(defn cfn-stream-processor-builder>
+  "The cfn-stream-processor-builder> function updates a CfnStreamProcessor$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -234,11 +234,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-stream-processor-builder (CfnStreamProcessor$Builder/create scope (name id)) id config))
+  (cfn-stream-processor-builder> (CfnStreamProcessor$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-stream-processor-connected-home-settings-property-builder
-  "The build-cfn-stream-processor-connected-home-settings-property-builder function updates a CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-connected-home-settings-property-builder>
+  "The cfn-stream-processor-connected-home-settings-property-builder> function updates a CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -265,11 +265,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-connected-home-settings-property-builder (new CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder) id config))
+  (cfn-stream-processor-connected-home-settings-property-builder> (new CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-stream-processor-data-sharing-preference-property-builder
-  "The build-cfn-stream-processor-data-sharing-preference-property-builder function updates a CfnStreamProcessor$DataSharingPreferenceProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-data-sharing-preference-property-builder>
+  "The cfn-stream-processor-data-sharing-preference-property-builder> function updates a CfnStreamProcessor$DataSharingPreferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$DataSharingPreferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -293,11 +293,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-data-sharing-preference-property-builder (new CfnStreamProcessor$DataSharingPreferenceProperty$Builder) id config))
+  (cfn-stream-processor-data-sharing-preference-property-builder> (new CfnStreamProcessor$DataSharingPreferenceProperty$Builder) id config))
 
 
-(defn build-cfn-stream-processor-face-search-settings-property-builder
-  "The build-cfn-stream-processor-face-search-settings-property-builder function updates a CfnStreamProcessor$FaceSearchSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-face-search-settings-property-builder>
+  "The cfn-stream-processor-face-search-settings-property-builder> function updates a CfnStreamProcessor$FaceSearchSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$FaceSearchSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -324,11 +324,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-face-search-settings-property-builder (new CfnStreamProcessor$FaceSearchSettingsProperty$Builder) id config))
+  (cfn-stream-processor-face-search-settings-property-builder> (new CfnStreamProcessor$FaceSearchSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-stream-processor-kinesis-data-stream-property-builder
-  "The build-cfn-stream-processor-kinesis-data-stream-property-builder function updates a CfnStreamProcessor$KinesisDataStreamProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-kinesis-data-stream-property-builder>
+  "The cfn-stream-processor-kinesis-data-stream-property-builder> function updates a CfnStreamProcessor$KinesisDataStreamProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$KinesisDataStreamProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -352,11 +352,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-kinesis-data-stream-property-builder (new CfnStreamProcessor$KinesisDataStreamProperty$Builder) id config))
+  (cfn-stream-processor-kinesis-data-stream-property-builder> (new CfnStreamProcessor$KinesisDataStreamProperty$Builder) id config))
 
 
-(defn build-cfn-stream-processor-kinesis-video-stream-property-builder
-  "The build-cfn-stream-processor-kinesis-video-stream-property-builder function updates a CfnStreamProcessor$KinesisVideoStreamProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-kinesis-video-stream-property-builder>
+  "The cfn-stream-processor-kinesis-video-stream-property-builder> function updates a CfnStreamProcessor$KinesisVideoStreamProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$KinesisVideoStreamProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -380,11 +380,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-kinesis-video-stream-property-builder (new CfnStreamProcessor$KinesisVideoStreamProperty$Builder) id config))
+  (cfn-stream-processor-kinesis-video-stream-property-builder> (new CfnStreamProcessor$KinesisVideoStreamProperty$Builder) id config))
 
 
-(defn build-cfn-stream-processor-notification-channel-property-builder
-  "The build-cfn-stream-processor-notification-channel-property-builder function updates a CfnStreamProcessor$NotificationChannelProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-notification-channel-property-builder>
+  "The cfn-stream-processor-notification-channel-property-builder> function updates a CfnStreamProcessor$NotificationChannelProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$NotificationChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -408,11 +408,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-notification-channel-property-builder (new CfnStreamProcessor$NotificationChannelProperty$Builder) id config))
+  (cfn-stream-processor-notification-channel-property-builder> (new CfnStreamProcessor$NotificationChannelProperty$Builder) id config))
 
 
-(defn build-cfn-stream-processor-point-property-builder
-  "The build-cfn-stream-processor-point-property-builder function updates a CfnStreamProcessor$PointProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-point-property-builder>
+  "The cfn-stream-processor-point-property-builder> function updates a CfnStreamProcessor$PointProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$PointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -439,11 +439,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-point-property-builder (new CfnStreamProcessor$PointProperty$Builder) id config))
+  (cfn-stream-processor-point-property-builder> (new CfnStreamProcessor$PointProperty$Builder) id config))
 
 
-(defn build-cfn-stream-processor-props-builder
-  "The build-cfn-stream-processor-props-builder function updates a CfnStreamProcessorProps$Builder instance using the provided configuration.
+(defn cfn-stream-processor-props-builder>
+  "The cfn-stream-processor-props-builder> function updates a CfnStreamProcessorProps$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -503,11 +503,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-props-builder (new CfnStreamProcessorProps$Builder) id config))
+  (cfn-stream-processor-props-builder> (new CfnStreamProcessorProps$Builder) id config))
 
 
-(defn build-cfn-stream-processor-s3-destination-property-builder
-  "The build-cfn-stream-processor-s3-destination-property-builder function updates a CfnStreamProcessor$S3DestinationProperty$Builder instance using the provided configuration.
+(defn cfn-stream-processor-s3-destination-property-builder>
+  "The cfn-stream-processor-s3-destination-property-builder> function updates a CfnStreamProcessor$S3DestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamProcessor$S3DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -534,4 +534,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-processor-s3-destination-property-builder (new CfnStreamProcessor$S3DestinationProperty$Builder) id config))
+  (cfn-stream-processor-s3-destination-property-builder> (new CfnStreamProcessor$S3DestinationProperty$Builder) id config))

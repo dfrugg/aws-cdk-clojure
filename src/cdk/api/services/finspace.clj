@@ -8,8 +8,8 @@
                                                      CfnEnvironmentProps$Builder]))
 
 
-(defn build-cfn-environment-attribute-map-items-property-builder
-  "The build-cfn-environment-attribute-map-items-property-builder function updates a CfnEnvironment$AttributeMapItemsProperty$Builder instance using the provided configuration.
+(defn cfn-environment-attribute-map-items-property-builder>
+  "The cfn-environment-attribute-map-items-property-builder> function updates a CfnEnvironment$AttributeMapItemsProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$AttributeMapItemsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -36,11 +36,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-attribute-map-items-property-builder (new CfnEnvironment$AttributeMapItemsProperty$Builder) id config))
+  (cfn-environment-attribute-map-items-property-builder> (new CfnEnvironment$AttributeMapItemsProperty$Builder) id config))
 
 
-(defn build-cfn-environment-builder
-  "The build-cfn-environment-builder function updates a CfnEnvironment$Builder instance using the provided configuration.
+(defn cfn-environment-builder>
+  "The cfn-environment-builder> function updates a CfnEnvironment$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -85,11 +85,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+  (cfn-environment-builder> (CfnEnvironment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-environment-federation-parameters-property-builder
-  "The build-cfn-environment-federation-parameters-property-builder function updates a CfnEnvironment$FederationParametersProperty$Builder instance using the provided configuration.
+(defn cfn-environment-federation-parameters-property-builder>
+  "The cfn-environment-federation-parameters-property-builder> function updates a CfnEnvironment$FederationParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$FederationParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -128,11 +128,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-federation-parameters-property-builder (new CfnEnvironment$FederationParametersProperty$Builder) id config))
+  (cfn-environment-federation-parameters-property-builder> (new CfnEnvironment$FederationParametersProperty$Builder) id config))
 
 
-(defn build-cfn-environment-props-builder
-  "The build-cfn-environment-props-builder function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
+(defn cfn-environment-props-builder>
+  "The cfn-environment-props-builder> function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -177,11 +177,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
+  (cfn-environment-props-builder> (new CfnEnvironmentProps$Builder) id config))
 
 
-(defn build-cfn-environment-superuser-parameters-property-builder
-  "The build-cfn-environment-superuser-parameters-property-builder function updates a CfnEnvironment$SuperuserParametersProperty$Builder instance using the provided configuration.
+(defn cfn-environment-superuser-parameters-property-builder>
+  "The cfn-environment-superuser-parameters-property-builder> function updates a CfnEnvironment$SuperuserParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$SuperuserParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -211,4 +211,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-superuser-parameters-property-builder (new CfnEnvironment$SuperuserParametersProperty$Builder) id config))
+  (cfn-environment-superuser-parameters-property-builder> (new CfnEnvironment$SuperuserParametersProperty$Builder) id config))

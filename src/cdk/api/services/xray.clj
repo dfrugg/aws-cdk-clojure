@@ -13,8 +13,8 @@
                                                  CfnSamplingRuleProps$Builder]))
 
 
-(defn build-cfn-group-builder
-  "The build-cfn-group-builder function updates a CfnGroup$Builder instance using the provided configuration.
+(defn cfn-group-builder>
+  "The cfn-group-builder> function updates a CfnGroup$Builder instance using the provided configuration.
   The function takes the CfnGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -47,11 +47,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
+  (cfn-group-builder> (CfnGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-group-insights-configuration-property-builder
-  "The build-cfn-group-insights-configuration-property-builder function updates a CfnGroup$InsightsConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-group-insights-configuration-property-builder>
+  "The cfn-group-insights-configuration-property-builder> function updates a CfnGroup$InsightsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$InsightsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -78,11 +78,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-insights-configuration-property-builder (new CfnGroup$InsightsConfigurationProperty$Builder) id config))
+  (cfn-group-insights-configuration-property-builder> (new CfnGroup$InsightsConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-group-props-builder
-  "The build-cfn-group-props-builder function updates a CfnGroupProps$Builder instance using the provided configuration.
+(defn cfn-group-props-builder>
+  "The cfn-group-props-builder> function updates a CfnGroupProps$Builder instance using the provided configuration.
   The function takes the CfnGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -115,11 +115,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
+  (cfn-group-props-builder> (new CfnGroupProps$Builder) id config))
 
 
-(defn build-cfn-resource-policy-builder
-  "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
+(defn cfn-resource-policy-builder>
+  "The cfn-resource-policy-builder> function updates a CfnResourcePolicy$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -149,11 +149,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-policy-builder (CfnResourcePolicy$Builder/create scope (name id)) id config))
+  (cfn-resource-policy-builder> (CfnResourcePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-policy-props-builder
-  "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
+(defn cfn-resource-policy-props-builder>
+  "The cfn-resource-policy-props-builder> function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -183,11 +183,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-policy-props-builder (new CfnResourcePolicyProps$Builder) id config))
+  (cfn-resource-policy-props-builder> (new CfnResourcePolicyProps$Builder) id config))
 
 
-(defn build-cfn-sampling-rule-builder
-  "The build-cfn-sampling-rule-builder function updates a CfnSamplingRule$Builder instance using the provided configuration.
+(defn cfn-sampling-rule-builder>
+  "The cfn-sampling-rule-builder> function updates a CfnSamplingRule$Builder instance using the provided configuration.
   The function takes the CfnSamplingRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -223,11 +223,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-sampling-rule-builder (CfnSamplingRule$Builder/create scope (name id)) id config))
+  (cfn-sampling-rule-builder> (CfnSamplingRule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-sampling-rule-props-builder
-  "The build-cfn-sampling-rule-props-builder function updates a CfnSamplingRuleProps$Builder instance using the provided configuration.
+(defn cfn-sampling-rule-props-builder>
+  "The cfn-sampling-rule-props-builder> function updates a CfnSamplingRuleProps$Builder instance using the provided configuration.
   The function takes the CfnSamplingRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -263,11 +263,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sampling-rule-props-builder (new CfnSamplingRuleProps$Builder) id config))
+  (cfn-sampling-rule-props-builder> (new CfnSamplingRuleProps$Builder) id config))
 
 
-(defn build-cfn-sampling-rule-sampling-rule-property-builder
-  "The build-cfn-sampling-rule-sampling-rule-property-builder function updates a CfnSamplingRule$SamplingRuleProperty$Builder instance using the provided configuration.
+(defn cfn-sampling-rule-sampling-rule-property-builder>
+  "The cfn-sampling-rule-sampling-rule-property-builder> function updates a CfnSamplingRule$SamplingRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnSamplingRule$SamplingRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -327,11 +327,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sampling-rule-sampling-rule-property-builder (new CfnSamplingRule$SamplingRuleProperty$Builder) id config))
+  (cfn-sampling-rule-sampling-rule-property-builder> (new CfnSamplingRule$SamplingRuleProperty$Builder) id config))
 
 
-(defn build-cfn-sampling-rule-sampling-rule-record-property-builder
-  "The build-cfn-sampling-rule-sampling-rule-record-property-builder function updates a CfnSamplingRule$SamplingRuleRecordProperty$Builder instance using the provided configuration.
+(defn cfn-sampling-rule-sampling-rule-record-property-builder>
+  "The cfn-sampling-rule-sampling-rule-record-property-builder> function updates a CfnSamplingRule$SamplingRuleRecordProperty$Builder instance using the provided configuration.
   The function takes the CfnSamplingRule$SamplingRuleRecordProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -361,11 +361,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sampling-rule-sampling-rule-record-property-builder (new CfnSamplingRule$SamplingRuleRecordProperty$Builder) id config))
+  (cfn-sampling-rule-sampling-rule-record-property-builder> (new CfnSamplingRule$SamplingRuleRecordProperty$Builder) id config))
 
 
-(defn build-cfn-sampling-rule-sampling-rule-update-property-builder
-  "The build-cfn-sampling-rule-sampling-rule-update-property-builder function updates a CfnSamplingRule$SamplingRuleUpdateProperty$Builder instance using the provided configuration.
+(defn cfn-sampling-rule-sampling-rule-update-property-builder>
+  "The cfn-sampling-rule-sampling-rule-update-property-builder> function updates a CfnSamplingRule$SamplingRuleUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnSamplingRule$SamplingRuleUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -422,4 +422,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sampling-rule-sampling-rule-update-property-builder (new CfnSamplingRule$SamplingRuleUpdateProperty$Builder) id config))
+  (cfn-sampling-rule-sampling-rule-update-property-builder> (new CfnSamplingRule$SamplingRuleUpdateProperty$Builder) id config))

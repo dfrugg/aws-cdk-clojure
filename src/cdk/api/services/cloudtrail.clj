@@ -89,8 +89,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :none data) ReadWriteType/NONE)))
 
 
-(defn build-add-event-selector-options-builder
-  "The build-add-event-selector-options-builder function updates a AddEventSelectorOptions$Builder instance using the provided configuration.
+(defn add-event-selector-options-builder>
+  "The add-event-selector-options-builder> function updates a AddEventSelectorOptions$Builder instance using the provided configuration.
   The function takes the AddEventSelectorOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -120,11 +120,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-event-selector-options-builder (new AddEventSelectorOptions$Builder) id config))
+  (add-event-selector-options-builder> (new AddEventSelectorOptions$Builder) id config))
 
 
-(defn build-cfn-channel-builder
-  "The build-cfn-channel-builder function updates a CfnChannel$Builder instance using the provided configuration.
+(defn cfn-channel-builder>
+  "The cfn-channel-builder> function updates a CfnChannel$Builder instance using the provided configuration.
   The function takes the CfnChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -157,11 +157,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-channel-builder (CfnChannel$Builder/create scope (name id)) id config))
+  (cfn-channel-builder> (CfnChannel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-channel-destination-property-builder
-  "The build-cfn-channel-destination-property-builder function updates a CfnChannel$DestinationProperty$Builder instance using the provided configuration.
+(defn cfn-channel-destination-property-builder>
+  "The cfn-channel-destination-property-builder> function updates a CfnChannel$DestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -188,11 +188,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-destination-property-builder (new CfnChannel$DestinationProperty$Builder) id config))
+  (cfn-channel-destination-property-builder> (new CfnChannel$DestinationProperty$Builder) id config))
 
 
-(defn build-cfn-channel-props-builder
-  "The build-cfn-channel-props-builder function updates a CfnChannelProps$Builder instance using the provided configuration.
+(defn cfn-channel-props-builder>
+  "The cfn-channel-props-builder> function updates a CfnChannelProps$Builder instance using the provided configuration.
   The function takes the CfnChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -225,11 +225,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
+  (cfn-channel-props-builder> (new CfnChannelProps$Builder) id config))
 
 
-(defn build-cfn-event-data-store-advanced-event-selector-property-builder
-  "The build-cfn-event-data-store-advanced-event-selector-property-builder function updates a CfnEventDataStore$AdvancedEventSelectorProperty$Builder instance using the provided configuration.
+(defn cfn-event-data-store-advanced-event-selector-property-builder>
+  "The cfn-event-data-store-advanced-event-selector-property-builder> function updates a CfnEventDataStore$AdvancedEventSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnEventDataStore$AdvancedEventSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -256,11 +256,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-data-store-advanced-event-selector-property-builder (new CfnEventDataStore$AdvancedEventSelectorProperty$Builder) id config))
+  (cfn-event-data-store-advanced-event-selector-property-builder> (new CfnEventDataStore$AdvancedEventSelectorProperty$Builder) id config))
 
 
-(defn build-cfn-event-data-store-advanced-field-selector-property-builder
-  "The build-cfn-event-data-store-advanced-field-selector-property-builder function updates a CfnEventDataStore$AdvancedFieldSelectorProperty$Builder instance using the provided configuration.
+(defn cfn-event-data-store-advanced-field-selector-property-builder>
+  "The cfn-event-data-store-advanced-field-selector-property-builder> function updates a CfnEventDataStore$AdvancedFieldSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnEventDataStore$AdvancedFieldSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -302,11 +302,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-data-store-advanced-field-selector-property-builder (new CfnEventDataStore$AdvancedFieldSelectorProperty$Builder) id config))
+  (cfn-event-data-store-advanced-field-selector-property-builder> (new CfnEventDataStore$AdvancedFieldSelectorProperty$Builder) id config))
 
 
-(defn build-cfn-event-data-store-builder
-  "The build-cfn-event-data-store-builder function updates a CfnEventDataStore$Builder instance using the provided configuration.
+(defn cfn-event-data-store-builder>
+  "The cfn-event-data-store-builder> function updates a CfnEventDataStore$Builder instance using the provided configuration.
   The function takes the CfnEventDataStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -369,11 +369,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-event-data-store-builder (CfnEventDataStore$Builder/create scope (name id)) id config))
+  (cfn-event-data-store-builder> (CfnEventDataStore$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-event-data-store-insight-selector-property-builder
-  "The build-cfn-event-data-store-insight-selector-property-builder function updates a CfnEventDataStore$InsightSelectorProperty$Builder instance using the provided configuration.
+(defn cfn-event-data-store-insight-selector-property-builder>
+  "The cfn-event-data-store-insight-selector-property-builder> function updates a CfnEventDataStore$InsightSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnEventDataStore$InsightSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -397,11 +397,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-data-store-insight-selector-property-builder (new CfnEventDataStore$InsightSelectorProperty$Builder) id config))
+  (cfn-event-data-store-insight-selector-property-builder> (new CfnEventDataStore$InsightSelectorProperty$Builder) id config))
 
 
-(defn build-cfn-event-data-store-props-builder
-  "The build-cfn-event-data-store-props-builder function updates a CfnEventDataStoreProps$Builder instance using the provided configuration.
+(defn cfn-event-data-store-props-builder>
+  "The cfn-event-data-store-props-builder> function updates a CfnEventDataStoreProps$Builder instance using the provided configuration.
   The function takes the CfnEventDataStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -464,11 +464,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-data-store-props-builder (new CfnEventDataStoreProps$Builder) id config))
+  (cfn-event-data-store-props-builder> (new CfnEventDataStoreProps$Builder) id config))
 
 
-(defn build-cfn-resource-policy-builder
-  "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
+(defn cfn-resource-policy-builder>
+  "The cfn-resource-policy-builder> function updates a CfnResourcePolicy$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -495,11 +495,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-policy-builder (CfnResourcePolicy$Builder/create scope (name id)) id config))
+  (cfn-resource-policy-builder> (CfnResourcePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-policy-props-builder
-  "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
+(defn cfn-resource-policy-props-builder>
+  "The cfn-resource-policy-props-builder> function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -526,11 +526,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-policy-props-builder (new CfnResourcePolicyProps$Builder) id config))
+  (cfn-resource-policy-props-builder> (new CfnResourcePolicyProps$Builder) id config))
 
 
-(defn build-cfn-trail-advanced-event-selector-property-builder
-  "The build-cfn-trail-advanced-event-selector-property-builder function updates a CfnTrail$AdvancedEventSelectorProperty$Builder instance using the provided configuration.
+(defn cfn-trail-advanced-event-selector-property-builder>
+  "The cfn-trail-advanced-event-selector-property-builder> function updates a CfnTrail$AdvancedEventSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnTrail$AdvancedEventSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -557,11 +557,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-trail-advanced-event-selector-property-builder (new CfnTrail$AdvancedEventSelectorProperty$Builder) id config))
+  (cfn-trail-advanced-event-selector-property-builder> (new CfnTrail$AdvancedEventSelectorProperty$Builder) id config))
 
 
-(defn build-cfn-trail-advanced-field-selector-property-builder
-  "The build-cfn-trail-advanced-field-selector-property-builder function updates a CfnTrail$AdvancedFieldSelectorProperty$Builder instance using the provided configuration.
+(defn cfn-trail-advanced-field-selector-property-builder>
+  "The cfn-trail-advanced-field-selector-property-builder> function updates a CfnTrail$AdvancedFieldSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnTrail$AdvancedFieldSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -603,11 +603,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-trail-advanced-field-selector-property-builder (new CfnTrail$AdvancedFieldSelectorProperty$Builder) id config))
+  (cfn-trail-advanced-field-selector-property-builder> (new CfnTrail$AdvancedFieldSelectorProperty$Builder) id config))
 
 
-(defn build-cfn-trail-builder
-  "The build-cfn-trail-builder function updates a CfnTrail$Builder instance using the provided configuration.
+(defn cfn-trail-builder>
+  "The cfn-trail-builder> function updates a CfnTrail$Builder instance using the provided configuration.
   The function takes the CfnTrail$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -676,11 +676,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-trail-builder (CfnTrail$Builder/create scope (name id)) id config))
+  (cfn-trail-builder> (CfnTrail$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-trail-data-resource-property-builder
-  "The build-cfn-trail-data-resource-property-builder function updates a CfnTrail$DataResourceProperty$Builder instance using the provided configuration.
+(defn cfn-trail-data-resource-property-builder>
+  "The cfn-trail-data-resource-property-builder> function updates a CfnTrail$DataResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTrail$DataResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -707,11 +707,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-trail-data-resource-property-builder (new CfnTrail$DataResourceProperty$Builder) id config))
+  (cfn-trail-data-resource-property-builder> (new CfnTrail$DataResourceProperty$Builder) id config))
 
 
-(defn build-cfn-trail-event-selector-property-builder
-  "The build-cfn-trail-event-selector-property-builder function updates a CfnTrail$EventSelectorProperty$Builder instance using the provided configuration.
+(defn cfn-trail-event-selector-property-builder>
+  "The cfn-trail-event-selector-property-builder> function updates a CfnTrail$EventSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnTrail$EventSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -744,11 +744,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-trail-event-selector-property-builder (new CfnTrail$EventSelectorProperty$Builder) id config))
+  (cfn-trail-event-selector-property-builder> (new CfnTrail$EventSelectorProperty$Builder) id config))
 
 
-(defn build-cfn-trail-insight-selector-property-builder
-  "The build-cfn-trail-insight-selector-property-builder function updates a CfnTrail$InsightSelectorProperty$Builder instance using the provided configuration.
+(defn cfn-trail-insight-selector-property-builder>
+  "The cfn-trail-insight-selector-property-builder> function updates a CfnTrail$InsightSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnTrail$InsightSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -772,11 +772,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-trail-insight-selector-property-builder (new CfnTrail$InsightSelectorProperty$Builder) id config))
+  (cfn-trail-insight-selector-property-builder> (new CfnTrail$InsightSelectorProperty$Builder) id config))
 
 
-(defn build-cfn-trail-props-builder
-  "The build-cfn-trail-props-builder function updates a CfnTrailProps$Builder instance using the provided configuration.
+(defn cfn-trail-props-builder>
+  "The cfn-trail-props-builder> function updates a CfnTrailProps$Builder instance using the provided configuration.
   The function takes the CfnTrailProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -845,11 +845,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-trail-props-builder (new CfnTrailProps$Builder) id config))
+  (cfn-trail-props-builder> (new CfnTrailProps$Builder) id config))
 
 
-(defn build-s3-event-selector-builder
-  "The build-s3-event-selector-builder function updates a S3EventSelector$Builder instance using the provided configuration.
+(defn s3-event-selector-builder>
+  "The s3-event-selector-builder> function updates a S3EventSelector$Builder instance using the provided configuration.
   The function takes the S3EventSelector$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -876,11 +876,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-s3-event-selector-builder (new S3EventSelector$Builder) id config))
+  (s3-event-selector-builder> (new S3EventSelector$Builder) id config))
 
 
-(defn build-trail-builder
-  "The build-trail-builder function updates a Trail$Builder instance using the provided configuration.
+(defn trail-builder>
+  "The trail-builder> function updates a Trail$Builder instance using the provided configuration.
   The function takes the Trail$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -946,11 +946,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-trail-builder (Trail$Builder/create scope (name id)) id config))
+  (trail-builder> (Trail$Builder/create scope (name id)) id config))
 
 
-(defn build-trail-props-builder
-  "The build-trail-props-builder function updates a TrailProps$Builder instance using the provided configuration.
+(defn trail-props-builder>
+  "The trail-props-builder> function updates a TrailProps$Builder instance using the provided configuration.
   The function takes the TrailProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1016,4 +1016,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-trail-props-builder (new TrailProps$Builder) id config))
+  (trail-props-builder> (new TrailProps$Builder) id config))

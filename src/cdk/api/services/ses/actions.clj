@@ -59,8 +59,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :request-response data) LambdaInvocationType/REQUEST_RESPONSE)))
 
 
-(defn build-add-header-builder
-  "The build-add-header-builder function updates a AddHeader$Builder instance using the provided configuration.
+(defn add-header-builder>
+  "The add-header-builder> function updates a AddHeader$Builder instance using the provided configuration.
   The function takes the AddHeader$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -87,11 +87,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-header-builder (AddHeader$Builder/create) id config))
+  (add-header-builder> (AddHeader$Builder/create) id config))
 
 
-(defn build-add-header-props-builder
-  "The build-add-header-props-builder function updates a AddHeaderProps$Builder instance using the provided configuration.
+(defn add-header-props-builder>
+  "The add-header-props-builder> function updates a AddHeaderProps$Builder instance using the provided configuration.
   The function takes the AddHeaderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -118,11 +118,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-header-props-builder (new AddHeaderProps$Builder) id config))
+  (add-header-props-builder> (new AddHeaderProps$Builder) id config))
 
 
-(defn build-bounce-builder
-  "The build-bounce-builder function updates a Bounce$Builder instance using the provided configuration.
+(defn bounce-builder>
+  "The bounce-builder> function updates a Bounce$Builder instance using the provided configuration.
   The function takes the Bounce$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -152,11 +152,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bounce-builder (Bounce$Builder/create) id config))
+  (bounce-builder> (Bounce$Builder/create) id config))
 
 
-(defn build-bounce-props-builder
-  "The build-bounce-props-builder function updates a BounceProps$Builder instance using the provided configuration.
+(defn bounce-props-builder>
+  "The bounce-props-builder> function updates a BounceProps$Builder instance using the provided configuration.
   The function takes the BounceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -186,11 +186,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bounce-props-builder (new BounceProps$Builder) id config))
+  (bounce-props-builder> (new BounceProps$Builder) id config))
 
 
-(defn build-bounce-template-builder
-  "The build-bounce-template-builder function updates a BounceTemplate$Builder instance using the provided configuration.
+(defn bounce-template-builder>
+  "The bounce-template-builder> function updates a BounceTemplate$Builder instance using the provided configuration.
   The function takes the BounceTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -220,11 +220,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bounce-template-builder (BounceTemplate$Builder/create) id config))
+  (bounce-template-builder> (BounceTemplate$Builder/create) id config))
 
 
-(defn build-bounce-template-props-builder
-  "The build-bounce-template-props-builder function updates a BounceTemplateProps$Builder instance using the provided configuration.
+(defn bounce-template-props-builder>
+  "The bounce-template-props-builder> function updates a BounceTemplateProps$Builder instance using the provided configuration.
   The function takes the BounceTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -254,11 +254,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bounce-template-props-builder (new BounceTemplateProps$Builder) id config))
+  (bounce-template-props-builder> (new BounceTemplateProps$Builder) id config))
 
 
-(defn build-lambda-builder
-  "The build-lambda-builder function updates a Lambda$Builder instance using the provided configuration.
+(defn lambda-builder>
+  "The lambda-builder> function updates a Lambda$Builder instance using the provided configuration.
   The function takes the Lambda$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -288,11 +288,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-builder (Lambda$Builder/create) id config))
+  (lambda-builder> (Lambda$Builder/create) id config))
 
 
-(defn build-lambda-props-builder
-  "The build-lambda-props-builder function updates a LambdaProps$Builder instance using the provided configuration.
+(defn lambda-props-builder>
+  "The lambda-props-builder> function updates a LambdaProps$Builder instance using the provided configuration.
   The function takes the LambdaProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -322,11 +322,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-props-builder (new LambdaProps$Builder) id config))
+  (lambda-props-builder> (new LambdaProps$Builder) id config))
 
 
-(defn build-s3-builder
-  "The build-s3-builder function updates a S3$Builder instance using the provided configuration.
+(defn s3-builder>
+  "The s3-builder> function updates a S3$Builder instance using the provided configuration.
   The function takes the S3$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -359,11 +359,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-s3-builder (S3$Builder/create) id config))
+  (s3-builder> (S3$Builder/create) id config))
 
 
-(defn build-s3-props-builder
-  "The build-s3-props-builder function updates a S3Props$Builder instance using the provided configuration.
+(defn s3-props-builder>
+  "The s3-props-builder> function updates a S3Props$Builder instance using the provided configuration.
   The function takes the S3Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -396,11 +396,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-s3-props-builder (new S3Props$Builder) id config))
+  (s3-props-builder> (new S3Props$Builder) id config))
 
 
-(defn build-sns-builder
-  "The build-sns-builder function updates a Sns$Builder instance using the provided configuration.
+(defn sns-builder>
+  "The sns-builder> function updates a Sns$Builder instance using the provided configuration.
   The function takes the Sns$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -427,11 +427,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-sns-builder (Sns$Builder/create) id config))
+  (sns-builder> (Sns$Builder/create) id config))
 
 
-(defn build-sns-props-builder
-  "The build-sns-props-builder function updates a SnsProps$Builder instance using the provided configuration.
+(defn sns-props-builder>
+  "The sns-props-builder> function updates a SnsProps$Builder instance using the provided configuration.
   The function takes the SnsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -458,11 +458,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-sns-props-builder (new SnsProps$Builder) id config))
+  (sns-props-builder> (new SnsProps$Builder) id config))
 
 
-(defn build-stop-builder
-  "The build-stop-builder function updates a Stop$Builder instance using the provided configuration.
+(defn stop-builder>
+  "The stop-builder> function updates a Stop$Builder instance using the provided configuration.
   The function takes the Stop$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -486,11 +486,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-stop-builder (Stop$Builder/create) id config))
+  (stop-builder> (Stop$Builder/create) id config))
 
 
-(defn build-stop-props-builder
-  "The build-stop-props-builder function updates a StopProps$Builder instance using the provided configuration.
+(defn stop-props-builder>
+  "The stop-props-builder> function updates a StopProps$Builder instance using the provided configuration.
   The function takes the StopProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -514,11 +514,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-stop-props-builder (new StopProps$Builder) id config))
+  (stop-props-builder> (new StopProps$Builder) id config))
 
 
-(defn build-work-mail-builder
-  "The build-work-mail-builder function updates a WorkMail$Builder instance using the provided configuration.
+(defn work-mail-builder>
+  "The work-mail-builder> function updates a WorkMail$Builder instance using the provided configuration.
   The function takes the WorkMail$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -545,11 +545,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-work-mail-builder (WorkMail$Builder/create) id config))
+  (work-mail-builder> (WorkMail$Builder/create) id config))
 
 
-(defn build-work-mail-props-builder
-  "The build-work-mail-props-builder function updates a WorkMailProps$Builder instance using the provided configuration.
+(defn work-mail-props-builder>
+  "The work-mail-props-builder> function updates a WorkMailProps$Builder instance using the provided configuration.
   The function takes the WorkMailProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -576,4 +576,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-work-mail-props-builder (new WorkMailProps$Builder) id config))
+  (work-mail-props-builder> (new WorkMailProps$Builder) id config))

@@ -96,8 +96,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build (new AssemblyBuildOptions$Builder)))
 
 
-(defn build-asset-manifest-artifact-builder
-  "The build-asset-manifest-artifact-builder function updates a AssetManifestArtifact$Builder instance using the provided configuration.
+(defn asset-manifest-artifact-builder>
+  "The asset-manifest-artifact-builder> function updates a AssetManifestArtifact$Builder instance using the provided configuration.
   The function takes the AssetManifestArtifact$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -140,11 +140,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^CloudAssembly assembly ^String artifact-name id config]
-  (build-asset-manifest-artifact-builder (AssetManifestArtifact$Builder/create assembly artifact-name) id config))
+  (asset-manifest-artifact-builder> (AssetManifestArtifact$Builder/create assembly artifact-name) id config))
 
 
-(defn build-aws-cloud-formation-stack-properties-builder
-  "The build-aws-cloud-formation-stack-properties-builder function updates a AwsCloudFormationStackProperties$Builder instance using the provided configuration.
+(defn aws-cloud-formation-stack-properties-builder>
+  "The aws-cloud-formation-stack-properties-builder> function updates a AwsCloudFormationStackProperties$Builder instance using the provided configuration.
   The function takes the AwsCloudFormationStackProperties$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -177,11 +177,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-cloud-formation-stack-properties-builder (new AwsCloudFormationStackProperties$Builder) id config))
+  (aws-cloud-formation-stack-properties-builder> (new AwsCloudFormationStackProperties$Builder) id config))
 
 
-(defn build-cloud-assembly-builder
-  "The build-cloud-assembly-builder function updates a CloudAssembly$Builder instance using the provided configuration.
+(defn cloud-assembly-builder>
+  "The cloud-assembly-builder> function updates a CloudAssembly$Builder instance using the provided configuration.
   The function takes the CloudAssembly$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -214,11 +214,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String directory id config]
-  (build-cloud-assembly-builder (CloudAssembly$Builder/create directory) id config))
+  (cloud-assembly-builder> (CloudAssembly$Builder/create directory) id config))
 
 
-(defn build-cloud-assembly-builder-builder
-  "The build-cloud-assembly-builder-builder function updates a CloudAssemblyBuilder$Builder instance using the provided configuration.
+(defn cloud-assembly-builder-builder>
+  "The cloud-assembly-builder-builder> function updates a CloudAssemblyBuilder$Builder instance using the provided configuration.
   The function takes the CloudAssemblyBuilder$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -256,13 +256,13 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   ([^String out-dir id config]
-   (build-cloud-assembly-builder-builder (CloudAssemblyBuilder$Builder/create out-dir) id config))
+   (cloud-assembly-builder-builder> (CloudAssemblyBuilder$Builder/create out-dir) id config))
   ([id config]
-   (build-cloud-assembly-builder-builder (CloudAssemblyBuilder$Builder/create) id config)))
+   (cloud-assembly-builder-builder> (CloudAssemblyBuilder$Builder/create) id config)))
 
 
-(defn build-cloud-assembly-builder-props-builder
-  "The build-cloud-assembly-builder-props-builder function updates a CloudAssemblyBuilderProps$Builder instance using the provided configuration.
+(defn cloud-assembly-builder-props-builder>
+  "The cloud-assembly-builder-props-builder> function updates a CloudAssemblyBuilderProps$Builder instance using the provided configuration.
   The function takes the CloudAssemblyBuilderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -289,11 +289,11 @@ __Create Form:__ ____[]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cloud-assembly-builder-props-builder (new CloudAssemblyBuilderProps$Builder) id config))
+  (cloud-assembly-builder-props-builder> (new CloudAssemblyBuilderProps$Builder) id config))
 
 
-(defn build-cloud-formation-stack-artifact-builder
-  "The build-cloud-formation-stack-artifact-builder function updates a CloudFormationStackArtifact$Builder instance using the provided configuration.
+(defn cloud-formation-stack-artifact-builder>
+  "The cloud-formation-stack-artifact-builder> function updates a CloudFormationStackArtifact$Builder instance using the provided configuration.
   The function takes the CloudFormationStackArtifact$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -336,11 +336,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^CloudAssembly assembly ^String artifact-id id config]
-  (build-cloud-formation-stack-artifact-builder (CloudFormationStackArtifact$Builder/create assembly artifact-id) id config))
+  (cloud-formation-stack-artifact-builder> (CloudFormationStackArtifact$Builder/create assembly artifact-id) id config))
 
 
-(defn build-endpoint-service-availability-zones-context-query-builder
-  "The build-endpoint-service-availability-zones-context-query-builder function updates a EndpointServiceAvailabilityZonesContextQuery$Builder instance using the provided configuration.
+(defn endpoint-service-availability-zones-context-query-builder>
+  "The endpoint-service-availability-zones-context-query-builder> function updates a EndpointServiceAvailabilityZonesContextQuery$Builder instance using the provided configuration.
   The function takes the EndpointServiceAvailabilityZonesContextQuery$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -370,11 +370,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-endpoint-service-availability-zones-context-query-builder (new EndpointServiceAvailabilityZonesContextQuery$Builder) id config))
+  (endpoint-service-availability-zones-context-query-builder> (new EndpointServiceAvailabilityZonesContextQuery$Builder) id config))
 
 
-(defn build-environment-builder
-  "The build-environment-builder function updates a Environment$Builder instance using the provided configuration.
+(defn environment-builder>
+  "The environment-builder> function updates a Environment$Builder instance using the provided configuration.
   The function takes the Environment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -404,11 +404,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-environment-builder (new Environment$Builder) id config))
+  (environment-builder> (new Environment$Builder) id config))
 
 
-(defn build-environment-placeholder-values-builder
-  "The build-environment-placeholder-values-builder function updates a EnvironmentPlaceholderValues$Builder instance using the provided configuration.
+(defn environment-placeholder-values-builder>
+  "The environment-placeholder-values-builder> function updates a EnvironmentPlaceholderValues$Builder instance using the provided configuration.
   The function takes the EnvironmentPlaceholderValues$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -438,11 +438,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-environment-placeholder-values-builder (new EnvironmentPlaceholderValues$Builder) id config))
+  (environment-placeholder-values-builder> (new EnvironmentPlaceholderValues$Builder) id config))
 
 
-(defn build-key-context-response-builder
-  "The build-key-context-response-builder function updates a KeyContextResponse$Builder instance using the provided configuration.
+(defn key-context-response-builder>
+  "The key-context-response-builder> function updates a KeyContextResponse$Builder instance using the provided configuration.
   The function takes the KeyContextResponse$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -466,11 +466,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-key-context-response-builder (new KeyContextResponse$Builder) id config))
+  (key-context-response-builder> (new KeyContextResponse$Builder) id config))
 
 
-(defn build-load-balancer-context-response-builder
-  "The build-load-balancer-context-response-builder function updates a LoadBalancerContextResponse$Builder instance using the provided configuration.
+(defn load-balancer-context-response-builder>
+  "The load-balancer-context-response-builder> function updates a LoadBalancerContextResponse$Builder instance using the provided configuration.
   The function takes the LoadBalancerContextResponse$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -509,11 +509,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-load-balancer-context-response-builder (new LoadBalancerContextResponse$Builder) id config))
+  (load-balancer-context-response-builder> (new LoadBalancerContextResponse$Builder) id config))
 
 
-(defn build-load-balancer-listener-context-response-builder
-  "The build-load-balancer-listener-context-response-builder function updates a LoadBalancerListenerContextResponse$Builder instance using the provided configuration.
+(defn load-balancer-listener-context-response-builder>
+  "The load-balancer-listener-context-response-builder> function updates a LoadBalancerListenerContextResponse$Builder instance using the provided configuration.
   The function takes the LoadBalancerListenerContextResponse$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -543,11 +543,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-load-balancer-listener-context-response-builder (new LoadBalancerListenerContextResponse$Builder) id config))
+  (load-balancer-listener-context-response-builder> (new LoadBalancerListenerContextResponse$Builder) id config))
 
 
-(defn build-metadata-entry-result-builder
-  "The build-metadata-entry-result-builder function updates a MetadataEntryResult$Builder instance using the provided configuration.
+(defn metadata-entry-result-builder>
+  "The metadata-entry-result-builder> function updates a MetadataEntryResult$Builder instance using the provided configuration.
   The function takes the MetadataEntryResult$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -580,11 +580,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-metadata-entry-result-builder (new MetadataEntryResult$Builder) id config))
+  (metadata-entry-result-builder> (new MetadataEntryResult$Builder) id config))
 
 
-(defn build-nested-cloud-assembly-artifact-builder
-  "The build-nested-cloud-assembly-artifact-builder function updates a NestedCloudAssemblyArtifact$Builder instance using the provided configuration.
+(defn nested-cloud-assembly-artifact-builder>
+  "The nested-cloud-assembly-artifact-builder> function updates a NestedCloudAssemblyArtifact$Builder instance using the provided configuration.
   The function takes the NestedCloudAssemblyArtifact$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -627,11 +627,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^CloudAssembly assembly ^String artifact-name id config]
-  (build-nested-cloud-assembly-artifact-builder (NestedCloudAssemblyArtifact$Builder/create assembly artifact-name) id config))
+  (nested-cloud-assembly-artifact-builder> (NestedCloudAssemblyArtifact$Builder/create assembly artifact-name) id config))
 
 
-(defn build-security-group-context-response-builder
-  "The build-security-group-context-response-builder function updates a SecurityGroupContextResponse$Builder instance using the provided configuration.
+(defn security-group-context-response-builder>
+  "The security-group-context-response-builder> function updates a SecurityGroupContextResponse$Builder instance using the provided configuration.
   The function takes the SecurityGroupContextResponse$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -658,11 +658,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-security-group-context-response-builder (new SecurityGroupContextResponse$Builder) id config))
+  (security-group-context-response-builder> (new SecurityGroupContextResponse$Builder) id config))
 
 
-(defn build-synthesis-message-builder
-  "The build-synthesis-message-builder function updates a SynthesisMessage$Builder instance using the provided configuration.
+(defn synthesis-message-builder>
+  "The synthesis-message-builder> function updates a SynthesisMessage$Builder instance using the provided configuration.
   The function takes the SynthesisMessage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -692,11 +692,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-synthesis-message-builder (new SynthesisMessage$Builder) id config))
+  (synthesis-message-builder> (new SynthesisMessage$Builder) id config))
 
 
-(defn build-tree-cloud-artifact-builder
-  "The build-tree-cloud-artifact-builder function updates a TreeCloudArtifact$Builder instance using the provided configuration.
+(defn tree-cloud-artifact-builder>
+  "The tree-cloud-artifact-builder> function updates a TreeCloudArtifact$Builder instance using the provided configuration.
   The function takes the TreeCloudArtifact$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -739,11 +739,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^CloudAssembly assembly ^String artifact-name id config]
-  (build-tree-cloud-artifact-builder (TreeCloudArtifact$Builder/create assembly artifact-name) id config))
+  (tree-cloud-artifact-builder> (TreeCloudArtifact$Builder/create assembly artifact-name) id config))
 
 
-(defn build-vpc-context-response-builder
-  "The build-vpc-context-response-builder function updates a VpcContextResponse$Builder instance using the provided configuration.
+(defn vpc-context-response-builder>
+  "The vpc-context-response-builder> function updates a VpcContextResponse$Builder instance using the provided configuration.
   The function takes the VpcContextResponse$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -812,11 +812,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpc-context-response-builder (new VpcContextResponse$Builder) id config))
+  (vpc-context-response-builder> (new VpcContextResponse$Builder) id config))
 
 
-(defn build-vpc-subnet-builder
-  "The build-vpc-subnet-builder function updates a VpcSubnet$Builder instance using the provided configuration.
+(defn vpc-subnet-builder>
+  "The vpc-subnet-builder> function updates a VpcSubnet$Builder instance using the provided configuration.
   The function takes the VpcSubnet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -849,11 +849,11 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpc-subnet-builder (new VpcSubnet$Builder) id config))
+  (vpc-subnet-builder> (new VpcSubnet$Builder) id config))
 
 
-(defn build-vpc-subnet-group-builder
-  "The build-vpc-subnet-group-builder function updates a VpcSubnetGroup$Builder instance using the provided configuration.
+(defn vpc-subnet-group-builder>
+  "The vpc-subnet-group-builder> function updates a VpcSubnetGroup$Builder instance using the provided configuration.
   The function takes the VpcSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -883,4 +883,4 @@ __Create Form:__ ____[software.amazon.awscdk.cxapi.CloudAssembly java.lang.Strin
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpc-subnet-group-builder (new VpcSubnetGroup$Builder) id config))
+  (vpc-subnet-group-builder> (new VpcSubnetGroup$Builder) id config))

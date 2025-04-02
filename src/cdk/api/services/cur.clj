@@ -5,8 +5,8 @@
                                                 CfnReportDefinitionProps$Builder]))
 
 
-(defn build-cfn-report-definition-builder
-  "The build-cfn-report-definition-builder function updates a CfnReportDefinition$Builder instance using the provided configuration.
+(defn cfn-report-definition-builder>
+  "The cfn-report-definition-builder> function updates a CfnReportDefinition$Builder instance using the provided configuration.
   The function takes the CfnReportDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -63,11 +63,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-report-definition-builder (CfnReportDefinition$Builder/create scope (name id)) id config))
+  (cfn-report-definition-builder> (CfnReportDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-report-definition-props-builder
-  "The build-cfn-report-definition-props-builder function updates a CfnReportDefinitionProps$Builder instance using the provided configuration.
+(defn cfn-report-definition-props-builder>
+  "The cfn-report-definition-props-builder> function updates a CfnReportDefinitionProps$Builder instance using the provided configuration.
   The function takes the CfnReportDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -124,4 +124,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-report-definition-props-builder (new CfnReportDefinitionProps$Builder) id config))
+  (cfn-report-definition-props-builder> (new CfnReportDefinitionProps$Builder) id config))

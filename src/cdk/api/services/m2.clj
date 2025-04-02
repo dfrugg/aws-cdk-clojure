@@ -12,8 +12,8 @@
                                                CfnEnvironmentProps$Builder]))
 
 
-(defn build-cfn-application-builder
-  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+(defn cfn-application-builder>
+  "The cfn-application-builder> function updates a CfnApplication$Builder instance using the provided configuration.
   The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -55,11 +55,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+  (cfn-application-builder> (CfnApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-definition-property-builder
-  "The build-cfn-application-definition-property-builder function updates a CfnApplication$DefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-application-definition-property-builder>
+  "The cfn-application-definition-property-builder> function updates a CfnApplication$DefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$DefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -86,11 +86,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-definition-property-builder (new CfnApplication$DefinitionProperty$Builder) id config))
+  (cfn-application-definition-property-builder> (new CfnApplication$DefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-application-props-builder
-  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+(defn cfn-application-props-builder>
+  "The cfn-application-props-builder> function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -132,11 +132,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+  (cfn-application-props-builder> (new CfnApplicationProps$Builder) id config))
 
 
-(defn build-cfn-environment-builder
-  "The build-cfn-environment-builder function updates a CfnEnvironment$Builder instance using the provided configuration.
+(defn cfn-environment-builder>
+  "The cfn-environment-builder> function updates a CfnEnvironment$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -196,11 +196,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+  (cfn-environment-builder> (CfnEnvironment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-environment-efs-storage-configuration-property-builder
-  "The build-cfn-environment-efs-storage-configuration-property-builder function updates a CfnEnvironment$EfsStorageConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-environment-efs-storage-configuration-property-builder>
+  "The cfn-environment-efs-storage-configuration-property-builder> function updates a CfnEnvironment$EfsStorageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$EfsStorageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -227,11 +227,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-efs-storage-configuration-property-builder (new CfnEnvironment$EfsStorageConfigurationProperty$Builder) id config))
+  (cfn-environment-efs-storage-configuration-property-builder> (new CfnEnvironment$EfsStorageConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-environment-fsx-storage-configuration-property-builder
-  "The build-cfn-environment-fsx-storage-configuration-property-builder function updates a CfnEnvironment$FsxStorageConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-environment-fsx-storage-configuration-property-builder>
+  "The cfn-environment-fsx-storage-configuration-property-builder> function updates a CfnEnvironment$FsxStorageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$FsxStorageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -258,11 +258,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-fsx-storage-configuration-property-builder (new CfnEnvironment$FsxStorageConfigurationProperty$Builder) id config))
+  (cfn-environment-fsx-storage-configuration-property-builder> (new CfnEnvironment$FsxStorageConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-environment-high-availability-config-property-builder
-  "The build-cfn-environment-high-availability-config-property-builder function updates a CfnEnvironment$HighAvailabilityConfigProperty$Builder instance using the provided configuration.
+(defn cfn-environment-high-availability-config-property-builder>
+  "The cfn-environment-high-availability-config-property-builder> function updates a CfnEnvironment$HighAvailabilityConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$HighAvailabilityConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -286,11 +286,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-high-availability-config-property-builder (new CfnEnvironment$HighAvailabilityConfigProperty$Builder) id config))
+  (cfn-environment-high-availability-config-property-builder> (new CfnEnvironment$HighAvailabilityConfigProperty$Builder) id config))
 
 
-(defn build-cfn-environment-props-builder
-  "The build-cfn-environment-props-builder function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
+(defn cfn-environment-props-builder>
+  "The cfn-environment-props-builder> function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -350,11 +350,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
+  (cfn-environment-props-builder> (new CfnEnvironmentProps$Builder) id config))
 
 
-(defn build-cfn-environment-storage-configuration-property-builder
-  "The build-cfn-environment-storage-configuration-property-builder function updates a CfnEnvironment$StorageConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-environment-storage-configuration-property-builder>
+  "The cfn-environment-storage-configuration-property-builder> function updates a CfnEnvironment$StorageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$StorageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -381,4 +381,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-storage-configuration-property-builder (new CfnEnvironment$StorageConfigurationProperty$Builder) id config))
+  (cfn-environment-storage-configuration-property-builder> (new CfnEnvironment$StorageConfigurationProperty$Builder) id config))

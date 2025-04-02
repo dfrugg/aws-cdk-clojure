@@ -32,8 +32,8 @@
   (.build (new CfnLogAnomalyDetectionIntegrationProps$Builder)))
 
 
-(defn build-cfn-notification-channel-builder
-  "The build-cfn-notification-channel-builder function updates a CfnNotificationChannel$Builder instance using the provided configuration.
+(defn cfn-notification-channel-builder>
+  "The cfn-notification-channel-builder> function updates a CfnNotificationChannel$Builder instance using the provided configuration.
   The function takes the CfnNotificationChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -57,11 +57,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-notification-channel-builder (CfnNotificationChannel$Builder/create scope (name id)) id config))
+  (cfn-notification-channel-builder> (CfnNotificationChannel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-notification-channel-notification-channel-config-property-builder
-  "The build-cfn-notification-channel-notification-channel-config-property-builder function updates a CfnNotificationChannel$NotificationChannelConfigProperty$Builder instance using the provided configuration.
+(defn cfn-notification-channel-notification-channel-config-property-builder>
+  "The cfn-notification-channel-notification-channel-config-property-builder> function updates a CfnNotificationChannel$NotificationChannelConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnNotificationChannel$NotificationChannelConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -88,11 +88,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-notification-channel-notification-channel-config-property-builder (new CfnNotificationChannel$NotificationChannelConfigProperty$Builder) id config))
+  (cfn-notification-channel-notification-channel-config-property-builder> (new CfnNotificationChannel$NotificationChannelConfigProperty$Builder) id config))
 
 
-(defn build-cfn-notification-channel-notification-filter-config-property-builder
-  "The build-cfn-notification-channel-notification-filter-config-property-builder function updates a CfnNotificationChannel$NotificationFilterConfigProperty$Builder instance using the provided configuration.
+(defn cfn-notification-channel-notification-filter-config-property-builder>
+  "The cfn-notification-channel-notification-filter-config-property-builder> function updates a CfnNotificationChannel$NotificationFilterConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnNotificationChannel$NotificationFilterConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -119,11 +119,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-notification-channel-notification-filter-config-property-builder (new CfnNotificationChannel$NotificationFilterConfigProperty$Builder) id config))
+  (cfn-notification-channel-notification-filter-config-property-builder> (new CfnNotificationChannel$NotificationFilterConfigProperty$Builder) id config))
 
 
-(defn build-cfn-notification-channel-props-builder
-  "The build-cfn-notification-channel-props-builder function updates a CfnNotificationChannelProps$Builder instance using the provided configuration.
+(defn cfn-notification-channel-props-builder>
+  "The cfn-notification-channel-props-builder> function updates a CfnNotificationChannelProps$Builder instance using the provided configuration.
   The function takes the CfnNotificationChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -147,11 +147,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-notification-channel-props-builder (new CfnNotificationChannelProps$Builder) id config))
+  (cfn-notification-channel-props-builder> (new CfnNotificationChannelProps$Builder) id config))
 
 
-(defn build-cfn-notification-channel-sns-channel-config-property-builder
-  "The build-cfn-notification-channel-sns-channel-config-property-builder function updates a CfnNotificationChannel$SnsChannelConfigProperty$Builder instance using the provided configuration.
+(defn cfn-notification-channel-sns-channel-config-property-builder>
+  "The cfn-notification-channel-sns-channel-config-property-builder> function updates a CfnNotificationChannel$SnsChannelConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnNotificationChannel$SnsChannelConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -175,11 +175,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-notification-channel-sns-channel-config-property-builder (new CfnNotificationChannel$SnsChannelConfigProperty$Builder) id config))
+  (cfn-notification-channel-sns-channel-config-property-builder> (new CfnNotificationChannel$SnsChannelConfigProperty$Builder) id config))
 
 
-(defn build-cfn-resource-collection-builder
-  "The build-cfn-resource-collection-builder function updates a CfnResourceCollection$Builder instance using the provided configuration.
+(defn cfn-resource-collection-builder>
+  "The cfn-resource-collection-builder> function updates a CfnResourceCollection$Builder instance using the provided configuration.
   The function takes the CfnResourceCollection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -203,11 +203,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-collection-builder (CfnResourceCollection$Builder/create scope (name id)) id config))
+  (cfn-resource-collection-builder> (CfnResourceCollection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-collection-cloud-formation-collection-filter-property-builder
-  "The build-cfn-resource-collection-cloud-formation-collection-filter-property-builder function updates a CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder instance using the provided configuration.
+(defn cfn-resource-collection-cloud-formation-collection-filter-property-builder>
+  "The cfn-resource-collection-cloud-formation-collection-filter-property-builder> function updates a CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -231,11 +231,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-collection-cloud-formation-collection-filter-property-builder (new CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder) id config))
+  (cfn-resource-collection-cloud-formation-collection-filter-property-builder> (new CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder) id config))
 
 
-(defn build-cfn-resource-collection-props-builder
-  "The build-cfn-resource-collection-props-builder function updates a CfnResourceCollectionProps$Builder instance using the provided configuration.
+(defn cfn-resource-collection-props-builder>
+  "The cfn-resource-collection-props-builder> function updates a CfnResourceCollectionProps$Builder instance using the provided configuration.
   The function takes the CfnResourceCollectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -259,11 +259,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-collection-props-builder (new CfnResourceCollectionProps$Builder) id config))
+  (cfn-resource-collection-props-builder> (new CfnResourceCollectionProps$Builder) id config))
 
 
-(defn build-cfn-resource-collection-resource-collection-filter-property-builder
-  "The build-cfn-resource-collection-resource-collection-filter-property-builder function updates a CfnResourceCollection$ResourceCollectionFilterProperty$Builder instance using the provided configuration.
+(defn cfn-resource-collection-resource-collection-filter-property-builder>
+  "The cfn-resource-collection-resource-collection-filter-property-builder> function updates a CfnResourceCollection$ResourceCollectionFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceCollection$ResourceCollectionFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -290,11 +290,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-collection-resource-collection-filter-property-builder (new CfnResourceCollection$ResourceCollectionFilterProperty$Builder) id config))
+  (cfn-resource-collection-resource-collection-filter-property-builder> (new CfnResourceCollection$ResourceCollectionFilterProperty$Builder) id config))
 
 
-(defn build-cfn-resource-collection-tag-collection-property-builder
-  "The build-cfn-resource-collection-tag-collection-property-builder function updates a CfnResourceCollection$TagCollectionProperty$Builder instance using the provided configuration.
+(defn cfn-resource-collection-tag-collection-property-builder>
+  "The cfn-resource-collection-tag-collection-property-builder> function updates a CfnResourceCollection$TagCollectionProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceCollection$TagCollectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -321,4 +321,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-collection-tag-collection-property-builder (new CfnResourceCollection$TagCollectionProperty$Builder) id config))
+  (cfn-resource-collection-tag-collection-property-builder> (new CfnResourceCollection$TagCollectionProperty$Builder) id config))

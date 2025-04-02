@@ -11,8 +11,8 @@
                                                       CfnProjectProps$Builder]))
 
 
-(defn build-cfn-device-builder
-  "The build-cfn-device-builder function updates a CfnDevice$Builder instance using the provided configuration.
+(defn cfn-device-builder>
+  "The cfn-device-builder> function updates a CfnDevice$Builder instance using the provided configuration.
   The function takes the CfnDevice$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -39,11 +39,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-device-builder (CfnDevice$Builder/create scope (name id)) id config))
+  (cfn-device-builder> (CfnDevice$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-device-props-builder
-  "The build-cfn-device-props-builder function updates a CfnDeviceProps$Builder instance using the provided configuration.
+(defn cfn-device-props-builder>
+  "The cfn-device-props-builder> function updates a CfnDeviceProps$Builder instance using the provided configuration.
   The function takes the CfnDeviceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -70,11 +70,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-device-props-builder (new CfnDeviceProps$Builder) id config))
+  (cfn-device-props-builder> (new CfnDeviceProps$Builder) id config))
 
 
-(defn build-cfn-placement-builder
-  "The build-cfn-placement-builder function updates a CfnPlacement$Builder instance using the provided configuration.
+(defn cfn-placement-builder>
+  "The cfn-placement-builder> function updates a CfnPlacement$Builder instance using the provided configuration.
   The function takes the CfnPlacement$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -107,11 +107,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-placement-builder (CfnPlacement$Builder/create scope (name id)) id config))
+  (cfn-placement-builder> (CfnPlacement$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-placement-props-builder
-  "The build-cfn-placement-props-builder function updates a CfnPlacementProps$Builder instance using the provided configuration.
+(defn cfn-placement-props-builder>
+  "The cfn-placement-props-builder> function updates a CfnPlacementProps$Builder instance using the provided configuration.
   The function takes the CfnPlacementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -144,11 +144,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-placement-props-builder (new CfnPlacementProps$Builder) id config))
+  (cfn-placement-props-builder> (new CfnPlacementProps$Builder) id config))
 
 
-(defn build-cfn-project-builder
-  "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
+(defn cfn-project-builder>
+  "The cfn-project-builder> function updates a CfnProject$Builder instance using the provided configuration.
   The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -178,11 +178,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+  (cfn-project-builder> (CfnProject$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-project-device-template-property-builder
-  "The build-cfn-project-device-template-property-builder function updates a CfnProject$DeviceTemplateProperty$Builder instance using the provided configuration.
+(defn cfn-project-device-template-property-builder>
+  "The cfn-project-device-template-property-builder> function updates a CfnProject$DeviceTemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$DeviceTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -209,11 +209,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-project-device-template-property-builder (new CfnProject$DeviceTemplateProperty$Builder) id config))
+  (cfn-project-device-template-property-builder> (new CfnProject$DeviceTemplateProperty$Builder) id config))
 
 
-(defn build-cfn-project-placement-template-property-builder
-  "The build-cfn-project-placement-template-property-builder function updates a CfnProject$PlacementTemplateProperty$Builder instance using the provided configuration.
+(defn cfn-project-placement-template-property-builder>
+  "The cfn-project-placement-template-property-builder> function updates a CfnProject$PlacementTemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$PlacementTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -240,11 +240,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-project-placement-template-property-builder (new CfnProject$PlacementTemplateProperty$Builder) id config))
+  (cfn-project-placement-template-property-builder> (new CfnProject$PlacementTemplateProperty$Builder) id config))
 
 
-(defn build-cfn-project-props-builder
-  "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
+(defn cfn-project-props-builder>
+  "The cfn-project-props-builder> function updates a CfnProjectProps$Builder instance using the provided configuration.
   The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -274,4 +274,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))
+  (cfn-project-props-builder> (new CfnProjectProps$Builder) id config))

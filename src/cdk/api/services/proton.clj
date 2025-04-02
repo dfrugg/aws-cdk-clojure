@@ -9,8 +9,8 @@
                                                    CfnServiceTemplateProps$Builder]))
 
 
-(defn build-cfn-environment-account-connection-builder
-  "The build-cfn-environment-account-connection-builder function updates a CfnEnvironmentAccountConnection$Builder instance using the provided configuration.
+(defn cfn-environment-account-connection-builder>
+  "The cfn-environment-account-connection-builder> function updates a CfnEnvironmentAccountConnection$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentAccountConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -52,11 +52,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-environment-account-connection-builder (CfnEnvironmentAccountConnection$Builder/create scope (name id)) id config))
+  (cfn-environment-account-connection-builder> (CfnEnvironmentAccountConnection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-environment-account-connection-props-builder
-  "The build-cfn-environment-account-connection-props-builder function updates a CfnEnvironmentAccountConnectionProps$Builder instance using the provided configuration.
+(defn cfn-environment-account-connection-props-builder>
+  "The cfn-environment-account-connection-props-builder> function updates a CfnEnvironmentAccountConnectionProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentAccountConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -98,11 +98,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-account-connection-props-builder (new CfnEnvironmentAccountConnectionProps$Builder) id config))
+  (cfn-environment-account-connection-props-builder> (new CfnEnvironmentAccountConnectionProps$Builder) id config))
 
 
-(defn build-cfn-environment-template-builder
-  "The build-cfn-environment-template-builder function updates a CfnEnvironmentTemplate$Builder instance using the provided configuration.
+(defn cfn-environment-template-builder>
+  "The cfn-environment-template-builder> function updates a CfnEnvironmentTemplate$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -141,11 +141,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-environment-template-builder (CfnEnvironmentTemplate$Builder/create scope (name id)) id config))
+  (cfn-environment-template-builder> (CfnEnvironmentTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-environment-template-props-builder
-  "The build-cfn-environment-template-props-builder function updates a CfnEnvironmentTemplateProps$Builder instance using the provided configuration.
+(defn cfn-environment-template-props-builder>
+  "The cfn-environment-template-props-builder> function updates a CfnEnvironmentTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -184,11 +184,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-template-props-builder (new CfnEnvironmentTemplateProps$Builder) id config))
+  (cfn-environment-template-props-builder> (new CfnEnvironmentTemplateProps$Builder) id config))
 
 
-(defn build-cfn-service-template-builder
-  "The build-cfn-service-template-builder function updates a CfnServiceTemplate$Builder instance using the provided configuration.
+(defn cfn-service-template-builder>
+  "The cfn-service-template-builder> function updates a CfnServiceTemplate$Builder instance using the provided configuration.
   The function takes the CfnServiceTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -227,11 +227,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-service-template-builder (CfnServiceTemplate$Builder/create scope (name id)) id config))
+  (cfn-service-template-builder> (CfnServiceTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-service-template-props-builder
-  "The build-cfn-service-template-props-builder function updates a CfnServiceTemplateProps$Builder instance using the provided configuration.
+(defn cfn-service-template-props-builder>
+  "The cfn-service-template-props-builder> function updates a CfnServiceTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnServiceTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -270,4 +270,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-template-props-builder (new CfnServiceTemplateProps$Builder) id config))
+  (cfn-service-template-props-builder> (new CfnServiceTemplateProps$Builder) id config))

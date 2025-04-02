@@ -5,8 +5,8 @@
                                                              CfnRepositoryAssociationProps$Builder]))
 
 
-(defn build-cfn-repository-association-builder
-  "The build-cfn-repository-association-builder function updates a CfnRepositoryAssociation$Builder instance using the provided configuration.
+(defn cfn-repository-association-builder>
+  "The cfn-repository-association-builder> function updates a CfnRepositoryAssociation$Builder instance using the provided configuration.
   The function takes the CfnRepositoryAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -45,11 +45,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-repository-association-builder (CfnRepositoryAssociation$Builder/create scope (name id)) id config))
+  (cfn-repository-association-builder> (CfnRepositoryAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-repository-association-props-builder
-  "The build-cfn-repository-association-props-builder function updates a CfnRepositoryAssociationProps$Builder instance using the provided configuration.
+(defn cfn-repository-association-props-builder>
+  "The cfn-repository-association-props-builder> function updates a CfnRepositoryAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnRepositoryAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -88,4 +88,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-repository-association-props-builder (new CfnRepositoryAssociationProps$Builder) id config))
+  (cfn-repository-association-props-builder> (new CfnRepositoryAssociationProps$Builder) id config))

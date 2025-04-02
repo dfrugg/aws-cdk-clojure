@@ -13,8 +13,8 @@
                                                           CfnResourcePolicyProps$Builder]))
 
 
-(defn build-cfn-account-builder
-  "The build-cfn-account-builder function updates a CfnAccount$Builder instance using the provided configuration.
+(defn cfn-account-builder>
+  "The cfn-account-builder> function updates a CfnAccount$Builder instance using the provided configuration.
   The function takes the CfnAccount$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -50,11 +50,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-account-builder (CfnAccount$Builder/create scope (name id)) id config))
+  (cfn-account-builder> (CfnAccount$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-account-props-builder
-  "The build-cfn-account-props-builder function updates a CfnAccountProps$Builder instance using the provided configuration.
+(defn cfn-account-props-builder>
+  "The cfn-account-props-builder> function updates a CfnAccountProps$Builder instance using the provided configuration.
   The function takes the CfnAccountProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -90,11 +90,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-account-props-builder (new CfnAccountProps$Builder) id config))
+  (cfn-account-props-builder> (new CfnAccountProps$Builder) id config))
 
 
-(defn build-cfn-organization-builder
-  "The build-cfn-organization-builder function updates a CfnOrganization$Builder instance using the provided configuration.
+(defn cfn-organization-builder>
+  "The cfn-organization-builder> function updates a CfnOrganization$Builder instance using the provided configuration.
   The function takes the CfnOrganization$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -118,11 +118,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-organization-builder (CfnOrganization$Builder/create scope (name id)) id config))
+  (cfn-organization-builder> (CfnOrganization$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-organization-props-builder
-  "The build-cfn-organization-props-builder function updates a CfnOrganizationProps$Builder instance using the provided configuration.
+(defn cfn-organization-props-builder>
+  "The cfn-organization-props-builder> function updates a CfnOrganizationProps$Builder instance using the provided configuration.
   The function takes the CfnOrganizationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -146,11 +146,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-organization-props-builder (new CfnOrganizationProps$Builder) id config))
+  (cfn-organization-props-builder> (new CfnOrganizationProps$Builder) id config))
 
 
-(defn build-cfn-organizational-unit-builder
-  "The build-cfn-organizational-unit-builder function updates a CfnOrganizationalUnit$Builder instance using the provided configuration.
+(defn cfn-organizational-unit-builder>
+  "The cfn-organizational-unit-builder> function updates a CfnOrganizationalUnit$Builder instance using the provided configuration.
   The function takes the CfnOrganizationalUnit$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -180,11 +180,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-organizational-unit-builder (CfnOrganizationalUnit$Builder/create scope (name id)) id config))
+  (cfn-organizational-unit-builder> (CfnOrganizationalUnit$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-organizational-unit-props-builder
-  "The build-cfn-organizational-unit-props-builder function updates a CfnOrganizationalUnitProps$Builder instance using the provided configuration.
+(defn cfn-organizational-unit-props-builder>
+  "The cfn-organizational-unit-props-builder> function updates a CfnOrganizationalUnitProps$Builder instance using the provided configuration.
   The function takes the CfnOrganizationalUnitProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -214,11 +214,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-organizational-unit-props-builder (new CfnOrganizationalUnitProps$Builder) id config))
+  (cfn-organizational-unit-props-builder> (new CfnOrganizationalUnitProps$Builder) id config))
 
 
-(defn build-cfn-policy-builder
-  "The build-cfn-policy-builder function updates a CfnPolicy$Builder instance using the provided configuration.
+(defn cfn-policy-builder>
+  "The cfn-policy-builder> function updates a CfnPolicy$Builder instance using the provided configuration.
   The function takes the CfnPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -257,11 +257,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-policy-builder (CfnPolicy$Builder/create scope (name id)) id config))
+  (cfn-policy-builder> (CfnPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-policy-props-builder
-  "The build-cfn-policy-props-builder function updates a CfnPolicyProps$Builder instance using the provided configuration.
+(defn cfn-policy-props-builder>
+  "The cfn-policy-props-builder> function updates a CfnPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -300,11 +300,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-props-builder (new CfnPolicyProps$Builder) id config))
+  (cfn-policy-props-builder> (new CfnPolicyProps$Builder) id config))
 
 
-(defn build-cfn-resource-policy-builder
-  "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
+(defn cfn-resource-policy-builder>
+  "The cfn-resource-policy-builder> function updates a CfnResourcePolicy$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -331,11 +331,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-policy-builder (CfnResourcePolicy$Builder/create scope (name id)) id config))
+  (cfn-resource-policy-builder> (CfnResourcePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-policy-props-builder
-  "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
+(defn cfn-resource-policy-props-builder>
+  "The cfn-resource-policy-props-builder> function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -362,4 +362,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-policy-props-builder (new CfnResourcePolicyProps$Builder) id config))
+  (cfn-resource-policy-props-builder> (new CfnResourcePolicyProps$Builder) id config))

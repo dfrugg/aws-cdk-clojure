@@ -6,8 +6,8 @@
                                                                 LambdaDestinationOptions$Builder]))
 
 
-(defn build-lambda-destination-builder
-  "The build-lambda-destination-builder function updates a LambdaDestination$Builder instance using the provided configuration.
+(defn lambda-destination-builder>
+  "The lambda-destination-builder> function updates a LambdaDestination$Builder instance using the provided configuration.
   The function takes the LambdaDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -34,11 +34,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IFunction handler id config]
-  (build-lambda-destination-builder (LambdaDestination$Builder/create handler) id config))
+  (lambda-destination-builder> (LambdaDestination$Builder/create handler) id config))
 
 
-(defn build-lambda-destination-options-builder
-  "The build-lambda-destination-options-builder function updates a LambdaDestinationOptions$Builder instance using the provided configuration.
+(defn lambda-destination-options-builder>
+  "The lambda-destination-options-builder> function updates a LambdaDestinationOptions$Builder instance using the provided configuration.
   The function takes the LambdaDestinationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -62,4 +62,4 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-destination-options-builder (new LambdaDestinationOptions$Builder) id config))
+  (lambda-destination-options-builder> (new LambdaDestinationOptions$Builder) id config))

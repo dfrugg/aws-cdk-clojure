@@ -14,8 +14,8 @@
                                                          CfnSchemaProps$Builder]))
 
 
-(defn build-cfn-discoverer-builder
-  "The build-cfn-discoverer-builder function updates a CfnDiscoverer$Builder instance using the provided configuration.
+(defn cfn-discoverer-builder>
+  "The cfn-discoverer-builder> function updates a CfnDiscoverer$Builder instance using the provided configuration.
   The function takes the CfnDiscoverer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -48,11 +48,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-discoverer-builder (CfnDiscoverer$Builder/create scope (name id)) id config))
+  (cfn-discoverer-builder> (CfnDiscoverer$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-discoverer-props-builder
-  "The build-cfn-discoverer-props-builder function updates a CfnDiscovererProps$Builder instance using the provided configuration.
+(defn cfn-discoverer-props-builder>
+  "The cfn-discoverer-props-builder> function updates a CfnDiscovererProps$Builder instance using the provided configuration.
   The function takes the CfnDiscovererProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -85,11 +85,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-discoverer-props-builder (new CfnDiscovererProps$Builder) id config))
+  (cfn-discoverer-props-builder> (new CfnDiscovererProps$Builder) id config))
 
 
-(defn build-cfn-discoverer-tags-entry-property-builder
-  "The build-cfn-discoverer-tags-entry-property-builder function updates a CfnDiscoverer$TagsEntryProperty$Builder instance using the provided configuration.
+(defn cfn-discoverer-tags-entry-property-builder>
+  "The cfn-discoverer-tags-entry-property-builder> function updates a CfnDiscoverer$TagsEntryProperty$Builder instance using the provided configuration.
   The function takes the CfnDiscoverer$TagsEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -116,11 +116,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-discoverer-tags-entry-property-builder (new CfnDiscoverer$TagsEntryProperty$Builder) id config))
+  (cfn-discoverer-tags-entry-property-builder> (new CfnDiscoverer$TagsEntryProperty$Builder) id config))
 
 
-(defn build-cfn-registry-builder
-  "The build-cfn-registry-builder function updates a CfnRegistry$Builder instance using the provided configuration.
+(defn cfn-registry-builder>
+  "The cfn-registry-builder> function updates a CfnRegistry$Builder instance using the provided configuration.
   The function takes the CfnRegistry$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -150,11 +150,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-registry-builder (CfnRegistry$Builder/create scope (name id)) id config))
+  (cfn-registry-builder> (CfnRegistry$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-registry-policy-builder
-  "The build-cfn-registry-policy-builder function updates a CfnRegistryPolicy$Builder instance using the provided configuration.
+(defn cfn-registry-policy-builder>
+  "The cfn-registry-policy-builder> function updates a CfnRegistryPolicy$Builder instance using the provided configuration.
   The function takes the CfnRegistryPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -184,11 +184,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-registry-policy-builder (CfnRegistryPolicy$Builder/create scope (name id)) id config))
+  (cfn-registry-policy-builder> (CfnRegistryPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-registry-policy-props-builder
-  "The build-cfn-registry-policy-props-builder function updates a CfnRegistryPolicyProps$Builder instance using the provided configuration.
+(defn cfn-registry-policy-props-builder>
+  "The cfn-registry-policy-props-builder> function updates a CfnRegistryPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnRegistryPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -218,11 +218,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-registry-policy-props-builder (new CfnRegistryPolicyProps$Builder) id config))
+  (cfn-registry-policy-props-builder> (new CfnRegistryPolicyProps$Builder) id config))
 
 
-(defn build-cfn-registry-props-builder
-  "The build-cfn-registry-props-builder function updates a CfnRegistryProps$Builder instance using the provided configuration.
+(defn cfn-registry-props-builder>
+  "The cfn-registry-props-builder> function updates a CfnRegistryProps$Builder instance using the provided configuration.
   The function takes the CfnRegistryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -252,11 +252,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-registry-props-builder (new CfnRegistryProps$Builder) id config))
+  (cfn-registry-props-builder> (new CfnRegistryProps$Builder) id config))
 
 
-(defn build-cfn-registry-tags-entry-property-builder
-  "The build-cfn-registry-tags-entry-property-builder function updates a CfnRegistry$TagsEntryProperty$Builder instance using the provided configuration.
+(defn cfn-registry-tags-entry-property-builder>
+  "The cfn-registry-tags-entry-property-builder> function updates a CfnRegistry$TagsEntryProperty$Builder instance using the provided configuration.
   The function takes the CfnRegistry$TagsEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -283,11 +283,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-registry-tags-entry-property-builder (new CfnRegistry$TagsEntryProperty$Builder) id config))
+  (cfn-registry-tags-entry-property-builder> (new CfnRegistry$TagsEntryProperty$Builder) id config))
 
 
-(defn build-cfn-schema-builder
-  "The build-cfn-schema-builder function updates a CfnSchema$Builder instance using the provided configuration.
+(defn cfn-schema-builder>
+  "The cfn-schema-builder> function updates a CfnSchema$Builder instance using the provided configuration.
   The function takes the CfnSchema$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -326,11 +326,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-schema-builder (CfnSchema$Builder/create scope (name id)) id config))
+  (cfn-schema-builder> (CfnSchema$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-schema-props-builder
-  "The build-cfn-schema-props-builder function updates a CfnSchemaProps$Builder instance using the provided configuration.
+(defn cfn-schema-props-builder>
+  "The cfn-schema-props-builder> function updates a CfnSchemaProps$Builder instance using the provided configuration.
   The function takes the CfnSchemaProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -369,11 +369,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schema-props-builder (new CfnSchemaProps$Builder) id config))
+  (cfn-schema-props-builder> (new CfnSchemaProps$Builder) id config))
 
 
-(defn build-cfn-schema-tags-entry-property-builder
-  "The build-cfn-schema-tags-entry-property-builder function updates a CfnSchema$TagsEntryProperty$Builder instance using the provided configuration.
+(defn cfn-schema-tags-entry-property-builder>
+  "The cfn-schema-tags-entry-property-builder> function updates a CfnSchema$TagsEntryProperty$Builder instance using the provided configuration.
   The function takes the CfnSchema$TagsEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -400,4 +400,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schema-tags-entry-property-builder (new CfnSchema$TagsEntryProperty$Builder) id config))
+  (cfn-schema-tags-entry-property-builder> (new CfnSchema$TagsEntryProperty$Builder) id config))

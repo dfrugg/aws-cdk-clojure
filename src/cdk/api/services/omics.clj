@@ -24,8 +24,8 @@
                                                   CfnWorkflowProps$Builder]))
 
 
-(defn build-cfn-annotation-store-builder
-  "The build-cfn-annotation-store-builder function updates a CfnAnnotationStore$Builder instance using the provided configuration.
+(defn cfn-annotation-store-builder>
+  "The cfn-annotation-store-builder> function updates a CfnAnnotationStore$Builder instance using the provided configuration.
   The function takes the CfnAnnotationStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -67,11 +67,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-annotation-store-builder (CfnAnnotationStore$Builder/create scope (name id)) id config))
+  (cfn-annotation-store-builder> (CfnAnnotationStore$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-annotation-store-props-builder
-  "The build-cfn-annotation-store-props-builder function updates a CfnAnnotationStoreProps$Builder instance using the provided configuration.
+(defn cfn-annotation-store-props-builder>
+  "The cfn-annotation-store-props-builder> function updates a CfnAnnotationStoreProps$Builder instance using the provided configuration.
   The function takes the CfnAnnotationStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -113,11 +113,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-annotation-store-props-builder (new CfnAnnotationStoreProps$Builder) id config))
+  (cfn-annotation-store-props-builder> (new CfnAnnotationStoreProps$Builder) id config))
 
 
-(defn build-cfn-annotation-store-reference-item-property-builder
-  "The build-cfn-annotation-store-reference-item-property-builder function updates a CfnAnnotationStore$ReferenceItemProperty$Builder instance using the provided configuration.
+(defn cfn-annotation-store-reference-item-property-builder>
+  "The cfn-annotation-store-reference-item-property-builder> function updates a CfnAnnotationStore$ReferenceItemProperty$Builder instance using the provided configuration.
   The function takes the CfnAnnotationStore$ReferenceItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -141,11 +141,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-annotation-store-reference-item-property-builder (new CfnAnnotationStore$ReferenceItemProperty$Builder) id config))
+  (cfn-annotation-store-reference-item-property-builder> (new CfnAnnotationStore$ReferenceItemProperty$Builder) id config))
 
 
-(defn build-cfn-annotation-store-sse-config-property-builder
-  "The build-cfn-annotation-store-sse-config-property-builder function updates a CfnAnnotationStore$SseConfigProperty$Builder instance using the provided configuration.
+(defn cfn-annotation-store-sse-config-property-builder>
+  "The cfn-annotation-store-sse-config-property-builder> function updates a CfnAnnotationStore$SseConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnAnnotationStore$SseConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -172,11 +172,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-annotation-store-sse-config-property-builder (new CfnAnnotationStore$SseConfigProperty$Builder) id config))
+  (cfn-annotation-store-sse-config-property-builder> (new CfnAnnotationStore$SseConfigProperty$Builder) id config))
 
 
-(defn build-cfn-annotation-store-store-options-property-builder
-  "The build-cfn-annotation-store-store-options-property-builder function updates a CfnAnnotationStore$StoreOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-annotation-store-store-options-property-builder>
+  "The cfn-annotation-store-store-options-property-builder> function updates a CfnAnnotationStore$StoreOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnnotationStore$StoreOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -200,11 +200,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-annotation-store-store-options-property-builder (new CfnAnnotationStore$StoreOptionsProperty$Builder) id config))
+  (cfn-annotation-store-store-options-property-builder> (new CfnAnnotationStore$StoreOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-annotation-store-tsv-store-options-property-builder
-  "The build-cfn-annotation-store-tsv-store-options-property-builder function updates a CfnAnnotationStore$TsvStoreOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-annotation-store-tsv-store-options-property-builder>
+  "The cfn-annotation-store-tsv-store-options-property-builder> function updates a CfnAnnotationStore$TsvStoreOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnnotationStore$TsvStoreOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -234,11 +234,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-annotation-store-tsv-store-options-property-builder (new CfnAnnotationStore$TsvStoreOptionsProperty$Builder) id config))
+  (cfn-annotation-store-tsv-store-options-property-builder> (new CfnAnnotationStore$TsvStoreOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-reference-store-builder
-  "The build-cfn-reference-store-builder function updates a CfnReferenceStore$Builder instance using the provided configuration.
+(defn cfn-reference-store-builder>
+  "The cfn-reference-store-builder> function updates a CfnReferenceStore$Builder instance using the provided configuration.
   The function takes the CfnReferenceStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -271,11 +271,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-reference-store-builder (CfnReferenceStore$Builder/create scope (name id)) id config))
+  (cfn-reference-store-builder> (CfnReferenceStore$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-reference-store-props-builder
-  "The build-cfn-reference-store-props-builder function updates a CfnReferenceStoreProps$Builder instance using the provided configuration.
+(defn cfn-reference-store-props-builder>
+  "The cfn-reference-store-props-builder> function updates a CfnReferenceStoreProps$Builder instance using the provided configuration.
   The function takes the CfnReferenceStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -308,11 +308,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-reference-store-props-builder (new CfnReferenceStoreProps$Builder) id config))
+  (cfn-reference-store-props-builder> (new CfnReferenceStoreProps$Builder) id config))
 
 
-(defn build-cfn-reference-store-sse-config-property-builder
-  "The build-cfn-reference-store-sse-config-property-builder function updates a CfnReferenceStore$SseConfigProperty$Builder instance using the provided configuration.
+(defn cfn-reference-store-sse-config-property-builder>
+  "The cfn-reference-store-sse-config-property-builder> function updates a CfnReferenceStore$SseConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnReferenceStore$SseConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -339,11 +339,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-reference-store-sse-config-property-builder (new CfnReferenceStore$SseConfigProperty$Builder) id config))
+  (cfn-reference-store-sse-config-property-builder> (new CfnReferenceStore$SseConfigProperty$Builder) id config))
 
 
-(defn build-cfn-run-group-builder
-  "The build-cfn-run-group-builder function updates a CfnRunGroup$Builder instance using the provided configuration.
+(defn cfn-run-group-builder>
+  "The cfn-run-group-builder> function updates a CfnRunGroup$Builder instance using the provided configuration.
   The function takes the CfnRunGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -382,11 +382,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-run-group-builder (CfnRunGroup$Builder/create scope (name id)) id config))
+  (cfn-run-group-builder> (CfnRunGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-run-group-props-builder
-  "The build-cfn-run-group-props-builder function updates a CfnRunGroupProps$Builder instance using the provided configuration.
+(defn cfn-run-group-props-builder>
+  "The cfn-run-group-props-builder> function updates a CfnRunGroupProps$Builder instance using the provided configuration.
   The function takes the CfnRunGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -425,11 +425,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-run-group-props-builder (new CfnRunGroupProps$Builder) id config))
+  (cfn-run-group-props-builder> (new CfnRunGroupProps$Builder) id config))
 
 
-(defn build-cfn-sequence-store-builder
-  "The build-cfn-sequence-store-builder function updates a CfnSequenceStore$Builder instance using the provided configuration.
+(defn cfn-sequence-store-builder>
+  "The cfn-sequence-store-builder> function updates a CfnSequenceStore$Builder instance using the provided configuration.
   The function takes the CfnSequenceStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -465,11 +465,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-sequence-store-builder (CfnSequenceStore$Builder/create scope (name id)) id config))
+  (cfn-sequence-store-builder> (CfnSequenceStore$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-sequence-store-props-builder
-  "The build-cfn-sequence-store-props-builder function updates a CfnSequenceStoreProps$Builder instance using the provided configuration.
+(defn cfn-sequence-store-props-builder>
+  "The cfn-sequence-store-props-builder> function updates a CfnSequenceStoreProps$Builder instance using the provided configuration.
   The function takes the CfnSequenceStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -505,11 +505,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sequence-store-props-builder (new CfnSequenceStoreProps$Builder) id config))
+  (cfn-sequence-store-props-builder> (new CfnSequenceStoreProps$Builder) id config))
 
 
-(defn build-cfn-sequence-store-sse-config-property-builder
-  "The build-cfn-sequence-store-sse-config-property-builder function updates a CfnSequenceStore$SseConfigProperty$Builder instance using the provided configuration.
+(defn cfn-sequence-store-sse-config-property-builder>
+  "The cfn-sequence-store-sse-config-property-builder> function updates a CfnSequenceStore$SseConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSequenceStore$SseConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -536,11 +536,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sequence-store-sse-config-property-builder (new CfnSequenceStore$SseConfigProperty$Builder) id config))
+  (cfn-sequence-store-sse-config-property-builder> (new CfnSequenceStore$SseConfigProperty$Builder) id config))
 
 
-(defn build-cfn-variant-store-builder
-  "The build-cfn-variant-store-builder function updates a CfnVariantStore$Builder instance using the provided configuration.
+(defn cfn-variant-store-builder>
+  "The cfn-variant-store-builder> function updates a CfnVariantStore$Builder instance using the provided configuration.
   The function takes the CfnVariantStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -576,11 +576,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-variant-store-builder (CfnVariantStore$Builder/create scope (name id)) id config))
+  (cfn-variant-store-builder> (CfnVariantStore$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-variant-store-props-builder
-  "The build-cfn-variant-store-props-builder function updates a CfnVariantStoreProps$Builder instance using the provided configuration.
+(defn cfn-variant-store-props-builder>
+  "The cfn-variant-store-props-builder> function updates a CfnVariantStoreProps$Builder instance using the provided configuration.
   The function takes the CfnVariantStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -616,11 +616,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-variant-store-props-builder (new CfnVariantStoreProps$Builder) id config))
+  (cfn-variant-store-props-builder> (new CfnVariantStoreProps$Builder) id config))
 
 
-(defn build-cfn-variant-store-reference-item-property-builder
-  "The build-cfn-variant-store-reference-item-property-builder function updates a CfnVariantStore$ReferenceItemProperty$Builder instance using the provided configuration.
+(defn cfn-variant-store-reference-item-property-builder>
+  "The cfn-variant-store-reference-item-property-builder> function updates a CfnVariantStore$ReferenceItemProperty$Builder instance using the provided configuration.
   The function takes the CfnVariantStore$ReferenceItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -644,11 +644,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-variant-store-reference-item-property-builder (new CfnVariantStore$ReferenceItemProperty$Builder) id config))
+  (cfn-variant-store-reference-item-property-builder> (new CfnVariantStore$ReferenceItemProperty$Builder) id config))
 
 
-(defn build-cfn-variant-store-sse-config-property-builder
-  "The build-cfn-variant-store-sse-config-property-builder function updates a CfnVariantStore$SseConfigProperty$Builder instance using the provided configuration.
+(defn cfn-variant-store-sse-config-property-builder>
+  "The cfn-variant-store-sse-config-property-builder> function updates a CfnVariantStore$SseConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnVariantStore$SseConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -675,11 +675,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-variant-store-sse-config-property-builder (new CfnVariantStore$SseConfigProperty$Builder) id config))
+  (cfn-variant-store-sse-config-property-builder> (new CfnVariantStore$SseConfigProperty$Builder) id config))
 
 
-(defn build-cfn-workflow-builder
-  "The build-cfn-workflow-builder function updates a CfnWorkflow$Builder instance using the provided configuration.
+(defn cfn-workflow-builder>
+  "The cfn-workflow-builder> function updates a CfnWorkflow$Builder instance using the provided configuration.
   The function takes the CfnWorkflow$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -727,11 +727,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-workflow-builder (CfnWorkflow$Builder/create scope (name id)) id config))
+  (cfn-workflow-builder> (CfnWorkflow$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-workflow-props-builder
-  "The build-cfn-workflow-props-builder function updates a CfnWorkflowProps$Builder instance using the provided configuration.
+(defn cfn-workflow-props-builder>
+  "The cfn-workflow-props-builder> function updates a CfnWorkflowProps$Builder instance using the provided configuration.
   The function takes the CfnWorkflowProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -779,11 +779,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workflow-props-builder (new CfnWorkflowProps$Builder) id config))
+  (cfn-workflow-props-builder> (new CfnWorkflowProps$Builder) id config))
 
 
-(defn build-cfn-workflow-workflow-parameter-property-builder
-  "The build-cfn-workflow-workflow-parameter-property-builder function updates a CfnWorkflow$WorkflowParameterProperty$Builder instance using the provided configuration.
+(defn cfn-workflow-workflow-parameter-property-builder>
+  "The cfn-workflow-workflow-parameter-property-builder> function updates a CfnWorkflow$WorkflowParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkflow$WorkflowParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -810,4 +810,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-workflow-workflow-parameter-property-builder (new CfnWorkflow$WorkflowParameterProperty$Builder) id config))
+  (cfn-workflow-workflow-parameter-property-builder> (new CfnWorkflow$WorkflowParameterProperty$Builder) id config))

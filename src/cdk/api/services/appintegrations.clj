@@ -14,8 +14,8 @@
                                                             CfnEventIntegrationProps$Builder]))
 
 
-(defn build-cfn-application-application-source-config-property-builder
-  "The build-cfn-application-application-source-config-property-builder function updates a CfnApplication$ApplicationSourceConfigProperty$Builder instance using the provided configuration.
+(defn cfn-application-application-source-config-property-builder>
+  "The cfn-application-application-source-config-property-builder> function updates a CfnApplication$ApplicationSourceConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ApplicationSourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -39,11 +39,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-application-source-config-property-builder (new CfnApplication$ApplicationSourceConfigProperty$Builder) id config))
+  (cfn-application-application-source-config-property-builder> (new CfnApplication$ApplicationSourceConfigProperty$Builder) id config))
 
 
-(defn build-cfn-application-builder
-  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+(defn cfn-application-builder>
+  "The cfn-application-builder> function updates a CfnApplication$Builder instance using the provided configuration.
   The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -82,11 +82,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+  (cfn-application-builder> (CfnApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-external-url-config-property-builder
-  "The build-cfn-application-external-url-config-property-builder function updates a CfnApplication$ExternalUrlConfigProperty$Builder instance using the provided configuration.
+(defn cfn-application-external-url-config-property-builder>
+  "The cfn-application-external-url-config-property-builder> function updates a CfnApplication$ExternalUrlConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ExternalUrlConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -113,11 +113,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-external-url-config-property-builder (new CfnApplication$ExternalUrlConfigProperty$Builder) id config))
+  (cfn-application-external-url-config-property-builder> (new CfnApplication$ExternalUrlConfigProperty$Builder) id config))
 
 
-(defn build-cfn-application-props-builder
-  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+(defn cfn-application-props-builder>
+  "The cfn-application-props-builder> function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -156,11 +156,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+  (cfn-application-props-builder> (new CfnApplicationProps$Builder) id config))
 
 
-(defn build-cfn-data-integration-builder
-  "The build-cfn-data-integration-builder function updates a CfnDataIntegration$Builder instance using the provided configuration.
+(defn cfn-data-integration-builder>
+  "The cfn-data-integration-builder> function updates a CfnDataIntegration$Builder instance using the provided configuration.
   The function takes the CfnDataIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -205,11 +205,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-data-integration-builder (CfnDataIntegration$Builder/create scope (name id)) id config))
+  (cfn-data-integration-builder> (CfnDataIntegration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-data-integration-file-configuration-property-builder
-  "The build-cfn-data-integration-file-configuration-property-builder function updates a CfnDataIntegration$FileConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-data-integration-file-configuration-property-builder>
+  "The cfn-data-integration-file-configuration-property-builder> function updates a CfnDataIntegration$FileConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataIntegration$FileConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -236,11 +236,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-integration-file-configuration-property-builder (new CfnDataIntegration$FileConfigurationProperty$Builder) id config))
+  (cfn-data-integration-file-configuration-property-builder> (new CfnDataIntegration$FileConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-data-integration-props-builder
-  "The build-cfn-data-integration-props-builder function updates a CfnDataIntegrationProps$Builder instance using the provided configuration.
+(defn cfn-data-integration-props-builder>
+  "The cfn-data-integration-props-builder> function updates a CfnDataIntegrationProps$Builder instance using the provided configuration.
   The function takes the CfnDataIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -285,11 +285,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-integration-props-builder (new CfnDataIntegrationProps$Builder) id config))
+  (cfn-data-integration-props-builder> (new CfnDataIntegrationProps$Builder) id config))
 
 
-(defn build-cfn-data-integration-schedule-config-property-builder
-  "The build-cfn-data-integration-schedule-config-property-builder function updates a CfnDataIntegration$ScheduleConfigProperty$Builder instance using the provided configuration.
+(defn cfn-data-integration-schedule-config-property-builder>
+  "The cfn-data-integration-schedule-config-property-builder> function updates a CfnDataIntegration$ScheduleConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDataIntegration$ScheduleConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -319,11 +319,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-integration-schedule-config-property-builder (new CfnDataIntegration$ScheduleConfigProperty$Builder) id config))
+  (cfn-data-integration-schedule-config-property-builder> (new CfnDataIntegration$ScheduleConfigProperty$Builder) id config))
 
 
-(defn build-cfn-event-integration-builder
-  "The build-cfn-event-integration-builder function updates a CfnEventIntegration$Builder instance using the provided configuration.
+(defn cfn-event-integration-builder>
+  "The cfn-event-integration-builder> function updates a CfnEventIntegration$Builder instance using the provided configuration.
   The function takes the CfnEventIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -359,11 +359,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-event-integration-builder (CfnEventIntegration$Builder/create scope (name id)) id config))
+  (cfn-event-integration-builder> (CfnEventIntegration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-event-integration-event-filter-property-builder
-  "The build-cfn-event-integration-event-filter-property-builder function updates a CfnEventIntegration$EventFilterProperty$Builder instance using the provided configuration.
+(defn cfn-event-integration-event-filter-property-builder>
+  "The cfn-event-integration-event-filter-property-builder> function updates a CfnEventIntegration$EventFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnEventIntegration$EventFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -387,11 +387,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-integration-event-filter-property-builder (new CfnEventIntegration$EventFilterProperty$Builder) id config))
+  (cfn-event-integration-event-filter-property-builder> (new CfnEventIntegration$EventFilterProperty$Builder) id config))
 
 
-(defn build-cfn-event-integration-props-builder
-  "The build-cfn-event-integration-props-builder function updates a CfnEventIntegrationProps$Builder instance using the provided configuration.
+(defn cfn-event-integration-props-builder>
+  "The cfn-event-integration-props-builder> function updates a CfnEventIntegrationProps$Builder instance using the provided configuration.
   The function takes the CfnEventIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -427,4 +427,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-integration-props-builder (new CfnEventIntegrationProps$Builder) id config))
+  (cfn-event-integration-props-builder> (new CfnEventIntegrationProps$Builder) id config))

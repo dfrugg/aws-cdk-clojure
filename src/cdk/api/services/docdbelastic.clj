@@ -5,8 +5,8 @@
                                                          CfnClusterProps$Builder]))
 
 
-(defn build-cfn-cluster-builder
-  "The build-cfn-cluster-builder function updates a CfnCluster$Builder instance using the provided configuration.
+(defn cfn-cluster-builder>
+  "The cfn-cluster-builder> function updates a CfnCluster$Builder instance using the provided configuration.
   The function takes the CfnCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -69,11 +69,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+  (cfn-cluster-builder> (CfnCluster$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cluster-props-builder
-  "The build-cfn-cluster-props-builder function updates a CfnClusterProps$Builder instance using the provided configuration.
+(defn cfn-cluster-props-builder>
+  "The cfn-cluster-props-builder> function updates a CfnClusterProps$Builder instance using the provided configuration.
   The function takes the CfnClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -136,4 +136,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
+  (cfn-cluster-props-builder> (new CfnClusterProps$Builder) id config))

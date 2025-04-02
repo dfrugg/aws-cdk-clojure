@@ -16,8 +16,8 @@
                                                                      CfnResourceSetProps$Builder]))
 
 
-(defn build-cfn-cell-builder
-  "The build-cfn-cell-builder function updates a CfnCell$Builder instance using the provided configuration.
+(defn cfn-cell-builder>
+  "The cfn-cell-builder> function updates a CfnCell$Builder instance using the provided configuration.
   The function takes the CfnCell$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -47,11 +47,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cell-builder (CfnCell$Builder/create scope (name id)) id config))
+  (cfn-cell-builder> (CfnCell$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cell-props-builder
-  "The build-cfn-cell-props-builder function updates a CfnCellProps$Builder instance using the provided configuration.
+(defn cfn-cell-props-builder>
+  "The cfn-cell-props-builder> function updates a CfnCellProps$Builder instance using the provided configuration.
   The function takes the CfnCellProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -81,11 +81,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cell-props-builder (new CfnCellProps$Builder) id config))
+  (cfn-cell-props-builder> (new CfnCellProps$Builder) id config))
 
 
-(defn build-cfn-readiness-check-builder
-  "The build-cfn-readiness-check-builder function updates a CfnReadinessCheck$Builder instance using the provided configuration.
+(defn cfn-readiness-check-builder>
+  "The cfn-readiness-check-builder> function updates a CfnReadinessCheck$Builder instance using the provided configuration.
   The function takes the CfnReadinessCheck$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -115,11 +115,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-readiness-check-builder (CfnReadinessCheck$Builder/create scope (name id)) id config))
+  (cfn-readiness-check-builder> (CfnReadinessCheck$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-readiness-check-props-builder
-  "The build-cfn-readiness-check-props-builder function updates a CfnReadinessCheckProps$Builder instance using the provided configuration.
+(defn cfn-readiness-check-props-builder>
+  "The cfn-readiness-check-props-builder> function updates a CfnReadinessCheckProps$Builder instance using the provided configuration.
   The function takes the CfnReadinessCheckProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -149,11 +149,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-readiness-check-props-builder (new CfnReadinessCheckProps$Builder) id config))
+  (cfn-readiness-check-props-builder> (new CfnReadinessCheckProps$Builder) id config))
 
 
-(defn build-cfn-recovery-group-builder
-  "The build-cfn-recovery-group-builder function updates a CfnRecoveryGroup$Builder instance using the provided configuration.
+(defn cfn-recovery-group-builder>
+  "The cfn-recovery-group-builder> function updates a CfnRecoveryGroup$Builder instance using the provided configuration.
   The function takes the CfnRecoveryGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -183,11 +183,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-recovery-group-builder (CfnRecoveryGroup$Builder/create scope (name id)) id config))
+  (cfn-recovery-group-builder> (CfnRecoveryGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-recovery-group-props-builder
-  "The build-cfn-recovery-group-props-builder function updates a CfnRecoveryGroupProps$Builder instance using the provided configuration.
+(defn cfn-recovery-group-props-builder>
+  "The cfn-recovery-group-props-builder> function updates a CfnRecoveryGroupProps$Builder instance using the provided configuration.
   The function takes the CfnRecoveryGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -217,11 +217,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-recovery-group-props-builder (new CfnRecoveryGroupProps$Builder) id config))
+  (cfn-recovery-group-props-builder> (new CfnRecoveryGroupProps$Builder) id config))
 
 
-(defn build-cfn-resource-set-builder
-  "The build-cfn-resource-set-builder function updates a CfnResourceSet$Builder instance using the provided configuration.
+(defn cfn-resource-set-builder>
+  "The cfn-resource-set-builder> function updates a CfnResourceSet$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -254,11 +254,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-set-builder (CfnResourceSet$Builder/create scope (name id)) id config))
+  (cfn-resource-set-builder> (CfnResourceSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-set-dns-target-resource-property-builder
-  "The build-cfn-resource-set-dns-target-resource-property-builder function updates a CfnResourceSet$DNSTargetResourceProperty$Builder instance using the provided configuration.
+(defn cfn-resource-set-dns-target-resource-property-builder>
+  "The cfn-resource-set-dns-target-resource-property-builder> function updates a CfnResourceSet$DNSTargetResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$DNSTargetResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -294,11 +294,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-set-dns-target-resource-property-builder (new CfnResourceSet$DNSTargetResourceProperty$Builder) id config))
+  (cfn-resource-set-dns-target-resource-property-builder> (new CfnResourceSet$DNSTargetResourceProperty$Builder) id config))
 
 
-(defn build-cfn-resource-set-nlb-resource-property-builder
-  "The build-cfn-resource-set-nlb-resource-property-builder function updates a CfnResourceSet$NLBResourceProperty$Builder instance using the provided configuration.
+(defn cfn-resource-set-nlb-resource-property-builder>
+  "The cfn-resource-set-nlb-resource-property-builder> function updates a CfnResourceSet$NLBResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$NLBResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -322,11 +322,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-set-nlb-resource-property-builder (new CfnResourceSet$NLBResourceProperty$Builder) id config))
+  (cfn-resource-set-nlb-resource-property-builder> (new CfnResourceSet$NLBResourceProperty$Builder) id config))
 
 
-(defn build-cfn-resource-set-props-builder
-  "The build-cfn-resource-set-props-builder function updates a CfnResourceSetProps$Builder instance using the provided configuration.
+(defn cfn-resource-set-props-builder>
+  "The cfn-resource-set-props-builder> function updates a CfnResourceSetProps$Builder instance using the provided configuration.
   The function takes the CfnResourceSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -359,11 +359,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-set-props-builder (new CfnResourceSetProps$Builder) id config))
+  (cfn-resource-set-props-builder> (new CfnResourceSetProps$Builder) id config))
 
 
-(defn build-cfn-resource-set-r53-resource-record-property-builder
-  "The build-cfn-resource-set-r53-resource-record-property-builder function updates a CfnResourceSet$R53ResourceRecordProperty$Builder instance using the provided configuration.
+(defn cfn-resource-set-r53-resource-record-property-builder>
+  "The cfn-resource-set-r53-resource-record-property-builder> function updates a CfnResourceSet$R53ResourceRecordProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$R53ResourceRecordProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -390,11 +390,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-set-r53-resource-record-property-builder (new CfnResourceSet$R53ResourceRecordProperty$Builder) id config))
+  (cfn-resource-set-r53-resource-record-property-builder> (new CfnResourceSet$R53ResourceRecordProperty$Builder) id config))
 
 
-(defn build-cfn-resource-set-resource-property-builder
-  "The build-cfn-resource-set-resource-property-builder function updates a CfnResourceSet$ResourceProperty$Builder instance using the provided configuration.
+(defn cfn-resource-set-resource-property-builder>
+  "The cfn-resource-set-resource-property-builder> function updates a CfnResourceSet$ResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$ResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -427,11 +427,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-set-resource-property-builder (new CfnResourceSet$ResourceProperty$Builder) id config))
+  (cfn-resource-set-resource-property-builder> (new CfnResourceSet$ResourceProperty$Builder) id config))
 
 
-(defn build-cfn-resource-set-target-resource-property-builder
-  "The build-cfn-resource-set-target-resource-property-builder function updates a CfnResourceSet$TargetResourceProperty$Builder instance using the provided configuration.
+(defn cfn-resource-set-target-resource-property-builder>
+  "The cfn-resource-set-target-resource-property-builder> function updates a CfnResourceSet$TargetResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$TargetResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -458,4 +458,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-set-target-resource-property-builder (new CfnResourceSet$TargetResourceProperty$Builder) id config))
+  (cfn-resource-set-target-resource-property-builder> (new CfnResourceSet$TargetResourceProperty$Builder) id config))

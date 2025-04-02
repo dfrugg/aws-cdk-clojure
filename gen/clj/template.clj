@@ -165,7 +165,7 @@
 ;
 
 (def template-build-builder-start
-  "(defn build-%s
+  "(defn %s>
   \"%s\"
   [^%s builder id config]")
 
@@ -197,7 +197,7 @@
 
 (defn template-builder-docstring
   [methods fn-name class-name]
-  (str "The build-" fn-name " function updates a " class-name
+  (str "The " fn-name "> function updates a " class-name
        " instance using the provided configuration.\n  The function takes the " class-name
        " instance, an optional namespace to use when looking up a value in the configuration,\n  and the configuration itself."
        "\n\n  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:\n\n"
@@ -300,14 +300,14 @@
   "(defn %s
   \"%s\"
   [id config]
-  (build-%s (%s/create) id config))")
+  (%s> (%s/create) id config))")
 
 
 (def template-init-no-arg-construct
   "(defn %s
   \"%s\"
   [id config]
-  (build-%s (new %s) id config))")
+  (%s> (new %s) id config))")
 
 
 (def template-init-no-arg-construct-no-config
@@ -335,14 +335,14 @@
   "(defn %s
   \"%s\"
   [^software.constructs.Construct scope id config]
-  (build-%s (%s/create scope (name id)) id config))")
+  (%s> (%s/create scope (name id)) id config))")
 
 
 (def template-init-hint
   "(defn %s
   \"%s\"
   [%sid config]
-  (build-%s (%s/create%s) id config))")
+  (%s> (%s/create%s) id config))")
 
 
 (def template-init-multi-defn
@@ -353,7 +353,7 @@
 (def template-init-multi-arity
   "
   ([%sid config]
-   (build-%s (%s/create%s) id config))")
+   (%s> (%s/create%s) id config))")
 
 
 (defn builder-source-multi-init

@@ -10,8 +10,8 @@
                                                 CfnSubnetGroupProps$Builder]))
 
 
-(defn build-cfn-cluster-builder
-  "The build-cfn-cluster-builder function updates a CfnCluster$Builder instance using the provided configuration.
+(defn cfn-cluster-builder>
+  "The cfn-cluster-builder> function updates a CfnCluster$Builder instance using the provided configuration.
   The function takes the CfnCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -74,11 +74,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+  (cfn-cluster-builder> (CfnCluster$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cluster-props-builder
-  "The build-cfn-cluster-props-builder function updates a CfnClusterProps$Builder instance using the provided configuration.
+(defn cfn-cluster-props-builder>
+  "The cfn-cluster-props-builder> function updates a CfnClusterProps$Builder instance using the provided configuration.
   The function takes the CfnClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -141,11 +141,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
+  (cfn-cluster-props-builder> (new CfnClusterProps$Builder) id config))
 
 
-(defn build-cfn-cluster-sse-specification-property-builder
-  "The build-cfn-cluster-sse-specification-property-builder function updates a CfnCluster$SSESpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-sse-specification-property-builder>
+  "The cfn-cluster-sse-specification-property-builder> function updates a CfnCluster$SSESpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$SSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -169,11 +169,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-sse-specification-property-builder (new CfnCluster$SSESpecificationProperty$Builder) id config))
+  (cfn-cluster-sse-specification-property-builder> (new CfnCluster$SSESpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-parameter-group-builder
-  "The build-cfn-parameter-group-builder function updates a CfnParameterGroup$Builder instance using the provided configuration.
+(defn cfn-parameter-group-builder>
+  "The cfn-parameter-group-builder> function updates a CfnParameterGroup$Builder instance using the provided configuration.
   The function takes the CfnParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -203,11 +203,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-parameter-group-builder (CfnParameterGroup$Builder/create scope (name id)) id config))
+  (cfn-parameter-group-builder> (CfnParameterGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-parameter-group-props-builder
-  "The build-cfn-parameter-group-props-builder function updates a CfnParameterGroupProps$Builder instance using the provided configuration.
+(defn cfn-parameter-group-props-builder>
+  "The cfn-parameter-group-props-builder> function updates a CfnParameterGroupProps$Builder instance using the provided configuration.
   The function takes the CfnParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -237,11 +237,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-parameter-group-props-builder (new CfnParameterGroupProps$Builder) id config))
+  (cfn-parameter-group-props-builder> (new CfnParameterGroupProps$Builder) id config))
 
 
-(defn build-cfn-subnet-group-builder
-  "The build-cfn-subnet-group-builder function updates a CfnSubnetGroup$Builder instance using the provided configuration.
+(defn cfn-subnet-group-builder>
+  "The cfn-subnet-group-builder> function updates a CfnSubnetGroup$Builder instance using the provided configuration.
   The function takes the CfnSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -271,11 +271,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-subnet-group-builder (CfnSubnetGroup$Builder/create scope (name id)) id config))
+  (cfn-subnet-group-builder> (CfnSubnetGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-subnet-group-props-builder
-  "The build-cfn-subnet-group-props-builder function updates a CfnSubnetGroupProps$Builder instance using the provided configuration.
+(defn cfn-subnet-group-props-builder>
+  "The cfn-subnet-group-props-builder> function updates a CfnSubnetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnSubnetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -305,4 +305,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-subnet-group-props-builder (new CfnSubnetGroupProps$Builder) id config))
+  (cfn-subnet-group-props-builder> (new CfnSubnetGroupProps$Builder) id config))

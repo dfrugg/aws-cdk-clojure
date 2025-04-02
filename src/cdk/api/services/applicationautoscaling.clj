@@ -189,8 +189,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :custom-resource data) ServiceNamespace/CUSTOM_RESOURCE)))
 
 
-(defn build-adjustment-tier-builder
-  "The build-adjustment-tier-builder function updates a AdjustmentTier$Builder instance using the provided configuration.
+(defn adjustment-tier-builder>
+  "The adjustment-tier-builder> function updates a AdjustmentTier$Builder instance using the provided configuration.
   The function takes the AdjustmentTier$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -220,11 +220,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-adjustment-tier-builder (new AdjustmentTier$Builder) id config))
+  (adjustment-tier-builder> (new AdjustmentTier$Builder) id config))
 
 
-(defn build-base-scalable-attribute-props-builder
-  "The build-base-scalable-attribute-props-builder function updates a BaseScalableAttributeProps$Builder instance using the provided configuration.
+(defn base-scalable-attribute-props-builder>
+  "The base-scalable-attribute-props-builder> function updates a BaseScalableAttributeProps$Builder instance using the provided configuration.
   The function takes the BaseScalableAttributeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -263,11 +263,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-scalable-attribute-props-builder (new BaseScalableAttributeProps$Builder) id config))
+  (base-scalable-attribute-props-builder> (new BaseScalableAttributeProps$Builder) id config))
 
 
-(defn build-base-target-tracking-props-builder
-  "The build-base-target-tracking-props-builder function updates a BaseTargetTrackingProps$Builder instance using the provided configuration.
+(defn base-target-tracking-props-builder>
+  "The base-target-tracking-props-builder> function updates a BaseTargetTrackingProps$Builder instance using the provided configuration.
   The function takes the BaseTargetTrackingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -300,11 +300,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-target-tracking-props-builder (new BaseTargetTrackingProps$Builder) id config))
+  (base-target-tracking-props-builder> (new BaseTargetTrackingProps$Builder) id config))
 
 
-(defn build-basic-step-scaling-policy-props-builder
-  "The build-basic-step-scaling-policy-props-builder function updates a BasicStepScalingPolicyProps$Builder instance using the provided configuration.
+(defn basic-step-scaling-policy-props-builder>
+  "The basic-step-scaling-policy-props-builder> function updates a BasicStepScalingPolicyProps$Builder instance using the provided configuration.
   The function takes the BasicStepScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -349,11 +349,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-basic-step-scaling-policy-props-builder (new BasicStepScalingPolicyProps$Builder) id config))
+  (basic-step-scaling-policy-props-builder> (new BasicStepScalingPolicyProps$Builder) id config))
 
 
-(defn build-basic-target-tracking-scaling-policy-props-builder
-  "The build-basic-target-tracking-scaling-policy-props-builder function updates a BasicTargetTrackingScalingPolicyProps$Builder instance using the provided configuration.
+(defn basic-target-tracking-scaling-policy-props-builder>
+  "The basic-target-tracking-scaling-policy-props-builder> function updates a BasicTargetTrackingScalingPolicyProps$Builder instance using the provided configuration.
   The function takes the BasicTargetTrackingScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -398,11 +398,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-basic-target-tracking-scaling-policy-props-builder (new BasicTargetTrackingScalingPolicyProps$Builder) id config))
+  (basic-target-tracking-scaling-policy-props-builder> (new BasicTargetTrackingScalingPolicyProps$Builder) id config))
 
 
-(defn build-cfn-scalable-target-builder
-  "The build-cfn-scalable-target-builder function updates a CfnScalableTarget$Builder instance using the provided configuration.
+(defn cfn-scalable-target-builder>
+  "The cfn-scalable-target-builder> function updates a CfnScalableTarget$Builder instance using the provided configuration.
   The function takes the CfnScalableTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -447,11 +447,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-scalable-target-builder (CfnScalableTarget$Builder/create scope (name id)) id config))
+  (cfn-scalable-target-builder> (CfnScalableTarget$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-scalable-target-props-builder
-  "The build-cfn-scalable-target-props-builder function updates a CfnScalableTargetProps$Builder instance using the provided configuration.
+(defn cfn-scalable-target-props-builder>
+  "The cfn-scalable-target-props-builder> function updates a CfnScalableTargetProps$Builder instance using the provided configuration.
   The function takes the CfnScalableTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -496,11 +496,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scalable-target-props-builder (new CfnScalableTargetProps$Builder) id config))
+  (cfn-scalable-target-props-builder> (new CfnScalableTargetProps$Builder) id config))
 
 
-(defn build-cfn-scalable-target-scalable-target-action-property-builder
-  "The build-cfn-scalable-target-scalable-target-action-property-builder function updates a CfnScalableTarget$ScalableTargetActionProperty$Builder instance using the provided configuration.
+(defn cfn-scalable-target-scalable-target-action-property-builder>
+  "The cfn-scalable-target-scalable-target-action-property-builder> function updates a CfnScalableTarget$ScalableTargetActionProperty$Builder instance using the provided configuration.
   The function takes the CfnScalableTarget$ScalableTargetActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -527,11 +527,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scalable-target-scalable-target-action-property-builder (new CfnScalableTarget$ScalableTargetActionProperty$Builder) id config))
+  (cfn-scalable-target-scalable-target-action-property-builder> (new CfnScalableTarget$ScalableTargetActionProperty$Builder) id config))
 
 
-(defn build-cfn-scalable-target-scheduled-action-property-builder
-  "The build-cfn-scalable-target-scheduled-action-property-builder function updates a CfnScalableTarget$ScheduledActionProperty$Builder instance using the provided configuration.
+(defn cfn-scalable-target-scheduled-action-property-builder>
+  "The cfn-scalable-target-scheduled-action-property-builder> function updates a CfnScalableTarget$ScheduledActionProperty$Builder instance using the provided configuration.
   The function takes the CfnScalableTarget$ScheduledActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -570,11 +570,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scalable-target-scheduled-action-property-builder (new CfnScalableTarget$ScheduledActionProperty$Builder) id config))
+  (cfn-scalable-target-scheduled-action-property-builder> (new CfnScalableTarget$ScheduledActionProperty$Builder) id config))
 
 
-(defn build-cfn-scalable-target-suspended-state-property-builder
-  "The build-cfn-scalable-target-suspended-state-property-builder function updates a CfnScalableTarget$SuspendedStateProperty$Builder instance using the provided configuration.
+(defn cfn-scalable-target-suspended-state-property-builder>
+  "The cfn-scalable-target-suspended-state-property-builder> function updates a CfnScalableTarget$SuspendedStateProperty$Builder instance using the provided configuration.
   The function takes the CfnScalableTarget$SuspendedStateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -604,11 +604,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scalable-target-suspended-state-property-builder (new CfnScalableTarget$SuspendedStateProperty$Builder) id config))
+  (cfn-scalable-target-suspended-state-property-builder> (new CfnScalableTarget$SuspendedStateProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-builder
-  "The build-cfn-scaling-policy-builder function updates a CfnScalingPolicy$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-builder>
+  "The cfn-scaling-policy-builder> function updates a CfnScalingPolicy$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -653,11 +653,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-scaling-policy-builder (CfnScalingPolicy$Builder/create scope (name id)) id config))
+  (cfn-scaling-policy-builder> (CfnScalingPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-scaling-policy-customized-metric-specification-property-builder
-  "The build-cfn-scaling-policy-customized-metric-specification-property-builder function updates a CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-customized-metric-specification-property-builder>
+  "The cfn-scaling-policy-customized-metric-specification-property-builder> function updates a CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -696,11 +696,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-customized-metric-specification-property-builder (new CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder) id config))
+  (cfn-scaling-policy-customized-metric-specification-property-builder> (new CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-metric-dimension-property-builder
-  "The build-cfn-scaling-policy-metric-dimension-property-builder function updates a CfnScalingPolicy$MetricDimensionProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-metric-dimension-property-builder>
+  "The cfn-scaling-policy-metric-dimension-property-builder> function updates a CfnScalingPolicy$MetricDimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$MetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -727,11 +727,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-metric-dimension-property-builder (new CfnScalingPolicy$MetricDimensionProperty$Builder) id config))
+  (cfn-scaling-policy-metric-dimension-property-builder> (new CfnScalingPolicy$MetricDimensionProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-predefined-metric-specification-property-builder
-  "The build-cfn-scaling-policy-predefined-metric-specification-property-builder function updates a CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-predefined-metric-specification-property-builder>
+  "The cfn-scaling-policy-predefined-metric-specification-property-builder> function updates a CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -758,11 +758,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-predefined-metric-specification-property-builder (new CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder) id config))
+  (cfn-scaling-policy-predefined-metric-specification-property-builder> (new CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-props-builder
-  "The build-cfn-scaling-policy-props-builder function updates a CfnScalingPolicyProps$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-props-builder>
+  "The cfn-scaling-policy-props-builder> function updates a CfnScalingPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -807,11 +807,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-props-builder (new CfnScalingPolicyProps$Builder) id config))
+  (cfn-scaling-policy-props-builder> (new CfnScalingPolicyProps$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-step-adjustment-property-builder
-  "The build-cfn-scaling-policy-step-adjustment-property-builder function updates a CfnScalingPolicy$StepAdjustmentProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-step-adjustment-property-builder>
+  "The cfn-scaling-policy-step-adjustment-property-builder> function updates a CfnScalingPolicy$StepAdjustmentProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$StepAdjustmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -841,11 +841,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-step-adjustment-property-builder (new CfnScalingPolicy$StepAdjustmentProperty$Builder) id config))
+  (cfn-scaling-policy-step-adjustment-property-builder> (new CfnScalingPolicy$StepAdjustmentProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-step-scaling-policy-configuration-property-builder
-  "The build-cfn-scaling-policy-step-scaling-policy-configuration-property-builder function updates a CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-step-scaling-policy-configuration-property-builder>
+  "The cfn-scaling-policy-step-scaling-policy-configuration-property-builder> function updates a CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -881,11 +881,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-step-scaling-policy-configuration-property-builder (new CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder) id config))
+  (cfn-scaling-policy-step-scaling-policy-configuration-property-builder> (new CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-target-tracking-metric-data-query-property-builder
-  "The build-cfn-scaling-policy-target-tracking-metric-data-query-property-builder function updates a CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-target-tracking-metric-data-query-property-builder>
+  "The cfn-scaling-policy-target-tracking-metric-data-query-property-builder> function updates a CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -921,11 +921,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-target-tracking-metric-data-query-property-builder (new CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder) id config))
+  (cfn-scaling-policy-target-tracking-metric-data-query-property-builder> (new CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-target-tracking-metric-dimension-property-builder
-  "The build-cfn-scaling-policy-target-tracking-metric-dimension-property-builder function updates a CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-target-tracking-metric-dimension-property-builder>
+  "The cfn-scaling-policy-target-tracking-metric-dimension-property-builder> function updates a CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -952,11 +952,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-target-tracking-metric-dimension-property-builder (new CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder) id config))
+  (cfn-scaling-policy-target-tracking-metric-dimension-property-builder> (new CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-target-tracking-metric-property-builder
-  "The build-cfn-scaling-policy-target-tracking-metric-property-builder function updates a CfnScalingPolicy$TargetTrackingMetricProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-target-tracking-metric-property-builder>
+  "The cfn-scaling-policy-target-tracking-metric-property-builder> function updates a CfnScalingPolicy$TargetTrackingMetricProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$TargetTrackingMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -986,11 +986,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-target-tracking-metric-property-builder (new CfnScalingPolicy$TargetTrackingMetricProperty$Builder) id config))
+  (cfn-scaling-policy-target-tracking-metric-property-builder> (new CfnScalingPolicy$TargetTrackingMetricProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-target-tracking-metric-stat-property-builder
-  "The build-cfn-scaling-policy-target-tracking-metric-stat-property-builder function updates a CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-target-tracking-metric-stat-property-builder>
+  "The cfn-scaling-policy-target-tracking-metric-stat-property-builder> function updates a CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1020,11 +1020,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-target-tracking-metric-stat-property-builder (new CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder) id config))
+  (cfn-scaling-policy-target-tracking-metric-stat-property-builder> (new CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder) id config))
 
 
-(defn build-cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder
-  "The build-cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder function updates a CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder>
+  "The cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder> function updates a CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1063,11 +1063,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder (new CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))
+  (cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder> (new CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))
 
 
-(defn build-cron-options-builder
-  "The build-cron-options-builder function updates a CronOptions$Builder instance using the provided configuration.
+(defn cron-options-builder>
+  "The cron-options-builder> function updates a CronOptions$Builder instance using the provided configuration.
   The function takes the CronOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1106,11 +1106,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cron-options-builder (new CronOptions$Builder) id config))
+  (cron-options-builder> (new CronOptions$Builder) id config))
 
 
-(defn build-enable-scaling-props-builder
-  "The build-enable-scaling-props-builder function updates a EnableScalingProps$Builder instance using the provided configuration.
+(defn enable-scaling-props-builder>
+  "The enable-scaling-props-builder> function updates a EnableScalingProps$Builder instance using the provided configuration.
   The function takes the EnableScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1137,11 +1137,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-enable-scaling-props-builder (new EnableScalingProps$Builder) id config))
+  (enable-scaling-props-builder> (new EnableScalingProps$Builder) id config))
 
 
-(defn build-scalable-target-builder
-  "The build-scalable-target-builder function updates a ScalableTarget$Builder instance using the provided configuration.
+(defn scalable-target-builder>
+  "The scalable-target-builder> function updates a ScalableTarget$Builder instance using the provided configuration.
   The function takes the ScalableTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1180,11 +1180,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-scalable-target-builder (ScalableTarget$Builder/create scope (name id)) id config))
+  (scalable-target-builder> (ScalableTarget$Builder/create scope (name id)) id config))
 
 
-(defn build-scalable-target-props-builder
-  "The build-scalable-target-props-builder function updates a ScalableTargetProps$Builder instance using the provided configuration.
+(defn scalable-target-props-builder>
+  "The scalable-target-props-builder> function updates a ScalableTargetProps$Builder instance using the provided configuration.
   The function takes the ScalableTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1223,11 +1223,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scalable-target-props-builder (new ScalableTargetProps$Builder) id config))
+  (scalable-target-props-builder> (new ScalableTargetProps$Builder) id config))
 
 
-(defn build-scaling-interval-builder
-  "The build-scaling-interval-builder function updates a ScalingInterval$Builder instance using the provided configuration.
+(defn scaling-interval-builder>
+  "The scaling-interval-builder> function updates a ScalingInterval$Builder instance using the provided configuration.
   The function takes the ScalingInterval$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1257,11 +1257,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scaling-interval-builder (new ScalingInterval$Builder) id config))
+  (scaling-interval-builder> (new ScalingInterval$Builder) id config))
 
 
-(defn build-scaling-schedule-builder
-  "The build-scaling-schedule-builder function updates a ScalingSchedule$Builder instance using the provided configuration.
+(defn scaling-schedule-builder>
+  "The scaling-schedule-builder> function updates a ScalingSchedule$Builder instance using the provided configuration.
   The function takes the ScalingSchedule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1300,11 +1300,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scaling-schedule-builder (new ScalingSchedule$Builder) id config))
+  (scaling-schedule-builder> (new ScalingSchedule$Builder) id config))
 
 
-(defn build-step-scaling-action-builder
-  "The build-step-scaling-action-builder function updates a StepScalingAction$Builder instance using the provided configuration.
+(defn step-scaling-action-builder>
+  "The step-scaling-action-builder> function updates a StepScalingAction$Builder instance using the provided configuration.
   The function takes the StepScalingAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1343,11 +1343,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-step-scaling-action-builder (StepScalingAction$Builder/create scope (name id)) id config))
+  (step-scaling-action-builder> (StepScalingAction$Builder/create scope (name id)) id config))
 
 
-(defn build-step-scaling-action-props-builder
-  "The build-step-scaling-action-props-builder function updates a StepScalingActionProps$Builder instance using the provided configuration.
+(defn step-scaling-action-props-builder>
+  "The step-scaling-action-props-builder> function updates a StepScalingActionProps$Builder instance using the provided configuration.
   The function takes the StepScalingActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1386,11 +1386,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-step-scaling-action-props-builder (new StepScalingActionProps$Builder) id config))
+  (step-scaling-action-props-builder> (new StepScalingActionProps$Builder) id config))
 
 
-(defn build-step-scaling-policy-builder
-  "The build-step-scaling-policy-builder function updates a StepScalingPolicy$Builder instance using the provided configuration.
+(defn step-scaling-policy-builder>
+  "The step-scaling-policy-builder> function updates a StepScalingPolicy$Builder instance using the provided configuration.
   The function takes the StepScalingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1438,11 +1438,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-step-scaling-policy-builder (StepScalingPolicy$Builder/create scope (name id)) id config))
+  (step-scaling-policy-builder> (StepScalingPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-step-scaling-policy-props-builder
-  "The build-step-scaling-policy-props-builder function updates a StepScalingPolicyProps$Builder instance using the provided configuration.
+(defn step-scaling-policy-props-builder>
+  "The step-scaling-policy-props-builder> function updates a StepScalingPolicyProps$Builder instance using the provided configuration.
   The function takes the StepScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1490,11 +1490,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-step-scaling-policy-props-builder (new StepScalingPolicyProps$Builder) id config))
+  (step-scaling-policy-props-builder> (new StepScalingPolicyProps$Builder) id config))
 
 
-(defn build-target-tracking-scaling-policy-builder
-  "The build-target-tracking-scaling-policy-builder function updates a TargetTrackingScalingPolicy$Builder instance using the provided configuration.
+(defn target-tracking-scaling-policy-builder>
+  "The target-tracking-scaling-policy-builder> function updates a TargetTrackingScalingPolicy$Builder instance using the provided configuration.
   The function takes the TargetTrackingScalingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1542,11 +1542,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-target-tracking-scaling-policy-builder (TargetTrackingScalingPolicy$Builder/create scope (name id)) id config))
+  (target-tracking-scaling-policy-builder> (TargetTrackingScalingPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-target-tracking-scaling-policy-props-builder
-  "The build-target-tracking-scaling-policy-props-builder function updates a TargetTrackingScalingPolicyProps$Builder instance using the provided configuration.
+(defn target-tracking-scaling-policy-props-builder>
+  "The target-tracking-scaling-policy-props-builder> function updates a TargetTrackingScalingPolicyProps$Builder instance using the provided configuration.
   The function takes the TargetTrackingScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1594,4 +1594,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-target-tracking-scaling-policy-props-builder (new TargetTrackingScalingPolicyProps$Builder) id config))
+  (target-tracking-scaling-policy-props-builder> (new TargetTrackingScalingPolicyProps$Builder) id config))

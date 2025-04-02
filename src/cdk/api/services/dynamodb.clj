@@ -289,8 +289,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :default data) TableEncryption/DEFAULT)))
 
 
-(defn build-attribute-builder
-  "The build-attribute-builder function updates a Attribute$Builder instance using the provided configuration.
+(defn attribute-builder>
+  "The attribute-builder> function updates a Attribute$Builder instance using the provided configuration.
   The function takes the Attribute$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -317,11 +317,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-attribute-builder (new Attribute$Builder) id config))
+  (attribute-builder> (new Attribute$Builder) id config))
 
 
-(defn build-autoscaled-capacity-options-builder
-  "The build-autoscaled-capacity-options-builder function updates a AutoscaledCapacityOptions$Builder instance using the provided configuration.
+(defn autoscaled-capacity-options-builder>
+  "The autoscaled-capacity-options-builder> function updates a AutoscaledCapacityOptions$Builder instance using the provided configuration.
   The function takes the AutoscaledCapacityOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -354,11 +354,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-autoscaled-capacity-options-builder (new AutoscaledCapacityOptions$Builder) id config))
+  (autoscaled-capacity-options-builder> (new AutoscaledCapacityOptions$Builder) id config))
 
 
-(defn build-cfn-global-table-attribute-definition-property-builder
-  "The build-cfn-global-table-attribute-definition-property-builder function updates a CfnGlobalTable$AttributeDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-attribute-definition-property-builder>
+  "The cfn-global-table-attribute-definition-property-builder> function updates a CfnGlobalTable$AttributeDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$AttributeDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -385,11 +385,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-attribute-definition-property-builder (new CfnGlobalTable$AttributeDefinitionProperty$Builder) id config))
+  (cfn-global-table-attribute-definition-property-builder> (new CfnGlobalTable$AttributeDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-builder
-  "The build-cfn-global-table-builder function updates a CfnGlobalTable$Builder instance using the provided configuration.
+(defn cfn-global-table-builder>
+  "The cfn-global-table-builder> function updates a CfnGlobalTable$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -446,11 +446,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-global-table-builder (CfnGlobalTable$Builder/create scope (name id)) id config))
+  (cfn-global-table-builder> (CfnGlobalTable$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-global-table-capacity-auto-scaling-settings-property-builder
-  "The build-cfn-global-table-capacity-auto-scaling-settings-property-builder function updates a CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-capacity-auto-scaling-settings-property-builder>
+  "The cfn-global-table-capacity-auto-scaling-settings-property-builder> function updates a CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -483,11 +483,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-capacity-auto-scaling-settings-property-builder (new CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder) id config))
+  (cfn-global-table-capacity-auto-scaling-settings-property-builder> (new CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-contributor-insights-specification-property-builder
-  "The build-cfn-global-table-contributor-insights-specification-property-builder function updates a CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-contributor-insights-specification-property-builder>
+  "The cfn-global-table-contributor-insights-specification-property-builder> function updates a CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -511,11 +511,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-contributor-insights-specification-property-builder (new CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder) id config))
+  (cfn-global-table-contributor-insights-specification-property-builder> (new CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-global-secondary-index-property-builder
-  "The build-cfn-global-table-global-secondary-index-property-builder function updates a CfnGlobalTable$GlobalSecondaryIndexProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-global-secondary-index-property-builder>
+  "The cfn-global-table-global-secondary-index-property-builder> function updates a CfnGlobalTable$GlobalSecondaryIndexProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$GlobalSecondaryIndexProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -551,11 +551,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-global-secondary-index-property-builder (new CfnGlobalTable$GlobalSecondaryIndexProperty$Builder) id config))
+  (cfn-global-table-global-secondary-index-property-builder> (new CfnGlobalTable$GlobalSecondaryIndexProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-key-schema-property-builder
-  "The build-cfn-global-table-key-schema-property-builder function updates a CfnGlobalTable$KeySchemaProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-key-schema-property-builder>
+  "The cfn-global-table-key-schema-property-builder> function updates a CfnGlobalTable$KeySchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$KeySchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -582,11 +582,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-key-schema-property-builder (new CfnGlobalTable$KeySchemaProperty$Builder) id config))
+  (cfn-global-table-key-schema-property-builder> (new CfnGlobalTable$KeySchemaProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-kinesis-stream-specification-property-builder
-  "The build-cfn-global-table-kinesis-stream-specification-property-builder function updates a CfnGlobalTable$KinesisStreamSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-kinesis-stream-specification-property-builder>
+  "The cfn-global-table-kinesis-stream-specification-property-builder> function updates a CfnGlobalTable$KinesisStreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$KinesisStreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -613,11 +613,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-kinesis-stream-specification-property-builder (new CfnGlobalTable$KinesisStreamSpecificationProperty$Builder) id config))
+  (cfn-global-table-kinesis-stream-specification-property-builder> (new CfnGlobalTable$KinesisStreamSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-local-secondary-index-property-builder
-  "The build-cfn-global-table-local-secondary-index-property-builder function updates a CfnGlobalTable$LocalSecondaryIndexProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-local-secondary-index-property-builder>
+  "The cfn-global-table-local-secondary-index-property-builder> function updates a CfnGlobalTable$LocalSecondaryIndexProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$LocalSecondaryIndexProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -647,11 +647,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-local-secondary-index-property-builder (new CfnGlobalTable$LocalSecondaryIndexProperty$Builder) id config))
+  (cfn-global-table-local-secondary-index-property-builder> (new CfnGlobalTable$LocalSecondaryIndexProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-point-in-time-recovery-specification-property-builder
-  "The build-cfn-global-table-point-in-time-recovery-specification-property-builder function updates a CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-point-in-time-recovery-specification-property-builder>
+  "The cfn-global-table-point-in-time-recovery-specification-property-builder> function updates a CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -675,11 +675,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-point-in-time-recovery-specification-property-builder (new CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder) id config))
+  (cfn-global-table-point-in-time-recovery-specification-property-builder> (new CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-projection-property-builder
-  "The build-cfn-global-table-projection-property-builder function updates a CfnGlobalTable$ProjectionProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-projection-property-builder>
+  "The cfn-global-table-projection-property-builder> function updates a CfnGlobalTable$ProjectionProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ProjectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -706,11 +706,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-projection-property-builder (new CfnGlobalTable$ProjectionProperty$Builder) id config))
+  (cfn-global-table-projection-property-builder> (new CfnGlobalTable$ProjectionProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-props-builder
-  "The build-cfn-global-table-props-builder function updates a CfnGlobalTableProps$Builder instance using the provided configuration.
+(defn cfn-global-table-props-builder>
+  "The cfn-global-table-props-builder> function updates a CfnGlobalTableProps$Builder instance using the provided configuration.
   The function takes the CfnGlobalTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -767,11 +767,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-props-builder (new CfnGlobalTableProps$Builder) id config))
+  (cfn-global-table-props-builder> (new CfnGlobalTableProps$Builder) id config))
 
 
-(defn build-cfn-global-table-read-on-demand-throughput-settings-property-builder
-  "The build-cfn-global-table-read-on-demand-throughput-settings-property-builder function updates a CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-read-on-demand-throughput-settings-property-builder>
+  "The cfn-global-table-read-on-demand-throughput-settings-property-builder> function updates a CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -795,11 +795,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-read-on-demand-throughput-settings-property-builder (new CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder) id config))
+  (cfn-global-table-read-on-demand-throughput-settings-property-builder> (new CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-read-provisioned-throughput-settings-property-builder
-  "The build-cfn-global-table-read-provisioned-throughput-settings-property-builder function updates a CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-read-provisioned-throughput-settings-property-builder>
+  "The cfn-global-table-read-provisioned-throughput-settings-property-builder> function updates a CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -826,11 +826,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-read-provisioned-throughput-settings-property-builder (new CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder) id config))
+  (cfn-global-table-read-provisioned-throughput-settings-property-builder> (new CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-replica-global-secondary-index-specification-property-builder
-  "The build-cfn-global-table-replica-global-secondary-index-specification-property-builder function updates a CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-replica-global-secondary-index-specification-property-builder>
+  "The cfn-global-table-replica-global-secondary-index-specification-property-builder> function updates a CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -863,11 +863,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-replica-global-secondary-index-specification-property-builder (new CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder) id config))
+  (cfn-global-table-replica-global-secondary-index-specification-property-builder> (new CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-replica-specification-property-builder
-  "The build-cfn-global-table-replica-specification-property-builder function updates a CfnGlobalTable$ReplicaSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-replica-specification-property-builder>
+  "The cfn-global-table-replica-specification-property-builder> function updates a CfnGlobalTable$ReplicaSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ReplicaSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -927,11 +927,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-replica-specification-property-builder (new CfnGlobalTable$ReplicaSpecificationProperty$Builder) id config))
+  (cfn-global-table-replica-specification-property-builder> (new CfnGlobalTable$ReplicaSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-replica-sse-specification-property-builder
-  "The build-cfn-global-table-replica-sse-specification-property-builder function updates a CfnGlobalTable$ReplicaSSESpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-replica-sse-specification-property-builder>
+  "The cfn-global-table-replica-sse-specification-property-builder> function updates a CfnGlobalTable$ReplicaSSESpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ReplicaSSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -955,11 +955,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-replica-sse-specification-property-builder (new CfnGlobalTable$ReplicaSSESpecificationProperty$Builder) id config))
+  (cfn-global-table-replica-sse-specification-property-builder> (new CfnGlobalTable$ReplicaSSESpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-replica-stream-specification-property-builder
-  "The build-cfn-global-table-replica-stream-specification-property-builder function updates a CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-replica-stream-specification-property-builder>
+  "The cfn-global-table-replica-stream-specification-property-builder> function updates a CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -983,11 +983,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-replica-stream-specification-property-builder (new CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder) id config))
+  (cfn-global-table-replica-stream-specification-property-builder> (new CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-resource-policy-property-builder
-  "The build-cfn-global-table-resource-policy-property-builder function updates a CfnGlobalTable$ResourcePolicyProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-resource-policy-property-builder>
+  "The cfn-global-table-resource-policy-property-builder> function updates a CfnGlobalTable$ResourcePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ResourcePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1011,11 +1011,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-resource-policy-property-builder (new CfnGlobalTable$ResourcePolicyProperty$Builder) id config))
+  (cfn-global-table-resource-policy-property-builder> (new CfnGlobalTable$ResourcePolicyProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-sse-specification-property-builder
-  "The build-cfn-global-table-sse-specification-property-builder function updates a CfnGlobalTable$SSESpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-sse-specification-property-builder>
+  "The cfn-global-table-sse-specification-property-builder> function updates a CfnGlobalTable$SSESpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$SSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1042,11 +1042,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-sse-specification-property-builder (new CfnGlobalTable$SSESpecificationProperty$Builder) id config))
+  (cfn-global-table-sse-specification-property-builder> (new CfnGlobalTable$SSESpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-stream-specification-property-builder
-  "The build-cfn-global-table-stream-specification-property-builder function updates a CfnGlobalTable$StreamSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-stream-specification-property-builder>
+  "The cfn-global-table-stream-specification-property-builder> function updates a CfnGlobalTable$StreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$StreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1070,11 +1070,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-stream-specification-property-builder (new CfnGlobalTable$StreamSpecificationProperty$Builder) id config))
+  (cfn-global-table-stream-specification-property-builder> (new CfnGlobalTable$StreamSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-target-tracking-scaling-policy-configuration-property-builder
-  "The build-cfn-global-table-target-tracking-scaling-policy-configuration-property-builder function updates a CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-target-tracking-scaling-policy-configuration-property-builder>
+  "The cfn-global-table-target-tracking-scaling-policy-configuration-property-builder> function updates a CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1107,11 +1107,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-target-tracking-scaling-policy-configuration-property-builder (new CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))
+  (cfn-global-table-target-tracking-scaling-policy-configuration-property-builder> (new CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-time-to-live-specification-property-builder
-  "The build-cfn-global-table-time-to-live-specification-property-builder function updates a CfnGlobalTable$TimeToLiveSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-time-to-live-specification-property-builder>
+  "The cfn-global-table-time-to-live-specification-property-builder> function updates a CfnGlobalTable$TimeToLiveSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$TimeToLiveSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1138,11 +1138,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-time-to-live-specification-property-builder (new CfnGlobalTable$TimeToLiveSpecificationProperty$Builder) id config))
+  (cfn-global-table-time-to-live-specification-property-builder> (new CfnGlobalTable$TimeToLiveSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-write-on-demand-throughput-settings-property-builder
-  "The build-cfn-global-table-write-on-demand-throughput-settings-property-builder function updates a CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-write-on-demand-throughput-settings-property-builder>
+  "The cfn-global-table-write-on-demand-throughput-settings-property-builder> function updates a CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1166,11 +1166,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-write-on-demand-throughput-settings-property-builder (new CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder) id config))
+  (cfn-global-table-write-on-demand-throughput-settings-property-builder> (new CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-global-table-write-provisioned-throughput-settings-property-builder
-  "The build-cfn-global-table-write-provisioned-throughput-settings-property-builder function updates a CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-global-table-write-provisioned-throughput-settings-property-builder>
+  "The cfn-global-table-write-provisioned-throughput-settings-property-builder> function updates a CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1194,11 +1194,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-global-table-write-provisioned-throughput-settings-property-builder (new CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder) id config))
+  (cfn-global-table-write-provisioned-throughput-settings-property-builder> (new CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-table-attribute-definition-property-builder
-  "The build-cfn-table-attribute-definition-property-builder function updates a CfnTable$AttributeDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-table-attribute-definition-property-builder>
+  "The cfn-table-attribute-definition-property-builder> function updates a CfnTable$AttributeDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$AttributeDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1225,11 +1225,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-attribute-definition-property-builder (new CfnTable$AttributeDefinitionProperty$Builder) id config))
+  (cfn-table-attribute-definition-property-builder> (new CfnTable$AttributeDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-table-builder
-  "The build-cfn-table-builder function updates a CfnTable$Builder instance using the provided configuration.
+(defn cfn-table-builder>
+  "The cfn-table-builder> function updates a CfnTable$Builder instance using the provided configuration.
   The function takes the CfnTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1307,11 +1307,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-table-builder (CfnTable$Builder/create scope (name id)) id config))
+  (cfn-table-builder> (CfnTable$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-table-contributor-insights-specification-property-builder
-  "The build-cfn-table-contributor-insights-specification-property-builder function updates a CfnTable$ContributorInsightsSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-contributor-insights-specification-property-builder>
+  "The cfn-table-contributor-insights-specification-property-builder> function updates a CfnTable$ContributorInsightsSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ContributorInsightsSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1335,11 +1335,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-contributor-insights-specification-property-builder (new CfnTable$ContributorInsightsSpecificationProperty$Builder) id config))
+  (cfn-table-contributor-insights-specification-property-builder> (new CfnTable$ContributorInsightsSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-csv-property-builder
-  "The build-cfn-table-csv-property-builder function updates a CfnTable$CsvProperty$Builder instance using the provided configuration.
+(defn cfn-table-csv-property-builder>
+  "The cfn-table-csv-property-builder> function updates a CfnTable$CsvProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$CsvProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1366,11 +1366,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-csv-property-builder (new CfnTable$CsvProperty$Builder) id config))
+  (cfn-table-csv-property-builder> (new CfnTable$CsvProperty$Builder) id config))
 
 
-(defn build-cfn-table-global-secondary-index-property-builder
-  "The build-cfn-table-global-secondary-index-property-builder function updates a CfnTable$GlobalSecondaryIndexProperty$Builder instance using the provided configuration.
+(defn cfn-table-global-secondary-index-property-builder>
+  "The cfn-table-global-secondary-index-property-builder> function updates a CfnTable$GlobalSecondaryIndexProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$GlobalSecondaryIndexProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1409,11 +1409,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-global-secondary-index-property-builder (new CfnTable$GlobalSecondaryIndexProperty$Builder) id config))
+  (cfn-table-global-secondary-index-property-builder> (new CfnTable$GlobalSecondaryIndexProperty$Builder) id config))
 
 
-(defn build-cfn-table-import-source-specification-property-builder
-  "The build-cfn-table-import-source-specification-property-builder function updates a CfnTable$ImportSourceSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-import-source-specification-property-builder>
+  "The cfn-table-import-source-specification-property-builder> function updates a CfnTable$ImportSourceSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ImportSourceSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1446,11 +1446,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-import-source-specification-property-builder (new CfnTable$ImportSourceSpecificationProperty$Builder) id config))
+  (cfn-table-import-source-specification-property-builder> (new CfnTable$ImportSourceSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-input-format-options-property-builder
-  "The build-cfn-table-input-format-options-property-builder function updates a CfnTable$InputFormatOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-table-input-format-options-property-builder>
+  "The cfn-table-input-format-options-property-builder> function updates a CfnTable$InputFormatOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$InputFormatOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1474,11 +1474,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-input-format-options-property-builder (new CfnTable$InputFormatOptionsProperty$Builder) id config))
+  (cfn-table-input-format-options-property-builder> (new CfnTable$InputFormatOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-table-key-schema-property-builder
-  "The build-cfn-table-key-schema-property-builder function updates a CfnTable$KeySchemaProperty$Builder instance using the provided configuration.
+(defn cfn-table-key-schema-property-builder>
+  "The cfn-table-key-schema-property-builder> function updates a CfnTable$KeySchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$KeySchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1505,11 +1505,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-key-schema-property-builder (new CfnTable$KeySchemaProperty$Builder) id config))
+  (cfn-table-key-schema-property-builder> (new CfnTable$KeySchemaProperty$Builder) id config))
 
 
-(defn build-cfn-table-kinesis-stream-specification-property-builder
-  "The build-cfn-table-kinesis-stream-specification-property-builder function updates a CfnTable$KinesisStreamSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-kinesis-stream-specification-property-builder>
+  "The cfn-table-kinesis-stream-specification-property-builder> function updates a CfnTable$KinesisStreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$KinesisStreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1536,11 +1536,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-kinesis-stream-specification-property-builder (new CfnTable$KinesisStreamSpecificationProperty$Builder) id config))
+  (cfn-table-kinesis-stream-specification-property-builder> (new CfnTable$KinesisStreamSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-local-secondary-index-property-builder
-  "The build-cfn-table-local-secondary-index-property-builder function updates a CfnTable$LocalSecondaryIndexProperty$Builder instance using the provided configuration.
+(defn cfn-table-local-secondary-index-property-builder>
+  "The cfn-table-local-secondary-index-property-builder> function updates a CfnTable$LocalSecondaryIndexProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$LocalSecondaryIndexProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1570,11 +1570,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-local-secondary-index-property-builder (new CfnTable$LocalSecondaryIndexProperty$Builder) id config))
+  (cfn-table-local-secondary-index-property-builder> (new CfnTable$LocalSecondaryIndexProperty$Builder) id config))
 
 
-(defn build-cfn-table-on-demand-throughput-property-builder
-  "The build-cfn-table-on-demand-throughput-property-builder function updates a CfnTable$OnDemandThroughputProperty$Builder instance using the provided configuration.
+(defn cfn-table-on-demand-throughput-property-builder>
+  "The cfn-table-on-demand-throughput-property-builder> function updates a CfnTable$OnDemandThroughputProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$OnDemandThroughputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1601,11 +1601,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-on-demand-throughput-property-builder (new CfnTable$OnDemandThroughputProperty$Builder) id config))
+  (cfn-table-on-demand-throughput-property-builder> (new CfnTable$OnDemandThroughputProperty$Builder) id config))
 
 
-(defn build-cfn-table-point-in-time-recovery-specification-property-builder
-  "The build-cfn-table-point-in-time-recovery-specification-property-builder function updates a CfnTable$PointInTimeRecoverySpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-point-in-time-recovery-specification-property-builder>
+  "The cfn-table-point-in-time-recovery-specification-property-builder> function updates a CfnTable$PointInTimeRecoverySpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$PointInTimeRecoverySpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1629,11 +1629,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-point-in-time-recovery-specification-property-builder (new CfnTable$PointInTimeRecoverySpecificationProperty$Builder) id config))
+  (cfn-table-point-in-time-recovery-specification-property-builder> (new CfnTable$PointInTimeRecoverySpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-projection-property-builder
-  "The build-cfn-table-projection-property-builder function updates a CfnTable$ProjectionProperty$Builder instance using the provided configuration.
+(defn cfn-table-projection-property-builder>
+  "The cfn-table-projection-property-builder> function updates a CfnTable$ProjectionProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ProjectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1660,11 +1660,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-projection-property-builder (new CfnTable$ProjectionProperty$Builder) id config))
+  (cfn-table-projection-property-builder> (new CfnTable$ProjectionProperty$Builder) id config))
 
 
-(defn build-cfn-table-props-builder
-  "The build-cfn-table-props-builder function updates a CfnTableProps$Builder instance using the provided configuration.
+(defn cfn-table-props-builder>
+  "The cfn-table-props-builder> function updates a CfnTableProps$Builder instance using the provided configuration.
   The function takes the CfnTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1742,11 +1742,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-props-builder (new CfnTableProps$Builder) id config))
+  (cfn-table-props-builder> (new CfnTableProps$Builder) id config))
 
 
-(defn build-cfn-table-provisioned-throughput-property-builder
-  "The build-cfn-table-provisioned-throughput-property-builder function updates a CfnTable$ProvisionedThroughputProperty$Builder instance using the provided configuration.
+(defn cfn-table-provisioned-throughput-property-builder>
+  "The cfn-table-provisioned-throughput-property-builder> function updates a CfnTable$ProvisionedThroughputProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ProvisionedThroughputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1773,11 +1773,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-provisioned-throughput-property-builder (new CfnTable$ProvisionedThroughputProperty$Builder) id config))
+  (cfn-table-provisioned-throughput-property-builder> (new CfnTable$ProvisionedThroughputProperty$Builder) id config))
 
 
-(defn build-cfn-table-resource-policy-property-builder
-  "The build-cfn-table-resource-policy-property-builder function updates a CfnTable$ResourcePolicyProperty$Builder instance using the provided configuration.
+(defn cfn-table-resource-policy-property-builder>
+  "The cfn-table-resource-policy-property-builder> function updates a CfnTable$ResourcePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ResourcePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1801,11 +1801,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-resource-policy-property-builder (new CfnTable$ResourcePolicyProperty$Builder) id config))
+  (cfn-table-resource-policy-property-builder> (new CfnTable$ResourcePolicyProperty$Builder) id config))
 
 
-(defn build-cfn-table-s3-bucket-source-property-builder
-  "The build-cfn-table-s3-bucket-source-property-builder function updates a CfnTable$S3BucketSourceProperty$Builder instance using the provided configuration.
+(defn cfn-table-s3-bucket-source-property-builder>
+  "The cfn-table-s3-bucket-source-property-builder> function updates a CfnTable$S3BucketSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$S3BucketSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1835,11 +1835,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-s3-bucket-source-property-builder (new CfnTable$S3BucketSourceProperty$Builder) id config))
+  (cfn-table-s3-bucket-source-property-builder> (new CfnTable$S3BucketSourceProperty$Builder) id config))
 
 
-(defn build-cfn-table-sse-specification-property-builder
-  "The build-cfn-table-sse-specification-property-builder function updates a CfnTable$SSESpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-sse-specification-property-builder>
+  "The cfn-table-sse-specification-property-builder> function updates a CfnTable$SSESpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$SSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1869,11 +1869,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-sse-specification-property-builder (new CfnTable$SSESpecificationProperty$Builder) id config))
+  (cfn-table-sse-specification-property-builder> (new CfnTable$SSESpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-stream-specification-property-builder
-  "The build-cfn-table-stream-specification-property-builder function updates a CfnTable$StreamSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-stream-specification-property-builder>
+  "The cfn-table-stream-specification-property-builder> function updates a CfnTable$StreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$StreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1900,11 +1900,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-stream-specification-property-builder (new CfnTable$StreamSpecificationProperty$Builder) id config))
+  (cfn-table-stream-specification-property-builder> (new CfnTable$StreamSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-time-to-live-specification-property-builder
-  "The build-cfn-table-time-to-live-specification-property-builder function updates a CfnTable$TimeToLiveSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-time-to-live-specification-property-builder>
+  "The cfn-table-time-to-live-specification-property-builder> function updates a CfnTable$TimeToLiveSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$TimeToLiveSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1931,11 +1931,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-time-to-live-specification-property-builder (new CfnTable$TimeToLiveSpecificationProperty$Builder) id config))
+  (cfn-table-time-to-live-specification-property-builder> (new CfnTable$TimeToLiveSpecificationProperty$Builder) id config))
 
 
-(defn build-csv-options-builder
-  "The build-csv-options-builder function updates a CsvOptions$Builder instance using the provided configuration.
+(defn csv-options-builder>
+  "The csv-options-builder> function updates a CsvOptions$Builder instance using the provided configuration.
   The function takes the CsvOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1962,11 +1962,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-csv-options-builder (new CsvOptions$Builder) id config))
+  (csv-options-builder> (new CsvOptions$Builder) id config))
 
 
-(defn build-enable-scaling-props-builder
-  "The build-enable-scaling-props-builder function updates a EnableScalingProps$Builder instance using the provided configuration.
+(defn enable-scaling-props-builder>
+  "The enable-scaling-props-builder> function updates a EnableScalingProps$Builder instance using the provided configuration.
   The function takes the EnableScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1993,11 +1993,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-enable-scaling-props-builder (new EnableScalingProps$Builder) id config))
+  (enable-scaling-props-builder> (new EnableScalingProps$Builder) id config))
 
 
-(defn build-global-secondary-index-props-builder
-  "The build-global-secondary-index-props-builder function updates a GlobalSecondaryIndexProps$Builder instance using the provided configuration.
+(defn global-secondary-index-props-builder>
+  "The global-secondary-index-props-builder> function updates a GlobalSecondaryIndexProps$Builder instance using the provided configuration.
   The function takes the GlobalSecondaryIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2039,11 +2039,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-global-secondary-index-props-builder (new GlobalSecondaryIndexProps$Builder) id config))
+  (global-secondary-index-props-builder> (new GlobalSecondaryIndexProps$Builder) id config))
 
 
-(defn build-global-secondary-index-props-v2-builder
-  "The build-global-secondary-index-props-v2-builder function updates a GlobalSecondaryIndexPropsV2$Builder instance using the provided configuration.
+(defn global-secondary-index-props-v2-builder>
+  "The global-secondary-index-props-v2-builder> function updates a GlobalSecondaryIndexPropsV2$Builder instance using the provided configuration.
   The function takes the GlobalSecondaryIndexPropsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2085,11 +2085,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-global-secondary-index-props-v2-builder (new GlobalSecondaryIndexPropsV2$Builder) id config))
+  (global-secondary-index-props-v2-builder> (new GlobalSecondaryIndexPropsV2$Builder) id config))
 
 
-(defn build-import-source-specification-builder
-  "The build-import-source-specification-builder function updates a ImportSourceSpecification$Builder instance using the provided configuration.
+(defn import-source-specification-builder>
+  "The import-source-specification-builder> function updates a ImportSourceSpecification$Builder instance using the provided configuration.
   The function takes the ImportSourceSpecification$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2125,11 +2125,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-import-source-specification-builder (new ImportSourceSpecification$Builder) id config))
+  (import-source-specification-builder> (new ImportSourceSpecification$Builder) id config))
 
 
-(defn build-local-secondary-index-props-builder
-  "The build-local-secondary-index-props-builder function updates a LocalSecondaryIndexProps$Builder instance using the provided configuration.
+(defn local-secondary-index-props-builder>
+  "The local-secondary-index-props-builder> function updates a LocalSecondaryIndexProps$Builder instance using the provided configuration.
   The function takes the LocalSecondaryIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2162,11 +2162,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-local-secondary-index-props-builder (new LocalSecondaryIndexProps$Builder) id config))
+  (local-secondary-index-props-builder> (new LocalSecondaryIndexProps$Builder) id config))
 
 
-(defn build-operations-metric-options-builder
-  "The build-operations-metric-options-builder function updates a OperationsMetricOptions$Builder instance using the provided configuration.
+(defn operations-metric-options-builder>
+  "The operations-metric-options-builder> function updates a OperationsMetricOptions$Builder instance using the provided configuration.
   The function takes the OperationsMetricOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2214,11 +2214,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-operations-metric-options-builder (new OperationsMetricOptions$Builder) id config))
+  (operations-metric-options-builder> (new OperationsMetricOptions$Builder) id config))
 
 
-(defn build-replica-global-secondary-index-options-builder
-  "The build-replica-global-secondary-index-options-builder function updates a ReplicaGlobalSecondaryIndexOptions$Builder instance using the provided configuration.
+(defn replica-global-secondary-index-options-builder>
+  "The replica-global-secondary-index-options-builder> function updates a ReplicaGlobalSecondaryIndexOptions$Builder instance using the provided configuration.
   The function takes the ReplicaGlobalSecondaryIndexOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2245,11 +2245,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-replica-global-secondary-index-options-builder (new ReplicaGlobalSecondaryIndexOptions$Builder) id config))
+  (replica-global-secondary-index-options-builder> (new ReplicaGlobalSecondaryIndexOptions$Builder) id config))
 
 
-(defn build-replica-table-props-builder
-  "The build-replica-table-props-builder function updates a ReplicaTableProps$Builder instance using the provided configuration.
+(defn replica-table-props-builder>
+  "The replica-table-props-builder> function updates a ReplicaTableProps$Builder instance using the provided configuration.
   The function takes the ReplicaTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2300,11 +2300,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-replica-table-props-builder (new ReplicaTableProps$Builder) id config))
+  (replica-table-props-builder> (new ReplicaTableProps$Builder) id config))
 
 
-(defn build-schema-options-builder
-  "The build-schema-options-builder function updates a SchemaOptions$Builder instance using the provided configuration.
+(defn schema-options-builder>
+  "The schema-options-builder> function updates a SchemaOptions$Builder instance using the provided configuration.
   The function takes the SchemaOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2331,11 +2331,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-schema-options-builder (new SchemaOptions$Builder) id config))
+  (schema-options-builder> (new SchemaOptions$Builder) id config))
 
 
-(defn build-secondary-index-props-builder
-  "The build-secondary-index-props-builder function updates a SecondaryIndexProps$Builder instance using the provided configuration.
+(defn secondary-index-props-builder>
+  "The secondary-index-props-builder> function updates a SecondaryIndexProps$Builder instance using the provided configuration.
   The function takes the SecondaryIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2365,11 +2365,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-secondary-index-props-builder (new SecondaryIndexProps$Builder) id config))
+  (secondary-index-props-builder> (new SecondaryIndexProps$Builder) id config))
 
 
-(defn build-system-errors-for-operations-metric-options-builder
-  "The build-system-errors-for-operations-metric-options-builder function updates a SystemErrorsForOperationsMetricOptions$Builder instance using the provided configuration.
+(defn system-errors-for-operations-metric-options-builder>
+  "The system-errors-for-operations-metric-options-builder> function updates a SystemErrorsForOperationsMetricOptions$Builder instance using the provided configuration.
   The function takes the SystemErrorsForOperationsMetricOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2417,11 +2417,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-system-errors-for-operations-metric-options-builder (new SystemErrorsForOperationsMetricOptions$Builder) id config))
+  (system-errors-for-operations-metric-options-builder> (new SystemErrorsForOperationsMetricOptions$Builder) id config))
 
 
-(defn build-table-attributes-builder
-  "The build-table-attributes-builder function updates a TableAttributes$Builder instance using the provided configuration.
+(defn table-attributes-builder>
+  "The table-attributes-builder> function updates a TableAttributes$Builder instance using the provided configuration.
   The function takes the TableAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2463,11 +2463,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-table-attributes-builder (new TableAttributes$Builder) id config))
+  (table-attributes-builder> (new TableAttributes$Builder) id config))
 
 
-(defn build-table-attributes-v2-builder
-  "The build-table-attributes-v2-builder function updates a TableAttributesV2$Builder instance using the provided configuration.
+(defn table-attributes-v2-builder>
+  "The table-attributes-v2-builder> function updates a TableAttributesV2$Builder instance using the provided configuration.
   The function takes the TableAttributesV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2512,11 +2512,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-table-attributes-v2-builder (new TableAttributesV2$Builder) id config))
+  (table-attributes-v2-builder> (new TableAttributesV2$Builder) id config))
 
 
-(defn build-table-builder
-  "The build-table-builder function updates a Table$Builder instance using the provided configuration.
+(defn table-builder>
+  "The table-builder> function updates a Table$Builder instance using the provided configuration.
   The function takes the Table$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2600,11 +2600,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-table-builder (Table$Builder/create scope (name id)) id config))
+  (table-builder> (Table$Builder/create scope (name id)) id config))
 
 
-(defn build-table-options-builder
-  "The build-table-options-builder function updates a TableOptions$Builder instance using the provided configuration.
+(defn table-options-builder>
+  "The table-options-builder> function updates a TableOptions$Builder instance using the provided configuration.
   The function takes the TableOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2682,11 +2682,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-table-options-builder (new TableOptions$Builder) id config))
+  (table-options-builder> (new TableOptions$Builder) id config))
 
 
-(defn build-table-options-v2-builder
-  "The build-table-options-v2-builder function updates a TableOptionsV2$Builder instance using the provided configuration.
+(defn table-options-v2-builder>
+  "The table-options-v2-builder> function updates a TableOptionsV2$Builder instance using the provided configuration.
   The function takes the TableOptionsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2728,11 +2728,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-table-options-v2-builder (new TableOptionsV2$Builder) id config))
+  (table-options-v2-builder> (new TableOptionsV2$Builder) id config))
 
 
-(defn build-table-props-builder
-  "The build-table-props-builder function updates a TableProps$Builder instance using the provided configuration.
+(defn table-props-builder>
+  "The table-props-builder> function updates a TableProps$Builder instance using the provided configuration.
   The function takes the TableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2816,11 +2816,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-table-props-builder (new TableProps$Builder) id config))
+  (table-props-builder> (new TableProps$Builder) id config))
 
 
-(defn build-table-props-v2-builder
-  "The build-table-props-v2-builder function updates a TablePropsV2$Builder instance using the provided configuration.
+(defn table-props-v2-builder>
+  "The table-props-v2-builder> function updates a TablePropsV2$Builder instance using the provided configuration.
   The function takes the TablePropsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2895,11 +2895,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-table-props-v2-builder (new TablePropsV2$Builder) id config))
+  (table-props-v2-builder> (new TablePropsV2$Builder) id config))
 
 
-(defn build-table-v2-builder
-  "The build-table-v2-builder function updates a TableV2$Builder instance using the provided configuration.
+(defn table-v2-builder>
+  "The table-v2-builder> function updates a TableV2$Builder instance using the provided configuration.
   The function takes the TableV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2974,11 +2974,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-table-v2-builder (TableV2$Builder/create scope (name id)) id config))
+  (table-v2-builder> (TableV2$Builder/create scope (name id)) id config))
 
 
-(defn build-throughput-props-builder
-  "The build-throughput-props-builder function updates a ThroughputProps$Builder instance using the provided configuration.
+(defn throughput-props-builder>
+  "The throughput-props-builder> function updates a ThroughputProps$Builder instance using the provided configuration.
   The function takes the ThroughputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3005,11 +3005,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-throughput-props-builder (new ThroughputProps$Builder) id config))
+  (throughput-props-builder> (new ThroughputProps$Builder) id config))
 
 
-(defn build-utilization-scaling-props-builder
-  "The build-utilization-scaling-props-builder function updates a UtilizationScalingProps$Builder instance using the provided configuration.
+(defn utilization-scaling-props-builder>
+  "The utilization-scaling-props-builder> function updates a UtilizationScalingProps$Builder instance using the provided configuration.
   The function takes the UtilizationScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3045,4 +3045,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-utilization-scaling-props-builder (new UtilizationScalingProps$Builder) id config))
+  (utilization-scaling-props-builder> (new UtilizationScalingProps$Builder) id config))

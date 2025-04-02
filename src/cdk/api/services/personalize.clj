@@ -22,8 +22,8 @@
                                                         CfnSolutionProps$Builder]))
 
 
-(defn build-cfn-dataset-builder
-  "The build-cfn-dataset-builder function updates a CfnDataset$Builder instance using the provided configuration.
+(defn cfn-dataset-builder>
+  "The cfn-dataset-builder> function updates a CfnDataset$Builder instance using the provided configuration.
   The function takes the CfnDataset$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -59,11 +59,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-dataset-builder (CfnDataset$Builder/create scope (name id)) id config))
+  (cfn-dataset-builder> (CfnDataset$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-dataset-data-source-property-builder
-  "The build-cfn-dataset-data-source-property-builder function updates a CfnDataset$DataSourceProperty$Builder instance using the provided configuration.
+(defn cfn-dataset-data-source-property-builder>
+  "The cfn-dataset-data-source-property-builder> function updates a CfnDataset$DataSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$DataSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -87,11 +87,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-data-source-property-builder (new CfnDataset$DataSourceProperty$Builder) id config))
+  (cfn-dataset-data-source-property-builder> (new CfnDataset$DataSourceProperty$Builder) id config))
 
 
-(defn build-cfn-dataset-dataset-import-job-property-builder
-  "The build-cfn-dataset-dataset-import-job-property-builder function updates a CfnDataset$DatasetImportJobProperty$Builder instance using the provided configuration.
+(defn cfn-dataset-dataset-import-job-property-builder>
+  "The cfn-dataset-dataset-import-job-property-builder> function updates a CfnDataset$DatasetImportJobProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$DatasetImportJobProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -127,11 +127,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-dataset-import-job-property-builder (new CfnDataset$DatasetImportJobProperty$Builder) id config))
+  (cfn-dataset-dataset-import-job-property-builder> (new CfnDataset$DatasetImportJobProperty$Builder) id config))
 
 
-(defn build-cfn-dataset-group-builder
-  "The build-cfn-dataset-group-builder function updates a CfnDatasetGroup$Builder instance using the provided configuration.
+(defn cfn-dataset-group-builder>
+  "The cfn-dataset-group-builder> function updates a CfnDatasetGroup$Builder instance using the provided configuration.
   The function takes the CfnDatasetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -164,11 +164,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-dataset-group-builder (CfnDatasetGroup$Builder/create scope (name id)) id config))
+  (cfn-dataset-group-builder> (CfnDatasetGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-dataset-group-props-builder
-  "The build-cfn-dataset-group-props-builder function updates a CfnDatasetGroupProps$Builder instance using the provided configuration.
+(defn cfn-dataset-group-props-builder>
+  "The cfn-dataset-group-props-builder> function updates a CfnDatasetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDatasetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -201,11 +201,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-group-props-builder (new CfnDatasetGroupProps$Builder) id config))
+  (cfn-dataset-group-props-builder> (new CfnDatasetGroupProps$Builder) id config))
 
 
-(defn build-cfn-dataset-props-builder
-  "The build-cfn-dataset-props-builder function updates a CfnDatasetProps$Builder instance using the provided configuration.
+(defn cfn-dataset-props-builder>
+  "The cfn-dataset-props-builder> function updates a CfnDatasetProps$Builder instance using the provided configuration.
   The function takes the CfnDatasetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -241,11 +241,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-props-builder (new CfnDatasetProps$Builder) id config))
+  (cfn-dataset-props-builder> (new CfnDatasetProps$Builder) id config))
 
 
-(defn build-cfn-schema-builder
-  "The build-cfn-schema-builder function updates a CfnSchema$Builder instance using the provided configuration.
+(defn cfn-schema-builder>
+  "The cfn-schema-builder> function updates a CfnSchema$Builder instance using the provided configuration.
   The function takes the CfnSchema$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -275,11 +275,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-schema-builder (CfnSchema$Builder/create scope (name id)) id config))
+  (cfn-schema-builder> (CfnSchema$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-schema-props-builder
-  "The build-cfn-schema-props-builder function updates a CfnSchemaProps$Builder instance using the provided configuration.
+(defn cfn-schema-props-builder>
+  "The cfn-schema-props-builder> function updates a CfnSchemaProps$Builder instance using the provided configuration.
   The function takes the CfnSchemaProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -309,11 +309,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schema-props-builder (new CfnSchemaProps$Builder) id config))
+  (cfn-schema-props-builder> (new CfnSchemaProps$Builder) id config))
 
 
-(defn build-cfn-solution-algorithm-hyper-parameter-ranges-property-builder
-  "The build-cfn-solution-algorithm-hyper-parameter-ranges-property-builder function updates a CfnSolution$AlgorithmHyperParameterRangesProperty$Builder instance using the provided configuration.
+(defn cfn-solution-algorithm-hyper-parameter-ranges-property-builder>
+  "The cfn-solution-algorithm-hyper-parameter-ranges-property-builder> function updates a CfnSolution$AlgorithmHyperParameterRangesProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$AlgorithmHyperParameterRangesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -343,11 +343,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-algorithm-hyper-parameter-ranges-property-builder (new CfnSolution$AlgorithmHyperParameterRangesProperty$Builder) id config))
+  (cfn-solution-algorithm-hyper-parameter-ranges-property-builder> (new CfnSolution$AlgorithmHyperParameterRangesProperty$Builder) id config))
 
 
-(defn build-cfn-solution-auto-ml-config-property-builder
-  "The build-cfn-solution-auto-ml-config-property-builder function updates a CfnSolution$AutoMLConfigProperty$Builder instance using the provided configuration.
+(defn cfn-solution-auto-ml-config-property-builder>
+  "The cfn-solution-auto-ml-config-property-builder> function updates a CfnSolution$AutoMLConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$AutoMLConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -374,11 +374,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-auto-ml-config-property-builder (new CfnSolution$AutoMLConfigProperty$Builder) id config))
+  (cfn-solution-auto-ml-config-property-builder> (new CfnSolution$AutoMLConfigProperty$Builder) id config))
 
 
-(defn build-cfn-solution-builder
-  "The build-cfn-solution-builder function updates a CfnSolution$Builder instance using the provided configuration.
+(defn cfn-solution-builder>
+  "The cfn-solution-builder> function updates a CfnSolution$Builder instance using the provided configuration.
   The function takes the CfnSolution$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -420,11 +420,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-solution-builder (CfnSolution$Builder/create scope (name id)) id config))
+  (cfn-solution-builder> (CfnSolution$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-solution-categorical-hyper-parameter-range-property-builder
-  "The build-cfn-solution-categorical-hyper-parameter-range-property-builder function updates a CfnSolution$CategoricalHyperParameterRangeProperty$Builder instance using the provided configuration.
+(defn cfn-solution-categorical-hyper-parameter-range-property-builder>
+  "The cfn-solution-categorical-hyper-parameter-range-property-builder> function updates a CfnSolution$CategoricalHyperParameterRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$CategoricalHyperParameterRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -451,11 +451,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-categorical-hyper-parameter-range-property-builder (new CfnSolution$CategoricalHyperParameterRangeProperty$Builder) id config))
+  (cfn-solution-categorical-hyper-parameter-range-property-builder> (new CfnSolution$CategoricalHyperParameterRangeProperty$Builder) id config))
 
 
-(defn build-cfn-solution-continuous-hyper-parameter-range-property-builder
-  "The build-cfn-solution-continuous-hyper-parameter-range-property-builder function updates a CfnSolution$ContinuousHyperParameterRangeProperty$Builder instance using the provided configuration.
+(defn cfn-solution-continuous-hyper-parameter-range-property-builder>
+  "The cfn-solution-continuous-hyper-parameter-range-property-builder> function updates a CfnSolution$ContinuousHyperParameterRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$ContinuousHyperParameterRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -485,11 +485,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-continuous-hyper-parameter-range-property-builder (new CfnSolution$ContinuousHyperParameterRangeProperty$Builder) id config))
+  (cfn-solution-continuous-hyper-parameter-range-property-builder> (new CfnSolution$ContinuousHyperParameterRangeProperty$Builder) id config))
 
 
-(defn build-cfn-solution-hpo-config-property-builder
-  "The build-cfn-solution-hpo-config-property-builder function updates a CfnSolution$HpoConfigProperty$Builder instance using the provided configuration.
+(defn cfn-solution-hpo-config-property-builder>
+  "The cfn-solution-hpo-config-property-builder> function updates a CfnSolution$HpoConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$HpoConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -519,11 +519,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-hpo-config-property-builder (new CfnSolution$HpoConfigProperty$Builder) id config))
+  (cfn-solution-hpo-config-property-builder> (new CfnSolution$HpoConfigProperty$Builder) id config))
 
 
-(defn build-cfn-solution-hpo-objective-property-builder
-  "The build-cfn-solution-hpo-objective-property-builder function updates a CfnSolution$HpoObjectiveProperty$Builder instance using the provided configuration.
+(defn cfn-solution-hpo-objective-property-builder>
+  "The cfn-solution-hpo-objective-property-builder> function updates a CfnSolution$HpoObjectiveProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$HpoObjectiveProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -553,11 +553,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-hpo-objective-property-builder (new CfnSolution$HpoObjectiveProperty$Builder) id config))
+  (cfn-solution-hpo-objective-property-builder> (new CfnSolution$HpoObjectiveProperty$Builder) id config))
 
 
-(defn build-cfn-solution-hpo-resource-config-property-builder
-  "The build-cfn-solution-hpo-resource-config-property-builder function updates a CfnSolution$HpoResourceConfigProperty$Builder instance using the provided configuration.
+(defn cfn-solution-hpo-resource-config-property-builder>
+  "The cfn-solution-hpo-resource-config-property-builder> function updates a CfnSolution$HpoResourceConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$HpoResourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -584,11 +584,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-hpo-resource-config-property-builder (new CfnSolution$HpoResourceConfigProperty$Builder) id config))
+  (cfn-solution-hpo-resource-config-property-builder> (new CfnSolution$HpoResourceConfigProperty$Builder) id config))
 
 
-(defn build-cfn-solution-integer-hyper-parameter-range-property-builder
-  "The build-cfn-solution-integer-hyper-parameter-range-property-builder function updates a CfnSolution$IntegerHyperParameterRangeProperty$Builder instance using the provided configuration.
+(defn cfn-solution-integer-hyper-parameter-range-property-builder>
+  "The cfn-solution-integer-hyper-parameter-range-property-builder> function updates a CfnSolution$IntegerHyperParameterRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$IntegerHyperParameterRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -618,11 +618,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-integer-hyper-parameter-range-property-builder (new CfnSolution$IntegerHyperParameterRangeProperty$Builder) id config))
+  (cfn-solution-integer-hyper-parameter-range-property-builder> (new CfnSolution$IntegerHyperParameterRangeProperty$Builder) id config))
 
 
-(defn build-cfn-solution-props-builder
-  "The build-cfn-solution-props-builder function updates a CfnSolutionProps$Builder instance using the provided configuration.
+(defn cfn-solution-props-builder>
+  "The cfn-solution-props-builder> function updates a CfnSolutionProps$Builder instance using the provided configuration.
   The function takes the CfnSolutionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -664,11 +664,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-props-builder (new CfnSolutionProps$Builder) id config))
+  (cfn-solution-props-builder> (new CfnSolutionProps$Builder) id config))
 
 
-(defn build-cfn-solution-solution-config-property-builder
-  "The build-cfn-solution-solution-config-property-builder function updates a CfnSolution$SolutionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-solution-solution-config-property-builder>
+  "The cfn-solution-solution-config-property-builder> function updates a CfnSolution$SolutionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$SolutionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -704,4 +704,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-solution-solution-config-property-builder (new CfnSolution$SolutionConfigProperty$Builder) id config))
+  (cfn-solution-solution-config-property-builder> (new CfnSolution$SolutionConfigProperty$Builder) id config))

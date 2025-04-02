@@ -17,8 +17,8 @@
                                                     CfnEventSubscriptionProps$Builder]))
 
 
-(defn build-cfn-db-cluster-builder
-  "The build-cfn-db-cluster-builder function updates a CfnDBCluster$Builder instance using the provided configuration.
+(defn cfn-db-cluster-builder>
+  "The cfn-db-cluster-builder> function updates a CfnDBCluster$Builder instance using the provided configuration.
   The function takes the CfnDBCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -114,11 +114,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-cluster-builder (CfnDBCluster$Builder/create scope (name id)) id config))
+  (cfn-db-cluster-builder> (CfnDBCluster$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-cluster-db-cluster-role-property-builder
-  "The build-cfn-db-cluster-db-cluster-role-property-builder function updates a CfnDBCluster$DBClusterRoleProperty$Builder instance using the provided configuration.
+(defn cfn-db-cluster-db-cluster-role-property-builder>
+  "The cfn-db-cluster-db-cluster-role-property-builder> function updates a CfnDBCluster$DBClusterRoleProperty$Builder instance using the provided configuration.
   The function takes the CfnDBCluster$DBClusterRoleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -145,11 +145,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-cluster-db-cluster-role-property-builder (new CfnDBCluster$DBClusterRoleProperty$Builder) id config))
+  (cfn-db-cluster-db-cluster-role-property-builder> (new CfnDBCluster$DBClusterRoleProperty$Builder) id config))
 
 
-(defn build-cfn-db-cluster-parameter-group-builder
-  "The build-cfn-db-cluster-parameter-group-builder function updates a CfnDBClusterParameterGroup$Builder instance using the provided configuration.
+(defn cfn-db-cluster-parameter-group-builder>
+  "The cfn-db-cluster-parameter-group-builder> function updates a CfnDBClusterParameterGroup$Builder instance using the provided configuration.
   The function takes the CfnDBClusterParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -185,11 +185,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-cluster-parameter-group-builder (CfnDBClusterParameterGroup$Builder/create scope (name id)) id config))
+  (cfn-db-cluster-parameter-group-builder> (CfnDBClusterParameterGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-cluster-parameter-group-props-builder
-  "The build-cfn-db-cluster-parameter-group-props-builder function updates a CfnDBClusterParameterGroupProps$Builder instance using the provided configuration.
+(defn cfn-db-cluster-parameter-group-props-builder>
+  "The cfn-db-cluster-parameter-group-props-builder> function updates a CfnDBClusterParameterGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDBClusterParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -225,11 +225,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-cluster-parameter-group-props-builder (new CfnDBClusterParameterGroupProps$Builder) id config))
+  (cfn-db-cluster-parameter-group-props-builder> (new CfnDBClusterParameterGroupProps$Builder) id config))
 
 
-(defn build-cfn-db-cluster-props-builder
-  "The build-cfn-db-cluster-props-builder function updates a CfnDBClusterProps$Builder instance using the provided configuration.
+(defn cfn-db-cluster-props-builder>
+  "The cfn-db-cluster-props-builder> function updates a CfnDBClusterProps$Builder instance using the provided configuration.
   The function takes the CfnDBClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -325,11 +325,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-cluster-props-builder (new CfnDBClusterProps$Builder) id config))
+  (cfn-db-cluster-props-builder> (new CfnDBClusterProps$Builder) id config))
 
 
-(defn build-cfn-db-cluster-serverless-scaling-configuration-property-builder
-  "The build-cfn-db-cluster-serverless-scaling-configuration-property-builder function updates a CfnDBCluster$ServerlessScalingConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-db-cluster-serverless-scaling-configuration-property-builder>
+  "The cfn-db-cluster-serverless-scaling-configuration-property-builder> function updates a CfnDBCluster$ServerlessScalingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDBCluster$ServerlessScalingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -356,11 +356,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-cluster-serverless-scaling-configuration-property-builder (new CfnDBCluster$ServerlessScalingConfigurationProperty$Builder) id config))
+  (cfn-db-cluster-serverless-scaling-configuration-property-builder> (new CfnDBCluster$ServerlessScalingConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-db-instance-builder
-  "The build-cfn-db-instance-builder function updates a CfnDBInstance$Builder instance using the provided configuration.
+(defn cfn-db-instance-builder>
+  "The cfn-db-instance-builder> function updates a CfnDBInstance$Builder instance using the provided configuration.
   The function takes the CfnDBInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -414,11 +414,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-instance-builder (CfnDBInstance$Builder/create scope (name id)) id config))
+  (cfn-db-instance-builder> (CfnDBInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-instance-props-builder
-  "The build-cfn-db-instance-props-builder function updates a CfnDBInstanceProps$Builder instance using the provided configuration.
+(defn cfn-db-instance-props-builder>
+  "The cfn-db-instance-props-builder> function updates a CfnDBInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnDBInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -472,11 +472,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-instance-props-builder (new CfnDBInstanceProps$Builder) id config))
+  (cfn-db-instance-props-builder> (new CfnDBInstanceProps$Builder) id config))
 
 
-(defn build-cfn-db-parameter-group-builder
-  "The build-cfn-db-parameter-group-builder function updates a CfnDBParameterGroup$Builder instance using the provided configuration.
+(defn cfn-db-parameter-group-builder>
+  "The cfn-db-parameter-group-builder> function updates a CfnDBParameterGroup$Builder instance using the provided configuration.
   The function takes the CfnDBParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -512,11 +512,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-parameter-group-builder (CfnDBParameterGroup$Builder/create scope (name id)) id config))
+  (cfn-db-parameter-group-builder> (CfnDBParameterGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-parameter-group-props-builder
-  "The build-cfn-db-parameter-group-props-builder function updates a CfnDBParameterGroupProps$Builder instance using the provided configuration.
+(defn cfn-db-parameter-group-props-builder>
+  "The cfn-db-parameter-group-props-builder> function updates a CfnDBParameterGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDBParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -552,11 +552,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-parameter-group-props-builder (new CfnDBParameterGroupProps$Builder) id config))
+  (cfn-db-parameter-group-props-builder> (new CfnDBParameterGroupProps$Builder) id config))
 
 
-(defn build-cfn-db-subnet-group-builder
-  "The build-cfn-db-subnet-group-builder function updates a CfnDBSubnetGroup$Builder instance using the provided configuration.
+(defn cfn-db-subnet-group-builder>
+  "The cfn-db-subnet-group-builder> function updates a CfnDBSubnetGroup$Builder instance using the provided configuration.
   The function takes the CfnDBSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -589,11 +589,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-db-subnet-group-builder (CfnDBSubnetGroup$Builder/create scope (name id)) id config))
+  (cfn-db-subnet-group-builder> (CfnDBSubnetGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-db-subnet-group-props-builder
-  "The build-cfn-db-subnet-group-props-builder function updates a CfnDBSubnetGroupProps$Builder instance using the provided configuration.
+(defn cfn-db-subnet-group-props-builder>
+  "The cfn-db-subnet-group-props-builder> function updates a CfnDBSubnetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDBSubnetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -626,11 +626,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-db-subnet-group-props-builder (new CfnDBSubnetGroupProps$Builder) id config))
+  (cfn-db-subnet-group-props-builder> (new CfnDBSubnetGroupProps$Builder) id config))
 
 
-(defn build-cfn-event-subscription-builder
-  "The build-cfn-event-subscription-builder function updates a CfnEventSubscription$Builder instance using the provided configuration.
+(defn cfn-event-subscription-builder>
+  "The cfn-event-subscription-builder> function updates a CfnEventSubscription$Builder instance using the provided configuration.
   The function takes the CfnEventSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -666,11 +666,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-event-subscription-builder (CfnEventSubscription$Builder/create scope (name id)) id config))
+  (cfn-event-subscription-builder> (CfnEventSubscription$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-event-subscription-props-builder
-  "The build-cfn-event-subscription-props-builder function updates a CfnEventSubscriptionProps$Builder instance using the provided configuration.
+(defn cfn-event-subscription-props-builder>
+  "The cfn-event-subscription-props-builder> function updates a CfnEventSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnEventSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -706,4 +706,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-subscription-props-builder (new CfnEventSubscriptionProps$Builder) id config))
+  (cfn-event-subscription-props-builder> (new CfnEventSubscriptionProps$Builder) id config))

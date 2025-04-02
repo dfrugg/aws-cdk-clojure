@@ -20,8 +20,8 @@
                                                                 CfnApplicationProps$Builder]))
 
 
-(defn build-cfn-application-alarm-metric-property-builder
-  "The build-cfn-application-alarm-metric-property-builder function updates a CfnApplication$AlarmMetricProperty$Builder instance using the provided configuration.
+(defn cfn-application-alarm-metric-property-builder>
+  "The cfn-application-alarm-metric-property-builder> function updates a CfnApplication$AlarmMetricProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$AlarmMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -45,11 +45,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-alarm-metric-property-builder (new CfnApplication$AlarmMetricProperty$Builder) id config))
+  (cfn-application-alarm-metric-property-builder> (new CfnApplication$AlarmMetricProperty$Builder) id config))
 
 
-(defn build-cfn-application-alarm-property-builder
-  "The build-cfn-application-alarm-property-builder function updates a CfnApplication$AlarmProperty$Builder instance using the provided configuration.
+(defn cfn-application-alarm-property-builder>
+  "The cfn-application-alarm-property-builder> function updates a CfnApplication$AlarmProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$AlarmProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -76,11 +76,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-alarm-property-builder (new CfnApplication$AlarmProperty$Builder) id config))
+  (cfn-application-alarm-property-builder> (new CfnApplication$AlarmProperty$Builder) id config))
 
 
-(defn build-cfn-application-builder
-  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+(defn cfn-application-builder>
+  "The cfn-application-builder> function updates a CfnApplication$Builder instance using the provided configuration.
   The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -134,11 +134,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+  (cfn-application-builder> (CfnApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-component-configuration-property-builder
-  "The build-cfn-application-component-configuration-property-builder function updates a CfnApplication$ComponentConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-application-component-configuration-property-builder>
+  "The cfn-application-component-configuration-property-builder> function updates a CfnApplication$ComponentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ComponentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -165,11 +165,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-component-configuration-property-builder (new CfnApplication$ComponentConfigurationProperty$Builder) id config))
+  (cfn-application-component-configuration-property-builder> (new CfnApplication$ComponentConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-application-component-monitoring-setting-property-builder
-  "The build-cfn-application-component-monitoring-setting-property-builder function updates a CfnApplication$ComponentMonitoringSettingProperty$Builder instance using the provided configuration.
+(defn cfn-application-component-monitoring-setting-property-builder>
+  "The cfn-application-component-monitoring-setting-property-builder> function updates a CfnApplication$ComponentMonitoringSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ComponentMonitoringSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -208,11 +208,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-component-monitoring-setting-property-builder (new CfnApplication$ComponentMonitoringSettingProperty$Builder) id config))
+  (cfn-application-component-monitoring-setting-property-builder> (new CfnApplication$ComponentMonitoringSettingProperty$Builder) id config))
 
 
-(defn build-cfn-application-configuration-details-property-builder
-  "The build-cfn-application-configuration-details-property-builder function updates a CfnApplication$ConfigurationDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-application-configuration-details-property-builder>
+  "The cfn-application-configuration-details-property-builder> function updates a CfnApplication$ConfigurationDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ConfigurationDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -254,11 +254,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-configuration-details-property-builder (new CfnApplication$ConfigurationDetailsProperty$Builder) id config))
+  (cfn-application-configuration-details-property-builder> (new CfnApplication$ConfigurationDetailsProperty$Builder) id config))
 
 
-(defn build-cfn-application-custom-component-property-builder
-  "The build-cfn-application-custom-component-property-builder function updates a CfnApplication$CustomComponentProperty$Builder instance using the provided configuration.
+(defn cfn-application-custom-component-property-builder>
+  "The cfn-application-custom-component-property-builder> function updates a CfnApplication$CustomComponentProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$CustomComponentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -285,11 +285,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-custom-component-property-builder (new CfnApplication$CustomComponentProperty$Builder) id config))
+  (cfn-application-custom-component-property-builder> (new CfnApplication$CustomComponentProperty$Builder) id config))
 
 
-(defn build-cfn-application-ha-cluster-prometheus-exporter-property-builder
-  "The build-cfn-application-ha-cluster-prometheus-exporter-property-builder function updates a CfnApplication$HAClusterPrometheusExporterProperty$Builder instance using the provided configuration.
+(defn cfn-application-ha-cluster-prometheus-exporter-property-builder>
+  "The cfn-application-ha-cluster-prometheus-exporter-property-builder> function updates a CfnApplication$HAClusterPrometheusExporterProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$HAClusterPrometheusExporterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -313,11 +313,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-ha-cluster-prometheus-exporter-property-builder (new CfnApplication$HAClusterPrometheusExporterProperty$Builder) id config))
+  (cfn-application-ha-cluster-prometheus-exporter-property-builder> (new CfnApplication$HAClusterPrometheusExporterProperty$Builder) id config))
 
 
-(defn build-cfn-application-hana-prometheus-exporter-property-builder
-  "The build-cfn-application-hana-prometheus-exporter-property-builder function updates a CfnApplication$HANAPrometheusExporterProperty$Builder instance using the provided configuration.
+(defn cfn-application-hana-prometheus-exporter-property-builder>
+  "The cfn-application-hana-prometheus-exporter-property-builder> function updates a CfnApplication$HANAPrometheusExporterProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$HANAPrometheusExporterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -353,11 +353,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-hana-prometheus-exporter-property-builder (new CfnApplication$HANAPrometheusExporterProperty$Builder) id config))
+  (cfn-application-hana-prometheus-exporter-property-builder> (new CfnApplication$HANAPrometheusExporterProperty$Builder) id config))
 
 
-(defn build-cfn-application-jmx-prometheus-exporter-property-builder
-  "The build-cfn-application-jmx-prometheus-exporter-property-builder function updates a CfnApplication$JMXPrometheusExporterProperty$Builder instance using the provided configuration.
+(defn cfn-application-jmx-prometheus-exporter-property-builder>
+  "The cfn-application-jmx-prometheus-exporter-property-builder> function updates a CfnApplication$JMXPrometheusExporterProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$JMXPrometheusExporterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -387,11 +387,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-jmx-prometheus-exporter-property-builder (new CfnApplication$JMXPrometheusExporterProperty$Builder) id config))
+  (cfn-application-jmx-prometheus-exporter-property-builder> (new CfnApplication$JMXPrometheusExporterProperty$Builder) id config))
 
 
-(defn build-cfn-application-log-pattern-property-builder
-  "The build-cfn-application-log-pattern-property-builder function updates a CfnApplication$LogPatternProperty$Builder instance using the provided configuration.
+(defn cfn-application-log-pattern-property-builder>
+  "The cfn-application-log-pattern-property-builder> function updates a CfnApplication$LogPatternProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$LogPatternProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -421,11 +421,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-log-pattern-property-builder (new CfnApplication$LogPatternProperty$Builder) id config))
+  (cfn-application-log-pattern-property-builder> (new CfnApplication$LogPatternProperty$Builder) id config))
 
 
-(defn build-cfn-application-log-pattern-set-property-builder
-  "The build-cfn-application-log-pattern-set-property-builder function updates a CfnApplication$LogPatternSetProperty$Builder instance using the provided configuration.
+(defn cfn-application-log-pattern-set-property-builder>
+  "The cfn-application-log-pattern-set-property-builder> function updates a CfnApplication$LogPatternSetProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$LogPatternSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -452,11 +452,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-log-pattern-set-property-builder (new CfnApplication$LogPatternSetProperty$Builder) id config))
+  (cfn-application-log-pattern-set-property-builder> (new CfnApplication$LogPatternSetProperty$Builder) id config))
 
 
-(defn build-cfn-application-log-property-builder
-  "The build-cfn-application-log-property-builder function updates a CfnApplication$LogProperty$Builder instance using the provided configuration.
+(defn cfn-application-log-property-builder>
+  "The cfn-application-log-property-builder> function updates a CfnApplication$LogProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$LogProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -492,11 +492,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-log-property-builder (new CfnApplication$LogProperty$Builder) id config))
+  (cfn-application-log-property-builder> (new CfnApplication$LogProperty$Builder) id config))
 
 
-(defn build-cfn-application-props-builder
-  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+(defn cfn-application-props-builder>
+  "The cfn-application-props-builder> function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -550,11 +550,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+  (cfn-application-props-builder> (new CfnApplicationProps$Builder) id config))
 
 
-(defn build-cfn-application-sub-component-configuration-details-property-builder
-  "The build-cfn-application-sub-component-configuration-details-property-builder function updates a CfnApplication$SubComponentConfigurationDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-application-sub-component-configuration-details-property-builder>
+  "The cfn-application-sub-component-configuration-details-property-builder> function updates a CfnApplication$SubComponentConfigurationDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$SubComponentConfigurationDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -584,11 +584,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-sub-component-configuration-details-property-builder (new CfnApplication$SubComponentConfigurationDetailsProperty$Builder) id config))
+  (cfn-application-sub-component-configuration-details-property-builder> (new CfnApplication$SubComponentConfigurationDetailsProperty$Builder) id config))
 
 
-(defn build-cfn-application-sub-component-type-configuration-property-builder
-  "The build-cfn-application-sub-component-type-configuration-property-builder function updates a CfnApplication$SubComponentTypeConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-application-sub-component-type-configuration-property-builder>
+  "The cfn-application-sub-component-type-configuration-property-builder> function updates a CfnApplication$SubComponentTypeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$SubComponentTypeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -615,11 +615,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-sub-component-type-configuration-property-builder (new CfnApplication$SubComponentTypeConfigurationProperty$Builder) id config))
+  (cfn-application-sub-component-type-configuration-property-builder> (new CfnApplication$SubComponentTypeConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-application-windows-event-property-builder
-  "The build-cfn-application-windows-event-property-builder function updates a CfnApplication$WindowsEventProperty$Builder instance using the provided configuration.
+(defn cfn-application-windows-event-property-builder>
+  "The cfn-application-windows-event-property-builder> function updates a CfnApplication$WindowsEventProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$WindowsEventProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -652,4 +652,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-windows-event-property-builder (new CfnApplication$WindowsEventProperty$Builder) id config))
+  (cfn-application-windows-event-property-builder> (new CfnApplication$WindowsEventProperty$Builder) id config))

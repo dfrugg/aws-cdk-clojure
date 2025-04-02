@@ -22,8 +22,8 @@
                                                 CfnPermissionSetProps$Builder]))
 
 
-(defn build-cfn-application-assignment-builder
-  "The build-cfn-application-assignment-builder function updates a CfnApplicationAssignment$Builder instance using the provided configuration.
+(defn cfn-application-assignment-builder>
+  "The cfn-application-assignment-builder> function updates a CfnApplicationAssignment$Builder instance using the provided configuration.
   The function takes the CfnApplicationAssignment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -53,11 +53,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-assignment-builder (CfnApplicationAssignment$Builder/create scope (name id)) id config))
+  (cfn-application-assignment-builder> (CfnApplicationAssignment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-assignment-props-builder
-  "The build-cfn-application-assignment-props-builder function updates a CfnApplicationAssignmentProps$Builder instance using the provided configuration.
+(defn cfn-application-assignment-props-builder>
+  "The cfn-application-assignment-props-builder> function updates a CfnApplicationAssignmentProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationAssignmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -87,11 +87,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-assignment-props-builder (new CfnApplicationAssignmentProps$Builder) id config))
+  (cfn-application-assignment-props-builder> (new CfnApplicationAssignmentProps$Builder) id config))
 
 
-(defn build-cfn-application-builder
-  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+(defn cfn-application-builder>
+  "The cfn-application-builder> function updates a CfnApplication$Builder instance using the provided configuration.
   The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -133,11 +133,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+  (cfn-application-builder> (CfnApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-portal-options-configuration-property-builder
-  "The build-cfn-application-portal-options-configuration-property-builder function updates a CfnApplication$PortalOptionsConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-application-portal-options-configuration-property-builder>
+  "The cfn-application-portal-options-configuration-property-builder> function updates a CfnApplication$PortalOptionsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$PortalOptionsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -164,11 +164,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-portal-options-configuration-property-builder (new CfnApplication$PortalOptionsConfigurationProperty$Builder) id config))
+  (cfn-application-portal-options-configuration-property-builder> (new CfnApplication$PortalOptionsConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-application-props-builder
-  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+(defn cfn-application-props-builder>
+  "The cfn-application-props-builder> function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -210,11 +210,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+  (cfn-application-props-builder> (new CfnApplicationProps$Builder) id config))
 
 
-(defn build-cfn-application-sign-in-options-property-builder
-  "The build-cfn-application-sign-in-options-property-builder function updates a CfnApplication$SignInOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-application-sign-in-options-property-builder>
+  "The cfn-application-sign-in-options-property-builder> function updates a CfnApplication$SignInOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$SignInOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -241,11 +241,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-sign-in-options-property-builder (new CfnApplication$SignInOptionsProperty$Builder) id config))
+  (cfn-application-sign-in-options-property-builder> (new CfnApplication$SignInOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-assignment-builder
-  "The build-cfn-assignment-builder function updates a CfnAssignment$Builder instance using the provided configuration.
+(defn cfn-assignment-builder>
+  "The cfn-assignment-builder> function updates a CfnAssignment$Builder instance using the provided configuration.
   The function takes the CfnAssignment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -284,11 +284,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-assignment-builder (CfnAssignment$Builder/create scope (name id)) id config))
+  (cfn-assignment-builder> (CfnAssignment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-assignment-props-builder
-  "The build-cfn-assignment-props-builder function updates a CfnAssignmentProps$Builder instance using the provided configuration.
+(defn cfn-assignment-props-builder>
+  "The cfn-assignment-props-builder> function updates a CfnAssignmentProps$Builder instance using the provided configuration.
   The function takes the CfnAssignmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -327,11 +327,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-assignment-props-builder (new CfnAssignmentProps$Builder) id config))
+  (cfn-assignment-props-builder> (new CfnAssignmentProps$Builder) id config))
 
 
-(defn build-cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder
-  "The build-cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder function updates a CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder instance using the provided configuration.
+(defn cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder>
+  "The cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder> function updates a CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -358,11 +358,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder (new CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder) id config))
+  (cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder> (new CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder) id config))
 
 
-(defn build-cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder
-  "The build-cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder function updates a CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty$Builder instance using the provided configuration.
+(defn cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder>
+  "The cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder> function updates a CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty$Builder instance using the provided configuration.
   The function takes the CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -386,11 +386,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder (new CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty$Builder) id config))
+  (cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder> (new CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty$Builder) id config))
 
 
-(defn build-cfn-instance-access-control-attribute-configuration-builder
-  "The build-cfn-instance-access-control-attribute-configuration-builder function updates a CfnInstanceAccessControlAttributeConfiguration$Builder instance using the provided configuration.
+(defn cfn-instance-access-control-attribute-configuration-builder>
+  "The cfn-instance-access-control-attribute-configuration-builder> function updates a CfnInstanceAccessControlAttributeConfiguration$Builder instance using the provided configuration.
   The function takes the CfnInstanceAccessControlAttributeConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -420,11 +420,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-instance-access-control-attribute-configuration-builder (CfnInstanceAccessControlAttributeConfiguration$Builder/create scope (name id)) id config))
+  (cfn-instance-access-control-attribute-configuration-builder> (CfnInstanceAccessControlAttributeConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder
-  "The build-cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder function updates a CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder>
+  "The cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder> function updates a CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -448,11 +448,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder (new CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder) id config))
+  (cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder> (new CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-instance-access-control-attribute-configuration-props-builder
-  "The build-cfn-instance-access-control-attribute-configuration-props-builder function updates a CfnInstanceAccessControlAttributeConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-instance-access-control-attribute-configuration-props-builder>
+  "The cfn-instance-access-control-attribute-configuration-props-builder> function updates a CfnInstanceAccessControlAttributeConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceAccessControlAttributeConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -482,11 +482,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-access-control-attribute-configuration-props-builder (new CfnInstanceAccessControlAttributeConfigurationProps$Builder) id config))
+  (cfn-instance-access-control-attribute-configuration-props-builder> (new CfnInstanceAccessControlAttributeConfigurationProps$Builder) id config))
 
 
-(defn build-cfn-instance-builder
-  "The build-cfn-instance-builder function updates a CfnInstance$Builder instance using the provided configuration.
+(defn cfn-instance-builder>
+  "The cfn-instance-builder> function updates a CfnInstance$Builder instance using the provided configuration.
   The function takes the CfnInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -513,11 +513,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-instance-builder (CfnInstance$Builder/create scope (name id)) id config))
+  (cfn-instance-builder> (CfnInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-instance-props-builder
-  "The build-cfn-instance-props-builder function updates a CfnInstanceProps$Builder instance using the provided configuration.
+(defn cfn-instance-props-builder>
+  "The cfn-instance-props-builder> function updates a CfnInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -544,11 +544,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-props-builder (new CfnInstanceProps$Builder) id config))
+  (cfn-instance-props-builder> (new CfnInstanceProps$Builder) id config))
 
 
-(defn build-cfn-permission-set-builder
-  "The build-cfn-permission-set-builder function updates a CfnPermissionSet$Builder instance using the provided configuration.
+(defn cfn-permission-set-builder>
+  "The cfn-permission-set-builder> function updates a CfnPermissionSet$Builder instance using the provided configuration.
   The function takes the CfnPermissionSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -599,11 +599,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-permission-set-builder (CfnPermissionSet$Builder/create scope (name id)) id config))
+  (cfn-permission-set-builder> (CfnPermissionSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-permission-set-customer-managed-policy-reference-property-builder
-  "The build-cfn-permission-set-customer-managed-policy-reference-property-builder function updates a CfnPermissionSet$CustomerManagedPolicyReferenceProperty$Builder instance using the provided configuration.
+(defn cfn-permission-set-customer-managed-policy-reference-property-builder>
+  "The cfn-permission-set-customer-managed-policy-reference-property-builder> function updates a CfnPermissionSet$CustomerManagedPolicyReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissionSet$CustomerManagedPolicyReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -630,11 +630,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permission-set-customer-managed-policy-reference-property-builder (new CfnPermissionSet$CustomerManagedPolicyReferenceProperty$Builder) id config))
+  (cfn-permission-set-customer-managed-policy-reference-property-builder> (new CfnPermissionSet$CustomerManagedPolicyReferenceProperty$Builder) id config))
 
 
-(defn build-cfn-permission-set-permissions-boundary-property-builder
-  "The build-cfn-permission-set-permissions-boundary-property-builder function updates a CfnPermissionSet$PermissionsBoundaryProperty$Builder instance using the provided configuration.
+(defn cfn-permission-set-permissions-boundary-property-builder>
+  "The cfn-permission-set-permissions-boundary-property-builder> function updates a CfnPermissionSet$PermissionsBoundaryProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissionSet$PermissionsBoundaryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -661,11 +661,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permission-set-permissions-boundary-property-builder (new CfnPermissionSet$PermissionsBoundaryProperty$Builder) id config))
+  (cfn-permission-set-permissions-boundary-property-builder> (new CfnPermissionSet$PermissionsBoundaryProperty$Builder) id config))
 
 
-(defn build-cfn-permission-set-props-builder
-  "The build-cfn-permission-set-props-builder function updates a CfnPermissionSetProps$Builder instance using the provided configuration.
+(defn cfn-permission-set-props-builder>
+  "The cfn-permission-set-props-builder> function updates a CfnPermissionSetProps$Builder instance using the provided configuration.
   The function takes the CfnPermissionSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -716,4 +716,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permission-set-props-builder (new CfnPermissionSetProps$Builder) id config))
+  (cfn-permission-set-props-builder> (new CfnPermissionSetProps$Builder) id config))

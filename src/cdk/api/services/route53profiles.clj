@@ -9,8 +9,8 @@
                                                             CfnProfileResourceAssociationProps$Builder]))
 
 
-(defn build-cfn-profile-association-builder
-  "The build-cfn-profile-association-builder function updates a CfnProfileAssociation$Builder instance using the provided configuration.
+(defn cfn-profile-association-builder>
+  "The cfn-profile-association-builder> function updates a CfnProfileAssociation$Builder instance using the provided configuration.
   The function takes the CfnProfileAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -46,11 +46,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-profile-association-builder (CfnProfileAssociation$Builder/create scope (name id)) id config))
+  (cfn-profile-association-builder> (CfnProfileAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-profile-association-props-builder
-  "The build-cfn-profile-association-props-builder function updates a CfnProfileAssociationProps$Builder instance using the provided configuration.
+(defn cfn-profile-association-props-builder>
+  "The cfn-profile-association-props-builder> function updates a CfnProfileAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnProfileAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -86,11 +86,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-profile-association-props-builder (new CfnProfileAssociationProps$Builder) id config))
+  (cfn-profile-association-props-builder> (new CfnProfileAssociationProps$Builder) id config))
 
 
-(defn build-cfn-profile-builder
-  "The build-cfn-profile-builder function updates a CfnProfile$Builder instance using the provided configuration.
+(defn cfn-profile-builder>
+  "The cfn-profile-builder> function updates a CfnProfile$Builder instance using the provided configuration.
   The function takes the CfnProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -117,11 +117,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-profile-builder (CfnProfile$Builder/create scope (name id)) id config))
+  (cfn-profile-builder> (CfnProfile$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-profile-props-builder
-  "The build-cfn-profile-props-builder function updates a CfnProfileProps$Builder instance using the provided configuration.
+(defn cfn-profile-props-builder>
+  "The cfn-profile-props-builder> function updates a CfnProfileProps$Builder instance using the provided configuration.
   The function takes the CfnProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -148,11 +148,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-profile-props-builder (new CfnProfileProps$Builder) id config))
+  (cfn-profile-props-builder> (new CfnProfileProps$Builder) id config))
 
 
-(defn build-cfn-profile-resource-association-builder
-  "The build-cfn-profile-resource-association-builder function updates a CfnProfileResourceAssociation$Builder instance using the provided configuration.
+(defn cfn-profile-resource-association-builder>
+  "The cfn-profile-resource-association-builder> function updates a CfnProfileResourceAssociation$Builder instance using the provided configuration.
   The function takes the CfnProfileResourceAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -185,11 +185,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-profile-resource-association-builder (CfnProfileResourceAssociation$Builder/create scope (name id)) id config))
+  (cfn-profile-resource-association-builder> (CfnProfileResourceAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-profile-resource-association-props-builder
-  "The build-cfn-profile-resource-association-props-builder function updates a CfnProfileResourceAssociationProps$Builder instance using the provided configuration.
+(defn cfn-profile-resource-association-props-builder>
+  "The cfn-profile-resource-association-props-builder> function updates a CfnProfileResourceAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnProfileResourceAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -222,4 +222,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-profile-resource-association-props-builder (new CfnProfileResourceAssociationProps$Builder) id config))
+  (cfn-profile-resource-association-props-builder> (new CfnProfileResourceAssociationProps$Builder) id config))

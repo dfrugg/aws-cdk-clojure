@@ -45,8 +45,8 @@
                                                           CfnTagProps$Builder]))
 
 
-(defn build-cfn-data-cells-filter-builder
-  "The build-cfn-data-cells-filter-builder function updates a CfnDataCellsFilter$Builder instance using the provided configuration.
+(defn cfn-data-cells-filter-builder>
+  "The cfn-data-cells-filter-builder> function updates a CfnDataCellsFilter$Builder instance using the provided configuration.
   The function takes the CfnDataCellsFilter$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -88,11 +88,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-data-cells-filter-builder (CfnDataCellsFilter$Builder/create scope (name id)) id config))
+  (cfn-data-cells-filter-builder> (CfnDataCellsFilter$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-data-cells-filter-column-wildcard-property-builder
-  "The build-cfn-data-cells-filter-column-wildcard-property-builder function updates a CfnDataCellsFilter$ColumnWildcardProperty$Builder instance using the provided configuration.
+(defn cfn-data-cells-filter-column-wildcard-property-builder>
+  "The cfn-data-cells-filter-column-wildcard-property-builder> function updates a CfnDataCellsFilter$ColumnWildcardProperty$Builder instance using the provided configuration.
   The function takes the CfnDataCellsFilter$ColumnWildcardProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -116,11 +116,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-cells-filter-column-wildcard-property-builder (new CfnDataCellsFilter$ColumnWildcardProperty$Builder) id config))
+  (cfn-data-cells-filter-column-wildcard-property-builder> (new CfnDataCellsFilter$ColumnWildcardProperty$Builder) id config))
 
 
-(defn build-cfn-data-cells-filter-props-builder
-  "The build-cfn-data-cells-filter-props-builder function updates a CfnDataCellsFilterProps$Builder instance using the provided configuration.
+(defn cfn-data-cells-filter-props-builder>
+  "The cfn-data-cells-filter-props-builder> function updates a CfnDataCellsFilterProps$Builder instance using the provided configuration.
   The function takes the CfnDataCellsFilterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -162,11 +162,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-cells-filter-props-builder (new CfnDataCellsFilterProps$Builder) id config))
+  (cfn-data-cells-filter-props-builder> (new CfnDataCellsFilterProps$Builder) id config))
 
 
-(defn build-cfn-data-cells-filter-row-filter-property-builder
-  "The build-cfn-data-cells-filter-row-filter-property-builder function updates a CfnDataCellsFilter$RowFilterProperty$Builder instance using the provided configuration.
+(defn cfn-data-cells-filter-row-filter-property-builder>
+  "The cfn-data-cells-filter-row-filter-property-builder> function updates a CfnDataCellsFilter$RowFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnDataCellsFilter$RowFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -193,11 +193,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-cells-filter-row-filter-property-builder (new CfnDataCellsFilter$RowFilterProperty$Builder) id config))
+  (cfn-data-cells-filter-row-filter-property-builder> (new CfnDataCellsFilter$RowFilterProperty$Builder) id config))
 
 
-(defn build-cfn-data-lake-settings-builder
-  "The build-cfn-data-lake-settings-builder function updates a CfnDataLakeSettings$Builder instance using the provided configuration.
+(defn cfn-data-lake-settings-builder>
+  "The cfn-data-lake-settings-builder> function updates a CfnDataLakeSettings$Builder instance using the provided configuration.
   The function takes the CfnDataLakeSettings$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -248,11 +248,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-data-lake-settings-builder (CfnDataLakeSettings$Builder/create scope (name id)) id config))
+  (cfn-data-lake-settings-builder> (CfnDataLakeSettings$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-data-lake-settings-data-lake-principal-property-builder
-  "The build-cfn-data-lake-settings-data-lake-principal-property-builder function updates a CfnDataLakeSettings$DataLakePrincipalProperty$Builder instance using the provided configuration.
+(defn cfn-data-lake-settings-data-lake-principal-property-builder>
+  "The cfn-data-lake-settings-data-lake-principal-property-builder> function updates a CfnDataLakeSettings$DataLakePrincipalProperty$Builder instance using the provided configuration.
   The function takes the CfnDataLakeSettings$DataLakePrincipalProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -276,11 +276,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-lake-settings-data-lake-principal-property-builder (new CfnDataLakeSettings$DataLakePrincipalProperty$Builder) id config))
+  (cfn-data-lake-settings-data-lake-principal-property-builder> (new CfnDataLakeSettings$DataLakePrincipalProperty$Builder) id config))
 
 
-(defn build-cfn-data-lake-settings-principal-permissions-property-builder
-  "The build-cfn-data-lake-settings-principal-permissions-property-builder function updates a CfnDataLakeSettings$PrincipalPermissionsProperty$Builder instance using the provided configuration.
+(defn cfn-data-lake-settings-principal-permissions-property-builder>
+  "The cfn-data-lake-settings-principal-permissions-property-builder> function updates a CfnDataLakeSettings$PrincipalPermissionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataLakeSettings$PrincipalPermissionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -307,11 +307,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-lake-settings-principal-permissions-property-builder (new CfnDataLakeSettings$PrincipalPermissionsProperty$Builder) id config))
+  (cfn-data-lake-settings-principal-permissions-property-builder> (new CfnDataLakeSettings$PrincipalPermissionsProperty$Builder) id config))
 
 
-(defn build-cfn-data-lake-settings-props-builder
-  "The build-cfn-data-lake-settings-props-builder function updates a CfnDataLakeSettingsProps$Builder instance using the provided configuration.
+(defn cfn-data-lake-settings-props-builder>
+  "The cfn-data-lake-settings-props-builder> function updates a CfnDataLakeSettingsProps$Builder instance using the provided configuration.
   The function takes the CfnDataLakeSettingsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -362,11 +362,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-data-lake-settings-props-builder (new CfnDataLakeSettingsProps$Builder) id config))
+  (cfn-data-lake-settings-props-builder> (new CfnDataLakeSettingsProps$Builder) id config))
 
 
-(defn build-cfn-permissions-builder
-  "The build-cfn-permissions-builder function updates a CfnPermissions$Builder instance using the provided configuration.
+(defn cfn-permissions-builder>
+  "The cfn-permissions-builder> function updates a CfnPermissions$Builder instance using the provided configuration.
   The function takes the CfnPermissions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -399,11 +399,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-permissions-builder (CfnPermissions$Builder/create scope (name id)) id config))
+  (cfn-permissions-builder> (CfnPermissions$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-permissions-column-wildcard-property-builder
-  "The build-cfn-permissions-column-wildcard-property-builder function updates a CfnPermissions$ColumnWildcardProperty$Builder instance using the provided configuration.
+(defn cfn-permissions-column-wildcard-property-builder>
+  "The cfn-permissions-column-wildcard-property-builder> function updates a CfnPermissions$ColumnWildcardProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissions$ColumnWildcardProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -427,11 +427,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permissions-column-wildcard-property-builder (new CfnPermissions$ColumnWildcardProperty$Builder) id config))
+  (cfn-permissions-column-wildcard-property-builder> (new CfnPermissions$ColumnWildcardProperty$Builder) id config))
 
 
-(defn build-cfn-permissions-data-lake-principal-property-builder
-  "The build-cfn-permissions-data-lake-principal-property-builder function updates a CfnPermissions$DataLakePrincipalProperty$Builder instance using the provided configuration.
+(defn cfn-permissions-data-lake-principal-property-builder>
+  "The cfn-permissions-data-lake-principal-property-builder> function updates a CfnPermissions$DataLakePrincipalProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissions$DataLakePrincipalProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -455,11 +455,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permissions-data-lake-principal-property-builder (new CfnPermissions$DataLakePrincipalProperty$Builder) id config))
+  (cfn-permissions-data-lake-principal-property-builder> (new CfnPermissions$DataLakePrincipalProperty$Builder) id config))
 
 
-(defn build-cfn-permissions-data-location-resource-property-builder
-  "The build-cfn-permissions-data-location-resource-property-builder function updates a CfnPermissions$DataLocationResourceProperty$Builder instance using the provided configuration.
+(defn cfn-permissions-data-location-resource-property-builder>
+  "The cfn-permissions-data-location-resource-property-builder> function updates a CfnPermissions$DataLocationResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissions$DataLocationResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -486,11 +486,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permissions-data-location-resource-property-builder (new CfnPermissions$DataLocationResourceProperty$Builder) id config))
+  (cfn-permissions-data-location-resource-property-builder> (new CfnPermissions$DataLocationResourceProperty$Builder) id config))
 
 
-(defn build-cfn-permissions-database-resource-property-builder
-  "The build-cfn-permissions-database-resource-property-builder function updates a CfnPermissions$DatabaseResourceProperty$Builder instance using the provided configuration.
+(defn cfn-permissions-database-resource-property-builder>
+  "The cfn-permissions-database-resource-property-builder> function updates a CfnPermissions$DatabaseResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissions$DatabaseResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -517,11 +517,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permissions-database-resource-property-builder (new CfnPermissions$DatabaseResourceProperty$Builder) id config))
+  (cfn-permissions-database-resource-property-builder> (new CfnPermissions$DatabaseResourceProperty$Builder) id config))
 
 
-(defn build-cfn-permissions-props-builder
-  "The build-cfn-permissions-props-builder function updates a CfnPermissionsProps$Builder instance using the provided configuration.
+(defn cfn-permissions-props-builder>
+  "The cfn-permissions-props-builder> function updates a CfnPermissionsProps$Builder instance using the provided configuration.
   The function takes the CfnPermissionsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -554,11 +554,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permissions-props-builder (new CfnPermissionsProps$Builder) id config))
+  (cfn-permissions-props-builder> (new CfnPermissionsProps$Builder) id config))
 
 
-(defn build-cfn-permissions-resource-property-builder
-  "The build-cfn-permissions-resource-property-builder function updates a CfnPermissions$ResourceProperty$Builder instance using the provided configuration.
+(defn cfn-permissions-resource-property-builder>
+  "The cfn-permissions-resource-property-builder> function updates a CfnPermissions$ResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissions$ResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -591,11 +591,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permissions-resource-property-builder (new CfnPermissions$ResourceProperty$Builder) id config))
+  (cfn-permissions-resource-property-builder> (new CfnPermissions$ResourceProperty$Builder) id config))
 
 
-(defn build-cfn-permissions-table-resource-property-builder
-  "The build-cfn-permissions-table-resource-property-builder function updates a CfnPermissions$TableResourceProperty$Builder instance using the provided configuration.
+(defn cfn-permissions-table-resource-property-builder>
+  "The cfn-permissions-table-resource-property-builder> function updates a CfnPermissions$TableResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissions$TableResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -628,7 +628,7 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permissions-table-resource-property-builder (new CfnPermissions$TableResourceProperty$Builder) id config))
+  (cfn-permissions-table-resource-property-builder> (new CfnPermissions$TableResourceProperty$Builder) id config))
 
 
 (defn cfn-permissions-table-wildcard-property-builder
@@ -637,8 +637,8 @@
   (.build (new CfnPermissions$TableWildcardProperty$Builder)))
 
 
-(defn build-cfn-permissions-table-with-columns-resource-property-builder
-  "The build-cfn-permissions-table-with-columns-resource-property-builder function updates a CfnPermissions$TableWithColumnsResourceProperty$Builder instance using the provided configuration.
+(defn cfn-permissions-table-with-columns-resource-property-builder>
+  "The cfn-permissions-table-with-columns-resource-property-builder> function updates a CfnPermissions$TableWithColumnsResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissions$TableWithColumnsResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -674,11 +674,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-permissions-table-with-columns-resource-property-builder (new CfnPermissions$TableWithColumnsResourceProperty$Builder) id config))
+  (cfn-permissions-table-with-columns-resource-property-builder> (new CfnPermissions$TableWithColumnsResourceProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-builder
-  "The build-cfn-principal-permissions-builder function updates a CfnPrincipalPermissions$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-builder>
+  "The cfn-principal-permissions-builder> function updates a CfnPrincipalPermissions$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -714,11 +714,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-principal-permissions-builder (CfnPrincipalPermissions$Builder/create scope (name id)) id config))
+  (cfn-principal-permissions-builder> (CfnPrincipalPermissions$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-principal-permissions-column-wildcard-property-builder
-  "The build-cfn-principal-permissions-column-wildcard-property-builder function updates a CfnPrincipalPermissions$ColumnWildcardProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-column-wildcard-property-builder>
+  "The cfn-principal-permissions-column-wildcard-property-builder> function updates a CfnPrincipalPermissions$ColumnWildcardProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$ColumnWildcardProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -742,11 +742,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-column-wildcard-property-builder (new CfnPrincipalPermissions$ColumnWildcardProperty$Builder) id config))
+  (cfn-principal-permissions-column-wildcard-property-builder> (new CfnPrincipalPermissions$ColumnWildcardProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-data-cells-filter-resource-property-builder
-  "The build-cfn-principal-permissions-data-cells-filter-resource-property-builder function updates a CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-data-cells-filter-resource-property-builder>
+  "The cfn-principal-permissions-data-cells-filter-resource-property-builder> function updates a CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -779,11 +779,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-data-cells-filter-resource-property-builder (new CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder) id config))
+  (cfn-principal-permissions-data-cells-filter-resource-property-builder> (new CfnPrincipalPermissions$DataCellsFilterResourceProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-data-lake-principal-property-builder
-  "The build-cfn-principal-permissions-data-lake-principal-property-builder function updates a CfnPrincipalPermissions$DataLakePrincipalProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-data-lake-principal-property-builder>
+  "The cfn-principal-permissions-data-lake-principal-property-builder> function updates a CfnPrincipalPermissions$DataLakePrincipalProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$DataLakePrincipalProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -807,11 +807,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-data-lake-principal-property-builder (new CfnPrincipalPermissions$DataLakePrincipalProperty$Builder) id config))
+  (cfn-principal-permissions-data-lake-principal-property-builder> (new CfnPrincipalPermissions$DataLakePrincipalProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-data-location-resource-property-builder
-  "The build-cfn-principal-permissions-data-location-resource-property-builder function updates a CfnPrincipalPermissions$DataLocationResourceProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-data-location-resource-property-builder>
+  "The cfn-principal-permissions-data-location-resource-property-builder> function updates a CfnPrincipalPermissions$DataLocationResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$DataLocationResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -838,11 +838,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-data-location-resource-property-builder (new CfnPrincipalPermissions$DataLocationResourceProperty$Builder) id config))
+  (cfn-principal-permissions-data-location-resource-property-builder> (new CfnPrincipalPermissions$DataLocationResourceProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-database-resource-property-builder
-  "The build-cfn-principal-permissions-database-resource-property-builder function updates a CfnPrincipalPermissions$DatabaseResourceProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-database-resource-property-builder>
+  "The cfn-principal-permissions-database-resource-property-builder> function updates a CfnPrincipalPermissions$DatabaseResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$DatabaseResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -869,11 +869,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-database-resource-property-builder (new CfnPrincipalPermissions$DatabaseResourceProperty$Builder) id config))
+  (cfn-principal-permissions-database-resource-property-builder> (new CfnPrincipalPermissions$DatabaseResourceProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-lf-tag-key-resource-property-builder
-  "The build-cfn-principal-permissions-lf-tag-key-resource-property-builder function updates a CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-lf-tag-key-resource-property-builder>
+  "The cfn-principal-permissions-lf-tag-key-resource-property-builder> function updates a CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -903,11 +903,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-lf-tag-key-resource-property-builder (new CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder) id config))
+  (cfn-principal-permissions-lf-tag-key-resource-property-builder> (new CfnPrincipalPermissions$LFTagKeyResourceProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-lf-tag-policy-resource-property-builder
-  "The build-cfn-principal-permissions-lf-tag-policy-resource-property-builder function updates a CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-lf-tag-policy-resource-property-builder>
+  "The cfn-principal-permissions-lf-tag-policy-resource-property-builder> function updates a CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -937,11 +937,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-lf-tag-policy-resource-property-builder (new CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder) id config))
+  (cfn-principal-permissions-lf-tag-policy-resource-property-builder> (new CfnPrincipalPermissions$LFTagPolicyResourceProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-lf-tag-property-builder
-  "The build-cfn-principal-permissions-lf-tag-property-builder function updates a CfnPrincipalPermissions$LFTagProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-lf-tag-property-builder>
+  "The cfn-principal-permissions-lf-tag-property-builder> function updates a CfnPrincipalPermissions$LFTagProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$LFTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -968,11 +968,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-lf-tag-property-builder (new CfnPrincipalPermissions$LFTagProperty$Builder) id config))
+  (cfn-principal-permissions-lf-tag-property-builder> (new CfnPrincipalPermissions$LFTagProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-props-builder
-  "The build-cfn-principal-permissions-props-builder function updates a CfnPrincipalPermissionsProps$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-props-builder>
+  "The cfn-principal-permissions-props-builder> function updates a CfnPrincipalPermissionsProps$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissionsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1008,11 +1008,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-props-builder (new CfnPrincipalPermissionsProps$Builder) id config))
+  (cfn-principal-permissions-props-builder> (new CfnPrincipalPermissionsProps$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-resource-property-builder
-  "The build-cfn-principal-permissions-resource-property-builder function updates a CfnPrincipalPermissions$ResourceProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-resource-property-builder>
+  "The cfn-principal-permissions-resource-property-builder> function updates a CfnPrincipalPermissions$ResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$ResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1057,11 +1057,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-resource-property-builder (new CfnPrincipalPermissions$ResourceProperty$Builder) id config))
+  (cfn-principal-permissions-resource-property-builder> (new CfnPrincipalPermissions$ResourceProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-table-resource-property-builder
-  "The build-cfn-principal-permissions-table-resource-property-builder function updates a CfnPrincipalPermissions$TableResourceProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-table-resource-property-builder>
+  "The cfn-principal-permissions-table-resource-property-builder> function updates a CfnPrincipalPermissions$TableResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$TableResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1094,11 +1094,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-table-resource-property-builder (new CfnPrincipalPermissions$TableResourceProperty$Builder) id config))
+  (cfn-principal-permissions-table-resource-property-builder> (new CfnPrincipalPermissions$TableResourceProperty$Builder) id config))
 
 
-(defn build-cfn-principal-permissions-table-with-columns-resource-property-builder
-  "The build-cfn-principal-permissions-table-with-columns-resource-property-builder function updates a CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder instance using the provided configuration.
+(defn cfn-principal-permissions-table-with-columns-resource-property-builder>
+  "The cfn-principal-permissions-table-with-columns-resource-property-builder> function updates a CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1134,11 +1134,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-principal-permissions-table-with-columns-resource-property-builder (new CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder) id config))
+  (cfn-principal-permissions-table-with-columns-resource-property-builder> (new CfnPrincipalPermissions$TableWithColumnsResourceProperty$Builder) id config))
 
 
-(defn build-cfn-resource-builder
-  "The build-cfn-resource-builder function updates a CfnResource$Builder instance using the provided configuration.
+(defn cfn-resource-builder>
+  "The cfn-resource-builder> function updates a CfnResource$Builder instance using the provided configuration.
   The function takes the CfnResource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1174,11 +1174,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-builder (CfnResource$Builder/create scope (name id)) id config))
+  (cfn-resource-builder> (CfnResource$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-props-builder
-  "The build-cfn-resource-props-builder function updates a CfnResourceProps$Builder instance using the provided configuration.
+(defn cfn-resource-props-builder>
+  "The cfn-resource-props-builder> function updates a CfnResourceProps$Builder instance using the provided configuration.
   The function takes the CfnResourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1214,11 +1214,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-props-builder (new CfnResourceProps$Builder) id config))
+  (cfn-resource-props-builder> (new CfnResourceProps$Builder) id config))
 
 
-(defn build-cfn-tag-association-builder
-  "The build-cfn-tag-association-builder function updates a CfnTagAssociation$Builder instance using the provided configuration.
+(defn cfn-tag-association-builder>
+  "The cfn-tag-association-builder> function updates a CfnTagAssociation$Builder instance using the provided configuration.
   The function takes the CfnTagAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1245,11 +1245,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-tag-association-builder (CfnTagAssociation$Builder/create scope (name id)) id config))
+  (cfn-tag-association-builder> (CfnTagAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-tag-association-database-resource-property-builder
-  "The build-cfn-tag-association-database-resource-property-builder function updates a CfnTagAssociation$DatabaseResourceProperty$Builder instance using the provided configuration.
+(defn cfn-tag-association-database-resource-property-builder>
+  "The cfn-tag-association-database-resource-property-builder> function updates a CfnTagAssociation$DatabaseResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTagAssociation$DatabaseResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1276,11 +1276,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tag-association-database-resource-property-builder (new CfnTagAssociation$DatabaseResourceProperty$Builder) id config))
+  (cfn-tag-association-database-resource-property-builder> (new CfnTagAssociation$DatabaseResourceProperty$Builder) id config))
 
 
-(defn build-cfn-tag-association-lf-tag-pair-property-builder
-  "The build-cfn-tag-association-lf-tag-pair-property-builder function updates a CfnTagAssociation$LFTagPairProperty$Builder instance using the provided configuration.
+(defn cfn-tag-association-lf-tag-pair-property-builder>
+  "The cfn-tag-association-lf-tag-pair-property-builder> function updates a CfnTagAssociation$LFTagPairProperty$Builder instance using the provided configuration.
   The function takes the CfnTagAssociation$LFTagPairProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1310,11 +1310,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tag-association-lf-tag-pair-property-builder (new CfnTagAssociation$LFTagPairProperty$Builder) id config))
+  (cfn-tag-association-lf-tag-pair-property-builder> (new CfnTagAssociation$LFTagPairProperty$Builder) id config))
 
 
-(defn build-cfn-tag-association-props-builder
-  "The build-cfn-tag-association-props-builder function updates a CfnTagAssociationProps$Builder instance using the provided configuration.
+(defn cfn-tag-association-props-builder>
+  "The cfn-tag-association-props-builder> function updates a CfnTagAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnTagAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1341,11 +1341,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tag-association-props-builder (new CfnTagAssociationProps$Builder) id config))
+  (cfn-tag-association-props-builder> (new CfnTagAssociationProps$Builder) id config))
 
 
-(defn build-cfn-tag-association-resource-property-builder
-  "The build-cfn-tag-association-resource-property-builder function updates a CfnTagAssociation$ResourceProperty$Builder instance using the provided configuration.
+(defn cfn-tag-association-resource-property-builder>
+  "The cfn-tag-association-resource-property-builder> function updates a CfnTagAssociation$ResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTagAssociation$ResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1378,11 +1378,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tag-association-resource-property-builder (new CfnTagAssociation$ResourceProperty$Builder) id config))
+  (cfn-tag-association-resource-property-builder> (new CfnTagAssociation$ResourceProperty$Builder) id config))
 
 
-(defn build-cfn-tag-association-table-resource-property-builder
-  "The build-cfn-tag-association-table-resource-property-builder function updates a CfnTagAssociation$TableResourceProperty$Builder instance using the provided configuration.
+(defn cfn-tag-association-table-resource-property-builder>
+  "The cfn-tag-association-table-resource-property-builder> function updates a CfnTagAssociation$TableResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTagAssociation$TableResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1415,11 +1415,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tag-association-table-resource-property-builder (new CfnTagAssociation$TableResourceProperty$Builder) id config))
+  (cfn-tag-association-table-resource-property-builder> (new CfnTagAssociation$TableResourceProperty$Builder) id config))
 
 
-(defn build-cfn-tag-association-table-with-columns-resource-property-builder
-  "The build-cfn-tag-association-table-with-columns-resource-property-builder function updates a CfnTagAssociation$TableWithColumnsResourceProperty$Builder instance using the provided configuration.
+(defn cfn-tag-association-table-with-columns-resource-property-builder>
+  "The cfn-tag-association-table-with-columns-resource-property-builder> function updates a CfnTagAssociation$TableWithColumnsResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTagAssociation$TableWithColumnsResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1452,11 +1452,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tag-association-table-with-columns-resource-property-builder (new CfnTagAssociation$TableWithColumnsResourceProperty$Builder) id config))
+  (cfn-tag-association-table-with-columns-resource-property-builder> (new CfnTagAssociation$TableWithColumnsResourceProperty$Builder) id config))
 
 
-(defn build-cfn-tag-builder
-  "The build-cfn-tag-builder function updates a CfnTag$Builder instance using the provided configuration.
+(defn cfn-tag-builder>
+  "The cfn-tag-builder> function updates a CfnTag$Builder instance using the provided configuration.
   The function takes the CfnTag$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1486,11 +1486,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-tag-builder (CfnTag$Builder/create scope (name id)) id config))
+  (cfn-tag-builder> (CfnTag$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-tag-props-builder
-  "The build-cfn-tag-props-builder function updates a CfnTagProps$Builder instance using the provided configuration.
+(defn cfn-tag-props-builder>
+  "The cfn-tag-props-builder> function updates a CfnTagProps$Builder instance using the provided configuration.
   The function takes the CfnTagProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1520,4 +1520,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tag-props-builder (new CfnTagProps$Builder) id config))
+  (cfn-tag-props-builder> (new CfnTagProps$Builder) id config))

@@ -20,8 +20,8 @@
                                                              CfnPricingRuleProps$Builder]))
 
 
-(defn build-cfn-billing-group-account-grouping-property-builder
-  "The build-cfn-billing-group-account-grouping-property-builder function updates a CfnBillingGroup$AccountGroupingProperty$Builder instance using the provided configuration.
+(defn cfn-billing-group-account-grouping-property-builder>
+  "The cfn-billing-group-account-grouping-property-builder> function updates a CfnBillingGroup$AccountGroupingProperty$Builder instance using the provided configuration.
   The function takes the CfnBillingGroup$AccountGroupingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -48,11 +48,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-billing-group-account-grouping-property-builder (new CfnBillingGroup$AccountGroupingProperty$Builder) id config))
+  (cfn-billing-group-account-grouping-property-builder> (new CfnBillingGroup$AccountGroupingProperty$Builder) id config))
 
 
-(defn build-cfn-billing-group-builder
-  "The build-cfn-billing-group-builder function updates a CfnBillingGroup$Builder instance using the provided configuration.
+(defn cfn-billing-group-builder>
+  "The cfn-billing-group-builder> function updates a CfnBillingGroup$Builder instance using the provided configuration.
   The function takes the CfnBillingGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -91,11 +91,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-billing-group-builder (CfnBillingGroup$Builder/create scope (name id)) id config))
+  (cfn-billing-group-builder> (CfnBillingGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-billing-group-computation-preference-property-builder
-  "The build-cfn-billing-group-computation-preference-property-builder function updates a CfnBillingGroup$ComputationPreferenceProperty$Builder instance using the provided configuration.
+(defn cfn-billing-group-computation-preference-property-builder>
+  "The cfn-billing-group-computation-preference-property-builder> function updates a CfnBillingGroup$ComputationPreferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnBillingGroup$ComputationPreferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -119,11 +119,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-billing-group-computation-preference-property-builder (new CfnBillingGroup$ComputationPreferenceProperty$Builder) id config))
+  (cfn-billing-group-computation-preference-property-builder> (new CfnBillingGroup$ComputationPreferenceProperty$Builder) id config))
 
 
-(defn build-cfn-billing-group-props-builder
-  "The build-cfn-billing-group-props-builder function updates a CfnBillingGroupProps$Builder instance using the provided configuration.
+(defn cfn-billing-group-props-builder>
+  "The cfn-billing-group-props-builder> function updates a CfnBillingGroupProps$Builder instance using the provided configuration.
   The function takes the CfnBillingGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -162,11 +162,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-billing-group-props-builder (new CfnBillingGroupProps$Builder) id config))
+  (cfn-billing-group-props-builder> (new CfnBillingGroupProps$Builder) id config))
 
 
-(defn build-cfn-custom-line-item-billing-period-range-property-builder
-  "The build-cfn-custom-line-item-billing-period-range-property-builder function updates a CfnCustomLineItem$BillingPeriodRangeProperty$Builder instance using the provided configuration.
+(defn cfn-custom-line-item-billing-period-range-property-builder>
+  "The cfn-custom-line-item-billing-period-range-property-builder> function updates a CfnCustomLineItem$BillingPeriodRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$BillingPeriodRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -193,11 +193,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-line-item-billing-period-range-property-builder (new CfnCustomLineItem$BillingPeriodRangeProperty$Builder) id config))
+  (cfn-custom-line-item-billing-period-range-property-builder> (new CfnCustomLineItem$BillingPeriodRangeProperty$Builder) id config))
 
 
-(defn build-cfn-custom-line-item-builder
-  "The build-cfn-custom-line-item-builder function updates a CfnCustomLineItem$Builder instance using the provided configuration.
+(defn cfn-custom-line-item-builder>
+  "The cfn-custom-line-item-builder> function updates a CfnCustomLineItem$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -239,11 +239,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-custom-line-item-builder (CfnCustomLineItem$Builder/create scope (name id)) id config))
+  (cfn-custom-line-item-builder> (CfnCustomLineItem$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-custom-line-item-custom-line-item-charge-details-property-builder
-  "The build-cfn-custom-line-item-custom-line-item-charge-details-property-builder function updates a CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-custom-line-item-custom-line-item-charge-details-property-builder>
+  "The cfn-custom-line-item-custom-line-item-charge-details-property-builder> function updates a CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -276,11 +276,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-line-item-custom-line-item-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder) id config))
+  (cfn-custom-line-item-custom-line-item-charge-details-property-builder> (new CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder) id config))
 
 
-(defn build-cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder
-  "The build-cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder function updates a CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder>
+  "The cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder> function updates a CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -304,11 +304,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder) id config))
+  (cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder> (new CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder) id config))
 
 
-(defn build-cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder
-  "The build-cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder function updates a CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder>
+  "The cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder> function updates a CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -335,11 +335,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder) id config))
+  (cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder> (new CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder) id config))
 
 
-(defn build-cfn-custom-line-item-line-item-filter-property-builder
-  "The build-cfn-custom-line-item-line-item-filter-property-builder function updates a CfnCustomLineItem$LineItemFilterProperty$Builder instance using the provided configuration.
+(defn cfn-custom-line-item-line-item-filter-property-builder>
+  "The cfn-custom-line-item-line-item-filter-property-builder> function updates a CfnCustomLineItem$LineItemFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$LineItemFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -369,11 +369,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-line-item-line-item-filter-property-builder (new CfnCustomLineItem$LineItemFilterProperty$Builder) id config))
+  (cfn-custom-line-item-line-item-filter-property-builder> (new CfnCustomLineItem$LineItemFilterProperty$Builder) id config))
 
 
-(defn build-cfn-custom-line-item-props-builder
-  "The build-cfn-custom-line-item-props-builder function updates a CfnCustomLineItemProps$Builder instance using the provided configuration.
+(defn cfn-custom-line-item-props-builder>
+  "The cfn-custom-line-item-props-builder> function updates a CfnCustomLineItemProps$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -415,11 +415,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-custom-line-item-props-builder (new CfnCustomLineItemProps$Builder) id config))
+  (cfn-custom-line-item-props-builder> (new CfnCustomLineItemProps$Builder) id config))
 
 
-(defn build-cfn-pricing-plan-builder
-  "The build-cfn-pricing-plan-builder function updates a CfnPricingPlan$Builder instance using the provided configuration.
+(defn cfn-pricing-plan-builder>
+  "The cfn-pricing-plan-builder> function updates a CfnPricingPlan$Builder instance using the provided configuration.
   The function takes the CfnPricingPlan$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -452,11 +452,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-pricing-plan-builder (CfnPricingPlan$Builder/create scope (name id)) id config))
+  (cfn-pricing-plan-builder> (CfnPricingPlan$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-pricing-plan-props-builder
-  "The build-cfn-pricing-plan-props-builder function updates a CfnPricingPlanProps$Builder instance using the provided configuration.
+(defn cfn-pricing-plan-props-builder>
+  "The cfn-pricing-plan-props-builder> function updates a CfnPricingPlanProps$Builder instance using the provided configuration.
   The function takes the CfnPricingPlanProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -489,11 +489,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pricing-plan-props-builder (new CfnPricingPlanProps$Builder) id config))
+  (cfn-pricing-plan-props-builder> (new CfnPricingPlanProps$Builder) id config))
 
 
-(defn build-cfn-pricing-rule-builder
-  "The build-cfn-pricing-rule-builder function updates a CfnPricingRule$Builder instance using the provided configuration.
+(defn cfn-pricing-rule-builder>
+  "The cfn-pricing-rule-builder> function updates a CfnPricingRule$Builder instance using the provided configuration.
   The function takes the CfnPricingRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -547,11 +547,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-pricing-rule-builder (CfnPricingRule$Builder/create scope (name id)) id config))
+  (cfn-pricing-rule-builder> (CfnPricingRule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-pricing-rule-free-tier-property-builder
-  "The build-cfn-pricing-rule-free-tier-property-builder function updates a CfnPricingRule$FreeTierProperty$Builder instance using the provided configuration.
+(defn cfn-pricing-rule-free-tier-property-builder>
+  "The cfn-pricing-rule-free-tier-property-builder> function updates a CfnPricingRule$FreeTierProperty$Builder instance using the provided configuration.
   The function takes the CfnPricingRule$FreeTierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -575,11 +575,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pricing-rule-free-tier-property-builder (new CfnPricingRule$FreeTierProperty$Builder) id config))
+  (cfn-pricing-rule-free-tier-property-builder> (new CfnPricingRule$FreeTierProperty$Builder) id config))
 
 
-(defn build-cfn-pricing-rule-props-builder
-  "The build-cfn-pricing-rule-props-builder function updates a CfnPricingRuleProps$Builder instance using the provided configuration.
+(defn cfn-pricing-rule-props-builder>
+  "The cfn-pricing-rule-props-builder> function updates a CfnPricingRuleProps$Builder instance using the provided configuration.
   The function takes the CfnPricingRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -633,11 +633,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pricing-rule-props-builder (new CfnPricingRuleProps$Builder) id config))
+  (cfn-pricing-rule-props-builder> (new CfnPricingRuleProps$Builder) id config))
 
 
-(defn build-cfn-pricing-rule-tiering-property-builder
-  "The build-cfn-pricing-rule-tiering-property-builder function updates a CfnPricingRule$TieringProperty$Builder instance using the provided configuration.
+(defn cfn-pricing-rule-tiering-property-builder>
+  "The cfn-pricing-rule-tiering-property-builder> function updates a CfnPricingRule$TieringProperty$Builder instance using the provided configuration.
   The function takes the CfnPricingRule$TieringProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -661,4 +661,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pricing-rule-tiering-property-builder (new CfnPricingRule$TieringProperty$Builder) id config))
+  (cfn-pricing-rule-tiering-property-builder> (new CfnPricingRule$TieringProperty$Builder) id config))

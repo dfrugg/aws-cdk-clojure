@@ -7,8 +7,8 @@
                                                           CfnZonalAutoshiftConfigurationProps$Builder]))
 
 
-(defn build-cfn-zonal-autoshift-configuration-builder
-  "The build-cfn-zonal-autoshift-configuration-builder function updates a CfnZonalAutoshiftConfiguration$Builder instance using the provided configuration.
+(defn cfn-zonal-autoshift-configuration-builder>
+  "The cfn-zonal-autoshift-configuration-builder> function updates a CfnZonalAutoshiftConfiguration$Builder instance using the provided configuration.
   The function takes the CfnZonalAutoshiftConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -38,11 +38,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-zonal-autoshift-configuration-builder (CfnZonalAutoshiftConfiguration$Builder/create scope (name id)) id config))
+  (cfn-zonal-autoshift-configuration-builder> (CfnZonalAutoshiftConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-zonal-autoshift-configuration-control-condition-property-builder
-  "The build-cfn-zonal-autoshift-configuration-control-condition-property-builder function updates a CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder instance using the provided configuration.
+(defn cfn-zonal-autoshift-configuration-control-condition-property-builder>
+  "The cfn-zonal-autoshift-configuration-control-condition-property-builder> function updates a CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder instance using the provided configuration.
   The function takes the CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -69,11 +69,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-zonal-autoshift-configuration-control-condition-property-builder (new CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder) id config))
+  (cfn-zonal-autoshift-configuration-control-condition-property-builder> (new CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder) id config))
 
 
-(defn build-cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder
-  "The build-cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder function updates a CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder>
+  "The cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder> function updates a CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -106,11 +106,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder (new CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder) id config))
+  (cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder> (new CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-zonal-autoshift-configuration-props-builder
-  "The build-cfn-zonal-autoshift-configuration-props-builder function updates a CfnZonalAutoshiftConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-zonal-autoshift-configuration-props-builder>
+  "The cfn-zonal-autoshift-configuration-props-builder> function updates a CfnZonalAutoshiftConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnZonalAutoshiftConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -140,4 +140,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-zonal-autoshift-configuration-props-builder (new CfnZonalAutoshiftConfigurationProps$Builder) id config))
+  (cfn-zonal-autoshift-configuration-props-builder> (new CfnZonalAutoshiftConfigurationProps$Builder) id config))

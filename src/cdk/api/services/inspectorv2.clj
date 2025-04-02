@@ -20,8 +20,8 @@
                                                         CfnFilterProps$Builder]))
 
 
-(defn build-cfn-cis-scan-configuration-builder
-  "The build-cfn-cis-scan-configuration-builder function updates a CfnCisScanConfiguration$Builder instance using the provided configuration.
+(defn cfn-cis-scan-configuration-builder>
+  "The cfn-cis-scan-configuration-builder> function updates a CfnCisScanConfiguration$Builder instance using the provided configuration.
   The function takes the CfnCisScanConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -57,11 +57,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cis-scan-configuration-builder (CfnCisScanConfiguration$Builder/create scope (name id)) id config))
+  (cfn-cis-scan-configuration-builder> (CfnCisScanConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cis-scan-configuration-cis-targets-property-builder
-  "The build-cfn-cis-scan-configuration-cis-targets-property-builder function updates a CfnCisScanConfiguration$CisTargetsProperty$Builder instance using the provided configuration.
+(defn cfn-cis-scan-configuration-cis-targets-property-builder>
+  "The cfn-cis-scan-configuration-cis-targets-property-builder> function updates a CfnCisScanConfiguration$CisTargetsProperty$Builder instance using the provided configuration.
   The function takes the CfnCisScanConfiguration$CisTargetsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -88,11 +88,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cis-scan-configuration-cis-targets-property-builder (new CfnCisScanConfiguration$CisTargetsProperty$Builder) id config))
+  (cfn-cis-scan-configuration-cis-targets-property-builder> (new CfnCisScanConfiguration$CisTargetsProperty$Builder) id config))
 
 
-(defn build-cfn-cis-scan-configuration-daily-schedule-property-builder
-  "The build-cfn-cis-scan-configuration-daily-schedule-property-builder function updates a CfnCisScanConfiguration$DailyScheduleProperty$Builder instance using the provided configuration.
+(defn cfn-cis-scan-configuration-daily-schedule-property-builder>
+  "The cfn-cis-scan-configuration-daily-schedule-property-builder> function updates a CfnCisScanConfiguration$DailyScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnCisScanConfiguration$DailyScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -116,11 +116,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cis-scan-configuration-daily-schedule-property-builder (new CfnCisScanConfiguration$DailyScheduleProperty$Builder) id config))
+  (cfn-cis-scan-configuration-daily-schedule-property-builder> (new CfnCisScanConfiguration$DailyScheduleProperty$Builder) id config))
 
 
-(defn build-cfn-cis-scan-configuration-monthly-schedule-property-builder
-  "The build-cfn-cis-scan-configuration-monthly-schedule-property-builder function updates a CfnCisScanConfiguration$MonthlyScheduleProperty$Builder instance using the provided configuration.
+(defn cfn-cis-scan-configuration-monthly-schedule-property-builder>
+  "The cfn-cis-scan-configuration-monthly-schedule-property-builder> function updates a CfnCisScanConfiguration$MonthlyScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnCisScanConfiguration$MonthlyScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -147,11 +147,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cis-scan-configuration-monthly-schedule-property-builder (new CfnCisScanConfiguration$MonthlyScheduleProperty$Builder) id config))
+  (cfn-cis-scan-configuration-monthly-schedule-property-builder> (new CfnCisScanConfiguration$MonthlyScheduleProperty$Builder) id config))
 
 
-(defn build-cfn-cis-scan-configuration-props-builder
-  "The build-cfn-cis-scan-configuration-props-builder function updates a CfnCisScanConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-cis-scan-configuration-props-builder>
+  "The cfn-cis-scan-configuration-props-builder> function updates a CfnCisScanConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnCisScanConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -187,11 +187,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cis-scan-configuration-props-builder (new CfnCisScanConfigurationProps$Builder) id config))
+  (cfn-cis-scan-configuration-props-builder> (new CfnCisScanConfigurationProps$Builder) id config))
 
 
-(defn build-cfn-cis-scan-configuration-schedule-property-builder
-  "The build-cfn-cis-scan-configuration-schedule-property-builder function updates a CfnCisScanConfiguration$ScheduleProperty$Builder instance using the provided configuration.
+(defn cfn-cis-scan-configuration-schedule-property-builder>
+  "The cfn-cis-scan-configuration-schedule-property-builder> function updates a CfnCisScanConfiguration$ScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnCisScanConfiguration$ScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -224,11 +224,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cis-scan-configuration-schedule-property-builder (new CfnCisScanConfiguration$ScheduleProperty$Builder) id config))
+  (cfn-cis-scan-configuration-schedule-property-builder> (new CfnCisScanConfiguration$ScheduleProperty$Builder) id config))
 
 
-(defn build-cfn-cis-scan-configuration-time-property-builder
-  "The build-cfn-cis-scan-configuration-time-property-builder function updates a CfnCisScanConfiguration$TimeProperty$Builder instance using the provided configuration.
+(defn cfn-cis-scan-configuration-time-property-builder>
+  "The cfn-cis-scan-configuration-time-property-builder> function updates a CfnCisScanConfiguration$TimeProperty$Builder instance using the provided configuration.
   The function takes the CfnCisScanConfiguration$TimeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -255,11 +255,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cis-scan-configuration-time-property-builder (new CfnCisScanConfiguration$TimeProperty$Builder) id config))
+  (cfn-cis-scan-configuration-time-property-builder> (new CfnCisScanConfiguration$TimeProperty$Builder) id config))
 
 
-(defn build-cfn-cis-scan-configuration-weekly-schedule-property-builder
-  "The build-cfn-cis-scan-configuration-weekly-schedule-property-builder function updates a CfnCisScanConfiguration$WeeklyScheduleProperty$Builder instance using the provided configuration.
+(defn cfn-cis-scan-configuration-weekly-schedule-property-builder>
+  "The cfn-cis-scan-configuration-weekly-schedule-property-builder> function updates a CfnCisScanConfiguration$WeeklyScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnCisScanConfiguration$WeeklyScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -286,11 +286,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cis-scan-configuration-weekly-schedule-property-builder (new CfnCisScanConfiguration$WeeklyScheduleProperty$Builder) id config))
+  (cfn-cis-scan-configuration-weekly-schedule-property-builder> (new CfnCisScanConfiguration$WeeklyScheduleProperty$Builder) id config))
 
 
-(defn build-cfn-filter-builder
-  "The build-cfn-filter-builder function updates a CfnFilter$Builder instance using the provided configuration.
+(defn cfn-filter-builder>
+  "The cfn-filter-builder> function updates a CfnFilter$Builder instance using the provided configuration.
   The function takes the CfnFilter$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -323,11 +323,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-filter-builder (CfnFilter$Builder/create scope (name id)) id config))
+  (cfn-filter-builder> (CfnFilter$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-filter-date-filter-property-builder
-  "The build-cfn-filter-date-filter-property-builder function updates a CfnFilter$DateFilterProperty$Builder instance using the provided configuration.
+(defn cfn-filter-date-filter-property-builder>
+  "The cfn-filter-date-filter-property-builder> function updates a CfnFilter$DateFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnFilter$DateFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -354,11 +354,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-filter-date-filter-property-builder (new CfnFilter$DateFilterProperty$Builder) id config))
+  (cfn-filter-date-filter-property-builder> (new CfnFilter$DateFilterProperty$Builder) id config))
 
 
-(defn build-cfn-filter-filter-criteria-property-builder
-  "The build-cfn-filter-filter-criteria-property-builder function updates a CfnFilter$FilterCriteriaProperty$Builder instance using the provided configuration.
+(defn cfn-filter-filter-criteria-property-builder>
+  "The cfn-filter-filter-criteria-property-builder> function updates a CfnFilter$FilterCriteriaProperty$Builder instance using the provided configuration.
   The function takes the CfnFilter$FilterCriteriaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -472,11 +472,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-filter-filter-criteria-property-builder (new CfnFilter$FilterCriteriaProperty$Builder) id config))
+  (cfn-filter-filter-criteria-property-builder> (new CfnFilter$FilterCriteriaProperty$Builder) id config))
 
 
-(defn build-cfn-filter-map-filter-property-builder
-  "The build-cfn-filter-map-filter-property-builder function updates a CfnFilter$MapFilterProperty$Builder instance using the provided configuration.
+(defn cfn-filter-map-filter-property-builder>
+  "The cfn-filter-map-filter-property-builder> function updates a CfnFilter$MapFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnFilter$MapFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -506,11 +506,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-filter-map-filter-property-builder (new CfnFilter$MapFilterProperty$Builder) id config))
+  (cfn-filter-map-filter-property-builder> (new CfnFilter$MapFilterProperty$Builder) id config))
 
 
-(defn build-cfn-filter-number-filter-property-builder
-  "The build-cfn-filter-number-filter-property-builder function updates a CfnFilter$NumberFilterProperty$Builder instance using the provided configuration.
+(defn cfn-filter-number-filter-property-builder>
+  "The cfn-filter-number-filter-property-builder> function updates a CfnFilter$NumberFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnFilter$NumberFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -537,11 +537,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-filter-number-filter-property-builder (new CfnFilter$NumberFilterProperty$Builder) id config))
+  (cfn-filter-number-filter-property-builder> (new CfnFilter$NumberFilterProperty$Builder) id config))
 
 
-(defn build-cfn-filter-package-filter-property-builder
-  "The build-cfn-filter-package-filter-property-builder function updates a CfnFilter$PackageFilterProperty$Builder instance using the provided configuration.
+(defn cfn-filter-package-filter-property-builder>
+  "The cfn-filter-package-filter-property-builder> function updates a CfnFilter$PackageFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnFilter$PackageFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -580,11 +580,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-filter-package-filter-property-builder (new CfnFilter$PackageFilterProperty$Builder) id config))
+  (cfn-filter-package-filter-property-builder> (new CfnFilter$PackageFilterProperty$Builder) id config))
 
 
-(defn build-cfn-filter-port-range-filter-property-builder
-  "The build-cfn-filter-port-range-filter-property-builder function updates a CfnFilter$PortRangeFilterProperty$Builder instance using the provided configuration.
+(defn cfn-filter-port-range-filter-property-builder>
+  "The cfn-filter-port-range-filter-property-builder> function updates a CfnFilter$PortRangeFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnFilter$PortRangeFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -611,11 +611,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-filter-port-range-filter-property-builder (new CfnFilter$PortRangeFilterProperty$Builder) id config))
+  (cfn-filter-port-range-filter-property-builder> (new CfnFilter$PortRangeFilterProperty$Builder) id config))
 
 
-(defn build-cfn-filter-props-builder
-  "The build-cfn-filter-props-builder function updates a CfnFilterProps$Builder instance using the provided configuration.
+(defn cfn-filter-props-builder>
+  "The cfn-filter-props-builder> function updates a CfnFilterProps$Builder instance using the provided configuration.
   The function takes the CfnFilterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -648,11 +648,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-filter-props-builder (new CfnFilterProps$Builder) id config))
+  (cfn-filter-props-builder> (new CfnFilterProps$Builder) id config))
 
 
-(defn build-cfn-filter-string-filter-property-builder
-  "The build-cfn-filter-string-filter-property-builder function updates a CfnFilter$StringFilterProperty$Builder instance using the provided configuration.
+(defn cfn-filter-string-filter-property-builder>
+  "The cfn-filter-string-filter-property-builder> function updates a CfnFilter$StringFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnFilter$StringFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -679,4 +679,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-filter-string-filter-property-builder (new CfnFilter$StringFilterProperty$Builder) id config))
+  (cfn-filter-string-filter-property-builder> (new CfnFilter$StringFilterProperty$Builder) id config))

@@ -2920,8 +2920,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_EXPRESS)))
 
 
-(defn build-acl-cidr-config-builder
-  "The build-acl-cidr-config-builder function updates a AclCidrConfig$Builder instance using the provided configuration.
+(defn acl-cidr-config-builder>
+  "The acl-cidr-config-builder> function updates a AclCidrConfig$Builder instance using the provided configuration.
   The function takes the AclCidrConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2948,11 +2948,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-acl-cidr-config-builder (new AclCidrConfig$Builder) id config))
+  (acl-cidr-config-builder> (new AclCidrConfig$Builder) id config))
 
 
-(defn build-acl-icmp-builder
-  "The build-acl-icmp-builder function updates a AclIcmp$Builder instance using the provided configuration.
+(defn acl-icmp-builder>
+  "The acl-icmp-builder> function updates a AclIcmp$Builder instance using the provided configuration.
   The function takes the AclIcmp$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2979,11 +2979,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-acl-icmp-builder (new AclIcmp$Builder) id config))
+  (acl-icmp-builder> (new AclIcmp$Builder) id config))
 
 
-(defn build-acl-port-range-builder
-  "The build-acl-port-range-builder function updates a AclPortRange$Builder instance using the provided configuration.
+(defn acl-port-range-builder>
+  "The acl-port-range-builder> function updates a AclPortRange$Builder instance using the provided configuration.
   The function takes the AclPortRange$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3010,11 +3010,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-acl-port-range-builder (new AclPortRange$Builder) id config))
+  (acl-port-range-builder> (new AclPortRange$Builder) id config))
 
 
-(defn build-acl-traffic-config-builder
-  "The build-acl-traffic-config-builder function updates a AclTrafficConfig$Builder instance using the provided configuration.
+(defn acl-traffic-config-builder>
+  "The acl-traffic-config-builder> function updates a AclTrafficConfig$Builder instance using the provided configuration.
   The function takes the AclTrafficConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3044,11 +3044,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-acl-traffic-config-builder (new AclTrafficConfig$Builder) id config))
+  (acl-traffic-config-builder> (new AclTrafficConfig$Builder) id config))
 
 
-(defn build-add-route-options-builder
-  "The build-add-route-options-builder function updates a AddRouteOptions$Builder instance using the provided configuration.
+(defn add-route-options-builder>
+  "The add-route-options-builder> function updates a AddRouteOptions$Builder instance using the provided configuration.
   The function takes the AddRouteOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3084,11 +3084,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-route-options-builder (new AddRouteOptions$Builder) id config))
+  (add-route-options-builder> (new AddRouteOptions$Builder) id config))
 
 
-(defn build-allocate-cidr-request-builder
-  "The build-allocate-cidr-request-builder function updates a AllocateCidrRequest$Builder instance using the provided configuration.
+(defn allocate-cidr-request-builder>
+  "The allocate-cidr-request-builder> function updates a AllocateCidrRequest$Builder instance using the provided configuration.
   The function takes the AllocateCidrRequest$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3115,11 +3115,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-allocate-cidr-request-builder (new AllocateCidrRequest$Builder) id config))
+  (allocate-cidr-request-builder> (new AllocateCidrRequest$Builder) id config))
 
 
-(defn build-allocate-ipv6-cidr-request-builder
-  "The build-allocate-ipv6-cidr-request-builder function updates a AllocateIpv6CidrRequest$Builder instance using the provided configuration.
+(defn allocate-ipv6-cidr-request-builder>
+  "The allocate-ipv6-cidr-request-builder> function updates a AllocateIpv6CidrRequest$Builder instance using the provided configuration.
   The function takes the AllocateIpv6CidrRequest$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3146,11 +3146,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-allocate-ipv6-cidr-request-builder (new AllocateIpv6CidrRequest$Builder) id config))
+  (allocate-ipv6-cidr-request-builder> (new AllocateIpv6CidrRequest$Builder) id config))
 
 
-(defn build-allocate-vpc-ipv6-cidr-request-builder
-  "The build-allocate-vpc-ipv6-cidr-request-builder function updates a AllocateVpcIpv6CidrRequest$Builder instance using the provided configuration.
+(defn allocate-vpc-ipv6-cidr-request-builder>
+  "The allocate-vpc-ipv6-cidr-request-builder> function updates a AllocateVpcIpv6CidrRequest$Builder instance using the provided configuration.
   The function takes the AllocateVpcIpv6CidrRequest$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3177,11 +3177,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-allocate-vpc-ipv6-cidr-request-builder (new AllocateVpcIpv6CidrRequest$Builder) id config))
+  (allocate-vpc-ipv6-cidr-request-builder> (new AllocateVpcIpv6CidrRequest$Builder) id config))
 
 
-(defn build-allocated-subnet-builder
-  "The build-allocated-subnet-builder function updates a AllocatedSubnet$Builder instance using the provided configuration.
+(defn allocated-subnet-builder>
+  "The allocated-subnet-builder> function updates a AllocatedSubnet$Builder instance using the provided configuration.
   The function takes the AllocatedSubnet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3208,11 +3208,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-allocated-subnet-builder (new AllocatedSubnet$Builder) id config))
+  (allocated-subnet-builder> (new AllocatedSubnet$Builder) id config))
 
 
-(defn build-amazon-linux-image-builder
-  "The build-amazon-linux-image-builder function updates a AmazonLinuxImage$Builder instance using the provided configuration.
+(defn amazon-linux-image-builder>
+  "The amazon-linux-image-builder> function updates a AmazonLinuxImage$Builder instance using the provided configuration.
   The function takes the AmazonLinuxImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3257,11 +3257,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux-image-builder (AmazonLinuxImage$Builder/create) id config))
+  (amazon-linux-image-builder> (AmazonLinuxImage$Builder/create) id config))
 
 
-(defn build-amazon-linux-image-props-builder
-  "The build-amazon-linux-image-props-builder function updates a AmazonLinuxImageProps$Builder instance using the provided configuration.
+(defn amazon-linux-image-props-builder>
+  "The amazon-linux-image-props-builder> function updates a AmazonLinuxImageProps$Builder instance using the provided configuration.
   The function takes the AmazonLinuxImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3306,11 +3306,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux-image-props-builder (new AmazonLinuxImageProps$Builder) id config))
+  (amazon-linux-image-props-builder> (new AmazonLinuxImageProps$Builder) id config))
 
 
-(defn build-amazon-linux-image-ssm-parameter-base-options-builder
-  "The build-amazon-linux-image-ssm-parameter-base-options-builder function updates a AmazonLinuxImageSsmParameterBaseOptions$Builder instance using the provided configuration.
+(defn amazon-linux-image-ssm-parameter-base-options-builder>
+  "The amazon-linux-image-ssm-parameter-base-options-builder> function updates a AmazonLinuxImageSsmParameterBaseOptions$Builder instance using the provided configuration.
   The function takes the AmazonLinuxImageSsmParameterBaseOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3337,11 +3337,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux-image-ssm-parameter-base-options-builder (new AmazonLinuxImageSsmParameterBaseOptions$Builder) id config))
+  (amazon-linux-image-ssm-parameter-base-options-builder> (new AmazonLinuxImageSsmParameterBaseOptions$Builder) id config))
 
 
-(defn build-amazon-linux-image-ssm-parameter-base-props-builder
-  "The build-amazon-linux-image-ssm-parameter-base-props-builder function updates a AmazonLinuxImageSsmParameterBaseProps$Builder instance using the provided configuration.
+(defn amazon-linux-image-ssm-parameter-base-props-builder>
+  "The amazon-linux-image-ssm-parameter-base-props-builder> function updates a AmazonLinuxImageSsmParameterBaseProps$Builder instance using the provided configuration.
   The function takes the AmazonLinuxImageSsmParameterBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3371,11 +3371,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux-image-ssm-parameter-base-props-builder (new AmazonLinuxImageSsmParameterBaseProps$Builder) id config))
+  (amazon-linux-image-ssm-parameter-base-props-builder> (new AmazonLinuxImageSsmParameterBaseProps$Builder) id config))
 
 
-(defn build-amazon-linux-image-ssm-parameter-common-options-builder
-  "The build-amazon-linux-image-ssm-parameter-common-options-builder function updates a AmazonLinuxImageSsmParameterCommonOptions$Builder instance using the provided configuration.
+(defn amazon-linux-image-ssm-parameter-common-options-builder>
+  "The amazon-linux-image-ssm-parameter-common-options-builder> function updates a AmazonLinuxImageSsmParameterCommonOptions$Builder instance using the provided configuration.
   The function takes the AmazonLinuxImageSsmParameterCommonOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3408,11 +3408,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux-image-ssm-parameter-common-options-builder (new AmazonLinuxImageSsmParameterCommonOptions$Builder) id config))
+  (amazon-linux-image-ssm-parameter-common-options-builder> (new AmazonLinuxImageSsmParameterCommonOptions$Builder) id config))
 
 
-(defn build-amazon-linux2-image-ssm-parameter-builder
-  "The build-amazon-linux2-image-ssm-parameter-builder function updates a AmazonLinux2ImageSsmParameter$Builder instance using the provided configuration.
+(defn amazon-linux2-image-ssm-parameter-builder>
+  "The amazon-linux2-image-ssm-parameter-builder> function updates a AmazonLinux2ImageSsmParameter$Builder instance using the provided configuration.
   The function takes the AmazonLinux2ImageSsmParameter$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3454,11 +3454,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux2-image-ssm-parameter-builder (AmazonLinux2ImageSsmParameter$Builder/create) id config))
+  (amazon-linux2-image-ssm-parameter-builder> (AmazonLinux2ImageSsmParameter$Builder/create) id config))
 
 
-(defn build-amazon-linux2-image-ssm-parameter-props-builder
-  "The build-amazon-linux2-image-ssm-parameter-props-builder function updates a AmazonLinux2ImageSsmParameterProps$Builder instance using the provided configuration.
+(defn amazon-linux2-image-ssm-parameter-props-builder>
+  "The amazon-linux2-image-ssm-parameter-props-builder> function updates a AmazonLinux2ImageSsmParameterProps$Builder instance using the provided configuration.
   The function takes the AmazonLinux2ImageSsmParameterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3500,11 +3500,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux2-image-ssm-parameter-props-builder (new AmazonLinux2ImageSsmParameterProps$Builder) id config))
+  (amazon-linux2-image-ssm-parameter-props-builder> (new AmazonLinux2ImageSsmParameterProps$Builder) id config))
 
 
-(defn build-amazon-linux2022-image-ssm-parameter-builder
-  "The build-amazon-linux2022-image-ssm-parameter-builder function updates a AmazonLinux2022ImageSsmParameter$Builder instance using the provided configuration.
+(defn amazon-linux2022-image-ssm-parameter-builder>
+  "The amazon-linux2022-image-ssm-parameter-builder> function updates a AmazonLinux2022ImageSsmParameter$Builder instance using the provided configuration.
   The function takes the AmazonLinux2022ImageSsmParameter$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3540,11 +3540,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux2022-image-ssm-parameter-builder (AmazonLinux2022ImageSsmParameter$Builder/create) id config))
+  (amazon-linux2022-image-ssm-parameter-builder> (AmazonLinux2022ImageSsmParameter$Builder/create) id config))
 
 
-(defn build-amazon-linux2022-image-ssm-parameter-props-builder
-  "The build-amazon-linux2022-image-ssm-parameter-props-builder function updates a AmazonLinux2022ImageSsmParameterProps$Builder instance using the provided configuration.
+(defn amazon-linux2022-image-ssm-parameter-props-builder>
+  "The amazon-linux2022-image-ssm-parameter-props-builder> function updates a AmazonLinux2022ImageSsmParameterProps$Builder instance using the provided configuration.
   The function takes the AmazonLinux2022ImageSsmParameterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3580,11 +3580,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux2022-image-ssm-parameter-props-builder (new AmazonLinux2022ImageSsmParameterProps$Builder) id config))
+  (amazon-linux2022-image-ssm-parameter-props-builder> (new AmazonLinux2022ImageSsmParameterProps$Builder) id config))
 
 
-(defn build-amazon-linux2023-image-ssm-parameter-builder
-  "The build-amazon-linux2023-image-ssm-parameter-builder function updates a AmazonLinux2023ImageSsmParameter$Builder instance using the provided configuration.
+(defn amazon-linux2023-image-ssm-parameter-builder>
+  "The amazon-linux2023-image-ssm-parameter-builder> function updates a AmazonLinux2023ImageSsmParameter$Builder instance using the provided configuration.
   The function takes the AmazonLinux2023ImageSsmParameter$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3620,11 +3620,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux2023-image-ssm-parameter-builder (AmazonLinux2023ImageSsmParameter$Builder/create) id config))
+  (amazon-linux2023-image-ssm-parameter-builder> (AmazonLinux2023ImageSsmParameter$Builder/create) id config))
 
 
-(defn build-amazon-linux2023-image-ssm-parameter-props-builder
-  "The build-amazon-linux2023-image-ssm-parameter-props-builder function updates a AmazonLinux2023ImageSsmParameterProps$Builder instance using the provided configuration.
+(defn amazon-linux2023-image-ssm-parameter-props-builder>
+  "The amazon-linux2023-image-ssm-parameter-props-builder> function updates a AmazonLinux2023ImageSsmParameterProps$Builder instance using the provided configuration.
   The function takes the AmazonLinux2023ImageSsmParameterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3660,11 +3660,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-amazon-linux2023-image-ssm-parameter-props-builder (new AmazonLinux2023ImageSsmParameterProps$Builder) id config))
+  (amazon-linux2023-image-ssm-parameter-props-builder> (new AmazonLinux2023ImageSsmParameterProps$Builder) id config))
 
 
-(defn build-apply-cloud-formation-init-options-builder
-  "The build-apply-cloud-formation-init-options-builder function updates a ApplyCloudFormationInitOptions$Builder instance using the provided configuration.
+(defn apply-cloud-formation-init-options-builder>
+  "The apply-cloud-formation-init-options-builder> function updates a ApplyCloudFormationInitOptions$Builder instance using the provided configuration.
   The function takes the ApplyCloudFormationInitOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3706,11 +3706,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-apply-cloud-formation-init-options-builder (new ApplyCloudFormationInitOptions$Builder) id config))
+  (apply-cloud-formation-init-options-builder> (new ApplyCloudFormationInitOptions$Builder) id config))
 
 
-(defn build-attach-init-options-builder
-  "The build-attach-init-options-builder function updates a AttachInitOptions$Builder instance using the provided configuration.
+(defn attach-init-options-builder>
+  "The attach-init-options-builder> function updates a AttachInitOptions$Builder instance using the provided configuration.
   The function takes the AttachInitOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3761,11 +3761,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-attach-init-options-builder (new AttachInitOptions$Builder) id config))
+  (attach-init-options-builder> (new AttachInitOptions$Builder) id config))
 
 
-(defn build-aws-ipam-props-builder
-  "The build-aws-ipam-props-builder function updates a AwsIpamProps$Builder instance using the provided configuration.
+(defn aws-ipam-props-builder>
+  "The aws-ipam-props-builder> function updates a AwsIpamProps$Builder instance using the provided configuration.
   The function takes the AwsIpamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3795,11 +3795,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-ipam-props-builder (new AwsIpamProps$Builder) id config))
+  (aws-ipam-props-builder> (new AwsIpamProps$Builder) id config))
 
 
-(defn build-bastion-host-linux-builder
-  "The build-bastion-host-linux-builder function updates a BastionHostLinux$Builder instance using the provided configuration.
+(defn bastion-host-linux-builder>
+  "The bastion-host-linux-builder> function updates a BastionHostLinux$Builder instance using the provided configuration.
   The function takes the BastionHostLinux$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3853,11 +3853,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-bastion-host-linux-builder (BastionHostLinux$Builder/create scope (name id)) id config))
+  (bastion-host-linux-builder> (BastionHostLinux$Builder/create scope (name id)) id config))
 
 
-(defn build-bastion-host-linux-props-builder
-  "The build-bastion-host-linux-props-builder function updates a BastionHostLinuxProps$Builder instance using the provided configuration.
+(defn bastion-host-linux-props-builder>
+  "The bastion-host-linux-props-builder> function updates a BastionHostLinuxProps$Builder instance using the provided configuration.
   The function takes the BastionHostLinuxProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3911,11 +3911,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bastion-host-linux-props-builder (new BastionHostLinuxProps$Builder) id config))
+  (bastion-host-linux-props-builder> (new BastionHostLinuxProps$Builder) id config))
 
 
-(defn build-block-device-builder
-  "The build-block-device-builder function updates a BlockDevice$Builder instance using the provided configuration.
+(defn block-device-builder>
+  "The block-device-builder> function updates a BlockDevice$Builder instance using the provided configuration.
   The function takes the BlockDevice$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3945,11 +3945,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-block-device-builder (new BlockDevice$Builder) id config))
+  (block-device-builder> (new BlockDevice$Builder) id config))
 
 
-(defn build-cfn-capacity-reservation-builder
-  "The build-cfn-capacity-reservation-builder function updates a CfnCapacityReservation$Builder instance using the provided configuration.
+(defn cfn-capacity-reservation-builder>
+  "The cfn-capacity-reservation-builder> function updates a CfnCapacityReservation$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4009,11 +4009,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-capacity-reservation-builder (CfnCapacityReservation$Builder/create scope (name id)) id config))
+  (cfn-capacity-reservation-builder> (CfnCapacityReservation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-capacity-reservation-fleet-builder
-  "The build-cfn-capacity-reservation-fleet-builder function updates a CfnCapacityReservationFleet$Builder instance using the provided configuration.
+(defn cfn-capacity-reservation-fleet-builder>
+  "The cfn-capacity-reservation-fleet-builder> function updates a CfnCapacityReservationFleet$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservationFleet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4061,11 +4061,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-capacity-reservation-fleet-builder (CfnCapacityReservationFleet$Builder/create scope (name id)) id config))
+  (cfn-capacity-reservation-fleet-builder> (CfnCapacityReservationFleet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-capacity-reservation-fleet-instance-type-specification-property-builder
-  "The build-cfn-capacity-reservation-fleet-instance-type-specification-property-builder function updates a CfnCapacityReservationFleet$InstanceTypeSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-capacity-reservation-fleet-instance-type-specification-property-builder>
+  "The cfn-capacity-reservation-fleet-instance-type-specification-property-builder> function updates a CfnCapacityReservationFleet$InstanceTypeSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservationFleet$InstanceTypeSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4107,11 +4107,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-capacity-reservation-fleet-instance-type-specification-property-builder (new CfnCapacityReservationFleet$InstanceTypeSpecificationProperty$Builder) id config))
+  (cfn-capacity-reservation-fleet-instance-type-specification-property-builder> (new CfnCapacityReservationFleet$InstanceTypeSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-capacity-reservation-fleet-props-builder
-  "The build-cfn-capacity-reservation-fleet-props-builder function updates a CfnCapacityReservationFleetProps$Builder instance using the provided configuration.
+(defn cfn-capacity-reservation-fleet-props-builder>
+  "The cfn-capacity-reservation-fleet-props-builder> function updates a CfnCapacityReservationFleetProps$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservationFleetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4159,11 +4159,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-capacity-reservation-fleet-props-builder (new CfnCapacityReservationFleetProps$Builder) id config))
+  (cfn-capacity-reservation-fleet-props-builder> (new CfnCapacityReservationFleetProps$Builder) id config))
 
 
-(defn build-cfn-capacity-reservation-fleet-tag-specification-property-builder
-  "The build-cfn-capacity-reservation-fleet-tag-specification-property-builder function updates a CfnCapacityReservationFleet$TagSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-capacity-reservation-fleet-tag-specification-property-builder>
+  "The cfn-capacity-reservation-fleet-tag-specification-property-builder> function updates a CfnCapacityReservationFleet$TagSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservationFleet$TagSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4190,11 +4190,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-capacity-reservation-fleet-tag-specification-property-builder (new CfnCapacityReservationFleet$TagSpecificationProperty$Builder) id config))
+  (cfn-capacity-reservation-fleet-tag-specification-property-builder> (new CfnCapacityReservationFleet$TagSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-capacity-reservation-props-builder
-  "The build-cfn-capacity-reservation-props-builder function updates a CfnCapacityReservationProps$Builder instance using the provided configuration.
+(defn cfn-capacity-reservation-props-builder>
+  "The cfn-capacity-reservation-props-builder> function updates a CfnCapacityReservationProps$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4254,11 +4254,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-capacity-reservation-props-builder (new CfnCapacityReservationProps$Builder) id config))
+  (cfn-capacity-reservation-props-builder> (new CfnCapacityReservationProps$Builder) id config))
 
 
-(defn build-cfn-capacity-reservation-tag-specification-property-builder
-  "The build-cfn-capacity-reservation-tag-specification-property-builder function updates a CfnCapacityReservation$TagSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-capacity-reservation-tag-specification-property-builder>
+  "The cfn-capacity-reservation-tag-specification-property-builder> function updates a CfnCapacityReservation$TagSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservation$TagSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4285,11 +4285,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-capacity-reservation-tag-specification-property-builder (new CfnCapacityReservation$TagSpecificationProperty$Builder) id config))
+  (cfn-capacity-reservation-tag-specification-property-builder> (new CfnCapacityReservation$TagSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-carrier-gateway-builder
-  "The build-cfn-carrier-gateway-builder function updates a CfnCarrierGateway$Builder instance using the provided configuration.
+(defn cfn-carrier-gateway-builder>
+  "The cfn-carrier-gateway-builder> function updates a CfnCarrierGateway$Builder instance using the provided configuration.
   The function takes the CfnCarrierGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4316,11 +4316,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-carrier-gateway-builder (CfnCarrierGateway$Builder/create scope (name id)) id config))
+  (cfn-carrier-gateway-builder> (CfnCarrierGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-carrier-gateway-props-builder
-  "The build-cfn-carrier-gateway-props-builder function updates a CfnCarrierGatewayProps$Builder instance using the provided configuration.
+(defn cfn-carrier-gateway-props-builder>
+  "The cfn-carrier-gateway-props-builder> function updates a CfnCarrierGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnCarrierGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4347,11 +4347,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-carrier-gateway-props-builder (new CfnCarrierGatewayProps$Builder) id config))
+  (cfn-carrier-gateway-props-builder> (new CfnCarrierGatewayProps$Builder) id config))
 
 
-(defn build-cfn-client-vpn-authorization-rule-builder
-  "The build-cfn-client-vpn-authorization-rule-builder function updates a CfnClientVpnAuthorizationRule$Builder instance using the provided configuration.
+(defn cfn-client-vpn-authorization-rule-builder>
+  "The cfn-client-vpn-authorization-rule-builder> function updates a CfnClientVpnAuthorizationRule$Builder instance using the provided configuration.
   The function takes the CfnClientVpnAuthorizationRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4387,11 +4387,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-client-vpn-authorization-rule-builder (CfnClientVpnAuthorizationRule$Builder/create scope (name id)) id config))
+  (cfn-client-vpn-authorization-rule-builder> (CfnClientVpnAuthorizationRule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-client-vpn-authorization-rule-props-builder
-  "The build-cfn-client-vpn-authorization-rule-props-builder function updates a CfnClientVpnAuthorizationRuleProps$Builder instance using the provided configuration.
+(defn cfn-client-vpn-authorization-rule-props-builder>
+  "The cfn-client-vpn-authorization-rule-props-builder> function updates a CfnClientVpnAuthorizationRuleProps$Builder instance using the provided configuration.
   The function takes the CfnClientVpnAuthorizationRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4427,11 +4427,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-authorization-rule-props-builder (new CfnClientVpnAuthorizationRuleProps$Builder) id config))
+  (cfn-client-vpn-authorization-rule-props-builder> (new CfnClientVpnAuthorizationRuleProps$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-builder
-  "The build-cfn-client-vpn-endpoint-builder function updates a CfnClientVpnEndpoint$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-builder>
+  "The cfn-client-vpn-endpoint-builder> function updates a CfnClientVpnEndpoint$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4500,11 +4500,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-client-vpn-endpoint-builder (CfnClientVpnEndpoint$Builder/create scope (name id)) id config))
+  (cfn-client-vpn-endpoint-builder> (CfnClientVpnEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-certificate-authentication-request-property-builder
-  "The build-cfn-client-vpn-endpoint-certificate-authentication-request-property-builder function updates a CfnClientVpnEndpoint$CertificateAuthenticationRequestProperty$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-certificate-authentication-request-property-builder>
+  "The cfn-client-vpn-endpoint-certificate-authentication-request-property-builder> function updates a CfnClientVpnEndpoint$CertificateAuthenticationRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$CertificateAuthenticationRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4528,11 +4528,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-certificate-authentication-request-property-builder (new CfnClientVpnEndpoint$CertificateAuthenticationRequestProperty$Builder) id config))
+  (cfn-client-vpn-endpoint-certificate-authentication-request-property-builder> (new CfnClientVpnEndpoint$CertificateAuthenticationRequestProperty$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-client-authentication-request-property-builder
-  "The build-cfn-client-vpn-endpoint-client-authentication-request-property-builder function updates a CfnClientVpnEndpoint$ClientAuthenticationRequestProperty$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-client-authentication-request-property-builder>
+  "The cfn-client-vpn-endpoint-client-authentication-request-property-builder> function updates a CfnClientVpnEndpoint$ClientAuthenticationRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$ClientAuthenticationRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4565,11 +4565,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-client-authentication-request-property-builder (new CfnClientVpnEndpoint$ClientAuthenticationRequestProperty$Builder) id config))
+  (cfn-client-vpn-endpoint-client-authentication-request-property-builder> (new CfnClientVpnEndpoint$ClientAuthenticationRequestProperty$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-client-connect-options-property-builder
-  "The build-cfn-client-vpn-endpoint-client-connect-options-property-builder function updates a CfnClientVpnEndpoint$ClientConnectOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-client-connect-options-property-builder>
+  "The cfn-client-vpn-endpoint-client-connect-options-property-builder> function updates a CfnClientVpnEndpoint$ClientConnectOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$ClientConnectOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4596,11 +4596,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-client-connect-options-property-builder (new CfnClientVpnEndpoint$ClientConnectOptionsProperty$Builder) id config))
+  (cfn-client-vpn-endpoint-client-connect-options-property-builder> (new CfnClientVpnEndpoint$ClientConnectOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-client-login-banner-options-property-builder
-  "The build-cfn-client-vpn-endpoint-client-login-banner-options-property-builder function updates a CfnClientVpnEndpoint$ClientLoginBannerOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-client-login-banner-options-property-builder>
+  "The cfn-client-vpn-endpoint-client-login-banner-options-property-builder> function updates a CfnClientVpnEndpoint$ClientLoginBannerOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$ClientLoginBannerOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4627,11 +4627,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-client-login-banner-options-property-builder (new CfnClientVpnEndpoint$ClientLoginBannerOptionsProperty$Builder) id config))
+  (cfn-client-vpn-endpoint-client-login-banner-options-property-builder> (new CfnClientVpnEndpoint$ClientLoginBannerOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-connection-log-options-property-builder
-  "The build-cfn-client-vpn-endpoint-connection-log-options-property-builder function updates a CfnClientVpnEndpoint$ConnectionLogOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-connection-log-options-property-builder>
+  "The cfn-client-vpn-endpoint-connection-log-options-property-builder> function updates a CfnClientVpnEndpoint$ConnectionLogOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$ConnectionLogOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4661,11 +4661,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-connection-log-options-property-builder (new CfnClientVpnEndpoint$ConnectionLogOptionsProperty$Builder) id config))
+  (cfn-client-vpn-endpoint-connection-log-options-property-builder> (new CfnClientVpnEndpoint$ConnectionLogOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-directory-service-authentication-request-property-builder
-  "The build-cfn-client-vpn-endpoint-directory-service-authentication-request-property-builder function updates a CfnClientVpnEndpoint$DirectoryServiceAuthenticationRequestProperty$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-directory-service-authentication-request-property-builder>
+  "The cfn-client-vpn-endpoint-directory-service-authentication-request-property-builder> function updates a CfnClientVpnEndpoint$DirectoryServiceAuthenticationRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$DirectoryServiceAuthenticationRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4689,11 +4689,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-directory-service-authentication-request-property-builder (new CfnClientVpnEndpoint$DirectoryServiceAuthenticationRequestProperty$Builder) id config))
+  (cfn-client-vpn-endpoint-directory-service-authentication-request-property-builder> (new CfnClientVpnEndpoint$DirectoryServiceAuthenticationRequestProperty$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-federated-authentication-request-property-builder
-  "The build-cfn-client-vpn-endpoint-federated-authentication-request-property-builder function updates a CfnClientVpnEndpoint$FederatedAuthenticationRequestProperty$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-federated-authentication-request-property-builder>
+  "The cfn-client-vpn-endpoint-federated-authentication-request-property-builder> function updates a CfnClientVpnEndpoint$FederatedAuthenticationRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$FederatedAuthenticationRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4720,11 +4720,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-federated-authentication-request-property-builder (new CfnClientVpnEndpoint$FederatedAuthenticationRequestProperty$Builder) id config))
+  (cfn-client-vpn-endpoint-federated-authentication-request-property-builder> (new CfnClientVpnEndpoint$FederatedAuthenticationRequestProperty$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-props-builder
-  "The build-cfn-client-vpn-endpoint-props-builder function updates a CfnClientVpnEndpointProps$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-props-builder>
+  "The cfn-client-vpn-endpoint-props-builder> function updates a CfnClientVpnEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4793,11 +4793,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-props-builder (new CfnClientVpnEndpointProps$Builder) id config))
+  (cfn-client-vpn-endpoint-props-builder> (new CfnClientVpnEndpointProps$Builder) id config))
 
 
-(defn build-cfn-client-vpn-endpoint-tag-specification-property-builder
-  "The build-cfn-client-vpn-endpoint-tag-specification-property-builder function updates a CfnClientVpnEndpoint$TagSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-client-vpn-endpoint-tag-specification-property-builder>
+  "The cfn-client-vpn-endpoint-tag-specification-property-builder> function updates a CfnClientVpnEndpoint$TagSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnClientVpnEndpoint$TagSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4824,11 +4824,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-endpoint-tag-specification-property-builder (new CfnClientVpnEndpoint$TagSpecificationProperty$Builder) id config))
+  (cfn-client-vpn-endpoint-tag-specification-property-builder> (new CfnClientVpnEndpoint$TagSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-client-vpn-route-builder
-  "The build-cfn-client-vpn-route-builder function updates a CfnClientVpnRoute$Builder instance using the provided configuration.
+(defn cfn-client-vpn-route-builder>
+  "The cfn-client-vpn-route-builder> function updates a CfnClientVpnRoute$Builder instance using the provided configuration.
   The function takes the CfnClientVpnRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4861,11 +4861,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-client-vpn-route-builder (CfnClientVpnRoute$Builder/create scope (name id)) id config))
+  (cfn-client-vpn-route-builder> (CfnClientVpnRoute$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-client-vpn-route-props-builder
-  "The build-cfn-client-vpn-route-props-builder function updates a CfnClientVpnRouteProps$Builder instance using the provided configuration.
+(defn cfn-client-vpn-route-props-builder>
+  "The cfn-client-vpn-route-props-builder> function updates a CfnClientVpnRouteProps$Builder instance using the provided configuration.
   The function takes the CfnClientVpnRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4898,11 +4898,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-route-props-builder (new CfnClientVpnRouteProps$Builder) id config))
+  (cfn-client-vpn-route-props-builder> (new CfnClientVpnRouteProps$Builder) id config))
 
 
-(defn build-cfn-client-vpn-target-network-association-builder
-  "The build-cfn-client-vpn-target-network-association-builder function updates a CfnClientVpnTargetNetworkAssociation$Builder instance using the provided configuration.
+(defn cfn-client-vpn-target-network-association-builder>
+  "The cfn-client-vpn-target-network-association-builder> function updates a CfnClientVpnTargetNetworkAssociation$Builder instance using the provided configuration.
   The function takes the CfnClientVpnTargetNetworkAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4929,11 +4929,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-client-vpn-target-network-association-builder (CfnClientVpnTargetNetworkAssociation$Builder/create scope (name id)) id config))
+  (cfn-client-vpn-target-network-association-builder> (CfnClientVpnTargetNetworkAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-client-vpn-target-network-association-props-builder
-  "The build-cfn-client-vpn-target-network-association-props-builder function updates a CfnClientVpnTargetNetworkAssociationProps$Builder instance using the provided configuration.
+(defn cfn-client-vpn-target-network-association-props-builder>
+  "The cfn-client-vpn-target-network-association-props-builder> function updates a CfnClientVpnTargetNetworkAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnClientVpnTargetNetworkAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4960,11 +4960,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-client-vpn-target-network-association-props-builder (new CfnClientVpnTargetNetworkAssociationProps$Builder) id config))
+  (cfn-client-vpn-target-network-association-props-builder> (new CfnClientVpnTargetNetworkAssociationProps$Builder) id config))
 
 
-(defn build-cfn-customer-gateway-builder
-  "The build-cfn-customer-gateway-builder function updates a CfnCustomerGateway$Builder instance using the provided configuration.
+(defn cfn-customer-gateway-builder>
+  "The cfn-customer-gateway-builder> function updates a CfnCustomerGateway$Builder instance using the provided configuration.
   The function takes the CfnCustomerGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5003,11 +5003,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-customer-gateway-builder (CfnCustomerGateway$Builder/create scope (name id)) id config))
+  (cfn-customer-gateway-builder> (CfnCustomerGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-customer-gateway-props-builder
-  "The build-cfn-customer-gateway-props-builder function updates a CfnCustomerGatewayProps$Builder instance using the provided configuration.
+(defn cfn-customer-gateway-props-builder>
+  "The cfn-customer-gateway-props-builder> function updates a CfnCustomerGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnCustomerGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5046,11 +5046,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-customer-gateway-props-builder (new CfnCustomerGatewayProps$Builder) id config))
+  (cfn-customer-gateway-props-builder> (new CfnCustomerGatewayProps$Builder) id config))
 
 
-(defn build-cfn-dhcp-options-builder
-  "The build-cfn-dhcp-options-builder function updates a CfnDHCPOptions$Builder instance using the provided configuration.
+(defn cfn-dhcp-options-builder>
+  "The cfn-dhcp-options-builder> function updates a CfnDHCPOptions$Builder instance using the provided configuration.
   The function takes the CfnDHCPOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5092,11 +5092,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-dhcp-options-builder (CfnDHCPOptions$Builder/create scope (name id)) id config))
+  (cfn-dhcp-options-builder> (CfnDHCPOptions$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-dhcp-options-props-builder
-  "The build-cfn-dhcp-options-props-builder function updates a CfnDHCPOptionsProps$Builder instance using the provided configuration.
+(defn cfn-dhcp-options-props-builder>
+  "The cfn-dhcp-options-props-builder> function updates a CfnDHCPOptionsProps$Builder instance using the provided configuration.
   The function takes the CfnDHCPOptionsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5138,11 +5138,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dhcp-options-props-builder (new CfnDHCPOptionsProps$Builder) id config))
+  (cfn-dhcp-options-props-builder> (new CfnDHCPOptionsProps$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-accelerator-count-request-property-builder
-  "The build-cfn-ec2-fleet-accelerator-count-request-property-builder function updates a CfnEC2Fleet$AcceleratorCountRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-accelerator-count-request-property-builder>
+  "The cfn-ec2-fleet-accelerator-count-request-property-builder> function updates a CfnEC2Fleet$AcceleratorCountRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$AcceleratorCountRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5169,11 +5169,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-accelerator-count-request-property-builder (new CfnEC2Fleet$AcceleratorCountRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-accelerator-count-request-property-builder> (new CfnEC2Fleet$AcceleratorCountRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-accelerator-total-memory-mi-b-request-property-builder
-  "The build-cfn-ec2-fleet-accelerator-total-memory-mi-b-request-property-builder function updates a CfnEC2Fleet$AcceleratorTotalMemoryMiBRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-accelerator-total-memory-mi-b-request-property-builder>
+  "The cfn-ec2-fleet-accelerator-total-memory-mi-b-request-property-builder> function updates a CfnEC2Fleet$AcceleratorTotalMemoryMiBRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$AcceleratorTotalMemoryMiBRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5200,11 +5200,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-accelerator-total-memory-mi-b-request-property-builder (new CfnEC2Fleet$AcceleratorTotalMemoryMiBRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-accelerator-total-memory-mi-b-request-property-builder> (new CfnEC2Fleet$AcceleratorTotalMemoryMiBRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-baseline-ebs-bandwidth-mbps-request-property-builder
-  "The build-cfn-ec2-fleet-baseline-ebs-bandwidth-mbps-request-property-builder function updates a CfnEC2Fleet$BaselineEbsBandwidthMbpsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-baseline-ebs-bandwidth-mbps-request-property-builder>
+  "The cfn-ec2-fleet-baseline-ebs-bandwidth-mbps-request-property-builder> function updates a CfnEC2Fleet$BaselineEbsBandwidthMbpsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$BaselineEbsBandwidthMbpsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5231,11 +5231,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-baseline-ebs-bandwidth-mbps-request-property-builder (new CfnEC2Fleet$BaselineEbsBandwidthMbpsRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-baseline-ebs-bandwidth-mbps-request-property-builder> (new CfnEC2Fleet$BaselineEbsBandwidthMbpsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-builder
-  "The build-cfn-ec2-fleet-builder function updates a CfnEC2Fleet$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-builder>
+  "The cfn-ec2-fleet-builder> function updates a CfnEC2Fleet$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5292,11 +5292,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ec2-fleet-builder (CfnEC2Fleet$Builder/create scope (name id)) id config))
+  (cfn-ec2-fleet-builder> (CfnEC2Fleet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ec2-fleet-capacity-rebalance-property-builder
-  "The build-cfn-ec2-fleet-capacity-rebalance-property-builder function updates a CfnEC2Fleet$CapacityRebalanceProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-capacity-rebalance-property-builder>
+  "The cfn-ec2-fleet-capacity-rebalance-property-builder> function updates a CfnEC2Fleet$CapacityRebalanceProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$CapacityRebalanceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5323,11 +5323,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-capacity-rebalance-property-builder (new CfnEC2Fleet$CapacityRebalanceProperty$Builder) id config))
+  (cfn-ec2-fleet-capacity-rebalance-property-builder> (new CfnEC2Fleet$CapacityRebalanceProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-capacity-reservation-options-request-property-builder
-  "The build-cfn-ec2-fleet-capacity-reservation-options-request-property-builder function updates a CfnEC2Fleet$CapacityReservationOptionsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-capacity-reservation-options-request-property-builder>
+  "The cfn-ec2-fleet-capacity-reservation-options-request-property-builder> function updates a CfnEC2Fleet$CapacityReservationOptionsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$CapacityReservationOptionsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5351,11 +5351,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-capacity-reservation-options-request-property-builder (new CfnEC2Fleet$CapacityReservationOptionsRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-capacity-reservation-options-request-property-builder> (new CfnEC2Fleet$CapacityReservationOptionsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-fleet-launch-template-config-request-property-builder
-  "The build-cfn-ec2-fleet-fleet-launch-template-config-request-property-builder function updates a CfnEC2Fleet$FleetLaunchTemplateConfigRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-fleet-launch-template-config-request-property-builder>
+  "The cfn-ec2-fleet-fleet-launch-template-config-request-property-builder> function updates a CfnEC2Fleet$FleetLaunchTemplateConfigRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$FleetLaunchTemplateConfigRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5382,11 +5382,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-fleet-launch-template-config-request-property-builder (new CfnEC2Fleet$FleetLaunchTemplateConfigRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-fleet-launch-template-config-request-property-builder> (new CfnEC2Fleet$FleetLaunchTemplateConfigRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-fleet-launch-template-overrides-request-property-builder
-  "The build-cfn-ec2-fleet-fleet-launch-template-overrides-request-property-builder function updates a CfnEC2Fleet$FleetLaunchTemplateOverridesRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-fleet-launch-template-overrides-request-property-builder>
+  "The cfn-ec2-fleet-fleet-launch-template-overrides-request-property-builder> function updates a CfnEC2Fleet$FleetLaunchTemplateOverridesRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$FleetLaunchTemplateOverridesRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5431,11 +5431,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-fleet-launch-template-overrides-request-property-builder (new CfnEC2Fleet$FleetLaunchTemplateOverridesRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-fleet-launch-template-overrides-request-property-builder> (new CfnEC2Fleet$FleetLaunchTemplateOverridesRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-fleet-launch-template-specification-request-property-builder
-  "The build-cfn-ec2-fleet-fleet-launch-template-specification-request-property-builder function updates a CfnEC2Fleet$FleetLaunchTemplateSpecificationRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-fleet-launch-template-specification-request-property-builder>
+  "The cfn-ec2-fleet-fleet-launch-template-specification-request-property-builder> function updates a CfnEC2Fleet$FleetLaunchTemplateSpecificationRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$FleetLaunchTemplateSpecificationRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5465,11 +5465,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-fleet-launch-template-specification-request-property-builder (new CfnEC2Fleet$FleetLaunchTemplateSpecificationRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-fleet-launch-template-specification-request-property-builder> (new CfnEC2Fleet$FleetLaunchTemplateSpecificationRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-instance-requirements-request-property-builder
-  "The build-cfn-ec2-fleet-instance-requirements-request-property-builder function updates a CfnEC2Fleet$InstanceRequirementsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-instance-requirements-request-property-builder>
+  "The cfn-ec2-fleet-instance-requirements-request-property-builder> function updates a CfnEC2Fleet$InstanceRequirementsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$InstanceRequirementsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5562,11 +5562,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-instance-requirements-request-property-builder (new CfnEC2Fleet$InstanceRequirementsRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-instance-requirements-request-property-builder> (new CfnEC2Fleet$InstanceRequirementsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-maintenance-strategies-property-builder
-  "The build-cfn-ec2-fleet-maintenance-strategies-property-builder function updates a CfnEC2Fleet$MaintenanceStrategiesProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-maintenance-strategies-property-builder>
+  "The cfn-ec2-fleet-maintenance-strategies-property-builder> function updates a CfnEC2Fleet$MaintenanceStrategiesProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$MaintenanceStrategiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5590,11 +5590,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-maintenance-strategies-property-builder (new CfnEC2Fleet$MaintenanceStrategiesProperty$Builder) id config))
+  (cfn-ec2-fleet-maintenance-strategies-property-builder> (new CfnEC2Fleet$MaintenanceStrategiesProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-memory-gi-b-per-v-cpu-request-property-builder
-  "The build-cfn-ec2-fleet-memory-gi-b-per-v-cpu-request-property-builder function updates a CfnEC2Fleet$MemoryGiBPerVCpuRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-memory-gi-b-per-v-cpu-request-property-builder>
+  "The cfn-ec2-fleet-memory-gi-b-per-v-cpu-request-property-builder> function updates a CfnEC2Fleet$MemoryGiBPerVCpuRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$MemoryGiBPerVCpuRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5621,11 +5621,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-memory-gi-b-per-v-cpu-request-property-builder (new CfnEC2Fleet$MemoryGiBPerVCpuRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-memory-gi-b-per-v-cpu-request-property-builder> (new CfnEC2Fleet$MemoryGiBPerVCpuRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-memory-mi-b-request-property-builder
-  "The build-cfn-ec2-fleet-memory-mi-b-request-property-builder function updates a CfnEC2Fleet$MemoryMiBRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-memory-mi-b-request-property-builder>
+  "The cfn-ec2-fleet-memory-mi-b-request-property-builder> function updates a CfnEC2Fleet$MemoryMiBRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$MemoryMiBRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5652,11 +5652,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-memory-mi-b-request-property-builder (new CfnEC2Fleet$MemoryMiBRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-memory-mi-b-request-property-builder> (new CfnEC2Fleet$MemoryMiBRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-network-bandwidth-gbps-request-property-builder
-  "The build-cfn-ec2-fleet-network-bandwidth-gbps-request-property-builder function updates a CfnEC2Fleet$NetworkBandwidthGbpsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-network-bandwidth-gbps-request-property-builder>
+  "The cfn-ec2-fleet-network-bandwidth-gbps-request-property-builder> function updates a CfnEC2Fleet$NetworkBandwidthGbpsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$NetworkBandwidthGbpsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5683,11 +5683,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-network-bandwidth-gbps-request-property-builder (new CfnEC2Fleet$NetworkBandwidthGbpsRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-network-bandwidth-gbps-request-property-builder> (new CfnEC2Fleet$NetworkBandwidthGbpsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-network-interface-count-request-property-builder
-  "The build-cfn-ec2-fleet-network-interface-count-request-property-builder function updates a CfnEC2Fleet$NetworkInterfaceCountRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-network-interface-count-request-property-builder>
+  "The cfn-ec2-fleet-network-interface-count-request-property-builder> function updates a CfnEC2Fleet$NetworkInterfaceCountRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$NetworkInterfaceCountRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5714,11 +5714,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-network-interface-count-request-property-builder (new CfnEC2Fleet$NetworkInterfaceCountRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-network-interface-count-request-property-builder> (new CfnEC2Fleet$NetworkInterfaceCountRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-on-demand-options-request-property-builder
-  "The build-cfn-ec2-fleet-on-demand-options-request-property-builder function updates a CfnEC2Fleet$OnDemandOptionsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-on-demand-options-request-property-builder>
+  "The cfn-ec2-fleet-on-demand-options-request-property-builder> function updates a CfnEC2Fleet$OnDemandOptionsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$OnDemandOptionsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5757,11 +5757,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-on-demand-options-request-property-builder (new CfnEC2Fleet$OnDemandOptionsRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-on-demand-options-request-property-builder> (new CfnEC2Fleet$OnDemandOptionsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-placement-property-builder
-  "The build-cfn-ec2-fleet-placement-property-builder function updates a CfnEC2Fleet$PlacementProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-placement-property-builder>
+  "The cfn-ec2-fleet-placement-property-builder> function updates a CfnEC2Fleet$PlacementProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$PlacementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5806,11 +5806,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-placement-property-builder (new CfnEC2Fleet$PlacementProperty$Builder) id config))
+  (cfn-ec2-fleet-placement-property-builder> (new CfnEC2Fleet$PlacementProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-props-builder
-  "The build-cfn-ec2-fleet-props-builder function updates a CfnEC2FleetProps$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-props-builder>
+  "The cfn-ec2-fleet-props-builder> function updates a CfnEC2FleetProps$Builder instance using the provided configuration.
   The function takes the CfnEC2FleetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5867,11 +5867,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-props-builder (new CfnEC2FleetProps$Builder) id config))
+  (cfn-ec2-fleet-props-builder> (new CfnEC2FleetProps$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-spot-options-request-property-builder
-  "The build-cfn-ec2-fleet-spot-options-request-property-builder function updates a CfnEC2Fleet$SpotOptionsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-spot-options-request-property-builder>
+  "The cfn-ec2-fleet-spot-options-request-property-builder> function updates a CfnEC2Fleet$SpotOptionsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$SpotOptionsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5916,11 +5916,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-spot-options-request-property-builder (new CfnEC2Fleet$SpotOptionsRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-spot-options-request-property-builder> (new CfnEC2Fleet$SpotOptionsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-tag-specification-property-builder
-  "The build-cfn-ec2-fleet-tag-specification-property-builder function updates a CfnEC2Fleet$TagSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-tag-specification-property-builder>
+  "The cfn-ec2-fleet-tag-specification-property-builder> function updates a CfnEC2Fleet$TagSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$TagSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5947,11 +5947,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-tag-specification-property-builder (new CfnEC2Fleet$TagSpecificationProperty$Builder) id config))
+  (cfn-ec2-fleet-tag-specification-property-builder> (new CfnEC2Fleet$TagSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-target-capacity-specification-request-property-builder
-  "The build-cfn-ec2-fleet-target-capacity-specification-request-property-builder function updates a CfnEC2Fleet$TargetCapacitySpecificationRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-target-capacity-specification-request-property-builder>
+  "The cfn-ec2-fleet-target-capacity-specification-request-property-builder> function updates a CfnEC2Fleet$TargetCapacitySpecificationRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$TargetCapacitySpecificationRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5987,11 +5987,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-target-capacity-specification-request-property-builder (new CfnEC2Fleet$TargetCapacitySpecificationRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-target-capacity-specification-request-property-builder> (new CfnEC2Fleet$TargetCapacitySpecificationRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-total-local-storage-gb-request-property-builder
-  "The build-cfn-ec2-fleet-total-local-storage-gb-request-property-builder function updates a CfnEC2Fleet$TotalLocalStorageGBRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-total-local-storage-gb-request-property-builder>
+  "The cfn-ec2-fleet-total-local-storage-gb-request-property-builder> function updates a CfnEC2Fleet$TotalLocalStorageGBRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$TotalLocalStorageGBRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6018,11 +6018,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-total-local-storage-gb-request-property-builder (new CfnEC2Fleet$TotalLocalStorageGBRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-total-local-storage-gb-request-property-builder> (new CfnEC2Fleet$TotalLocalStorageGBRequestProperty$Builder) id config))
 
 
-(defn build-cfn-ec2-fleet-v-cpu-count-range-request-property-builder
-  "The build-cfn-ec2-fleet-v-cpu-count-range-request-property-builder function updates a CfnEC2Fleet$VCpuCountRangeRequestProperty$Builder instance using the provided configuration.
+(defn cfn-ec2-fleet-v-cpu-count-range-request-property-builder>
+  "The cfn-ec2-fleet-v-cpu-count-range-request-property-builder> function updates a CfnEC2Fleet$VCpuCountRangeRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnEC2Fleet$VCpuCountRangeRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6049,11 +6049,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ec2-fleet-v-cpu-count-range-request-property-builder (new CfnEC2Fleet$VCpuCountRangeRequestProperty$Builder) id config))
+  (cfn-ec2-fleet-v-cpu-count-range-request-property-builder> (new CfnEC2Fleet$VCpuCountRangeRequestProperty$Builder) id config))
 
 
-(defn build-cfn-egress-only-internet-gateway-builder
-  "The build-cfn-egress-only-internet-gateway-builder function updates a CfnEgressOnlyInternetGateway$Builder instance using the provided configuration.
+(defn cfn-egress-only-internet-gateway-builder>
+  "The cfn-egress-only-internet-gateway-builder> function updates a CfnEgressOnlyInternetGateway$Builder instance using the provided configuration.
   The function takes the CfnEgressOnlyInternetGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6077,11 +6077,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-egress-only-internet-gateway-builder (CfnEgressOnlyInternetGateway$Builder/create scope (name id)) id config))
+  (cfn-egress-only-internet-gateway-builder> (CfnEgressOnlyInternetGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-egress-only-internet-gateway-props-builder
-  "The build-cfn-egress-only-internet-gateway-props-builder function updates a CfnEgressOnlyInternetGatewayProps$Builder instance using the provided configuration.
+(defn cfn-egress-only-internet-gateway-props-builder>
+  "The cfn-egress-only-internet-gateway-props-builder> function updates a CfnEgressOnlyInternetGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnEgressOnlyInternetGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6105,11 +6105,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-egress-only-internet-gateway-props-builder (new CfnEgressOnlyInternetGatewayProps$Builder) id config))
+  (cfn-egress-only-internet-gateway-props-builder> (new CfnEgressOnlyInternetGatewayProps$Builder) id config))
 
 
-(defn build-cfn-eip-association-builder
-  "The build-cfn-eip-association-builder function updates a CfnEIPAssociation$Builder instance using the provided configuration.
+(defn cfn-eip-association-builder>
+  "The cfn-eip-association-builder> function updates a CfnEIPAssociation$Builder instance using the provided configuration.
   The function takes the CfnEIPAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6145,11 +6145,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-eip-association-builder (CfnEIPAssociation$Builder/create scope (name id)) id config))
+  (cfn-eip-association-builder> (CfnEIPAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-eip-association-props-builder
-  "The build-cfn-eip-association-props-builder function updates a CfnEIPAssociationProps$Builder instance using the provided configuration.
+(defn cfn-eip-association-props-builder>
+  "The cfn-eip-association-props-builder> function updates a CfnEIPAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnEIPAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6185,11 +6185,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-eip-association-props-builder (new CfnEIPAssociationProps$Builder) id config))
+  (cfn-eip-association-props-builder> (new CfnEIPAssociationProps$Builder) id config))
 
 
-(defn build-cfn-eip-builder
-  "The build-cfn-eip-builder function updates a CfnEIP$Builder instance using the provided configuration.
+(defn cfn-eip-builder>
+  "The cfn-eip-builder> function updates a CfnEIP$Builder instance using the provided configuration.
   The function takes the CfnEIP$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6228,11 +6228,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-eip-builder (CfnEIP$Builder/create scope (name id)) id config))
+  (cfn-eip-builder> (CfnEIP$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-eip-props-builder
-  "The build-cfn-eip-props-builder function updates a CfnEIPProps$Builder instance using the provided configuration.
+(defn cfn-eip-props-builder>
+  "The cfn-eip-props-builder> function updates a CfnEIPProps$Builder instance using the provided configuration.
   The function takes the CfnEIPProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6271,11 +6271,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-eip-props-builder (new CfnEIPProps$Builder) id config))
+  (cfn-eip-props-builder> (new CfnEIPProps$Builder) id config))
 
 
-(defn build-cfn-enclave-certificate-iam-role-association-builder
-  "The build-cfn-enclave-certificate-iam-role-association-builder function updates a CfnEnclaveCertificateIamRoleAssociation$Builder instance using the provided configuration.
+(defn cfn-enclave-certificate-iam-role-association-builder>
+  "The cfn-enclave-certificate-iam-role-association-builder> function updates a CfnEnclaveCertificateIamRoleAssociation$Builder instance using the provided configuration.
   The function takes the CfnEnclaveCertificateIamRoleAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6302,11 +6302,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-enclave-certificate-iam-role-association-builder (CfnEnclaveCertificateIamRoleAssociation$Builder/create scope (name id)) id config))
+  (cfn-enclave-certificate-iam-role-association-builder> (CfnEnclaveCertificateIamRoleAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-enclave-certificate-iam-role-association-props-builder
-  "The build-cfn-enclave-certificate-iam-role-association-props-builder function updates a CfnEnclaveCertificateIamRoleAssociationProps$Builder instance using the provided configuration.
+(defn cfn-enclave-certificate-iam-role-association-props-builder>
+  "The cfn-enclave-certificate-iam-role-association-props-builder> function updates a CfnEnclaveCertificateIamRoleAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnEnclaveCertificateIamRoleAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6333,11 +6333,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-enclave-certificate-iam-role-association-props-builder (new CfnEnclaveCertificateIamRoleAssociationProps$Builder) id config))
+  (cfn-enclave-certificate-iam-role-association-props-builder> (new CfnEnclaveCertificateIamRoleAssociationProps$Builder) id config))
 
 
-(defn build-cfn-flow-log-builder
-  "The build-cfn-flow-log-builder function updates a CfnFlowLog$Builder instance using the provided configuration.
+(defn cfn-flow-log-builder>
+  "The cfn-flow-log-builder> function updates a CfnFlowLog$Builder instance using the provided configuration.
   The function takes the CfnFlowLog$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6394,11 +6394,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-flow-log-builder (CfnFlowLog$Builder/create scope (name id)) id config))
+  (cfn-flow-log-builder> (CfnFlowLog$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-flow-log-destination-options-property-builder
-  "The build-cfn-flow-log-destination-options-property-builder function updates a CfnFlowLog$DestinationOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-flow-log-destination-options-property-builder>
+  "The cfn-flow-log-destination-options-property-builder> function updates a CfnFlowLog$DestinationOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowLog$DestinationOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6428,11 +6428,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-log-destination-options-property-builder (new CfnFlowLog$DestinationOptionsProperty$Builder) id config))
+  (cfn-flow-log-destination-options-property-builder> (new CfnFlowLog$DestinationOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-flow-log-props-builder
-  "The build-cfn-flow-log-props-builder function updates a CfnFlowLogProps$Builder instance using the provided configuration.
+(defn cfn-flow-log-props-builder>
+  "The cfn-flow-log-props-builder> function updates a CfnFlowLogProps$Builder instance using the provided configuration.
   The function takes the CfnFlowLogProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6489,11 +6489,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flow-log-props-builder (new CfnFlowLogProps$Builder) id config))
+  (cfn-flow-log-props-builder> (new CfnFlowLogProps$Builder) id config))
 
 
-(defn build-cfn-gateway-route-table-association-builder
-  "The build-cfn-gateway-route-table-association-builder function updates a CfnGatewayRouteTableAssociation$Builder instance using the provided configuration.
+(defn cfn-gateway-route-table-association-builder>
+  "The cfn-gateway-route-table-association-builder> function updates a CfnGatewayRouteTableAssociation$Builder instance using the provided configuration.
   The function takes the CfnGatewayRouteTableAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6520,11 +6520,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-gateway-route-table-association-builder (CfnGatewayRouteTableAssociation$Builder/create scope (name id)) id config))
+  (cfn-gateway-route-table-association-builder> (CfnGatewayRouteTableAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-gateway-route-table-association-props-builder
-  "The build-cfn-gateway-route-table-association-props-builder function updates a CfnGatewayRouteTableAssociationProps$Builder instance using the provided configuration.
+(defn cfn-gateway-route-table-association-props-builder>
+  "The cfn-gateway-route-table-association-props-builder> function updates a CfnGatewayRouteTableAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnGatewayRouteTableAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6551,11 +6551,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-gateway-route-table-association-props-builder (new CfnGatewayRouteTableAssociationProps$Builder) id config))
+  (cfn-gateway-route-table-association-props-builder> (new CfnGatewayRouteTableAssociationProps$Builder) id config))
 
 
-(defn build-cfn-host-builder
-  "The build-cfn-host-builder function updates a CfnHost$Builder instance using the provided configuration.
+(defn cfn-host-builder>
+  "The cfn-host-builder> function updates a CfnHost$Builder instance using the provided configuration.
   The function takes the CfnHost$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6600,11 +6600,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-host-builder (CfnHost$Builder/create scope (name id)) id config))
+  (cfn-host-builder> (CfnHost$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-host-props-builder
-  "The build-cfn-host-props-builder function updates a CfnHostProps$Builder instance using the provided configuration.
+(defn cfn-host-props-builder>
+  "The cfn-host-props-builder> function updates a CfnHostProps$Builder instance using the provided configuration.
   The function takes the CfnHostProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6649,11 +6649,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-host-props-builder (new CfnHostProps$Builder) id config))
+  (cfn-host-props-builder> (new CfnHostProps$Builder) id config))
 
 
-(defn build-cfn-instance-association-parameter-property-builder
-  "The build-cfn-instance-association-parameter-property-builder function updates a CfnInstance$AssociationParameterProperty$Builder instance using the provided configuration.
+(defn cfn-instance-association-parameter-property-builder>
+  "The cfn-instance-association-parameter-property-builder> function updates a CfnInstance$AssociationParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$AssociationParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6680,11 +6680,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-association-parameter-property-builder (new CfnInstance$AssociationParameterProperty$Builder) id config))
+  (cfn-instance-association-parameter-property-builder> (new CfnInstance$AssociationParameterProperty$Builder) id config))
 
 
-(defn build-cfn-instance-block-device-mapping-property-builder
-  "The build-cfn-instance-block-device-mapping-property-builder function updates a CfnInstance$BlockDeviceMappingProperty$Builder instance using the provided configuration.
+(defn cfn-instance-block-device-mapping-property-builder>
+  "The cfn-instance-block-device-mapping-property-builder> function updates a CfnInstance$BlockDeviceMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$BlockDeviceMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6717,11 +6717,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-block-device-mapping-property-builder (new CfnInstance$BlockDeviceMappingProperty$Builder) id config))
+  (cfn-instance-block-device-mapping-property-builder> (new CfnInstance$BlockDeviceMappingProperty$Builder) id config))
 
 
-(defn build-cfn-instance-builder
-  "The build-cfn-instance-builder function updates a CfnInstance$Builder instance using the provided configuration.
+(defn cfn-instance-builder>
+  "The cfn-instance-builder> function updates a CfnInstance$Builder instance using the provided configuration.
   The function takes the CfnInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6862,11 +6862,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-instance-builder (CfnInstance$Builder/create scope (name id)) id config))
+  (cfn-instance-builder> (CfnInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-instance-connect-endpoint-builder
-  "The build-cfn-instance-connect-endpoint-builder function updates a CfnInstanceConnectEndpoint$Builder instance using the provided configuration.
+(defn cfn-instance-connect-endpoint-builder>
+  "The cfn-instance-connect-endpoint-builder> function updates a CfnInstanceConnectEndpoint$Builder instance using the provided configuration.
   The function takes the CfnInstanceConnectEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6902,11 +6902,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-instance-connect-endpoint-builder (CfnInstanceConnectEndpoint$Builder/create scope (name id)) id config))
+  (cfn-instance-connect-endpoint-builder> (CfnInstanceConnectEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-instance-connect-endpoint-props-builder
-  "The build-cfn-instance-connect-endpoint-props-builder function updates a CfnInstanceConnectEndpointProps$Builder instance using the provided configuration.
+(defn cfn-instance-connect-endpoint-props-builder>
+  "The cfn-instance-connect-endpoint-props-builder> function updates a CfnInstanceConnectEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceConnectEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6942,11 +6942,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-connect-endpoint-props-builder (new CfnInstanceConnectEndpointProps$Builder) id config))
+  (cfn-instance-connect-endpoint-props-builder> (new CfnInstanceConnectEndpointProps$Builder) id config))
 
 
-(defn build-cfn-instance-cpu-options-property-builder
-  "The build-cfn-instance-cpu-options-property-builder function updates a CfnInstance$CpuOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-instance-cpu-options-property-builder>
+  "The cfn-instance-cpu-options-property-builder> function updates a CfnInstance$CpuOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$CpuOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6973,11 +6973,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-cpu-options-property-builder (new CfnInstance$CpuOptionsProperty$Builder) id config))
+  (cfn-instance-cpu-options-property-builder> (new CfnInstance$CpuOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-instance-credit-specification-property-builder
-  "The build-cfn-instance-credit-specification-property-builder function updates a CfnInstance$CreditSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-instance-credit-specification-property-builder>
+  "The cfn-instance-credit-specification-property-builder> function updates a CfnInstance$CreditSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$CreditSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7001,11 +7001,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-credit-specification-property-builder (new CfnInstance$CreditSpecificationProperty$Builder) id config))
+  (cfn-instance-credit-specification-property-builder> (new CfnInstance$CreditSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-instance-ebs-property-builder
-  "The build-cfn-instance-ebs-property-builder function updates a CfnInstance$EbsProperty$Builder instance using the provided configuration.
+(defn cfn-instance-ebs-property-builder>
+  "The cfn-instance-ebs-property-builder> function updates a CfnInstance$EbsProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$EbsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7047,11 +7047,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-ebs-property-builder (new CfnInstance$EbsProperty$Builder) id config))
+  (cfn-instance-ebs-property-builder> (new CfnInstance$EbsProperty$Builder) id config))
 
 
-(defn build-cfn-instance-elastic-gpu-specification-property-builder
-  "The build-cfn-instance-elastic-gpu-specification-property-builder function updates a CfnInstance$ElasticGpuSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-instance-elastic-gpu-specification-property-builder>
+  "The cfn-instance-elastic-gpu-specification-property-builder> function updates a CfnInstance$ElasticGpuSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$ElasticGpuSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7075,11 +7075,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-elastic-gpu-specification-property-builder (new CfnInstance$ElasticGpuSpecificationProperty$Builder) id config))
+  (cfn-instance-elastic-gpu-specification-property-builder> (new CfnInstance$ElasticGpuSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-instance-elastic-inference-accelerator-property-builder
-  "The build-cfn-instance-elastic-inference-accelerator-property-builder function updates a CfnInstance$ElasticInferenceAcceleratorProperty$Builder instance using the provided configuration.
+(defn cfn-instance-elastic-inference-accelerator-property-builder>
+  "The cfn-instance-elastic-inference-accelerator-property-builder> function updates a CfnInstance$ElasticInferenceAcceleratorProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$ElasticInferenceAcceleratorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7106,11 +7106,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-elastic-inference-accelerator-property-builder (new CfnInstance$ElasticInferenceAcceleratorProperty$Builder) id config))
+  (cfn-instance-elastic-inference-accelerator-property-builder> (new CfnInstance$ElasticInferenceAcceleratorProperty$Builder) id config))
 
 
-(defn build-cfn-instance-enclave-options-property-builder
-  "The build-cfn-instance-enclave-options-property-builder function updates a CfnInstance$EnclaveOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-instance-enclave-options-property-builder>
+  "The cfn-instance-enclave-options-property-builder> function updates a CfnInstance$EnclaveOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$EnclaveOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7134,11 +7134,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-enclave-options-property-builder (new CfnInstance$EnclaveOptionsProperty$Builder) id config))
+  (cfn-instance-enclave-options-property-builder> (new CfnInstance$EnclaveOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-instance-hibernation-options-property-builder
-  "The build-cfn-instance-hibernation-options-property-builder function updates a CfnInstance$HibernationOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-instance-hibernation-options-property-builder>
+  "The cfn-instance-hibernation-options-property-builder> function updates a CfnInstance$HibernationOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$HibernationOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7162,11 +7162,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-hibernation-options-property-builder (new CfnInstance$HibernationOptionsProperty$Builder) id config))
+  (cfn-instance-hibernation-options-property-builder> (new CfnInstance$HibernationOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-instance-instance-ipv6-address-property-builder
-  "The build-cfn-instance-instance-ipv6-address-property-builder function updates a CfnInstance$InstanceIpv6AddressProperty$Builder instance using the provided configuration.
+(defn cfn-instance-instance-ipv6-address-property-builder>
+  "The cfn-instance-instance-ipv6-address-property-builder> function updates a CfnInstance$InstanceIpv6AddressProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$InstanceIpv6AddressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7190,11 +7190,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-instance-ipv6-address-property-builder (new CfnInstance$InstanceIpv6AddressProperty$Builder) id config))
+  (cfn-instance-instance-ipv6-address-property-builder> (new CfnInstance$InstanceIpv6AddressProperty$Builder) id config))
 
 
-(defn build-cfn-instance-launch-template-specification-property-builder
-  "The build-cfn-instance-launch-template-specification-property-builder function updates a CfnInstance$LaunchTemplateSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-instance-launch-template-specification-property-builder>
+  "The cfn-instance-launch-template-specification-property-builder> function updates a CfnInstance$LaunchTemplateSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$LaunchTemplateSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7224,11 +7224,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-launch-template-specification-property-builder (new CfnInstance$LaunchTemplateSpecificationProperty$Builder) id config))
+  (cfn-instance-launch-template-specification-property-builder> (new CfnInstance$LaunchTemplateSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-instance-license-specification-property-builder
-  "The build-cfn-instance-license-specification-property-builder function updates a CfnInstance$LicenseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-instance-license-specification-property-builder>
+  "The cfn-instance-license-specification-property-builder> function updates a CfnInstance$LicenseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$LicenseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7252,11 +7252,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-license-specification-property-builder (new CfnInstance$LicenseSpecificationProperty$Builder) id config))
+  (cfn-instance-license-specification-property-builder> (new CfnInstance$LicenseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-instance-network-interface-property-builder
-  "The build-cfn-instance-network-interface-property-builder function updates a CfnInstance$NetworkInterfaceProperty$Builder instance using the provided configuration.
+(defn cfn-instance-network-interface-property-builder>
+  "The cfn-instance-network-interface-property-builder> function updates a CfnInstance$NetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$NetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7316,7 +7316,7 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-network-interface-property-builder (new CfnInstance$NetworkInterfaceProperty$Builder) id config))
+  (cfn-instance-network-interface-property-builder> (new CfnInstance$NetworkInterfaceProperty$Builder) id config))
 
 
 (defn cfn-instance-no-device-property-builder
@@ -7325,8 +7325,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build (new CfnInstance$NoDeviceProperty$Builder)))
 
 
-(defn build-cfn-instance-private-dns-name-options-property-builder
-  "The build-cfn-instance-private-dns-name-options-property-builder function updates a CfnInstance$PrivateDnsNameOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-instance-private-dns-name-options-property-builder>
+  "The cfn-instance-private-dns-name-options-property-builder> function updates a CfnInstance$PrivateDnsNameOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$PrivateDnsNameOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7356,11 +7356,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-private-dns-name-options-property-builder (new CfnInstance$PrivateDnsNameOptionsProperty$Builder) id config))
+  (cfn-instance-private-dns-name-options-property-builder> (new CfnInstance$PrivateDnsNameOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-instance-private-ip-address-specification-property-builder
-  "The build-cfn-instance-private-ip-address-specification-property-builder function updates a CfnInstance$PrivateIpAddressSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-instance-private-ip-address-specification-property-builder>
+  "The cfn-instance-private-ip-address-specification-property-builder> function updates a CfnInstance$PrivateIpAddressSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$PrivateIpAddressSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7387,11 +7387,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-private-ip-address-specification-property-builder (new CfnInstance$PrivateIpAddressSpecificationProperty$Builder) id config))
+  (cfn-instance-private-ip-address-specification-property-builder> (new CfnInstance$PrivateIpAddressSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-instance-props-builder
-  "The build-cfn-instance-props-builder function updates a CfnInstanceProps$Builder instance using the provided configuration.
+(defn cfn-instance-props-builder>
+  "The cfn-instance-props-builder> function updates a CfnInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7532,11 +7532,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-props-builder (new CfnInstanceProps$Builder) id config))
+  (cfn-instance-props-builder> (new CfnInstanceProps$Builder) id config))
 
 
-(defn build-cfn-instance-ssm-association-property-builder
-  "The build-cfn-instance-ssm-association-property-builder function updates a CfnInstance$SsmAssociationProperty$Builder instance using the provided configuration.
+(defn cfn-instance-ssm-association-property-builder>
+  "The cfn-instance-ssm-association-property-builder> function updates a CfnInstance$SsmAssociationProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$SsmAssociationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7563,11 +7563,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-ssm-association-property-builder (new CfnInstance$SsmAssociationProperty$Builder) id config))
+  (cfn-instance-ssm-association-property-builder> (new CfnInstance$SsmAssociationProperty$Builder) id config))
 
 
-(defn build-cfn-instance-state-property-builder
-  "The build-cfn-instance-state-property-builder function updates a CfnInstance$StateProperty$Builder instance using the provided configuration.
+(defn cfn-instance-state-property-builder>
+  "The cfn-instance-state-property-builder> function updates a CfnInstance$StateProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$StateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7594,11 +7594,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-state-property-builder (new CfnInstance$StateProperty$Builder) id config))
+  (cfn-instance-state-property-builder> (new CfnInstance$StateProperty$Builder) id config))
 
 
-(defn build-cfn-instance-volume-property-builder
-  "The build-cfn-instance-volume-property-builder function updates a CfnInstance$VolumeProperty$Builder instance using the provided configuration.
+(defn cfn-instance-volume-property-builder>
+  "The cfn-instance-volume-property-builder> function updates a CfnInstance$VolumeProperty$Builder instance using the provided configuration.
   The function takes the CfnInstance$VolumeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7625,11 +7625,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-volume-property-builder (new CfnInstance$VolumeProperty$Builder) id config))
+  (cfn-instance-volume-property-builder> (new CfnInstance$VolumeProperty$Builder) id config))
 
 
-(defn build-cfn-internet-gateway-builder
-  "The build-cfn-internet-gateway-builder function updates a CfnInternetGateway$Builder instance using the provided configuration.
+(defn cfn-internet-gateway-builder>
+  "The cfn-internet-gateway-builder> function updates a CfnInternetGateway$Builder instance using the provided configuration.
   The function takes the CfnInternetGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7653,11 +7653,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-internet-gateway-builder (CfnInternetGateway$Builder/create scope (name id)) id config))
+  (cfn-internet-gateway-builder> (CfnInternetGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-internet-gateway-props-builder
-  "The build-cfn-internet-gateway-props-builder function updates a CfnInternetGatewayProps$Builder instance using the provided configuration.
+(defn cfn-internet-gateway-props-builder>
+  "The cfn-internet-gateway-props-builder> function updates a CfnInternetGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnInternetGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7681,11 +7681,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-internet-gateway-props-builder (new CfnInternetGatewayProps$Builder) id config))
+  (cfn-internet-gateway-props-builder> (new CfnInternetGatewayProps$Builder) id config))
 
 
-(defn build-cfn-ipam-allocation-builder
-  "The build-cfn-ipam-allocation-builder function updates a CfnIPAMAllocation$Builder instance using the provided configuration.
+(defn cfn-ipam-allocation-builder>
+  "The cfn-ipam-allocation-builder> function updates a CfnIPAMAllocation$Builder instance using the provided configuration.
   The function takes the CfnIPAMAllocation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7718,11 +7718,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ipam-allocation-builder (CfnIPAMAllocation$Builder/create scope (name id)) id config))
+  (cfn-ipam-allocation-builder> (CfnIPAMAllocation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ipam-allocation-props-builder
-  "The build-cfn-ipam-allocation-props-builder function updates a CfnIPAMAllocationProps$Builder instance using the provided configuration.
+(defn cfn-ipam-allocation-props-builder>
+  "The cfn-ipam-allocation-props-builder> function updates a CfnIPAMAllocationProps$Builder instance using the provided configuration.
   The function takes the CfnIPAMAllocationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7755,11 +7755,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-allocation-props-builder (new CfnIPAMAllocationProps$Builder) id config))
+  (cfn-ipam-allocation-props-builder> (new CfnIPAMAllocationProps$Builder) id config))
 
 
-(defn build-cfn-ipam-builder
-  "The build-cfn-ipam-builder function updates a CfnIPAM$Builder instance using the provided configuration.
+(defn cfn-ipam-builder>
+  "The cfn-ipam-builder> function updates a CfnIPAM$Builder instance using the provided configuration.
   The function takes the CfnIPAM$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7792,11 +7792,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ipam-builder (CfnIPAM$Builder/create scope (name id)) id config))
+  (cfn-ipam-builder> (CfnIPAM$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ipam-ipam-operating-region-property-builder
-  "The build-cfn-ipam-ipam-operating-region-property-builder function updates a CfnIPAM$IpamOperatingRegionProperty$Builder instance using the provided configuration.
+(defn cfn-ipam-ipam-operating-region-property-builder>
+  "The cfn-ipam-ipam-operating-region-property-builder> function updates a CfnIPAM$IpamOperatingRegionProperty$Builder instance using the provided configuration.
   The function takes the CfnIPAM$IpamOperatingRegionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7820,11 +7820,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-ipam-operating-region-property-builder (new CfnIPAM$IpamOperatingRegionProperty$Builder) id config))
+  (cfn-ipam-ipam-operating-region-property-builder> (new CfnIPAM$IpamOperatingRegionProperty$Builder) id config))
 
 
-(defn build-cfn-ipam-pool-builder
-  "The build-cfn-ipam-pool-builder function updates a CfnIPAMPool$Builder instance using the provided configuration.
+(defn cfn-ipam-pool-builder>
+  "The cfn-ipam-pool-builder> function updates a CfnIPAMPool$Builder instance using the provided configuration.
   The function takes the CfnIPAMPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7893,11 +7893,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ipam-pool-builder (CfnIPAMPool$Builder/create scope (name id)) id config))
+  (cfn-ipam-pool-builder> (CfnIPAMPool$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ipam-pool-cidr-builder
-  "The build-cfn-ipam-pool-cidr-builder function updates a CfnIPAMPoolCidr$Builder instance using the provided configuration.
+(defn cfn-ipam-pool-cidr-builder>
+  "The cfn-ipam-pool-cidr-builder> function updates a CfnIPAMPoolCidr$Builder instance using the provided configuration.
   The function takes the CfnIPAMPoolCidr$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7927,11 +7927,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ipam-pool-cidr-builder (CfnIPAMPoolCidr$Builder/create scope (name id)) id config))
+  (cfn-ipam-pool-cidr-builder> (CfnIPAMPoolCidr$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ipam-pool-cidr-props-builder
-  "The build-cfn-ipam-pool-cidr-props-builder function updates a CfnIPAMPoolCidrProps$Builder instance using the provided configuration.
+(defn cfn-ipam-pool-cidr-props-builder>
+  "The cfn-ipam-pool-cidr-props-builder> function updates a CfnIPAMPoolCidrProps$Builder instance using the provided configuration.
   The function takes the CfnIPAMPoolCidrProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -7961,11 +7961,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-pool-cidr-props-builder (new CfnIPAMPoolCidrProps$Builder) id config))
+  (cfn-ipam-pool-cidr-props-builder> (new CfnIPAMPoolCidrProps$Builder) id config))
 
 
-(defn build-cfn-ipam-pool-props-builder
-  "The build-cfn-ipam-pool-props-builder function updates a CfnIPAMPoolProps$Builder instance using the provided configuration.
+(defn cfn-ipam-pool-props-builder>
+  "The cfn-ipam-pool-props-builder> function updates a CfnIPAMPoolProps$Builder instance using the provided configuration.
   The function takes the CfnIPAMPoolProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8034,11 +8034,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-pool-props-builder (new CfnIPAMPoolProps$Builder) id config))
+  (cfn-ipam-pool-props-builder> (new CfnIPAMPoolProps$Builder) id config))
 
 
-(defn build-cfn-ipam-pool-provisioned-cidr-property-builder
-  "The build-cfn-ipam-pool-provisioned-cidr-property-builder function updates a CfnIPAMPool$ProvisionedCidrProperty$Builder instance using the provided configuration.
+(defn cfn-ipam-pool-provisioned-cidr-property-builder>
+  "The cfn-ipam-pool-provisioned-cidr-property-builder> function updates a CfnIPAMPool$ProvisionedCidrProperty$Builder instance using the provided configuration.
   The function takes the CfnIPAMPool$ProvisionedCidrProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8062,11 +8062,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-pool-provisioned-cidr-property-builder (new CfnIPAMPool$ProvisionedCidrProperty$Builder) id config))
+  (cfn-ipam-pool-provisioned-cidr-property-builder> (new CfnIPAMPool$ProvisionedCidrProperty$Builder) id config))
 
 
-(defn build-cfn-ipam-pool-source-resource-property-builder
-  "The build-cfn-ipam-pool-source-resource-property-builder function updates a CfnIPAMPool$SourceResourceProperty$Builder instance using the provided configuration.
+(defn cfn-ipam-pool-source-resource-property-builder>
+  "The cfn-ipam-pool-source-resource-property-builder> function updates a CfnIPAMPool$SourceResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnIPAMPool$SourceResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8099,11 +8099,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-pool-source-resource-property-builder (new CfnIPAMPool$SourceResourceProperty$Builder) id config))
+  (cfn-ipam-pool-source-resource-property-builder> (new CfnIPAMPool$SourceResourceProperty$Builder) id config))
 
 
-(defn build-cfn-ipam-props-builder
-  "The build-cfn-ipam-props-builder function updates a CfnIPAMProps$Builder instance using the provided configuration.
+(defn cfn-ipam-props-builder>
+  "The cfn-ipam-props-builder> function updates a CfnIPAMProps$Builder instance using the provided configuration.
   The function takes the CfnIPAMProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8136,11 +8136,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-props-builder (new CfnIPAMProps$Builder) id config))
+  (cfn-ipam-props-builder> (new CfnIPAMProps$Builder) id config))
 
 
-(defn build-cfn-ipam-resource-discovery-association-builder
-  "The build-cfn-ipam-resource-discovery-association-builder function updates a CfnIPAMResourceDiscoveryAssociation$Builder instance using the provided configuration.
+(defn cfn-ipam-resource-discovery-association-builder>
+  "The cfn-ipam-resource-discovery-association-builder> function updates a CfnIPAMResourceDiscoveryAssociation$Builder instance using the provided configuration.
   The function takes the CfnIPAMResourceDiscoveryAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8170,11 +8170,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ipam-resource-discovery-association-builder (CfnIPAMResourceDiscoveryAssociation$Builder/create scope (name id)) id config))
+  (cfn-ipam-resource-discovery-association-builder> (CfnIPAMResourceDiscoveryAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ipam-resource-discovery-association-props-builder
-  "The build-cfn-ipam-resource-discovery-association-props-builder function updates a CfnIPAMResourceDiscoveryAssociationProps$Builder instance using the provided configuration.
+(defn cfn-ipam-resource-discovery-association-props-builder>
+  "The cfn-ipam-resource-discovery-association-props-builder> function updates a CfnIPAMResourceDiscoveryAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnIPAMResourceDiscoveryAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8204,11 +8204,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-resource-discovery-association-props-builder (new CfnIPAMResourceDiscoveryAssociationProps$Builder) id config))
+  (cfn-ipam-resource-discovery-association-props-builder> (new CfnIPAMResourceDiscoveryAssociationProps$Builder) id config))
 
 
-(defn build-cfn-ipam-resource-discovery-builder
-  "The build-cfn-ipam-resource-discovery-builder function updates a CfnIPAMResourceDiscovery$Builder instance using the provided configuration.
+(defn cfn-ipam-resource-discovery-builder>
+  "The cfn-ipam-resource-discovery-builder> function updates a CfnIPAMResourceDiscovery$Builder instance using the provided configuration.
   The function takes the CfnIPAMResourceDiscovery$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8238,11 +8238,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ipam-resource-discovery-builder (CfnIPAMResourceDiscovery$Builder/create scope (name id)) id config))
+  (cfn-ipam-resource-discovery-builder> (CfnIPAMResourceDiscovery$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ipam-resource-discovery-ipam-operating-region-property-builder
-  "The build-cfn-ipam-resource-discovery-ipam-operating-region-property-builder function updates a CfnIPAMResourceDiscovery$IpamOperatingRegionProperty$Builder instance using the provided configuration.
+(defn cfn-ipam-resource-discovery-ipam-operating-region-property-builder>
+  "The cfn-ipam-resource-discovery-ipam-operating-region-property-builder> function updates a CfnIPAMResourceDiscovery$IpamOperatingRegionProperty$Builder instance using the provided configuration.
   The function takes the CfnIPAMResourceDiscovery$IpamOperatingRegionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8266,11 +8266,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-resource-discovery-ipam-operating-region-property-builder (new CfnIPAMResourceDiscovery$IpamOperatingRegionProperty$Builder) id config))
+  (cfn-ipam-resource-discovery-ipam-operating-region-property-builder> (new CfnIPAMResourceDiscovery$IpamOperatingRegionProperty$Builder) id config))
 
 
-(defn build-cfn-ipam-resource-discovery-props-builder
-  "The build-cfn-ipam-resource-discovery-props-builder function updates a CfnIPAMResourceDiscoveryProps$Builder instance using the provided configuration.
+(defn cfn-ipam-resource-discovery-props-builder>
+  "The cfn-ipam-resource-discovery-props-builder> function updates a CfnIPAMResourceDiscoveryProps$Builder instance using the provided configuration.
   The function takes the CfnIPAMResourceDiscoveryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8300,11 +8300,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-resource-discovery-props-builder (new CfnIPAMResourceDiscoveryProps$Builder) id config))
+  (cfn-ipam-resource-discovery-props-builder> (new CfnIPAMResourceDiscoveryProps$Builder) id config))
 
 
-(defn build-cfn-ipam-scope-builder
-  "The build-cfn-ipam-scope-builder function updates a CfnIPAMScope$Builder instance using the provided configuration.
+(defn cfn-ipam-scope-builder>
+  "The cfn-ipam-scope-builder> function updates a CfnIPAMScope$Builder instance using the provided configuration.
   The function takes the CfnIPAMScope$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8334,11 +8334,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ipam-scope-builder (CfnIPAMScope$Builder/create scope (name id)) id config))
+  (cfn-ipam-scope-builder> (CfnIPAMScope$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ipam-scope-props-builder
-  "The build-cfn-ipam-scope-props-builder function updates a CfnIPAMScopeProps$Builder instance using the provided configuration.
+(defn cfn-ipam-scope-props-builder>
+  "The cfn-ipam-scope-props-builder> function updates a CfnIPAMScopeProps$Builder instance using the provided configuration.
   The function takes the CfnIPAMScopeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8368,11 +8368,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ipam-scope-props-builder (new CfnIPAMScopeProps$Builder) id config))
+  (cfn-ipam-scope-props-builder> (new CfnIPAMScopeProps$Builder) id config))
 
 
-(defn build-cfn-key-pair-builder
-  "The build-cfn-key-pair-builder function updates a CfnKeyPair$Builder instance using the provided configuration.
+(defn cfn-key-pair-builder>
+  "The cfn-key-pair-builder> function updates a CfnKeyPair$Builder instance using the provided configuration.
   The function takes the CfnKeyPair$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8408,11 +8408,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-key-pair-builder (CfnKeyPair$Builder/create scope (name id)) id config))
+  (cfn-key-pair-builder> (CfnKeyPair$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-key-pair-props-builder
-  "The build-cfn-key-pair-props-builder function updates a CfnKeyPairProps$Builder instance using the provided configuration.
+(defn cfn-key-pair-props-builder>
+  "The cfn-key-pair-props-builder> function updates a CfnKeyPairProps$Builder instance using the provided configuration.
   The function takes the CfnKeyPairProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8448,11 +8448,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-pair-props-builder (new CfnKeyPairProps$Builder) id config))
+  (cfn-key-pair-props-builder> (new CfnKeyPairProps$Builder) id config))
 
 
-(defn build-cfn-launch-template-accelerator-count-property-builder
-  "The build-cfn-launch-template-accelerator-count-property-builder function updates a CfnLaunchTemplate$AcceleratorCountProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-accelerator-count-property-builder>
+  "The cfn-launch-template-accelerator-count-property-builder> function updates a CfnLaunchTemplate$AcceleratorCountProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$AcceleratorCountProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8479,11 +8479,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-accelerator-count-property-builder (new CfnLaunchTemplate$AcceleratorCountProperty$Builder) id config))
+  (cfn-launch-template-accelerator-count-property-builder> (new CfnLaunchTemplate$AcceleratorCountProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-accelerator-total-memory-mi-b-property-builder
-  "The build-cfn-launch-template-accelerator-total-memory-mi-b-property-builder function updates a CfnLaunchTemplate$AcceleratorTotalMemoryMiBProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-accelerator-total-memory-mi-b-property-builder>
+  "The cfn-launch-template-accelerator-total-memory-mi-b-property-builder> function updates a CfnLaunchTemplate$AcceleratorTotalMemoryMiBProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$AcceleratorTotalMemoryMiBProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8510,11 +8510,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-accelerator-total-memory-mi-b-property-builder (new CfnLaunchTemplate$AcceleratorTotalMemoryMiBProperty$Builder) id config))
+  (cfn-launch-template-accelerator-total-memory-mi-b-property-builder> (new CfnLaunchTemplate$AcceleratorTotalMemoryMiBProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-baseline-ebs-bandwidth-mbps-property-builder
-  "The build-cfn-launch-template-baseline-ebs-bandwidth-mbps-property-builder function updates a CfnLaunchTemplate$BaselineEbsBandwidthMbpsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-baseline-ebs-bandwidth-mbps-property-builder>
+  "The cfn-launch-template-baseline-ebs-bandwidth-mbps-property-builder> function updates a CfnLaunchTemplate$BaselineEbsBandwidthMbpsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$BaselineEbsBandwidthMbpsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8541,11 +8541,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-baseline-ebs-bandwidth-mbps-property-builder (new CfnLaunchTemplate$BaselineEbsBandwidthMbpsProperty$Builder) id config))
+  (cfn-launch-template-baseline-ebs-bandwidth-mbps-property-builder> (new CfnLaunchTemplate$BaselineEbsBandwidthMbpsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-block-device-mapping-property-builder
-  "The build-cfn-launch-template-block-device-mapping-property-builder function updates a CfnLaunchTemplate$BlockDeviceMappingProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-block-device-mapping-property-builder>
+  "The cfn-launch-template-block-device-mapping-property-builder> function updates a CfnLaunchTemplate$BlockDeviceMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$BlockDeviceMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8578,11 +8578,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-block-device-mapping-property-builder (new CfnLaunchTemplate$BlockDeviceMappingProperty$Builder) id config))
+  (cfn-launch-template-block-device-mapping-property-builder> (new CfnLaunchTemplate$BlockDeviceMappingProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-builder
-  "The build-cfn-launch-template-builder function updates a CfnLaunchTemplate$Builder instance using the provided configuration.
+(defn cfn-launch-template-builder>
+  "The cfn-launch-template-builder> function updates a CfnLaunchTemplate$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8615,11 +8615,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-launch-template-builder (CfnLaunchTemplate$Builder/create scope (name id)) id config))
+  (cfn-launch-template-builder> (CfnLaunchTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-launch-template-capacity-reservation-specification-property-builder
-  "The build-cfn-launch-template-capacity-reservation-specification-property-builder function updates a CfnLaunchTemplate$CapacityReservationSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-capacity-reservation-specification-property-builder>
+  "The cfn-launch-template-capacity-reservation-specification-property-builder> function updates a CfnLaunchTemplate$CapacityReservationSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$CapacityReservationSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8646,11 +8646,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-capacity-reservation-specification-property-builder (new CfnLaunchTemplate$CapacityReservationSpecificationProperty$Builder) id config))
+  (cfn-launch-template-capacity-reservation-specification-property-builder> (new CfnLaunchTemplate$CapacityReservationSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-capacity-reservation-target-property-builder
-  "The build-cfn-launch-template-capacity-reservation-target-property-builder function updates a CfnLaunchTemplate$CapacityReservationTargetProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-capacity-reservation-target-property-builder>
+  "The cfn-launch-template-capacity-reservation-target-property-builder> function updates a CfnLaunchTemplate$CapacityReservationTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$CapacityReservationTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8677,11 +8677,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-capacity-reservation-target-property-builder (new CfnLaunchTemplate$CapacityReservationTargetProperty$Builder) id config))
+  (cfn-launch-template-capacity-reservation-target-property-builder> (new CfnLaunchTemplate$CapacityReservationTargetProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-connection-tracking-specification-property-builder
-  "The build-cfn-launch-template-connection-tracking-specification-property-builder function updates a CfnLaunchTemplate$ConnectionTrackingSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-connection-tracking-specification-property-builder>
+  "The cfn-launch-template-connection-tracking-specification-property-builder> function updates a CfnLaunchTemplate$ConnectionTrackingSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$ConnectionTrackingSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8711,11 +8711,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-connection-tracking-specification-property-builder (new CfnLaunchTemplate$ConnectionTrackingSpecificationProperty$Builder) id config))
+  (cfn-launch-template-connection-tracking-specification-property-builder> (new CfnLaunchTemplate$ConnectionTrackingSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-cpu-options-property-builder
-  "The build-cfn-launch-template-cpu-options-property-builder function updates a CfnLaunchTemplate$CpuOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-cpu-options-property-builder>
+  "The cfn-launch-template-cpu-options-property-builder> function updates a CfnLaunchTemplate$CpuOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$CpuOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8745,11 +8745,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-cpu-options-property-builder (new CfnLaunchTemplate$CpuOptionsProperty$Builder) id config))
+  (cfn-launch-template-cpu-options-property-builder> (new CfnLaunchTemplate$CpuOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-credit-specification-property-builder
-  "The build-cfn-launch-template-credit-specification-property-builder function updates a CfnLaunchTemplate$CreditSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-credit-specification-property-builder>
+  "The cfn-launch-template-credit-specification-property-builder> function updates a CfnLaunchTemplate$CreditSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$CreditSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8773,11 +8773,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-credit-specification-property-builder (new CfnLaunchTemplate$CreditSpecificationProperty$Builder) id config))
+  (cfn-launch-template-credit-specification-property-builder> (new CfnLaunchTemplate$CreditSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-ebs-property-builder
-  "The build-cfn-launch-template-ebs-property-builder function updates a CfnLaunchTemplate$EbsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-ebs-property-builder>
+  "The cfn-launch-template-ebs-property-builder> function updates a CfnLaunchTemplate$EbsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$EbsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8822,11 +8822,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-ebs-property-builder (new CfnLaunchTemplate$EbsProperty$Builder) id config))
+  (cfn-launch-template-ebs-property-builder> (new CfnLaunchTemplate$EbsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-elastic-gpu-specification-property-builder
-  "The build-cfn-launch-template-elastic-gpu-specification-property-builder function updates a CfnLaunchTemplate$ElasticGpuSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-elastic-gpu-specification-property-builder>
+  "The cfn-launch-template-elastic-gpu-specification-property-builder> function updates a CfnLaunchTemplate$ElasticGpuSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$ElasticGpuSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8850,11 +8850,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-elastic-gpu-specification-property-builder (new CfnLaunchTemplate$ElasticGpuSpecificationProperty$Builder) id config))
+  (cfn-launch-template-elastic-gpu-specification-property-builder> (new CfnLaunchTemplate$ElasticGpuSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-ena-srd-specification-property-builder
-  "The build-cfn-launch-template-ena-srd-specification-property-builder function updates a CfnLaunchTemplate$EnaSrdSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-ena-srd-specification-property-builder>
+  "The cfn-launch-template-ena-srd-specification-property-builder> function updates a CfnLaunchTemplate$EnaSrdSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$EnaSrdSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8881,11 +8881,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-ena-srd-specification-property-builder (new CfnLaunchTemplate$EnaSrdSpecificationProperty$Builder) id config))
+  (cfn-launch-template-ena-srd-specification-property-builder> (new CfnLaunchTemplate$EnaSrdSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-ena-srd-udp-specification-property-builder
-  "The build-cfn-launch-template-ena-srd-udp-specification-property-builder function updates a CfnLaunchTemplate$EnaSrdUdpSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-ena-srd-udp-specification-property-builder>
+  "The cfn-launch-template-ena-srd-udp-specification-property-builder> function updates a CfnLaunchTemplate$EnaSrdUdpSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$EnaSrdUdpSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8909,11 +8909,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-ena-srd-udp-specification-property-builder (new CfnLaunchTemplate$EnaSrdUdpSpecificationProperty$Builder) id config))
+  (cfn-launch-template-ena-srd-udp-specification-property-builder> (new CfnLaunchTemplate$EnaSrdUdpSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-enclave-options-property-builder
-  "The build-cfn-launch-template-enclave-options-property-builder function updates a CfnLaunchTemplate$EnclaveOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-enclave-options-property-builder>
+  "The cfn-launch-template-enclave-options-property-builder> function updates a CfnLaunchTemplate$EnclaveOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$EnclaveOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8937,11 +8937,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-enclave-options-property-builder (new CfnLaunchTemplate$EnclaveOptionsProperty$Builder) id config))
+  (cfn-launch-template-enclave-options-property-builder> (new CfnLaunchTemplate$EnclaveOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-hibernation-options-property-builder
-  "The build-cfn-launch-template-hibernation-options-property-builder function updates a CfnLaunchTemplate$HibernationOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-hibernation-options-property-builder>
+  "The cfn-launch-template-hibernation-options-property-builder> function updates a CfnLaunchTemplate$HibernationOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$HibernationOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8965,11 +8965,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-hibernation-options-property-builder (new CfnLaunchTemplate$HibernationOptionsProperty$Builder) id config))
+  (cfn-launch-template-hibernation-options-property-builder> (new CfnLaunchTemplate$HibernationOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-iam-instance-profile-property-builder
-  "The build-cfn-launch-template-iam-instance-profile-property-builder function updates a CfnLaunchTemplate$IamInstanceProfileProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-iam-instance-profile-property-builder>
+  "The cfn-launch-template-iam-instance-profile-property-builder> function updates a CfnLaunchTemplate$IamInstanceProfileProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$IamInstanceProfileProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -8996,11 +8996,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-iam-instance-profile-property-builder (new CfnLaunchTemplate$IamInstanceProfileProperty$Builder) id config))
+  (cfn-launch-template-iam-instance-profile-property-builder> (new CfnLaunchTemplate$IamInstanceProfileProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-instance-market-options-property-builder
-  "The build-cfn-launch-template-instance-market-options-property-builder function updates a CfnLaunchTemplate$InstanceMarketOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-instance-market-options-property-builder>
+  "The cfn-launch-template-instance-market-options-property-builder> function updates a CfnLaunchTemplate$InstanceMarketOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$InstanceMarketOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9027,11 +9027,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-instance-market-options-property-builder (new CfnLaunchTemplate$InstanceMarketOptionsProperty$Builder) id config))
+  (cfn-launch-template-instance-market-options-property-builder> (new CfnLaunchTemplate$InstanceMarketOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-instance-requirements-property-builder
-  "The build-cfn-launch-template-instance-requirements-property-builder function updates a CfnLaunchTemplate$InstanceRequirementsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-instance-requirements-property-builder>
+  "The cfn-launch-template-instance-requirements-property-builder> function updates a CfnLaunchTemplate$InstanceRequirementsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$InstanceRequirementsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9124,11 +9124,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-instance-requirements-property-builder (new CfnLaunchTemplate$InstanceRequirementsProperty$Builder) id config))
+  (cfn-launch-template-instance-requirements-property-builder> (new CfnLaunchTemplate$InstanceRequirementsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-ipv4-prefix-specification-property-builder
-  "The build-cfn-launch-template-ipv4-prefix-specification-property-builder function updates a CfnLaunchTemplate$Ipv4PrefixSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-ipv4-prefix-specification-property-builder>
+  "The cfn-launch-template-ipv4-prefix-specification-property-builder> function updates a CfnLaunchTemplate$Ipv4PrefixSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$Ipv4PrefixSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9152,11 +9152,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-ipv4-prefix-specification-property-builder (new CfnLaunchTemplate$Ipv4PrefixSpecificationProperty$Builder) id config))
+  (cfn-launch-template-ipv4-prefix-specification-property-builder> (new CfnLaunchTemplate$Ipv4PrefixSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-ipv6-add-property-builder
-  "The build-cfn-launch-template-ipv6-add-property-builder function updates a CfnLaunchTemplate$Ipv6AddProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-ipv6-add-property-builder>
+  "The cfn-launch-template-ipv6-add-property-builder> function updates a CfnLaunchTemplate$Ipv6AddProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$Ipv6AddProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9180,11 +9180,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-ipv6-add-property-builder (new CfnLaunchTemplate$Ipv6AddProperty$Builder) id config))
+  (cfn-launch-template-ipv6-add-property-builder> (new CfnLaunchTemplate$Ipv6AddProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-ipv6-prefix-specification-property-builder
-  "The build-cfn-launch-template-ipv6-prefix-specification-property-builder function updates a CfnLaunchTemplate$Ipv6PrefixSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-ipv6-prefix-specification-property-builder>
+  "The cfn-launch-template-ipv6-prefix-specification-property-builder> function updates a CfnLaunchTemplate$Ipv6PrefixSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$Ipv6PrefixSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9208,11 +9208,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-ipv6-prefix-specification-property-builder (new CfnLaunchTemplate$Ipv6PrefixSpecificationProperty$Builder) id config))
+  (cfn-launch-template-ipv6-prefix-specification-property-builder> (new CfnLaunchTemplate$Ipv6PrefixSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-launch-template-data-property-builder
-  "The build-cfn-launch-template-launch-template-data-property-builder function updates a CfnLaunchTemplate$LaunchTemplateDataProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-launch-template-data-property-builder>
+  "The cfn-launch-template-launch-template-data-property-builder> function updates a CfnLaunchTemplate$LaunchTemplateDataProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$LaunchTemplateDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9326,11 +9326,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-launch-template-data-property-builder (new CfnLaunchTemplate$LaunchTemplateDataProperty$Builder) id config))
+  (cfn-launch-template-launch-template-data-property-builder> (new CfnLaunchTemplate$LaunchTemplateDataProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-launch-template-elastic-inference-accelerator-property-builder
-  "The build-cfn-launch-template-launch-template-elastic-inference-accelerator-property-builder function updates a CfnLaunchTemplate$LaunchTemplateElasticInferenceAcceleratorProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-launch-template-elastic-inference-accelerator-property-builder>
+  "The cfn-launch-template-launch-template-elastic-inference-accelerator-property-builder> function updates a CfnLaunchTemplate$LaunchTemplateElasticInferenceAcceleratorProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$LaunchTemplateElasticInferenceAcceleratorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9357,11 +9357,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-launch-template-elastic-inference-accelerator-property-builder (new CfnLaunchTemplate$LaunchTemplateElasticInferenceAcceleratorProperty$Builder) id config))
+  (cfn-launch-template-launch-template-elastic-inference-accelerator-property-builder> (new CfnLaunchTemplate$LaunchTemplateElasticInferenceAcceleratorProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-launch-template-tag-specification-property-builder
-  "The build-cfn-launch-template-launch-template-tag-specification-property-builder function updates a CfnLaunchTemplate$LaunchTemplateTagSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-launch-template-tag-specification-property-builder>
+  "The cfn-launch-template-launch-template-tag-specification-property-builder> function updates a CfnLaunchTemplate$LaunchTemplateTagSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$LaunchTemplateTagSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9388,11 +9388,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-launch-template-tag-specification-property-builder (new CfnLaunchTemplate$LaunchTemplateTagSpecificationProperty$Builder) id config))
+  (cfn-launch-template-launch-template-tag-specification-property-builder> (new CfnLaunchTemplate$LaunchTemplateTagSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-license-specification-property-builder
-  "The build-cfn-launch-template-license-specification-property-builder function updates a CfnLaunchTemplate$LicenseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-license-specification-property-builder>
+  "The cfn-launch-template-license-specification-property-builder> function updates a CfnLaunchTemplate$LicenseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$LicenseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9416,11 +9416,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-license-specification-property-builder (new CfnLaunchTemplate$LicenseSpecificationProperty$Builder) id config))
+  (cfn-launch-template-license-specification-property-builder> (new CfnLaunchTemplate$LicenseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-maintenance-options-property-builder
-  "The build-cfn-launch-template-maintenance-options-property-builder function updates a CfnLaunchTemplate$MaintenanceOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-maintenance-options-property-builder>
+  "The cfn-launch-template-maintenance-options-property-builder> function updates a CfnLaunchTemplate$MaintenanceOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$MaintenanceOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9444,11 +9444,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-maintenance-options-property-builder (new CfnLaunchTemplate$MaintenanceOptionsProperty$Builder) id config))
+  (cfn-launch-template-maintenance-options-property-builder> (new CfnLaunchTemplate$MaintenanceOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-memory-gi-b-per-v-cpu-property-builder
-  "The build-cfn-launch-template-memory-gi-b-per-v-cpu-property-builder function updates a CfnLaunchTemplate$MemoryGiBPerVCpuProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-memory-gi-b-per-v-cpu-property-builder>
+  "The cfn-launch-template-memory-gi-b-per-v-cpu-property-builder> function updates a CfnLaunchTemplate$MemoryGiBPerVCpuProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$MemoryGiBPerVCpuProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9475,11 +9475,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-memory-gi-b-per-v-cpu-property-builder (new CfnLaunchTemplate$MemoryGiBPerVCpuProperty$Builder) id config))
+  (cfn-launch-template-memory-gi-b-per-v-cpu-property-builder> (new CfnLaunchTemplate$MemoryGiBPerVCpuProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-memory-mi-b-property-builder
-  "The build-cfn-launch-template-memory-mi-b-property-builder function updates a CfnLaunchTemplate$MemoryMiBProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-memory-mi-b-property-builder>
+  "The cfn-launch-template-memory-mi-b-property-builder> function updates a CfnLaunchTemplate$MemoryMiBProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$MemoryMiBProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9506,11 +9506,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-memory-mi-b-property-builder (new CfnLaunchTemplate$MemoryMiBProperty$Builder) id config))
+  (cfn-launch-template-memory-mi-b-property-builder> (new CfnLaunchTemplate$MemoryMiBProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-metadata-options-property-builder
-  "The build-cfn-launch-template-metadata-options-property-builder function updates a CfnLaunchTemplate$MetadataOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-metadata-options-property-builder>
+  "The cfn-launch-template-metadata-options-property-builder> function updates a CfnLaunchTemplate$MetadataOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$MetadataOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9546,11 +9546,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-metadata-options-property-builder (new CfnLaunchTemplate$MetadataOptionsProperty$Builder) id config))
+  (cfn-launch-template-metadata-options-property-builder> (new CfnLaunchTemplate$MetadataOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-monitoring-property-builder
-  "The build-cfn-launch-template-monitoring-property-builder function updates a CfnLaunchTemplate$MonitoringProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-monitoring-property-builder>
+  "The cfn-launch-template-monitoring-property-builder> function updates a CfnLaunchTemplate$MonitoringProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$MonitoringProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9574,11 +9574,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-monitoring-property-builder (new CfnLaunchTemplate$MonitoringProperty$Builder) id config))
+  (cfn-launch-template-monitoring-property-builder> (new CfnLaunchTemplate$MonitoringProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-network-bandwidth-gbps-property-builder
-  "The build-cfn-launch-template-network-bandwidth-gbps-property-builder function updates a CfnLaunchTemplate$NetworkBandwidthGbpsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-network-bandwidth-gbps-property-builder>
+  "The cfn-launch-template-network-bandwidth-gbps-property-builder> function updates a CfnLaunchTemplate$NetworkBandwidthGbpsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$NetworkBandwidthGbpsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9605,11 +9605,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-network-bandwidth-gbps-property-builder (new CfnLaunchTemplate$NetworkBandwidthGbpsProperty$Builder) id config))
+  (cfn-launch-template-network-bandwidth-gbps-property-builder> (new CfnLaunchTemplate$NetworkBandwidthGbpsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-network-interface-count-property-builder
-  "The build-cfn-launch-template-network-interface-count-property-builder function updates a CfnLaunchTemplate$NetworkInterfaceCountProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-network-interface-count-property-builder>
+  "The cfn-launch-template-network-interface-count-property-builder> function updates a CfnLaunchTemplate$NetworkInterfaceCountProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$NetworkInterfaceCountProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9636,11 +9636,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-network-interface-count-property-builder (new CfnLaunchTemplate$NetworkInterfaceCountProperty$Builder) id config))
+  (cfn-launch-template-network-interface-count-property-builder> (new CfnLaunchTemplate$NetworkInterfaceCountProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-network-interface-property-builder
-  "The build-cfn-launch-template-network-interface-property-builder function updates a CfnLaunchTemplate$NetworkInterfaceProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-network-interface-property-builder>
+  "The cfn-launch-template-network-interface-property-builder> function updates a CfnLaunchTemplate$NetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$NetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9727,11 +9727,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-network-interface-property-builder (new CfnLaunchTemplate$NetworkInterfaceProperty$Builder) id config))
+  (cfn-launch-template-network-interface-property-builder> (new CfnLaunchTemplate$NetworkInterfaceProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-placement-property-builder
-  "The build-cfn-launch-template-placement-property-builder function updates a CfnLaunchTemplate$PlacementProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-placement-property-builder>
+  "The cfn-launch-template-placement-property-builder> function updates a CfnLaunchTemplate$PlacementProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$PlacementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9779,11 +9779,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-placement-property-builder (new CfnLaunchTemplate$PlacementProperty$Builder) id config))
+  (cfn-launch-template-placement-property-builder> (new CfnLaunchTemplate$PlacementProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-private-dns-name-options-property-builder
-  "The build-cfn-launch-template-private-dns-name-options-property-builder function updates a CfnLaunchTemplate$PrivateDnsNameOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-private-dns-name-options-property-builder>
+  "The cfn-launch-template-private-dns-name-options-property-builder> function updates a CfnLaunchTemplate$PrivateDnsNameOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$PrivateDnsNameOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9813,11 +9813,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-private-dns-name-options-property-builder (new CfnLaunchTemplate$PrivateDnsNameOptionsProperty$Builder) id config))
+  (cfn-launch-template-private-dns-name-options-property-builder> (new CfnLaunchTemplate$PrivateDnsNameOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-private-ip-add-property-builder
-  "The build-cfn-launch-template-private-ip-add-property-builder function updates a CfnLaunchTemplate$PrivateIpAddProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-private-ip-add-property-builder>
+  "The cfn-launch-template-private-ip-add-property-builder> function updates a CfnLaunchTemplate$PrivateIpAddProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$PrivateIpAddProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9844,11 +9844,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-private-ip-add-property-builder (new CfnLaunchTemplate$PrivateIpAddProperty$Builder) id config))
+  (cfn-launch-template-private-ip-add-property-builder> (new CfnLaunchTemplate$PrivateIpAddProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-props-builder
-  "The build-cfn-launch-template-props-builder function updates a CfnLaunchTemplateProps$Builder instance using the provided configuration.
+(defn cfn-launch-template-props-builder>
+  "The cfn-launch-template-props-builder> function updates a CfnLaunchTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9881,11 +9881,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-props-builder (new CfnLaunchTemplateProps$Builder) id config))
+  (cfn-launch-template-props-builder> (new CfnLaunchTemplateProps$Builder) id config))
 
 
-(defn build-cfn-launch-template-spot-options-property-builder
-  "The build-cfn-launch-template-spot-options-property-builder function updates a CfnLaunchTemplate$SpotOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-spot-options-property-builder>
+  "The cfn-launch-template-spot-options-property-builder> function updates a CfnLaunchTemplate$SpotOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$SpotOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9921,11 +9921,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-spot-options-property-builder (new CfnLaunchTemplate$SpotOptionsProperty$Builder) id config))
+  (cfn-launch-template-spot-options-property-builder> (new CfnLaunchTemplate$SpotOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-tag-specification-property-builder
-  "The build-cfn-launch-template-tag-specification-property-builder function updates a CfnLaunchTemplate$TagSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-tag-specification-property-builder>
+  "The cfn-launch-template-tag-specification-property-builder> function updates a CfnLaunchTemplate$TagSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$TagSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9952,11 +9952,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-tag-specification-property-builder (new CfnLaunchTemplate$TagSpecificationProperty$Builder) id config))
+  (cfn-launch-template-tag-specification-property-builder> (new CfnLaunchTemplate$TagSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-total-local-storage-gb-property-builder
-  "The build-cfn-launch-template-total-local-storage-gb-property-builder function updates a CfnLaunchTemplate$TotalLocalStorageGBProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-total-local-storage-gb-property-builder>
+  "The cfn-launch-template-total-local-storage-gb-property-builder> function updates a CfnLaunchTemplate$TotalLocalStorageGBProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$TotalLocalStorageGBProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -9983,11 +9983,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-total-local-storage-gb-property-builder (new CfnLaunchTemplate$TotalLocalStorageGBProperty$Builder) id config))
+  (cfn-launch-template-total-local-storage-gb-property-builder> (new CfnLaunchTemplate$TotalLocalStorageGBProperty$Builder) id config))
 
 
-(defn build-cfn-launch-template-v-cpu-count-property-builder
-  "The build-cfn-launch-template-v-cpu-count-property-builder function updates a CfnLaunchTemplate$VCpuCountProperty$Builder instance using the provided configuration.
+(defn cfn-launch-template-v-cpu-count-property-builder>
+  "The cfn-launch-template-v-cpu-count-property-builder> function updates a CfnLaunchTemplate$VCpuCountProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchTemplate$VCpuCountProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10014,11 +10014,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-launch-template-v-cpu-count-property-builder (new CfnLaunchTemplate$VCpuCountProperty$Builder) id config))
+  (cfn-launch-template-v-cpu-count-property-builder> (new CfnLaunchTemplate$VCpuCountProperty$Builder) id config))
 
 
-(defn build-cfn-local-gateway-route-builder
-  "The build-cfn-local-gateway-route-builder function updates a CfnLocalGatewayRoute$Builder instance using the provided configuration.
+(defn cfn-local-gateway-route-builder>
+  "The cfn-local-gateway-route-builder> function updates a CfnLocalGatewayRoute$Builder instance using the provided configuration.
   The function takes the CfnLocalGatewayRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10051,11 +10051,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-local-gateway-route-builder (CfnLocalGatewayRoute$Builder/create scope (name id)) id config))
+  (cfn-local-gateway-route-builder> (CfnLocalGatewayRoute$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-local-gateway-route-props-builder
-  "The build-cfn-local-gateway-route-props-builder function updates a CfnLocalGatewayRouteProps$Builder instance using the provided configuration.
+(defn cfn-local-gateway-route-props-builder>
+  "The cfn-local-gateway-route-props-builder> function updates a CfnLocalGatewayRouteProps$Builder instance using the provided configuration.
   The function takes the CfnLocalGatewayRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10088,11 +10088,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-local-gateway-route-props-builder (new CfnLocalGatewayRouteProps$Builder) id config))
+  (cfn-local-gateway-route-props-builder> (new CfnLocalGatewayRouteProps$Builder) id config))
 
 
-(defn build-cfn-local-gateway-route-table-builder
-  "The build-cfn-local-gateway-route-table-builder function updates a CfnLocalGatewayRouteTable$Builder instance using the provided configuration.
+(defn cfn-local-gateway-route-table-builder>
+  "The cfn-local-gateway-route-table-builder> function updates a CfnLocalGatewayRouteTable$Builder instance using the provided configuration.
   The function takes the CfnLocalGatewayRouteTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10122,11 +10122,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-local-gateway-route-table-builder (CfnLocalGatewayRouteTable$Builder/create scope (name id)) id config))
+  (cfn-local-gateway-route-table-builder> (CfnLocalGatewayRouteTable$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-local-gateway-route-table-props-builder
-  "The build-cfn-local-gateway-route-table-props-builder function updates a CfnLocalGatewayRouteTableProps$Builder instance using the provided configuration.
+(defn cfn-local-gateway-route-table-props-builder>
+  "The cfn-local-gateway-route-table-props-builder> function updates a CfnLocalGatewayRouteTableProps$Builder instance using the provided configuration.
   The function takes the CfnLocalGatewayRouteTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10156,11 +10156,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-local-gateway-route-table-props-builder (new CfnLocalGatewayRouteTableProps$Builder) id config))
+  (cfn-local-gateway-route-table-props-builder> (new CfnLocalGatewayRouteTableProps$Builder) id config))
 
 
-(defn build-cfn-local-gateway-route-table-virtual-interface-group-association-builder
-  "The build-cfn-local-gateway-route-table-virtual-interface-group-association-builder function updates a CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation$Builder instance using the provided configuration.
+(defn cfn-local-gateway-route-table-virtual-interface-group-association-builder>
+  "The cfn-local-gateway-route-table-virtual-interface-group-association-builder> function updates a CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation$Builder instance using the provided configuration.
   The function takes the CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10190,11 +10190,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-local-gateway-route-table-virtual-interface-group-association-builder (CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation$Builder/create scope (name id)) id config))
+  (cfn-local-gateway-route-table-virtual-interface-group-association-builder> (CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-local-gateway-route-table-virtual-interface-group-association-props-builder
-  "The build-cfn-local-gateway-route-table-virtual-interface-group-association-props-builder function updates a CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps$Builder instance using the provided configuration.
+(defn cfn-local-gateway-route-table-virtual-interface-group-association-props-builder>
+  "The cfn-local-gateway-route-table-virtual-interface-group-association-props-builder> function updates a CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10224,11 +10224,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-local-gateway-route-table-virtual-interface-group-association-props-builder (new CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps$Builder) id config))
+  (cfn-local-gateway-route-table-virtual-interface-group-association-props-builder> (new CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps$Builder) id config))
 
 
-(defn build-cfn-local-gateway-route-table-vpc-association-builder
-  "The build-cfn-local-gateway-route-table-vpc-association-builder function updates a CfnLocalGatewayRouteTableVPCAssociation$Builder instance using the provided configuration.
+(defn cfn-local-gateway-route-table-vpc-association-builder>
+  "The cfn-local-gateway-route-table-vpc-association-builder> function updates a CfnLocalGatewayRouteTableVPCAssociation$Builder instance using the provided configuration.
   The function takes the CfnLocalGatewayRouteTableVPCAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10258,11 +10258,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-local-gateway-route-table-vpc-association-builder (CfnLocalGatewayRouteTableVPCAssociation$Builder/create scope (name id)) id config))
+  (cfn-local-gateway-route-table-vpc-association-builder> (CfnLocalGatewayRouteTableVPCAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-local-gateway-route-table-vpc-association-props-builder
-  "The build-cfn-local-gateway-route-table-vpc-association-props-builder function updates a CfnLocalGatewayRouteTableVPCAssociationProps$Builder instance using the provided configuration.
+(defn cfn-local-gateway-route-table-vpc-association-props-builder>
+  "The cfn-local-gateway-route-table-vpc-association-props-builder> function updates a CfnLocalGatewayRouteTableVPCAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnLocalGatewayRouteTableVPCAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10292,11 +10292,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-local-gateway-route-table-vpc-association-props-builder (new CfnLocalGatewayRouteTableVPCAssociationProps$Builder) id config))
+  (cfn-local-gateway-route-table-vpc-association-props-builder> (new CfnLocalGatewayRouteTableVPCAssociationProps$Builder) id config))
 
 
-(defn build-cfn-nat-gateway-builder
-  "The build-cfn-nat-gateway-builder function updates a CfnNatGateway$Builder instance using the provided configuration.
+(defn cfn-nat-gateway-builder>
+  "The cfn-nat-gateway-builder> function updates a CfnNatGateway$Builder instance using the provided configuration.
   The function takes the CfnNatGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10344,11 +10344,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-nat-gateway-builder (CfnNatGateway$Builder/create scope (name id)) id config))
+  (cfn-nat-gateway-builder> (CfnNatGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-nat-gateway-props-builder
-  "The build-cfn-nat-gateway-props-builder function updates a CfnNatGatewayProps$Builder instance using the provided configuration.
+(defn cfn-nat-gateway-props-builder>
+  "The cfn-nat-gateway-props-builder> function updates a CfnNatGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnNatGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10396,11 +10396,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-nat-gateway-props-builder (new CfnNatGatewayProps$Builder) id config))
+  (cfn-nat-gateway-props-builder> (new CfnNatGatewayProps$Builder) id config))
 
 
-(defn build-cfn-network-acl-builder
-  "The build-cfn-network-acl-builder function updates a CfnNetworkAcl$Builder instance using the provided configuration.
+(defn cfn-network-acl-builder>
+  "The cfn-network-acl-builder> function updates a CfnNetworkAcl$Builder instance using the provided configuration.
   The function takes the CfnNetworkAcl$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10427,11 +10427,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-acl-builder (CfnNetworkAcl$Builder/create scope (name id)) id config))
+  (cfn-network-acl-builder> (CfnNetworkAcl$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-acl-entry-builder
-  "The build-cfn-network-acl-entry-builder function updates a CfnNetworkAclEntry$Builder instance using the provided configuration.
+(defn cfn-network-acl-entry-builder>
+  "The cfn-network-acl-entry-builder> function updates a CfnNetworkAclEntry$Builder instance using the provided configuration.
   The function takes the CfnNetworkAclEntry$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10479,11 +10479,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-acl-entry-builder (CfnNetworkAclEntry$Builder/create scope (name id)) id config))
+  (cfn-network-acl-entry-builder> (CfnNetworkAclEntry$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-acl-entry-icmp-property-builder
-  "The build-cfn-network-acl-entry-icmp-property-builder function updates a CfnNetworkAclEntry$IcmpProperty$Builder instance using the provided configuration.
+(defn cfn-network-acl-entry-icmp-property-builder>
+  "The cfn-network-acl-entry-icmp-property-builder> function updates a CfnNetworkAclEntry$IcmpProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkAclEntry$IcmpProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10510,11 +10510,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-acl-entry-icmp-property-builder (new CfnNetworkAclEntry$IcmpProperty$Builder) id config))
+  (cfn-network-acl-entry-icmp-property-builder> (new CfnNetworkAclEntry$IcmpProperty$Builder) id config))
 
 
-(defn build-cfn-network-acl-entry-port-range-property-builder
-  "The build-cfn-network-acl-entry-port-range-property-builder function updates a CfnNetworkAclEntry$PortRangeProperty$Builder instance using the provided configuration.
+(defn cfn-network-acl-entry-port-range-property-builder>
+  "The cfn-network-acl-entry-port-range-property-builder> function updates a CfnNetworkAclEntry$PortRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkAclEntry$PortRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10541,11 +10541,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-acl-entry-port-range-property-builder (new CfnNetworkAclEntry$PortRangeProperty$Builder) id config))
+  (cfn-network-acl-entry-port-range-property-builder> (new CfnNetworkAclEntry$PortRangeProperty$Builder) id config))
 
 
-(defn build-cfn-network-acl-entry-props-builder
-  "The build-cfn-network-acl-entry-props-builder function updates a CfnNetworkAclEntryProps$Builder instance using the provided configuration.
+(defn cfn-network-acl-entry-props-builder>
+  "The cfn-network-acl-entry-props-builder> function updates a CfnNetworkAclEntryProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkAclEntryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10593,11 +10593,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-acl-entry-props-builder (new CfnNetworkAclEntryProps$Builder) id config))
+  (cfn-network-acl-entry-props-builder> (new CfnNetworkAclEntryProps$Builder) id config))
 
 
-(defn build-cfn-network-acl-props-builder
-  "The build-cfn-network-acl-props-builder function updates a CfnNetworkAclProps$Builder instance using the provided configuration.
+(defn cfn-network-acl-props-builder>
+  "The cfn-network-acl-props-builder> function updates a CfnNetworkAclProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkAclProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10624,11 +10624,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-acl-props-builder (new CfnNetworkAclProps$Builder) id config))
+  (cfn-network-acl-props-builder> (new CfnNetworkAclProps$Builder) id config))
 
 
-(defn build-cfn-network-insights-access-scope-access-scope-path-request-property-builder
-  "The build-cfn-network-insights-access-scope-access-scope-path-request-property-builder function updates a CfnNetworkInsightsAccessScope$AccessScopePathRequestProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-access-scope-path-request-property-builder>
+  "The cfn-network-insights-access-scope-access-scope-path-request-property-builder> function updates a CfnNetworkInsightsAccessScope$AccessScopePathRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScope$AccessScopePathRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10658,11 +10658,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-access-scope-access-scope-path-request-property-builder (new CfnNetworkInsightsAccessScope$AccessScopePathRequestProperty$Builder) id config))
+  (cfn-network-insights-access-scope-access-scope-path-request-property-builder> (new CfnNetworkInsightsAccessScope$AccessScopePathRequestProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-access-scope-analysis-builder
-  "The build-cfn-network-insights-access-scope-analysis-builder function updates a CfnNetworkInsightsAccessScopeAnalysis$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-analysis-builder>
+  "The cfn-network-insights-access-scope-analysis-builder> function updates a CfnNetworkInsightsAccessScopeAnalysis$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScopeAnalysis$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10689,11 +10689,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-insights-access-scope-analysis-builder (CfnNetworkInsightsAccessScopeAnalysis$Builder/create scope (name id)) id config))
+  (cfn-network-insights-access-scope-analysis-builder> (CfnNetworkInsightsAccessScopeAnalysis$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-insights-access-scope-analysis-props-builder
-  "The build-cfn-network-insights-access-scope-analysis-props-builder function updates a CfnNetworkInsightsAccessScopeAnalysisProps$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-analysis-props-builder>
+  "The cfn-network-insights-access-scope-analysis-props-builder> function updates a CfnNetworkInsightsAccessScopeAnalysisProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScopeAnalysisProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10720,11 +10720,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-access-scope-analysis-props-builder (new CfnNetworkInsightsAccessScopeAnalysisProps$Builder) id config))
+  (cfn-network-insights-access-scope-analysis-props-builder> (new CfnNetworkInsightsAccessScopeAnalysisProps$Builder) id config))
 
 
-(defn build-cfn-network-insights-access-scope-builder
-  "The build-cfn-network-insights-access-scope-builder function updates a CfnNetworkInsightsAccessScope$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-builder>
+  "The cfn-network-insights-access-scope-builder> function updates a CfnNetworkInsightsAccessScope$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScope$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10754,11 +10754,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-insights-access-scope-builder (CfnNetworkInsightsAccessScope$Builder/create scope (name id)) id config))
+  (cfn-network-insights-access-scope-builder> (CfnNetworkInsightsAccessScope$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-insights-access-scope-packet-header-statement-request-property-builder
-  "The build-cfn-network-insights-access-scope-packet-header-statement-request-property-builder function updates a CfnNetworkInsightsAccessScope$PacketHeaderStatementRequestProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-packet-header-statement-request-property-builder>
+  "The cfn-network-insights-access-scope-packet-header-statement-request-property-builder> function updates a CfnNetworkInsightsAccessScope$PacketHeaderStatementRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScope$PacketHeaderStatementRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10800,11 +10800,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-access-scope-packet-header-statement-request-property-builder (new CfnNetworkInsightsAccessScope$PacketHeaderStatementRequestProperty$Builder) id config))
+  (cfn-network-insights-access-scope-packet-header-statement-request-property-builder> (new CfnNetworkInsightsAccessScope$PacketHeaderStatementRequestProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-access-scope-path-statement-request-property-builder
-  "The build-cfn-network-insights-access-scope-path-statement-request-property-builder function updates a CfnNetworkInsightsAccessScope$PathStatementRequestProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-path-statement-request-property-builder>
+  "The cfn-network-insights-access-scope-path-statement-request-property-builder> function updates a CfnNetworkInsightsAccessScope$PathStatementRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScope$PathStatementRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10831,11 +10831,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-access-scope-path-statement-request-property-builder (new CfnNetworkInsightsAccessScope$PathStatementRequestProperty$Builder) id config))
+  (cfn-network-insights-access-scope-path-statement-request-property-builder> (new CfnNetworkInsightsAccessScope$PathStatementRequestProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-access-scope-props-builder
-  "The build-cfn-network-insights-access-scope-props-builder function updates a CfnNetworkInsightsAccessScopeProps$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-props-builder>
+  "The cfn-network-insights-access-scope-props-builder> function updates a CfnNetworkInsightsAccessScopeProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScopeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10865,11 +10865,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-access-scope-props-builder (new CfnNetworkInsightsAccessScopeProps$Builder) id config))
+  (cfn-network-insights-access-scope-props-builder> (new CfnNetworkInsightsAccessScopeProps$Builder) id config))
 
 
-(defn build-cfn-network-insights-access-scope-resource-statement-request-property-builder
-  "The build-cfn-network-insights-access-scope-resource-statement-request-property-builder function updates a CfnNetworkInsightsAccessScope$ResourceStatementRequestProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-resource-statement-request-property-builder>
+  "The cfn-network-insights-access-scope-resource-statement-request-property-builder> function updates a CfnNetworkInsightsAccessScope$ResourceStatementRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScope$ResourceStatementRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10896,11 +10896,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-access-scope-resource-statement-request-property-builder (new CfnNetworkInsightsAccessScope$ResourceStatementRequestProperty$Builder) id config))
+  (cfn-network-insights-access-scope-resource-statement-request-property-builder> (new CfnNetworkInsightsAccessScope$ResourceStatementRequestProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-access-scope-through-resources-statement-request-property-builder
-  "The build-cfn-network-insights-access-scope-through-resources-statement-request-property-builder function updates a CfnNetworkInsightsAccessScope$ThroughResourcesStatementRequestProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-access-scope-through-resources-statement-request-property-builder>
+  "The cfn-network-insights-access-scope-through-resources-statement-request-property-builder> function updates a CfnNetworkInsightsAccessScope$ThroughResourcesStatementRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAccessScope$ThroughResourcesStatementRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10924,11 +10924,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-access-scope-through-resources-statement-request-property-builder (new CfnNetworkInsightsAccessScope$ThroughResourcesStatementRequestProperty$Builder) id config))
+  (cfn-network-insights-access-scope-through-resources-statement-request-property-builder> (new CfnNetworkInsightsAccessScope$ThroughResourcesStatementRequestProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-additional-detail-property-builder
-  "The build-cfn-network-insights-analysis-additional-detail-property-builder function updates a CfnNetworkInsightsAnalysis$AdditionalDetailProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-additional-detail-property-builder>
+  "The cfn-network-insights-analysis-additional-detail-property-builder> function updates a CfnNetworkInsightsAnalysis$AdditionalDetailProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AdditionalDetailProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10961,11 +10961,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-additional-detail-property-builder (new CfnNetworkInsightsAnalysis$AdditionalDetailProperty$Builder) id config))
+  (cfn-network-insights-analysis-additional-detail-property-builder> (new CfnNetworkInsightsAnalysis$AdditionalDetailProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-alternate-path-hint-property-builder
-  "The build-cfn-network-insights-analysis-alternate-path-hint-property-builder function updates a CfnNetworkInsightsAnalysis$AlternatePathHintProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-alternate-path-hint-property-builder>
+  "The cfn-network-insights-analysis-alternate-path-hint-property-builder> function updates a CfnNetworkInsightsAnalysis$AlternatePathHintProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AlternatePathHintProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -10992,11 +10992,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-alternate-path-hint-property-builder (new CfnNetworkInsightsAnalysis$AlternatePathHintProperty$Builder) id config))
+  (cfn-network-insights-analysis-alternate-path-hint-property-builder> (new CfnNetworkInsightsAnalysis$AlternatePathHintProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-analysis-acl-rule-property-builder
-  "The build-cfn-network-insights-analysis-analysis-acl-rule-property-builder function updates a CfnNetworkInsightsAnalysis$AnalysisAclRuleProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-analysis-acl-rule-property-builder>
+  "The cfn-network-insights-analysis-analysis-acl-rule-property-builder> function updates a CfnNetworkInsightsAnalysis$AnalysisAclRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AnalysisAclRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11035,11 +11035,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-analysis-acl-rule-property-builder (new CfnNetworkInsightsAnalysis$AnalysisAclRuleProperty$Builder) id config))
+  (cfn-network-insights-analysis-analysis-acl-rule-property-builder> (new CfnNetworkInsightsAnalysis$AnalysisAclRuleProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-analysis-component-property-builder
-  "The build-cfn-network-insights-analysis-analysis-component-property-builder function updates a CfnNetworkInsightsAnalysis$AnalysisComponentProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-analysis-component-property-builder>
+  "The cfn-network-insights-analysis-analysis-component-property-builder> function updates a CfnNetworkInsightsAnalysis$AnalysisComponentProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AnalysisComponentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11066,11 +11066,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-analysis-component-property-builder (new CfnNetworkInsightsAnalysis$AnalysisComponentProperty$Builder) id config))
+  (cfn-network-insights-analysis-analysis-component-property-builder> (new CfnNetworkInsightsAnalysis$AnalysisComponentProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-analysis-load-balancer-listener-property-builder
-  "The build-cfn-network-insights-analysis-analysis-load-balancer-listener-property-builder function updates a CfnNetworkInsightsAnalysis$AnalysisLoadBalancerListenerProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-analysis-load-balancer-listener-property-builder>
+  "The cfn-network-insights-analysis-analysis-load-balancer-listener-property-builder> function updates a CfnNetworkInsightsAnalysis$AnalysisLoadBalancerListenerProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AnalysisLoadBalancerListenerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11097,11 +11097,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-analysis-load-balancer-listener-property-builder (new CfnNetworkInsightsAnalysis$AnalysisLoadBalancerListenerProperty$Builder) id config))
+  (cfn-network-insights-analysis-analysis-load-balancer-listener-property-builder> (new CfnNetworkInsightsAnalysis$AnalysisLoadBalancerListenerProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-analysis-load-balancer-target-property-builder
-  "The build-cfn-network-insights-analysis-analysis-load-balancer-target-property-builder function updates a CfnNetworkInsightsAnalysis$AnalysisLoadBalancerTargetProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-analysis-load-balancer-target-property-builder>
+  "The cfn-network-insights-analysis-analysis-load-balancer-target-property-builder> function updates a CfnNetworkInsightsAnalysis$AnalysisLoadBalancerTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AnalysisLoadBalancerTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11134,11 +11134,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-analysis-load-balancer-target-property-builder (new CfnNetworkInsightsAnalysis$AnalysisLoadBalancerTargetProperty$Builder) id config))
+  (cfn-network-insights-analysis-analysis-load-balancer-target-property-builder> (new CfnNetworkInsightsAnalysis$AnalysisLoadBalancerTargetProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-analysis-packet-header-property-builder
-  "The build-cfn-network-insights-analysis-analysis-packet-header-property-builder function updates a CfnNetworkInsightsAnalysis$AnalysisPacketHeaderProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-analysis-packet-header-property-builder>
+  "The cfn-network-insights-analysis-analysis-packet-header-property-builder> function updates a CfnNetworkInsightsAnalysis$AnalysisPacketHeaderProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AnalysisPacketHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11174,11 +11174,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-analysis-packet-header-property-builder (new CfnNetworkInsightsAnalysis$AnalysisPacketHeaderProperty$Builder) id config))
+  (cfn-network-insights-analysis-analysis-packet-header-property-builder> (new CfnNetworkInsightsAnalysis$AnalysisPacketHeaderProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-analysis-route-table-route-property-builder
-  "The build-cfn-network-insights-analysis-analysis-route-table-route-property-builder function updates a CfnNetworkInsightsAnalysis$AnalysisRouteTableRouteProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-analysis-route-table-route-property-builder>
+  "The cfn-network-insights-analysis-analysis-route-table-route-property-builder> function updates a CfnNetworkInsightsAnalysis$AnalysisRouteTableRouteProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AnalysisRouteTableRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11232,11 +11232,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-analysis-route-table-route-property-builder (new CfnNetworkInsightsAnalysis$AnalysisRouteTableRouteProperty$Builder) id config))
+  (cfn-network-insights-analysis-analysis-route-table-route-property-builder> (new CfnNetworkInsightsAnalysis$AnalysisRouteTableRouteProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-analysis-security-group-rule-property-builder
-  "The build-cfn-network-insights-analysis-analysis-security-group-rule-property-builder function updates a CfnNetworkInsightsAnalysis$AnalysisSecurityGroupRuleProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-analysis-security-group-rule-property-builder>
+  "The cfn-network-insights-analysis-analysis-security-group-rule-property-builder> function updates a CfnNetworkInsightsAnalysis$AnalysisSecurityGroupRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$AnalysisSecurityGroupRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11275,11 +11275,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-analysis-security-group-rule-property-builder (new CfnNetworkInsightsAnalysis$AnalysisSecurityGroupRuleProperty$Builder) id config))
+  (cfn-network-insights-analysis-analysis-security-group-rule-property-builder> (new CfnNetworkInsightsAnalysis$AnalysisSecurityGroupRuleProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-builder
-  "The build-cfn-network-insights-analysis-builder function updates a CfnNetworkInsightsAnalysis$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-builder>
+  "The cfn-network-insights-analysis-builder> function updates a CfnNetworkInsightsAnalysis$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11312,11 +11312,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-insights-analysis-builder (CfnNetworkInsightsAnalysis$Builder/create scope (name id)) id config))
+  (cfn-network-insights-analysis-builder> (CfnNetworkInsightsAnalysis$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-insights-analysis-explanation-property-builder
-  "The build-cfn-network-insights-analysis-explanation-property-builder function updates a CfnNetworkInsightsAnalysis$ExplanationProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-explanation-property-builder>
+  "The cfn-network-insights-analysis-explanation-property-builder> function updates a CfnNetworkInsightsAnalysis$ExplanationProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$ExplanationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11490,11 +11490,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-explanation-property-builder (new CfnNetworkInsightsAnalysis$ExplanationProperty$Builder) id config))
+  (cfn-network-insights-analysis-explanation-property-builder> (new CfnNetworkInsightsAnalysis$ExplanationProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-path-component-property-builder
-  "The build-cfn-network-insights-analysis-path-component-property-builder function updates a CfnNetworkInsightsAnalysis$PathComponentProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-path-component-property-builder>
+  "The cfn-network-insights-analysis-path-component-property-builder> function updates a CfnNetworkInsightsAnalysis$PathComponentProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$PathComponentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11566,11 +11566,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-path-component-property-builder (new CfnNetworkInsightsAnalysis$PathComponentProperty$Builder) id config))
+  (cfn-network-insights-analysis-path-component-property-builder> (new CfnNetworkInsightsAnalysis$PathComponentProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-port-range-property-builder
-  "The build-cfn-network-insights-analysis-port-range-property-builder function updates a CfnNetworkInsightsAnalysis$PortRangeProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-port-range-property-builder>
+  "The cfn-network-insights-analysis-port-range-property-builder> function updates a CfnNetworkInsightsAnalysis$PortRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$PortRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11597,11 +11597,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-port-range-property-builder (new CfnNetworkInsightsAnalysis$PortRangeProperty$Builder) id config))
+  (cfn-network-insights-analysis-port-range-property-builder> (new CfnNetworkInsightsAnalysis$PortRangeProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-props-builder
-  "The build-cfn-network-insights-analysis-props-builder function updates a CfnNetworkInsightsAnalysisProps$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-props-builder>
+  "The cfn-network-insights-analysis-props-builder> function updates a CfnNetworkInsightsAnalysisProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysisProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11634,11 +11634,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-props-builder (new CfnNetworkInsightsAnalysisProps$Builder) id config))
+  (cfn-network-insights-analysis-props-builder> (new CfnNetworkInsightsAnalysisProps$Builder) id config))
 
 
-(defn build-cfn-network-insights-analysis-transit-gateway-route-table-route-property-builder
-  "The build-cfn-network-insights-analysis-transit-gateway-route-table-route-property-builder function updates a CfnNetworkInsightsAnalysis$TransitGatewayRouteTableRouteProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-analysis-transit-gateway-route-table-route-property-builder>
+  "The cfn-network-insights-analysis-transit-gateway-route-table-route-property-builder> function updates a CfnNetworkInsightsAnalysis$TransitGatewayRouteTableRouteProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsAnalysis$TransitGatewayRouteTableRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11680,11 +11680,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-analysis-transit-gateway-route-table-route-property-builder (new CfnNetworkInsightsAnalysis$TransitGatewayRouteTableRouteProperty$Builder) id config))
+  (cfn-network-insights-analysis-transit-gateway-route-table-route-property-builder> (new CfnNetworkInsightsAnalysis$TransitGatewayRouteTableRouteProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-path-builder
-  "The build-cfn-network-insights-path-builder function updates a CfnNetworkInsightsPath$Builder instance using the provided configuration.
+(defn cfn-network-insights-path-builder>
+  "The cfn-network-insights-path-builder> function updates a CfnNetworkInsightsPath$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsPath$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11732,11 +11732,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-insights-path-builder (CfnNetworkInsightsPath$Builder/create scope (name id)) id config))
+  (cfn-network-insights-path-builder> (CfnNetworkInsightsPath$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-insights-path-filter-port-range-property-builder
-  "The build-cfn-network-insights-path-filter-port-range-property-builder function updates a CfnNetworkInsightsPath$FilterPortRangeProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-path-filter-port-range-property-builder>
+  "The cfn-network-insights-path-filter-port-range-property-builder> function updates a CfnNetworkInsightsPath$FilterPortRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsPath$FilterPortRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11763,11 +11763,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-path-filter-port-range-property-builder (new CfnNetworkInsightsPath$FilterPortRangeProperty$Builder) id config))
+  (cfn-network-insights-path-filter-port-range-property-builder> (new CfnNetworkInsightsPath$FilterPortRangeProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-path-path-filter-property-builder
-  "The build-cfn-network-insights-path-path-filter-property-builder function updates a CfnNetworkInsightsPath$PathFilterProperty$Builder instance using the provided configuration.
+(defn cfn-network-insights-path-path-filter-property-builder>
+  "The cfn-network-insights-path-path-filter-property-builder> function updates a CfnNetworkInsightsPath$PathFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsPath$PathFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11800,11 +11800,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-path-path-filter-property-builder (new CfnNetworkInsightsPath$PathFilterProperty$Builder) id config))
+  (cfn-network-insights-path-path-filter-property-builder> (new CfnNetworkInsightsPath$PathFilterProperty$Builder) id config))
 
 
-(defn build-cfn-network-insights-path-props-builder
-  "The build-cfn-network-insights-path-props-builder function updates a CfnNetworkInsightsPathProps$Builder instance using the provided configuration.
+(defn cfn-network-insights-path-props-builder>
+  "The cfn-network-insights-path-props-builder> function updates a CfnNetworkInsightsPathProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkInsightsPathProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11852,11 +11852,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-insights-path-props-builder (new CfnNetworkInsightsPathProps$Builder) id config))
+  (cfn-network-insights-path-props-builder> (new CfnNetworkInsightsPathProps$Builder) id config))
 
 
-(defn build-cfn-network-interface-attachment-builder
-  "The build-cfn-network-interface-attachment-builder function updates a CfnNetworkInterfaceAttachment$Builder instance using the provided configuration.
+(defn cfn-network-interface-attachment-builder>
+  "The cfn-network-interface-attachment-builder> function updates a CfnNetworkInterfaceAttachment$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterfaceAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11892,11 +11892,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-interface-attachment-builder (CfnNetworkInterfaceAttachment$Builder/create scope (name id)) id config))
+  (cfn-network-interface-attachment-builder> (CfnNetworkInterfaceAttachment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-interface-attachment-ena-srd-specification-property-builder
-  "The build-cfn-network-interface-attachment-ena-srd-specification-property-builder function updates a CfnNetworkInterfaceAttachment$EnaSrdSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-network-interface-attachment-ena-srd-specification-property-builder>
+  "The cfn-network-interface-attachment-ena-srd-specification-property-builder> function updates a CfnNetworkInterfaceAttachment$EnaSrdSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterfaceAttachment$EnaSrdSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11923,11 +11923,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-attachment-ena-srd-specification-property-builder (new CfnNetworkInterfaceAttachment$EnaSrdSpecificationProperty$Builder) id config))
+  (cfn-network-interface-attachment-ena-srd-specification-property-builder> (new CfnNetworkInterfaceAttachment$EnaSrdSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-network-interface-attachment-ena-srd-udp-specification-property-builder
-  "The build-cfn-network-interface-attachment-ena-srd-udp-specification-property-builder function updates a CfnNetworkInterfaceAttachment$EnaSrdUdpSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-network-interface-attachment-ena-srd-udp-specification-property-builder>
+  "The cfn-network-interface-attachment-ena-srd-udp-specification-property-builder> function updates a CfnNetworkInterfaceAttachment$EnaSrdUdpSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterfaceAttachment$EnaSrdUdpSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11951,11 +11951,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-attachment-ena-srd-udp-specification-property-builder (new CfnNetworkInterfaceAttachment$EnaSrdUdpSpecificationProperty$Builder) id config))
+  (cfn-network-interface-attachment-ena-srd-udp-specification-property-builder> (new CfnNetworkInterfaceAttachment$EnaSrdUdpSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-network-interface-attachment-props-builder
-  "The build-cfn-network-interface-attachment-props-builder function updates a CfnNetworkInterfaceAttachmentProps$Builder instance using the provided configuration.
+(defn cfn-network-interface-attachment-props-builder>
+  "The cfn-network-interface-attachment-props-builder> function updates a CfnNetworkInterfaceAttachmentProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterfaceAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -11991,11 +11991,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-attachment-props-builder (new CfnNetworkInterfaceAttachmentProps$Builder) id config))
+  (cfn-network-interface-attachment-props-builder> (new CfnNetworkInterfaceAttachmentProps$Builder) id config))
 
 
-(defn build-cfn-network-interface-builder
-  "The build-cfn-network-interface-builder function updates a CfnNetworkInterface$Builder instance using the provided configuration.
+(defn cfn-network-interface-builder>
+  "The cfn-network-interface-builder> function updates a CfnNetworkInterface$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterface$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12067,11 +12067,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-interface-builder (CfnNetworkInterface$Builder/create scope (name id)) id config))
+  (cfn-network-interface-builder> (CfnNetworkInterface$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-interface-connection-tracking-specification-property-builder
-  "The build-cfn-network-interface-connection-tracking-specification-property-builder function updates a CfnNetworkInterface$ConnectionTrackingSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-network-interface-connection-tracking-specification-property-builder>
+  "The cfn-network-interface-connection-tracking-specification-property-builder> function updates a CfnNetworkInterface$ConnectionTrackingSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterface$ConnectionTrackingSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12101,11 +12101,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-connection-tracking-specification-property-builder (new CfnNetworkInterface$ConnectionTrackingSpecificationProperty$Builder) id config))
+  (cfn-network-interface-connection-tracking-specification-property-builder> (new CfnNetworkInterface$ConnectionTrackingSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-network-interface-instance-ipv6-address-property-builder
-  "The build-cfn-network-interface-instance-ipv6-address-property-builder function updates a CfnNetworkInterface$InstanceIpv6AddressProperty$Builder instance using the provided configuration.
+(defn cfn-network-interface-instance-ipv6-address-property-builder>
+  "The cfn-network-interface-instance-ipv6-address-property-builder> function updates a CfnNetworkInterface$InstanceIpv6AddressProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterface$InstanceIpv6AddressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12129,11 +12129,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-instance-ipv6-address-property-builder (new CfnNetworkInterface$InstanceIpv6AddressProperty$Builder) id config))
+  (cfn-network-interface-instance-ipv6-address-property-builder> (new CfnNetworkInterface$InstanceIpv6AddressProperty$Builder) id config))
 
 
-(defn build-cfn-network-interface-ipv4-prefix-specification-property-builder
-  "The build-cfn-network-interface-ipv4-prefix-specification-property-builder function updates a CfnNetworkInterface$Ipv4PrefixSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-network-interface-ipv4-prefix-specification-property-builder>
+  "The cfn-network-interface-ipv4-prefix-specification-property-builder> function updates a CfnNetworkInterface$Ipv4PrefixSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterface$Ipv4PrefixSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12157,11 +12157,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-ipv4-prefix-specification-property-builder (new CfnNetworkInterface$Ipv4PrefixSpecificationProperty$Builder) id config))
+  (cfn-network-interface-ipv4-prefix-specification-property-builder> (new CfnNetworkInterface$Ipv4PrefixSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-network-interface-ipv6-prefix-specification-property-builder
-  "The build-cfn-network-interface-ipv6-prefix-specification-property-builder function updates a CfnNetworkInterface$Ipv6PrefixSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-network-interface-ipv6-prefix-specification-property-builder>
+  "The cfn-network-interface-ipv6-prefix-specification-property-builder> function updates a CfnNetworkInterface$Ipv6PrefixSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterface$Ipv6PrefixSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12185,11 +12185,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-ipv6-prefix-specification-property-builder (new CfnNetworkInterface$Ipv6PrefixSpecificationProperty$Builder) id config))
+  (cfn-network-interface-ipv6-prefix-specification-property-builder> (new CfnNetworkInterface$Ipv6PrefixSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-network-interface-permission-builder
-  "The build-cfn-network-interface-permission-builder function updates a CfnNetworkInterfacePermission$Builder instance using the provided configuration.
+(defn cfn-network-interface-permission-builder>
+  "The cfn-network-interface-permission-builder> function updates a CfnNetworkInterfacePermission$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterfacePermission$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12219,11 +12219,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-interface-permission-builder (CfnNetworkInterfacePermission$Builder/create scope (name id)) id config))
+  (cfn-network-interface-permission-builder> (CfnNetworkInterfacePermission$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-interface-permission-props-builder
-  "The build-cfn-network-interface-permission-props-builder function updates a CfnNetworkInterfacePermissionProps$Builder instance using the provided configuration.
+(defn cfn-network-interface-permission-props-builder>
+  "The cfn-network-interface-permission-props-builder> function updates a CfnNetworkInterfacePermissionProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterfacePermissionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12253,11 +12253,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-permission-props-builder (new CfnNetworkInterfacePermissionProps$Builder) id config))
+  (cfn-network-interface-permission-props-builder> (new CfnNetworkInterfacePermissionProps$Builder) id config))
 
 
-(defn build-cfn-network-interface-private-ip-address-specification-property-builder
-  "The build-cfn-network-interface-private-ip-address-specification-property-builder function updates a CfnNetworkInterface$PrivateIpAddressSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-network-interface-private-ip-address-specification-property-builder>
+  "The cfn-network-interface-private-ip-address-specification-property-builder> function updates a CfnNetworkInterface$PrivateIpAddressSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterface$PrivateIpAddressSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12284,11 +12284,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-private-ip-address-specification-property-builder (new CfnNetworkInterface$PrivateIpAddressSpecificationProperty$Builder) id config))
+  (cfn-network-interface-private-ip-address-specification-property-builder> (new CfnNetworkInterface$PrivateIpAddressSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-network-interface-props-builder
-  "The build-cfn-network-interface-props-builder function updates a CfnNetworkInterfaceProps$Builder instance using the provided configuration.
+(defn cfn-network-interface-props-builder>
+  "The cfn-network-interface-props-builder> function updates a CfnNetworkInterfaceProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkInterfaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12360,11 +12360,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-interface-props-builder (new CfnNetworkInterfaceProps$Builder) id config))
+  (cfn-network-interface-props-builder> (new CfnNetworkInterfaceProps$Builder) id config))
 
 
-(defn build-cfn-network-performance-metric-subscription-builder
-  "The build-cfn-network-performance-metric-subscription-builder function updates a CfnNetworkPerformanceMetricSubscription$Builder instance using the provided configuration.
+(defn cfn-network-performance-metric-subscription-builder>
+  "The cfn-network-performance-metric-subscription-builder> function updates a CfnNetworkPerformanceMetricSubscription$Builder instance using the provided configuration.
   The function takes the CfnNetworkPerformanceMetricSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12397,11 +12397,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-network-performance-metric-subscription-builder (CfnNetworkPerformanceMetricSubscription$Builder/create scope (name id)) id config))
+  (cfn-network-performance-metric-subscription-builder> (CfnNetworkPerformanceMetricSubscription$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-network-performance-metric-subscription-props-builder
-  "The build-cfn-network-performance-metric-subscription-props-builder function updates a CfnNetworkPerformanceMetricSubscriptionProps$Builder instance using the provided configuration.
+(defn cfn-network-performance-metric-subscription-props-builder>
+  "The cfn-network-performance-metric-subscription-props-builder> function updates a CfnNetworkPerformanceMetricSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkPerformanceMetricSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12434,11 +12434,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-network-performance-metric-subscription-props-builder (new CfnNetworkPerformanceMetricSubscriptionProps$Builder) id config))
+  (cfn-network-performance-metric-subscription-props-builder> (new CfnNetworkPerformanceMetricSubscriptionProps$Builder) id config))
 
 
-(defn build-cfn-placement-group-builder
-  "The build-cfn-placement-group-builder function updates a CfnPlacementGroup$Builder instance using the provided configuration.
+(defn cfn-placement-group-builder>
+  "The cfn-placement-group-builder> function updates a CfnPlacementGroup$Builder instance using the provided configuration.
   The function takes the CfnPlacementGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12471,11 +12471,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-placement-group-builder (CfnPlacementGroup$Builder/create scope (name id)) id config))
+  (cfn-placement-group-builder> (CfnPlacementGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-placement-group-props-builder
-  "The build-cfn-placement-group-props-builder function updates a CfnPlacementGroupProps$Builder instance using the provided configuration.
+(defn cfn-placement-group-props-builder>
+  "The cfn-placement-group-props-builder> function updates a CfnPlacementGroupProps$Builder instance using the provided configuration.
   The function takes the CfnPlacementGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12508,11 +12508,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-placement-group-props-builder (new CfnPlacementGroupProps$Builder) id config))
+  (cfn-placement-group-props-builder> (new CfnPlacementGroupProps$Builder) id config))
 
 
-(defn build-cfn-prefix-list-builder
-  "The build-cfn-prefix-list-builder function updates a CfnPrefixList$Builder instance using the provided configuration.
+(defn cfn-prefix-list-builder>
+  "The cfn-prefix-list-builder> function updates a CfnPrefixList$Builder instance using the provided configuration.
   The function takes the CfnPrefixList$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12548,11 +12548,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-prefix-list-builder (CfnPrefixList$Builder/create scope (name id)) id config))
+  (cfn-prefix-list-builder> (CfnPrefixList$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-prefix-list-entry-property-builder
-  "The build-cfn-prefix-list-entry-property-builder function updates a CfnPrefixList$EntryProperty$Builder instance using the provided configuration.
+(defn cfn-prefix-list-entry-property-builder>
+  "The cfn-prefix-list-entry-property-builder> function updates a CfnPrefixList$EntryProperty$Builder instance using the provided configuration.
   The function takes the CfnPrefixList$EntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12579,11 +12579,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-prefix-list-entry-property-builder (new CfnPrefixList$EntryProperty$Builder) id config))
+  (cfn-prefix-list-entry-property-builder> (new CfnPrefixList$EntryProperty$Builder) id config))
 
 
-(defn build-cfn-prefix-list-props-builder
-  "The build-cfn-prefix-list-props-builder function updates a CfnPrefixListProps$Builder instance using the provided configuration.
+(defn cfn-prefix-list-props-builder>
+  "The cfn-prefix-list-props-builder> function updates a CfnPrefixListProps$Builder instance using the provided configuration.
   The function takes the CfnPrefixListProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12619,11 +12619,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-prefix-list-props-builder (new CfnPrefixListProps$Builder) id config))
+  (cfn-prefix-list-props-builder> (new CfnPrefixListProps$Builder) id config))
 
 
-(defn build-cfn-route-builder
-  "The build-cfn-route-builder function updates a CfnRoute$Builder instance using the provided configuration.
+(defn cfn-route-builder>
+  "The cfn-route-builder> function updates a CfnRoute$Builder instance using the provided configuration.
   The function takes the CfnRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12689,11 +12689,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-route-builder (CfnRoute$Builder/create scope (name id)) id config))
+  (cfn-route-builder> (CfnRoute$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-route-props-builder
-  "The build-cfn-route-props-builder function updates a CfnRouteProps$Builder instance using the provided configuration.
+(defn cfn-route-props-builder>
+  "The cfn-route-props-builder> function updates a CfnRouteProps$Builder instance using the provided configuration.
   The function takes the CfnRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12759,11 +12759,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-route-props-builder (new CfnRouteProps$Builder) id config))
+  (cfn-route-props-builder> (new CfnRouteProps$Builder) id config))
 
 
-(defn build-cfn-route-table-builder
-  "The build-cfn-route-table-builder function updates a CfnRouteTable$Builder instance using the provided configuration.
+(defn cfn-route-table-builder>
+  "The cfn-route-table-builder> function updates a CfnRouteTable$Builder instance using the provided configuration.
   The function takes the CfnRouteTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12790,11 +12790,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-route-table-builder (CfnRouteTable$Builder/create scope (name id)) id config))
+  (cfn-route-table-builder> (CfnRouteTable$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-route-table-props-builder
-  "The build-cfn-route-table-props-builder function updates a CfnRouteTableProps$Builder instance using the provided configuration.
+(defn cfn-route-table-props-builder>
+  "The cfn-route-table-props-builder> function updates a CfnRouteTableProps$Builder instance using the provided configuration.
   The function takes the CfnRouteTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12821,11 +12821,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-route-table-props-builder (new CfnRouteTableProps$Builder) id config))
+  (cfn-route-table-props-builder> (new CfnRouteTableProps$Builder) id config))
 
 
-(defn build-cfn-security-group-builder
-  "The build-cfn-security-group-builder function updates a CfnSecurityGroup$Builder instance using the provided configuration.
+(defn cfn-security-group-builder>
+  "The cfn-security-group-builder> function updates a CfnSecurityGroup$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12864,11 +12864,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-security-group-builder (CfnSecurityGroup$Builder/create scope (name id)) id config))
+  (cfn-security-group-builder> (CfnSecurityGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-security-group-egress-builder
-  "The build-cfn-security-group-egress-builder function updates a CfnSecurityGroupEgress$Builder instance using the provided configuration.
+(defn cfn-security-group-egress-builder>
+  "The cfn-security-group-egress-builder> function updates a CfnSecurityGroupEgress$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroupEgress$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12916,11 +12916,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-security-group-egress-builder (CfnSecurityGroupEgress$Builder/create scope (name id)) id config))
+  (cfn-security-group-egress-builder> (CfnSecurityGroupEgress$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-security-group-egress-property-builder
-  "The build-cfn-security-group-egress-property-builder function updates a CfnSecurityGroup$EgressProperty$Builder instance using the provided configuration.
+(defn cfn-security-group-egress-property-builder>
+  "The cfn-security-group-egress-property-builder> function updates a CfnSecurityGroup$EgressProperty$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroup$EgressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -12965,11 +12965,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-group-egress-property-builder (new CfnSecurityGroup$EgressProperty$Builder) id config))
+  (cfn-security-group-egress-property-builder> (new CfnSecurityGroup$EgressProperty$Builder) id config))
 
 
-(defn build-cfn-security-group-egress-props-builder
-  "The build-cfn-security-group-egress-props-builder function updates a CfnSecurityGroupEgressProps$Builder instance using the provided configuration.
+(defn cfn-security-group-egress-props-builder>
+  "The cfn-security-group-egress-props-builder> function updates a CfnSecurityGroupEgressProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroupEgressProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13017,11 +13017,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-group-egress-props-builder (new CfnSecurityGroupEgressProps$Builder) id config))
+  (cfn-security-group-egress-props-builder> (new CfnSecurityGroupEgressProps$Builder) id config))
 
 
-(defn build-cfn-security-group-ingress-builder
-  "The build-cfn-security-group-ingress-builder function updates a CfnSecurityGroupIngress$Builder instance using the provided configuration.
+(defn cfn-security-group-ingress-builder>
+  "The cfn-security-group-ingress-builder> function updates a CfnSecurityGroupIngress$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroupIngress$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13078,11 +13078,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-security-group-ingress-builder (CfnSecurityGroupIngress$Builder/create scope (name id)) id config))
+  (cfn-security-group-ingress-builder> (CfnSecurityGroupIngress$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-security-group-ingress-property-builder
-  "The build-cfn-security-group-ingress-property-builder function updates a CfnSecurityGroup$IngressProperty$Builder instance using the provided configuration.
+(defn cfn-security-group-ingress-property-builder>
+  "The cfn-security-group-ingress-property-builder> function updates a CfnSecurityGroup$IngressProperty$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroup$IngressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13133,11 +13133,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-group-ingress-property-builder (new CfnSecurityGroup$IngressProperty$Builder) id config))
+  (cfn-security-group-ingress-property-builder> (new CfnSecurityGroup$IngressProperty$Builder) id config))
 
 
-(defn build-cfn-security-group-ingress-props-builder
-  "The build-cfn-security-group-ingress-props-builder function updates a CfnSecurityGroupIngressProps$Builder instance using the provided configuration.
+(defn cfn-security-group-ingress-props-builder>
+  "The cfn-security-group-ingress-props-builder> function updates a CfnSecurityGroupIngressProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroupIngressProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13194,11 +13194,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-group-ingress-props-builder (new CfnSecurityGroupIngressProps$Builder) id config))
+  (cfn-security-group-ingress-props-builder> (new CfnSecurityGroupIngressProps$Builder) id config))
 
 
-(defn build-cfn-security-group-props-builder
-  "The build-cfn-security-group-props-builder function updates a CfnSecurityGroupProps$Builder instance using the provided configuration.
+(defn cfn-security-group-props-builder>
+  "The cfn-security-group-props-builder> function updates a CfnSecurityGroupProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13237,11 +13237,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-group-props-builder (new CfnSecurityGroupProps$Builder) id config))
+  (cfn-security-group-props-builder> (new CfnSecurityGroupProps$Builder) id config))
 
 
-(defn build-cfn-snapshot-block-public-access-builder
-  "The build-cfn-snapshot-block-public-access-builder function updates a CfnSnapshotBlockPublicAccess$Builder instance using the provided configuration.
+(defn cfn-snapshot-block-public-access-builder>
+  "The cfn-snapshot-block-public-access-builder> function updates a CfnSnapshotBlockPublicAccess$Builder instance using the provided configuration.
   The function takes the CfnSnapshotBlockPublicAccess$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13265,11 +13265,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-snapshot-block-public-access-builder (CfnSnapshotBlockPublicAccess$Builder/create scope (name id)) id config))
+  (cfn-snapshot-block-public-access-builder> (CfnSnapshotBlockPublicAccess$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-snapshot-block-public-access-props-builder
-  "The build-cfn-snapshot-block-public-access-props-builder function updates a CfnSnapshotBlockPublicAccessProps$Builder instance using the provided configuration.
+(defn cfn-snapshot-block-public-access-props-builder>
+  "The cfn-snapshot-block-public-access-props-builder> function updates a CfnSnapshotBlockPublicAccessProps$Builder instance using the provided configuration.
   The function takes the CfnSnapshotBlockPublicAccessProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13293,11 +13293,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-snapshot-block-public-access-props-builder (new CfnSnapshotBlockPublicAccessProps$Builder) id config))
+  (cfn-snapshot-block-public-access-props-builder> (new CfnSnapshotBlockPublicAccessProps$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-accelerator-count-request-property-builder
-  "The build-cfn-spot-fleet-accelerator-count-request-property-builder function updates a CfnSpotFleet$AcceleratorCountRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-accelerator-count-request-property-builder>
+  "The cfn-spot-fleet-accelerator-count-request-property-builder> function updates a CfnSpotFleet$AcceleratorCountRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$AcceleratorCountRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13324,11 +13324,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-accelerator-count-request-property-builder (new CfnSpotFleet$AcceleratorCountRequestProperty$Builder) id config))
+  (cfn-spot-fleet-accelerator-count-request-property-builder> (new CfnSpotFleet$AcceleratorCountRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-accelerator-total-memory-mi-b-request-property-builder
-  "The build-cfn-spot-fleet-accelerator-total-memory-mi-b-request-property-builder function updates a CfnSpotFleet$AcceleratorTotalMemoryMiBRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-accelerator-total-memory-mi-b-request-property-builder>
+  "The cfn-spot-fleet-accelerator-total-memory-mi-b-request-property-builder> function updates a CfnSpotFleet$AcceleratorTotalMemoryMiBRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$AcceleratorTotalMemoryMiBRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13355,11 +13355,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-accelerator-total-memory-mi-b-request-property-builder (new CfnSpotFleet$AcceleratorTotalMemoryMiBRequestProperty$Builder) id config))
+  (cfn-spot-fleet-accelerator-total-memory-mi-b-request-property-builder> (new CfnSpotFleet$AcceleratorTotalMemoryMiBRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-baseline-ebs-bandwidth-mbps-request-property-builder
-  "The build-cfn-spot-fleet-baseline-ebs-bandwidth-mbps-request-property-builder function updates a CfnSpotFleet$BaselineEbsBandwidthMbpsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-baseline-ebs-bandwidth-mbps-request-property-builder>
+  "The cfn-spot-fleet-baseline-ebs-bandwidth-mbps-request-property-builder> function updates a CfnSpotFleet$BaselineEbsBandwidthMbpsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$BaselineEbsBandwidthMbpsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13386,11 +13386,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-baseline-ebs-bandwidth-mbps-request-property-builder (new CfnSpotFleet$BaselineEbsBandwidthMbpsRequestProperty$Builder) id config))
+  (cfn-spot-fleet-baseline-ebs-bandwidth-mbps-request-property-builder> (new CfnSpotFleet$BaselineEbsBandwidthMbpsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-block-device-mapping-property-builder
-  "The build-cfn-spot-fleet-block-device-mapping-property-builder function updates a CfnSpotFleet$BlockDeviceMappingProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-block-device-mapping-property-builder>
+  "The cfn-spot-fleet-block-device-mapping-property-builder> function updates a CfnSpotFleet$BlockDeviceMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$BlockDeviceMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13423,11 +13423,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-block-device-mapping-property-builder (new CfnSpotFleet$BlockDeviceMappingProperty$Builder) id config))
+  (cfn-spot-fleet-block-device-mapping-property-builder> (new CfnSpotFleet$BlockDeviceMappingProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-builder
-  "The build-cfn-spot-fleet-builder function updates a CfnSpotFleet$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-builder>
+  "The cfn-spot-fleet-builder> function updates a CfnSpotFleet$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13451,11 +13451,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-spot-fleet-builder (CfnSpotFleet$Builder/create scope (name id)) id config))
+  (cfn-spot-fleet-builder> (CfnSpotFleet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-spot-fleet-classic-load-balancer-property-builder
-  "The build-cfn-spot-fleet-classic-load-balancer-property-builder function updates a CfnSpotFleet$ClassicLoadBalancerProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-classic-load-balancer-property-builder>
+  "The cfn-spot-fleet-classic-load-balancer-property-builder> function updates a CfnSpotFleet$ClassicLoadBalancerProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$ClassicLoadBalancerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13479,11 +13479,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-classic-load-balancer-property-builder (new CfnSpotFleet$ClassicLoadBalancerProperty$Builder) id config))
+  (cfn-spot-fleet-classic-load-balancer-property-builder> (new CfnSpotFleet$ClassicLoadBalancerProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-classic-load-balancers-config-property-builder
-  "The build-cfn-spot-fleet-classic-load-balancers-config-property-builder function updates a CfnSpotFleet$ClassicLoadBalancersConfigProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-classic-load-balancers-config-property-builder>
+  "The cfn-spot-fleet-classic-load-balancers-config-property-builder> function updates a CfnSpotFleet$ClassicLoadBalancersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$ClassicLoadBalancersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13507,11 +13507,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-classic-load-balancers-config-property-builder (new CfnSpotFleet$ClassicLoadBalancersConfigProperty$Builder) id config))
+  (cfn-spot-fleet-classic-load-balancers-config-property-builder> (new CfnSpotFleet$ClassicLoadBalancersConfigProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-ebs-block-device-property-builder
-  "The build-cfn-spot-fleet-ebs-block-device-property-builder function updates a CfnSpotFleet$EbsBlockDeviceProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-ebs-block-device-property-builder>
+  "The cfn-spot-fleet-ebs-block-device-property-builder> function updates a CfnSpotFleet$EbsBlockDeviceProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$EbsBlockDeviceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13550,11 +13550,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-ebs-block-device-property-builder (new CfnSpotFleet$EbsBlockDeviceProperty$Builder) id config))
+  (cfn-spot-fleet-ebs-block-device-property-builder> (new CfnSpotFleet$EbsBlockDeviceProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-fleet-launch-template-specification-property-builder
-  "The build-cfn-spot-fleet-fleet-launch-template-specification-property-builder function updates a CfnSpotFleet$FleetLaunchTemplateSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-fleet-launch-template-specification-property-builder>
+  "The cfn-spot-fleet-fleet-launch-template-specification-property-builder> function updates a CfnSpotFleet$FleetLaunchTemplateSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$FleetLaunchTemplateSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13584,11 +13584,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-fleet-launch-template-specification-property-builder (new CfnSpotFleet$FleetLaunchTemplateSpecificationProperty$Builder) id config))
+  (cfn-spot-fleet-fleet-launch-template-specification-property-builder> (new CfnSpotFleet$FleetLaunchTemplateSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-group-identifier-property-builder
-  "The build-cfn-spot-fleet-group-identifier-property-builder function updates a CfnSpotFleet$GroupIdentifierProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-group-identifier-property-builder>
+  "The cfn-spot-fleet-group-identifier-property-builder> function updates a CfnSpotFleet$GroupIdentifierProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$GroupIdentifierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13612,11 +13612,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-group-identifier-property-builder (new CfnSpotFleet$GroupIdentifierProperty$Builder) id config))
+  (cfn-spot-fleet-group-identifier-property-builder> (new CfnSpotFleet$GroupIdentifierProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-iam-instance-profile-specification-property-builder
-  "The build-cfn-spot-fleet-iam-instance-profile-specification-property-builder function updates a CfnSpotFleet$IamInstanceProfileSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-iam-instance-profile-specification-property-builder>
+  "The cfn-spot-fleet-iam-instance-profile-specification-property-builder> function updates a CfnSpotFleet$IamInstanceProfileSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$IamInstanceProfileSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13640,11 +13640,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-iam-instance-profile-specification-property-builder (new CfnSpotFleet$IamInstanceProfileSpecificationProperty$Builder) id config))
+  (cfn-spot-fleet-iam-instance-profile-specification-property-builder> (new CfnSpotFleet$IamInstanceProfileSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-instance-ipv6-address-property-builder
-  "The build-cfn-spot-fleet-instance-ipv6-address-property-builder function updates a CfnSpotFleet$InstanceIpv6AddressProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-instance-ipv6-address-property-builder>
+  "The cfn-spot-fleet-instance-ipv6-address-property-builder> function updates a CfnSpotFleet$InstanceIpv6AddressProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$InstanceIpv6AddressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13668,11 +13668,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-instance-ipv6-address-property-builder (new CfnSpotFleet$InstanceIpv6AddressProperty$Builder) id config))
+  (cfn-spot-fleet-instance-ipv6-address-property-builder> (new CfnSpotFleet$InstanceIpv6AddressProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-instance-network-interface-specification-property-builder
-  "The build-cfn-spot-fleet-instance-network-interface-specification-property-builder function updates a CfnSpotFleet$InstanceNetworkInterfaceSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-instance-network-interface-specification-property-builder>
+  "The cfn-spot-fleet-instance-network-interface-specification-property-builder> function updates a CfnSpotFleet$InstanceNetworkInterfaceSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$InstanceNetworkInterfaceSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13726,11 +13726,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-instance-network-interface-specification-property-builder (new CfnSpotFleet$InstanceNetworkInterfaceSpecificationProperty$Builder) id config))
+  (cfn-spot-fleet-instance-network-interface-specification-property-builder> (new CfnSpotFleet$InstanceNetworkInterfaceSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-instance-requirements-request-property-builder
-  "The build-cfn-spot-fleet-instance-requirements-request-property-builder function updates a CfnSpotFleet$InstanceRequirementsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-instance-requirements-request-property-builder>
+  "The cfn-spot-fleet-instance-requirements-request-property-builder> function updates a CfnSpotFleet$InstanceRequirementsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$InstanceRequirementsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13823,11 +13823,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-instance-requirements-request-property-builder (new CfnSpotFleet$InstanceRequirementsRequestProperty$Builder) id config))
+  (cfn-spot-fleet-instance-requirements-request-property-builder> (new CfnSpotFleet$InstanceRequirementsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-launch-template-config-property-builder
-  "The build-cfn-spot-fleet-launch-template-config-property-builder function updates a CfnSpotFleet$LaunchTemplateConfigProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-launch-template-config-property-builder>
+  "The cfn-spot-fleet-launch-template-config-property-builder> function updates a CfnSpotFleet$LaunchTemplateConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$LaunchTemplateConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13854,11 +13854,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-launch-template-config-property-builder (new CfnSpotFleet$LaunchTemplateConfigProperty$Builder) id config))
+  (cfn-spot-fleet-launch-template-config-property-builder> (new CfnSpotFleet$LaunchTemplateConfigProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-launch-template-overrides-property-builder
-  "The build-cfn-spot-fleet-launch-template-overrides-property-builder function updates a CfnSpotFleet$LaunchTemplateOverridesProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-launch-template-overrides-property-builder>
+  "The cfn-spot-fleet-launch-template-overrides-property-builder> function updates a CfnSpotFleet$LaunchTemplateOverridesProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$LaunchTemplateOverridesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13900,11 +13900,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-launch-template-overrides-property-builder (new CfnSpotFleet$LaunchTemplateOverridesProperty$Builder) id config))
+  (cfn-spot-fleet-launch-template-overrides-property-builder> (new CfnSpotFleet$LaunchTemplateOverridesProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-load-balancers-config-property-builder
-  "The build-cfn-spot-fleet-load-balancers-config-property-builder function updates a CfnSpotFleet$LoadBalancersConfigProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-load-balancers-config-property-builder>
+  "The cfn-spot-fleet-load-balancers-config-property-builder> function updates a CfnSpotFleet$LoadBalancersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$LoadBalancersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13931,11 +13931,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-load-balancers-config-property-builder (new CfnSpotFleet$LoadBalancersConfigProperty$Builder) id config))
+  (cfn-spot-fleet-load-balancers-config-property-builder> (new CfnSpotFleet$LoadBalancersConfigProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-memory-gi-b-per-v-cpu-request-property-builder
-  "The build-cfn-spot-fleet-memory-gi-b-per-v-cpu-request-property-builder function updates a CfnSpotFleet$MemoryGiBPerVCpuRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-memory-gi-b-per-v-cpu-request-property-builder>
+  "The cfn-spot-fleet-memory-gi-b-per-v-cpu-request-property-builder> function updates a CfnSpotFleet$MemoryGiBPerVCpuRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$MemoryGiBPerVCpuRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13962,11 +13962,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-memory-gi-b-per-v-cpu-request-property-builder (new CfnSpotFleet$MemoryGiBPerVCpuRequestProperty$Builder) id config))
+  (cfn-spot-fleet-memory-gi-b-per-v-cpu-request-property-builder> (new CfnSpotFleet$MemoryGiBPerVCpuRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-memory-mi-b-request-property-builder
-  "The build-cfn-spot-fleet-memory-mi-b-request-property-builder function updates a CfnSpotFleet$MemoryMiBRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-memory-mi-b-request-property-builder>
+  "The cfn-spot-fleet-memory-mi-b-request-property-builder> function updates a CfnSpotFleet$MemoryMiBRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$MemoryMiBRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -13993,11 +13993,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-memory-mi-b-request-property-builder (new CfnSpotFleet$MemoryMiBRequestProperty$Builder) id config))
+  (cfn-spot-fleet-memory-mi-b-request-property-builder> (new CfnSpotFleet$MemoryMiBRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-network-bandwidth-gbps-request-property-builder
-  "The build-cfn-spot-fleet-network-bandwidth-gbps-request-property-builder function updates a CfnSpotFleet$NetworkBandwidthGbpsRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-network-bandwidth-gbps-request-property-builder>
+  "The cfn-spot-fleet-network-bandwidth-gbps-request-property-builder> function updates a CfnSpotFleet$NetworkBandwidthGbpsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$NetworkBandwidthGbpsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14024,11 +14024,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-network-bandwidth-gbps-request-property-builder (new CfnSpotFleet$NetworkBandwidthGbpsRequestProperty$Builder) id config))
+  (cfn-spot-fleet-network-bandwidth-gbps-request-property-builder> (new CfnSpotFleet$NetworkBandwidthGbpsRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-network-interface-count-request-property-builder
-  "The build-cfn-spot-fleet-network-interface-count-request-property-builder function updates a CfnSpotFleet$NetworkInterfaceCountRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-network-interface-count-request-property-builder>
+  "The cfn-spot-fleet-network-interface-count-request-property-builder> function updates a CfnSpotFleet$NetworkInterfaceCountRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$NetworkInterfaceCountRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14055,11 +14055,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-network-interface-count-request-property-builder (new CfnSpotFleet$NetworkInterfaceCountRequestProperty$Builder) id config))
+  (cfn-spot-fleet-network-interface-count-request-property-builder> (new CfnSpotFleet$NetworkInterfaceCountRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-private-ip-address-specification-property-builder
-  "The build-cfn-spot-fleet-private-ip-address-specification-property-builder function updates a CfnSpotFleet$PrivateIpAddressSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-private-ip-address-specification-property-builder>
+  "The cfn-spot-fleet-private-ip-address-specification-property-builder> function updates a CfnSpotFleet$PrivateIpAddressSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$PrivateIpAddressSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14086,11 +14086,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-private-ip-address-specification-property-builder (new CfnSpotFleet$PrivateIpAddressSpecificationProperty$Builder) id config))
+  (cfn-spot-fleet-private-ip-address-specification-property-builder> (new CfnSpotFleet$PrivateIpAddressSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-props-builder
-  "The build-cfn-spot-fleet-props-builder function updates a CfnSpotFleetProps$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-props-builder>
+  "The cfn-spot-fleet-props-builder> function updates a CfnSpotFleetProps$Builder instance using the provided configuration.
   The function takes the CfnSpotFleetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14114,11 +14114,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-props-builder (new CfnSpotFleetProps$Builder) id config))
+  (cfn-spot-fleet-props-builder> (new CfnSpotFleetProps$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-spot-capacity-rebalance-property-builder
-  "The build-cfn-spot-fleet-spot-capacity-rebalance-property-builder function updates a CfnSpotFleet$SpotCapacityRebalanceProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-spot-capacity-rebalance-property-builder>
+  "The cfn-spot-fleet-spot-capacity-rebalance-property-builder> function updates a CfnSpotFleet$SpotCapacityRebalanceProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$SpotCapacityRebalanceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14145,11 +14145,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-spot-capacity-rebalance-property-builder (new CfnSpotFleet$SpotCapacityRebalanceProperty$Builder) id config))
+  (cfn-spot-fleet-spot-capacity-rebalance-property-builder> (new CfnSpotFleet$SpotCapacityRebalanceProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-spot-fleet-launch-specification-property-builder
-  "The build-cfn-spot-fleet-spot-fleet-launch-specification-property-builder function updates a CfnSpotFleet$SpotFleetLaunchSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-spot-fleet-launch-specification-property-builder>
+  "The cfn-spot-fleet-spot-fleet-launch-specification-property-builder> function updates a CfnSpotFleet$SpotFleetLaunchSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$SpotFleetLaunchSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14224,11 +14224,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-spot-fleet-launch-specification-property-builder (new CfnSpotFleet$SpotFleetLaunchSpecificationProperty$Builder) id config))
+  (cfn-spot-fleet-spot-fleet-launch-specification-property-builder> (new CfnSpotFleet$SpotFleetLaunchSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-spot-fleet-monitoring-property-builder
-  "The build-cfn-spot-fleet-spot-fleet-monitoring-property-builder function updates a CfnSpotFleet$SpotFleetMonitoringProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-spot-fleet-monitoring-property-builder>
+  "The cfn-spot-fleet-spot-fleet-monitoring-property-builder> function updates a CfnSpotFleet$SpotFleetMonitoringProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$SpotFleetMonitoringProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14252,11 +14252,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-spot-fleet-monitoring-property-builder (new CfnSpotFleet$SpotFleetMonitoringProperty$Builder) id config))
+  (cfn-spot-fleet-spot-fleet-monitoring-property-builder> (new CfnSpotFleet$SpotFleetMonitoringProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-spot-fleet-request-config-data-property-builder
-  "The build-cfn-spot-fleet-spot-fleet-request-config-data-property-builder function updates a CfnSpotFleet$SpotFleetRequestConfigDataProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-spot-fleet-request-config-data-property-builder>
+  "The cfn-spot-fleet-spot-fleet-request-config-data-property-builder> function updates a CfnSpotFleet$SpotFleetRequestConfigDataProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$SpotFleetRequestConfigDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14346,11 +14346,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-spot-fleet-request-config-data-property-builder (new CfnSpotFleet$SpotFleetRequestConfigDataProperty$Builder) id config))
+  (cfn-spot-fleet-spot-fleet-request-config-data-property-builder> (new CfnSpotFleet$SpotFleetRequestConfigDataProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-spot-fleet-tag-specification-property-builder
-  "The build-cfn-spot-fleet-spot-fleet-tag-specification-property-builder function updates a CfnSpotFleet$SpotFleetTagSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-spot-fleet-tag-specification-property-builder>
+  "The cfn-spot-fleet-spot-fleet-tag-specification-property-builder> function updates a CfnSpotFleet$SpotFleetTagSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$SpotFleetTagSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14377,11 +14377,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-spot-fleet-tag-specification-property-builder (new CfnSpotFleet$SpotFleetTagSpecificationProperty$Builder) id config))
+  (cfn-spot-fleet-spot-fleet-tag-specification-property-builder> (new CfnSpotFleet$SpotFleetTagSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-spot-maintenance-strategies-property-builder
-  "The build-cfn-spot-fleet-spot-maintenance-strategies-property-builder function updates a CfnSpotFleet$SpotMaintenanceStrategiesProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-spot-maintenance-strategies-property-builder>
+  "The cfn-spot-fleet-spot-maintenance-strategies-property-builder> function updates a CfnSpotFleet$SpotMaintenanceStrategiesProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$SpotMaintenanceStrategiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14405,11 +14405,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-spot-maintenance-strategies-property-builder (new CfnSpotFleet$SpotMaintenanceStrategiesProperty$Builder) id config))
+  (cfn-spot-fleet-spot-maintenance-strategies-property-builder> (new CfnSpotFleet$SpotMaintenanceStrategiesProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-spot-placement-property-builder
-  "The build-cfn-spot-fleet-spot-placement-property-builder function updates a CfnSpotFleet$SpotPlacementProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-spot-placement-property-builder>
+  "The cfn-spot-fleet-spot-placement-property-builder> function updates a CfnSpotFleet$SpotPlacementProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$SpotPlacementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14439,11 +14439,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-spot-placement-property-builder (new CfnSpotFleet$SpotPlacementProperty$Builder) id config))
+  (cfn-spot-fleet-spot-placement-property-builder> (new CfnSpotFleet$SpotPlacementProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-target-group-property-builder
-  "The build-cfn-spot-fleet-target-group-property-builder function updates a CfnSpotFleet$TargetGroupProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-target-group-property-builder>
+  "The cfn-spot-fleet-target-group-property-builder> function updates a CfnSpotFleet$TargetGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$TargetGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14467,11 +14467,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-target-group-property-builder (new CfnSpotFleet$TargetGroupProperty$Builder) id config))
+  (cfn-spot-fleet-target-group-property-builder> (new CfnSpotFleet$TargetGroupProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-target-groups-config-property-builder
-  "The build-cfn-spot-fleet-target-groups-config-property-builder function updates a CfnSpotFleet$TargetGroupsConfigProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-target-groups-config-property-builder>
+  "The cfn-spot-fleet-target-groups-config-property-builder> function updates a CfnSpotFleet$TargetGroupsConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$TargetGroupsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14495,11 +14495,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-target-groups-config-property-builder (new CfnSpotFleet$TargetGroupsConfigProperty$Builder) id config))
+  (cfn-spot-fleet-target-groups-config-property-builder> (new CfnSpotFleet$TargetGroupsConfigProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-total-local-storage-gb-request-property-builder
-  "The build-cfn-spot-fleet-total-local-storage-gb-request-property-builder function updates a CfnSpotFleet$TotalLocalStorageGBRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-total-local-storage-gb-request-property-builder>
+  "The cfn-spot-fleet-total-local-storage-gb-request-property-builder> function updates a CfnSpotFleet$TotalLocalStorageGBRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$TotalLocalStorageGBRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14526,11 +14526,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-total-local-storage-gb-request-property-builder (new CfnSpotFleet$TotalLocalStorageGBRequestProperty$Builder) id config))
+  (cfn-spot-fleet-total-local-storage-gb-request-property-builder> (new CfnSpotFleet$TotalLocalStorageGBRequestProperty$Builder) id config))
 
 
-(defn build-cfn-spot-fleet-v-cpu-count-range-request-property-builder
-  "The build-cfn-spot-fleet-v-cpu-count-range-request-property-builder function updates a CfnSpotFleet$VCpuCountRangeRequestProperty$Builder instance using the provided configuration.
+(defn cfn-spot-fleet-v-cpu-count-range-request-property-builder>
+  "The cfn-spot-fleet-v-cpu-count-range-request-property-builder> function updates a CfnSpotFleet$VCpuCountRangeRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnSpotFleet$VCpuCountRangeRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14557,11 +14557,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-spot-fleet-v-cpu-count-range-request-property-builder (new CfnSpotFleet$VCpuCountRangeRequestProperty$Builder) id config))
+  (cfn-spot-fleet-v-cpu-count-range-request-property-builder> (new CfnSpotFleet$VCpuCountRangeRequestProperty$Builder) id config))
 
 
-(defn build-cfn-subnet-builder
-  "The build-cfn-subnet-builder function updates a CfnSubnet$Builder instance using the provided configuration.
+(defn cfn-subnet-builder>
+  "The cfn-subnet-builder> function updates a CfnSubnet$Builder instance using the provided configuration.
   The function takes the CfnSubnet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14636,11 +14636,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-subnet-builder (CfnSubnet$Builder/create scope (name id)) id config))
+  (cfn-subnet-builder> (CfnSubnet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-subnet-cidr-block-builder
-  "The build-cfn-subnet-cidr-block-builder function updates a CfnSubnetCidrBlock$Builder instance using the provided configuration.
+(defn cfn-subnet-cidr-block-builder>
+  "The cfn-subnet-cidr-block-builder> function updates a CfnSubnetCidrBlock$Builder instance using the provided configuration.
   The function takes the CfnSubnetCidrBlock$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14673,11 +14673,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-subnet-cidr-block-builder (CfnSubnetCidrBlock$Builder/create scope (name id)) id config))
+  (cfn-subnet-cidr-block-builder> (CfnSubnetCidrBlock$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-subnet-cidr-block-props-builder
-  "The build-cfn-subnet-cidr-block-props-builder function updates a CfnSubnetCidrBlockProps$Builder instance using the provided configuration.
+(defn cfn-subnet-cidr-block-props-builder>
+  "The cfn-subnet-cidr-block-props-builder> function updates a CfnSubnetCidrBlockProps$Builder instance using the provided configuration.
   The function takes the CfnSubnetCidrBlockProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14710,11 +14710,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-subnet-cidr-block-props-builder (new CfnSubnetCidrBlockProps$Builder) id config))
+  (cfn-subnet-cidr-block-props-builder> (new CfnSubnetCidrBlockProps$Builder) id config))
 
 
-(defn build-cfn-subnet-network-acl-association-builder
-  "The build-cfn-subnet-network-acl-association-builder function updates a CfnSubnetNetworkAclAssociation$Builder instance using the provided configuration.
+(defn cfn-subnet-network-acl-association-builder>
+  "The cfn-subnet-network-acl-association-builder> function updates a CfnSubnetNetworkAclAssociation$Builder instance using the provided configuration.
   The function takes the CfnSubnetNetworkAclAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14741,11 +14741,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-subnet-network-acl-association-builder (CfnSubnetNetworkAclAssociation$Builder/create scope (name id)) id config))
+  (cfn-subnet-network-acl-association-builder> (CfnSubnetNetworkAclAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-subnet-network-acl-association-props-builder
-  "The build-cfn-subnet-network-acl-association-props-builder function updates a CfnSubnetNetworkAclAssociationProps$Builder instance using the provided configuration.
+(defn cfn-subnet-network-acl-association-props-builder>
+  "The cfn-subnet-network-acl-association-props-builder> function updates a CfnSubnetNetworkAclAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnSubnetNetworkAclAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14772,11 +14772,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-subnet-network-acl-association-props-builder (new CfnSubnetNetworkAclAssociationProps$Builder) id config))
+  (cfn-subnet-network-acl-association-props-builder> (new CfnSubnetNetworkAclAssociationProps$Builder) id config))
 
 
-(defn build-cfn-subnet-private-dns-name-options-on-launch-property-builder
-  "The build-cfn-subnet-private-dns-name-options-on-launch-property-builder function updates a CfnSubnet$PrivateDnsNameOptionsOnLaunchProperty$Builder instance using the provided configuration.
+(defn cfn-subnet-private-dns-name-options-on-launch-property-builder>
+  "The cfn-subnet-private-dns-name-options-on-launch-property-builder> function updates a CfnSubnet$PrivateDnsNameOptionsOnLaunchProperty$Builder instance using the provided configuration.
   The function takes the CfnSubnet$PrivateDnsNameOptionsOnLaunchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14806,11 +14806,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-subnet-private-dns-name-options-on-launch-property-builder (new CfnSubnet$PrivateDnsNameOptionsOnLaunchProperty$Builder) id config))
+  (cfn-subnet-private-dns-name-options-on-launch-property-builder> (new CfnSubnet$PrivateDnsNameOptionsOnLaunchProperty$Builder) id config))
 
 
-(defn build-cfn-subnet-props-builder
-  "The build-cfn-subnet-props-builder function updates a CfnSubnetProps$Builder instance using the provided configuration.
+(defn cfn-subnet-props-builder>
+  "The cfn-subnet-props-builder> function updates a CfnSubnetProps$Builder instance using the provided configuration.
   The function takes the CfnSubnetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14885,11 +14885,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-subnet-props-builder (new CfnSubnetProps$Builder) id config))
+  (cfn-subnet-props-builder> (new CfnSubnetProps$Builder) id config))
 
 
-(defn build-cfn-subnet-route-table-association-builder
-  "The build-cfn-subnet-route-table-association-builder function updates a CfnSubnetRouteTableAssociation$Builder instance using the provided configuration.
+(defn cfn-subnet-route-table-association-builder>
+  "The cfn-subnet-route-table-association-builder> function updates a CfnSubnetRouteTableAssociation$Builder instance using the provided configuration.
   The function takes the CfnSubnetRouteTableAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14916,11 +14916,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-subnet-route-table-association-builder (CfnSubnetRouteTableAssociation$Builder/create scope (name id)) id config))
+  (cfn-subnet-route-table-association-builder> (CfnSubnetRouteTableAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-subnet-route-table-association-props-builder
-  "The build-cfn-subnet-route-table-association-props-builder function updates a CfnSubnetRouteTableAssociationProps$Builder instance using the provided configuration.
+(defn cfn-subnet-route-table-association-props-builder>
+  "The cfn-subnet-route-table-association-props-builder> function updates a CfnSubnetRouteTableAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnSubnetRouteTableAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14947,11 +14947,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-subnet-route-table-association-props-builder (new CfnSubnetRouteTableAssociationProps$Builder) id config))
+  (cfn-subnet-route-table-association-props-builder> (new CfnSubnetRouteTableAssociationProps$Builder) id config))
 
 
-(defn build-cfn-traffic-mirror-filter-builder
-  "The build-cfn-traffic-mirror-filter-builder function updates a CfnTrafficMirrorFilter$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-filter-builder>
+  "The cfn-traffic-mirror-filter-builder> function updates a CfnTrafficMirrorFilter$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorFilter$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -14981,11 +14981,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-traffic-mirror-filter-builder (CfnTrafficMirrorFilter$Builder/create scope (name id)) id config))
+  (cfn-traffic-mirror-filter-builder> (CfnTrafficMirrorFilter$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-traffic-mirror-filter-props-builder
-  "The build-cfn-traffic-mirror-filter-props-builder function updates a CfnTrafficMirrorFilterProps$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-filter-props-builder>
+  "The cfn-traffic-mirror-filter-props-builder> function updates a CfnTrafficMirrorFilterProps$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorFilterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15015,11 +15015,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-traffic-mirror-filter-props-builder (new CfnTrafficMirrorFilterProps$Builder) id config))
+  (cfn-traffic-mirror-filter-props-builder> (new CfnTrafficMirrorFilterProps$Builder) id config))
 
 
-(defn build-cfn-traffic-mirror-filter-rule-builder
-  "The build-cfn-traffic-mirror-filter-rule-builder function updates a CfnTrafficMirrorFilterRule$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-filter-rule-builder>
+  "The cfn-traffic-mirror-filter-rule-builder> function updates a CfnTrafficMirrorFilterRule$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorFilterRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15070,11 +15070,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-traffic-mirror-filter-rule-builder (CfnTrafficMirrorFilterRule$Builder/create scope (name id)) id config))
+  (cfn-traffic-mirror-filter-rule-builder> (CfnTrafficMirrorFilterRule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-traffic-mirror-filter-rule-props-builder
-  "The build-cfn-traffic-mirror-filter-rule-props-builder function updates a CfnTrafficMirrorFilterRuleProps$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-filter-rule-props-builder>
+  "The cfn-traffic-mirror-filter-rule-props-builder> function updates a CfnTrafficMirrorFilterRuleProps$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorFilterRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15125,11 +15125,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-traffic-mirror-filter-rule-props-builder (new CfnTrafficMirrorFilterRuleProps$Builder) id config))
+  (cfn-traffic-mirror-filter-rule-props-builder> (new CfnTrafficMirrorFilterRuleProps$Builder) id config))
 
 
-(defn build-cfn-traffic-mirror-filter-rule-traffic-mirror-port-range-property-builder
-  "The build-cfn-traffic-mirror-filter-rule-traffic-mirror-port-range-property-builder function updates a CfnTrafficMirrorFilterRule$TrafficMirrorPortRangeProperty$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-filter-rule-traffic-mirror-port-range-property-builder>
+  "The cfn-traffic-mirror-filter-rule-traffic-mirror-port-range-property-builder> function updates a CfnTrafficMirrorFilterRule$TrafficMirrorPortRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorFilterRule$TrafficMirrorPortRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15156,11 +15156,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-traffic-mirror-filter-rule-traffic-mirror-port-range-property-builder (new CfnTrafficMirrorFilterRule$TrafficMirrorPortRangeProperty$Builder) id config))
+  (cfn-traffic-mirror-filter-rule-traffic-mirror-port-range-property-builder> (new CfnTrafficMirrorFilterRule$TrafficMirrorPortRangeProperty$Builder) id config))
 
 
-(defn build-cfn-traffic-mirror-session-builder
-  "The build-cfn-traffic-mirror-session-builder function updates a CfnTrafficMirrorSession$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-session-builder>
+  "The cfn-traffic-mirror-session-builder> function updates a CfnTrafficMirrorSession$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorSession$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15205,11 +15205,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-traffic-mirror-session-builder (CfnTrafficMirrorSession$Builder/create scope (name id)) id config))
+  (cfn-traffic-mirror-session-builder> (CfnTrafficMirrorSession$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-traffic-mirror-session-props-builder
-  "The build-cfn-traffic-mirror-session-props-builder function updates a CfnTrafficMirrorSessionProps$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-session-props-builder>
+  "The cfn-traffic-mirror-session-props-builder> function updates a CfnTrafficMirrorSessionProps$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorSessionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15254,11 +15254,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-traffic-mirror-session-props-builder (new CfnTrafficMirrorSessionProps$Builder) id config))
+  (cfn-traffic-mirror-session-props-builder> (new CfnTrafficMirrorSessionProps$Builder) id config))
 
 
-(defn build-cfn-traffic-mirror-target-builder
-  "The build-cfn-traffic-mirror-target-builder function updates a CfnTrafficMirrorTarget$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-target-builder>
+  "The cfn-traffic-mirror-target-builder> function updates a CfnTrafficMirrorTarget$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15294,11 +15294,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-traffic-mirror-target-builder (CfnTrafficMirrorTarget$Builder/create scope (name id)) id config))
+  (cfn-traffic-mirror-target-builder> (CfnTrafficMirrorTarget$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-traffic-mirror-target-props-builder
-  "The build-cfn-traffic-mirror-target-props-builder function updates a CfnTrafficMirrorTargetProps$Builder instance using the provided configuration.
+(defn cfn-traffic-mirror-target-props-builder>
+  "The cfn-traffic-mirror-target-props-builder> function updates a CfnTrafficMirrorTargetProps$Builder instance using the provided configuration.
   The function takes the CfnTrafficMirrorTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15334,11 +15334,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-traffic-mirror-target-props-builder (new CfnTrafficMirrorTargetProps$Builder) id config))
+  (cfn-traffic-mirror-target-props-builder> (new CfnTrafficMirrorTargetProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-attachment-builder
-  "The build-cfn-transit-gateway-attachment-builder function updates a CfnTransitGatewayAttachment$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-attachment-builder>
+  "The cfn-transit-gateway-attachment-builder> function updates a CfnTransitGatewayAttachment$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15374,11 +15374,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-attachment-builder (CfnTransitGatewayAttachment$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-attachment-builder> (CfnTransitGatewayAttachment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-attachment-options-property-builder
-  "The build-cfn-transit-gateway-attachment-options-property-builder function updates a CfnTransitGatewayAttachment$OptionsProperty$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-attachment-options-property-builder>
+  "The cfn-transit-gateway-attachment-options-property-builder> function updates a CfnTransitGatewayAttachment$OptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayAttachment$OptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15411,11 +15411,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-attachment-options-property-builder (new CfnTransitGatewayAttachment$OptionsProperty$Builder) id config))
+  (cfn-transit-gateway-attachment-options-property-builder> (new CfnTransitGatewayAttachment$OptionsProperty$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-attachment-props-builder
-  "The build-cfn-transit-gateway-attachment-props-builder function updates a CfnTransitGatewayAttachmentProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-attachment-props-builder>
+  "The cfn-transit-gateway-attachment-props-builder> function updates a CfnTransitGatewayAttachmentProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15451,11 +15451,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-attachment-props-builder (new CfnTransitGatewayAttachmentProps$Builder) id config))
+  (cfn-transit-gateway-attachment-props-builder> (new CfnTransitGatewayAttachmentProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-builder
-  "The build-cfn-transit-gateway-builder function updates a CfnTransitGateway$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-builder>
+  "The cfn-transit-gateway-builder> function updates a CfnTransitGateway$Builder instance using the provided configuration.
   The function takes the CfnTransitGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15512,11 +15512,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-builder (CfnTransitGateway$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-builder> (CfnTransitGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-connect-builder
-  "The build-cfn-transit-gateway-connect-builder function updates a CfnTransitGatewayConnect$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-connect-builder>
+  "The cfn-transit-gateway-connect-builder> function updates a CfnTransitGatewayConnect$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayConnect$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15546,11 +15546,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-connect-builder (CfnTransitGatewayConnect$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-connect-builder> (CfnTransitGatewayConnect$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-connect-props-builder
-  "The build-cfn-transit-gateway-connect-props-builder function updates a CfnTransitGatewayConnectProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-connect-props-builder>
+  "The cfn-transit-gateway-connect-props-builder> function updates a CfnTransitGatewayConnectProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayConnectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15580,11 +15580,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-connect-props-builder (new CfnTransitGatewayConnectProps$Builder) id config))
+  (cfn-transit-gateway-connect-props-builder> (new CfnTransitGatewayConnectProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-connect-transit-gateway-connect-options-property-builder
-  "The build-cfn-transit-gateway-connect-transit-gateway-connect-options-property-builder function updates a CfnTransitGatewayConnect$TransitGatewayConnectOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-connect-transit-gateway-connect-options-property-builder>
+  "The cfn-transit-gateway-connect-transit-gateway-connect-options-property-builder> function updates a CfnTransitGatewayConnect$TransitGatewayConnectOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayConnect$TransitGatewayConnectOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15608,11 +15608,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-connect-transit-gateway-connect-options-property-builder (new CfnTransitGatewayConnect$TransitGatewayConnectOptionsProperty$Builder) id config))
+  (cfn-transit-gateway-connect-transit-gateway-connect-options-property-builder> (new CfnTransitGatewayConnect$TransitGatewayConnectOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-domain-association-builder
-  "The build-cfn-transit-gateway-multicast-domain-association-builder function updates a CfnTransitGatewayMulticastDomainAssociation$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-domain-association-builder>
+  "The cfn-transit-gateway-multicast-domain-association-builder> function updates a CfnTransitGatewayMulticastDomainAssociation$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastDomainAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15642,11 +15642,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-multicast-domain-association-builder (CfnTransitGatewayMulticastDomainAssociation$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-multicast-domain-association-builder> (CfnTransitGatewayMulticastDomainAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-domain-association-props-builder
-  "The build-cfn-transit-gateway-multicast-domain-association-props-builder function updates a CfnTransitGatewayMulticastDomainAssociationProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-domain-association-props-builder>
+  "The cfn-transit-gateway-multicast-domain-association-props-builder> function updates a CfnTransitGatewayMulticastDomainAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastDomainAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15676,11 +15676,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-multicast-domain-association-props-builder (new CfnTransitGatewayMulticastDomainAssociationProps$Builder) id config))
+  (cfn-transit-gateway-multicast-domain-association-props-builder> (new CfnTransitGatewayMulticastDomainAssociationProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-domain-builder
-  "The build-cfn-transit-gateway-multicast-domain-builder function updates a CfnTransitGatewayMulticastDomain$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-domain-builder>
+  "The cfn-transit-gateway-multicast-domain-builder> function updates a CfnTransitGatewayMulticastDomain$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastDomain$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15710,11 +15710,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-multicast-domain-builder (CfnTransitGatewayMulticastDomain$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-multicast-domain-builder> (CfnTransitGatewayMulticastDomain$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-domain-options-property-builder
-  "The build-cfn-transit-gateway-multicast-domain-options-property-builder function updates a CfnTransitGatewayMulticastDomain$OptionsProperty$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-domain-options-property-builder>
+  "The cfn-transit-gateway-multicast-domain-options-property-builder> function updates a CfnTransitGatewayMulticastDomain$OptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastDomain$OptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15744,11 +15744,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-multicast-domain-options-property-builder (new CfnTransitGatewayMulticastDomain$OptionsProperty$Builder) id config))
+  (cfn-transit-gateway-multicast-domain-options-property-builder> (new CfnTransitGatewayMulticastDomain$OptionsProperty$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-domain-props-builder
-  "The build-cfn-transit-gateway-multicast-domain-props-builder function updates a CfnTransitGatewayMulticastDomainProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-domain-props-builder>
+  "The cfn-transit-gateway-multicast-domain-props-builder> function updates a CfnTransitGatewayMulticastDomainProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15778,11 +15778,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-multicast-domain-props-builder (new CfnTransitGatewayMulticastDomainProps$Builder) id config))
+  (cfn-transit-gateway-multicast-domain-props-builder> (new CfnTransitGatewayMulticastDomainProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-group-member-builder
-  "The build-cfn-transit-gateway-multicast-group-member-builder function updates a CfnTransitGatewayMulticastGroupMember$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-group-member-builder>
+  "The cfn-transit-gateway-multicast-group-member-builder> function updates a CfnTransitGatewayMulticastGroupMember$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastGroupMember$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15812,11 +15812,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-multicast-group-member-builder (CfnTransitGatewayMulticastGroupMember$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-multicast-group-member-builder> (CfnTransitGatewayMulticastGroupMember$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-group-member-props-builder
-  "The build-cfn-transit-gateway-multicast-group-member-props-builder function updates a CfnTransitGatewayMulticastGroupMemberProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-group-member-props-builder>
+  "The cfn-transit-gateway-multicast-group-member-props-builder> function updates a CfnTransitGatewayMulticastGroupMemberProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastGroupMemberProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15846,11 +15846,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-multicast-group-member-props-builder (new CfnTransitGatewayMulticastGroupMemberProps$Builder) id config))
+  (cfn-transit-gateway-multicast-group-member-props-builder> (new CfnTransitGatewayMulticastGroupMemberProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-group-source-builder
-  "The build-cfn-transit-gateway-multicast-group-source-builder function updates a CfnTransitGatewayMulticastGroupSource$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-group-source-builder>
+  "The cfn-transit-gateway-multicast-group-source-builder> function updates a CfnTransitGatewayMulticastGroupSource$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastGroupSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15880,11 +15880,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-multicast-group-source-builder (CfnTransitGatewayMulticastGroupSource$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-multicast-group-source-builder> (CfnTransitGatewayMulticastGroupSource$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-multicast-group-source-props-builder
-  "The build-cfn-transit-gateway-multicast-group-source-props-builder function updates a CfnTransitGatewayMulticastGroupSourceProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-multicast-group-source-props-builder>
+  "The cfn-transit-gateway-multicast-group-source-props-builder> function updates a CfnTransitGatewayMulticastGroupSourceProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayMulticastGroupSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15914,11 +15914,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-multicast-group-source-props-builder (new CfnTransitGatewayMulticastGroupSourceProps$Builder) id config))
+  (cfn-transit-gateway-multicast-group-source-props-builder> (new CfnTransitGatewayMulticastGroupSourceProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-peering-attachment-builder
-  "The build-cfn-transit-gateway-peering-attachment-builder function updates a CfnTransitGatewayPeeringAttachment$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-peering-attachment-builder>
+  "The cfn-transit-gateway-peering-attachment-builder> function updates a CfnTransitGatewayPeeringAttachment$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayPeeringAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15954,11 +15954,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-peering-attachment-builder (CfnTransitGatewayPeeringAttachment$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-peering-attachment-builder> (CfnTransitGatewayPeeringAttachment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-peering-attachment-peering-attachment-status-property-builder
-  "The build-cfn-transit-gateway-peering-attachment-peering-attachment-status-property-builder function updates a CfnTransitGatewayPeeringAttachment$PeeringAttachmentStatusProperty$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-peering-attachment-peering-attachment-status-property-builder>
+  "The cfn-transit-gateway-peering-attachment-peering-attachment-status-property-builder> function updates a CfnTransitGatewayPeeringAttachment$PeeringAttachmentStatusProperty$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayPeeringAttachment$PeeringAttachmentStatusProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -15985,11 +15985,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-peering-attachment-peering-attachment-status-property-builder (new CfnTransitGatewayPeeringAttachment$PeeringAttachmentStatusProperty$Builder) id config))
+  (cfn-transit-gateway-peering-attachment-peering-attachment-status-property-builder> (new CfnTransitGatewayPeeringAttachment$PeeringAttachmentStatusProperty$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-peering-attachment-props-builder
-  "The build-cfn-transit-gateway-peering-attachment-props-builder function updates a CfnTransitGatewayPeeringAttachmentProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-peering-attachment-props-builder>
+  "The cfn-transit-gateway-peering-attachment-props-builder> function updates a CfnTransitGatewayPeeringAttachmentProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayPeeringAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16025,11 +16025,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-peering-attachment-props-builder (new CfnTransitGatewayPeeringAttachmentProps$Builder) id config))
+  (cfn-transit-gateway-peering-attachment-props-builder> (new CfnTransitGatewayPeeringAttachmentProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-props-builder
-  "The build-cfn-transit-gateway-props-builder function updates a CfnTransitGatewayProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-props-builder>
+  "The cfn-transit-gateway-props-builder> function updates a CfnTransitGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16086,11 +16086,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-props-builder (new CfnTransitGatewayProps$Builder) id config))
+  (cfn-transit-gateway-props-builder> (new CfnTransitGatewayProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-route-builder
-  "The build-cfn-transit-gateway-route-builder function updates a CfnTransitGatewayRoute$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-route-builder>
+  "The cfn-transit-gateway-route-builder> function updates a CfnTransitGatewayRoute$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16123,11 +16123,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-route-builder (CfnTransitGatewayRoute$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-route-builder> (CfnTransitGatewayRoute$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-route-props-builder
-  "The build-cfn-transit-gateway-route-props-builder function updates a CfnTransitGatewayRouteProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-route-props-builder>
+  "The cfn-transit-gateway-route-props-builder> function updates a CfnTransitGatewayRouteProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16160,11 +16160,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-route-props-builder (new CfnTransitGatewayRouteProps$Builder) id config))
+  (cfn-transit-gateway-route-props-builder> (new CfnTransitGatewayRouteProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-route-table-association-builder
-  "The build-cfn-transit-gateway-route-table-association-builder function updates a CfnTransitGatewayRouteTableAssociation$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-route-table-association-builder>
+  "The cfn-transit-gateway-route-table-association-builder> function updates a CfnTransitGatewayRouteTableAssociation$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRouteTableAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16191,11 +16191,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-route-table-association-builder (CfnTransitGatewayRouteTableAssociation$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-route-table-association-builder> (CfnTransitGatewayRouteTableAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-route-table-association-props-builder
-  "The build-cfn-transit-gateway-route-table-association-props-builder function updates a CfnTransitGatewayRouteTableAssociationProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-route-table-association-props-builder>
+  "The cfn-transit-gateway-route-table-association-props-builder> function updates a CfnTransitGatewayRouteTableAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRouteTableAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16222,11 +16222,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-route-table-association-props-builder (new CfnTransitGatewayRouteTableAssociationProps$Builder) id config))
+  (cfn-transit-gateway-route-table-association-props-builder> (new CfnTransitGatewayRouteTableAssociationProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-route-table-builder
-  "The build-cfn-transit-gateway-route-table-builder function updates a CfnTransitGatewayRouteTable$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-route-table-builder>
+  "The cfn-transit-gateway-route-table-builder> function updates a CfnTransitGatewayRouteTable$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRouteTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16253,11 +16253,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-route-table-builder (CfnTransitGatewayRouteTable$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-route-table-builder> (CfnTransitGatewayRouteTable$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-route-table-propagation-builder
-  "The build-cfn-transit-gateway-route-table-propagation-builder function updates a CfnTransitGatewayRouteTablePropagation$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-route-table-propagation-builder>
+  "The cfn-transit-gateway-route-table-propagation-builder> function updates a CfnTransitGatewayRouteTablePropagation$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRouteTablePropagation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16284,11 +16284,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-route-table-propagation-builder (CfnTransitGatewayRouteTablePropagation$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-route-table-propagation-builder> (CfnTransitGatewayRouteTablePropagation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-route-table-propagation-props-builder
-  "The build-cfn-transit-gateway-route-table-propagation-props-builder function updates a CfnTransitGatewayRouteTablePropagationProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-route-table-propagation-props-builder>
+  "The cfn-transit-gateway-route-table-propagation-props-builder> function updates a CfnTransitGatewayRouteTablePropagationProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRouteTablePropagationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16315,11 +16315,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-route-table-propagation-props-builder (new CfnTransitGatewayRouteTablePropagationProps$Builder) id config))
+  (cfn-transit-gateway-route-table-propagation-props-builder> (new CfnTransitGatewayRouteTablePropagationProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-route-table-props-builder
-  "The build-cfn-transit-gateway-route-table-props-builder function updates a CfnTransitGatewayRouteTableProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-route-table-props-builder>
+  "The cfn-transit-gateway-route-table-props-builder> function updates a CfnTransitGatewayRouteTableProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRouteTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16346,11 +16346,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-route-table-props-builder (new CfnTransitGatewayRouteTableProps$Builder) id config))
+  (cfn-transit-gateway-route-table-props-builder> (new CfnTransitGatewayRouteTableProps$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-vpc-attachment-builder
-  "The build-cfn-transit-gateway-vpc-attachment-builder function updates a CfnTransitGatewayVpcAttachment$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-vpc-attachment-builder>
+  "The cfn-transit-gateway-vpc-attachment-builder> function updates a CfnTransitGatewayVpcAttachment$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayVpcAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16392,11 +16392,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-transit-gateway-vpc-attachment-builder (CfnTransitGatewayVpcAttachment$Builder/create scope (name id)) id config))
+  (cfn-transit-gateway-vpc-attachment-builder> (CfnTransitGatewayVpcAttachment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-transit-gateway-vpc-attachment-options-property-builder
-  "The build-cfn-transit-gateway-vpc-attachment-options-property-builder function updates a CfnTransitGatewayVpcAttachment$OptionsProperty$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-vpc-attachment-options-property-builder>
+  "The cfn-transit-gateway-vpc-attachment-options-property-builder> function updates a CfnTransitGatewayVpcAttachment$OptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayVpcAttachment$OptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16426,11 +16426,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-vpc-attachment-options-property-builder (new CfnTransitGatewayVpcAttachment$OptionsProperty$Builder) id config))
+  (cfn-transit-gateway-vpc-attachment-options-property-builder> (new CfnTransitGatewayVpcAttachment$OptionsProperty$Builder) id config))
 
 
-(defn build-cfn-transit-gateway-vpc-attachment-props-builder
-  "The build-cfn-transit-gateway-vpc-attachment-props-builder function updates a CfnTransitGatewayVpcAttachmentProps$Builder instance using the provided configuration.
+(defn cfn-transit-gateway-vpc-attachment-props-builder>
+  "The cfn-transit-gateway-vpc-attachment-props-builder> function updates a CfnTransitGatewayVpcAttachmentProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayVpcAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16472,11 +16472,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-transit-gateway-vpc-attachment-props-builder (new CfnTransitGatewayVpcAttachmentProps$Builder) id config))
+  (cfn-transit-gateway-vpc-attachment-props-builder> (new CfnTransitGatewayVpcAttachmentProps$Builder) id config))
 
 
-(defn build-cfn-verified-access-endpoint-builder
-  "The build-cfn-verified-access-endpoint-builder function updates a CfnVerifiedAccessEndpoint$Builder instance using the provided configuration.
+(defn cfn-verified-access-endpoint-builder>
+  "The cfn-verified-access-endpoint-builder> function updates a CfnVerifiedAccessEndpoint$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16539,11 +16539,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-verified-access-endpoint-builder (CfnVerifiedAccessEndpoint$Builder/create scope (name id)) id config))
+  (cfn-verified-access-endpoint-builder> (CfnVerifiedAccessEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-verified-access-endpoint-load-balancer-options-property-builder
-  "The build-cfn-verified-access-endpoint-load-balancer-options-property-builder function updates a CfnVerifiedAccessEndpoint$LoadBalancerOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-endpoint-load-balancer-options-property-builder>
+  "The cfn-verified-access-endpoint-load-balancer-options-property-builder> function updates a CfnVerifiedAccessEndpoint$LoadBalancerOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessEndpoint$LoadBalancerOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16576,11 +16576,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-endpoint-load-balancer-options-property-builder (new CfnVerifiedAccessEndpoint$LoadBalancerOptionsProperty$Builder) id config))
+  (cfn-verified-access-endpoint-load-balancer-options-property-builder> (new CfnVerifiedAccessEndpoint$LoadBalancerOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-endpoint-network-interface-options-property-builder
-  "The build-cfn-verified-access-endpoint-network-interface-options-property-builder function updates a CfnVerifiedAccessEndpoint$NetworkInterfaceOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-endpoint-network-interface-options-property-builder>
+  "The cfn-verified-access-endpoint-network-interface-options-property-builder> function updates a CfnVerifiedAccessEndpoint$NetworkInterfaceOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessEndpoint$NetworkInterfaceOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16610,11 +16610,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-endpoint-network-interface-options-property-builder (new CfnVerifiedAccessEndpoint$NetworkInterfaceOptionsProperty$Builder) id config))
+  (cfn-verified-access-endpoint-network-interface-options-property-builder> (new CfnVerifiedAccessEndpoint$NetworkInterfaceOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-endpoint-props-builder
-  "The build-cfn-verified-access-endpoint-props-builder function updates a CfnVerifiedAccessEndpointProps$Builder instance using the provided configuration.
+(defn cfn-verified-access-endpoint-props-builder>
+  "The cfn-verified-access-endpoint-props-builder> function updates a CfnVerifiedAccessEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16677,11 +16677,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-endpoint-props-builder (new CfnVerifiedAccessEndpointProps$Builder) id config))
+  (cfn-verified-access-endpoint-props-builder> (new CfnVerifiedAccessEndpointProps$Builder) id config))
 
 
-(defn build-cfn-verified-access-endpoint-sse-specification-property-builder
-  "The build-cfn-verified-access-endpoint-sse-specification-property-builder function updates a CfnVerifiedAccessEndpoint$SseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-endpoint-sse-specification-property-builder>
+  "The cfn-verified-access-endpoint-sse-specification-property-builder> function updates a CfnVerifiedAccessEndpoint$SseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessEndpoint$SseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16708,11 +16708,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-endpoint-sse-specification-property-builder (new CfnVerifiedAccessEndpoint$SseSpecificationProperty$Builder) id config))
+  (cfn-verified-access-endpoint-sse-specification-property-builder> (new CfnVerifiedAccessEndpoint$SseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-group-builder
-  "The build-cfn-verified-access-group-builder function updates a CfnVerifiedAccessGroup$Builder instance using the provided configuration.
+(defn cfn-verified-access-group-builder>
+  "The cfn-verified-access-group-builder> function updates a CfnVerifiedAccessGroup$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16751,11 +16751,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-verified-access-group-builder (CfnVerifiedAccessGroup$Builder/create scope (name id)) id config))
+  (cfn-verified-access-group-builder> (CfnVerifiedAccessGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-verified-access-group-props-builder
-  "The build-cfn-verified-access-group-props-builder function updates a CfnVerifiedAccessGroupProps$Builder instance using the provided configuration.
+(defn cfn-verified-access-group-props-builder>
+  "The cfn-verified-access-group-props-builder> function updates a CfnVerifiedAccessGroupProps$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16794,11 +16794,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-group-props-builder (new CfnVerifiedAccessGroupProps$Builder) id config))
+  (cfn-verified-access-group-props-builder> (new CfnVerifiedAccessGroupProps$Builder) id config))
 
 
-(defn build-cfn-verified-access-group-sse-specification-property-builder
-  "The build-cfn-verified-access-group-sse-specification-property-builder function updates a CfnVerifiedAccessGroup$SseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-group-sse-specification-property-builder>
+  "The cfn-verified-access-group-sse-specification-property-builder> function updates a CfnVerifiedAccessGroup$SseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessGroup$SseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16825,11 +16825,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-group-sse-specification-property-builder (new CfnVerifiedAccessGroup$SseSpecificationProperty$Builder) id config))
+  (cfn-verified-access-group-sse-specification-property-builder> (new CfnVerifiedAccessGroup$SseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-instance-builder
-  "The build-cfn-verified-access-instance-builder function updates a CfnVerifiedAccessInstance$Builder instance using the provided configuration.
+(defn cfn-verified-access-instance-builder>
+  "The cfn-verified-access-instance-builder> function updates a CfnVerifiedAccessInstance$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16868,11 +16868,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-verified-access-instance-builder (CfnVerifiedAccessInstance$Builder/create scope (name id)) id config))
+  (cfn-verified-access-instance-builder> (CfnVerifiedAccessInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-verified-access-instance-cloud-watch-logs-property-builder
-  "The build-cfn-verified-access-instance-cloud-watch-logs-property-builder function updates a CfnVerifiedAccessInstance$CloudWatchLogsProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-instance-cloud-watch-logs-property-builder>
+  "The cfn-verified-access-instance-cloud-watch-logs-property-builder> function updates a CfnVerifiedAccessInstance$CloudWatchLogsProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessInstance$CloudWatchLogsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16899,11 +16899,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-instance-cloud-watch-logs-property-builder (new CfnVerifiedAccessInstance$CloudWatchLogsProperty$Builder) id config))
+  (cfn-verified-access-instance-cloud-watch-logs-property-builder> (new CfnVerifiedAccessInstance$CloudWatchLogsProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-instance-kinesis-data-firehose-property-builder
-  "The build-cfn-verified-access-instance-kinesis-data-firehose-property-builder function updates a CfnVerifiedAccessInstance$KinesisDataFirehoseProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-instance-kinesis-data-firehose-property-builder>
+  "The cfn-verified-access-instance-kinesis-data-firehose-property-builder> function updates a CfnVerifiedAccessInstance$KinesisDataFirehoseProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessInstance$KinesisDataFirehoseProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16930,11 +16930,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-instance-kinesis-data-firehose-property-builder (new CfnVerifiedAccessInstance$KinesisDataFirehoseProperty$Builder) id config))
+  (cfn-verified-access-instance-kinesis-data-firehose-property-builder> (new CfnVerifiedAccessInstance$KinesisDataFirehoseProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-instance-props-builder
-  "The build-cfn-verified-access-instance-props-builder function updates a CfnVerifiedAccessInstanceProps$Builder instance using the provided configuration.
+(defn cfn-verified-access-instance-props-builder>
+  "The cfn-verified-access-instance-props-builder> function updates a CfnVerifiedAccessInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -16973,11 +16973,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-instance-props-builder (new CfnVerifiedAccessInstanceProps$Builder) id config))
+  (cfn-verified-access-instance-props-builder> (new CfnVerifiedAccessInstanceProps$Builder) id config))
 
 
-(defn build-cfn-verified-access-instance-s3-property-builder
-  "The build-cfn-verified-access-instance-s3-property-builder function updates a CfnVerifiedAccessInstance$S3Property$Builder instance using the provided configuration.
+(defn cfn-verified-access-instance-s3-property-builder>
+  "The cfn-verified-access-instance-s3-property-builder> function updates a CfnVerifiedAccessInstance$S3Property$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessInstance$S3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17010,11 +17010,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-instance-s3-property-builder (new CfnVerifiedAccessInstance$S3Property$Builder) id config))
+  (cfn-verified-access-instance-s3-property-builder> (new CfnVerifiedAccessInstance$S3Property$Builder) id config))
 
 
-(defn build-cfn-verified-access-instance-verified-access-logs-property-builder
-  "The build-cfn-verified-access-instance-verified-access-logs-property-builder function updates a CfnVerifiedAccessInstance$VerifiedAccessLogsProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-instance-verified-access-logs-property-builder>
+  "The cfn-verified-access-instance-verified-access-logs-property-builder> function updates a CfnVerifiedAccessInstance$VerifiedAccessLogsProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessInstance$VerifiedAccessLogsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17050,11 +17050,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-instance-verified-access-logs-property-builder (new CfnVerifiedAccessInstance$VerifiedAccessLogsProperty$Builder) id config))
+  (cfn-verified-access-instance-verified-access-logs-property-builder> (new CfnVerifiedAccessInstance$VerifiedAccessLogsProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-instance-verified-access-trust-provider-property-builder
-  "The build-cfn-verified-access-instance-verified-access-trust-provider-property-builder function updates a CfnVerifiedAccessInstance$VerifiedAccessTrustProviderProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-instance-verified-access-trust-provider-property-builder>
+  "The cfn-verified-access-instance-verified-access-trust-provider-property-builder> function updates a CfnVerifiedAccessInstance$VerifiedAccessTrustProviderProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessInstance$VerifiedAccessTrustProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17090,11 +17090,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-instance-verified-access-trust-provider-property-builder (new CfnVerifiedAccessInstance$VerifiedAccessTrustProviderProperty$Builder) id config))
+  (cfn-verified-access-instance-verified-access-trust-provider-property-builder> (new CfnVerifiedAccessInstance$VerifiedAccessTrustProviderProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-trust-provider-builder
-  "The build-cfn-verified-access-trust-provider-builder function updates a CfnVerifiedAccessTrustProvider$Builder instance using the provided configuration.
+(defn cfn-verified-access-trust-provider-builder>
+  "The cfn-verified-access-trust-provider-builder> function updates a CfnVerifiedAccessTrustProvider$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessTrustProvider$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17142,11 +17142,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-verified-access-trust-provider-builder (CfnVerifiedAccessTrustProvider$Builder/create scope (name id)) id config))
+  (cfn-verified-access-trust-provider-builder> (CfnVerifiedAccessTrustProvider$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-verified-access-trust-provider-device-options-property-builder
-  "The build-cfn-verified-access-trust-provider-device-options-property-builder function updates a CfnVerifiedAccessTrustProvider$DeviceOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-trust-provider-device-options-property-builder>
+  "The cfn-verified-access-trust-provider-device-options-property-builder> function updates a CfnVerifiedAccessTrustProvider$DeviceOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessTrustProvider$DeviceOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17173,11 +17173,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-trust-provider-device-options-property-builder (new CfnVerifiedAccessTrustProvider$DeviceOptionsProperty$Builder) id config))
+  (cfn-verified-access-trust-provider-device-options-property-builder> (new CfnVerifiedAccessTrustProvider$DeviceOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-trust-provider-oidc-options-property-builder
-  "The build-cfn-verified-access-trust-provider-oidc-options-property-builder function updates a CfnVerifiedAccessTrustProvider$OidcOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-trust-provider-oidc-options-property-builder>
+  "The cfn-verified-access-trust-provider-oidc-options-property-builder> function updates a CfnVerifiedAccessTrustProvider$OidcOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessTrustProvider$OidcOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17219,11 +17219,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-trust-provider-oidc-options-property-builder (new CfnVerifiedAccessTrustProvider$OidcOptionsProperty$Builder) id config))
+  (cfn-verified-access-trust-provider-oidc-options-property-builder> (new CfnVerifiedAccessTrustProvider$OidcOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-verified-access-trust-provider-props-builder
-  "The build-cfn-verified-access-trust-provider-props-builder function updates a CfnVerifiedAccessTrustProviderProps$Builder instance using the provided configuration.
+(defn cfn-verified-access-trust-provider-props-builder>
+  "The cfn-verified-access-trust-provider-props-builder> function updates a CfnVerifiedAccessTrustProviderProps$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessTrustProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17271,11 +17271,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-trust-provider-props-builder (new CfnVerifiedAccessTrustProviderProps$Builder) id config))
+  (cfn-verified-access-trust-provider-props-builder> (new CfnVerifiedAccessTrustProviderProps$Builder) id config))
 
 
-(defn build-cfn-verified-access-trust-provider-sse-specification-property-builder
-  "The build-cfn-verified-access-trust-provider-sse-specification-property-builder function updates a CfnVerifiedAccessTrustProvider$SseSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-verified-access-trust-provider-sse-specification-property-builder>
+  "The cfn-verified-access-trust-provider-sse-specification-property-builder> function updates a CfnVerifiedAccessTrustProvider$SseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnVerifiedAccessTrustProvider$SseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17302,11 +17302,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-verified-access-trust-provider-sse-specification-property-builder (new CfnVerifiedAccessTrustProvider$SseSpecificationProperty$Builder) id config))
+  (cfn-verified-access-trust-provider-sse-specification-property-builder> (new CfnVerifiedAccessTrustProvider$SseSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-volume-attachment-builder
-  "The build-cfn-volume-attachment-builder function updates a CfnVolumeAttachment$Builder instance using the provided configuration.
+(defn cfn-volume-attachment-builder>
+  "The cfn-volume-attachment-builder> function updates a CfnVolumeAttachment$Builder instance using the provided configuration.
   The function takes the CfnVolumeAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17336,11 +17336,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-volume-attachment-builder (CfnVolumeAttachment$Builder/create scope (name id)) id config))
+  (cfn-volume-attachment-builder> (CfnVolumeAttachment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-volume-attachment-props-builder
-  "The build-cfn-volume-attachment-props-builder function updates a CfnVolumeAttachmentProps$Builder instance using the provided configuration.
+(defn cfn-volume-attachment-props-builder>
+  "The cfn-volume-attachment-props-builder> function updates a CfnVolumeAttachmentProps$Builder instance using the provided configuration.
   The function takes the CfnVolumeAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17370,11 +17370,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-volume-attachment-props-builder (new CfnVolumeAttachmentProps$Builder) id config))
+  (cfn-volume-attachment-props-builder> (new CfnVolumeAttachmentProps$Builder) id config))
 
 
-(defn build-cfn-volume-builder
-  "The build-cfn-volume-builder function updates a CfnVolume$Builder instance using the provided configuration.
+(defn cfn-volume-builder>
+  "The cfn-volume-builder> function updates a CfnVolume$Builder instance using the provided configuration.
   The function takes the CfnVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17431,11 +17431,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-volume-builder (CfnVolume$Builder/create scope (name id)) id config))
+  (cfn-volume-builder> (CfnVolume$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-volume-props-builder
-  "The build-cfn-volume-props-builder function updates a CfnVolumeProps$Builder instance using the provided configuration.
+(defn cfn-volume-props-builder>
+  "The cfn-volume-props-builder> function updates a CfnVolumeProps$Builder instance using the provided configuration.
   The function takes the CfnVolumeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17492,11 +17492,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-volume-props-builder (new CfnVolumeProps$Builder) id config))
+  (cfn-volume-props-builder> (new CfnVolumeProps$Builder) id config))
 
 
-(defn build-cfn-vpc-builder
-  "The build-cfn-vpc-builder function updates a CfnVPC$Builder instance using the provided configuration.
+(defn cfn-vpc-builder>
+  "The cfn-vpc-builder> function updates a CfnVPC$Builder instance using the provided configuration.
   The function takes the CfnVPC$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17538,11 +17538,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-builder (CfnVPC$Builder/create scope (name id)) id config))
+  (cfn-vpc-builder> (CfnVPC$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-cidr-block-builder
-  "The build-cfn-vpc-cidr-block-builder function updates a CfnVPCCidrBlock$Builder instance using the provided configuration.
+(defn cfn-vpc-cidr-block-builder>
+  "The cfn-vpc-cidr-block-builder> function updates a CfnVPCCidrBlock$Builder instance using the provided configuration.
   The function takes the CfnVPCCidrBlock$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17590,11 +17590,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-cidr-block-builder (CfnVPCCidrBlock$Builder/create scope (name id)) id config))
+  (cfn-vpc-cidr-block-builder> (CfnVPCCidrBlock$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-cidr-block-props-builder
-  "The build-cfn-vpc-cidr-block-props-builder function updates a CfnVPCCidrBlockProps$Builder instance using the provided configuration.
+(defn cfn-vpc-cidr-block-props-builder>
+  "The cfn-vpc-cidr-block-props-builder> function updates a CfnVPCCidrBlockProps$Builder instance using the provided configuration.
   The function takes the CfnVPCCidrBlockProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17642,11 +17642,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-cidr-block-props-builder (new CfnVPCCidrBlockProps$Builder) id config))
+  (cfn-vpc-cidr-block-props-builder> (new CfnVPCCidrBlockProps$Builder) id config))
 
 
-(defn build-cfn-vpc-endpoint-builder
-  "The build-cfn-vpc-endpoint-builder function updates a CfnVPCEndpoint$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-builder>
+  "The cfn-vpc-endpoint-builder> function updates a CfnVPCEndpoint$Builder instance using the provided configuration.
   The function takes the CfnVPCEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17691,11 +17691,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-endpoint-builder (CfnVPCEndpoint$Builder/create scope (name id)) id config))
+  (cfn-vpc-endpoint-builder> (CfnVPCEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-endpoint-connection-notification-builder
-  "The build-cfn-vpc-endpoint-connection-notification-builder function updates a CfnVPCEndpointConnectionNotification$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-connection-notification-builder>
+  "The cfn-vpc-endpoint-connection-notification-builder> function updates a CfnVPCEndpointConnectionNotification$Builder instance using the provided configuration.
   The function takes the CfnVPCEndpointConnectionNotification$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17728,11 +17728,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-endpoint-connection-notification-builder (CfnVPCEndpointConnectionNotification$Builder/create scope (name id)) id config))
+  (cfn-vpc-endpoint-connection-notification-builder> (CfnVPCEndpointConnectionNotification$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-endpoint-connection-notification-props-builder
-  "The build-cfn-vpc-endpoint-connection-notification-props-builder function updates a CfnVPCEndpointConnectionNotificationProps$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-connection-notification-props-builder>
+  "The cfn-vpc-endpoint-connection-notification-props-builder> function updates a CfnVPCEndpointConnectionNotificationProps$Builder instance using the provided configuration.
   The function takes the CfnVPCEndpointConnectionNotificationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17765,11 +17765,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-endpoint-connection-notification-props-builder (new CfnVPCEndpointConnectionNotificationProps$Builder) id config))
+  (cfn-vpc-endpoint-connection-notification-props-builder> (new CfnVPCEndpointConnectionNotificationProps$Builder) id config))
 
 
-(defn build-cfn-vpc-endpoint-props-builder
-  "The build-cfn-vpc-endpoint-props-builder function updates a CfnVPCEndpointProps$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-props-builder>
+  "The cfn-vpc-endpoint-props-builder> function updates a CfnVPCEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnVPCEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17814,11 +17814,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-endpoint-props-builder (new CfnVPCEndpointProps$Builder) id config))
+  (cfn-vpc-endpoint-props-builder> (new CfnVPCEndpointProps$Builder) id config))
 
 
-(defn build-cfn-vpc-endpoint-service-builder
-  "The build-cfn-vpc-endpoint-service-builder function updates a CfnVPCEndpointService$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-service-builder>
+  "The cfn-vpc-endpoint-service-builder> function updates a CfnVPCEndpointService$Builder instance using the provided configuration.
   The function takes the CfnVPCEndpointService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17854,11 +17854,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-endpoint-service-builder (CfnVPCEndpointService$Builder/create scope (name id)) id config))
+  (cfn-vpc-endpoint-service-builder> (CfnVPCEndpointService$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-endpoint-service-permissions-builder
-  "The build-cfn-vpc-endpoint-service-permissions-builder function updates a CfnVPCEndpointServicePermissions$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-service-permissions-builder>
+  "The cfn-vpc-endpoint-service-permissions-builder> function updates a CfnVPCEndpointServicePermissions$Builder instance using the provided configuration.
   The function takes the CfnVPCEndpointServicePermissions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17885,11 +17885,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-endpoint-service-permissions-builder (CfnVPCEndpointServicePermissions$Builder/create scope (name id)) id config))
+  (cfn-vpc-endpoint-service-permissions-builder> (CfnVPCEndpointServicePermissions$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-endpoint-service-permissions-props-builder
-  "The build-cfn-vpc-endpoint-service-permissions-props-builder function updates a CfnVPCEndpointServicePermissionsProps$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-service-permissions-props-builder>
+  "The cfn-vpc-endpoint-service-permissions-props-builder> function updates a CfnVPCEndpointServicePermissionsProps$Builder instance using the provided configuration.
   The function takes the CfnVPCEndpointServicePermissionsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17916,11 +17916,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-endpoint-service-permissions-props-builder (new CfnVPCEndpointServicePermissionsProps$Builder) id config))
+  (cfn-vpc-endpoint-service-permissions-props-builder> (new CfnVPCEndpointServicePermissionsProps$Builder) id config))
 
 
-(defn build-cfn-vpc-endpoint-service-props-builder
-  "The build-cfn-vpc-endpoint-service-props-builder function updates a CfnVPCEndpointServiceProps$Builder instance using the provided configuration.
+(defn cfn-vpc-endpoint-service-props-builder>
+  "The cfn-vpc-endpoint-service-props-builder> function updates a CfnVPCEndpointServiceProps$Builder instance using the provided configuration.
   The function takes the CfnVPCEndpointServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17956,11 +17956,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-endpoint-service-props-builder (new CfnVPCEndpointServiceProps$Builder) id config))
+  (cfn-vpc-endpoint-service-props-builder> (new CfnVPCEndpointServiceProps$Builder) id config))
 
 
-(defn build-cfn-vpc-gateway-attachment-builder
-  "The build-cfn-vpc-gateway-attachment-builder function updates a CfnVPCGatewayAttachment$Builder instance using the provided configuration.
+(defn cfn-vpc-gateway-attachment-builder>
+  "The cfn-vpc-gateway-attachment-builder> function updates a CfnVPCGatewayAttachment$Builder instance using the provided configuration.
   The function takes the CfnVPCGatewayAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -17990,11 +17990,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-gateway-attachment-builder (CfnVPCGatewayAttachment$Builder/create scope (name id)) id config))
+  (cfn-vpc-gateway-attachment-builder> (CfnVPCGatewayAttachment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-gateway-attachment-props-builder
-  "The build-cfn-vpc-gateway-attachment-props-builder function updates a CfnVPCGatewayAttachmentProps$Builder instance using the provided configuration.
+(defn cfn-vpc-gateway-attachment-props-builder>
+  "The cfn-vpc-gateway-attachment-props-builder> function updates a CfnVPCGatewayAttachmentProps$Builder instance using the provided configuration.
   The function takes the CfnVPCGatewayAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18024,11 +18024,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-gateway-attachment-props-builder (new CfnVPCGatewayAttachmentProps$Builder) id config))
+  (cfn-vpc-gateway-attachment-props-builder> (new CfnVPCGatewayAttachmentProps$Builder) id config))
 
 
-(defn build-cfn-vpc-peering-connection-builder
-  "The build-cfn-vpc-peering-connection-builder function updates a CfnVPCPeeringConnection$Builder instance using the provided configuration.
+(defn cfn-vpc-peering-connection-builder>
+  "The cfn-vpc-peering-connection-builder> function updates a CfnVPCPeeringConnection$Builder instance using the provided configuration.
   The function takes the CfnVPCPeeringConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18067,11 +18067,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpc-peering-connection-builder (CfnVPCPeeringConnection$Builder/create scope (name id)) id config))
+  (cfn-vpc-peering-connection-builder> (CfnVPCPeeringConnection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpc-peering-connection-props-builder
-  "The build-cfn-vpc-peering-connection-props-builder function updates a CfnVPCPeeringConnectionProps$Builder instance using the provided configuration.
+(defn cfn-vpc-peering-connection-props-builder>
+  "The cfn-vpc-peering-connection-props-builder> function updates a CfnVPCPeeringConnectionProps$Builder instance using the provided configuration.
   The function takes the CfnVPCPeeringConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18110,11 +18110,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-peering-connection-props-builder (new CfnVPCPeeringConnectionProps$Builder) id config))
+  (cfn-vpc-peering-connection-props-builder> (new CfnVPCPeeringConnectionProps$Builder) id config))
 
 
-(defn build-cfn-vpc-props-builder
-  "The build-cfn-vpc-props-builder function updates a CfnVPCProps$Builder instance using the provided configuration.
+(defn cfn-vpc-props-builder>
+  "The cfn-vpc-props-builder> function updates a CfnVPCProps$Builder instance using the provided configuration.
   The function takes the CfnVPCProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18156,11 +18156,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpc-props-builder (new CfnVPCProps$Builder) id config))
+  (cfn-vpc-props-builder> (new CfnVPCProps$Builder) id config))
 
 
-(defn build-cfn-vpcdhcp-options-association-builder
-  "The build-cfn-vpcdhcp-options-association-builder function updates a CfnVPCDHCPOptionsAssociation$Builder instance using the provided configuration.
+(defn cfn-vpcdhcp-options-association-builder>
+  "The cfn-vpcdhcp-options-association-builder> function updates a CfnVPCDHCPOptionsAssociation$Builder instance using the provided configuration.
   The function takes the CfnVPCDHCPOptionsAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18187,11 +18187,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpcdhcp-options-association-builder (CfnVPCDHCPOptionsAssociation$Builder/create scope (name id)) id config))
+  (cfn-vpcdhcp-options-association-builder> (CfnVPCDHCPOptionsAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpcdhcp-options-association-props-builder
-  "The build-cfn-vpcdhcp-options-association-props-builder function updates a CfnVPCDHCPOptionsAssociationProps$Builder instance using the provided configuration.
+(defn cfn-vpcdhcp-options-association-props-builder>
+  "The cfn-vpcdhcp-options-association-props-builder> function updates a CfnVPCDHCPOptionsAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnVPCDHCPOptionsAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18218,11 +18218,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpcdhcp-options-association-props-builder (new CfnVPCDHCPOptionsAssociationProps$Builder) id config))
+  (cfn-vpcdhcp-options-association-props-builder> (new CfnVPCDHCPOptionsAssociationProps$Builder) id config))
 
 
-(defn build-cfn-vpn-connection-builder
-  "The build-cfn-vpn-connection-builder function updates a CfnVPNConnection$Builder instance using the provided configuration.
+(defn cfn-vpn-connection-builder>
+  "The cfn-vpn-connection-builder> function updates a CfnVPNConnection$Builder instance using the provided configuration.
   The function takes the CfnVPNConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18264,11 +18264,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpn-connection-builder (CfnVPNConnection$Builder/create scope (name id)) id config))
+  (cfn-vpn-connection-builder> (CfnVPNConnection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpn-connection-props-builder
-  "The build-cfn-vpn-connection-props-builder function updates a CfnVPNConnectionProps$Builder instance using the provided configuration.
+(defn cfn-vpn-connection-props-builder>
+  "The cfn-vpn-connection-props-builder> function updates a CfnVPNConnectionProps$Builder instance using the provided configuration.
   The function takes the CfnVPNConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18310,11 +18310,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpn-connection-props-builder (new CfnVPNConnectionProps$Builder) id config))
+  (cfn-vpn-connection-props-builder> (new CfnVPNConnectionProps$Builder) id config))
 
 
-(defn build-cfn-vpn-connection-route-builder
-  "The build-cfn-vpn-connection-route-builder function updates a CfnVPNConnectionRoute$Builder instance using the provided configuration.
+(defn cfn-vpn-connection-route-builder>
+  "The cfn-vpn-connection-route-builder> function updates a CfnVPNConnectionRoute$Builder instance using the provided configuration.
   The function takes the CfnVPNConnectionRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18341,11 +18341,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpn-connection-route-builder (CfnVPNConnectionRoute$Builder/create scope (name id)) id config))
+  (cfn-vpn-connection-route-builder> (CfnVPNConnectionRoute$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpn-connection-route-props-builder
-  "The build-cfn-vpn-connection-route-props-builder function updates a CfnVPNConnectionRouteProps$Builder instance using the provided configuration.
+(defn cfn-vpn-connection-route-props-builder>
+  "The cfn-vpn-connection-route-props-builder> function updates a CfnVPNConnectionRouteProps$Builder instance using the provided configuration.
   The function takes the CfnVPNConnectionRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18372,11 +18372,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpn-connection-route-props-builder (new CfnVPNConnectionRouteProps$Builder) id config))
+  (cfn-vpn-connection-route-props-builder> (new CfnVPNConnectionRouteProps$Builder) id config))
 
 
-(defn build-cfn-vpn-connection-vpn-tunnel-options-specification-property-builder
-  "The build-cfn-vpn-connection-vpn-tunnel-options-specification-property-builder function updates a CfnVPNConnection$VpnTunnelOptionsSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-vpn-connection-vpn-tunnel-options-specification-property-builder>
+  "The cfn-vpn-connection-vpn-tunnel-options-specification-property-builder> function updates a CfnVPNConnection$VpnTunnelOptionsSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnVPNConnection$VpnTunnelOptionsSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18403,11 +18403,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpn-connection-vpn-tunnel-options-specification-property-builder (new CfnVPNConnection$VpnTunnelOptionsSpecificationProperty$Builder) id config))
+  (cfn-vpn-connection-vpn-tunnel-options-specification-property-builder> (new CfnVPNConnection$VpnTunnelOptionsSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-vpn-gateway-builder
-  "The build-cfn-vpn-gateway-builder function updates a CfnVPNGateway$Builder instance using the provided configuration.
+(defn cfn-vpn-gateway-builder>
+  "The cfn-vpn-gateway-builder> function updates a CfnVPNGateway$Builder instance using the provided configuration.
   The function takes the CfnVPNGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18437,11 +18437,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpn-gateway-builder (CfnVPNGateway$Builder/create scope (name id)) id config))
+  (cfn-vpn-gateway-builder> (CfnVPNGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpn-gateway-props-builder
-  "The build-cfn-vpn-gateway-props-builder function updates a CfnVPNGatewayProps$Builder instance using the provided configuration.
+(defn cfn-vpn-gateway-props-builder>
+  "The cfn-vpn-gateway-props-builder> function updates a CfnVPNGatewayProps$Builder instance using the provided configuration.
   The function takes the CfnVPNGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18471,11 +18471,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpn-gateway-props-builder (new CfnVPNGatewayProps$Builder) id config))
+  (cfn-vpn-gateway-props-builder> (new CfnVPNGatewayProps$Builder) id config))
 
 
-(defn build-cfn-vpn-gateway-route-propagation-builder
-  "The build-cfn-vpn-gateway-route-propagation-builder function updates a CfnVPNGatewayRoutePropagation$Builder instance using the provided configuration.
+(defn cfn-vpn-gateway-route-propagation-builder>
+  "The cfn-vpn-gateway-route-propagation-builder> function updates a CfnVPNGatewayRoutePropagation$Builder instance using the provided configuration.
   The function takes the CfnVPNGatewayRoutePropagation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18502,11 +18502,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vpn-gateway-route-propagation-builder (CfnVPNGatewayRoutePropagation$Builder/create scope (name id)) id config))
+  (cfn-vpn-gateway-route-propagation-builder> (CfnVPNGatewayRoutePropagation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vpn-gateway-route-propagation-props-builder
-  "The build-cfn-vpn-gateway-route-propagation-props-builder function updates a CfnVPNGatewayRoutePropagationProps$Builder instance using the provided configuration.
+(defn cfn-vpn-gateway-route-propagation-props-builder>
+  "The cfn-vpn-gateway-route-propagation-props-builder> function updates a CfnVPNGatewayRoutePropagationProps$Builder instance using the provided configuration.
   The function takes the CfnVPNGatewayRoutePropagationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18533,11 +18533,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vpn-gateway-route-propagation-props-builder (new CfnVPNGatewayRoutePropagationProps$Builder) id config))
+  (cfn-vpn-gateway-route-propagation-props-builder> (new CfnVPNGatewayRoutePropagationProps$Builder) id config))
 
 
-(defn build-client-vpn-authorization-rule-builder
-  "The build-client-vpn-authorization-rule-builder function updates a ClientVpnAuthorizationRule$Builder instance using the provided configuration.
+(defn client-vpn-authorization-rule-builder>
+  "The client-vpn-authorization-rule-builder> function updates a ClientVpnAuthorizationRule$Builder instance using the provided configuration.
   The function takes the ClientVpnAuthorizationRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18570,11 +18570,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-client-vpn-authorization-rule-builder (ClientVpnAuthorizationRule$Builder/create scope (name id)) id config))
+  (client-vpn-authorization-rule-builder> (ClientVpnAuthorizationRule$Builder/create scope (name id)) id config))
 
 
-(defn build-client-vpn-authorization-rule-options-builder
-  "The build-client-vpn-authorization-rule-options-builder function updates a ClientVpnAuthorizationRuleOptions$Builder instance using the provided configuration.
+(defn client-vpn-authorization-rule-options-builder>
+  "The client-vpn-authorization-rule-options-builder> function updates a ClientVpnAuthorizationRuleOptions$Builder instance using the provided configuration.
   The function takes the ClientVpnAuthorizationRuleOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18604,11 +18604,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-client-vpn-authorization-rule-options-builder (new ClientVpnAuthorizationRuleOptions$Builder) id config))
+  (client-vpn-authorization-rule-options-builder> (new ClientVpnAuthorizationRuleOptions$Builder) id config))
 
 
-(defn build-client-vpn-authorization-rule-props-builder
-  "The build-client-vpn-authorization-rule-props-builder function updates a ClientVpnAuthorizationRuleProps$Builder instance using the provided configuration.
+(defn client-vpn-authorization-rule-props-builder>
+  "The client-vpn-authorization-rule-props-builder> function updates a ClientVpnAuthorizationRuleProps$Builder instance using the provided configuration.
   The function takes the ClientVpnAuthorizationRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18641,11 +18641,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-client-vpn-authorization-rule-props-builder (new ClientVpnAuthorizationRuleProps$Builder) id config))
+  (client-vpn-authorization-rule-props-builder> (new ClientVpnAuthorizationRuleProps$Builder) id config))
 
 
-(defn build-client-vpn-endpoint-attributes-builder
-  "The build-client-vpn-endpoint-attributes-builder function updates a ClientVpnEndpointAttributes$Builder instance using the provided configuration.
+(defn client-vpn-endpoint-attributes-builder>
+  "The client-vpn-endpoint-attributes-builder> function updates a ClientVpnEndpointAttributes$Builder instance using the provided configuration.
   The function takes the ClientVpnEndpointAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18672,11 +18672,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-client-vpn-endpoint-attributes-builder (new ClientVpnEndpointAttributes$Builder) id config))
+  (client-vpn-endpoint-attributes-builder> (new ClientVpnEndpointAttributes$Builder) id config))
 
 
-(defn build-client-vpn-endpoint-builder
-  "The build-client-vpn-endpoint-builder function updates a ClientVpnEndpoint$Builder instance using the provided configuration.
+(defn client-vpn-endpoint-builder>
+  "The client-vpn-endpoint-builder> function updates a ClientVpnEndpoint$Builder instance using the provided configuration.
   The function takes the ClientVpnEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18757,11 +18757,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-client-vpn-endpoint-builder (ClientVpnEndpoint$Builder/create scope (name id)) id config))
+  (client-vpn-endpoint-builder> (ClientVpnEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-client-vpn-endpoint-options-builder
-  "The build-client-vpn-endpoint-options-builder function updates a ClientVpnEndpointOptions$Builder instance using the provided configuration.
+(defn client-vpn-endpoint-options-builder>
+  "The client-vpn-endpoint-options-builder> function updates a ClientVpnEndpointOptions$Builder instance using the provided configuration.
   The function takes the ClientVpnEndpointOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18839,11 +18839,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-client-vpn-endpoint-options-builder (new ClientVpnEndpointOptions$Builder) id config))
+  (client-vpn-endpoint-options-builder> (new ClientVpnEndpointOptions$Builder) id config))
 
 
-(defn build-client-vpn-endpoint-props-builder
-  "The build-client-vpn-endpoint-props-builder function updates a ClientVpnEndpointProps$Builder instance using the provided configuration.
+(defn client-vpn-endpoint-props-builder>
+  "The client-vpn-endpoint-props-builder> function updates a ClientVpnEndpointProps$Builder instance using the provided configuration.
   The function takes the ClientVpnEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18924,11 +18924,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-client-vpn-endpoint-props-builder (new ClientVpnEndpointProps$Builder) id config))
+  (client-vpn-endpoint-props-builder> (new ClientVpnEndpointProps$Builder) id config))
 
 
-(defn build-client-vpn-route-builder
-  "The build-client-vpn-route-builder function updates a ClientVpnRoute$Builder instance using the provided configuration.
+(defn client-vpn-route-builder>
+  "The client-vpn-route-builder> function updates a ClientVpnRoute$Builder instance using the provided configuration.
   The function takes the ClientVpnRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18961,11 +18961,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-client-vpn-route-builder (ClientVpnRoute$Builder/create scope (name id)) id config))
+  (client-vpn-route-builder> (ClientVpnRoute$Builder/create scope (name id)) id config))
 
 
-(defn build-client-vpn-route-options-builder
-  "The build-client-vpn-route-options-builder function updates a ClientVpnRouteOptions$Builder instance using the provided configuration.
+(defn client-vpn-route-options-builder>
+  "The client-vpn-route-options-builder> function updates a ClientVpnRouteOptions$Builder instance using the provided configuration.
   The function takes the ClientVpnRouteOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -18995,11 +18995,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-client-vpn-route-options-builder (new ClientVpnRouteOptions$Builder) id config))
+  (client-vpn-route-options-builder> (new ClientVpnRouteOptions$Builder) id config))
 
 
-(defn build-client-vpn-route-props-builder
-  "The build-client-vpn-route-props-builder function updates a ClientVpnRouteProps$Builder instance using the provided configuration.
+(defn client-vpn-route-props-builder>
+  "The client-vpn-route-props-builder> function updates a ClientVpnRouteProps$Builder instance using the provided configuration.
   The function takes the ClientVpnRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19032,11 +19032,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-client-vpn-route-props-builder (new ClientVpnRouteProps$Builder) id config))
+  (client-vpn-route-props-builder> (new ClientVpnRouteProps$Builder) id config))
 
 
-(defn build-common-network-acl-entry-options-builder
-  "The build-common-network-acl-entry-options-builder function updates a CommonNetworkAclEntryOptions$Builder instance using the provided configuration.
+(defn common-network-acl-entry-options-builder>
+  "The common-network-acl-entry-options-builder> function updates a CommonNetworkAclEntryOptions$Builder instance using the provided configuration.
   The function takes the CommonNetworkAclEntryOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19075,11 +19075,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-common-network-acl-entry-options-builder (new CommonNetworkAclEntryOptions$Builder) id config))
+  (common-network-acl-entry-options-builder> (new CommonNetworkAclEntryOptions$Builder) id config))
 
 
-(defn build-config-set-props-builder
-  "The build-config-set-props-builder function updates a ConfigSetProps$Builder instance using the provided configuration.
+(defn config-set-props-builder>
+  "The config-set-props-builder> function updates a ConfigSetProps$Builder instance using the provided configuration.
   The function takes the ConfigSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19106,11 +19106,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-config-set-props-builder (new ConfigSetProps$Builder) id config))
+  (config-set-props-builder> (new ConfigSetProps$Builder) id config))
 
 
-(defn build-configure-nat-options-builder
-  "The build-configure-nat-options-builder function updates a ConfigureNatOptions$Builder instance using the provided configuration.
+(defn configure-nat-options-builder>
+  "The configure-nat-options-builder> function updates a ConfigureNatOptions$Builder instance using the provided configuration.
   The function takes the ConfigureNatOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19140,11 +19140,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-configure-nat-options-builder (new ConfigureNatOptions$Builder) id config))
+  (configure-nat-options-builder> (new ConfigureNatOptions$Builder) id config))
 
 
-(defn build-connection-rule-builder
-  "The build-connection-rule-builder function updates a ConnectionRule$Builder instance using the provided configuration.
+(defn connection-rule-builder>
+  "The connection-rule-builder> function updates a ConnectionRule$Builder instance using the provided configuration.
   The function takes the ConnectionRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19177,11 +19177,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-connection-rule-builder (new ConnectionRule$Builder) id config))
+  (connection-rule-builder> (new ConnectionRule$Builder) id config))
 
 
-(defn build-connections-builder
-  "The build-connections-builder function updates a Connections$Builder instance using the provided configuration.
+(defn connections-builder>
+  "The connections-builder> function updates a Connections$Builder instance using the provided configuration.
   The function takes the Connections$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19211,11 +19211,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-connections-builder (Connections$Builder/create) id config))
+  (connections-builder> (Connections$Builder/create) id config))
 
 
-(defn build-connections-props-builder
-  "The build-connections-props-builder function updates a ConnectionsProps$Builder instance using the provided configuration.
+(defn connections-props-builder>
+  "The connections-props-builder> function updates a ConnectionsProps$Builder instance using the provided configuration.
   The function takes the ConnectionsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19245,11 +19245,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-connections-props-builder (new ConnectionsProps$Builder) id config))
+  (connections-props-builder> (new ConnectionsProps$Builder) id config))
 
 
-(defn build-create-ipv6-cidr-blocks-request-builder
-  "The build-create-ipv6-cidr-blocks-request-builder function updates a CreateIpv6CidrBlocksRequest$Builder instance using the provided configuration.
+(defn create-ipv6-cidr-blocks-request-builder>
+  "The create-ipv6-cidr-blocks-request-builder> function updates a CreateIpv6CidrBlocksRequest$Builder instance using the provided configuration.
   The function takes the CreateIpv6CidrBlocksRequest$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19279,11 +19279,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-create-ipv6-cidr-blocks-request-builder (new CreateIpv6CidrBlocksRequest$Builder) id config))
+  (create-ipv6-cidr-blocks-request-builder> (new CreateIpv6CidrBlocksRequest$Builder) id config))
 
 
-(defn build-destination-options-builder
-  "The build-destination-options-builder function updates a DestinationOptions$Builder instance using the provided configuration.
+(defn destination-options-builder>
+  "The destination-options-builder> function updates a DestinationOptions$Builder instance using the provided configuration.
   The function takes the DestinationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19313,11 +19313,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-destination-options-builder (new DestinationOptions$Builder) id config))
+  (destination-options-builder> (new DestinationOptions$Builder) id config))
 
 
-(defn build-ebs-device-options-base-builder
-  "The build-ebs-device-options-base-builder function updates a EbsDeviceOptionsBase$Builder instance using the provided configuration.
+(defn ebs-device-options-base-builder>
+  "The ebs-device-options-base-builder> function updates a EbsDeviceOptionsBase$Builder instance using the provided configuration.
   The function takes the EbsDeviceOptionsBase$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19347,11 +19347,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ebs-device-options-base-builder (new EbsDeviceOptionsBase$Builder) id config))
+  (ebs-device-options-base-builder> (new EbsDeviceOptionsBase$Builder) id config))
 
 
-(defn build-ebs-device-options-builder
-  "The build-ebs-device-options-builder function updates a EbsDeviceOptions$Builder instance using the provided configuration.
+(defn ebs-device-options-builder>
+  "The ebs-device-options-builder> function updates a EbsDeviceOptions$Builder instance using the provided configuration.
   The function takes the EbsDeviceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19387,11 +19387,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ebs-device-options-builder (new EbsDeviceOptions$Builder) id config))
+  (ebs-device-options-builder> (new EbsDeviceOptions$Builder) id config))
 
 
-(defn build-ebs-device-props-builder
-  "The build-ebs-device-props-builder function updates a EbsDeviceProps$Builder instance using the provided configuration.
+(defn ebs-device-props-builder>
+  "The ebs-device-props-builder> function updates a EbsDeviceProps$Builder instance using the provided configuration.
   The function takes the EbsDeviceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19433,11 +19433,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ebs-device-props-builder (new EbsDeviceProps$Builder) id config))
+  (ebs-device-props-builder> (new EbsDeviceProps$Builder) id config))
 
 
-(defn build-ebs-device-snapshot-options-builder
-  "The build-ebs-device-snapshot-options-builder function updates a EbsDeviceSnapshotOptions$Builder instance using the provided configuration.
+(defn ebs-device-snapshot-options-builder>
+  "The ebs-device-snapshot-options-builder> function updates a EbsDeviceSnapshotOptions$Builder instance using the provided configuration.
   The function takes the EbsDeviceSnapshotOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19470,11 +19470,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ebs-device-snapshot-options-builder (new EbsDeviceSnapshotOptions$Builder) id config))
+  (ebs-device-snapshot-options-builder> (new EbsDeviceSnapshotOptions$Builder) id config))
 
 
-(defn build-enable-vpn-gateway-options-builder
-  "The build-enable-vpn-gateway-options-builder function updates a EnableVpnGatewayOptions$Builder instance using the provided configuration.
+(defn enable-vpn-gateway-options-builder>
+  "The enable-vpn-gateway-options-builder> function updates a EnableVpnGatewayOptions$Builder instance using the provided configuration.
   The function takes the EnableVpnGatewayOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19504,11 +19504,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-enable-vpn-gateway-options-builder (new EnableVpnGatewayOptions$Builder) id config))
+  (enable-vpn-gateway-options-builder> (new EnableVpnGatewayOptions$Builder) id config))
 
 
-(defn build-execute-file-options-builder
-  "The build-execute-file-options-builder function updates a ExecuteFileOptions$Builder instance using the provided configuration.
+(defn execute-file-options-builder>
+  "The execute-file-options-builder> function updates a ExecuteFileOptions$Builder instance using the provided configuration.
   The function takes the ExecuteFileOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19535,11 +19535,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-execute-file-options-builder (new ExecuteFileOptions$Builder) id config))
+  (execute-file-options-builder> (new ExecuteFileOptions$Builder) id config))
 
 
-(defn build-flow-log-builder
-  "The build-flow-log-builder function updates a FlowLog$Builder instance using the provided configuration.
+(defn flow-log-builder>
+  "The flow-log-builder> function updates a FlowLog$Builder instance using the provided configuration.
   The function takes the FlowLog$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19578,11 +19578,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-flow-log-builder (FlowLog$Builder/create scope (name id)) id config))
+  (flow-log-builder> (FlowLog$Builder/create scope (name id)) id config))
 
 
-(defn build-flow-log-destination-config-builder
-  "The build-flow-log-destination-config-builder function updates a FlowLogDestinationConfig$Builder instance using the provided configuration.
+(defn flow-log-destination-config-builder>
+  "The flow-log-destination-config-builder> function updates a FlowLogDestinationConfig$Builder instance using the provided configuration.
   The function takes the FlowLogDestinationConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19624,11 +19624,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-flow-log-destination-config-builder (new FlowLogDestinationConfig$Builder) id config))
+  (flow-log-destination-config-builder> (new FlowLogDestinationConfig$Builder) id config))
 
 
-(defn build-flow-log-options-builder
-  "The build-flow-log-options-builder function updates a FlowLogOptions$Builder instance using the provided configuration.
+(defn flow-log-options-builder>
+  "The flow-log-options-builder> function updates a FlowLogOptions$Builder instance using the provided configuration.
   The function takes the FlowLogOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19661,11 +19661,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-flow-log-options-builder (new FlowLogOptions$Builder) id config))
+  (flow-log-options-builder> (new FlowLogOptions$Builder) id config))
 
 
-(defn build-flow-log-props-builder
-  "The build-flow-log-props-builder function updates a FlowLogProps$Builder instance using the provided configuration.
+(defn flow-log-props-builder>
+  "The flow-log-props-builder> function updates a FlowLogProps$Builder instance using the provided configuration.
   The function takes the FlowLogProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19704,11 +19704,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-flow-log-props-builder (new FlowLogProps$Builder) id config))
+  (flow-log-props-builder> (new FlowLogProps$Builder) id config))
 
 
-(defn build-gateway-config-builder
-  "The build-gateway-config-builder function updates a GatewayConfig$Builder instance using the provided configuration.
+(defn gateway-config-builder>
+  "The gateway-config-builder> function updates a GatewayConfig$Builder instance using the provided configuration.
   The function takes the GatewayConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19735,11 +19735,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-gateway-config-builder (new GatewayConfig$Builder) id config))
+  (gateway-config-builder> (new GatewayConfig$Builder) id config))
 
 
-(defn build-gateway-vpc-endpoint-builder
-  "The build-gateway-vpc-endpoint-builder function updates a GatewayVpcEndpoint$Builder instance using the provided configuration.
+(defn gateway-vpc-endpoint-builder>
+  "The gateway-vpc-endpoint-builder> function updates a GatewayVpcEndpoint$Builder instance using the provided configuration.
   The function takes the GatewayVpcEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19769,11 +19769,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-gateway-vpc-endpoint-builder (GatewayVpcEndpoint$Builder/create scope (name id)) id config))
+  (gateway-vpc-endpoint-builder> (GatewayVpcEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-gateway-vpc-endpoint-options-builder
-  "The build-gateway-vpc-endpoint-options-builder function updates a GatewayVpcEndpointOptions$Builder instance using the provided configuration.
+(defn gateway-vpc-endpoint-options-builder>
+  "The gateway-vpc-endpoint-options-builder> function updates a GatewayVpcEndpointOptions$Builder instance using the provided configuration.
   The function takes the GatewayVpcEndpointOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19800,11 +19800,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-gateway-vpc-endpoint-options-builder (new GatewayVpcEndpointOptions$Builder) id config))
+  (gateway-vpc-endpoint-options-builder> (new GatewayVpcEndpointOptions$Builder) id config))
 
 
-(defn build-gateway-vpc-endpoint-props-builder
-  "The build-gateway-vpc-endpoint-props-builder function updates a GatewayVpcEndpointProps$Builder instance using the provided configuration.
+(defn gateway-vpc-endpoint-props-builder>
+  "The gateway-vpc-endpoint-props-builder> function updates a GatewayVpcEndpointProps$Builder instance using the provided configuration.
   The function takes the GatewayVpcEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19834,11 +19834,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-gateway-vpc-endpoint-props-builder (new GatewayVpcEndpointProps$Builder) id config))
+  (gateway-vpc-endpoint-props-builder> (new GatewayVpcEndpointProps$Builder) id config))
 
 
-(defn build-generic-linux-image-builder
-  "The build-generic-linux-image-builder function updates a GenericLinuxImage$Builder instance using the provided configuration.
+(defn generic-linux-image-builder>
+  "The generic-linux-image-builder> function updates a GenericLinuxImage$Builder instance using the provided configuration.
   The function takes the GenericLinuxImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19865,11 +19865,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^Map ami-map id config]
-  (build-generic-linux-image-builder (GenericLinuxImage$Builder/create ami-map) id config))
+  (generic-linux-image-builder> (GenericLinuxImage$Builder/create ami-map) id config))
 
 
-(defn build-generic-linux-image-props-builder
-  "The build-generic-linux-image-props-builder function updates a GenericLinuxImageProps$Builder instance using the provided configuration.
+(defn generic-linux-image-props-builder>
+  "The generic-linux-image-props-builder> function updates a GenericLinuxImageProps$Builder instance using the provided configuration.
   The function takes the GenericLinuxImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19893,11 +19893,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-generic-linux-image-props-builder (new GenericLinuxImageProps$Builder) id config))
+  (generic-linux-image-props-builder> (new GenericLinuxImageProps$Builder) id config))
 
 
-(defn build-generic-windows-image-builder
-  "The build-generic-windows-image-builder function updates a GenericWindowsImage$Builder instance using the provided configuration.
+(defn generic-windows-image-builder>
+  "The generic-windows-image-builder> function updates a GenericWindowsImage$Builder instance using the provided configuration.
   The function takes the GenericWindowsImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19924,11 +19924,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^Map ami-map id config]
-  (build-generic-windows-image-builder (GenericWindowsImage$Builder/create ami-map) id config))
+  (generic-windows-image-builder> (GenericWindowsImage$Builder/create ami-map) id config))
 
 
-(defn build-generic-windows-image-props-builder
-  "The build-generic-windows-image-props-builder function updates a GenericWindowsImageProps$Builder instance using the provided configuration.
+(defn generic-windows-image-props-builder>
+  "The generic-windows-image-props-builder> function updates a GenericWindowsImageProps$Builder instance using the provided configuration.
   The function takes the GenericWindowsImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19952,11 +19952,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-generic-windows-image-props-builder (new GenericWindowsImageProps$Builder) id config))
+  (generic-windows-image-props-builder> (new GenericWindowsImageProps$Builder) id config))
 
 
-(defn build-init-command-options-builder
-  "The build-init-command-options-builder function updates a InitCommandOptions$Builder instance using the provided configuration.
+(defn init-command-options-builder>
+  "The init-command-options-builder> function updates a InitCommandOptions$Builder instance using the provided configuration.
   The function takes the InitCommandOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -19998,11 +19998,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-init-command-options-builder (new InitCommandOptions$Builder) id config))
+  (init-command-options-builder> (new InitCommandOptions$Builder) id config))
 
 
-(defn build-init-file-asset-options-builder
-  "The build-init-file-asset-options-builder function updates a InitFileAssetOptions$Builder instance using the provided configuration.
+(defn init-file-asset-options-builder>
+  "The init-file-asset-options-builder> function updates a InitFileAssetOptions$Builder instance using the provided configuration.
   The function takes the InitFileAssetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20062,11 +20062,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-init-file-asset-options-builder (new InitFileAssetOptions$Builder) id config))
+  (init-file-asset-options-builder> (new InitFileAssetOptions$Builder) id config))
 
 
-(defn build-init-file-options-builder
-  "The build-init-file-options-builder function updates a InitFileOptions$Builder instance using the provided configuration.
+(defn init-file-options-builder>
+  "The init-file-options-builder> function updates a InitFileOptions$Builder instance using the provided configuration.
   The function takes the InitFileOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20102,11 +20102,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-init-file-options-builder (new InitFileOptions$Builder) id config))
+  (init-file-options-builder> (new InitFileOptions$Builder) id config))
 
 
-(defn build-init-service-options-builder
-  "The build-init-service-options-builder function updates a InitServiceOptions$Builder instance using the provided configuration.
+(defn init-service-options-builder>
+  "The init-service-options-builder> function updates a InitServiceOptions$Builder instance using the provided configuration.
   The function takes the InitServiceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20139,11 +20139,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-init-service-options-builder (new InitServiceOptions$Builder) id config))
+  (init-service-options-builder> (new InitServiceOptions$Builder) id config))
 
 
-(defn build-init-source-asset-options-builder
-  "The build-init-source-asset-options-builder function updates a InitSourceAssetOptions$Builder instance using the provided configuration.
+(defn init-source-asset-options-builder>
+  "The init-source-asset-options-builder> function updates a InitSourceAssetOptions$Builder instance using the provided configuration.
   The function takes the InitSourceAssetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20191,11 +20191,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-init-source-asset-options-builder (new InitSourceAssetOptions$Builder) id config))
+  (init-source-asset-options-builder> (new InitSourceAssetOptions$Builder) id config))
 
 
-(defn build-init-source-options-builder
-  "The build-init-source-options-builder function updates a InitSourceOptions$Builder instance using the provided configuration.
+(defn init-source-options-builder>
+  "The init-source-options-builder> function updates a InitSourceOptions$Builder instance using the provided configuration.
   The function takes the InitSourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20219,11 +20219,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-init-source-options-builder (new InitSourceOptions$Builder) id config))
+  (init-source-options-builder> (new InitSourceOptions$Builder) id config))
 
 
-(defn build-init-user-options-builder
-  "The build-init-user-options-builder function updates a InitUserOptions$Builder instance using the provided configuration.
+(defn init-user-options-builder>
+  "The init-user-options-builder> function updates a InitUserOptions$Builder instance using the provided configuration.
   The function takes the InitUserOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20253,11 +20253,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-init-user-options-builder (new InitUserOptions$Builder) id config))
+  (init-user-options-builder> (new InitUserOptions$Builder) id config))
 
 
-(defn build-instance-builder
-  "The build-instance-builder function updates a Instance$Builder instance using the provided configuration.
+(defn instance-builder>
+  "The instance-builder> function updates a Instance$Builder instance using the provided configuration.
   The function takes the Instance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20365,11 +20365,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-instance-builder (Instance$Builder/create scope (name id)) id config))
+  (instance-builder> (Instance$Builder/create scope (name id)) id config))
 
 
-(defn build-instance-props-builder
-  "The build-instance-props-builder function updates a InstanceProps$Builder instance using the provided configuration.
+(defn instance-props-builder>
+  "The instance-props-builder> function updates a InstanceProps$Builder instance using the provided configuration.
   The function takes the InstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20477,11 +20477,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-instance-props-builder (new InstanceProps$Builder) id config))
+  (instance-props-builder> (new InstanceProps$Builder) id config))
 
 
-(defn build-instance-require-imdsv2-aspect-builder
-  "The build-instance-require-imdsv2-aspect-builder function updates a InstanceRequireImdsv2Aspect$Builder instance using the provided configuration.
+(defn instance-require-imdsv2-aspect-builder>
+  "The instance-require-imdsv2-aspect-builder> function updates a InstanceRequireImdsv2Aspect$Builder instance using the provided configuration.
   The function takes the InstanceRequireImdsv2Aspect$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20508,11 +20508,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-instance-require-imdsv2-aspect-builder (InstanceRequireImdsv2Aspect$Builder/create) id config))
+  (instance-require-imdsv2-aspect-builder> (InstanceRequireImdsv2Aspect$Builder/create) id config))
 
 
-(defn build-instance-require-imdsv2-aspect-props-builder
-  "The build-instance-require-imdsv2-aspect-props-builder function updates a InstanceRequireImdsv2AspectProps$Builder instance using the provided configuration.
+(defn instance-require-imdsv2-aspect-props-builder>
+  "The instance-require-imdsv2-aspect-props-builder> function updates a InstanceRequireImdsv2AspectProps$Builder instance using the provided configuration.
   The function takes the InstanceRequireImdsv2AspectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20539,11 +20539,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-instance-require-imdsv2-aspect-props-builder (new InstanceRequireImdsv2AspectProps$Builder) id config))
+  (instance-require-imdsv2-aspect-props-builder> (new InstanceRequireImdsv2AspectProps$Builder) id config))
 
 
-(defn build-interface-vpc-endpoint-attributes-builder
-  "The build-interface-vpc-endpoint-attributes-builder function updates a InterfaceVpcEndpointAttributes$Builder instance using the provided configuration.
+(defn interface-vpc-endpoint-attributes-builder>
+  "The interface-vpc-endpoint-attributes-builder> function updates a InterfaceVpcEndpointAttributes$Builder instance using the provided configuration.
   The function takes the InterfaceVpcEndpointAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20573,11 +20573,11 @@ __Create Form:__ ____[java.util.Map]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-interface-vpc-endpoint-attributes-builder (new InterfaceVpcEndpointAttributes$Builder) id config))
+  (interface-vpc-endpoint-attributes-builder> (new InterfaceVpcEndpointAttributes$Builder) id config))
 
 
-(defn build-interface-vpc-endpoint-aws-service-builder
-  "The build-interface-vpc-endpoint-aws-service-builder function updates a InterfaceVpcEndpointAwsService$Builder instance using the provided configuration.
+(defn interface-vpc-endpoint-aws-service-builder>
+  "The interface-vpc-endpoint-aws-service-builder> function updates a InterfaceVpcEndpointAwsService$Builder instance using the provided configuration.
   The function takes the InterfaceVpcEndpointAwsService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20623,15 +20623,15 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   ([^String service-name id config]
-   (build-interface-vpc-endpoint-aws-service-builder (InterfaceVpcEndpointAwsService$Builder/create service-name) id config))
+   (interface-vpc-endpoint-aws-service-builder> (InterfaceVpcEndpointAwsService$Builder/create service-name) id config))
   ([^String service-name ^String prefix id config]
-   (build-interface-vpc-endpoint-aws-service-builder (InterfaceVpcEndpointAwsService$Builder/create service-name prefix) id config))
+   (interface-vpc-endpoint-aws-service-builder> (InterfaceVpcEndpointAwsService$Builder/create service-name prefix) id config))
   ([^String service-name ^String prefix ^String port id config]
-   (build-interface-vpc-endpoint-aws-service-builder (InterfaceVpcEndpointAwsService$Builder/create service-name prefix port) id config)))
+   (interface-vpc-endpoint-aws-service-builder> (InterfaceVpcEndpointAwsService$Builder/create service-name prefix port) id config)))
 
 
-(defn build-interface-vpc-endpoint-aws-service-props-builder
-  "The build-interface-vpc-endpoint-aws-service-props-builder function updates a InterfaceVpcEndpointAwsServiceProps$Builder instance using the provided configuration.
+(defn interface-vpc-endpoint-aws-service-props-builder>
+  "The interface-vpc-endpoint-aws-service-props-builder> function updates a InterfaceVpcEndpointAwsServiceProps$Builder instance using the provided configuration.
   The function takes the InterfaceVpcEndpointAwsServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20655,11 +20655,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-interface-vpc-endpoint-aws-service-props-builder (new InterfaceVpcEndpointAwsServiceProps$Builder) id config))
+  (interface-vpc-endpoint-aws-service-props-builder> (new InterfaceVpcEndpointAwsServiceProps$Builder) id config))
 
 
-(defn build-interface-vpc-endpoint-builder
-  "The build-interface-vpc-endpoint-builder function updates a InterfaceVpcEndpoint$Builder instance using the provided configuration.
+(defn interface-vpc-endpoint-builder>
+  "The interface-vpc-endpoint-builder> function updates a InterfaceVpcEndpoint$Builder instance using the provided configuration.
   The function takes the InterfaceVpcEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20701,11 +20701,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-interface-vpc-endpoint-builder (InterfaceVpcEndpoint$Builder/create scope (name id)) id config))
+  (interface-vpc-endpoint-builder> (InterfaceVpcEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-interface-vpc-endpoint-options-builder
-  "The build-interface-vpc-endpoint-options-builder function updates a InterfaceVpcEndpointOptions$Builder instance using the provided configuration.
+(defn interface-vpc-endpoint-options-builder>
+  "The interface-vpc-endpoint-options-builder> function updates a InterfaceVpcEndpointOptions$Builder instance using the provided configuration.
   The function takes the InterfaceVpcEndpointOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20744,11 +20744,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-interface-vpc-endpoint-options-builder (new InterfaceVpcEndpointOptions$Builder) id config))
+  (interface-vpc-endpoint-options-builder> (new InterfaceVpcEndpointOptions$Builder) id config))
 
 
-(defn build-interface-vpc-endpoint-props-builder
-  "The build-interface-vpc-endpoint-props-builder function updates a InterfaceVpcEndpointProps$Builder instance using the provided configuration.
+(defn interface-vpc-endpoint-props-builder>
+  "The interface-vpc-endpoint-props-builder> function updates a InterfaceVpcEndpointProps$Builder instance using the provided configuration.
   The function takes the InterfaceVpcEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20790,11 +20790,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-interface-vpc-endpoint-props-builder (new InterfaceVpcEndpointProps$Builder) id config))
+  (interface-vpc-endpoint-props-builder> (new InterfaceVpcEndpointProps$Builder) id config))
 
 
-(defn build-key-pair-attributes-builder
-  "The build-key-pair-attributes-builder function updates a KeyPairAttributes$Builder instance using the provided configuration.
+(defn key-pair-attributes-builder>
+  "The key-pair-attributes-builder> function updates a KeyPairAttributes$Builder instance using the provided configuration.
   The function takes the KeyPairAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20821,11 +20821,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-key-pair-attributes-builder (new KeyPairAttributes$Builder) id config))
+  (key-pair-attributes-builder> (new KeyPairAttributes$Builder) id config))
 
 
-(defn build-key-pair-builder
-  "The build-key-pair-builder function updates a KeyPair$Builder instance using the provided configuration.
+(defn key-pair-builder>
+  "The key-pair-builder> function updates a KeyPair$Builder instance using the provided configuration.
   The function takes the KeyPair$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20870,11 +20870,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-key-pair-builder (KeyPair$Builder/create scope (name id)) id config))
+  (key-pair-builder> (KeyPair$Builder/create scope (name id)) id config))
 
 
-(defn build-key-pair-props-builder
-  "The build-key-pair-props-builder function updates a KeyPairProps$Builder instance using the provided configuration.
+(defn key-pair-props-builder>
+  "The key-pair-props-builder> function updates a KeyPairProps$Builder instance using the provided configuration.
   The function takes the KeyPairProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20919,11 +20919,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-key-pair-props-builder (new KeyPairProps$Builder) id config))
+  (key-pair-props-builder> (new KeyPairProps$Builder) id config))
 
 
-(defn build-launch-template-attributes-builder
-  "The build-launch-template-attributes-builder function updates a LaunchTemplateAttributes$Builder instance using the provided configuration.
+(defn launch-template-attributes-builder>
+  "The launch-template-attributes-builder> function updates a LaunchTemplateAttributes$Builder instance using the provided configuration.
   The function takes the LaunchTemplateAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -20953,11 +20953,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-launch-template-attributes-builder (new LaunchTemplateAttributes$Builder) id config))
+  (launch-template-attributes-builder> (new LaunchTemplateAttributes$Builder) id config))
 
 
-(defn build-launch-template-builder
-  "The build-launch-template-builder function updates a LaunchTemplate$Builder instance using the provided configuration.
+(defn launch-template-builder>
+  "The launch-template-builder> function updates a LaunchTemplate$Builder instance using the provided configuration.
   The function takes the LaunchTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21053,11 +21053,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-launch-template-builder (LaunchTemplate$Builder/create scope (name id)) id config))
+  (launch-template-builder> (LaunchTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-launch-template-props-builder
-  "The build-launch-template-props-builder function updates a LaunchTemplateProps$Builder instance using the provided configuration.
+(defn launch-template-props-builder>
+  "The launch-template-props-builder> function updates a LaunchTemplateProps$Builder instance using the provided configuration.
   The function takes the LaunchTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21153,11 +21153,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-launch-template-props-builder (new LaunchTemplateProps$Builder) id config))
+  (launch-template-props-builder> (new LaunchTemplateProps$Builder) id config))
 
 
-(defn build-launch-template-require-imdsv2-aspect-builder
-  "The build-launch-template-require-imdsv2-aspect-builder function updates a LaunchTemplateRequireImdsv2Aspect$Builder instance using the provided configuration.
+(defn launch-template-require-imdsv2-aspect-builder>
+  "The launch-template-require-imdsv2-aspect-builder> function updates a LaunchTemplateRequireImdsv2Aspect$Builder instance using the provided configuration.
   The function takes the LaunchTemplateRequireImdsv2Aspect$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21181,11 +21181,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-launch-template-require-imdsv2-aspect-builder (LaunchTemplateRequireImdsv2Aspect$Builder/create) id config))
+  (launch-template-require-imdsv2-aspect-builder> (LaunchTemplateRequireImdsv2Aspect$Builder/create) id config))
 
 
-(defn build-launch-template-require-imdsv2-aspect-props-builder
-  "The build-launch-template-require-imdsv2-aspect-props-builder function updates a LaunchTemplateRequireImdsv2AspectProps$Builder instance using the provided configuration.
+(defn launch-template-require-imdsv2-aspect-props-builder>
+  "The launch-template-require-imdsv2-aspect-props-builder> function updates a LaunchTemplateRequireImdsv2AspectProps$Builder instance using the provided configuration.
   The function takes the LaunchTemplateRequireImdsv2AspectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21209,11 +21209,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-launch-template-require-imdsv2-aspect-props-builder (new LaunchTemplateRequireImdsv2AspectProps$Builder) id config))
+  (launch-template-require-imdsv2-aspect-props-builder> (new LaunchTemplateRequireImdsv2AspectProps$Builder) id config))
 
 
-(defn build-launch-template-spot-options-builder
-  "The build-launch-template-spot-options-builder function updates a LaunchTemplateSpotOptions$Builder instance using the provided configuration.
+(defn launch-template-spot-options-builder>
+  "The launch-template-spot-options-builder> function updates a LaunchTemplateSpotOptions$Builder instance using the provided configuration.
   The function takes the LaunchTemplateSpotOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21249,11 +21249,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-launch-template-spot-options-builder (new LaunchTemplateSpotOptions$Builder) id config))
+  (launch-template-spot-options-builder> (new LaunchTemplateSpotOptions$Builder) id config))
 
 
-(defn build-linux-user-data-options-builder
-  "The build-linux-user-data-options-builder function updates a LinuxUserDataOptions$Builder instance using the provided configuration.
+(defn linux-user-data-options-builder>
+  "The linux-user-data-options-builder> function updates a LinuxUserDataOptions$Builder instance using the provided configuration.
   The function takes the LinuxUserDataOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21277,11 +21277,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-linux-user-data-options-builder (new LinuxUserDataOptions$Builder) id config))
+  (linux-user-data-options-builder> (new LinuxUserDataOptions$Builder) id config))
 
 
-(defn build-location-package-options-builder
-  "The build-location-package-options-builder function updates a LocationPackageOptions$Builder instance using the provided configuration.
+(defn location-package-options-builder>
+  "The location-package-options-builder> function updates a LocationPackageOptions$Builder instance using the provided configuration.
   The function takes the LocationPackageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21308,11 +21308,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-location-package-options-builder (new LocationPackageOptions$Builder) id config))
+  (location-package-options-builder> (new LocationPackageOptions$Builder) id config))
 
 
-(defn build-lookup-machine-image-builder
-  "The build-lookup-machine-image-builder function updates a LookupMachineImage$Builder instance using the provided configuration.
+(defn lookup-machine-image-builder>
+  "The lookup-machine-image-builder> function updates a LookupMachineImage$Builder instance using the provided configuration.
   The function takes the LookupMachineImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21348,11 +21348,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lookup-machine-image-builder (LookupMachineImage$Builder/create) id config))
+  (lookup-machine-image-builder> (LookupMachineImage$Builder/create) id config))
 
 
-(defn build-lookup-machine-image-props-builder
-  "The build-lookup-machine-image-props-builder function updates a LookupMachineImageProps$Builder instance using the provided configuration.
+(defn lookup-machine-image-props-builder>
+  "The lookup-machine-image-props-builder> function updates a LookupMachineImageProps$Builder instance using the provided configuration.
   The function takes the LookupMachineImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21388,11 +21388,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lookup-machine-image-props-builder (new LookupMachineImageProps$Builder) id config))
+  (lookup-machine-image-props-builder> (new LookupMachineImageProps$Builder) id config))
 
 
-(defn build-machine-image-config-builder
-  "The build-machine-image-config-builder function updates a MachineImageConfig$Builder instance using the provided configuration.
+(defn machine-image-config-builder>
+  "The machine-image-config-builder> function updates a MachineImageConfig$Builder instance using the provided configuration.
   The function takes the MachineImageConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21422,11 +21422,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-machine-image-config-builder (new MachineImageConfig$Builder) id config))
+  (machine-image-config-builder> (new MachineImageConfig$Builder) id config))
 
 
-(defn build-multipart-body-options-builder
-  "The build-multipart-body-options-builder function updates a MultipartBodyOptions$Builder instance using the provided configuration.
+(defn multipart-body-options-builder>
+  "The multipart-body-options-builder> function updates a MultipartBodyOptions$Builder instance using the provided configuration.
   The function takes the MultipartBodyOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21456,11 +21456,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-multipart-body-options-builder (new MultipartBodyOptions$Builder) id config))
+  (multipart-body-options-builder> (new MultipartBodyOptions$Builder) id config))
 
 
-(defn build-multipart-user-data-builder
-  "The build-multipart-user-data-builder function updates a MultipartUserData$Builder instance using the provided configuration.
+(defn multipart-user-data-builder>
+  "The multipart-user-data-builder> function updates a MultipartUserData$Builder instance using the provided configuration.
   The function takes the MultipartUserData$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21484,11 +21484,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-multipart-user-data-builder (MultipartUserData$Builder/create) id config))
+  (multipart-user-data-builder> (MultipartUserData$Builder/create) id config))
 
 
-(defn build-multipart-user-data-options-builder
-  "The build-multipart-user-data-options-builder function updates a MultipartUserDataOptions$Builder instance using the provided configuration.
+(defn multipart-user-data-options-builder>
+  "The multipart-user-data-options-builder> function updates a MultipartUserDataOptions$Builder instance using the provided configuration.
   The function takes the MultipartUserDataOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21512,11 +21512,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-multipart-user-data-options-builder (new MultipartUserDataOptions$Builder) id config))
+  (multipart-user-data-options-builder> (new MultipartUserDataOptions$Builder) id config))
 
 
-(defn build-named-package-options-builder
-  "The build-named-package-options-builder function updates a NamedPackageOptions$Builder instance using the provided configuration.
+(defn named-package-options-builder>
+  "The named-package-options-builder> function updates a NamedPackageOptions$Builder instance using the provided configuration.
   The function takes the NamedPackageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21543,11 +21543,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-named-package-options-builder (new NamedPackageOptions$Builder) id config))
+  (named-package-options-builder> (new NamedPackageOptions$Builder) id config))
 
 
-(defn build-nat-gateway-props-builder
-  "The build-nat-gateway-props-builder function updates a NatGatewayProps$Builder instance using the provided configuration.
+(defn nat-gateway-props-builder>
+  "The nat-gateway-props-builder> function updates a NatGatewayProps$Builder instance using the provided configuration.
   The function takes the NatGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21571,11 +21571,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-nat-gateway-props-builder (new NatGatewayProps$Builder) id config))
+  (nat-gateway-props-builder> (new NatGatewayProps$Builder) id config))
 
 
-(defn build-nat-instance-props-builder
-  "The build-nat-instance-props-builder function updates a NatInstanceProps$Builder instance using the provided configuration.
+(defn nat-instance-props-builder>
+  "The nat-instance-props-builder> function updates a NatInstanceProps$Builder instance using the provided configuration.
   The function takes the NatInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21620,11 +21620,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-nat-instance-props-builder (new NatInstanceProps$Builder) id config))
+  (nat-instance-props-builder> (new NatInstanceProps$Builder) id config))
 
 
-(defn build-nat-instance-provider-v2-builder
-  "The build-nat-instance-provider-v2-builder function updates a NatInstanceProviderV2$Builder instance using the provided configuration.
+(defn nat-instance-provider-v2-builder>
+  "The nat-instance-provider-v2-builder> function updates a NatInstanceProviderV2$Builder instance using the provided configuration.
   The function takes the NatInstanceProviderV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21669,11 +21669,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-nat-instance-provider-v2-builder (NatInstanceProviderV2$Builder/create) id config))
+  (nat-instance-provider-v2-builder> (NatInstanceProviderV2$Builder/create) id config))
 
 
-(defn build-network-acl-builder
-  "The build-network-acl-builder function updates a NetworkAcl$Builder instance using the provided configuration.
+(defn network-acl-builder>
+  "The network-acl-builder> function updates a NetworkAcl$Builder instance using the provided configuration.
   The function takes the NetworkAcl$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21703,11 +21703,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-network-acl-builder (NetworkAcl$Builder/create scope (name id)) id config))
+  (network-acl-builder> (NetworkAcl$Builder/create scope (name id)) id config))
 
 
-(defn build-network-acl-entry-builder
-  "The build-network-acl-entry-builder function updates a NetworkAclEntry$Builder instance using the provided configuration.
+(defn network-acl-entry-builder>
+  "The network-acl-entry-builder> function updates a NetworkAclEntry$Builder instance using the provided configuration.
   The function takes the NetworkAclEntry$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21749,11 +21749,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-network-acl-entry-builder (NetworkAclEntry$Builder/create scope (name id)) id config))
+  (network-acl-entry-builder> (NetworkAclEntry$Builder/create scope (name id)) id config))
 
 
-(defn build-network-acl-entry-props-builder
-  "The build-network-acl-entry-props-builder function updates a NetworkAclEntryProps$Builder instance using the provided configuration.
+(defn network-acl-entry-props-builder>
+  "The network-acl-entry-props-builder> function updates a NetworkAclEntryProps$Builder instance using the provided configuration.
   The function takes the NetworkAclEntryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21795,11 +21795,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-acl-entry-props-builder (new NetworkAclEntryProps$Builder) id config))
+  (network-acl-entry-props-builder> (new NetworkAclEntryProps$Builder) id config))
 
 
-(defn build-network-acl-props-builder
-  "The build-network-acl-props-builder function updates a NetworkAclProps$Builder instance using the provided configuration.
+(defn network-acl-props-builder>
+  "The network-acl-props-builder> function updates a NetworkAclProps$Builder instance using the provided configuration.
   The function takes the NetworkAclProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21829,11 +21829,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-acl-props-builder (new NetworkAclProps$Builder) id config))
+  (network-acl-props-builder> (new NetworkAclProps$Builder) id config))
 
 
-(defn build-placement-group-builder
-  "The build-placement-group-builder function updates a PlacementGroup$Builder instance using the provided configuration.
+(defn placement-group-builder>
+  "The placement-group-builder> function updates a PlacementGroup$Builder instance using the provided configuration.
   The function takes the PlacementGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21866,11 +21866,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-placement-group-builder (PlacementGroup$Builder/create scope (name id)) id config))
+  (placement-group-builder> (PlacementGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-placement-group-props-builder
-  "The build-placement-group-props-builder function updates a PlacementGroupProps$Builder instance using the provided configuration.
+(defn placement-group-props-builder>
+  "The placement-group-props-builder> function updates a PlacementGroupProps$Builder instance using the provided configuration.
   The function takes the PlacementGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21903,11 +21903,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-placement-group-props-builder (new PlacementGroupProps$Builder) id config))
+  (placement-group-props-builder> (new PlacementGroupProps$Builder) id config))
 
 
-(defn build-port-builder
-  "The build-port-builder function updates a Port$Builder instance using the provided configuration.
+(defn port-builder>
+  "The port-builder> function updates a Port$Builder instance using the provided configuration.
   The function takes the Port$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21940,11 +21940,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-port-builder (Port$Builder/create) id config))
+  (port-builder> (Port$Builder/create) id config))
 
 
-(defn build-port-props-builder
-  "The build-port-props-builder function updates a PortProps$Builder instance using the provided configuration.
+(defn port-props-builder>
+  "The port-props-builder> function updates a PortProps$Builder instance using the provided configuration.
   The function takes the PortProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -21977,11 +21977,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-port-props-builder (new PortProps$Builder) id config))
+  (port-props-builder> (new PortProps$Builder) id config))
 
 
-(defn build-prefix-list-builder
-  "The build-prefix-list-builder function updates a PrefixList$Builder instance using the provided configuration.
+(defn prefix-list-builder>
+  "The prefix-list-builder> function updates a PrefixList$Builder instance using the provided configuration.
   The function takes the PrefixList$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22014,11 +22014,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-prefix-list-builder (PrefixList$Builder/create scope (name id)) id config))
+  (prefix-list-builder> (PrefixList$Builder/create scope (name id)) id config))
 
 
-(defn build-prefix-list-options-builder
-  "The build-prefix-list-options-builder function updates a PrefixListOptions$Builder instance using the provided configuration.
+(defn prefix-list-options-builder>
+  "The prefix-list-options-builder> function updates a PrefixListOptions$Builder instance using the provided configuration.
   The function takes the PrefixListOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22042,11 +22042,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-prefix-list-options-builder (new PrefixListOptions$Builder) id config))
+  (prefix-list-options-builder> (new PrefixListOptions$Builder) id config))
 
 
-(defn build-prefix-list-props-builder
-  "The build-prefix-list-props-builder function updates a PrefixListProps$Builder instance using the provided configuration.
+(defn prefix-list-props-builder>
+  "The prefix-list-props-builder> function updates a PrefixListProps$Builder instance using the provided configuration.
   The function takes the PrefixListProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22079,11 +22079,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-prefix-list-props-builder (new PrefixListProps$Builder) id config))
+  (prefix-list-props-builder> (new PrefixListProps$Builder) id config))
 
 
-(defn build-private-subnet-attributes-builder
-  "The build-private-subnet-attributes-builder function updates a PrivateSubnetAttributes$Builder instance using the provided configuration.
+(defn private-subnet-attributes-builder>
+  "The private-subnet-attributes-builder> function updates a PrivateSubnetAttributes$Builder instance using the provided configuration.
   The function takes the PrivateSubnetAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22116,11 +22116,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-private-subnet-attributes-builder (new PrivateSubnetAttributes$Builder) id config))
+  (private-subnet-attributes-builder> (new PrivateSubnetAttributes$Builder) id config))
 
 
-(defn build-private-subnet-builder
-  "The build-private-subnet-builder function updates a PrivateSubnet$Builder instance using the provided configuration.
+(defn private-subnet-builder>
+  "The private-subnet-builder> function updates a PrivateSubnet$Builder instance using the provided configuration.
   The function takes the PrivateSubnet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22159,11 +22159,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-private-subnet-builder (PrivateSubnet$Builder/create scope (name id)) id config))
+  (private-subnet-builder> (PrivateSubnet$Builder/create scope (name id)) id config))
 
 
-(defn build-private-subnet-props-builder
-  "The build-private-subnet-props-builder function updates a PrivateSubnetProps$Builder instance using the provided configuration.
+(defn private-subnet-props-builder>
+  "The private-subnet-props-builder> function updates a PrivateSubnetProps$Builder instance using the provided configuration.
   The function takes the PrivateSubnetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22202,11 +22202,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-private-subnet-props-builder (new PrivateSubnetProps$Builder) id config))
+  (private-subnet-props-builder> (new PrivateSubnetProps$Builder) id config))
 
 
-(defn build-public-subnet-attributes-builder
-  "The build-public-subnet-attributes-builder function updates a PublicSubnetAttributes$Builder instance using the provided configuration.
+(defn public-subnet-attributes-builder>
+  "The public-subnet-attributes-builder> function updates a PublicSubnetAttributes$Builder instance using the provided configuration.
   The function takes the PublicSubnetAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22239,11 +22239,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-public-subnet-attributes-builder (new PublicSubnetAttributes$Builder) id config))
+  (public-subnet-attributes-builder> (new PublicSubnetAttributes$Builder) id config))
 
 
-(defn build-public-subnet-builder
-  "The build-public-subnet-builder function updates a PublicSubnet$Builder instance using the provided configuration.
+(defn public-subnet-builder>
+  "The public-subnet-builder> function updates a PublicSubnet$Builder instance using the provided configuration.
   The function takes the PublicSubnet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22282,11 +22282,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-public-subnet-builder (PublicSubnet$Builder/create scope (name id)) id config))
+  (public-subnet-builder> (PublicSubnet$Builder/create scope (name id)) id config))
 
 
-(defn build-public-subnet-props-builder
-  "The build-public-subnet-props-builder function updates a PublicSubnetProps$Builder instance using the provided configuration.
+(defn public-subnet-props-builder>
+  "The public-subnet-props-builder> function updates a PublicSubnetProps$Builder instance using the provided configuration.
   The function takes the PublicSubnetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22325,11 +22325,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-public-subnet-props-builder (new PublicSubnetProps$Builder) id config))
+  (public-subnet-props-builder> (new PublicSubnetProps$Builder) id config))
 
 
-(defn build-requested-subnet-builder
-  "The build-requested-subnet-builder function updates a RequestedSubnet$Builder instance using the provided configuration.
+(defn requested-subnet-builder>
+  "The requested-subnet-builder> function updates a RequestedSubnet$Builder instance using the provided configuration.
   The function takes the RequestedSubnet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22359,11 +22359,11 @@ __Create Form:__ ____[java.lang.String java.lang.String java.lang.Number]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-requested-subnet-builder (new RequestedSubnet$Builder) id config))
+  (requested-subnet-builder> (new RequestedSubnet$Builder) id config))
 
 
-(defn build-resolve-ssm-parameter-at-launch-image-builder
-  "The build-resolve-ssm-parameter-at-launch-image-builder function updates a ResolveSsmParameterAtLaunchImage$Builder instance using the provided configuration.
+(defn resolve-ssm-parameter-at-launch-image-builder>
+  "The resolve-ssm-parameter-at-launch-image-builder> function updates a ResolveSsmParameterAtLaunchImage$Builder instance using the provided configuration.
   The function takes the ResolveSsmParameterAtLaunchImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22399,11 +22399,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String parameter-name id config]
-  (build-resolve-ssm-parameter-at-launch-image-builder (ResolveSsmParameterAtLaunchImage$Builder/create parameter-name) id config))
+  (resolve-ssm-parameter-at-launch-image-builder> (ResolveSsmParameterAtLaunchImage$Builder/create parameter-name) id config))
 
 
-(defn build-rule-scope-builder
-  "The build-rule-scope-builder function updates a RuleScope$Builder instance using the provided configuration.
+(defn rule-scope-builder>
+  "The rule-scope-builder> function updates a RuleScope$Builder instance using the provided configuration.
   The function takes the RuleScope$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22430,11 +22430,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-rule-scope-builder (new RuleScope$Builder) id config))
+  (rule-scope-builder> (new RuleScope$Builder) id config))
 
 
-(defn build-s3-destination-options-builder
-  "The build-s3-destination-options-builder function updates a S3DestinationOptions$Builder instance using the provided configuration.
+(defn s3-destination-options-builder>
+  "The s3-destination-options-builder> function updates a S3DestinationOptions$Builder instance using the provided configuration.
   The function takes the S3DestinationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22464,11 +22464,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-s3-destination-options-builder (new S3DestinationOptions$Builder) id config))
+  (s3-destination-options-builder> (new S3DestinationOptions$Builder) id config))
 
 
-(defn build-s3-download-options-builder
-  "The build-s3-download-options-builder function updates a S3DownloadOptions$Builder instance using the provided configuration.
+(defn s3-download-options-builder>
+  "The s3-download-options-builder> function updates a S3DownloadOptions$Builder instance using the provided configuration.
   The function takes the S3DownloadOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22501,11 +22501,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-s3-download-options-builder (new S3DownloadOptions$Builder) id config))
+  (s3-download-options-builder> (new S3DownloadOptions$Builder) id config))
 
 
-(defn build-security-group-builder
-  "The build-security-group-builder function updates a SecurityGroup$Builder instance using the provided configuration.
+(defn security-group-builder>
+  "The security-group-builder> function updates a SecurityGroup$Builder instance using the provided configuration.
   The function takes the SecurityGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22544,11 +22544,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-security-group-builder (SecurityGroup$Builder/create scope (name id)) id config))
+  (security-group-builder> (SecurityGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-security-group-import-options-builder
-  "The build-security-group-import-options-builder function updates a SecurityGroupImportOptions$Builder instance using the provided configuration.
+(defn security-group-import-options-builder>
+  "The security-group-import-options-builder> function updates a SecurityGroupImportOptions$Builder instance using the provided configuration.
   The function takes the SecurityGroupImportOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22578,11 +22578,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-security-group-import-options-builder (new SecurityGroupImportOptions$Builder) id config))
+  (security-group-import-options-builder> (new SecurityGroupImportOptions$Builder) id config))
 
 
-(defn build-security-group-props-builder
-  "The build-security-group-props-builder function updates a SecurityGroupProps$Builder instance using the provided configuration.
+(defn security-group-props-builder>
+  "The security-group-props-builder> function updates a SecurityGroupProps$Builder instance using the provided configuration.
   The function takes the SecurityGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22621,11 +22621,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-security-group-props-builder (new SecurityGroupProps$Builder) id config))
+  (security-group-props-builder> (new SecurityGroupProps$Builder) id config))
 
 
-(defn build-selected-subnets-builder
-  "The build-selected-subnets-builder function updates a SelectedSubnets$Builder instance using the provided configuration.
+(defn selected-subnets-builder>
+  "The selected-subnets-builder> function updates a SelectedSubnets$Builder instance using the provided configuration.
   The function takes the SelectedSubnets$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22664,11 +22664,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-selected-subnets-builder (new SelectedSubnets$Builder) id config))
+  (selected-subnets-builder> (new SelectedSubnets$Builder) id config))
 
 
-(defn build-ssm-parameter-image-options-builder
-  "The build-ssm-parameter-image-options-builder function updates a SsmParameterImageOptions$Builder instance using the provided configuration.
+(defn ssm-parameter-image-options-builder>
+  "The ssm-parameter-image-options-builder> function updates a SsmParameterImageOptions$Builder instance using the provided configuration.
   The function takes the SsmParameterImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22701,11 +22701,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ssm-parameter-image-options-builder (new SsmParameterImageOptions$Builder) id config))
+  (ssm-parameter-image-options-builder> (new SsmParameterImageOptions$Builder) id config))
 
 
-(defn build-subnet-attributes-builder
-  "The build-subnet-attributes-builder function updates a SubnetAttributes$Builder instance using the provided configuration.
+(defn subnet-attributes-builder>
+  "The subnet-attributes-builder> function updates a SubnetAttributes$Builder instance using the provided configuration.
   The function takes the SubnetAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22738,11 +22738,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-subnet-attributes-builder (new SubnetAttributes$Builder) id config))
+  (subnet-attributes-builder> (new SubnetAttributes$Builder) id config))
 
 
-(defn build-subnet-builder
-  "The build-subnet-builder function updates a Subnet$Builder instance using the provided configuration.
+(defn subnet-builder>
+  "The subnet-builder> function updates a Subnet$Builder instance using the provided configuration.
   The function takes the Subnet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22781,11 +22781,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-subnet-builder (Subnet$Builder/create scope (name id)) id config))
+  (subnet-builder> (Subnet$Builder/create scope (name id)) id config))
 
 
-(defn build-subnet-configuration-builder
-  "The build-subnet-configuration-builder function updates a SubnetConfiguration$Builder instance using the provided configuration.
+(defn subnet-configuration-builder>
+  "The subnet-configuration-builder> function updates a SubnetConfiguration$Builder instance using the provided configuration.
   The function takes the SubnetConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22824,11 +22824,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-subnet-configuration-builder (new SubnetConfiguration$Builder) id config))
+  (subnet-configuration-builder> (new SubnetConfiguration$Builder) id config))
 
 
-(defn build-subnet-ipam-options-builder
-  "The build-subnet-ipam-options-builder function updates a SubnetIpamOptions$Builder instance using the provided configuration.
+(defn subnet-ipam-options-builder>
+  "The subnet-ipam-options-builder> function updates a SubnetIpamOptions$Builder instance using the provided configuration.
   The function takes the SubnetIpamOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22852,11 +22852,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-subnet-ipam-options-builder (new SubnetIpamOptions$Builder) id config))
+  (subnet-ipam-options-builder> (new SubnetIpamOptions$Builder) id config))
 
 
-(defn build-subnet-network-acl-association-builder
-  "The build-subnet-network-acl-association-builder function updates a SubnetNetworkAclAssociation$Builder instance using the provided configuration.
+(defn subnet-network-acl-association-builder>
+  "The subnet-network-acl-association-builder> function updates a SubnetNetworkAclAssociation$Builder instance using the provided configuration.
   The function takes the SubnetNetworkAclAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22886,11 +22886,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-subnet-network-acl-association-builder (SubnetNetworkAclAssociation$Builder/create scope (name id)) id config))
+  (subnet-network-acl-association-builder> (SubnetNetworkAclAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-subnet-network-acl-association-props-builder
-  "The build-subnet-network-acl-association-props-builder function updates a SubnetNetworkAclAssociationProps$Builder instance using the provided configuration.
+(defn subnet-network-acl-association-props-builder>
+  "The subnet-network-acl-association-props-builder> function updates a SubnetNetworkAclAssociationProps$Builder instance using the provided configuration.
   The function takes the SubnetNetworkAclAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22920,11 +22920,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-subnet-network-acl-association-props-builder (new SubnetNetworkAclAssociationProps$Builder) id config))
+  (subnet-network-acl-association-props-builder> (new SubnetNetworkAclAssociationProps$Builder) id config))
 
 
-(defn build-subnet-props-builder
-  "The build-subnet-props-builder function updates a SubnetProps$Builder instance using the provided configuration.
+(defn subnet-props-builder>
+  "The subnet-props-builder> function updates a SubnetProps$Builder instance using the provided configuration.
   The function takes the SubnetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -22963,11 +22963,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-subnet-props-builder (new SubnetProps$Builder) id config))
+  (subnet-props-builder> (new SubnetProps$Builder) id config))
 
 
-(defn build-subnet-selection-builder
-  "The build-subnet-selection-builder function updates a SubnetSelection$Builder instance using the provided configuration.
+(defn subnet-selection-builder>
+  "The subnet-selection-builder> function updates a SubnetSelection$Builder instance using the provided configuration.
   The function takes the SubnetSelection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23006,11 +23006,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-subnet-selection-builder (new SubnetSelection$Builder) id config))
+  (subnet-selection-builder> (new SubnetSelection$Builder) id config))
 
 
-(defn build-systemd-config-file-options-builder
-  "The build-systemd-config-file-options-builder function updates a SystemdConfigFileOptions$Builder instance using the provided configuration.
+(defn systemd-config-file-options-builder>
+  "The systemd-config-file-options-builder> function updates a SystemdConfigFileOptions$Builder instance using the provided configuration.
   The function takes the SystemdConfigFileOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23058,11 +23058,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-systemd-config-file-options-builder (new SystemdConfigFileOptions$Builder) id config))
+  (systemd-config-file-options-builder> (new SystemdConfigFileOptions$Builder) id config))
 
 
-(defn build-volume-attributes-builder
-  "The build-volume-attributes-builder function updates a VolumeAttributes$Builder instance using the provided configuration.
+(defn volume-attributes-builder>
+  "The volume-attributes-builder> function updates a VolumeAttributes$Builder instance using the provided configuration.
   The function takes the VolumeAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23092,11 +23092,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-volume-attributes-builder (new VolumeAttributes$Builder) id config))
+  (volume-attributes-builder> (new VolumeAttributes$Builder) id config))
 
 
-(defn build-volume-builder
-  "The build-volume-builder function updates a Volume$Builder instance using the provided configuration.
+(defn volume-builder>
+  "The volume-builder> function updates a Volume$Builder instance using the provided configuration.
   The function takes the Volume$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23153,11 +23153,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-volume-builder (Volume$Builder/create scope (name id)) id config))
+  (volume-builder> (Volume$Builder/create scope (name id)) id config))
 
 
-(defn build-volume-props-builder
-  "The build-volume-props-builder function updates a VolumeProps$Builder instance using the provided configuration.
+(defn volume-props-builder>
+  "The volume-props-builder> function updates a VolumeProps$Builder instance using the provided configuration.
   The function takes the VolumeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23214,11 +23214,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-volume-props-builder (new VolumeProps$Builder) id config))
+  (volume-props-builder> (new VolumeProps$Builder) id config))
 
 
-(defn build-vpc-attributes-builder
-  "The build-vpc-attributes-builder function updates a VpcAttributes$Builder instance using the provided configuration.
+(defn vpc-attributes-builder>
+  "The vpc-attributes-builder> function updates a VpcAttributes$Builder instance using the provided configuration.
   The function takes the VpcAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23290,11 +23290,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpc-attributes-builder (new VpcAttributes$Builder) id config))
+  (vpc-attributes-builder> (new VpcAttributes$Builder) id config))
 
 
-(defn build-vpc-builder
-  "The build-vpc-builder function updates a Vpc$Builder instance using the provided configuration.
+(defn vpc-builder>
+  "The vpc-builder> function updates a Vpc$Builder instance using the provided configuration.
   The function takes the Vpc$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23384,11 +23384,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-vpc-builder (Vpc$Builder/create scope (name id)) id config))
+  (vpc-builder> (Vpc$Builder/create scope (name id)) id config))
 
 
-(defn build-vpc-endpoint-service-builder
-  "The build-vpc-endpoint-service-builder function updates a VpcEndpointService$Builder instance using the provided configuration.
+(defn vpc-endpoint-service-builder>
+  "The vpc-endpoint-service-builder> function updates a VpcEndpointService$Builder instance using the provided configuration.
   The function takes the VpcEndpointService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23421,11 +23421,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-vpc-endpoint-service-builder (VpcEndpointService$Builder/create scope (name id)) id config))
+  (vpc-endpoint-service-builder> (VpcEndpointService$Builder/create scope (name id)) id config))
 
 
-(defn build-vpc-endpoint-service-props-builder
-  "The build-vpc-endpoint-service-props-builder function updates a VpcEndpointServiceProps$Builder instance using the provided configuration.
+(defn vpc-endpoint-service-props-builder>
+  "The vpc-endpoint-service-props-builder> function updates a VpcEndpointServiceProps$Builder instance using the provided configuration.
   The function takes the VpcEndpointServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23458,11 +23458,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpc-endpoint-service-props-builder (new VpcEndpointServiceProps$Builder) id config))
+  (vpc-endpoint-service-props-builder> (new VpcEndpointServiceProps$Builder) id config))
 
 
-(defn build-vpc-ipam-options-builder
-  "The build-vpc-ipam-options-builder function updates a VpcIpamOptions$Builder instance using the provided configuration.
+(defn vpc-ipam-options-builder>
+  "The vpc-ipam-options-builder> function updates a VpcIpamOptions$Builder instance using the provided configuration.
   The function takes the VpcIpamOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23492,11 +23492,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpc-ipam-options-builder (new VpcIpamOptions$Builder) id config))
+  (vpc-ipam-options-builder> (new VpcIpamOptions$Builder) id config))
 
 
-(defn build-vpc-lookup-options-builder
-  "The build-vpc-lookup-options-builder function updates a VpcLookupOptions$Builder instance using the provided configuration.
+(defn vpc-lookup-options-builder>
+  "The vpc-lookup-options-builder> function updates a VpcLookupOptions$Builder instance using the provided configuration.
   The function takes the VpcLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23541,11 +23541,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpc-lookup-options-builder (new VpcLookupOptions$Builder) id config))
+  (vpc-lookup-options-builder> (new VpcLookupOptions$Builder) id config))
 
 
-(defn build-vpc-props-builder
-  "The build-vpc-props-builder function updates a VpcProps$Builder instance using the provided configuration.
+(defn vpc-props-builder>
+  "The vpc-props-builder> function updates a VpcProps$Builder instance using the provided configuration.
   The function takes the VpcProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23635,11 +23635,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpc-props-builder (new VpcProps$Builder) id config))
+  (vpc-props-builder> (new VpcProps$Builder) id config))
 
 
-(defn build-vpn-connection-attributes-builder
-  "The build-vpn-connection-attributes-builder function updates a VpnConnectionAttributes$Builder instance using the provided configuration.
+(defn vpn-connection-attributes-builder>
+  "The vpn-connection-attributes-builder> function updates a VpnConnectionAttributes$Builder instance using the provided configuration.
   The function takes the VpnConnectionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23672,11 +23672,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpn-connection-attributes-builder (new VpnConnectionAttributes$Builder) id config))
+  (vpn-connection-attributes-builder> (new VpnConnectionAttributes$Builder) id config))
 
 
-(defn build-vpn-connection-builder
-  "The build-vpn-connection-builder function updates a VpnConnection$Builder instance using the provided configuration.
+(defn vpn-connection-builder>
+  "The vpn-connection-builder> function updates a VpnConnection$Builder instance using the provided configuration.
   The function takes the VpnConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23712,11 +23712,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-vpn-connection-builder (VpnConnection$Builder/create scope (name id)) id config))
+  (vpn-connection-builder> (VpnConnection$Builder/create scope (name id)) id config))
 
 
-(defn build-vpn-connection-options-builder
-  "The build-vpn-connection-options-builder function updates a VpnConnectionOptions$Builder instance using the provided configuration.
+(defn vpn-connection-options-builder>
+  "The vpn-connection-options-builder> function updates a VpnConnectionOptions$Builder instance using the provided configuration.
   The function takes the VpnConnectionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23749,11 +23749,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpn-connection-options-builder (new VpnConnectionOptions$Builder) id config))
+  (vpn-connection-options-builder> (new VpnConnectionOptions$Builder) id config))
 
 
-(defn build-vpn-connection-props-builder
-  "The build-vpn-connection-props-builder function updates a VpnConnectionProps$Builder instance using the provided configuration.
+(defn vpn-connection-props-builder>
+  "The vpn-connection-props-builder> function updates a VpnConnectionProps$Builder instance using the provided configuration.
   The function takes the VpnConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23789,11 +23789,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpn-connection-props-builder (new VpnConnectionProps$Builder) id config))
+  (vpn-connection-props-builder> (new VpnConnectionProps$Builder) id config))
 
 
-(defn build-vpn-gateway-builder
-  "The build-vpn-gateway-builder function updates a VpnGateway$Builder instance using the provided configuration.
+(defn vpn-gateway-builder>
+  "The vpn-gateway-builder> function updates a VpnGateway$Builder instance using the provided configuration.
   The function takes the VpnGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23820,11 +23820,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-vpn-gateway-builder (VpnGateway$Builder/create scope (name id)) id config))
+  (vpn-gateway-builder> (VpnGateway$Builder/create scope (name id)) id config))
 
 
-(defn build-vpn-gateway-props-builder
-  "The build-vpn-gateway-props-builder function updates a VpnGatewayProps$Builder instance using the provided configuration.
+(defn vpn-gateway-props-builder>
+  "The vpn-gateway-props-builder> function updates a VpnGatewayProps$Builder instance using the provided configuration.
   The function takes the VpnGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23851,11 +23851,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpn-gateway-props-builder (new VpnGatewayProps$Builder) id config))
+  (vpn-gateway-props-builder> (new VpnGatewayProps$Builder) id config))
 
 
-(defn build-vpn-tunnel-option-builder
-  "The build-vpn-tunnel-option-builder function updates a VpnTunnelOption$Builder instance using the provided configuration.
+(defn vpn-tunnel-option-builder>
+  "The vpn-tunnel-option-builder> function updates a VpnTunnelOption$Builder instance using the provided configuration.
   The function takes the VpnTunnelOption$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23885,11 +23885,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-vpn-tunnel-option-builder (new VpnTunnelOption$Builder) id config))
+  (vpn-tunnel-option-builder> (new VpnTunnelOption$Builder) id config))
 
 
-(defn build-windows-image-builder
-  "The build-windows-image-builder function updates a WindowsImage$Builder instance using the provided configuration.
+(defn windows-image-builder>
+  "The windows-image-builder> function updates a WindowsImage$Builder instance using the provided configuration.
   The function takes the WindowsImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23916,11 +23916,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.WindowsVersion]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^WindowsVersion windows-version id config]
-  (build-windows-image-builder (WindowsImage$Builder/create windows-version) id config))
+  (windows-image-builder> (WindowsImage$Builder/create windows-version) id config))
 
 
-(defn build-windows-image-props-builder
-  "The build-windows-image-props-builder function updates a WindowsImageProps$Builder instance using the provided configuration.
+(defn windows-image-props-builder>
+  "The windows-image-props-builder> function updates a WindowsImageProps$Builder instance using the provided configuration.
   The function takes the WindowsImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23944,11 +23944,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.WindowsVersion]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-windows-image-props-builder (new WindowsImageProps$Builder) id config))
+  (windows-image-props-builder> (new WindowsImageProps$Builder) id config))
 
 
-(defn build-windows-user-data-options-builder
-  "The build-windows-user-data-options-builder function updates a WindowsUserDataOptions$Builder instance using the provided configuration.
+(defn windows-user-data-options-builder>
+  "The windows-user-data-options-builder> function updates a WindowsUserDataOptions$Builder instance using the provided configuration.
   The function takes the WindowsUserDataOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -23972,4 +23972,4 @@ __Create Form:__ ____[software.amazon.awscdk.services.ec2.WindowsVersion]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-windows-user-data-options-builder (new WindowsUserDataOptions$Builder) id config))
+  (windows-user-data-options-builder> (new WindowsUserDataOptions$Builder) id config))

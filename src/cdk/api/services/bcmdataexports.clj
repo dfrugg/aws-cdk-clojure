@@ -12,8 +12,8 @@
                                                            CfnExportProps$Builder]))
 
 
-(defn build-cfn-export-builder
-  "The build-cfn-export-builder function updates a CfnExport$Builder instance using the provided configuration.
+(defn cfn-export-builder>
+  "The cfn-export-builder> function updates a CfnExport$Builder instance using the provided configuration.
   The function takes the CfnExport$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -40,11 +40,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-export-builder (CfnExport$Builder/create scope (name id)) id config))
+  (cfn-export-builder> (CfnExport$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-export-data-query-property-builder
-  "The build-cfn-export-data-query-property-builder function updates a CfnExport$DataQueryProperty$Builder instance using the provided configuration.
+(defn cfn-export-data-query-property-builder>
+  "The cfn-export-data-query-property-builder> function updates a CfnExport$DataQueryProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$DataQueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -71,11 +71,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-export-data-query-property-builder (new CfnExport$DataQueryProperty$Builder) id config))
+  (cfn-export-data-query-property-builder> (new CfnExport$DataQueryProperty$Builder) id config))
 
 
-(defn build-cfn-export-destination-configurations-property-builder
-  "The build-cfn-export-destination-configurations-property-builder function updates a CfnExport$DestinationConfigurationsProperty$Builder instance using the provided configuration.
+(defn cfn-export-destination-configurations-property-builder>
+  "The cfn-export-destination-configurations-property-builder> function updates a CfnExport$DestinationConfigurationsProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$DestinationConfigurationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -99,11 +99,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-export-destination-configurations-property-builder (new CfnExport$DestinationConfigurationsProperty$Builder) id config))
+  (cfn-export-destination-configurations-property-builder> (new CfnExport$DestinationConfigurationsProperty$Builder) id config))
 
 
-(defn build-cfn-export-export-property-builder
-  "The build-cfn-export-export-property-builder function updates a CfnExport$ExportProperty$Builder instance using the provided configuration.
+(defn cfn-export-export-property-builder>
+  "The cfn-export-export-property-builder> function updates a CfnExport$ExportProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$ExportProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -142,11 +142,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-export-export-property-builder (new CfnExport$ExportProperty$Builder) id config))
+  (cfn-export-export-property-builder> (new CfnExport$ExportProperty$Builder) id config))
 
 
-(defn build-cfn-export-props-builder
-  "The build-cfn-export-props-builder function updates a CfnExportProps$Builder instance using the provided configuration.
+(defn cfn-export-props-builder>
+  "The cfn-export-props-builder> function updates a CfnExportProps$Builder instance using the provided configuration.
   The function takes the CfnExportProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -173,11 +173,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-export-props-builder (new CfnExportProps$Builder) id config))
+  (cfn-export-props-builder> (new CfnExportProps$Builder) id config))
 
 
-(defn build-cfn-export-refresh-cadence-property-builder
-  "The build-cfn-export-refresh-cadence-property-builder function updates a CfnExport$RefreshCadenceProperty$Builder instance using the provided configuration.
+(defn cfn-export-refresh-cadence-property-builder>
+  "The cfn-export-refresh-cadence-property-builder> function updates a CfnExport$RefreshCadenceProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$RefreshCadenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -201,11 +201,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-export-refresh-cadence-property-builder (new CfnExport$RefreshCadenceProperty$Builder) id config))
+  (cfn-export-refresh-cadence-property-builder> (new CfnExport$RefreshCadenceProperty$Builder) id config))
 
 
-(defn build-cfn-export-resource-tag-property-builder
-  "The build-cfn-export-resource-tag-property-builder function updates a CfnExport$ResourceTagProperty$Builder instance using the provided configuration.
+(defn cfn-export-resource-tag-property-builder>
+  "The cfn-export-resource-tag-property-builder> function updates a CfnExport$ResourceTagProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$ResourceTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -232,11 +232,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-export-resource-tag-property-builder (new CfnExport$ResourceTagProperty$Builder) id config))
+  (cfn-export-resource-tag-property-builder> (new CfnExport$ResourceTagProperty$Builder) id config))
 
 
-(defn build-cfn-export-s3-destination-property-builder
-  "The build-cfn-export-s3-destination-property-builder function updates a CfnExport$S3DestinationProperty$Builder instance using the provided configuration.
+(defn cfn-export-s3-destination-property-builder>
+  "The cfn-export-s3-destination-property-builder> function updates a CfnExport$S3DestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$S3DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -269,11 +269,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-export-s3-destination-property-builder (new CfnExport$S3DestinationProperty$Builder) id config))
+  (cfn-export-s3-destination-property-builder> (new CfnExport$S3DestinationProperty$Builder) id config))
 
 
-(defn build-cfn-export-s3-output-configurations-property-builder
-  "The build-cfn-export-s3-output-configurations-property-builder function updates a CfnExport$S3OutputConfigurationsProperty$Builder instance using the provided configuration.
+(defn cfn-export-s3-output-configurations-property-builder>
+  "The cfn-export-s3-output-configurations-property-builder> function updates a CfnExport$S3OutputConfigurationsProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$S3OutputConfigurationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -306,4 +306,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-export-s3-output-configurations-property-builder (new CfnExport$S3OutputConfigurationsProperty$Builder) id config))
+  (cfn-export-s3-output-configurations-property-builder> (new CfnExport$S3OutputConfigurationsProperty$Builder) id config))

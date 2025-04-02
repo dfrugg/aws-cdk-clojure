@@ -56,8 +56,8 @@
                                                       CfnInputProps$Builder]))
 
 
-(defn build-cfn-alarm-model-acknowledge-flow-property-builder
-  "The build-cfn-alarm-model-acknowledge-flow-property-builder function updates a CfnAlarmModel$AcknowledgeFlowProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-acknowledge-flow-property-builder>
+  "The cfn-alarm-model-acknowledge-flow-property-builder> function updates a CfnAlarmModel$AcknowledgeFlowProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$AcknowledgeFlowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -81,11 +81,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-acknowledge-flow-property-builder (new CfnAlarmModel$AcknowledgeFlowProperty$Builder) id config))
+  (cfn-alarm-model-acknowledge-flow-property-builder> (new CfnAlarmModel$AcknowledgeFlowProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-alarm-action-property-builder
-  "The build-cfn-alarm-model-alarm-action-property-builder function updates a CfnAlarmModel$AlarmActionProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-alarm-action-property-builder>
+  "The cfn-alarm-model-alarm-action-property-builder> function updates a CfnAlarmModel$AlarmActionProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$AlarmActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -133,11 +133,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-alarm-action-property-builder (new CfnAlarmModel$AlarmActionProperty$Builder) id config))
+  (cfn-alarm-model-alarm-action-property-builder> (new CfnAlarmModel$AlarmActionProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-alarm-capabilities-property-builder
-  "The build-cfn-alarm-model-alarm-capabilities-property-builder function updates a CfnAlarmModel$AlarmCapabilitiesProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-alarm-capabilities-property-builder>
+  "The cfn-alarm-model-alarm-capabilities-property-builder> function updates a CfnAlarmModel$AlarmCapabilitiesProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$AlarmCapabilitiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -164,11 +164,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-alarm-capabilities-property-builder (new CfnAlarmModel$AlarmCapabilitiesProperty$Builder) id config))
+  (cfn-alarm-model-alarm-capabilities-property-builder> (new CfnAlarmModel$AlarmCapabilitiesProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-alarm-event-actions-property-builder
-  "The build-cfn-alarm-model-alarm-event-actions-property-builder function updates a CfnAlarmModel$AlarmEventActionsProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-alarm-event-actions-property-builder>
+  "The cfn-alarm-model-alarm-event-actions-property-builder> function updates a CfnAlarmModel$AlarmEventActionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$AlarmEventActionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -192,11 +192,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-alarm-event-actions-property-builder (new CfnAlarmModel$AlarmEventActionsProperty$Builder) id config))
+  (cfn-alarm-model-alarm-event-actions-property-builder> (new CfnAlarmModel$AlarmEventActionsProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-alarm-rule-property-builder
-  "The build-cfn-alarm-model-alarm-rule-property-builder function updates a CfnAlarmModel$AlarmRuleProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-alarm-rule-property-builder>
+  "The cfn-alarm-model-alarm-rule-property-builder> function updates a CfnAlarmModel$AlarmRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$AlarmRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -220,11 +220,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-alarm-rule-property-builder (new CfnAlarmModel$AlarmRuleProperty$Builder) id config))
+  (cfn-alarm-model-alarm-rule-property-builder> (new CfnAlarmModel$AlarmRuleProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-asset-property-timestamp-property-builder
-  "The build-cfn-alarm-model-asset-property-timestamp-property-builder function updates a CfnAlarmModel$AssetPropertyTimestampProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-asset-property-timestamp-property-builder>
+  "The cfn-alarm-model-asset-property-timestamp-property-builder> function updates a CfnAlarmModel$AssetPropertyTimestampProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$AssetPropertyTimestampProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -251,11 +251,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-asset-property-timestamp-property-builder (new CfnAlarmModel$AssetPropertyTimestampProperty$Builder) id config))
+  (cfn-alarm-model-asset-property-timestamp-property-builder> (new CfnAlarmModel$AssetPropertyTimestampProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-asset-property-value-property-builder
-  "The build-cfn-alarm-model-asset-property-value-property-builder function updates a CfnAlarmModel$AssetPropertyValueProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-asset-property-value-property-builder>
+  "The cfn-alarm-model-asset-property-value-property-builder> function updates a CfnAlarmModel$AssetPropertyValueProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$AssetPropertyValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -285,11 +285,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-asset-property-value-property-builder (new CfnAlarmModel$AssetPropertyValueProperty$Builder) id config))
+  (cfn-alarm-model-asset-property-value-property-builder> (new CfnAlarmModel$AssetPropertyValueProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-asset-property-variant-property-builder
-  "The build-cfn-alarm-model-asset-property-variant-property-builder function updates a CfnAlarmModel$AssetPropertyVariantProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-asset-property-variant-property-builder>
+  "The cfn-alarm-model-asset-property-variant-property-builder> function updates a CfnAlarmModel$AssetPropertyVariantProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$AssetPropertyVariantProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -322,11 +322,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-asset-property-variant-property-builder (new CfnAlarmModel$AssetPropertyVariantProperty$Builder) id config))
+  (cfn-alarm-model-asset-property-variant-property-builder> (new CfnAlarmModel$AssetPropertyVariantProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-builder
-  "The build-cfn-alarm-model-builder function updates a CfnAlarmModel$Builder instance using the provided configuration.
+(defn cfn-alarm-model-builder>
+  "The cfn-alarm-model-builder> function updates a CfnAlarmModel$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -374,11 +374,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-alarm-model-builder (CfnAlarmModel$Builder/create scope (name id)) id config))
+  (cfn-alarm-model-builder> (CfnAlarmModel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-alarm-model-dynamo-d-bv2-property-builder
-  "The build-cfn-alarm-model-dynamo-d-bv2-property-builder function updates a CfnAlarmModel$DynamoDBv2Property$Builder instance using the provided configuration.
+(defn cfn-alarm-model-dynamo-d-bv2-property-builder>
+  "The cfn-alarm-model-dynamo-d-bv2-property-builder> function updates a CfnAlarmModel$DynamoDBv2Property$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$DynamoDBv2Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -405,11 +405,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-dynamo-d-bv2-property-builder (new CfnAlarmModel$DynamoDBv2Property$Builder) id config))
+  (cfn-alarm-model-dynamo-d-bv2-property-builder> (new CfnAlarmModel$DynamoDBv2Property$Builder) id config))
 
 
-(defn build-cfn-alarm-model-dynamo-db-property-builder
-  "The build-cfn-alarm-model-dynamo-db-property-builder function updates a CfnAlarmModel$DynamoDBProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-dynamo-db-property-builder>
+  "The cfn-alarm-model-dynamo-db-property-builder> function updates a CfnAlarmModel$DynamoDBProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$DynamoDBProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -460,11 +460,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-dynamo-db-property-builder (new CfnAlarmModel$DynamoDBProperty$Builder) id config))
+  (cfn-alarm-model-dynamo-db-property-builder> (new CfnAlarmModel$DynamoDBProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-firehose-property-builder
-  "The build-cfn-alarm-model-firehose-property-builder function updates a CfnAlarmModel$FirehoseProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-firehose-property-builder>
+  "The cfn-alarm-model-firehose-property-builder> function updates a CfnAlarmModel$FirehoseProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$FirehoseProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -494,11 +494,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-firehose-property-builder (new CfnAlarmModel$FirehoseProperty$Builder) id config))
+  (cfn-alarm-model-firehose-property-builder> (new CfnAlarmModel$FirehoseProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-initialization-configuration-property-builder
-  "The build-cfn-alarm-model-initialization-configuration-property-builder function updates a CfnAlarmModel$InitializationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-initialization-configuration-property-builder>
+  "The cfn-alarm-model-initialization-configuration-property-builder> function updates a CfnAlarmModel$InitializationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$InitializationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -522,11 +522,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-initialization-configuration-property-builder (new CfnAlarmModel$InitializationConfigurationProperty$Builder) id config))
+  (cfn-alarm-model-initialization-configuration-property-builder> (new CfnAlarmModel$InitializationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-iot-events-property-builder
-  "The build-cfn-alarm-model-iot-events-property-builder function updates a CfnAlarmModel$IotEventsProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-iot-events-property-builder>
+  "The cfn-alarm-model-iot-events-property-builder> function updates a CfnAlarmModel$IotEventsProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$IotEventsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -553,11 +553,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-iot-events-property-builder (new CfnAlarmModel$IotEventsProperty$Builder) id config))
+  (cfn-alarm-model-iot-events-property-builder> (new CfnAlarmModel$IotEventsProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-iot-site-wise-property-builder
-  "The build-cfn-alarm-model-iot-site-wise-property-builder function updates a CfnAlarmModel$IotSiteWiseProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-iot-site-wise-property-builder>
+  "The cfn-alarm-model-iot-site-wise-property-builder> function updates a CfnAlarmModel$IotSiteWiseProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$IotSiteWiseProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -593,11 +593,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-iot-site-wise-property-builder (new CfnAlarmModel$IotSiteWiseProperty$Builder) id config))
+  (cfn-alarm-model-iot-site-wise-property-builder> (new CfnAlarmModel$IotSiteWiseProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-iot-topic-publish-property-builder
-  "The build-cfn-alarm-model-iot-topic-publish-property-builder function updates a CfnAlarmModel$IotTopicPublishProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-iot-topic-publish-property-builder>
+  "The cfn-alarm-model-iot-topic-publish-property-builder> function updates a CfnAlarmModel$IotTopicPublishProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$IotTopicPublishProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -624,11 +624,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-iot-topic-publish-property-builder (new CfnAlarmModel$IotTopicPublishProperty$Builder) id config))
+  (cfn-alarm-model-iot-topic-publish-property-builder> (new CfnAlarmModel$IotTopicPublishProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-lambda-property-builder
-  "The build-cfn-alarm-model-lambda-property-builder function updates a CfnAlarmModel$LambdaProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-lambda-property-builder>
+  "The cfn-alarm-model-lambda-property-builder> function updates a CfnAlarmModel$LambdaProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$LambdaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -655,11 +655,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-lambda-property-builder (new CfnAlarmModel$LambdaProperty$Builder) id config))
+  (cfn-alarm-model-lambda-property-builder> (new CfnAlarmModel$LambdaProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-payload-property-builder
-  "The build-cfn-alarm-model-payload-property-builder function updates a CfnAlarmModel$PayloadProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-payload-property-builder>
+  "The cfn-alarm-model-payload-property-builder> function updates a CfnAlarmModel$PayloadProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$PayloadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -686,11 +686,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-payload-property-builder (new CfnAlarmModel$PayloadProperty$Builder) id config))
+  (cfn-alarm-model-payload-property-builder> (new CfnAlarmModel$PayloadProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-props-builder
-  "The build-cfn-alarm-model-props-builder function updates a CfnAlarmModelProps$Builder instance using the provided configuration.
+(defn cfn-alarm-model-props-builder>
+  "The cfn-alarm-model-props-builder> function updates a CfnAlarmModelProps$Builder instance using the provided configuration.
   The function takes the CfnAlarmModelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -738,11 +738,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-props-builder (new CfnAlarmModelProps$Builder) id config))
+  (cfn-alarm-model-props-builder> (new CfnAlarmModelProps$Builder) id config))
 
 
-(defn build-cfn-alarm-model-simple-rule-property-builder
-  "The build-cfn-alarm-model-simple-rule-property-builder function updates a CfnAlarmModel$SimpleRuleProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-simple-rule-property-builder>
+  "The cfn-alarm-model-simple-rule-property-builder> function updates a CfnAlarmModel$SimpleRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$SimpleRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -772,11 +772,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-simple-rule-property-builder (new CfnAlarmModel$SimpleRuleProperty$Builder) id config))
+  (cfn-alarm-model-simple-rule-property-builder> (new CfnAlarmModel$SimpleRuleProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-sns-property-builder
-  "The build-cfn-alarm-model-sns-property-builder function updates a CfnAlarmModel$SnsProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-sns-property-builder>
+  "The cfn-alarm-model-sns-property-builder> function updates a CfnAlarmModel$SnsProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$SnsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -803,11 +803,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-sns-property-builder (new CfnAlarmModel$SnsProperty$Builder) id config))
+  (cfn-alarm-model-sns-property-builder> (new CfnAlarmModel$SnsProperty$Builder) id config))
 
 
-(defn build-cfn-alarm-model-sqs-property-builder
-  "The build-cfn-alarm-model-sqs-property-builder function updates a CfnAlarmModel$SqsProperty$Builder instance using the provided configuration.
+(defn cfn-alarm-model-sqs-property-builder>
+  "The cfn-alarm-model-sqs-property-builder> function updates a CfnAlarmModel$SqsProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarmModel$SqsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -837,11 +837,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alarm-model-sqs-property-builder (new CfnAlarmModel$SqsProperty$Builder) id config))
+  (cfn-alarm-model-sqs-property-builder> (new CfnAlarmModel$SqsProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-action-property-builder
-  "The build-cfn-detector-model-action-property-builder function updates a CfnDetectorModel$ActionProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-action-property-builder>
+  "The cfn-detector-model-action-property-builder> function updates a CfnDetectorModel$ActionProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -901,11 +901,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-action-property-builder (new CfnDetectorModel$ActionProperty$Builder) id config))
+  (cfn-detector-model-action-property-builder> (new CfnDetectorModel$ActionProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-asset-property-timestamp-property-builder
-  "The build-cfn-detector-model-asset-property-timestamp-property-builder function updates a CfnDetectorModel$AssetPropertyTimestampProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-asset-property-timestamp-property-builder>
+  "The cfn-detector-model-asset-property-timestamp-property-builder> function updates a CfnDetectorModel$AssetPropertyTimestampProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$AssetPropertyTimestampProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -932,11 +932,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-asset-property-timestamp-property-builder (new CfnDetectorModel$AssetPropertyTimestampProperty$Builder) id config))
+  (cfn-detector-model-asset-property-timestamp-property-builder> (new CfnDetectorModel$AssetPropertyTimestampProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-asset-property-value-property-builder
-  "The build-cfn-detector-model-asset-property-value-property-builder function updates a CfnDetectorModel$AssetPropertyValueProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-asset-property-value-property-builder>
+  "The cfn-detector-model-asset-property-value-property-builder> function updates a CfnDetectorModel$AssetPropertyValueProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$AssetPropertyValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -966,11 +966,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-asset-property-value-property-builder (new CfnDetectorModel$AssetPropertyValueProperty$Builder) id config))
+  (cfn-detector-model-asset-property-value-property-builder> (new CfnDetectorModel$AssetPropertyValueProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-asset-property-variant-property-builder
-  "The build-cfn-detector-model-asset-property-variant-property-builder function updates a CfnDetectorModel$AssetPropertyVariantProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-asset-property-variant-property-builder>
+  "The cfn-detector-model-asset-property-variant-property-builder> function updates a CfnDetectorModel$AssetPropertyVariantProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$AssetPropertyVariantProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1003,11 +1003,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-asset-property-variant-property-builder (new CfnDetectorModel$AssetPropertyVariantProperty$Builder) id config))
+  (cfn-detector-model-asset-property-variant-property-builder> (new CfnDetectorModel$AssetPropertyVariantProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-builder
-  "The build-cfn-detector-model-builder function updates a CfnDetectorModel$Builder instance using the provided configuration.
+(defn cfn-detector-model-builder>
+  "The cfn-detector-model-builder> function updates a CfnDetectorModel$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1049,11 +1049,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-detector-model-builder (CfnDetectorModel$Builder/create scope (name id)) id config))
+  (cfn-detector-model-builder> (CfnDetectorModel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-detector-model-clear-timer-property-builder
-  "The build-cfn-detector-model-clear-timer-property-builder function updates a CfnDetectorModel$ClearTimerProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-clear-timer-property-builder>
+  "The cfn-detector-model-clear-timer-property-builder> function updates a CfnDetectorModel$ClearTimerProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$ClearTimerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1077,11 +1077,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-clear-timer-property-builder (new CfnDetectorModel$ClearTimerProperty$Builder) id config))
+  (cfn-detector-model-clear-timer-property-builder> (new CfnDetectorModel$ClearTimerProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-detector-model-definition-property-builder
-  "The build-cfn-detector-model-detector-model-definition-property-builder function updates a CfnDetectorModel$DetectorModelDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-detector-model-definition-property-builder>
+  "The cfn-detector-model-detector-model-definition-property-builder> function updates a CfnDetectorModel$DetectorModelDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$DetectorModelDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1108,11 +1108,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-detector-model-definition-property-builder (new CfnDetectorModel$DetectorModelDefinitionProperty$Builder) id config))
+  (cfn-detector-model-detector-model-definition-property-builder> (new CfnDetectorModel$DetectorModelDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-dynamo-d-bv2-property-builder
-  "The build-cfn-detector-model-dynamo-d-bv2-property-builder function updates a CfnDetectorModel$DynamoDBv2Property$Builder instance using the provided configuration.
+(defn cfn-detector-model-dynamo-d-bv2-property-builder>
+  "The cfn-detector-model-dynamo-d-bv2-property-builder> function updates a CfnDetectorModel$DynamoDBv2Property$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$DynamoDBv2Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1139,11 +1139,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-dynamo-d-bv2-property-builder (new CfnDetectorModel$DynamoDBv2Property$Builder) id config))
+  (cfn-detector-model-dynamo-d-bv2-property-builder> (new CfnDetectorModel$DynamoDBv2Property$Builder) id config))
 
 
-(defn build-cfn-detector-model-dynamo-db-property-builder
-  "The build-cfn-detector-model-dynamo-db-property-builder function updates a CfnDetectorModel$DynamoDBProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-dynamo-db-property-builder>
+  "The cfn-detector-model-dynamo-db-property-builder> function updates a CfnDetectorModel$DynamoDBProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$DynamoDBProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1194,11 +1194,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-dynamo-db-property-builder (new CfnDetectorModel$DynamoDBProperty$Builder) id config))
+  (cfn-detector-model-dynamo-db-property-builder> (new CfnDetectorModel$DynamoDBProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-event-property-builder
-  "The build-cfn-detector-model-event-property-builder function updates a CfnDetectorModel$EventProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-event-property-builder>
+  "The cfn-detector-model-event-property-builder> function updates a CfnDetectorModel$EventProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$EventProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1228,11 +1228,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-event-property-builder (new CfnDetectorModel$EventProperty$Builder) id config))
+  (cfn-detector-model-event-property-builder> (new CfnDetectorModel$EventProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-firehose-property-builder
-  "The build-cfn-detector-model-firehose-property-builder function updates a CfnDetectorModel$FirehoseProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-firehose-property-builder>
+  "The cfn-detector-model-firehose-property-builder> function updates a CfnDetectorModel$FirehoseProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$FirehoseProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1262,11 +1262,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-firehose-property-builder (new CfnDetectorModel$FirehoseProperty$Builder) id config))
+  (cfn-detector-model-firehose-property-builder> (new CfnDetectorModel$FirehoseProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-iot-events-property-builder
-  "The build-cfn-detector-model-iot-events-property-builder function updates a CfnDetectorModel$IotEventsProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-iot-events-property-builder>
+  "The cfn-detector-model-iot-events-property-builder> function updates a CfnDetectorModel$IotEventsProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$IotEventsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1293,11 +1293,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-iot-events-property-builder (new CfnDetectorModel$IotEventsProperty$Builder) id config))
+  (cfn-detector-model-iot-events-property-builder> (new CfnDetectorModel$IotEventsProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-iot-site-wise-property-builder
-  "The build-cfn-detector-model-iot-site-wise-property-builder function updates a CfnDetectorModel$IotSiteWiseProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-iot-site-wise-property-builder>
+  "The cfn-detector-model-iot-site-wise-property-builder> function updates a CfnDetectorModel$IotSiteWiseProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$IotSiteWiseProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1333,11 +1333,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-iot-site-wise-property-builder (new CfnDetectorModel$IotSiteWiseProperty$Builder) id config))
+  (cfn-detector-model-iot-site-wise-property-builder> (new CfnDetectorModel$IotSiteWiseProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-iot-topic-publish-property-builder
-  "The build-cfn-detector-model-iot-topic-publish-property-builder function updates a CfnDetectorModel$IotTopicPublishProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-iot-topic-publish-property-builder>
+  "The cfn-detector-model-iot-topic-publish-property-builder> function updates a CfnDetectorModel$IotTopicPublishProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$IotTopicPublishProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1364,11 +1364,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-iot-topic-publish-property-builder (new CfnDetectorModel$IotTopicPublishProperty$Builder) id config))
+  (cfn-detector-model-iot-topic-publish-property-builder> (new CfnDetectorModel$IotTopicPublishProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-lambda-property-builder
-  "The build-cfn-detector-model-lambda-property-builder function updates a CfnDetectorModel$LambdaProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-lambda-property-builder>
+  "The cfn-detector-model-lambda-property-builder> function updates a CfnDetectorModel$LambdaProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$LambdaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1395,11 +1395,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-lambda-property-builder (new CfnDetectorModel$LambdaProperty$Builder) id config))
+  (cfn-detector-model-lambda-property-builder> (new CfnDetectorModel$LambdaProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-on-enter-property-builder
-  "The build-cfn-detector-model-on-enter-property-builder function updates a CfnDetectorModel$OnEnterProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-on-enter-property-builder>
+  "The cfn-detector-model-on-enter-property-builder> function updates a CfnDetectorModel$OnEnterProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$OnEnterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1423,11 +1423,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-on-enter-property-builder (new CfnDetectorModel$OnEnterProperty$Builder) id config))
+  (cfn-detector-model-on-enter-property-builder> (new CfnDetectorModel$OnEnterProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-on-exit-property-builder
-  "The build-cfn-detector-model-on-exit-property-builder function updates a CfnDetectorModel$OnExitProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-on-exit-property-builder>
+  "The cfn-detector-model-on-exit-property-builder> function updates a CfnDetectorModel$OnExitProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$OnExitProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1451,11 +1451,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-on-exit-property-builder (new CfnDetectorModel$OnExitProperty$Builder) id config))
+  (cfn-detector-model-on-exit-property-builder> (new CfnDetectorModel$OnExitProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-on-input-property-builder
-  "The build-cfn-detector-model-on-input-property-builder function updates a CfnDetectorModel$OnInputProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-on-input-property-builder>
+  "The cfn-detector-model-on-input-property-builder> function updates a CfnDetectorModel$OnInputProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$OnInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1482,11 +1482,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-on-input-property-builder (new CfnDetectorModel$OnInputProperty$Builder) id config))
+  (cfn-detector-model-on-input-property-builder> (new CfnDetectorModel$OnInputProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-payload-property-builder
-  "The build-cfn-detector-model-payload-property-builder function updates a CfnDetectorModel$PayloadProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-payload-property-builder>
+  "The cfn-detector-model-payload-property-builder> function updates a CfnDetectorModel$PayloadProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$PayloadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1513,11 +1513,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-payload-property-builder (new CfnDetectorModel$PayloadProperty$Builder) id config))
+  (cfn-detector-model-payload-property-builder> (new CfnDetectorModel$PayloadProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-props-builder
-  "The build-cfn-detector-model-props-builder function updates a CfnDetectorModelProps$Builder instance using the provided configuration.
+(defn cfn-detector-model-props-builder>
+  "The cfn-detector-model-props-builder> function updates a CfnDetectorModelProps$Builder instance using the provided configuration.
   The function takes the CfnDetectorModelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1559,11 +1559,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-props-builder (new CfnDetectorModelProps$Builder) id config))
+  (cfn-detector-model-props-builder> (new CfnDetectorModelProps$Builder) id config))
 
 
-(defn build-cfn-detector-model-reset-timer-property-builder
-  "The build-cfn-detector-model-reset-timer-property-builder function updates a CfnDetectorModel$ResetTimerProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-reset-timer-property-builder>
+  "The cfn-detector-model-reset-timer-property-builder> function updates a CfnDetectorModel$ResetTimerProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$ResetTimerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1587,11 +1587,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-reset-timer-property-builder (new CfnDetectorModel$ResetTimerProperty$Builder) id config))
+  (cfn-detector-model-reset-timer-property-builder> (new CfnDetectorModel$ResetTimerProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-set-timer-property-builder
-  "The build-cfn-detector-model-set-timer-property-builder function updates a CfnDetectorModel$SetTimerProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-set-timer-property-builder>
+  "The cfn-detector-model-set-timer-property-builder> function updates a CfnDetectorModel$SetTimerProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$SetTimerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1621,11 +1621,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-set-timer-property-builder (new CfnDetectorModel$SetTimerProperty$Builder) id config))
+  (cfn-detector-model-set-timer-property-builder> (new CfnDetectorModel$SetTimerProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-set-variable-property-builder
-  "The build-cfn-detector-model-set-variable-property-builder function updates a CfnDetectorModel$SetVariableProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-set-variable-property-builder>
+  "The cfn-detector-model-set-variable-property-builder> function updates a CfnDetectorModel$SetVariableProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$SetVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1652,11 +1652,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-set-variable-property-builder (new CfnDetectorModel$SetVariableProperty$Builder) id config))
+  (cfn-detector-model-set-variable-property-builder> (new CfnDetectorModel$SetVariableProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-sns-property-builder
-  "The build-cfn-detector-model-sns-property-builder function updates a CfnDetectorModel$SnsProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-sns-property-builder>
+  "The cfn-detector-model-sns-property-builder> function updates a CfnDetectorModel$SnsProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$SnsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1683,11 +1683,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-sns-property-builder (new CfnDetectorModel$SnsProperty$Builder) id config))
+  (cfn-detector-model-sns-property-builder> (new CfnDetectorModel$SnsProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-sqs-property-builder
-  "The build-cfn-detector-model-sqs-property-builder function updates a CfnDetectorModel$SqsProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-sqs-property-builder>
+  "The cfn-detector-model-sqs-property-builder> function updates a CfnDetectorModel$SqsProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$SqsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1717,11 +1717,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-sqs-property-builder (new CfnDetectorModel$SqsProperty$Builder) id config))
+  (cfn-detector-model-sqs-property-builder> (new CfnDetectorModel$SqsProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-state-property-builder
-  "The build-cfn-detector-model-state-property-builder function updates a CfnDetectorModel$StateProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-state-property-builder>
+  "The cfn-detector-model-state-property-builder> function updates a CfnDetectorModel$StateProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$StateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1754,11 +1754,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-state-property-builder (new CfnDetectorModel$StateProperty$Builder) id config))
+  (cfn-detector-model-state-property-builder> (new CfnDetectorModel$StateProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-transition-event-property-builder
-  "The build-cfn-detector-model-transition-event-property-builder function updates a CfnDetectorModel$TransitionEventProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-transition-event-property-builder>
+  "The cfn-detector-model-transition-event-property-builder> function updates a CfnDetectorModel$TransitionEventProperty$Builder instance using the provided configuration.
   The function takes the CfnDetectorModel$TransitionEventProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1791,11 +1791,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-transition-event-property-builder (new CfnDetectorModel$TransitionEventProperty$Builder) id config))
+  (cfn-detector-model-transition-event-property-builder> (new CfnDetectorModel$TransitionEventProperty$Builder) id config))
 
 
-(defn build-cfn-input-attribute-property-builder
-  "The build-cfn-input-attribute-property-builder function updates a CfnInput$AttributeProperty$Builder instance using the provided configuration.
+(defn cfn-input-attribute-property-builder>
+  "The cfn-input-attribute-property-builder> function updates a CfnInput$AttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnInput$AttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1819,11 +1819,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-input-attribute-property-builder (new CfnInput$AttributeProperty$Builder) id config))
+  (cfn-input-attribute-property-builder> (new CfnInput$AttributeProperty$Builder) id config))
 
 
-(defn build-cfn-input-builder
-  "The build-cfn-input-builder function updates a CfnInput$Builder instance using the provided configuration.
+(defn cfn-input-builder>
+  "The cfn-input-builder> function updates a CfnInput$Builder instance using the provided configuration.
   The function takes the CfnInput$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1856,11 +1856,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-input-builder (CfnInput$Builder/create scope (name id)) id config))
+  (cfn-input-builder> (CfnInput$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-input-input-definition-property-builder
-  "The build-cfn-input-input-definition-property-builder function updates a CfnInput$InputDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-input-input-definition-property-builder>
+  "The cfn-input-input-definition-property-builder> function updates a CfnInput$InputDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnInput$InputDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1884,11 +1884,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-input-input-definition-property-builder (new CfnInput$InputDefinitionProperty$Builder) id config))
+  (cfn-input-input-definition-property-builder> (new CfnInput$InputDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-input-props-builder
-  "The build-cfn-input-props-builder function updates a CfnInputProps$Builder instance using the provided configuration.
+(defn cfn-input-props-builder>
+  "The cfn-input-props-builder> function updates a CfnInputProps$Builder instance using the provided configuration.
   The function takes the CfnInputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1921,4 +1921,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-input-props-builder (new CfnInputProps$Builder) id config))
+  (cfn-input-props-builder> (new CfnInputProps$Builder) id config))

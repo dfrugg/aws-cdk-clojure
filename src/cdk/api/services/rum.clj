@@ -9,8 +9,8 @@
                                                 CfnAppMonitorProps$Builder]))
 
 
-(defn build-cfn-app-monitor-app-monitor-configuration-property-builder
-  "The build-cfn-app-monitor-app-monitor-configuration-property-builder function updates a CfnAppMonitor$AppMonitorConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-app-monitor-app-monitor-configuration-property-builder>
+  "The cfn-app-monitor-app-monitor-configuration-property-builder> function updates a CfnAppMonitor$AppMonitorConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAppMonitor$AppMonitorConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -61,11 +61,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-monitor-app-monitor-configuration-property-builder (new CfnAppMonitor$AppMonitorConfigurationProperty$Builder) id config))
+  (cfn-app-monitor-app-monitor-configuration-property-builder> (new CfnAppMonitor$AppMonitorConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-app-monitor-builder
-  "The build-cfn-app-monitor-builder function updates a CfnAppMonitor$Builder instance using the provided configuration.
+(defn cfn-app-monitor-builder>
+  "The cfn-app-monitor-builder> function updates a CfnAppMonitor$Builder instance using the provided configuration.
   The function takes the CfnAppMonitor$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -104,11 +104,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-app-monitor-builder (CfnAppMonitor$Builder/create scope (name id)) id config))
+  (cfn-app-monitor-builder> (CfnAppMonitor$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-app-monitor-custom-events-property-builder
-  "The build-cfn-app-monitor-custom-events-property-builder function updates a CfnAppMonitor$CustomEventsProperty$Builder instance using the provided configuration.
+(defn cfn-app-monitor-custom-events-property-builder>
+  "The cfn-app-monitor-custom-events-property-builder> function updates a CfnAppMonitor$CustomEventsProperty$Builder instance using the provided configuration.
   The function takes the CfnAppMonitor$CustomEventsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -132,11 +132,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-monitor-custom-events-property-builder (new CfnAppMonitor$CustomEventsProperty$Builder) id config))
+  (cfn-app-monitor-custom-events-property-builder> (new CfnAppMonitor$CustomEventsProperty$Builder) id config))
 
 
-(defn build-cfn-app-monitor-metric-definition-property-builder
-  "The build-cfn-app-monitor-metric-definition-property-builder function updates a CfnAppMonitor$MetricDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-app-monitor-metric-definition-property-builder>
+  "The cfn-app-monitor-metric-definition-property-builder> function updates a CfnAppMonitor$MetricDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnAppMonitor$MetricDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -175,11 +175,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-monitor-metric-definition-property-builder (new CfnAppMonitor$MetricDefinitionProperty$Builder) id config))
+  (cfn-app-monitor-metric-definition-property-builder> (new CfnAppMonitor$MetricDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-app-monitor-metric-destination-property-builder
-  "The build-cfn-app-monitor-metric-destination-property-builder function updates a CfnAppMonitor$MetricDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-app-monitor-metric-destination-property-builder>
+  "The cfn-app-monitor-metric-destination-property-builder> function updates a CfnAppMonitor$MetricDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnAppMonitor$MetricDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -212,11 +212,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-monitor-metric-destination-property-builder (new CfnAppMonitor$MetricDestinationProperty$Builder) id config))
+  (cfn-app-monitor-metric-destination-property-builder> (new CfnAppMonitor$MetricDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-app-monitor-props-builder
-  "The build-cfn-app-monitor-props-builder function updates a CfnAppMonitorProps$Builder instance using the provided configuration.
+(defn cfn-app-monitor-props-builder>
+  "The cfn-app-monitor-props-builder> function updates a CfnAppMonitorProps$Builder instance using the provided configuration.
   The function takes the CfnAppMonitorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -255,4 +255,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-monitor-props-builder (new CfnAppMonitorProps$Builder) id config))
+  (cfn-app-monitor-props-builder> (new CfnAppMonitorProps$Builder) id config))

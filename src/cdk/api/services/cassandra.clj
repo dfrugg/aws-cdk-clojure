@@ -18,8 +18,8 @@
                                                       CfnTableProps$Builder]))
 
 
-(defn build-cfn-keyspace-builder
-  "The build-cfn-keyspace-builder function updates a CfnKeyspace$Builder instance using the provided configuration.
+(defn cfn-keyspace-builder>
+  "The cfn-keyspace-builder> function updates a CfnKeyspace$Builder instance using the provided configuration.
   The function takes the CfnKeyspace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -49,11 +49,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-keyspace-builder (CfnKeyspace$Builder/create scope (name id)) id config))
+  (cfn-keyspace-builder> (CfnKeyspace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-keyspace-props-builder
-  "The build-cfn-keyspace-props-builder function updates a CfnKeyspaceProps$Builder instance using the provided configuration.
+(defn cfn-keyspace-props-builder>
+  "The cfn-keyspace-props-builder> function updates a CfnKeyspaceProps$Builder instance using the provided configuration.
   The function takes the CfnKeyspaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -83,11 +83,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-keyspace-props-builder (new CfnKeyspaceProps$Builder) id config))
+  (cfn-keyspace-props-builder> (new CfnKeyspaceProps$Builder) id config))
 
 
-(defn build-cfn-keyspace-replication-specification-property-builder
-  "The build-cfn-keyspace-replication-specification-property-builder function updates a CfnKeyspace$ReplicationSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-keyspace-replication-specification-property-builder>
+  "The cfn-keyspace-replication-specification-property-builder> function updates a CfnKeyspace$ReplicationSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnKeyspace$ReplicationSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -114,11 +114,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-keyspace-replication-specification-property-builder (new CfnKeyspace$ReplicationSpecificationProperty$Builder) id config))
+  (cfn-keyspace-replication-specification-property-builder> (new CfnKeyspace$ReplicationSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-auto-scaling-setting-property-builder
-  "The build-cfn-table-auto-scaling-setting-property-builder function updates a CfnTable$AutoScalingSettingProperty$Builder instance using the provided configuration.
+(defn cfn-table-auto-scaling-setting-property-builder>
+  "The cfn-table-auto-scaling-setting-property-builder> function updates a CfnTable$AutoScalingSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$AutoScalingSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -151,11 +151,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-auto-scaling-setting-property-builder (new CfnTable$AutoScalingSettingProperty$Builder) id config))
+  (cfn-table-auto-scaling-setting-property-builder> (new CfnTable$AutoScalingSettingProperty$Builder) id config))
 
 
-(defn build-cfn-table-auto-scaling-specification-property-builder
-  "The build-cfn-table-auto-scaling-specification-property-builder function updates a CfnTable$AutoScalingSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-auto-scaling-specification-property-builder>
+  "The cfn-table-auto-scaling-specification-property-builder> function updates a CfnTable$AutoScalingSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$AutoScalingSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -182,11 +182,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-auto-scaling-specification-property-builder (new CfnTable$AutoScalingSpecificationProperty$Builder) id config))
+  (cfn-table-auto-scaling-specification-property-builder> (new CfnTable$AutoScalingSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-billing-mode-property-builder
-  "The build-cfn-table-billing-mode-property-builder function updates a CfnTable$BillingModeProperty$Builder instance using the provided configuration.
+(defn cfn-table-billing-mode-property-builder>
+  "The cfn-table-billing-mode-property-builder> function updates a CfnTable$BillingModeProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$BillingModeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -213,11 +213,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-billing-mode-property-builder (new CfnTable$BillingModeProperty$Builder) id config))
+  (cfn-table-billing-mode-property-builder> (new CfnTable$BillingModeProperty$Builder) id config))
 
 
-(defn build-cfn-table-builder
-  "The build-cfn-table-builder function updates a CfnTable$Builder instance using the provided configuration.
+(defn cfn-table-builder>
+  "The cfn-table-builder> function updates a CfnTable$Builder instance using the provided configuration.
   The function takes the CfnTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -277,11 +277,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-table-builder (CfnTable$Builder/create scope (name id)) id config))
+  (cfn-table-builder> (CfnTable$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-table-clustering-key-column-property-builder
-  "The build-cfn-table-clustering-key-column-property-builder function updates a CfnTable$ClusteringKeyColumnProperty$Builder instance using the provided configuration.
+(defn cfn-table-clustering-key-column-property-builder>
+  "The cfn-table-clustering-key-column-property-builder> function updates a CfnTable$ClusteringKeyColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ClusteringKeyColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -308,11 +308,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-clustering-key-column-property-builder (new CfnTable$ClusteringKeyColumnProperty$Builder) id config))
+  (cfn-table-clustering-key-column-property-builder> (new CfnTable$ClusteringKeyColumnProperty$Builder) id config))
 
 
-(defn build-cfn-table-column-property-builder
-  "The build-cfn-table-column-property-builder function updates a CfnTable$ColumnProperty$Builder instance using the provided configuration.
+(defn cfn-table-column-property-builder>
+  "The cfn-table-column-property-builder> function updates a CfnTable$ColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -339,11 +339,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-column-property-builder (new CfnTable$ColumnProperty$Builder) id config))
+  (cfn-table-column-property-builder> (new CfnTable$ColumnProperty$Builder) id config))
 
 
-(defn build-cfn-table-encryption-specification-property-builder
-  "The build-cfn-table-encryption-specification-property-builder function updates a CfnTable$EncryptionSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-encryption-specification-property-builder>
+  "The cfn-table-encryption-specification-property-builder> function updates a CfnTable$EncryptionSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$EncryptionSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -370,11 +370,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-encryption-specification-property-builder (new CfnTable$EncryptionSpecificationProperty$Builder) id config))
+  (cfn-table-encryption-specification-property-builder> (new CfnTable$EncryptionSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-props-builder
-  "The build-cfn-table-props-builder function updates a CfnTableProps$Builder instance using the provided configuration.
+(defn cfn-table-props-builder>
+  "The cfn-table-props-builder> function updates a CfnTableProps$Builder instance using the provided configuration.
   The function takes the CfnTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -434,11 +434,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-props-builder (new CfnTableProps$Builder) id config))
+  (cfn-table-props-builder> (new CfnTableProps$Builder) id config))
 
 
-(defn build-cfn-table-provisioned-throughput-property-builder
-  "The build-cfn-table-provisioned-throughput-property-builder function updates a CfnTable$ProvisionedThroughputProperty$Builder instance using the provided configuration.
+(defn cfn-table-provisioned-throughput-property-builder>
+  "The cfn-table-provisioned-throughput-property-builder> function updates a CfnTable$ProvisionedThroughputProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ProvisionedThroughputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -465,11 +465,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-provisioned-throughput-property-builder (new CfnTable$ProvisionedThroughputProperty$Builder) id config))
+  (cfn-table-provisioned-throughput-property-builder> (new CfnTable$ProvisionedThroughputProperty$Builder) id config))
 
 
-(defn build-cfn-table-replica-specification-property-builder
-  "The build-cfn-table-replica-specification-property-builder function updates a CfnTable$ReplicaSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-table-replica-specification-property-builder>
+  "The cfn-table-replica-specification-property-builder> function updates a CfnTable$ReplicaSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ReplicaSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -499,11 +499,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-replica-specification-property-builder (new CfnTable$ReplicaSpecificationProperty$Builder) id config))
+  (cfn-table-replica-specification-property-builder> (new CfnTable$ReplicaSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-table-scaling-policy-property-builder
-  "The build-cfn-table-scaling-policy-property-builder function updates a CfnTable$ScalingPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-table-scaling-policy-property-builder>
+  "The cfn-table-scaling-policy-property-builder> function updates a CfnTable$ScalingPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ScalingPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -527,11 +527,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-scaling-policy-property-builder (new CfnTable$ScalingPolicyProperty$Builder) id config))
+  (cfn-table-scaling-policy-property-builder> (new CfnTable$ScalingPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-table-target-tracking-scaling-policy-configuration-property-builder
-  "The build-cfn-table-target-tracking-scaling-policy-configuration-property-builder function updates a CfnTable$TargetTrackingScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-table-target-tracking-scaling-policy-configuration-property-builder>
+  "The cfn-table-target-tracking-scaling-policy-configuration-property-builder> function updates a CfnTable$TargetTrackingScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$TargetTrackingScalingPolicyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -564,4 +564,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-table-target-tracking-scaling-policy-configuration-property-builder (new CfnTable$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))
+  (cfn-table-target-tracking-scaling-policy-configuration-property-builder> (new CfnTable$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))

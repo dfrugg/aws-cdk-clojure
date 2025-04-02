@@ -36,8 +36,8 @@
                                                         CfnVodSourceProps$Builder]))
 
 
-(defn build-cfn-channel-builder
-  "The build-cfn-channel-builder function updates a CfnChannel$Builder instance using the provided configuration.
+(defn cfn-channel-builder>
+  "The cfn-channel-builder> function updates a CfnChannel$Builder instance using the provided configuration.
   The function takes the CfnChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -85,11 +85,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-channel-builder (CfnChannel$Builder/create scope (name id)) id config))
+  (cfn-channel-builder> (CfnChannel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-channel-dash-playlist-settings-property-builder
-  "The build-cfn-channel-dash-playlist-settings-property-builder function updates a CfnChannel$DashPlaylistSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-channel-dash-playlist-settings-property-builder>
+  "The cfn-channel-dash-playlist-settings-property-builder> function updates a CfnChannel$DashPlaylistSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$DashPlaylistSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -122,11 +122,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-dash-playlist-settings-property-builder (new CfnChannel$DashPlaylistSettingsProperty$Builder) id config))
+  (cfn-channel-dash-playlist-settings-property-builder> (new CfnChannel$DashPlaylistSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-hls-playlist-settings-property-builder
-  "The build-cfn-channel-hls-playlist-settings-property-builder function updates a CfnChannel$HlsPlaylistSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-channel-hls-playlist-settings-property-builder>
+  "The cfn-channel-hls-playlist-settings-property-builder> function updates a CfnChannel$HlsPlaylistSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$HlsPlaylistSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -153,11 +153,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-hls-playlist-settings-property-builder (new CfnChannel$HlsPlaylistSettingsProperty$Builder) id config))
+  (cfn-channel-hls-playlist-settings-property-builder> (new CfnChannel$HlsPlaylistSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-channel-log-configuration-for-channel-property-builder
-  "The build-cfn-channel-log-configuration-for-channel-property-builder function updates a CfnChannel$LogConfigurationForChannelProperty$Builder instance using the provided configuration.
+(defn cfn-channel-log-configuration-for-channel-property-builder>
+  "The cfn-channel-log-configuration-for-channel-property-builder> function updates a CfnChannel$LogConfigurationForChannelProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$LogConfigurationForChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -181,11 +181,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-log-configuration-for-channel-property-builder (new CfnChannel$LogConfigurationForChannelProperty$Builder) id config))
+  (cfn-channel-log-configuration-for-channel-property-builder> (new CfnChannel$LogConfigurationForChannelProperty$Builder) id config))
 
 
-(defn build-cfn-channel-policy-builder
-  "The build-cfn-channel-policy-builder function updates a CfnChannelPolicy$Builder instance using the provided configuration.
+(defn cfn-channel-policy-builder>
+  "The cfn-channel-policy-builder> function updates a CfnChannelPolicy$Builder instance using the provided configuration.
   The function takes the CfnChannelPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -212,11 +212,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-channel-policy-builder (CfnChannelPolicy$Builder/create scope (name id)) id config))
+  (cfn-channel-policy-builder> (CfnChannelPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-channel-policy-props-builder
-  "The build-cfn-channel-policy-props-builder function updates a CfnChannelPolicyProps$Builder instance using the provided configuration.
+(defn cfn-channel-policy-props-builder>
+  "The cfn-channel-policy-props-builder> function updates a CfnChannelPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnChannelPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -243,11 +243,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-policy-props-builder (new CfnChannelPolicyProps$Builder) id config))
+  (cfn-channel-policy-props-builder> (new CfnChannelPolicyProps$Builder) id config))
 
 
-(defn build-cfn-channel-props-builder
-  "The build-cfn-channel-props-builder function updates a CfnChannelProps$Builder instance using the provided configuration.
+(defn cfn-channel-props-builder>
+  "The cfn-channel-props-builder> function updates a CfnChannelProps$Builder instance using the provided configuration.
   The function takes the CfnChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -295,11 +295,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
+  (cfn-channel-props-builder> (new CfnChannelProps$Builder) id config))
 
 
-(defn build-cfn-channel-request-output-item-property-builder
-  "The build-cfn-channel-request-output-item-property-builder function updates a CfnChannel$RequestOutputItemProperty$Builder instance using the provided configuration.
+(defn cfn-channel-request-output-item-property-builder>
+  "The cfn-channel-request-output-item-property-builder> function updates a CfnChannel$RequestOutputItemProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$RequestOutputItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -332,11 +332,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-request-output-item-property-builder (new CfnChannel$RequestOutputItemProperty$Builder) id config))
+  (cfn-channel-request-output-item-property-builder> (new CfnChannel$RequestOutputItemProperty$Builder) id config))
 
 
-(defn build-cfn-channel-slate-source-property-builder
-  "The build-cfn-channel-slate-source-property-builder function updates a CfnChannel$SlateSourceProperty$Builder instance using the provided configuration.
+(defn cfn-channel-slate-source-property-builder>
+  "The cfn-channel-slate-source-property-builder> function updates a CfnChannel$SlateSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$SlateSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -363,11 +363,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-slate-source-property-builder (new CfnChannel$SlateSourceProperty$Builder) id config))
+  (cfn-channel-slate-source-property-builder> (new CfnChannel$SlateSourceProperty$Builder) id config))
 
 
-(defn build-cfn-channel-time-shift-configuration-property-builder
-  "The build-cfn-channel-time-shift-configuration-property-builder function updates a CfnChannel$TimeShiftConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-channel-time-shift-configuration-property-builder>
+  "The cfn-channel-time-shift-configuration-property-builder> function updates a CfnChannel$TimeShiftConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$TimeShiftConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -391,11 +391,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-channel-time-shift-configuration-property-builder (new CfnChannel$TimeShiftConfigurationProperty$Builder) id config))
+  (cfn-channel-time-shift-configuration-property-builder> (new CfnChannel$TimeShiftConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-live-source-builder
-  "The build-cfn-live-source-builder function updates a CfnLiveSource$Builder instance using the provided configuration.
+(defn cfn-live-source-builder>
+  "The cfn-live-source-builder> function updates a CfnLiveSource$Builder instance using the provided configuration.
   The function takes the CfnLiveSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -428,11 +428,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-live-source-builder (CfnLiveSource$Builder/create scope (name id)) id config))
+  (cfn-live-source-builder> (CfnLiveSource$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-live-source-http-package-configuration-property-builder
-  "The build-cfn-live-source-http-package-configuration-property-builder function updates a CfnLiveSource$HttpPackageConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-live-source-http-package-configuration-property-builder>
+  "The cfn-live-source-http-package-configuration-property-builder> function updates a CfnLiveSource$HttpPackageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLiveSource$HttpPackageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -462,11 +462,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-live-source-http-package-configuration-property-builder (new CfnLiveSource$HttpPackageConfigurationProperty$Builder) id config))
+  (cfn-live-source-http-package-configuration-property-builder> (new CfnLiveSource$HttpPackageConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-live-source-props-builder
-  "The build-cfn-live-source-props-builder function updates a CfnLiveSourceProps$Builder instance using the provided configuration.
+(defn cfn-live-source-props-builder>
+  "The cfn-live-source-props-builder> function updates a CfnLiveSourceProps$Builder instance using the provided configuration.
   The function takes the CfnLiveSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -499,11 +499,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-live-source-props-builder (new CfnLiveSourceProps$Builder) id config))
+  (cfn-live-source-props-builder> (new CfnLiveSourceProps$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-ad-marker-passthrough-property-builder
-  "The build-cfn-playback-configuration-ad-marker-passthrough-property-builder function updates a CfnPlaybackConfiguration$AdMarkerPassthroughProperty$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-ad-marker-passthrough-property-builder>
+  "The cfn-playback-configuration-ad-marker-passthrough-property-builder> function updates a CfnPlaybackConfiguration$AdMarkerPassthroughProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$AdMarkerPassthroughProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -527,11 +527,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-ad-marker-passthrough-property-builder (new CfnPlaybackConfiguration$AdMarkerPassthroughProperty$Builder) id config))
+  (cfn-playback-configuration-ad-marker-passthrough-property-builder> (new CfnPlaybackConfiguration$AdMarkerPassthroughProperty$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-avail-suppression-property-builder
-  "The build-cfn-playback-configuration-avail-suppression-property-builder function updates a CfnPlaybackConfiguration$AvailSuppressionProperty$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-avail-suppression-property-builder>
+  "The cfn-playback-configuration-avail-suppression-property-builder> function updates a CfnPlaybackConfiguration$AvailSuppressionProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$AvailSuppressionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -561,11 +561,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-avail-suppression-property-builder (new CfnPlaybackConfiguration$AvailSuppressionProperty$Builder) id config))
+  (cfn-playback-configuration-avail-suppression-property-builder> (new CfnPlaybackConfiguration$AvailSuppressionProperty$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-builder
-  "The build-cfn-playback-configuration-builder function updates a CfnPlaybackConfiguration$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-builder>
+  "The cfn-playback-configuration-builder> function updates a CfnPlaybackConfiguration$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -631,11 +631,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-playback-configuration-builder (CfnPlaybackConfiguration$Builder/create scope (name id)) id config))
+  (cfn-playback-configuration-builder> (CfnPlaybackConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-playback-configuration-bumper-property-builder
-  "The build-cfn-playback-configuration-bumper-property-builder function updates a CfnPlaybackConfiguration$BumperProperty$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-bumper-property-builder>
+  "The cfn-playback-configuration-bumper-property-builder> function updates a CfnPlaybackConfiguration$BumperProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$BumperProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -662,11 +662,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-bumper-property-builder (new CfnPlaybackConfiguration$BumperProperty$Builder) id config))
+  (cfn-playback-configuration-bumper-property-builder> (new CfnPlaybackConfiguration$BumperProperty$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-cdn-configuration-property-builder
-  "The build-cfn-playback-configuration-cdn-configuration-property-builder function updates a CfnPlaybackConfiguration$CdnConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-cdn-configuration-property-builder>
+  "The cfn-playback-configuration-cdn-configuration-property-builder> function updates a CfnPlaybackConfiguration$CdnConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$CdnConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -693,11 +693,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-cdn-configuration-property-builder (new CfnPlaybackConfiguration$CdnConfigurationProperty$Builder) id config))
+  (cfn-playback-configuration-cdn-configuration-property-builder> (new CfnPlaybackConfiguration$CdnConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-dash-configuration-property-builder
-  "The build-cfn-playback-configuration-dash-configuration-property-builder function updates a CfnPlaybackConfiguration$DashConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-dash-configuration-property-builder>
+  "The cfn-playback-configuration-dash-configuration-property-builder> function updates a CfnPlaybackConfiguration$DashConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$DashConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -727,11 +727,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-dash-configuration-property-builder (new CfnPlaybackConfiguration$DashConfigurationProperty$Builder) id config))
+  (cfn-playback-configuration-dash-configuration-property-builder> (new CfnPlaybackConfiguration$DashConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-hls-configuration-property-builder
-  "The build-cfn-playback-configuration-hls-configuration-property-builder function updates a CfnPlaybackConfiguration$HlsConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-hls-configuration-property-builder>
+  "The cfn-playback-configuration-hls-configuration-property-builder> function updates a CfnPlaybackConfiguration$HlsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$HlsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -755,11 +755,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-hls-configuration-property-builder (new CfnPlaybackConfiguration$HlsConfigurationProperty$Builder) id config))
+  (cfn-playback-configuration-hls-configuration-property-builder> (new CfnPlaybackConfiguration$HlsConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-live-pre-roll-configuration-property-builder
-  "The build-cfn-playback-configuration-live-pre-roll-configuration-property-builder function updates a CfnPlaybackConfiguration$LivePreRollConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-live-pre-roll-configuration-property-builder>
+  "The cfn-playback-configuration-live-pre-roll-configuration-property-builder> function updates a CfnPlaybackConfiguration$LivePreRollConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$LivePreRollConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -786,11 +786,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-live-pre-roll-configuration-property-builder (new CfnPlaybackConfiguration$LivePreRollConfigurationProperty$Builder) id config))
+  (cfn-playback-configuration-live-pre-roll-configuration-property-builder> (new CfnPlaybackConfiguration$LivePreRollConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-manifest-processing-rules-property-builder
-  "The build-cfn-playback-configuration-manifest-processing-rules-property-builder function updates a CfnPlaybackConfiguration$ManifestProcessingRulesProperty$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-manifest-processing-rules-property-builder>
+  "The cfn-playback-configuration-manifest-processing-rules-property-builder> function updates a CfnPlaybackConfiguration$ManifestProcessingRulesProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfiguration$ManifestProcessingRulesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -814,11 +814,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-manifest-processing-rules-property-builder (new CfnPlaybackConfiguration$ManifestProcessingRulesProperty$Builder) id config))
+  (cfn-playback-configuration-manifest-processing-rules-property-builder> (new CfnPlaybackConfiguration$ManifestProcessingRulesProperty$Builder) id config))
 
 
-(defn build-cfn-playback-configuration-props-builder
-  "The build-cfn-playback-configuration-props-builder function updates a CfnPlaybackConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-playback-configuration-props-builder>
+  "The cfn-playback-configuration-props-builder> function updates a CfnPlaybackConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnPlaybackConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -884,11 +884,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-playback-configuration-props-builder (new CfnPlaybackConfigurationProps$Builder) id config))
+  (cfn-playback-configuration-props-builder> (new CfnPlaybackConfigurationProps$Builder) id config))
 
 
-(defn build-cfn-source-location-access-configuration-property-builder
-  "The build-cfn-source-location-access-configuration-property-builder function updates a CfnSourceLocation$AccessConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-source-location-access-configuration-property-builder>
+  "The cfn-source-location-access-configuration-property-builder> function updates a CfnSourceLocation$AccessConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSourceLocation$AccessConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -915,11 +915,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-source-location-access-configuration-property-builder (new CfnSourceLocation$AccessConfigurationProperty$Builder) id config))
+  (cfn-source-location-access-configuration-property-builder> (new CfnSourceLocation$AccessConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-source-location-builder
-  "The build-cfn-source-location-builder function updates a CfnSourceLocation$Builder instance using the provided configuration.
+(defn cfn-source-location-builder>
+  "The cfn-source-location-builder> function updates a CfnSourceLocation$Builder instance using the provided configuration.
   The function takes the CfnSourceLocation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -958,11 +958,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-source-location-builder (CfnSourceLocation$Builder/create scope (name id)) id config))
+  (cfn-source-location-builder> (CfnSourceLocation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-source-location-default-segment-delivery-configuration-property-builder
-  "The build-cfn-source-location-default-segment-delivery-configuration-property-builder function updates a CfnSourceLocation$DefaultSegmentDeliveryConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-source-location-default-segment-delivery-configuration-property-builder>
+  "The cfn-source-location-default-segment-delivery-configuration-property-builder> function updates a CfnSourceLocation$DefaultSegmentDeliveryConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSourceLocation$DefaultSegmentDeliveryConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -986,11 +986,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-source-location-default-segment-delivery-configuration-property-builder (new CfnSourceLocation$DefaultSegmentDeliveryConfigurationProperty$Builder) id config))
+  (cfn-source-location-default-segment-delivery-configuration-property-builder> (new CfnSourceLocation$DefaultSegmentDeliveryConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-source-location-http-configuration-property-builder
-  "The build-cfn-source-location-http-configuration-property-builder function updates a CfnSourceLocation$HttpConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-source-location-http-configuration-property-builder>
+  "The cfn-source-location-http-configuration-property-builder> function updates a CfnSourceLocation$HttpConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSourceLocation$HttpConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1014,11 +1014,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-source-location-http-configuration-property-builder (new CfnSourceLocation$HttpConfigurationProperty$Builder) id config))
+  (cfn-source-location-http-configuration-property-builder> (new CfnSourceLocation$HttpConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-source-location-props-builder
-  "The build-cfn-source-location-props-builder function updates a CfnSourceLocationProps$Builder instance using the provided configuration.
+(defn cfn-source-location-props-builder>
+  "The cfn-source-location-props-builder> function updates a CfnSourceLocationProps$Builder instance using the provided configuration.
   The function takes the CfnSourceLocationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1057,11 +1057,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-source-location-props-builder (new CfnSourceLocationProps$Builder) id config))
+  (cfn-source-location-props-builder> (new CfnSourceLocationProps$Builder) id config))
 
 
-(defn build-cfn-source-location-secrets-manager-access-token-configuration-property-builder
-  "The build-cfn-source-location-secrets-manager-access-token-configuration-property-builder function updates a CfnSourceLocation$SecretsManagerAccessTokenConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-source-location-secrets-manager-access-token-configuration-property-builder>
+  "The cfn-source-location-secrets-manager-access-token-configuration-property-builder> function updates a CfnSourceLocation$SecretsManagerAccessTokenConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSourceLocation$SecretsManagerAccessTokenConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1091,11 +1091,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-source-location-secrets-manager-access-token-configuration-property-builder (new CfnSourceLocation$SecretsManagerAccessTokenConfigurationProperty$Builder) id config))
+  (cfn-source-location-secrets-manager-access-token-configuration-property-builder> (new CfnSourceLocation$SecretsManagerAccessTokenConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-source-location-segment-delivery-configuration-property-builder
-  "The build-cfn-source-location-segment-delivery-configuration-property-builder function updates a CfnSourceLocation$SegmentDeliveryConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-source-location-segment-delivery-configuration-property-builder>
+  "The cfn-source-location-segment-delivery-configuration-property-builder> function updates a CfnSourceLocation$SegmentDeliveryConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSourceLocation$SegmentDeliveryConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1122,11 +1122,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-source-location-segment-delivery-configuration-property-builder (new CfnSourceLocation$SegmentDeliveryConfigurationProperty$Builder) id config))
+  (cfn-source-location-segment-delivery-configuration-property-builder> (new CfnSourceLocation$SegmentDeliveryConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-vod-source-builder
-  "The build-cfn-vod-source-builder function updates a CfnVodSource$Builder instance using the provided configuration.
+(defn cfn-vod-source-builder>
+  "The cfn-vod-source-builder> function updates a CfnVodSource$Builder instance using the provided configuration.
   The function takes the CfnVodSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1159,11 +1159,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-vod-source-builder (CfnVodSource$Builder/create scope (name id)) id config))
+  (cfn-vod-source-builder> (CfnVodSource$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-vod-source-http-package-configuration-property-builder
-  "The build-cfn-vod-source-http-package-configuration-property-builder function updates a CfnVodSource$HttpPackageConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-vod-source-http-package-configuration-property-builder>
+  "The cfn-vod-source-http-package-configuration-property-builder> function updates a CfnVodSource$HttpPackageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnVodSource$HttpPackageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1193,11 +1193,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vod-source-http-package-configuration-property-builder (new CfnVodSource$HttpPackageConfigurationProperty$Builder) id config))
+  (cfn-vod-source-http-package-configuration-property-builder> (new CfnVodSource$HttpPackageConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-vod-source-props-builder
-  "The build-cfn-vod-source-props-builder function updates a CfnVodSourceProps$Builder instance using the provided configuration.
+(defn cfn-vod-source-props-builder>
+  "The cfn-vod-source-props-builder> function updates a CfnVodSourceProps$Builder instance using the provided configuration.
   The function takes the CfnVodSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1230,4 +1230,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-vod-source-props-builder (new CfnVodSourceProps$Builder) id config))
+  (cfn-vod-source-props-builder> (new CfnVodSourceProps$Builder) id config))

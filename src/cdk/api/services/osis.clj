@@ -11,8 +11,8 @@
                                                  CfnPipelineProps$Builder]))
 
 
-(defn build-cfn-pipeline-buffer-options-property-builder
-  "The build-cfn-pipeline-buffer-options-property-builder function updates a CfnPipeline$BufferOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-buffer-options-property-builder>
+  "The cfn-pipeline-buffer-options-property-builder> function updates a CfnPipeline$BufferOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$BufferOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -36,11 +36,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-buffer-options-property-builder (new CfnPipeline$BufferOptionsProperty$Builder) id config))
+  (cfn-pipeline-buffer-options-property-builder> (new CfnPipeline$BufferOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-builder
-  "The build-cfn-pipeline-builder function updates a CfnPipeline$Builder instance using the provided configuration.
+(defn cfn-pipeline-builder>
+  "The cfn-pipeline-builder> function updates a CfnPipeline$Builder instance using the provided configuration.
   The function takes the CfnPipeline$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -88,11 +88,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-pipeline-builder (CfnPipeline$Builder/create scope (name id)) id config))
+  (cfn-pipeline-builder> (CfnPipeline$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-pipeline-cloud-watch-log-destination-property-builder
-  "The build-cfn-pipeline-cloud-watch-log-destination-property-builder function updates a CfnPipeline$CloudWatchLogDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-cloud-watch-log-destination-property-builder>
+  "The cfn-pipeline-cloud-watch-log-destination-property-builder> function updates a CfnPipeline$CloudWatchLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$CloudWatchLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -116,11 +116,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-cloud-watch-log-destination-property-builder (new CfnPipeline$CloudWatchLogDestinationProperty$Builder) id config))
+  (cfn-pipeline-cloud-watch-log-destination-property-builder> (new CfnPipeline$CloudWatchLogDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-encryption-at-rest-options-property-builder
-  "The build-cfn-pipeline-encryption-at-rest-options-property-builder function updates a CfnPipeline$EncryptionAtRestOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-encryption-at-rest-options-property-builder>
+  "The cfn-pipeline-encryption-at-rest-options-property-builder> function updates a CfnPipeline$EncryptionAtRestOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$EncryptionAtRestOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -144,11 +144,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-encryption-at-rest-options-property-builder (new CfnPipeline$EncryptionAtRestOptionsProperty$Builder) id config))
+  (cfn-pipeline-encryption-at-rest-options-property-builder> (new CfnPipeline$EncryptionAtRestOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-log-publishing-options-property-builder
-  "The build-cfn-pipeline-log-publishing-options-property-builder function updates a CfnPipeline$LogPublishingOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-log-publishing-options-property-builder>
+  "The cfn-pipeline-log-publishing-options-property-builder> function updates a CfnPipeline$LogPublishingOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$LogPublishingOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -175,11 +175,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-log-publishing-options-property-builder (new CfnPipeline$LogPublishingOptionsProperty$Builder) id config))
+  (cfn-pipeline-log-publishing-options-property-builder> (new CfnPipeline$LogPublishingOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-props-builder
-  "The build-cfn-pipeline-props-builder function updates a CfnPipelineProps$Builder instance using the provided configuration.
+(defn cfn-pipeline-props-builder>
+  "The cfn-pipeline-props-builder> function updates a CfnPipelineProps$Builder instance using the provided configuration.
   The function takes the CfnPipelineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -227,11 +227,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-props-builder (new CfnPipelineProps$Builder) id config))
+  (cfn-pipeline-props-builder> (new CfnPipelineProps$Builder) id config))
 
 
-(defn build-cfn-pipeline-vpc-endpoint-property-builder
-  "The build-cfn-pipeline-vpc-endpoint-property-builder function updates a CfnPipeline$VpcEndpointProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-vpc-endpoint-property-builder>
+  "The cfn-pipeline-vpc-endpoint-property-builder> function updates a CfnPipeline$VpcEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$VpcEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -261,11 +261,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-vpc-endpoint-property-builder (new CfnPipeline$VpcEndpointProperty$Builder) id config))
+  (cfn-pipeline-vpc-endpoint-property-builder> (new CfnPipeline$VpcEndpointProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-vpc-options-property-builder
-  "The build-cfn-pipeline-vpc-options-property-builder function updates a CfnPipeline$VpcOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-vpc-options-property-builder>
+  "The cfn-pipeline-vpc-options-property-builder> function updates a CfnPipeline$VpcOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$VpcOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -292,4 +292,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-vpc-options-property-builder (new CfnPipeline$VpcOptionsProperty$Builder) id config))
+  (cfn-pipeline-vpc-options-property-builder> (new CfnPipeline$VpcOptionsProperty$Builder) id config))

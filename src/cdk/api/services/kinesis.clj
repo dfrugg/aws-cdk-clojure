@@ -55,8 +55,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :on-demand data) StreamMode/ON_DEMAND)))
 
 
-(defn build-cfn-stream-builder
-  "The build-cfn-stream-builder function updates a CfnStream$Builder instance using the provided configuration.
+(defn cfn-stream-builder>
+  "The cfn-stream-builder> function updates a CfnStream$Builder instance using the provided configuration.
   The function takes the CfnStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -95,11 +95,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-stream-builder (CfnStream$Builder/create scope (name id)) id config))
+  (cfn-stream-builder> (CfnStream$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-stream-consumer-builder
-  "The build-cfn-stream-consumer-builder function updates a CfnStreamConsumer$Builder instance using the provided configuration.
+(defn cfn-stream-consumer-builder>
+  "The cfn-stream-consumer-builder> function updates a CfnStreamConsumer$Builder instance using the provided configuration.
   The function takes the CfnStreamConsumer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -126,11 +126,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-stream-consumer-builder (CfnStreamConsumer$Builder/create scope (name id)) id config))
+  (cfn-stream-consumer-builder> (CfnStreamConsumer$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-stream-consumer-props-builder
-  "The build-cfn-stream-consumer-props-builder function updates a CfnStreamConsumerProps$Builder instance using the provided configuration.
+(defn cfn-stream-consumer-props-builder>
+  "The cfn-stream-consumer-props-builder> function updates a CfnStreamConsumerProps$Builder instance using the provided configuration.
   The function takes the CfnStreamConsumerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -157,11 +157,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-consumer-props-builder (new CfnStreamConsumerProps$Builder) id config))
+  (cfn-stream-consumer-props-builder> (new CfnStreamConsumerProps$Builder) id config))
 
 
-(defn build-cfn-stream-props-builder
-  "The build-cfn-stream-props-builder function updates a CfnStreamProps$Builder instance using the provided configuration.
+(defn cfn-stream-props-builder>
+  "The cfn-stream-props-builder> function updates a CfnStreamProps$Builder instance using the provided configuration.
   The function takes the CfnStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -200,11 +200,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-props-builder (new CfnStreamProps$Builder) id config))
+  (cfn-stream-props-builder> (new CfnStreamProps$Builder) id config))
 
 
-(defn build-cfn-stream-stream-encryption-property-builder
-  "The build-cfn-stream-stream-encryption-property-builder function updates a CfnStream$StreamEncryptionProperty$Builder instance using the provided configuration.
+(defn cfn-stream-stream-encryption-property-builder>
+  "The cfn-stream-stream-encryption-property-builder> function updates a CfnStream$StreamEncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnStream$StreamEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -231,11 +231,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-stream-encryption-property-builder (new CfnStream$StreamEncryptionProperty$Builder) id config))
+  (cfn-stream-stream-encryption-property-builder> (new CfnStream$StreamEncryptionProperty$Builder) id config))
 
 
-(defn build-cfn-stream-stream-mode-details-property-builder
-  "The build-cfn-stream-stream-mode-details-property-builder function updates a CfnStream$StreamModeDetailsProperty$Builder instance using the provided configuration.
+(defn cfn-stream-stream-mode-details-property-builder>
+  "The cfn-stream-stream-mode-details-property-builder> function updates a CfnStream$StreamModeDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnStream$StreamModeDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -259,11 +259,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-stream-mode-details-property-builder (new CfnStream$StreamModeDetailsProperty$Builder) id config))
+  (cfn-stream-stream-mode-details-property-builder> (new CfnStream$StreamModeDetailsProperty$Builder) id config))
 
 
-(defn build-stream-attributes-builder
-  "The build-stream-attributes-builder function updates a StreamAttributes$Builder instance using the provided configuration.
+(defn stream-attributes-builder>
+  "The stream-attributes-builder> function updates a StreamAttributes$Builder instance using the provided configuration.
   The function takes the StreamAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -290,11 +290,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-stream-attributes-builder (new StreamAttributes$Builder) id config))
+  (stream-attributes-builder> (new StreamAttributes$Builder) id config))
 
 
-(defn build-stream-builder
-  "The build-stream-builder function updates a Stream$Builder instance using the provided configuration.
+(defn stream-builder>
+  "The stream-builder> function updates a Stream$Builder instance using the provided configuration.
   The function takes the Stream$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -336,11 +336,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-stream-builder (Stream$Builder/create scope (name id)) id config))
+  (stream-builder> (Stream$Builder/create scope (name id)) id config))
 
 
-(defn build-stream-props-builder
-  "The build-stream-props-builder function updates a StreamProps$Builder instance using the provided configuration.
+(defn stream-props-builder>
+  "The stream-props-builder> function updates a StreamProps$Builder instance using the provided configuration.
   The function takes the StreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -382,4 +382,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-stream-props-builder (new StreamProps$Builder) id config))
+  (stream-props-builder> (new StreamProps$Builder) id config))

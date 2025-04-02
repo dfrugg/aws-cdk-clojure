@@ -40,8 +40,8 @@
                                                         CfnStandardProps$Builder]))
 
 
-(defn build-cfn-automation-rule-automation-rules-action-property-builder
-  "The build-cfn-automation-rule-automation-rules-action-property-builder function updates a CfnAutomationRule$AutomationRulesActionProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-automation-rules-action-property-builder>
+  "The cfn-automation-rule-automation-rules-action-property-builder> function updates a CfnAutomationRule$AutomationRulesActionProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$AutomationRulesActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -68,11 +68,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-automation-rules-action-property-builder (new CfnAutomationRule$AutomationRulesActionProperty$Builder) id config))
+  (cfn-automation-rule-automation-rules-action-property-builder> (new CfnAutomationRule$AutomationRulesActionProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-automation-rules-finding-fields-update-property-builder
-  "The build-cfn-automation-rule-automation-rules-finding-fields-update-property-builder function updates a CfnAutomationRule$AutomationRulesFindingFieldsUpdateProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-automation-rules-finding-fields-update-property-builder>
+  "The cfn-automation-rule-automation-rules-finding-fields-update-property-builder> function updates a CfnAutomationRule$AutomationRulesFindingFieldsUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$AutomationRulesFindingFieldsUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -120,11 +120,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-automation-rules-finding-fields-update-property-builder (new CfnAutomationRule$AutomationRulesFindingFieldsUpdateProperty$Builder) id config))
+  (cfn-automation-rule-automation-rules-finding-fields-update-property-builder> (new CfnAutomationRule$AutomationRulesFindingFieldsUpdateProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-automation-rules-finding-filters-property-builder
-  "The build-cfn-automation-rule-automation-rules-finding-filters-property-builder function updates a CfnAutomationRule$AutomationRulesFindingFiltersProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-automation-rules-finding-filters-property-builder>
+  "The cfn-automation-rule-automation-rules-finding-filters-property-builder> function updates a CfnAutomationRule$AutomationRulesFindingFiltersProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$AutomationRulesFindingFiltersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -250,11 +250,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-automation-rules-finding-filters-property-builder (new CfnAutomationRule$AutomationRulesFindingFiltersProperty$Builder) id config))
+  (cfn-automation-rule-automation-rules-finding-filters-property-builder> (new CfnAutomationRule$AutomationRulesFindingFiltersProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-builder
-  "The build-cfn-automation-rule-builder function updates a CfnAutomationRule$Builder instance using the provided configuration.
+(defn cfn-automation-rule-builder>
+  "The cfn-automation-rule-builder> function updates a CfnAutomationRule$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -299,11 +299,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-automation-rule-builder (CfnAutomationRule$Builder/create scope (name id)) id config))
+  (cfn-automation-rule-builder> (CfnAutomationRule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-automation-rule-date-filter-property-builder
-  "The build-cfn-automation-rule-date-filter-property-builder function updates a CfnAutomationRule$DateFilterProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-date-filter-property-builder>
+  "The cfn-automation-rule-date-filter-property-builder> function updates a CfnAutomationRule$DateFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$DateFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -333,11 +333,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-date-filter-property-builder (new CfnAutomationRule$DateFilterProperty$Builder) id config))
+  (cfn-automation-rule-date-filter-property-builder> (new CfnAutomationRule$DateFilterProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-date-range-property-builder
-  "The build-cfn-automation-rule-date-range-property-builder function updates a CfnAutomationRule$DateRangeProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-date-range-property-builder>
+  "The cfn-automation-rule-date-range-property-builder> function updates a CfnAutomationRule$DateRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$DateRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -364,11 +364,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-date-range-property-builder (new CfnAutomationRule$DateRangeProperty$Builder) id config))
+  (cfn-automation-rule-date-range-property-builder> (new CfnAutomationRule$DateRangeProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-map-filter-property-builder
-  "The build-cfn-automation-rule-map-filter-property-builder function updates a CfnAutomationRule$MapFilterProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-map-filter-property-builder>
+  "The cfn-automation-rule-map-filter-property-builder> function updates a CfnAutomationRule$MapFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$MapFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -398,11 +398,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-map-filter-property-builder (new CfnAutomationRule$MapFilterProperty$Builder) id config))
+  (cfn-automation-rule-map-filter-property-builder> (new CfnAutomationRule$MapFilterProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-note-update-property-builder
-  "The build-cfn-automation-rule-note-update-property-builder function updates a CfnAutomationRule$NoteUpdateProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-note-update-property-builder>
+  "The cfn-automation-rule-note-update-property-builder> function updates a CfnAutomationRule$NoteUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$NoteUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -429,11 +429,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-note-update-property-builder (new CfnAutomationRule$NoteUpdateProperty$Builder) id config))
+  (cfn-automation-rule-note-update-property-builder> (new CfnAutomationRule$NoteUpdateProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-number-filter-property-builder
-  "The build-cfn-automation-rule-number-filter-property-builder function updates a CfnAutomationRule$NumberFilterProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-number-filter-property-builder>
+  "The cfn-automation-rule-number-filter-property-builder> function updates a CfnAutomationRule$NumberFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$NumberFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -463,11 +463,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-number-filter-property-builder (new CfnAutomationRule$NumberFilterProperty$Builder) id config))
+  (cfn-automation-rule-number-filter-property-builder> (new CfnAutomationRule$NumberFilterProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-props-builder
-  "The build-cfn-automation-rule-props-builder function updates a CfnAutomationRuleProps$Builder instance using the provided configuration.
+(defn cfn-automation-rule-props-builder>
+  "The cfn-automation-rule-props-builder> function updates a CfnAutomationRuleProps$Builder instance using the provided configuration.
   The function takes the CfnAutomationRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -512,11 +512,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-props-builder (new CfnAutomationRuleProps$Builder) id config))
+  (cfn-automation-rule-props-builder> (new CfnAutomationRuleProps$Builder) id config))
 
 
-(defn build-cfn-automation-rule-related-finding-property-builder
-  "The build-cfn-automation-rule-related-finding-property-builder function updates a CfnAutomationRule$RelatedFindingProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-related-finding-property-builder>
+  "The cfn-automation-rule-related-finding-property-builder> function updates a CfnAutomationRule$RelatedFindingProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$RelatedFindingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -543,11 +543,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-related-finding-property-builder (new CfnAutomationRule$RelatedFindingProperty$Builder) id config))
+  (cfn-automation-rule-related-finding-property-builder> (new CfnAutomationRule$RelatedFindingProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-severity-update-property-builder
-  "The build-cfn-automation-rule-severity-update-property-builder function updates a CfnAutomationRule$SeverityUpdateProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-severity-update-property-builder>
+  "The cfn-automation-rule-severity-update-property-builder> function updates a CfnAutomationRule$SeverityUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$SeverityUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -577,11 +577,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-severity-update-property-builder (new CfnAutomationRule$SeverityUpdateProperty$Builder) id config))
+  (cfn-automation-rule-severity-update-property-builder> (new CfnAutomationRule$SeverityUpdateProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-string-filter-property-builder
-  "The build-cfn-automation-rule-string-filter-property-builder function updates a CfnAutomationRule$StringFilterProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-string-filter-property-builder>
+  "The cfn-automation-rule-string-filter-property-builder> function updates a CfnAutomationRule$StringFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$StringFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -608,11 +608,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-string-filter-property-builder (new CfnAutomationRule$StringFilterProperty$Builder) id config))
+  (cfn-automation-rule-string-filter-property-builder> (new CfnAutomationRule$StringFilterProperty$Builder) id config))
 
 
-(defn build-cfn-automation-rule-workflow-update-property-builder
-  "The build-cfn-automation-rule-workflow-update-property-builder function updates a CfnAutomationRule$WorkflowUpdateProperty$Builder instance using the provided configuration.
+(defn cfn-automation-rule-workflow-update-property-builder>
+  "The cfn-automation-rule-workflow-update-property-builder> function updates a CfnAutomationRule$WorkflowUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$WorkflowUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -636,11 +636,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-automation-rule-workflow-update-property-builder (new CfnAutomationRule$WorkflowUpdateProperty$Builder) id config))
+  (cfn-automation-rule-workflow-update-property-builder> (new CfnAutomationRule$WorkflowUpdateProperty$Builder) id config))
 
 
-(defn build-cfn-delegated-admin-builder
-  "The build-cfn-delegated-admin-builder function updates a CfnDelegatedAdmin$Builder instance using the provided configuration.
+(defn cfn-delegated-admin-builder>
+  "The cfn-delegated-admin-builder> function updates a CfnDelegatedAdmin$Builder instance using the provided configuration.
   The function takes the CfnDelegatedAdmin$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -664,11 +664,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-delegated-admin-builder (CfnDelegatedAdmin$Builder/create scope (name id)) id config))
+  (cfn-delegated-admin-builder> (CfnDelegatedAdmin$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-delegated-admin-props-builder
-  "The build-cfn-delegated-admin-props-builder function updates a CfnDelegatedAdminProps$Builder instance using the provided configuration.
+(defn cfn-delegated-admin-props-builder>
+  "The cfn-delegated-admin-props-builder> function updates a CfnDelegatedAdminProps$Builder instance using the provided configuration.
   The function takes the CfnDelegatedAdminProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -692,11 +692,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delegated-admin-props-builder (new CfnDelegatedAdminProps$Builder) id config))
+  (cfn-delegated-admin-props-builder> (new CfnDelegatedAdminProps$Builder) id config))
 
 
-(defn build-cfn-hub-builder
-  "The build-cfn-hub-builder function updates a CfnHub$Builder instance using the provided configuration.
+(defn cfn-hub-builder>
+  "The cfn-hub-builder> function updates a CfnHub$Builder instance using the provided configuration.
   The function takes the CfnHub$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -729,11 +729,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-hub-builder (CfnHub$Builder/create scope (name id)) id config))
+  (cfn-hub-builder> (CfnHub$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-hub-props-builder
-  "The build-cfn-hub-props-builder function updates a CfnHubProps$Builder instance using the provided configuration.
+(defn cfn-hub-props-builder>
+  "The cfn-hub-props-builder> function updates a CfnHubProps$Builder instance using the provided configuration.
   The function takes the CfnHubProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -766,11 +766,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-hub-props-builder (new CfnHubProps$Builder) id config))
+  (cfn-hub-props-builder> (new CfnHubProps$Builder) id config))
 
 
-(defn build-cfn-insight-aws-security-finding-filters-property-builder
-  "The build-cfn-insight-aws-security-finding-filters-property-builder function updates a CfnInsight$AwsSecurityFindingFiltersProperty$Builder instance using the provided configuration.
+(defn cfn-insight-aws-security-finding-filters-property-builder>
+  "The cfn-insight-aws-security-finding-filters-property-builder> function updates a CfnInsight$AwsSecurityFindingFiltersProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$AwsSecurityFindingFiltersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1103,11 +1103,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-aws-security-finding-filters-property-builder (new CfnInsight$AwsSecurityFindingFiltersProperty$Builder) id config))
+  (cfn-insight-aws-security-finding-filters-property-builder> (new CfnInsight$AwsSecurityFindingFiltersProperty$Builder) id config))
 
 
-(defn build-cfn-insight-boolean-filter-property-builder
-  "The build-cfn-insight-boolean-filter-property-builder function updates a CfnInsight$BooleanFilterProperty$Builder instance using the provided configuration.
+(defn cfn-insight-boolean-filter-property-builder>
+  "The cfn-insight-boolean-filter-property-builder> function updates a CfnInsight$BooleanFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$BooleanFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1131,11 +1131,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-boolean-filter-property-builder (new CfnInsight$BooleanFilterProperty$Builder) id config))
+  (cfn-insight-boolean-filter-property-builder> (new CfnInsight$BooleanFilterProperty$Builder) id config))
 
 
-(defn build-cfn-insight-builder
-  "The build-cfn-insight-builder function updates a CfnInsight$Builder instance using the provided configuration.
+(defn cfn-insight-builder>
+  "The cfn-insight-builder> function updates a CfnInsight$Builder instance using the provided configuration.
   The function takes the CfnInsight$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1165,11 +1165,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-insight-builder (CfnInsight$Builder/create scope (name id)) id config))
+  (cfn-insight-builder> (CfnInsight$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-insight-date-filter-property-builder
-  "The build-cfn-insight-date-filter-property-builder function updates a CfnInsight$DateFilterProperty$Builder instance using the provided configuration.
+(defn cfn-insight-date-filter-property-builder>
+  "The cfn-insight-date-filter-property-builder> function updates a CfnInsight$DateFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$DateFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1199,11 +1199,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-date-filter-property-builder (new CfnInsight$DateFilterProperty$Builder) id config))
+  (cfn-insight-date-filter-property-builder> (new CfnInsight$DateFilterProperty$Builder) id config))
 
 
-(defn build-cfn-insight-date-range-property-builder
-  "The build-cfn-insight-date-range-property-builder function updates a CfnInsight$DateRangeProperty$Builder instance using the provided configuration.
+(defn cfn-insight-date-range-property-builder>
+  "The cfn-insight-date-range-property-builder> function updates a CfnInsight$DateRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$DateRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1230,11 +1230,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-date-range-property-builder (new CfnInsight$DateRangeProperty$Builder) id config))
+  (cfn-insight-date-range-property-builder> (new CfnInsight$DateRangeProperty$Builder) id config))
 
 
-(defn build-cfn-insight-ip-filter-property-builder
-  "The build-cfn-insight-ip-filter-property-builder function updates a CfnInsight$IpFilterProperty$Builder instance using the provided configuration.
+(defn cfn-insight-ip-filter-property-builder>
+  "The cfn-insight-ip-filter-property-builder> function updates a CfnInsight$IpFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$IpFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1258,11 +1258,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-ip-filter-property-builder (new CfnInsight$IpFilterProperty$Builder) id config))
+  (cfn-insight-ip-filter-property-builder> (new CfnInsight$IpFilterProperty$Builder) id config))
 
 
-(defn build-cfn-insight-keyword-filter-property-builder
-  "The build-cfn-insight-keyword-filter-property-builder function updates a CfnInsight$KeywordFilterProperty$Builder instance using the provided configuration.
+(defn cfn-insight-keyword-filter-property-builder>
+  "The cfn-insight-keyword-filter-property-builder> function updates a CfnInsight$KeywordFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$KeywordFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1286,11 +1286,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-keyword-filter-property-builder (new CfnInsight$KeywordFilterProperty$Builder) id config))
+  (cfn-insight-keyword-filter-property-builder> (new CfnInsight$KeywordFilterProperty$Builder) id config))
 
 
-(defn build-cfn-insight-map-filter-property-builder
-  "The build-cfn-insight-map-filter-property-builder function updates a CfnInsight$MapFilterProperty$Builder instance using the provided configuration.
+(defn cfn-insight-map-filter-property-builder>
+  "The cfn-insight-map-filter-property-builder> function updates a CfnInsight$MapFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$MapFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1320,11 +1320,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-map-filter-property-builder (new CfnInsight$MapFilterProperty$Builder) id config))
+  (cfn-insight-map-filter-property-builder> (new CfnInsight$MapFilterProperty$Builder) id config))
 
 
-(defn build-cfn-insight-number-filter-property-builder
-  "The build-cfn-insight-number-filter-property-builder function updates a CfnInsight$NumberFilterProperty$Builder instance using the provided configuration.
+(defn cfn-insight-number-filter-property-builder>
+  "The cfn-insight-number-filter-property-builder> function updates a CfnInsight$NumberFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$NumberFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1354,11 +1354,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-number-filter-property-builder (new CfnInsight$NumberFilterProperty$Builder) id config))
+  (cfn-insight-number-filter-property-builder> (new CfnInsight$NumberFilterProperty$Builder) id config))
 
 
-(defn build-cfn-insight-props-builder
-  "The build-cfn-insight-props-builder function updates a CfnInsightProps$Builder instance using the provided configuration.
+(defn cfn-insight-props-builder>
+  "The cfn-insight-props-builder> function updates a CfnInsightProps$Builder instance using the provided configuration.
   The function takes the CfnInsightProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1388,11 +1388,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-props-builder (new CfnInsightProps$Builder) id config))
+  (cfn-insight-props-builder> (new CfnInsightProps$Builder) id config))
 
 
-(defn build-cfn-insight-string-filter-property-builder
-  "The build-cfn-insight-string-filter-property-builder function updates a CfnInsight$StringFilterProperty$Builder instance using the provided configuration.
+(defn cfn-insight-string-filter-property-builder>
+  "The cfn-insight-string-filter-property-builder> function updates a CfnInsight$StringFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$StringFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1419,11 +1419,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-insight-string-filter-property-builder (new CfnInsight$StringFilterProperty$Builder) id config))
+  (cfn-insight-string-filter-property-builder> (new CfnInsight$StringFilterProperty$Builder) id config))
 
 
-(defn build-cfn-product-subscription-builder
-  "The build-cfn-product-subscription-builder function updates a CfnProductSubscription$Builder instance using the provided configuration.
+(defn cfn-product-subscription-builder>
+  "The cfn-product-subscription-builder> function updates a CfnProductSubscription$Builder instance using the provided configuration.
   The function takes the CfnProductSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1447,11 +1447,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-product-subscription-builder (CfnProductSubscription$Builder/create scope (name id)) id config))
+  (cfn-product-subscription-builder> (CfnProductSubscription$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-product-subscription-props-builder
-  "The build-cfn-product-subscription-props-builder function updates a CfnProductSubscriptionProps$Builder instance using the provided configuration.
+(defn cfn-product-subscription-props-builder>
+  "The cfn-product-subscription-props-builder> function updates a CfnProductSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnProductSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1475,11 +1475,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-product-subscription-props-builder (new CfnProductSubscriptionProps$Builder) id config))
+  (cfn-product-subscription-props-builder> (new CfnProductSubscriptionProps$Builder) id config))
 
 
-(defn build-cfn-security-control-builder
-  "The build-cfn-security-control-builder function updates a CfnSecurityControl$Builder instance using the provided configuration.
+(defn cfn-security-control-builder>
+  "The cfn-security-control-builder> function updates a CfnSecurityControl$Builder instance using the provided configuration.
   The function takes the CfnSecurityControl$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1512,11 +1512,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-security-control-builder (CfnSecurityControl$Builder/create scope (name id)) id config))
+  (cfn-security-control-builder> (CfnSecurityControl$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-security-control-parameter-configuration-property-builder
-  "The build-cfn-security-control-parameter-configuration-property-builder function updates a CfnSecurityControl$ParameterConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-security-control-parameter-configuration-property-builder>
+  "The cfn-security-control-parameter-configuration-property-builder> function updates a CfnSecurityControl$ParameterConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSecurityControl$ParameterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1540,11 +1540,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-control-parameter-configuration-property-builder (new CfnSecurityControl$ParameterConfigurationProperty$Builder) id config))
+  (cfn-security-control-parameter-configuration-property-builder> (new CfnSecurityControl$ParameterConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-security-control-props-builder
-  "The build-cfn-security-control-props-builder function updates a CfnSecurityControlProps$Builder instance using the provided configuration.
+(defn cfn-security-control-props-builder>
+  "The cfn-security-control-props-builder> function updates a CfnSecurityControlProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityControlProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1577,11 +1577,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-security-control-props-builder (new CfnSecurityControlProps$Builder) id config))
+  (cfn-security-control-props-builder> (new CfnSecurityControlProps$Builder) id config))
 
 
-(defn build-cfn-standard-builder
-  "The build-cfn-standard-builder function updates a CfnStandard$Builder instance using the provided configuration.
+(defn cfn-standard-builder>
+  "The cfn-standard-builder> function updates a CfnStandard$Builder instance using the provided configuration.
   The function takes the CfnStandard$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1608,11 +1608,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-standard-builder (CfnStandard$Builder/create scope (name id)) id config))
+  (cfn-standard-builder> (CfnStandard$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-standard-props-builder
-  "The build-cfn-standard-props-builder function updates a CfnStandardProps$Builder instance using the provided configuration.
+(defn cfn-standard-props-builder>
+  "The cfn-standard-props-builder> function updates a CfnStandardProps$Builder instance using the provided configuration.
   The function takes the CfnStandardProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1639,11 +1639,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-standard-props-builder (new CfnStandardProps$Builder) id config))
+  (cfn-standard-props-builder> (new CfnStandardProps$Builder) id config))
 
 
-(defn build-cfn-standard-standards-control-property-builder
-  "The build-cfn-standard-standards-control-property-builder function updates a CfnStandard$StandardsControlProperty$Builder instance using the provided configuration.
+(defn cfn-standard-standards-control-property-builder>
+  "The cfn-standard-standards-control-property-builder> function updates a CfnStandard$StandardsControlProperty$Builder instance using the provided configuration.
   The function takes the CfnStandard$StandardsControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1670,4 +1670,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-standard-standards-control-property-builder (new CfnStandard$StandardsControlProperty$Builder) id config))
+  (cfn-standard-standards-control-property-builder> (new CfnStandard$StandardsControlProperty$Builder) id config))

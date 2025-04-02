@@ -27,8 +27,8 @@
                                                           CfnVariableProps$Builder]))
 
 
-(defn build-cfn-detector-builder
-  "The build-cfn-detector-builder function updates a CfnDetector$Builder instance using the provided configuration.
+(defn cfn-detector-builder>
+  "The cfn-detector-builder> function updates a CfnDetector$Builder instance using the provided configuration.
   The function takes the CfnDetector$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -73,11 +73,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-detector-builder (CfnDetector$Builder/create scope (name id)) id config))
+  (cfn-detector-builder> (CfnDetector$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-detector-entity-type-property-builder
-  "The build-cfn-detector-entity-type-property-builder function updates a CfnDetector$EntityTypeProperty$Builder instance using the provided configuration.
+(defn cfn-detector-entity-type-property-builder>
+  "The cfn-detector-entity-type-property-builder> function updates a CfnDetector$EntityTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$EntityTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -119,11 +119,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-entity-type-property-builder (new CfnDetector$EntityTypeProperty$Builder) id config))
+  (cfn-detector-entity-type-property-builder> (new CfnDetector$EntityTypeProperty$Builder) id config))
 
 
-(defn build-cfn-detector-event-type-property-builder
-  "The build-cfn-detector-event-type-property-builder function updates a CfnDetector$EventTypeProperty$Builder instance using the provided configuration.
+(defn cfn-detector-event-type-property-builder>
+  "The cfn-detector-event-type-property-builder> function updates a CfnDetector$EventTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$EventTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -174,11 +174,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-event-type-property-builder (new CfnDetector$EventTypeProperty$Builder) id config))
+  (cfn-detector-event-type-property-builder> (new CfnDetector$EventTypeProperty$Builder) id config))
 
 
-(defn build-cfn-detector-event-variable-property-builder
-  "The build-cfn-detector-event-variable-property-builder function updates a CfnDetector$EventVariableProperty$Builder instance using the provided configuration.
+(defn cfn-detector-event-variable-property-builder>
+  "The cfn-detector-event-variable-property-builder> function updates a CfnDetector$EventVariableProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$EventVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -232,11 +232,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-event-variable-property-builder (new CfnDetector$EventVariableProperty$Builder) id config))
+  (cfn-detector-event-variable-property-builder> (new CfnDetector$EventVariableProperty$Builder) id config))
 
 
-(defn build-cfn-detector-label-property-builder
-  "The build-cfn-detector-label-property-builder function updates a CfnDetector$LabelProperty$Builder instance using the provided configuration.
+(defn cfn-detector-label-property-builder>
+  "The cfn-detector-label-property-builder> function updates a CfnDetector$LabelProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$LabelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -278,11 +278,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-label-property-builder (new CfnDetector$LabelProperty$Builder) id config))
+  (cfn-detector-label-property-builder> (new CfnDetector$LabelProperty$Builder) id config))
 
 
-(defn build-cfn-detector-model-property-builder
-  "The build-cfn-detector-model-property-builder function updates a CfnDetector$ModelProperty$Builder instance using the provided configuration.
+(defn cfn-detector-model-property-builder>
+  "The cfn-detector-model-property-builder> function updates a CfnDetector$ModelProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$ModelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -306,11 +306,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-model-property-builder (new CfnDetector$ModelProperty$Builder) id config))
+  (cfn-detector-model-property-builder> (new CfnDetector$ModelProperty$Builder) id config))
 
 
-(defn build-cfn-detector-outcome-property-builder
-  "The build-cfn-detector-outcome-property-builder function updates a CfnDetector$OutcomeProperty$Builder instance using the provided configuration.
+(defn cfn-detector-outcome-property-builder>
+  "The cfn-detector-outcome-property-builder> function updates a CfnDetector$OutcomeProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$OutcomeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -352,11 +352,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-outcome-property-builder (new CfnDetector$OutcomeProperty$Builder) id config))
+  (cfn-detector-outcome-property-builder> (new CfnDetector$OutcomeProperty$Builder) id config))
 
 
-(defn build-cfn-detector-props-builder
-  "The build-cfn-detector-props-builder function updates a CfnDetectorProps$Builder instance using the provided configuration.
+(defn cfn-detector-props-builder>
+  "The cfn-detector-props-builder> function updates a CfnDetectorProps$Builder instance using the provided configuration.
   The function takes the CfnDetectorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -401,11 +401,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-props-builder (new CfnDetectorProps$Builder) id config))
+  (cfn-detector-props-builder> (new CfnDetectorProps$Builder) id config))
 
 
-(defn build-cfn-detector-rule-property-builder
-  "The build-cfn-detector-rule-property-builder function updates a CfnDetector$RuleProperty$Builder instance using the provided configuration.
+(defn cfn-detector-rule-property-builder>
+  "The cfn-detector-rule-property-builder> function updates a CfnDetector$RuleProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$RuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -459,11 +459,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-detector-rule-property-builder (new CfnDetector$RuleProperty$Builder) id config))
+  (cfn-detector-rule-property-builder> (new CfnDetector$RuleProperty$Builder) id config))
 
 
-(defn build-cfn-entity-type-builder
-  "The build-cfn-entity-type-builder function updates a CfnEntityType$Builder instance using the provided configuration.
+(defn cfn-entity-type-builder>
+  "The cfn-entity-type-builder> function updates a CfnEntityType$Builder instance using the provided configuration.
   The function takes the CfnEntityType$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -493,11 +493,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-entity-type-builder (CfnEntityType$Builder/create scope (name id)) id config))
+  (cfn-entity-type-builder> (CfnEntityType$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-entity-type-props-builder
-  "The build-cfn-entity-type-props-builder function updates a CfnEntityTypeProps$Builder instance using the provided configuration.
+(defn cfn-entity-type-props-builder>
+  "The cfn-entity-type-props-builder> function updates a CfnEntityTypeProps$Builder instance using the provided configuration.
   The function takes the CfnEntityTypeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -527,11 +527,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-entity-type-props-builder (new CfnEntityTypeProps$Builder) id config))
+  (cfn-entity-type-props-builder> (new CfnEntityTypeProps$Builder) id config))
 
 
-(defn build-cfn-event-type-builder
-  "The build-cfn-event-type-builder function updates a CfnEventType$Builder instance using the provided configuration.
+(defn cfn-event-type-builder>
+  "The cfn-event-type-builder> function updates a CfnEventType$Builder instance using the provided configuration.
   The function takes the CfnEventType$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -570,11 +570,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-event-type-builder (CfnEventType$Builder/create scope (name id)) id config))
+  (cfn-event-type-builder> (CfnEventType$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-event-type-entity-type-property-builder
-  "The build-cfn-event-type-entity-type-property-builder function updates a CfnEventType$EntityTypeProperty$Builder instance using the provided configuration.
+(defn cfn-event-type-entity-type-property-builder>
+  "The cfn-event-type-entity-type-property-builder> function updates a CfnEventType$EntityTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnEventType$EntityTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -616,11 +616,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-type-entity-type-property-builder (new CfnEventType$EntityTypeProperty$Builder) id config))
+  (cfn-event-type-entity-type-property-builder> (new CfnEventType$EntityTypeProperty$Builder) id config))
 
 
-(defn build-cfn-event-type-event-variable-property-builder
-  "The build-cfn-event-type-event-variable-property-builder function updates a CfnEventType$EventVariableProperty$Builder instance using the provided configuration.
+(defn cfn-event-type-event-variable-property-builder>
+  "The cfn-event-type-event-variable-property-builder> function updates a CfnEventType$EventVariableProperty$Builder instance using the provided configuration.
   The function takes the CfnEventType$EventVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -674,11 +674,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-type-event-variable-property-builder (new CfnEventType$EventVariableProperty$Builder) id config))
+  (cfn-event-type-event-variable-property-builder> (new CfnEventType$EventVariableProperty$Builder) id config))
 
 
-(defn build-cfn-event-type-label-property-builder
-  "The build-cfn-event-type-label-property-builder function updates a CfnEventType$LabelProperty$Builder instance using the provided configuration.
+(defn cfn-event-type-label-property-builder>
+  "The cfn-event-type-label-property-builder> function updates a CfnEventType$LabelProperty$Builder instance using the provided configuration.
   The function takes the CfnEventType$LabelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -720,11 +720,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-type-label-property-builder (new CfnEventType$LabelProperty$Builder) id config))
+  (cfn-event-type-label-property-builder> (new CfnEventType$LabelProperty$Builder) id config))
 
 
-(defn build-cfn-event-type-props-builder
-  "The build-cfn-event-type-props-builder function updates a CfnEventTypeProps$Builder instance using the provided configuration.
+(defn cfn-event-type-props-builder>
+  "The cfn-event-type-props-builder> function updates a CfnEventTypeProps$Builder instance using the provided configuration.
   The function takes the CfnEventTypeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -763,11 +763,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-event-type-props-builder (new CfnEventTypeProps$Builder) id config))
+  (cfn-event-type-props-builder> (new CfnEventTypeProps$Builder) id config))
 
 
-(defn build-cfn-label-builder
-  "The build-cfn-label-builder function updates a CfnLabel$Builder instance using the provided configuration.
+(defn cfn-label-builder>
+  "The cfn-label-builder> function updates a CfnLabel$Builder instance using the provided configuration.
   The function takes the CfnLabel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -797,11 +797,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-label-builder (CfnLabel$Builder/create scope (name id)) id config))
+  (cfn-label-builder> (CfnLabel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-label-props-builder
-  "The build-cfn-label-props-builder function updates a CfnLabelProps$Builder instance using the provided configuration.
+(defn cfn-label-props-builder>
+  "The cfn-label-props-builder> function updates a CfnLabelProps$Builder instance using the provided configuration.
   The function takes the CfnLabelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -831,11 +831,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-label-props-builder (new CfnLabelProps$Builder) id config))
+  (cfn-label-props-builder> (new CfnLabelProps$Builder) id config))
 
 
-(defn build-cfn-list-builder
-  "The build-cfn-list-builder function updates a CfnList$Builder instance using the provided configuration.
+(defn cfn-list-builder>
+  "The cfn-list-builder> function updates a CfnList$Builder instance using the provided configuration.
   The function takes the CfnList$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -871,11 +871,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-list-builder (CfnList$Builder/create scope (name id)) id config))
+  (cfn-list-builder> (CfnList$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-list-props-builder
-  "The build-cfn-list-props-builder function updates a CfnListProps$Builder instance using the provided configuration.
+(defn cfn-list-props-builder>
+  "The cfn-list-props-builder> function updates a CfnListProps$Builder instance using the provided configuration.
   The function takes the CfnListProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -911,11 +911,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-list-props-builder (new CfnListProps$Builder) id config))
+  (cfn-list-props-builder> (new CfnListProps$Builder) id config))
 
 
-(defn build-cfn-outcome-builder
-  "The build-cfn-outcome-builder function updates a CfnOutcome$Builder instance using the provided configuration.
+(defn cfn-outcome-builder>
+  "The cfn-outcome-builder> function updates a CfnOutcome$Builder instance using the provided configuration.
   The function takes the CfnOutcome$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -945,11 +945,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-outcome-builder (CfnOutcome$Builder/create scope (name id)) id config))
+  (cfn-outcome-builder> (CfnOutcome$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-outcome-props-builder
-  "The build-cfn-outcome-props-builder function updates a CfnOutcomeProps$Builder instance using the provided configuration.
+(defn cfn-outcome-props-builder>
+  "The cfn-outcome-props-builder> function updates a CfnOutcomeProps$Builder instance using the provided configuration.
   The function takes the CfnOutcomeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -979,11 +979,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-outcome-props-builder (new CfnOutcomeProps$Builder) id config))
+  (cfn-outcome-props-builder> (new CfnOutcomeProps$Builder) id config))
 
 
-(defn build-cfn-variable-builder
-  "The build-cfn-variable-builder function updates a CfnVariable$Builder instance using the provided configuration.
+(defn cfn-variable-builder>
+  "The cfn-variable-builder> function updates a CfnVariable$Builder instance using the provided configuration.
   The function takes the CfnVariable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1025,11 +1025,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-variable-builder (CfnVariable$Builder/create scope (name id)) id config))
+  (cfn-variable-builder> (CfnVariable$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-variable-props-builder
-  "The build-cfn-variable-props-builder function updates a CfnVariableProps$Builder instance using the provided configuration.
+(defn cfn-variable-props-builder>
+  "The cfn-variable-props-builder> function updates a CfnVariableProps$Builder instance using the provided configuration.
   The function takes the CfnVariableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1071,4 +1071,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-variable-props-builder (new CfnVariableProps$Builder) id config))
+  (cfn-variable-props-builder> (new CfnVariableProps$Builder) id config))

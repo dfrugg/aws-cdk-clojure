@@ -15,8 +15,8 @@
                                                 CfnTargetAccountConfigurationProps$Builder]))
 
 
-(defn build-cfn-experiment-template-builder
-  "The build-cfn-experiment-template-builder function updates a CfnExperimentTemplate$Builder instance using the provided configuration.
+(defn cfn-experiment-template-builder>
+  "The cfn-experiment-template-builder> function updates a CfnExperimentTemplate$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -61,11 +61,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-experiment-template-builder (CfnExperimentTemplate$Builder/create scope (name id)) id config))
+  (cfn-experiment-template-builder> (CfnExperimentTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-experiment-template-cloud-watch-logs-configuration-property-builder
-  "The build-cfn-experiment-template-cloud-watch-logs-configuration-property-builder function updates a CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-experiment-template-cloud-watch-logs-configuration-property-builder>
+  "The cfn-experiment-template-cloud-watch-logs-configuration-property-builder> function updates a CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -89,11 +89,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-cloud-watch-logs-configuration-property-builder (new CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder) id config))
+  (cfn-experiment-template-cloud-watch-logs-configuration-property-builder> (new CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-experiment-template-experiment-template-action-property-builder
-  "The build-cfn-experiment-template-experiment-template-action-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder instance using the provided configuration.
+(defn cfn-experiment-template-experiment-template-action-property-builder>
+  "The cfn-experiment-template-experiment-template-action-property-builder> function updates a CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -129,11 +129,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-experiment-template-action-property-builder (new CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder) id config))
+  (cfn-experiment-template-experiment-template-action-property-builder> (new CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder) id config))
 
 
-(defn build-cfn-experiment-template-experiment-template-experiment-options-property-builder
-  "The build-cfn-experiment-template-experiment-template-experiment-options-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-experiment-template-experiment-template-experiment-options-property-builder>
+  "The cfn-experiment-template-experiment-template-experiment-options-property-builder> function updates a CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -160,11 +160,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-experiment-template-experiment-options-property-builder (new CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder) id config))
+  (cfn-experiment-template-experiment-template-experiment-options-property-builder> (new CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-experiment-template-experiment-template-log-configuration-property-builder
-  "The build-cfn-experiment-template-experiment-template-log-configuration-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-experiment-template-experiment-template-log-configuration-property-builder>
+  "The cfn-experiment-template-experiment-template-log-configuration-property-builder> function updates a CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -194,11 +194,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-experiment-template-log-configuration-property-builder (new CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder) id config))
+  (cfn-experiment-template-experiment-template-log-configuration-property-builder> (new CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-experiment-template-experiment-template-stop-condition-property-builder
-  "The build-cfn-experiment-template-experiment-template-stop-condition-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder instance using the provided configuration.
+(defn cfn-experiment-template-experiment-template-stop-condition-property-builder>
+  "The cfn-experiment-template-experiment-template-stop-condition-property-builder> function updates a CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -225,11 +225,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-experiment-template-stop-condition-property-builder (new CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder) id config))
+  (cfn-experiment-template-experiment-template-stop-condition-property-builder> (new CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder) id config))
 
 
-(defn build-cfn-experiment-template-experiment-template-target-filter-property-builder
-  "The build-cfn-experiment-template-experiment-template-target-filter-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder instance using the provided configuration.
+(defn cfn-experiment-template-experiment-template-target-filter-property-builder>
+  "The cfn-experiment-template-experiment-template-target-filter-property-builder> function updates a CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -256,11 +256,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-experiment-template-target-filter-property-builder (new CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder) id config))
+  (cfn-experiment-template-experiment-template-target-filter-property-builder> (new CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder) id config))
 
 
-(defn build-cfn-experiment-template-experiment-template-target-property-builder
-  "The build-cfn-experiment-template-experiment-template-target-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder instance using the provided configuration.
+(defn cfn-experiment-template-experiment-template-target-property-builder>
+  "The cfn-experiment-template-experiment-template-target-property-builder> function updates a CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -299,11 +299,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-experiment-template-target-property-builder (new CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder) id config))
+  (cfn-experiment-template-experiment-template-target-property-builder> (new CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder) id config))
 
 
-(defn build-cfn-experiment-template-props-builder
-  "The build-cfn-experiment-template-props-builder function updates a CfnExperimentTemplateProps$Builder instance using the provided configuration.
+(defn cfn-experiment-template-props-builder>
+  "The cfn-experiment-template-props-builder> function updates a CfnExperimentTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -348,11 +348,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-props-builder (new CfnExperimentTemplateProps$Builder) id config))
+  (cfn-experiment-template-props-builder> (new CfnExperimentTemplateProps$Builder) id config))
 
 
-(defn build-cfn-experiment-template-s3-configuration-property-builder
-  "The build-cfn-experiment-template-s3-configuration-property-builder function updates a CfnExperimentTemplate$S3ConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-experiment-template-s3-configuration-property-builder>
+  "The cfn-experiment-template-s3-configuration-property-builder> function updates a CfnExperimentTemplate$S3ConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$S3ConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -379,11 +379,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-experiment-template-s3-configuration-property-builder (new CfnExperimentTemplate$S3ConfigurationProperty$Builder) id config))
+  (cfn-experiment-template-s3-configuration-property-builder> (new CfnExperimentTemplate$S3ConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-target-account-configuration-builder
-  "The build-cfn-target-account-configuration-builder function updates a CfnTargetAccountConfiguration$Builder instance using the provided configuration.
+(defn cfn-target-account-configuration-builder>
+  "The cfn-target-account-configuration-builder> function updates a CfnTargetAccountConfiguration$Builder instance using the provided configuration.
   The function takes the CfnTargetAccountConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -416,11 +416,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-target-account-configuration-builder (CfnTargetAccountConfiguration$Builder/create scope (name id)) id config))
+  (cfn-target-account-configuration-builder> (CfnTargetAccountConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-target-account-configuration-props-builder
-  "The build-cfn-target-account-configuration-props-builder function updates a CfnTargetAccountConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-target-account-configuration-props-builder>
+  "The cfn-target-account-configuration-props-builder> function updates a CfnTargetAccountConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnTargetAccountConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -453,4 +453,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-target-account-configuration-props-builder (new CfnTargetAccountConfigurationProps$Builder) id config))
+  (cfn-target-account-configuration-props-builder> (new CfnTargetAccountConfigurationProps$Builder) id config))

@@ -9,8 +9,8 @@
                                                                 CfnKeyProps$Builder]))
 
 
-(defn build-cfn-alias-builder
-  "The build-cfn-alias-builder function updates a CfnAlias$Builder instance using the provided configuration.
+(defn cfn-alias-builder>
+  "The cfn-alias-builder> function updates a CfnAlias$Builder instance using the provided configuration.
   The function takes the CfnAlias$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -37,11 +37,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-alias-builder (CfnAlias$Builder/create scope (name id)) id config))
+  (cfn-alias-builder> (CfnAlias$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-alias-props-builder
-  "The build-cfn-alias-props-builder function updates a CfnAliasProps$Builder instance using the provided configuration.
+(defn cfn-alias-props-builder>
+  "The cfn-alias-props-builder> function updates a CfnAliasProps$Builder instance using the provided configuration.
   The function takes the CfnAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -68,11 +68,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alias-props-builder (new CfnAliasProps$Builder) id config))
+  (cfn-alias-props-builder> (new CfnAliasProps$Builder) id config))
 
 
-(defn build-cfn-key-builder
-  "The build-cfn-key-builder function updates a CfnKey$Builder instance using the provided configuration.
+(defn cfn-key-builder>
+  "The cfn-key-builder> function updates a CfnKey$Builder instance using the provided configuration.
   The function takes the CfnKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -108,11 +108,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-key-builder (CfnKey$Builder/create scope (name id)) id config))
+  (cfn-key-builder> (CfnKey$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-key-key-attributes-property-builder
-  "The build-cfn-key-key-attributes-property-builder function updates a CfnKey$KeyAttributesProperty$Builder instance using the provided configuration.
+(defn cfn-key-key-attributes-property-builder>
+  "The cfn-key-key-attributes-property-builder> function updates a CfnKey$KeyAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnKey$KeyAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -145,11 +145,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-key-attributes-property-builder (new CfnKey$KeyAttributesProperty$Builder) id config))
+  (cfn-key-key-attributes-property-builder> (new CfnKey$KeyAttributesProperty$Builder) id config))
 
 
-(defn build-cfn-key-key-modes-of-use-property-builder
-  "The build-cfn-key-key-modes-of-use-property-builder function updates a CfnKey$KeyModesOfUseProperty$Builder instance using the provided configuration.
+(defn cfn-key-key-modes-of-use-property-builder>
+  "The cfn-key-key-modes-of-use-property-builder> function updates a CfnKey$KeyModesOfUseProperty$Builder instance using the provided configuration.
   The function takes the CfnKey$KeyModesOfUseProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -197,11 +197,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-key-modes-of-use-property-builder (new CfnKey$KeyModesOfUseProperty$Builder) id config))
+  (cfn-key-key-modes-of-use-property-builder> (new CfnKey$KeyModesOfUseProperty$Builder) id config))
 
 
-(defn build-cfn-key-props-builder
-  "The build-cfn-key-props-builder function updates a CfnKeyProps$Builder instance using the provided configuration.
+(defn cfn-key-props-builder>
+  "The cfn-key-props-builder> function updates a CfnKeyProps$Builder instance using the provided configuration.
   The function takes the CfnKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -237,4 +237,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-props-builder (new CfnKeyProps$Builder) id config))
+  (cfn-key-props-builder> (new CfnKeyProps$Builder) id config))

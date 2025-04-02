@@ -6,8 +6,8 @@
                                                        CfnServerProps$Builder]))
 
 
-(defn build-cfn-server-builder
-  "The build-cfn-server-builder function updates a CfnServer$Builder instance using the provided configuration.
+(defn cfn-server-builder>
+  "The cfn-server-builder> function updates a CfnServer$Builder instance using the provided configuration.
   The function takes the CfnServer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -91,11 +91,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-server-builder (CfnServer$Builder/create scope (name id)) id config))
+  (cfn-server-builder> (CfnServer$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-server-engine-attribute-property-builder
-  "The build-cfn-server-engine-attribute-property-builder function updates a CfnServer$EngineAttributeProperty$Builder instance using the provided configuration.
+(defn cfn-server-engine-attribute-property-builder>
+  "The cfn-server-engine-attribute-property-builder> function updates a CfnServer$EngineAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnServer$EngineAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -122,11 +122,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-server-engine-attribute-property-builder (new CfnServer$EngineAttributeProperty$Builder) id config))
+  (cfn-server-engine-attribute-property-builder> (new CfnServer$EngineAttributeProperty$Builder) id config))
 
 
-(defn build-cfn-server-props-builder
-  "The build-cfn-server-props-builder function updates a CfnServerProps$Builder instance using the provided configuration.
+(defn cfn-server-props-builder>
+  "The cfn-server-props-builder> function updates a CfnServerProps$Builder instance using the provided configuration.
   The function takes the CfnServerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -210,4 +210,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-server-props-builder (new CfnServerProps$Builder) id config))
+  (cfn-server-props-builder> (new CfnServerProps$Builder) id config))

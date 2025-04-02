@@ -22,8 +22,8 @@
                                                       CfnScheduleProps$Builder]))
 
 
-(defn build-cfn-schedule-aws-vpc-configuration-property-builder
-  "The build-cfn-schedule-aws-vpc-configuration-property-builder function updates a CfnSchedule$AwsVpcConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-aws-vpc-configuration-property-builder>
+  "The cfn-schedule-aws-vpc-configuration-property-builder> function updates a CfnSchedule$AwsVpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$AwsVpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -53,11 +53,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-aws-vpc-configuration-property-builder (new CfnSchedule$AwsVpcConfigurationProperty$Builder) id config))
+  (cfn-schedule-aws-vpc-configuration-property-builder> (new CfnSchedule$AwsVpcConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-builder
-  "The build-cfn-schedule-builder function updates a CfnSchedule$Builder instance using the provided configuration.
+(defn cfn-schedule-builder>
+  "The cfn-schedule-builder> function updates a CfnSchedule$Builder instance using the provided configuration.
   The function takes the CfnSchedule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -111,11 +111,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-schedule-builder (CfnSchedule$Builder/create scope (name id)) id config))
+  (cfn-schedule-builder> (CfnSchedule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-schedule-capacity-provider-strategy-item-property-builder
-  "The build-cfn-schedule-capacity-provider-strategy-item-property-builder function updates a CfnSchedule$CapacityProviderStrategyItemProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-capacity-provider-strategy-item-property-builder>
+  "The cfn-schedule-capacity-provider-strategy-item-property-builder> function updates a CfnSchedule$CapacityProviderStrategyItemProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$CapacityProviderStrategyItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -145,11 +145,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-capacity-provider-strategy-item-property-builder (new CfnSchedule$CapacityProviderStrategyItemProperty$Builder) id config))
+  (cfn-schedule-capacity-provider-strategy-item-property-builder> (new CfnSchedule$CapacityProviderStrategyItemProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-dead-letter-config-property-builder
-  "The build-cfn-schedule-dead-letter-config-property-builder function updates a CfnSchedule$DeadLetterConfigProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-dead-letter-config-property-builder>
+  "The cfn-schedule-dead-letter-config-property-builder> function updates a CfnSchedule$DeadLetterConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$DeadLetterConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -173,11 +173,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-dead-letter-config-property-builder (new CfnSchedule$DeadLetterConfigProperty$Builder) id config))
+  (cfn-schedule-dead-letter-config-property-builder> (new CfnSchedule$DeadLetterConfigProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-ecs-parameters-property-builder
-  "The build-cfn-schedule-ecs-parameters-property-builder function updates a CfnSchedule$EcsParametersProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-ecs-parameters-property-builder>
+  "The cfn-schedule-ecs-parameters-property-builder> function updates a CfnSchedule$EcsParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$EcsParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -240,11 +240,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-ecs-parameters-property-builder (new CfnSchedule$EcsParametersProperty$Builder) id config))
+  (cfn-schedule-ecs-parameters-property-builder> (new CfnSchedule$EcsParametersProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-event-bridge-parameters-property-builder
-  "The build-cfn-schedule-event-bridge-parameters-property-builder function updates a CfnSchedule$EventBridgeParametersProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-event-bridge-parameters-property-builder>
+  "The cfn-schedule-event-bridge-parameters-property-builder> function updates a CfnSchedule$EventBridgeParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$EventBridgeParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -271,11 +271,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-event-bridge-parameters-property-builder (new CfnSchedule$EventBridgeParametersProperty$Builder) id config))
+  (cfn-schedule-event-bridge-parameters-property-builder> (new CfnSchedule$EventBridgeParametersProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-flexible-time-window-property-builder
-  "The build-cfn-schedule-flexible-time-window-property-builder function updates a CfnSchedule$FlexibleTimeWindowProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-flexible-time-window-property-builder>
+  "The cfn-schedule-flexible-time-window-property-builder> function updates a CfnSchedule$FlexibleTimeWindowProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$FlexibleTimeWindowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -302,11 +302,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-flexible-time-window-property-builder (new CfnSchedule$FlexibleTimeWindowProperty$Builder) id config))
+  (cfn-schedule-flexible-time-window-property-builder> (new CfnSchedule$FlexibleTimeWindowProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-group-builder
-  "The build-cfn-schedule-group-builder function updates a CfnScheduleGroup$Builder instance using the provided configuration.
+(defn cfn-schedule-group-builder>
+  "The cfn-schedule-group-builder> function updates a CfnScheduleGroup$Builder instance using the provided configuration.
   The function takes the CfnScheduleGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -333,11 +333,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-schedule-group-builder (CfnScheduleGroup$Builder/create scope (name id)) id config))
+  (cfn-schedule-group-builder> (CfnScheduleGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-schedule-group-props-builder
-  "The build-cfn-schedule-group-props-builder function updates a CfnScheduleGroupProps$Builder instance using the provided configuration.
+(defn cfn-schedule-group-props-builder>
+  "The cfn-schedule-group-props-builder> function updates a CfnScheduleGroupProps$Builder instance using the provided configuration.
   The function takes the CfnScheduleGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -364,11 +364,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-group-props-builder (new CfnScheduleGroupProps$Builder) id config))
+  (cfn-schedule-group-props-builder> (new CfnScheduleGroupProps$Builder) id config))
 
 
-(defn build-cfn-schedule-kinesis-parameters-property-builder
-  "The build-cfn-schedule-kinesis-parameters-property-builder function updates a CfnSchedule$KinesisParametersProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-kinesis-parameters-property-builder>
+  "The cfn-schedule-kinesis-parameters-property-builder> function updates a CfnSchedule$KinesisParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$KinesisParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -392,11 +392,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-kinesis-parameters-property-builder (new CfnSchedule$KinesisParametersProperty$Builder) id config))
+  (cfn-schedule-kinesis-parameters-property-builder> (new CfnSchedule$KinesisParametersProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-network-configuration-property-builder
-  "The build-cfn-schedule-network-configuration-property-builder function updates a CfnSchedule$NetworkConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-network-configuration-property-builder>
+  "The cfn-schedule-network-configuration-property-builder> function updates a CfnSchedule$NetworkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$NetworkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -420,11 +420,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-network-configuration-property-builder (new CfnSchedule$NetworkConfigurationProperty$Builder) id config))
+  (cfn-schedule-network-configuration-property-builder> (new CfnSchedule$NetworkConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-placement-constraint-property-builder
-  "The build-cfn-schedule-placement-constraint-property-builder function updates a CfnSchedule$PlacementConstraintProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-placement-constraint-property-builder>
+  "The cfn-schedule-placement-constraint-property-builder> function updates a CfnSchedule$PlacementConstraintProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$PlacementConstraintProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -451,11 +451,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-placement-constraint-property-builder (new CfnSchedule$PlacementConstraintProperty$Builder) id config))
+  (cfn-schedule-placement-constraint-property-builder> (new CfnSchedule$PlacementConstraintProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-placement-strategy-property-builder
-  "The build-cfn-schedule-placement-strategy-property-builder function updates a CfnSchedule$PlacementStrategyProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-placement-strategy-property-builder>
+  "The cfn-schedule-placement-strategy-property-builder> function updates a CfnSchedule$PlacementStrategyProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$PlacementStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -482,11 +482,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-placement-strategy-property-builder (new CfnSchedule$PlacementStrategyProperty$Builder) id config))
+  (cfn-schedule-placement-strategy-property-builder> (new CfnSchedule$PlacementStrategyProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-props-builder
-  "The build-cfn-schedule-props-builder function updates a CfnScheduleProps$Builder instance using the provided configuration.
+(defn cfn-schedule-props-builder>
+  "The cfn-schedule-props-builder> function updates a CfnScheduleProps$Builder instance using the provided configuration.
   The function takes the CfnScheduleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -540,11 +540,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-props-builder (new CfnScheduleProps$Builder) id config))
+  (cfn-schedule-props-builder> (new CfnScheduleProps$Builder) id config))
 
 
-(defn build-cfn-schedule-retry-policy-property-builder
-  "The build-cfn-schedule-retry-policy-property-builder function updates a CfnSchedule$RetryPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-retry-policy-property-builder>
+  "The cfn-schedule-retry-policy-property-builder> function updates a CfnSchedule$RetryPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$RetryPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -571,11 +571,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-retry-policy-property-builder (new CfnSchedule$RetryPolicyProperty$Builder) id config))
+  (cfn-schedule-retry-policy-property-builder> (new CfnSchedule$RetryPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-sage-maker-pipeline-parameter-property-builder
-  "The build-cfn-schedule-sage-maker-pipeline-parameter-property-builder function updates a CfnSchedule$SageMakerPipelineParameterProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-sage-maker-pipeline-parameter-property-builder>
+  "The cfn-schedule-sage-maker-pipeline-parameter-property-builder> function updates a CfnSchedule$SageMakerPipelineParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$SageMakerPipelineParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -602,11 +602,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-sage-maker-pipeline-parameter-property-builder (new CfnSchedule$SageMakerPipelineParameterProperty$Builder) id config))
+  (cfn-schedule-sage-maker-pipeline-parameter-property-builder> (new CfnSchedule$SageMakerPipelineParameterProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-sage-maker-pipeline-parameters-property-builder
-  "The build-cfn-schedule-sage-maker-pipeline-parameters-property-builder function updates a CfnSchedule$SageMakerPipelineParametersProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-sage-maker-pipeline-parameters-property-builder>
+  "The cfn-schedule-sage-maker-pipeline-parameters-property-builder> function updates a CfnSchedule$SageMakerPipelineParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$SageMakerPipelineParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -630,11 +630,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-sage-maker-pipeline-parameters-property-builder (new CfnSchedule$SageMakerPipelineParametersProperty$Builder) id config))
+  (cfn-schedule-sage-maker-pipeline-parameters-property-builder> (new CfnSchedule$SageMakerPipelineParametersProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-sqs-parameters-property-builder
-  "The build-cfn-schedule-sqs-parameters-property-builder function updates a CfnSchedule$SqsParametersProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-sqs-parameters-property-builder>
+  "The cfn-schedule-sqs-parameters-property-builder> function updates a CfnSchedule$SqsParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$SqsParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -658,11 +658,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-sqs-parameters-property-builder (new CfnSchedule$SqsParametersProperty$Builder) id config))
+  (cfn-schedule-sqs-parameters-property-builder> (new CfnSchedule$SqsParametersProperty$Builder) id config))
 
 
-(defn build-cfn-schedule-target-property-builder
-  "The build-cfn-schedule-target-property-builder function updates a CfnSchedule$TargetProperty$Builder instance using the provided configuration.
+(defn cfn-schedule-target-property-builder>
+  "The cfn-schedule-target-property-builder> function updates a CfnSchedule$TargetProperty$Builder instance using the provided configuration.
   The function takes the CfnSchedule$TargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -713,4 +713,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-schedule-target-property-builder (new CfnSchedule$TargetProperty$Builder) id config))
+  (cfn-schedule-target-property-builder> (new CfnSchedule$TargetProperty$Builder) id config))

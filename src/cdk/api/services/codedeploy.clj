@@ -116,8 +116,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :first data) LoadBalancerGeneration/FIRST)))
 
 
-(defn build-auto-rollback-config-builder
-  "The build-auto-rollback-config-builder function updates a AutoRollbackConfig$Builder instance using the provided configuration.
+(defn auto-rollback-config-builder>
+  "The auto-rollback-config-builder> function updates a AutoRollbackConfig$Builder instance using the provided configuration.
   The function takes the AutoRollbackConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -147,11 +147,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-auto-rollback-config-builder (new AutoRollbackConfig$Builder) id config))
+  (auto-rollback-config-builder> (new AutoRollbackConfig$Builder) id config))
 
 
-(defn build-base-deployment-config-options-builder
-  "The build-base-deployment-config-options-builder function updates a BaseDeploymentConfigOptions$Builder instance using the provided configuration.
+(defn base-deployment-config-options-builder>
+  "The base-deployment-config-options-builder> function updates a BaseDeploymentConfigOptions$Builder instance using the provided configuration.
   The function takes the BaseDeploymentConfigOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -175,11 +175,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-deployment-config-options-builder (new BaseDeploymentConfigOptions$Builder) id config))
+  (base-deployment-config-options-builder> (new BaseDeploymentConfigOptions$Builder) id config))
 
 
-(defn build-base-deployment-config-props-builder
-  "The build-base-deployment-config-props-builder function updates a BaseDeploymentConfigProps$Builder instance using the provided configuration.
+(defn base-deployment-config-props-builder>
+  "The base-deployment-config-props-builder> function updates a BaseDeploymentConfigProps$Builder instance using the provided configuration.
   The function takes the BaseDeploymentConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -212,11 +212,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-deployment-config-props-builder (new BaseDeploymentConfigProps$Builder) id config))
+  (base-deployment-config-props-builder> (new BaseDeploymentConfigProps$Builder) id config))
 
 
-(defn build-base-traffic-shifting-config-props-builder
-  "The build-base-traffic-shifting-config-props-builder function updates a BaseTrafficShiftingConfigProps$Builder instance using the provided configuration.
+(defn base-traffic-shifting-config-props-builder>
+  "The base-traffic-shifting-config-props-builder> function updates a BaseTrafficShiftingConfigProps$Builder instance using the provided configuration.
   The function takes the BaseTrafficShiftingConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -243,11 +243,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-traffic-shifting-config-props-builder (new BaseTrafficShiftingConfigProps$Builder) id config))
+  (base-traffic-shifting-config-props-builder> (new BaseTrafficShiftingConfigProps$Builder) id config))
 
 
-(defn build-canary-traffic-routing-config-builder
-  "The build-canary-traffic-routing-config-builder function updates a CanaryTrafficRoutingConfig$Builder instance using the provided configuration.
+(defn canary-traffic-routing-config-builder>
+  "The canary-traffic-routing-config-builder> function updates a CanaryTrafficRoutingConfig$Builder instance using the provided configuration.
   The function takes the CanaryTrafficRoutingConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -274,11 +274,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-canary-traffic-routing-config-builder (new CanaryTrafficRoutingConfig$Builder) id config))
+  (canary-traffic-routing-config-builder> (new CanaryTrafficRoutingConfig$Builder) id config))
 
 
-(defn build-cfn-application-builder
-  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+(defn cfn-application-builder>
+  "The cfn-application-builder> function updates a CfnApplication$Builder instance using the provided configuration.
   The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -308,11 +308,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+  (cfn-application-builder> (CfnApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-props-builder
-  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+(defn cfn-application-props-builder>
+  "The cfn-application-props-builder> function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -342,11 +342,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+  (cfn-application-props-builder> (new CfnApplicationProps$Builder) id config))
 
 
-(defn build-cfn-deployment-config-builder
-  "The build-cfn-deployment-config-builder function updates a CfnDeploymentConfig$Builder instance using the provided configuration.
+(defn cfn-deployment-config-builder>
+  "The cfn-deployment-config-builder> function updates a CfnDeploymentConfig$Builder instance using the provided configuration.
   The function takes the CfnDeploymentConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -382,11 +382,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-deployment-config-builder (CfnDeploymentConfig$Builder/create scope (name id)) id config))
+  (cfn-deployment-config-builder> (CfnDeploymentConfig$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-deployment-config-minimum-healthy-hosts-per-zone-property-builder
-  "The build-cfn-deployment-config-minimum-healthy-hosts-per-zone-property-builder function updates a CfnDeploymentConfig$MinimumHealthyHostsPerZoneProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-config-minimum-healthy-hosts-per-zone-property-builder>
+  "The cfn-deployment-config-minimum-healthy-hosts-per-zone-property-builder> function updates a CfnDeploymentConfig$MinimumHealthyHostsPerZoneProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentConfig$MinimumHealthyHostsPerZoneProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -413,11 +413,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-config-minimum-healthy-hosts-per-zone-property-builder (new CfnDeploymentConfig$MinimumHealthyHostsPerZoneProperty$Builder) id config))
+  (cfn-deployment-config-minimum-healthy-hosts-per-zone-property-builder> (new CfnDeploymentConfig$MinimumHealthyHostsPerZoneProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-config-minimum-healthy-hosts-property-builder
-  "The build-cfn-deployment-config-minimum-healthy-hosts-property-builder function updates a CfnDeploymentConfig$MinimumHealthyHostsProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-config-minimum-healthy-hosts-property-builder>
+  "The cfn-deployment-config-minimum-healthy-hosts-property-builder> function updates a CfnDeploymentConfig$MinimumHealthyHostsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentConfig$MinimumHealthyHostsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -444,11 +444,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-config-minimum-healthy-hosts-property-builder (new CfnDeploymentConfig$MinimumHealthyHostsProperty$Builder) id config))
+  (cfn-deployment-config-minimum-healthy-hosts-property-builder> (new CfnDeploymentConfig$MinimumHealthyHostsProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-config-props-builder
-  "The build-cfn-deployment-config-props-builder function updates a CfnDeploymentConfigProps$Builder instance using the provided configuration.
+(defn cfn-deployment-config-props-builder>
+  "The cfn-deployment-config-props-builder> function updates a CfnDeploymentConfigProps$Builder instance using the provided configuration.
   The function takes the CfnDeploymentConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -484,11 +484,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-config-props-builder (new CfnDeploymentConfigProps$Builder) id config))
+  (cfn-deployment-config-props-builder> (new CfnDeploymentConfigProps$Builder) id config))
 
 
-(defn build-cfn-deployment-config-time-based-canary-property-builder
-  "The build-cfn-deployment-config-time-based-canary-property-builder function updates a CfnDeploymentConfig$TimeBasedCanaryProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-config-time-based-canary-property-builder>
+  "The cfn-deployment-config-time-based-canary-property-builder> function updates a CfnDeploymentConfig$TimeBasedCanaryProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentConfig$TimeBasedCanaryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -515,11 +515,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-config-time-based-canary-property-builder (new CfnDeploymentConfig$TimeBasedCanaryProperty$Builder) id config))
+  (cfn-deployment-config-time-based-canary-property-builder> (new CfnDeploymentConfig$TimeBasedCanaryProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-config-time-based-linear-property-builder
-  "The build-cfn-deployment-config-time-based-linear-property-builder function updates a CfnDeploymentConfig$TimeBasedLinearProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-config-time-based-linear-property-builder>
+  "The cfn-deployment-config-time-based-linear-property-builder> function updates a CfnDeploymentConfig$TimeBasedLinearProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentConfig$TimeBasedLinearProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -546,11 +546,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-config-time-based-linear-property-builder (new CfnDeploymentConfig$TimeBasedLinearProperty$Builder) id config))
+  (cfn-deployment-config-time-based-linear-property-builder> (new CfnDeploymentConfig$TimeBasedLinearProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-config-traffic-routing-config-property-builder
-  "The build-cfn-deployment-config-traffic-routing-config-property-builder function updates a CfnDeploymentConfig$TrafficRoutingConfigProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-config-traffic-routing-config-property-builder>
+  "The cfn-deployment-config-traffic-routing-config-property-builder> function updates a CfnDeploymentConfig$TrafficRoutingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentConfig$TrafficRoutingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -580,11 +580,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-config-traffic-routing-config-property-builder (new CfnDeploymentConfig$TrafficRoutingConfigProperty$Builder) id config))
+  (cfn-deployment-config-traffic-routing-config-property-builder> (new CfnDeploymentConfig$TrafficRoutingConfigProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-config-zonal-config-property-builder
-  "The build-cfn-deployment-config-zonal-config-property-builder function updates a CfnDeploymentConfig$ZonalConfigProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-config-zonal-config-property-builder>
+  "The cfn-deployment-config-zonal-config-property-builder> function updates a CfnDeploymentConfig$ZonalConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentConfig$ZonalConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -614,11 +614,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-config-zonal-config-property-builder (new CfnDeploymentConfig$ZonalConfigProperty$Builder) id config))
+  (cfn-deployment-config-zonal-config-property-builder> (new CfnDeploymentConfig$ZonalConfigProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-alarm-configuration-property-builder
-  "The build-cfn-deployment-group-alarm-configuration-property-builder function updates a CfnDeploymentGroup$AlarmConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-alarm-configuration-property-builder>
+  "The cfn-deployment-group-alarm-configuration-property-builder> function updates a CfnDeploymentGroup$AlarmConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$AlarmConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -648,11 +648,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-alarm-configuration-property-builder (new CfnDeploymentGroup$AlarmConfigurationProperty$Builder) id config))
+  (cfn-deployment-group-alarm-configuration-property-builder> (new CfnDeploymentGroup$AlarmConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-alarm-property-builder
-  "The build-cfn-deployment-group-alarm-property-builder function updates a CfnDeploymentGroup$AlarmProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-alarm-property-builder>
+  "The cfn-deployment-group-alarm-property-builder> function updates a CfnDeploymentGroup$AlarmProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$AlarmProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -676,11 +676,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-alarm-property-builder (new CfnDeploymentGroup$AlarmProperty$Builder) id config))
+  (cfn-deployment-group-alarm-property-builder> (new CfnDeploymentGroup$AlarmProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-auto-rollback-configuration-property-builder
-  "The build-cfn-deployment-group-auto-rollback-configuration-property-builder function updates a CfnDeploymentGroup$AutoRollbackConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-auto-rollback-configuration-property-builder>
+  "The cfn-deployment-group-auto-rollback-configuration-property-builder> function updates a CfnDeploymentGroup$AutoRollbackConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$AutoRollbackConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -707,11 +707,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-auto-rollback-configuration-property-builder (new CfnDeploymentGroup$AutoRollbackConfigurationProperty$Builder) id config))
+  (cfn-deployment-group-auto-rollback-configuration-property-builder> (new CfnDeploymentGroup$AutoRollbackConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-blue-green-deployment-configuration-property-builder
-  "The build-cfn-deployment-group-blue-green-deployment-configuration-property-builder function updates a CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-blue-green-deployment-configuration-property-builder>
+  "The cfn-deployment-group-blue-green-deployment-configuration-property-builder> function updates a CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -741,11 +741,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-blue-green-deployment-configuration-property-builder (new CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty$Builder) id config))
+  (cfn-deployment-group-blue-green-deployment-configuration-property-builder> (new CfnDeploymentGroup$BlueGreenDeploymentConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-blue-instance-termination-option-property-builder
-  "The build-cfn-deployment-group-blue-instance-termination-option-property-builder function updates a CfnDeploymentGroup$BlueInstanceTerminationOptionProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-blue-instance-termination-option-property-builder>
+  "The cfn-deployment-group-blue-instance-termination-option-property-builder> function updates a CfnDeploymentGroup$BlueInstanceTerminationOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$BlueInstanceTerminationOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -772,11 +772,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-blue-instance-termination-option-property-builder (new CfnDeploymentGroup$BlueInstanceTerminationOptionProperty$Builder) id config))
+  (cfn-deployment-group-blue-instance-termination-option-property-builder> (new CfnDeploymentGroup$BlueInstanceTerminationOptionProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-builder
-  "The build-cfn-deployment-group-builder function updates a CfnDeploymentGroup$Builder instance using the provided configuration.
+(defn cfn-deployment-group-builder>
+  "The cfn-deployment-group-builder> function updates a CfnDeploymentGroup$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -857,11 +857,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-deployment-group-builder (CfnDeploymentGroup$Builder/create scope (name id)) id config))
+  (cfn-deployment-group-builder> (CfnDeploymentGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-deployment-group-deployment-property-builder
-  "The build-cfn-deployment-group-deployment-property-builder function updates a CfnDeploymentGroup$DeploymentProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-deployment-property-builder>
+  "The cfn-deployment-group-deployment-property-builder> function updates a CfnDeploymentGroup$DeploymentProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$DeploymentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -891,11 +891,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-deployment-property-builder (new CfnDeploymentGroup$DeploymentProperty$Builder) id config))
+  (cfn-deployment-group-deployment-property-builder> (new CfnDeploymentGroup$DeploymentProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-deployment-ready-option-property-builder
-  "The build-cfn-deployment-group-deployment-ready-option-property-builder function updates a CfnDeploymentGroup$DeploymentReadyOptionProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-deployment-ready-option-property-builder>
+  "The cfn-deployment-group-deployment-ready-option-property-builder> function updates a CfnDeploymentGroup$DeploymentReadyOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$DeploymentReadyOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -922,11 +922,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-deployment-ready-option-property-builder (new CfnDeploymentGroup$DeploymentReadyOptionProperty$Builder) id config))
+  (cfn-deployment-group-deployment-ready-option-property-builder> (new CfnDeploymentGroup$DeploymentReadyOptionProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-deployment-style-property-builder
-  "The build-cfn-deployment-group-deployment-style-property-builder function updates a CfnDeploymentGroup$DeploymentStyleProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-deployment-style-property-builder>
+  "The cfn-deployment-group-deployment-style-property-builder> function updates a CfnDeploymentGroup$DeploymentStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$DeploymentStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -953,11 +953,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-deployment-style-property-builder (new CfnDeploymentGroup$DeploymentStyleProperty$Builder) id config))
+  (cfn-deployment-group-deployment-style-property-builder> (new CfnDeploymentGroup$DeploymentStyleProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-ec2-tag-filter-property-builder
-  "The build-cfn-deployment-group-ec2-tag-filter-property-builder function updates a CfnDeploymentGroup$EC2TagFilterProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-ec2-tag-filter-property-builder>
+  "The cfn-deployment-group-ec2-tag-filter-property-builder> function updates a CfnDeploymentGroup$EC2TagFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$EC2TagFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -987,11 +987,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-ec2-tag-filter-property-builder (new CfnDeploymentGroup$EC2TagFilterProperty$Builder) id config))
+  (cfn-deployment-group-ec2-tag-filter-property-builder> (new CfnDeploymentGroup$EC2TagFilterProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-ec2-tag-set-list-object-property-builder
-  "The build-cfn-deployment-group-ec2-tag-set-list-object-property-builder function updates a CfnDeploymentGroup$EC2TagSetListObjectProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-ec2-tag-set-list-object-property-builder>
+  "The cfn-deployment-group-ec2-tag-set-list-object-property-builder> function updates a CfnDeploymentGroup$EC2TagSetListObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$EC2TagSetListObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1015,11 +1015,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-ec2-tag-set-list-object-property-builder (new CfnDeploymentGroup$EC2TagSetListObjectProperty$Builder) id config))
+  (cfn-deployment-group-ec2-tag-set-list-object-property-builder> (new CfnDeploymentGroup$EC2TagSetListObjectProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-ec2-tag-set-property-builder
-  "The build-cfn-deployment-group-ec2-tag-set-property-builder function updates a CfnDeploymentGroup$EC2TagSetProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-ec2-tag-set-property-builder>
+  "The cfn-deployment-group-ec2-tag-set-property-builder> function updates a CfnDeploymentGroup$EC2TagSetProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$EC2TagSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1043,11 +1043,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-ec2-tag-set-property-builder (new CfnDeploymentGroup$EC2TagSetProperty$Builder) id config))
+  (cfn-deployment-group-ec2-tag-set-property-builder> (new CfnDeploymentGroup$EC2TagSetProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-ecs-service-property-builder
-  "The build-cfn-deployment-group-ecs-service-property-builder function updates a CfnDeploymentGroup$ECSServiceProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-ecs-service-property-builder>
+  "The cfn-deployment-group-ecs-service-property-builder> function updates a CfnDeploymentGroup$ECSServiceProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$ECSServiceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1074,11 +1074,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-ecs-service-property-builder (new CfnDeploymentGroup$ECSServiceProperty$Builder) id config))
+  (cfn-deployment-group-ecs-service-property-builder> (new CfnDeploymentGroup$ECSServiceProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-elb-info-property-builder
-  "The build-cfn-deployment-group-elb-info-property-builder function updates a CfnDeploymentGroup$ELBInfoProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-elb-info-property-builder>
+  "The cfn-deployment-group-elb-info-property-builder> function updates a CfnDeploymentGroup$ELBInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$ELBInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1102,11 +1102,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-elb-info-property-builder (new CfnDeploymentGroup$ELBInfoProperty$Builder) id config))
+  (cfn-deployment-group-elb-info-property-builder> (new CfnDeploymentGroup$ELBInfoProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-git-hub-location-property-builder
-  "The build-cfn-deployment-group-git-hub-location-property-builder function updates a CfnDeploymentGroup$GitHubLocationProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-git-hub-location-property-builder>
+  "The cfn-deployment-group-git-hub-location-property-builder> function updates a CfnDeploymentGroup$GitHubLocationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$GitHubLocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1133,11 +1133,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-git-hub-location-property-builder (new CfnDeploymentGroup$GitHubLocationProperty$Builder) id config))
+  (cfn-deployment-group-git-hub-location-property-builder> (new CfnDeploymentGroup$GitHubLocationProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-green-fleet-provisioning-option-property-builder
-  "The build-cfn-deployment-group-green-fleet-provisioning-option-property-builder function updates a CfnDeploymentGroup$GreenFleetProvisioningOptionProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-green-fleet-provisioning-option-property-builder>
+  "The cfn-deployment-group-green-fleet-provisioning-option-property-builder> function updates a CfnDeploymentGroup$GreenFleetProvisioningOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$GreenFleetProvisioningOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1161,11 +1161,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-green-fleet-provisioning-option-property-builder (new CfnDeploymentGroup$GreenFleetProvisioningOptionProperty$Builder) id config))
+  (cfn-deployment-group-green-fleet-provisioning-option-property-builder> (new CfnDeploymentGroup$GreenFleetProvisioningOptionProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-load-balancer-info-property-builder
-  "The build-cfn-deployment-group-load-balancer-info-property-builder function updates a CfnDeploymentGroup$LoadBalancerInfoProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-load-balancer-info-property-builder>
+  "The cfn-deployment-group-load-balancer-info-property-builder> function updates a CfnDeploymentGroup$LoadBalancerInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$LoadBalancerInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1195,11 +1195,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-load-balancer-info-property-builder (new CfnDeploymentGroup$LoadBalancerInfoProperty$Builder) id config))
+  (cfn-deployment-group-load-balancer-info-property-builder> (new CfnDeploymentGroup$LoadBalancerInfoProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-on-premises-tag-set-list-object-property-builder
-  "The build-cfn-deployment-group-on-premises-tag-set-list-object-property-builder function updates a CfnDeploymentGroup$OnPremisesTagSetListObjectProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-on-premises-tag-set-list-object-property-builder>
+  "The cfn-deployment-group-on-premises-tag-set-list-object-property-builder> function updates a CfnDeploymentGroup$OnPremisesTagSetListObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$OnPremisesTagSetListObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1223,11 +1223,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-on-premises-tag-set-list-object-property-builder (new CfnDeploymentGroup$OnPremisesTagSetListObjectProperty$Builder) id config))
+  (cfn-deployment-group-on-premises-tag-set-list-object-property-builder> (new CfnDeploymentGroup$OnPremisesTagSetListObjectProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-on-premises-tag-set-property-builder
-  "The build-cfn-deployment-group-on-premises-tag-set-property-builder function updates a CfnDeploymentGroup$OnPremisesTagSetProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-on-premises-tag-set-property-builder>
+  "The cfn-deployment-group-on-premises-tag-set-property-builder> function updates a CfnDeploymentGroup$OnPremisesTagSetProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$OnPremisesTagSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1251,11 +1251,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-on-premises-tag-set-property-builder (new CfnDeploymentGroup$OnPremisesTagSetProperty$Builder) id config))
+  (cfn-deployment-group-on-premises-tag-set-property-builder> (new CfnDeploymentGroup$OnPremisesTagSetProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-props-builder
-  "The build-cfn-deployment-group-props-builder function updates a CfnDeploymentGroupProps$Builder instance using the provided configuration.
+(defn cfn-deployment-group-props-builder>
+  "The cfn-deployment-group-props-builder> function updates a CfnDeploymentGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1336,11 +1336,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-props-builder (new CfnDeploymentGroupProps$Builder) id config))
+  (cfn-deployment-group-props-builder> (new CfnDeploymentGroupProps$Builder) id config))
 
 
-(defn build-cfn-deployment-group-revision-location-property-builder
-  "The build-cfn-deployment-group-revision-location-property-builder function updates a CfnDeploymentGroup$RevisionLocationProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-revision-location-property-builder>
+  "The cfn-deployment-group-revision-location-property-builder> function updates a CfnDeploymentGroup$RevisionLocationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$RevisionLocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1370,11 +1370,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-revision-location-property-builder (new CfnDeploymentGroup$RevisionLocationProperty$Builder) id config))
+  (cfn-deployment-group-revision-location-property-builder> (new CfnDeploymentGroup$RevisionLocationProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-s3-location-property-builder
-  "The build-cfn-deployment-group-s3-location-property-builder function updates a CfnDeploymentGroup$S3LocationProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-s3-location-property-builder>
+  "The cfn-deployment-group-s3-location-property-builder> function updates a CfnDeploymentGroup$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1410,11 +1410,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-s3-location-property-builder (new CfnDeploymentGroup$S3LocationProperty$Builder) id config))
+  (cfn-deployment-group-s3-location-property-builder> (new CfnDeploymentGroup$S3LocationProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-tag-filter-property-builder
-  "The build-cfn-deployment-group-tag-filter-property-builder function updates a CfnDeploymentGroup$TagFilterProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-tag-filter-property-builder>
+  "The cfn-deployment-group-tag-filter-property-builder> function updates a CfnDeploymentGroup$TagFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$TagFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1444,11 +1444,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-tag-filter-property-builder (new CfnDeploymentGroup$TagFilterProperty$Builder) id config))
+  (cfn-deployment-group-tag-filter-property-builder> (new CfnDeploymentGroup$TagFilterProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-target-group-info-property-builder
-  "The build-cfn-deployment-group-target-group-info-property-builder function updates a CfnDeploymentGroup$TargetGroupInfoProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-target-group-info-property-builder>
+  "The cfn-deployment-group-target-group-info-property-builder> function updates a CfnDeploymentGroup$TargetGroupInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$TargetGroupInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1472,11 +1472,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-target-group-info-property-builder (new CfnDeploymentGroup$TargetGroupInfoProperty$Builder) id config))
+  (cfn-deployment-group-target-group-info-property-builder> (new CfnDeploymentGroup$TargetGroupInfoProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-target-group-pair-info-property-builder
-  "The build-cfn-deployment-group-target-group-pair-info-property-builder function updates a CfnDeploymentGroup$TargetGroupPairInfoProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-target-group-pair-info-property-builder>
+  "The cfn-deployment-group-target-group-pair-info-property-builder> function updates a CfnDeploymentGroup$TargetGroupPairInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$TargetGroupPairInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1506,11 +1506,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-target-group-pair-info-property-builder (new CfnDeploymentGroup$TargetGroupPairInfoProperty$Builder) id config))
+  (cfn-deployment-group-target-group-pair-info-property-builder> (new CfnDeploymentGroup$TargetGroupPairInfoProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-traffic-route-property-builder
-  "The build-cfn-deployment-group-traffic-route-property-builder function updates a CfnDeploymentGroup$TrafficRouteProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-traffic-route-property-builder>
+  "The cfn-deployment-group-traffic-route-property-builder> function updates a CfnDeploymentGroup$TrafficRouteProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$TrafficRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1534,11 +1534,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-traffic-route-property-builder (new CfnDeploymentGroup$TrafficRouteProperty$Builder) id config))
+  (cfn-deployment-group-traffic-route-property-builder> (new CfnDeploymentGroup$TrafficRouteProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-group-trigger-config-property-builder
-  "The build-cfn-deployment-group-trigger-config-property-builder function updates a CfnDeploymentGroup$TriggerConfigProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-group-trigger-config-property-builder>
+  "The cfn-deployment-group-trigger-config-property-builder> function updates a CfnDeploymentGroup$TriggerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDeploymentGroup$TriggerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1568,11 +1568,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-group-trigger-config-property-builder (new CfnDeploymentGroup$TriggerConfigProperty$Builder) id config))
+  (cfn-deployment-group-trigger-config-property-builder> (new CfnDeploymentGroup$TriggerConfigProperty$Builder) id config))
 
 
-(defn build-ecs-application-builder
-  "The build-ecs-application-builder function updates a EcsApplication$Builder instance using the provided configuration.
+(defn ecs-application-builder>
+  "The ecs-application-builder> function updates a EcsApplication$Builder instance using the provided configuration.
   The function takes the EcsApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1596,11 +1596,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-ecs-application-builder (EcsApplication$Builder/create scope (name id)) id config))
+  (ecs-application-builder> (EcsApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-ecs-application-props-builder
-  "The build-ecs-application-props-builder function updates a EcsApplicationProps$Builder instance using the provided configuration.
+(defn ecs-application-props-builder>
+  "The ecs-application-props-builder> function updates a EcsApplicationProps$Builder instance using the provided configuration.
   The function takes the EcsApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1624,11 +1624,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-application-props-builder (new EcsApplicationProps$Builder) id config))
+  (ecs-application-props-builder> (new EcsApplicationProps$Builder) id config))
 
 
-(defn build-ecs-blue-green-deployment-config-builder
-  "The build-ecs-blue-green-deployment-config-builder function updates a EcsBlueGreenDeploymentConfig$Builder instance using the provided configuration.
+(defn ecs-blue-green-deployment-config-builder>
+  "The ecs-blue-green-deployment-config-builder> function updates a EcsBlueGreenDeploymentConfig$Builder instance using the provided configuration.
   The function takes the EcsBlueGreenDeploymentConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1667,11 +1667,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-blue-green-deployment-config-builder (new EcsBlueGreenDeploymentConfig$Builder) id config))
+  (ecs-blue-green-deployment-config-builder> (new EcsBlueGreenDeploymentConfig$Builder) id config))
 
 
-(defn build-ecs-deployment-config-builder
-  "The build-ecs-deployment-config-builder function updates a EcsDeploymentConfig$Builder instance using the provided configuration.
+(defn ecs-deployment-config-builder>
+  "The ecs-deployment-config-builder> function updates a EcsDeploymentConfig$Builder instance using the provided configuration.
   The function takes the EcsDeploymentConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1698,11 +1698,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-ecs-deployment-config-builder (EcsDeploymentConfig$Builder/create scope (name id)) id config))
+  (ecs-deployment-config-builder> (EcsDeploymentConfig$Builder/create scope (name id)) id config))
 
 
-(defn build-ecs-deployment-config-props-builder
-  "The build-ecs-deployment-config-props-builder function updates a EcsDeploymentConfigProps$Builder instance using the provided configuration.
+(defn ecs-deployment-config-props-builder>
+  "The ecs-deployment-config-props-builder> function updates a EcsDeploymentConfigProps$Builder instance using the provided configuration.
   The function takes the EcsDeploymentConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1729,11 +1729,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-deployment-config-props-builder (new EcsDeploymentConfigProps$Builder) id config))
+  (ecs-deployment-config-props-builder> (new EcsDeploymentConfigProps$Builder) id config))
 
 
-(defn build-ecs-deployment-group-attributes-builder
-  "The build-ecs-deployment-group-attributes-builder function updates a EcsDeploymentGroupAttributes$Builder instance using the provided configuration.
+(defn ecs-deployment-group-attributes-builder>
+  "The ecs-deployment-group-attributes-builder> function updates a EcsDeploymentGroupAttributes$Builder instance using the provided configuration.
   The function takes the EcsDeploymentGroupAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1763,11 +1763,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-deployment-group-attributes-builder (new EcsDeploymentGroupAttributes$Builder) id config))
+  (ecs-deployment-group-attributes-builder> (new EcsDeploymentGroupAttributes$Builder) id config))
 
 
-(defn build-ecs-deployment-group-builder
-  "The build-ecs-deployment-group-builder function updates a EcsDeploymentGroup$Builder instance using the provided configuration.
+(defn ecs-deployment-group-builder>
+  "The ecs-deployment-group-builder> function updates a EcsDeploymentGroup$Builder instance using the provided configuration.
   The function takes the EcsDeploymentGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1818,11 +1818,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-ecs-deployment-group-builder (EcsDeploymentGroup$Builder/create scope (name id)) id config))
+  (ecs-deployment-group-builder> (EcsDeploymentGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-ecs-deployment-group-props-builder
-  "The build-ecs-deployment-group-props-builder function updates a EcsDeploymentGroupProps$Builder instance using the provided configuration.
+(defn ecs-deployment-group-props-builder>
+  "The ecs-deployment-group-props-builder> function updates a EcsDeploymentGroupProps$Builder instance using the provided configuration.
   The function takes the EcsDeploymentGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1873,11 +1873,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ecs-deployment-group-props-builder (new EcsDeploymentGroupProps$Builder) id config))
+  (ecs-deployment-group-props-builder> (new EcsDeploymentGroupProps$Builder) id config))
 
 
-(defn build-lambda-application-builder
-  "The build-lambda-application-builder function updates a LambdaApplication$Builder instance using the provided configuration.
+(defn lambda-application-builder>
+  "The lambda-application-builder> function updates a LambdaApplication$Builder instance using the provided configuration.
   The function takes the LambdaApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1901,11 +1901,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-lambda-application-builder (LambdaApplication$Builder/create scope (name id)) id config))
+  (lambda-application-builder> (LambdaApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-lambda-application-props-builder
-  "The build-lambda-application-props-builder function updates a LambdaApplicationProps$Builder instance using the provided configuration.
+(defn lambda-application-props-builder>
+  "The lambda-application-props-builder> function updates a LambdaApplicationProps$Builder instance using the provided configuration.
   The function takes the LambdaApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1929,11 +1929,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-application-props-builder (new LambdaApplicationProps$Builder) id config))
+  (lambda-application-props-builder> (new LambdaApplicationProps$Builder) id config))
 
 
-(defn build-lambda-deployment-config-builder
-  "The build-lambda-deployment-config-builder function updates a LambdaDeploymentConfig$Builder instance using the provided configuration.
+(defn lambda-deployment-config-builder>
+  "The lambda-deployment-config-builder> function updates a LambdaDeploymentConfig$Builder instance using the provided configuration.
   The function takes the LambdaDeploymentConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1960,11 +1960,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-lambda-deployment-config-builder (LambdaDeploymentConfig$Builder/create scope (name id)) id config))
+  (lambda-deployment-config-builder> (LambdaDeploymentConfig$Builder/create scope (name id)) id config))
 
 
-(defn build-lambda-deployment-config-import-props-builder
-  "The build-lambda-deployment-config-import-props-builder function updates a LambdaDeploymentConfigImportProps$Builder instance using the provided configuration.
+(defn lambda-deployment-config-import-props-builder>
+  "The lambda-deployment-config-import-props-builder> function updates a LambdaDeploymentConfigImportProps$Builder instance using the provided configuration.
   The function takes the LambdaDeploymentConfigImportProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1988,11 +1988,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-deployment-config-import-props-builder (new LambdaDeploymentConfigImportProps$Builder) id config))
+  (lambda-deployment-config-import-props-builder> (new LambdaDeploymentConfigImportProps$Builder) id config))
 
 
-(defn build-lambda-deployment-config-props-builder
-  "The build-lambda-deployment-config-props-builder function updates a LambdaDeploymentConfigProps$Builder instance using the provided configuration.
+(defn lambda-deployment-config-props-builder>
+  "The lambda-deployment-config-props-builder> function updates a LambdaDeploymentConfigProps$Builder instance using the provided configuration.
   The function takes the LambdaDeploymentConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2019,11 +2019,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-deployment-config-props-builder (new LambdaDeploymentConfigProps$Builder) id config))
+  (lambda-deployment-config-props-builder> (new LambdaDeploymentConfigProps$Builder) id config))
 
 
-(defn build-lambda-deployment-group-attributes-builder
-  "The build-lambda-deployment-group-attributes-builder function updates a LambdaDeploymentGroupAttributes$Builder instance using the provided configuration.
+(defn lambda-deployment-group-attributes-builder>
+  "The lambda-deployment-group-attributes-builder> function updates a LambdaDeploymentGroupAttributes$Builder instance using the provided configuration.
   The function takes the LambdaDeploymentGroupAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2053,11 +2053,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-deployment-group-attributes-builder (new LambdaDeploymentGroupAttributes$Builder) id config))
+  (lambda-deployment-group-attributes-builder> (new LambdaDeploymentGroupAttributes$Builder) id config))
 
 
-(defn build-lambda-deployment-group-builder
-  "The build-lambda-deployment-group-builder function updates a LambdaDeploymentGroup$Builder instance using the provided configuration.
+(defn lambda-deployment-group-builder>
+  "The lambda-deployment-group-builder> function updates a LambdaDeploymentGroup$Builder instance using the provided configuration.
   The function takes the LambdaDeploymentGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2111,11 +2111,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-lambda-deployment-group-builder (LambdaDeploymentGroup$Builder/create scope (name id)) id config))
+  (lambda-deployment-group-builder> (LambdaDeploymentGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-lambda-deployment-group-props-builder
-  "The build-lambda-deployment-group-props-builder function updates a LambdaDeploymentGroupProps$Builder instance using the provided configuration.
+(defn lambda-deployment-group-props-builder>
+  "The lambda-deployment-group-props-builder> function updates a LambdaDeploymentGroupProps$Builder instance using the provided configuration.
   The function takes the LambdaDeploymentGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2169,11 +2169,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-deployment-group-props-builder (new LambdaDeploymentGroupProps$Builder) id config))
+  (lambda-deployment-group-props-builder> (new LambdaDeploymentGroupProps$Builder) id config))
 
 
-(defn build-linear-traffic-routing-config-builder
-  "The build-linear-traffic-routing-config-builder function updates a LinearTrafficRoutingConfig$Builder instance using the provided configuration.
+(defn linear-traffic-routing-config-builder>
+  "The linear-traffic-routing-config-builder> function updates a LinearTrafficRoutingConfig$Builder instance using the provided configuration.
   The function takes the LinearTrafficRoutingConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2200,11 +2200,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-linear-traffic-routing-config-builder (new LinearTrafficRoutingConfig$Builder) id config))
+  (linear-traffic-routing-config-builder> (new LinearTrafficRoutingConfig$Builder) id config))
 
 
-(defn build-server-application-builder
-  "The build-server-application-builder function updates a ServerApplication$Builder instance using the provided configuration.
+(defn server-application-builder>
+  "The server-application-builder> function updates a ServerApplication$Builder instance using the provided configuration.
   The function takes the ServerApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2228,11 +2228,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-server-application-builder (ServerApplication$Builder/create scope (name id)) id config))
+  (server-application-builder> (ServerApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-server-application-props-builder
-  "The build-server-application-props-builder function updates a ServerApplicationProps$Builder instance using the provided configuration.
+(defn server-application-props-builder>
+  "The server-application-props-builder> function updates a ServerApplicationProps$Builder instance using the provided configuration.
   The function takes the ServerApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2256,11 +2256,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-server-application-props-builder (new ServerApplicationProps$Builder) id config))
+  (server-application-props-builder> (new ServerApplicationProps$Builder) id config))
 
 
-(defn build-server-deployment-config-builder
-  "The build-server-deployment-config-builder function updates a ServerDeploymentConfig$Builder instance using the provided configuration.
+(defn server-deployment-config-builder>
+  "The server-deployment-config-builder> function updates a ServerDeploymentConfig$Builder instance using the provided configuration.
   The function takes the ServerDeploymentConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2287,11 +2287,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-server-deployment-config-builder (ServerDeploymentConfig$Builder/create scope (name id)) id config))
+  (server-deployment-config-builder> (ServerDeploymentConfig$Builder/create scope (name id)) id config))
 
 
-(defn build-server-deployment-config-props-builder
-  "The build-server-deployment-config-props-builder function updates a ServerDeploymentConfigProps$Builder instance using the provided configuration.
+(defn server-deployment-config-props-builder>
+  "The server-deployment-config-props-builder> function updates a ServerDeploymentConfigProps$Builder instance using the provided configuration.
   The function takes the ServerDeploymentConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2318,11 +2318,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-server-deployment-config-props-builder (new ServerDeploymentConfigProps$Builder) id config))
+  (server-deployment-config-props-builder> (new ServerDeploymentConfigProps$Builder) id config))
 
 
-(defn build-server-deployment-group-attributes-builder
-  "The build-server-deployment-group-attributes-builder function updates a ServerDeploymentGroupAttributes$Builder instance using the provided configuration.
+(defn server-deployment-group-attributes-builder>
+  "The server-deployment-group-attributes-builder> function updates a ServerDeploymentGroupAttributes$Builder instance using the provided configuration.
   The function takes the ServerDeploymentGroupAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2352,11 +2352,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-server-deployment-group-attributes-builder (new ServerDeploymentGroupAttributes$Builder) id config))
+  (server-deployment-group-attributes-builder> (new ServerDeploymentGroupAttributes$Builder) id config))
 
 
-(defn build-server-deployment-group-builder
-  "The build-server-deployment-group-builder function updates a ServerDeploymentGroup$Builder instance using the provided configuration.
+(defn server-deployment-group-builder>
+  "The server-deployment-group-builder> function updates a ServerDeploymentGroup$Builder instance using the provided configuration.
   The function takes the ServerDeploymentGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2419,11 +2419,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-server-deployment-group-builder (ServerDeploymentGroup$Builder/create scope (name id)) id config))
+  (server-deployment-group-builder> (ServerDeploymentGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-server-deployment-group-props-builder
-  "The build-server-deployment-group-props-builder function updates a ServerDeploymentGroupProps$Builder instance using the provided configuration.
+(defn server-deployment-group-props-builder>
+  "The server-deployment-group-props-builder> function updates a ServerDeploymentGroupProps$Builder instance using the provided configuration.
   The function takes the ServerDeploymentGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2486,11 +2486,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-server-deployment-group-props-builder (new ServerDeploymentGroupProps$Builder) id config))
+  (server-deployment-group-props-builder> (new ServerDeploymentGroupProps$Builder) id config))
 
 
-(defn build-time-based-canary-traffic-routing-builder
-  "The build-time-based-canary-traffic-routing-builder function updates a TimeBasedCanaryTrafficRouting$Builder instance using the provided configuration.
+(defn time-based-canary-traffic-routing-builder>
+  "The time-based-canary-traffic-routing-builder> function updates a TimeBasedCanaryTrafficRouting$Builder instance using the provided configuration.
   The function takes the TimeBasedCanaryTrafficRouting$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2517,11 +2517,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-time-based-canary-traffic-routing-builder (TimeBasedCanaryTrafficRouting$Builder/create) id config))
+  (time-based-canary-traffic-routing-builder> (TimeBasedCanaryTrafficRouting$Builder/create) id config))
 
 
-(defn build-time-based-canary-traffic-routing-props-builder
-  "The build-time-based-canary-traffic-routing-props-builder function updates a TimeBasedCanaryTrafficRoutingProps$Builder instance using the provided configuration.
+(defn time-based-canary-traffic-routing-props-builder>
+  "The time-based-canary-traffic-routing-props-builder> function updates a TimeBasedCanaryTrafficRoutingProps$Builder instance using the provided configuration.
   The function takes the TimeBasedCanaryTrafficRoutingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2548,11 +2548,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-time-based-canary-traffic-routing-props-builder (new TimeBasedCanaryTrafficRoutingProps$Builder) id config))
+  (time-based-canary-traffic-routing-props-builder> (new TimeBasedCanaryTrafficRoutingProps$Builder) id config))
 
 
-(defn build-time-based-linear-traffic-routing-builder
-  "The build-time-based-linear-traffic-routing-builder function updates a TimeBasedLinearTrafficRouting$Builder instance using the provided configuration.
+(defn time-based-linear-traffic-routing-builder>
+  "The time-based-linear-traffic-routing-builder> function updates a TimeBasedLinearTrafficRouting$Builder instance using the provided configuration.
   The function takes the TimeBasedLinearTrafficRouting$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2579,11 +2579,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-time-based-linear-traffic-routing-builder (TimeBasedLinearTrafficRouting$Builder/create) id config))
+  (time-based-linear-traffic-routing-builder> (TimeBasedLinearTrafficRouting$Builder/create) id config))
 
 
-(defn build-time-based-linear-traffic-routing-props-builder
-  "The build-time-based-linear-traffic-routing-props-builder function updates a TimeBasedLinearTrafficRoutingProps$Builder instance using the provided configuration.
+(defn time-based-linear-traffic-routing-props-builder>
+  "The time-based-linear-traffic-routing-props-builder> function updates a TimeBasedLinearTrafficRoutingProps$Builder instance using the provided configuration.
   The function takes the TimeBasedLinearTrafficRoutingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2610,11 +2610,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-time-based-linear-traffic-routing-props-builder (new TimeBasedLinearTrafficRoutingProps$Builder) id config))
+  (time-based-linear-traffic-routing-props-builder> (new TimeBasedLinearTrafficRoutingProps$Builder) id config))
 
 
-(defn build-traffic-routing-config-builder
-  "The build-traffic-routing-config-builder function updates a TrafficRoutingConfig$Builder instance using the provided configuration.
+(defn traffic-routing-config-builder>
+  "The traffic-routing-config-builder> function updates a TrafficRoutingConfig$Builder instance using the provided configuration.
   The function takes the TrafficRoutingConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2644,4 +2644,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-traffic-routing-config-builder (new TrafficRoutingConfig$Builder) id config))
+  (traffic-routing-config-builder> (new TrafficRoutingConfig$Builder) id config))

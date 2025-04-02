@@ -80,8 +80,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :sign-verify data) KeyUsage/SIGN_VERIFY)))
 
 
-(defn build-alias-attributes-builder
-  "The build-alias-attributes-builder function updates a AliasAttributes$Builder instance using the provided configuration.
+(defn alias-attributes-builder>
+  "The alias-attributes-builder> function updates a AliasAttributes$Builder instance using the provided configuration.
   The function takes the AliasAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -108,11 +108,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-alias-attributes-builder (new AliasAttributes$Builder) id config))
+  (alias-attributes-builder> (new AliasAttributes$Builder) id config))
 
 
-(defn build-alias-builder
-  "The build-alias-builder function updates a Alias$Builder instance using the provided configuration.
+(defn alias-builder>
+  "The alias-builder> function updates a Alias$Builder instance using the provided configuration.
   The function takes the Alias$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -142,11 +142,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-alias-builder (Alias$Builder/create scope (name id)) id config))
+  (alias-builder> (Alias$Builder/create scope (name id)) id config))
 
 
-(defn build-alias-props-builder
-  "The build-alias-props-builder function updates a AliasProps$Builder instance using the provided configuration.
+(defn alias-props-builder>
+  "The alias-props-builder> function updates a AliasProps$Builder instance using the provided configuration.
   The function takes the AliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -176,11 +176,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-alias-props-builder (new AliasProps$Builder) id config))
+  (alias-props-builder> (new AliasProps$Builder) id config))
 
 
-(defn build-cfn-alias-builder
-  "The build-cfn-alias-builder function updates a CfnAlias$Builder instance using the provided configuration.
+(defn cfn-alias-builder>
+  "The cfn-alias-builder> function updates a CfnAlias$Builder instance using the provided configuration.
   The function takes the CfnAlias$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -207,11 +207,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-alias-builder (CfnAlias$Builder/create scope (name id)) id config))
+  (cfn-alias-builder> (CfnAlias$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-alias-props-builder
-  "The build-cfn-alias-props-builder function updates a CfnAliasProps$Builder instance using the provided configuration.
+(defn cfn-alias-props-builder>
+  "The cfn-alias-props-builder> function updates a CfnAliasProps$Builder instance using the provided configuration.
   The function takes the CfnAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -238,11 +238,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-alias-props-builder (new CfnAliasProps$Builder) id config))
+  (cfn-alias-props-builder> (new CfnAliasProps$Builder) id config))
 
 
-(defn build-cfn-key-builder
-  "The build-cfn-key-builder function updates a CfnKey$Builder instance using the provided configuration.
+(defn cfn-key-builder>
+  "The cfn-key-builder> function updates a CfnKey$Builder instance using the provided configuration.
   The function takes the CfnKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -299,11 +299,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-key-builder (CfnKey$Builder/create scope (name id)) id config))
+  (cfn-key-builder> (CfnKey$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-key-props-builder
-  "The build-cfn-key-props-builder function updates a CfnKeyProps$Builder instance using the provided configuration.
+(defn cfn-key-props-builder>
+  "The cfn-key-props-builder> function updates a CfnKeyProps$Builder instance using the provided configuration.
   The function takes the CfnKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -360,11 +360,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-props-builder (new CfnKeyProps$Builder) id config))
+  (cfn-key-props-builder> (new CfnKeyProps$Builder) id config))
 
 
-(defn build-cfn-replica-key-builder
-  "The build-cfn-replica-key-builder function updates a CfnReplicaKey$Builder instance using the provided configuration.
+(defn cfn-replica-key-builder>
+  "The cfn-replica-key-builder> function updates a CfnReplicaKey$Builder instance using the provided configuration.
   The function takes the CfnReplicaKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -403,11 +403,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-replica-key-builder (CfnReplicaKey$Builder/create scope (name id)) id config))
+  (cfn-replica-key-builder> (CfnReplicaKey$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-replica-key-props-builder
-  "The build-cfn-replica-key-props-builder function updates a CfnReplicaKeyProps$Builder instance using the provided configuration.
+(defn cfn-replica-key-props-builder>
+  "The cfn-replica-key-props-builder> function updates a CfnReplicaKeyProps$Builder instance using the provided configuration.
   The function takes the CfnReplicaKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -446,11 +446,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-replica-key-props-builder (new CfnReplicaKeyProps$Builder) id config))
+  (cfn-replica-key-props-builder> (new CfnReplicaKeyProps$Builder) id config))
 
 
-(defn build-key-builder
-  "The build-key-builder function updates a Key$Builder instance using the provided configuration.
+(defn key-builder>
+  "The key-builder> function updates a Key$Builder instance using the provided configuration.
   The function takes the Key$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -504,11 +504,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-key-builder (Key$Builder/create scope (name id)) id config))
+  (key-builder> (Key$Builder/create scope (name id)) id config))
 
 
-(defn build-key-lookup-options-builder
-  "The build-key-lookup-options-builder function updates a KeyLookupOptions$Builder instance using the provided configuration.
+(defn key-lookup-options-builder>
+  "The key-lookup-options-builder> function updates a KeyLookupOptions$Builder instance using the provided configuration.
   The function takes the KeyLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -532,11 +532,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-key-lookup-options-builder (new KeyLookupOptions$Builder) id config))
+  (key-lookup-options-builder> (new KeyLookupOptions$Builder) id config))
 
 
-(defn build-key-props-builder
-  "The build-key-props-builder function updates a KeyProps$Builder instance using the provided configuration.
+(defn key-props-builder>
+  "The key-props-builder> function updates a KeyProps$Builder instance using the provided configuration.
   The function takes the KeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -590,4 +590,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-key-props-builder (new KeyProps$Builder) id config))
+  (key-props-builder> (new KeyProps$Builder) id config))

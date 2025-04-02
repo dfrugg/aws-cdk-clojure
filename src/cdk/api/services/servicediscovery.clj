@@ -162,8 +162,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :weighted data) RoutingPolicy/WEIGHTED)))
 
 
-(defn build-alias-target-instance-builder
-  "The build-alias-target-instance-builder function updates a AliasTargetInstance$Builder instance using the provided configuration.
+(defn alias-target-instance-builder>
+  "The alias-target-instance-builder> function updates a AliasTargetInstance$Builder instance using the provided configuration.
   The function takes the AliasTargetInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -196,11 +196,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-alias-target-instance-builder (AliasTargetInstance$Builder/create scope (name id)) id config))
+  (alias-target-instance-builder> (AliasTargetInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-alias-target-instance-props-builder
-  "The build-alias-target-instance-props-builder function updates a AliasTargetInstanceProps$Builder instance using the provided configuration.
+(defn alias-target-instance-props-builder>
+  "The alias-target-instance-props-builder> function updates a AliasTargetInstanceProps$Builder instance using the provided configuration.
   The function takes the AliasTargetInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -233,11 +233,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-alias-target-instance-props-builder (new AliasTargetInstanceProps$Builder) id config))
+  (alias-target-instance-props-builder> (new AliasTargetInstanceProps$Builder) id config))
 
 
-(defn build-base-instance-props-builder
-  "The build-base-instance-props-builder function updates a BaseInstanceProps$Builder instance using the provided configuration.
+(defn base-instance-props-builder>
+  "The base-instance-props-builder> function updates a BaseInstanceProps$Builder instance using the provided configuration.
   The function takes the BaseInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -264,11 +264,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-instance-props-builder (new BaseInstanceProps$Builder) id config))
+  (base-instance-props-builder> (new BaseInstanceProps$Builder) id config))
 
 
-(defn build-base-namespace-props-builder
-  "The build-base-namespace-props-builder function updates a BaseNamespaceProps$Builder instance using the provided configuration.
+(defn base-namespace-props-builder>
+  "The base-namespace-props-builder> function updates a BaseNamespaceProps$Builder instance using the provided configuration.
   The function takes the BaseNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -295,11 +295,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-namespace-props-builder (new BaseNamespaceProps$Builder) id config))
+  (base-namespace-props-builder> (new BaseNamespaceProps$Builder) id config))
 
 
-(defn build-base-service-props-builder
-  "The build-base-service-props-builder function updates a BaseServiceProps$Builder instance using the provided configuration.
+(defn base-service-props-builder>
+  "The base-service-props-builder> function updates a BaseServiceProps$Builder instance using the provided configuration.
   The function takes the BaseServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -332,11 +332,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-base-service-props-builder (new BaseServiceProps$Builder) id config))
+  (base-service-props-builder> (new BaseServiceProps$Builder) id config))
 
 
-(defn build-cfn-http-namespace-builder
-  "The build-cfn-http-namespace-builder function updates a CfnHttpNamespace$Builder instance using the provided configuration.
+(defn cfn-http-namespace-builder>
+  "The cfn-http-namespace-builder> function updates a CfnHttpNamespace$Builder instance using the provided configuration.
   The function takes the CfnHttpNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -366,11 +366,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-http-namespace-builder (CfnHttpNamespace$Builder/create scope (name id)) id config))
+  (cfn-http-namespace-builder> (CfnHttpNamespace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-http-namespace-props-builder
-  "The build-cfn-http-namespace-props-builder function updates a CfnHttpNamespaceProps$Builder instance using the provided configuration.
+(defn cfn-http-namespace-props-builder>
+  "The cfn-http-namespace-props-builder> function updates a CfnHttpNamespaceProps$Builder instance using the provided configuration.
   The function takes the CfnHttpNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -400,11 +400,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-http-namespace-props-builder (new CfnHttpNamespaceProps$Builder) id config))
+  (cfn-http-namespace-props-builder> (new CfnHttpNamespaceProps$Builder) id config))
 
 
-(defn build-cfn-instance-builder
-  "The build-cfn-instance-builder function updates a CfnInstance$Builder instance using the provided configuration.
+(defn cfn-instance-builder>
+  "The cfn-instance-builder> function updates a CfnInstance$Builder instance using the provided configuration.
   The function takes the CfnInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -434,11 +434,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-instance-builder (CfnInstance$Builder/create scope (name id)) id config))
+  (cfn-instance-builder> (CfnInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-instance-props-builder
-  "The build-cfn-instance-props-builder function updates a CfnInstanceProps$Builder instance using the provided configuration.
+(defn cfn-instance-props-builder>
+  "The cfn-instance-props-builder> function updates a CfnInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -468,11 +468,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-props-builder (new CfnInstanceProps$Builder) id config))
+  (cfn-instance-props-builder> (new CfnInstanceProps$Builder) id config))
 
 
-(defn build-cfn-private-dns-namespace-builder
-  "The build-cfn-private-dns-namespace-builder function updates a CfnPrivateDnsNamespace$Builder instance using the provided configuration.
+(defn cfn-private-dns-namespace-builder>
+  "The cfn-private-dns-namespace-builder> function updates a CfnPrivateDnsNamespace$Builder instance using the provided configuration.
   The function takes the CfnPrivateDnsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -508,11 +508,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-private-dns-namespace-builder (CfnPrivateDnsNamespace$Builder/create scope (name id)) id config))
+  (cfn-private-dns-namespace-builder> (CfnPrivateDnsNamespace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-private-dns-namespace-private-dns-properties-mutable-property-builder
-  "The build-cfn-private-dns-namespace-private-dns-properties-mutable-property-builder function updates a CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder instance using the provided configuration.
+(defn cfn-private-dns-namespace-private-dns-properties-mutable-property-builder>
+  "The cfn-private-dns-namespace-private-dns-properties-mutable-property-builder> function updates a CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder instance using the provided configuration.
   The function takes the CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -536,11 +536,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-private-dns-namespace-private-dns-properties-mutable-property-builder (new CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder) id config))
+  (cfn-private-dns-namespace-private-dns-properties-mutable-property-builder> (new CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder) id config))
 
 
-(defn build-cfn-private-dns-namespace-properties-property-builder
-  "The build-cfn-private-dns-namespace-properties-property-builder function updates a CfnPrivateDnsNamespace$PropertiesProperty$Builder instance using the provided configuration.
+(defn cfn-private-dns-namespace-properties-property-builder>
+  "The cfn-private-dns-namespace-properties-property-builder> function updates a CfnPrivateDnsNamespace$PropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnPrivateDnsNamespace$PropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -564,11 +564,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-private-dns-namespace-properties-property-builder (new CfnPrivateDnsNamespace$PropertiesProperty$Builder) id config))
+  (cfn-private-dns-namespace-properties-property-builder> (new CfnPrivateDnsNamespace$PropertiesProperty$Builder) id config))
 
 
-(defn build-cfn-private-dns-namespace-props-builder
-  "The build-cfn-private-dns-namespace-props-builder function updates a CfnPrivateDnsNamespaceProps$Builder instance using the provided configuration.
+(defn cfn-private-dns-namespace-props-builder>
+  "The cfn-private-dns-namespace-props-builder> function updates a CfnPrivateDnsNamespaceProps$Builder instance using the provided configuration.
   The function takes the CfnPrivateDnsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -604,11 +604,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-private-dns-namespace-props-builder (new CfnPrivateDnsNamespaceProps$Builder) id config))
+  (cfn-private-dns-namespace-props-builder> (new CfnPrivateDnsNamespaceProps$Builder) id config))
 
 
-(defn build-cfn-private-dns-namespace-soa-property-builder
-  "The build-cfn-private-dns-namespace-soa-property-builder function updates a CfnPrivateDnsNamespace$SOAProperty$Builder instance using the provided configuration.
+(defn cfn-private-dns-namespace-soa-property-builder>
+  "The cfn-private-dns-namespace-soa-property-builder> function updates a CfnPrivateDnsNamespace$SOAProperty$Builder instance using the provided configuration.
   The function takes the CfnPrivateDnsNamespace$SOAProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -632,11 +632,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-private-dns-namespace-soa-property-builder (new CfnPrivateDnsNamespace$SOAProperty$Builder) id config))
+  (cfn-private-dns-namespace-soa-property-builder> (new CfnPrivateDnsNamespace$SOAProperty$Builder) id config))
 
 
-(defn build-cfn-public-dns-namespace-builder
-  "The build-cfn-public-dns-namespace-builder function updates a CfnPublicDnsNamespace$Builder instance using the provided configuration.
+(defn cfn-public-dns-namespace-builder>
+  "The cfn-public-dns-namespace-builder> function updates a CfnPublicDnsNamespace$Builder instance using the provided configuration.
   The function takes the CfnPublicDnsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -669,11 +669,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-public-dns-namespace-builder (CfnPublicDnsNamespace$Builder/create scope (name id)) id config))
+  (cfn-public-dns-namespace-builder> (CfnPublicDnsNamespace$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-public-dns-namespace-properties-property-builder
-  "The build-cfn-public-dns-namespace-properties-property-builder function updates a CfnPublicDnsNamespace$PropertiesProperty$Builder instance using the provided configuration.
+(defn cfn-public-dns-namespace-properties-property-builder>
+  "The cfn-public-dns-namespace-properties-property-builder> function updates a CfnPublicDnsNamespace$PropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnPublicDnsNamespace$PropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -697,11 +697,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-public-dns-namespace-properties-property-builder (new CfnPublicDnsNamespace$PropertiesProperty$Builder) id config))
+  (cfn-public-dns-namespace-properties-property-builder> (new CfnPublicDnsNamespace$PropertiesProperty$Builder) id config))
 
 
-(defn build-cfn-public-dns-namespace-props-builder
-  "The build-cfn-public-dns-namespace-props-builder function updates a CfnPublicDnsNamespaceProps$Builder instance using the provided configuration.
+(defn cfn-public-dns-namespace-props-builder>
+  "The cfn-public-dns-namespace-props-builder> function updates a CfnPublicDnsNamespaceProps$Builder instance using the provided configuration.
   The function takes the CfnPublicDnsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -734,11 +734,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-public-dns-namespace-props-builder (new CfnPublicDnsNamespaceProps$Builder) id config))
+  (cfn-public-dns-namespace-props-builder> (new CfnPublicDnsNamespaceProps$Builder) id config))
 
 
-(defn build-cfn-public-dns-namespace-public-dns-properties-mutable-property-builder
-  "The build-cfn-public-dns-namespace-public-dns-properties-mutable-property-builder function updates a CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder instance using the provided configuration.
+(defn cfn-public-dns-namespace-public-dns-properties-mutable-property-builder>
+  "The cfn-public-dns-namespace-public-dns-properties-mutable-property-builder> function updates a CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder instance using the provided configuration.
   The function takes the CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -762,11 +762,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-public-dns-namespace-public-dns-properties-mutable-property-builder (new CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder) id config))
+  (cfn-public-dns-namespace-public-dns-properties-mutable-property-builder> (new CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder) id config))
 
 
-(defn build-cfn-public-dns-namespace-soa-property-builder
-  "The build-cfn-public-dns-namespace-soa-property-builder function updates a CfnPublicDnsNamespace$SOAProperty$Builder instance using the provided configuration.
+(defn cfn-public-dns-namespace-soa-property-builder>
+  "The cfn-public-dns-namespace-soa-property-builder> function updates a CfnPublicDnsNamespace$SOAProperty$Builder instance using the provided configuration.
   The function takes the CfnPublicDnsNamespace$SOAProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -790,11 +790,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-public-dns-namespace-soa-property-builder (new CfnPublicDnsNamespace$SOAProperty$Builder) id config))
+  (cfn-public-dns-namespace-soa-property-builder> (new CfnPublicDnsNamespace$SOAProperty$Builder) id config))
 
 
-(defn build-cfn-service-builder
-  "The build-cfn-service-builder function updates a CfnService$Builder instance using the provided configuration.
+(defn cfn-service-builder>
+  "The cfn-service-builder> function updates a CfnService$Builder instance using the provided configuration.
   The function takes the CfnService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -839,11 +839,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-service-builder (CfnService$Builder/create scope (name id)) id config))
+  (cfn-service-builder> (CfnService$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-service-dns-config-property-builder
-  "The build-cfn-service-dns-config-property-builder function updates a CfnService$DnsConfigProperty$Builder instance using the provided configuration.
+(defn cfn-service-dns-config-property-builder>
+  "The cfn-service-dns-config-property-builder> function updates a CfnService$DnsConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnService$DnsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -873,11 +873,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-dns-config-property-builder (new CfnService$DnsConfigProperty$Builder) id config))
+  (cfn-service-dns-config-property-builder> (new CfnService$DnsConfigProperty$Builder) id config))
 
 
-(defn build-cfn-service-dns-record-property-builder
-  "The build-cfn-service-dns-record-property-builder function updates a CfnService$DnsRecordProperty$Builder instance using the provided configuration.
+(defn cfn-service-dns-record-property-builder>
+  "The cfn-service-dns-record-property-builder> function updates a CfnService$DnsRecordProperty$Builder instance using the provided configuration.
   The function takes the CfnService$DnsRecordProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -904,11 +904,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-dns-record-property-builder (new CfnService$DnsRecordProperty$Builder) id config))
+  (cfn-service-dns-record-property-builder> (new CfnService$DnsRecordProperty$Builder) id config))
 
 
-(defn build-cfn-service-health-check-config-property-builder
-  "The build-cfn-service-health-check-config-property-builder function updates a CfnService$HealthCheckConfigProperty$Builder instance using the provided configuration.
+(defn cfn-service-health-check-config-property-builder>
+  "The cfn-service-health-check-config-property-builder> function updates a CfnService$HealthCheckConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnService$HealthCheckConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -938,11 +938,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-health-check-config-property-builder (new CfnService$HealthCheckConfigProperty$Builder) id config))
+  (cfn-service-health-check-config-property-builder> (new CfnService$HealthCheckConfigProperty$Builder) id config))
 
 
-(defn build-cfn-service-health-check-custom-config-property-builder
-  "The build-cfn-service-health-check-custom-config-property-builder function updates a CfnService$HealthCheckCustomConfigProperty$Builder instance using the provided configuration.
+(defn cfn-service-health-check-custom-config-property-builder>
+  "The cfn-service-health-check-custom-config-property-builder> function updates a CfnService$HealthCheckCustomConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnService$HealthCheckCustomConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -966,11 +966,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-health-check-custom-config-property-builder (new CfnService$HealthCheckCustomConfigProperty$Builder) id config))
+  (cfn-service-health-check-custom-config-property-builder> (new CfnService$HealthCheckCustomConfigProperty$Builder) id config))
 
 
-(defn build-cfn-service-props-builder
-  "The build-cfn-service-props-builder function updates a CfnServiceProps$Builder instance using the provided configuration.
+(defn cfn-service-props-builder>
+  "The cfn-service-props-builder> function updates a CfnServiceProps$Builder instance using the provided configuration.
   The function takes the CfnServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1015,11 +1015,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-props-builder (new CfnServiceProps$Builder) id config))
+  (cfn-service-props-builder> (new CfnServiceProps$Builder) id config))
 
 
-(defn build-cname-instance-base-props-builder
-  "The build-cname-instance-base-props-builder function updates a CnameInstanceBaseProps$Builder instance using the provided configuration.
+(defn cname-instance-base-props-builder>
+  "The cname-instance-base-props-builder> function updates a CnameInstanceBaseProps$Builder instance using the provided configuration.
   The function takes the CnameInstanceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1049,11 +1049,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cname-instance-base-props-builder (new CnameInstanceBaseProps$Builder) id config))
+  (cname-instance-base-props-builder> (new CnameInstanceBaseProps$Builder) id config))
 
 
-(defn build-cname-instance-builder
-  "The build-cname-instance-builder function updates a CnameInstance$Builder instance using the provided configuration.
+(defn cname-instance-builder>
+  "The cname-instance-builder> function updates a CnameInstance$Builder instance using the provided configuration.
   The function takes the CnameInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1086,11 +1086,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cname-instance-builder (CnameInstance$Builder/create scope (name id)) id config))
+  (cname-instance-builder> (CnameInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-cname-instance-props-builder
-  "The build-cname-instance-props-builder function updates a CnameInstanceProps$Builder instance using the provided configuration.
+(defn cname-instance-props-builder>
+  "The cname-instance-props-builder> function updates a CnameInstanceProps$Builder instance using the provided configuration.
   The function takes the CnameInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1123,11 +1123,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cname-instance-props-builder (new CnameInstanceProps$Builder) id config))
+  (cname-instance-props-builder> (new CnameInstanceProps$Builder) id config))
 
 
-(defn build-dns-service-props-builder
-  "The build-dns-service-props-builder function updates a DnsServiceProps$Builder instance using the provided configuration.
+(defn dns-service-props-builder>
+  "The dns-service-props-builder> function updates a DnsServiceProps$Builder instance using the provided configuration.
   The function takes the DnsServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1175,11 +1175,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-dns-service-props-builder (new DnsServiceProps$Builder) id config))
+  (dns-service-props-builder> (new DnsServiceProps$Builder) id config))
 
 
-(defn build-health-check-config-builder
-  "The build-health-check-config-builder function updates a HealthCheckConfig$Builder instance using the provided configuration.
+(defn health-check-config-builder>
+  "The health-check-config-builder> function updates a HealthCheckConfig$Builder instance using the provided configuration.
   The function takes the HealthCheckConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1209,11 +1209,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-health-check-config-builder (new HealthCheckConfig$Builder) id config))
+  (health-check-config-builder> (new HealthCheckConfig$Builder) id config))
 
 
-(defn build-health-check-custom-config-builder
-  "The build-health-check-custom-config-builder function updates a HealthCheckCustomConfig$Builder instance using the provided configuration.
+(defn health-check-custom-config-builder>
+  "The health-check-custom-config-builder> function updates a HealthCheckCustomConfig$Builder instance using the provided configuration.
   The function takes the HealthCheckCustomConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1237,11 +1237,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-health-check-custom-config-builder (new HealthCheckCustomConfig$Builder) id config))
+  (health-check-custom-config-builder> (new HealthCheckCustomConfig$Builder) id config))
 
 
-(defn build-http-namespace-attributes-builder
-  "The build-http-namespace-attributes-builder function updates a HttpNamespaceAttributes$Builder instance using the provided configuration.
+(defn http-namespace-attributes-builder>
+  "The http-namespace-attributes-builder> function updates a HttpNamespaceAttributes$Builder instance using the provided configuration.
   The function takes the HttpNamespaceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1271,11 +1271,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-namespace-attributes-builder (new HttpNamespaceAttributes$Builder) id config))
+  (http-namespace-attributes-builder> (new HttpNamespaceAttributes$Builder) id config))
 
 
-(defn build-http-namespace-builder
-  "The build-http-namespace-builder function updates a HttpNamespace$Builder instance using the provided configuration.
+(defn http-namespace-builder>
+  "The http-namespace-builder> function updates a HttpNamespace$Builder instance using the provided configuration.
   The function takes the HttpNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1302,11 +1302,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-http-namespace-builder (HttpNamespace$Builder/create scope (name id)) id config))
+  (http-namespace-builder> (HttpNamespace$Builder/create scope (name id)) id config))
 
 
-(defn build-http-namespace-props-builder
-  "The build-http-namespace-props-builder function updates a HttpNamespaceProps$Builder instance using the provided configuration.
+(defn http-namespace-props-builder>
+  "The http-namespace-props-builder> function updates a HttpNamespaceProps$Builder instance using the provided configuration.
   The function takes the HttpNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1333,11 +1333,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-http-namespace-props-builder (new HttpNamespaceProps$Builder) id config))
+  (http-namespace-props-builder> (new HttpNamespaceProps$Builder) id config))
 
 
-(defn build-ip-instance-base-props-builder
-  "The build-ip-instance-base-props-builder function updates a IpInstanceBaseProps$Builder instance using the provided configuration.
+(defn ip-instance-base-props-builder>
+  "The ip-instance-base-props-builder> function updates a IpInstanceBaseProps$Builder instance using the provided configuration.
   The function takes the IpInstanceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1373,11 +1373,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ip-instance-base-props-builder (new IpInstanceBaseProps$Builder) id config))
+  (ip-instance-base-props-builder> (new IpInstanceBaseProps$Builder) id config))
 
 
-(defn build-ip-instance-builder
-  "The build-ip-instance-builder function updates a IpInstance$Builder instance using the provided configuration.
+(defn ip-instance-builder>
+  "The ip-instance-builder> function updates a IpInstance$Builder instance using the provided configuration.
   The function takes the IpInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1416,11 +1416,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-ip-instance-builder (IpInstance$Builder/create scope (name id)) id config))
+  (ip-instance-builder> (IpInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-ip-instance-props-builder
-  "The build-ip-instance-props-builder function updates a IpInstanceProps$Builder instance using the provided configuration.
+(defn ip-instance-props-builder>
+  "The ip-instance-props-builder> function updates a IpInstanceProps$Builder instance using the provided configuration.
   The function takes the IpInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1459,11 +1459,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-ip-instance-props-builder (new IpInstanceProps$Builder) id config))
+  (ip-instance-props-builder> (new IpInstanceProps$Builder) id config))
 
 
-(defn build-non-ip-instance-base-props-builder
-  "The build-non-ip-instance-base-props-builder function updates a NonIpInstanceBaseProps$Builder instance using the provided configuration.
+(defn non-ip-instance-base-props-builder>
+  "The non-ip-instance-base-props-builder> function updates a NonIpInstanceBaseProps$Builder instance using the provided configuration.
   The function takes the NonIpInstanceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1490,11 +1490,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-non-ip-instance-base-props-builder (new NonIpInstanceBaseProps$Builder) id config))
+  (non-ip-instance-base-props-builder> (new NonIpInstanceBaseProps$Builder) id config))
 
 
-(defn build-non-ip-instance-builder
-  "The build-non-ip-instance-builder function updates a NonIpInstance$Builder instance using the provided configuration.
+(defn non-ip-instance-builder>
+  "The non-ip-instance-builder> function updates a NonIpInstance$Builder instance using the provided configuration.
   The function takes the NonIpInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1524,11 +1524,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-non-ip-instance-builder (NonIpInstance$Builder/create scope (name id)) id config))
+  (non-ip-instance-builder> (NonIpInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-non-ip-instance-props-builder
-  "The build-non-ip-instance-props-builder function updates a NonIpInstanceProps$Builder instance using the provided configuration.
+(defn non-ip-instance-props-builder>
+  "The non-ip-instance-props-builder> function updates a NonIpInstanceProps$Builder instance using the provided configuration.
   The function takes the NonIpInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1558,11 +1558,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-non-ip-instance-props-builder (new NonIpInstanceProps$Builder) id config))
+  (non-ip-instance-props-builder> (new NonIpInstanceProps$Builder) id config))
 
 
-(defn build-private-dns-namespace-attributes-builder
-  "The build-private-dns-namespace-attributes-builder function updates a PrivateDnsNamespaceAttributes$Builder instance using the provided configuration.
+(defn private-dns-namespace-attributes-builder>
+  "The private-dns-namespace-attributes-builder> function updates a PrivateDnsNamespaceAttributes$Builder instance using the provided configuration.
   The function takes the PrivateDnsNamespaceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1592,11 +1592,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-private-dns-namespace-attributes-builder (new PrivateDnsNamespaceAttributes$Builder) id config))
+  (private-dns-namespace-attributes-builder> (new PrivateDnsNamespaceAttributes$Builder) id config))
 
 
-(defn build-private-dns-namespace-builder
-  "The build-private-dns-namespace-builder function updates a PrivateDnsNamespace$Builder instance using the provided configuration.
+(defn private-dns-namespace-builder>
+  "The private-dns-namespace-builder> function updates a PrivateDnsNamespace$Builder instance using the provided configuration.
   The function takes the PrivateDnsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1626,11 +1626,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-private-dns-namespace-builder (PrivateDnsNamespace$Builder/create scope (name id)) id config))
+  (private-dns-namespace-builder> (PrivateDnsNamespace$Builder/create scope (name id)) id config))
 
 
-(defn build-private-dns-namespace-props-builder
-  "The build-private-dns-namespace-props-builder function updates a PrivateDnsNamespaceProps$Builder instance using the provided configuration.
+(defn private-dns-namespace-props-builder>
+  "The private-dns-namespace-props-builder> function updates a PrivateDnsNamespaceProps$Builder instance using the provided configuration.
   The function takes the PrivateDnsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1660,11 +1660,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-private-dns-namespace-props-builder (new PrivateDnsNamespaceProps$Builder) id config))
+  (private-dns-namespace-props-builder> (new PrivateDnsNamespaceProps$Builder) id config))
 
 
-(defn build-public-dns-namespace-attributes-builder
-  "The build-public-dns-namespace-attributes-builder function updates a PublicDnsNamespaceAttributes$Builder instance using the provided configuration.
+(defn public-dns-namespace-attributes-builder>
+  "The public-dns-namespace-attributes-builder> function updates a PublicDnsNamespaceAttributes$Builder instance using the provided configuration.
   The function takes the PublicDnsNamespaceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1694,11 +1694,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-public-dns-namespace-attributes-builder (new PublicDnsNamespaceAttributes$Builder) id config))
+  (public-dns-namespace-attributes-builder> (new PublicDnsNamespaceAttributes$Builder) id config))
 
 
-(defn build-public-dns-namespace-builder
-  "The build-public-dns-namespace-builder function updates a PublicDnsNamespace$Builder instance using the provided configuration.
+(defn public-dns-namespace-builder>
+  "The public-dns-namespace-builder> function updates a PublicDnsNamespace$Builder instance using the provided configuration.
   The function takes the PublicDnsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1725,11 +1725,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-public-dns-namespace-builder (PublicDnsNamespace$Builder/create scope (name id)) id config))
+  (public-dns-namespace-builder> (PublicDnsNamespace$Builder/create scope (name id)) id config))
 
 
-(defn build-public-dns-namespace-props-builder
-  "The build-public-dns-namespace-props-builder function updates a PublicDnsNamespaceProps$Builder instance using the provided configuration.
+(defn public-dns-namespace-props-builder>
+  "The public-dns-namespace-props-builder> function updates a PublicDnsNamespaceProps$Builder instance using the provided configuration.
   The function takes the PublicDnsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1756,11 +1756,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-public-dns-namespace-props-builder (new PublicDnsNamespaceProps$Builder) id config))
+  (public-dns-namespace-props-builder> (new PublicDnsNamespaceProps$Builder) id config))
 
 
-(defn build-service-attributes-builder
-  "The build-service-attributes-builder function updates a ServiceAttributes$Builder instance using the provided configuration.
+(defn service-attributes-builder>
+  "The service-attributes-builder> function updates a ServiceAttributes$Builder instance using the provided configuration.
   The function takes the ServiceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1802,11 +1802,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-service-attributes-builder (new ServiceAttributes$Builder) id config))
+  (service-attributes-builder> (new ServiceAttributes$Builder) id config))
 
 
-(defn build-service-builder
-  "The build-service-builder function updates a Service$Builder instance using the provided configuration.
+(defn service-builder>
+  "The service-builder> function updates a Service$Builder instance using the provided configuration.
   The function takes the Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1857,11 +1857,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-service-builder (Service$Builder/create scope (name id)) id config))
+  (service-builder> (Service$Builder/create scope (name id)) id config))
 
 
-(defn build-service-props-builder
-  "The build-service-props-builder function updates a ServiceProps$Builder instance using the provided configuration.
+(defn service-props-builder>
+  "The service-props-builder> function updates a ServiceProps$Builder instance using the provided configuration.
   The function takes the ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1912,4 +1912,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-service-props-builder (new ServiceProps$Builder) id config))
+  (service-props-builder> (new ServiceProps$Builder) id config))

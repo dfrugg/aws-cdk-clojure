@@ -6,8 +6,8 @@
                                                                  CfnEnvironmentProps$Builder]))
 
 
-(defn build-cfn-environment-builder
-  "The build-cfn-environment-builder function updates a CfnEnvironment$Builder instance using the provided configuration.
+(defn cfn-environment-builder>
+  "The cfn-environment-builder> function updates a CfnEnvironment$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -55,11 +55,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+  (cfn-environment-builder> (CfnEnvironment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-environment-maintenance-window-property-builder
-  "The build-cfn-environment-maintenance-window-property-builder function updates a CfnEnvironment$MaintenanceWindowProperty$Builder instance using the provided configuration.
+(defn cfn-environment-maintenance-window-property-builder>
+  "The cfn-environment-maintenance-window-property-builder> function updates a CfnEnvironment$MaintenanceWindowProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$MaintenanceWindowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -101,11 +101,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-maintenance-window-property-builder (new CfnEnvironment$MaintenanceWindowProperty$Builder) id config))
+  (cfn-environment-maintenance-window-property-builder> (new CfnEnvironment$MaintenanceWindowProperty$Builder) id config))
 
 
-(defn build-cfn-environment-props-builder
-  "The build-cfn-environment-props-builder function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
+(defn cfn-environment-props-builder>
+  "The cfn-environment-props-builder> function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -153,4 +153,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
+  (cfn-environment-props-builder> (new CfnEnvironmentProps$Builder) id config))

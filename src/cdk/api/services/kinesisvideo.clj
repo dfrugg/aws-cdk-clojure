@@ -7,8 +7,8 @@
                                                          CfnStreamProps$Builder]))
 
 
-(defn build-cfn-signaling-channel-builder
-  "The build-cfn-signaling-channel-builder function updates a CfnSignalingChannel$Builder instance using the provided configuration.
+(defn cfn-signaling-channel-builder>
+  "The cfn-signaling-channel-builder> function updates a CfnSignalingChannel$Builder instance using the provided configuration.
   The function takes the CfnSignalingChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -41,11 +41,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-signaling-channel-builder (CfnSignalingChannel$Builder/create scope (name id)) id config))
+  (cfn-signaling-channel-builder> (CfnSignalingChannel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-signaling-channel-props-builder
-  "The build-cfn-signaling-channel-props-builder function updates a CfnSignalingChannelProps$Builder instance using the provided configuration.
+(defn cfn-signaling-channel-props-builder>
+  "The cfn-signaling-channel-props-builder> function updates a CfnSignalingChannelProps$Builder instance using the provided configuration.
   The function takes the CfnSignalingChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -78,11 +78,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-signaling-channel-props-builder (new CfnSignalingChannelProps$Builder) id config))
+  (cfn-signaling-channel-props-builder> (new CfnSignalingChannelProps$Builder) id config))
 
 
-(defn build-cfn-stream-builder
-  "The build-cfn-stream-builder function updates a CfnStream$Builder instance using the provided configuration.
+(defn cfn-stream-builder>
+  "The cfn-stream-builder> function updates a CfnStream$Builder instance using the provided configuration.
   The function takes the CfnStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -121,11 +121,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-stream-builder (CfnStream$Builder/create scope (name id)) id config))
+  (cfn-stream-builder> (CfnStream$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-stream-props-builder
-  "The build-cfn-stream-props-builder function updates a CfnStreamProps$Builder instance using the provided configuration.
+(defn cfn-stream-props-builder>
+  "The cfn-stream-props-builder> function updates a CfnStreamProps$Builder instance using the provided configuration.
   The function takes the CfnStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -164,4 +164,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-props-builder (new CfnStreamProps$Builder) id config))
+  (cfn-stream-props-builder> (new CfnStreamProps$Builder) id config))

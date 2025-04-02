@@ -40,8 +40,8 @@
                                                        CfnPrivacyBudgetTemplateProps$Builder]))
 
 
-(defn build-cfn-analysis-template-analysis-parameter-property-builder
-  "The build-cfn-analysis-template-analysis-parameter-property-builder function updates a CfnAnalysisTemplate$AnalysisParameterProperty$Builder instance using the provided configuration.
+(defn cfn-analysis-template-analysis-parameter-property-builder>
+  "The cfn-analysis-template-analysis-parameter-property-builder> function updates a CfnAnalysisTemplate$AnalysisParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysisTemplate$AnalysisParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -71,11 +71,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analysis-template-analysis-parameter-property-builder (new CfnAnalysisTemplate$AnalysisParameterProperty$Builder) id config))
+  (cfn-analysis-template-analysis-parameter-property-builder> (new CfnAnalysisTemplate$AnalysisParameterProperty$Builder) id config))
 
 
-(defn build-cfn-analysis-template-analysis-schema-property-builder
-  "The build-cfn-analysis-template-analysis-schema-property-builder function updates a CfnAnalysisTemplate$AnalysisSchemaProperty$Builder instance using the provided configuration.
+(defn cfn-analysis-template-analysis-schema-property-builder>
+  "The cfn-analysis-template-analysis-schema-property-builder> function updates a CfnAnalysisTemplate$AnalysisSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysisTemplate$AnalysisSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -99,11 +99,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analysis-template-analysis-schema-property-builder (new CfnAnalysisTemplate$AnalysisSchemaProperty$Builder) id config))
+  (cfn-analysis-template-analysis-schema-property-builder> (new CfnAnalysisTemplate$AnalysisSchemaProperty$Builder) id config))
 
 
-(defn build-cfn-analysis-template-analysis-source-property-builder
-  "The build-cfn-analysis-template-analysis-source-property-builder function updates a CfnAnalysisTemplate$AnalysisSourceProperty$Builder instance using the provided configuration.
+(defn cfn-analysis-template-analysis-source-property-builder>
+  "The cfn-analysis-template-analysis-source-property-builder> function updates a CfnAnalysisTemplate$AnalysisSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysisTemplate$AnalysisSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -127,11 +127,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analysis-template-analysis-source-property-builder (new CfnAnalysisTemplate$AnalysisSourceProperty$Builder) id config))
+  (cfn-analysis-template-analysis-source-property-builder> (new CfnAnalysisTemplate$AnalysisSourceProperty$Builder) id config))
 
 
-(defn build-cfn-analysis-template-builder
-  "The build-cfn-analysis-template-builder function updates a CfnAnalysisTemplate$Builder instance using the provided configuration.
+(defn cfn-analysis-template-builder>
+  "The cfn-analysis-template-builder> function updates a CfnAnalysisTemplate$Builder instance using the provided configuration.
   The function takes the CfnAnalysisTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -173,11 +173,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-analysis-template-builder (CfnAnalysisTemplate$Builder/create scope (name id)) id config))
+  (cfn-analysis-template-builder> (CfnAnalysisTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-analysis-template-props-builder
-  "The build-cfn-analysis-template-props-builder function updates a CfnAnalysisTemplateProps$Builder instance using the provided configuration.
+(defn cfn-analysis-template-props-builder>
+  "The cfn-analysis-template-props-builder> function updates a CfnAnalysisTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnAnalysisTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -219,11 +219,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-analysis-template-props-builder (new CfnAnalysisTemplateProps$Builder) id config))
+  (cfn-analysis-template-props-builder> (new CfnAnalysisTemplateProps$Builder) id config))
 
 
-(defn build-cfn-collaboration-builder
-  "The build-cfn-collaboration-builder function updates a CfnCollaboration$Builder instance using the provided configuration.
+(defn cfn-collaboration-builder>
+  "The cfn-collaboration-builder> function updates a CfnCollaboration$Builder instance using the provided configuration.
   The function takes the CfnCollaboration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -271,11 +271,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-collaboration-builder (CfnCollaboration$Builder/create scope (name id)) id config))
+  (cfn-collaboration-builder> (CfnCollaboration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-collaboration-data-encryption-metadata-property-builder
-  "The build-cfn-collaboration-data-encryption-metadata-property-builder function updates a CfnCollaboration$DataEncryptionMetadataProperty$Builder instance using the provided configuration.
+(defn cfn-collaboration-data-encryption-metadata-property-builder>
+  "The cfn-collaboration-data-encryption-metadata-property-builder> function updates a CfnCollaboration$DataEncryptionMetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnCollaboration$DataEncryptionMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -308,11 +308,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-collaboration-data-encryption-metadata-property-builder (new CfnCollaboration$DataEncryptionMetadataProperty$Builder) id config))
+  (cfn-collaboration-data-encryption-metadata-property-builder> (new CfnCollaboration$DataEncryptionMetadataProperty$Builder) id config))
 
 
-(defn build-cfn-collaboration-member-specification-property-builder
-  "The build-cfn-collaboration-member-specification-property-builder function updates a CfnCollaboration$MemberSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-collaboration-member-specification-property-builder>
+  "The cfn-collaboration-member-specification-property-builder> function updates a CfnCollaboration$MemberSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnCollaboration$MemberSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -345,11 +345,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-collaboration-member-specification-property-builder (new CfnCollaboration$MemberSpecificationProperty$Builder) id config))
+  (cfn-collaboration-member-specification-property-builder> (new CfnCollaboration$MemberSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-collaboration-payment-configuration-property-builder
-  "The build-cfn-collaboration-payment-configuration-property-builder function updates a CfnCollaboration$PaymentConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-collaboration-payment-configuration-property-builder>
+  "The cfn-collaboration-payment-configuration-property-builder> function updates a CfnCollaboration$PaymentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCollaboration$PaymentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -373,11 +373,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-collaboration-payment-configuration-property-builder (new CfnCollaboration$PaymentConfigurationProperty$Builder) id config))
+  (cfn-collaboration-payment-configuration-property-builder> (new CfnCollaboration$PaymentConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-collaboration-props-builder
-  "The build-cfn-collaboration-props-builder function updates a CfnCollaborationProps$Builder instance using the provided configuration.
+(defn cfn-collaboration-props-builder>
+  "The cfn-collaboration-props-builder> function updates a CfnCollaborationProps$Builder instance using the provided configuration.
   The function takes the CfnCollaborationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -425,11 +425,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-collaboration-props-builder (new CfnCollaborationProps$Builder) id config))
+  (cfn-collaboration-props-builder> (new CfnCollaborationProps$Builder) id config))
 
 
-(defn build-cfn-collaboration-query-compute-payment-config-property-builder
-  "The build-cfn-collaboration-query-compute-payment-config-property-builder function updates a CfnCollaboration$QueryComputePaymentConfigProperty$Builder instance using the provided configuration.
+(defn cfn-collaboration-query-compute-payment-config-property-builder>
+  "The cfn-collaboration-query-compute-payment-config-property-builder> function updates a CfnCollaboration$QueryComputePaymentConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCollaboration$QueryComputePaymentConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -453,11 +453,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-collaboration-query-compute-payment-config-property-builder (new CfnCollaboration$QueryComputePaymentConfigProperty$Builder) id config))
+  (cfn-collaboration-query-compute-payment-config-property-builder> (new CfnCollaboration$QueryComputePaymentConfigProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-aggregate-column-property-builder
-  "The build-cfn-configured-table-aggregate-column-property-builder function updates a CfnConfiguredTable$AggregateColumnProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-aggregate-column-property-builder>
+  "The cfn-configured-table-aggregate-column-property-builder> function updates a CfnConfiguredTable$AggregateColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$AggregateColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -484,11 +484,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-aggregate-column-property-builder (new CfnConfiguredTable$AggregateColumnProperty$Builder) id config))
+  (cfn-configured-table-aggregate-column-property-builder> (new CfnConfiguredTable$AggregateColumnProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-aggregation-constraint-property-builder
-  "The build-cfn-configured-table-aggregation-constraint-property-builder function updates a CfnConfiguredTable$AggregationConstraintProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-aggregation-constraint-property-builder>
+  "The cfn-configured-table-aggregation-constraint-property-builder> function updates a CfnConfiguredTable$AggregationConstraintProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$AggregationConstraintProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -518,11 +518,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-aggregation-constraint-property-builder (new CfnConfiguredTable$AggregationConstraintProperty$Builder) id config))
+  (cfn-configured-table-aggregation-constraint-property-builder> (new CfnConfiguredTable$AggregationConstraintProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-analysis-rule-aggregation-property-builder
-  "The build-cfn-configured-table-analysis-rule-aggregation-property-builder function updates a CfnConfiguredTable$AnalysisRuleAggregationProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-analysis-rule-aggregation-property-builder>
+  "The cfn-configured-table-analysis-rule-aggregation-property-builder> function updates a CfnConfiguredTable$AnalysisRuleAggregationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$AnalysisRuleAggregationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -564,11 +564,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-analysis-rule-aggregation-property-builder (new CfnConfiguredTable$AnalysisRuleAggregationProperty$Builder) id config))
+  (cfn-configured-table-analysis-rule-aggregation-property-builder> (new CfnConfiguredTable$AnalysisRuleAggregationProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-analysis-rule-custom-property-builder
-  "The build-cfn-configured-table-analysis-rule-custom-property-builder function updates a CfnConfiguredTable$AnalysisRuleCustomProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-analysis-rule-custom-property-builder>
+  "The cfn-configured-table-analysis-rule-custom-property-builder> function updates a CfnConfiguredTable$AnalysisRuleCustomProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$AnalysisRuleCustomProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -598,11 +598,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-analysis-rule-custom-property-builder (new CfnConfiguredTable$AnalysisRuleCustomProperty$Builder) id config))
+  (cfn-configured-table-analysis-rule-custom-property-builder> (new CfnConfiguredTable$AnalysisRuleCustomProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-analysis-rule-list-property-builder
-  "The build-cfn-configured-table-analysis-rule-list-property-builder function updates a CfnConfiguredTable$AnalysisRuleListProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-analysis-rule-list-property-builder>
+  "The cfn-configured-table-analysis-rule-list-property-builder> function updates a CfnConfiguredTable$AnalysisRuleListProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$AnalysisRuleListProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -632,11 +632,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-analysis-rule-list-property-builder (new CfnConfiguredTable$AnalysisRuleListProperty$Builder) id config))
+  (cfn-configured-table-analysis-rule-list-property-builder> (new CfnConfiguredTable$AnalysisRuleListProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-analysis-rule-property-builder
-  "The build-cfn-configured-table-analysis-rule-property-builder function updates a CfnConfiguredTable$AnalysisRuleProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-analysis-rule-property-builder>
+  "The cfn-configured-table-analysis-rule-property-builder> function updates a CfnConfiguredTable$AnalysisRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$AnalysisRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -663,11 +663,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-analysis-rule-property-builder (new CfnConfiguredTable$AnalysisRuleProperty$Builder) id config))
+  (cfn-configured-table-analysis-rule-property-builder> (new CfnConfiguredTable$AnalysisRuleProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-association-builder
-  "The build-cfn-configured-table-association-builder function updates a CfnConfiguredTableAssociation$Builder instance using the provided configuration.
+(defn cfn-configured-table-association-builder>
+  "The cfn-configured-table-association-builder> function updates a CfnConfiguredTableAssociation$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTableAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -706,11 +706,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-configured-table-association-builder (CfnConfiguredTableAssociation$Builder/create scope (name id)) id config))
+  (cfn-configured-table-association-builder> (CfnConfiguredTableAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-configured-table-association-props-builder
-  "The build-cfn-configured-table-association-props-builder function updates a CfnConfiguredTableAssociationProps$Builder instance using the provided configuration.
+(defn cfn-configured-table-association-props-builder>
+  "The cfn-configured-table-association-props-builder> function updates a CfnConfiguredTableAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTableAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -749,11 +749,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-association-props-builder (new CfnConfiguredTableAssociationProps$Builder) id config))
+  (cfn-configured-table-association-props-builder> (new CfnConfiguredTableAssociationProps$Builder) id config))
 
 
-(defn build-cfn-configured-table-builder
-  "The build-cfn-configured-table-builder function updates a CfnConfiguredTable$Builder instance using the provided configuration.
+(defn cfn-configured-table-builder>
+  "The cfn-configured-table-builder> function updates a CfnConfiguredTable$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -795,11 +795,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-configured-table-builder (CfnConfiguredTable$Builder/create scope (name id)) id config))
+  (cfn-configured-table-builder> (CfnConfiguredTable$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-configured-table-configured-table-analysis-rule-policy-property-builder
-  "The build-cfn-configured-table-configured-table-analysis-rule-policy-property-builder function updates a CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-configured-table-analysis-rule-policy-property-builder>
+  "The cfn-configured-table-configured-table-analysis-rule-policy-property-builder> function updates a CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -823,11 +823,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-configured-table-analysis-rule-policy-property-builder (new CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder) id config))
+  (cfn-configured-table-configured-table-analysis-rule-policy-property-builder> (new CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder
-  "The build-cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder function updates a CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyV1Property$Builder instance using the provided configuration.
+(defn cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder>
+  "The cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder> function updates a CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyV1Property$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyV1Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -857,11 +857,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder (new CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyV1Property$Builder) id config))
+  (cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder> (new CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyV1Property$Builder) id config))
 
 
-(defn build-cfn-configured-table-differential-privacy-column-property-builder
-  "The build-cfn-configured-table-differential-privacy-column-property-builder function updates a CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-differential-privacy-column-property-builder>
+  "The cfn-configured-table-differential-privacy-column-property-builder> function updates a CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -885,11 +885,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-differential-privacy-column-property-builder (new CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder) id config))
+  (cfn-configured-table-differential-privacy-column-property-builder> (new CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-differential-privacy-property-builder
-  "The build-cfn-configured-table-differential-privacy-property-builder function updates a CfnConfiguredTable$DifferentialPrivacyProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-differential-privacy-property-builder>
+  "The cfn-configured-table-differential-privacy-property-builder> function updates a CfnConfiguredTable$DifferentialPrivacyProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$DifferentialPrivacyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -913,11 +913,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-differential-privacy-property-builder (new CfnConfiguredTable$DifferentialPrivacyProperty$Builder) id config))
+  (cfn-configured-table-differential-privacy-property-builder> (new CfnConfiguredTable$DifferentialPrivacyProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-glue-table-reference-property-builder
-  "The build-cfn-configured-table-glue-table-reference-property-builder function updates a CfnConfiguredTable$GlueTableReferenceProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-glue-table-reference-property-builder>
+  "The cfn-configured-table-glue-table-reference-property-builder> function updates a CfnConfiguredTable$GlueTableReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$GlueTableReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -944,11 +944,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-glue-table-reference-property-builder (new CfnConfiguredTable$GlueTableReferenceProperty$Builder) id config))
+  (cfn-configured-table-glue-table-reference-property-builder> (new CfnConfiguredTable$GlueTableReferenceProperty$Builder) id config))
 
 
-(defn build-cfn-configured-table-props-builder
-  "The build-cfn-configured-table-props-builder function updates a CfnConfiguredTableProps$Builder instance using the provided configuration.
+(defn cfn-configured-table-props-builder>
+  "The cfn-configured-table-props-builder> function updates a CfnConfiguredTableProps$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -990,11 +990,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-props-builder (new CfnConfiguredTableProps$Builder) id config))
+  (cfn-configured-table-props-builder> (new CfnConfiguredTableProps$Builder) id config))
 
 
-(defn build-cfn-configured-table-table-reference-property-builder
-  "The build-cfn-configured-table-table-reference-property-builder function updates a CfnConfiguredTable$TableReferenceProperty$Builder instance using the provided configuration.
+(defn cfn-configured-table-table-reference-property-builder>
+  "The cfn-configured-table-table-reference-property-builder> function updates a CfnConfiguredTable$TableReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$TableReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1018,11 +1018,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-configured-table-table-reference-property-builder (new CfnConfiguredTable$TableReferenceProperty$Builder) id config))
+  (cfn-configured-table-table-reference-property-builder> (new CfnConfiguredTable$TableReferenceProperty$Builder) id config))
 
 
-(defn build-cfn-membership-builder
-  "The build-cfn-membership-builder function updates a CfnMembership$Builder instance using the provided configuration.
+(defn cfn-membership-builder>
+  "The cfn-membership-builder> function updates a CfnMembership$Builder instance using the provided configuration.
   The function takes the CfnMembership$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1058,11 +1058,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-membership-builder (CfnMembership$Builder/create scope (name id)) id config))
+  (cfn-membership-builder> (CfnMembership$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-membership-membership-payment-configuration-property-builder
-  "The build-cfn-membership-membership-payment-configuration-property-builder function updates a CfnMembership$MembershipPaymentConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-membership-membership-payment-configuration-property-builder>
+  "The cfn-membership-membership-payment-configuration-property-builder> function updates a CfnMembership$MembershipPaymentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$MembershipPaymentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1086,11 +1086,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-membership-membership-payment-configuration-property-builder (new CfnMembership$MembershipPaymentConfigurationProperty$Builder) id config))
+  (cfn-membership-membership-payment-configuration-property-builder> (new CfnMembership$MembershipPaymentConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-membership-membership-protected-query-output-configuration-property-builder
-  "The build-cfn-membership-membership-protected-query-output-configuration-property-builder function updates a CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-membership-membership-protected-query-output-configuration-property-builder>
+  "The cfn-membership-membership-protected-query-output-configuration-property-builder> function updates a CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1114,11 +1114,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-membership-membership-protected-query-output-configuration-property-builder (new CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder) id config))
+  (cfn-membership-membership-protected-query-output-configuration-property-builder> (new CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-membership-membership-protected-query-result-configuration-property-builder
-  "The build-cfn-membership-membership-protected-query-result-configuration-property-builder function updates a CfnMembership$MembershipProtectedQueryResultConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-membership-membership-protected-query-result-configuration-property-builder>
+  "The cfn-membership-membership-protected-query-result-configuration-property-builder> function updates a CfnMembership$MembershipProtectedQueryResultConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$MembershipProtectedQueryResultConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1145,11 +1145,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-membership-membership-protected-query-result-configuration-property-builder (new CfnMembership$MembershipProtectedQueryResultConfigurationProperty$Builder) id config))
+  (cfn-membership-membership-protected-query-result-configuration-property-builder> (new CfnMembership$MembershipProtectedQueryResultConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-membership-membership-query-compute-payment-config-property-builder
-  "The build-cfn-membership-membership-query-compute-payment-config-property-builder function updates a CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder instance using the provided configuration.
+(defn cfn-membership-membership-query-compute-payment-config-property-builder>
+  "The cfn-membership-membership-query-compute-payment-config-property-builder> function updates a CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1173,11 +1173,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-membership-membership-query-compute-payment-config-property-builder (new CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder) id config))
+  (cfn-membership-membership-query-compute-payment-config-property-builder> (new CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder) id config))
 
 
-(defn build-cfn-membership-props-builder
-  "The build-cfn-membership-props-builder function updates a CfnMembershipProps$Builder instance using the provided configuration.
+(defn cfn-membership-props-builder>
+  "The cfn-membership-props-builder> function updates a CfnMembershipProps$Builder instance using the provided configuration.
   The function takes the CfnMembershipProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1213,11 +1213,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-membership-props-builder (new CfnMembershipProps$Builder) id config))
+  (cfn-membership-props-builder> (new CfnMembershipProps$Builder) id config))
 
 
-(defn build-cfn-membership-protected-query-s3-output-configuration-property-builder
-  "The build-cfn-membership-protected-query-s3-output-configuration-property-builder function updates a CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-membership-protected-query-s3-output-configuration-property-builder>
+  "The cfn-membership-protected-query-s3-output-configuration-property-builder> function updates a CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1247,11 +1247,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-membership-protected-query-s3-output-configuration-property-builder (new CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder) id config))
+  (cfn-membership-protected-query-s3-output-configuration-property-builder> (new CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-privacy-budget-template-builder
-  "The build-cfn-privacy-budget-template-builder function updates a CfnPrivacyBudgetTemplate$Builder instance using the provided configuration.
+(defn cfn-privacy-budget-template-builder>
+  "The cfn-privacy-budget-template-builder> function updates a CfnPrivacyBudgetTemplate$Builder instance using the provided configuration.
   The function takes the CfnPrivacyBudgetTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1287,11 +1287,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-privacy-budget-template-builder (CfnPrivacyBudgetTemplate$Builder/create scope (name id)) id config))
+  (cfn-privacy-budget-template-builder> (CfnPrivacyBudgetTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-privacy-budget-template-parameters-property-builder
-  "The build-cfn-privacy-budget-template-parameters-property-builder function updates a CfnPrivacyBudgetTemplate$ParametersProperty$Builder instance using the provided configuration.
+(defn cfn-privacy-budget-template-parameters-property-builder>
+  "The cfn-privacy-budget-template-parameters-property-builder> function updates a CfnPrivacyBudgetTemplate$ParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPrivacyBudgetTemplate$ParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1318,11 +1318,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-privacy-budget-template-parameters-property-builder (new CfnPrivacyBudgetTemplate$ParametersProperty$Builder) id config))
+  (cfn-privacy-budget-template-parameters-property-builder> (new CfnPrivacyBudgetTemplate$ParametersProperty$Builder) id config))
 
 
-(defn build-cfn-privacy-budget-template-props-builder
-  "The build-cfn-privacy-budget-template-props-builder function updates a CfnPrivacyBudgetTemplateProps$Builder instance using the provided configuration.
+(defn cfn-privacy-budget-template-props-builder>
+  "The cfn-privacy-budget-template-props-builder> function updates a CfnPrivacyBudgetTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnPrivacyBudgetTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1358,4 +1358,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-privacy-budget-template-props-builder (new CfnPrivacyBudgetTemplateProps$Builder) id config))
+  (cfn-privacy-budget-template-props-builder> (new CfnPrivacyBudgetTemplateProps$Builder) id config))

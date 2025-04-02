@@ -19,8 +19,8 @@
                                                        CfnFlywheelProps$Builder]))
 
 
-(defn build-cfn-document-classifier-augmented-manifests-list-item-property-builder
-  "The build-cfn-document-classifier-augmented-manifests-list-item-property-builder function updates a CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder instance using the provided configuration.
+(defn cfn-document-classifier-augmented-manifests-list-item-property-builder>
+  "The cfn-document-classifier-augmented-manifests-list-item-property-builder> function updates a CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -50,11 +50,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-document-classifier-augmented-manifests-list-item-property-builder (new CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder) id config))
+  (cfn-document-classifier-augmented-manifests-list-item-property-builder> (new CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder) id config))
 
 
-(defn build-cfn-document-classifier-builder
-  "The build-cfn-document-classifier-builder function updates a CfnDocumentClassifier$Builder instance using the provided configuration.
+(defn cfn-document-classifier-builder>
+  "The cfn-document-classifier-builder> function updates a CfnDocumentClassifier$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -111,11 +111,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-document-classifier-builder (CfnDocumentClassifier$Builder/create scope (name id)) id config))
+  (cfn-document-classifier-builder> (CfnDocumentClassifier$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-document-classifier-document-classifier-documents-property-builder
-  "The build-cfn-document-classifier-document-classifier-documents-property-builder function updates a CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder instance using the provided configuration.
+(defn cfn-document-classifier-document-classifier-documents-property-builder>
+  "The cfn-document-classifier-document-classifier-documents-property-builder> function updates a CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -142,11 +142,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-document-classifier-document-classifier-documents-property-builder (new CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder) id config))
+  (cfn-document-classifier-document-classifier-documents-property-builder> (new CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder) id config))
 
 
-(defn build-cfn-document-classifier-document-classifier-input-data-config-property-builder
-  "The build-cfn-document-classifier-document-classifier-input-data-config-property-builder function updates a CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder instance using the provided configuration.
+(defn cfn-document-classifier-document-classifier-input-data-config-property-builder>
+  "The cfn-document-classifier-document-classifier-input-data-config-property-builder> function updates a CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -191,11 +191,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-document-classifier-document-classifier-input-data-config-property-builder (new CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder) id config))
+  (cfn-document-classifier-document-classifier-input-data-config-property-builder> (new CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder) id config))
 
 
-(defn build-cfn-document-classifier-document-classifier-output-data-config-property-builder
-  "The build-cfn-document-classifier-document-classifier-output-data-config-property-builder function updates a CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder instance using the provided configuration.
+(defn cfn-document-classifier-document-classifier-output-data-config-property-builder>
+  "The cfn-document-classifier-document-classifier-output-data-config-property-builder> function updates a CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -222,11 +222,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-document-classifier-document-classifier-output-data-config-property-builder (new CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder) id config))
+  (cfn-document-classifier-document-classifier-output-data-config-property-builder> (new CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder) id config))
 
 
-(defn build-cfn-document-classifier-document-reader-config-property-builder
-  "The build-cfn-document-classifier-document-reader-config-property-builder function updates a CfnDocumentClassifier$DocumentReaderConfigProperty$Builder instance using the provided configuration.
+(defn cfn-document-classifier-document-reader-config-property-builder>
+  "The cfn-document-classifier-document-reader-config-property-builder> function updates a CfnDocumentClassifier$DocumentReaderConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$DocumentReaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -256,11 +256,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-document-classifier-document-reader-config-property-builder (new CfnDocumentClassifier$DocumentReaderConfigProperty$Builder) id config))
+  (cfn-document-classifier-document-reader-config-property-builder> (new CfnDocumentClassifier$DocumentReaderConfigProperty$Builder) id config))
 
 
-(defn build-cfn-document-classifier-props-builder
-  "The build-cfn-document-classifier-props-builder function updates a CfnDocumentClassifierProps$Builder instance using the provided configuration.
+(defn cfn-document-classifier-props-builder>
+  "The cfn-document-classifier-props-builder> function updates a CfnDocumentClassifierProps$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifierProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -317,11 +317,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-document-classifier-props-builder (new CfnDocumentClassifierProps$Builder) id config))
+  (cfn-document-classifier-props-builder> (new CfnDocumentClassifierProps$Builder) id config))
 
 
-(defn build-cfn-document-classifier-vpc-config-property-builder
-  "The build-cfn-document-classifier-vpc-config-property-builder function updates a CfnDocumentClassifier$VpcConfigProperty$Builder instance using the provided configuration.
+(defn cfn-document-classifier-vpc-config-property-builder>
+  "The cfn-document-classifier-vpc-config-property-builder> function updates a CfnDocumentClassifier$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -348,11 +348,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-document-classifier-vpc-config-property-builder (new CfnDocumentClassifier$VpcConfigProperty$Builder) id config))
+  (cfn-document-classifier-vpc-config-property-builder> (new CfnDocumentClassifier$VpcConfigProperty$Builder) id config))
 
 
-(defn build-cfn-flywheel-builder
-  "The build-cfn-flywheel-builder function updates a CfnFlywheel$Builder instance using the provided configuration.
+(defn cfn-flywheel-builder>
+  "The cfn-flywheel-builder> function updates a CfnFlywheel$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -397,11 +397,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-flywheel-builder (CfnFlywheel$Builder/create scope (name id)) id config))
+  (cfn-flywheel-builder> (CfnFlywheel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-flywheel-data-security-config-property-builder
-  "The build-cfn-flywheel-data-security-config-property-builder function updates a CfnFlywheel$DataSecurityConfigProperty$Builder instance using the provided configuration.
+(defn cfn-flywheel-data-security-config-property-builder>
+  "The cfn-flywheel-data-security-config-property-builder> function updates a CfnFlywheel$DataSecurityConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$DataSecurityConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -434,11 +434,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flywheel-data-security-config-property-builder (new CfnFlywheel$DataSecurityConfigProperty$Builder) id config))
+  (cfn-flywheel-data-security-config-property-builder> (new CfnFlywheel$DataSecurityConfigProperty$Builder) id config))
 
 
-(defn build-cfn-flywheel-document-classification-config-property-builder
-  "The build-cfn-flywheel-document-classification-config-property-builder function updates a CfnFlywheel$DocumentClassificationConfigProperty$Builder instance using the provided configuration.
+(defn cfn-flywheel-document-classification-config-property-builder>
+  "The cfn-flywheel-document-classification-config-property-builder> function updates a CfnFlywheel$DocumentClassificationConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$DocumentClassificationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -465,11 +465,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flywheel-document-classification-config-property-builder (new CfnFlywheel$DocumentClassificationConfigProperty$Builder) id config))
+  (cfn-flywheel-document-classification-config-property-builder> (new CfnFlywheel$DocumentClassificationConfigProperty$Builder) id config))
 
 
-(defn build-cfn-flywheel-entity-recognition-config-property-builder
-  "The build-cfn-flywheel-entity-recognition-config-property-builder function updates a CfnFlywheel$EntityRecognitionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-flywheel-entity-recognition-config-property-builder>
+  "The cfn-flywheel-entity-recognition-config-property-builder> function updates a CfnFlywheel$EntityRecognitionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$EntityRecognitionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -493,11 +493,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flywheel-entity-recognition-config-property-builder (new CfnFlywheel$EntityRecognitionConfigProperty$Builder) id config))
+  (cfn-flywheel-entity-recognition-config-property-builder> (new CfnFlywheel$EntityRecognitionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-flywheel-entity-types-list-item-property-builder
-  "The build-cfn-flywheel-entity-types-list-item-property-builder function updates a CfnFlywheel$EntityTypesListItemProperty$Builder instance using the provided configuration.
+(defn cfn-flywheel-entity-types-list-item-property-builder>
+  "The cfn-flywheel-entity-types-list-item-property-builder> function updates a CfnFlywheel$EntityTypesListItemProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$EntityTypesListItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -521,11 +521,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flywheel-entity-types-list-item-property-builder (new CfnFlywheel$EntityTypesListItemProperty$Builder) id config))
+  (cfn-flywheel-entity-types-list-item-property-builder> (new CfnFlywheel$EntityTypesListItemProperty$Builder) id config))
 
 
-(defn build-cfn-flywheel-props-builder
-  "The build-cfn-flywheel-props-builder function updates a CfnFlywheelProps$Builder instance using the provided configuration.
+(defn cfn-flywheel-props-builder>
+  "The cfn-flywheel-props-builder> function updates a CfnFlywheelProps$Builder instance using the provided configuration.
   The function takes the CfnFlywheelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -570,11 +570,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flywheel-props-builder (new CfnFlywheelProps$Builder) id config))
+  (cfn-flywheel-props-builder> (new CfnFlywheelProps$Builder) id config))
 
 
-(defn build-cfn-flywheel-task-config-property-builder
-  "The build-cfn-flywheel-task-config-property-builder function updates a CfnFlywheel$TaskConfigProperty$Builder instance using the provided configuration.
+(defn cfn-flywheel-task-config-property-builder>
+  "The cfn-flywheel-task-config-property-builder> function updates a CfnFlywheel$TaskConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$TaskConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -604,11 +604,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flywheel-task-config-property-builder (new CfnFlywheel$TaskConfigProperty$Builder) id config))
+  (cfn-flywheel-task-config-property-builder> (new CfnFlywheel$TaskConfigProperty$Builder) id config))
 
 
-(defn build-cfn-flywheel-vpc-config-property-builder
-  "The build-cfn-flywheel-vpc-config-property-builder function updates a CfnFlywheel$VpcConfigProperty$Builder instance using the provided configuration.
+(defn cfn-flywheel-vpc-config-property-builder>
+  "The cfn-flywheel-vpc-config-property-builder> function updates a CfnFlywheel$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -635,4 +635,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-flywheel-vpc-config-property-builder (new CfnFlywheel$VpcConfigProperty$Builder) id config))
+  (cfn-flywheel-vpc-config-property-builder> (new CfnFlywheel$VpcConfigProperty$Builder) id config))

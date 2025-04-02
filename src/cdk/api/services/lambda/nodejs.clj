@@ -104,8 +104,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :both data) SourceMapMode/BOTH)))
 
 
-(defn build-bundling-options-builder
-  "The build-bundling-options-builder function updates a BundlingOptions$Builder instance using the provided configuration.
+(defn bundling-options-builder>
+  "The bundling-options-builder> function updates a BundlingOptions$Builder instance using the provided configuration.
   The function takes the BundlingOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -243,11 +243,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-bundling-options-builder (new BundlingOptions$Builder) id config))
+  (bundling-options-builder> (new BundlingOptions$Builder) id config))
 
 
-(defn build-nodejs-function-builder
-  "The build-nodejs-function-builder function updates a NodejsFunction$Builder instance using the provided configuration.
+(defn nodejs-function-builder>
+  "The nodejs-function-builder> function updates a NodejsFunction$Builder instance using the provided configuration.
   The function takes the NodejsFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -433,11 +433,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-nodejs-function-builder (NodejsFunction$Builder/create scope (name id)) id config))
+  (nodejs-function-builder> (NodejsFunction$Builder/create scope (name id)) id config))
 
 
-(defn build-nodejs-function-props-builder
-  "The build-nodejs-function-props-builder function updates a NodejsFunctionProps$Builder instance using the provided configuration.
+(defn nodejs-function-props-builder>
+  "The nodejs-function-props-builder> function updates a NodejsFunctionProps$Builder instance using the provided configuration.
   The function takes the NodejsFunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -623,4 +623,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-nodejs-function-props-builder (new NodejsFunctionProps$Builder) id config))
+  (nodejs-function-props-builder> (new NodejsFunctionProps$Builder) id config))

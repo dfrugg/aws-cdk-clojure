@@ -11,8 +11,8 @@
                                                          CfnPipelineProps$Builder]))
 
 
-(defn build-cfn-pipeline-builder
-  "The build-cfn-pipeline-builder function updates a CfnPipeline$Builder instance using the provided configuration.
+(defn cfn-pipeline-builder>
+  "The cfn-pipeline-builder> function updates a CfnPipeline$Builder instance using the provided configuration.
   The function takes the CfnPipeline$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -54,11 +54,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-pipeline-builder (CfnPipeline$Builder/create scope (name id)) id config))
+  (cfn-pipeline-builder> (CfnPipeline$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-pipeline-field-property-builder
-  "The build-cfn-pipeline-field-property-builder function updates a CfnPipeline$FieldProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-field-property-builder>
+  "The cfn-pipeline-field-property-builder> function updates a CfnPipeline$FieldProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$FieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -88,11 +88,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-field-property-builder (new CfnPipeline$FieldProperty$Builder) id config))
+  (cfn-pipeline-field-property-builder> (new CfnPipeline$FieldProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-parameter-attribute-property-builder
-  "The build-cfn-pipeline-parameter-attribute-property-builder function updates a CfnPipeline$ParameterAttributeProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-parameter-attribute-property-builder>
+  "The cfn-pipeline-parameter-attribute-property-builder> function updates a CfnPipeline$ParameterAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$ParameterAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -119,11 +119,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-parameter-attribute-property-builder (new CfnPipeline$ParameterAttributeProperty$Builder) id config))
+  (cfn-pipeline-parameter-attribute-property-builder> (new CfnPipeline$ParameterAttributeProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-parameter-object-property-builder
-  "The build-cfn-pipeline-parameter-object-property-builder function updates a CfnPipeline$ParameterObjectProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-parameter-object-property-builder>
+  "The cfn-pipeline-parameter-object-property-builder> function updates a CfnPipeline$ParameterObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$ParameterObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -150,11 +150,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-parameter-object-property-builder (new CfnPipeline$ParameterObjectProperty$Builder) id config))
+  (cfn-pipeline-parameter-object-property-builder> (new CfnPipeline$ParameterObjectProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-parameter-value-property-builder
-  "The build-cfn-pipeline-parameter-value-property-builder function updates a CfnPipeline$ParameterValueProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-parameter-value-property-builder>
+  "The cfn-pipeline-parameter-value-property-builder> function updates a CfnPipeline$ParameterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$ParameterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -181,11 +181,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-parameter-value-property-builder (new CfnPipeline$ParameterValueProperty$Builder) id config))
+  (cfn-pipeline-parameter-value-property-builder> (new CfnPipeline$ParameterValueProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-pipeline-object-property-builder
-  "The build-cfn-pipeline-pipeline-object-property-builder function updates a CfnPipeline$PipelineObjectProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-pipeline-object-property-builder>
+  "The cfn-pipeline-pipeline-object-property-builder> function updates a CfnPipeline$PipelineObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$PipelineObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -215,11 +215,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-pipeline-object-property-builder (new CfnPipeline$PipelineObjectProperty$Builder) id config))
+  (cfn-pipeline-pipeline-object-property-builder> (new CfnPipeline$PipelineObjectProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-pipeline-tag-property-builder
-  "The build-cfn-pipeline-pipeline-tag-property-builder function updates a CfnPipeline$PipelineTagProperty$Builder instance using the provided configuration.
+(defn cfn-pipeline-pipeline-tag-property-builder>
+  "The cfn-pipeline-pipeline-tag-property-builder> function updates a CfnPipeline$PipelineTagProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$PipelineTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -246,11 +246,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-pipeline-tag-property-builder (new CfnPipeline$PipelineTagProperty$Builder) id config))
+  (cfn-pipeline-pipeline-tag-property-builder> (new CfnPipeline$PipelineTagProperty$Builder) id config))
 
 
-(defn build-cfn-pipeline-props-builder
-  "The build-cfn-pipeline-props-builder function updates a CfnPipelineProps$Builder instance using the provided configuration.
+(defn cfn-pipeline-props-builder>
+  "The cfn-pipeline-props-builder> function updates a CfnPipelineProps$Builder instance using the provided configuration.
   The function takes the CfnPipelineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -292,4 +292,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-pipeline-props-builder (new CfnPipelineProps$Builder) id config))
+  (cfn-pipeline-props-builder> (new CfnPipelineProps$Builder) id config))

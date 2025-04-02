@@ -7,8 +7,8 @@
                                                      CfnGitHubRepositoryProps$Builder]))
 
 
-(defn build-cfn-git-hub-repository-builder
-  "The build-cfn-git-hub-repository-builder function updates a CfnGitHubRepository$Builder instance using the provided configuration.
+(defn cfn-git-hub-repository-builder>
+  "The cfn-git-hub-repository-builder> function updates a CfnGitHubRepository$Builder instance using the provided configuration.
   The function takes the CfnGitHubRepository$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -53,11 +53,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-git-hub-repository-builder (CfnGitHubRepository$Builder/create scope (name id)) id config))
+  (cfn-git-hub-repository-builder> (CfnGitHubRepository$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-git-hub-repository-code-property-builder
-  "The build-cfn-git-hub-repository-code-property-builder function updates a CfnGitHubRepository$CodeProperty$Builder instance using the provided configuration.
+(defn cfn-git-hub-repository-code-property-builder>
+  "The cfn-git-hub-repository-code-property-builder> function updates a CfnGitHubRepository$CodeProperty$Builder instance using the provided configuration.
   The function takes the CfnGitHubRepository$CodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -81,11 +81,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-git-hub-repository-code-property-builder (new CfnGitHubRepository$CodeProperty$Builder) id config))
+  (cfn-git-hub-repository-code-property-builder> (new CfnGitHubRepository$CodeProperty$Builder) id config))
 
 
-(defn build-cfn-git-hub-repository-props-builder
-  "The build-cfn-git-hub-repository-props-builder function updates a CfnGitHubRepositoryProps$Builder instance using the provided configuration.
+(defn cfn-git-hub-repository-props-builder>
+  "The cfn-git-hub-repository-props-builder> function updates a CfnGitHubRepositoryProps$Builder instance using the provided configuration.
   The function takes the CfnGitHubRepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -130,11 +130,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-git-hub-repository-props-builder (new CfnGitHubRepositoryProps$Builder) id config))
+  (cfn-git-hub-repository-props-builder> (new CfnGitHubRepositoryProps$Builder) id config))
 
 
-(defn build-cfn-git-hub-repository-s3-property-builder
-  "The build-cfn-git-hub-repository-s3-property-builder function updates a CfnGitHubRepository$S3Property$Builder instance using the provided configuration.
+(defn cfn-git-hub-repository-s3-property-builder>
+  "The cfn-git-hub-repository-s3-property-builder> function updates a CfnGitHubRepository$S3Property$Builder instance using the provided configuration.
   The function takes the CfnGitHubRepository$S3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -164,4 +164,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-git-hub-repository-s3-property-builder (new CfnGitHubRepository$S3Property$Builder) id config))
+  (cfn-git-hub-repository-s3-property-builder> (new CfnGitHubRepository$S3Property$Builder) id config))

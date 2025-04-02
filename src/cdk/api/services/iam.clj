@@ -119,8 +119,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :deny data) Effect/DENY)))
 
 
-(defn build-access-key-builder
-  "The build-access-key-builder function updates a AccessKey$Builder instance using the provided configuration.
+(defn access-key-builder>
+  "The access-key-builder> function updates a AccessKey$Builder instance using the provided configuration.
   The function takes the AccessKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -150,11 +150,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-access-key-builder (AccessKey$Builder/create scope (name id)) id config))
+  (access-key-builder> (AccessKey$Builder/create scope (name id)) id config))
 
 
-(defn build-access-key-props-builder
-  "The build-access-key-props-builder function updates a AccessKeyProps$Builder instance using the provided configuration.
+(defn access-key-props-builder>
+  "The access-key-props-builder> function updates a AccessKeyProps$Builder instance using the provided configuration.
   The function takes the AccessKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -184,11 +184,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-access-key-props-builder (new AccessKeyProps$Builder) id config))
+  (access-key-props-builder> (new AccessKeyProps$Builder) id config))
 
 
-(defn build-add-to-principal-policy-result-builder
-  "The build-add-to-principal-policy-result-builder function updates a AddToPrincipalPolicyResult$Builder instance using the provided configuration.
+(defn add-to-principal-policy-result-builder>
+  "The add-to-principal-policy-result-builder> function updates a AddToPrincipalPolicyResult$Builder instance using the provided configuration.
   The function takes the AddToPrincipalPolicyResult$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -215,11 +215,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-to-principal-policy-result-builder (new AddToPrincipalPolicyResult$Builder) id config))
+  (add-to-principal-policy-result-builder> (new AddToPrincipalPolicyResult$Builder) id config))
 
 
-(defn build-add-to-resource-policy-result-builder
-  "The build-add-to-resource-policy-result-builder function updates a AddToResourcePolicyResult$Builder instance using the provided configuration.
+(defn add-to-resource-policy-result-builder>
+  "The add-to-resource-policy-result-builder> function updates a AddToResourcePolicyResult$Builder instance using the provided configuration.
   The function takes the AddToResourcePolicyResult$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -246,11 +246,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-to-resource-policy-result-builder (new AddToResourcePolicyResult$Builder) id config))
+  (add-to-resource-policy-result-builder> (new AddToResourcePolicyResult$Builder) id config))
 
 
-(defn build-cfn-access-key-builder
-  "The build-cfn-access-key-builder function updates a CfnAccessKey$Builder instance using the provided configuration.
+(defn cfn-access-key-builder>
+  "The cfn-access-key-builder> function updates a CfnAccessKey$Builder instance using the provided configuration.
   The function takes the CfnAccessKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -280,11 +280,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-access-key-builder (CfnAccessKey$Builder/create scope (name id)) id config))
+  (cfn-access-key-builder> (CfnAccessKey$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-access-key-props-builder
-  "The build-cfn-access-key-props-builder function updates a CfnAccessKeyProps$Builder instance using the provided configuration.
+(defn cfn-access-key-props-builder>
+  "The cfn-access-key-props-builder> function updates a CfnAccessKeyProps$Builder instance using the provided configuration.
   The function takes the CfnAccessKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -314,11 +314,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-key-props-builder (new CfnAccessKeyProps$Builder) id config))
+  (cfn-access-key-props-builder> (new CfnAccessKeyProps$Builder) id config))
 
 
-(defn build-cfn-group-builder
-  "The build-cfn-group-builder function updates a CfnGroup$Builder instance using the provided configuration.
+(defn cfn-group-builder>
+  "The cfn-group-builder> function updates a CfnGroup$Builder instance using the provided configuration.
   The function takes the CfnGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -351,11 +351,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
+  (cfn-group-builder> (CfnGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-group-policy-builder
-  "The build-cfn-group-policy-builder function updates a CfnGroupPolicy$Builder instance using the provided configuration.
+(defn cfn-group-policy-builder>
+  "The cfn-group-policy-builder> function updates a CfnGroupPolicy$Builder instance using the provided configuration.
   The function takes the CfnGroupPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -385,11 +385,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-group-policy-builder (CfnGroupPolicy$Builder/create scope (name id)) id config))
+  (cfn-group-policy-builder> (CfnGroupPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-group-policy-property-builder
-  "The build-cfn-group-policy-property-builder function updates a CfnGroup$PolicyProperty$Builder instance using the provided configuration.
+(defn cfn-group-policy-property-builder>
+  "The cfn-group-policy-property-builder> function updates a CfnGroup$PolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$PolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -416,11 +416,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-policy-property-builder (new CfnGroup$PolicyProperty$Builder) id config))
+  (cfn-group-policy-property-builder> (new CfnGroup$PolicyProperty$Builder) id config))
 
 
-(defn build-cfn-group-policy-props-builder
-  "The build-cfn-group-policy-props-builder function updates a CfnGroupPolicyProps$Builder instance using the provided configuration.
+(defn cfn-group-policy-props-builder>
+  "The cfn-group-policy-props-builder> function updates a CfnGroupPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnGroupPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -450,11 +450,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-policy-props-builder (new CfnGroupPolicyProps$Builder) id config))
+  (cfn-group-policy-props-builder> (new CfnGroupPolicyProps$Builder) id config))
 
 
-(defn build-cfn-group-props-builder
-  "The build-cfn-group-props-builder function updates a CfnGroupProps$Builder instance using the provided configuration.
+(defn cfn-group-props-builder>
+  "The cfn-group-props-builder> function updates a CfnGroupProps$Builder instance using the provided configuration.
   The function takes the CfnGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -487,11 +487,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
+  (cfn-group-props-builder> (new CfnGroupProps$Builder) id config))
 
 
-(defn build-cfn-instance-profile-builder
-  "The build-cfn-instance-profile-builder function updates a CfnInstanceProfile$Builder instance using the provided configuration.
+(defn cfn-instance-profile-builder>
+  "The cfn-instance-profile-builder> function updates a CfnInstanceProfile$Builder instance using the provided configuration.
   The function takes the CfnInstanceProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -521,11 +521,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-instance-profile-builder (CfnInstanceProfile$Builder/create scope (name id)) id config))
+  (cfn-instance-profile-builder> (CfnInstanceProfile$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-instance-profile-props-builder
-  "The build-cfn-instance-profile-props-builder function updates a CfnInstanceProfileProps$Builder instance using the provided configuration.
+(defn cfn-instance-profile-props-builder>
+  "The cfn-instance-profile-props-builder> function updates a CfnInstanceProfileProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -555,11 +555,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-instance-profile-props-builder (new CfnInstanceProfileProps$Builder) id config))
+  (cfn-instance-profile-props-builder> (new CfnInstanceProfileProps$Builder) id config))
 
 
-(defn build-cfn-managed-policy-builder
-  "The build-cfn-managed-policy-builder function updates a CfnManagedPolicy$Builder instance using the provided configuration.
+(defn cfn-managed-policy-builder>
+  "The cfn-managed-policy-builder> function updates a CfnManagedPolicy$Builder instance using the provided configuration.
   The function takes the CfnManagedPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -601,11 +601,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-managed-policy-builder (CfnManagedPolicy$Builder/create scope (name id)) id config))
+  (cfn-managed-policy-builder> (CfnManagedPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-managed-policy-props-builder
-  "The build-cfn-managed-policy-props-builder function updates a CfnManagedPolicyProps$Builder instance using the provided configuration.
+(defn cfn-managed-policy-props-builder>
+  "The cfn-managed-policy-props-builder> function updates a CfnManagedPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnManagedPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -647,11 +647,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-managed-policy-props-builder (new CfnManagedPolicyProps$Builder) id config))
+  (cfn-managed-policy-props-builder> (new CfnManagedPolicyProps$Builder) id config))
 
 
-(defn build-cfn-oidc-provider-builder
-  "The build-cfn-oidc-provider-builder function updates a CfnOIDCProvider$Builder instance using the provided configuration.
+(defn cfn-oidc-provider-builder>
+  "The cfn-oidc-provider-builder> function updates a CfnOIDCProvider$Builder instance using the provided configuration.
   The function takes the CfnOIDCProvider$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -684,11 +684,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-oidc-provider-builder (CfnOIDCProvider$Builder/create scope (name id)) id config))
+  (cfn-oidc-provider-builder> (CfnOIDCProvider$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-oidc-provider-props-builder
-  "The build-cfn-oidc-provider-props-builder function updates a CfnOIDCProviderProps$Builder instance using the provided configuration.
+(defn cfn-oidc-provider-props-builder>
+  "The cfn-oidc-provider-props-builder> function updates a CfnOIDCProviderProps$Builder instance using the provided configuration.
   The function takes the CfnOIDCProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -721,11 +721,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-oidc-provider-props-builder (new CfnOIDCProviderProps$Builder) id config))
+  (cfn-oidc-provider-props-builder> (new CfnOIDCProviderProps$Builder) id config))
 
 
-(defn build-cfn-policy-builder
-  "The build-cfn-policy-builder function updates a CfnPolicy$Builder instance using the provided configuration.
+(defn cfn-policy-builder>
+  "The cfn-policy-builder> function updates a CfnPolicy$Builder instance using the provided configuration.
   The function takes the CfnPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -761,11 +761,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-policy-builder (CfnPolicy$Builder/create scope (name id)) id config))
+  (cfn-policy-builder> (CfnPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-policy-props-builder
-  "The build-cfn-policy-props-builder function updates a CfnPolicyProps$Builder instance using the provided configuration.
+(defn cfn-policy-props-builder>
+  "The cfn-policy-props-builder> function updates a CfnPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -801,11 +801,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-policy-props-builder (new CfnPolicyProps$Builder) id config))
+  (cfn-policy-props-builder> (new CfnPolicyProps$Builder) id config))
 
 
-(defn build-cfn-role-builder
-  "The build-cfn-role-builder function updates a CfnRole$Builder instance using the provided configuration.
+(defn cfn-role-builder>
+  "The cfn-role-builder> function updates a CfnRole$Builder instance using the provided configuration.
   The function takes the CfnRole$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -853,11 +853,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-role-builder (CfnRole$Builder/create scope (name id)) id config))
+  (cfn-role-builder> (CfnRole$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-role-policy-builder
-  "The build-cfn-role-policy-builder function updates a CfnRolePolicy$Builder instance using the provided configuration.
+(defn cfn-role-policy-builder>
+  "The cfn-role-policy-builder> function updates a CfnRolePolicy$Builder instance using the provided configuration.
   The function takes the CfnRolePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -887,11 +887,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-role-policy-builder (CfnRolePolicy$Builder/create scope (name id)) id config))
+  (cfn-role-policy-builder> (CfnRolePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-role-policy-property-builder
-  "The build-cfn-role-policy-property-builder function updates a CfnRole$PolicyProperty$Builder instance using the provided configuration.
+(defn cfn-role-policy-property-builder>
+  "The cfn-role-policy-property-builder> function updates a CfnRole$PolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnRole$PolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -918,11 +918,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-role-policy-property-builder (new CfnRole$PolicyProperty$Builder) id config))
+  (cfn-role-policy-property-builder> (new CfnRole$PolicyProperty$Builder) id config))
 
 
-(defn build-cfn-role-policy-props-builder
-  "The build-cfn-role-policy-props-builder function updates a CfnRolePolicyProps$Builder instance using the provided configuration.
+(defn cfn-role-policy-props-builder>
+  "The cfn-role-policy-props-builder> function updates a CfnRolePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnRolePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -952,11 +952,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-role-policy-props-builder (new CfnRolePolicyProps$Builder) id config))
+  (cfn-role-policy-props-builder> (new CfnRolePolicyProps$Builder) id config))
 
 
-(defn build-cfn-role-props-builder
-  "The build-cfn-role-props-builder function updates a CfnRoleProps$Builder instance using the provided configuration.
+(defn cfn-role-props-builder>
+  "The cfn-role-props-builder> function updates a CfnRoleProps$Builder instance using the provided configuration.
   The function takes the CfnRoleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1004,11 +1004,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-role-props-builder (new CfnRoleProps$Builder) id config))
+  (cfn-role-props-builder> (new CfnRoleProps$Builder) id config))
 
 
-(defn build-cfn-saml-provider-builder
-  "The build-cfn-saml-provider-builder function updates a CfnSAMLProvider$Builder instance using the provided configuration.
+(defn cfn-saml-provider-builder>
+  "The cfn-saml-provider-builder> function updates a CfnSAMLProvider$Builder instance using the provided configuration.
   The function takes the CfnSAMLProvider$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1038,11 +1038,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-saml-provider-builder (CfnSAMLProvider$Builder/create scope (name id)) id config))
+  (cfn-saml-provider-builder> (CfnSAMLProvider$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-saml-provider-props-builder
-  "The build-cfn-saml-provider-props-builder function updates a CfnSAMLProviderProps$Builder instance using the provided configuration.
+(defn cfn-saml-provider-props-builder>
+  "The cfn-saml-provider-props-builder> function updates a CfnSAMLProviderProps$Builder instance using the provided configuration.
   The function takes the CfnSAMLProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1072,11 +1072,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-saml-provider-props-builder (new CfnSAMLProviderProps$Builder) id config))
+  (cfn-saml-provider-props-builder> (new CfnSAMLProviderProps$Builder) id config))
 
 
-(defn build-cfn-server-certificate-builder
-  "The build-cfn-server-certificate-builder function updates a CfnServerCertificate$Builder instance using the provided configuration.
+(defn cfn-server-certificate-builder>
+  "The cfn-server-certificate-builder> function updates a CfnServerCertificate$Builder instance using the provided configuration.
   The function takes the CfnServerCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1115,11 +1115,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-server-certificate-builder (CfnServerCertificate$Builder/create scope (name id)) id config))
+  (cfn-server-certificate-builder> (CfnServerCertificate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-server-certificate-props-builder
-  "The build-cfn-server-certificate-props-builder function updates a CfnServerCertificateProps$Builder instance using the provided configuration.
+(defn cfn-server-certificate-props-builder>
+  "The cfn-server-certificate-props-builder> function updates a CfnServerCertificateProps$Builder instance using the provided configuration.
   The function takes the CfnServerCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1158,11 +1158,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-server-certificate-props-builder (new CfnServerCertificateProps$Builder) id config))
+  (cfn-server-certificate-props-builder> (new CfnServerCertificateProps$Builder) id config))
 
 
-(defn build-cfn-service-linked-role-builder
-  "The build-cfn-service-linked-role-builder function updates a CfnServiceLinkedRole$Builder instance using the provided configuration.
+(defn cfn-service-linked-role-builder>
+  "The cfn-service-linked-role-builder> function updates a CfnServiceLinkedRole$Builder instance using the provided configuration.
   The function takes the CfnServiceLinkedRole$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1192,11 +1192,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-service-linked-role-builder (CfnServiceLinkedRole$Builder/create scope (name id)) id config))
+  (cfn-service-linked-role-builder> (CfnServiceLinkedRole$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-service-linked-role-props-builder
-  "The build-cfn-service-linked-role-props-builder function updates a CfnServiceLinkedRoleProps$Builder instance using the provided configuration.
+(defn cfn-service-linked-role-props-builder>
+  "The cfn-service-linked-role-props-builder> function updates a CfnServiceLinkedRoleProps$Builder instance using the provided configuration.
   The function takes the CfnServiceLinkedRoleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1226,11 +1226,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-linked-role-props-builder (new CfnServiceLinkedRoleProps$Builder) id config))
+  (cfn-service-linked-role-props-builder> (new CfnServiceLinkedRoleProps$Builder) id config))
 
 
-(defn build-cfn-user-builder
-  "The build-cfn-user-builder function updates a CfnUser$Builder instance using the provided configuration.
+(defn cfn-user-builder>
+  "The cfn-user-builder> function updates a CfnUser$Builder instance using the provided configuration.
   The function takes the CfnUser$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1275,11 +1275,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-user-builder (CfnUser$Builder/create scope (name id)) id config))
+  (cfn-user-builder> (CfnUser$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-user-login-profile-property-builder
-  "The build-cfn-user-login-profile-property-builder function updates a CfnUser$LoginProfileProperty$Builder instance using the provided configuration.
+(defn cfn-user-login-profile-property-builder>
+  "The cfn-user-login-profile-property-builder> function updates a CfnUser$LoginProfileProperty$Builder instance using the provided configuration.
   The function takes the CfnUser$LoginProfileProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1306,11 +1306,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-user-login-profile-property-builder (new CfnUser$LoginProfileProperty$Builder) id config))
+  (cfn-user-login-profile-property-builder> (new CfnUser$LoginProfileProperty$Builder) id config))
 
 
-(defn build-cfn-user-policy-builder
-  "The build-cfn-user-policy-builder function updates a CfnUserPolicy$Builder instance using the provided configuration.
+(defn cfn-user-policy-builder>
+  "The cfn-user-policy-builder> function updates a CfnUserPolicy$Builder instance using the provided configuration.
   The function takes the CfnUserPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1340,11 +1340,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-user-policy-builder (CfnUserPolicy$Builder/create scope (name id)) id config))
+  (cfn-user-policy-builder> (CfnUserPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-user-policy-property-builder
-  "The build-cfn-user-policy-property-builder function updates a CfnUser$PolicyProperty$Builder instance using the provided configuration.
+(defn cfn-user-policy-property-builder>
+  "The cfn-user-policy-property-builder> function updates a CfnUser$PolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnUser$PolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1371,11 +1371,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-user-policy-property-builder (new CfnUser$PolicyProperty$Builder) id config))
+  (cfn-user-policy-property-builder> (new CfnUser$PolicyProperty$Builder) id config))
 
 
-(defn build-cfn-user-policy-props-builder
-  "The build-cfn-user-policy-props-builder function updates a CfnUserPolicyProps$Builder instance using the provided configuration.
+(defn cfn-user-policy-props-builder>
+  "The cfn-user-policy-props-builder> function updates a CfnUserPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnUserPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1405,11 +1405,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-user-policy-props-builder (new CfnUserPolicyProps$Builder) id config))
+  (cfn-user-policy-props-builder> (new CfnUserPolicyProps$Builder) id config))
 
 
-(defn build-cfn-user-props-builder
-  "The build-cfn-user-props-builder function updates a CfnUserProps$Builder instance using the provided configuration.
+(defn cfn-user-props-builder>
+  "The cfn-user-props-builder> function updates a CfnUserProps$Builder instance using the provided configuration.
   The function takes the CfnUserProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1454,11 +1454,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-user-props-builder (new CfnUserProps$Builder) id config))
+  (cfn-user-props-builder> (new CfnUserProps$Builder) id config))
 
 
-(defn build-cfn-user-to-group-addition-builder
-  "The build-cfn-user-to-group-addition-builder function updates a CfnUserToGroupAddition$Builder instance using the provided configuration.
+(defn cfn-user-to-group-addition-builder>
+  "The cfn-user-to-group-addition-builder> function updates a CfnUserToGroupAddition$Builder instance using the provided configuration.
   The function takes the CfnUserToGroupAddition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1485,11 +1485,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-user-to-group-addition-builder (CfnUserToGroupAddition$Builder/create scope (name id)) id config))
+  (cfn-user-to-group-addition-builder> (CfnUserToGroupAddition$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-user-to-group-addition-props-builder
-  "The build-cfn-user-to-group-addition-props-builder function updates a CfnUserToGroupAdditionProps$Builder instance using the provided configuration.
+(defn cfn-user-to-group-addition-props-builder>
+  "The cfn-user-to-group-addition-props-builder> function updates a CfnUserToGroupAdditionProps$Builder instance using the provided configuration.
   The function takes the CfnUserToGroupAdditionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1516,11 +1516,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-user-to-group-addition-props-builder (new CfnUserToGroupAdditionProps$Builder) id config))
+  (cfn-user-to-group-addition-props-builder> (new CfnUserToGroupAdditionProps$Builder) id config))
 
 
-(defn build-cfn-virtual-mfa-device-builder
-  "The build-cfn-virtual-mfa-device-builder function updates a CfnVirtualMFADevice$Builder instance using the provided configuration.
+(defn cfn-virtual-mfa-device-builder>
+  "The cfn-virtual-mfa-device-builder> function updates a CfnVirtualMFADevice$Builder instance using the provided configuration.
   The function takes the CfnVirtualMFADevice$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1553,11 +1553,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-virtual-mfa-device-builder (CfnVirtualMFADevice$Builder/create scope (name id)) id config))
+  (cfn-virtual-mfa-device-builder> (CfnVirtualMFADevice$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-virtual-mfa-device-props-builder
-  "The build-cfn-virtual-mfa-device-props-builder function updates a CfnVirtualMFADeviceProps$Builder instance using the provided configuration.
+(defn cfn-virtual-mfa-device-props-builder>
+  "The cfn-virtual-mfa-device-props-builder> function updates a CfnVirtualMFADeviceProps$Builder instance using the provided configuration.
   The function takes the CfnVirtualMFADeviceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1590,11 +1590,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-virtual-mfa-device-props-builder (new CfnVirtualMFADeviceProps$Builder) id config))
+  (cfn-virtual-mfa-device-props-builder> (new CfnVirtualMFADeviceProps$Builder) id config))
 
 
-(defn build-common-grant-options-builder
-  "The build-common-grant-options-builder function updates a CommonGrantOptions$Builder instance using the provided configuration.
+(defn common-grant-options-builder>
+  "The common-grant-options-builder> function updates a CommonGrantOptions$Builder instance using the provided configuration.
   The function takes the CommonGrantOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1627,11 +1627,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-common-grant-options-builder (new CommonGrantOptions$Builder) id config))
+  (common-grant-options-builder> (new CommonGrantOptions$Builder) id config))
 
 
-(defn build-customize-roles-options-builder
-  "The build-customize-roles-options-builder function updates a CustomizeRolesOptions$Builder instance using the provided configuration.
+(defn customize-roles-options-builder>
+  "The customize-roles-options-builder> function updates a CustomizeRolesOptions$Builder instance using the provided configuration.
   The function takes the CustomizeRolesOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1658,11 +1658,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-customize-roles-options-builder (new CustomizeRolesOptions$Builder) id config))
+  (customize-roles-options-builder> (new CustomizeRolesOptions$Builder) id config))
 
 
-(defn build-from-role-arn-options-builder
-  "The build-from-role-arn-options-builder function updates a FromRoleArnOptions$Builder instance using the provided configuration.
+(defn from-role-arn-options-builder>
+  "The from-role-arn-options-builder> function updates a FromRoleArnOptions$Builder instance using the provided configuration.
   The function takes the FromRoleArnOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1692,11 +1692,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-from-role-arn-options-builder (new FromRoleArnOptions$Builder) id config))
+  (from-role-arn-options-builder> (new FromRoleArnOptions$Builder) id config))
 
 
-(defn build-from-role-name-options-builder
-  "The build-from-role-name-options-builder function updates a FromRoleNameOptions$Builder instance using the provided configuration.
+(defn from-role-name-options-builder>
+  "The from-role-name-options-builder> function updates a FromRoleNameOptions$Builder instance using the provided configuration.
   The function takes the FromRoleNameOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1726,11 +1726,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-from-role-name-options-builder (new FromRoleNameOptions$Builder) id config))
+  (from-role-name-options-builder> (new FromRoleNameOptions$Builder) id config))
 
 
-(defn build-grant-on-principal-and-resource-options-builder
-  "The build-grant-on-principal-and-resource-options-builder function updates a GrantOnPrincipalAndResourceOptions$Builder instance using the provided configuration.
+(defn grant-on-principal-and-resource-options-builder>
+  "The grant-on-principal-and-resource-options-builder> function updates a GrantOnPrincipalAndResourceOptions$Builder instance using the provided configuration.
   The function takes the GrantOnPrincipalAndResourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1772,11 +1772,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-grant-on-principal-and-resource-options-builder (new GrantOnPrincipalAndResourceOptions$Builder) id config))
+  (grant-on-principal-and-resource-options-builder> (new GrantOnPrincipalAndResourceOptions$Builder) id config))
 
 
-(defn build-grant-on-principal-options-builder
-  "The build-grant-on-principal-options-builder function updates a GrantOnPrincipalOptions$Builder instance using the provided configuration.
+(defn grant-on-principal-options-builder>
+  "The grant-on-principal-options-builder> function updates a GrantOnPrincipalOptions$Builder instance using the provided configuration.
   The function takes the GrantOnPrincipalOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1812,11 +1812,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-grant-on-principal-options-builder (new GrantOnPrincipalOptions$Builder) id config))
+  (grant-on-principal-options-builder> (new GrantOnPrincipalOptions$Builder) id config))
 
 
-(defn build-grant-with-resource-options-builder
-  "The build-grant-with-resource-options-builder function updates a GrantWithResourceOptions$Builder instance using the provided configuration.
+(defn grant-with-resource-options-builder>
+  "The grant-with-resource-options-builder> function updates a GrantWithResourceOptions$Builder instance using the provided configuration.
   The function takes the GrantWithResourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1855,11 +1855,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-grant-with-resource-options-builder (new GrantWithResourceOptions$Builder) id config))
+  (grant-with-resource-options-builder> (new GrantWithResourceOptions$Builder) id config))
 
 
-(defn build-group-builder
-  "The build-group-builder function updates a Group$Builder instance using the provided configuration.
+(defn group-builder>
+  "The group-builder> function updates a Group$Builder instance using the provided configuration.
   The function takes the Group$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1889,11 +1889,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-group-builder (Group$Builder/create scope (name id)) id config))
+  (group-builder> (Group$Builder/create scope (name id)) id config))
 
 
-(defn build-group-props-builder
-  "The build-group-props-builder function updates a GroupProps$Builder instance using the provided configuration.
+(defn group-props-builder>
+  "The group-props-builder> function updates a GroupProps$Builder instance using the provided configuration.
   The function takes the GroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1923,11 +1923,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-group-props-builder (new GroupProps$Builder) id config))
+  (group-props-builder> (new GroupProps$Builder) id config))
 
 
-(defn build-instance-profile-attributes-builder
-  "The build-instance-profile-attributes-builder function updates a InstanceProfileAttributes$Builder instance using the provided configuration.
+(defn instance-profile-attributes-builder>
+  "The instance-profile-attributes-builder> function updates a InstanceProfileAttributes$Builder instance using the provided configuration.
   The function takes the InstanceProfileAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1954,11 +1954,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-instance-profile-attributes-builder (new InstanceProfileAttributes$Builder) id config))
+  (instance-profile-attributes-builder> (new InstanceProfileAttributes$Builder) id config))
 
 
-(defn build-instance-profile-builder
-  "The build-instance-profile-builder function updates a InstanceProfile$Builder instance using the provided configuration.
+(defn instance-profile-builder>
+  "The instance-profile-builder> function updates a InstanceProfile$Builder instance using the provided configuration.
   The function takes the InstanceProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1988,11 +1988,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-instance-profile-builder (InstanceProfile$Builder/create scope (name id)) id config))
+  (instance-profile-builder> (InstanceProfile$Builder/create scope (name id)) id config))
 
 
-(defn build-instance-profile-props-builder
-  "The build-instance-profile-props-builder function updates a InstanceProfileProps$Builder instance using the provided configuration.
+(defn instance-profile-props-builder>
+  "The instance-profile-props-builder> function updates a InstanceProfileProps$Builder instance using the provided configuration.
   The function takes the InstanceProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2022,11 +2022,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-instance-profile-props-builder (new InstanceProfileProps$Builder) id config))
+  (instance-profile-props-builder> (new InstanceProfileProps$Builder) id config))
 
 
-(defn build-lazy-role-builder
-  "The build-lazy-role-builder function updates a LazyRole$Builder instance using the provided configuration.
+(defn lazy-role-builder>
+  "The lazy-role-builder> function updates a LazyRole$Builder instance using the provided configuration.
   The function takes the LazyRole$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2074,11 +2074,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-lazy-role-builder (LazyRole$Builder/create scope (name id)) id config))
+  (lazy-role-builder> (LazyRole$Builder/create scope (name id)) id config))
 
 
-(defn build-lazy-role-props-builder
-  "The build-lazy-role-props-builder function updates a LazyRoleProps$Builder instance using the provided configuration.
+(defn lazy-role-props-builder>
+  "The lazy-role-props-builder> function updates a LazyRoleProps$Builder instance using the provided configuration.
   The function takes the LazyRoleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2126,11 +2126,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lazy-role-props-builder (new LazyRoleProps$Builder) id config))
+  (lazy-role-props-builder> (new LazyRoleProps$Builder) id config))
 
 
-(defn build-managed-policy-builder
-  "The build-managed-policy-builder function updates a ManagedPolicy$Builder instance using the provided configuration.
+(defn managed-policy-builder>
+  "The managed-policy-builder> function updates a ManagedPolicy$Builder instance using the provided configuration.
   The function takes the ManagedPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2175,11 +2175,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-managed-policy-builder (ManagedPolicy$Builder/create scope (name id)) id config))
+  (managed-policy-builder> (ManagedPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-managed-policy-props-builder
-  "The build-managed-policy-props-builder function updates a ManagedPolicyProps$Builder instance using the provided configuration.
+(defn managed-policy-props-builder>
+  "The managed-policy-props-builder> function updates a ManagedPolicyProps$Builder instance using the provided configuration.
   The function takes the ManagedPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2224,11 +2224,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-managed-policy-props-builder (new ManagedPolicyProps$Builder) id config))
+  (managed-policy-props-builder> (new ManagedPolicyProps$Builder) id config))
 
 
-(defn build-open-id-connect-provider-builder
-  "The build-open-id-connect-provider-builder function updates a OpenIdConnectProvider$Builder instance using the provided configuration.
+(defn open-id-connect-provider-builder>
+  "The open-id-connect-provider-builder> function updates a OpenIdConnectProvider$Builder instance using the provided configuration.
   The function takes the OpenIdConnectProvider$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2258,11 +2258,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-open-id-connect-provider-builder (OpenIdConnectProvider$Builder/create scope (name id)) id config))
+  (open-id-connect-provider-builder> (OpenIdConnectProvider$Builder/create scope (name id)) id config))
 
 
-(defn build-open-id-connect-provider-props-builder
-  "The build-open-id-connect-provider-props-builder function updates a OpenIdConnectProviderProps$Builder instance using the provided configuration.
+(defn open-id-connect-provider-props-builder>
+  "The open-id-connect-provider-props-builder> function updates a OpenIdConnectProviderProps$Builder instance using the provided configuration.
   The function takes the OpenIdConnectProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2292,11 +2292,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-open-id-connect-provider-props-builder (new OpenIdConnectProviderProps$Builder) id config))
+  (open-id-connect-provider-props-builder> (new OpenIdConnectProviderProps$Builder) id config))
 
 
-(defn build-policy-builder
-  "The build-policy-builder function updates a Policy$Builder instance using the provided configuration.
+(defn policy-builder>
+  "The policy-builder> function updates a Policy$Builder instance using the provided configuration.
   The function takes the Policy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2338,11 +2338,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-policy-builder (Policy$Builder/create scope (name id)) id config))
+  (policy-builder> (Policy$Builder/create scope (name id)) id config))
 
 
-(defn build-policy-document-builder
-  "The build-policy-document-builder function updates a PolicyDocument$Builder instance using the provided configuration.
+(defn policy-document-builder>
+  "The policy-document-builder> function updates a PolicyDocument$Builder instance using the provided configuration.
   The function takes the PolicyDocument$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2372,11 +2372,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-policy-document-builder (PolicyDocument$Builder/create) id config))
+  (policy-document-builder> (PolicyDocument$Builder/create) id config))
 
 
-(defn build-policy-document-props-builder
-  "The build-policy-document-props-builder function updates a PolicyDocumentProps$Builder instance using the provided configuration.
+(defn policy-document-props-builder>
+  "The policy-document-props-builder> function updates a PolicyDocumentProps$Builder instance using the provided configuration.
   The function takes the PolicyDocumentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2406,11 +2406,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-policy-document-props-builder (new PolicyDocumentProps$Builder) id config))
+  (policy-document-props-builder> (new PolicyDocumentProps$Builder) id config))
 
 
-(defn build-policy-props-builder
-  "The build-policy-props-builder function updates a PolicyProps$Builder instance using the provided configuration.
+(defn policy-props-builder>
+  "The policy-props-builder> function updates a PolicyProps$Builder instance using the provided configuration.
   The function takes the PolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2452,11 +2452,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-policy-props-builder (new PolicyProps$Builder) id config))
+  (policy-props-builder> (new PolicyProps$Builder) id config))
 
 
-(defn build-policy-statement-builder
-  "The build-policy-statement-builder function updates a PolicyStatement$Builder instance using the provided configuration.
+(defn policy-statement-builder>
+  "The policy-statement-builder> function updates a PolicyStatement$Builder instance using the provided configuration.
   The function takes the PolicyStatement$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2504,11 +2504,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-policy-statement-builder (PolicyStatement$Builder/create) id config))
+  (policy-statement-builder> (PolicyStatement$Builder/create) id config))
 
 
-(defn build-policy-statement-props-builder
-  "The build-policy-statement-props-builder function updates a PolicyStatementProps$Builder instance using the provided configuration.
+(defn policy-statement-props-builder>
+  "The policy-statement-props-builder> function updates a PolicyStatementProps$Builder instance using the provided configuration.
   The function takes the PolicyStatementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2556,11 +2556,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-policy-statement-props-builder (new PolicyStatementProps$Builder) id config))
+  (policy-statement-props-builder> (new PolicyStatementProps$Builder) id config))
 
 
-(defn build-role-builder
-  "The build-role-builder function updates a Role$Builder instance using the provided configuration.
+(defn role-builder>
+  "The role-builder> function updates a Role$Builder instance using the provided configuration.
   The function takes the Role$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2608,11 +2608,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-role-builder (Role$Builder/create scope (name id)) id config))
+  (role-builder> (Role$Builder/create scope (name id)) id config))
 
 
-(defn build-role-props-builder
-  "The build-role-props-builder function updates a RoleProps$Builder instance using the provided configuration.
+(defn role-props-builder>
+  "The role-props-builder> function updates a RoleProps$Builder instance using the provided configuration.
   The function takes the RoleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2660,11 +2660,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-role-props-builder (new RoleProps$Builder) id config))
+  (role-props-builder> (new RoleProps$Builder) id config))
 
 
-(defn build-saml-provider-builder
-  "The build-saml-provider-builder function updates a SamlProvider$Builder instance using the provided configuration.
+(defn saml-provider-builder>
+  "The saml-provider-builder> function updates a SamlProvider$Builder instance using the provided configuration.
   The function takes the SamlProvider$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2691,11 +2691,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-saml-provider-builder (SamlProvider$Builder/create scope (name id)) id config))
+  (saml-provider-builder> (SamlProvider$Builder/create scope (name id)) id config))
 
 
-(defn build-saml-provider-props-builder
-  "The build-saml-provider-props-builder function updates a SamlProviderProps$Builder instance using the provided configuration.
+(defn saml-provider-props-builder>
+  "The saml-provider-props-builder> function updates a SamlProviderProps$Builder instance using the provided configuration.
   The function takes the SamlProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2722,11 +2722,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-saml-provider-props-builder (new SamlProviderProps$Builder) id config))
+  (saml-provider-props-builder> (new SamlProviderProps$Builder) id config))
 
 
-(defn build-service-principal-builder
-  "The build-service-principal-builder function updates a ServicePrincipal$Builder instance using the provided configuration.
+(defn service-principal-builder>
+  "The service-principal-builder> function updates a ServicePrincipal$Builder instance using the provided configuration.
   The function takes the ServicePrincipal$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2756,11 +2756,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String service id config]
-  (build-service-principal-builder (ServicePrincipal$Builder/create service) id config))
+  (service-principal-builder> (ServicePrincipal$Builder/create service) id config))
 
 
-(defn build-service-principal-opts-builder
-  "The build-service-principal-opts-builder function updates a ServicePrincipalOpts$Builder instance using the provided configuration.
+(defn service-principal-opts-builder>
+  "The service-principal-opts-builder> function updates a ServicePrincipalOpts$Builder instance using the provided configuration.
   The function takes the ServicePrincipalOpts$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2787,11 +2787,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-service-principal-opts-builder (new ServicePrincipalOpts$Builder) id config))
+  (service-principal-opts-builder> (new ServicePrincipalOpts$Builder) id config))
 
 
-(defn build-unknown-principal-builder
-  "The build-unknown-principal-builder function updates a UnknownPrincipal$Builder instance using the provided configuration.
+(defn unknown-principal-builder>
+  "The unknown-principal-builder> function updates a UnknownPrincipal$Builder instance using the provided configuration.
   The function takes the UnknownPrincipal$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2815,11 +2815,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-unknown-principal-builder (UnknownPrincipal$Builder/create) id config))
+  (unknown-principal-builder> (UnknownPrincipal$Builder/create) id config))
 
 
-(defn build-unknown-principal-props-builder
-  "The build-unknown-principal-props-builder function updates a UnknownPrincipalProps$Builder instance using the provided configuration.
+(defn unknown-principal-props-builder>
+  "The unknown-principal-props-builder> function updates a UnknownPrincipalProps$Builder instance using the provided configuration.
   The function takes the UnknownPrincipalProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2843,11 +2843,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-unknown-principal-props-builder (new UnknownPrincipalProps$Builder) id config))
+  (unknown-principal-props-builder> (new UnknownPrincipalProps$Builder) id config))
 
 
-(defn build-user-attributes-builder
-  "The build-user-attributes-builder function updates a UserAttributes$Builder instance using the provided configuration.
+(defn user-attributes-builder>
+  "The user-attributes-builder> function updates a UserAttributes$Builder instance using the provided configuration.
   The function takes the UserAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2871,11 +2871,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-user-attributes-builder (new UserAttributes$Builder) id config))
+  (user-attributes-builder> (new UserAttributes$Builder) id config))
 
 
-(defn build-user-builder
-  "The build-user-builder function updates a User$Builder instance using the provided configuration.
+(defn user-builder>
+  "The user-builder> function updates a User$Builder instance using the provided configuration.
   The function takes the User$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2917,11 +2917,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-user-builder (User$Builder/create scope (name id)) id config))
+  (user-builder> (User$Builder/create scope (name id)) id config))
 
 
-(defn build-user-props-builder
-  "The build-user-props-builder function updates a UserProps$Builder instance using the provided configuration.
+(defn user-props-builder>
+  "The user-props-builder> function updates a UserProps$Builder instance using the provided configuration.
   The function takes the UserProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2963,11 +2963,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-user-props-builder (new UserProps$Builder) id config))
+  (user-props-builder> (new UserProps$Builder) id config))
 
 
-(defn build-without-policy-updates-options-builder
-  "The build-without-policy-updates-options-builder function updates a WithoutPolicyUpdatesOptions$Builder instance using the provided configuration.
+(defn without-policy-updates-options-builder>
+  "The without-policy-updates-options-builder> function updates a WithoutPolicyUpdatesOptions$Builder instance using the provided configuration.
   The function takes the WithoutPolicyUpdatesOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2991,4 +2991,4 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-without-policy-updates-options-builder (new WithoutPolicyUpdatesOptions$Builder) id config))
+  (without-policy-updates-options-builder> (new WithoutPolicyUpdatesOptions$Builder) id config))

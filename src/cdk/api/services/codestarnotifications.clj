@@ -31,8 +31,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :full data) DetailType/FULL)))
 
 
-(defn build-cfn-notification-rule-builder
-  "The build-cfn-notification-rule-builder function updates a CfnNotificationRule$Builder instance using the provided configuration.
+(defn cfn-notification-rule-builder>
+  "The cfn-notification-rule-builder> function updates a CfnNotificationRule$Builder instance using the provided configuration.
   The function takes the CfnNotificationRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -83,11 +83,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-notification-rule-builder (CfnNotificationRule$Builder/create scope (name id)) id config))
+  (cfn-notification-rule-builder> (CfnNotificationRule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-notification-rule-props-builder
-  "The build-cfn-notification-rule-props-builder function updates a CfnNotificationRuleProps$Builder instance using the provided configuration.
+(defn cfn-notification-rule-props-builder>
+  "The cfn-notification-rule-props-builder> function updates a CfnNotificationRuleProps$Builder instance using the provided configuration.
   The function takes the CfnNotificationRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -138,11 +138,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-notification-rule-props-builder (new CfnNotificationRuleProps$Builder) id config))
+  (cfn-notification-rule-props-builder> (new CfnNotificationRuleProps$Builder) id config))
 
 
-(defn build-cfn-notification-rule-target-property-builder
-  "The build-cfn-notification-rule-target-property-builder function updates a CfnNotificationRule$TargetProperty$Builder instance using the provided configuration.
+(defn cfn-notification-rule-target-property-builder>
+  "The cfn-notification-rule-target-property-builder> function updates a CfnNotificationRule$TargetProperty$Builder instance using the provided configuration.
   The function takes the CfnNotificationRule$TargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -169,11 +169,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-notification-rule-target-property-builder (new CfnNotificationRule$TargetProperty$Builder) id config))
+  (cfn-notification-rule-target-property-builder> (new CfnNotificationRule$TargetProperty$Builder) id config))
 
 
-(defn build-notification-rule-builder
-  "The build-notification-rule-builder function updates a NotificationRule$Builder instance using the provided configuration.
+(defn notification-rule-builder>
+  "The notification-rule-builder> function updates a NotificationRule$Builder instance using the provided configuration.
   The function takes the NotificationRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -212,11 +212,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-notification-rule-builder (NotificationRule$Builder/create scope (name id)) id config))
+  (notification-rule-builder> (NotificationRule$Builder/create scope (name id)) id config))
 
 
-(defn build-notification-rule-options-builder
-  "The build-notification-rule-options-builder function updates a NotificationRuleOptions$Builder instance using the provided configuration.
+(defn notification-rule-options-builder>
+  "The notification-rule-options-builder> function updates a NotificationRuleOptions$Builder instance using the provided configuration.
   The function takes the NotificationRuleOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -246,11 +246,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-notification-rule-options-builder (new NotificationRuleOptions$Builder) id config))
+  (notification-rule-options-builder> (new NotificationRuleOptions$Builder) id config))
 
 
-(defn build-notification-rule-props-builder
-  "The build-notification-rule-props-builder function updates a NotificationRuleProps$Builder instance using the provided configuration.
+(defn notification-rule-props-builder>
+  "The notification-rule-props-builder> function updates a NotificationRuleProps$Builder instance using the provided configuration.
   The function takes the NotificationRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -289,11 +289,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-notification-rule-props-builder (new NotificationRuleProps$Builder) id config))
+  (notification-rule-props-builder> (new NotificationRuleProps$Builder) id config))
 
 
-(defn build-notification-rule-source-config-builder
-  "The build-notification-rule-source-config-builder function updates a NotificationRuleSourceConfig$Builder instance using the provided configuration.
+(defn notification-rule-source-config-builder>
+  "The notification-rule-source-config-builder> function updates a NotificationRuleSourceConfig$Builder instance using the provided configuration.
   The function takes the NotificationRuleSourceConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -317,11 +317,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-notification-rule-source-config-builder (new NotificationRuleSourceConfig$Builder) id config))
+  (notification-rule-source-config-builder> (new NotificationRuleSourceConfig$Builder) id config))
 
 
-(defn build-notification-rule-target-config-builder
-  "The build-notification-rule-target-config-builder function updates a NotificationRuleTargetConfig$Builder instance using the provided configuration.
+(defn notification-rule-target-config-builder>
+  "The notification-rule-target-config-builder> function updates a NotificationRuleTargetConfig$Builder instance using the provided configuration.
   The function takes the NotificationRuleTargetConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -348,4 +348,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-notification-rule-target-config-builder (new NotificationRuleTargetConfig$Builder) id config))
+  (notification-rule-target-config-builder> (new NotificationRuleTargetConfig$Builder) id config))

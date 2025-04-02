@@ -9,8 +9,8 @@
                                                 CfnSinkProps$Builder]))
 
 
-(defn build-cfn-link-builder
-  "The build-cfn-link-builder function updates a CfnLink$Builder instance using the provided configuration.
+(defn cfn-link-builder>
+  "The cfn-link-builder> function updates a CfnLink$Builder instance using the provided configuration.
   The function takes the CfnLink$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -46,11 +46,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-link-builder (CfnLink$Builder/create scope (name id)) id config))
+  (cfn-link-builder> (CfnLink$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-link-link-configuration-property-builder
-  "The build-cfn-link-link-configuration-property-builder function updates a CfnLink$LinkConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-link-link-configuration-property-builder>
+  "The cfn-link-link-configuration-property-builder> function updates a CfnLink$LinkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLink$LinkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -77,11 +77,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-link-link-configuration-property-builder (new CfnLink$LinkConfigurationProperty$Builder) id config))
+  (cfn-link-link-configuration-property-builder> (new CfnLink$LinkConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-link-link-filter-property-builder
-  "The build-cfn-link-link-filter-property-builder function updates a CfnLink$LinkFilterProperty$Builder instance using the provided configuration.
+(defn cfn-link-link-filter-property-builder>
+  "The cfn-link-link-filter-property-builder> function updates a CfnLink$LinkFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnLink$LinkFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -105,11 +105,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-link-link-filter-property-builder (new CfnLink$LinkFilterProperty$Builder) id config))
+  (cfn-link-link-filter-property-builder> (new CfnLink$LinkFilterProperty$Builder) id config))
 
 
-(defn build-cfn-link-props-builder
-  "The build-cfn-link-props-builder function updates a CfnLinkProps$Builder instance using the provided configuration.
+(defn cfn-link-props-builder>
+  "The cfn-link-props-builder> function updates a CfnLinkProps$Builder instance using the provided configuration.
   The function takes the CfnLinkProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -145,11 +145,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-link-props-builder (new CfnLinkProps$Builder) id config))
+  (cfn-link-props-builder> (new CfnLinkProps$Builder) id config))
 
 
-(defn build-cfn-sink-builder
-  "The build-cfn-sink-builder function updates a CfnSink$Builder instance using the provided configuration.
+(defn cfn-sink-builder>
+  "The cfn-sink-builder> function updates a CfnSink$Builder instance using the provided configuration.
   The function takes the CfnSink$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -179,11 +179,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-sink-builder (CfnSink$Builder/create scope (name id)) id config))
+  (cfn-sink-builder> (CfnSink$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-sink-props-builder
-  "The build-cfn-sink-props-builder function updates a CfnSinkProps$Builder instance using the provided configuration.
+(defn cfn-sink-props-builder>
+  "The cfn-sink-props-builder> function updates a CfnSinkProps$Builder instance using the provided configuration.
   The function takes the CfnSinkProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -213,4 +213,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sink-props-builder (new CfnSinkProps$Builder) id config))
+  (cfn-sink-props-builder> (new CfnSinkProps$Builder) id config))

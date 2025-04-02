@@ -20,8 +20,8 @@
                                                      CfnTrackerProps$Builder]))
 
 
-(defn build-cfn-api-key-api-key-restrictions-property-builder
-  "The build-cfn-api-key-api-key-restrictions-property-builder function updates a CfnAPIKey$ApiKeyRestrictionsProperty$Builder instance using the provided configuration.
+(defn cfn-api-key-api-key-restrictions-property-builder>
+  "The cfn-api-key-api-key-restrictions-property-builder> function updates a CfnAPIKey$ApiKeyRestrictionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAPIKey$ApiKeyRestrictionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -51,11 +51,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-api-key-api-key-restrictions-property-builder (new CfnAPIKey$ApiKeyRestrictionsProperty$Builder) id config))
+  (cfn-api-key-api-key-restrictions-property-builder> (new CfnAPIKey$ApiKeyRestrictionsProperty$Builder) id config))
 
 
-(defn build-cfn-api-key-builder
-  "The build-cfn-api-key-builder function updates a CfnAPIKey$Builder instance using the provided configuration.
+(defn cfn-api-key-builder>
+  "The cfn-api-key-builder> function updates a CfnAPIKey$Builder instance using the provided configuration.
   The function takes the CfnAPIKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -100,11 +100,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-api-key-builder (CfnAPIKey$Builder/create scope (name id)) id config))
+  (cfn-api-key-builder> (CfnAPIKey$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-api-key-props-builder
-  "The build-cfn-api-key-props-builder function updates a CfnAPIKeyProps$Builder instance using the provided configuration.
+(defn cfn-api-key-props-builder>
+  "The cfn-api-key-props-builder> function updates a CfnAPIKeyProps$Builder instance using the provided configuration.
   The function takes the CfnAPIKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -149,11 +149,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-api-key-props-builder (new CfnAPIKeyProps$Builder) id config))
+  (cfn-api-key-props-builder> (new CfnAPIKeyProps$Builder) id config))
 
 
-(defn build-cfn-geofence-collection-builder
-  "The build-cfn-geofence-collection-builder function updates a CfnGeofenceCollection$Builder instance using the provided configuration.
+(defn cfn-geofence-collection-builder>
+  "The cfn-geofence-collection-builder> function updates a CfnGeofenceCollection$Builder instance using the provided configuration.
   The function takes the CfnGeofenceCollection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -192,11 +192,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-geofence-collection-builder (CfnGeofenceCollection$Builder/create scope (name id)) id config))
+  (cfn-geofence-collection-builder> (CfnGeofenceCollection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-geofence-collection-props-builder
-  "The build-cfn-geofence-collection-props-builder function updates a CfnGeofenceCollectionProps$Builder instance using the provided configuration.
+(defn cfn-geofence-collection-props-builder>
+  "The cfn-geofence-collection-props-builder> function updates a CfnGeofenceCollectionProps$Builder instance using the provided configuration.
   The function takes the CfnGeofenceCollectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -235,11 +235,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-geofence-collection-props-builder (new CfnGeofenceCollectionProps$Builder) id config))
+  (cfn-geofence-collection-props-builder> (new CfnGeofenceCollectionProps$Builder) id config))
 
 
-(defn build-cfn-map-builder
-  "The build-cfn-map-builder function updates a CfnMap$Builder instance using the provided configuration.
+(defn cfn-map-builder>
+  "The cfn-map-builder> function updates a CfnMap$Builder instance using the provided configuration.
   The function takes the CfnMap$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -275,11 +275,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-map-builder (CfnMap$Builder/create scope (name id)) id config))
+  (cfn-map-builder> (CfnMap$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-map-map-configuration-property-builder
-  "The build-cfn-map-map-configuration-property-builder function updates a CfnMap$MapConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-map-map-configuration-property-builder>
+  "The cfn-map-map-configuration-property-builder> function updates a CfnMap$MapConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMap$MapConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -309,11 +309,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-map-map-configuration-property-builder (new CfnMap$MapConfigurationProperty$Builder) id config))
+  (cfn-map-map-configuration-property-builder> (new CfnMap$MapConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-map-props-builder
-  "The build-cfn-map-props-builder function updates a CfnMapProps$Builder instance using the provided configuration.
+(defn cfn-map-props-builder>
+  "The cfn-map-props-builder> function updates a CfnMapProps$Builder instance using the provided configuration.
   The function takes the CfnMapProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -349,11 +349,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-map-props-builder (new CfnMapProps$Builder) id config))
+  (cfn-map-props-builder> (new CfnMapProps$Builder) id config))
 
 
-(defn build-cfn-place-index-builder
-  "The build-cfn-place-index-builder function updates a CfnPlaceIndex$Builder instance using the provided configuration.
+(defn cfn-place-index-builder>
+  "The cfn-place-index-builder> function updates a CfnPlaceIndex$Builder instance using the provided configuration.
   The function takes the CfnPlaceIndex$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -392,11 +392,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-place-index-builder (CfnPlaceIndex$Builder/create scope (name id)) id config))
+  (cfn-place-index-builder> (CfnPlaceIndex$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-place-index-data-source-configuration-property-builder
-  "The build-cfn-place-index-data-source-configuration-property-builder function updates a CfnPlaceIndex$DataSourceConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-place-index-data-source-configuration-property-builder>
+  "The cfn-place-index-data-source-configuration-property-builder> function updates a CfnPlaceIndex$DataSourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaceIndex$DataSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -420,11 +420,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-place-index-data-source-configuration-property-builder (new CfnPlaceIndex$DataSourceConfigurationProperty$Builder) id config))
+  (cfn-place-index-data-source-configuration-property-builder> (new CfnPlaceIndex$DataSourceConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-place-index-props-builder
-  "The build-cfn-place-index-props-builder function updates a CfnPlaceIndexProps$Builder instance using the provided configuration.
+(defn cfn-place-index-props-builder>
+  "The cfn-place-index-props-builder> function updates a CfnPlaceIndexProps$Builder instance using the provided configuration.
   The function takes the CfnPlaceIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -463,11 +463,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-place-index-props-builder (new CfnPlaceIndexProps$Builder) id config))
+  (cfn-place-index-props-builder> (new CfnPlaceIndexProps$Builder) id config))
 
 
-(defn build-cfn-route-calculator-builder
-  "The build-cfn-route-calculator-builder function updates a CfnRouteCalculator$Builder instance using the provided configuration.
+(defn cfn-route-calculator-builder>
+  "The cfn-route-calculator-builder> function updates a CfnRouteCalculator$Builder instance using the provided configuration.
   The function takes the CfnRouteCalculator$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -503,11 +503,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-route-calculator-builder (CfnRouteCalculator$Builder/create scope (name id)) id config))
+  (cfn-route-calculator-builder> (CfnRouteCalculator$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-route-calculator-props-builder
-  "The build-cfn-route-calculator-props-builder function updates a CfnRouteCalculatorProps$Builder instance using the provided configuration.
+(defn cfn-route-calculator-props-builder>
+  "The cfn-route-calculator-props-builder> function updates a CfnRouteCalculatorProps$Builder instance using the provided configuration.
   The function takes the CfnRouteCalculatorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -543,11 +543,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-route-calculator-props-builder (new CfnRouteCalculatorProps$Builder) id config))
+  (cfn-route-calculator-props-builder> (new CfnRouteCalculatorProps$Builder) id config))
 
 
-(defn build-cfn-tracker-builder
-  "The build-cfn-tracker-builder function updates a CfnTracker$Builder instance using the provided configuration.
+(defn cfn-tracker-builder>
+  "The cfn-tracker-builder> function updates a CfnTracker$Builder instance using the provided configuration.
   The function takes the CfnTracker$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -595,11 +595,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-tracker-builder (CfnTracker$Builder/create scope (name id)) id config))
+  (cfn-tracker-builder> (CfnTracker$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-tracker-consumer-builder
-  "The build-cfn-tracker-consumer-builder function updates a CfnTrackerConsumer$Builder instance using the provided configuration.
+(defn cfn-tracker-consumer-builder>
+  "The cfn-tracker-consumer-builder> function updates a CfnTrackerConsumer$Builder instance using the provided configuration.
   The function takes the CfnTrackerConsumer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -626,11 +626,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-tracker-consumer-builder (CfnTrackerConsumer$Builder/create scope (name id)) id config))
+  (cfn-tracker-consumer-builder> (CfnTrackerConsumer$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-tracker-consumer-props-builder
-  "The build-cfn-tracker-consumer-props-builder function updates a CfnTrackerConsumerProps$Builder instance using the provided configuration.
+(defn cfn-tracker-consumer-props-builder>
+  "The cfn-tracker-consumer-props-builder> function updates a CfnTrackerConsumerProps$Builder instance using the provided configuration.
   The function takes the CfnTrackerConsumerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -657,11 +657,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tracker-consumer-props-builder (new CfnTrackerConsumerProps$Builder) id config))
+  (cfn-tracker-consumer-props-builder> (new CfnTrackerConsumerProps$Builder) id config))
 
 
-(defn build-cfn-tracker-props-builder
-  "The build-cfn-tracker-props-builder function updates a CfnTrackerProps$Builder instance using the provided configuration.
+(defn cfn-tracker-props-builder>
+  "The cfn-tracker-props-builder> function updates a CfnTrackerProps$Builder instance using the provided configuration.
   The function takes the CfnTrackerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -709,4 +709,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-tracker-props-builder (new CfnTrackerProps$Builder) id config))
+  (cfn-tracker-props-builder> (new CfnTrackerProps$Builder) id config))

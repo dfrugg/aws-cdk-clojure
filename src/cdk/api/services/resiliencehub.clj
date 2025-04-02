@@ -12,8 +12,8 @@
                                                           CfnResiliencyPolicyProps$Builder]))
 
 
-(defn build-cfn-app-builder
-  "The build-cfn-app-builder function updates a CfnApp$Builder instance using the provided configuration.
+(defn cfn-app-builder>
+  "The cfn-app-builder> function updates a CfnApp$Builder instance using the provided configuration.
   The function takes the CfnApp$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -61,11 +61,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-app-builder (CfnApp$Builder/create scope (name id)) id config))
+  (cfn-app-builder> (CfnApp$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-app-event-subscription-property-builder
-  "The build-cfn-app-event-subscription-property-builder function updates a CfnApp$EventSubscriptionProperty$Builder instance using the provided configuration.
+(defn cfn-app-event-subscription-property-builder>
+  "The cfn-app-event-subscription-property-builder> function updates a CfnApp$EventSubscriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$EventSubscriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -95,11 +95,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-event-subscription-property-builder (new CfnApp$EventSubscriptionProperty$Builder) id config))
+  (cfn-app-event-subscription-property-builder> (new CfnApp$EventSubscriptionProperty$Builder) id config))
 
 
-(defn build-cfn-app-permission-model-property-builder
-  "The build-cfn-app-permission-model-property-builder function updates a CfnApp$PermissionModelProperty$Builder instance using the provided configuration.
+(defn cfn-app-permission-model-property-builder>
+  "The cfn-app-permission-model-property-builder> function updates a CfnApp$PermissionModelProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$PermissionModelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -129,11 +129,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-permission-model-property-builder (new CfnApp$PermissionModelProperty$Builder) id config))
+  (cfn-app-permission-model-property-builder> (new CfnApp$PermissionModelProperty$Builder) id config))
 
 
-(defn build-cfn-app-physical-resource-id-property-builder
-  "The build-cfn-app-physical-resource-id-property-builder function updates a CfnApp$PhysicalResourceIdProperty$Builder instance using the provided configuration.
+(defn cfn-app-physical-resource-id-property-builder>
+  "The cfn-app-physical-resource-id-property-builder> function updates a CfnApp$PhysicalResourceIdProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$PhysicalResourceIdProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -166,11 +166,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-physical-resource-id-property-builder (new CfnApp$PhysicalResourceIdProperty$Builder) id config))
+  (cfn-app-physical-resource-id-property-builder> (new CfnApp$PhysicalResourceIdProperty$Builder) id config))
 
 
-(defn build-cfn-app-props-builder
-  "The build-cfn-app-props-builder function updates a CfnAppProps$Builder instance using the provided configuration.
+(defn cfn-app-props-builder>
+  "The cfn-app-props-builder> function updates a CfnAppProps$Builder instance using the provided configuration.
   The function takes the CfnAppProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -218,11 +218,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-props-builder (new CfnAppProps$Builder) id config))
+  (cfn-app-props-builder> (new CfnAppProps$Builder) id config))
 
 
-(defn build-cfn-app-resource-mapping-property-builder
-  "The build-cfn-app-resource-mapping-property-builder function updates a CfnApp$ResourceMappingProperty$Builder instance using the provided configuration.
+(defn cfn-app-resource-mapping-property-builder>
+  "The cfn-app-resource-mapping-property-builder> function updates a CfnApp$ResourceMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$ResourceMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -261,11 +261,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-app-resource-mapping-property-builder (new CfnApp$ResourceMappingProperty$Builder) id config))
+  (cfn-app-resource-mapping-property-builder> (new CfnApp$ResourceMappingProperty$Builder) id config))
 
 
-(defn build-cfn-resiliency-policy-builder
-  "The build-cfn-resiliency-policy-builder function updates a CfnResiliencyPolicy$Builder instance using the provided configuration.
+(defn cfn-resiliency-policy-builder>
+  "The cfn-resiliency-policy-builder> function updates a CfnResiliencyPolicy$Builder instance using the provided configuration.
   The function takes the CfnResiliencyPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -304,11 +304,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resiliency-policy-builder (CfnResiliencyPolicy$Builder/create scope (name id)) id config))
+  (cfn-resiliency-policy-builder> (CfnResiliencyPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resiliency-policy-failure-policy-property-builder
-  "The build-cfn-resiliency-policy-failure-policy-property-builder function updates a CfnResiliencyPolicy$FailurePolicyProperty$Builder instance using the provided configuration.
+(defn cfn-resiliency-policy-failure-policy-property-builder>
+  "The cfn-resiliency-policy-failure-policy-property-builder> function updates a CfnResiliencyPolicy$FailurePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnResiliencyPolicy$FailurePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -335,11 +335,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resiliency-policy-failure-policy-property-builder (new CfnResiliencyPolicy$FailurePolicyProperty$Builder) id config))
+  (cfn-resiliency-policy-failure-policy-property-builder> (new CfnResiliencyPolicy$FailurePolicyProperty$Builder) id config))
 
 
-(defn build-cfn-resiliency-policy-props-builder
-  "The build-cfn-resiliency-policy-props-builder function updates a CfnResiliencyPolicyProps$Builder instance using the provided configuration.
+(defn cfn-resiliency-policy-props-builder>
+  "The cfn-resiliency-policy-props-builder> function updates a CfnResiliencyPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResiliencyPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -378,4 +378,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resiliency-policy-props-builder (new CfnResiliencyPolicyProps$Builder) id config))
+  (cfn-resiliency-policy-props-builder> (new CfnResiliencyPolicyProps$Builder) id config))

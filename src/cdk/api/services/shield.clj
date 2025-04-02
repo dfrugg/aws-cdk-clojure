@@ -14,8 +14,8 @@
                                                    CfnProtectionProps$Builder]))
 
 
-(defn build-cfn-drt-access-builder
-  "The build-cfn-drt-access-builder function updates a CfnDRTAccess$Builder instance using the provided configuration.
+(defn cfn-drt-access-builder>
+  "The cfn-drt-access-builder> function updates a CfnDRTAccess$Builder instance using the provided configuration.
   The function takes the CfnDRTAccess$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -42,11 +42,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-drt-access-builder (CfnDRTAccess$Builder/create scope (name id)) id config))
+  (cfn-drt-access-builder> (CfnDRTAccess$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-drt-access-props-builder
-  "The build-cfn-drt-access-props-builder function updates a CfnDRTAccessProps$Builder instance using the provided configuration.
+(defn cfn-drt-access-props-builder>
+  "The cfn-drt-access-props-builder> function updates a CfnDRTAccessProps$Builder instance using the provided configuration.
   The function takes the CfnDRTAccessProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -73,11 +73,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-drt-access-props-builder (new CfnDRTAccessProps$Builder) id config))
+  (cfn-drt-access-props-builder> (new CfnDRTAccessProps$Builder) id config))
 
 
-(defn build-cfn-proactive-engagement-builder
-  "The build-cfn-proactive-engagement-builder function updates a CfnProactiveEngagement$Builder instance using the provided configuration.
+(defn cfn-proactive-engagement-builder>
+  "The cfn-proactive-engagement-builder> function updates a CfnProactiveEngagement$Builder instance using the provided configuration.
   The function takes the CfnProactiveEngagement$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -104,11 +104,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-proactive-engagement-builder (CfnProactiveEngagement$Builder/create scope (name id)) id config))
+  (cfn-proactive-engagement-builder> (CfnProactiveEngagement$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-proactive-engagement-emergency-contact-property-builder
-  "The build-cfn-proactive-engagement-emergency-contact-property-builder function updates a CfnProactiveEngagement$EmergencyContactProperty$Builder instance using the provided configuration.
+(defn cfn-proactive-engagement-emergency-contact-property-builder>
+  "The cfn-proactive-engagement-emergency-contact-property-builder> function updates a CfnProactiveEngagement$EmergencyContactProperty$Builder instance using the provided configuration.
   The function takes the CfnProactiveEngagement$EmergencyContactProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -138,11 +138,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-proactive-engagement-emergency-contact-property-builder (new CfnProactiveEngagement$EmergencyContactProperty$Builder) id config))
+  (cfn-proactive-engagement-emergency-contact-property-builder> (new CfnProactiveEngagement$EmergencyContactProperty$Builder) id config))
 
 
-(defn build-cfn-proactive-engagement-props-builder
-  "The build-cfn-proactive-engagement-props-builder function updates a CfnProactiveEngagementProps$Builder instance using the provided configuration.
+(defn cfn-proactive-engagement-props-builder>
+  "The cfn-proactive-engagement-props-builder> function updates a CfnProactiveEngagementProps$Builder instance using the provided configuration.
   The function takes the CfnProactiveEngagementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -169,11 +169,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-proactive-engagement-props-builder (new CfnProactiveEngagementProps$Builder) id config))
+  (cfn-proactive-engagement-props-builder> (new CfnProactiveEngagementProps$Builder) id config))
 
 
-(defn build-cfn-protection-action-property-builder
-  "The build-cfn-protection-action-property-builder function updates a CfnProtection$ActionProperty$Builder instance using the provided configuration.
+(defn cfn-protection-action-property-builder>
+  "The cfn-protection-action-property-builder> function updates a CfnProtection$ActionProperty$Builder instance using the provided configuration.
   The function takes the CfnProtection$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -200,11 +200,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-protection-action-property-builder (new CfnProtection$ActionProperty$Builder) id config))
+  (cfn-protection-action-property-builder> (new CfnProtection$ActionProperty$Builder) id config))
 
 
-(defn build-cfn-protection-application-layer-automatic-response-configuration-property-builder
-  "The build-cfn-protection-application-layer-automatic-response-configuration-property-builder function updates a CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-protection-application-layer-automatic-response-configuration-property-builder>
+  "The cfn-protection-application-layer-automatic-response-configuration-property-builder> function updates a CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -231,11 +231,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-protection-application-layer-automatic-response-configuration-property-builder (new CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder) id config))
+  (cfn-protection-application-layer-automatic-response-configuration-property-builder> (new CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-protection-builder
-  "The build-cfn-protection-builder function updates a CfnProtection$Builder instance using the provided configuration.
+(defn cfn-protection-builder>
+  "The cfn-protection-builder> function updates a CfnProtection$Builder instance using the provided configuration.
   The function takes the CfnProtection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -271,11 +271,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-protection-builder (CfnProtection$Builder/create scope (name id)) id config))
+  (cfn-protection-builder> (CfnProtection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-protection-group-builder
-  "The build-cfn-protection-group-builder function updates a CfnProtectionGroup$Builder instance using the provided configuration.
+(defn cfn-protection-group-builder>
+  "The cfn-protection-group-builder> function updates a CfnProtectionGroup$Builder instance using the provided configuration.
   The function takes the CfnProtectionGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -314,11 +314,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-protection-group-builder (CfnProtectionGroup$Builder/create scope (name id)) id config))
+  (cfn-protection-group-builder> (CfnProtectionGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-protection-group-props-builder
-  "The build-cfn-protection-group-props-builder function updates a CfnProtectionGroupProps$Builder instance using the provided configuration.
+(defn cfn-protection-group-props-builder>
+  "The cfn-protection-group-props-builder> function updates a CfnProtectionGroupProps$Builder instance using the provided configuration.
   The function takes the CfnProtectionGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -357,11 +357,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-protection-group-props-builder (new CfnProtectionGroupProps$Builder) id config))
+  (cfn-protection-group-props-builder> (new CfnProtectionGroupProps$Builder) id config))
 
 
-(defn build-cfn-protection-props-builder
-  "The build-cfn-protection-props-builder function updates a CfnProtectionProps$Builder instance using the provided configuration.
+(defn cfn-protection-props-builder>
+  "The cfn-protection-props-builder> function updates a CfnProtectionProps$Builder instance using the provided configuration.
   The function takes the CfnProtectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -397,4 +397,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-protection-props-builder (new CfnProtectionProps$Builder) id config))
+  (cfn-protection-props-builder> (new CfnProtectionProps$Builder) id config))

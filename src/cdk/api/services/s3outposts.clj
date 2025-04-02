@@ -20,8 +20,8 @@
                                                        CfnEndpointProps$Builder]))
 
 
-(defn build-cfn-access-point-builder
-  "The build-cfn-access-point-builder function updates a CfnAccessPoint$Builder instance using the provided configuration.
+(defn cfn-access-point-builder>
+  "The cfn-access-point-builder> function updates a CfnAccessPoint$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -54,11 +54,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-access-point-builder (CfnAccessPoint$Builder/create scope (name id)) id config))
+  (cfn-access-point-builder> (CfnAccessPoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-access-point-props-builder
-  "The build-cfn-access-point-props-builder function updates a CfnAccessPointProps$Builder instance using the provided configuration.
+(defn cfn-access-point-props-builder>
+  "The cfn-access-point-props-builder> function updates a CfnAccessPointProps$Builder instance using the provided configuration.
   The function takes the CfnAccessPointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -91,11 +91,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-props-builder (new CfnAccessPointProps$Builder) id config))
+  (cfn-access-point-props-builder> (new CfnAccessPointProps$Builder) id config))
 
 
-(defn build-cfn-access-point-vpc-configuration-property-builder
-  "The build-cfn-access-point-vpc-configuration-property-builder function updates a CfnAccessPoint$VpcConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-access-point-vpc-configuration-property-builder>
+  "The cfn-access-point-vpc-configuration-property-builder> function updates a CfnAccessPoint$VpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$VpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -119,11 +119,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-access-point-vpc-configuration-property-builder (new CfnAccessPoint$VpcConfigurationProperty$Builder) id config))
+  (cfn-access-point-vpc-configuration-property-builder> (new CfnAccessPoint$VpcConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-bucket-abort-incomplete-multipart-upload-property-builder
-  "The build-cfn-bucket-abort-incomplete-multipart-upload-property-builder function updates a CfnBucket$AbortIncompleteMultipartUploadProperty$Builder instance using the provided configuration.
+(defn cfn-bucket-abort-incomplete-multipart-upload-property-builder>
+  "The cfn-bucket-abort-incomplete-multipart-upload-property-builder> function updates a CfnBucket$AbortIncompleteMultipartUploadProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$AbortIncompleteMultipartUploadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -147,11 +147,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-abort-incomplete-multipart-upload-property-builder (new CfnBucket$AbortIncompleteMultipartUploadProperty$Builder) id config))
+  (cfn-bucket-abort-incomplete-multipart-upload-property-builder> (new CfnBucket$AbortIncompleteMultipartUploadProperty$Builder) id config))
 
 
-(defn build-cfn-bucket-builder
-  "The build-cfn-bucket-builder function updates a CfnBucket$Builder instance using the provided configuration.
+(defn cfn-bucket-builder>
+  "The cfn-bucket-builder> function updates a CfnBucket$Builder instance using the provided configuration.
   The function takes the CfnBucket$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -184,11 +184,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bucket-builder (CfnBucket$Builder/create scope (name id)) id config))
+  (cfn-bucket-builder> (CfnBucket$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bucket-filter-and-operator-property-builder
-  "The build-cfn-bucket-filter-and-operator-property-builder function updates a CfnBucket$FilterAndOperatorProperty$Builder instance using the provided configuration.
+(defn cfn-bucket-filter-and-operator-property-builder>
+  "The cfn-bucket-filter-and-operator-property-builder> function updates a CfnBucket$FilterAndOperatorProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$FilterAndOperatorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -215,11 +215,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-filter-and-operator-property-builder (new CfnBucket$FilterAndOperatorProperty$Builder) id config))
+  (cfn-bucket-filter-and-operator-property-builder> (new CfnBucket$FilterAndOperatorProperty$Builder) id config))
 
 
-(defn build-cfn-bucket-filter-property-builder
-  "The build-cfn-bucket-filter-property-builder function updates a CfnBucket$FilterProperty$Builder instance using the provided configuration.
+(defn cfn-bucket-filter-property-builder>
+  "The cfn-bucket-filter-property-builder> function updates a CfnBucket$FilterProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$FilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -249,11 +249,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-filter-property-builder (new CfnBucket$FilterProperty$Builder) id config))
+  (cfn-bucket-filter-property-builder> (new CfnBucket$FilterProperty$Builder) id config))
 
 
-(defn build-cfn-bucket-filter-tag-property-builder
-  "The build-cfn-bucket-filter-tag-property-builder function updates a CfnBucket$FilterTagProperty$Builder instance using the provided configuration.
+(defn cfn-bucket-filter-tag-property-builder>
+  "The cfn-bucket-filter-tag-property-builder> function updates a CfnBucket$FilterTagProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$FilterTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -280,11 +280,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-filter-tag-property-builder (new CfnBucket$FilterTagProperty$Builder) id config))
+  (cfn-bucket-filter-tag-property-builder> (new CfnBucket$FilterTagProperty$Builder) id config))
 
 
-(defn build-cfn-bucket-lifecycle-configuration-property-builder
-  "The build-cfn-bucket-lifecycle-configuration-property-builder function updates a CfnBucket$LifecycleConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-bucket-lifecycle-configuration-property-builder>
+  "The cfn-bucket-lifecycle-configuration-property-builder> function updates a CfnBucket$LifecycleConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$LifecycleConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -308,11 +308,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-lifecycle-configuration-property-builder (new CfnBucket$LifecycleConfigurationProperty$Builder) id config))
+  (cfn-bucket-lifecycle-configuration-property-builder> (new CfnBucket$LifecycleConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-bucket-policy-builder
-  "The build-cfn-bucket-policy-builder function updates a CfnBucketPolicy$Builder instance using the provided configuration.
+(defn cfn-bucket-policy-builder>
+  "The cfn-bucket-policy-builder> function updates a CfnBucketPolicy$Builder instance using the provided configuration.
   The function takes the CfnBucketPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -339,11 +339,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-bucket-policy-builder (CfnBucketPolicy$Builder/create scope (name id)) id config))
+  (cfn-bucket-policy-builder> (CfnBucketPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-bucket-policy-props-builder
-  "The build-cfn-bucket-policy-props-builder function updates a CfnBucketPolicyProps$Builder instance using the provided configuration.
+(defn cfn-bucket-policy-props-builder>
+  "The cfn-bucket-policy-props-builder> function updates a CfnBucketPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnBucketPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -370,11 +370,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-policy-props-builder (new CfnBucketPolicyProps$Builder) id config))
+  (cfn-bucket-policy-props-builder> (new CfnBucketPolicyProps$Builder) id config))
 
 
-(defn build-cfn-bucket-props-builder
-  "The build-cfn-bucket-props-builder function updates a CfnBucketProps$Builder instance using the provided configuration.
+(defn cfn-bucket-props-builder>
+  "The cfn-bucket-props-builder> function updates a CfnBucketProps$Builder instance using the provided configuration.
   The function takes the CfnBucketProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -407,11 +407,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-props-builder (new CfnBucketProps$Builder) id config))
+  (cfn-bucket-props-builder> (new CfnBucketProps$Builder) id config))
 
 
-(defn build-cfn-bucket-rule-property-builder
-  "The build-cfn-bucket-rule-property-builder function updates a CfnBucket$RuleProperty$Builder instance using the provided configuration.
+(defn cfn-bucket-rule-property-builder>
+  "The cfn-bucket-rule-property-builder> function updates a CfnBucket$RuleProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$RuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -450,11 +450,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-bucket-rule-property-builder (new CfnBucket$RuleProperty$Builder) id config))
+  (cfn-bucket-rule-property-builder> (new CfnBucket$RuleProperty$Builder) id config))
 
 
-(defn build-cfn-endpoint-builder
-  "The build-cfn-endpoint-builder function updates a CfnEndpoint$Builder instance using the provided configuration.
+(defn cfn-endpoint-builder>
+  "The cfn-endpoint-builder> function updates a CfnEndpoint$Builder instance using the provided configuration.
   The function takes the CfnEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -493,11 +493,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-endpoint-builder (CfnEndpoint$Builder/create scope (name id)) id config))
+  (cfn-endpoint-builder> (CfnEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-endpoint-failed-reason-property-builder
-  "The build-cfn-endpoint-failed-reason-property-builder function updates a CfnEndpoint$FailedReasonProperty$Builder instance using the provided configuration.
+(defn cfn-endpoint-failed-reason-property-builder>
+  "The cfn-endpoint-failed-reason-property-builder> function updates a CfnEndpoint$FailedReasonProperty$Builder instance using the provided configuration.
   The function takes the CfnEndpoint$FailedReasonProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -524,11 +524,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-endpoint-failed-reason-property-builder (new CfnEndpoint$FailedReasonProperty$Builder) id config))
+  (cfn-endpoint-failed-reason-property-builder> (new CfnEndpoint$FailedReasonProperty$Builder) id config))
 
 
-(defn build-cfn-endpoint-network-interface-property-builder
-  "The build-cfn-endpoint-network-interface-property-builder function updates a CfnEndpoint$NetworkInterfaceProperty$Builder instance using the provided configuration.
+(defn cfn-endpoint-network-interface-property-builder>
+  "The cfn-endpoint-network-interface-property-builder> function updates a CfnEndpoint$NetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnEndpoint$NetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -552,11 +552,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-endpoint-network-interface-property-builder (new CfnEndpoint$NetworkInterfaceProperty$Builder) id config))
+  (cfn-endpoint-network-interface-property-builder> (new CfnEndpoint$NetworkInterfaceProperty$Builder) id config))
 
 
-(defn build-cfn-endpoint-props-builder
-  "The build-cfn-endpoint-props-builder function updates a CfnEndpointProps$Builder instance using the provided configuration.
+(defn cfn-endpoint-props-builder>
+  "The cfn-endpoint-props-builder> function updates a CfnEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -595,4 +595,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-endpoint-props-builder (new CfnEndpointProps$Builder) id config))
+  (cfn-endpoint-props-builder> (new CfnEndpointProps$Builder) id config))

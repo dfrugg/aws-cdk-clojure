@@ -7,8 +7,8 @@
                                                                  CfnSuiteDefinitionProps$Builder]))
 
 
-(defn build-cfn-suite-definition-builder
-  "The build-cfn-suite-definition-builder function updates a CfnSuiteDefinition$Builder instance using the provided configuration.
+(defn cfn-suite-definition-builder>
+  "The cfn-suite-definition-builder> function updates a CfnSuiteDefinition$Builder instance using the provided configuration.
   The function takes the CfnSuiteDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -35,11 +35,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-suite-definition-builder (CfnSuiteDefinition$Builder/create scope (name id)) id config))
+  (cfn-suite-definition-builder> (CfnSuiteDefinition$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-suite-definition-device-under-test-property-builder
-  "The build-cfn-suite-definition-device-under-test-property-builder function updates a CfnSuiteDefinition$DeviceUnderTestProperty$Builder instance using the provided configuration.
+(defn cfn-suite-definition-device-under-test-property-builder>
+  "The cfn-suite-definition-device-under-test-property-builder> function updates a CfnSuiteDefinition$DeviceUnderTestProperty$Builder instance using the provided configuration.
   The function takes the CfnSuiteDefinition$DeviceUnderTestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -66,11 +66,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-suite-definition-device-under-test-property-builder (new CfnSuiteDefinition$DeviceUnderTestProperty$Builder) id config))
+  (cfn-suite-definition-device-under-test-property-builder> (new CfnSuiteDefinition$DeviceUnderTestProperty$Builder) id config))
 
 
-(defn build-cfn-suite-definition-props-builder
-  "The build-cfn-suite-definition-props-builder function updates a CfnSuiteDefinitionProps$Builder instance using the provided configuration.
+(defn cfn-suite-definition-props-builder>
+  "The cfn-suite-definition-props-builder> function updates a CfnSuiteDefinitionProps$Builder instance using the provided configuration.
   The function takes the CfnSuiteDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -97,11 +97,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-suite-definition-props-builder (new CfnSuiteDefinitionProps$Builder) id config))
+  (cfn-suite-definition-props-builder> (new CfnSuiteDefinitionProps$Builder) id config))
 
 
-(defn build-cfn-suite-definition-suite-definition-configuration-property-builder
-  "The build-cfn-suite-definition-suite-definition-configuration-property-builder function updates a CfnSuiteDefinition$SuiteDefinitionConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-suite-definition-suite-definition-configuration-property-builder>
+  "The cfn-suite-definition-suite-definition-configuration-property-builder> function updates a CfnSuiteDefinition$SuiteDefinitionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSuiteDefinition$SuiteDefinitionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -137,4 +137,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-suite-definition-suite-definition-configuration-property-builder (new CfnSuiteDefinition$SuiteDefinitionConfigurationProperty$Builder) id config))
+  (cfn-suite-definition-suite-definition-configuration-property-builder> (new CfnSuiteDefinition$SuiteDefinitionConfigurationProperty$Builder) id config))

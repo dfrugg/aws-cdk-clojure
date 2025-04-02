@@ -29,8 +29,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :default data) ComputePlatform/DEFAULT)))
 
 
-(defn build-cfn-profiling-group-agent-permissions-property-builder
-  "The build-cfn-profiling-group-agent-permissions-property-builder function updates a CfnProfilingGroup$AgentPermissionsProperty$Builder instance using the provided configuration.
+(defn cfn-profiling-group-agent-permissions-property-builder>
+  "The cfn-profiling-group-agent-permissions-property-builder> function updates a CfnProfilingGroup$AgentPermissionsProperty$Builder instance using the provided configuration.
   The function takes the CfnProfilingGroup$AgentPermissionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -54,11 +54,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-profiling-group-agent-permissions-property-builder (new CfnProfilingGroup$AgentPermissionsProperty$Builder) id config))
+  (cfn-profiling-group-agent-permissions-property-builder> (new CfnProfilingGroup$AgentPermissionsProperty$Builder) id config))
 
 
-(defn build-cfn-profiling-group-builder
-  "The build-cfn-profiling-group-builder function updates a CfnProfilingGroup$Builder instance using the provided configuration.
+(defn cfn-profiling-group-builder>
+  "The cfn-profiling-group-builder> function updates a CfnProfilingGroup$Builder instance using the provided configuration.
   The function takes the CfnProfilingGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -94,11 +94,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-profiling-group-builder (CfnProfilingGroup$Builder/create scope (name id)) id config))
+  (cfn-profiling-group-builder> (CfnProfilingGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-profiling-group-channel-property-builder
-  "The build-cfn-profiling-group-channel-property-builder function updates a CfnProfilingGroup$ChannelProperty$Builder instance using the provided configuration.
+(defn cfn-profiling-group-channel-property-builder>
+  "The cfn-profiling-group-channel-property-builder> function updates a CfnProfilingGroup$ChannelProperty$Builder instance using the provided configuration.
   The function takes the CfnProfilingGroup$ChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -125,11 +125,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-profiling-group-channel-property-builder (new CfnProfilingGroup$ChannelProperty$Builder) id config))
+  (cfn-profiling-group-channel-property-builder> (new CfnProfilingGroup$ChannelProperty$Builder) id config))
 
 
-(defn build-cfn-profiling-group-props-builder
-  "The build-cfn-profiling-group-props-builder function updates a CfnProfilingGroupProps$Builder instance using the provided configuration.
+(defn cfn-profiling-group-props-builder>
+  "The cfn-profiling-group-props-builder> function updates a CfnProfilingGroupProps$Builder instance using the provided configuration.
   The function takes the CfnProfilingGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -165,11 +165,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-profiling-group-props-builder (new CfnProfilingGroupProps$Builder) id config))
+  (cfn-profiling-group-props-builder> (new CfnProfilingGroupProps$Builder) id config))
 
 
-(defn build-profiling-group-builder
-  "The build-profiling-group-builder function updates a ProfilingGroup$Builder instance using the provided configuration.
+(defn profiling-group-builder>
+  "The profiling-group-builder> function updates a ProfilingGroup$Builder instance using the provided configuration.
   The function takes the ProfilingGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -196,11 +196,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-profiling-group-builder (ProfilingGroup$Builder/create scope (name id)) id config))
+  (profiling-group-builder> (ProfilingGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-profiling-group-props-builder
-  "The build-profiling-group-props-builder function updates a ProfilingGroupProps$Builder instance using the provided configuration.
+(defn profiling-group-props-builder>
+  "The profiling-group-props-builder> function updates a ProfilingGroupProps$Builder instance using the provided configuration.
   The function takes the ProfilingGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -227,4 +227,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-profiling-group-props-builder (new ProfilingGroupProps$Builder) id config))
+  (profiling-group-props-builder> (new ProfilingGroupProps$Builder) id config))

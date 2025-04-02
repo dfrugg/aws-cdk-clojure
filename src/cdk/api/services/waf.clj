@@ -29,8 +29,8 @@
                                                 CfnXssMatchSetProps$Builder]))
 
 
-(defn build-cfn-byte-match-set-builder
-  "The build-cfn-byte-match-set-builder function updates a CfnByteMatchSet$Builder instance using the provided configuration.
+(defn cfn-byte-match-set-builder>
+  "The cfn-byte-match-set-builder> function updates a CfnByteMatchSet$Builder instance using the provided configuration.
   The function takes the CfnByteMatchSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -57,11 +57,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-byte-match-set-builder (CfnByteMatchSet$Builder/create scope (name id)) id config))
+  (cfn-byte-match-set-builder> (CfnByteMatchSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-byte-match-set-byte-match-tuple-property-builder
-  "The build-cfn-byte-match-set-byte-match-tuple-property-builder function updates a CfnByteMatchSet$ByteMatchTupleProperty$Builder instance using the provided configuration.
+(defn cfn-byte-match-set-byte-match-tuple-property-builder>
+  "The cfn-byte-match-set-byte-match-tuple-property-builder> function updates a CfnByteMatchSet$ByteMatchTupleProperty$Builder instance using the provided configuration.
   The function takes the CfnByteMatchSet$ByteMatchTupleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -97,11 +97,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-byte-match-set-byte-match-tuple-property-builder (new CfnByteMatchSet$ByteMatchTupleProperty$Builder) id config))
+  (cfn-byte-match-set-byte-match-tuple-property-builder> (new CfnByteMatchSet$ByteMatchTupleProperty$Builder) id config))
 
 
-(defn build-cfn-byte-match-set-field-to-match-property-builder
-  "The build-cfn-byte-match-set-field-to-match-property-builder function updates a CfnByteMatchSet$FieldToMatchProperty$Builder instance using the provided configuration.
+(defn cfn-byte-match-set-field-to-match-property-builder>
+  "The cfn-byte-match-set-field-to-match-property-builder> function updates a CfnByteMatchSet$FieldToMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnByteMatchSet$FieldToMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -128,11 +128,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-byte-match-set-field-to-match-property-builder (new CfnByteMatchSet$FieldToMatchProperty$Builder) id config))
+  (cfn-byte-match-set-field-to-match-property-builder> (new CfnByteMatchSet$FieldToMatchProperty$Builder) id config))
 
 
-(defn build-cfn-byte-match-set-props-builder
-  "The build-cfn-byte-match-set-props-builder function updates a CfnByteMatchSetProps$Builder instance using the provided configuration.
+(defn cfn-byte-match-set-props-builder>
+  "The cfn-byte-match-set-props-builder> function updates a CfnByteMatchSetProps$Builder instance using the provided configuration.
   The function takes the CfnByteMatchSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -159,11 +159,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-byte-match-set-props-builder (new CfnByteMatchSetProps$Builder) id config))
+  (cfn-byte-match-set-props-builder> (new CfnByteMatchSetProps$Builder) id config))
 
 
-(defn build-cfn-ip-set-builder
-  "The build-cfn-ip-set-builder function updates a CfnIPSet$Builder instance using the provided configuration.
+(defn cfn-ip-set-builder>
+  "The cfn-ip-set-builder> function updates a CfnIPSet$Builder instance using the provided configuration.
   The function takes the CfnIPSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -190,11 +190,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ip-set-builder (CfnIPSet$Builder/create scope (name id)) id config))
+  (cfn-ip-set-builder> (CfnIPSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ip-set-ip-set-descriptor-property-builder
-  "The build-cfn-ip-set-ip-set-descriptor-property-builder function updates a CfnIPSet$IPSetDescriptorProperty$Builder instance using the provided configuration.
+(defn cfn-ip-set-ip-set-descriptor-property-builder>
+  "The cfn-ip-set-ip-set-descriptor-property-builder> function updates a CfnIPSet$IPSetDescriptorProperty$Builder instance using the provided configuration.
   The function takes the CfnIPSet$IPSetDescriptorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -221,11 +221,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ip-set-ip-set-descriptor-property-builder (new CfnIPSet$IPSetDescriptorProperty$Builder) id config))
+  (cfn-ip-set-ip-set-descriptor-property-builder> (new CfnIPSet$IPSetDescriptorProperty$Builder) id config))
 
 
-(defn build-cfn-ip-set-props-builder
-  "The build-cfn-ip-set-props-builder function updates a CfnIPSetProps$Builder instance using the provided configuration.
+(defn cfn-ip-set-props-builder>
+  "The cfn-ip-set-props-builder> function updates a CfnIPSetProps$Builder instance using the provided configuration.
   The function takes the CfnIPSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -252,11 +252,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ip-set-props-builder (new CfnIPSetProps$Builder) id config))
+  (cfn-ip-set-props-builder> (new CfnIPSetProps$Builder) id config))
 
 
-(defn build-cfn-rule-builder
-  "The build-cfn-rule-builder function updates a CfnRule$Builder instance using the provided configuration.
+(defn cfn-rule-builder>
+  "The cfn-rule-builder> function updates a CfnRule$Builder instance using the provided configuration.
   The function takes the CfnRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -286,11 +286,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-rule-builder (CfnRule$Builder/create scope (name id)) id config))
+  (cfn-rule-builder> (CfnRule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-rule-predicate-property-builder
-  "The build-cfn-rule-predicate-property-builder function updates a CfnRule$PredicateProperty$Builder instance using the provided configuration.
+(defn cfn-rule-predicate-property-builder>
+  "The cfn-rule-predicate-property-builder> function updates a CfnRule$PredicateProperty$Builder instance using the provided configuration.
   The function takes the CfnRule$PredicateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -320,11 +320,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-rule-predicate-property-builder (new CfnRule$PredicateProperty$Builder) id config))
+  (cfn-rule-predicate-property-builder> (new CfnRule$PredicateProperty$Builder) id config))
 
 
-(defn build-cfn-rule-props-builder
-  "The build-cfn-rule-props-builder function updates a CfnRuleProps$Builder instance using the provided configuration.
+(defn cfn-rule-props-builder>
+  "The cfn-rule-props-builder> function updates a CfnRuleProps$Builder instance using the provided configuration.
   The function takes the CfnRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -354,11 +354,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-rule-props-builder (new CfnRuleProps$Builder) id config))
+  (cfn-rule-props-builder> (new CfnRuleProps$Builder) id config))
 
 
-(defn build-cfn-size-constraint-set-builder
-  "The build-cfn-size-constraint-set-builder function updates a CfnSizeConstraintSet$Builder instance using the provided configuration.
+(defn cfn-size-constraint-set-builder>
+  "The cfn-size-constraint-set-builder> function updates a CfnSizeConstraintSet$Builder instance using the provided configuration.
   The function takes the CfnSizeConstraintSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -385,11 +385,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-size-constraint-set-builder (CfnSizeConstraintSet$Builder/create scope (name id)) id config))
+  (cfn-size-constraint-set-builder> (CfnSizeConstraintSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-size-constraint-set-field-to-match-property-builder
-  "The build-cfn-size-constraint-set-field-to-match-property-builder function updates a CfnSizeConstraintSet$FieldToMatchProperty$Builder instance using the provided configuration.
+(defn cfn-size-constraint-set-field-to-match-property-builder>
+  "The cfn-size-constraint-set-field-to-match-property-builder> function updates a CfnSizeConstraintSet$FieldToMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnSizeConstraintSet$FieldToMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -416,11 +416,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-size-constraint-set-field-to-match-property-builder (new CfnSizeConstraintSet$FieldToMatchProperty$Builder) id config))
+  (cfn-size-constraint-set-field-to-match-property-builder> (new CfnSizeConstraintSet$FieldToMatchProperty$Builder) id config))
 
 
-(defn build-cfn-size-constraint-set-props-builder
-  "The build-cfn-size-constraint-set-props-builder function updates a CfnSizeConstraintSetProps$Builder instance using the provided configuration.
+(defn cfn-size-constraint-set-props-builder>
+  "The cfn-size-constraint-set-props-builder> function updates a CfnSizeConstraintSetProps$Builder instance using the provided configuration.
   The function takes the CfnSizeConstraintSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -447,11 +447,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-size-constraint-set-props-builder (new CfnSizeConstraintSetProps$Builder) id config))
+  (cfn-size-constraint-set-props-builder> (new CfnSizeConstraintSetProps$Builder) id config))
 
 
-(defn build-cfn-size-constraint-set-size-constraint-property-builder
-  "The build-cfn-size-constraint-set-size-constraint-property-builder function updates a CfnSizeConstraintSet$SizeConstraintProperty$Builder instance using the provided configuration.
+(defn cfn-size-constraint-set-size-constraint-property-builder>
+  "The cfn-size-constraint-set-size-constraint-property-builder> function updates a CfnSizeConstraintSet$SizeConstraintProperty$Builder instance using the provided configuration.
   The function takes the CfnSizeConstraintSet$SizeConstraintProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -484,11 +484,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-size-constraint-set-size-constraint-property-builder (new CfnSizeConstraintSet$SizeConstraintProperty$Builder) id config))
+  (cfn-size-constraint-set-size-constraint-property-builder> (new CfnSizeConstraintSet$SizeConstraintProperty$Builder) id config))
 
 
-(defn build-cfn-sql-injection-match-set-builder
-  "The build-cfn-sql-injection-match-set-builder function updates a CfnSqlInjectionMatchSet$Builder instance using the provided configuration.
+(defn cfn-sql-injection-match-set-builder>
+  "The cfn-sql-injection-match-set-builder> function updates a CfnSqlInjectionMatchSet$Builder instance using the provided configuration.
   The function takes the CfnSqlInjectionMatchSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -515,11 +515,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-sql-injection-match-set-builder (CfnSqlInjectionMatchSet$Builder/create scope (name id)) id config))
+  (cfn-sql-injection-match-set-builder> (CfnSqlInjectionMatchSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-sql-injection-match-set-field-to-match-property-builder
-  "The build-cfn-sql-injection-match-set-field-to-match-property-builder function updates a CfnSqlInjectionMatchSet$FieldToMatchProperty$Builder instance using the provided configuration.
+(defn cfn-sql-injection-match-set-field-to-match-property-builder>
+  "The cfn-sql-injection-match-set-field-to-match-property-builder> function updates a CfnSqlInjectionMatchSet$FieldToMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnSqlInjectionMatchSet$FieldToMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -546,11 +546,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sql-injection-match-set-field-to-match-property-builder (new CfnSqlInjectionMatchSet$FieldToMatchProperty$Builder) id config))
+  (cfn-sql-injection-match-set-field-to-match-property-builder> (new CfnSqlInjectionMatchSet$FieldToMatchProperty$Builder) id config))
 
 
-(defn build-cfn-sql-injection-match-set-props-builder
-  "The build-cfn-sql-injection-match-set-props-builder function updates a CfnSqlInjectionMatchSetProps$Builder instance using the provided configuration.
+(defn cfn-sql-injection-match-set-props-builder>
+  "The cfn-sql-injection-match-set-props-builder> function updates a CfnSqlInjectionMatchSetProps$Builder instance using the provided configuration.
   The function takes the CfnSqlInjectionMatchSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -577,11 +577,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sql-injection-match-set-props-builder (new CfnSqlInjectionMatchSetProps$Builder) id config))
+  (cfn-sql-injection-match-set-props-builder> (new CfnSqlInjectionMatchSetProps$Builder) id config))
 
 
-(defn build-cfn-sql-injection-match-set-sql-injection-match-tuple-property-builder
-  "The build-cfn-sql-injection-match-set-sql-injection-match-tuple-property-builder function updates a CfnSqlInjectionMatchSet$SqlInjectionMatchTupleProperty$Builder instance using the provided configuration.
+(defn cfn-sql-injection-match-set-sql-injection-match-tuple-property-builder>
+  "The cfn-sql-injection-match-set-sql-injection-match-tuple-property-builder> function updates a CfnSqlInjectionMatchSet$SqlInjectionMatchTupleProperty$Builder instance using the provided configuration.
   The function takes the CfnSqlInjectionMatchSet$SqlInjectionMatchTupleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -608,11 +608,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sql-injection-match-set-sql-injection-match-tuple-property-builder (new CfnSqlInjectionMatchSet$SqlInjectionMatchTupleProperty$Builder) id config))
+  (cfn-sql-injection-match-set-sql-injection-match-tuple-property-builder> (new CfnSqlInjectionMatchSet$SqlInjectionMatchTupleProperty$Builder) id config))
 
 
-(defn build-cfn-web-acl-activated-rule-property-builder
-  "The build-cfn-web-acl-activated-rule-property-builder function updates a CfnWebACL$ActivatedRuleProperty$Builder instance using the provided configuration.
+(defn cfn-web-acl-activated-rule-property-builder>
+  "The cfn-web-acl-activated-rule-property-builder> function updates a CfnWebACL$ActivatedRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnWebACL$ActivatedRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -642,11 +642,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-web-acl-activated-rule-property-builder (new CfnWebACL$ActivatedRuleProperty$Builder) id config))
+  (cfn-web-acl-activated-rule-property-builder> (new CfnWebACL$ActivatedRuleProperty$Builder) id config))
 
 
-(defn build-cfn-web-acl-builder
-  "The build-cfn-web-acl-builder function updates a CfnWebACL$Builder instance using the provided configuration.
+(defn cfn-web-acl-builder>
+  "The cfn-web-acl-builder> function updates a CfnWebACL$Builder instance using the provided configuration.
   The function takes the CfnWebACL$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -679,11 +679,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-web-acl-builder (CfnWebACL$Builder/create scope (name id)) id config))
+  (cfn-web-acl-builder> (CfnWebACL$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-web-acl-props-builder
-  "The build-cfn-web-acl-props-builder function updates a CfnWebACLProps$Builder instance using the provided configuration.
+(defn cfn-web-acl-props-builder>
+  "The cfn-web-acl-props-builder> function updates a CfnWebACLProps$Builder instance using the provided configuration.
   The function takes the CfnWebACLProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -716,11 +716,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-web-acl-props-builder (new CfnWebACLProps$Builder) id config))
+  (cfn-web-acl-props-builder> (new CfnWebACLProps$Builder) id config))
 
 
-(defn build-cfn-web-acl-waf-action-property-builder
-  "The build-cfn-web-acl-waf-action-property-builder function updates a CfnWebACL$WafActionProperty$Builder instance using the provided configuration.
+(defn cfn-web-acl-waf-action-property-builder>
+  "The cfn-web-acl-waf-action-property-builder> function updates a CfnWebACL$WafActionProperty$Builder instance using the provided configuration.
   The function takes the CfnWebACL$WafActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -744,11 +744,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-web-acl-waf-action-property-builder (new CfnWebACL$WafActionProperty$Builder) id config))
+  (cfn-web-acl-waf-action-property-builder> (new CfnWebACL$WafActionProperty$Builder) id config))
 
 
-(defn build-cfn-xss-match-set-builder
-  "The build-cfn-xss-match-set-builder function updates a CfnXssMatchSet$Builder instance using the provided configuration.
+(defn cfn-xss-match-set-builder>
+  "The cfn-xss-match-set-builder> function updates a CfnXssMatchSet$Builder instance using the provided configuration.
   The function takes the CfnXssMatchSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -775,11 +775,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-xss-match-set-builder (CfnXssMatchSet$Builder/create scope (name id)) id config))
+  (cfn-xss-match-set-builder> (CfnXssMatchSet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-xss-match-set-field-to-match-property-builder
-  "The build-cfn-xss-match-set-field-to-match-property-builder function updates a CfnXssMatchSet$FieldToMatchProperty$Builder instance using the provided configuration.
+(defn cfn-xss-match-set-field-to-match-property-builder>
+  "The cfn-xss-match-set-field-to-match-property-builder> function updates a CfnXssMatchSet$FieldToMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnXssMatchSet$FieldToMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -806,11 +806,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-xss-match-set-field-to-match-property-builder (new CfnXssMatchSet$FieldToMatchProperty$Builder) id config))
+  (cfn-xss-match-set-field-to-match-property-builder> (new CfnXssMatchSet$FieldToMatchProperty$Builder) id config))
 
 
-(defn build-cfn-xss-match-set-props-builder
-  "The build-cfn-xss-match-set-props-builder function updates a CfnXssMatchSetProps$Builder instance using the provided configuration.
+(defn cfn-xss-match-set-props-builder>
+  "The cfn-xss-match-set-props-builder> function updates a CfnXssMatchSetProps$Builder instance using the provided configuration.
   The function takes the CfnXssMatchSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -837,11 +837,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-xss-match-set-props-builder (new CfnXssMatchSetProps$Builder) id config))
+  (cfn-xss-match-set-props-builder> (new CfnXssMatchSetProps$Builder) id config))
 
 
-(defn build-cfn-xss-match-set-xss-match-tuple-property-builder
-  "The build-cfn-xss-match-set-xss-match-tuple-property-builder function updates a CfnXssMatchSet$XssMatchTupleProperty$Builder instance using the provided configuration.
+(defn cfn-xss-match-set-xss-match-tuple-property-builder>
+  "The cfn-xss-match-set-xss-match-tuple-property-builder> function updates a CfnXssMatchSet$XssMatchTupleProperty$Builder instance using the provided configuration.
   The function takes the CfnXssMatchSet$XssMatchTupleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -868,4 +868,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-xss-match-set-xss-match-tuple-property-builder (new CfnXssMatchSet$XssMatchTupleProperty$Builder) id config))
+  (cfn-xss-match-set-xss-match-tuple-property-builder> (new CfnXssMatchSet$XssMatchTupleProperty$Builder) id config))

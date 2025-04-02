@@ -9,8 +9,8 @@
                                                             CfnMonitorProps$Builder]))
 
 
-(defn build-cfn-monitor-builder
-  "The build-cfn-monitor-builder function updates a CfnMonitor$Builder instance using the provided configuration.
+(defn cfn-monitor-builder>
+  "The cfn-monitor-builder> function updates a CfnMonitor$Builder instance using the provided configuration.
   The function takes the CfnMonitor$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -67,11 +67,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-monitor-builder (CfnMonitor$Builder/create scope (name id)) id config))
+  (cfn-monitor-builder> (CfnMonitor$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-monitor-health-events-config-property-builder
-  "The build-cfn-monitor-health-events-config-property-builder function updates a CfnMonitor$HealthEventsConfigProperty$Builder instance using the provided configuration.
+(defn cfn-monitor-health-events-config-property-builder>
+  "The cfn-monitor-health-events-config-property-builder> function updates a CfnMonitor$HealthEventsConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitor$HealthEventsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -104,11 +104,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-monitor-health-events-config-property-builder (new CfnMonitor$HealthEventsConfigProperty$Builder) id config))
+  (cfn-monitor-health-events-config-property-builder> (new CfnMonitor$HealthEventsConfigProperty$Builder) id config))
 
 
-(defn build-cfn-monitor-internet-measurements-log-delivery-property-builder
-  "The build-cfn-monitor-internet-measurements-log-delivery-property-builder function updates a CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder instance using the provided configuration.
+(defn cfn-monitor-internet-measurements-log-delivery-property-builder>
+  "The cfn-monitor-internet-measurements-log-delivery-property-builder> function updates a CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -132,11 +132,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-monitor-internet-measurements-log-delivery-property-builder (new CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder) id config))
+  (cfn-monitor-internet-measurements-log-delivery-property-builder> (new CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder) id config))
 
 
-(defn build-cfn-monitor-local-health-events-config-property-builder
-  "The build-cfn-monitor-local-health-events-config-property-builder function updates a CfnMonitor$LocalHealthEventsConfigProperty$Builder instance using the provided configuration.
+(defn cfn-monitor-local-health-events-config-property-builder>
+  "The cfn-monitor-local-health-events-config-property-builder> function updates a CfnMonitor$LocalHealthEventsConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitor$LocalHealthEventsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -166,11 +166,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-monitor-local-health-events-config-property-builder (new CfnMonitor$LocalHealthEventsConfigProperty$Builder) id config))
+  (cfn-monitor-local-health-events-config-property-builder> (new CfnMonitor$LocalHealthEventsConfigProperty$Builder) id config))
 
 
-(defn build-cfn-monitor-props-builder
-  "The build-cfn-monitor-props-builder function updates a CfnMonitorProps$Builder instance using the provided configuration.
+(defn cfn-monitor-props-builder>
+  "The cfn-monitor-props-builder> function updates a CfnMonitorProps$Builder instance using the provided configuration.
   The function takes the CfnMonitorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -227,11 +227,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-monitor-props-builder (new CfnMonitorProps$Builder) id config))
+  (cfn-monitor-props-builder> (new CfnMonitorProps$Builder) id config))
 
 
-(defn build-cfn-monitor-s3-config-property-builder
-  "The build-cfn-monitor-s3-config-property-builder function updates a CfnMonitor$S3ConfigProperty$Builder instance using the provided configuration.
+(defn cfn-monitor-s3-config-property-builder>
+  "The cfn-monitor-s3-config-property-builder> function updates a CfnMonitor$S3ConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitor$S3ConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -261,4 +261,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-monitor-s3-config-property-builder (new CfnMonitor$S3ConfigProperty$Builder) id config))
+  (cfn-monitor-s3-config-property-builder> (new CfnMonitor$S3ConfigProperty$Builder) id config))

@@ -21,8 +21,8 @@
                                                       CfnSimulationApplicationVersionProps$Builder]))
 
 
-(defn build-cfn-fleet-builder
-  "The build-cfn-fleet-builder function updates a CfnFleet$Builder instance using the provided configuration.
+(defn cfn-fleet-builder>
+  "The cfn-fleet-builder> function updates a CfnFleet$Builder instance using the provided configuration.
   The function takes the CfnFleet$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -49,11 +49,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-fleet-builder (CfnFleet$Builder/create scope (name id)) id config))
+  (cfn-fleet-builder> (CfnFleet$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-fleet-props-builder
-  "The build-cfn-fleet-props-builder function updates a CfnFleetProps$Builder instance using the provided configuration.
+(defn cfn-fleet-props-builder>
+  "The cfn-fleet-props-builder> function updates a CfnFleetProps$Builder instance using the provided configuration.
   The function takes the CfnFleetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -80,11 +80,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fleet-props-builder (new CfnFleetProps$Builder) id config))
+  (cfn-fleet-props-builder> (new CfnFleetProps$Builder) id config))
 
 
-(defn build-cfn-robot-application-builder
-  "The build-cfn-robot-application-builder function updates a CfnRobotApplication$Builder instance using the provided configuration.
+(defn cfn-robot-application-builder>
+  "The cfn-robot-application-builder> function updates a CfnRobotApplication$Builder instance using the provided configuration.
   The function takes the CfnRobotApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -123,11 +123,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-robot-application-builder (CfnRobotApplication$Builder/create scope (name id)) id config))
+  (cfn-robot-application-builder> (CfnRobotApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-robot-application-props-builder
-  "The build-cfn-robot-application-props-builder function updates a CfnRobotApplicationProps$Builder instance using the provided configuration.
+(defn cfn-robot-application-props-builder>
+  "The cfn-robot-application-props-builder> function updates a CfnRobotApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnRobotApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -166,11 +166,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-robot-application-props-builder (new CfnRobotApplicationProps$Builder) id config))
+  (cfn-robot-application-props-builder> (new CfnRobotApplicationProps$Builder) id config))
 
 
-(defn build-cfn-robot-application-robot-software-suite-property-builder
-  "The build-cfn-robot-application-robot-software-suite-property-builder function updates a CfnRobotApplication$RobotSoftwareSuiteProperty$Builder instance using the provided configuration.
+(defn cfn-robot-application-robot-software-suite-property-builder>
+  "The cfn-robot-application-robot-software-suite-property-builder> function updates a CfnRobotApplication$RobotSoftwareSuiteProperty$Builder instance using the provided configuration.
   The function takes the CfnRobotApplication$RobotSoftwareSuiteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -197,11 +197,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-robot-application-robot-software-suite-property-builder (new CfnRobotApplication$RobotSoftwareSuiteProperty$Builder) id config))
+  (cfn-robot-application-robot-software-suite-property-builder> (new CfnRobotApplication$RobotSoftwareSuiteProperty$Builder) id config))
 
 
-(defn build-cfn-robot-application-source-config-property-builder
-  "The build-cfn-robot-application-source-config-property-builder function updates a CfnRobotApplication$SourceConfigProperty$Builder instance using the provided configuration.
+(defn cfn-robot-application-source-config-property-builder>
+  "The cfn-robot-application-source-config-property-builder> function updates a CfnRobotApplication$SourceConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnRobotApplication$SourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -231,11 +231,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-robot-application-source-config-property-builder (new CfnRobotApplication$SourceConfigProperty$Builder) id config))
+  (cfn-robot-application-source-config-property-builder> (new CfnRobotApplication$SourceConfigProperty$Builder) id config))
 
 
-(defn build-cfn-robot-application-version-builder
-  "The build-cfn-robot-application-version-builder function updates a CfnRobotApplicationVersion$Builder instance using the provided configuration.
+(defn cfn-robot-application-version-builder>
+  "The cfn-robot-application-version-builder> function updates a CfnRobotApplicationVersion$Builder instance using the provided configuration.
   The function takes the CfnRobotApplicationVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -262,11 +262,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-robot-application-version-builder (CfnRobotApplicationVersion$Builder/create scope (name id)) id config))
+  (cfn-robot-application-version-builder> (CfnRobotApplicationVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-robot-application-version-props-builder
-  "The build-cfn-robot-application-version-props-builder function updates a CfnRobotApplicationVersionProps$Builder instance using the provided configuration.
+(defn cfn-robot-application-version-props-builder>
+  "The cfn-robot-application-version-props-builder> function updates a CfnRobotApplicationVersionProps$Builder instance using the provided configuration.
   The function takes the CfnRobotApplicationVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -293,11 +293,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-robot-application-version-props-builder (new CfnRobotApplicationVersionProps$Builder) id config))
+  (cfn-robot-application-version-props-builder> (new CfnRobotApplicationVersionProps$Builder) id config))
 
 
-(defn build-cfn-robot-builder
-  "The build-cfn-robot-builder function updates a CfnRobot$Builder instance using the provided configuration.
+(defn cfn-robot-builder>
+  "The cfn-robot-builder> function updates a CfnRobot$Builder instance using the provided configuration.
   The function takes the CfnRobot$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -333,11 +333,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-robot-builder (CfnRobot$Builder/create scope (name id)) id config))
+  (cfn-robot-builder> (CfnRobot$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-robot-props-builder
-  "The build-cfn-robot-props-builder function updates a CfnRobotProps$Builder instance using the provided configuration.
+(defn cfn-robot-props-builder>
+  "The cfn-robot-props-builder> function updates a CfnRobotProps$Builder instance using the provided configuration.
   The function takes the CfnRobotProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -373,11 +373,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-robot-props-builder (new CfnRobotProps$Builder) id config))
+  (cfn-robot-props-builder> (new CfnRobotProps$Builder) id config))
 
 
-(defn build-cfn-simulation-application-builder
-  "The build-cfn-simulation-application-builder function updates a CfnSimulationApplication$Builder instance using the provided configuration.
+(defn cfn-simulation-application-builder>
+  "The cfn-simulation-application-builder> function updates a CfnSimulationApplication$Builder instance using the provided configuration.
   The function takes the CfnSimulationApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -422,11 +422,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-simulation-application-builder (CfnSimulationApplication$Builder/create scope (name id)) id config))
+  (cfn-simulation-application-builder> (CfnSimulationApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-simulation-application-props-builder
-  "The build-cfn-simulation-application-props-builder function updates a CfnSimulationApplicationProps$Builder instance using the provided configuration.
+(defn cfn-simulation-application-props-builder>
+  "The cfn-simulation-application-props-builder> function updates a CfnSimulationApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnSimulationApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -471,11 +471,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simulation-application-props-builder (new CfnSimulationApplicationProps$Builder) id config))
+  (cfn-simulation-application-props-builder> (new CfnSimulationApplicationProps$Builder) id config))
 
 
-(defn build-cfn-simulation-application-rendering-engine-property-builder
-  "The build-cfn-simulation-application-rendering-engine-property-builder function updates a CfnSimulationApplication$RenderingEngineProperty$Builder instance using the provided configuration.
+(defn cfn-simulation-application-rendering-engine-property-builder>
+  "The cfn-simulation-application-rendering-engine-property-builder> function updates a CfnSimulationApplication$RenderingEngineProperty$Builder instance using the provided configuration.
   The function takes the CfnSimulationApplication$RenderingEngineProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -502,11 +502,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simulation-application-rendering-engine-property-builder (new CfnSimulationApplication$RenderingEngineProperty$Builder) id config))
+  (cfn-simulation-application-rendering-engine-property-builder> (new CfnSimulationApplication$RenderingEngineProperty$Builder) id config))
 
 
-(defn build-cfn-simulation-application-robot-software-suite-property-builder
-  "The build-cfn-simulation-application-robot-software-suite-property-builder function updates a CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder instance using the provided configuration.
+(defn cfn-simulation-application-robot-software-suite-property-builder>
+  "The cfn-simulation-application-robot-software-suite-property-builder> function updates a CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder instance using the provided configuration.
   The function takes the CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -533,11 +533,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simulation-application-robot-software-suite-property-builder (new CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder) id config))
+  (cfn-simulation-application-robot-software-suite-property-builder> (new CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder) id config))
 
 
-(defn build-cfn-simulation-application-simulation-software-suite-property-builder
-  "The build-cfn-simulation-application-simulation-software-suite-property-builder function updates a CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder instance using the provided configuration.
+(defn cfn-simulation-application-simulation-software-suite-property-builder>
+  "The cfn-simulation-application-simulation-software-suite-property-builder> function updates a CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder instance using the provided configuration.
   The function takes the CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -564,11 +564,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simulation-application-simulation-software-suite-property-builder (new CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder) id config))
+  (cfn-simulation-application-simulation-software-suite-property-builder> (new CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder) id config))
 
 
-(defn build-cfn-simulation-application-source-config-property-builder
-  "The build-cfn-simulation-application-source-config-property-builder function updates a CfnSimulationApplication$SourceConfigProperty$Builder instance using the provided configuration.
+(defn cfn-simulation-application-source-config-property-builder>
+  "The cfn-simulation-application-source-config-property-builder> function updates a CfnSimulationApplication$SourceConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSimulationApplication$SourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -598,11 +598,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simulation-application-source-config-property-builder (new CfnSimulationApplication$SourceConfigProperty$Builder) id config))
+  (cfn-simulation-application-source-config-property-builder> (new CfnSimulationApplication$SourceConfigProperty$Builder) id config))
 
 
-(defn build-cfn-simulation-application-version-builder
-  "The build-cfn-simulation-application-version-builder function updates a CfnSimulationApplicationVersion$Builder instance using the provided configuration.
+(defn cfn-simulation-application-version-builder>
+  "The cfn-simulation-application-version-builder> function updates a CfnSimulationApplicationVersion$Builder instance using the provided configuration.
   The function takes the CfnSimulationApplicationVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -629,11 +629,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-simulation-application-version-builder (CfnSimulationApplicationVersion$Builder/create scope (name id)) id config))
+  (cfn-simulation-application-version-builder> (CfnSimulationApplicationVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-simulation-application-version-props-builder
-  "The build-cfn-simulation-application-version-props-builder function updates a CfnSimulationApplicationVersionProps$Builder instance using the provided configuration.
+(defn cfn-simulation-application-version-props-builder>
+  "The cfn-simulation-application-version-props-builder> function updates a CfnSimulationApplicationVersionProps$Builder instance using the provided configuration.
   The function takes the CfnSimulationApplicationVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -660,4 +660,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-simulation-application-version-props-builder (new CfnSimulationApplicationVersionProps$Builder) id config))
+  (cfn-simulation-application-version-props-builder> (new CfnSimulationApplicationVersionProps$Builder) id config))

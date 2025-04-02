@@ -14,8 +14,8 @@
                                                            CfnLicenseProps$Builder]))
 
 
-(defn build-cfn-grant-builder
-  "The build-cfn-grant-builder function updates a CfnGrant$Builder instance using the provided configuration.
+(defn cfn-grant-builder>
+  "The cfn-grant-builder> function updates a CfnGrant$Builder instance using the provided configuration.
   The function takes the CfnGrant$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -54,11 +54,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-grant-builder (CfnGrant$Builder/create scope (name id)) id config))
+  (cfn-grant-builder> (CfnGrant$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-grant-props-builder
-  "The build-cfn-grant-props-builder function updates a CfnGrantProps$Builder instance using the provided configuration.
+(defn cfn-grant-props-builder>
+  "The cfn-grant-props-builder> function updates a CfnGrantProps$Builder instance using the provided configuration.
   The function takes the CfnGrantProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -97,11 +97,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-grant-props-builder (new CfnGrantProps$Builder) id config))
+  (cfn-grant-props-builder> (new CfnGrantProps$Builder) id config))
 
 
-(defn build-cfn-license-borrow-configuration-property-builder
-  "The build-cfn-license-borrow-configuration-property-builder function updates a CfnLicense$BorrowConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-license-borrow-configuration-property-builder>
+  "The cfn-license-borrow-configuration-property-builder> function updates a CfnLicense$BorrowConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$BorrowConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -128,11 +128,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-license-borrow-configuration-property-builder (new CfnLicense$BorrowConfigurationProperty$Builder) id config))
+  (cfn-license-borrow-configuration-property-builder> (new CfnLicense$BorrowConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-license-builder
-  "The build-cfn-license-builder function updates a CfnLicense$Builder instance using the provided configuration.
+(defn cfn-license-builder>
+  "The cfn-license-builder> function updates a CfnLicense$Builder instance using the provided configuration.
   The function takes the CfnLicense$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -186,11 +186,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-license-builder (CfnLicense$Builder/create scope (name id)) id config))
+  (cfn-license-builder> (CfnLicense$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-license-consumption-configuration-property-builder
-  "The build-cfn-license-consumption-configuration-property-builder function updates a CfnLicense$ConsumptionConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-license-consumption-configuration-property-builder>
+  "The cfn-license-consumption-configuration-property-builder> function updates a CfnLicense$ConsumptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$ConsumptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -220,11 +220,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-license-consumption-configuration-property-builder (new CfnLicense$ConsumptionConfigurationProperty$Builder) id config))
+  (cfn-license-consumption-configuration-property-builder> (new CfnLicense$ConsumptionConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-license-entitlement-property-builder
-  "The build-cfn-license-entitlement-property-builder function updates a CfnLicense$EntitlementProperty$Builder instance using the provided configuration.
+(defn cfn-license-entitlement-property-builder>
+  "The cfn-license-entitlement-property-builder> function updates a CfnLicense$EntitlementProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$EntitlementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -263,11 +263,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-license-entitlement-property-builder (new CfnLicense$EntitlementProperty$Builder) id config))
+  (cfn-license-entitlement-property-builder> (new CfnLicense$EntitlementProperty$Builder) id config))
 
 
-(defn build-cfn-license-issuer-data-property-builder
-  "The build-cfn-license-issuer-data-property-builder function updates a CfnLicense$IssuerDataProperty$Builder instance using the provided configuration.
+(defn cfn-license-issuer-data-property-builder>
+  "The cfn-license-issuer-data-property-builder> function updates a CfnLicense$IssuerDataProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$IssuerDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -294,11 +294,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-license-issuer-data-property-builder (new CfnLicense$IssuerDataProperty$Builder) id config))
+  (cfn-license-issuer-data-property-builder> (new CfnLicense$IssuerDataProperty$Builder) id config))
 
 
-(defn build-cfn-license-metadata-property-builder
-  "The build-cfn-license-metadata-property-builder function updates a CfnLicense$MetadataProperty$Builder instance using the provided configuration.
+(defn cfn-license-metadata-property-builder>
+  "The cfn-license-metadata-property-builder> function updates a CfnLicense$MetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$MetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -325,11 +325,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-license-metadata-property-builder (new CfnLicense$MetadataProperty$Builder) id config))
+  (cfn-license-metadata-property-builder> (new CfnLicense$MetadataProperty$Builder) id config))
 
 
-(defn build-cfn-license-props-builder
-  "The build-cfn-license-props-builder function updates a CfnLicenseProps$Builder instance using the provided configuration.
+(defn cfn-license-props-builder>
+  "The cfn-license-props-builder> function updates a CfnLicenseProps$Builder instance using the provided configuration.
   The function takes the CfnLicenseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -383,11 +383,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-license-props-builder (new CfnLicenseProps$Builder) id config))
+  (cfn-license-props-builder> (new CfnLicenseProps$Builder) id config))
 
 
-(defn build-cfn-license-provisional-configuration-property-builder
-  "The build-cfn-license-provisional-configuration-property-builder function updates a CfnLicense$ProvisionalConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-license-provisional-configuration-property-builder>
+  "The cfn-license-provisional-configuration-property-builder> function updates a CfnLicense$ProvisionalConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$ProvisionalConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -411,11 +411,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-license-provisional-configuration-property-builder (new CfnLicense$ProvisionalConfigurationProperty$Builder) id config))
+  (cfn-license-provisional-configuration-property-builder> (new CfnLicense$ProvisionalConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-license-validity-date-format-property-builder
-  "The build-cfn-license-validity-date-format-property-builder function updates a CfnLicense$ValidityDateFormatProperty$Builder instance using the provided configuration.
+(defn cfn-license-validity-date-format-property-builder>
+  "The cfn-license-validity-date-format-property-builder> function updates a CfnLicense$ValidityDateFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$ValidityDateFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -442,4 +442,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-license-validity-date-format-property-builder (new CfnLicense$ValidityDateFormatProperty$Builder) id config))
+  (cfn-license-validity-date-format-property-builder> (new CfnLicense$ValidityDateFormatProperty$Builder) id config))

@@ -35,8 +35,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :dns data) ValidationMethod/DNS)))
 
 
-(defn build-certificate-builder
-  "The build-certificate-builder function updates a Certificate$Builder instance using the provided configuration.
+(defn certificate-builder>
+  "The certificate-builder> function updates a Certificate$Builder instance using the provided configuration.
   The function takes the Certificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -75,11 +75,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-certificate-builder (Certificate$Builder/create scope (name id)) id config))
+  (certificate-builder> (Certificate$Builder/create scope (name id)) id config))
 
 
-(defn build-certificate-props-builder
-  "The build-certificate-props-builder function updates a CertificateProps$Builder instance using the provided configuration.
+(defn certificate-props-builder>
+  "The certificate-props-builder> function updates a CertificateProps$Builder instance using the provided configuration.
   The function takes the CertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -118,11 +118,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-certificate-props-builder (new CertificateProps$Builder) id config))
+  (certificate-props-builder> (new CertificateProps$Builder) id config))
 
 
-(defn build-certification-validation-props-builder
-  "The build-certification-validation-props-builder function updates a CertificationValidationProps$Builder instance using the provided configuration.
+(defn certification-validation-props-builder>
+  "The certification-validation-props-builder> function updates a CertificationValidationProps$Builder instance using the provided configuration.
   The function takes the CertificationValidationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -155,11 +155,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-certification-validation-props-builder (new CertificationValidationProps$Builder) id config))
+  (certification-validation-props-builder> (new CertificationValidationProps$Builder) id config))
 
 
-(defn build-cfn-account-builder
-  "The build-cfn-account-builder function updates a CfnAccount$Builder instance using the provided configuration.
+(defn cfn-account-builder>
+  "The cfn-account-builder> function updates a CfnAccount$Builder instance using the provided configuration.
   The function takes the CfnAccount$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -183,11 +183,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-account-builder (CfnAccount$Builder/create scope (name id)) id config))
+  (cfn-account-builder> (CfnAccount$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-account-expiry-events-configuration-property-builder
-  "The build-cfn-account-expiry-events-configuration-property-builder function updates a CfnAccount$ExpiryEventsConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-account-expiry-events-configuration-property-builder>
+  "The cfn-account-expiry-events-configuration-property-builder> function updates a CfnAccount$ExpiryEventsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccount$ExpiryEventsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -211,11 +211,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-account-expiry-events-configuration-property-builder (new CfnAccount$ExpiryEventsConfigurationProperty$Builder) id config))
+  (cfn-account-expiry-events-configuration-property-builder> (new CfnAccount$ExpiryEventsConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-account-props-builder
-  "The build-cfn-account-props-builder function updates a CfnAccountProps$Builder instance using the provided configuration.
+(defn cfn-account-props-builder>
+  "The cfn-account-props-builder> function updates a CfnAccountProps$Builder instance using the provided configuration.
   The function takes the CfnAccountProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -239,11 +239,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-account-props-builder (new CfnAccountProps$Builder) id config))
+  (cfn-account-props-builder> (new CfnAccountProps$Builder) id config))
 
 
-(defn build-cfn-certificate-builder
-  "The build-cfn-certificate-builder function updates a CfnCertificate$Builder instance using the provided configuration.
+(defn cfn-certificate-builder>
+  "The cfn-certificate-builder> function updates a CfnCertificate$Builder instance using the provided configuration.
   The function takes the CfnCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -288,11 +288,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-certificate-builder (CfnCertificate$Builder/create scope (name id)) id config))
+  (cfn-certificate-builder> (CfnCertificate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-certificate-domain-validation-option-property-builder
-  "The build-cfn-certificate-domain-validation-option-property-builder function updates a CfnCertificate$DomainValidationOptionProperty$Builder instance using the provided configuration.
+(defn cfn-certificate-domain-validation-option-property-builder>
+  "The cfn-certificate-domain-validation-option-property-builder> function updates a CfnCertificate$DomainValidationOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$DomainValidationOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -322,11 +322,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-certificate-domain-validation-option-property-builder (new CfnCertificate$DomainValidationOptionProperty$Builder) id config))
+  (cfn-certificate-domain-validation-option-property-builder> (new CfnCertificate$DomainValidationOptionProperty$Builder) id config))
 
 
-(defn build-cfn-certificate-props-builder
-  "The build-cfn-certificate-props-builder function updates a CfnCertificateProps$Builder instance using the provided configuration.
+(defn cfn-certificate-props-builder>
+  "The cfn-certificate-props-builder> function updates a CfnCertificateProps$Builder instance using the provided configuration.
   The function takes the CfnCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -371,11 +371,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-certificate-props-builder (new CfnCertificateProps$Builder) id config))
+  (cfn-certificate-props-builder> (new CfnCertificateProps$Builder) id config))
 
 
-(defn build-dns-validated-certificate-props-builder
-  "The build-dns-validated-certificate-props-builder function updates a DnsValidatedCertificateProps$Builder instance using the provided configuration.
+(defn dns-validated-certificate-props-builder>
+  "The dns-validated-certificate-props-builder> function updates a DnsValidatedCertificateProps$Builder instance using the provided configuration.
   The function takes the DnsValidatedCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -429,11 +429,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-dns-validated-certificate-props-builder (new DnsValidatedCertificateProps$Builder) id config))
+  (dns-validated-certificate-props-builder> (new DnsValidatedCertificateProps$Builder) id config))
 
 
-(defn build-private-certificate-builder
-  "The build-private-certificate-builder function updates a PrivateCertificate$Builder instance using the provided configuration.
+(defn private-certificate-builder>
+  "The private-certificate-builder> function updates a PrivateCertificate$Builder instance using the provided configuration.
   The function takes the PrivateCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -466,11 +466,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-private-certificate-builder (PrivateCertificate$Builder/create scope (name id)) id config))
+  (private-certificate-builder> (PrivateCertificate$Builder/create scope (name id)) id config))
 
 
-(defn build-private-certificate-props-builder
-  "The build-private-certificate-props-builder function updates a PrivateCertificateProps$Builder instance using the provided configuration.
+(defn private-certificate-props-builder>
+  "The private-certificate-props-builder> function updates a PrivateCertificateProps$Builder instance using the provided configuration.
   The function takes the PrivateCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -503,4 +503,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-private-certificate-props-builder (new PrivateCertificateProps$Builder) id config))
+  (private-certificate-props-builder> (new PrivateCertificateProps$Builder) id config))

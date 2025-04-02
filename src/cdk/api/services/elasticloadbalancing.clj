@@ -41,8 +41,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :ssl data) LoadBalancingProtocol/SSL)))
 
 
-(defn build-cfn-load-balancer-access-logging-policy-property-builder
-  "The build-cfn-load-balancer-access-logging-policy-property-builder function updates a CfnLoadBalancer$AccessLoggingPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-load-balancer-access-logging-policy-property-builder>
+  "The cfn-load-balancer-access-logging-policy-property-builder> function updates a CfnLoadBalancer$AccessLoggingPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$AccessLoggingPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -75,11 +75,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-access-logging-policy-property-builder (new CfnLoadBalancer$AccessLoggingPolicyProperty$Builder) id config))
+  (cfn-load-balancer-access-logging-policy-property-builder> (new CfnLoadBalancer$AccessLoggingPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-load-balancer-app-cookie-stickiness-policy-property-builder
-  "The build-cfn-load-balancer-app-cookie-stickiness-policy-property-builder function updates a CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-load-balancer-app-cookie-stickiness-policy-property-builder>
+  "The cfn-load-balancer-app-cookie-stickiness-policy-property-builder> function updates a CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -106,11 +106,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-app-cookie-stickiness-policy-property-builder (new CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder) id config))
+  (cfn-load-balancer-app-cookie-stickiness-policy-property-builder> (new CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-load-balancer-builder
-  "The build-cfn-load-balancer-builder function updates a CfnLoadBalancer$Builder instance using the provided configuration.
+(defn cfn-load-balancer-builder>
+  "The cfn-load-balancer-builder> function updates a CfnLoadBalancer$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -179,11 +179,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-load-balancer-builder (CfnLoadBalancer$Builder/create scope (name id)) id config))
+  (cfn-load-balancer-builder> (CfnLoadBalancer$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-load-balancer-connection-draining-policy-property-builder
-  "The build-cfn-load-balancer-connection-draining-policy-property-builder function updates a CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-load-balancer-connection-draining-policy-property-builder>
+  "The cfn-load-balancer-connection-draining-policy-property-builder> function updates a CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -210,11 +210,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-connection-draining-policy-property-builder (new CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder) id config))
+  (cfn-load-balancer-connection-draining-policy-property-builder> (new CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-load-balancer-connection-settings-property-builder
-  "The build-cfn-load-balancer-connection-settings-property-builder function updates a CfnLoadBalancer$ConnectionSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-load-balancer-connection-settings-property-builder>
+  "The cfn-load-balancer-connection-settings-property-builder> function updates a CfnLoadBalancer$ConnectionSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$ConnectionSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -238,11 +238,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-connection-settings-property-builder (new CfnLoadBalancer$ConnectionSettingsProperty$Builder) id config))
+  (cfn-load-balancer-connection-settings-property-builder> (new CfnLoadBalancer$ConnectionSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-load-balancer-health-check-property-builder
-  "The build-cfn-load-balancer-health-check-property-builder function updates a CfnLoadBalancer$HealthCheckProperty$Builder instance using the provided configuration.
+(defn cfn-load-balancer-health-check-property-builder>
+  "The cfn-load-balancer-health-check-property-builder> function updates a CfnLoadBalancer$HealthCheckProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$HealthCheckProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -278,11 +278,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-health-check-property-builder (new CfnLoadBalancer$HealthCheckProperty$Builder) id config))
+  (cfn-load-balancer-health-check-property-builder> (new CfnLoadBalancer$HealthCheckProperty$Builder) id config))
 
 
-(defn build-cfn-load-balancer-lb-cookie-stickiness-policy-property-builder
-  "The build-cfn-load-balancer-lb-cookie-stickiness-policy-property-builder function updates a CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-load-balancer-lb-cookie-stickiness-policy-property-builder>
+  "The cfn-load-balancer-lb-cookie-stickiness-policy-property-builder> function updates a CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -309,11 +309,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-lb-cookie-stickiness-policy-property-builder (new CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder) id config))
+  (cfn-load-balancer-lb-cookie-stickiness-policy-property-builder> (new CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-load-balancer-listeners-property-builder
-  "The build-cfn-load-balancer-listeners-property-builder function updates a CfnLoadBalancer$ListenersProperty$Builder instance using the provided configuration.
+(defn cfn-load-balancer-listeners-property-builder>
+  "The cfn-load-balancer-listeners-property-builder> function updates a CfnLoadBalancer$ListenersProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$ListenersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -352,11 +352,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-listeners-property-builder (new CfnLoadBalancer$ListenersProperty$Builder) id config))
+  (cfn-load-balancer-listeners-property-builder> (new CfnLoadBalancer$ListenersProperty$Builder) id config))
 
 
-(defn build-cfn-load-balancer-policies-property-builder
-  "The build-cfn-load-balancer-policies-property-builder function updates a CfnLoadBalancer$PoliciesProperty$Builder instance using the provided configuration.
+(defn cfn-load-balancer-policies-property-builder>
+  "The cfn-load-balancer-policies-property-builder> function updates a CfnLoadBalancer$PoliciesProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$PoliciesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -392,11 +392,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-policies-property-builder (new CfnLoadBalancer$PoliciesProperty$Builder) id config))
+  (cfn-load-balancer-policies-property-builder> (new CfnLoadBalancer$PoliciesProperty$Builder) id config))
 
 
-(defn build-cfn-load-balancer-props-builder
-  "The build-cfn-load-balancer-props-builder function updates a CfnLoadBalancerProps$Builder instance using the provided configuration.
+(defn cfn-load-balancer-props-builder>
+  "The cfn-load-balancer-props-builder> function updates a CfnLoadBalancerProps$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -465,11 +465,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-load-balancer-props-builder (new CfnLoadBalancerProps$Builder) id config))
+  (cfn-load-balancer-props-builder> (new CfnLoadBalancerProps$Builder) id config))
 
 
-(defn build-health-check-builder
-  "The build-health-check-builder function updates a HealthCheck$Builder instance using the provided configuration.
+(defn health-check-builder>
+  "The health-check-builder> function updates a HealthCheck$Builder instance using the provided configuration.
   The function takes the HealthCheck$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -511,11 +511,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-health-check-builder (new HealthCheck$Builder) id config))
+  (health-check-builder> (new HealthCheck$Builder) id config))
 
 
-(defn build-load-balancer-builder
-  "The build-load-balancer-builder function updates a LoadBalancer$Builder instance using the provided configuration.
+(defn load-balancer-builder>
+  "The load-balancer-builder> function updates a LoadBalancer$Builder instance using the provided configuration.
   The function takes the LoadBalancer$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -560,11 +560,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-load-balancer-builder (LoadBalancer$Builder/create scope (name id)) id config))
+  (load-balancer-builder> (LoadBalancer$Builder/create scope (name id)) id config))
 
 
-(defn build-load-balancer-listener-builder
-  "The build-load-balancer-listener-builder function updates a LoadBalancerListener$Builder instance using the provided configuration.
+(defn load-balancer-listener-builder>
+  "The load-balancer-listener-builder> function updates a LoadBalancerListener$Builder instance using the provided configuration.
   The function takes the LoadBalancerListener$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -606,11 +606,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-load-balancer-listener-builder (new LoadBalancerListener$Builder) id config))
+  (load-balancer-listener-builder> (new LoadBalancerListener$Builder) id config))
 
 
-(defn build-load-balancer-props-builder
-  "The build-load-balancer-props-builder function updates a LoadBalancerProps$Builder instance using the provided configuration.
+(defn load-balancer-props-builder>
+  "The load-balancer-props-builder> function updates a LoadBalancerProps$Builder instance using the provided configuration.
   The function takes the LoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -655,4 +655,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-load-balancer-props-builder (new LoadBalancerProps$Builder) id config))
+  (load-balancer-props-builder> (new LoadBalancerProps$Builder) id config))

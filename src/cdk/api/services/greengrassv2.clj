@@ -29,8 +29,8 @@
                                                          CfnDeploymentProps$Builder]))
 
 
-(defn build-cfn-component-version-builder
-  "The build-cfn-component-version-builder function updates a CfnComponentVersion$Builder instance using the provided configuration.
+(defn cfn-component-version-builder>
+  "The cfn-component-version-builder> function updates a CfnComponentVersion$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -60,11 +60,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-component-version-builder (CfnComponentVersion$Builder/create scope (name id)) id config))
+  (cfn-component-version-builder> (CfnComponentVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-component-version-component-dependency-requirement-property-builder
-  "The build-cfn-component-version-component-dependency-requirement-property-builder function updates a CfnComponentVersion$ComponentDependencyRequirementProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-component-dependency-requirement-property-builder>
+  "The cfn-component-version-component-dependency-requirement-property-builder> function updates a CfnComponentVersion$ComponentDependencyRequirementProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$ComponentDependencyRequirementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -91,11 +91,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-component-dependency-requirement-property-builder (new CfnComponentVersion$ComponentDependencyRequirementProperty$Builder) id config))
+  (cfn-component-version-component-dependency-requirement-property-builder> (new CfnComponentVersion$ComponentDependencyRequirementProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-component-platform-property-builder
-  "The build-cfn-component-version-component-platform-property-builder function updates a CfnComponentVersion$ComponentPlatformProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-component-platform-property-builder>
+  "The cfn-component-version-component-platform-property-builder> function updates a CfnComponentVersion$ComponentPlatformProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$ComponentPlatformProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -122,11 +122,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-component-platform-property-builder (new CfnComponentVersion$ComponentPlatformProperty$Builder) id config))
+  (cfn-component-version-component-platform-property-builder> (new CfnComponentVersion$ComponentPlatformProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-lambda-container-params-property-builder
-  "The build-cfn-component-version-lambda-container-params-property-builder function updates a CfnComponentVersion$LambdaContainerParamsProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-lambda-container-params-property-builder>
+  "The cfn-component-version-lambda-container-params-property-builder> function updates a CfnComponentVersion$LambdaContainerParamsProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$LambdaContainerParamsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -159,11 +159,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-lambda-container-params-property-builder (new CfnComponentVersion$LambdaContainerParamsProperty$Builder) id config))
+  (cfn-component-version-lambda-container-params-property-builder> (new CfnComponentVersion$LambdaContainerParamsProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-lambda-device-mount-property-builder
-  "The build-cfn-component-version-lambda-device-mount-property-builder function updates a CfnComponentVersion$LambdaDeviceMountProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-lambda-device-mount-property-builder>
+  "The cfn-component-version-lambda-device-mount-property-builder> function updates a CfnComponentVersion$LambdaDeviceMountProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$LambdaDeviceMountProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -193,11 +193,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-lambda-device-mount-property-builder (new CfnComponentVersion$LambdaDeviceMountProperty$Builder) id config))
+  (cfn-component-version-lambda-device-mount-property-builder> (new CfnComponentVersion$LambdaDeviceMountProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-lambda-event-source-property-builder
-  "The build-cfn-component-version-lambda-event-source-property-builder function updates a CfnComponentVersion$LambdaEventSourceProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-lambda-event-source-property-builder>
+  "The cfn-component-version-lambda-event-source-property-builder> function updates a CfnComponentVersion$LambdaEventSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$LambdaEventSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -224,11 +224,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-lambda-event-source-property-builder (new CfnComponentVersion$LambdaEventSourceProperty$Builder) id config))
+  (cfn-component-version-lambda-event-source-property-builder> (new CfnComponentVersion$LambdaEventSourceProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-lambda-execution-parameters-property-builder
-  "The build-cfn-component-version-lambda-execution-parameters-property-builder function updates a CfnComponentVersion$LambdaExecutionParametersProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-lambda-execution-parameters-property-builder>
+  "The cfn-component-version-lambda-execution-parameters-property-builder> function updates a CfnComponentVersion$LambdaExecutionParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$LambdaExecutionParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -282,11 +282,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-lambda-execution-parameters-property-builder (new CfnComponentVersion$LambdaExecutionParametersProperty$Builder) id config))
+  (cfn-component-version-lambda-execution-parameters-property-builder> (new CfnComponentVersion$LambdaExecutionParametersProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-lambda-function-recipe-source-property-builder
-  "The build-cfn-component-version-lambda-function-recipe-source-property-builder function updates a CfnComponentVersion$LambdaFunctionRecipeSourceProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-lambda-function-recipe-source-property-builder>
+  "The cfn-component-version-lambda-function-recipe-source-property-builder> function updates a CfnComponentVersion$LambdaFunctionRecipeSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$LambdaFunctionRecipeSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -325,11 +325,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-lambda-function-recipe-source-property-builder (new CfnComponentVersion$LambdaFunctionRecipeSourceProperty$Builder) id config))
+  (cfn-component-version-lambda-function-recipe-source-property-builder> (new CfnComponentVersion$LambdaFunctionRecipeSourceProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-lambda-linux-process-params-property-builder
-  "The build-cfn-component-version-lambda-linux-process-params-property-builder function updates a CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-lambda-linux-process-params-property-builder>
+  "The cfn-component-version-lambda-linux-process-params-property-builder> function updates a CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -356,11 +356,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-lambda-linux-process-params-property-builder (new CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder) id config))
+  (cfn-component-version-lambda-linux-process-params-property-builder> (new CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-lambda-volume-mount-property-builder
-  "The build-cfn-component-version-lambda-volume-mount-property-builder function updates a CfnComponentVersion$LambdaVolumeMountProperty$Builder instance using the provided configuration.
+(defn cfn-component-version-lambda-volume-mount-property-builder>
+  "The cfn-component-version-lambda-volume-mount-property-builder> function updates a CfnComponentVersion$LambdaVolumeMountProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentVersion$LambdaVolumeMountProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -393,11 +393,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-lambda-volume-mount-property-builder (new CfnComponentVersion$LambdaVolumeMountProperty$Builder) id config))
+  (cfn-component-version-lambda-volume-mount-property-builder> (new CfnComponentVersion$LambdaVolumeMountProperty$Builder) id config))
 
 
-(defn build-cfn-component-version-props-builder
-  "The build-cfn-component-version-props-builder function updates a CfnComponentVersionProps$Builder instance using the provided configuration.
+(defn cfn-component-version-props-builder>
+  "The cfn-component-version-props-builder> function updates a CfnComponentVersionProps$Builder instance using the provided configuration.
   The function takes the CfnComponentVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -427,11 +427,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-component-version-props-builder (new CfnComponentVersionProps$Builder) id config))
+  (cfn-component-version-props-builder> (new CfnComponentVersionProps$Builder) id config))
 
 
-(defn build-cfn-deployment-builder
-  "The build-cfn-deployment-builder function updates a CfnDeployment$Builder instance using the provided configuration.
+(defn cfn-deployment-builder>
+  "The cfn-deployment-builder> function updates a CfnDeployment$Builder instance using the provided configuration.
   The function takes the CfnDeployment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -473,11 +473,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-deployment-builder (CfnDeployment$Builder/create scope (name id)) id config))
+  (cfn-deployment-builder> (CfnDeployment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-deployment-component-configuration-update-property-builder
-  "The build-cfn-deployment-component-configuration-update-property-builder function updates a CfnDeployment$ComponentConfigurationUpdateProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-component-configuration-update-property-builder>
+  "The cfn-deployment-component-configuration-update-property-builder> function updates a CfnDeployment$ComponentConfigurationUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$ComponentConfigurationUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -504,11 +504,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-component-configuration-update-property-builder (new CfnDeployment$ComponentConfigurationUpdateProperty$Builder) id config))
+  (cfn-deployment-component-configuration-update-property-builder> (new CfnDeployment$ComponentConfigurationUpdateProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-component-deployment-specification-property-builder
-  "The build-cfn-deployment-component-deployment-specification-property-builder function updates a CfnDeployment$ComponentDeploymentSpecificationProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-component-deployment-specification-property-builder>
+  "The cfn-deployment-component-deployment-specification-property-builder> function updates a CfnDeployment$ComponentDeploymentSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$ComponentDeploymentSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -538,11 +538,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-component-deployment-specification-property-builder (new CfnDeployment$ComponentDeploymentSpecificationProperty$Builder) id config))
+  (cfn-deployment-component-deployment-specification-property-builder> (new CfnDeployment$ComponentDeploymentSpecificationProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-component-run-with-property-builder
-  "The build-cfn-deployment-component-run-with-property-builder function updates a CfnDeployment$ComponentRunWithProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-component-run-with-property-builder>
+  "The cfn-deployment-component-run-with-property-builder> function updates a CfnDeployment$ComponentRunWithProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$ComponentRunWithProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -572,11 +572,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-component-run-with-property-builder (new CfnDeployment$ComponentRunWithProperty$Builder) id config))
+  (cfn-deployment-component-run-with-property-builder> (new CfnDeployment$ComponentRunWithProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-deployment-component-update-policy-property-builder
-  "The build-cfn-deployment-deployment-component-update-policy-property-builder function updates a CfnDeployment$DeploymentComponentUpdatePolicyProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-deployment-component-update-policy-property-builder>
+  "The cfn-deployment-deployment-component-update-policy-property-builder> function updates a CfnDeployment$DeploymentComponentUpdatePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$DeploymentComponentUpdatePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -603,11 +603,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-deployment-component-update-policy-property-builder (new CfnDeployment$DeploymentComponentUpdatePolicyProperty$Builder) id config))
+  (cfn-deployment-deployment-component-update-policy-property-builder> (new CfnDeployment$DeploymentComponentUpdatePolicyProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-deployment-configuration-validation-policy-property-builder
-  "The build-cfn-deployment-deployment-configuration-validation-policy-property-builder function updates a CfnDeployment$DeploymentConfigurationValidationPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-deployment-configuration-validation-policy-property-builder>
+  "The cfn-deployment-deployment-configuration-validation-policy-property-builder> function updates a CfnDeployment$DeploymentConfigurationValidationPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$DeploymentConfigurationValidationPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -631,11 +631,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-deployment-configuration-validation-policy-property-builder (new CfnDeployment$DeploymentConfigurationValidationPolicyProperty$Builder) id config))
+  (cfn-deployment-deployment-configuration-validation-policy-property-builder> (new CfnDeployment$DeploymentConfigurationValidationPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-deployment-io-t-job-configuration-property-builder
-  "The build-cfn-deployment-deployment-io-t-job-configuration-property-builder function updates a CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-deployment-io-t-job-configuration-property-builder>
+  "The cfn-deployment-deployment-io-t-job-configuration-property-builder> function updates a CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -665,11 +665,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-deployment-io-t-job-configuration-property-builder (new CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder) id config))
+  (cfn-deployment-deployment-io-t-job-configuration-property-builder> (new CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-deployment-policies-property-builder
-  "The build-cfn-deployment-deployment-policies-property-builder function updates a CfnDeployment$DeploymentPoliciesProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-deployment-policies-property-builder>
+  "The cfn-deployment-deployment-policies-property-builder> function updates a CfnDeployment$DeploymentPoliciesProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$DeploymentPoliciesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -699,11 +699,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-deployment-policies-property-builder (new CfnDeployment$DeploymentPoliciesProperty$Builder) id config))
+  (cfn-deployment-deployment-policies-property-builder> (new CfnDeployment$DeploymentPoliciesProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-io-t-job-abort-config-property-builder
-  "The build-cfn-deployment-io-t-job-abort-config-property-builder function updates a CfnDeployment$IoTJobAbortConfigProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-io-t-job-abort-config-property-builder>
+  "The cfn-deployment-io-t-job-abort-config-property-builder> function updates a CfnDeployment$IoTJobAbortConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$IoTJobAbortConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -727,11 +727,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-io-t-job-abort-config-property-builder (new CfnDeployment$IoTJobAbortConfigProperty$Builder) id config))
+  (cfn-deployment-io-t-job-abort-config-property-builder> (new CfnDeployment$IoTJobAbortConfigProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-io-t-job-abort-criteria-property-builder
-  "The build-cfn-deployment-io-t-job-abort-criteria-property-builder function updates a CfnDeployment$IoTJobAbortCriteriaProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-io-t-job-abort-criteria-property-builder>
+  "The cfn-deployment-io-t-job-abort-criteria-property-builder> function updates a CfnDeployment$IoTJobAbortCriteriaProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$IoTJobAbortCriteriaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -764,11 +764,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-io-t-job-abort-criteria-property-builder (new CfnDeployment$IoTJobAbortCriteriaProperty$Builder) id config))
+  (cfn-deployment-io-t-job-abort-criteria-property-builder> (new CfnDeployment$IoTJobAbortCriteriaProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-io-t-job-executions-rollout-config-property-builder
-  "The build-cfn-deployment-io-t-job-executions-rollout-config-property-builder function updates a CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-io-t-job-executions-rollout-config-property-builder>
+  "The cfn-deployment-io-t-job-executions-rollout-config-property-builder> function updates a CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -795,11 +795,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-io-t-job-executions-rollout-config-property-builder (new CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder) id config))
+  (cfn-deployment-io-t-job-executions-rollout-config-property-builder> (new CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-io-t-job-exponential-rollout-rate-property-builder
-  "The build-cfn-deployment-io-t-job-exponential-rollout-rate-property-builder function updates a CfnDeployment$IoTJobExponentialRolloutRateProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-io-t-job-exponential-rollout-rate-property-builder>
+  "The cfn-deployment-io-t-job-exponential-rollout-rate-property-builder> function updates a CfnDeployment$IoTJobExponentialRolloutRateProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$IoTJobExponentialRolloutRateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -829,11 +829,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-io-t-job-exponential-rollout-rate-property-builder (new CfnDeployment$IoTJobExponentialRolloutRateProperty$Builder) id config))
+  (cfn-deployment-io-t-job-exponential-rollout-rate-property-builder> (new CfnDeployment$IoTJobExponentialRolloutRateProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-io-t-job-timeout-config-property-builder
-  "The build-cfn-deployment-io-t-job-timeout-config-property-builder function updates a CfnDeployment$IoTJobTimeoutConfigProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-io-t-job-timeout-config-property-builder>
+  "The cfn-deployment-io-t-job-timeout-config-property-builder> function updates a CfnDeployment$IoTJobTimeoutConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$IoTJobTimeoutConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -857,11 +857,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-io-t-job-timeout-config-property-builder (new CfnDeployment$IoTJobTimeoutConfigProperty$Builder) id config))
+  (cfn-deployment-io-t-job-timeout-config-property-builder> (new CfnDeployment$IoTJobTimeoutConfigProperty$Builder) id config))
 
 
-(defn build-cfn-deployment-props-builder
-  "The build-cfn-deployment-props-builder function updates a CfnDeploymentProps$Builder instance using the provided configuration.
+(defn cfn-deployment-props-builder>
+  "The cfn-deployment-props-builder> function updates a CfnDeploymentProps$Builder instance using the provided configuration.
   The function takes the CfnDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -903,11 +903,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-props-builder (new CfnDeploymentProps$Builder) id config))
+  (cfn-deployment-props-builder> (new CfnDeploymentProps$Builder) id config))
 
 
-(defn build-cfn-deployment-system-resource-limits-property-builder
-  "The build-cfn-deployment-system-resource-limits-property-builder function updates a CfnDeployment$SystemResourceLimitsProperty$Builder instance using the provided configuration.
+(defn cfn-deployment-system-resource-limits-property-builder>
+  "The cfn-deployment-system-resource-limits-property-builder> function updates a CfnDeployment$SystemResourceLimitsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeployment$SystemResourceLimitsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -934,4 +934,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-deployment-system-resource-limits-property-builder (new CfnDeployment$SystemResourceLimitsProperty$Builder) id config))
+  (cfn-deployment-system-resource-limits-property-builder> (new CfnDeployment$SystemResourceLimitsProperty$Builder) id config))

@@ -16,8 +16,8 @@
                                                            CfnServiceProps$Builder]))
 
 
-(defn build-cfn-application-api-gateway-proxy-input-property-builder
-  "The build-cfn-application-api-gateway-proxy-input-property-builder function updates a CfnApplication$ApiGatewayProxyInputProperty$Builder instance using the provided configuration.
+(defn cfn-application-api-gateway-proxy-input-property-builder>
+  "The cfn-application-api-gateway-proxy-input-property-builder> function updates a CfnApplication$ApiGatewayProxyInputProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ApiGatewayProxyInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -44,11 +44,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-api-gateway-proxy-input-property-builder (new CfnApplication$ApiGatewayProxyInputProperty$Builder) id config))
+  (cfn-application-api-gateway-proxy-input-property-builder> (new CfnApplication$ApiGatewayProxyInputProperty$Builder) id config))
 
 
-(defn build-cfn-application-builder
-  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+(defn cfn-application-builder>
+  "The cfn-application-builder> function updates a CfnApplication$Builder instance using the provided configuration.
   The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -87,11 +87,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+  (cfn-application-builder> (CfnApplication$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-props-builder
-  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+(defn cfn-application-props-builder>
+  "The cfn-application-props-builder> function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -130,11 +130,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+  (cfn-application-props-builder> (new CfnApplicationProps$Builder) id config))
 
 
-(defn build-cfn-environment-builder
-  "The build-cfn-environment-builder function updates a CfnEnvironment$Builder instance using the provided configuration.
+(defn cfn-environment-builder>
+  "The cfn-environment-builder> function updates a CfnEnvironment$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -167,11 +167,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+  (cfn-environment-builder> (CfnEnvironment$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-environment-props-builder
-  "The build-cfn-environment-props-builder function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
+(defn cfn-environment-props-builder>
+  "The cfn-environment-props-builder> function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -204,11 +204,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
+  (cfn-environment-props-builder> (new CfnEnvironmentProps$Builder) id config))
 
 
-(defn build-cfn-route-builder
-  "The build-cfn-route-builder function updates a CfnRoute$Builder instance using the provided configuration.
+(defn cfn-route-builder>
+  "The cfn-route-builder> function updates a CfnRoute$Builder instance using the provided configuration.
   The function takes the CfnRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -250,11 +250,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-route-builder (CfnRoute$Builder/create scope (name id)) id config))
+  (cfn-route-builder> (CfnRoute$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-route-default-route-input-property-builder
-  "The build-cfn-route-default-route-input-property-builder function updates a CfnRoute$DefaultRouteInputProperty$Builder instance using the provided configuration.
+(defn cfn-route-default-route-input-property-builder>
+  "The cfn-route-default-route-input-property-builder> function updates a CfnRoute$DefaultRouteInputProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$DefaultRouteInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -278,11 +278,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-route-default-route-input-property-builder (new CfnRoute$DefaultRouteInputProperty$Builder) id config))
+  (cfn-route-default-route-input-property-builder> (new CfnRoute$DefaultRouteInputProperty$Builder) id config))
 
 
-(defn build-cfn-route-props-builder
-  "The build-cfn-route-props-builder function updates a CfnRouteProps$Builder instance using the provided configuration.
+(defn cfn-route-props-builder>
+  "The cfn-route-props-builder> function updates a CfnRouteProps$Builder instance using the provided configuration.
   The function takes the CfnRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -324,11 +324,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-route-props-builder (new CfnRouteProps$Builder) id config))
+  (cfn-route-props-builder> (new CfnRouteProps$Builder) id config))
 
 
-(defn build-cfn-route-uri-path-route-input-property-builder
-  "The build-cfn-route-uri-path-route-input-property-builder function updates a CfnRoute$UriPathRouteInputProperty$Builder instance using the provided configuration.
+(defn cfn-route-uri-path-route-input-property-builder>
+  "The cfn-route-uri-path-route-input-property-builder> function updates a CfnRoute$UriPathRouteInputProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$UriPathRouteInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -364,11 +364,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-route-uri-path-route-input-property-builder (new CfnRoute$UriPathRouteInputProperty$Builder) id config))
+  (cfn-route-uri-path-route-input-property-builder> (new CfnRoute$UriPathRouteInputProperty$Builder) id config))
 
 
-(defn build-cfn-service-builder
-  "The build-cfn-service-builder function updates a CfnService$Builder instance using the provided configuration.
+(defn cfn-service-builder>
+  "The cfn-service-builder> function updates a CfnService$Builder instance using the provided configuration.
   The function takes the CfnService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -416,11 +416,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-service-builder (CfnService$Builder/create scope (name id)) id config))
+  (cfn-service-builder> (CfnService$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-service-lambda-endpoint-input-property-builder
-  "The build-cfn-service-lambda-endpoint-input-property-builder function updates a CfnService$LambdaEndpointInputProperty$Builder instance using the provided configuration.
+(defn cfn-service-lambda-endpoint-input-property-builder>
+  "The cfn-service-lambda-endpoint-input-property-builder> function updates a CfnService$LambdaEndpointInputProperty$Builder instance using the provided configuration.
   The function takes the CfnService$LambdaEndpointInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -444,11 +444,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-lambda-endpoint-input-property-builder (new CfnService$LambdaEndpointInputProperty$Builder) id config))
+  (cfn-service-lambda-endpoint-input-property-builder> (new CfnService$LambdaEndpointInputProperty$Builder) id config))
 
 
-(defn build-cfn-service-props-builder
-  "The build-cfn-service-props-builder function updates a CfnServiceProps$Builder instance using the provided configuration.
+(defn cfn-service-props-builder>
+  "The cfn-service-props-builder> function updates a CfnServiceProps$Builder instance using the provided configuration.
   The function takes the CfnServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -496,11 +496,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-props-builder (new CfnServiceProps$Builder) id config))
+  (cfn-service-props-builder> (new CfnServiceProps$Builder) id config))
 
 
-(defn build-cfn-service-url-endpoint-input-property-builder
-  "The build-cfn-service-url-endpoint-input-property-builder function updates a CfnService$UrlEndpointInputProperty$Builder instance using the provided configuration.
+(defn cfn-service-url-endpoint-input-property-builder>
+  "The cfn-service-url-endpoint-input-property-builder> function updates a CfnService$UrlEndpointInputProperty$Builder instance using the provided configuration.
   The function takes the CfnService$UrlEndpointInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -527,4 +527,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-service-url-endpoint-input-property-builder (new CfnService$UrlEndpointInputProperty$Builder) id config))
+  (cfn-service-url-endpoint-input-property-builder> (new CfnService$UrlEndpointInputProperty$Builder) id config))

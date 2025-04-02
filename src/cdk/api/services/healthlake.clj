@@ -10,8 +10,8 @@
                                                        CfnFHIRDatastoreProps$Builder]))
 
 
-(defn build-cfn-fhir-datastore-builder
-  "The build-cfn-fhir-datastore-builder function updates a CfnFHIRDatastore$Builder instance using the provided configuration.
+(defn cfn-fhir-datastore-builder>
+  "The cfn-fhir-datastore-builder> function updates a CfnFHIRDatastore$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -50,11 +50,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-fhir-datastore-builder (CfnFHIRDatastore$Builder/create scope (name id)) id config))
+  (cfn-fhir-datastore-builder> (CfnFHIRDatastore$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-fhir-datastore-created-at-property-builder
-  "The build-cfn-fhir-datastore-created-at-property-builder function updates a CfnFHIRDatastore$CreatedAtProperty$Builder instance using the provided configuration.
+(defn cfn-fhir-datastore-created-at-property-builder>
+  "The cfn-fhir-datastore-created-at-property-builder> function updates a CfnFHIRDatastore$CreatedAtProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$CreatedAtProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -81,11 +81,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fhir-datastore-created-at-property-builder (new CfnFHIRDatastore$CreatedAtProperty$Builder) id config))
+  (cfn-fhir-datastore-created-at-property-builder> (new CfnFHIRDatastore$CreatedAtProperty$Builder) id config))
 
 
-(defn build-cfn-fhir-datastore-identity-provider-configuration-property-builder
-  "The build-cfn-fhir-datastore-identity-provider-configuration-property-builder function updates a CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-fhir-datastore-identity-provider-configuration-property-builder>
+  "The cfn-fhir-datastore-identity-provider-configuration-property-builder> function updates a CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -118,11 +118,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fhir-datastore-identity-provider-configuration-property-builder (new CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder) id config))
+  (cfn-fhir-datastore-identity-provider-configuration-property-builder> (new CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-fhir-datastore-kms-encryption-config-property-builder
-  "The build-cfn-fhir-datastore-kms-encryption-config-property-builder function updates a CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-fhir-datastore-kms-encryption-config-property-builder>
+  "The cfn-fhir-datastore-kms-encryption-config-property-builder> function updates a CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -149,11 +149,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fhir-datastore-kms-encryption-config-property-builder (new CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder) id config))
+  (cfn-fhir-datastore-kms-encryption-config-property-builder> (new CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-fhir-datastore-preload-data-config-property-builder
-  "The build-cfn-fhir-datastore-preload-data-config-property-builder function updates a CfnFHIRDatastore$PreloadDataConfigProperty$Builder instance using the provided configuration.
+(defn cfn-fhir-datastore-preload-data-config-property-builder>
+  "The cfn-fhir-datastore-preload-data-config-property-builder> function updates a CfnFHIRDatastore$PreloadDataConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$PreloadDataConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -177,11 +177,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fhir-datastore-preload-data-config-property-builder (new CfnFHIRDatastore$PreloadDataConfigProperty$Builder) id config))
+  (cfn-fhir-datastore-preload-data-config-property-builder> (new CfnFHIRDatastore$PreloadDataConfigProperty$Builder) id config))
 
 
-(defn build-cfn-fhir-datastore-props-builder
-  "The build-cfn-fhir-datastore-props-builder function updates a CfnFHIRDatastoreProps$Builder instance using the provided configuration.
+(defn cfn-fhir-datastore-props-builder>
+  "The cfn-fhir-datastore-props-builder> function updates a CfnFHIRDatastoreProps$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -220,11 +220,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fhir-datastore-props-builder (new CfnFHIRDatastoreProps$Builder) id config))
+  (cfn-fhir-datastore-props-builder> (new CfnFHIRDatastoreProps$Builder) id config))
 
 
-(defn build-cfn-fhir-datastore-sse-configuration-property-builder
-  "The build-cfn-fhir-datastore-sse-configuration-property-builder function updates a CfnFHIRDatastore$SseConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-fhir-datastore-sse-configuration-property-builder>
+  "The cfn-fhir-datastore-sse-configuration-property-builder> function updates a CfnFHIRDatastore$SseConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$SseConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -248,4 +248,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-fhir-datastore-sse-configuration-property-builder (new CfnFHIRDatastore$SseConfigurationProperty$Builder) id config))
+  (cfn-fhir-datastore-sse-configuration-property-builder> (new CfnFHIRDatastore$SseConfigurationProperty$Builder) id config))

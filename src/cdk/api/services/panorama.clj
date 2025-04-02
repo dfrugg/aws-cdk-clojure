@@ -12,8 +12,8 @@
                                                      CfnPackageVersionProps$Builder]))
 
 
-(defn build-cfn-application-instance-builder
-  "The build-cfn-application-instance-builder function updates a CfnApplicationInstance$Builder instance using the provided configuration.
+(defn cfn-application-instance-builder>
+  "The cfn-application-instance-builder> function updates a CfnApplicationInstance$Builder instance using the provided configuration.
   The function takes the CfnApplicationInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -58,11 +58,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-application-instance-builder (CfnApplicationInstance$Builder/create scope (name id)) id config))
+  (cfn-application-instance-builder> (CfnApplicationInstance$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-application-instance-manifest-overrides-payload-property-builder
-  "The build-cfn-application-instance-manifest-overrides-payload-property-builder function updates a CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder instance using the provided configuration.
+(defn cfn-application-instance-manifest-overrides-payload-property-builder>
+  "The cfn-application-instance-manifest-overrides-payload-property-builder> function updates a CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -86,11 +86,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-instance-manifest-overrides-payload-property-builder (new CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder) id config))
+  (cfn-application-instance-manifest-overrides-payload-property-builder> (new CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder) id config))
 
 
-(defn build-cfn-application-instance-manifest-payload-property-builder
-  "The build-cfn-application-instance-manifest-payload-property-builder function updates a CfnApplicationInstance$ManifestPayloadProperty$Builder instance using the provided configuration.
+(defn cfn-application-instance-manifest-payload-property-builder>
+  "The cfn-application-instance-manifest-payload-property-builder> function updates a CfnApplicationInstance$ManifestPayloadProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationInstance$ManifestPayloadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -114,11 +114,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-instance-manifest-payload-property-builder (new CfnApplicationInstance$ManifestPayloadProperty$Builder) id config))
+  (cfn-application-instance-manifest-payload-property-builder> (new CfnApplicationInstance$ManifestPayloadProperty$Builder) id config))
 
 
-(defn build-cfn-application-instance-props-builder
-  "The build-cfn-application-instance-props-builder function updates a CfnApplicationInstanceProps$Builder instance using the provided configuration.
+(defn cfn-application-instance-props-builder>
+  "The cfn-application-instance-props-builder> function updates a CfnApplicationInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -163,11 +163,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-application-instance-props-builder (new CfnApplicationInstanceProps$Builder) id config))
+  (cfn-application-instance-props-builder> (new CfnApplicationInstanceProps$Builder) id config))
 
 
-(defn build-cfn-package-builder
-  "The build-cfn-package-builder function updates a CfnPackage$Builder instance using the provided configuration.
+(defn cfn-package-builder>
+  "The cfn-package-builder> function updates a CfnPackage$Builder instance using the provided configuration.
   The function takes the CfnPackage$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -197,11 +197,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-package-builder (CfnPackage$Builder/create scope (name id)) id config))
+  (cfn-package-builder> (CfnPackage$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-package-props-builder
-  "The build-cfn-package-props-builder function updates a CfnPackageProps$Builder instance using the provided configuration.
+(defn cfn-package-props-builder>
+  "The cfn-package-props-builder> function updates a CfnPackageProps$Builder instance using the provided configuration.
   The function takes the CfnPackageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -231,11 +231,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-package-props-builder (new CfnPackageProps$Builder) id config))
+  (cfn-package-props-builder> (new CfnPackageProps$Builder) id config))
 
 
-(defn build-cfn-package-storage-location-property-builder
-  "The build-cfn-package-storage-location-property-builder function updates a CfnPackage$StorageLocationProperty$Builder instance using the provided configuration.
+(defn cfn-package-storage-location-property-builder>
+  "The cfn-package-storage-location-property-builder> function updates a CfnPackage$StorageLocationProperty$Builder instance using the provided configuration.
   The function takes the CfnPackage$StorageLocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -271,11 +271,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-package-storage-location-property-builder (new CfnPackage$StorageLocationProperty$Builder) id config))
+  (cfn-package-storage-location-property-builder> (new CfnPackage$StorageLocationProperty$Builder) id config))
 
 
-(defn build-cfn-package-version-builder
-  "The build-cfn-package-version-builder function updates a CfnPackageVersion$Builder instance using the provided configuration.
+(defn cfn-package-version-builder>
+  "The cfn-package-version-builder> function updates a CfnPackageVersion$Builder instance using the provided configuration.
   The function takes the CfnPackageVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -314,11 +314,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-package-version-builder (CfnPackageVersion$Builder/create scope (name id)) id config))
+  (cfn-package-version-builder> (CfnPackageVersion$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-package-version-props-builder
-  "The build-cfn-package-version-props-builder function updates a CfnPackageVersionProps$Builder instance using the provided configuration.
+(defn cfn-package-version-props-builder>
+  "The cfn-package-version-props-builder> function updates a CfnPackageVersionProps$Builder instance using the provided configuration.
   The function takes the CfnPackageVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -357,4 +357,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-package-version-props-builder (new CfnPackageVersionProps$Builder) id config))
+  (cfn-package-version-props-builder> (new CfnPackageVersionProps$Builder) id config))

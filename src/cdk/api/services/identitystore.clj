@@ -8,8 +8,8 @@
                                                           CfnGroupProps$Builder]))
 
 
-(defn build-cfn-group-builder
-  "The build-cfn-group-builder function updates a CfnGroup$Builder instance using the provided configuration.
+(defn cfn-group-builder>
+  "The cfn-group-builder> function updates a CfnGroup$Builder instance using the provided configuration.
   The function takes the CfnGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -39,11 +39,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
+  (cfn-group-builder> (CfnGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-group-membership-builder
-  "The build-cfn-group-membership-builder function updates a CfnGroupMembership$Builder instance using the provided configuration.
+(defn cfn-group-membership-builder>
+  "The cfn-group-membership-builder> function updates a CfnGroupMembership$Builder instance using the provided configuration.
   The function takes the CfnGroupMembership$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -73,11 +73,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-group-membership-builder (CfnGroupMembership$Builder/create scope (name id)) id config))
+  (cfn-group-membership-builder> (CfnGroupMembership$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-group-membership-member-id-property-builder
-  "The build-cfn-group-membership-member-id-property-builder function updates a CfnGroupMembership$MemberIdProperty$Builder instance using the provided configuration.
+(defn cfn-group-membership-member-id-property-builder>
+  "The cfn-group-membership-member-id-property-builder> function updates a CfnGroupMembership$MemberIdProperty$Builder instance using the provided configuration.
   The function takes the CfnGroupMembership$MemberIdProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -101,11 +101,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-membership-member-id-property-builder (new CfnGroupMembership$MemberIdProperty$Builder) id config))
+  (cfn-group-membership-member-id-property-builder> (new CfnGroupMembership$MemberIdProperty$Builder) id config))
 
 
-(defn build-cfn-group-membership-props-builder
-  "The build-cfn-group-membership-props-builder function updates a CfnGroupMembershipProps$Builder instance using the provided configuration.
+(defn cfn-group-membership-props-builder>
+  "The cfn-group-membership-props-builder> function updates a CfnGroupMembershipProps$Builder instance using the provided configuration.
   The function takes the CfnGroupMembershipProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -135,11 +135,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-membership-props-builder (new CfnGroupMembershipProps$Builder) id config))
+  (cfn-group-membership-props-builder> (new CfnGroupMembershipProps$Builder) id config))
 
 
-(defn build-cfn-group-props-builder
-  "The build-cfn-group-props-builder function updates a CfnGroupProps$Builder instance using the provided configuration.
+(defn cfn-group-props-builder>
+  "The cfn-group-props-builder> function updates a CfnGroupProps$Builder instance using the provided configuration.
   The function takes the CfnGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -169,4 +169,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
+  (cfn-group-props-builder> (new CfnGroupProps$Builder) id config))

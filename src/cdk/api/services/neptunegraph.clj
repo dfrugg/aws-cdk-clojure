@@ -8,8 +8,8 @@
                                                          CfnPrivateGraphEndpointProps$Builder]))
 
 
-(defn build-cfn-graph-builder
-  "The build-cfn-graph-builder function updates a CfnGraph$Builder instance using the provided configuration.
+(defn cfn-graph-builder>
+  "The cfn-graph-builder> function updates a CfnGraph$Builder instance using the provided configuration.
   The function takes the CfnGraph$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -51,11 +51,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-graph-builder (CfnGraph$Builder/create scope (name id)) id config))
+  (cfn-graph-builder> (CfnGraph$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-graph-props-builder
-  "The build-cfn-graph-props-builder function updates a CfnGraphProps$Builder instance using the provided configuration.
+(defn cfn-graph-props-builder>
+  "The cfn-graph-props-builder> function updates a CfnGraphProps$Builder instance using the provided configuration.
   The function takes the CfnGraphProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -97,11 +97,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-graph-props-builder (new CfnGraphProps$Builder) id config))
+  (cfn-graph-props-builder> (new CfnGraphProps$Builder) id config))
 
 
-(defn build-cfn-graph-vector-search-configuration-property-builder
-  "The build-cfn-graph-vector-search-configuration-property-builder function updates a CfnGraph$VectorSearchConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-graph-vector-search-configuration-property-builder>
+  "The cfn-graph-vector-search-configuration-property-builder> function updates a CfnGraph$VectorSearchConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnGraph$VectorSearchConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -125,11 +125,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-graph-vector-search-configuration-property-builder (new CfnGraph$VectorSearchConfigurationProperty$Builder) id config))
+  (cfn-graph-vector-search-configuration-property-builder> (new CfnGraph$VectorSearchConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-private-graph-endpoint-builder
-  "The build-cfn-private-graph-endpoint-builder function updates a CfnPrivateGraphEndpoint$Builder instance using the provided configuration.
+(defn cfn-private-graph-endpoint-builder>
+  "The cfn-private-graph-endpoint-builder> function updates a CfnPrivateGraphEndpoint$Builder instance using the provided configuration.
   The function takes the CfnPrivateGraphEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -162,11 +162,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-private-graph-endpoint-builder (CfnPrivateGraphEndpoint$Builder/create scope (name id)) id config))
+  (cfn-private-graph-endpoint-builder> (CfnPrivateGraphEndpoint$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-private-graph-endpoint-props-builder
-  "The build-cfn-private-graph-endpoint-props-builder function updates a CfnPrivateGraphEndpointProps$Builder instance using the provided configuration.
+(defn cfn-private-graph-endpoint-props-builder>
+  "The cfn-private-graph-endpoint-props-builder> function updates a CfnPrivateGraphEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnPrivateGraphEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -199,4 +199,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-private-graph-endpoint-props-builder (new CfnPrivateGraphEndpointProps$Builder) id config))
+  (cfn-private-graph-endpoint-props-builder> (new CfnPrivateGraphEndpointProps$Builder) id config))

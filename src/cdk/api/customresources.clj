@@ -16,8 +16,8 @@
                                                    WaiterStateMachineProps$Builder]))
 
 
-(defn build-aws-custom-resource-builder
-  "The build-aws-custom-resource-builder function updates a AwsCustomResource$Builder instance using the provided configuration.
+(defn aws-custom-resource-builder>
+  "The aws-custom-resource-builder> function updates a AwsCustomResource$Builder instance using the provided configuration.
   The function takes the AwsCustomResource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -83,11 +83,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-aws-custom-resource-builder (AwsCustomResource$Builder/create scope (name id)) id config))
+  (aws-custom-resource-builder> (AwsCustomResource$Builder/create scope (name id)) id config))
 
 
-(defn build-aws-custom-resource-props-builder
-  "The build-aws-custom-resource-props-builder function updates a AwsCustomResourceProps$Builder instance using the provided configuration.
+(defn aws-custom-resource-props-builder>
+  "The aws-custom-resource-props-builder> function updates a AwsCustomResourceProps$Builder instance using the provided configuration.
   The function takes the AwsCustomResourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -153,11 +153,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-custom-resource-props-builder (new AwsCustomResourceProps$Builder) id config))
+  (aws-custom-resource-props-builder> (new AwsCustomResourceProps$Builder) id config))
 
 
-(defn build-aws-sdk-call-builder
-  "The build-aws-sdk-call-builder function updates a AwsSdkCall$Builder instance using the provided configuration.
+(defn aws-sdk-call-builder>
+  "The aws-sdk-call-builder> function updates a AwsSdkCall$Builder instance using the provided configuration.
   The function takes the AwsSdkCall$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -208,11 +208,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-aws-sdk-call-builder (new AwsSdkCall$Builder) id config))
+  (aws-sdk-call-builder> (new AwsSdkCall$Builder) id config))
 
 
-(defn build-log-options-builder
-  "The build-log-options-builder function updates a LogOptions$Builder instance using the provided configuration.
+(defn log-options-builder>
+  "The log-options-builder> function updates a LogOptions$Builder instance using the provided configuration.
   The function takes the LogOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -242,11 +242,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-log-options-builder (new LogOptions$Builder) id config))
+  (log-options-builder> (new LogOptions$Builder) id config))
 
 
-(defn build-logging-props-builder
-  "The build-logging-props-builder function updates a LoggingProps$Builder instance using the provided configuration.
+(defn logging-props-builder>
+  "The logging-props-builder> function updates a LoggingProps$Builder instance using the provided configuration.
   The function takes the LoggingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -270,11 +270,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-logging-props-builder (new LoggingProps$Builder) id config))
+  (logging-props-builder> (new LoggingProps$Builder) id config))
 
 
-(defn build-provider-builder
-  "The build-provider-builder function updates a Provider$Builder instance using the provided configuration.
+(defn provider-builder>
+  "The provider-builder> function updates a Provider$Builder instance using the provided configuration.
   The function takes the Provider$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -337,11 +337,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-provider-builder (Provider$Builder/create scope (name id)) id config))
+  (provider-builder> (Provider$Builder/create scope (name id)) id config))
 
 
-(defn build-provider-props-builder
-  "The build-provider-props-builder function updates a ProviderProps$Builder instance using the provided configuration.
+(defn provider-props-builder>
+  "The provider-props-builder> function updates a ProviderProps$Builder instance using the provided configuration.
   The function takes the ProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -404,11 +404,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-provider-props-builder (new ProviderProps$Builder) id config))
+  (provider-props-builder> (new ProviderProps$Builder) id config))
 
 
-(defn build-sdk-calls-policy-options-builder
-  "The build-sdk-calls-policy-options-builder function updates a SdkCallsPolicyOptions$Builder instance using the provided configuration.
+(defn sdk-calls-policy-options-builder>
+  "The sdk-calls-policy-options-builder> function updates a SdkCallsPolicyOptions$Builder instance using the provided configuration.
   The function takes the SdkCallsPolicyOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -432,11 +432,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-sdk-calls-policy-options-builder (new SdkCallsPolicyOptions$Builder) id config))
+  (sdk-calls-policy-options-builder> (new SdkCallsPolicyOptions$Builder) id config))
 
 
-(defn build-waiter-state-machine-builder
-  "The build-waiter-state-machine-builder function updates a WaiterStateMachine$Builder instance using the provided configuration.
+(defn waiter-state-machine-builder>
+  "The waiter-state-machine-builder> function updates a WaiterStateMachine$Builder instance using the provided configuration.
   The function takes the WaiterStateMachine$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -478,11 +478,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-waiter-state-machine-builder (WaiterStateMachine$Builder/create scope (name id)) id config))
+  (waiter-state-machine-builder> (WaiterStateMachine$Builder/create scope (name id)) id config))
 
 
-(defn build-waiter-state-machine-props-builder
-  "The build-waiter-state-machine-props-builder function updates a WaiterStateMachineProps$Builder instance using the provided configuration.
+(defn waiter-state-machine-props-builder>
+  "The waiter-state-machine-props-builder> function updates a WaiterStateMachineProps$Builder instance using the provided configuration.
   The function takes the WaiterStateMachineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -524,4 +524,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-waiter-state-machine-props-builder (new WaiterStateMachineProps$Builder) id config))
+  (waiter-state-machine-props-builder> (new WaiterStateMachineProps$Builder) id config))

@@ -6,8 +6,8 @@
                                               TemplateParsingOptions$Builder]))
 
 
-(defn build-match-capture-builder
-  "The build-match-capture-builder function updates a MatchCapture$Builder instance using the provided configuration.
+(defn match-capture-builder>
+  "The match-capture-builder> function updates a MatchCapture$Builder instance using the provided configuration.
   The function takes the MatchCapture$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -34,11 +34,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-match-capture-builder (new MatchCapture$Builder) id config))
+  (match-capture-builder> (new MatchCapture$Builder) id config))
 
 
-(defn build-match-failure-builder
-  "The build-match-failure-builder function updates a MatchFailure$Builder instance using the provided configuration.
+(defn match-failure-builder>
+  "The match-failure-builder> function updates a MatchFailure$Builder instance using the provided configuration.
   The function takes the MatchFailure$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -71,11 +71,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-match-failure-builder (new MatchFailure$Builder) id config))
+  (match-failure-builder> (new MatchFailure$Builder) id config))
 
 
-(defn build-template-parsing-options-builder
-  "The build-template-parsing-options-builder function updates a TemplateParsingOptions$Builder instance using the provided configuration.
+(defn template-parsing-options-builder>
+  "The template-parsing-options-builder> function updates a TemplateParsingOptions$Builder instance using the provided configuration.
   The function takes the TemplateParsingOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -99,4 +99,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-template-parsing-options-builder (new TemplateParsingOptions$Builder) id config))
+  (template-parsing-options-builder> (new TemplateParsingOptions$Builder) id config))

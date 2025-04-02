@@ -9,8 +9,8 @@
                                                       CfnResourceGroupProps$Builder]))
 
 
-(defn build-cfn-assessment-target-builder
-  "The build-cfn-assessment-target-builder function updates a CfnAssessmentTarget$Builder instance using the provided configuration.
+(defn cfn-assessment-target-builder>
+  "The cfn-assessment-target-builder> function updates a CfnAssessmentTarget$Builder instance using the provided configuration.
   The function takes the CfnAssessmentTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -37,11 +37,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-assessment-target-builder (CfnAssessmentTarget$Builder/create scope (name id)) id config))
+  (cfn-assessment-target-builder> (CfnAssessmentTarget$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-assessment-target-props-builder
-  "The build-cfn-assessment-target-props-builder function updates a CfnAssessmentTargetProps$Builder instance using the provided configuration.
+(defn cfn-assessment-target-props-builder>
+  "The cfn-assessment-target-props-builder> function updates a CfnAssessmentTargetProps$Builder instance using the provided configuration.
   The function takes the CfnAssessmentTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -68,11 +68,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-assessment-target-props-builder (new CfnAssessmentTargetProps$Builder) id config))
+  (cfn-assessment-target-props-builder> (new CfnAssessmentTargetProps$Builder) id config))
 
 
-(defn build-cfn-assessment-template-builder
-  "The build-cfn-assessment-template-builder function updates a CfnAssessmentTemplate$Builder instance using the provided configuration.
+(defn cfn-assessment-template-builder>
+  "The cfn-assessment-template-builder> function updates a CfnAssessmentTemplate$Builder instance using the provided configuration.
   The function takes the CfnAssessmentTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -108,11 +108,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-assessment-template-builder (CfnAssessmentTemplate$Builder/create scope (name id)) id config))
+  (cfn-assessment-template-builder> (CfnAssessmentTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-assessment-template-props-builder
-  "The build-cfn-assessment-template-props-builder function updates a CfnAssessmentTemplateProps$Builder instance using the provided configuration.
+(defn cfn-assessment-template-props-builder>
+  "The cfn-assessment-template-props-builder> function updates a CfnAssessmentTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnAssessmentTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -148,11 +148,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-assessment-template-props-builder (new CfnAssessmentTemplateProps$Builder) id config))
+  (cfn-assessment-template-props-builder> (new CfnAssessmentTemplateProps$Builder) id config))
 
 
-(defn build-cfn-resource-group-builder
-  "The build-cfn-resource-group-builder function updates a CfnResourceGroup$Builder instance using the provided configuration.
+(defn cfn-resource-group-builder>
+  "The cfn-resource-group-builder> function updates a CfnResourceGroup$Builder instance using the provided configuration.
   The function takes the CfnResourceGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -176,11 +176,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-resource-group-builder (CfnResourceGroup$Builder/create scope (name id)) id config))
+  (cfn-resource-group-builder> (CfnResourceGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-resource-group-props-builder
-  "The build-cfn-resource-group-props-builder function updates a CfnResourceGroupProps$Builder instance using the provided configuration.
+(defn cfn-resource-group-props-builder>
+  "The cfn-resource-group-props-builder> function updates a CfnResourceGroupProps$Builder instance using the provided configuration.
   The function takes the CfnResourceGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -204,4 +204,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-resource-group-props-builder (new CfnResourceGroupProps$Builder) id config))
+  (cfn-resource-group-props-builder> (new CfnResourceGroupProps$Builder) id config))

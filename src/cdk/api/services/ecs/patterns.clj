@@ -100,8 +100,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :alias data) NetworkLoadBalancedServiceRecordType/ALIAS)))
 
 
-(defn build-application-listener-props-builder
-  "The build-application-listener-props-builder function updates a ApplicationListenerProps$Builder instance using the provided configuration.
+(defn application-listener-props-builder>
+  "The application-listener-props-builder> function updates a ApplicationListenerProps$Builder instance using the provided configuration.
   The function takes the ApplicationListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -137,11 +137,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-listener-props-builder (new ApplicationListenerProps$Builder) id config))
+  (application-listener-props-builder> (new ApplicationListenerProps$Builder) id config))
 
 
-(defn build-application-load-balanced-ec2-service-builder
-  "The build-application-load-balanced-ec2-service-builder function updates a ApplicationLoadBalancedEc2Service$Builder instance using the provided configuration.
+(defn application-load-balanced-ec2-service-builder>
+  "The application-load-balanced-ec2-service-builder> function updates a ApplicationLoadBalancedEc2Service$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancedEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -270,11 +270,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-application-load-balanced-ec2-service-builder (ApplicationLoadBalancedEc2Service$Builder/create scope (name id)) id config))
+  (application-load-balanced-ec2-service-builder> (ApplicationLoadBalancedEc2Service$Builder/create scope (name id)) id config))
 
 
-(defn build-application-load-balanced-ec2-service-props-builder
-  "The build-application-load-balanced-ec2-service-props-builder function updates a ApplicationLoadBalancedEc2ServiceProps$Builder instance using the provided configuration.
+(defn application-load-balanced-ec2-service-props-builder>
+  "The application-load-balanced-ec2-service-props-builder> function updates a ApplicationLoadBalancedEc2ServiceProps$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancedEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -403,11 +403,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-load-balanced-ec2-service-props-builder (new ApplicationLoadBalancedEc2ServiceProps$Builder) id config))
+  (application-load-balanced-ec2-service-props-builder> (new ApplicationLoadBalancedEc2ServiceProps$Builder) id config))
 
 
-(defn build-application-load-balanced-fargate-service-builder
-  "The build-application-load-balanced-fargate-service-builder function updates a ApplicationLoadBalancedFargateService$Builder instance using the provided configuration.
+(defn application-load-balanced-fargate-service-builder>
+  "The application-load-balanced-fargate-service-builder> function updates a ApplicationLoadBalancedFargateService$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancedFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -548,11 +548,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-application-load-balanced-fargate-service-builder (ApplicationLoadBalancedFargateService$Builder/create scope (name id)) id config))
+  (application-load-balanced-fargate-service-builder> (ApplicationLoadBalancedFargateService$Builder/create scope (name id)) id config))
 
 
-(defn build-application-load-balanced-fargate-service-props-builder
-  "The build-application-load-balanced-fargate-service-props-builder function updates a ApplicationLoadBalancedFargateServiceProps$Builder instance using the provided configuration.
+(defn application-load-balanced-fargate-service-props-builder>
+  "The application-load-balanced-fargate-service-props-builder> function updates a ApplicationLoadBalancedFargateServiceProps$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancedFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -693,11 +693,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-load-balanced-fargate-service-props-builder (new ApplicationLoadBalancedFargateServiceProps$Builder) id config))
+  (application-load-balanced-fargate-service-props-builder> (new ApplicationLoadBalancedFargateServiceProps$Builder) id config))
 
 
-(defn build-application-load-balanced-service-base-props-builder
-  "The build-application-load-balanced-service-base-props-builder function updates a ApplicationLoadBalancedServiceBaseProps$Builder instance using the provided configuration.
+(defn application-load-balanced-service-base-props-builder>
+  "The application-load-balanced-service-base-props-builder> function updates a ApplicationLoadBalancedServiceBaseProps$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancedServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -808,11 +808,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-load-balanced-service-base-props-builder (new ApplicationLoadBalancedServiceBaseProps$Builder) id config))
+  (application-load-balanced-service-base-props-builder> (new ApplicationLoadBalancedServiceBaseProps$Builder) id config))
 
 
-(defn build-application-load-balanced-task-image-options-builder
-  "The build-application-load-balanced-task-image-options-builder function updates a ApplicationLoadBalancedTaskImageOptions$Builder instance using the provided configuration.
+(defn application-load-balanced-task-image-options-builder>
+  "The application-load-balanced-task-image-options-builder> function updates a ApplicationLoadBalancedTaskImageOptions$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancedTaskImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -872,11 +872,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-load-balanced-task-image-options-builder (new ApplicationLoadBalancedTaskImageOptions$Builder) id config))
+  (application-load-balanced-task-image-options-builder> (new ApplicationLoadBalancedTaskImageOptions$Builder) id config))
 
 
-(defn build-application-load-balanced-task-image-props-builder
-  "The build-application-load-balanced-task-image-props-builder function updates a ApplicationLoadBalancedTaskImageProps$Builder instance using the provided configuration.
+(defn application-load-balanced-task-image-props-builder>
+  "The application-load-balanced-task-image-props-builder> function updates a ApplicationLoadBalancedTaskImageProps$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancedTaskImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -930,11 +930,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-load-balanced-task-image-props-builder (new ApplicationLoadBalancedTaskImageProps$Builder) id config))
+  (application-load-balanced-task-image-props-builder> (new ApplicationLoadBalancedTaskImageProps$Builder) id config))
 
 
-(defn build-application-load-balancer-props-builder
-  "The build-application-load-balancer-props-builder function updates a ApplicationLoadBalancerProps$Builder instance using the provided configuration.
+(defn application-load-balancer-props-builder>
+  "The application-load-balancer-props-builder> function updates a ApplicationLoadBalancerProps$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -973,11 +973,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-load-balancer-props-builder (new ApplicationLoadBalancerProps$Builder) id config))
+  (application-load-balancer-props-builder> (new ApplicationLoadBalancerProps$Builder) id config))
 
 
-(defn build-application-multiple-target-groups-ec2-service-builder
-  "The build-application-multiple-target-groups-ec2-service-builder function updates a ApplicationMultipleTargetGroupsEc2Service$Builder instance using the provided configuration.
+(defn application-multiple-target-groups-ec2-service-builder>
+  "The application-multiple-target-groups-ec2-service-builder> function updates a ApplicationMultipleTargetGroupsEc2Service$Builder instance using the provided configuration.
   The function takes the ApplicationMultipleTargetGroupsEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1052,11 +1052,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-application-multiple-target-groups-ec2-service-builder (ApplicationMultipleTargetGroupsEc2Service$Builder/create scope (name id)) id config))
+  (application-multiple-target-groups-ec2-service-builder> (ApplicationMultipleTargetGroupsEc2Service$Builder/create scope (name id)) id config))
 
 
-(defn build-application-multiple-target-groups-ec2-service-props-builder
-  "The build-application-multiple-target-groups-ec2-service-props-builder function updates a ApplicationMultipleTargetGroupsEc2ServiceProps$Builder instance using the provided configuration.
+(defn application-multiple-target-groups-ec2-service-props-builder>
+  "The application-multiple-target-groups-ec2-service-props-builder> function updates a ApplicationMultipleTargetGroupsEc2ServiceProps$Builder instance using the provided configuration.
   The function takes the ApplicationMultipleTargetGroupsEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1131,11 +1131,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-multiple-target-groups-ec2-service-props-builder (new ApplicationMultipleTargetGroupsEc2ServiceProps$Builder) id config))
+  (application-multiple-target-groups-ec2-service-props-builder> (new ApplicationMultipleTargetGroupsEc2ServiceProps$Builder) id config))
 
 
-(defn build-application-multiple-target-groups-fargate-service-builder
-  "The build-application-multiple-target-groups-fargate-service-builder function updates a ApplicationMultipleTargetGroupsFargateService$Builder instance using the provided configuration.
+(defn application-multiple-target-groups-fargate-service-builder>
+  "The application-multiple-target-groups-fargate-service-builder> function updates a ApplicationMultipleTargetGroupsFargateService$Builder instance using the provided configuration.
   The function takes the ApplicationMultipleTargetGroupsFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1213,11 +1213,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-application-multiple-target-groups-fargate-service-builder (ApplicationMultipleTargetGroupsFargateService$Builder/create scope (name id)) id config))
+  (application-multiple-target-groups-fargate-service-builder> (ApplicationMultipleTargetGroupsFargateService$Builder/create scope (name id)) id config))
 
 
-(defn build-application-multiple-target-groups-fargate-service-props-builder
-  "The build-application-multiple-target-groups-fargate-service-props-builder function updates a ApplicationMultipleTargetGroupsFargateServiceProps$Builder instance using the provided configuration.
+(defn application-multiple-target-groups-fargate-service-props-builder>
+  "The application-multiple-target-groups-fargate-service-props-builder> function updates a ApplicationMultipleTargetGroupsFargateServiceProps$Builder instance using the provided configuration.
   The function takes the ApplicationMultipleTargetGroupsFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1295,11 +1295,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-multiple-target-groups-fargate-service-props-builder (new ApplicationMultipleTargetGroupsFargateServiceProps$Builder) id config))
+  (application-multiple-target-groups-fargate-service-props-builder> (new ApplicationMultipleTargetGroupsFargateServiceProps$Builder) id config))
 
 
-(defn build-application-multiple-target-groups-service-base-props-builder
-  "The build-application-multiple-target-groups-service-base-props-builder function updates a ApplicationMultipleTargetGroupsServiceBaseProps$Builder instance using the provided configuration.
+(defn application-multiple-target-groups-service-base-props-builder>
+  "The application-multiple-target-groups-service-base-props-builder> function updates a ApplicationMultipleTargetGroupsServiceBaseProps$Builder instance using the provided configuration.
   The function takes the ApplicationMultipleTargetGroupsServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1356,11 +1356,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-multiple-target-groups-service-base-props-builder (new ApplicationMultipleTargetGroupsServiceBaseProps$Builder) id config))
+  (application-multiple-target-groups-service-base-props-builder> (new ApplicationMultipleTargetGroupsServiceBaseProps$Builder) id config))
 
 
-(defn build-application-target-props-builder
-  "The build-application-target-props-builder function updates a ApplicationTargetProps$Builder instance using the provided configuration.
+(defn application-target-props-builder>
+  "The application-target-props-builder> function updates a ApplicationTargetProps$Builder instance using the provided configuration.
   The function takes the ApplicationTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1399,11 +1399,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-application-target-props-builder (new ApplicationTargetProps$Builder) id config))
+  (application-target-props-builder> (new ApplicationTargetProps$Builder) id config))
 
 
-(defn build-fargate-service-base-props-builder
-  "The build-fargate-service-base-props-builder function updates a FargateServiceBaseProps$Builder instance using the provided configuration.
+(defn fargate-service-base-props-builder>
+  "The fargate-service-base-props-builder> function updates a FargateServiceBaseProps$Builder instance using the provided configuration.
   The function takes the FargateServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1442,11 +1442,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-fargate-service-base-props-builder (new FargateServiceBaseProps$Builder) id config))
+  (fargate-service-base-props-builder> (new FargateServiceBaseProps$Builder) id config))
 
 
-(defn build-network-listener-props-builder
-  "The build-network-listener-props-builder function updates a NetworkListenerProps$Builder instance using the provided configuration.
+(defn network-listener-props-builder>
+  "The network-listener-props-builder> function updates a NetworkListenerProps$Builder instance using the provided configuration.
   The function takes the NetworkListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1473,11 +1473,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-listener-props-builder (new NetworkListenerProps$Builder) id config))
+  (network-listener-props-builder> (new NetworkListenerProps$Builder) id config))
 
 
-(defn build-network-load-balanced-ec2-service-builder
-  "The build-network-load-balanced-ec2-service-builder function updates a NetworkLoadBalancedEc2Service$Builder instance using the provided configuration.
+(defn network-load-balanced-ec2-service-builder>
+  "The network-load-balanced-ec2-service-builder> function updates a NetworkLoadBalancedEc2Service$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancedEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1582,11 +1582,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-network-load-balanced-ec2-service-builder (NetworkLoadBalancedEc2Service$Builder/create scope (name id)) id config))
+  (network-load-balanced-ec2-service-builder> (NetworkLoadBalancedEc2Service$Builder/create scope (name id)) id config))
 
 
-(defn build-network-load-balanced-ec2-service-props-builder
-  "The build-network-load-balanced-ec2-service-props-builder function updates a NetworkLoadBalancedEc2ServiceProps$Builder instance using the provided configuration.
+(defn network-load-balanced-ec2-service-props-builder>
+  "The network-load-balanced-ec2-service-props-builder> function updates a NetworkLoadBalancedEc2ServiceProps$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancedEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1691,11 +1691,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-load-balanced-ec2-service-props-builder (new NetworkLoadBalancedEc2ServiceProps$Builder) id config))
+  (network-load-balanced-ec2-service-props-builder> (new NetworkLoadBalancedEc2ServiceProps$Builder) id config))
 
 
-(defn build-network-load-balanced-fargate-service-builder
-  "The build-network-load-balanced-fargate-service-builder function updates a NetworkLoadBalancedFargateService$Builder instance using the provided configuration.
+(defn network-load-balanced-fargate-service-builder>
+  "The network-load-balanced-fargate-service-builder> function updates a NetworkLoadBalancedFargateService$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancedFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1809,11 +1809,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-network-load-balanced-fargate-service-builder (NetworkLoadBalancedFargateService$Builder/create scope (name id)) id config))
+  (network-load-balanced-fargate-service-builder> (NetworkLoadBalancedFargateService$Builder/create scope (name id)) id config))
 
 
-(defn build-network-load-balanced-fargate-service-props-builder
-  "The build-network-load-balanced-fargate-service-props-builder function updates a NetworkLoadBalancedFargateServiceProps$Builder instance using the provided configuration.
+(defn network-load-balanced-fargate-service-props-builder>
+  "The network-load-balanced-fargate-service-props-builder> function updates a NetworkLoadBalancedFargateServiceProps$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancedFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1927,11 +1927,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-load-balanced-fargate-service-props-builder (new NetworkLoadBalancedFargateServiceProps$Builder) id config))
+  (network-load-balanced-fargate-service-props-builder> (new NetworkLoadBalancedFargateServiceProps$Builder) id config))
 
 
-(defn build-network-load-balanced-service-base-props-builder
-  "The build-network-load-balanced-service-base-props-builder function updates a NetworkLoadBalancedServiceBaseProps$Builder instance using the provided configuration.
+(defn network-load-balanced-service-base-props-builder>
+  "The network-load-balanced-service-base-props-builder> function updates a NetworkLoadBalancedServiceBaseProps$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancedServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2018,11 +2018,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-load-balanced-service-base-props-builder (new NetworkLoadBalancedServiceBaseProps$Builder) id config))
+  (network-load-balanced-service-base-props-builder> (new NetworkLoadBalancedServiceBaseProps$Builder) id config))
 
 
-(defn build-network-load-balanced-task-image-options-builder
-  "The build-network-load-balanced-task-image-options-builder function updates a NetworkLoadBalancedTaskImageOptions$Builder instance using the provided configuration.
+(defn network-load-balanced-task-image-options-builder>
+  "The network-load-balanced-task-image-options-builder> function updates a NetworkLoadBalancedTaskImageOptions$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancedTaskImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2076,11 +2076,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-load-balanced-task-image-options-builder (new NetworkLoadBalancedTaskImageOptions$Builder) id config))
+  (network-load-balanced-task-image-options-builder> (new NetworkLoadBalancedTaskImageOptions$Builder) id config))
 
 
-(defn build-network-load-balanced-task-image-props-builder
-  "The build-network-load-balanced-task-image-props-builder function updates a NetworkLoadBalancedTaskImageProps$Builder instance using the provided configuration.
+(defn network-load-balanced-task-image-props-builder>
+  "The network-load-balanced-task-image-props-builder> function updates a NetworkLoadBalancedTaskImageProps$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancedTaskImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2134,11 +2134,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-load-balanced-task-image-props-builder (new NetworkLoadBalancedTaskImageProps$Builder) id config))
+  (network-load-balanced-task-image-props-builder> (new NetworkLoadBalancedTaskImageProps$Builder) id config))
 
 
-(defn build-network-load-balancer-props-builder
-  "The build-network-load-balancer-props-builder function updates a NetworkLoadBalancerProps$Builder instance using the provided configuration.
+(defn network-load-balancer-props-builder>
+  "The network-load-balancer-props-builder> function updates a NetworkLoadBalancerProps$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2174,11 +2174,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-load-balancer-props-builder (new NetworkLoadBalancerProps$Builder) id config))
+  (network-load-balancer-props-builder> (new NetworkLoadBalancerProps$Builder) id config))
 
 
-(defn build-network-multiple-target-groups-ec2-service-builder
-  "The build-network-multiple-target-groups-ec2-service-builder function updates a NetworkMultipleTargetGroupsEc2Service$Builder instance using the provided configuration.
+(defn network-multiple-target-groups-ec2-service-builder>
+  "The network-multiple-target-groups-ec2-service-builder> function updates a NetworkMultipleTargetGroupsEc2Service$Builder instance using the provided configuration.
   The function takes the NetworkMultipleTargetGroupsEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2253,11 +2253,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-network-multiple-target-groups-ec2-service-builder (NetworkMultipleTargetGroupsEc2Service$Builder/create scope (name id)) id config))
+  (network-multiple-target-groups-ec2-service-builder> (NetworkMultipleTargetGroupsEc2Service$Builder/create scope (name id)) id config))
 
 
-(defn build-network-multiple-target-groups-ec2-service-props-builder
-  "The build-network-multiple-target-groups-ec2-service-props-builder function updates a NetworkMultipleTargetGroupsEc2ServiceProps$Builder instance using the provided configuration.
+(defn network-multiple-target-groups-ec2-service-props-builder>
+  "The network-multiple-target-groups-ec2-service-props-builder> function updates a NetworkMultipleTargetGroupsEc2ServiceProps$Builder instance using the provided configuration.
   The function takes the NetworkMultipleTargetGroupsEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2332,11 +2332,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-multiple-target-groups-ec2-service-props-builder (new NetworkMultipleTargetGroupsEc2ServiceProps$Builder) id config))
+  (network-multiple-target-groups-ec2-service-props-builder> (new NetworkMultipleTargetGroupsEc2ServiceProps$Builder) id config))
 
 
-(defn build-network-multiple-target-groups-fargate-service-builder
-  "The build-network-multiple-target-groups-fargate-service-builder function updates a NetworkMultipleTargetGroupsFargateService$Builder instance using the provided configuration.
+(defn network-multiple-target-groups-fargate-service-builder>
+  "The network-multiple-target-groups-fargate-service-builder> function updates a NetworkMultipleTargetGroupsFargateService$Builder instance using the provided configuration.
   The function takes the NetworkMultipleTargetGroupsFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2414,11 +2414,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-network-multiple-target-groups-fargate-service-builder (NetworkMultipleTargetGroupsFargateService$Builder/create scope (name id)) id config))
+  (network-multiple-target-groups-fargate-service-builder> (NetworkMultipleTargetGroupsFargateService$Builder/create scope (name id)) id config))
 
 
-(defn build-network-multiple-target-groups-fargate-service-props-builder
-  "The build-network-multiple-target-groups-fargate-service-props-builder function updates a NetworkMultipleTargetGroupsFargateServiceProps$Builder instance using the provided configuration.
+(defn network-multiple-target-groups-fargate-service-props-builder>
+  "The network-multiple-target-groups-fargate-service-props-builder> function updates a NetworkMultipleTargetGroupsFargateServiceProps$Builder instance using the provided configuration.
   The function takes the NetworkMultipleTargetGroupsFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2496,11 +2496,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-multiple-target-groups-fargate-service-props-builder (new NetworkMultipleTargetGroupsFargateServiceProps$Builder) id config))
+  (network-multiple-target-groups-fargate-service-props-builder> (new NetworkMultipleTargetGroupsFargateServiceProps$Builder) id config))
 
 
-(defn build-network-multiple-target-groups-service-base-props-builder
-  "The build-network-multiple-target-groups-service-base-props-builder function updates a NetworkMultipleTargetGroupsServiceBaseProps$Builder instance using the provided configuration.
+(defn network-multiple-target-groups-service-base-props-builder>
+  "The network-multiple-target-groups-service-base-props-builder> function updates a NetworkMultipleTargetGroupsServiceBaseProps$Builder instance using the provided configuration.
   The function takes the NetworkMultipleTargetGroupsServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2557,11 +2557,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-multiple-target-groups-service-base-props-builder (new NetworkMultipleTargetGroupsServiceBaseProps$Builder) id config))
+  (network-multiple-target-groups-service-base-props-builder> (new NetworkMultipleTargetGroupsServiceBaseProps$Builder) id config))
 
 
-(defn build-network-target-props-builder
-  "The build-network-target-props-builder function updates a NetworkTargetProps$Builder instance using the provided configuration.
+(defn network-target-props-builder>
+  "The network-target-props-builder> function updates a NetworkTargetProps$Builder instance using the provided configuration.
   The function takes the NetworkTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2588,11 +2588,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-network-target-props-builder (new NetworkTargetProps$Builder) id config))
+  (network-target-props-builder> (new NetworkTargetProps$Builder) id config))
 
 
-(defn build-queue-processing-ec2-service-builder
-  "The build-queue-processing-ec2-service-builder function updates a QueueProcessingEc2Service$Builder instance using the provided configuration.
+(defn queue-processing-ec2-service-builder>
+  "The queue-processing-ec2-service-builder> function updates a QueueProcessingEc2Service$Builder instance using the provided configuration.
   The function takes the QueueProcessingEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2718,11 +2718,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-queue-processing-ec2-service-builder (QueueProcessingEc2Service$Builder/create scope (name id)) id config))
+  (queue-processing-ec2-service-builder> (QueueProcessingEc2Service$Builder/create scope (name id)) id config))
 
 
-(defn build-queue-processing-ec2-service-props-builder
-  "The build-queue-processing-ec2-service-props-builder function updates a QueueProcessingEc2ServiceProps$Builder instance using the provided configuration.
+(defn queue-processing-ec2-service-props-builder>
+  "The queue-processing-ec2-service-props-builder> function updates a QueueProcessingEc2ServiceProps$Builder instance using the provided configuration.
   The function takes the QueueProcessingEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2848,11 +2848,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-queue-processing-ec2-service-props-builder (new QueueProcessingEc2ServiceProps$Builder) id config))
+  (queue-processing-ec2-service-props-builder> (new QueueProcessingEc2ServiceProps$Builder) id config))
 
 
-(defn build-queue-processing-fargate-service-builder
-  "The build-queue-processing-fargate-service-builder function updates a QueueProcessingFargateService$Builder instance using the provided configuration.
+(defn queue-processing-fargate-service-builder>
+  "The queue-processing-fargate-service-builder> function updates a QueueProcessingFargateService$Builder instance using the provided configuration.
   The function takes the QueueProcessingFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2990,11 +2990,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-queue-processing-fargate-service-builder (QueueProcessingFargateService$Builder/create scope (name id)) id config))
+  (queue-processing-fargate-service-builder> (QueueProcessingFargateService$Builder/create scope (name id)) id config))
 
 
-(defn build-queue-processing-fargate-service-props-builder
-  "The build-queue-processing-fargate-service-props-builder function updates a QueueProcessingFargateServiceProps$Builder instance using the provided configuration.
+(defn queue-processing-fargate-service-props-builder>
+  "The queue-processing-fargate-service-props-builder> function updates a QueueProcessingFargateServiceProps$Builder instance using the provided configuration.
   The function takes the QueueProcessingFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3132,11 +3132,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-queue-processing-fargate-service-props-builder (new QueueProcessingFargateServiceProps$Builder) id config))
+  (queue-processing-fargate-service-props-builder> (new QueueProcessingFargateServiceProps$Builder) id config))
 
 
-(defn build-queue-processing-service-base-props-builder
-  "The build-queue-processing-service-base-props-builder function updates a QueueProcessingServiceBaseProps$Builder instance using the provided configuration.
+(defn queue-processing-service-base-props-builder>
+  "The queue-processing-service-base-props-builder> function updates a QueueProcessingServiceBaseProps$Builder instance using the provided configuration.
   The function takes the QueueProcessingServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3241,11 +3241,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-queue-processing-service-base-props-builder (new QueueProcessingServiceBaseProps$Builder) id config))
+  (queue-processing-service-base-props-builder> (new QueueProcessingServiceBaseProps$Builder) id config))
 
 
-(defn build-scheduled-ec2-task-builder
-  "The build-scheduled-ec2-task-builder function updates a ScheduledEc2Task$Builder instance using the provided configuration.
+(defn scheduled-ec2-task-builder>
+  "The scheduled-ec2-task-builder> function updates a ScheduledEc2Task$Builder instance using the provided configuration.
   The function takes the ScheduledEc2Task$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3302,11 +3302,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-scheduled-ec2-task-builder (ScheduledEc2Task$Builder/create scope (name id)) id config))
+  (scheduled-ec2-task-builder> (ScheduledEc2Task$Builder/create scope (name id)) id config))
 
 
-(defn build-scheduled-ec2-task-definition-options-builder
-  "The build-scheduled-ec2-task-definition-options-builder function updates a ScheduledEc2TaskDefinitionOptions$Builder instance using the provided configuration.
+(defn scheduled-ec2-task-definition-options-builder>
+  "The scheduled-ec2-task-definition-options-builder> function updates a ScheduledEc2TaskDefinitionOptions$Builder instance using the provided configuration.
   The function takes the ScheduledEc2TaskDefinitionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3330,11 +3330,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scheduled-ec2-task-definition-options-builder (new ScheduledEc2TaskDefinitionOptions$Builder) id config))
+  (scheduled-ec2-task-definition-options-builder> (new ScheduledEc2TaskDefinitionOptions$Builder) id config))
 
 
-(defn build-scheduled-ec2-task-image-options-builder
-  "The build-scheduled-ec2-task-image-options-builder function updates a ScheduledEc2TaskImageOptions$Builder instance using the provided configuration.
+(defn scheduled-ec2-task-image-options-builder>
+  "The scheduled-ec2-task-image-options-builder> function updates a ScheduledEc2TaskImageOptions$Builder instance using the provided configuration.
   The function takes the ScheduledEc2TaskImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3382,11 +3382,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scheduled-ec2-task-image-options-builder (new ScheduledEc2TaskImageOptions$Builder) id config))
+  (scheduled-ec2-task-image-options-builder> (new ScheduledEc2TaskImageOptions$Builder) id config))
 
 
-(defn build-scheduled-ec2-task-props-builder
-  "The build-scheduled-ec2-task-props-builder function updates a ScheduledEc2TaskProps$Builder instance using the provided configuration.
+(defn scheduled-ec2-task-props-builder>
+  "The scheduled-ec2-task-props-builder> function updates a ScheduledEc2TaskProps$Builder instance using the provided configuration.
   The function takes the ScheduledEc2TaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3443,11 +3443,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scheduled-ec2-task-props-builder (new ScheduledEc2TaskProps$Builder) id config))
+  (scheduled-ec2-task-props-builder> (new ScheduledEc2TaskProps$Builder) id config))
 
 
-(defn build-scheduled-fargate-task-builder
-  "The build-scheduled-fargate-task-builder function updates a ScheduledFargateTask$Builder instance using the provided configuration.
+(defn scheduled-fargate-task-builder>
+  "The scheduled-fargate-task-builder> function updates a ScheduledFargateTask$Builder instance using the provided configuration.
   The function takes the ScheduledFargateTask$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3522,11 +3522,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-scheduled-fargate-task-builder (ScheduledFargateTask$Builder/create scope (name id)) id config))
+  (scheduled-fargate-task-builder> (ScheduledFargateTask$Builder/create scope (name id)) id config))
 
 
-(defn build-scheduled-fargate-task-definition-options-builder
-  "The build-scheduled-fargate-task-definition-options-builder function updates a ScheduledFargateTaskDefinitionOptions$Builder instance using the provided configuration.
+(defn scheduled-fargate-task-definition-options-builder>
+  "The scheduled-fargate-task-definition-options-builder> function updates a ScheduledFargateTaskDefinitionOptions$Builder instance using the provided configuration.
   The function takes the ScheduledFargateTaskDefinitionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3550,11 +3550,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scheduled-fargate-task-definition-options-builder (new ScheduledFargateTaskDefinitionOptions$Builder) id config))
+  (scheduled-fargate-task-definition-options-builder> (new ScheduledFargateTaskDefinitionOptions$Builder) id config))
 
 
-(defn build-scheduled-fargate-task-image-options-builder
-  "The build-scheduled-fargate-task-image-options-builder function updates a ScheduledFargateTaskImageOptions$Builder instance using the provided configuration.
+(defn scheduled-fargate-task-image-options-builder>
+  "The scheduled-fargate-task-image-options-builder> function updates a ScheduledFargateTaskImageOptions$Builder instance using the provided configuration.
   The function takes the ScheduledFargateTaskImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3611,11 +3611,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scheduled-fargate-task-image-options-builder (new ScheduledFargateTaskImageOptions$Builder) id config))
+  (scheduled-fargate-task-image-options-builder> (new ScheduledFargateTaskImageOptions$Builder) id config))
 
 
-(defn build-scheduled-fargate-task-props-builder
-  "The build-scheduled-fargate-task-props-builder function updates a ScheduledFargateTaskProps$Builder instance using the provided configuration.
+(defn scheduled-fargate-task-props-builder>
+  "The scheduled-fargate-task-props-builder> function updates a ScheduledFargateTaskProps$Builder instance using the provided configuration.
   The function takes the ScheduledFargateTaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3690,11 +3690,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scheduled-fargate-task-props-builder (new ScheduledFargateTaskProps$Builder) id config))
+  (scheduled-fargate-task-props-builder> (new ScheduledFargateTaskProps$Builder) id config))
 
 
-(defn build-scheduled-task-base-props-builder
-  "The build-scheduled-task-base-props-builder function updates a ScheduledTaskBaseProps$Builder instance using the provided configuration.
+(defn scheduled-task-base-props-builder>
+  "The scheduled-task-base-props-builder> function updates a ScheduledTaskBaseProps$Builder instance using the provided configuration.
   The function takes the ScheduledTaskBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3745,11 +3745,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scheduled-task-base-props-builder (new ScheduledTaskBaseProps$Builder) id config))
+  (scheduled-task-base-props-builder> (new ScheduledTaskBaseProps$Builder) id config))
 
 
-(defn build-scheduled-task-image-props-builder
-  "The build-scheduled-task-image-props-builder function updates a ScheduledTaskImageProps$Builder instance using the provided configuration.
+(defn scheduled-task-image-props-builder>
+  "The scheduled-task-image-props-builder> function updates a ScheduledTaskImageProps$Builder instance using the provided configuration.
   The function takes the ScheduledTaskImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3788,4 +3788,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-scheduled-task-image-props-builder (new ScheduledTaskImageProps$Builder) id config))
+  (scheduled-task-image-props-builder> (new ScheduledTaskImageProps$Builder) id config))

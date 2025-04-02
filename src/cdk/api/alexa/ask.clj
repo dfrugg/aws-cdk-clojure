@@ -8,8 +8,8 @@
                                              CfnSkillProps$Builder]))
 
 
-(defn build-cfn-skill-authentication-configuration-property-builder
-  "The build-cfn-skill-authentication-configuration-property-builder function updates a CfnSkill$AuthenticationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-skill-authentication-configuration-property-builder>
+  "The cfn-skill-authentication-configuration-property-builder> function updates a CfnSkill$AuthenticationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSkill$AuthenticationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -39,11 +39,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-skill-authentication-configuration-property-builder (new CfnSkill$AuthenticationConfigurationProperty$Builder) id config))
+  (cfn-skill-authentication-configuration-property-builder> (new CfnSkill$AuthenticationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-skill-builder
-  "The build-cfn-skill-builder function updates a CfnSkill$Builder instance using the provided configuration.
+(defn cfn-skill-builder>
+  "The cfn-skill-builder> function updates a CfnSkill$Builder instance using the provided configuration.
   The function takes the CfnSkill$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -73,11 +73,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-skill-builder (CfnSkill$Builder/create scope (name id)) id config))
+  (cfn-skill-builder> (CfnSkill$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-skill-overrides-property-builder
-  "The build-cfn-skill-overrides-property-builder function updates a CfnSkill$OverridesProperty$Builder instance using the provided configuration.
+(defn cfn-skill-overrides-property-builder>
+  "The cfn-skill-overrides-property-builder> function updates a CfnSkill$OverridesProperty$Builder instance using the provided configuration.
   The function takes the CfnSkill$OverridesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -101,11 +101,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-skill-overrides-property-builder (new CfnSkill$OverridesProperty$Builder) id config))
+  (cfn-skill-overrides-property-builder> (new CfnSkill$OverridesProperty$Builder) id config))
 
 
-(defn build-cfn-skill-props-builder
-  "The build-cfn-skill-props-builder function updates a CfnSkillProps$Builder instance using the provided configuration.
+(defn cfn-skill-props-builder>
+  "The cfn-skill-props-builder> function updates a CfnSkillProps$Builder instance using the provided configuration.
   The function takes the CfnSkillProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -135,11 +135,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-skill-props-builder (new CfnSkillProps$Builder) id config))
+  (cfn-skill-props-builder> (new CfnSkillProps$Builder) id config))
 
 
-(defn build-cfn-skill-skill-package-property-builder
-  "The build-cfn-skill-skill-package-property-builder function updates a CfnSkill$SkillPackageProperty$Builder instance using the provided configuration.
+(defn cfn-skill-skill-package-property-builder>
+  "The cfn-skill-skill-package-property-builder> function updates a CfnSkill$SkillPackageProperty$Builder instance using the provided configuration.
   The function takes the CfnSkill$SkillPackageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -175,4 +175,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-skill-skill-package-property-builder (new CfnSkill$SkillPackageProperty$Builder) id config))
+  (cfn-skill-skill-package-property-builder> (new CfnSkill$SkillPackageProperty$Builder) id config))

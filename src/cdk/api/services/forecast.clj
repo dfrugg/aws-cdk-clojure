@@ -11,8 +11,8 @@
                                                      CfnDatasetProps$Builder]))
 
 
-(defn build-cfn-dataset-attributes-items-property-builder
-  "The build-cfn-dataset-attributes-items-property-builder function updates a CfnDataset$AttributesItemsProperty$Builder instance using the provided configuration.
+(defn cfn-dataset-attributes-items-property-builder>
+  "The cfn-dataset-attributes-items-property-builder> function updates a CfnDataset$AttributesItemsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$AttributesItemsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -39,11 +39,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-attributes-items-property-builder (new CfnDataset$AttributesItemsProperty$Builder) id config))
+  (cfn-dataset-attributes-items-property-builder> (new CfnDataset$AttributesItemsProperty$Builder) id config))
 
 
-(defn build-cfn-dataset-builder
-  "The build-cfn-dataset-builder function updates a CfnDataset$Builder instance using the provided configuration.
+(defn cfn-dataset-builder>
+  "The cfn-dataset-builder> function updates a CfnDataset$Builder instance using the provided configuration.
   The function takes the CfnDataset$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -85,11 +85,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-dataset-builder (CfnDataset$Builder/create scope (name id)) id config))
+  (cfn-dataset-builder> (CfnDataset$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-dataset-encryption-config-property-builder
-  "The build-cfn-dataset-encryption-config-property-builder function updates a CfnDataset$EncryptionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-dataset-encryption-config-property-builder>
+  "The cfn-dataset-encryption-config-property-builder> function updates a CfnDataset$EncryptionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$EncryptionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -116,11 +116,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-encryption-config-property-builder (new CfnDataset$EncryptionConfigProperty$Builder) id config))
+  (cfn-dataset-encryption-config-property-builder> (new CfnDataset$EncryptionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-dataset-group-builder
-  "The build-cfn-dataset-group-builder function updates a CfnDatasetGroup$Builder instance using the provided configuration.
+(defn cfn-dataset-group-builder>
+  "The cfn-dataset-group-builder> function updates a CfnDatasetGroup$Builder instance using the provided configuration.
   The function takes the CfnDatasetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -153,11 +153,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-dataset-group-builder (CfnDatasetGroup$Builder/create scope (name id)) id config))
+  (cfn-dataset-group-builder> (CfnDatasetGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-dataset-group-props-builder
-  "The build-cfn-dataset-group-props-builder function updates a CfnDatasetGroupProps$Builder instance using the provided configuration.
+(defn cfn-dataset-group-props-builder>
+  "The cfn-dataset-group-props-builder> function updates a CfnDatasetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDatasetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -190,11 +190,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-group-props-builder (new CfnDatasetGroupProps$Builder) id config))
+  (cfn-dataset-group-props-builder> (new CfnDatasetGroupProps$Builder) id config))
 
 
-(defn build-cfn-dataset-props-builder
-  "The build-cfn-dataset-props-builder function updates a CfnDatasetProps$Builder instance using the provided configuration.
+(defn cfn-dataset-props-builder>
+  "The cfn-dataset-props-builder> function updates a CfnDatasetProps$Builder instance using the provided configuration.
   The function takes the CfnDatasetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -236,11 +236,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-props-builder (new CfnDatasetProps$Builder) id config))
+  (cfn-dataset-props-builder> (new CfnDatasetProps$Builder) id config))
 
 
-(defn build-cfn-dataset-schema-property-builder
-  "The build-cfn-dataset-schema-property-builder function updates a CfnDataset$SchemaProperty$Builder instance using the provided configuration.
+(defn cfn-dataset-schema-property-builder>
+  "The cfn-dataset-schema-property-builder> function updates a CfnDataset$SchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$SchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -264,11 +264,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-schema-property-builder (new CfnDataset$SchemaProperty$Builder) id config))
+  (cfn-dataset-schema-property-builder> (new CfnDataset$SchemaProperty$Builder) id config))
 
 
-(defn build-cfn-dataset-tags-items-property-builder
-  "The build-cfn-dataset-tags-items-property-builder function updates a CfnDataset$TagsItemsProperty$Builder instance using the provided configuration.
+(defn cfn-dataset-tags-items-property-builder>
+  "The cfn-dataset-tags-items-property-builder> function updates a CfnDataset$TagsItemsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$TagsItemsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -295,4 +295,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-dataset-tags-items-property-builder (new CfnDataset$TagsItemsProperty$Builder) id config))
+  (cfn-dataset-tags-items-property-builder> (new CfnDataset$TagsItemsProperty$Builder) id config))

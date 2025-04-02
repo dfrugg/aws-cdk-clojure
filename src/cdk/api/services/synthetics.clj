@@ -67,8 +67,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :other data) RuntimeFamily/OTHER)))
 
 
-(defn build-artifacts-bucket-location-builder
-  "The build-artifacts-bucket-location-builder function updates a ArtifactsBucketLocation$Builder instance using the provided configuration.
+(defn artifacts-bucket-location-builder>
+  "The artifacts-bucket-location-builder> function updates a ArtifactsBucketLocation$Builder instance using the provided configuration.
   The function takes the ArtifactsBucketLocation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -95,11 +95,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-artifacts-bucket-location-builder (new ArtifactsBucketLocation$Builder) id config))
+  (artifacts-bucket-location-builder> (new ArtifactsBucketLocation$Builder) id config))
 
 
-(defn build-asset-code-builder
-  "The build-asset-code-builder function updates a AssetCode$Builder instance using the provided configuration.
+(defn asset-code-builder>
+  "The asset-code-builder> function updates a AssetCode$Builder instance using the provided configuration.
   The function takes the AssetCode$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -147,11 +147,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String path id config]
-  (build-asset-code-builder (AssetCode$Builder/create path) id config))
+  (asset-code-builder> (AssetCode$Builder/create path) id config))
 
 
-(defn build-canary-builder
-  "The build-canary-builder function updates a Canary$Builder instance using the provided configuration.
+(defn canary-builder>
+  "The canary-builder> function updates a Canary$Builder instance using the provided configuration.
   The function takes the Canary$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -220,11 +220,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-canary-builder (Canary$Builder/create scope (name id)) id config))
+  (canary-builder> (Canary$Builder/create scope (name id)) id config))
 
 
-(defn build-canary-props-builder
-  "The build-canary-props-builder function updates a CanaryProps$Builder instance using the provided configuration.
+(defn canary-props-builder>
+  "The canary-props-builder> function updates a CanaryProps$Builder instance using the provided configuration.
   The function takes the CanaryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -293,11 +293,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-canary-props-builder (new CanaryProps$Builder) id config))
+  (canary-props-builder> (new CanaryProps$Builder) id config))
 
 
-(defn build-cfn-canary-artifact-config-property-builder
-  "The build-cfn-canary-artifact-config-property-builder function updates a CfnCanary$ArtifactConfigProperty$Builder instance using the provided configuration.
+(defn cfn-canary-artifact-config-property-builder>
+  "The cfn-canary-artifact-config-property-builder> function updates a CfnCanary$ArtifactConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$ArtifactConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -321,11 +321,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-artifact-config-property-builder (new CfnCanary$ArtifactConfigProperty$Builder) id config))
+  (cfn-canary-artifact-config-property-builder> (new CfnCanary$ArtifactConfigProperty$Builder) id config))
 
 
-(defn build-cfn-canary-base-screenshot-property-builder
-  "The build-cfn-canary-base-screenshot-property-builder function updates a CfnCanary$BaseScreenshotProperty$Builder instance using the provided configuration.
+(defn cfn-canary-base-screenshot-property-builder>
+  "The cfn-canary-base-screenshot-property-builder> function updates a CfnCanary$BaseScreenshotProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$BaseScreenshotProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -352,11 +352,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-base-screenshot-property-builder (new CfnCanary$BaseScreenshotProperty$Builder) id config))
+  (cfn-canary-base-screenshot-property-builder> (new CfnCanary$BaseScreenshotProperty$Builder) id config))
 
 
-(defn build-cfn-canary-builder
-  "The build-cfn-canary-builder function updates a CfnCanary$Builder instance using the provided configuration.
+(defn cfn-canary-builder>
+  "The cfn-canary-builder> function updates a CfnCanary$Builder instance using the provided configuration.
   The function takes the CfnCanary$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -422,11 +422,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-canary-builder (CfnCanary$Builder/create scope (name id)) id config))
+  (cfn-canary-builder> (CfnCanary$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-canary-code-property-builder
-  "The build-cfn-canary-code-property-builder function updates a CfnCanary$CodeProperty$Builder instance using the provided configuration.
+(defn cfn-canary-code-property-builder>
+  "The cfn-canary-code-property-builder> function updates a CfnCanary$CodeProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$CodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -465,11 +465,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-code-property-builder (new CfnCanary$CodeProperty$Builder) id config))
+  (cfn-canary-code-property-builder> (new CfnCanary$CodeProperty$Builder) id config))
 
 
-(defn build-cfn-canary-props-builder
-  "The build-cfn-canary-props-builder function updates a CfnCanaryProps$Builder instance using the provided configuration.
+(defn cfn-canary-props-builder>
+  "The cfn-canary-props-builder> function updates a CfnCanaryProps$Builder instance using the provided configuration.
   The function takes the CfnCanaryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -535,11 +535,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-props-builder (new CfnCanaryProps$Builder) id config))
+  (cfn-canary-props-builder> (new CfnCanaryProps$Builder) id config))
 
 
-(defn build-cfn-canary-run-config-property-builder
-  "The build-cfn-canary-run-config-property-builder function updates a CfnCanary$RunConfigProperty$Builder instance using the provided configuration.
+(defn cfn-canary-run-config-property-builder>
+  "The cfn-canary-run-config-property-builder> function updates a CfnCanary$RunConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$RunConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -572,11 +572,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-run-config-property-builder (new CfnCanary$RunConfigProperty$Builder) id config))
+  (cfn-canary-run-config-property-builder> (new CfnCanary$RunConfigProperty$Builder) id config))
 
 
-(defn build-cfn-canary-s3-encryption-property-builder
-  "The build-cfn-canary-s3-encryption-property-builder function updates a CfnCanary$S3EncryptionProperty$Builder instance using the provided configuration.
+(defn cfn-canary-s3-encryption-property-builder>
+  "The cfn-canary-s3-encryption-property-builder> function updates a CfnCanary$S3EncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$S3EncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -603,11 +603,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-s3-encryption-property-builder (new CfnCanary$S3EncryptionProperty$Builder) id config))
+  (cfn-canary-s3-encryption-property-builder> (new CfnCanary$S3EncryptionProperty$Builder) id config))
 
 
-(defn build-cfn-canary-schedule-property-builder
-  "The build-cfn-canary-schedule-property-builder function updates a CfnCanary$ScheduleProperty$Builder instance using the provided configuration.
+(defn cfn-canary-schedule-property-builder>
+  "The cfn-canary-schedule-property-builder> function updates a CfnCanary$ScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$ScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -634,11 +634,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-schedule-property-builder (new CfnCanary$ScheduleProperty$Builder) id config))
+  (cfn-canary-schedule-property-builder> (new CfnCanary$ScheduleProperty$Builder) id config))
 
 
-(defn build-cfn-canary-visual-reference-property-builder
-  "The build-cfn-canary-visual-reference-property-builder function updates a CfnCanary$VisualReferenceProperty$Builder instance using the provided configuration.
+(defn cfn-canary-visual-reference-property-builder>
+  "The cfn-canary-visual-reference-property-builder> function updates a CfnCanary$VisualReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$VisualReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -665,11 +665,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-visual-reference-property-builder (new CfnCanary$VisualReferenceProperty$Builder) id config))
+  (cfn-canary-visual-reference-property-builder> (new CfnCanary$VisualReferenceProperty$Builder) id config))
 
 
-(defn build-cfn-canary-vpc-config-property-builder
-  "The build-cfn-canary-vpc-config-property-builder function updates a CfnCanary$VPCConfigProperty$Builder instance using the provided configuration.
+(defn cfn-canary-vpc-config-property-builder>
+  "The cfn-canary-vpc-config-property-builder> function updates a CfnCanary$VPCConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$VPCConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -699,11 +699,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-canary-vpc-config-property-builder (new CfnCanary$VPCConfigProperty$Builder) id config))
+  (cfn-canary-vpc-config-property-builder> (new CfnCanary$VPCConfigProperty$Builder) id config))
 
 
-(defn build-cfn-group-builder
-  "The build-cfn-group-builder function updates a CfnGroup$Builder instance using the provided configuration.
+(defn cfn-group-builder>
+  "The cfn-group-builder> function updates a CfnGroup$Builder instance using the provided configuration.
   The function takes the CfnGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -733,11 +733,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
+  (cfn-group-builder> (CfnGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-group-props-builder
-  "The build-cfn-group-props-builder function updates a CfnGroupProps$Builder instance using the provided configuration.
+(defn cfn-group-props-builder>
+  "The cfn-group-props-builder> function updates a CfnGroupProps$Builder instance using the provided configuration.
   The function takes the CfnGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -767,11 +767,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
+  (cfn-group-props-builder> (new CfnGroupProps$Builder) id config))
 
 
-(defn build-code-config-builder
-  "The build-code-config-builder function updates a CodeConfig$Builder instance using the provided configuration.
+(defn code-config-builder>
+  "The code-config-builder> function updates a CodeConfig$Builder instance using the provided configuration.
   The function takes the CodeConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -798,11 +798,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-code-config-builder (new CodeConfig$Builder) id config))
+  (code-config-builder> (new CodeConfig$Builder) id config))
 
 
-(defn build-cron-options-builder
-  "The build-cron-options-builder function updates a CronOptions$Builder instance using the provided configuration.
+(defn cron-options-builder>
+  "The cron-options-builder> function updates a CronOptions$Builder instance using the provided configuration.
   The function takes the CronOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -838,11 +838,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cron-options-builder (new CronOptions$Builder) id config))
+  (cron-options-builder> (new CronOptions$Builder) id config))
 
 
-(defn build-custom-test-options-builder
-  "The build-custom-test-options-builder function updates a CustomTestOptions$Builder instance using the provided configuration.
+(defn custom-test-options-builder>
+  "The custom-test-options-builder> function updates a CustomTestOptions$Builder instance using the provided configuration.
   The function takes the CustomTestOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -869,4 +869,4 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-custom-test-options-builder (new CustomTestOptions$Builder) id config))
+  (custom-test-options-builder> (new CustomTestOptions$Builder) id config))

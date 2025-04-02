@@ -6,8 +6,8 @@
                                                    CfnEnvironmentEC2Props$Builder]))
 
 
-(defn build-cfn-environment-ec2-builder
-  "The build-cfn-environment-ec2-builder function updates a CfnEnvironmentEC2$Builder instance using the provided configuration.
+(defn cfn-environment-ec2-builder>
+  "The cfn-environment-ec2-builder> function updates a CfnEnvironmentEC2$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentEC2$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -58,11 +58,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-environment-ec2-builder (CfnEnvironmentEC2$Builder/create scope (name id)) id config))
+  (cfn-environment-ec2-builder> (CfnEnvironmentEC2$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-environment-ec2-props-builder
-  "The build-cfn-environment-ec2-props-builder function updates a CfnEnvironmentEC2Props$Builder instance using the provided configuration.
+(defn cfn-environment-ec2-props-builder>
+  "The cfn-environment-ec2-props-builder> function updates a CfnEnvironmentEC2Props$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentEC2Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -113,11 +113,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-ec2-props-builder (new CfnEnvironmentEC2Props$Builder) id config))
+  (cfn-environment-ec2-props-builder> (new CfnEnvironmentEC2Props$Builder) id config))
 
 
-(defn build-cfn-environment-ec2-repository-property-builder
-  "The build-cfn-environment-ec2-repository-property-builder function updates a CfnEnvironmentEC2$RepositoryProperty$Builder instance using the provided configuration.
+(defn cfn-environment-ec2-repository-property-builder>
+  "The cfn-environment-ec2-repository-property-builder> function updates a CfnEnvironmentEC2$RepositoryProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentEC2$RepositoryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -144,4 +144,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-environment-ec2-repository-property-builder (new CfnEnvironmentEC2$RepositoryProperty$Builder) id config))
+  (cfn-environment-ec2-repository-property-builder> (new CfnEnvironmentEC2$RepositoryProperty$Builder) id config))

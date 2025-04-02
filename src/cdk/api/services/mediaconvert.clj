@@ -11,8 +11,8 @@
                                                          CfnQueueProps$Builder]))
 
 
-(defn build-cfn-job-template-acceleration-settings-property-builder
-  "The build-cfn-job-template-acceleration-settings-property-builder function updates a CfnJobTemplate$AccelerationSettingsProperty$Builder instance using the provided configuration.
+(defn cfn-job-template-acceleration-settings-property-builder>
+  "The cfn-job-template-acceleration-settings-property-builder> function updates a CfnJobTemplate$AccelerationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnJobTemplate$AccelerationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -36,11 +36,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-job-template-acceleration-settings-property-builder (new CfnJobTemplate$AccelerationSettingsProperty$Builder) id config))
+  (cfn-job-template-acceleration-settings-property-builder> (new CfnJobTemplate$AccelerationSettingsProperty$Builder) id config))
 
 
-(defn build-cfn-job-template-builder
-  "The build-cfn-job-template-builder function updates a CfnJobTemplate$Builder instance using the provided configuration.
+(defn cfn-job-template-builder>
+  "The cfn-job-template-builder> function updates a CfnJobTemplate$Builder instance using the provided configuration.
   The function takes the CfnJobTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -91,11 +91,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-job-template-builder (CfnJobTemplate$Builder/create scope (name id)) id config))
+  (cfn-job-template-builder> (CfnJobTemplate$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-job-template-hop-destination-property-builder
-  "The build-cfn-job-template-hop-destination-property-builder function updates a CfnJobTemplate$HopDestinationProperty$Builder instance using the provided configuration.
+(defn cfn-job-template-hop-destination-property-builder>
+  "The cfn-job-template-hop-destination-property-builder> function updates a CfnJobTemplate$HopDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnJobTemplate$HopDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -125,11 +125,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-job-template-hop-destination-property-builder (new CfnJobTemplate$HopDestinationProperty$Builder) id config))
+  (cfn-job-template-hop-destination-property-builder> (new CfnJobTemplate$HopDestinationProperty$Builder) id config))
 
 
-(defn build-cfn-job-template-props-builder
-  "The build-cfn-job-template-props-builder function updates a CfnJobTemplateProps$Builder instance using the provided configuration.
+(defn cfn-job-template-props-builder>
+  "The cfn-job-template-props-builder> function updates a CfnJobTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnJobTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -180,11 +180,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-job-template-props-builder (new CfnJobTemplateProps$Builder) id config))
+  (cfn-job-template-props-builder> (new CfnJobTemplateProps$Builder) id config))
 
 
-(defn build-cfn-preset-builder
-  "The build-cfn-preset-builder function updates a CfnPreset$Builder instance using the provided configuration.
+(defn cfn-preset-builder>
+  "The cfn-preset-builder> function updates a CfnPreset$Builder instance using the provided configuration.
   The function takes the CfnPreset$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -220,11 +220,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-preset-builder (CfnPreset$Builder/create scope (name id)) id config))
+  (cfn-preset-builder> (CfnPreset$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-preset-props-builder
-  "The build-cfn-preset-props-builder function updates a CfnPresetProps$Builder instance using the provided configuration.
+(defn cfn-preset-props-builder>
+  "The cfn-preset-props-builder> function updates a CfnPresetProps$Builder instance using the provided configuration.
   The function takes the CfnPresetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -260,11 +260,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-preset-props-builder (new CfnPresetProps$Builder) id config))
+  (cfn-preset-props-builder> (new CfnPresetProps$Builder) id config))
 
 
-(defn build-cfn-queue-builder
-  "The build-cfn-queue-builder function updates a CfnQueue$Builder instance using the provided configuration.
+(defn cfn-queue-builder>
+  "The cfn-queue-builder> function updates a CfnQueue$Builder instance using the provided configuration.
   The function takes the CfnQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -300,11 +300,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-queue-builder (CfnQueue$Builder/create scope (name id)) id config))
+  (cfn-queue-builder> (CfnQueue$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-queue-props-builder
-  "The build-cfn-queue-props-builder function updates a CfnQueueProps$Builder instance using the provided configuration.
+(defn cfn-queue-props-builder>
+  "The cfn-queue-props-builder> function updates a CfnQueueProps$Builder instance using the provided configuration.
   The function takes the CfnQueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -340,4 +340,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-queue-props-builder (new CfnQueueProps$Builder) id config))
+  (cfn-queue-props-builder> (new CfnQueueProps$Builder) id config))

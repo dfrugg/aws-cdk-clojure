@@ -103,8 +103,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :deny-all data) RedrivePermission/DENY_ALL)))
 
 
-(defn build-cfn-queue-builder
-  "The build-cfn-queue-builder function updates a CfnQueue$Builder instance using the provided configuration.
+(defn cfn-queue-builder>
+  "The cfn-queue-builder> function updates a CfnQueue$Builder instance using the provided configuration.
   The function takes the CfnQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -173,11 +173,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-queue-builder (CfnQueue$Builder/create scope (name id)) id config))
+  (cfn-queue-builder> (CfnQueue$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-queue-inline-policy-builder
-  "The build-cfn-queue-inline-policy-builder function updates a CfnQueueInlinePolicy$Builder instance using the provided configuration.
+(defn cfn-queue-inline-policy-builder>
+  "The cfn-queue-inline-policy-builder> function updates a CfnQueueInlinePolicy$Builder instance using the provided configuration.
   The function takes the CfnQueueInlinePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -204,11 +204,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-queue-inline-policy-builder (CfnQueueInlinePolicy$Builder/create scope (name id)) id config))
+  (cfn-queue-inline-policy-builder> (CfnQueueInlinePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-queue-inline-policy-props-builder
-  "The build-cfn-queue-inline-policy-props-builder function updates a CfnQueueInlinePolicyProps$Builder instance using the provided configuration.
+(defn cfn-queue-inline-policy-props-builder>
+  "The cfn-queue-inline-policy-props-builder> function updates a CfnQueueInlinePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnQueueInlinePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -235,11 +235,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-queue-inline-policy-props-builder (new CfnQueueInlinePolicyProps$Builder) id config))
+  (cfn-queue-inline-policy-props-builder> (new CfnQueueInlinePolicyProps$Builder) id config))
 
 
-(defn build-cfn-queue-policy-builder
-  "The build-cfn-queue-policy-builder function updates a CfnQueuePolicy$Builder instance using the provided configuration.
+(defn cfn-queue-policy-builder>
+  "The cfn-queue-policy-builder> function updates a CfnQueuePolicy$Builder instance using the provided configuration.
   The function takes the CfnQueuePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -266,11 +266,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-queue-policy-builder (CfnQueuePolicy$Builder/create scope (name id)) id config))
+  (cfn-queue-policy-builder> (CfnQueuePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-queue-policy-props-builder
-  "The build-cfn-queue-policy-props-builder function updates a CfnQueuePolicyProps$Builder instance using the provided configuration.
+(defn cfn-queue-policy-props-builder>
+  "The cfn-queue-policy-props-builder> function updates a CfnQueuePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnQueuePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -297,11 +297,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-queue-policy-props-builder (new CfnQueuePolicyProps$Builder) id config))
+  (cfn-queue-policy-props-builder> (new CfnQueuePolicyProps$Builder) id config))
 
 
-(defn build-cfn-queue-props-builder
-  "The build-cfn-queue-props-builder function updates a CfnQueueProps$Builder instance using the provided configuration.
+(defn cfn-queue-props-builder>
+  "The cfn-queue-props-builder> function updates a CfnQueueProps$Builder instance using the provided configuration.
   The function takes the CfnQueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -370,11 +370,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-queue-props-builder (new CfnQueueProps$Builder) id config))
+  (cfn-queue-props-builder> (new CfnQueueProps$Builder) id config))
 
 
-(defn build-dead-letter-queue-builder
-  "The build-dead-letter-queue-builder function updates a DeadLetterQueue$Builder instance using the provided configuration.
+(defn dead-letter-queue-builder>
+  "The dead-letter-queue-builder> function updates a DeadLetterQueue$Builder instance using the provided configuration.
   The function takes the DeadLetterQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -401,11 +401,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-dead-letter-queue-builder (new DeadLetterQueue$Builder) id config))
+  (dead-letter-queue-builder> (new DeadLetterQueue$Builder) id config))
 
 
-(defn build-queue-attributes-builder
-  "The build-queue-attributes-builder function updates a QueueAttributes$Builder instance using the provided configuration.
+(defn queue-attributes-builder>
+  "The queue-attributes-builder> function updates a QueueAttributes$Builder instance using the provided configuration.
   The function takes the QueueAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -441,11 +441,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-queue-attributes-builder (new QueueAttributes$Builder) id config))
+  (queue-attributes-builder> (new QueueAttributes$Builder) id config))
 
 
-(defn build-queue-builder
-  "The build-queue-builder function updates a Queue$Builder instance using the provided configuration.
+(defn queue-builder>
+  "The queue-builder> function updates a Queue$Builder instance using the provided configuration.
   The function takes the Queue$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -517,11 +517,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-queue-builder (Queue$Builder/create scope (name id)) id config))
+  (queue-builder> (Queue$Builder/create scope (name id)) id config))
 
 
-(defn build-queue-policy-builder
-  "The build-queue-policy-builder function updates a QueuePolicy$Builder instance using the provided configuration.
+(defn queue-policy-builder>
+  "The queue-policy-builder> function updates a QueuePolicy$Builder instance using the provided configuration.
   The function takes the QueuePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -545,11 +545,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-queue-policy-builder (QueuePolicy$Builder/create scope (name id)) id config))
+  (queue-policy-builder> (QueuePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-queue-policy-props-builder
-  "The build-queue-policy-props-builder function updates a QueuePolicyProps$Builder instance using the provided configuration.
+(defn queue-policy-props-builder>
+  "The queue-policy-props-builder> function updates a QueuePolicyProps$Builder instance using the provided configuration.
   The function takes the QueuePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -573,11 +573,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-queue-policy-props-builder (new QueuePolicyProps$Builder) id config))
+  (queue-policy-props-builder> (new QueuePolicyProps$Builder) id config))
 
 
-(defn build-queue-props-builder
-  "The build-queue-props-builder function updates a QueueProps$Builder instance using the provided configuration.
+(defn queue-props-builder>
+  "The queue-props-builder> function updates a QueueProps$Builder instance using the provided configuration.
   The function takes the QueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -649,11 +649,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-queue-props-builder (new QueueProps$Builder) id config))
+  (queue-props-builder> (new QueueProps$Builder) id config))
 
 
-(defn build-redrive-allow-policy-builder
-  "The build-redrive-allow-policy-builder function updates a RedriveAllowPolicy$Builder instance using the provided configuration.
+(defn redrive-allow-policy-builder>
+  "The redrive-allow-policy-builder> function updates a RedriveAllowPolicy$Builder instance using the provided configuration.
   The function takes the RedriveAllowPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -680,4 +680,4 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-redrive-allow-policy-builder (new RedriveAllowPolicy$Builder) id config))
+  (redrive-allow-policy-builder> (new RedriveAllowPolicy$Builder) id config))

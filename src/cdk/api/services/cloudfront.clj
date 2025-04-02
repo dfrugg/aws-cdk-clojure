@@ -493,8 +493,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :allow-all data) ViewerProtocolPolicy/ALLOW_ALL)))
 
 
-(defn build-add-behavior-options-builder
-  "The build-add-behavior-options-builder function updates a AddBehaviorOptions$Builder instance using the provided configuration.
+(defn add-behavior-options-builder>
+  "The add-behavior-options-builder> function updates a AddBehaviorOptions$Builder instance using the provided configuration.
   The function takes the AddBehaviorOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -551,11 +551,11 @@ function on the data with the provided namespace id and item-key.  The found val
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-add-behavior-options-builder (new AddBehaviorOptions$Builder) id config))
+  (add-behavior-options-builder> (new AddBehaviorOptions$Builder) id config))
 
 
-(defn build-asset-import-source-builder
-  "The build-asset-import-source-builder function updates a AssetImportSource$Builder instance using the provided configuration.
+(defn asset-import-source-builder>
+  "The asset-import-source-builder> function updates a AssetImportSource$Builder instance using the provided configuration.
   The function takes the AssetImportSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -603,11 +603,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String path id config]
-  (build-asset-import-source-builder (AssetImportSource$Builder/create path) id config))
+  (asset-import-source-builder> (AssetImportSource$Builder/create path) id config))
 
 
-(defn build-behavior-builder
-  "The build-behavior-builder function updates a Behavior$Builder instance using the provided configuration.
+(defn behavior-builder>
+  "The behavior-builder> function updates a Behavior$Builder instance using the provided configuration.
   The function takes the Behavior$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -670,11 +670,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-behavior-builder (new Behavior$Builder) id config))
+  (behavior-builder> (new Behavior$Builder) id config))
 
 
-(defn build-behavior-options-builder
-  "The build-behavior-options-builder function updates a BehaviorOptions$Builder instance using the provided configuration.
+(defn behavior-options-builder>
+  "The behavior-options-builder> function updates a BehaviorOptions$Builder instance using the provided configuration.
   The function takes the BehaviorOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -734,11 +734,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-behavior-options-builder (new BehaviorOptions$Builder) id config))
+  (behavior-options-builder> (new BehaviorOptions$Builder) id config))
 
 
-(defn build-cache-policy-builder
-  "The build-cache-policy-builder function updates a CachePolicy$Builder instance using the provided configuration.
+(defn cache-policy-builder>
+  "The cache-policy-builder> function updates a CachePolicy$Builder instance using the provided configuration.
   The function takes the CachePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -789,11 +789,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cache-policy-builder (CachePolicy$Builder/create scope (name id)) id config))
+  (cache-policy-builder> (CachePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cache-policy-props-builder
-  "The build-cache-policy-props-builder function updates a CachePolicyProps$Builder instance using the provided configuration.
+(defn cache-policy-props-builder>
+  "The cache-policy-props-builder> function updates a CachePolicyProps$Builder instance using the provided configuration.
   The function takes the CachePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -844,11 +844,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cache-policy-props-builder (new CachePolicyProps$Builder) id config))
+  (cache-policy-props-builder> (new CachePolicyProps$Builder) id config))
 
 
-(defn build-cfn-cache-policy-builder
-  "The build-cfn-cache-policy-builder function updates a CfnCachePolicy$Builder instance using the provided configuration.
+(defn cfn-cache-policy-builder>
+  "The cfn-cache-policy-builder> function updates a CfnCachePolicy$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -872,11 +872,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cache-policy-builder (CfnCachePolicy$Builder/create scope (name id)) id config))
+  (cfn-cache-policy-builder> (CfnCachePolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cache-policy-cache-policy-config-property-builder
-  "The build-cfn-cache-policy-cache-policy-config-property-builder function updates a CfnCachePolicy$CachePolicyConfigProperty$Builder instance using the provided configuration.
+(defn cfn-cache-policy-cache-policy-config-property-builder>
+  "The cfn-cache-policy-cache-policy-config-property-builder> function updates a CfnCachePolicy$CachePolicyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$CachePolicyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -915,11 +915,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cache-policy-cache-policy-config-property-builder (new CfnCachePolicy$CachePolicyConfigProperty$Builder) id config))
+  (cfn-cache-policy-cache-policy-config-property-builder> (new CfnCachePolicy$CachePolicyConfigProperty$Builder) id config))
 
 
-(defn build-cfn-cache-policy-cookies-config-property-builder
-  "The build-cfn-cache-policy-cookies-config-property-builder function updates a CfnCachePolicy$CookiesConfigProperty$Builder instance using the provided configuration.
+(defn cfn-cache-policy-cookies-config-property-builder>
+  "The cfn-cache-policy-cookies-config-property-builder> function updates a CfnCachePolicy$CookiesConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$CookiesConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -946,11 +946,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cache-policy-cookies-config-property-builder (new CfnCachePolicy$CookiesConfigProperty$Builder) id config))
+  (cfn-cache-policy-cookies-config-property-builder> (new CfnCachePolicy$CookiesConfigProperty$Builder) id config))
 
 
-(defn build-cfn-cache-policy-headers-config-property-builder
-  "The build-cfn-cache-policy-headers-config-property-builder function updates a CfnCachePolicy$HeadersConfigProperty$Builder instance using the provided configuration.
+(defn cfn-cache-policy-headers-config-property-builder>
+  "The cfn-cache-policy-headers-config-property-builder> function updates a CfnCachePolicy$HeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$HeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -977,11 +977,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cache-policy-headers-config-property-builder (new CfnCachePolicy$HeadersConfigProperty$Builder) id config))
+  (cfn-cache-policy-headers-config-property-builder> (new CfnCachePolicy$HeadersConfigProperty$Builder) id config))
 
 
-(defn build-cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder
-  "The build-cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder function updates a CfnCachePolicy$ParametersInCacheKeyAndForwardedToOriginProperty$Builder instance using the provided configuration.
+(defn cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder>
+  "The cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder> function updates a CfnCachePolicy$ParametersInCacheKeyAndForwardedToOriginProperty$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$ParametersInCacheKeyAndForwardedToOriginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1017,11 +1017,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder (new CfnCachePolicy$ParametersInCacheKeyAndForwardedToOriginProperty$Builder) id config))
+  (cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder> (new CfnCachePolicy$ParametersInCacheKeyAndForwardedToOriginProperty$Builder) id config))
 
 
-(defn build-cfn-cache-policy-props-builder
-  "The build-cfn-cache-policy-props-builder function updates a CfnCachePolicyProps$Builder instance using the provided configuration.
+(defn cfn-cache-policy-props-builder>
+  "The cfn-cache-policy-props-builder> function updates a CfnCachePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnCachePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1045,11 +1045,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cache-policy-props-builder (new CfnCachePolicyProps$Builder) id config))
+  (cfn-cache-policy-props-builder> (new CfnCachePolicyProps$Builder) id config))
 
 
-(defn build-cfn-cache-policy-query-strings-config-property-builder
-  "The build-cfn-cache-policy-query-strings-config-property-builder function updates a CfnCachePolicy$QueryStringsConfigProperty$Builder instance using the provided configuration.
+(defn cfn-cache-policy-query-strings-config-property-builder>
+  "The cfn-cache-policy-query-strings-config-property-builder> function updates a CfnCachePolicy$QueryStringsConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$QueryStringsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1076,11 +1076,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cache-policy-query-strings-config-property-builder (new CfnCachePolicy$QueryStringsConfigProperty$Builder) id config))
+  (cfn-cache-policy-query-strings-config-property-builder> (new CfnCachePolicy$QueryStringsConfigProperty$Builder) id config))
 
 
-(defn build-cfn-cloud-front-origin-access-identity-builder
-  "The build-cfn-cloud-front-origin-access-identity-builder function updates a CfnCloudFrontOriginAccessIdentity$Builder instance using the provided configuration.
+(defn cfn-cloud-front-origin-access-identity-builder>
+  "The cfn-cloud-front-origin-access-identity-builder> function updates a CfnCloudFrontOriginAccessIdentity$Builder instance using the provided configuration.
   The function takes the CfnCloudFrontOriginAccessIdentity$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1104,11 +1104,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cloud-front-origin-access-identity-builder (CfnCloudFrontOriginAccessIdentity$Builder/create scope (name id)) id config))
+  (cfn-cloud-front-origin-access-identity-builder> (CfnCloudFrontOriginAccessIdentity$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder
-  "The build-cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder function updates a CfnCloudFrontOriginAccessIdentity$CloudFrontOriginAccessIdentityConfigProperty$Builder instance using the provided configuration.
+(defn cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder>
+  "The cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder> function updates a CfnCloudFrontOriginAccessIdentity$CloudFrontOriginAccessIdentityConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCloudFrontOriginAccessIdentity$CloudFrontOriginAccessIdentityConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1132,11 +1132,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder (new CfnCloudFrontOriginAccessIdentity$CloudFrontOriginAccessIdentityConfigProperty$Builder) id config))
+  (cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder> (new CfnCloudFrontOriginAccessIdentity$CloudFrontOriginAccessIdentityConfigProperty$Builder) id config))
 
 
-(defn build-cfn-cloud-front-origin-access-identity-props-builder
-  "The build-cfn-cloud-front-origin-access-identity-props-builder function updates a CfnCloudFrontOriginAccessIdentityProps$Builder instance using the provided configuration.
+(defn cfn-cloud-front-origin-access-identity-props-builder>
+  "The cfn-cloud-front-origin-access-identity-props-builder> function updates a CfnCloudFrontOriginAccessIdentityProps$Builder instance using the provided configuration.
   The function takes the CfnCloudFrontOriginAccessIdentityProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1160,11 +1160,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cloud-front-origin-access-identity-props-builder (new CfnCloudFrontOriginAccessIdentityProps$Builder) id config))
+  (cfn-cloud-front-origin-access-identity-props-builder> (new CfnCloudFrontOriginAccessIdentityProps$Builder) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-builder
-  "The build-cfn-continuous-deployment-policy-builder function updates a CfnContinuousDeploymentPolicy$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-builder>
+  "The cfn-continuous-deployment-policy-builder> function updates a CfnContinuousDeploymentPolicy$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1188,11 +1188,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-continuous-deployment-policy-builder (CfnContinuousDeploymentPolicy$Builder/create scope (name id)) id config))
+  (cfn-continuous-deployment-policy-builder> (CfnContinuousDeploymentPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder
-  "The build-cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder function updates a CfnContinuousDeploymentPolicy$ContinuousDeploymentPolicyConfigProperty$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder>
+  "The cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder> function updates a CfnContinuousDeploymentPolicy$ContinuousDeploymentPolicyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$ContinuousDeploymentPolicyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1231,11 +1231,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder (new CfnContinuousDeploymentPolicy$ContinuousDeploymentPolicyConfigProperty$Builder) id config))
+  (cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder> (new CfnContinuousDeploymentPolicy$ContinuousDeploymentPolicyConfigProperty$Builder) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-props-builder
-  "The build-cfn-continuous-deployment-policy-props-builder function updates a CfnContinuousDeploymentPolicyProps$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-props-builder>
+  "The cfn-continuous-deployment-policy-props-builder> function updates a CfnContinuousDeploymentPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1259,11 +1259,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-continuous-deployment-policy-props-builder (new CfnContinuousDeploymentPolicyProps$Builder) id config))
+  (cfn-continuous-deployment-policy-props-builder> (new CfnContinuousDeploymentPolicyProps$Builder) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-session-stickiness-config-property-builder
-  "The build-cfn-continuous-deployment-policy-session-stickiness-config-property-builder function updates a CfnContinuousDeploymentPolicy$SessionStickinessConfigProperty$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-session-stickiness-config-property-builder>
+  "The cfn-continuous-deployment-policy-session-stickiness-config-property-builder> function updates a CfnContinuousDeploymentPolicy$SessionStickinessConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$SessionStickinessConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1290,11 +1290,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-continuous-deployment-policy-session-stickiness-config-property-builder (new CfnContinuousDeploymentPolicy$SessionStickinessConfigProperty$Builder) id config))
+  (cfn-continuous-deployment-policy-session-stickiness-config-property-builder> (new CfnContinuousDeploymentPolicy$SessionStickinessConfigProperty$Builder) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-single-header-config-property-builder
-  "The build-cfn-continuous-deployment-policy-single-header-config-property-builder function updates a CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-single-header-config-property-builder>
+  "The cfn-continuous-deployment-policy-single-header-config-property-builder> function updates a CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1321,11 +1321,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-continuous-deployment-policy-single-header-config-property-builder (new CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty$Builder) id config))
+  (cfn-continuous-deployment-policy-single-header-config-property-builder> (new CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty$Builder) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-single-header-policy-config-property-builder
-  "The build-cfn-continuous-deployment-policy-single-header-policy-config-property-builder function updates a CfnContinuousDeploymentPolicy$SingleHeaderPolicyConfigProperty$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-single-header-policy-config-property-builder>
+  "The cfn-continuous-deployment-policy-single-header-policy-config-property-builder> function updates a CfnContinuousDeploymentPolicy$SingleHeaderPolicyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$SingleHeaderPolicyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1352,11 +1352,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-continuous-deployment-policy-single-header-policy-config-property-builder (new CfnContinuousDeploymentPolicy$SingleHeaderPolicyConfigProperty$Builder) id config))
+  (cfn-continuous-deployment-policy-single-header-policy-config-property-builder> (new CfnContinuousDeploymentPolicy$SingleHeaderPolicyConfigProperty$Builder) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-single-weight-config-property-builder
-  "The build-cfn-continuous-deployment-policy-single-weight-config-property-builder function updates a CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-single-weight-config-property-builder>
+  "The cfn-continuous-deployment-policy-single-weight-config-property-builder> function updates a CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1383,11 +1383,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-continuous-deployment-policy-single-weight-config-property-builder (new CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder) id config))
+  (cfn-continuous-deployment-policy-single-weight-config-property-builder> (new CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-single-weight-policy-config-property-builder
-  "The build-cfn-continuous-deployment-policy-single-weight-policy-config-property-builder function updates a CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-single-weight-policy-config-property-builder>
+  "The cfn-continuous-deployment-policy-single-weight-policy-config-property-builder> function updates a CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1414,11 +1414,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-continuous-deployment-policy-single-weight-policy-config-property-builder (new CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder) id config))
+  (cfn-continuous-deployment-policy-single-weight-policy-config-property-builder> (new CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder) id config))
 
 
-(defn build-cfn-continuous-deployment-policy-traffic-config-property-builder
-  "The build-cfn-continuous-deployment-policy-traffic-config-property-builder function updates a CfnContinuousDeploymentPolicy$TrafficConfigProperty$Builder instance using the provided configuration.
+(defn cfn-continuous-deployment-policy-traffic-config-property-builder>
+  "The cfn-continuous-deployment-policy-traffic-config-property-builder> function updates a CfnContinuousDeploymentPolicy$TrafficConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$TrafficConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1448,11 +1448,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-continuous-deployment-policy-traffic-config-property-builder (new CfnContinuousDeploymentPolicy$TrafficConfigProperty$Builder) id config))
+  (cfn-continuous-deployment-policy-traffic-config-property-builder> (new CfnContinuousDeploymentPolicy$TrafficConfigProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-builder
-  "The build-cfn-distribution-builder function updates a CfnDistribution$Builder instance using the provided configuration.
+(defn cfn-distribution-builder>
+  "The cfn-distribution-builder> function updates a CfnDistribution$Builder instance using the provided configuration.
   The function takes the CfnDistribution$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1479,11 +1479,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-distribution-builder (CfnDistribution$Builder/create scope (name id)) id config))
+  (cfn-distribution-builder> (CfnDistribution$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-distribution-cache-behavior-property-builder
-  "The build-cfn-distribution-cache-behavior-property-builder function updates a CfnDistribution$CacheBehaviorProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-cache-behavior-property-builder>
+  "The cfn-distribution-cache-behavior-property-builder> function updates a CfnDistribution$CacheBehaviorProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$CacheBehaviorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1564,11 +1564,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-cache-behavior-property-builder (new CfnDistribution$CacheBehaviorProperty$Builder) id config))
+  (cfn-distribution-cache-behavior-property-builder> (new CfnDistribution$CacheBehaviorProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-cookies-property-builder
-  "The build-cfn-distribution-cookies-property-builder function updates a CfnDistribution$CookiesProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-cookies-property-builder>
+  "The cfn-distribution-cookies-property-builder> function updates a CfnDistribution$CookiesProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$CookiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1595,11 +1595,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-cookies-property-builder (new CfnDistribution$CookiesProperty$Builder) id config))
+  (cfn-distribution-cookies-property-builder> (new CfnDistribution$CookiesProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-custom-error-response-property-builder
-  "The build-cfn-distribution-custom-error-response-property-builder function updates a CfnDistribution$CustomErrorResponseProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-custom-error-response-property-builder>
+  "The cfn-distribution-custom-error-response-property-builder> function updates a CfnDistribution$CustomErrorResponseProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$CustomErrorResponseProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1632,11 +1632,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-custom-error-response-property-builder (new CfnDistribution$CustomErrorResponseProperty$Builder) id config))
+  (cfn-distribution-custom-error-response-property-builder> (new CfnDistribution$CustomErrorResponseProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-custom-origin-config-property-builder
-  "The build-cfn-distribution-custom-origin-config-property-builder function updates a CfnDistribution$CustomOriginConfigProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-custom-origin-config-property-builder>
+  "The cfn-distribution-custom-origin-config-property-builder> function updates a CfnDistribution$CustomOriginConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$CustomOriginConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1675,11 +1675,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-custom-origin-config-property-builder (new CfnDistribution$CustomOriginConfigProperty$Builder) id config))
+  (cfn-distribution-custom-origin-config-property-builder> (new CfnDistribution$CustomOriginConfigProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-default-cache-behavior-property-builder
-  "The build-cfn-distribution-default-cache-behavior-property-builder function updates a CfnDistribution$DefaultCacheBehaviorProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-default-cache-behavior-property-builder>
+  "The cfn-distribution-default-cache-behavior-property-builder> function updates a CfnDistribution$DefaultCacheBehaviorProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$DefaultCacheBehaviorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1757,11 +1757,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-default-cache-behavior-property-builder (new CfnDistribution$DefaultCacheBehaviorProperty$Builder) id config))
+  (cfn-distribution-default-cache-behavior-property-builder> (new CfnDistribution$DefaultCacheBehaviorProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-distribution-config-property-builder
-  "The build-cfn-distribution-distribution-config-property-builder function updates a CfnDistribution$DistributionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-distribution-config-property-builder>
+  "The cfn-distribution-distribution-config-property-builder> function updates a CfnDistribution$DistributionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$DistributionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1845,11 +1845,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-distribution-config-property-builder (new CfnDistribution$DistributionConfigProperty$Builder) id config))
+  (cfn-distribution-distribution-config-property-builder> (new CfnDistribution$DistributionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-forwarded-values-property-builder
-  "The build-cfn-distribution-forwarded-values-property-builder function updates a CfnDistribution$ForwardedValuesProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-forwarded-values-property-builder>
+  "The cfn-distribution-forwarded-values-property-builder> function updates a CfnDistribution$ForwardedValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$ForwardedValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1882,11 +1882,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-forwarded-values-property-builder (new CfnDistribution$ForwardedValuesProperty$Builder) id config))
+  (cfn-distribution-forwarded-values-property-builder> (new CfnDistribution$ForwardedValuesProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-function-association-property-builder
-  "The build-cfn-distribution-function-association-property-builder function updates a CfnDistribution$FunctionAssociationProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-function-association-property-builder>
+  "The cfn-distribution-function-association-property-builder> function updates a CfnDistribution$FunctionAssociationProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$FunctionAssociationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1913,11 +1913,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-function-association-property-builder (new CfnDistribution$FunctionAssociationProperty$Builder) id config))
+  (cfn-distribution-function-association-property-builder> (new CfnDistribution$FunctionAssociationProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-geo-restriction-property-builder
-  "The build-cfn-distribution-geo-restriction-property-builder function updates a CfnDistribution$GeoRestrictionProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-geo-restriction-property-builder>
+  "The cfn-distribution-geo-restriction-property-builder> function updates a CfnDistribution$GeoRestrictionProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$GeoRestrictionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1944,11 +1944,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-geo-restriction-property-builder (new CfnDistribution$GeoRestrictionProperty$Builder) id config))
+  (cfn-distribution-geo-restriction-property-builder> (new CfnDistribution$GeoRestrictionProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-lambda-function-association-property-builder
-  "The build-cfn-distribution-lambda-function-association-property-builder function updates a CfnDistribution$LambdaFunctionAssociationProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-lambda-function-association-property-builder>
+  "The cfn-distribution-lambda-function-association-property-builder> function updates a CfnDistribution$LambdaFunctionAssociationProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$LambdaFunctionAssociationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1978,11 +1978,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-lambda-function-association-property-builder (new CfnDistribution$LambdaFunctionAssociationProperty$Builder) id config))
+  (cfn-distribution-lambda-function-association-property-builder> (new CfnDistribution$LambdaFunctionAssociationProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-legacy-custom-origin-property-builder
-  "The build-cfn-distribution-legacy-custom-origin-property-builder function updates a CfnDistribution$LegacyCustomOriginProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-legacy-custom-origin-property-builder>
+  "The cfn-distribution-legacy-custom-origin-property-builder> function updates a CfnDistribution$LegacyCustomOriginProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$LegacyCustomOriginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2018,11 +2018,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-legacy-custom-origin-property-builder (new CfnDistribution$LegacyCustomOriginProperty$Builder) id config))
+  (cfn-distribution-legacy-custom-origin-property-builder> (new CfnDistribution$LegacyCustomOriginProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-legacy-s3-origin-property-builder
-  "The build-cfn-distribution-legacy-s3-origin-property-builder function updates a CfnDistribution$LegacyS3OriginProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-legacy-s3-origin-property-builder>
+  "The cfn-distribution-legacy-s3-origin-property-builder> function updates a CfnDistribution$LegacyS3OriginProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$LegacyS3OriginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2049,11 +2049,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-legacy-s3-origin-property-builder (new CfnDistribution$LegacyS3OriginProperty$Builder) id config))
+  (cfn-distribution-legacy-s3-origin-property-builder> (new CfnDistribution$LegacyS3OriginProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-logging-property-builder
-  "The build-cfn-distribution-logging-property-builder function updates a CfnDistribution$LoggingProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-logging-property-builder>
+  "The cfn-distribution-logging-property-builder> function updates a CfnDistribution$LoggingProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$LoggingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2083,11 +2083,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-logging-property-builder (new CfnDistribution$LoggingProperty$Builder) id config))
+  (cfn-distribution-logging-property-builder> (new CfnDistribution$LoggingProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-origin-custom-header-property-builder
-  "The build-cfn-distribution-origin-custom-header-property-builder function updates a CfnDistribution$OriginCustomHeaderProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-origin-custom-header-property-builder>
+  "The cfn-distribution-origin-custom-header-property-builder> function updates a CfnDistribution$OriginCustomHeaderProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginCustomHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2114,11 +2114,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-origin-custom-header-property-builder (new CfnDistribution$OriginCustomHeaderProperty$Builder) id config))
+  (cfn-distribution-origin-custom-header-property-builder> (new CfnDistribution$OriginCustomHeaderProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-origin-group-failover-criteria-property-builder
-  "The build-cfn-distribution-origin-group-failover-criteria-property-builder function updates a CfnDistribution$OriginGroupFailoverCriteriaProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-origin-group-failover-criteria-property-builder>
+  "The cfn-distribution-origin-group-failover-criteria-property-builder> function updates a CfnDistribution$OriginGroupFailoverCriteriaProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginGroupFailoverCriteriaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2142,11 +2142,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-origin-group-failover-criteria-property-builder (new CfnDistribution$OriginGroupFailoverCriteriaProperty$Builder) id config))
+  (cfn-distribution-origin-group-failover-criteria-property-builder> (new CfnDistribution$OriginGroupFailoverCriteriaProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-origin-group-member-property-builder
-  "The build-cfn-distribution-origin-group-member-property-builder function updates a CfnDistribution$OriginGroupMemberProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-origin-group-member-property-builder>
+  "The cfn-distribution-origin-group-member-property-builder> function updates a CfnDistribution$OriginGroupMemberProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginGroupMemberProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2170,11 +2170,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-origin-group-member-property-builder (new CfnDistribution$OriginGroupMemberProperty$Builder) id config))
+  (cfn-distribution-origin-group-member-property-builder> (new CfnDistribution$OriginGroupMemberProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-origin-group-members-property-builder
-  "The build-cfn-distribution-origin-group-members-property-builder function updates a CfnDistribution$OriginGroupMembersProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-origin-group-members-property-builder>
+  "The cfn-distribution-origin-group-members-property-builder> function updates a CfnDistribution$OriginGroupMembersProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginGroupMembersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2201,11 +2201,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-origin-group-members-property-builder (new CfnDistribution$OriginGroupMembersProperty$Builder) id config))
+  (cfn-distribution-origin-group-members-property-builder> (new CfnDistribution$OriginGroupMembersProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-origin-group-property-builder
-  "The build-cfn-distribution-origin-group-property-builder function updates a CfnDistribution$OriginGroupProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-origin-group-property-builder>
+  "The cfn-distribution-origin-group-property-builder> function updates a CfnDistribution$OriginGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2235,11 +2235,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-origin-group-property-builder (new CfnDistribution$OriginGroupProperty$Builder) id config))
+  (cfn-distribution-origin-group-property-builder> (new CfnDistribution$OriginGroupProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-origin-groups-property-builder
-  "The build-cfn-distribution-origin-groups-property-builder function updates a CfnDistribution$OriginGroupsProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-origin-groups-property-builder>
+  "The cfn-distribution-origin-groups-property-builder> function updates a CfnDistribution$OriginGroupsProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginGroupsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2266,11 +2266,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-origin-groups-property-builder (new CfnDistribution$OriginGroupsProperty$Builder) id config))
+  (cfn-distribution-origin-groups-property-builder> (new CfnDistribution$OriginGroupsProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-origin-property-builder
-  "The build-cfn-distribution-origin-property-builder function updates a CfnDistribution$OriginProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-origin-property-builder>
+  "The cfn-distribution-origin-property-builder> function updates a CfnDistribution$OriginProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2321,11 +2321,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-origin-property-builder (new CfnDistribution$OriginProperty$Builder) id config))
+  (cfn-distribution-origin-property-builder> (new CfnDistribution$OriginProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-origin-shield-property-builder
-  "The build-cfn-distribution-origin-shield-property-builder function updates a CfnDistribution$OriginShieldProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-origin-shield-property-builder>
+  "The cfn-distribution-origin-shield-property-builder> function updates a CfnDistribution$OriginShieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginShieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2352,11 +2352,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-origin-shield-property-builder (new CfnDistribution$OriginShieldProperty$Builder) id config))
+  (cfn-distribution-origin-shield-property-builder> (new CfnDistribution$OriginShieldProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-props-builder
-  "The build-cfn-distribution-props-builder function updates a CfnDistributionProps$Builder instance using the provided configuration.
+(defn cfn-distribution-props-builder>
+  "The cfn-distribution-props-builder> function updates a CfnDistributionProps$Builder instance using the provided configuration.
   The function takes the CfnDistributionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2383,11 +2383,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-props-builder (new CfnDistributionProps$Builder) id config))
+  (cfn-distribution-props-builder> (new CfnDistributionProps$Builder) id config))
 
 
-(defn build-cfn-distribution-restrictions-property-builder
-  "The build-cfn-distribution-restrictions-property-builder function updates a CfnDistribution$RestrictionsProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-restrictions-property-builder>
+  "The cfn-distribution-restrictions-property-builder> function updates a CfnDistribution$RestrictionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$RestrictionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2411,11 +2411,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-restrictions-property-builder (new CfnDistribution$RestrictionsProperty$Builder) id config))
+  (cfn-distribution-restrictions-property-builder> (new CfnDistribution$RestrictionsProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-s3-origin-config-property-builder
-  "The build-cfn-distribution-s3-origin-config-property-builder function updates a CfnDistribution$S3OriginConfigProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-s3-origin-config-property-builder>
+  "The cfn-distribution-s3-origin-config-property-builder> function updates a CfnDistribution$S3OriginConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$S3OriginConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2439,11 +2439,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-s3-origin-config-property-builder (new CfnDistribution$S3OriginConfigProperty$Builder) id config))
+  (cfn-distribution-s3-origin-config-property-builder> (new CfnDistribution$S3OriginConfigProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-status-codes-property-builder
-  "The build-cfn-distribution-status-codes-property-builder function updates a CfnDistribution$StatusCodesProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-status-codes-property-builder>
+  "The cfn-distribution-status-codes-property-builder> function updates a CfnDistribution$StatusCodesProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$StatusCodesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2470,11 +2470,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-status-codes-property-builder (new CfnDistribution$StatusCodesProperty$Builder) id config))
+  (cfn-distribution-status-codes-property-builder> (new CfnDistribution$StatusCodesProperty$Builder) id config))
 
 
-(defn build-cfn-distribution-viewer-certificate-property-builder
-  "The build-cfn-distribution-viewer-certificate-property-builder function updates a CfnDistribution$ViewerCertificateProperty$Builder instance using the provided configuration.
+(defn cfn-distribution-viewer-certificate-property-builder>
+  "The cfn-distribution-viewer-certificate-property-builder> function updates a CfnDistribution$ViewerCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$ViewerCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2510,11 +2510,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-distribution-viewer-certificate-property-builder (new CfnDistribution$ViewerCertificateProperty$Builder) id config))
+  (cfn-distribution-viewer-certificate-property-builder> (new CfnDistribution$ViewerCertificateProperty$Builder) id config))
 
 
-(defn build-cfn-function-builder
-  "The build-cfn-function-builder function updates a CfnFunction$Builder instance using the provided configuration.
+(defn cfn-function-builder>
+  "The cfn-function-builder> function updates a CfnFunction$Builder instance using the provided configuration.
   The function takes the CfnFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2550,11 +2550,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-function-builder (CfnFunction$Builder/create scope (name id)) id config))
+  (cfn-function-builder> (CfnFunction$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-function-function-config-property-builder
-  "The build-cfn-function-function-config-property-builder function updates a CfnFunction$FunctionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-function-function-config-property-builder>
+  "The cfn-function-function-config-property-builder> function updates a CfnFunction$FunctionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFunction$FunctionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2584,11 +2584,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-function-function-config-property-builder (new CfnFunction$FunctionConfigProperty$Builder) id config))
+  (cfn-function-function-config-property-builder> (new CfnFunction$FunctionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-function-function-metadata-property-builder
-  "The build-cfn-function-function-metadata-property-builder function updates a CfnFunction$FunctionMetadataProperty$Builder instance using the provided configuration.
+(defn cfn-function-function-metadata-property-builder>
+  "The cfn-function-function-metadata-property-builder> function updates a CfnFunction$FunctionMetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnFunction$FunctionMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2612,11 +2612,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-function-function-metadata-property-builder (new CfnFunction$FunctionMetadataProperty$Builder) id config))
+  (cfn-function-function-metadata-property-builder> (new CfnFunction$FunctionMetadataProperty$Builder) id config))
 
 
-(defn build-cfn-function-key-value-store-association-property-builder
-  "The build-cfn-function-key-value-store-association-property-builder function updates a CfnFunction$KeyValueStoreAssociationProperty$Builder instance using the provided configuration.
+(defn cfn-function-key-value-store-association-property-builder>
+  "The cfn-function-key-value-store-association-property-builder> function updates a CfnFunction$KeyValueStoreAssociationProperty$Builder instance using the provided configuration.
   The function takes the CfnFunction$KeyValueStoreAssociationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2640,11 +2640,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-function-key-value-store-association-property-builder (new CfnFunction$KeyValueStoreAssociationProperty$Builder) id config))
+  (cfn-function-key-value-store-association-property-builder> (new CfnFunction$KeyValueStoreAssociationProperty$Builder) id config))
 
 
-(defn build-cfn-function-props-builder
-  "The build-cfn-function-props-builder function updates a CfnFunctionProps$Builder instance using the provided configuration.
+(defn cfn-function-props-builder>
+  "The cfn-function-props-builder> function updates a CfnFunctionProps$Builder instance using the provided configuration.
   The function takes the CfnFunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2680,11 +2680,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-function-props-builder (new CfnFunctionProps$Builder) id config))
+  (cfn-function-props-builder> (new CfnFunctionProps$Builder) id config))
 
 
-(defn build-cfn-key-group-builder
-  "The build-cfn-key-group-builder function updates a CfnKeyGroup$Builder instance using the provided configuration.
+(defn cfn-key-group-builder>
+  "The cfn-key-group-builder> function updates a CfnKeyGroup$Builder instance using the provided configuration.
   The function takes the CfnKeyGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2708,11 +2708,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-key-group-builder (CfnKeyGroup$Builder/create scope (name id)) id config))
+  (cfn-key-group-builder> (CfnKeyGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-key-group-key-group-config-property-builder
-  "The build-cfn-key-group-key-group-config-property-builder function updates a CfnKeyGroup$KeyGroupConfigProperty$Builder instance using the provided configuration.
+(defn cfn-key-group-key-group-config-property-builder>
+  "The cfn-key-group-key-group-config-property-builder> function updates a CfnKeyGroup$KeyGroupConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnKeyGroup$KeyGroupConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2742,11 +2742,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-group-key-group-config-property-builder (new CfnKeyGroup$KeyGroupConfigProperty$Builder) id config))
+  (cfn-key-group-key-group-config-property-builder> (new CfnKeyGroup$KeyGroupConfigProperty$Builder) id config))
 
 
-(defn build-cfn-key-group-props-builder
-  "The build-cfn-key-group-props-builder function updates a CfnKeyGroupProps$Builder instance using the provided configuration.
+(defn cfn-key-group-props-builder>
+  "The cfn-key-group-props-builder> function updates a CfnKeyGroupProps$Builder instance using the provided configuration.
   The function takes the CfnKeyGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2770,11 +2770,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-group-props-builder (new CfnKeyGroupProps$Builder) id config))
+  (cfn-key-group-props-builder> (new CfnKeyGroupProps$Builder) id config))
 
 
-(defn build-cfn-key-value-store-builder
-  "The build-cfn-key-value-store-builder function updates a CfnKeyValueStore$Builder instance using the provided configuration.
+(defn cfn-key-value-store-builder>
+  "The cfn-key-value-store-builder> function updates a CfnKeyValueStore$Builder instance using the provided configuration.
   The function takes the CfnKeyValueStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2804,11 +2804,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-key-value-store-builder (CfnKeyValueStore$Builder/create scope (name id)) id config))
+  (cfn-key-value-store-builder> (CfnKeyValueStore$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-key-value-store-import-source-property-builder
-  "The build-cfn-key-value-store-import-source-property-builder function updates a CfnKeyValueStore$ImportSourceProperty$Builder instance using the provided configuration.
+(defn cfn-key-value-store-import-source-property-builder>
+  "The cfn-key-value-store-import-source-property-builder> function updates a CfnKeyValueStore$ImportSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnKeyValueStore$ImportSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2835,11 +2835,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-value-store-import-source-property-builder (new CfnKeyValueStore$ImportSourceProperty$Builder) id config))
+  (cfn-key-value-store-import-source-property-builder> (new CfnKeyValueStore$ImportSourceProperty$Builder) id config))
 
 
-(defn build-cfn-key-value-store-props-builder
-  "The build-cfn-key-value-store-props-builder function updates a CfnKeyValueStoreProps$Builder instance using the provided configuration.
+(defn cfn-key-value-store-props-builder>
+  "The cfn-key-value-store-props-builder> function updates a CfnKeyValueStoreProps$Builder instance using the provided configuration.
   The function takes the CfnKeyValueStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2869,11 +2869,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-key-value-store-props-builder (new CfnKeyValueStoreProps$Builder) id config))
+  (cfn-key-value-store-props-builder> (new CfnKeyValueStoreProps$Builder) id config))
 
 
-(defn build-cfn-monitoring-subscription-builder
-  "The build-cfn-monitoring-subscription-builder function updates a CfnMonitoringSubscription$Builder instance using the provided configuration.
+(defn cfn-monitoring-subscription-builder>
+  "The cfn-monitoring-subscription-builder> function updates a CfnMonitoringSubscription$Builder instance using the provided configuration.
   The function takes the CfnMonitoringSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2900,11 +2900,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-monitoring-subscription-builder (CfnMonitoringSubscription$Builder/create scope (name id)) id config))
+  (cfn-monitoring-subscription-builder> (CfnMonitoringSubscription$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-monitoring-subscription-monitoring-subscription-property-builder
-  "The build-cfn-monitoring-subscription-monitoring-subscription-property-builder function updates a CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder instance using the provided configuration.
+(defn cfn-monitoring-subscription-monitoring-subscription-property-builder>
+  "The cfn-monitoring-subscription-monitoring-subscription-property-builder> function updates a CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2928,11 +2928,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-monitoring-subscription-monitoring-subscription-property-builder (new CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder) id config))
+  (cfn-monitoring-subscription-monitoring-subscription-property-builder> (new CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder) id config))
 
 
-(defn build-cfn-monitoring-subscription-props-builder
-  "The build-cfn-monitoring-subscription-props-builder function updates a CfnMonitoringSubscriptionProps$Builder instance using the provided configuration.
+(defn cfn-monitoring-subscription-props-builder>
+  "The cfn-monitoring-subscription-props-builder> function updates a CfnMonitoringSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnMonitoringSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2959,11 +2959,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-monitoring-subscription-props-builder (new CfnMonitoringSubscriptionProps$Builder) id config))
+  (cfn-monitoring-subscription-props-builder> (new CfnMonitoringSubscriptionProps$Builder) id config))
 
 
-(defn build-cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder
-  "The build-cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder function updates a CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder>
+  "The cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder> function updates a CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2987,11 +2987,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder (new CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty$Builder) id config))
+  (cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder> (new CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-origin-access-control-builder
-  "The build-cfn-origin-access-control-builder function updates a CfnOriginAccessControl$Builder instance using the provided configuration.
+(defn cfn-origin-access-control-builder>
+  "The cfn-origin-access-control-builder> function updates a CfnOriginAccessControl$Builder instance using the provided configuration.
   The function takes the CfnOriginAccessControl$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3015,11 +3015,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-origin-access-control-builder (CfnOriginAccessControl$Builder/create scope (name id)) id config))
+  (cfn-origin-access-control-builder> (CfnOriginAccessControl$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-origin-access-control-origin-access-control-config-property-builder
-  "The build-cfn-origin-access-control-origin-access-control-config-property-builder function updates a CfnOriginAccessControl$OriginAccessControlConfigProperty$Builder instance using the provided configuration.
+(defn cfn-origin-access-control-origin-access-control-config-property-builder>
+  "The cfn-origin-access-control-origin-access-control-config-property-builder> function updates a CfnOriginAccessControl$OriginAccessControlConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginAccessControl$OriginAccessControlConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3055,11 +3055,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-origin-access-control-origin-access-control-config-property-builder (new CfnOriginAccessControl$OriginAccessControlConfigProperty$Builder) id config))
+  (cfn-origin-access-control-origin-access-control-config-property-builder> (new CfnOriginAccessControl$OriginAccessControlConfigProperty$Builder) id config))
 
 
-(defn build-cfn-origin-access-control-props-builder
-  "The build-cfn-origin-access-control-props-builder function updates a CfnOriginAccessControlProps$Builder instance using the provided configuration.
+(defn cfn-origin-access-control-props-builder>
+  "The cfn-origin-access-control-props-builder> function updates a CfnOriginAccessControlProps$Builder instance using the provided configuration.
   The function takes the CfnOriginAccessControlProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3083,11 +3083,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-origin-access-control-props-builder (new CfnOriginAccessControlProps$Builder) id config))
+  (cfn-origin-access-control-props-builder> (new CfnOriginAccessControlProps$Builder) id config))
 
 
-(defn build-cfn-origin-request-policy-builder
-  "The build-cfn-origin-request-policy-builder function updates a CfnOriginRequestPolicy$Builder instance using the provided configuration.
+(defn cfn-origin-request-policy-builder>
+  "The cfn-origin-request-policy-builder> function updates a CfnOriginRequestPolicy$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3111,11 +3111,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-origin-request-policy-builder (CfnOriginRequestPolicy$Builder/create scope (name id)) id config))
+  (cfn-origin-request-policy-builder> (CfnOriginRequestPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-origin-request-policy-cookies-config-property-builder
-  "The build-cfn-origin-request-policy-cookies-config-property-builder function updates a CfnOriginRequestPolicy$CookiesConfigProperty$Builder instance using the provided configuration.
+(defn cfn-origin-request-policy-cookies-config-property-builder>
+  "The cfn-origin-request-policy-cookies-config-property-builder> function updates a CfnOriginRequestPolicy$CookiesConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicy$CookiesConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3142,11 +3142,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-origin-request-policy-cookies-config-property-builder (new CfnOriginRequestPolicy$CookiesConfigProperty$Builder) id config))
+  (cfn-origin-request-policy-cookies-config-property-builder> (new CfnOriginRequestPolicy$CookiesConfigProperty$Builder) id config))
 
 
-(defn build-cfn-origin-request-policy-headers-config-property-builder
-  "The build-cfn-origin-request-policy-headers-config-property-builder function updates a CfnOriginRequestPolicy$HeadersConfigProperty$Builder instance using the provided configuration.
+(defn cfn-origin-request-policy-headers-config-property-builder>
+  "The cfn-origin-request-policy-headers-config-property-builder> function updates a CfnOriginRequestPolicy$HeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicy$HeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3173,11 +3173,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-origin-request-policy-headers-config-property-builder (new CfnOriginRequestPolicy$HeadersConfigProperty$Builder) id config))
+  (cfn-origin-request-policy-headers-config-property-builder> (new CfnOriginRequestPolicy$HeadersConfigProperty$Builder) id config))
 
 
-(defn build-cfn-origin-request-policy-origin-request-policy-config-property-builder
-  "The build-cfn-origin-request-policy-origin-request-policy-config-property-builder function updates a CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty$Builder instance using the provided configuration.
+(defn cfn-origin-request-policy-origin-request-policy-config-property-builder>
+  "The cfn-origin-request-policy-origin-request-policy-config-property-builder> function updates a CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3213,11 +3213,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-origin-request-policy-origin-request-policy-config-property-builder (new CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty$Builder) id config))
+  (cfn-origin-request-policy-origin-request-policy-config-property-builder> (new CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty$Builder) id config))
 
 
-(defn build-cfn-origin-request-policy-props-builder
-  "The build-cfn-origin-request-policy-props-builder function updates a CfnOriginRequestPolicyProps$Builder instance using the provided configuration.
+(defn cfn-origin-request-policy-props-builder>
+  "The cfn-origin-request-policy-props-builder> function updates a CfnOriginRequestPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3241,11 +3241,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-origin-request-policy-props-builder (new CfnOriginRequestPolicyProps$Builder) id config))
+  (cfn-origin-request-policy-props-builder> (new CfnOriginRequestPolicyProps$Builder) id config))
 
 
-(defn build-cfn-origin-request-policy-query-strings-config-property-builder
-  "The build-cfn-origin-request-policy-query-strings-config-property-builder function updates a CfnOriginRequestPolicy$QueryStringsConfigProperty$Builder instance using the provided configuration.
+(defn cfn-origin-request-policy-query-strings-config-property-builder>
+  "The cfn-origin-request-policy-query-strings-config-property-builder> function updates a CfnOriginRequestPolicy$QueryStringsConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicy$QueryStringsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3272,11 +3272,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-origin-request-policy-query-strings-config-property-builder (new CfnOriginRequestPolicy$QueryStringsConfigProperty$Builder) id config))
+  (cfn-origin-request-policy-query-strings-config-property-builder> (new CfnOriginRequestPolicy$QueryStringsConfigProperty$Builder) id config))
 
 
-(defn build-cfn-public-key-builder
-  "The build-cfn-public-key-builder function updates a CfnPublicKey$Builder instance using the provided configuration.
+(defn cfn-public-key-builder>
+  "The cfn-public-key-builder> function updates a CfnPublicKey$Builder instance using the provided configuration.
   The function takes the CfnPublicKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3300,11 +3300,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-public-key-builder (CfnPublicKey$Builder/create scope (name id)) id config))
+  (cfn-public-key-builder> (CfnPublicKey$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-public-key-props-builder
-  "The build-cfn-public-key-props-builder function updates a CfnPublicKeyProps$Builder instance using the provided configuration.
+(defn cfn-public-key-props-builder>
+  "The cfn-public-key-props-builder> function updates a CfnPublicKeyProps$Builder instance using the provided configuration.
   The function takes the CfnPublicKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3328,11 +3328,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-public-key-props-builder (new CfnPublicKeyProps$Builder) id config))
+  (cfn-public-key-props-builder> (new CfnPublicKeyProps$Builder) id config))
 
 
-(defn build-cfn-public-key-public-key-config-property-builder
-  "The build-cfn-public-key-public-key-config-property-builder function updates a CfnPublicKey$PublicKeyConfigProperty$Builder instance using the provided configuration.
+(defn cfn-public-key-public-key-config-property-builder>
+  "The cfn-public-key-public-key-config-property-builder> function updates a CfnPublicKey$PublicKeyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnPublicKey$PublicKeyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3365,11 +3365,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-public-key-public-key-config-property-builder (new CfnPublicKey$PublicKeyConfigProperty$Builder) id config))
+  (cfn-public-key-public-key-config-property-builder> (new CfnPublicKey$PublicKeyConfigProperty$Builder) id config))
 
 
-(defn build-cfn-realtime-log-config-builder
-  "The build-cfn-realtime-log-config-builder function updates a CfnRealtimeLogConfig$Builder instance using the provided configuration.
+(defn cfn-realtime-log-config-builder>
+  "The cfn-realtime-log-config-builder> function updates a CfnRealtimeLogConfig$Builder instance using the provided configuration.
   The function takes the CfnRealtimeLogConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3402,11 +3402,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-realtime-log-config-builder (CfnRealtimeLogConfig$Builder/create scope (name id)) id config))
+  (cfn-realtime-log-config-builder> (CfnRealtimeLogConfig$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-realtime-log-config-end-point-property-builder
-  "The build-cfn-realtime-log-config-end-point-property-builder function updates a CfnRealtimeLogConfig$EndPointProperty$Builder instance using the provided configuration.
+(defn cfn-realtime-log-config-end-point-property-builder>
+  "The cfn-realtime-log-config-end-point-property-builder> function updates a CfnRealtimeLogConfig$EndPointProperty$Builder instance using the provided configuration.
   The function takes the CfnRealtimeLogConfig$EndPointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3433,11 +3433,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-realtime-log-config-end-point-property-builder (new CfnRealtimeLogConfig$EndPointProperty$Builder) id config))
+  (cfn-realtime-log-config-end-point-property-builder> (new CfnRealtimeLogConfig$EndPointProperty$Builder) id config))
 
 
-(defn build-cfn-realtime-log-config-kinesis-stream-config-property-builder
-  "The build-cfn-realtime-log-config-kinesis-stream-config-property-builder function updates a CfnRealtimeLogConfig$KinesisStreamConfigProperty$Builder instance using the provided configuration.
+(defn cfn-realtime-log-config-kinesis-stream-config-property-builder>
+  "The cfn-realtime-log-config-kinesis-stream-config-property-builder> function updates a CfnRealtimeLogConfig$KinesisStreamConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnRealtimeLogConfig$KinesisStreamConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3464,11 +3464,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-realtime-log-config-kinesis-stream-config-property-builder (new CfnRealtimeLogConfig$KinesisStreamConfigProperty$Builder) id config))
+  (cfn-realtime-log-config-kinesis-stream-config-property-builder> (new CfnRealtimeLogConfig$KinesisStreamConfigProperty$Builder) id config))
 
 
-(defn build-cfn-realtime-log-config-props-builder
-  "The build-cfn-realtime-log-config-props-builder function updates a CfnRealtimeLogConfigProps$Builder instance using the provided configuration.
+(defn cfn-realtime-log-config-props-builder>
+  "The cfn-realtime-log-config-props-builder> function updates a CfnRealtimeLogConfigProps$Builder instance using the provided configuration.
   The function takes the CfnRealtimeLogConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3501,11 +3501,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-realtime-log-config-props-builder (new CfnRealtimeLogConfigProps$Builder) id config))
+  (cfn-realtime-log-config-props-builder> (new CfnRealtimeLogConfigProps$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-access-control-allow-headers-property-builder
-  "The build-cfn-response-headers-policy-access-control-allow-headers-property-builder function updates a CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-access-control-allow-headers-property-builder>
+  "The cfn-response-headers-policy-access-control-allow-headers-property-builder> function updates a CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3529,11 +3529,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-access-control-allow-headers-property-builder (new CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty$Builder) id config))
+  (cfn-response-headers-policy-access-control-allow-headers-property-builder> (new CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-access-control-allow-methods-property-builder
-  "The build-cfn-response-headers-policy-access-control-allow-methods-property-builder function updates a CfnResponseHeadersPolicy$AccessControlAllowMethodsProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-access-control-allow-methods-property-builder>
+  "The cfn-response-headers-policy-access-control-allow-methods-property-builder> function updates a CfnResponseHeadersPolicy$AccessControlAllowMethodsProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$AccessControlAllowMethodsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3557,11 +3557,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-access-control-allow-methods-property-builder (new CfnResponseHeadersPolicy$AccessControlAllowMethodsProperty$Builder) id config))
+  (cfn-response-headers-policy-access-control-allow-methods-property-builder> (new CfnResponseHeadersPolicy$AccessControlAllowMethodsProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-access-control-allow-origins-property-builder
-  "The build-cfn-response-headers-policy-access-control-allow-origins-property-builder function updates a CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-access-control-allow-origins-property-builder>
+  "The cfn-response-headers-policy-access-control-allow-origins-property-builder> function updates a CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3585,11 +3585,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-access-control-allow-origins-property-builder (new CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty$Builder) id config))
+  (cfn-response-headers-policy-access-control-allow-origins-property-builder> (new CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-access-control-expose-headers-property-builder
-  "The build-cfn-response-headers-policy-access-control-expose-headers-property-builder function updates a CfnResponseHeadersPolicy$AccessControlExposeHeadersProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-access-control-expose-headers-property-builder>
+  "The cfn-response-headers-policy-access-control-expose-headers-property-builder> function updates a CfnResponseHeadersPolicy$AccessControlExposeHeadersProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$AccessControlExposeHeadersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3613,11 +3613,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-access-control-expose-headers-property-builder (new CfnResponseHeadersPolicy$AccessControlExposeHeadersProperty$Builder) id config))
+  (cfn-response-headers-policy-access-control-expose-headers-property-builder> (new CfnResponseHeadersPolicy$AccessControlExposeHeadersProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-builder
-  "The build-cfn-response-headers-policy-builder function updates a CfnResponseHeadersPolicy$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-builder>
+  "The cfn-response-headers-policy-builder> function updates a CfnResponseHeadersPolicy$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3641,11 +3641,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-response-headers-policy-builder (CfnResponseHeadersPolicy$Builder/create scope (name id)) id config))
+  (cfn-response-headers-policy-builder> (CfnResponseHeadersPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-response-headers-policy-content-security-policy-property-builder
-  "The build-cfn-response-headers-policy-content-security-policy-property-builder function updates a CfnResponseHeadersPolicy$ContentSecurityPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-content-security-policy-property-builder>
+  "The cfn-response-headers-policy-content-security-policy-property-builder> function updates a CfnResponseHeadersPolicy$ContentSecurityPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$ContentSecurityPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3672,11 +3672,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-content-security-policy-property-builder (new CfnResponseHeadersPolicy$ContentSecurityPolicyProperty$Builder) id config))
+  (cfn-response-headers-policy-content-security-policy-property-builder> (new CfnResponseHeadersPolicy$ContentSecurityPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-content-type-options-property-builder
-  "The build-cfn-response-headers-policy-content-type-options-property-builder function updates a CfnResponseHeadersPolicy$ContentTypeOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-content-type-options-property-builder>
+  "The cfn-response-headers-policy-content-type-options-property-builder> function updates a CfnResponseHeadersPolicy$ContentTypeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$ContentTypeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3700,11 +3700,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-content-type-options-property-builder (new CfnResponseHeadersPolicy$ContentTypeOptionsProperty$Builder) id config))
+  (cfn-response-headers-policy-content-type-options-property-builder> (new CfnResponseHeadersPolicy$ContentTypeOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-cors-config-property-builder
-  "The build-cfn-response-headers-policy-cors-config-property-builder function updates a CfnResponseHeadersPolicy$CorsConfigProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-cors-config-property-builder>
+  "The cfn-response-headers-policy-cors-config-property-builder> function updates a CfnResponseHeadersPolicy$CorsConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$CorsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3746,11 +3746,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-cors-config-property-builder (new CfnResponseHeadersPolicy$CorsConfigProperty$Builder) id config))
+  (cfn-response-headers-policy-cors-config-property-builder> (new CfnResponseHeadersPolicy$CorsConfigProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-custom-header-property-builder
-  "The build-cfn-response-headers-policy-custom-header-property-builder function updates a CfnResponseHeadersPolicy$CustomHeaderProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-custom-header-property-builder>
+  "The cfn-response-headers-policy-custom-header-property-builder> function updates a CfnResponseHeadersPolicy$CustomHeaderProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$CustomHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3780,11 +3780,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-custom-header-property-builder (new CfnResponseHeadersPolicy$CustomHeaderProperty$Builder) id config))
+  (cfn-response-headers-policy-custom-header-property-builder> (new CfnResponseHeadersPolicy$CustomHeaderProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-custom-headers-config-property-builder
-  "The build-cfn-response-headers-policy-custom-headers-config-property-builder function updates a CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-custom-headers-config-property-builder>
+  "The cfn-response-headers-policy-custom-headers-config-property-builder> function updates a CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3808,11 +3808,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-custom-headers-config-property-builder (new CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder) id config))
+  (cfn-response-headers-policy-custom-headers-config-property-builder> (new CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-frame-options-property-builder
-  "The build-cfn-response-headers-policy-frame-options-property-builder function updates a CfnResponseHeadersPolicy$FrameOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-frame-options-property-builder>
+  "The cfn-response-headers-policy-frame-options-property-builder> function updates a CfnResponseHeadersPolicy$FrameOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$FrameOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3839,11 +3839,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-frame-options-property-builder (new CfnResponseHeadersPolicy$FrameOptionsProperty$Builder) id config))
+  (cfn-response-headers-policy-frame-options-property-builder> (new CfnResponseHeadersPolicy$FrameOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-props-builder
-  "The build-cfn-response-headers-policy-props-builder function updates a CfnResponseHeadersPolicyProps$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-props-builder>
+  "The cfn-response-headers-policy-props-builder> function updates a CfnResponseHeadersPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3867,11 +3867,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-props-builder (new CfnResponseHeadersPolicyProps$Builder) id config))
+  (cfn-response-headers-policy-props-builder> (new CfnResponseHeadersPolicyProps$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-referrer-policy-property-builder
-  "The build-cfn-response-headers-policy-referrer-policy-property-builder function updates a CfnResponseHeadersPolicy$ReferrerPolicyProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-referrer-policy-property-builder>
+  "The cfn-response-headers-policy-referrer-policy-property-builder> function updates a CfnResponseHeadersPolicy$ReferrerPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$ReferrerPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3898,11 +3898,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-referrer-policy-property-builder (new CfnResponseHeadersPolicy$ReferrerPolicyProperty$Builder) id config))
+  (cfn-response-headers-policy-referrer-policy-property-builder> (new CfnResponseHeadersPolicy$ReferrerPolicyProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-remove-header-property-builder
-  "The build-cfn-response-headers-policy-remove-header-property-builder function updates a CfnResponseHeadersPolicy$RemoveHeaderProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-remove-header-property-builder>
+  "The cfn-response-headers-policy-remove-header-property-builder> function updates a CfnResponseHeadersPolicy$RemoveHeaderProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$RemoveHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3926,11 +3926,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-remove-header-property-builder (new CfnResponseHeadersPolicy$RemoveHeaderProperty$Builder) id config))
+  (cfn-response-headers-policy-remove-header-property-builder> (new CfnResponseHeadersPolicy$RemoveHeaderProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-remove-headers-config-property-builder
-  "The build-cfn-response-headers-policy-remove-headers-config-property-builder function updates a CfnResponseHeadersPolicy$RemoveHeadersConfigProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-remove-headers-config-property-builder>
+  "The cfn-response-headers-policy-remove-headers-config-property-builder> function updates a CfnResponseHeadersPolicy$RemoveHeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$RemoveHeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -3954,11 +3954,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-remove-headers-config-property-builder (new CfnResponseHeadersPolicy$RemoveHeadersConfigProperty$Builder) id config))
+  (cfn-response-headers-policy-remove-headers-config-property-builder> (new CfnResponseHeadersPolicy$RemoveHeadersConfigProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-response-headers-policy-config-property-builder
-  "The build-cfn-response-headers-policy-response-headers-policy-config-property-builder function updates a CfnResponseHeadersPolicy$ResponseHeadersPolicyConfigProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-response-headers-policy-config-property-builder>
+  "The cfn-response-headers-policy-response-headers-policy-config-property-builder> function updates a CfnResponseHeadersPolicy$ResponseHeadersPolicyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$ResponseHeadersPolicyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4000,11 +4000,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-response-headers-policy-config-property-builder (new CfnResponseHeadersPolicy$ResponseHeadersPolicyConfigProperty$Builder) id config))
+  (cfn-response-headers-policy-response-headers-policy-config-property-builder> (new CfnResponseHeadersPolicy$ResponseHeadersPolicyConfigProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-security-headers-config-property-builder
-  "The build-cfn-response-headers-policy-security-headers-config-property-builder function updates a CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-security-headers-config-property-builder>
+  "The cfn-response-headers-policy-security-headers-config-property-builder> function updates a CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4043,11 +4043,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-security-headers-config-property-builder (new CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder) id config))
+  (cfn-response-headers-policy-security-headers-config-property-builder> (new CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-server-timing-headers-config-property-builder
-  "The build-cfn-response-headers-policy-server-timing-headers-config-property-builder function updates a CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-server-timing-headers-config-property-builder>
+  "The cfn-response-headers-policy-server-timing-headers-config-property-builder> function updates a CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4074,11 +4074,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-server-timing-headers-config-property-builder (new CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder) id config))
+  (cfn-response-headers-policy-server-timing-headers-config-property-builder> (new CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-strict-transport-security-property-builder
-  "The build-cfn-response-headers-policy-strict-transport-security-property-builder function updates a CfnResponseHeadersPolicy$StrictTransportSecurityProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-strict-transport-security-property-builder>
+  "The cfn-response-headers-policy-strict-transport-security-property-builder> function updates a CfnResponseHeadersPolicy$StrictTransportSecurityProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$StrictTransportSecurityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4111,11 +4111,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-strict-transport-security-property-builder (new CfnResponseHeadersPolicy$StrictTransportSecurityProperty$Builder) id config))
+  (cfn-response-headers-policy-strict-transport-security-property-builder> (new CfnResponseHeadersPolicy$StrictTransportSecurityProperty$Builder) id config))
 
 
-(defn build-cfn-response-headers-policy-xss-protection-property-builder
-  "The build-cfn-response-headers-policy-xss-protection-property-builder function updates a CfnResponseHeadersPolicy$XSSProtectionProperty$Builder instance using the provided configuration.
+(defn cfn-response-headers-policy-xss-protection-property-builder>
+  "The cfn-response-headers-policy-xss-protection-property-builder> function updates a CfnResponseHeadersPolicy$XSSProtectionProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$XSSProtectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4148,11 +4148,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-response-headers-policy-xss-protection-property-builder (new CfnResponseHeadersPolicy$XSSProtectionProperty$Builder) id config))
+  (cfn-response-headers-policy-xss-protection-property-builder> (new CfnResponseHeadersPolicy$XSSProtectionProperty$Builder) id config))
 
 
-(defn build-cfn-streaming-distribution-builder
-  "The build-cfn-streaming-distribution-builder function updates a CfnStreamingDistribution$Builder instance using the provided configuration.
+(defn cfn-streaming-distribution-builder>
+  "The cfn-streaming-distribution-builder> function updates a CfnStreamingDistribution$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistribution$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4179,11 +4179,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-streaming-distribution-builder (CfnStreamingDistribution$Builder/create scope (name id)) id config))
+  (cfn-streaming-distribution-builder> (CfnStreamingDistribution$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-streaming-distribution-logging-property-builder
-  "The build-cfn-streaming-distribution-logging-property-builder function updates a CfnStreamingDistribution$LoggingProperty$Builder instance using the provided configuration.
+(defn cfn-streaming-distribution-logging-property-builder>
+  "The cfn-streaming-distribution-logging-property-builder> function updates a CfnStreamingDistribution$LoggingProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistribution$LoggingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4213,11 +4213,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-streaming-distribution-logging-property-builder (new CfnStreamingDistribution$LoggingProperty$Builder) id config))
+  (cfn-streaming-distribution-logging-property-builder> (new CfnStreamingDistribution$LoggingProperty$Builder) id config))
 
 
-(defn build-cfn-streaming-distribution-props-builder
-  "The build-cfn-streaming-distribution-props-builder function updates a CfnStreamingDistributionProps$Builder instance using the provided configuration.
+(defn cfn-streaming-distribution-props-builder>
+  "The cfn-streaming-distribution-props-builder> function updates a CfnStreamingDistributionProps$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistributionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4244,11 +4244,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-streaming-distribution-props-builder (new CfnStreamingDistributionProps$Builder) id config))
+  (cfn-streaming-distribution-props-builder> (new CfnStreamingDistributionProps$Builder) id config))
 
 
-(defn build-cfn-streaming-distribution-s3-origin-property-builder
-  "The build-cfn-streaming-distribution-s3-origin-property-builder function updates a CfnStreamingDistribution$S3OriginProperty$Builder instance using the provided configuration.
+(defn cfn-streaming-distribution-s3-origin-property-builder>
+  "The cfn-streaming-distribution-s3-origin-property-builder> function updates a CfnStreamingDistribution$S3OriginProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistribution$S3OriginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4275,11 +4275,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-streaming-distribution-s3-origin-property-builder (new CfnStreamingDistribution$S3OriginProperty$Builder) id config))
+  (cfn-streaming-distribution-s3-origin-property-builder> (new CfnStreamingDistribution$S3OriginProperty$Builder) id config))
 
 
-(defn build-cfn-streaming-distribution-streaming-distribution-config-property-builder
-  "The build-cfn-streaming-distribution-streaming-distribution-config-property-builder function updates a CfnStreamingDistribution$StreamingDistributionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-streaming-distribution-streaming-distribution-config-property-builder>
+  "The cfn-streaming-distribution-streaming-distribution-config-property-builder> function updates a CfnStreamingDistribution$StreamingDistributionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistribution$StreamingDistributionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4321,11 +4321,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-streaming-distribution-streaming-distribution-config-property-builder (new CfnStreamingDistribution$StreamingDistributionConfigProperty$Builder) id config))
+  (cfn-streaming-distribution-streaming-distribution-config-property-builder> (new CfnStreamingDistribution$StreamingDistributionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-streaming-distribution-trusted-signers-property-builder
-  "The build-cfn-streaming-distribution-trusted-signers-property-builder function updates a CfnStreamingDistribution$TrustedSignersProperty$Builder instance using the provided configuration.
+(defn cfn-streaming-distribution-trusted-signers-property-builder>
+  "The cfn-streaming-distribution-trusted-signers-property-builder> function updates a CfnStreamingDistribution$TrustedSignersProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistribution$TrustedSignersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4352,11 +4352,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-streaming-distribution-trusted-signers-property-builder (new CfnStreamingDistribution$TrustedSignersProperty$Builder) id config))
+  (cfn-streaming-distribution-trusted-signers-property-builder> (new CfnStreamingDistribution$TrustedSignersProperty$Builder) id config))
 
 
-(defn build-cloud-front-web-distribution-attributes-builder
-  "The build-cloud-front-web-distribution-attributes-builder function updates a CloudFrontWebDistributionAttributes$Builder instance using the provided configuration.
+(defn cloud-front-web-distribution-attributes-builder>
+  "The cloud-front-web-distribution-attributes-builder> function updates a CloudFrontWebDistributionAttributes$Builder instance using the provided configuration.
   The function takes the CloudFrontWebDistributionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4383,11 +4383,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cloud-front-web-distribution-attributes-builder (new CloudFrontWebDistributionAttributes$Builder) id config))
+  (cloud-front-web-distribution-attributes-builder> (new CloudFrontWebDistributionAttributes$Builder) id config))
 
 
-(defn build-cloud-front-web-distribution-builder
-  "The build-cloud-front-web-distribution-builder function updates a CloudFrontWebDistribution$Builder instance using the provided configuration.
+(defn cloud-front-web-distribution-builder>
+  "The cloud-front-web-distribution-builder> function updates a CloudFrontWebDistribution$Builder instance using the provided configuration.
   The function takes the CloudFrontWebDistribution$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4447,11 +4447,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cloud-front-web-distribution-builder (CloudFrontWebDistribution$Builder/create scope (name id)) id config))
+  (cloud-front-web-distribution-builder> (CloudFrontWebDistribution$Builder/create scope (name id)) id config))
 
 
-(defn build-cloud-front-web-distribution-props-builder
-  "The build-cloud-front-web-distribution-props-builder function updates a CloudFrontWebDistributionProps$Builder instance using the provided configuration.
+(defn cloud-front-web-distribution-props-builder>
+  "The cloud-front-web-distribution-props-builder> function updates a CloudFrontWebDistributionProps$Builder instance using the provided configuration.
   The function takes the CloudFrontWebDistributionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4511,11 +4511,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cloud-front-web-distribution-props-builder (new CloudFrontWebDistributionProps$Builder) id config))
+  (cloud-front-web-distribution-props-builder> (new CloudFrontWebDistributionProps$Builder) id config))
 
 
-(defn build-custom-origin-config-builder
-  "The build-custom-origin-config-builder function updates a CustomOriginConfig$Builder instance using the provided configuration.
+(defn custom-origin-config-builder>
+  "The custom-origin-config-builder> function updates a CustomOriginConfig$Builder instance using the provided configuration.
   The function takes the CustomOriginConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4566,11 +4566,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-custom-origin-config-builder (new CustomOriginConfig$Builder) id config))
+  (custom-origin-config-builder> (new CustomOriginConfig$Builder) id config))
 
 
-(defn build-distribution-attributes-builder
-  "The build-distribution-attributes-builder function updates a DistributionAttributes$Builder instance using the provided configuration.
+(defn distribution-attributes-builder>
+  "The distribution-attributes-builder> function updates a DistributionAttributes$Builder instance using the provided configuration.
   The function takes the DistributionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4597,11 +4597,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-distribution-attributes-builder (new DistributionAttributes$Builder) id config))
+  (distribution-attributes-builder> (new DistributionAttributes$Builder) id config))
 
 
-(defn build-distribution-builder
-  "The build-distribution-builder function updates a Distribution$Builder instance using the provided configuration.
+(defn distribution-builder>
+  "The distribution-builder> function updates a Distribution$Builder instance using the provided configuration.
   The function takes the Distribution$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4682,11 +4682,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-distribution-builder (Distribution$Builder/create scope (name id)) id config))
+  (distribution-builder> (Distribution$Builder/create scope (name id)) id config))
 
 
-(defn build-distribution-props-builder
-  "The build-distribution-props-builder function updates a DistributionProps$Builder instance using the provided configuration.
+(defn distribution-props-builder>
+  "The distribution-props-builder> function updates a DistributionProps$Builder instance using the provided configuration.
   The function takes the DistributionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4767,11 +4767,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-distribution-props-builder (new DistributionProps$Builder) id config))
+  (distribution-props-builder> (new DistributionProps$Builder) id config))
 
 
-(defn build-edge-lambda-builder
-  "The build-edge-lambda-builder function updates a EdgeLambda$Builder instance using the provided configuration.
+(defn edge-lambda-builder>
+  "The edge-lambda-builder> function updates a EdgeLambda$Builder instance using the provided configuration.
   The function takes the EdgeLambda$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4801,11 +4801,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-edge-lambda-builder (new EdgeLambda$Builder) id config))
+  (edge-lambda-builder> (new EdgeLambda$Builder) id config))
 
 
-(defn build-error-response-builder
-  "The build-error-response-builder function updates a ErrorResponse$Builder instance using the provided configuration.
+(defn error-response-builder>
+  "The error-response-builder> function updates a ErrorResponse$Builder instance using the provided configuration.
   The function takes the ErrorResponse$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4838,11 +4838,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-error-response-builder (new ErrorResponse$Builder) id config))
+  (error-response-builder> (new ErrorResponse$Builder) id config))
 
 
-(defn build-file-code-options-builder
-  "The build-file-code-options-builder function updates a FileCodeOptions$Builder instance using the provided configuration.
+(defn file-code-options-builder>
+  "The file-code-options-builder> function updates a FileCodeOptions$Builder instance using the provided configuration.
   The function takes the FileCodeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4866,11 +4866,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-file-code-options-builder (new FileCodeOptions$Builder) id config))
+  (file-code-options-builder> (new FileCodeOptions$Builder) id config))
 
 
-(defn build-function-association-builder
-  "The build-function-association-builder function updates a FunctionAssociation$Builder instance using the provided configuration.
+(defn function-association-builder>
+  "The function-association-builder> function updates a FunctionAssociation$Builder instance using the provided configuration.
   The function takes the FunctionAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4897,11 +4897,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-function-association-builder (new FunctionAssociation$Builder) id config))
+  (function-association-builder> (new FunctionAssociation$Builder) id config))
 
 
-(defn build-function-attributes-builder
-  "The build-function-attributes-builder function updates a FunctionAttributes$Builder instance using the provided configuration.
+(defn function-attributes-builder>
+  "The function-attributes-builder> function updates a FunctionAttributes$Builder instance using the provided configuration.
   The function takes the FunctionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4931,11 +4931,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-function-attributes-builder (new FunctionAttributes$Builder) id config))
+  (function-attributes-builder> (new FunctionAttributes$Builder) id config))
 
 
-(defn build-function-builder
-  "The build-function-builder function updates a Function$Builder instance using the provided configuration.
+(defn function-builder>
+  "The function-builder> function updates a Function$Builder instance using the provided configuration.
   The function takes the Function$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -4974,11 +4974,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-function-builder (Function$Builder/create scope (name id)) id config))
+  (function-builder> (Function$Builder/create scope (name id)) id config))
 
 
-(defn build-function-props-builder
-  "The build-function-props-builder function updates a FunctionProps$Builder instance using the provided configuration.
+(defn function-props-builder>
+  "The function-props-builder> function updates a FunctionProps$Builder instance using the provided configuration.
   The function takes the FunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5017,11 +5017,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-function-props-builder (new FunctionProps$Builder) id config))
+  (function-props-builder> (new FunctionProps$Builder) id config))
 
 
-(defn build-key-group-builder
-  "The build-key-group-builder function updates a KeyGroup$Builder instance using the provided configuration.
+(defn key-group-builder>
+  "The key-group-builder> function updates a KeyGroup$Builder instance using the provided configuration.
   The function takes the KeyGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5051,11 +5051,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-key-group-builder (KeyGroup$Builder/create scope (name id)) id config))
+  (key-group-builder> (KeyGroup$Builder/create scope (name id)) id config))
 
 
-(defn build-key-group-props-builder
-  "The build-key-group-props-builder function updates a KeyGroupProps$Builder instance using the provided configuration.
+(defn key-group-props-builder>
+  "The key-group-props-builder> function updates a KeyGroupProps$Builder instance using the provided configuration.
   The function takes the KeyGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5085,11 +5085,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-key-group-props-builder (new KeyGroupProps$Builder) id config))
+  (key-group-props-builder> (new KeyGroupProps$Builder) id config))
 
 
-(defn build-key-value-store-builder
-  "The build-key-value-store-builder function updates a KeyValueStore$Builder instance using the provided configuration.
+(defn key-value-store-builder>
+  "The key-value-store-builder> function updates a KeyValueStore$Builder instance using the provided configuration.
   The function takes the KeyValueStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5119,11 +5119,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-key-value-store-builder (KeyValueStore$Builder/create scope (name id)) id config))
+  (key-value-store-builder> (KeyValueStore$Builder/create scope (name id)) id config))
 
 
-(defn build-key-value-store-props-builder
-  "The build-key-value-store-props-builder function updates a KeyValueStoreProps$Builder instance using the provided configuration.
+(defn key-value-store-props-builder>
+  "The key-value-store-props-builder> function updates a KeyValueStoreProps$Builder instance using the provided configuration.
   The function takes the KeyValueStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5153,11 +5153,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-key-value-store-props-builder (new KeyValueStoreProps$Builder) id config))
+  (key-value-store-props-builder> (new KeyValueStoreProps$Builder) id config))
 
 
-(defn build-lambda-function-association-builder
-  "The build-lambda-function-association-builder function updates a LambdaFunctionAssociation$Builder instance using the provided configuration.
+(defn lambda-function-association-builder>
+  "The lambda-function-association-builder> function updates a LambdaFunctionAssociation$Builder instance using the provided configuration.
   The function takes the LambdaFunctionAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5187,11 +5187,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-function-association-builder (new LambdaFunctionAssociation$Builder) id config))
+  (lambda-function-association-builder> (new LambdaFunctionAssociation$Builder) id config))
 
 
-(defn build-logging-configuration-builder
-  "The build-logging-configuration-builder function updates a LoggingConfiguration$Builder instance using the provided configuration.
+(defn logging-configuration-builder>
+  "The logging-configuration-builder> function updates a LoggingConfiguration$Builder instance using the provided configuration.
   The function takes the LoggingConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5221,11 +5221,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-logging-configuration-builder (new LoggingConfiguration$Builder) id config))
+  (logging-configuration-builder> (new LoggingConfiguration$Builder) id config))
 
 
-(defn build-origin-access-identity-builder
-  "The build-origin-access-identity-builder function updates a OriginAccessIdentity$Builder instance using the provided configuration.
+(defn origin-access-identity-builder>
+  "The origin-access-identity-builder> function updates a OriginAccessIdentity$Builder instance using the provided configuration.
   The function takes the OriginAccessIdentity$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5249,11 +5249,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-origin-access-identity-builder (OriginAccessIdentity$Builder/create scope (name id)) id config))
+  (origin-access-identity-builder> (OriginAccessIdentity$Builder/create scope (name id)) id config))
 
 
-(defn build-origin-access-identity-props-builder
-  "The build-origin-access-identity-props-builder function updates a OriginAccessIdentityProps$Builder instance using the provided configuration.
+(defn origin-access-identity-props-builder>
+  "The origin-access-identity-props-builder> function updates a OriginAccessIdentityProps$Builder instance using the provided configuration.
   The function takes the OriginAccessIdentityProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5277,11 +5277,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-origin-access-identity-props-builder (new OriginAccessIdentityProps$Builder) id config))
+  (origin-access-identity-props-builder> (new OriginAccessIdentityProps$Builder) id config))
 
 
-(defn build-origin-bind-config-builder
-  "The build-origin-bind-config-builder function updates a OriginBindConfig$Builder instance using the provided configuration.
+(defn origin-bind-config-builder>
+  "The origin-bind-config-builder> function updates a OriginBindConfig$Builder instance using the provided configuration.
   The function takes the OriginBindConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5308,11 +5308,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-origin-bind-config-builder (new OriginBindConfig$Builder) id config))
+  (origin-bind-config-builder> (new OriginBindConfig$Builder) id config))
 
 
-(defn build-origin-bind-options-builder
-  "The build-origin-bind-options-builder function updates a OriginBindOptions$Builder instance using the provided configuration.
+(defn origin-bind-options-builder>
+  "The origin-bind-options-builder> function updates a OriginBindOptions$Builder instance using the provided configuration.
   The function takes the OriginBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5336,11 +5336,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-origin-bind-options-builder (new OriginBindOptions$Builder) id config))
+  (origin-bind-options-builder> (new OriginBindOptions$Builder) id config))
 
 
-(defn build-origin-failover-config-builder
-  "The build-origin-failover-config-builder function updates a OriginFailoverConfig$Builder instance using the provided configuration.
+(defn origin-failover-config-builder>
+  "The origin-failover-config-builder> function updates a OriginFailoverConfig$Builder instance using the provided configuration.
   The function takes the OriginFailoverConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5367,11 +5367,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-origin-failover-config-builder (new OriginFailoverConfig$Builder) id config))
+  (origin-failover-config-builder> (new OriginFailoverConfig$Builder) id config))
 
 
-(defn build-origin-options-builder
-  "The build-origin-options-builder function updates a OriginOptions$Builder instance using the provided configuration.
+(defn origin-options-builder>
+  "The origin-options-builder> function updates a OriginOptions$Builder instance using the provided configuration.
   The function takes the OriginOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5410,11 +5410,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-origin-options-builder (new OriginOptions$Builder) id config))
+  (origin-options-builder> (new OriginOptions$Builder) id config))
 
 
-(defn build-origin-props-builder
-  "The build-origin-props-builder function updates a OriginProps$Builder instance using the provided configuration.
+(defn origin-props-builder>
+  "The origin-props-builder> function updates a OriginProps$Builder instance using the provided configuration.
   The function takes the OriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5456,11 +5456,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-origin-props-builder (new OriginProps$Builder) id config))
+  (origin-props-builder> (new OriginProps$Builder) id config))
 
 
-(defn build-origin-request-policy-builder
-  "The build-origin-request-policy-builder function updates a OriginRequestPolicy$Builder instance using the provided configuration.
+(defn origin-request-policy-builder>
+  "The origin-request-policy-builder> function updates a OriginRequestPolicy$Builder instance using the provided configuration.
   The function takes the OriginRequestPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5496,11 +5496,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-origin-request-policy-builder (OriginRequestPolicy$Builder/create scope (name id)) id config))
+  (origin-request-policy-builder> (OriginRequestPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-origin-request-policy-props-builder
-  "The build-origin-request-policy-props-builder function updates a OriginRequestPolicyProps$Builder instance using the provided configuration.
+(defn origin-request-policy-props-builder>
+  "The origin-request-policy-props-builder> function updates a OriginRequestPolicyProps$Builder instance using the provided configuration.
   The function takes the OriginRequestPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5536,11 +5536,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-origin-request-policy-props-builder (new OriginRequestPolicyProps$Builder) id config))
+  (origin-request-policy-props-builder> (new OriginRequestPolicyProps$Builder) id config))
 
 
-(defn build-public-key-builder
-  "The build-public-key-builder function updates a PublicKey$Builder instance using the provided configuration.
+(defn public-key-builder>
+  "The public-key-builder> function updates a PublicKey$Builder instance using the provided configuration.
   The function takes the PublicKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5570,11 +5570,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-public-key-builder (PublicKey$Builder/create scope (name id)) id config))
+  (public-key-builder> (PublicKey$Builder/create scope (name id)) id config))
 
 
-(defn build-public-key-props-builder
-  "The build-public-key-props-builder function updates a PublicKeyProps$Builder instance using the provided configuration.
+(defn public-key-props-builder>
+  "The public-key-props-builder> function updates a PublicKeyProps$Builder instance using the provided configuration.
   The function takes the PublicKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5604,11 +5604,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-public-key-props-builder (new PublicKeyProps$Builder) id config))
+  (public-key-props-builder> (new PublicKeyProps$Builder) id config))
 
 
-(defn build-realtime-log-config-builder
-  "The build-realtime-log-config-builder function updates a RealtimeLogConfig$Builder instance using the provided configuration.
+(defn realtime-log-config-builder>
+  "The realtime-log-config-builder> function updates a RealtimeLogConfig$Builder instance using the provided configuration.
   The function takes the RealtimeLogConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5641,11 +5641,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-realtime-log-config-builder (RealtimeLogConfig$Builder/create scope (name id)) id config))
+  (realtime-log-config-builder> (RealtimeLogConfig$Builder/create scope (name id)) id config))
 
 
-(defn build-realtime-log-config-props-builder
-  "The build-realtime-log-config-props-builder function updates a RealtimeLogConfigProps$Builder instance using the provided configuration.
+(defn realtime-log-config-props-builder>
+  "The realtime-log-config-props-builder> function updates a RealtimeLogConfigProps$Builder instance using the provided configuration.
   The function takes the RealtimeLogConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5678,11 +5678,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-realtime-log-config-props-builder (new RealtimeLogConfigProps$Builder) id config))
+  (realtime-log-config-props-builder> (new RealtimeLogConfigProps$Builder) id config))
 
 
-(defn build-response-custom-header-builder
-  "The build-response-custom-header-builder function updates a ResponseCustomHeader$Builder instance using the provided configuration.
+(defn response-custom-header-builder>
+  "The response-custom-header-builder> function updates a ResponseCustomHeader$Builder instance using the provided configuration.
   The function takes the ResponseCustomHeader$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5712,11 +5712,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-custom-header-builder (new ResponseCustomHeader$Builder) id config))
+  (response-custom-header-builder> (new ResponseCustomHeader$Builder) id config))
 
 
-(defn build-response-custom-headers-behavior-builder
-  "The build-response-custom-headers-behavior-builder function updates a ResponseCustomHeadersBehavior$Builder instance using the provided configuration.
+(defn response-custom-headers-behavior-builder>
+  "The response-custom-headers-behavior-builder> function updates a ResponseCustomHeadersBehavior$Builder instance using the provided configuration.
   The function takes the ResponseCustomHeadersBehavior$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5740,11 +5740,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-custom-headers-behavior-builder (new ResponseCustomHeadersBehavior$Builder) id config))
+  (response-custom-headers-behavior-builder> (new ResponseCustomHeadersBehavior$Builder) id config))
 
 
-(defn build-response-headers-content-security-policy-builder
-  "The build-response-headers-content-security-policy-builder function updates a ResponseHeadersContentSecurityPolicy$Builder instance using the provided configuration.
+(defn response-headers-content-security-policy-builder>
+  "The response-headers-content-security-policy-builder> function updates a ResponseHeadersContentSecurityPolicy$Builder instance using the provided configuration.
   The function takes the ResponseHeadersContentSecurityPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5771,11 +5771,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-headers-content-security-policy-builder (new ResponseHeadersContentSecurityPolicy$Builder) id config))
+  (response-headers-content-security-policy-builder> (new ResponseHeadersContentSecurityPolicy$Builder) id config))
 
 
-(defn build-response-headers-content-type-options-builder
-  "The build-response-headers-content-type-options-builder function updates a ResponseHeadersContentTypeOptions$Builder instance using the provided configuration.
+(defn response-headers-content-type-options-builder>
+  "The response-headers-content-type-options-builder> function updates a ResponseHeadersContentTypeOptions$Builder instance using the provided configuration.
   The function takes the ResponseHeadersContentTypeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5799,11 +5799,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-headers-content-type-options-builder (new ResponseHeadersContentTypeOptions$Builder) id config))
+  (response-headers-content-type-options-builder> (new ResponseHeadersContentTypeOptions$Builder) id config))
 
 
-(defn build-response-headers-cors-behavior-builder
-  "The build-response-headers-cors-behavior-builder function updates a ResponseHeadersCorsBehavior$Builder instance using the provided configuration.
+(defn response-headers-cors-behavior-builder>
+  "The response-headers-cors-behavior-builder> function updates a ResponseHeadersCorsBehavior$Builder instance using the provided configuration.
   The function takes the ResponseHeadersCorsBehavior$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5845,11 +5845,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-headers-cors-behavior-builder (new ResponseHeadersCorsBehavior$Builder) id config))
+  (response-headers-cors-behavior-builder> (new ResponseHeadersCorsBehavior$Builder) id config))
 
 
-(defn build-response-headers-frame-options-builder
-  "The build-response-headers-frame-options-builder function updates a ResponseHeadersFrameOptions$Builder instance using the provided configuration.
+(defn response-headers-frame-options-builder>
+  "The response-headers-frame-options-builder> function updates a ResponseHeadersFrameOptions$Builder instance using the provided configuration.
   The function takes the ResponseHeadersFrameOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5876,11 +5876,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-headers-frame-options-builder (new ResponseHeadersFrameOptions$Builder) id config))
+  (response-headers-frame-options-builder> (new ResponseHeadersFrameOptions$Builder) id config))
 
 
-(defn build-response-headers-policy-builder
-  "The build-response-headers-policy-builder function updates a ResponseHeadersPolicy$Builder instance using the provided configuration.
+(defn response-headers-policy-builder>
+  "The response-headers-policy-builder> function updates a ResponseHeadersPolicy$Builder instance using the provided configuration.
   The function takes the ResponseHeadersPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5922,11 +5922,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-response-headers-policy-builder (ResponseHeadersPolicy$Builder/create scope (name id)) id config))
+  (response-headers-policy-builder> (ResponseHeadersPolicy$Builder/create scope (name id)) id config))
 
 
-(defn build-response-headers-policy-props-builder
-  "The build-response-headers-policy-props-builder function updates a ResponseHeadersPolicyProps$Builder instance using the provided configuration.
+(defn response-headers-policy-props-builder>
+  "The response-headers-policy-props-builder> function updates a ResponseHeadersPolicyProps$Builder instance using the provided configuration.
   The function takes the ResponseHeadersPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5968,11 +5968,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-headers-policy-props-builder (new ResponseHeadersPolicyProps$Builder) id config))
+  (response-headers-policy-props-builder> (new ResponseHeadersPolicyProps$Builder) id config))
 
 
-(defn build-response-headers-referrer-policy-builder
-  "The build-response-headers-referrer-policy-builder function updates a ResponseHeadersReferrerPolicy$Builder instance using the provided configuration.
+(defn response-headers-referrer-policy-builder>
+  "The response-headers-referrer-policy-builder> function updates a ResponseHeadersReferrerPolicy$Builder instance using the provided configuration.
   The function takes the ResponseHeadersReferrerPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -5999,11 +5999,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-headers-referrer-policy-builder (new ResponseHeadersReferrerPolicy$Builder) id config))
+  (response-headers-referrer-policy-builder> (new ResponseHeadersReferrerPolicy$Builder) id config))
 
 
-(defn build-response-headers-strict-transport-security-builder
-  "The build-response-headers-strict-transport-security-builder function updates a ResponseHeadersStrictTransportSecurity$Builder instance using the provided configuration.
+(defn response-headers-strict-transport-security-builder>
+  "The response-headers-strict-transport-security-builder> function updates a ResponseHeadersStrictTransportSecurity$Builder instance using the provided configuration.
   The function takes the ResponseHeadersStrictTransportSecurity$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6036,11 +6036,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-headers-strict-transport-security-builder (new ResponseHeadersStrictTransportSecurity$Builder) id config))
+  (response-headers-strict-transport-security-builder> (new ResponseHeadersStrictTransportSecurity$Builder) id config))
 
 
-(defn build-response-headers-xss-protection-builder
-  "The build-response-headers-xss-protection-builder function updates a ResponseHeadersXSSProtection$Builder instance using the provided configuration.
+(defn response-headers-xss-protection-builder>
+  "The response-headers-xss-protection-builder> function updates a ResponseHeadersXSSProtection$Builder instance using the provided configuration.
   The function takes the ResponseHeadersXSSProtection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6073,11 +6073,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-headers-xss-protection-builder (new ResponseHeadersXSSProtection$Builder) id config))
+  (response-headers-xss-protection-builder> (new ResponseHeadersXSSProtection$Builder) id config))
 
 
-(defn build-response-security-headers-behavior-builder
-  "The build-response-security-headers-behavior-builder function updates a ResponseSecurityHeadersBehavior$Builder instance using the provided configuration.
+(defn response-security-headers-behavior-builder>
+  "The response-security-headers-behavior-builder> function updates a ResponseSecurityHeadersBehavior$Builder instance using the provided configuration.
   The function takes the ResponseSecurityHeadersBehavior$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6116,11 +6116,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-response-security-headers-behavior-builder (new ResponseSecurityHeadersBehavior$Builder) id config))
+  (response-security-headers-behavior-builder> (new ResponseSecurityHeadersBehavior$Builder) id config))
 
 
-(defn build-s3-origin-config-builder
-  "The build-s3-origin-config-builder function updates a S3OriginConfig$Builder instance using the provided configuration.
+(defn s3-origin-config-builder>
+  "The s3-origin-config-builder> function updates a S3OriginConfig$Builder instance using the provided configuration.
   The function takes the S3OriginConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6156,11 +6156,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-s3-origin-config-builder (new S3OriginConfig$Builder) id config))
+  (s3-origin-config-builder> (new S3OriginConfig$Builder) id config))
 
 
-(defn build-source-configuration-builder
-  "The build-source-configuration-builder function updates a SourceConfiguration$Builder instance using the provided configuration.
+(defn source-configuration-builder>
+  "The source-configuration-builder> function updates a SourceConfiguration$Builder instance using the provided configuration.
   The function takes the SourceConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6208,11 +6208,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-source-configuration-builder (new SourceConfiguration$Builder) id config))
+  (source-configuration-builder> (new SourceConfiguration$Builder) id config))
 
 
-(defn build-viewer-certificate-options-builder
-  "The build-viewer-certificate-options-builder function updates a ViewerCertificateOptions$Builder instance using the provided configuration.
+(defn viewer-certificate-options-builder>
+  "The viewer-certificate-options-builder> function updates a ViewerCertificateOptions$Builder instance using the provided configuration.
   The function takes the ViewerCertificateOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -6242,4 +6242,4 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-viewer-certificate-options-builder (new ViewerCertificateOptions$Builder) id config))
+  (viewer-certificate-options-builder> (new ViewerCertificateOptions$Builder) id config))

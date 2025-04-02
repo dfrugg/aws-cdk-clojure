@@ -5,8 +5,8 @@
                                                           CfnHypervisorProps$Builder]))
 
 
-(defn build-cfn-hypervisor-builder
-  "The build-cfn-hypervisor-builder function updates a CfnHypervisor$Builder instance using the provided configuration.
+(defn cfn-hypervisor-builder>
+  "The cfn-hypervisor-builder> function updates a CfnHypervisor$Builder instance using the provided configuration.
   The function takes the CfnHypervisor$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -48,11 +48,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-hypervisor-builder (CfnHypervisor$Builder/create scope (name id)) id config))
+  (cfn-hypervisor-builder> (CfnHypervisor$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-hypervisor-props-builder
-  "The build-cfn-hypervisor-props-builder function updates a CfnHypervisorProps$Builder instance using the provided configuration.
+(defn cfn-hypervisor-props-builder>
+  "The cfn-hypervisor-props-builder> function updates a CfnHypervisorProps$Builder instance using the provided configuration.
   The function takes the CfnHypervisorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -94,4 +94,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-hypervisor-props-builder (new CfnHypervisorProps$Builder) id config))
+  (cfn-hypervisor-props-builder> (new CfnHypervisorProps$Builder) id config))

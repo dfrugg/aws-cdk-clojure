@@ -15,8 +15,8 @@
                                                                    CfnSafetyRuleProps$Builder]))
 
 
-(defn build-cfn-cluster-builder
-  "The build-cfn-cluster-builder function updates a CfnCluster$Builder instance using the provided configuration.
+(defn cfn-cluster-builder>
+  "The cfn-cluster-builder> function updates a CfnCluster$Builder instance using the provided configuration.
   The function takes the CfnCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -43,11 +43,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+  (cfn-cluster-builder> (CfnCluster$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-cluster-cluster-endpoint-property-builder
-  "The build-cfn-cluster-cluster-endpoint-property-builder function updates a CfnCluster$ClusterEndpointProperty$Builder instance using the provided configuration.
+(defn cfn-cluster-cluster-endpoint-property-builder>
+  "The cfn-cluster-cluster-endpoint-property-builder> function updates a CfnCluster$ClusterEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ClusterEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -74,11 +74,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-cluster-endpoint-property-builder (new CfnCluster$ClusterEndpointProperty$Builder) id config))
+  (cfn-cluster-cluster-endpoint-property-builder> (new CfnCluster$ClusterEndpointProperty$Builder) id config))
 
 
-(defn build-cfn-cluster-props-builder
-  "The build-cfn-cluster-props-builder function updates a CfnClusterProps$Builder instance using the provided configuration.
+(defn cfn-cluster-props-builder>
+  "The cfn-cluster-props-builder> function updates a CfnClusterProps$Builder instance using the provided configuration.
   The function takes the CfnClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -105,11 +105,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
+  (cfn-cluster-props-builder> (new CfnClusterProps$Builder) id config))
 
 
-(defn build-cfn-control-panel-builder
-  "The build-cfn-control-panel-builder function updates a CfnControlPanel$Builder instance using the provided configuration.
+(defn cfn-control-panel-builder>
+  "The cfn-control-panel-builder> function updates a CfnControlPanel$Builder instance using the provided configuration.
   The function takes the CfnControlPanel$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -139,11 +139,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-control-panel-builder (CfnControlPanel$Builder/create scope (name id)) id config))
+  (cfn-control-panel-builder> (CfnControlPanel$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-control-panel-props-builder
-  "The build-cfn-control-panel-props-builder function updates a CfnControlPanelProps$Builder instance using the provided configuration.
+(defn cfn-control-panel-props-builder>
+  "The cfn-control-panel-props-builder> function updates a CfnControlPanelProps$Builder instance using the provided configuration.
   The function takes the CfnControlPanelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -173,11 +173,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-control-panel-props-builder (new CfnControlPanelProps$Builder) id config))
+  (cfn-control-panel-props-builder> (new CfnControlPanelProps$Builder) id config))
 
 
-(defn build-cfn-routing-control-builder
-  "The build-cfn-routing-control-builder function updates a CfnRoutingControl$Builder instance using the provided configuration.
+(defn cfn-routing-control-builder>
+  "The cfn-routing-control-builder> function updates a CfnRoutingControl$Builder instance using the provided configuration.
   The function takes the CfnRoutingControl$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -207,11 +207,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-routing-control-builder (CfnRoutingControl$Builder/create scope (name id)) id config))
+  (cfn-routing-control-builder> (CfnRoutingControl$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-routing-control-props-builder
-  "The build-cfn-routing-control-props-builder function updates a CfnRoutingControlProps$Builder instance using the provided configuration.
+(defn cfn-routing-control-props-builder>
+  "The cfn-routing-control-props-builder> function updates a CfnRoutingControlProps$Builder instance using the provided configuration.
   The function takes the CfnRoutingControlProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -241,11 +241,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-routing-control-props-builder (new CfnRoutingControlProps$Builder) id config))
+  (cfn-routing-control-props-builder> (new CfnRoutingControlProps$Builder) id config))
 
 
-(defn build-cfn-safety-rule-assertion-rule-property-builder
-  "The build-cfn-safety-rule-assertion-rule-property-builder function updates a CfnSafetyRule$AssertionRuleProperty$Builder instance using the provided configuration.
+(defn cfn-safety-rule-assertion-rule-property-builder>
+  "The cfn-safety-rule-assertion-rule-property-builder> function updates a CfnSafetyRule$AssertionRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnSafetyRule$AssertionRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -272,11 +272,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-safety-rule-assertion-rule-property-builder (new CfnSafetyRule$AssertionRuleProperty$Builder) id config))
+  (cfn-safety-rule-assertion-rule-property-builder> (new CfnSafetyRule$AssertionRuleProperty$Builder) id config))
 
 
-(defn build-cfn-safety-rule-builder
-  "The build-cfn-safety-rule-builder function updates a CfnSafetyRule$Builder instance using the provided configuration.
+(defn cfn-safety-rule-builder>
+  "The cfn-safety-rule-builder> function updates a CfnSafetyRule$Builder instance using the provided configuration.
   The function takes the CfnSafetyRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -315,11 +315,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-safety-rule-builder (CfnSafetyRule$Builder/create scope (name id)) id config))
+  (cfn-safety-rule-builder> (CfnSafetyRule$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-safety-rule-gating-rule-property-builder
-  "The build-cfn-safety-rule-gating-rule-property-builder function updates a CfnSafetyRule$GatingRuleProperty$Builder instance using the provided configuration.
+(defn cfn-safety-rule-gating-rule-property-builder>
+  "The cfn-safety-rule-gating-rule-property-builder> function updates a CfnSafetyRule$GatingRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnSafetyRule$GatingRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -349,11 +349,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-safety-rule-gating-rule-property-builder (new CfnSafetyRule$GatingRuleProperty$Builder) id config))
+  (cfn-safety-rule-gating-rule-property-builder> (new CfnSafetyRule$GatingRuleProperty$Builder) id config))
 
 
-(defn build-cfn-safety-rule-props-builder
-  "The build-cfn-safety-rule-props-builder function updates a CfnSafetyRuleProps$Builder instance using the provided configuration.
+(defn cfn-safety-rule-props-builder>
+  "The cfn-safety-rule-props-builder> function updates a CfnSafetyRuleProps$Builder instance using the provided configuration.
   The function takes the CfnSafetyRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -392,11 +392,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-safety-rule-props-builder (new CfnSafetyRuleProps$Builder) id config))
+  (cfn-safety-rule-props-builder> (new CfnSafetyRuleProps$Builder) id config))
 
 
-(defn build-cfn-safety-rule-rule-config-property-builder
-  "The build-cfn-safety-rule-rule-config-property-builder function updates a CfnSafetyRule$RuleConfigProperty$Builder instance using the provided configuration.
+(defn cfn-safety-rule-rule-config-property-builder>
+  "The cfn-safety-rule-rule-config-property-builder> function updates a CfnSafetyRule$RuleConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSafetyRule$RuleConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -426,4 +426,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-safety-rule-rule-config-property-builder (new CfnSafetyRule$RuleConfigProperty$Builder) id config))
+  (cfn-safety-rule-rule-config-property-builder> (new CfnSafetyRule$RuleConfigProperty$Builder) id config))

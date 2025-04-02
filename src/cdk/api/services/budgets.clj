@@ -24,8 +24,8 @@
                                                     CfnBudgetsActionProps$Builder]))
 
 
-(defn build-cfn-budget-auto-adjust-data-property-builder
-  "The build-cfn-budget-auto-adjust-data-property-builder function updates a CfnBudget$AutoAdjustDataProperty$Builder instance using the provided configuration.
+(defn cfn-budget-auto-adjust-data-property-builder>
+  "The cfn-budget-auto-adjust-data-property-builder> function updates a CfnBudget$AutoAdjustDataProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$AutoAdjustDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -52,11 +52,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-auto-adjust-data-property-builder (new CfnBudget$AutoAdjustDataProperty$Builder) id config))
+  (cfn-budget-auto-adjust-data-property-builder> (new CfnBudget$AutoAdjustDataProperty$Builder) id config))
 
 
-(defn build-cfn-budget-budget-data-property-builder
-  "The build-cfn-budget-budget-data-property-builder function updates a CfnBudget$BudgetDataProperty$Builder instance using the provided configuration.
+(defn cfn-budget-budget-data-property-builder>
+  "The cfn-budget-budget-data-property-builder> function updates a CfnBudget$BudgetDataProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$BudgetDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -104,11 +104,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-budget-data-property-builder (new CfnBudget$BudgetDataProperty$Builder) id config))
+  (cfn-budget-budget-data-property-builder> (new CfnBudget$BudgetDataProperty$Builder) id config))
 
 
-(defn build-cfn-budget-builder
-  "The build-cfn-budget-builder function updates a CfnBudget$Builder instance using the provided configuration.
+(defn cfn-budget-builder>
+  "The cfn-budget-builder> function updates a CfnBudget$Builder instance using the provided configuration.
   The function takes the CfnBudget$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -138,11 +138,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-budget-builder (CfnBudget$Builder/create scope (name id)) id config))
+  (cfn-budget-builder> (CfnBudget$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-budget-cost-types-property-builder
-  "The build-cfn-budget-cost-types-property-builder function updates a CfnBudget$CostTypesProperty$Builder instance using the provided configuration.
+(defn cfn-budget-cost-types-property-builder>
+  "The cfn-budget-cost-types-property-builder> function updates a CfnBudget$CostTypesProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$CostTypesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -196,11 +196,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-cost-types-property-builder (new CfnBudget$CostTypesProperty$Builder) id config))
+  (cfn-budget-cost-types-property-builder> (new CfnBudget$CostTypesProperty$Builder) id config))
 
 
-(defn build-cfn-budget-historical-options-property-builder
-  "The build-cfn-budget-historical-options-property-builder function updates a CfnBudget$HistoricalOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-budget-historical-options-property-builder>
+  "The cfn-budget-historical-options-property-builder> function updates a CfnBudget$HistoricalOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$HistoricalOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -224,11 +224,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-historical-options-property-builder (new CfnBudget$HistoricalOptionsProperty$Builder) id config))
+  (cfn-budget-historical-options-property-builder> (new CfnBudget$HistoricalOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-budget-notification-property-builder
-  "The build-cfn-budget-notification-property-builder function updates a CfnBudget$NotificationProperty$Builder instance using the provided configuration.
+(defn cfn-budget-notification-property-builder>
+  "The cfn-budget-notification-property-builder> function updates a CfnBudget$NotificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$NotificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -261,11 +261,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-notification-property-builder (new CfnBudget$NotificationProperty$Builder) id config))
+  (cfn-budget-notification-property-builder> (new CfnBudget$NotificationProperty$Builder) id config))
 
 
-(defn build-cfn-budget-notification-with-subscribers-property-builder
-  "The build-cfn-budget-notification-with-subscribers-property-builder function updates a CfnBudget$NotificationWithSubscribersProperty$Builder instance using the provided configuration.
+(defn cfn-budget-notification-with-subscribers-property-builder>
+  "The cfn-budget-notification-with-subscribers-property-builder> function updates a CfnBudget$NotificationWithSubscribersProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$NotificationWithSubscribersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -292,11 +292,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-notification-with-subscribers-property-builder (new CfnBudget$NotificationWithSubscribersProperty$Builder) id config))
+  (cfn-budget-notification-with-subscribers-property-builder> (new CfnBudget$NotificationWithSubscribersProperty$Builder) id config))
 
 
-(defn build-cfn-budget-props-builder
-  "The build-cfn-budget-props-builder function updates a CfnBudgetProps$Builder instance using the provided configuration.
+(defn cfn-budget-props-builder>
+  "The cfn-budget-props-builder> function updates a CfnBudgetProps$Builder instance using the provided configuration.
   The function takes the CfnBudgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -326,11 +326,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-props-builder (new CfnBudgetProps$Builder) id config))
+  (cfn-budget-props-builder> (new CfnBudgetProps$Builder) id config))
 
 
-(defn build-cfn-budget-resource-tag-property-builder
-  "The build-cfn-budget-resource-tag-property-builder function updates a CfnBudget$ResourceTagProperty$Builder instance using the provided configuration.
+(defn cfn-budget-resource-tag-property-builder>
+  "The cfn-budget-resource-tag-property-builder> function updates a CfnBudget$ResourceTagProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$ResourceTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -357,11 +357,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-resource-tag-property-builder (new CfnBudget$ResourceTagProperty$Builder) id config))
+  (cfn-budget-resource-tag-property-builder> (new CfnBudget$ResourceTagProperty$Builder) id config))
 
 
-(defn build-cfn-budget-spend-property-builder
-  "The build-cfn-budget-spend-property-builder function updates a CfnBudget$SpendProperty$Builder instance using the provided configuration.
+(defn cfn-budget-spend-property-builder>
+  "The cfn-budget-spend-property-builder> function updates a CfnBudget$SpendProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$SpendProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -388,11 +388,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-spend-property-builder (new CfnBudget$SpendProperty$Builder) id config))
+  (cfn-budget-spend-property-builder> (new CfnBudget$SpendProperty$Builder) id config))
 
 
-(defn build-cfn-budget-subscriber-property-builder
-  "The build-cfn-budget-subscriber-property-builder function updates a CfnBudget$SubscriberProperty$Builder instance using the provided configuration.
+(defn cfn-budget-subscriber-property-builder>
+  "The cfn-budget-subscriber-property-builder> function updates a CfnBudget$SubscriberProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$SubscriberProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -419,11 +419,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-subscriber-property-builder (new CfnBudget$SubscriberProperty$Builder) id config))
+  (cfn-budget-subscriber-property-builder> (new CfnBudget$SubscriberProperty$Builder) id config))
 
 
-(defn build-cfn-budget-time-period-property-builder
-  "The build-cfn-budget-time-period-property-builder function updates a CfnBudget$TimePeriodProperty$Builder instance using the provided configuration.
+(defn cfn-budget-time-period-property-builder>
+  "The cfn-budget-time-period-property-builder> function updates a CfnBudget$TimePeriodProperty$Builder instance using the provided configuration.
   The function takes the CfnBudget$TimePeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -450,11 +450,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budget-time-period-property-builder (new CfnBudget$TimePeriodProperty$Builder) id config))
+  (cfn-budget-time-period-property-builder> (new CfnBudget$TimePeriodProperty$Builder) id config))
 
 
-(defn build-cfn-budgets-action-action-threshold-property-builder
-  "The build-cfn-budgets-action-action-threshold-property-builder function updates a CfnBudgetsAction$ActionThresholdProperty$Builder instance using the provided configuration.
+(defn cfn-budgets-action-action-threshold-property-builder>
+  "The cfn-budgets-action-action-threshold-property-builder> function updates a CfnBudgetsAction$ActionThresholdProperty$Builder instance using the provided configuration.
   The function takes the CfnBudgetsAction$ActionThresholdProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -481,11 +481,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budgets-action-action-threshold-property-builder (new CfnBudgetsAction$ActionThresholdProperty$Builder) id config))
+  (cfn-budgets-action-action-threshold-property-builder> (new CfnBudgetsAction$ActionThresholdProperty$Builder) id config))
 
 
-(defn build-cfn-budgets-action-builder
-  "The build-cfn-budgets-action-builder function updates a CfnBudgetsAction$Builder instance using the provided configuration.
+(defn cfn-budgets-action-builder>
+  "The cfn-budgets-action-builder> function updates a CfnBudgetsAction$Builder instance using the provided configuration.
   The function takes the CfnBudgetsAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -533,11 +533,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-budgets-action-builder (CfnBudgetsAction$Builder/create scope (name id)) id config))
+  (cfn-budgets-action-builder> (CfnBudgetsAction$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-budgets-action-definition-property-builder
-  "The build-cfn-budgets-action-definition-property-builder function updates a CfnBudgetsAction$DefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-budgets-action-definition-property-builder>
+  "The cfn-budgets-action-definition-property-builder> function updates a CfnBudgetsAction$DefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnBudgetsAction$DefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -567,11 +567,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budgets-action-definition-property-builder (new CfnBudgetsAction$DefinitionProperty$Builder) id config))
+  (cfn-budgets-action-definition-property-builder> (new CfnBudgetsAction$DefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-budgets-action-iam-action-definition-property-builder
-  "The build-cfn-budgets-action-iam-action-definition-property-builder function updates a CfnBudgetsAction$IamActionDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-budgets-action-iam-action-definition-property-builder>
+  "The cfn-budgets-action-iam-action-definition-property-builder> function updates a CfnBudgetsAction$IamActionDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnBudgetsAction$IamActionDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -604,11 +604,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budgets-action-iam-action-definition-property-builder (new CfnBudgetsAction$IamActionDefinitionProperty$Builder) id config))
+  (cfn-budgets-action-iam-action-definition-property-builder> (new CfnBudgetsAction$IamActionDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-budgets-action-props-builder
-  "The build-cfn-budgets-action-props-builder function updates a CfnBudgetsActionProps$Builder instance using the provided configuration.
+(defn cfn-budgets-action-props-builder>
+  "The cfn-budgets-action-props-builder> function updates a CfnBudgetsActionProps$Builder instance using the provided configuration.
   The function takes the CfnBudgetsActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -656,11 +656,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budgets-action-props-builder (new CfnBudgetsActionProps$Builder) id config))
+  (cfn-budgets-action-props-builder> (new CfnBudgetsActionProps$Builder) id config))
 
 
-(defn build-cfn-budgets-action-resource-tag-property-builder
-  "The build-cfn-budgets-action-resource-tag-property-builder function updates a CfnBudgetsAction$ResourceTagProperty$Builder instance using the provided configuration.
+(defn cfn-budgets-action-resource-tag-property-builder>
+  "The cfn-budgets-action-resource-tag-property-builder> function updates a CfnBudgetsAction$ResourceTagProperty$Builder instance using the provided configuration.
   The function takes the CfnBudgetsAction$ResourceTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -687,11 +687,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budgets-action-resource-tag-property-builder (new CfnBudgetsAction$ResourceTagProperty$Builder) id config))
+  (cfn-budgets-action-resource-tag-property-builder> (new CfnBudgetsAction$ResourceTagProperty$Builder) id config))
 
 
-(defn build-cfn-budgets-action-scp-action-definition-property-builder
-  "The build-cfn-budgets-action-scp-action-definition-property-builder function updates a CfnBudgetsAction$ScpActionDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-budgets-action-scp-action-definition-property-builder>
+  "The cfn-budgets-action-scp-action-definition-property-builder> function updates a CfnBudgetsAction$ScpActionDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnBudgetsAction$ScpActionDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -718,11 +718,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budgets-action-scp-action-definition-property-builder (new CfnBudgetsAction$ScpActionDefinitionProperty$Builder) id config))
+  (cfn-budgets-action-scp-action-definition-property-builder> (new CfnBudgetsAction$ScpActionDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-budgets-action-ssm-action-definition-property-builder
-  "The build-cfn-budgets-action-ssm-action-definition-property-builder function updates a CfnBudgetsAction$SsmActionDefinitionProperty$Builder instance using the provided configuration.
+(defn cfn-budgets-action-ssm-action-definition-property-builder>
+  "The cfn-budgets-action-ssm-action-definition-property-builder> function updates a CfnBudgetsAction$SsmActionDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnBudgetsAction$SsmActionDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -752,11 +752,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budgets-action-ssm-action-definition-property-builder (new CfnBudgetsAction$SsmActionDefinitionProperty$Builder) id config))
+  (cfn-budgets-action-ssm-action-definition-property-builder> (new CfnBudgetsAction$SsmActionDefinitionProperty$Builder) id config))
 
 
-(defn build-cfn-budgets-action-subscriber-property-builder
-  "The build-cfn-budgets-action-subscriber-property-builder function updates a CfnBudgetsAction$SubscriberProperty$Builder instance using the provided configuration.
+(defn cfn-budgets-action-subscriber-property-builder>
+  "The cfn-budgets-action-subscriber-property-builder> function updates a CfnBudgetsAction$SubscriberProperty$Builder instance using the provided configuration.
   The function takes the CfnBudgetsAction$SubscriberProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -783,4 +783,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-budgets-action-subscriber-property-builder (new CfnBudgetsAction$SubscriberProperty$Builder) id config))
+  (cfn-budgets-action-subscriber-property-builder> (new CfnBudgetsAction$SubscriberProperty$Builder) id config))

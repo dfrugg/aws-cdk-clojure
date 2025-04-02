@@ -9,8 +9,8 @@
                                                                 CfnSyncConfigurationProps$Builder]))
 
 
-(defn build-cfn-connection-builder
-  "The build-cfn-connection-builder function updates a CfnConnection$Builder instance using the provided configuration.
+(defn cfn-connection-builder>
+  "The cfn-connection-builder> function updates a CfnConnection$Builder instance using the provided configuration.
   The function takes the CfnConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -43,11 +43,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-connection-builder (CfnConnection$Builder/create scope (name id)) id config))
+  (cfn-connection-builder> (CfnConnection$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-connection-props-builder
-  "The build-cfn-connection-props-builder function updates a CfnConnectionProps$Builder instance using the provided configuration.
+(defn cfn-connection-props-builder>
+  "The cfn-connection-props-builder> function updates a CfnConnectionProps$Builder instance using the provided configuration.
   The function takes the CfnConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -80,11 +80,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-connection-props-builder (new CfnConnectionProps$Builder) id config))
+  (cfn-connection-props-builder> (new CfnConnectionProps$Builder) id config))
 
 
-(defn build-cfn-repository-link-builder
-  "The build-cfn-repository-link-builder function updates a CfnRepositoryLink$Builder instance using the provided configuration.
+(defn cfn-repository-link-builder>
+  "The cfn-repository-link-builder> function updates a CfnRepositoryLink$Builder instance using the provided configuration.
   The function takes the CfnRepositoryLink$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -120,11 +120,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-repository-link-builder (CfnRepositoryLink$Builder/create scope (name id)) id config))
+  (cfn-repository-link-builder> (CfnRepositoryLink$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-repository-link-props-builder
-  "The build-cfn-repository-link-props-builder function updates a CfnRepositoryLinkProps$Builder instance using the provided configuration.
+(defn cfn-repository-link-props-builder>
+  "The cfn-repository-link-props-builder> function updates a CfnRepositoryLinkProps$Builder instance using the provided configuration.
   The function takes the CfnRepositoryLinkProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -160,11 +160,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-repository-link-props-builder (new CfnRepositoryLinkProps$Builder) id config))
+  (cfn-repository-link-props-builder> (new CfnRepositoryLinkProps$Builder) id config))
 
 
-(defn build-cfn-sync-configuration-builder
-  "The build-cfn-sync-configuration-builder function updates a CfnSyncConfiguration$Builder instance using the provided configuration.
+(defn cfn-sync-configuration-builder>
+  "The cfn-sync-configuration-builder> function updates a CfnSyncConfiguration$Builder instance using the provided configuration.
   The function takes the CfnSyncConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -209,11 +209,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-sync-configuration-builder (CfnSyncConfiguration$Builder/create scope (name id)) id config))
+  (cfn-sync-configuration-builder> (CfnSyncConfiguration$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-sync-configuration-props-builder
-  "The build-cfn-sync-configuration-props-builder function updates a CfnSyncConfigurationProps$Builder instance using the provided configuration.
+(defn cfn-sync-configuration-props-builder>
+  "The cfn-sync-configuration-props-builder> function updates a CfnSyncConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnSyncConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -258,4 +258,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-sync-configuration-props-builder (new CfnSyncConfigurationProps$Builder) id config))
+  (cfn-sync-configuration-props-builder> (new CfnSyncConfigurationProps$Builder) id config))

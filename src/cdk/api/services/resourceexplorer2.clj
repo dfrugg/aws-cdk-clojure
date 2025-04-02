@@ -12,8 +12,8 @@
                                                               CfnViewProps$Builder]))
 
 
-(defn build-cfn-default-view-association-builder
-  "The build-cfn-default-view-association-builder function updates a CfnDefaultViewAssociation$Builder instance using the provided configuration.
+(defn cfn-default-view-association-builder>
+  "The cfn-default-view-association-builder> function updates a CfnDefaultViewAssociation$Builder instance using the provided configuration.
   The function takes the CfnDefaultViewAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -37,11 +37,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-default-view-association-builder (CfnDefaultViewAssociation$Builder/create scope (name id)) id config))
+  (cfn-default-view-association-builder> (CfnDefaultViewAssociation$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-default-view-association-props-builder
-  "The build-cfn-default-view-association-props-builder function updates a CfnDefaultViewAssociationProps$Builder instance using the provided configuration.
+(defn cfn-default-view-association-props-builder>
+  "The cfn-default-view-association-props-builder> function updates a CfnDefaultViewAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnDefaultViewAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -65,11 +65,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-default-view-association-props-builder (new CfnDefaultViewAssociationProps$Builder) id config))
+  (cfn-default-view-association-props-builder> (new CfnDefaultViewAssociationProps$Builder) id config))
 
 
-(defn build-cfn-index-builder
-  "The build-cfn-index-builder function updates a CfnIndex$Builder instance using the provided configuration.
+(defn cfn-index-builder>
+  "The cfn-index-builder> function updates a CfnIndex$Builder instance using the provided configuration.
   The function takes the CfnIndex$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -96,11 +96,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-index-builder (CfnIndex$Builder/create scope (name id)) id config))
+  (cfn-index-builder> (CfnIndex$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-index-props-builder
-  "The build-cfn-index-props-builder function updates a CfnIndexProps$Builder instance using the provided configuration.
+(defn cfn-index-props-builder>
+  "The cfn-index-props-builder> function updates a CfnIndexProps$Builder instance using the provided configuration.
   The function takes the CfnIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -127,11 +127,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-index-props-builder (new CfnIndexProps$Builder) id config))
+  (cfn-index-props-builder> (new CfnIndexProps$Builder) id config))
 
 
-(defn build-cfn-view-builder
-  "The build-cfn-view-builder function updates a CfnView$Builder instance using the provided configuration.
+(defn cfn-view-builder>
+  "The cfn-view-builder> function updates a CfnView$Builder instance using the provided configuration.
   The function takes the CfnView$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -167,11 +167,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-view-builder (CfnView$Builder/create scope (name id)) id config))
+  (cfn-view-builder> (CfnView$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-view-filters-property-builder
-  "The build-cfn-view-filters-property-builder function updates a CfnView$FiltersProperty$Builder instance using the provided configuration.
+(defn cfn-view-filters-property-builder>
+  "The cfn-view-filters-property-builder> function updates a CfnView$FiltersProperty$Builder instance using the provided configuration.
   The function takes the CfnView$FiltersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -195,11 +195,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-view-filters-property-builder (new CfnView$FiltersProperty$Builder) id config))
+  (cfn-view-filters-property-builder> (new CfnView$FiltersProperty$Builder) id config))
 
 
-(defn build-cfn-view-included-property-property-builder
-  "The build-cfn-view-included-property-property-builder function updates a CfnView$IncludedPropertyProperty$Builder instance using the provided configuration.
+(defn cfn-view-included-property-property-builder>
+  "The cfn-view-included-property-property-builder> function updates a CfnView$IncludedPropertyProperty$Builder instance using the provided configuration.
   The function takes the CfnView$IncludedPropertyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -223,11 +223,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-view-included-property-property-builder (new CfnView$IncludedPropertyProperty$Builder) id config))
+  (cfn-view-included-property-property-builder> (new CfnView$IncludedPropertyProperty$Builder) id config))
 
 
-(defn build-cfn-view-props-builder
-  "The build-cfn-view-props-builder function updates a CfnViewProps$Builder instance using the provided configuration.
+(defn cfn-view-props-builder>
+  "The cfn-view-props-builder> function updates a CfnViewProps$Builder instance using the provided configuration.
   The function takes the CfnViewProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -263,11 +263,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-view-props-builder (new CfnViewProps$Builder) id config))
+  (cfn-view-props-builder> (new CfnViewProps$Builder) id config))
 
 
-(defn build-cfn-view-search-filter-property-builder
-  "The build-cfn-view-search-filter-property-builder function updates a CfnView$SearchFilterProperty$Builder instance using the provided configuration.
+(defn cfn-view-search-filter-property-builder>
+  "The cfn-view-search-filter-property-builder> function updates a CfnView$SearchFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnView$SearchFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -291,4 +291,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-view-search-filter-property-builder (new CfnView$SearchFilterProperty$Builder) id config))
+  (cfn-view-search-filter-property-builder> (new CfnView$SearchFilterProperty$Builder) id config))

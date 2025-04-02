@@ -8,8 +8,8 @@
                                                  CfnStreamProps$Builder]))
 
 
-(defn build-cfn-ledger-builder
-  "The build-cfn-ledger-builder function updates a CfnLedger$Builder instance using the provided configuration.
+(defn cfn-ledger-builder>
+  "The cfn-ledger-builder> function updates a CfnLedger$Builder instance using the provided configuration.
   The function takes the CfnLedger$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -45,11 +45,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-ledger-builder (CfnLedger$Builder/create scope (name id)) id config))
+  (cfn-ledger-builder> (CfnLedger$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-ledger-props-builder
-  "The build-cfn-ledger-props-builder function updates a CfnLedgerProps$Builder instance using the provided configuration.
+(defn cfn-ledger-props-builder>
+  "The cfn-ledger-props-builder> function updates a CfnLedgerProps$Builder instance using the provided configuration.
   The function takes the CfnLedgerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -85,11 +85,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-ledger-props-builder (new CfnLedgerProps$Builder) id config))
+  (cfn-ledger-props-builder> (new CfnLedgerProps$Builder) id config))
 
 
-(defn build-cfn-stream-builder
-  "The build-cfn-stream-builder function updates a CfnStream$Builder instance using the provided configuration.
+(defn cfn-stream-builder>
+  "The cfn-stream-builder> function updates a CfnStream$Builder instance using the provided configuration.
   The function takes the CfnStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -131,11 +131,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-stream-builder (CfnStream$Builder/create scope (name id)) id config))
+  (cfn-stream-builder> (CfnStream$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-stream-kinesis-configuration-property-builder
-  "The build-cfn-stream-kinesis-configuration-property-builder function updates a CfnStream$KinesisConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-stream-kinesis-configuration-property-builder>
+  "The cfn-stream-kinesis-configuration-property-builder> function updates a CfnStream$KinesisConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnStream$KinesisConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -162,11 +162,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-kinesis-configuration-property-builder (new CfnStream$KinesisConfigurationProperty$Builder) id config))
+  (cfn-stream-kinesis-configuration-property-builder> (new CfnStream$KinesisConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-stream-props-builder
-  "The build-cfn-stream-props-builder function updates a CfnStreamProps$Builder instance using the provided configuration.
+(defn cfn-stream-props-builder>
+  "The cfn-stream-props-builder> function updates a CfnStreamProps$Builder instance using the provided configuration.
   The function takes the CfnStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -208,4 +208,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-stream-props-builder (new CfnStreamProps$Builder) id config))
+  (cfn-stream-props-builder> (new CfnStreamProps$Builder) id config))

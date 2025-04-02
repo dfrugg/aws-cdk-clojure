@@ -17,8 +17,8 @@
            [software.amazon.awscdk.services.sqs IQueue]))
 
 
-(defn build-email-subscription-builder
-  "The build-email-subscription-builder function updates a EmailSubscription$Builder instance using the provided configuration.
+(defn email-subscription-builder>
+  "The email-subscription-builder> function updates a EmailSubscription$Builder instance using the provided configuration.
   The function takes the EmailSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -54,11 +54,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String email id config]
-  (build-email-subscription-builder (EmailSubscription$Builder/create email) id config))
+  (email-subscription-builder> (EmailSubscription$Builder/create email) id config))
 
 
-(defn build-email-subscription-props-builder
-  "The build-email-subscription-props-builder function updates a EmailSubscriptionProps$Builder instance using the provided configuration.
+(defn email-subscription-props-builder>
+  "The email-subscription-props-builder> function updates a EmailSubscriptionProps$Builder instance using the provided configuration.
   The function takes the EmailSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -91,11 +91,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-email-subscription-props-builder (new EmailSubscriptionProps$Builder) id config))
+  (email-subscription-props-builder> (new EmailSubscriptionProps$Builder) id config))
 
 
-(defn build-lambda-subscription-builder
-  "The build-lambda-subscription-builder function updates a LambdaSubscription$Builder instance using the provided configuration.
+(defn lambda-subscription-builder>
+  "The lambda-subscription-builder> function updates a LambdaSubscription$Builder instance using the provided configuration.
   The function takes the LambdaSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -128,11 +128,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IFunction handler id config]
-  (build-lambda-subscription-builder (LambdaSubscription$Builder/create handler) id config))
+  (lambda-subscription-builder> (LambdaSubscription$Builder/create handler) id config))
 
 
-(defn build-lambda-subscription-props-builder
-  "The build-lambda-subscription-props-builder function updates a LambdaSubscriptionProps$Builder instance using the provided configuration.
+(defn lambda-subscription-props-builder>
+  "The lambda-subscription-props-builder> function updates a LambdaSubscriptionProps$Builder instance using the provided configuration.
   The function takes the LambdaSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -162,11 +162,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunction]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-lambda-subscription-props-builder (new LambdaSubscriptionProps$Builder) id config))
+  (lambda-subscription-props-builder> (new LambdaSubscriptionProps$Builder) id config))
 
 
-(defn build-sms-subscription-builder
-  "The build-sms-subscription-builder function updates a SmsSubscription$Builder instance using the provided configuration.
+(defn sms-subscription-builder>
+  "The sms-subscription-builder> function updates a SmsSubscription$Builder instance using the provided configuration.
   The function takes the SmsSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -199,11 +199,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String phone-number id config]
-  (build-sms-subscription-builder (SmsSubscription$Builder/create phone-number) id config))
+  (sms-subscription-builder> (SmsSubscription$Builder/create phone-number) id config))
 
 
-(defn build-sms-subscription-props-builder
-  "The build-sms-subscription-props-builder function updates a SmsSubscriptionProps$Builder instance using the provided configuration.
+(defn sms-subscription-props-builder>
+  "The sms-subscription-props-builder> function updates a SmsSubscriptionProps$Builder instance using the provided configuration.
   The function takes the SmsSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -233,11 +233,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-sms-subscription-props-builder (new SmsSubscriptionProps$Builder) id config))
+  (sms-subscription-props-builder> (new SmsSubscriptionProps$Builder) id config))
 
 
-(defn build-sqs-subscription-builder
-  "The build-sqs-subscription-builder function updates a SqsSubscription$Builder instance using the provided configuration.
+(defn sqs-subscription-builder>
+  "The sqs-subscription-builder> function updates a SqsSubscription$Builder instance using the provided configuration.
   The function takes the SqsSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -273,11 +273,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^IQueue queue id config]
-  (build-sqs-subscription-builder (SqsSubscription$Builder/create queue) id config))
+  (sqs-subscription-builder> (SqsSubscription$Builder/create queue) id config))
 
 
-(defn build-sqs-subscription-props-builder
-  "The build-sqs-subscription-props-builder function updates a SqsSubscriptionProps$Builder instance using the provided configuration.
+(defn sqs-subscription-props-builder>
+  "The sqs-subscription-props-builder> function updates a SqsSubscriptionProps$Builder instance using the provided configuration.
   The function takes the SqsSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -310,11 +310,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-sqs-subscription-props-builder (new SqsSubscriptionProps$Builder) id config))
+  (sqs-subscription-props-builder> (new SqsSubscriptionProps$Builder) id config))
 
 
-(defn build-subscription-props-builder
-  "The build-subscription-props-builder function updates a SubscriptionProps$Builder instance using the provided configuration.
+(defn subscription-props-builder>
+  "The subscription-props-builder> function updates a SubscriptionProps$Builder instance using the provided configuration.
   The function takes the SubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -344,11 +344,11 @@ __Create Form:__ ____[software.amazon.awscdk.services.sqs.IQueue]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-subscription-props-builder (new SubscriptionProps$Builder) id config))
+  (subscription-props-builder> (new SubscriptionProps$Builder) id config))
 
 
-(defn build-url-subscription-builder
-  "The build-url-subscription-builder function updates a UrlSubscription$Builder instance using the provided configuration.
+(defn url-subscription-builder>
+  "The url-subscription-builder> function updates a UrlSubscription$Builder instance using the provided configuration.
   The function takes the UrlSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -387,11 +387,11 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^String url id config]
-  (build-url-subscription-builder (UrlSubscription$Builder/create url) id config))
+  (url-subscription-builder> (UrlSubscription$Builder/create url) id config))
 
 
-(defn build-url-subscription-props-builder
-  "The build-url-subscription-props-builder function updates a UrlSubscriptionProps$Builder instance using the provided configuration.
+(defn url-subscription-props-builder>
+  "The url-subscription-props-builder> function updates a UrlSubscriptionProps$Builder instance using the provided configuration.
   The function takes the UrlSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -427,4 +427,4 @@ __Create Form:__ ____[java.lang.String]___
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-url-subscription-props-builder (new UrlSubscriptionProps$Builder) id config))
+  (url-subscription-props-builder> (new UrlSubscriptionProps$Builder) id config))

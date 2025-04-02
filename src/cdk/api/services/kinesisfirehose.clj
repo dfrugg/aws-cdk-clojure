@@ -55,8 +55,8 @@
                                                             CfnDeliveryStreamProps$Builder]))
 
 
-(defn build-cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder
-  "The build-cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder function updates a CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder>
+  "The cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder> function updates a CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -83,11 +83,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder (new CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder) id config))
+  (cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder> (new CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder function updates a CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder>
+  "The cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder> function updates a CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -138,11 +138,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder (new CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder> (new CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder
-  "The build-cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder function updates a CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder>
+  "The cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder> function updates a CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -166,11 +166,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder (new CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder> (new CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder
-  "The build-cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder function updates a CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder>
+  "The cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder> function updates a CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -197,11 +197,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder (new CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder) id config))
+  (cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder> (new CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder function updates a CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder>
+  "The cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder> function updates a CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -264,11 +264,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder (new CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder> (new CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder
-  "The build-cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder function updates a CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder>
+  "The cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder> function updates a CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -292,11 +292,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder (new CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder> (new CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-authentication-configuration-property-builder
-  "The build-cfn-delivery-stream-authentication-configuration-property-builder function updates a CfnDeliveryStream$AuthenticationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-authentication-configuration-property-builder>
+  "The cfn-delivery-stream-authentication-configuration-property-builder> function updates a CfnDeliveryStream$AuthenticationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$AuthenticationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -323,11 +323,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-authentication-configuration-property-builder (new CfnDeliveryStream$AuthenticationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-authentication-configuration-property-builder> (new CfnDeliveryStream$AuthenticationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-buffering-hints-property-builder
-  "The build-cfn-delivery-stream-buffering-hints-property-builder function updates a CfnDeliveryStream$BufferingHintsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-buffering-hints-property-builder>
+  "The cfn-delivery-stream-buffering-hints-property-builder> function updates a CfnDeliveryStream$BufferingHintsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$BufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -354,11 +354,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-buffering-hints-property-builder (new CfnDeliveryStream$BufferingHintsProperty$Builder) id config))
+  (cfn-delivery-stream-buffering-hints-property-builder> (new CfnDeliveryStream$BufferingHintsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-builder
-  "The build-cfn-delivery-stream-builder function updates a CfnDeliveryStream$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-builder>
+  "The cfn-delivery-stream-builder> function updates a CfnDeliveryStream$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -424,11 +424,11 @@
 | id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
-  (build-cfn-delivery-stream-builder (CfnDeliveryStream$Builder/create scope (name id)) id config))
+  (cfn-delivery-stream-builder> (CfnDeliveryStream$Builder/create scope (name id)) id config))
 
 
-(defn build-cfn-delivery-stream-cloud-watch-logging-options-property-builder
-  "The build-cfn-delivery-stream-cloud-watch-logging-options-property-builder function updates a CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-cloud-watch-logging-options-property-builder>
+  "The cfn-delivery-stream-cloud-watch-logging-options-property-builder> function updates a CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -458,11 +458,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-cloud-watch-logging-options-property-builder (new CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-cloud-watch-logging-options-property-builder> (new CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-copy-command-property-builder
-  "The build-cfn-delivery-stream-copy-command-property-builder function updates a CfnDeliveryStream$CopyCommandProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-copy-command-property-builder>
+  "The cfn-delivery-stream-copy-command-property-builder> function updates a CfnDeliveryStream$CopyCommandProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$CopyCommandProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -492,11 +492,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-copy-command-property-builder (new CfnDeliveryStream$CopyCommandProperty$Builder) id config))
+  (cfn-delivery-stream-copy-command-property-builder> (new CfnDeliveryStream$CopyCommandProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-data-format-conversion-configuration-property-builder
-  "The build-cfn-delivery-stream-data-format-conversion-configuration-property-builder function updates a CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-data-format-conversion-configuration-property-builder>
+  "The cfn-delivery-stream-data-format-conversion-configuration-property-builder> function updates a CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -529,11 +529,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-data-format-conversion-configuration-property-builder (new CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-data-format-conversion-configuration-property-builder> (new CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder
-  "The build-cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder function updates a CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder>
+  "The cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder> function updates a CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -560,11 +560,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder (new CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder) id config))
+  (cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder> (new CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-deserializer-property-builder
-  "The build-cfn-delivery-stream-deserializer-property-builder function updates a CfnDeliveryStream$DeserializerProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-deserializer-property-builder>
+  "The cfn-delivery-stream-deserializer-property-builder> function updates a CfnDeliveryStream$DeserializerProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$DeserializerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -591,11 +591,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-deserializer-property-builder (new CfnDeliveryStream$DeserializerProperty$Builder) id config))
+  (cfn-delivery-stream-deserializer-property-builder> (new CfnDeliveryStream$DeserializerProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-document-id-options-property-builder
-  "The build-cfn-delivery-stream-document-id-options-property-builder function updates a CfnDeliveryStream$DocumentIdOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-document-id-options-property-builder>
+  "The cfn-delivery-stream-document-id-options-property-builder> function updates a CfnDeliveryStream$DocumentIdOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$DocumentIdOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -619,11 +619,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-document-id-options-property-builder (new CfnDeliveryStream$DocumentIdOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-document-id-options-property-builder> (new CfnDeliveryStream$DocumentIdOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-dynamic-partitioning-configuration-property-builder
-  "The build-cfn-delivery-stream-dynamic-partitioning-configuration-property-builder function updates a CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-dynamic-partitioning-configuration-property-builder>
+  "The cfn-delivery-stream-dynamic-partitioning-configuration-property-builder> function updates a CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -650,11 +650,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-dynamic-partitioning-configuration-property-builder (new CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-dynamic-partitioning-configuration-property-builder> (new CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-elasticsearch-buffering-hints-property-builder
-  "The build-cfn-delivery-stream-elasticsearch-buffering-hints-property-builder function updates a CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-elasticsearch-buffering-hints-property-builder>
+  "The cfn-delivery-stream-elasticsearch-buffering-hints-property-builder> function updates a CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -681,11 +681,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-elasticsearch-buffering-hints-property-builder (new CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder) id config))
+  (cfn-delivery-stream-elasticsearch-buffering-hints-property-builder> (new CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-elasticsearch-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-elasticsearch-destination-configuration-property-builder function updates a CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-elasticsearch-destination-configuration-property-builder>
+  "The cfn-delivery-stream-elasticsearch-destination-configuration-property-builder> function updates a CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -748,11 +748,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-elasticsearch-destination-configuration-property-builder (new CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-elasticsearch-destination-configuration-property-builder> (new CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-elasticsearch-retry-options-property-builder
-  "The build-cfn-delivery-stream-elasticsearch-retry-options-property-builder function updates a CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-elasticsearch-retry-options-property-builder>
+  "The cfn-delivery-stream-elasticsearch-retry-options-property-builder> function updates a CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -776,11 +776,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-elasticsearch-retry-options-property-builder (new CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-elasticsearch-retry-options-property-builder> (new CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-encryption-configuration-property-builder
-  "The build-cfn-delivery-stream-encryption-configuration-property-builder function updates a CfnDeliveryStream$EncryptionConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-encryption-configuration-property-builder>
+  "The cfn-delivery-stream-encryption-configuration-property-builder> function updates a CfnDeliveryStream$EncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$EncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -807,11 +807,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-encryption-configuration-property-builder (new CfnDeliveryStream$EncryptionConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-encryption-configuration-property-builder> (new CfnDeliveryStream$EncryptionConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-extended-s3-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-extended-s3-destination-configuration-property-builder function updates a CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-extended-s3-destination-configuration-property-builder>
+  "The cfn-delivery-stream-extended-s3-destination-configuration-property-builder> function updates a CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -877,11 +877,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-extended-s3-destination-configuration-property-builder (new CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-extended-s3-destination-configuration-property-builder> (new CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-hive-json-ser-de-property-builder
-  "The build-cfn-delivery-stream-hive-json-ser-de-property-builder function updates a CfnDeliveryStream$HiveJsonSerDeProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-hive-json-ser-de-property-builder>
+  "The cfn-delivery-stream-hive-json-ser-de-property-builder> function updates a CfnDeliveryStream$HiveJsonSerDeProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$HiveJsonSerDeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -905,11 +905,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-hive-json-ser-de-property-builder (new CfnDeliveryStream$HiveJsonSerDeProperty$Builder) id config))
+  (cfn-delivery-stream-hive-json-ser-de-property-builder> (new CfnDeliveryStream$HiveJsonSerDeProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-http-endpoint-common-attribute-property-builder
-  "The build-cfn-delivery-stream-http-endpoint-common-attribute-property-builder function updates a CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-http-endpoint-common-attribute-property-builder>
+  "The cfn-delivery-stream-http-endpoint-common-attribute-property-builder> function updates a CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -936,11 +936,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-http-endpoint-common-attribute-property-builder (new CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder) id config))
+  (cfn-delivery-stream-http-endpoint-common-attribute-property-builder> (new CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-http-endpoint-configuration-property-builder
-  "The build-cfn-delivery-stream-http-endpoint-configuration-property-builder function updates a CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-http-endpoint-configuration-property-builder>
+  "The cfn-delivery-stream-http-endpoint-configuration-property-builder> function updates a CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -970,11 +970,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-http-endpoint-configuration-property-builder (new CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-http-endpoint-configuration-property-builder> (new CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-http-endpoint-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-http-endpoint-destination-configuration-property-builder function updates a CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-http-endpoint-destination-configuration-property-builder>
+  "The cfn-delivery-stream-http-endpoint-destination-configuration-property-builder> function updates a CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1022,11 +1022,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-http-endpoint-destination-configuration-property-builder (new CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-http-endpoint-destination-configuration-property-builder> (new CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-http-endpoint-request-configuration-property-builder
-  "The build-cfn-delivery-stream-http-endpoint-request-configuration-property-builder function updates a CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-http-endpoint-request-configuration-property-builder>
+  "The cfn-delivery-stream-http-endpoint-request-configuration-property-builder> function updates a CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1053,11 +1053,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-http-endpoint-request-configuration-property-builder (new CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-http-endpoint-request-configuration-property-builder> (new CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-input-format-configuration-property-builder
-  "The build-cfn-delivery-stream-input-format-configuration-property-builder function updates a CfnDeliveryStream$InputFormatConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-input-format-configuration-property-builder>
+  "The cfn-delivery-stream-input-format-configuration-property-builder> function updates a CfnDeliveryStream$InputFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$InputFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1081,11 +1081,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-input-format-configuration-property-builder (new CfnDeliveryStream$InputFormatConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-input-format-configuration-property-builder> (new CfnDeliveryStream$InputFormatConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-kinesis-stream-source-configuration-property-builder
-  "The build-cfn-delivery-stream-kinesis-stream-source-configuration-property-builder function updates a CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-kinesis-stream-source-configuration-property-builder>
+  "The cfn-delivery-stream-kinesis-stream-source-configuration-property-builder> function updates a CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1112,11 +1112,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-kinesis-stream-source-configuration-property-builder (new CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-kinesis-stream-source-configuration-property-builder> (new CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-kms-encryption-config-property-builder
-  "The build-cfn-delivery-stream-kms-encryption-config-property-builder function updates a CfnDeliveryStream$KMSEncryptionConfigProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-kms-encryption-config-property-builder>
+  "The cfn-delivery-stream-kms-encryption-config-property-builder> function updates a CfnDeliveryStream$KMSEncryptionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$KMSEncryptionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1140,11 +1140,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-kms-encryption-config-property-builder (new CfnDeliveryStream$KMSEncryptionConfigProperty$Builder) id config))
+  (cfn-delivery-stream-kms-encryption-config-property-builder> (new CfnDeliveryStream$KMSEncryptionConfigProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-msk-source-configuration-property-builder
-  "The build-cfn-delivery-stream-msk-source-configuration-property-builder function updates a CfnDeliveryStream$MSKSourceConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-msk-source-configuration-property-builder>
+  "The cfn-delivery-stream-msk-source-configuration-property-builder> function updates a CfnDeliveryStream$MSKSourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$MSKSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1174,11 +1174,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-msk-source-configuration-property-builder (new CfnDeliveryStream$MSKSourceConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-msk-source-configuration-property-builder> (new CfnDeliveryStream$MSKSourceConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-open-x-json-ser-de-property-builder
-  "The build-cfn-delivery-stream-open-x-json-ser-de-property-builder function updates a CfnDeliveryStream$OpenXJsonSerDeProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-open-x-json-ser-de-property-builder>
+  "The cfn-delivery-stream-open-x-json-ser-de-property-builder> function updates a CfnDeliveryStream$OpenXJsonSerDeProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$OpenXJsonSerDeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1208,11 +1208,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-open-x-json-ser-de-property-builder (new CfnDeliveryStream$OpenXJsonSerDeProperty$Builder) id config))
+  (cfn-delivery-stream-open-x-json-ser-de-property-builder> (new CfnDeliveryStream$OpenXJsonSerDeProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-orc-ser-de-property-builder
-  "The build-cfn-delivery-stream-orc-ser-de-property-builder function updates a CfnDeliveryStream$OrcSerDeProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-orc-ser-de-property-builder>
+  "The cfn-delivery-stream-orc-ser-de-property-builder> function updates a CfnDeliveryStream$OrcSerDeProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$OrcSerDeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1263,11 +1263,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-orc-ser-de-property-builder (new CfnDeliveryStream$OrcSerDeProperty$Builder) id config))
+  (cfn-delivery-stream-orc-ser-de-property-builder> (new CfnDeliveryStream$OrcSerDeProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-output-format-configuration-property-builder
-  "The build-cfn-delivery-stream-output-format-configuration-property-builder function updates a CfnDeliveryStream$OutputFormatConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-output-format-configuration-property-builder>
+  "The cfn-delivery-stream-output-format-configuration-property-builder> function updates a CfnDeliveryStream$OutputFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$OutputFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1291,11 +1291,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-output-format-configuration-property-builder (new CfnDeliveryStream$OutputFormatConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-output-format-configuration-property-builder> (new CfnDeliveryStream$OutputFormatConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-parquet-ser-de-property-builder
-  "The build-cfn-delivery-stream-parquet-ser-de-property-builder function updates a CfnDeliveryStream$ParquetSerDeProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-parquet-ser-de-property-builder>
+  "The cfn-delivery-stream-parquet-ser-de-property-builder> function updates a CfnDeliveryStream$ParquetSerDeProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$ParquetSerDeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1334,11 +1334,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-parquet-ser-de-property-builder (new CfnDeliveryStream$ParquetSerDeProperty$Builder) id config))
+  (cfn-delivery-stream-parquet-ser-de-property-builder> (new CfnDeliveryStream$ParquetSerDeProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-processing-configuration-property-builder
-  "The build-cfn-delivery-stream-processing-configuration-property-builder function updates a CfnDeliveryStream$ProcessingConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-processing-configuration-property-builder>
+  "The cfn-delivery-stream-processing-configuration-property-builder> function updates a CfnDeliveryStream$ProcessingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$ProcessingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1365,11 +1365,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-processing-configuration-property-builder (new CfnDeliveryStream$ProcessingConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-processing-configuration-property-builder> (new CfnDeliveryStream$ProcessingConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-processor-parameter-property-builder
-  "The build-cfn-delivery-stream-processor-parameter-property-builder function updates a CfnDeliveryStream$ProcessorParameterProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-processor-parameter-property-builder>
+  "The cfn-delivery-stream-processor-parameter-property-builder> function updates a CfnDeliveryStream$ProcessorParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$ProcessorParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1396,11 +1396,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-processor-parameter-property-builder (new CfnDeliveryStream$ProcessorParameterProperty$Builder) id config))
+  (cfn-delivery-stream-processor-parameter-property-builder> (new CfnDeliveryStream$ProcessorParameterProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-processor-property-builder
-  "The build-cfn-delivery-stream-processor-property-builder function updates a CfnDeliveryStream$ProcessorProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-processor-property-builder>
+  "The cfn-delivery-stream-processor-property-builder> function updates a CfnDeliveryStream$ProcessorProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$ProcessorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1427,11 +1427,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-processor-property-builder (new CfnDeliveryStream$ProcessorProperty$Builder) id config))
+  (cfn-delivery-stream-processor-property-builder> (new CfnDeliveryStream$ProcessorProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-props-builder
-  "The build-cfn-delivery-stream-props-builder function updates a CfnDeliveryStreamProps$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-props-builder>
+  "The cfn-delivery-stream-props-builder> function updates a CfnDeliveryStreamProps$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1497,11 +1497,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-props-builder (new CfnDeliveryStreamProps$Builder) id config))
+  (cfn-delivery-stream-props-builder> (new CfnDeliveryStreamProps$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-redshift-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-redshift-destination-configuration-property-builder function updates a CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-redshift-destination-configuration-property-builder>
+  "The cfn-delivery-stream-redshift-destination-configuration-property-builder> function updates a CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1555,11 +1555,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-redshift-destination-configuration-property-builder (new CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-redshift-destination-configuration-property-builder> (new CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-redshift-retry-options-property-builder
-  "The build-cfn-delivery-stream-redshift-retry-options-property-builder function updates a CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-redshift-retry-options-property-builder>
+  "The cfn-delivery-stream-redshift-retry-options-property-builder> function updates a CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1583,11 +1583,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-redshift-retry-options-property-builder (new CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-redshift-retry-options-property-builder> (new CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-retry-options-property-builder
-  "The build-cfn-delivery-stream-retry-options-property-builder function updates a CfnDeliveryStream$RetryOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-retry-options-property-builder>
+  "The cfn-delivery-stream-retry-options-property-builder> function updates a CfnDeliveryStream$RetryOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$RetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1611,11 +1611,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-retry-options-property-builder (new CfnDeliveryStream$RetryOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-retry-options-property-builder> (new CfnDeliveryStream$RetryOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-s3-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-s3-destination-configuration-property-builder function updates a CfnDeliveryStream$S3DestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-s3-destination-configuration-property-builder>
+  "The cfn-delivery-stream-s3-destination-configuration-property-builder> function updates a CfnDeliveryStream$S3DestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$S3DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1660,11 +1660,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-s3-destination-configuration-property-builder (new CfnDeliveryStream$S3DestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-s3-destination-configuration-property-builder> (new CfnDeliveryStream$S3DestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-schema-configuration-property-builder
-  "The build-cfn-delivery-stream-schema-configuration-property-builder function updates a CfnDeliveryStream$SchemaConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-schema-configuration-property-builder>
+  "The cfn-delivery-stream-schema-configuration-property-builder> function updates a CfnDeliveryStream$SchemaConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SchemaConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1703,11 +1703,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-schema-configuration-property-builder (new CfnDeliveryStream$SchemaConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-schema-configuration-property-builder> (new CfnDeliveryStream$SchemaConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-serializer-property-builder
-  "The build-cfn-delivery-stream-serializer-property-builder function updates a CfnDeliveryStream$SerializerProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-serializer-property-builder>
+  "The cfn-delivery-stream-serializer-property-builder> function updates a CfnDeliveryStream$SerializerProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SerializerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1734,11 +1734,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-serializer-property-builder (new CfnDeliveryStream$SerializerProperty$Builder) id config))
+  (cfn-delivery-stream-serializer-property-builder> (new CfnDeliveryStream$SerializerProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-snowflake-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-snowflake-destination-configuration-property-builder function updates a CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-snowflake-destination-configuration-property-builder>
+  "The cfn-delivery-stream-snowflake-destination-configuration-property-builder> function updates a CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1813,11 +1813,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-snowflake-destination-configuration-property-builder (new CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-snowflake-destination-configuration-property-builder> (new CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-snowflake-retry-options-property-builder
-  "The build-cfn-delivery-stream-snowflake-retry-options-property-builder function updates a CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-snowflake-retry-options-property-builder>
+  "The cfn-delivery-stream-snowflake-retry-options-property-builder> function updates a CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1841,11 +1841,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-snowflake-retry-options-property-builder (new CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-snowflake-retry-options-property-builder> (new CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-snowflake-role-configuration-property-builder
-  "The build-cfn-delivery-stream-snowflake-role-configuration-property-builder function updates a CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-snowflake-role-configuration-property-builder>
+  "The cfn-delivery-stream-snowflake-role-configuration-property-builder> function updates a CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1872,11 +1872,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-snowflake-role-configuration-property-builder (new CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-snowflake-role-configuration-property-builder> (new CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-snowflake-vpc-configuration-property-builder
-  "The build-cfn-delivery-stream-snowflake-vpc-configuration-property-builder function updates a CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-snowflake-vpc-configuration-property-builder>
+  "The cfn-delivery-stream-snowflake-vpc-configuration-property-builder> function updates a CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1900,11 +1900,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-snowflake-vpc-configuration-property-builder (new CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-snowflake-vpc-configuration-property-builder> (new CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-splunk-buffering-hints-property-builder
-  "The build-cfn-delivery-stream-splunk-buffering-hints-property-builder function updates a CfnDeliveryStream$SplunkBufferingHintsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-splunk-buffering-hints-property-builder>
+  "The cfn-delivery-stream-splunk-buffering-hints-property-builder> function updates a CfnDeliveryStream$SplunkBufferingHintsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SplunkBufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1931,11 +1931,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-splunk-buffering-hints-property-builder (new CfnDeliveryStream$SplunkBufferingHintsProperty$Builder) id config))
+  (cfn-delivery-stream-splunk-buffering-hints-property-builder> (new CfnDeliveryStream$SplunkBufferingHintsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-splunk-destination-configuration-property-builder
-  "The build-cfn-delivery-stream-splunk-destination-configuration-property-builder function updates a CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-splunk-destination-configuration-property-builder>
+  "The cfn-delivery-stream-splunk-destination-configuration-property-builder> function updates a CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -1986,11 +1986,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-splunk-destination-configuration-property-builder (new CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-splunk-destination-configuration-property-builder> (new CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-splunk-retry-options-property-builder
-  "The build-cfn-delivery-stream-splunk-retry-options-property-builder function updates a CfnDeliveryStream$SplunkRetryOptionsProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-splunk-retry-options-property-builder>
+  "The cfn-delivery-stream-splunk-retry-options-property-builder> function updates a CfnDeliveryStream$SplunkRetryOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$SplunkRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2014,11 +2014,11 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-splunk-retry-options-property-builder (new CfnDeliveryStream$SplunkRetryOptionsProperty$Builder) id config))
+  (cfn-delivery-stream-splunk-retry-options-property-builder> (new CfnDeliveryStream$SplunkRetryOptionsProperty$Builder) id config))
 
 
-(defn build-cfn-delivery-stream-vpc-configuration-property-builder
-  "The build-cfn-delivery-stream-vpc-configuration-property-builder function updates a CfnDeliveryStream$VpcConfigurationProperty$Builder instance using the provided configuration.
+(defn cfn-delivery-stream-vpc-configuration-property-builder>
+  "The cfn-delivery-stream-vpc-configuration-property-builder> function updates a CfnDeliveryStream$VpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDeliveryStream$VpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
   and the configuration itself.
 
@@ -2048,4 +2048,4 @@
 | id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | config | map | Data configuration |"
   [id config]
-  (build-cfn-delivery-stream-vpc-configuration-property-builder (new CfnDeliveryStream$VpcConfigurationProperty$Builder) id config))
+  (cfn-delivery-stream-vpc-configuration-property-builder> (new CfnDeliveryStream$VpcConfigurationProperty$Builder) id config))
