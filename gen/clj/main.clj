@@ -4,15 +4,32 @@
             [config :as co]
             [engine :as e]
             [inspect :as in]
-            [report :as rep]))
+            [state :as st]))
+
+
+(comment
+  ; Use directly in REPL
+  (require '[config :as co] :reload)
+  (def config (co/load))
+  (require '[classpath :as cp] :reload)
+  (def classified (cp/classify config))
+  (require '[inspect :as in] :reload)
+  (def inspected (in/describe-classpath classified config)))
+
+
+(defn save-state
+  "Generates all the files."
+  []
+  (let [config (co/load)
+        schema  (-> (cp/classify config)
+                    (in/describe-classpath config))]
+    (st/save schema)))
 
 
 (defn gen
   "Generates all the files."
   []
-  (in/clear!)
-  (let [config (co/load)]
-    (mapv #(in/add-enum % config) (cp/find-enums config))
-    (mapv #(in/add-builder % config) (cp/find-builders config))
-    (rep/print-summary)
-    (e/build config)))
+  (let [config (co/load)
+        schema  (-> (cp/classify config)
+                    (in/describe-classpath config))]
+    (e/build schema config)))

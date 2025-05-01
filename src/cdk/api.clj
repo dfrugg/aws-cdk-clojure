@@ -5705,7 +5705,7 @@ __Create Form:__ ___[java.lang.Object]___
 
 | Argument | DataType | Description |
 |---|---|---|
-| `protected-value` | java.lang.Object | Either a plain text builder, or an instance of [[cfn-dynamic-reference-service]] |
+| `protected-value` | java.lang.Object | Either a plain text builder, or an instance of CfnReference, CfnDynamicReference, or value from a CfnParamenter |
 | `id` | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
 | `config` | map | Data configuration |"
   [^Object protected-value id config]

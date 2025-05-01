@@ -1,15 +1,10 @@
 (ns config
   (:refer-clojure :exclude [load])
-  (:require [util :refer [package>path-cache
-                          symbols>string]]
-            [clojure.edn :as edn]
-            [clojure.java.io :as io]))
+  (:require [cdk.config :refer [load-resource-edn
+                                load-resource-edn!]]
+            [util :refer [package>path-cache
+                          symbols>string]]))
 
-
-(defn load-edn
-  "Loads an EDN file from the classpath"
-  [path]
-  (-> path io/resource slurp edn/read-string))
 
 
 (defn ensure-with-value
@@ -62,9 +57,9 @@
 (defn load
   "Loads all the configuration and returns it in a map."
   []
-  (-> (load-edn "gen.config.edn")
+  (-> (load-resource-edn! "gen.config.edn")
       (update :ignored symbols>string)
-      (assoc :inits (-> "gen.inits.edn" load-edn package-class-symbol>string))
+      (assoc :inits (-> "gen.inits.edn" load-resource-edn package-class-symbol>string))
       (ensure-with-value :source-path "src")
       (ensure-with-value :test-path "test/clj")
       (ensure-with-value :base-namespace "cdk.api")

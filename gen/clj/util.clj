@@ -14,6 +14,12 @@
     :else (conj (vec coll) value)))
 
 
+(defn deep-conj
+  "updates a data structure by conj'ing an element to a collection within."
+  [data entry-key datum]
+  (update data entry-key conj datum))
+
+
 (defn concatv
   "concat that returns a vector."
   [& colls]
@@ -131,6 +137,12 @@ uppercase charaacter, which belongs to the next token.
       (println data-key " -> ")
       (pprint (get data data-key))))
   data)
+
+
+(defn class-symbol
+  "Returns the symbol representation of a class."
+  [^Class klass]
+  (symbol (.getName klass)))
 
 
 (defn symbol>string

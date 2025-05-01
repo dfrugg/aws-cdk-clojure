@@ -9,7 +9,6 @@
                            process-namespace
                            process-enums
                            process-builders]]
-            [inspect :refer [packages]]
             [template :refer [function-spacer]]
             [util :refer [log
                           package>path
@@ -20,12 +19,12 @@
 
 (defn build-code
   "Builds the source file contents"
-  [package-data]
+  [classpath-info package-data]
   (log "Building Package Code - " (:package-name package-data))
   (let [package-coded (-> package-data
                           process-namespace
                           process-enums
-                          process-builders)
+                          (process-builders classpath-info))
         source (->> [(:source-namespace-code package-coded)
                      (sort (:source-enums-code package-coded))
                      (:source-builders-code package-coded)]
@@ -47,7 +46,6 @@
   (write-file source-file source-code)
   (when-not (str/blank? test-code)
     (write-file test-file test-code)))
-
 
 
 (defn package-options
@@ -80,12 +78,13 @@ and the namespace to use, etc.  Should have the following fields added to the pa
 
 (defn prepare-builder-requires
   "Adds any clojure requires that are need to generate builders."
-  [{:keys [builders source-namespace] :as package-data}]
+  [{:keys [enums]} {:keys [builders source-namespace] :as package-data}]
   (let [enums (->> (mapv :methods builders)
                    flatten
-                   (mapv :method-enum)
+                   (mapv :method-arg)
+                   (mapv enums)
                    (filterv some?))]
-    (reduce (fn [pd [n f]]
+    (reduce (fn [pd {n :namespace f :fn-name}]
               (if (= n source-namespace)
                 pd
                 (add-source-function pd n f)))
@@ -125,36 +124,36 @@ and the namespace to use, etc.  Should have the following fields added to the pa
 
 (defn prepare-builders
   "Performs preparation for generating builders.."
-  [package-data]
-  (-> package-data
-      prepare-builder-requires
-      prepare-builders-imports))
+  [classpath-info package-data]
+  (->> package-data
+       (prepare-builder-requires classpath-info)
+       prepare-builders-imports))
 
 
 (defn prepare-package
   "Prepares each package for building."
-  [config package-data]
+  [classpath-info package-data config]
   (log "Preparing Package: " (:package-name package-data))
   (->> (package-options package-data config)
        (merge package-code)
-       (prepare-builders)))
+       (prepare-builders classpath-info)))
 
 
 (defn build-package
   "Builds the clojure namespace file for a specific package."
-  [{:keys [package-name] :as package-data}]
+  [classpath-info {:keys [package-name] :as package-data}]
   (log "Building Package - " package-name)
-  (-> (build-code package-data)
+  (-> (build-code classpath-info package-data)
       write-code))
 
 
 (defn build
   "Builds everthing."
-  ([config] (build @packages config))
-  ([packages config]
+  ;([config] (build @packages config))
+  ([{:keys [packages] :as classpath-info} config]
    (ensure-directory (:source-namespace-path config))
    (ensure-directory (:test-namespace-path config))
    (let [packages (->> (vals packages)
-                       (mapv (partial prepare-package config)))]
+                       (mapv #(prepare-package classpath-info % config)))]
      (doseq [package packages]
-       (build-package package)))))
+       (build-package classpath-info package)))))

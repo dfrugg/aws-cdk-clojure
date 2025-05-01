@@ -189,20 +189,21 @@
 
 
 (defn template-builder-docstring-method
-  [{:keys [method method-key method-enum method-arg]}]
-  (if method-enum
-    (format template-builder-docstring-method-enum method method-arg (first method-enum) (second method-enum) method-key)
-    (format template-builder-docstring-method-lookup method method-arg method-key)))
+  [{:keys [method method-key method-arg]} {:keys [enums]}]
+  (let [enum-config (enums method-arg)]
+    (if enum-config
+      (format template-builder-docstring-method-enum method method-arg (:namespace enum-config) (:fn-name enum-config) method-key)
+      (format template-builder-docstring-method-lookup method method-arg method-key))))
 
 
 (defn template-builder-docstring
-  [methods fn-name class-name]
+  [methods fn-name class-name classpath-info]
   (str "The " fn-name "> function updates a " class-name
        " instance using the provided configuration.\n  The function takes the " class-name
        " instance, an optional namespace to use when looking up a value in the configuration,\n  and the configuration itself."
        "\n\n  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:\n\n"
        "| Field | DataType | Lookup Function | Data Key |\n|---|---|---|---|"
-       (->> (mapv template-builder-docstring-method methods)
+       (->> (mapv #(template-builder-docstring-method % classpath-info) methods)
             str/join)
        "\n"))
 
@@ -222,18 +223,19 @@
 
 
 (defn template-builder-method
-  [{:keys [method method-key method-enum]}]
-  (if method-enum
-    (format template-builder-method-enum (second method-enum) method-key method)
-    (format template-builder-method-lookup method-key method)))
+  [{:keys [method method-key method-arg]} {:keys [enums]}]
+  (let [enum-config (enums method-arg)]
+    (if enum-config
+      (format template-builder-method-enum (:fn-name enum-config) method-key method)
+      (format template-builder-method-lookup method-key method))))
 
 
 (defn build-builder-source-function
   "Generates code when builders have single constructor options"
-  [{:keys [methods fn-name class-name]}]
-  (let [docstring (template-builder-docstring methods fn-name class-name)
+  [{:keys [methods fn-name class-name]} classpath-info]
+  (let [docstring (template-builder-docstring methods fn-name class-name classpath-info)
         builder-header (format template-build-builder-start fn-name docstring class-name)
-        builder-sets (->> (mapv template-builder-method methods)
+        builder-sets (->> (mapv #(template-builder-method % classpath-info) methods)
                           str/join)]
     (str builder-header builder-sets template-builder-end)))
 
@@ -420,10 +422,10 @@
 
 (defn builder-source-function
   "Builds out the source code for for the builders on a package"
-  [{:keys [inits fn-name class-name methods] :as builder-data}]
+  [{:keys [inits fn-name class-name methods] :as builder-data} classpath-info]
   (let [builder? (some? (seq methods))
         build  (if builder?
-                 (build-builder-source-function builder-data)
+                 (build-builder-source-function builder-data classpath-info)
                  (builder-source-no-config-function builder-data))]
     (cond
       ; Return just the builder

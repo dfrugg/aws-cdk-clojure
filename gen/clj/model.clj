@@ -18,6 +18,7 @@
         simple-name (subs class-name (inc (count package-name)))]
     {:package-name package-name
      :class-name simple-name
+     :class-symbol (symbol class-name)
      :full-name class-name
      :fn-name (camel->kebab-case simple-name)
      :class target-class}))
@@ -98,12 +99,14 @@
 
 (defn process-builder
   "Processes a single builder on a package."
-  [package-data builder-data]
+  [classpath-info package-data builder-data]
   (-> package-data
-      (update :source-builders-code concatv (builder-source-function builder-data))))
+      (update :source-builders-code concatv (builder-source-function builder-data classpath-info))))
 
 
 (defn process-builders
   "Processes all of the builder definitions on a package."
-  [package-data]
-  (reduce process-builder package-data (sort-by :fn-name (:builders package-data))))
+  [package-data classpath-info]
+  (reduce (partial process-builder classpath-info)
+          package-data
+          (sort-by :fn-name (:builders package-data))))

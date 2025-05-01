@@ -8,7 +8,7 @@
 
   SecretValue$Builder {[java.lang.Object] {:fn-args "^Object protected-value"
                                            :init-args "protected-value"
-                                           :arg-descriptions {"protected-value" "Either a plain text builder, or an instance of [[cfn-dynamic-reference-service]]"}}}
+                                           :arg-descriptions {"protected-value" "Either a plain text builder, or an instance of CfnReference, CfnDynamicReference, or value from a CfnParamenter"}}}
 
   Stack$Builder {[] {:fn-args "" :init-args ""}
                  [software.constructs.Construct] {:discard? true}

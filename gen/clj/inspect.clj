@@ -1,7 +1,7 @@
 (ns inspect
+  "Responsible for inspecting found Java classes to analyze and save in context."
   (:require [model :refer [java-class-info]]
-            [util :refer [conjv
-                          constant-keyword
+            [util :refer [constant-keyword
                           camel->kebab-case
                           package>namespace]]
             [clojure.reflect :as ref]))
@@ -13,6 +13,7 @@
                    :test-namespace "package.name-test"
                    :enums [{:package-name "package.name"
                             :class-name "MyEnum"
+                            :class-symbol 'package.name.MyEnum
                             :full-name "package.name.MyEnum"
                             :class package.name.MyEnum
                             :fn-name 'my-enum
@@ -20,6 +21,7 @@
                                      'NO_ENUM :no-enum}}]
                    :builders [{:package-name "package.name"
                                :class-name "MyBuilder$Builder"
+                               :class-symbol 'package.name.MyBuilder$Builder
                                :full-name "package.name.MyBuilder$Builder"
                                :class package.name.MyBuilder$Builder
                                :fn-name 'my-builder
@@ -31,77 +33,6 @@
                                :methods [{:method 'methodSymbol
                                           :method-arg my.method.symbol.Type
                                           :method-key :method-symbol}]}]}})
-
-(def packages
-  "A map of package names that contains all the enums and builder configurations within them."
-  (atom {}))
-
-
-(def enums
-  "Collection of enums that have been encountered."
-  (atom {}))
-
-
-(defn clear!
-  "Clears all of the data from the caches."
-  []
-  (reset! packages {})
-  (reset! enums {}))
-
-
-(defn ignore?
-  "Checks if a class has been configured to be ignored."
-  [data {:keys [ignored]}]
-  (let [package-name (:package-name data)
-        class-name (:class-name data)
-        package (get ignored package-name)]
-    (if package
-      (contains? package class-name)
-      false)))
-
-
-(defn init-package
-  "Initializes a package-data with it's package name, the source namespace, and test namespace.."
-  [package-name {:keys [base-package base-package-namespace]} data-type data]
-  (if (= base-package package-name)
-    {:package-name package-name
-     :source-namespace base-package-namespace
-     :test-namespace (str base-package-namespace "-test")
-     data-type [data]}
-    (let [package-diff (subs package-name (count base-package))
-          namespace-diff (package>namespace (subs package-diff 1))]
-      {:package-name package-name
-       :source-namespace (str base-package-namespace "." namespace-diff)
-       :test-namespace (str base-package-namespace "." namespace-diff "-test")
-       data-type [data]})))
-
-
-(defn register-enum
-  "Registers an enum by it's full class name."
-  [{:keys [package-name fn-name full-name]}]
-  (let [source-namespace (-> (get @packages package-name) :source-namespace)]
-    (swap! enums assoc full-name [source-namespace fn-name])))
-
-
-(defn register
-  "Adds a class config to the repo."
-  [{:keys [package-name] :as data} data-type config]
-  (cond
-    ; Ignore this class
-    (ignore? data config)
-    (println "Ignoring" (:package-name data) (:class-name data))
-    ; Add to existing package
-    (contains? @packages package-name)
-    (do
-      (swap! packages update-in [package-name data-type] conjv data)
-      (when (= data-type :enums)
-        (register-enum data)))
-    ; Initialize package
-    :else
-    (let [package-data (init-package package-name config data-type data)]
-      (swap! packages assoc package-name package-data)
-      (when (= data-type :enums)
-        (register-enum data)))))
 
 
 ; Begin Enum Specific Processing
@@ -118,15 +49,7 @@
        (into {})))
 
 
-(defn add-enum
-  "Adds an Enum to the registry"
-  [^Class enum-class config]
-  (-> (java-class-info enum-class)
-      (assoc :values (enum-values enum-class))
-      (register :enums config)))
-
 ; Begin Builder Specific Processing
-
 (def create-method
   "The form that matches the value of the create method when reflected."
   (symbol "create"))
@@ -180,7 +103,65 @@
            (mapv #(assoc % :init-type :construct))))))
 
 
-(defn builder-methods
+
+;; Start New Stuff
+
+(defn describe-package
+  "Initializes a package-data with it's package name, the source namespace, and test namespace.."
+  [package-name {:keys [base-package base-package-namespace]}]
+  (if (= base-package package-name)
+    {:package-name package-name
+     :source-namespace base-package-namespace
+     :test-namespace (str base-package-namespace "-test")
+     :enums []
+     :builders []}
+    (let [package-diff (subs package-name (count base-package))
+          namespace-diff (package>namespace (subs package-diff 1))]
+      {:package-name package-name
+       :source-namespace (str base-package-namespace "." namespace-diff)
+       :test-namespace (str base-package-namespace "." namespace-diff "-test")
+       :enums []
+       :builders []})))
+
+
+(defn add-package-descriptions
+  "Adds a java class description to it's package description."
+  [classpath-info {:keys [package-name] :as java-info} data-type config]
+  (let [package-info (or (get-in classpath-info [:packages package-name])
+                         (describe-package package-name config))
+        java-info (assoc java-info :namespace (:source-namespace package-info))]
+    (-> classpath-info
+        (assoc-in [data-type (:class-symbol java-info)] java-info)
+        (assoc-in [:packages package-name] package-info)
+        (update-in [:packages package-name data-type] conj java-info))))
+
+
+(defn describe-enum
+  "Create the attribute definition for enums"
+  [^Class klass]
+  (-> (java-class-info klass)
+      (assoc :values (enum-values klass))))
+
+
+(defn describe-enums
+  "Converts a set of Enum classes into a map of the classes with their description."
+  [enums-set]
+  (->> enums-set
+       (mapv #(vector (.getName ^Class %) (describe-enum %)))
+       (into {})))
+
+
+(defn add-enum-descriptions
+  "Updates the classpath info enums to a map of it's descriptions."
+  [classpath-info config]
+  (reduce (fn [info enum]
+            (add-package-descriptions info (describe-enum enum) :enums config))
+          (update classpath-info :enums describe-enums)
+          (:enums classpath-info)))
+
+
+(defn describe-methods
+  "Describes the constructors and methods on the builder class"
   [{^Class builder-class :class :as builder-data} config]
   (let [methods (public-methods builder-class)
         inits (determine-inits builder-data config methods)
@@ -192,8 +173,7 @@
                                  (let [param (first (:parameter-types field))]
                                    (assoc field-map field-name {:method field-name
                                                                 :method-arg param
-                                                                :method-key (camel->kebab-case field-name)
-                                                                :method-enum (get @enums (str param))}))))
+                                                                :method-key (camel->kebab-case field-name)}))))
                              {}
                              methods)
                      vals
@@ -204,8 +184,26 @@
         (assoc :methods methods))))
 
 
-(defn add-builder
-  [^Class builder-class config]
-  (-> (java-class-info builder-class)
-      (builder-methods config)
-      (register :builders config)))
+(defn describe-builder
+  "Generates the description of a builder."
+  [^Class klass config]
+  (-> (java-class-info klass)
+      (describe-methods config)))
+
+
+(defn add-builder-descriptions
+  "Updates the builders to be mapped to their descriptions."
+  [classpath-info config]
+  (reduce (fn [info builder]
+            (add-package-descriptions info (describe-builder builder config) :builders config))
+          (assoc classpath-info :builders {})
+          (:builders classpath-info)))
+
+
+(defn describe-classpath
+  "Looks at the classpath and updates the found items with their descriptions."
+  [classpath-info config]
+  (-> classpath-info
+      (assoc :packages {})
+      (add-enum-descriptions config)
+      (add-builder-descriptions config)))
