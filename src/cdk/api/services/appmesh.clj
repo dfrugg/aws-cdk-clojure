@@ -269,22 +269,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `GrpcRetryEvent` - the value is returned.
-* is `:unavailable` - `GrpcRetryEvent/UNAVAILABLE` is returned
-* is `:resource-exhausted` - `GrpcRetryEvent/RESOURCE_EXHAUSTED` is returned
+* is `:cancelled` - `GrpcRetryEvent/CANCELLED` is returned
 * is `:deadline-exceeded` - `GrpcRetryEvent/DEADLINE_EXCEEDED` is returned
 * is `:internal-error` - `GrpcRetryEvent/INTERNAL_ERROR` is returned
-* is `:cancelled` - `GrpcRetryEvent/CANCELLED` is returned
+* is `:resource-exhausted` - `GrpcRetryEvent/RESOURCE_EXHAUSTED` is returned
+* is `:unavailable` - `GrpcRetryEvent/UNAVAILABLE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? GrpcRetryEvent data) data
-      (= :unavailable data) GrpcRetryEvent/UNAVAILABLE
-      (= :resource-exhausted data) GrpcRetryEvent/RESOURCE_EXHAUSTED
+      (= :cancelled data) GrpcRetryEvent/CANCELLED
       (= :deadline-exceeded data) GrpcRetryEvent/DEADLINE_EXCEEDED
       (= :internal-error data) GrpcRetryEvent/INTERNAL_ERROR
-      (= :cancelled data) GrpcRetryEvent/CANCELLED)))
+      (= :resource-exhausted data) GrpcRetryEvent/RESOURCE_EXHAUSTED
+      (= :unavailable data) GrpcRetryEvent/UNAVAILABLE)))
 
 
 (defn http-retry-event
@@ -294,20 +294,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpRetryEvent` - the value is returned.
-* is `:stream-error` - `HttpRetryEvent/STREAM_ERROR` is returned
-* is `:server-error` - `HttpRetryEvent/SERVER_ERROR` is returned
-* is `:gateway-error` - `HttpRetryEvent/GATEWAY_ERROR` is returned
 * is `:client-error` - `HttpRetryEvent/CLIENT_ERROR` is returned
+* is `:gateway-error` - `HttpRetryEvent/GATEWAY_ERROR` is returned
+* is `:server-error` - `HttpRetryEvent/SERVER_ERROR` is returned
+* is `:stream-error` - `HttpRetryEvent/STREAM_ERROR` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpRetryEvent data) data
-      (= :stream-error data) HttpRetryEvent/STREAM_ERROR
-      (= :server-error data) HttpRetryEvent/SERVER_ERROR
+      (= :client-error data) HttpRetryEvent/CLIENT_ERROR
       (= :gateway-error data) HttpRetryEvent/GATEWAY_ERROR
-      (= :client-error data) HttpRetryEvent/CLIENT_ERROR)))
+      (= :server-error data) HttpRetryEvent/SERVER_ERROR
+      (= :stream-error data) HttpRetryEvent/STREAM_ERROR)))
 
 
 (defn http-route-method
@@ -317,30 +317,30 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpRouteMethod` - the value is returned.
-* is `:put` - `HttpRouteMethod/PUT` is returned
-* is `:post` - `HttpRouteMethod/POST` is returned
 * is `:connect` - `HttpRouteMethod/CONNECT` is returned
 * is `:delete` - `HttpRouteMethod/DELETE` is returned
 * is `:get` - `HttpRouteMethod/GET` is returned
 * is `:head` - `HttpRouteMethod/HEAD` is returned
-* is `:trace` - `HttpRouteMethod/TRACE` is returned
-* is `:patch` - `HttpRouteMethod/PATCH` is returned
 * is `:options` - `HttpRouteMethod/OPTIONS` is returned
+* is `:patch` - `HttpRouteMethod/PATCH` is returned
+* is `:post` - `HttpRouteMethod/POST` is returned
+* is `:put` - `HttpRouteMethod/PUT` is returned
+* is `:trace` - `HttpRouteMethod/TRACE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpRouteMethod data) data
-      (= :put data) HttpRouteMethod/PUT
-      (= :post data) HttpRouteMethod/POST
       (= :connect data) HttpRouteMethod/CONNECT
       (= :delete data) HttpRouteMethod/DELETE
       (= :get data) HttpRouteMethod/GET
       (= :head data) HttpRouteMethod/HEAD
-      (= :trace data) HttpRouteMethod/TRACE
+      (= :options data) HttpRouteMethod/OPTIONS
       (= :patch data) HttpRouteMethod/PATCH
-      (= :options data) HttpRouteMethod/OPTIONS)))
+      (= :post data) HttpRouteMethod/POST
+      (= :put data) HttpRouteMethod/PUT
+      (= :trace data) HttpRouteMethod/TRACE)))
 
 
 (defn http-route-protocol
@@ -370,9 +370,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `IpPreference` - the value is returned.
 * is `:ipv4-only` - `IpPreference/IPV4_ONLY` is returned
+* is `:ipv4-preferred` - `IpPreference/IPV4_PREFERRED` is returned
 * is `:ipv6-only` - `IpPreference/IPV6_ONLY` is returned
 * is `:ipv6-preferred` - `IpPreference/IPV6_PREFERRED` is returned
-* is `:ipv4-preferred` - `IpPreference/IPV4_PREFERRED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -380,9 +380,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? IpPreference data) data
       (= :ipv4-only data) IpPreference/IPV4_ONLY
+      (= :ipv4-preferred data) IpPreference/IPV4_PREFERRED
       (= :ipv6-only data) IpPreference/IPV6_ONLY
-      (= :ipv6-preferred data) IpPreference/IPV6_PREFERRED
-      (= :ipv4-preferred data) IpPreference/IPV4_PREFERRED)))
+      (= :ipv6-preferred data) IpPreference/IPV6_PREFERRED)))
 
 
 (defn mesh-filter-type
@@ -392,16 +392,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MeshFilterType` - the value is returned.
-* is `:drop-all` - `MeshFilterType/DROP_ALL` is returned
 * is `:allow-all` - `MeshFilterType/ALLOW_ALL` is returned
+* is `:drop-all` - `MeshFilterType/DROP_ALL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MeshFilterType data) data
-      (= :drop-all data) MeshFilterType/DROP_ALL
-      (= :allow-all data) MeshFilterType/ALLOW_ALL)))
+      (= :allow-all data) MeshFilterType/ALLOW_ALL
+      (= :drop-all data) MeshFilterType/DROP_ALL)))
 
 
 (defn tcp-retry-event
@@ -428,18 +428,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TlsMode` - the value is returned.
+* is `:disabled` - `TlsMode/DISABLED` is returned
 * is `:permissive` - `TlsMode/PERMISSIVE` is returned
 * is `:strict` - `TlsMode/STRICT` is returned
-* is `:disabled` - `TlsMode/DISABLED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TlsMode data) data
+      (= :disabled data) TlsMode/DISABLED
       (= :permissive data) TlsMode/PERMISSIVE
-      (= :strict data) TlsMode/STRICT
-      (= :disabled data) TlsMode/DISABLED)))
+      (= :strict data) TlsMode/STRICT)))
 
 
 (defn access-log-config-builder>

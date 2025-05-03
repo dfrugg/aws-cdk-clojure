@@ -577,16 +577,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Action` - the value is returned.
-* is `:deny` - `Action/DENY` is returned
 * is `:allow` - `Action/ALLOW` is returned
+* is `:deny` - `Action/DENY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Action data) data
-      (= :deny data) Action/DENY
-      (= :allow data) Action/ALLOW)))
+      (= :allow data) Action/ALLOW
+      (= :deny data) Action/DENY)))
 
 
 (defn address-family
@@ -653,8 +653,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AmazonLinuxGeneration` - the value is returned.
-* is `:amazon-linux-2` - `AmazonLinuxGeneration/AMAZON_LINUX_2` is returned
 * is `:amazon-linux` - `AmazonLinuxGeneration/AMAZON_LINUX` is returned
+* is `:amazon-linux-2` - `AmazonLinuxGeneration/AMAZON_LINUX_2` is returned
 * is `:amazon-linux-2022` - `AmazonLinuxGeneration/AMAZON_LINUX_2022` is returned
 * is `:amazon-linux-2023` - `AmazonLinuxGeneration/AMAZON_LINUX_2023` is returned
 
@@ -663,8 +663,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AmazonLinuxGeneration data) data
-      (= :amazon-linux-2 data) AmazonLinuxGeneration/AMAZON_LINUX_2
       (= :amazon-linux data) AmazonLinuxGeneration/AMAZON_LINUX
+      (= :amazon-linux-2 data) AmazonLinuxGeneration/AMAZON_LINUX_2
       (= :amazon-linux-2022 data) AmazonLinuxGeneration/AMAZON_LINUX_2022
       (= :amazon-linux-2023 data) AmazonLinuxGeneration/AMAZON_LINUX_2023)))
 
@@ -676,16 +676,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AmazonLinuxKernel` - the value is returned.
-* is `:kernel6-1` - `AmazonLinuxKernel/KERNEL6_1` is returned
 * is `:kernel5-x` - `AmazonLinuxKernel/KERNEL5_X` is returned
+* is `:kernel6-1` - `AmazonLinuxKernel/KERNEL6_1` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AmazonLinuxKernel data) data
-      (= :kernel6-1 data) AmazonLinuxKernel/KERNEL6_1
-      (= :kernel5-x data) AmazonLinuxKernel/KERNEL5_X)))
+      (= :kernel5-x data) AmazonLinuxKernel/KERNEL5_X
+      (= :kernel6-1 data) AmazonLinuxKernel/KERNEL6_1)))
 
 
 (defn amazon-linux-storage
@@ -696,8 +696,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `AmazonLinuxStorage` - the value is returned.
 * is `:ebs` - `AmazonLinuxStorage/EBS` is returned
-* is `:s3` - `AmazonLinuxStorage/S3` is returned
 * is `:general-purpose` - `AmazonLinuxStorage/GENERAL_PURPOSE` is returned
+* is `:s3` - `AmazonLinuxStorage/S3` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -705,8 +705,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? AmazonLinuxStorage data) data
       (= :ebs data) AmazonLinuxStorage/EBS
-      (= :s3 data) AmazonLinuxStorage/S3
-      (= :general-purpose data) AmazonLinuxStorage/GENERAL_PURPOSE)))
+      (= :general-purpose data) AmazonLinuxStorage/GENERAL_PURPOSE
+      (= :s3 data) AmazonLinuxStorage/S3)))
 
 
 (defn amazon-linux-virt
@@ -716,16 +716,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AmazonLinuxVirt` - the value is returned.
-* is `:pv` - `AmazonLinuxVirt/PV` is returned
 * is `:hvm` - `AmazonLinuxVirt/HVM` is returned
+* is `:pv` - `AmazonLinuxVirt/PV` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AmazonLinuxVirt data) data
-      (= :pv data) AmazonLinuxVirt/PV
-      (= :hvm data) AmazonLinuxVirt/HVM)))
+      (= :hvm data) AmazonLinuxVirt/HVM
+      (= :pv data) AmazonLinuxVirt/PV)))
 
 
 (defn client-vpn-session-timeout
@@ -736,9 +736,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `ClientVpnSessionTimeout` - the value is returned.
 * is `:eight-hours` - `ClientVpnSessionTimeout/EIGHT_HOURS` is returned
-* is `:twenty-four-hours` - `ClientVpnSessionTimeout/TWENTY_FOUR_HOURS` is returned
-* is `:twelve-hours` - `ClientVpnSessionTimeout/TWELVE_HOURS` is returned
 * is `:ten-hours` - `ClientVpnSessionTimeout/TEN_HOURS` is returned
+* is `:twelve-hours` - `ClientVpnSessionTimeout/TWELVE_HOURS` is returned
+* is `:twenty-four-hours` - `ClientVpnSessionTimeout/TWENTY_FOUR_HOURS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -746,9 +746,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? ClientVpnSessionTimeout data) data
       (= :eight-hours data) ClientVpnSessionTimeout/EIGHT_HOURS
-      (= :twenty-four-hours data) ClientVpnSessionTimeout/TWENTY_FOUR_HOURS
+      (= :ten-hours data) ClientVpnSessionTimeout/TEN_HOURS
       (= :twelve-hours data) ClientVpnSessionTimeout/TWELVE_HOURS
-      (= :ten-hours data) ClientVpnSessionTimeout/TEN_HOURS)))
+      (= :twenty-four-hours data) ClientVpnSessionTimeout/TWENTY_FOUR_HOURS)))
 
 
 (defn cpu-credits
@@ -758,16 +758,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CpuCredits` - the value is returned.
-* is `:unlimited` - `CpuCredits/UNLIMITED` is returned
 * is `:standard` - `CpuCredits/STANDARD` is returned
+* is `:unlimited` - `CpuCredits/UNLIMITED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CpuCredits data) data
-      (= :unlimited data) CpuCredits/UNLIMITED
-      (= :standard data) CpuCredits/STANDARD)))
+      (= :standard data) CpuCredits/STANDARD
+      (= :unlimited data) CpuCredits/UNLIMITED)))
 
 
 (defn default-instance-tenancy
@@ -796,26 +796,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EbsDeviceVolumeType` - the value is returned.
-* is `:io1` - `EbsDeviceVolumeType/IO1` is returned
 * is `:gp2` - `EbsDeviceVolumeType/GP2` is returned
-* is `:sc1` - `EbsDeviceVolumeType/SC1` is returned
 * is `:gp3` - `EbsDeviceVolumeType/GP3` is returned
-* is `:standard` - `EbsDeviceVolumeType/STANDARD` is returned
-* is `:st1` - `EbsDeviceVolumeType/ST1` is returned
+* is `:io1` - `EbsDeviceVolumeType/IO1` is returned
 * is `:io2` - `EbsDeviceVolumeType/IO2` is returned
+* is `:sc1` - `EbsDeviceVolumeType/SC1` is returned
+* is `:st1` - `EbsDeviceVolumeType/ST1` is returned
+* is `:standard` - `EbsDeviceVolumeType/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EbsDeviceVolumeType data) data
-      (= :io1 data) EbsDeviceVolumeType/IO1
       (= :gp2 data) EbsDeviceVolumeType/GP2
-      (= :sc1 data) EbsDeviceVolumeType/SC1
       (= :gp3 data) EbsDeviceVolumeType/GP3
-      (= :standard data) EbsDeviceVolumeType/STANDARD
+      (= :io1 data) EbsDeviceVolumeType/IO1
+      (= :io2 data) EbsDeviceVolumeType/IO2
+      (= :sc1 data) EbsDeviceVolumeType/SC1
       (= :st1 data) EbsDeviceVolumeType/ST1
-      (= :io2 data) EbsDeviceVolumeType/IO2)))
+      (= :standard data) EbsDeviceVolumeType/STANDARD)))
 
 
 (defn flow-log-destination-type
@@ -825,18 +825,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FlowLogDestinationType` - the value is returned.
-* is `:s3` - `FlowLogDestinationType/S3` is returned
 * is `:cloud-watch-logs` - `FlowLogDestinationType/CLOUD_WATCH_LOGS` is returned
 * is `:kinesis-data-firehose` - `FlowLogDestinationType/KINESIS_DATA_FIREHOSE` is returned
+* is `:s3` - `FlowLogDestinationType/S3` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FlowLogDestinationType data) data
-      (= :s3 data) FlowLogDestinationType/S3
       (= :cloud-watch-logs data) FlowLogDestinationType/CLOUD_WATCH_LOGS
-      (= :kinesis-data-firehose data) FlowLogDestinationType/KINESIS_DATA_FIREHOSE)))
+      (= :kinesis-data-firehose data) FlowLogDestinationType/KINESIS_DATA_FIREHOSE
+      (= :s3 data) FlowLogDestinationType/S3)))
 
 
 (defn flow-log-file-format
@@ -865,16 +865,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FlowLogMaxAggregationInterval` - the value is returned.
-* is `:ten-minutes` - `FlowLogMaxAggregationInterval/TEN_MINUTES` is returned
 * is `:one-minute` - `FlowLogMaxAggregationInterval/ONE_MINUTE` is returned
+* is `:ten-minutes` - `FlowLogMaxAggregationInterval/TEN_MINUTES` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FlowLogMaxAggregationInterval data) data
-      (= :ten-minutes data) FlowLogMaxAggregationInterval/TEN_MINUTES
-      (= :one-minute data) FlowLogMaxAggregationInterval/ONE_MINUTE)))
+      (= :one-minute data) FlowLogMaxAggregationInterval/ONE_MINUTE
+      (= :ten-minutes data) FlowLogMaxAggregationInterval/TEN_MINUTES)))
 
 
 (defn flow-log-traffic-type
@@ -884,18 +884,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FlowLogTrafficType` - the value is returned.
+* is `:accept` - `FlowLogTrafficType/ACCEPT` is returned
 * is `:all` - `FlowLogTrafficType/ALL` is returned
 * is `:reject` - `FlowLogTrafficType/REJECT` is returned
-* is `:accept` - `FlowLogTrafficType/ACCEPT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FlowLogTrafficType data) data
+      (= :accept data) FlowLogTrafficType/ACCEPT
       (= :all data) FlowLogTrafficType/ALL
-      (= :reject data) FlowLogTrafficType/REJECT
-      (= :accept data) FlowLogTrafficType/ACCEPT)))
+      (= :reject data) FlowLogTrafficType/REJECT)))
 
 
 (defn instance-architecture
@@ -905,16 +905,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `InstanceArchitecture` - the value is returned.
-* is `:x86-64` - `InstanceArchitecture/X86_64` is returned
 * is `:arm-64` - `InstanceArchitecture/ARM_64` is returned
+* is `:x86-64` - `InstanceArchitecture/X86_64` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? InstanceArchitecture data) data
-      (= :x86-64 data) InstanceArchitecture/X86_64
-      (= :arm-64 data) InstanceArchitecture/ARM_64)))
+      (= :arm-64 data) InstanceArchitecture/ARM_64
+      (= :x86-64 data) InstanceArchitecture/X86_64)))
 
 
 (defn instance-class
@@ -924,484 +924,484 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `InstanceClass` - the value is returned.
-* is `:c5d` - `InstanceClass/C5D` is returned
-* is `:standard7-amd` - `InstanceClass/STANDARD7_AMD` is returned
-* is `:fpga1` - `InstanceClass/FPGA1` is returned
-* is `:standard7-graviton` - `InstanceClass/STANDARD7_GRAVITON` is returned
-* is `:r4` - `InstanceClass/R4` is returned
-* is `:p3dn` - `InstanceClass/P3DN` is returned
-* is `:memory5-amd` - `InstanceClass/MEMORY5_AMD` is returned
-* is `:memory-intensive-2-graviton2-nvme-drive` - `InstanceClass/MEMORY_INTENSIVE_2_GRAVITON2_NVME_DRIVE` is returned
-* is `:standard5` - `InstanceClass/STANDARD5` is returned
-* is `:memory5-high-performance` - `InstanceClass/MEMORY5_HIGH_PERFORMANCE` is returned
-* is `:standard6-amd` - `InstanceClass/STANDARD6_AMD` is returned
-* is `:standard5-high-compute` - `InstanceClass/STANDARD5_HIGH_COMPUTE` is returned
-* is `:memory6-intel-nvme-drive` - `InstanceClass/MEMORY6_INTEL_NVME_DRIVE` is returned
-* is `:high-memory-24tb-1` - `InstanceClass/HIGH_MEMORY_24TB_1` is returned
-* is `:i4g` - `InstanceClass/I4G` is returned
-* is `:m5n` - `InstanceClass/M5N` is returned
-* is `:c6i` - `InstanceClass/C6I` is returned
-* is `:dl1` - `InstanceClass/DL1` is returned
-* is `:memory5-ebs-optimized` - `InstanceClass/MEMORY5_EBS_OPTIMIZED` is returned
-* is `:compute5-amd` - `InstanceClass/COMPUTE5_AMD` is returned
-* is `:compute5` - `InstanceClass/COMPUTE5` is returned
-* is `:parallel2` - `InstanceClass/PARALLEL2` is returned
-* is `:m6in` - `InstanceClass/M6IN` is returned
-* is `:hpc6id` - `InstanceClass/HPC6ID` is returned
-* is `:r7g` - `InstanceClass/R7G` is returned
-* is `:trn1` - `InstanceClass/TRN1` is returned
-* is `:compute5-amd-nvme-drive` - `InstanceClass/COMPUTE5_AMD_NVME_DRIVE` is returned
-* is `:standard5-high-performance` - `InstanceClass/STANDARD5_HIGH_PERFORMANCE` is returned
-* is `:i4i` - `InstanceClass/I4I` is returned
 * is `:a1` - `InstanceClass/A1` is returned
-* is `:c6gn` - `InstanceClass/C6GN` is returned
-* is `:graphics4-nvme-drive-high-performance` - `InstanceClass/GRAPHICS4_NVME_DRIVE_HIGH_PERFORMANCE` is returned
-* is `:storage3` - `InstanceClass/STORAGE3` is returned
-* is `:storage4-graviton-network-storage-optimized` - `InstanceClass/STORAGE4_GRAVITON_NETWORK_STORAGE_OPTIMIZED` is returned
-* is `:c7g` - `InstanceClass/C7G` is returned
-* is `:high-memory-6tb-1` - `InstanceClass/HIGH_MEMORY_6TB_1` is returned
-* is `:compute6-intel-nvme-drive` - `InstanceClass/COMPUTE6_INTEL_NVME_DRIVE` is returned
-* is `:r5dn` - `InstanceClass/R5DN` is returned
-* is `:t3a` - `InstanceClass/T3A` is returned
-* is `:u-6tb1` - `InstanceClass/U_6TB1` is returned
-* is `:mac2-m2pro` - `InstanceClass/MAC2_M2PRO` is returned
-* is `:memory6-graviton2-nvme-drive` - `InstanceClass/MEMORY6_GRAVITON2_NVME_DRIVE` is returned
-* is `:x2iedn` - `InstanceClass/X2IEDN` is returned
-* is `:inference1` - `InstanceClass/INFERENCE1` is returned
-* is `:high-compute-memory1` - `InstanceClass/HIGH_COMPUTE_MEMORY1` is returned
-* is `:m6id` - `InstanceClass/M6ID` is returned
-* is `:memory7-intel` - `InstanceClass/MEMORY7_INTEL` is returned
-* is `:graphics5-graviton2` - `InstanceClass/GRAPHICS5_GRAVITON2` is returned
-* is `:parallel3` - `InstanceClass/PARALLEL3` is returned
-* is `:memory5-amd-nvme-drive` - `InstanceClass/MEMORY5_AMD_NVME_DRIVE` is returned
-* is `:r5a` - `InstanceClass/R5A` is returned
-* is `:m5d` - `InstanceClass/M5D` is returned
-* is `:m6gd` - `InstanceClass/M6GD` is returned
-* is `:r5d` - `InstanceClass/R5D` is returned
-* is `:trn1n` - `InstanceClass/TRN1N` is returned
-* is `:hpc7g` - `InstanceClass/HPC7G` is returned
-* is `:r7iz` - `InstanceClass/R7IZ` is returned
-* is `:compute7-graviton3` - `InstanceClass/COMPUTE7_GRAVITON3` is returned
-* is `:c7a` - `InstanceClass/C7A` is returned
-* is `:m3` - `InstanceClass/M3` is returned
-* is `:m5a` - `InstanceClass/M5A` is returned
-* is `:compute5-nvme-drive` - `InstanceClass/COMPUTE5_NVME_DRIVE` is returned
-* is `:memory7-intel-base` - `InstanceClass/MEMORY7_INTEL_BASE` is returned
-* is `:training-accelerator1-enhanced-network` - `InstanceClass/TRAINING_ACCELERATOR1_ENHANCED_NETWORK` is returned
-* is `:standard5-amd` - `InstanceClass/STANDARD5_AMD` is returned
-* is `:r6i` - `InstanceClass/R6I` is returned
-* is `:u-18tb1` - `InstanceClass/U_18TB1` is returned
-* is `:m7i` - `InstanceClass/M7I` is returned
-* is `:c6g` - `InstanceClass/C6G` is returned
-* is `:r6in` - `InstanceClass/R6IN` is returned
-* is `:parallel3-nvme-drive-high-performance` - `InstanceClass/PARALLEL3_NVME_DRIVE_HIGH_PERFORMANCE` is returned
-* is `:high-memory-12tb-1` - `InstanceClass/HIGH_MEMORY_12TB_1` is returned
-* is `:memory6-amd` - `InstanceClass/MEMORY6_AMD` is returned
-* is `:r6a` - `InstanceClass/R6A` is returned
-* is `:m4` - `InstanceClass/M4` is returned
-* is `:graphics3` - `InstanceClass/GRAPHICS3` is returned
-* is `:g5` - `InstanceClass/G5` is returned
-* is `:high-memory-18tb-1` - `InstanceClass/HIGH_MEMORY_18TB_1` is returned
-* is `:c5` - `InstanceClass/C5` is returned
-* is `:training-accelerator1` - `InstanceClass/TRAINING_ACCELERATOR1` is returned
-* is `:x1` - `InstanceClass/X1` is returned
-* is `:x2iezn` - `InstanceClass/X2IEZN` is returned
-* is `:i3en` - `InstanceClass/I3EN` is returned
-* is `:memory3` - `InstanceClass/MEMORY3` is returned
-* is `:m7gd` - `InstanceClass/M7GD` is returned
-* is `:x2g` - `InstanceClass/X2G` is returned
-* is `:io3-dense-nvme-drive` - `InstanceClass/IO3_DENSE_NVME_DRIVE` is returned
-* is `:standard6-intel-high-performance` - `InstanceClass/STANDARD6_INTEL_HIGH_PERFORMANCE` is returned
-* is `:r6gd` - `InstanceClass/R6GD` is returned
-* is `:video-transcoding1` - `InstanceClass/VIDEO_TRANSCODING1` is returned
-* is `:macintosh2-m1` - `InstanceClass/MACINTOSH2_M1` is returned
-* is `:m5dn` - `InstanceClass/M5DN` is returned
-* is `:storage4-graviton-network-optimized` - `InstanceClass/STORAGE4_GRAVITON_NETWORK_OPTIMIZED` is returned
-* is `:r5` - `InstanceClass/R5` is returned
-* is `:x2gd` - `InstanceClass/X2GD` is returned
-* is `:memory-intensive-1-extended` - `InstanceClass/MEMORY_INTENSIVE_1_EXTENDED` is returned
-* is `:c5ad` - `InstanceClass/C5AD` is returned
-* is `:parallel4` - `InstanceClass/PARALLEL4` is returned
-* is `:parallel4-nvme-drive-extended` - `InstanceClass/PARALLEL4_NVME_DRIVE_EXTENDED` is returned
-* is `:c6id` - `InstanceClass/C6ID` is returned
-* is `:m5ad` - `InstanceClass/M5AD` is returned
-* is `:c5n` - `InstanceClass/C5N` is returned
-* is `:macintosh1-intel` - `InstanceClass/MACINTOSH1_INTEL` is returned
-* is `:standard6-intel` - `InstanceClass/STANDARD6_INTEL` is returned
-* is `:memory-intensive-2-graviton2` - `InstanceClass/MEMORY_INTENSIVE_2_GRAVITON2` is returned
-* is `:inference2` - `InstanceClass/INFERENCE2` is returned
-* is `:compute6-intel-high-performance` - `InstanceClass/COMPUTE6_INTEL_HIGH_PERFORMANCE` is returned
-* is `:vt1` - `InstanceClass/VT1` is returned
-* is `:memory5-nvme-drive-high-performance` - `InstanceClass/MEMORY5_NVME_DRIVE_HIGH_PERFORMANCE` is returned
-* is `:standard6-intel-nvme-drive-high-performance` - `InstanceClass/STANDARD6_INTEL_NVME_DRIVE_HIGH_PERFORMANCE` is returned
-* is `:storage2` - `InstanceClass/STORAGE2` is returned
-* is `:high-performance-computing6-amd` - `InstanceClass/HIGH_PERFORMANCE_COMPUTING6_AMD` is returned
 * is `:arm1` - `InstanceClass/ARM1` is returned
-* is `:x1e` - `InstanceClass/X1E` is returned
-* is `:inf1` - `InstanceClass/INF1` is returned
-* is `:hpc6a` - `InstanceClass/HPC6A` is returned
-* is `:memory6-graviton` - `InstanceClass/MEMORY6_GRAVITON` is returned
-* is `:c3` - `InstanceClass/C3` is returned
-* is `:macintosh2-m2-pro` - `InstanceClass/MACINTOSH2_M2_PRO` is returned
-* is `:c6in` - `InstanceClass/C6IN` is returned
-* is `:high-memory-3tb-1` - `InstanceClass/HIGH_MEMORY_3TB_1` is returned
-* is `:graphics4-amd-nvme-drive` - `InstanceClass/GRAPHICS4_AMD_NVME_DRIVE` is returned
-* is `:mac1` - `InstanceClass/MAC1` is returned
-* is `:standard5-nvme-drive` - `InstanceClass/STANDARD5_NVME_DRIVE` is returned
-* is `:memory6-intel-high-performance` - `InstanceClass/MEMORY6_INTEL_HIGH_PERFORMANCE` is returned
-* is `:m7g` - `InstanceClass/M7G` is returned
-* is `:hpc7a` - `InstanceClass/HPC7A` is returned
-* is `:compute7-graviton3-high-network-bandwidth` - `InstanceClass/COMPUTE7_GRAVITON3_HIGH_NETWORK_BANDWIDTH` is returned
-* is `:h1` - `InstanceClass/H1` is returned
-* is `:inf2` - `InstanceClass/INF2` is returned
-* is `:u-24tb1` - `InstanceClass/U_24TB1` is returned
-* is `:im4gn` - `InstanceClass/IM4GN` is returned
-* is `:m6idn` - `InstanceClass/M6IDN` is returned
-* is `:memory5` - `InstanceClass/MEMORY5` is returned
-* is `:standard5-nvme-drive-high-performance` - `InstanceClass/STANDARD5_NVME_DRIVE_HIGH_PERFORMANCE` is returned
-* is `:standard4` - `InstanceClass/STANDARD4` is returned
-* is `:r7gd` - `InstanceClass/R7GD` is returned
-* is `:r5ad` - `InstanceClass/R5AD` is returned
-* is `:c7gn` - `InstanceClass/C7GN` is returned
-* is `:p4d` - `InstanceClass/P4D` is returned
-* is `:f1` - `InstanceClass/F1` is returned
-* is `:io3` - `InstanceClass/IO3` is returned
-* is `:m7a` - `InstanceClass/M7A` is returned
-* is `:m6a` - `InstanceClass/M6A` is returned
-* is `:compute6-graviton2-nvme-drive` - `InstanceClass/COMPUTE6_GRAVITON2_NVME_DRIVE` is returned
-* is `:u-9tb1` - `InstanceClass/U_9TB1` is returned
-* is `:memory-intensive-1` - `InstanceClass/MEMORY_INTENSIVE_1` is returned
-* is `:storage4-graviton` - `InstanceClass/STORAGE4_GRAVITON` is returned
-* is `:standard6-graviton` - `InstanceClass/STANDARD6_GRAVITON` is returned
-* is `:m5` - `InstanceClass/M5` is returned
-* is `:standard6-intel-nvme-drive` - `InstanceClass/STANDARD6_INTEL_NVME_DRIVE` is returned
-* is `:i3` - `InstanceClass/I3` is returned
-* is `:burstable3` - `InstanceClass/BURSTABLE3` is returned
-* is `:r5n` - `InstanceClass/R5N` is returned
-* is `:storage-compute-1` - `InstanceClass/STORAGE_COMPUTE_1` is returned
-* is `:d3en` - `InstanceClass/D3EN` is returned
-* is `:standard7-graviton3-nvme-drive` - `InstanceClass/STANDARD7_GRAVITON3_NVME_DRIVE` is returned
-* is `:g5g` - `InstanceClass/G5G` is returned
-* is `:high-performance-computing6-intel-nvme-drive` - `InstanceClass/HIGH_PERFORMANCE_COMPUTING6_INTEL_NVME_DRIVE` is returned
-* is `:compute4` - `InstanceClass/COMPUTE4` is returned
-* is `:p3` - `InstanceClass/P3` is returned
-* is `:standard6-graviton2-nvme-drive` - `InstanceClass/STANDARD6_GRAVITON2_NVME_DRIVE` is returned
-* is `:g4ad` - `InstanceClass/G4AD` is returned
-* is `:p4de` - `InstanceClass/P4DE` is returned
-* is `:memory4` - `InstanceClass/MEMORY4` is returned
-* is `:parallel5` - `InstanceClass/PARALLEL5` is returned
-* is `:mac2` - `InstanceClass/MAC2` is returned
-* is `:t4g` - `InstanceClass/T4G` is returned
-* is `:compute7-amd` - `InstanceClass/COMPUTE7_AMD` is returned
-* is `:t2` - `InstanceClass/T2` is returned
-* is `:r6id` - `InstanceClass/R6ID` is returned
-* is `:c6a` - `InstanceClass/C6A` is returned
-* is `:u-3tb1` - `InstanceClass/U_3TB1` is returned
-* is `:deep-learning2-qualcomm` - `InstanceClass/DEEP_LEARNING2_QUALCOMM` is returned
-* is `:compute6-graviton2` - `InstanceClass/COMPUTE6_GRAVITON2` is returned
-* is `:standard7-intel-flex` - `InstanceClass/STANDARD7_INTEL_FLEX` is returned
-* is `:compute5-high-performance` - `InstanceClass/COMPUTE5_HIGH_PERFORMANCE` is returned
-* is `:mac2-m2` - `InstanceClass/MAC2_M2` is returned
-* is `:compute7-graviton3-nvme-drive` - `InstanceClass/COMPUTE7_GRAVITON3_NVME_DRIVE` is returned
-* is `:m6g` - `InstanceClass/M6G` is returned
-* is `:r5b` - `InstanceClass/R5B` is returned
-* is `:memory-intensive-2-intel` - `InstanceClass/MEMORY_INTENSIVE_2_INTEL` is returned
-* is `:burstable4-graviton` - `InstanceClass/BURSTABLE4_GRAVITON` is returned
-* is `:memory7-amd` - `InstanceClass/MEMORY7_AMD` is returned
-* is `:r3` - `InstanceClass/R3` is returned
-* is `:deep-learning1` - `InstanceClass/DEEP_LEARNING1` is returned
-* is `:m6i` - `InstanceClass/M6I` is returned
-* is `:standard5-amd-nvme-drive` - `InstanceClass/STANDARD5_AMD_NVME_DRIVE` is returned
-* is `:compute3` - `InstanceClass/COMPUTE3` is returned
-* is `:standard7-intel` - `InstanceClass/STANDARD7_INTEL` is returned
-* is `:c6gd` - `InstanceClass/C6GD` is returned
-* is `:memory-intensive-2-xt-intel` - `InstanceClass/MEMORY_INTENSIVE_2_XT_INTEL` is returned
-* is `:d2` - `InstanceClass/D2` is returned
-* is `:c7i` - `InstanceClass/C7I` is returned
-* is `:graphics5` - `InstanceClass/GRAPHICS5` is returned
-* is `:compute6-intel` - `InstanceClass/COMPUTE6_INTEL` is returned
-* is `:memory-intensive-2-xtz-intel` - `InstanceClass/MEMORY_INTENSIVE_2_XTZ_INTEL` is returned
-* is `:t3` - `InstanceClass/T3` is returned
-* is `:compute6-graviton2-high-network-bandwidth` - `InstanceClass/COMPUTE6_GRAVITON2_HIGH_NETWORK_BANDWIDTH` is returned
-* is `:storage3-enhanced-network` - `InstanceClass/STORAGE3_ENHANCED_NETWORK` is returned
-* is `:c7gd` - `InstanceClass/C7GD` is returned
-* is `:x2idn` - `InstanceClass/X2IDN` is returned
-* is `:c5a` - `InstanceClass/C5A` is returned
-* is `:memory6-intel-nvme-drive-high-performance` - `InstanceClass/MEMORY6_INTEL_NVME_DRIVE_HIGH_PERFORMANCE` is returned
-* is `:high-performance-computing7-graviton` - `InstanceClass/HIGH_PERFORMANCE_COMPUTING7_GRAVITON` is returned
-* is `:graphics3-small` - `InstanceClass/GRAPHICS3_SMALL` is returned
-* is `:c4` - `InstanceClass/C4` is returned
-* is `:memory5-nvme-drive` - `InstanceClass/MEMORY5_NVME_DRIVE` is returned
-* is `:u-12tb1` - `InstanceClass/U_12TB1` is returned
 * is `:burstable2` - `InstanceClass/BURSTABLE2` is returned
-* is `:r6idn` - `InstanceClass/R6IDN` is returned
-* is `:m7i-flex` - `InstanceClass/M7I_FLEX` is returned
-* is `:high-performance-computing7-amd` - `InstanceClass/HIGH_PERFORMANCE_COMPUTING7_AMD` is returned
+* is `:burstable3` - `InstanceClass/BURSTABLE3` is returned
 * is `:burstable3-amd` - `InstanceClass/BURSTABLE3_AMD` is returned
-* is `:g3s` - `InstanceClass/G3S` is returned
-* is `:memory7-graviton` - `InstanceClass/MEMORY7_GRAVITON` is returned
-* is `:d3` - `InstanceClass/D3` is returned
+* is `:burstable4-graviton` - `InstanceClass/BURSTABLE4_GRAVITON` is returned
+* is `:c3` - `InstanceClass/C3` is returned
+* is `:c4` - `InstanceClass/C4` is returned
+* is `:c5` - `InstanceClass/C5` is returned
+* is `:c5a` - `InstanceClass/C5A` is returned
+* is `:c5ad` - `InstanceClass/C5AD` is returned
+* is `:c5d` - `InstanceClass/C5D` is returned
+* is `:c5n` - `InstanceClass/C5N` is returned
+* is `:c6a` - `InstanceClass/C6A` is returned
+* is `:c6g` - `InstanceClass/C6G` is returned
+* is `:c6gd` - `InstanceClass/C6GD` is returned
+* is `:c6gn` - `InstanceClass/C6GN` is returned
+* is `:c6i` - `InstanceClass/C6I` is returned
+* is `:c6id` - `InstanceClass/C6ID` is returned
+* is `:c6in` - `InstanceClass/C6IN` is returned
+* is `:c7a` - `InstanceClass/C7A` is returned
+* is `:c7g` - `InstanceClass/C7G` is returned
+* is `:c7gd` - `InstanceClass/C7GD` is returned
+* is `:c7gn` - `InstanceClass/C7GN` is returned
+* is `:c7i` - `InstanceClass/C7I` is returned
+* is `:compute3` - `InstanceClass/COMPUTE3` is returned
+* is `:compute4` - `InstanceClass/COMPUTE4` is returned
+* is `:compute5` - `InstanceClass/COMPUTE5` is returned
+* is `:compute5-amd` - `InstanceClass/COMPUTE5_AMD` is returned
+* is `:compute5-amd-nvme-drive` - `InstanceClass/COMPUTE5_AMD_NVME_DRIVE` is returned
+* is `:compute5-high-performance` - `InstanceClass/COMPUTE5_HIGH_PERFORMANCE` is returned
+* is `:compute5-nvme-drive` - `InstanceClass/COMPUTE5_NVME_DRIVE` is returned
+* is `:compute6-amd` - `InstanceClass/COMPUTE6_AMD` is returned
+* is `:compute6-graviton2` - `InstanceClass/COMPUTE6_GRAVITON2` is returned
+* is `:compute6-graviton2-high-network-bandwidth` - `InstanceClass/COMPUTE6_GRAVITON2_HIGH_NETWORK_BANDWIDTH` is returned
+* is `:compute6-graviton2-nvme-drive` - `InstanceClass/COMPUTE6_GRAVITON2_NVME_DRIVE` is returned
+* is `:compute6-intel` - `InstanceClass/COMPUTE6_INTEL` is returned
+* is `:compute6-intel-high-performance` - `InstanceClass/COMPUTE6_INTEL_HIGH_PERFORMANCE` is returned
+* is `:compute6-intel-nvme-drive` - `InstanceClass/COMPUTE6_INTEL_NVME_DRIVE` is returned
+* is `:compute7-amd` - `InstanceClass/COMPUTE7_AMD` is returned
+* is `:compute7-graviton3` - `InstanceClass/COMPUTE7_GRAVITON3` is returned
+* is `:compute7-graviton3-high-network-bandwidth` - `InstanceClass/COMPUTE7_GRAVITON3_HIGH_NETWORK_BANDWIDTH` is returned
+* is `:compute7-graviton3-nvme-drive` - `InstanceClass/COMPUTE7_GRAVITON3_NVME_DRIVE` is returned
 * is `:compute7-intel` - `InstanceClass/COMPUTE7_INTEL` is returned
-* is `:memory6-intel` - `InstanceClass/MEMORY6_INTEL` is returned
+* is `:d2` - `InstanceClass/D2` is returned
+* is `:d3` - `InstanceClass/D3` is returned
+* is `:d3en` - `InstanceClass/D3EN` is returned
+* is `:deep-learning1` - `InstanceClass/DEEP_LEARNING1` is returned
+* is `:deep-learning2-qualcomm` - `InstanceClass/DEEP_LEARNING2_QUALCOMM` is returned
+* is `:dl1` - `InstanceClass/DL1` is returned
+* is `:dl2q` - `InstanceClass/DL2Q` is returned
+* is `:f1` - `InstanceClass/F1` is returned
+* is `:fpga1` - `InstanceClass/FPGA1` is returned
 * is `:g3` - `InstanceClass/G3` is returned
-* is `:m5zn` - `InstanceClass/M5ZN` is returned
-* is `:p5` - `InstanceClass/P5` is returned
+* is `:g3s` - `InstanceClass/G3S` is returned
+* is `:g4ad` - `InstanceClass/G4AD` is returned
 * is `:g4dn` - `InstanceClass/G4DN` is returned
-* is `:z1d` - `InstanceClass/Z1D` is returned
-* is `:r6g` - `InstanceClass/R6G` is returned
-* is `:r7a` - `InstanceClass/R7A` is returned
-* is `:memory7-graviton3-nvme-drive` - `InstanceClass/MEMORY7_GRAVITON3_NVME_DRIVE` is returned
+* is `:g5` - `InstanceClass/G5` is returned
+* is `:g5g` - `InstanceClass/G5G` is returned
+* is `:graphics3` - `InstanceClass/GRAPHICS3` is returned
+* is `:graphics3-small` - `InstanceClass/GRAPHICS3_SMALL` is returned
+* is `:graphics4-amd-nvme-drive` - `InstanceClass/GRAPHICS4_AMD_NVME_DRIVE` is returned
+* is `:graphics4-nvme-drive-high-performance` - `InstanceClass/GRAPHICS4_NVME_DRIVE_HIGH_PERFORMANCE` is returned
+* is `:graphics5` - `InstanceClass/GRAPHICS5` is returned
+* is `:graphics5-graviton2` - `InstanceClass/GRAPHICS5_GRAVITON2` is returned
+* is `:h1` - `InstanceClass/H1` is returned
+* is `:high-compute-memory1` - `InstanceClass/HIGH_COMPUTE_MEMORY1` is returned
+* is `:high-memory-12tb-1` - `InstanceClass/HIGH_MEMORY_12TB_1` is returned
+* is `:high-memory-18tb-1` - `InstanceClass/HIGH_MEMORY_18TB_1` is returned
+* is `:high-memory-24tb-1` - `InstanceClass/HIGH_MEMORY_24TB_1` is returned
+* is `:high-memory-3tb-1` - `InstanceClass/HIGH_MEMORY_3TB_1` is returned
+* is `:high-memory-6tb-1` - `InstanceClass/HIGH_MEMORY_6TB_1` is returned
+* is `:high-memory-9tb-1` - `InstanceClass/HIGH_MEMORY_9TB_1` is returned
+* is `:high-performance-computing6-amd` - `InstanceClass/HIGH_PERFORMANCE_COMPUTING6_AMD` is returned
+* is `:high-performance-computing6-intel-nvme-drive` - `InstanceClass/HIGH_PERFORMANCE_COMPUTING6_INTEL_NVME_DRIVE` is returned
+* is `:high-performance-computing7-amd` - `InstanceClass/HIGH_PERFORMANCE_COMPUTING7_AMD` is returned
+* is `:high-performance-computing7-graviton` - `InstanceClass/HIGH_PERFORMANCE_COMPUTING7_GRAVITON` is returned
+* is `:hpc6a` - `InstanceClass/HPC6A` is returned
+* is `:hpc6id` - `InstanceClass/HPC6ID` is returned
+* is `:hpc7a` - `InstanceClass/HPC7A` is returned
+* is `:hpc7g` - `InstanceClass/HPC7G` is returned
+* is `:i3` - `InstanceClass/I3` is returned
+* is `:i3en` - `InstanceClass/I3EN` is returned
+* is `:i4g` - `InstanceClass/I4G` is returned
+* is `:i4i` - `InstanceClass/I4I` is returned
+* is `:im4gn` - `InstanceClass/IM4GN` is returned
+* is `:inf1` - `InstanceClass/INF1` is returned
+* is `:inf2` - `InstanceClass/INF2` is returned
+* is `:inference1` - `InstanceClass/INFERENCE1` is returned
+* is `:inference2` - `InstanceClass/INFERENCE2` is returned
+* is `:io3` - `InstanceClass/IO3` is returned
+* is `:io3-dense-nvme-drive` - `InstanceClass/IO3_DENSE_NVME_DRIVE` is returned
 * is `:io4-intel` - `InstanceClass/IO4_INTEL` is returned
 * is `:is4gen` - `InstanceClass/IS4GEN` is returned
-* is `:compute6-amd` - `InstanceClass/COMPUTE6_AMD` is returned
-* is `:dl2q` - `InstanceClass/DL2Q` is returned
+* is `:m3` - `InstanceClass/M3` is returned
+* is `:m4` - `InstanceClass/M4` is returned
+* is `:m5` - `InstanceClass/M5` is returned
+* is `:m5a` - `InstanceClass/M5A` is returned
+* is `:m5ad` - `InstanceClass/M5AD` is returned
+* is `:m5d` - `InstanceClass/M5D` is returned
+* is `:m5dn` - `InstanceClass/M5DN` is returned
+* is `:m5n` - `InstanceClass/M5N` is returned
+* is `:m5zn` - `InstanceClass/M5ZN` is returned
+* is `:m6a` - `InstanceClass/M6A` is returned
+* is `:m6g` - `InstanceClass/M6G` is returned
+* is `:m6gd` - `InstanceClass/M6GD` is returned
+* is `:m6i` - `InstanceClass/M6I` is returned
+* is `:m6id` - `InstanceClass/M6ID` is returned
+* is `:m6idn` - `InstanceClass/M6IDN` is returned
+* is `:m6in` - `InstanceClass/M6IN` is returned
+* is `:m7a` - `InstanceClass/M7A` is returned
+* is `:m7g` - `InstanceClass/M7G` is returned
+* is `:m7gd` - `InstanceClass/M7GD` is returned
+* is `:m7i` - `InstanceClass/M7I` is returned
+* is `:m7i-flex` - `InstanceClass/M7I_FLEX` is returned
+* is `:mac1` - `InstanceClass/MAC1` is returned
+* is `:mac2` - `InstanceClass/MAC2` is returned
+* is `:mac2-m2` - `InstanceClass/MAC2_M2` is returned
+* is `:mac2-m2pro` - `InstanceClass/MAC2_M2PRO` is returned
+* is `:macintosh1-intel` - `InstanceClass/MACINTOSH1_INTEL` is returned
+* is `:macintosh2-m1` - `InstanceClass/MACINTOSH2_M1` is returned
 * is `:macintosh2-m2` - `InstanceClass/MACINTOSH2_M2` is returned
-* is `:standard3` - `InstanceClass/STANDARD3` is returned
-* is `:r7i` - `InstanceClass/R7I` is returned
+* is `:macintosh2-m2-pro` - `InstanceClass/MACINTOSH2_M2_PRO` is returned
+* is `:memory3` - `InstanceClass/MEMORY3` is returned
+* is `:memory4` - `InstanceClass/MEMORY4` is returned
+* is `:memory5` - `InstanceClass/MEMORY5` is returned
+* is `:memory5-amd` - `InstanceClass/MEMORY5_AMD` is returned
+* is `:memory5-amd-nvme-drive` - `InstanceClass/MEMORY5_AMD_NVME_DRIVE` is returned
+* is `:memory5-ebs-optimized` - `InstanceClass/MEMORY5_EBS_OPTIMIZED` is returned
+* is `:memory5-high-performance` - `InstanceClass/MEMORY5_HIGH_PERFORMANCE` is returned
+* is `:memory5-nvme-drive` - `InstanceClass/MEMORY5_NVME_DRIVE` is returned
+* is `:memory5-nvme-drive-high-performance` - `InstanceClass/MEMORY5_NVME_DRIVE_HIGH_PERFORMANCE` is returned
+* is `:memory6-amd` - `InstanceClass/MEMORY6_AMD` is returned
+* is `:memory6-graviton` - `InstanceClass/MEMORY6_GRAVITON` is returned
+* is `:memory6-graviton2-nvme-drive` - `InstanceClass/MEMORY6_GRAVITON2_NVME_DRIVE` is returned
+* is `:memory6-intel` - `InstanceClass/MEMORY6_INTEL` is returned
+* is `:memory6-intel-high-performance` - `InstanceClass/MEMORY6_INTEL_HIGH_PERFORMANCE` is returned
+* is `:memory6-intel-nvme-drive` - `InstanceClass/MEMORY6_INTEL_NVME_DRIVE` is returned
+* is `:memory6-intel-nvme-drive-high-performance` - `InstanceClass/MEMORY6_INTEL_NVME_DRIVE_HIGH_PERFORMANCE` is returned
+* is `:memory7-amd` - `InstanceClass/MEMORY7_AMD` is returned
+* is `:memory7-graviton` - `InstanceClass/MEMORY7_GRAVITON` is returned
+* is `:memory7-graviton3-nvme-drive` - `InstanceClass/MEMORY7_GRAVITON3_NVME_DRIVE` is returned
+* is `:memory7-intel` - `InstanceClass/MEMORY7_INTEL` is returned
+* is `:memory7-intel-base` - `InstanceClass/MEMORY7_INTEL_BASE` is returned
+* is `:memory-intensive-1` - `InstanceClass/MEMORY_INTENSIVE_1` is returned
+* is `:memory-intensive-1-extended` - `InstanceClass/MEMORY_INTENSIVE_1_EXTENDED` is returned
+* is `:memory-intensive-2-graviton2` - `InstanceClass/MEMORY_INTENSIVE_2_GRAVITON2` is returned
+* is `:memory-intensive-2-graviton2-nvme-drive` - `InstanceClass/MEMORY_INTENSIVE_2_GRAVITON2_NVME_DRIVE` is returned
+* is `:memory-intensive-2-intel` - `InstanceClass/MEMORY_INTENSIVE_2_INTEL` is returned
+* is `:memory-intensive-2-xtz-intel` - `InstanceClass/MEMORY_INTENSIVE_2_XTZ_INTEL` is returned
+* is `:memory-intensive-2-xt-intel` - `InstanceClass/MEMORY_INTENSIVE_2_XT_INTEL` is returned
 * is `:p2` - `InstanceClass/P2` is returned
-* is `:high-memory-9tb-1` - `InstanceClass/HIGH_MEMORY_9TB_1` is returned
+* is `:p3` - `InstanceClass/P3` is returned
+* is `:p3dn` - `InstanceClass/P3DN` is returned
+* is `:p4d` - `InstanceClass/P4D` is returned
+* is `:p4de` - `InstanceClass/P4DE` is returned
+* is `:p5` - `InstanceClass/P5` is returned
+* is `:parallel2` - `InstanceClass/PARALLEL2` is returned
+* is `:parallel3` - `InstanceClass/PARALLEL3` is returned
+* is `:parallel3-nvme-drive-high-performance` - `InstanceClass/PARALLEL3_NVME_DRIVE_HIGH_PERFORMANCE` is returned
+* is `:parallel4` - `InstanceClass/PARALLEL4` is returned
+* is `:parallel4-nvme-drive-extended` - `InstanceClass/PARALLEL4_NVME_DRIVE_EXTENDED` is returned
+* is `:parallel5` - `InstanceClass/PARALLEL5` is returned
+* is `:r3` - `InstanceClass/R3` is returned
+* is `:r4` - `InstanceClass/R4` is returned
+* is `:r5` - `InstanceClass/R5` is returned
+* is `:r5a` - `InstanceClass/R5A` is returned
+* is `:r5ad` - `InstanceClass/R5AD` is returned
+* is `:r5b` - `InstanceClass/R5B` is returned
+* is `:r5d` - `InstanceClass/R5D` is returned
+* is `:r5dn` - `InstanceClass/R5DN` is returned
+* is `:r5n` - `InstanceClass/R5N` is returned
+* is `:r6a` - `InstanceClass/R6A` is returned
+* is `:r6g` - `InstanceClass/R6G` is returned
+* is `:r6gd` - `InstanceClass/R6GD` is returned
+* is `:r6i` - `InstanceClass/R6I` is returned
+* is `:r6id` - `InstanceClass/R6ID` is returned
+* is `:r6idn` - `InstanceClass/R6IDN` is returned
+* is `:r6in` - `InstanceClass/R6IN` is returned
+* is `:r7a` - `InstanceClass/R7A` is returned
+* is `:r7g` - `InstanceClass/R7G` is returned
+* is `:r7gd` - `InstanceClass/R7GD` is returned
+* is `:r7i` - `InstanceClass/R7I` is returned
+* is `:r7iz` - `InstanceClass/R7IZ` is returned
+* is `:standard3` - `InstanceClass/STANDARD3` is returned
+* is `:standard4` - `InstanceClass/STANDARD4` is returned
+* is `:standard5` - `InstanceClass/STANDARD5` is returned
+* is `:standard5-amd` - `InstanceClass/STANDARD5_AMD` is returned
+* is `:standard5-amd-nvme-drive` - `InstanceClass/STANDARD5_AMD_NVME_DRIVE` is returned
+* is `:standard5-high-compute` - `InstanceClass/STANDARD5_HIGH_COMPUTE` is returned
+* is `:standard5-high-performance` - `InstanceClass/STANDARD5_HIGH_PERFORMANCE` is returned
+* is `:standard5-nvme-drive` - `InstanceClass/STANDARD5_NVME_DRIVE` is returned
+* is `:standard5-nvme-drive-high-performance` - `InstanceClass/STANDARD5_NVME_DRIVE_HIGH_PERFORMANCE` is returned
+* is `:standard6-amd` - `InstanceClass/STANDARD6_AMD` is returned
+* is `:standard6-graviton` - `InstanceClass/STANDARD6_GRAVITON` is returned
+* is `:standard6-graviton2-nvme-drive` - `InstanceClass/STANDARD6_GRAVITON2_NVME_DRIVE` is returned
+* is `:standard6-intel` - `InstanceClass/STANDARD6_INTEL` is returned
+* is `:standard6-intel-high-performance` - `InstanceClass/STANDARD6_INTEL_HIGH_PERFORMANCE` is returned
+* is `:standard6-intel-nvme-drive` - `InstanceClass/STANDARD6_INTEL_NVME_DRIVE` is returned
+* is `:standard6-intel-nvme-drive-high-performance` - `InstanceClass/STANDARD6_INTEL_NVME_DRIVE_HIGH_PERFORMANCE` is returned
+* is `:standard7-amd` - `InstanceClass/STANDARD7_AMD` is returned
+* is `:standard7-graviton` - `InstanceClass/STANDARD7_GRAVITON` is returned
+* is `:standard7-graviton3-nvme-drive` - `InstanceClass/STANDARD7_GRAVITON3_NVME_DRIVE` is returned
+* is `:standard7-intel` - `InstanceClass/STANDARD7_INTEL` is returned
+* is `:standard7-intel-flex` - `InstanceClass/STANDARD7_INTEL_FLEX` is returned
+* is `:storage2` - `InstanceClass/STORAGE2` is returned
+* is `:storage3` - `InstanceClass/STORAGE3` is returned
+* is `:storage3-enhanced-network` - `InstanceClass/STORAGE3_ENHANCED_NETWORK` is returned
+* is `:storage4-graviton` - `InstanceClass/STORAGE4_GRAVITON` is returned
+* is `:storage4-graviton-network-optimized` - `InstanceClass/STORAGE4_GRAVITON_NETWORK_OPTIMIZED` is returned
+* is `:storage4-graviton-network-storage-optimized` - `InstanceClass/STORAGE4_GRAVITON_NETWORK_STORAGE_OPTIMIZED` is returned
+* is `:storage-compute-1` - `InstanceClass/STORAGE_COMPUTE_1` is returned
+* is `:t2` - `InstanceClass/T2` is returned
+* is `:t3` - `InstanceClass/T3` is returned
+* is `:t3a` - `InstanceClass/T3A` is returned
+* is `:t4g` - `InstanceClass/T4G` is returned
+* is `:training-accelerator1` - `InstanceClass/TRAINING_ACCELERATOR1` is returned
+* is `:training-accelerator1-enhanced-network` - `InstanceClass/TRAINING_ACCELERATOR1_ENHANCED_NETWORK` is returned
+* is `:trn1` - `InstanceClass/TRN1` is returned
+* is `:trn1n` - `InstanceClass/TRN1N` is returned
+* is `:u-12tb1` - `InstanceClass/U_12TB1` is returned
+* is `:u-18tb1` - `InstanceClass/U_18TB1` is returned
+* is `:u-24tb1` - `InstanceClass/U_24TB1` is returned
+* is `:u-3tb1` - `InstanceClass/U_3TB1` is returned
+* is `:u-6tb1` - `InstanceClass/U_6TB1` is returned
+* is `:u-9tb1` - `InstanceClass/U_9TB1` is returned
+* is `:video-transcoding1` - `InstanceClass/VIDEO_TRANSCODING1` is returned
+* is `:vt1` - `InstanceClass/VT1` is returned
+* is `:x1` - `InstanceClass/X1` is returned
+* is `:x1e` - `InstanceClass/X1E` is returned
+* is `:x2g` - `InstanceClass/X2G` is returned
+* is `:x2gd` - `InstanceClass/X2GD` is returned
+* is `:x2idn` - `InstanceClass/X2IDN` is returned
+* is `:x2iedn` - `InstanceClass/X2IEDN` is returned
+* is `:x2iezn` - `InstanceClass/X2IEZN` is returned
+* is `:z1d` - `InstanceClass/Z1D` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? InstanceClass data) data
-      (= :c5d data) InstanceClass/C5D
-      (= :standard7-amd data) InstanceClass/STANDARD7_AMD
-      (= :fpga1 data) InstanceClass/FPGA1
-      (= :standard7-graviton data) InstanceClass/STANDARD7_GRAVITON
-      (= :r4 data) InstanceClass/R4
-      (= :p3dn data) InstanceClass/P3DN
-      (= :memory5-amd data) InstanceClass/MEMORY5_AMD
-      (= :memory-intensive-2-graviton2-nvme-drive data) InstanceClass/MEMORY_INTENSIVE_2_GRAVITON2_NVME_DRIVE
-      (= :standard5 data) InstanceClass/STANDARD5
-      (= :memory5-high-performance data) InstanceClass/MEMORY5_HIGH_PERFORMANCE
-      (= :standard6-amd data) InstanceClass/STANDARD6_AMD
-      (= :standard5-high-compute data) InstanceClass/STANDARD5_HIGH_COMPUTE
-      (= :memory6-intel-nvme-drive data) InstanceClass/MEMORY6_INTEL_NVME_DRIVE
-      (= :high-memory-24tb-1 data) InstanceClass/HIGH_MEMORY_24TB_1
-      (= :i4g data) InstanceClass/I4G
-      (= :m5n data) InstanceClass/M5N
-      (= :c6i data) InstanceClass/C6I
-      (= :dl1 data) InstanceClass/DL1
-      (= :memory5-ebs-optimized data) InstanceClass/MEMORY5_EBS_OPTIMIZED
-      (= :compute5-amd data) InstanceClass/COMPUTE5_AMD
-      (= :compute5 data) InstanceClass/COMPUTE5
-      (= :parallel2 data) InstanceClass/PARALLEL2
-      (= :m6in data) InstanceClass/M6IN
-      (= :hpc6id data) InstanceClass/HPC6ID
-      (= :r7g data) InstanceClass/R7G
-      (= :trn1 data) InstanceClass/TRN1
-      (= :compute5-amd-nvme-drive data) InstanceClass/COMPUTE5_AMD_NVME_DRIVE
-      (= :standard5-high-performance data) InstanceClass/STANDARD5_HIGH_PERFORMANCE
-      (= :i4i data) InstanceClass/I4I
       (= :a1 data) InstanceClass/A1
-      (= :c6gn data) InstanceClass/C6GN
-      (= :graphics4-nvme-drive-high-performance data) InstanceClass/GRAPHICS4_NVME_DRIVE_HIGH_PERFORMANCE
-      (= :storage3 data) InstanceClass/STORAGE3
-      (= :storage4-graviton-network-storage-optimized data) InstanceClass/STORAGE4_GRAVITON_NETWORK_STORAGE_OPTIMIZED
-      (= :c7g data) InstanceClass/C7G
-      (= :high-memory-6tb-1 data) InstanceClass/HIGH_MEMORY_6TB_1
-      (= :compute6-intel-nvme-drive data) InstanceClass/COMPUTE6_INTEL_NVME_DRIVE
-      (= :r5dn data) InstanceClass/R5DN
-      (= :t3a data) InstanceClass/T3A
-      (= :u-6tb1 data) InstanceClass/U_6TB1
-      (= :mac2-m2pro data) InstanceClass/MAC2_M2PRO
-      (= :memory6-graviton2-nvme-drive data) InstanceClass/MEMORY6_GRAVITON2_NVME_DRIVE
-      (= :x2iedn data) InstanceClass/X2IEDN
-      (= :inference1 data) InstanceClass/INFERENCE1
-      (= :high-compute-memory1 data) InstanceClass/HIGH_COMPUTE_MEMORY1
-      (= :m6id data) InstanceClass/M6ID
-      (= :memory7-intel data) InstanceClass/MEMORY7_INTEL
-      (= :graphics5-graviton2 data) InstanceClass/GRAPHICS5_GRAVITON2
-      (= :parallel3 data) InstanceClass/PARALLEL3
-      (= :memory5-amd-nvme-drive data) InstanceClass/MEMORY5_AMD_NVME_DRIVE
-      (= :r5a data) InstanceClass/R5A
-      (= :m5d data) InstanceClass/M5D
-      (= :m6gd data) InstanceClass/M6GD
-      (= :r5d data) InstanceClass/R5D
-      (= :trn1n data) InstanceClass/TRN1N
-      (= :hpc7g data) InstanceClass/HPC7G
-      (= :r7iz data) InstanceClass/R7IZ
-      (= :compute7-graviton3 data) InstanceClass/COMPUTE7_GRAVITON3
-      (= :c7a data) InstanceClass/C7A
-      (= :m3 data) InstanceClass/M3
-      (= :m5a data) InstanceClass/M5A
-      (= :compute5-nvme-drive data) InstanceClass/COMPUTE5_NVME_DRIVE
-      (= :memory7-intel-base data) InstanceClass/MEMORY7_INTEL_BASE
-      (= :training-accelerator1-enhanced-network data) InstanceClass/TRAINING_ACCELERATOR1_ENHANCED_NETWORK
-      (= :standard5-amd data) InstanceClass/STANDARD5_AMD
-      (= :r6i data) InstanceClass/R6I
-      (= :u-18tb1 data) InstanceClass/U_18TB1
-      (= :m7i data) InstanceClass/M7I
-      (= :c6g data) InstanceClass/C6G
-      (= :r6in data) InstanceClass/R6IN
-      (= :parallel3-nvme-drive-high-performance data) InstanceClass/PARALLEL3_NVME_DRIVE_HIGH_PERFORMANCE
-      (= :high-memory-12tb-1 data) InstanceClass/HIGH_MEMORY_12TB_1
-      (= :memory6-amd data) InstanceClass/MEMORY6_AMD
-      (= :r6a data) InstanceClass/R6A
-      (= :m4 data) InstanceClass/M4
-      (= :graphics3 data) InstanceClass/GRAPHICS3
-      (= :g5 data) InstanceClass/G5
-      (= :high-memory-18tb-1 data) InstanceClass/HIGH_MEMORY_18TB_1
-      (= :c5 data) InstanceClass/C5
-      (= :training-accelerator1 data) InstanceClass/TRAINING_ACCELERATOR1
-      (= :x1 data) InstanceClass/X1
-      (= :x2iezn data) InstanceClass/X2IEZN
-      (= :i3en data) InstanceClass/I3EN
-      (= :memory3 data) InstanceClass/MEMORY3
-      (= :m7gd data) InstanceClass/M7GD
-      (= :x2g data) InstanceClass/X2G
-      (= :io3-dense-nvme-drive data) InstanceClass/IO3_DENSE_NVME_DRIVE
-      (= :standard6-intel-high-performance data) InstanceClass/STANDARD6_INTEL_HIGH_PERFORMANCE
-      (= :r6gd data) InstanceClass/R6GD
-      (= :video-transcoding1 data) InstanceClass/VIDEO_TRANSCODING1
-      (= :macintosh2-m1 data) InstanceClass/MACINTOSH2_M1
-      (= :m5dn data) InstanceClass/M5DN
-      (= :storage4-graviton-network-optimized data) InstanceClass/STORAGE4_GRAVITON_NETWORK_OPTIMIZED
-      (= :r5 data) InstanceClass/R5
-      (= :x2gd data) InstanceClass/X2GD
-      (= :memory-intensive-1-extended data) InstanceClass/MEMORY_INTENSIVE_1_EXTENDED
-      (= :c5ad data) InstanceClass/C5AD
-      (= :parallel4 data) InstanceClass/PARALLEL4
-      (= :parallel4-nvme-drive-extended data) InstanceClass/PARALLEL4_NVME_DRIVE_EXTENDED
-      (= :c6id data) InstanceClass/C6ID
-      (= :m5ad data) InstanceClass/M5AD
-      (= :c5n data) InstanceClass/C5N
-      (= :macintosh1-intel data) InstanceClass/MACINTOSH1_INTEL
-      (= :standard6-intel data) InstanceClass/STANDARD6_INTEL
-      (= :memory-intensive-2-graviton2 data) InstanceClass/MEMORY_INTENSIVE_2_GRAVITON2
-      (= :inference2 data) InstanceClass/INFERENCE2
-      (= :compute6-intel-high-performance data) InstanceClass/COMPUTE6_INTEL_HIGH_PERFORMANCE
-      (= :vt1 data) InstanceClass/VT1
-      (= :memory5-nvme-drive-high-performance data) InstanceClass/MEMORY5_NVME_DRIVE_HIGH_PERFORMANCE
-      (= :standard6-intel-nvme-drive-high-performance data) InstanceClass/STANDARD6_INTEL_NVME_DRIVE_HIGH_PERFORMANCE
-      (= :storage2 data) InstanceClass/STORAGE2
-      (= :high-performance-computing6-amd data) InstanceClass/HIGH_PERFORMANCE_COMPUTING6_AMD
       (= :arm1 data) InstanceClass/ARM1
-      (= :x1e data) InstanceClass/X1E
-      (= :inf1 data) InstanceClass/INF1
-      (= :hpc6a data) InstanceClass/HPC6A
-      (= :memory6-graviton data) InstanceClass/MEMORY6_GRAVITON
-      (= :c3 data) InstanceClass/C3
-      (= :macintosh2-m2-pro data) InstanceClass/MACINTOSH2_M2_PRO
-      (= :c6in data) InstanceClass/C6IN
-      (= :high-memory-3tb-1 data) InstanceClass/HIGH_MEMORY_3TB_1
-      (= :graphics4-amd-nvme-drive data) InstanceClass/GRAPHICS4_AMD_NVME_DRIVE
-      (= :mac1 data) InstanceClass/MAC1
-      (= :standard5-nvme-drive data) InstanceClass/STANDARD5_NVME_DRIVE
-      (= :memory6-intel-high-performance data) InstanceClass/MEMORY6_INTEL_HIGH_PERFORMANCE
-      (= :m7g data) InstanceClass/M7G
-      (= :hpc7a data) InstanceClass/HPC7A
-      (= :compute7-graviton3-high-network-bandwidth data) InstanceClass/COMPUTE7_GRAVITON3_HIGH_NETWORK_BANDWIDTH
-      (= :h1 data) InstanceClass/H1
-      (= :inf2 data) InstanceClass/INF2
-      (= :u-24tb1 data) InstanceClass/U_24TB1
-      (= :im4gn data) InstanceClass/IM4GN
-      (= :m6idn data) InstanceClass/M6IDN
-      (= :memory5 data) InstanceClass/MEMORY5
-      (= :standard5-nvme-drive-high-performance data) InstanceClass/STANDARD5_NVME_DRIVE_HIGH_PERFORMANCE
-      (= :standard4 data) InstanceClass/STANDARD4
-      (= :r7gd data) InstanceClass/R7GD
-      (= :r5ad data) InstanceClass/R5AD
-      (= :c7gn data) InstanceClass/C7GN
-      (= :p4d data) InstanceClass/P4D
-      (= :f1 data) InstanceClass/F1
-      (= :io3 data) InstanceClass/IO3
-      (= :m7a data) InstanceClass/M7A
-      (= :m6a data) InstanceClass/M6A
-      (= :compute6-graviton2-nvme-drive data) InstanceClass/COMPUTE6_GRAVITON2_NVME_DRIVE
-      (= :u-9tb1 data) InstanceClass/U_9TB1
-      (= :memory-intensive-1 data) InstanceClass/MEMORY_INTENSIVE_1
-      (= :storage4-graviton data) InstanceClass/STORAGE4_GRAVITON
-      (= :standard6-graviton data) InstanceClass/STANDARD6_GRAVITON
-      (= :m5 data) InstanceClass/M5
-      (= :standard6-intel-nvme-drive data) InstanceClass/STANDARD6_INTEL_NVME_DRIVE
-      (= :i3 data) InstanceClass/I3
-      (= :burstable3 data) InstanceClass/BURSTABLE3
-      (= :r5n data) InstanceClass/R5N
-      (= :storage-compute-1 data) InstanceClass/STORAGE_COMPUTE_1
-      (= :d3en data) InstanceClass/D3EN
-      (= :standard7-graviton3-nvme-drive data) InstanceClass/STANDARD7_GRAVITON3_NVME_DRIVE
-      (= :g5g data) InstanceClass/G5G
-      (= :high-performance-computing6-intel-nvme-drive data) InstanceClass/HIGH_PERFORMANCE_COMPUTING6_INTEL_NVME_DRIVE
-      (= :compute4 data) InstanceClass/COMPUTE4
-      (= :p3 data) InstanceClass/P3
-      (= :standard6-graviton2-nvme-drive data) InstanceClass/STANDARD6_GRAVITON2_NVME_DRIVE
-      (= :g4ad data) InstanceClass/G4AD
-      (= :p4de data) InstanceClass/P4DE
-      (= :memory4 data) InstanceClass/MEMORY4
-      (= :parallel5 data) InstanceClass/PARALLEL5
-      (= :mac2 data) InstanceClass/MAC2
-      (= :t4g data) InstanceClass/T4G
-      (= :compute7-amd data) InstanceClass/COMPUTE7_AMD
-      (= :t2 data) InstanceClass/T2
-      (= :r6id data) InstanceClass/R6ID
-      (= :c6a data) InstanceClass/C6A
-      (= :u-3tb1 data) InstanceClass/U_3TB1
-      (= :deep-learning2-qualcomm data) InstanceClass/DEEP_LEARNING2_QUALCOMM
-      (= :compute6-graviton2 data) InstanceClass/COMPUTE6_GRAVITON2
-      (= :standard7-intel-flex data) InstanceClass/STANDARD7_INTEL_FLEX
-      (= :compute5-high-performance data) InstanceClass/COMPUTE5_HIGH_PERFORMANCE
-      (= :mac2-m2 data) InstanceClass/MAC2_M2
-      (= :compute7-graviton3-nvme-drive data) InstanceClass/COMPUTE7_GRAVITON3_NVME_DRIVE
-      (= :m6g data) InstanceClass/M6G
-      (= :r5b data) InstanceClass/R5B
-      (= :memory-intensive-2-intel data) InstanceClass/MEMORY_INTENSIVE_2_INTEL
-      (= :burstable4-graviton data) InstanceClass/BURSTABLE4_GRAVITON
-      (= :memory7-amd data) InstanceClass/MEMORY7_AMD
-      (= :r3 data) InstanceClass/R3
-      (= :deep-learning1 data) InstanceClass/DEEP_LEARNING1
-      (= :m6i data) InstanceClass/M6I
-      (= :standard5-amd-nvme-drive data) InstanceClass/STANDARD5_AMD_NVME_DRIVE
-      (= :compute3 data) InstanceClass/COMPUTE3
-      (= :standard7-intel data) InstanceClass/STANDARD7_INTEL
-      (= :c6gd data) InstanceClass/C6GD
-      (= :memory-intensive-2-xt-intel data) InstanceClass/MEMORY_INTENSIVE_2_XT_INTEL
-      (= :d2 data) InstanceClass/D2
-      (= :c7i data) InstanceClass/C7I
-      (= :graphics5 data) InstanceClass/GRAPHICS5
-      (= :compute6-intel data) InstanceClass/COMPUTE6_INTEL
-      (= :memory-intensive-2-xtz-intel data) InstanceClass/MEMORY_INTENSIVE_2_XTZ_INTEL
-      (= :t3 data) InstanceClass/T3
-      (= :compute6-graviton2-high-network-bandwidth data) InstanceClass/COMPUTE6_GRAVITON2_HIGH_NETWORK_BANDWIDTH
-      (= :storage3-enhanced-network data) InstanceClass/STORAGE3_ENHANCED_NETWORK
-      (= :c7gd data) InstanceClass/C7GD
-      (= :x2idn data) InstanceClass/X2IDN
-      (= :c5a data) InstanceClass/C5A
-      (= :memory6-intel-nvme-drive-high-performance data) InstanceClass/MEMORY6_INTEL_NVME_DRIVE_HIGH_PERFORMANCE
-      (= :high-performance-computing7-graviton data) InstanceClass/HIGH_PERFORMANCE_COMPUTING7_GRAVITON
-      (= :graphics3-small data) InstanceClass/GRAPHICS3_SMALL
-      (= :c4 data) InstanceClass/C4
-      (= :memory5-nvme-drive data) InstanceClass/MEMORY5_NVME_DRIVE
-      (= :u-12tb1 data) InstanceClass/U_12TB1
       (= :burstable2 data) InstanceClass/BURSTABLE2
-      (= :r6idn data) InstanceClass/R6IDN
-      (= :m7i-flex data) InstanceClass/M7I_FLEX
-      (= :high-performance-computing7-amd data) InstanceClass/HIGH_PERFORMANCE_COMPUTING7_AMD
+      (= :burstable3 data) InstanceClass/BURSTABLE3
       (= :burstable3-amd data) InstanceClass/BURSTABLE3_AMD
-      (= :g3s data) InstanceClass/G3S
-      (= :memory7-graviton data) InstanceClass/MEMORY7_GRAVITON
-      (= :d3 data) InstanceClass/D3
+      (= :burstable4-graviton data) InstanceClass/BURSTABLE4_GRAVITON
+      (= :c3 data) InstanceClass/C3
+      (= :c4 data) InstanceClass/C4
+      (= :c5 data) InstanceClass/C5
+      (= :c5a data) InstanceClass/C5A
+      (= :c5ad data) InstanceClass/C5AD
+      (= :c5d data) InstanceClass/C5D
+      (= :c5n data) InstanceClass/C5N
+      (= :c6a data) InstanceClass/C6A
+      (= :c6g data) InstanceClass/C6G
+      (= :c6gd data) InstanceClass/C6GD
+      (= :c6gn data) InstanceClass/C6GN
+      (= :c6i data) InstanceClass/C6I
+      (= :c6id data) InstanceClass/C6ID
+      (= :c6in data) InstanceClass/C6IN
+      (= :c7a data) InstanceClass/C7A
+      (= :c7g data) InstanceClass/C7G
+      (= :c7gd data) InstanceClass/C7GD
+      (= :c7gn data) InstanceClass/C7GN
+      (= :c7i data) InstanceClass/C7I
+      (= :compute3 data) InstanceClass/COMPUTE3
+      (= :compute4 data) InstanceClass/COMPUTE4
+      (= :compute5 data) InstanceClass/COMPUTE5
+      (= :compute5-amd data) InstanceClass/COMPUTE5_AMD
+      (= :compute5-amd-nvme-drive data) InstanceClass/COMPUTE5_AMD_NVME_DRIVE
+      (= :compute5-high-performance data) InstanceClass/COMPUTE5_HIGH_PERFORMANCE
+      (= :compute5-nvme-drive data) InstanceClass/COMPUTE5_NVME_DRIVE
+      (= :compute6-amd data) InstanceClass/COMPUTE6_AMD
+      (= :compute6-graviton2 data) InstanceClass/COMPUTE6_GRAVITON2
+      (= :compute6-graviton2-high-network-bandwidth data) InstanceClass/COMPUTE6_GRAVITON2_HIGH_NETWORK_BANDWIDTH
+      (= :compute6-graviton2-nvme-drive data) InstanceClass/COMPUTE6_GRAVITON2_NVME_DRIVE
+      (= :compute6-intel data) InstanceClass/COMPUTE6_INTEL
+      (= :compute6-intel-high-performance data) InstanceClass/COMPUTE6_INTEL_HIGH_PERFORMANCE
+      (= :compute6-intel-nvme-drive data) InstanceClass/COMPUTE6_INTEL_NVME_DRIVE
+      (= :compute7-amd data) InstanceClass/COMPUTE7_AMD
+      (= :compute7-graviton3 data) InstanceClass/COMPUTE7_GRAVITON3
+      (= :compute7-graviton3-high-network-bandwidth data) InstanceClass/COMPUTE7_GRAVITON3_HIGH_NETWORK_BANDWIDTH
+      (= :compute7-graviton3-nvme-drive data) InstanceClass/COMPUTE7_GRAVITON3_NVME_DRIVE
       (= :compute7-intel data) InstanceClass/COMPUTE7_INTEL
-      (= :memory6-intel data) InstanceClass/MEMORY6_INTEL
+      (= :d2 data) InstanceClass/D2
+      (= :d3 data) InstanceClass/D3
+      (= :d3en data) InstanceClass/D3EN
+      (= :deep-learning1 data) InstanceClass/DEEP_LEARNING1
+      (= :deep-learning2-qualcomm data) InstanceClass/DEEP_LEARNING2_QUALCOMM
+      (= :dl1 data) InstanceClass/DL1
+      (= :dl2q data) InstanceClass/DL2Q
+      (= :f1 data) InstanceClass/F1
+      (= :fpga1 data) InstanceClass/FPGA1
       (= :g3 data) InstanceClass/G3
-      (= :m5zn data) InstanceClass/M5ZN
-      (= :p5 data) InstanceClass/P5
+      (= :g3s data) InstanceClass/G3S
+      (= :g4ad data) InstanceClass/G4AD
       (= :g4dn data) InstanceClass/G4DN
-      (= :z1d data) InstanceClass/Z1D
-      (= :r6g data) InstanceClass/R6G
-      (= :r7a data) InstanceClass/R7A
-      (= :memory7-graviton3-nvme-drive data) InstanceClass/MEMORY7_GRAVITON3_NVME_DRIVE
+      (= :g5 data) InstanceClass/G5
+      (= :g5g data) InstanceClass/G5G
+      (= :graphics3 data) InstanceClass/GRAPHICS3
+      (= :graphics3-small data) InstanceClass/GRAPHICS3_SMALL
+      (= :graphics4-amd-nvme-drive data) InstanceClass/GRAPHICS4_AMD_NVME_DRIVE
+      (= :graphics4-nvme-drive-high-performance data) InstanceClass/GRAPHICS4_NVME_DRIVE_HIGH_PERFORMANCE
+      (= :graphics5 data) InstanceClass/GRAPHICS5
+      (= :graphics5-graviton2 data) InstanceClass/GRAPHICS5_GRAVITON2
+      (= :h1 data) InstanceClass/H1
+      (= :high-compute-memory1 data) InstanceClass/HIGH_COMPUTE_MEMORY1
+      (= :high-memory-12tb-1 data) InstanceClass/HIGH_MEMORY_12TB_1
+      (= :high-memory-18tb-1 data) InstanceClass/HIGH_MEMORY_18TB_1
+      (= :high-memory-24tb-1 data) InstanceClass/HIGH_MEMORY_24TB_1
+      (= :high-memory-3tb-1 data) InstanceClass/HIGH_MEMORY_3TB_1
+      (= :high-memory-6tb-1 data) InstanceClass/HIGH_MEMORY_6TB_1
+      (= :high-memory-9tb-1 data) InstanceClass/HIGH_MEMORY_9TB_1
+      (= :high-performance-computing6-amd data) InstanceClass/HIGH_PERFORMANCE_COMPUTING6_AMD
+      (= :high-performance-computing6-intel-nvme-drive data) InstanceClass/HIGH_PERFORMANCE_COMPUTING6_INTEL_NVME_DRIVE
+      (= :high-performance-computing7-amd data) InstanceClass/HIGH_PERFORMANCE_COMPUTING7_AMD
+      (= :high-performance-computing7-graviton data) InstanceClass/HIGH_PERFORMANCE_COMPUTING7_GRAVITON
+      (= :hpc6a data) InstanceClass/HPC6A
+      (= :hpc6id data) InstanceClass/HPC6ID
+      (= :hpc7a data) InstanceClass/HPC7A
+      (= :hpc7g data) InstanceClass/HPC7G
+      (= :i3 data) InstanceClass/I3
+      (= :i3en data) InstanceClass/I3EN
+      (= :i4g data) InstanceClass/I4G
+      (= :i4i data) InstanceClass/I4I
+      (= :im4gn data) InstanceClass/IM4GN
+      (= :inf1 data) InstanceClass/INF1
+      (= :inf2 data) InstanceClass/INF2
+      (= :inference1 data) InstanceClass/INFERENCE1
+      (= :inference2 data) InstanceClass/INFERENCE2
+      (= :io3 data) InstanceClass/IO3
+      (= :io3-dense-nvme-drive data) InstanceClass/IO3_DENSE_NVME_DRIVE
       (= :io4-intel data) InstanceClass/IO4_INTEL
       (= :is4gen data) InstanceClass/IS4GEN
-      (= :compute6-amd data) InstanceClass/COMPUTE6_AMD
-      (= :dl2q data) InstanceClass/DL2Q
+      (= :m3 data) InstanceClass/M3
+      (= :m4 data) InstanceClass/M4
+      (= :m5 data) InstanceClass/M5
+      (= :m5a data) InstanceClass/M5A
+      (= :m5ad data) InstanceClass/M5AD
+      (= :m5d data) InstanceClass/M5D
+      (= :m5dn data) InstanceClass/M5DN
+      (= :m5n data) InstanceClass/M5N
+      (= :m5zn data) InstanceClass/M5ZN
+      (= :m6a data) InstanceClass/M6A
+      (= :m6g data) InstanceClass/M6G
+      (= :m6gd data) InstanceClass/M6GD
+      (= :m6i data) InstanceClass/M6I
+      (= :m6id data) InstanceClass/M6ID
+      (= :m6idn data) InstanceClass/M6IDN
+      (= :m6in data) InstanceClass/M6IN
+      (= :m7a data) InstanceClass/M7A
+      (= :m7g data) InstanceClass/M7G
+      (= :m7gd data) InstanceClass/M7GD
+      (= :m7i data) InstanceClass/M7I
+      (= :m7i-flex data) InstanceClass/M7I_FLEX
+      (= :mac1 data) InstanceClass/MAC1
+      (= :mac2 data) InstanceClass/MAC2
+      (= :mac2-m2 data) InstanceClass/MAC2_M2
+      (= :mac2-m2pro data) InstanceClass/MAC2_M2PRO
+      (= :macintosh1-intel data) InstanceClass/MACINTOSH1_INTEL
+      (= :macintosh2-m1 data) InstanceClass/MACINTOSH2_M1
       (= :macintosh2-m2 data) InstanceClass/MACINTOSH2_M2
-      (= :standard3 data) InstanceClass/STANDARD3
-      (= :r7i data) InstanceClass/R7I
+      (= :macintosh2-m2-pro data) InstanceClass/MACINTOSH2_M2_PRO
+      (= :memory3 data) InstanceClass/MEMORY3
+      (= :memory4 data) InstanceClass/MEMORY4
+      (= :memory5 data) InstanceClass/MEMORY5
+      (= :memory5-amd data) InstanceClass/MEMORY5_AMD
+      (= :memory5-amd-nvme-drive data) InstanceClass/MEMORY5_AMD_NVME_DRIVE
+      (= :memory5-ebs-optimized data) InstanceClass/MEMORY5_EBS_OPTIMIZED
+      (= :memory5-high-performance data) InstanceClass/MEMORY5_HIGH_PERFORMANCE
+      (= :memory5-nvme-drive data) InstanceClass/MEMORY5_NVME_DRIVE
+      (= :memory5-nvme-drive-high-performance data) InstanceClass/MEMORY5_NVME_DRIVE_HIGH_PERFORMANCE
+      (= :memory6-amd data) InstanceClass/MEMORY6_AMD
+      (= :memory6-graviton data) InstanceClass/MEMORY6_GRAVITON
+      (= :memory6-graviton2-nvme-drive data) InstanceClass/MEMORY6_GRAVITON2_NVME_DRIVE
+      (= :memory6-intel data) InstanceClass/MEMORY6_INTEL
+      (= :memory6-intel-high-performance data) InstanceClass/MEMORY6_INTEL_HIGH_PERFORMANCE
+      (= :memory6-intel-nvme-drive data) InstanceClass/MEMORY6_INTEL_NVME_DRIVE
+      (= :memory6-intel-nvme-drive-high-performance data) InstanceClass/MEMORY6_INTEL_NVME_DRIVE_HIGH_PERFORMANCE
+      (= :memory7-amd data) InstanceClass/MEMORY7_AMD
+      (= :memory7-graviton data) InstanceClass/MEMORY7_GRAVITON
+      (= :memory7-graviton3-nvme-drive data) InstanceClass/MEMORY7_GRAVITON3_NVME_DRIVE
+      (= :memory7-intel data) InstanceClass/MEMORY7_INTEL
+      (= :memory7-intel-base data) InstanceClass/MEMORY7_INTEL_BASE
+      (= :memory-intensive-1 data) InstanceClass/MEMORY_INTENSIVE_1
+      (= :memory-intensive-1-extended data) InstanceClass/MEMORY_INTENSIVE_1_EXTENDED
+      (= :memory-intensive-2-graviton2 data) InstanceClass/MEMORY_INTENSIVE_2_GRAVITON2
+      (= :memory-intensive-2-graviton2-nvme-drive data) InstanceClass/MEMORY_INTENSIVE_2_GRAVITON2_NVME_DRIVE
+      (= :memory-intensive-2-intel data) InstanceClass/MEMORY_INTENSIVE_2_INTEL
+      (= :memory-intensive-2-xtz-intel data) InstanceClass/MEMORY_INTENSIVE_2_XTZ_INTEL
+      (= :memory-intensive-2-xt-intel data) InstanceClass/MEMORY_INTENSIVE_2_XT_INTEL
       (= :p2 data) InstanceClass/P2
-      (= :high-memory-9tb-1 data) InstanceClass/HIGH_MEMORY_9TB_1)))
+      (= :p3 data) InstanceClass/P3
+      (= :p3dn data) InstanceClass/P3DN
+      (= :p4d data) InstanceClass/P4D
+      (= :p4de data) InstanceClass/P4DE
+      (= :p5 data) InstanceClass/P5
+      (= :parallel2 data) InstanceClass/PARALLEL2
+      (= :parallel3 data) InstanceClass/PARALLEL3
+      (= :parallel3-nvme-drive-high-performance data) InstanceClass/PARALLEL3_NVME_DRIVE_HIGH_PERFORMANCE
+      (= :parallel4 data) InstanceClass/PARALLEL4
+      (= :parallel4-nvme-drive-extended data) InstanceClass/PARALLEL4_NVME_DRIVE_EXTENDED
+      (= :parallel5 data) InstanceClass/PARALLEL5
+      (= :r3 data) InstanceClass/R3
+      (= :r4 data) InstanceClass/R4
+      (= :r5 data) InstanceClass/R5
+      (= :r5a data) InstanceClass/R5A
+      (= :r5ad data) InstanceClass/R5AD
+      (= :r5b data) InstanceClass/R5B
+      (= :r5d data) InstanceClass/R5D
+      (= :r5dn data) InstanceClass/R5DN
+      (= :r5n data) InstanceClass/R5N
+      (= :r6a data) InstanceClass/R6A
+      (= :r6g data) InstanceClass/R6G
+      (= :r6gd data) InstanceClass/R6GD
+      (= :r6i data) InstanceClass/R6I
+      (= :r6id data) InstanceClass/R6ID
+      (= :r6idn data) InstanceClass/R6IDN
+      (= :r6in data) InstanceClass/R6IN
+      (= :r7a data) InstanceClass/R7A
+      (= :r7g data) InstanceClass/R7G
+      (= :r7gd data) InstanceClass/R7GD
+      (= :r7i data) InstanceClass/R7I
+      (= :r7iz data) InstanceClass/R7IZ
+      (= :standard3 data) InstanceClass/STANDARD3
+      (= :standard4 data) InstanceClass/STANDARD4
+      (= :standard5 data) InstanceClass/STANDARD5
+      (= :standard5-amd data) InstanceClass/STANDARD5_AMD
+      (= :standard5-amd-nvme-drive data) InstanceClass/STANDARD5_AMD_NVME_DRIVE
+      (= :standard5-high-compute data) InstanceClass/STANDARD5_HIGH_COMPUTE
+      (= :standard5-high-performance data) InstanceClass/STANDARD5_HIGH_PERFORMANCE
+      (= :standard5-nvme-drive data) InstanceClass/STANDARD5_NVME_DRIVE
+      (= :standard5-nvme-drive-high-performance data) InstanceClass/STANDARD5_NVME_DRIVE_HIGH_PERFORMANCE
+      (= :standard6-amd data) InstanceClass/STANDARD6_AMD
+      (= :standard6-graviton data) InstanceClass/STANDARD6_GRAVITON
+      (= :standard6-graviton2-nvme-drive data) InstanceClass/STANDARD6_GRAVITON2_NVME_DRIVE
+      (= :standard6-intel data) InstanceClass/STANDARD6_INTEL
+      (= :standard6-intel-high-performance data) InstanceClass/STANDARD6_INTEL_HIGH_PERFORMANCE
+      (= :standard6-intel-nvme-drive data) InstanceClass/STANDARD6_INTEL_NVME_DRIVE
+      (= :standard6-intel-nvme-drive-high-performance data) InstanceClass/STANDARD6_INTEL_NVME_DRIVE_HIGH_PERFORMANCE
+      (= :standard7-amd data) InstanceClass/STANDARD7_AMD
+      (= :standard7-graviton data) InstanceClass/STANDARD7_GRAVITON
+      (= :standard7-graviton3-nvme-drive data) InstanceClass/STANDARD7_GRAVITON3_NVME_DRIVE
+      (= :standard7-intel data) InstanceClass/STANDARD7_INTEL
+      (= :standard7-intel-flex data) InstanceClass/STANDARD7_INTEL_FLEX
+      (= :storage2 data) InstanceClass/STORAGE2
+      (= :storage3 data) InstanceClass/STORAGE3
+      (= :storage3-enhanced-network data) InstanceClass/STORAGE3_ENHANCED_NETWORK
+      (= :storage4-graviton data) InstanceClass/STORAGE4_GRAVITON
+      (= :storage4-graviton-network-optimized data) InstanceClass/STORAGE4_GRAVITON_NETWORK_OPTIMIZED
+      (= :storage4-graviton-network-storage-optimized data) InstanceClass/STORAGE4_GRAVITON_NETWORK_STORAGE_OPTIMIZED
+      (= :storage-compute-1 data) InstanceClass/STORAGE_COMPUTE_1
+      (= :t2 data) InstanceClass/T2
+      (= :t3 data) InstanceClass/T3
+      (= :t3a data) InstanceClass/T3A
+      (= :t4g data) InstanceClass/T4G
+      (= :training-accelerator1 data) InstanceClass/TRAINING_ACCELERATOR1
+      (= :training-accelerator1-enhanced-network data) InstanceClass/TRAINING_ACCELERATOR1_ENHANCED_NETWORK
+      (= :trn1 data) InstanceClass/TRN1
+      (= :trn1n data) InstanceClass/TRN1N
+      (= :u-12tb1 data) InstanceClass/U_12TB1
+      (= :u-18tb1 data) InstanceClass/U_18TB1
+      (= :u-24tb1 data) InstanceClass/U_24TB1
+      (= :u-3tb1 data) InstanceClass/U_3TB1
+      (= :u-6tb1 data) InstanceClass/U_6TB1
+      (= :u-9tb1 data) InstanceClass/U_9TB1
+      (= :video-transcoding1 data) InstanceClass/VIDEO_TRANSCODING1
+      (= :vt1 data) InstanceClass/VT1
+      (= :x1 data) InstanceClass/X1
+      (= :x1e data) InstanceClass/X1E
+      (= :x2g data) InstanceClass/X2G
+      (= :x2gd data) InstanceClass/X2GD
+      (= :x2idn data) InstanceClass/X2IDN
+      (= :x2iedn data) InstanceClass/X2IEDN
+      (= :x2iezn data) InstanceClass/X2IEZN
+      (= :z1d data) InstanceClass/Z1D)))
 
 
 (defn instance-initiated-shutdown-behavior
@@ -1430,32 +1430,32 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `InstanceSize` - the value is returned.
-* is `:small` - `InstanceSize/SMALL` is returned
-* is `:xlarge6` - `InstanceSize/XLARGE6` is returned
 * is `:large` - `InstanceSize/LARGE` is returned
+* is `:medium` - `InstanceSize/MEDIUM` is returned
 * is `:metal` - `InstanceSize/METAL` is returned
-* is `:xlarge48` - `InstanceSize/XLARGE48` is returned
-* is `:xlarge9` - `InstanceSize/XLARGE9` is returned
-* is `:xlarge24metal` - `InstanceSize/XLARGE24METAL` is returned
-* is `:xlarge48metal` - `InstanceSize/XLARGE48METAL` is returned
+* is `:micro` - `InstanceSize/MICRO` is returned
+* is `:nano` - `InstanceSize/NANO` is returned
+* is `:small` - `InstanceSize/SMALL` is returned
+* is `:xlarge` - `InstanceSize/XLARGE` is returned
+* is `:xlarge10` - `InstanceSize/XLARGE10` is returned
 * is `:xlarge112` - `InstanceSize/XLARGE112` is returned
+* is `:xlarge12` - `InstanceSize/XLARGE12` is returned
+* is `:xlarge16` - `InstanceSize/XLARGE16` is returned
 * is `:xlarge16metal` - `InstanceSize/XLARGE16METAL` is returned
 * is `:xlarge18` - `InstanceSize/XLARGE18` is returned
-* is `:xlarge8` - `InstanceSize/XLARGE8` is returned
-* is `:medium` - `InstanceSize/MEDIUM` is returned
-* is `:nano` - `InstanceSize/NANO` is returned
-* is `:xlarge16` - `InstanceSize/XLARGE16` is returned
-* is `:xlarge12` - `InstanceSize/XLARGE12` is returned
-* is `:xlarge3` - `InstanceSize/XLARGE3` is returned
-* is `:micro` - `InstanceSize/MICRO` is returned
-* is `:xlarge32` - `InstanceSize/XLARGE32` is returned
-* is `:xlarge10` - `InstanceSize/XLARGE10` is returned
-* is `:xlarge24` - `InstanceSize/XLARGE24` is returned
-* is `:xlarge56` - `InstanceSize/XLARGE56` is returned
-* is `:xlarge4` - `InstanceSize/XLARGE4` is returned
-* is `:xlarge32metal` - `InstanceSize/XLARGE32METAL` is returned
 * is `:xlarge2` - `InstanceSize/XLARGE2` is returned
-* is `:xlarge` - `InstanceSize/XLARGE` is returned
+* is `:xlarge24` - `InstanceSize/XLARGE24` is returned
+* is `:xlarge24metal` - `InstanceSize/XLARGE24METAL` is returned
+* is `:xlarge3` - `InstanceSize/XLARGE3` is returned
+* is `:xlarge32` - `InstanceSize/XLARGE32` is returned
+* is `:xlarge32metal` - `InstanceSize/XLARGE32METAL` is returned
+* is `:xlarge4` - `InstanceSize/XLARGE4` is returned
+* is `:xlarge48` - `InstanceSize/XLARGE48` is returned
+* is `:xlarge48metal` - `InstanceSize/XLARGE48METAL` is returned
+* is `:xlarge56` - `InstanceSize/XLARGE56` is returned
+* is `:xlarge6` - `InstanceSize/XLARGE6` is returned
+* is `:xlarge8` - `InstanceSize/XLARGE8` is returned
+* is `:xlarge9` - `InstanceSize/XLARGE9` is returned
 * is `:xlarge96` - `InstanceSize/XLARGE96` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -1463,32 +1463,32 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? InstanceSize data) data
-      (= :small data) InstanceSize/SMALL
-      (= :xlarge6 data) InstanceSize/XLARGE6
       (= :large data) InstanceSize/LARGE
+      (= :medium data) InstanceSize/MEDIUM
       (= :metal data) InstanceSize/METAL
-      (= :xlarge48 data) InstanceSize/XLARGE48
-      (= :xlarge9 data) InstanceSize/XLARGE9
-      (= :xlarge24metal data) InstanceSize/XLARGE24METAL
-      (= :xlarge48metal data) InstanceSize/XLARGE48METAL
+      (= :micro data) InstanceSize/MICRO
+      (= :nano data) InstanceSize/NANO
+      (= :small data) InstanceSize/SMALL
+      (= :xlarge data) InstanceSize/XLARGE
+      (= :xlarge10 data) InstanceSize/XLARGE10
       (= :xlarge112 data) InstanceSize/XLARGE112
+      (= :xlarge12 data) InstanceSize/XLARGE12
+      (= :xlarge16 data) InstanceSize/XLARGE16
       (= :xlarge16metal data) InstanceSize/XLARGE16METAL
       (= :xlarge18 data) InstanceSize/XLARGE18
-      (= :xlarge8 data) InstanceSize/XLARGE8
-      (= :medium data) InstanceSize/MEDIUM
-      (= :nano data) InstanceSize/NANO
-      (= :xlarge16 data) InstanceSize/XLARGE16
-      (= :xlarge12 data) InstanceSize/XLARGE12
-      (= :xlarge3 data) InstanceSize/XLARGE3
-      (= :micro data) InstanceSize/MICRO
-      (= :xlarge32 data) InstanceSize/XLARGE32
-      (= :xlarge10 data) InstanceSize/XLARGE10
-      (= :xlarge24 data) InstanceSize/XLARGE24
-      (= :xlarge56 data) InstanceSize/XLARGE56
-      (= :xlarge4 data) InstanceSize/XLARGE4
-      (= :xlarge32metal data) InstanceSize/XLARGE32METAL
       (= :xlarge2 data) InstanceSize/XLARGE2
-      (= :xlarge data) InstanceSize/XLARGE
+      (= :xlarge24 data) InstanceSize/XLARGE24
+      (= :xlarge24metal data) InstanceSize/XLARGE24METAL
+      (= :xlarge3 data) InstanceSize/XLARGE3
+      (= :xlarge32 data) InstanceSize/XLARGE32
+      (= :xlarge32metal data) InstanceSize/XLARGE32METAL
+      (= :xlarge4 data) InstanceSize/XLARGE4
+      (= :xlarge48 data) InstanceSize/XLARGE48
+      (= :xlarge48metal data) InstanceSize/XLARGE48METAL
+      (= :xlarge56 data) InstanceSize/XLARGE56
+      (= :xlarge6 data) InstanceSize/XLARGE6
+      (= :xlarge8 data) InstanceSize/XLARGE8
+      (= :xlarge9 data) InstanceSize/XLARGE9
       (= :xlarge96 data) InstanceSize/XLARGE96)))
 
 
@@ -1499,16 +1499,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `IpProtocol` - the value is returned.
-* is `:ipv4-only` - `IpProtocol/IPV4_ONLY` is returned
 * is `:dual-stack` - `IpProtocol/DUAL_STACK` is returned
+* is `:ipv4-only` - `IpProtocol/IPV4_ONLY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? IpProtocol data) data
-      (= :ipv4-only data) IpProtocol/IPV4_ONLY
-      (= :dual-stack data) IpProtocol/DUAL_STACK)))
+      (= :dual-stack data) IpProtocol/DUAL_STACK
+      (= :ipv4-only data) IpProtocol/IPV4_ONLY)))
 
 
 (defn key-pair-format
@@ -1518,16 +1518,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `KeyPairFormat` - the value is returned.
-* is `:ppk` - `KeyPairFormat/PPK` is returned
 * is `:pem` - `KeyPairFormat/PEM` is returned
+* is `:ppk` - `KeyPairFormat/PPK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? KeyPairFormat data) data
-      (= :ppk data) KeyPairFormat/PPK
-      (= :pem data) KeyPairFormat/PEM)))
+      (= :pem data) KeyPairFormat/PEM
+      (= :ppk data) KeyPairFormat/PPK)))
 
 
 (defn key-pair-type
@@ -1575,18 +1575,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `NatTrafficDirection` - the value is returned.
-* is `:outbound-only` - `NatTrafficDirection/OUTBOUND_ONLY` is returned
 * is `:inbound-and-outbound` - `NatTrafficDirection/INBOUND_AND_OUTBOUND` is returned
 * is `:none` - `NatTrafficDirection/NONE` is returned
+* is `:outbound-only` - `NatTrafficDirection/OUTBOUND_ONLY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? NatTrafficDirection data) data
-      (= :outbound-only data) NatTrafficDirection/OUTBOUND_ONLY
       (= :inbound-and-outbound data) NatTrafficDirection/INBOUND_AND_OUTBOUND
-      (= :none data) NatTrafficDirection/NONE)))
+      (= :none data) NatTrafficDirection/NONE
+      (= :outbound-only data) NatTrafficDirection/OUTBOUND_ONLY)))
 
 
 (defn operating-system-type
@@ -1596,18 +1596,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `OperatingSystemType` - the value is returned.
-* is `:windows` - `OperatingSystemType/WINDOWS` is returned
 * is `:linux` - `OperatingSystemType/LINUX` is returned
 * is `:unknown` - `OperatingSystemType/UNKNOWN` is returned
+* is `:windows` - `OperatingSystemType/WINDOWS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? OperatingSystemType data) data
-      (= :windows data) OperatingSystemType/WINDOWS
       (= :linux data) OperatingSystemType/LINUX
-      (= :unknown data) OperatingSystemType/UNKNOWN)))
+      (= :unknown data) OperatingSystemType/UNKNOWN
+      (= :windows data) OperatingSystemType/WINDOWS)))
 
 
 (defn placement-group-spread-level
@@ -1617,16 +1617,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PlacementGroupSpreadLevel` - the value is returned.
-* is `:rack` - `PlacementGroupSpreadLevel/RACK` is returned
 * is `:host` - `PlacementGroupSpreadLevel/HOST` is returned
+* is `:rack` - `PlacementGroupSpreadLevel/RACK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PlacementGroupSpreadLevel data) data
-      (= :rack data) PlacementGroupSpreadLevel/RACK
-      (= :host data) PlacementGroupSpreadLevel/HOST)))
+      (= :host data) PlacementGroupSpreadLevel/HOST
+      (= :rack data) PlacementGroupSpreadLevel/RACK)))
 
 
 (defn placement-group-strategy
@@ -1636,18 +1636,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PlacementGroupStrategy` - the value is returned.
+* is `:cluster` - `PlacementGroupStrategy/CLUSTER` is returned
 * is `:partition` - `PlacementGroupStrategy/PARTITION` is returned
 * is `:spread` - `PlacementGroupStrategy/SPREAD` is returned
-* is `:cluster` - `PlacementGroupStrategy/CLUSTER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PlacementGroupStrategy data) data
+      (= :cluster data) PlacementGroupStrategy/CLUSTER
       (= :partition data) PlacementGroupStrategy/PARTITION
-      (= :spread data) PlacementGroupStrategy/SPREAD
-      (= :cluster data) PlacementGroupStrategy/CLUSTER)))
+      (= :spread data) PlacementGroupStrategy/SPREAD)))
 
 
 (defn protocol
@@ -1657,306 +1657,306 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Protocol` - the value is returned.
-* is `:tpplusplus` - `Protocol/TPPLUSPLUS` is returned
-* is `:netblt` - `Protocol/NETBLT` is returned
-* is `:ipv6-frag` - `Protocol/IPV6_FRAG` is returned
-* is `:sscopmce` - `Protocol/SSCOPMCE` is returned
-* is `:pup` - `Protocol/PUP` is returned
-* is `:tcf` - `Protocol/TCF` is returned
-* is `:ggp` - `Protocol/GGP` is returned
-* is `:mobile` - `Protocol/MOBILE` is returned
-* is `:iptm` - `Protocol/IPTM` is returned
-* is `:igp` - `Protocol/IGP` is returned
-* is `:cftp` - `Protocol/CFTP` is returned
-* is `:snp` - `Protocol/SNP` is returned
-* is `:qnx` - `Protocol/QNX` is returned
-* is `:sps` - `Protocol/SPS` is returned
-* is `:wb-mon` - `Protocol/WB_MON` is returned
-* is `:ttp` - `Protocol/TTP` is returned
-* is `:smp` - `Protocol/SMP` is returned
-* is `:uti` - `Protocol/UTI` is returned
-* is `:narp` - `Protocol/NARP` is returned
-* is `:fc` - `Protocol/FC` is returned
-* is `:chaos` - `Protocol/CHAOS` is returned
-* is `:ifmp` - `Protocol/IFMP` is returned
-* is `:tcp` - `Protocol/TCP` is returned
-* is `:ipv6-route` - `Protocol/IPV6_ROUTE` is returned
-* is `:experiment-2` - `Protocol/EXPERIMENT_2` is returned
-* is `:srp` - `Protocol/SRP` is returned
-* is `:ipv6` - `Protocol/IPV6` is returned
-* is `:micp` - `Protocol/MICP` is returned
-* is `:stp` - `Protocol/STP` is returned
-* is `:i-nlsp` - `Protocol/I_NLSP` is returned
-* is `:mfe-nsp` - `Protocol/MFE_NSP` is returned
-* is `:sat-mon` - `Protocol/SAT_MON` is returned
-* is `:il` - `Protocol/IL` is returned
-* is `:l2-t-p` - `Protocol/L2_T_P` is returned
-* is `:reserved` - `Protocol/RESERVED` is returned
-* is `:gre` - `Protocol/GRE` is returned
-* is `:experiment-1` - `Protocol/EXPERIMENT_1` is returned
-* is `:trunk-1` - `Protocol/TRUNK_1` is returned
-* is `:icmp` - `Protocol/ICMP` is returned
-* is `:gmtp` - `Protocol/GMTP` is returned
-* is `:aris` - `Protocol/ARIS` is returned
-* is `:swipe` - `Protocol/SWIPE` is returned
-* is `:emcon` - `Protocol/EMCON` is returned
-* is `:eigrp` - `Protocol/EIGRP` is returned
-* is `:merit-inp` - `Protocol/MERIT_INP` is returned
-* is `:etherip` - `Protocol/ETHERIP` is returned
-* is `:ddx` - `Protocol/DDX` is returned
-* is `:vines` - `Protocol/VINES` is returned
-* is `:fire` - `Protocol/FIRE` is returned
-* is `:wb-expak` - `Protocol/WB_EXPAK` is returned
-* is `:idpr-cmtp` - `Protocol/IDPR_CMTP` is returned
-* is `:ipv6-opts` - `Protocol/IPV6_OPTS` is returned
-* is `:iso-ip` - `Protocol/ISO_IP` is returned
-* is `:vmtp` - `Protocol/VMTP` is returned
-* is `:any-dfs` - `Protocol/ANY_DFS` is returned
-* is `:st` - `Protocol/ST` is returned
-* is `:encap` - `Protocol/ENCAP` is returned
-* is `:bna` - `Protocol/BNA` is returned
-* is `:iplt` - `Protocol/IPLT` is returned
-* is `:any-0-hop` - `Protocol/ANY_0_HOP` is returned
-* is `:sm` - `Protocol/SM` is returned
-* is `:pgm` - `Protocol/PGM` is returned
-* is `:ptp` - `Protocol/PTP` is returned
-* is `:tlsp` - `Protocol/TLSP` is returned
-* is `:iso-tp4` - `Protocol/ISO_TP4` is returned
-* is `:crtp` - `Protocol/CRTP` is returned
-* is `:udp` - `Protocol/UDP` is returned
-* is `:trunk-2` - `Protocol/TRUNK_2` is returned
-* is `:sun-nd` - `Protocol/SUN_ND` is returned
-* is `:ipv6-nonxt` - `Protocol/IPV6_NONXT` is returned
-* is `:dccp` - `Protocol/DCCP` is returned
-* is `:nvp-ii` - `Protocol/NVP_II` is returned
-* is `:dcn-meas` - `Protocol/DCN_MEAS` is returned
-* is `:rdp` - `Protocol/RDP` is returned
-* is `:xnet` - `Protocol/XNET` is returned
-* is `:ipx-in-ip` - `Protocol/IPX_IN_IP` is returned
-* is `:esp` - `Protocol/ESP` is returned
-* is `:crudp` - `Protocol/CRUDP` is returned
-* is `:shim6` - `Protocol/SHIM6` is returned
-* is `:br-sat-mon` - `Protocol/BR_SAT_MON` is returned
-* is `:hip` - `Protocol/HIP` is returned
-* is `:sdrp` - `Protocol/SDRP` is returned
-* is `:larp` - `Protocol/LARP` is returned
-* is `:rsvp` - `Protocol/RSVP` is returned
 * is `:ah` - `Protocol/AH` is returned
-* is `:hopopt` - `Protocol/HOPOPT` is returned
-* is `:isis-ipv4` - `Protocol/ISIS_IPV4` is returned
-* is `:rohc` - `Protocol/ROHC` is returned
-* is `:mtp` - `Protocol/MTP` is returned
-* is `:nsfnet-igp` - `Protocol/NSFNET_IGP` is returned
-* is `:vrrp` - `Protocol/VRRP` is returned
-* is `:a-n` - `Protocol/A_N` is returned
-* is `:rsvp-e2e-ignore` - `Protocol/RSVP_E2E_IGNORE` is returned
-* is `:sctp` - `Protocol/SCTP` is returned
-* is `:kryptolan` - `Protocol/KRYPTOLAN` is returned
-* is `:ethernet` - `Protocol/ETHERNET` is returned
-* is `:mpls-in-ip` - `Protocol/MPLS_IN_IP` is returned
-* is `:ippc` - `Protocol/IPPC` is returned
-* is `:ipv4` - `Protocol/IPV4` is returned
+* is `:all` - `Protocol/ALL` is returned
+* is `:any-0-hop` - `Protocol/ANY_0_HOP` is returned
+* is `:any-dfs` - `Protocol/ANY_DFS` is returned
 * is `:any-enc` - `Protocol/ANY_ENC` is returned
-* is `:xtp` - `Protocol/XTP` is returned
-* is `:scc-sp` - `Protocol/SCC_SP` is returned
-* is `:manet` - `Protocol/MANET` is returned
-* is `:pnni` - `Protocol/PNNI` is returned
-* is `:pim` - `Protocol/PIM` is returned
-* is `:igmp` - `Protocol/IGMP` is returned
+* is `:any-local` - `Protocol/ANY_LOCAL` is returned
+* is `:aris` - `Protocol/ARIS` is returned
+* is `:ax-25` - `Protocol/AX_25` is returned
+* is `:a-n` - `Protocol/A_N` is returned
+* is `:bbn-rcc-mon` - `Protocol/BBN_RCC_MON` is returned
+* is `:bna` - `Protocol/BNA` is returned
+* is `:br-sat-mon` - `Protocol/BR_SAT_MON` is returned
 * is `:cbt` - `Protocol/CBT` is returned
-* is `:ipcomp` - `Protocol/IPCOMP` is returned
-* is `:prm` - `Protocol/PRM` is returned
-* is `:irtp` - `Protocol/IRTP` is returned
-* is `:pvp` - `Protocol/PVP` is returned
-* is `:sat-expak` - `Protocol/SAT_EXPAK` is returned
-* is `:mobility-header` - `Protocol/MOBILITY_HEADER` is returned
-* is `:icmpv6` - `Protocol/ICMPV6` is returned
-* is `:leaf-2` - `Protocol/LEAF_2` is returned
+* is `:cftp` - `Protocol/CFTP` is returned
+* is `:chaos` - `Protocol/CHAOS` is returned
 * is `:compaq-peer` - `Protocol/COMPAQ_PEER` is returned
 * is `:cphb` - `Protocol/CPHB` is returned
 * is `:cpnx` - `Protocol/CPNX` is returned
-* is `:egp` - `Protocol/EGP` is returned
-* is `:xns-idp` - `Protocol/XNS_IDP` is returned
-* is `:mux` - `Protocol/MUX` is returned
-* is `:bbn-rcc-mon` - `Protocol/BBN_RCC_MON` is returned
-* is `:dsr` - `Protocol/DSR` is returned
-* is `:udplite` - `Protocol/UDPLITE` is returned
-* is `:dgp` - `Protocol/DGP` is returned
-* is `:secure-vmtp` - `Protocol/SECURE_VMTP` is returned
-* is `:idrp` - `Protocol/IDRP` is returned
-* is `:ipcv` - `Protocol/IPCV` is returned
-* is `:leaf-1` - `Protocol/LEAF_1` is returned
-* is `:idpr` - `Protocol/IDPR` is returned
-* is `:ipip` - `Protocol/IPIP` is returned
-* is `:rvd` - `Protocol/RVD` is returned
-* is `:hmp` - `Protocol/HMP` is returned
-* is `:iatp` - `Protocol/IATP` is returned
-* is `:skip` - `Protocol/SKIP` is returned
-* is `:threepc` - `Protocol/THREEPC` is returned
-* is `:scps` - `Protocol/SCPS` is returned
-* is `:sprite-rpc` - `Protocol/SPRITE_RPC` is returned
-* is `:visa` - `Protocol/VISA` is returned
-* is `:ax-25` - `Protocol/AX_25` is returned
-* is `:ospfigp` - `Protocol/OSPFIGP` is returned
-* is `:wsn` - `Protocol/WSN` is returned
-* is `:pipe` - `Protocol/PIPE` is returned
+* is `:crtp` - `Protocol/CRTP` is returned
+* is `:crudp` - `Protocol/CRUDP` is returned
+* is `:dccp` - `Protocol/DCCP` is returned
+* is `:dcn-meas` - `Protocol/DCN_MEAS` is returned
 * is `:ddp` - `Protocol/DDP` is returned
+* is `:ddx` - `Protocol/DDX` is returned
+* is `:dgp` - `Protocol/DGP` is returned
+* is `:dsr` - `Protocol/DSR` is returned
+* is `:egp` - `Protocol/EGP` is returned
+* is `:eigrp` - `Protocol/EIGRP` is returned
+* is `:emcon` - `Protocol/EMCON` is returned
+* is `:encap` - `Protocol/ENCAP` is returned
+* is `:esp` - `Protocol/ESP` is returned
+* is `:etherip` - `Protocol/ETHERIP` is returned
+* is `:ethernet` - `Protocol/ETHERNET` is returned
+* is `:experiment-1` - `Protocol/EXPERIMENT_1` is returned
+* is `:experiment-2` - `Protocol/EXPERIMENT_2` is returned
+* is `:fc` - `Protocol/FC` is returned
+* is `:fire` - `Protocol/FIRE` is returned
+* is `:ggp` - `Protocol/GGP` is returned
+* is `:gmtp` - `Protocol/GMTP` is returned
+* is `:gre` - `Protocol/GRE` is returned
+* is `:hip` - `Protocol/HIP` is returned
+* is `:hmp` - `Protocol/HMP` is returned
+* is `:hopopt` - `Protocol/HOPOPT` is returned
+* is `:iatp` - `Protocol/IATP` is returned
+* is `:icmp` - `Protocol/ICMP` is returned
+* is `:icmpv6` - `Protocol/ICMPV6` is returned
+* is `:idpr` - `Protocol/IDPR` is returned
+* is `:idpr-cmtp` - `Protocol/IDPR_CMTP` is returned
+* is `:idrp` - `Protocol/IDRP` is returned
+* is `:ifmp` - `Protocol/IFMP` is returned
+* is `:igmp` - `Protocol/IGMP` is returned
+* is `:igp` - `Protocol/IGP` is returned
+* is `:il` - `Protocol/IL` is returned
+* is `:ipcomp` - `Protocol/IPCOMP` is returned
+* is `:ipcv` - `Protocol/IPCV` is returned
+* is `:ipip` - `Protocol/IPIP` is returned
+* is `:iplt` - `Protocol/IPLT` is returned
+* is `:ippc` - `Protocol/IPPC` is returned
+* is `:iptm` - `Protocol/IPTM` is returned
+* is `:ipv4` - `Protocol/IPV4` is returned
+* is `:ipv6` - `Protocol/IPV6` is returned
+* is `:ipv6-frag` - `Protocol/IPV6_FRAG` is returned
+* is `:ipv6-nonxt` - `Protocol/IPV6_NONXT` is returned
+* is `:ipv6-opts` - `Protocol/IPV6_OPTS` is returned
+* is `:ipv6-route` - `Protocol/IPV6_ROUTE` is returned
+* is `:ipx-in-ip` - `Protocol/IPX_IN_IP` is returned
+* is `:irtp` - `Protocol/IRTP` is returned
+* is `:isis-ipv4` - `Protocol/ISIS_IPV4` is returned
+* is `:iso-ip` - `Protocol/ISO_IP` is returned
+* is `:iso-tp4` - `Protocol/ISO_TP4` is returned
+* is `:i-nlsp` - `Protocol/I_NLSP` is returned
+* is `:kryptolan` - `Protocol/KRYPTOLAN` is returned
+* is `:l2-t-p` - `Protocol/L2_T_P` is returned
+* is `:larp` - `Protocol/LARP` is returned
+* is `:leaf-1` - `Protocol/LEAF_1` is returned
+* is `:leaf-2` - `Protocol/LEAF_2` is returned
+* is `:manet` - `Protocol/MANET` is returned
+* is `:merit-inp` - `Protocol/MERIT_INP` is returned
+* is `:mfe-nsp` - `Protocol/MFE_NSP` is returned
+* is `:micp` - `Protocol/MICP` is returned
+* is `:mobile` - `Protocol/MOBILE` is returned
+* is `:mobility-header` - `Protocol/MOBILITY_HEADER` is returned
+* is `:mpls-in-ip` - `Protocol/MPLS_IN_IP` is returned
+* is `:mtp` - `Protocol/MTP` is returned
+* is `:mux` - `Protocol/MUX` is returned
+* is `:narp` - `Protocol/NARP` is returned
+* is `:netblt` - `Protocol/NETBLT` is returned
+* is `:nsfnet-igp` - `Protocol/NSFNET_IGP` is returned
+* is `:nvp-ii` - `Protocol/NVP_II` is returned
+* is `:ospfigp` - `Protocol/OSPFIGP` is returned
+* is `:pgm` - `Protocol/PGM` is returned
+* is `:pim` - `Protocol/PIM` is returned
+* is `:pipe` - `Protocol/PIPE` is returned
+* is `:pnni` - `Protocol/PNNI` is returned
+* is `:prm` - `Protocol/PRM` is returned
+* is `:ptp` - `Protocol/PTP` is returned
+* is `:pup` - `Protocol/PUP` is returned
+* is `:pvp` - `Protocol/PVP` is returned
+* is `:qnx` - `Protocol/QNX` is returned
+* is `:rdp` - `Protocol/RDP` is returned
+* is `:reserved` - `Protocol/RESERVED` is returned
+* is `:rohc` - `Protocol/ROHC` is returned
+* is `:rsvp` - `Protocol/RSVP` is returned
+* is `:rsvp-e2e-ignore` - `Protocol/RSVP_E2E_IGNORE` is returned
+* is `:rvd` - `Protocol/RVD` is returned
+* is `:sat-expak` - `Protocol/SAT_EXPAK` is returned
+* is `:sat-mon` - `Protocol/SAT_MON` is returned
+* is `:scc-sp` - `Protocol/SCC_SP` is returned
+* is `:scps` - `Protocol/SCPS` is returned
+* is `:sctp` - `Protocol/SCTP` is returned
+* is `:sdrp` - `Protocol/SDRP` is returned
+* is `:secure-vmtp` - `Protocol/SECURE_VMTP` is returned
+* is `:shim6` - `Protocol/SHIM6` is returned
+* is `:skip` - `Protocol/SKIP` is returned
+* is `:sm` - `Protocol/SM` is returned
+* is `:smp` - `Protocol/SMP` is returned
+* is `:snp` - `Protocol/SNP` is returned
+* is `:sprite-rpc` - `Protocol/SPRITE_RPC` is returned
+* is `:sps` - `Protocol/SPS` is returned
+* is `:srp` - `Protocol/SRP` is returned
+* is `:sscopmce` - `Protocol/SSCOPMCE` is returned
+* is `:st` - `Protocol/ST` is returned
+* is `:stp` - `Protocol/STP` is returned
+* is `:sun-nd` - `Protocol/SUN_ND` is returned
+* is `:swipe` - `Protocol/SWIPE` is returned
+* is `:tcf` - `Protocol/TCF` is returned
+* is `:tcp` - `Protocol/TCP` is returned
+* is `:threepc` - `Protocol/THREEPC` is returned
+* is `:tlsp` - `Protocol/TLSP` is returned
+* is `:tpplusplus` - `Protocol/TPPLUSPLUS` is returned
+* is `:trunk-1` - `Protocol/TRUNK_1` is returned
+* is `:trunk-2` - `Protocol/TRUNK_2` is returned
+* is `:ttp` - `Protocol/TTP` is returned
+* is `:udp` - `Protocol/UDP` is returned
+* is `:udplite` - `Protocol/UDPLITE` is returned
+* is `:uti` - `Protocol/UTI` is returned
+* is `:vines` - `Protocol/VINES` is returned
+* is `:visa` - `Protocol/VISA` is returned
+* is `:vmtp` - `Protocol/VMTP` is returned
+* is `:vrrp` - `Protocol/VRRP` is returned
+* is `:wb-expak` - `Protocol/WB_EXPAK` is returned
+* is `:wb-mon` - `Protocol/WB_MON` is returned
 * is `:wesp` - `Protocol/WESP` is returned
-* is `:all` - `Protocol/ALL` is returned
-* is `:any-local` - `Protocol/ANY_LOCAL` is returned
+* is `:wsn` - `Protocol/WSN` is returned
+* is `:xnet` - `Protocol/XNET` is returned
+* is `:xns-idp` - `Protocol/XNS_IDP` is returned
+* is `:xtp` - `Protocol/XTP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Protocol data) data
-      (= :tpplusplus data) Protocol/TPPLUSPLUS
-      (= :netblt data) Protocol/NETBLT
-      (= :ipv6-frag data) Protocol/IPV6_FRAG
-      (= :sscopmce data) Protocol/SSCOPMCE
-      (= :pup data) Protocol/PUP
-      (= :tcf data) Protocol/TCF
-      (= :ggp data) Protocol/GGP
-      (= :mobile data) Protocol/MOBILE
-      (= :iptm data) Protocol/IPTM
-      (= :igp data) Protocol/IGP
-      (= :cftp data) Protocol/CFTP
-      (= :snp data) Protocol/SNP
-      (= :qnx data) Protocol/QNX
-      (= :sps data) Protocol/SPS
-      (= :wb-mon data) Protocol/WB_MON
-      (= :ttp data) Protocol/TTP
-      (= :smp data) Protocol/SMP
-      (= :uti data) Protocol/UTI
-      (= :narp data) Protocol/NARP
-      (= :fc data) Protocol/FC
-      (= :chaos data) Protocol/CHAOS
-      (= :ifmp data) Protocol/IFMP
-      (= :tcp data) Protocol/TCP
-      (= :ipv6-route data) Protocol/IPV6_ROUTE
-      (= :experiment-2 data) Protocol/EXPERIMENT_2
-      (= :srp data) Protocol/SRP
-      (= :ipv6 data) Protocol/IPV6
-      (= :micp data) Protocol/MICP
-      (= :stp data) Protocol/STP
-      (= :i-nlsp data) Protocol/I_NLSP
-      (= :mfe-nsp data) Protocol/MFE_NSP
-      (= :sat-mon data) Protocol/SAT_MON
-      (= :il data) Protocol/IL
-      (= :l2-t-p data) Protocol/L2_T_P
-      (= :reserved data) Protocol/RESERVED
-      (= :gre data) Protocol/GRE
-      (= :experiment-1 data) Protocol/EXPERIMENT_1
-      (= :trunk-1 data) Protocol/TRUNK_1
-      (= :icmp data) Protocol/ICMP
-      (= :gmtp data) Protocol/GMTP
-      (= :aris data) Protocol/ARIS
-      (= :swipe data) Protocol/SWIPE
-      (= :emcon data) Protocol/EMCON
-      (= :eigrp data) Protocol/EIGRP
-      (= :merit-inp data) Protocol/MERIT_INP
-      (= :etherip data) Protocol/ETHERIP
-      (= :ddx data) Protocol/DDX
-      (= :vines data) Protocol/VINES
-      (= :fire data) Protocol/FIRE
-      (= :wb-expak data) Protocol/WB_EXPAK
-      (= :idpr-cmtp data) Protocol/IDPR_CMTP
-      (= :ipv6-opts data) Protocol/IPV6_OPTS
-      (= :iso-ip data) Protocol/ISO_IP
-      (= :vmtp data) Protocol/VMTP
-      (= :any-dfs data) Protocol/ANY_DFS
-      (= :st data) Protocol/ST
-      (= :encap data) Protocol/ENCAP
-      (= :bna data) Protocol/BNA
-      (= :iplt data) Protocol/IPLT
-      (= :any-0-hop data) Protocol/ANY_0_HOP
-      (= :sm data) Protocol/SM
-      (= :pgm data) Protocol/PGM
-      (= :ptp data) Protocol/PTP
-      (= :tlsp data) Protocol/TLSP
-      (= :iso-tp4 data) Protocol/ISO_TP4
-      (= :crtp data) Protocol/CRTP
-      (= :udp data) Protocol/UDP
-      (= :trunk-2 data) Protocol/TRUNK_2
-      (= :sun-nd data) Protocol/SUN_ND
-      (= :ipv6-nonxt data) Protocol/IPV6_NONXT
-      (= :dccp data) Protocol/DCCP
-      (= :nvp-ii data) Protocol/NVP_II
-      (= :dcn-meas data) Protocol/DCN_MEAS
-      (= :rdp data) Protocol/RDP
-      (= :xnet data) Protocol/XNET
-      (= :ipx-in-ip data) Protocol/IPX_IN_IP
-      (= :esp data) Protocol/ESP
-      (= :crudp data) Protocol/CRUDP
-      (= :shim6 data) Protocol/SHIM6
-      (= :br-sat-mon data) Protocol/BR_SAT_MON
-      (= :hip data) Protocol/HIP
-      (= :sdrp data) Protocol/SDRP
-      (= :larp data) Protocol/LARP
-      (= :rsvp data) Protocol/RSVP
       (= :ah data) Protocol/AH
-      (= :hopopt data) Protocol/HOPOPT
-      (= :isis-ipv4 data) Protocol/ISIS_IPV4
-      (= :rohc data) Protocol/ROHC
-      (= :mtp data) Protocol/MTP
-      (= :nsfnet-igp data) Protocol/NSFNET_IGP
-      (= :vrrp data) Protocol/VRRP
-      (= :a-n data) Protocol/A_N
-      (= :rsvp-e2e-ignore data) Protocol/RSVP_E2E_IGNORE
-      (= :sctp data) Protocol/SCTP
-      (= :kryptolan data) Protocol/KRYPTOLAN
-      (= :ethernet data) Protocol/ETHERNET
-      (= :mpls-in-ip data) Protocol/MPLS_IN_IP
-      (= :ippc data) Protocol/IPPC
-      (= :ipv4 data) Protocol/IPV4
+      (= :all data) Protocol/ALL
+      (= :any-0-hop data) Protocol/ANY_0_HOP
+      (= :any-dfs data) Protocol/ANY_DFS
       (= :any-enc data) Protocol/ANY_ENC
-      (= :xtp data) Protocol/XTP
-      (= :scc-sp data) Protocol/SCC_SP
-      (= :manet data) Protocol/MANET
-      (= :pnni data) Protocol/PNNI
-      (= :pim data) Protocol/PIM
-      (= :igmp data) Protocol/IGMP
+      (= :any-local data) Protocol/ANY_LOCAL
+      (= :aris data) Protocol/ARIS
+      (= :ax-25 data) Protocol/AX_25
+      (= :a-n data) Protocol/A_N
+      (= :bbn-rcc-mon data) Protocol/BBN_RCC_MON
+      (= :bna data) Protocol/BNA
+      (= :br-sat-mon data) Protocol/BR_SAT_MON
       (= :cbt data) Protocol/CBT
-      (= :ipcomp data) Protocol/IPCOMP
-      (= :prm data) Protocol/PRM
-      (= :irtp data) Protocol/IRTP
-      (= :pvp data) Protocol/PVP
-      (= :sat-expak data) Protocol/SAT_EXPAK
-      (= :mobility-header data) Protocol/MOBILITY_HEADER
-      (= :icmpv6 data) Protocol/ICMPV6
-      (= :leaf-2 data) Protocol/LEAF_2
+      (= :cftp data) Protocol/CFTP
+      (= :chaos data) Protocol/CHAOS
       (= :compaq-peer data) Protocol/COMPAQ_PEER
       (= :cphb data) Protocol/CPHB
       (= :cpnx data) Protocol/CPNX
-      (= :egp data) Protocol/EGP
-      (= :xns-idp data) Protocol/XNS_IDP
-      (= :mux data) Protocol/MUX
-      (= :bbn-rcc-mon data) Protocol/BBN_RCC_MON
-      (= :dsr data) Protocol/DSR
-      (= :udplite data) Protocol/UDPLITE
-      (= :dgp data) Protocol/DGP
-      (= :secure-vmtp data) Protocol/SECURE_VMTP
-      (= :idrp data) Protocol/IDRP
-      (= :ipcv data) Protocol/IPCV
-      (= :leaf-1 data) Protocol/LEAF_1
-      (= :idpr data) Protocol/IDPR
-      (= :ipip data) Protocol/IPIP
-      (= :rvd data) Protocol/RVD
-      (= :hmp data) Protocol/HMP
-      (= :iatp data) Protocol/IATP
-      (= :skip data) Protocol/SKIP
-      (= :threepc data) Protocol/THREEPC
-      (= :scps data) Protocol/SCPS
-      (= :sprite-rpc data) Protocol/SPRITE_RPC
-      (= :visa data) Protocol/VISA
-      (= :ax-25 data) Protocol/AX_25
-      (= :ospfigp data) Protocol/OSPFIGP
-      (= :wsn data) Protocol/WSN
-      (= :pipe data) Protocol/PIPE
+      (= :crtp data) Protocol/CRTP
+      (= :crudp data) Protocol/CRUDP
+      (= :dccp data) Protocol/DCCP
+      (= :dcn-meas data) Protocol/DCN_MEAS
       (= :ddp data) Protocol/DDP
+      (= :ddx data) Protocol/DDX
+      (= :dgp data) Protocol/DGP
+      (= :dsr data) Protocol/DSR
+      (= :egp data) Protocol/EGP
+      (= :eigrp data) Protocol/EIGRP
+      (= :emcon data) Protocol/EMCON
+      (= :encap data) Protocol/ENCAP
+      (= :esp data) Protocol/ESP
+      (= :etherip data) Protocol/ETHERIP
+      (= :ethernet data) Protocol/ETHERNET
+      (= :experiment-1 data) Protocol/EXPERIMENT_1
+      (= :experiment-2 data) Protocol/EXPERIMENT_2
+      (= :fc data) Protocol/FC
+      (= :fire data) Protocol/FIRE
+      (= :ggp data) Protocol/GGP
+      (= :gmtp data) Protocol/GMTP
+      (= :gre data) Protocol/GRE
+      (= :hip data) Protocol/HIP
+      (= :hmp data) Protocol/HMP
+      (= :hopopt data) Protocol/HOPOPT
+      (= :iatp data) Protocol/IATP
+      (= :icmp data) Protocol/ICMP
+      (= :icmpv6 data) Protocol/ICMPV6
+      (= :idpr data) Protocol/IDPR
+      (= :idpr-cmtp data) Protocol/IDPR_CMTP
+      (= :idrp data) Protocol/IDRP
+      (= :ifmp data) Protocol/IFMP
+      (= :igmp data) Protocol/IGMP
+      (= :igp data) Protocol/IGP
+      (= :il data) Protocol/IL
+      (= :ipcomp data) Protocol/IPCOMP
+      (= :ipcv data) Protocol/IPCV
+      (= :ipip data) Protocol/IPIP
+      (= :iplt data) Protocol/IPLT
+      (= :ippc data) Protocol/IPPC
+      (= :iptm data) Protocol/IPTM
+      (= :ipv4 data) Protocol/IPV4
+      (= :ipv6 data) Protocol/IPV6
+      (= :ipv6-frag data) Protocol/IPV6_FRAG
+      (= :ipv6-nonxt data) Protocol/IPV6_NONXT
+      (= :ipv6-opts data) Protocol/IPV6_OPTS
+      (= :ipv6-route data) Protocol/IPV6_ROUTE
+      (= :ipx-in-ip data) Protocol/IPX_IN_IP
+      (= :irtp data) Protocol/IRTP
+      (= :isis-ipv4 data) Protocol/ISIS_IPV4
+      (= :iso-ip data) Protocol/ISO_IP
+      (= :iso-tp4 data) Protocol/ISO_TP4
+      (= :i-nlsp data) Protocol/I_NLSP
+      (= :kryptolan data) Protocol/KRYPTOLAN
+      (= :l2-t-p data) Protocol/L2_T_P
+      (= :larp data) Protocol/LARP
+      (= :leaf-1 data) Protocol/LEAF_1
+      (= :leaf-2 data) Protocol/LEAF_2
+      (= :manet data) Protocol/MANET
+      (= :merit-inp data) Protocol/MERIT_INP
+      (= :mfe-nsp data) Protocol/MFE_NSP
+      (= :micp data) Protocol/MICP
+      (= :mobile data) Protocol/MOBILE
+      (= :mobility-header data) Protocol/MOBILITY_HEADER
+      (= :mpls-in-ip data) Protocol/MPLS_IN_IP
+      (= :mtp data) Protocol/MTP
+      (= :mux data) Protocol/MUX
+      (= :narp data) Protocol/NARP
+      (= :netblt data) Protocol/NETBLT
+      (= :nsfnet-igp data) Protocol/NSFNET_IGP
+      (= :nvp-ii data) Protocol/NVP_II
+      (= :ospfigp data) Protocol/OSPFIGP
+      (= :pgm data) Protocol/PGM
+      (= :pim data) Protocol/PIM
+      (= :pipe data) Protocol/PIPE
+      (= :pnni data) Protocol/PNNI
+      (= :prm data) Protocol/PRM
+      (= :ptp data) Protocol/PTP
+      (= :pup data) Protocol/PUP
+      (= :pvp data) Protocol/PVP
+      (= :qnx data) Protocol/QNX
+      (= :rdp data) Protocol/RDP
+      (= :reserved data) Protocol/RESERVED
+      (= :rohc data) Protocol/ROHC
+      (= :rsvp data) Protocol/RSVP
+      (= :rsvp-e2e-ignore data) Protocol/RSVP_E2E_IGNORE
+      (= :rvd data) Protocol/RVD
+      (= :sat-expak data) Protocol/SAT_EXPAK
+      (= :sat-mon data) Protocol/SAT_MON
+      (= :scc-sp data) Protocol/SCC_SP
+      (= :scps data) Protocol/SCPS
+      (= :sctp data) Protocol/SCTP
+      (= :sdrp data) Protocol/SDRP
+      (= :secure-vmtp data) Protocol/SECURE_VMTP
+      (= :shim6 data) Protocol/SHIM6
+      (= :skip data) Protocol/SKIP
+      (= :sm data) Protocol/SM
+      (= :smp data) Protocol/SMP
+      (= :snp data) Protocol/SNP
+      (= :sprite-rpc data) Protocol/SPRITE_RPC
+      (= :sps data) Protocol/SPS
+      (= :srp data) Protocol/SRP
+      (= :sscopmce data) Protocol/SSCOPMCE
+      (= :st data) Protocol/ST
+      (= :stp data) Protocol/STP
+      (= :sun-nd data) Protocol/SUN_ND
+      (= :swipe data) Protocol/SWIPE
+      (= :tcf data) Protocol/TCF
+      (= :tcp data) Protocol/TCP
+      (= :threepc data) Protocol/THREEPC
+      (= :tlsp data) Protocol/TLSP
+      (= :tpplusplus data) Protocol/TPPLUSPLUS
+      (= :trunk-1 data) Protocol/TRUNK_1
+      (= :trunk-2 data) Protocol/TRUNK_2
+      (= :ttp data) Protocol/TTP
+      (= :udp data) Protocol/UDP
+      (= :udplite data) Protocol/UDPLITE
+      (= :uti data) Protocol/UTI
+      (= :vines data) Protocol/VINES
+      (= :visa data) Protocol/VISA
+      (= :vmtp data) Protocol/VMTP
+      (= :vrrp data) Protocol/VRRP
+      (= :wb-expak data) Protocol/WB_EXPAK
+      (= :wb-mon data) Protocol/WB_MON
       (= :wesp data) Protocol/WESP
-      (= :all data) Protocol/ALL
-      (= :any-local data) Protocol/ANY_LOCAL)))
+      (= :wsn data) Protocol/WSN
+      (= :xnet data) Protocol/XNET
+      (= :xns-idp data) Protocol/XNS_IDP
+      (= :xtp data) Protocol/XTP)))
 
 
 (defn router-type
@@ -1966,32 +1966,32 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RouterType` - the value is returned.
-* is `:nat-gateway` - `RouterType/NAT_GATEWAY` is returned
 * is `:carrier-gateway` - `RouterType/CARRIER_GATEWAY` is returned
-* is `:transit-gateway` - `RouterType/TRANSIT_GATEWAY` is returned
-* is `:network-interface` - `RouterType/NETWORK_INTERFACE` is returned
 * is `:egress-only-internet-gateway` - `RouterType/EGRESS_ONLY_INTERNET_GATEWAY` is returned
-* is `:instance` - `RouterType/INSTANCE` is returned
 * is `:gateway` - `RouterType/GATEWAY` is returned
-* is `:vpc-peering-connection` - `RouterType/VPC_PEERING_CONNECTION` is returned
-* is `:vpc-endpoint` - `RouterType/VPC_ENDPOINT` is returned
+* is `:instance` - `RouterType/INSTANCE` is returned
 * is `:local-gateway` - `RouterType/LOCAL_GATEWAY` is returned
+* is `:nat-gateway` - `RouterType/NAT_GATEWAY` is returned
+* is `:network-interface` - `RouterType/NETWORK_INTERFACE` is returned
+* is `:transit-gateway` - `RouterType/TRANSIT_GATEWAY` is returned
+* is `:vpc-endpoint` - `RouterType/VPC_ENDPOINT` is returned
+* is `:vpc-peering-connection` - `RouterType/VPC_PEERING_CONNECTION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RouterType data) data
-      (= :nat-gateway data) RouterType/NAT_GATEWAY
       (= :carrier-gateway data) RouterType/CARRIER_GATEWAY
-      (= :transit-gateway data) RouterType/TRANSIT_GATEWAY
-      (= :network-interface data) RouterType/NETWORK_INTERFACE
       (= :egress-only-internet-gateway data) RouterType/EGRESS_ONLY_INTERNET_GATEWAY
-      (= :instance data) RouterType/INSTANCE
       (= :gateway data) RouterType/GATEWAY
-      (= :vpc-peering-connection data) RouterType/VPC_PEERING_CONNECTION
+      (= :instance data) RouterType/INSTANCE
+      (= :local-gateway data) RouterType/LOCAL_GATEWAY
+      (= :nat-gateway data) RouterType/NAT_GATEWAY
+      (= :network-interface data) RouterType/NETWORK_INTERFACE
+      (= :transit-gateway data) RouterType/TRANSIT_GATEWAY
       (= :vpc-endpoint data) RouterType/VPC_ENDPOINT
-      (= :local-gateway data) RouterType/LOCAL_GATEWAY)))
+      (= :vpc-peering-connection data) RouterType/VPC_PEERING_CONNECTION)))
 
 
 (defn service-manager
@@ -2001,18 +2001,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ServiceManager` - the value is returned.
+* is `:systemd` - `ServiceManager/SYSTEMD` is returned
 * is `:sysvinit` - `ServiceManager/SYSVINIT` is returned
 * is `:windows` - `ServiceManager/WINDOWS` is returned
-* is `:systemd` - `ServiceManager/SYSTEMD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ServiceManager data) data
+      (= :systemd data) ServiceManager/SYSTEMD
       (= :sysvinit data) ServiceManager/SYSVINIT
-      (= :windows data) ServiceManager/WINDOWS
-      (= :systemd data) ServiceManager/SYSTEMD)))
+      (= :windows data) ServiceManager/WINDOWS)))
 
 
 (defn spot-instance-interruption
@@ -2022,18 +2022,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SpotInstanceInterruption` - the value is returned.
-* is `:terminate` - `SpotInstanceInterruption/TERMINATE` is returned
 * is `:hibernate` - `SpotInstanceInterruption/HIBERNATE` is returned
 * is `:stop` - `SpotInstanceInterruption/STOP` is returned
+* is `:terminate` - `SpotInstanceInterruption/TERMINATE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SpotInstanceInterruption data) data
-      (= :terminate data) SpotInstanceInterruption/TERMINATE
       (= :hibernate data) SpotInstanceInterruption/HIBERNATE
-      (= :stop data) SpotInstanceInterruption/STOP)))
+      (= :stop data) SpotInstanceInterruption/STOP
+      (= :terminate data) SpotInstanceInterruption/TERMINATE)))
 
 
 (defn spot-request-type
@@ -2062,20 +2062,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SubnetType` - the value is returned.
-* is `:private-with-egress` - `SubnetType/PRIVATE_WITH_EGRESS` is returned
-* is `:public` - `SubnetType/PUBLIC` is returned
 * is `:private-isolated` - `SubnetType/PRIVATE_ISOLATED` is returned
+* is `:private-with-egress` - `SubnetType/PRIVATE_WITH_EGRESS` is returned
 * is `:private-with-nat` - `SubnetType/PRIVATE_WITH_NAT` is returned
+* is `:public` - `SubnetType/PUBLIC` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SubnetType data) data
-      (= :private-with-egress data) SubnetType/PRIVATE_WITH_EGRESS
-      (= :public data) SubnetType/PUBLIC
       (= :private-isolated data) SubnetType/PRIVATE_ISOLATED
-      (= :private-with-nat data) SubnetType/PRIVATE_WITH_NAT)))
+      (= :private-with-egress data) SubnetType/PRIVATE_WITH_EGRESS
+      (= :private-with-nat data) SubnetType/PRIVATE_WITH_NAT
+      (= :public data) SubnetType/PUBLIC)))
 
 
 (defn traffic-direction
@@ -2104,16 +2104,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TransportProtocol` - the value is returned.
-* is `:udp` - `TransportProtocol/UDP` is returned
 * is `:tcp` - `TransportProtocol/TCP` is returned
+* is `:udp` - `TransportProtocol/UDP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TransportProtocol data) data
-      (= :udp data) TransportProtocol/UDP
-      (= :tcp data) TransportProtocol/TCP)))
+      (= :tcp data) TransportProtocol/TCP
+      (= :udp data) TransportProtocol/UDP)))
 
 
 (defn vpc-endpoint-type
@@ -2161,16 +2161,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `VpnPort` - the value is returned.
-* is `:openvpn` - `VpnPort/OPENVPN` is returned
 * is `:https` - `VpnPort/HTTPS` is returned
+* is `:openvpn` - `VpnPort/OPENVPN` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? VpnPort data) data
-      (= :openvpn data) VpnPort/OPENVPN
-      (= :https data) VpnPort/HTTPS)))
+      (= :https data) VpnPort/HTTPS
+      (= :openvpn data) VpnPort/OPENVPN)))
 
 
 (defn windows-version
@@ -2180,744 +2180,744 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `WindowsVersion` - the value is returned.
-* is `:windows-server-2019-english-full-hyperv` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_HYPERV` is returned
-* is `:windows-server-2022-english-full-eks-optimized-1-25` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_25` is returned
-* is `:windows-server-2016-czech-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_CZECH_FULL_BASE` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_WEB` is returned
-* is `:windows-server-2019-chinese-traditional-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_CHINESE_TRADITIONAL_FULL_BASE` is returned
-* is `:windows-server-2016-english-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_WEB` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_EXPRESS` is returned
-* is `:windows-server-2016-english-full-containers` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_CONTAINERS` is returned
-* is `:windows-server-2019-japanese-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_WEB` is returned
-* is `:windows-server-2019-japanese-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-german-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_GERMAN_64BIT_BASE` is returned
-* is `:windows-server-2016-chinese-simplified-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_CHINESE_SIMPLIFIED_FULL_BASE` is returned
-* is `:windows-server-2016-turkish-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_TURKISH_FULL_BASE` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_WEB` is returned
-* is `:windows-server-2016-japanese-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_WEB` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_STANDARD` is returned
-* is `:windows-server-2016-polish-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_POLISH_FULL_BASE` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_STANDARD` is returned
-* is `:windows-server-2008-r2-sp1-korean-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_KOREAN_64BIT_BASE` is returned
-* is `:windows-server-2019-english-stig-core` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_STIG_CORE` is returned
-* is `:windows-server-2012-rtm-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_FULL_BASE` is returned
-* is `:windows-server-2019-english-full-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_WEB` is returned
-* is `:windows-server-2022-japanese-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_WEB` is returned
-* is `:windows-server-2012-rtm-portuguese-brazil-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_PORTUGUESE_BRAZIL_64BIT_BASE` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_STANDARD` is returned
-* is `:windows-server-2022-english-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_STANDARD` is returned
-* is `:windows-server-2022-czech-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_CZECH_FULL_BASE` is returned
-* is `:windows-server-2022-english-full-sql-2019-express` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_EXPRESS` is returned
-* is `:windows-server-2008-r2-sp1-portuguese-brazil-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_PORTUGUESE_BRAZIL_64BIT_BASE` is returned
-* is `:windows-server-2016-japanese-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_ENTERPRISE` is returned
-* is `:windows-server-2019-english-full-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-italian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ITALIAN_64BIT_BASE` is returned
-* is `:windows-server-2016-swedish-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_SWEDISH_FULL_BASE` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_ENTERPRISE` is returned
-* is `:windows-server-2022-hungarian-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_HUNGARIAN_FULL_BASE` is returned
-* is `:windows-server-2016-english-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_STANDARD` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_ENTERPRISE` is returned
-* is `:windows-server-2019-english-core-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_ECS_OPTIMIZED` is returned
-* is `:windows-server-2008-sp2-english-64bit-sql-2008-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_SQL_2008_SP4_EXPRESS` is returned
-* is `:windows-server-2003-r2-sp2-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_BASE` is returned
-* is `:windows-server-2022-japanese-full-sql-2022-standard` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_STANDARD` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-web` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_WEB` is returned
-* is `:windows-server-2016-portuguese-portugal-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_PORTUGUESE_PORTUGAL_FULL_BASE` is returned
-* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_WEB` is returned
-* is `:windows-server-2012-rtm-portuguese-portugal-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_PORTUGUESE_PORTUGAL_64BIT_BASE` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP3_EXPRESS` is returned
-* is `:windows-server-2012-rtm-french-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_FRENCH_64BIT_BASE` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_STANDARD` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_STANDARD` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_WEB` is returned
-* is `:windows-server-2012-r2-rtm-french-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_FRENCH_64BIT_BASE` is returned
-* is `:windows-server-2019-english-full-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_ENTERPRISE` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
-* is `:windows-server-2022-dutch-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_DUTCH_FULL_BASE` is returned
-* is `:windows-server-2022-english-full-eks-optimized-1-28` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_28` is returned
-* is `:windows-server-2016-japanese-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_BASE` is returned
-* is `:windows-server-1809-english-core-base` - `WindowsVersion/WINDOWS_SERVER_1809_ENGLISH_CORE_BASE` is returned
-* is `:windows-server-2012-rtm-russian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_RUSSIAN_64BIT_BASE` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_EXPRESS` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_STANDARD` is returned
-* is `:windows-server-2016-italian-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_ITALIAN_FULL_BASE` is returned
-* is `:windows-server-2003-r2-sp2-language-packs-64bit-sql-2005-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_SQL_2005_SP4_STANDARD` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_STANDARD` is returned
-* is `:windows-server-2022-french-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_FRENCH_FULL_BASE` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_EXPRESS` is returned
-* is `:windows-server-2019-portuguese-portugal-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_PORTUGUESE_PORTUGAL_FULL_BASE` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-core` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_CORE` is returned
-* is `:windows-server-2012-rtm-italian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ITALIAN_64BIT_BASE` is returned
-* is `:windows-server-2008-sp2-english-32bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_32BIT_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_WEB` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_ENTERPRISE` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_WEB` is returned
-* is `:windows-server-2012-r2-rtm-english-p3` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_P3` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_WEB` is returned
-* is `:windows-server-2019-english-core-eks-optimized-1-27` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_27` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_ENTERPRISE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_STANDARD` is returned
-* is `:windows-server-2016-japanese-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_STANDARD` is returned
-* is `:windows-server-2003-r2-sp2-language-packs-64bit-sql-2005-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_SQL_2005_SP4_EXPRESS` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_ENTERPRISE` is returned
-* is `:windows-server-2022-english-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_ENTERPRISE` is returned
-* is `:windows-server-2016-portuguese-brazil-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_PORTUGUESE_BRAZIL_FULL_BASE` is returned
-* is `:windows-server-2019-english-full-sql-2019-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_EXPRESS` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_ENTERPRISE` is returned
-* is `:windows-server-2012-rtm-chinese-traditional-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_TRADITIONAL_64BIT_BASE` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_ENTERPRISE` is returned
-* is `:windows-server-2012-rtm-czech-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_CZECH_64BIT_BASE` is returned
-* is `:windows-server-2022-german-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_GERMAN_FULL_BASE` is returned
 * is `:windows-server-1709-english-core-base` - `WindowsVersion/WINDOWS_SERVER_1709_ENGLISH_CORE_BASE` is returned
-* is `:windows-server-2012-rtm-chinese-simplified-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_SIMPLIFIED_64BIT_BASE` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_EXPRESS` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_EXPRESS` is returned
-* is `:windows-server-2022-turkish-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_TURKISH_FULL_BASE` is returned
-* is `:windows-server-2012-rtm-english-64bit-2014-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_2014_SP3_WEB` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_WEB` is returned
-* is `:windows-server-2022-english-full-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_CONTAINERSLATEST` is returned
-* is `:windows-server-2007-r2-sp1-language-packs-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2007_R2_SP1_LANGUAGE_PACKS_64BIT_BASE` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2012-sp4-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_WEB` is returned
 * is `:windows-server-1709-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_1709_ENGLISH_CORE_CONTAINERSLATEST` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP3_STANDARD` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_ENTERPRISE` is returned
-* is `:windows-server-2022-english-full-eks-optimized-1-24` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_24` is returned
-* is `:windows-server-2019-japanese-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_ENTERPRISE` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_BASE` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_ENTERPRISE` is returned
-* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
-* is `:windows-server-2022-chinese-simplified-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_CHINESE_SIMPLIFIED_FULL_BASE` is returned
-* is `:windows-server-2022-english-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_WEB` is returned
-* is `:windows-server-2012-r2-rtm-portuguese-portugal-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_PORTUGUESE_PORTUGAL_64BIT_BASE` is returned
-* is `:windows-server-2022-english-full-eks-optimized-1-23` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_23` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2012-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_EXPRESS` is returned
-* is `:windows-server-2022-italian-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_ITALIAN_FULL_BASE` is returned
-* is `:windows-server-2022-portuguese-portugal-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_PORTUGUESE_PORTUGAL_FULL_BASE` is returned
-* is `:windows-server-2008-r2-sp1-japanese-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_BASE` is returned
-* is `:windows-server-2016-english-deep-learning` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_DEEP_LEARNING` is returned
-* is `:windows-server-2019-english-full-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_CONTAINERSLATEST` is returned
-* is `:windows-server-2022-english-core-base` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_BASE` is returned
-* is `:windows-server-2022-english-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_STANDARD` is returned
-* is `:windows-server-2012-rtm-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_BASE` is returned
-* is `:windows-server-2016-japanese-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_ENTERPRISE` is returned
-* is `:windows-server-2019-japanese-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_BASE` is returned
-* is `:windows-server-2019-english-core-eks-optimized-1-25` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_25` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-core-sql-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_CORE_SQL_2012_SP4_STANDARD` is returned
-* is `:windows-server-2019-czech-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_CZECH_FULL_BASE` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP3_STANDARD` is returned
-* is `:windows-server-2016-russian-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_RUSSIAN_FULL_BASE` is returned
-* is `:windows-server-2019-german-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_GERMAN_FULL_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_EXPRESS` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_ENTERPRISE` is returned
-* is `:windows-server-2016-english-tesla` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_TESLA` is returned
-* is `:windows-server-2008-r2-sp1-english-61bit-sql-2012-rtm-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_61BIT_SQL_2012_RTM_SP2_ENTERPRISE` is returned
-* is `:windows-server-2019-english-full-sql-2022-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_ENTERPRISE` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_WEB` is returned
-* is `:windows-server-2022-japanese-full-sql-2022-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_ENTERPRISE` is returned
-* is `:windows-server-2022-english-stig-full` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_STIG_FULL` is returned
-* is `:windows-server-2019-english-full-eks-optimized-1-24` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_24` is returned
-* is `:windows-server-2022-russian-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_RUSSIAN_FULL_BASE` is returned
-* is `:windows-server-1809-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_1809_ENGLISH_CORE_CONTAINERSLATEST` is returned
-* is `:windows-server-2019-english-full-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_EXPRESS` is returned
-* is `:windows-server-2003-r2-sp2-language-packs-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_BASE` is returned
-* is `:windows-server-2012-r2-rtm-russian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_RUSSIAN_64BIT_BASE` is returned
-* is `:windows-server-2022-chinese-traditional-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_CHINESE_TRADITIONAL_FULL_BASE` is returned
-* is `:windows-server-2016-japanese-full-fql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_FQL_2016_SP2_WEB` is returned
-* is `:windows-server-2016-english-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_ENTERPRISE` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
-* is `:windows-server-2019-english-full-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_STANDARD` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_STANDARD` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_STANDARD` is returned
-* is `:windows-server-2008-sp2-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_BASE` is returned
-* is `:windows-server-2019-japanese-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_STANDARD` is returned
-* is `:windows-server-2022-korean-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_KOREAN_FULL_BASE` is returned
-* is `:windows-server-2003-r2-sp2-english-32bit-base` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_32BIT_BASE` is returned
-* is `:windows-server-2019-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_ENTERPRISE` is returned
-* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2012-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2012_SP4_EXPRESS` is returned
-* is `:windows-server-2016-english-full-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2014_SP3_STANDARD` is returned
-* is `:windows-server-2012-rtm-turkish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_TURKISH_64BIT_BASE` is returned
-* is `:windows-server-2022-portuguese-brazil-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_PORTUGUESE_BRAZIL_FULL_BASE` is returned
-* is `:windows-server-2022-japanese-full-sql-2022-web` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_WEB` is returned
-* is `:windows-server-2022-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_BASE` is returned
-* is `:windows-server-2022-english-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_ENTERPRISE` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_STANDARD` is returned
-* is `:windows-server-2022-english-stig-core` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_STIG_CORE` is returned
-* is `:windows-server-2003-r2-sp2-english-64bit-sql-2005-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_SQL_2005_SP4_EXPRESS` is returned
-* is `:windows-server-2012-r2-rtm-czech-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CZECH_64BIT_BASE` is returned
-* is `:windows-server-2016-english-core-containers` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_CONTAINERS` is returned
-* is `:windows-server-2012-rtm-polish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_POLISH_64BIT_BASE` is returned
-* is `:windows-server-2008-r2-sp1-chinese-prc-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_CHINESE_PRC_64BIT_BASE` is returned
-* is `:windows-server-2019-japanese-full-sql-2022-standard` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_STANDARD` is returned
-* is `:windows-server-2012-rtm-dutch-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_DUTCH_64BIT_BASE` is returned
-* is `:windows-server-2016-english-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_ENTERPRISE` is returned
-* is `:windows-server-2019-english-full-sql-2022-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_STANDARD` is returned
-* is `:windows-server-2019-japanese-full-sql-2022-web` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_WEB` is returned
-* is `:windows-server-2016-english-full-hyperv` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_HYPERV` is returned
-* is `:windows-server-2019-english-full-eks-optimized-1-27` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_27` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_ENTERPRISE` is returned
-* is `:windows-server-2016-spanish-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_SPANISH_FULL_BASE` is returned
-* is `:windows-server-2019-chinese-simplified-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_CHINESE_SIMPLIFIED_FULL_BASE` is returned
-* is `:windows-server-2022-japanese-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_STANDARD` is returned
-* is `:windows-server-2019-hungarian-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_HUNGARIAN_FULL_BASE` is returned
-* is `:windows-server-2012-r2-sp1-portuguese-brazil-64bit-core` - `WindowsVersion/WINDOWS_SERVER_2012_R2_SP1_PORTUGUESE_BRAZIL_64BIT_CORE` is returned
-* is `:windows-server-2016-french-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_FRENCH_FULL_BASE` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_WEB` is returned
-* is `:windows-server-2016-korean-full-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP1_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_EXPRESS` is returned
-* is `:windows-server-2019-dutch-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_DUTCH_FULL_BASE` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_ENTERPRISE` is returned
-* is `:windows-server-2016-hungarian-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_HUNGARIAN_FULL_BASE` is returned
-* is `:windows-server-2019-english-core-eks-optimized-1-26` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_26` is returned
-* is `:windows-server-2022-english-core-eks-optimized-1-28` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_28` is returned
-* is `:windows-server-2016-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_BASE` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2012-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2012_SP4_EXPRESS` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_STANDARD` is returned
-* is `:windows-server-2019-polish-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_POLISH_FULL_BASE` is returned
-* is `:windows-server-2022-japanese-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_BASE` is returned
-* is `:windows-server-2022-english-full-sql-2017-express` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_EXPRESS` is returned
-* is `:windows-server-2008-sp2-english-64bit-sql-2008-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_SQL_2008_SP4_STANDARD` is returned
-* is `:windows-server-2019-english-deep-learning` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_DEEP_LEARNING` is returned
-* is `:windows-server-2016-english-full-sql-2017-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_EXPRESS` is returned
-* is `:windows-server-2022-polish-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_POLISH_FULL_BASE` is returned
-* is `:windows-server-2019-english-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_STANDARD` is returned
-* is `:windows-server-2008-r2-sp1-language-packs-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_LANGUAGE_PACKS_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_EXPRESS` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_WEB` is returned
 * is `:windows-server-1803-english-core-base` - `WindowsVersion/WINDOWS_SERVER_1803_ENGLISH_CORE_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_EXPRESS` is returned
-* is `:windows-server-2022-english-full-sql-2022-standard` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-polish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_POLISH_64BIT_BASE` is returned
-* is `:windows-server-2022-swedish-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_SWEDISH_FULL_BASE` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_STANDARD` is returned
-* is `:windows-server-2016-chinese-traditional-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_CHINESE_TRADITIONAL_FULL_BASE` is returned
-* is `:windows-server-2022-spanish-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_SPANISH_FULL_BASE` is returned
-* is `:windows-server-2022-english-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_WEB` is returned
-* is `:windows-server-2019-english-core-eks-optimized-1-28` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_28` is returned
-* is `:windows-server-2019-japanese-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_WEB` is returned
-* is `:windows-server-2022-english-full-sql-2022-express` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_EXPRESS` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_STANDARD` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_EXPRESS` is returned
-* is `:windows-server-2022-english-core-eks-optimized-1-24` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_24` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2007-r2-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2007_R2_SP3_WEB` is returned
-* is `:windows-server-2019-italian-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_ITALIAN_FULL_BASE` is returned
-* is `:windows-server-2022-english-core-eks-optimized-1-25` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_25` is returned
-* is `:windows-server-2019-english-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_STANDARD` is returned
-* is `:windows-server-2019-english-full-eks-optimized-1-25` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_25` is returned
-* is `:windows-server-2022-english-full-eks-optimized-1-26` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_26` is returned
-* is `:windows-server-2016-english-full-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_ECS_OPTIMIZED` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_ENTERPRISE` is returned
-* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2012_SP4_STANDARD` is returned
-* is `:windows-server-2022-japanese-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_WEB` is returned
-* is `:windows-server-2016-japanese-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_STANDARD` is returned
-* is `:windows-server-2016-english-full-sql-2014-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2014_SP3_ENTERPRISE` is returned
-* is `:windows-server-2019-russian-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_RUSSIAN_FULL_BASE` is returned
-* is `:windows-server-2012-rtm-hungarian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_HUNGARIAN_64BIT_BASE` is returned
-* is `:windows-server-2016-english-full-sql-2019-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_EXPRESS` is returned
-* is `:windows-server-2019-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_CONTAINERSLATEST` is returned
-* is `:windows-server-2008-sp2-portuguese-brazil-32bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_PORTUGUESE_BRAZIL_32BIT_BASE` is returned
-* is `:windows-server-2022-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_CONTAINERSLATEST` is returned
-* is `:windows-server-2019-japanese-full-sql-2022-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_ENTERPRISE` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_WEB` is returned
-* is `:windows-server-2019-english-full-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_EXPRESS` is returned
-* is `:windows-server-2019-english-full-sql-2022-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_WEB` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_WEB` is returned
-* is `:windows-server-2022-english-full-sql-2022-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_ENTERPRISE` is returned
-* is `:windows-server-2019-english-full-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_ECS_OPTIMIZED` is returned
-* is `:windows-server-2019-portuguese-brazil-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_PORTUGUESE_BRAZIL_FULL_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_ENTERPRISE` is returned
-* is `:windows-server-2019-turkish-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_TURKISH_FULL_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-deep-learning` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_DEEP_LEARNING` is returned
-* is `:windows-server-2016-english-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_STANDARD` is returned
-* is `:windows-server-2019-english-full-eks-optimized-1-28` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_28` is returned
-* is `:windows-server-2012-r2-rtm-chinese-traditional-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_TRADITIONAL_64BIT_BASE` is returned
-* is `:windows-server-2022-english-full-eks-optimized-1-27` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_27` is returned
-* is `:windows-server-2022-english-core-eks-optimized-1-27` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_27` is returned
-* is `:windows-server-2019-english-full-eks-optimized-1-23` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_23` is returned
-* is `:windows-server-2012-r2-rtm-swedish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_SWEDISH_64BIT_BASE` is returned
-* is `:windows-server-2012-rtm-chinese-traditional-hong-kong-sar-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_TRADITIONAL_HONG_KONG_SAR_64BIT_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_EXPRESS` is returned
-* is `:windows-server-2019-english-full-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_ENTERPRISE` is returned
-* is `:windows-server-2016-japanese-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_WEB` is returned
-* is `:windows-server-2019-english-core-base` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_BASE` is returned
-* is `:windows-server-2019-swedish-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_SWEDISH_FULL_BASE` is returned
-* is `:windows-server-2016-dutch-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_DUTCH_FULL_BASE` is returned
-* is `:windows-server-2012-r2-rtm-portuguese-brazil-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_PORTUGUESE_BRAZIL_64BIT_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-hyperv` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_HYPERV` is returned
-* is `:windows-server-2008-r2-sp1-language-packs-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_LANGUAGE_PACKS_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_WEB` is returned
-* is `:windows-server-2016-english-64bit-sql-2012-sp4-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP3_EXPRESS` is returned
-* is `:windows-server-2012-r2-rtm-turkish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_TURKISH_64BIT_BASE` is returned
-* is `:windows-server-2016-english-core-base` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_BASE` is returned
-* is `:windows-server-2019-english-core-eks-optimized-1-22` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_22` is returned
-* is `:windows-server-2012-r2-rtm-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_FULL_BASE` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP2_EXPRESS` is returned
-* is `:windows-server-2019-english-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_WEB` is returned
-* is `:windows-server-2022-japanese-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_ENTERPRISE` is returned
-* is `:windows-server-2019-english-stig-full` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_STIG_FULL` is returned
-* is `:windows-server-2012-sp2-portuguese-brazil-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_SP2_PORTUGUESE_BRAZIL_64BIT_BASE` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_BASE` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2016_SP2_EXPRESS` is returned
-* is `:windows-server-2012-r2-rtm-korean-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_KOREAN_64BIT_BASE` is returned
-* is `:windows-server-2016-korean-full-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP3_STANDARD` is returned
-* is `:windows-server-2019-english-core-eks-optimized-1-24` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_24` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-sharepoint-2010-sp2-foundation` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SHAREPOINT_2010_SP2_FOUNDATION` is returned
 * is `:windows-server-1803-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_1803_ENGLISH_CORE_CONTAINERSLATEST` is returned
-* is `:windows-server-2022-english-full-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_ECS_OPTIMIZED` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2012-sp4-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_EXPRESS` is returned
-* is `:windows-server-2019-spanish-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_SPANISH_FULL_BASE` is returned
-* is `:windows-server-2012-r2-english-stig-full` - `WindowsVersion/WINDOWS_SERVER_2012_R2_ENGLISH_STIG_FULL` is returned
-* is `:windows-server-2012-r2-rtm-dutch-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_DUTCH_64BIT_BASE` is returned
-* is `:windows-server-2012-r2-rtm-hungarian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_HUNGARIAN_64BIT_BASE` is returned
-* is `:windows-server-2022-japanese-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_WEB` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_EXPRESS` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_EXPRESS` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_EXPRESS` is returned
-* is `:windows-server-2016-english-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_WEB` is returned
-* is `:windows-server-2019-english-core-eks-optimized-1-23` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_23` is returned
-* is `:windows-server-2019-english-full-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_WEB` is returned
-* is `:windows-server-2016-english-stig-core` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_STIG_CORE` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_WEB` is returned
-* is `:windows-server-2016-korean-full-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP2_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_BASE` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_WEB` is returned
-* is `:windows-server-2019-english-full-sql-2022-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_EXPRESS` is returned
+* is `:windows-server-1809-english-core-base` - `WindowsVersion/WINDOWS_SERVER_1809_ENGLISH_CORE_BASE` is returned
+* is `:windows-server-1809-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_1809_ENGLISH_CORE_CONTAINERSLATEST` is returned
+* is `:windows-server-2003-r2-sp2-english-32bit-base` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_32BIT_BASE` is returned
+* is `:windows-server-2003-r2-sp2-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_BASE` is returned
+* is `:windows-server-2003-r2-sp2-english-64bit-sql-2005-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_SQL_2005_SP4_EXPRESS` is returned
 * is `:windows-server-2003-r2-sp2-english-64bit-sql-2005-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_SQL_2005_SP4_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_EXPRESS` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_STANDARD` is returned
-* is `:windows-server-2016-english-core-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_WEB` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-sql-2012-sp4-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2012_SP4_WEB` is returned
-* is `:windows-server-2022-english-core-eks-optimized-1-26` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_26` is returned
-* is `:windows-server-2012-r2-rtm-chinese-traditional-hong-kong-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_TRADITIONAL_HONG_KONG_64BIT_BASE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_BASE` is returned
-* is `:windows-server-2012-rtm-spanish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_SPANISH_64BIT_BASE` is returned
 * is `:windows-server-2003-r2-sp2-language-packs-32bit-base` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_32BIT_BASE` is returned
-* is `:windows-server-2019-english-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_WEB` is returned
-* is `:windows-server-2022-english-full-sql-2022-web` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_WEB` is returned
-* is `:windows-server-2012-rtm-german-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_GERMAN_64BIT_BASE` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
-* is `:windows-server-2016-english-stig-full` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_STIG_FULL` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-chinese-simplified-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_SIMPLIFIED_64BIT_BASE` is returned
-* is `:windows-server-2019-french-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_FRENCH_FULL_BASE` is returned
-* is `:windows-server-2012-r2-rtm-spanish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_SPANISH_64BIT_BASE` is returned
-* is `:windows-server-2012-r2-english-stig-core` - `WindowsVersion/WINDOWS_SERVER_2012_R2_ENGLISH_STIG_CORE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_ENTERPRISE` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_EXPRESS` is returned
-* is `:windows-server-2019-english-full-eks-optimized-1-22` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_22` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-core` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_CORE` is returned
-* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_WEB` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_STANDARD` is returned
-* is `:windows-server-2016-english-full-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_WEB` is returned
-* is `:windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-enterprise` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE` is returned
-* is `:windows-server-2019-english-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_ENTERPRISE` is returned
-* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
-* is `:windows-server-2022-english-core-eks-optimized-1-23` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_23` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_WEB` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_EXPRESS` is returned
-* is `:windows-server-2016-english-p3` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_P3` is returned
-* is `:windows-server-2012-rtm-swedish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_SWEDISH_64BIT_BASE` is returned
-* is `:windows-server-2019-japanese-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_ENTERPRISE` is returned
-* is `:windows-server-2022-japanese-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_ENTERPRISE` is returned
-* is `:windows-server-2016-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_CONTAINERSLATEST` is returned
-* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_STANDARD` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_ENTERPRISE` is returned
+* is `:windows-server-2003-r2-sp2-language-packs-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_BASE` is returned
+* is `:windows-server-2003-r2-sp2-language-packs-64bit-sql-2005-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_SQL_2005_SP4_EXPRESS` is returned
+* is `:windows-server-2003-r2-sp2-language-packs-64bit-sql-2005-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_SQL_2005_SP4_STANDARD` is returned
+* is `:windows-server-2007-r2-sp1-language-packs-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2007_R2_SP1_LANGUAGE_PACKS_64BIT_BASE` is returned
 * is `:windows-server-2008-r2-sp1-chinese-hong-kong-sar-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_CHINESE_HONG_KONG_SAR_64BIT_BASE` is returned
-* is `:windows-server-2019-korean-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_KOREAN_FULL_BASE` is returned
-* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_STANDARD` is returned
-* is `:windows-server-2019-english-full-sql-2017-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_EXPRESS` is returned
-* is `:windows-server-2019-english-tesla` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_TESLA` is returned
-* is `:windows-server-2019-english-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_ENTERPRISE` is returned
-* is `:windows-server-2016-german-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_GERMAN_FULL_BASE` is returned
-* is `:windows-server-2012-rtm-korean-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_KOREAN_64BIT_BASE` is returned
+* is `:windows-server-2008-r2-sp1-chinese-prc-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_CHINESE_PRC_64BIT_BASE` is returned
+* is `:windows-server-2008-r2-sp1-english-61bit-sql-2012-rtm-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_61BIT_SQL_2012_RTM_SP2_ENTERPRISE` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_BASE` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-core` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_CORE` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-core-sql-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_CORE_SQL_2012_SP4_STANDARD` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-sharepoint-2010-sp2-foundation` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SHAREPOINT_2010_SP2_FOUNDATION` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_WEB` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-enterprise` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_EXPRESS` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_STANDARD` is returned
+* is `:windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-web` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_WEB` is returned
+* is `:windows-server-2008-r2-sp1-japanese-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_BASE` is returned
+* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
+* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
+* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_WEB` is returned
+* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2012-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2012_SP4_EXPRESS` is returned
+* is `:windows-server-2008-r2-sp1-japanese-64bit-sql-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2012_SP4_STANDARD` is returned
+* is `:windows-server-2008-r2-sp1-korean-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_KOREAN_64BIT_BASE` is returned
+* is `:windows-server-2008-r2-sp1-language-packs-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_LANGUAGE_PACKS_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
+* is `:windows-server-2008-r2-sp1-language-packs-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_LANGUAGE_PACKS_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
+* is `:windows-server-2008-r2-sp1-portuguese-brazil-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_PORTUGUESE_BRAZIL_64BIT_BASE` is returned
+* is `:windows-server-2008-sp2-english-32bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_32BIT_BASE` is returned
+* is `:windows-server-2008-sp2-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_BASE` is returned
+* is `:windows-server-2008-sp2-english-64bit-sql-2008-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_SQL_2008_SP4_EXPRESS` is returned
+* is `:windows-server-2008-sp2-english-64bit-sql-2008-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_SQL_2008_SP4_STANDARD` is returned
+* is `:windows-server-2008-sp2-portuguese-brazil-32bit-base` - `WindowsVersion/WINDOWS_SERVER_2008_SP2_PORTUGUESE_BRAZIL_32BIT_BASE` is returned
+* is `:windows-server-2012-r2-english-stig-core` - `WindowsVersion/WINDOWS_SERVER_2012_R2_ENGLISH_STIG_CORE` is returned
+* is `:windows-server-2012-r2-english-stig-full` - `WindowsVersion/WINDOWS_SERVER_2012_R2_ENGLISH_STIG_FULL` is returned
+* is `:windows-server-2012-r2-rtm-chinese-simplified-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_SIMPLIFIED_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-chinese-traditional-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_TRADITIONAL_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-chinese-traditional-hong-kong-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_TRADITIONAL_HONG_KONG_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-czech-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CZECH_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-dutch-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_DUTCH_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-core` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_CORE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-hyperv` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_HYPERV` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2012-sp4-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_EXPRESS` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_WEB` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_EXPRESS` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_WEB` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_EXPRESS` is returned
 * is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_STANDARD` is returned
-* is `:windows-server-2019-english-full-eks-optimized-1-26` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_26` is returned
-* is `:windows-server-2016-japanese-full-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_EXPRESS` is returned
-* is `:windows-server-2022-english-core-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_ECS_OPTIMIZED` is returned
-* is `:windows-server-2012-rtm-japanese-64bit-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_2012_SP4_STANDARD` is returned
-* is `:windows-server-2016-korean-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_BASE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_WEB` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_EXPRESS` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_WEB` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_EXPRESS` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_WEB` is returned
+* is `:windows-server-2012-r2-rtm-english-deep-learning` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_DEEP_LEARNING` is returned
+* is `:windows-server-2012-r2-rtm-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_FULL_BASE` is returned
+* is `:windows-server-2012-r2-rtm-english-p3` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_P3` is returned
+* is `:windows-server-2012-r2-rtm-french-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_FRENCH_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-german-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_GERMAN_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-hungarian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_HUNGARIAN_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-italian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ITALIAN_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP2_EXPRESS` is returned
 * is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP2_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP3_EXPRESS` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP3_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_EXPRESS` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_WEB` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_WEB` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_ENTERPRISE` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_EXPRESS` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_STANDARD` is returned
+* is `:windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_WEB` is returned
+* is `:windows-server-2012-r2-rtm-korean-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_KOREAN_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-polish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_POLISH_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-portuguese-brazil-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_PORTUGUESE_BRAZIL_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-portuguese-portugal-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_PORTUGUESE_PORTUGAL_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-russian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_RUSSIAN_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-spanish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_SPANISH_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-swedish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_SWEDISH_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-rtm-turkish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_TURKISH_64BIT_BASE` is returned
+* is `:windows-server-2012-r2-sp1-portuguese-brazil-64bit-core` - `WindowsVersion/WINDOWS_SERVER_2012_R2_SP1_PORTUGUESE_BRAZIL_64BIT_CORE` is returned
+* is `:windows-server-2012-rtm-chinese-simplified-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_SIMPLIFIED_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-chinese-traditional-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_TRADITIONAL_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-chinese-traditional-hong-kong-sar-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_TRADITIONAL_HONG_KONG_SAR_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-czech-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_CZECH_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-dutch-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_DUTCH_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-english-64bit-2014-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_2014_SP3_WEB` is returned
+* is `:windows-server-2012-rtm-english-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2007-r2-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2007_R2_SP3_WEB` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2012-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_EXPRESS` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_STANDARD` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2012-sp4-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_WEB` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_EXPRESS` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_STANDARD` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_WEB` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP3_EXPRESS` is returned
+* is `:windows-server-2012-rtm-english-64bit-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP3_STANDARD` is returned
+* is `:windows-server-2012-rtm-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_FULL_BASE` is returned
+* is `:windows-server-2012-rtm-french-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_FRENCH_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-german-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_GERMAN_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-hungarian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_HUNGARIAN_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-italian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_ITALIAN_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-2012-sp4-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_2012_SP4_STANDARD` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2008-r2-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2008_R2_SP3_EXPRESS` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2008-r2-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2008_R2_SP3_STANDARD` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2012-sp4-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2012_SP4_EXPRESS` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2012-sp4-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2012_SP4_WEB` is returned
 * is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_EXPRESS` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_STANDARD` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_WEB` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_EXPRESS` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_STANDARD` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_WEB` is returned
+* is `:windows-server-2012-rtm-japanese-64bit-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2016_SP2_EXPRESS` is returned
+* is `:windows-server-2012-rtm-korean-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_KOREAN_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-polish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_POLISH_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-portuguese-brazil-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_PORTUGUESE_BRAZIL_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-portuguese-portugal-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_PORTUGUESE_PORTUGAL_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-russian-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_RUSSIAN_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-spanish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_SPANISH_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-swedish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_SWEDISH_64BIT_BASE` is returned
+* is `:windows-server-2012-rtm-turkish-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_RTM_TURKISH_64BIT_BASE` is returned
+* is `:windows-server-2012-sp2-portuguese-brazil-64bit-base` - `WindowsVersion/WINDOWS_SERVER_2012_SP2_PORTUGUESE_BRAZIL_64BIT_BASE` is returned
+* is `:windows-server-2016-chinese-simplified-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_CHINESE_SIMPLIFIED_FULL_BASE` is returned
+* is `:windows-server-2016-chinese-traditional-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_CHINESE_TRADITIONAL_FULL_BASE` is returned
+* is `:windows-server-2016-czech-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_CZECH_FULL_BASE` is returned
+* is `:windows-server-2016-dutch-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_DUTCH_FULL_BASE` is returned
+* is `:windows-server-2016-english-64bit-sql-2012-sp4-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE` is returned
+* is `:windows-server-2016-english-core-base` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_BASE` is returned
+* is `:windows-server-2016-english-core-containers` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_CONTAINERS` is returned
+* is `:windows-server-2016-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_CONTAINERSLATEST` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_ENTERPRISE` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_EXPRESS` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_STANDARD` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_WEB` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_ENTERPRISE` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_EXPRESS` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_STANDARD` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_WEB` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_ENTERPRISE` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_EXPRESS` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_STANDARD` is returned
+* is `:windows-server-2016-english-core-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_WEB` is returned
+* is `:windows-server-2016-english-deep-learning` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_DEEP_LEARNING` is returned
+* is `:windows-server-2016-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_BASE` is returned
+* is `:windows-server-2016-english-full-containers` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_CONTAINERS` is returned
+* is `:windows-server-2016-english-full-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_ECS_OPTIMIZED` is returned
+* is `:windows-server-2016-english-full-hyperv` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_HYPERV` is returned
+* is `:windows-server-2016-english-full-sql-2014-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2014_SP3_ENTERPRISE` is returned
+* is `:windows-server-2016-english-full-sql-2014-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2014_SP3_STANDARD` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_ENTERPRISE` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_EXPRESS` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_STANDARD` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_WEB` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_ENTERPRISE` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_EXPRESS` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_STANDARD` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_WEB` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_ENTERPRISE` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_EXPRESS` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_STANDARD` is returned
+* is `:windows-server-2016-english-full-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_WEB` is returned
+* is `:windows-server-2016-english-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_ENTERPRISE` is returned
+* is `:windows-server-2016-english-full-sql-2017-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_EXPRESS` is returned
+* is `:windows-server-2016-english-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_STANDARD` is returned
+* is `:windows-server-2016-english-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_WEB` is returned
+* is `:windows-server-2016-english-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_ENTERPRISE` is returned
+* is `:windows-server-2016-english-full-sql-2019-express` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_EXPRESS` is returned
+* is `:windows-server-2016-english-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_STANDARD` is returned
+* is `:windows-server-2016-english-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_WEB` is returned
+* is `:windows-server-2016-english-p3` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_P3` is returned
+* is `:windows-server-2016-english-stig-core` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_STIG_CORE` is returned
+* is `:windows-server-2016-english-stig-full` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_STIG_FULL` is returned
+* is `:windows-server-2016-english-tesla` - `WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_TESLA` is returned
+* is `:windows-server-2016-french-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_FRENCH_FULL_BASE` is returned
+* is `:windows-server-2016-german-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_GERMAN_FULL_BASE` is returned
+* is `:windows-server-2016-hungarian-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_HUNGARIAN_FULL_BASE` is returned
+* is `:windows-server-2016-italian-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_ITALIAN_FULL_BASE` is returned
+* is `:windows-server-2016-japanese-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_BASE` is returned
+* is `:windows-server-2016-japanese-full-fql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_FQL_2016_SP2_WEB` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp1-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_ENTERPRISE` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp1-express` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_EXPRESS` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_STANDARD` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp1-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_WEB` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_ENTERPRISE` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_EXPRESS` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_STANDARD` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_ENTERPRISE` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_EXPRESS` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_STANDARD` is returned
+* is `:windows-server-2016-japanese-full-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_WEB` is returned
+* is `:windows-server-2016-japanese-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_ENTERPRISE` is returned
+* is `:windows-server-2016-japanese-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_STANDARD` is returned
+* is `:windows-server-2016-japanese-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_WEB` is returned
+* is `:windows-server-2016-japanese-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_ENTERPRISE` is returned
+* is `:windows-server-2016-japanese-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_STANDARD` is returned
+* is `:windows-server-2016-japanese-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_WEB` is returned
+* is `:windows-server-2016-korean-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_BASE` is returned
+* is `:windows-server-2016-korean-full-sql-2016-sp1-standard` - `WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP1_STANDARD` is returned
+* is `:windows-server-2016-korean-full-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP2_STANDARD` is returned
+* is `:windows-server-2016-korean-full-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP3_STANDARD` is returned
+* is `:windows-server-2016-polish-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_POLISH_FULL_BASE` is returned
+* is `:windows-server-2016-portuguese-brazil-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_PORTUGUESE_BRAZIL_FULL_BASE` is returned
+* is `:windows-server-2016-portuguese-portugal-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_PORTUGUESE_PORTUGAL_FULL_BASE` is returned
+* is `:windows-server-2016-russian-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_RUSSIAN_FULL_BASE` is returned
+* is `:windows-server-2016-spanish-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_SPANISH_FULL_BASE` is returned
+* is `:windows-server-2016-swedish-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_SWEDISH_FULL_BASE` is returned
+* is `:windows-server-2016-turkish-full-base` - `WindowsVersion/WINDOWS_SERVER_2016_TURKISH_FULL_BASE` is returned
+* is `:windows-server-2019-chinese-simplified-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_CHINESE_SIMPLIFIED_FULL_BASE` is returned
+* is `:windows-server-2019-chinese-traditional-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_CHINESE_TRADITIONAL_FULL_BASE` is returned
+* is `:windows-server-2019-czech-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_CZECH_FULL_BASE` is returned
+* is `:windows-server-2019-dutch-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_DUTCH_FULL_BASE` is returned
+* is `:windows-server-2019-english-core-base` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_BASE` is returned
+* is `:windows-server-2019-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_CONTAINERSLATEST` is returned
+* is `:windows-server-2019-english-core-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_ECS_OPTIMIZED` is returned
+* is `:windows-server-2019-english-core-eks-optimized-1-22` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_22` is returned
+* is `:windows-server-2019-english-core-eks-optimized-1-23` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_23` is returned
+* is `:windows-server-2019-english-core-eks-optimized-1-24` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_24` is returned
+* is `:windows-server-2019-english-core-eks-optimized-1-25` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_25` is returned
+* is `:windows-server-2019-english-core-eks-optimized-1-26` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_26` is returned
+* is `:windows-server-2019-english-core-eks-optimized-1-27` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_27` is returned
+* is `:windows-server-2019-english-core-eks-optimized-1-28` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_28` is returned
+* is `:windows-server-2019-english-deep-learning` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_DEEP_LEARNING` is returned
+* is `:windows-server-2019-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_BASE` is returned
+* is `:windows-server-2019-english-full-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_CONTAINERSLATEST` is returned
+* is `:windows-server-2019-english-full-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_ECS_OPTIMIZED` is returned
+* is `:windows-server-2019-english-full-eks-optimized-1-22` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_22` is returned
+* is `:windows-server-2019-english-full-eks-optimized-1-23` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_23` is returned
+* is `:windows-server-2019-english-full-eks-optimized-1-24` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_24` is returned
+* is `:windows-server-2019-english-full-eks-optimized-1-25` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_25` is returned
+* is `:windows-server-2019-english-full-eks-optimized-1-26` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_26` is returned
+* is `:windows-server-2019-english-full-eks-optimized-1-27` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_27` is returned
+* is `:windows-server-2019-english-full-eks-optimized-1-28` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_28` is returned
+* is `:windows-server-2019-english-full-hyperv` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_HYPERV` is returned
+* is `:windows-server-2019-english-full-sql-2016-sp2-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_ENTERPRISE` is returned
+* is `:windows-server-2019-english-full-sql-2016-sp2-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_EXPRESS` is returned
+* is `:windows-server-2019-english-full-sql-2016-sp2-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_STANDARD` is returned
+* is `:windows-server-2019-english-full-sql-2016-sp2-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_WEB` is returned
+* is `:windows-server-2019-english-full-sql-2016-sp3-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_ENTERPRISE` is returned
+* is `:windows-server-2019-english-full-sql-2016-sp3-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_EXPRESS` is returned
+* is `:windows-server-2019-english-full-sql-2016-sp3-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_STANDARD` is returned
+* is `:windows-server-2019-english-full-sql-2016-sp3-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_WEB` is returned
+* is `:windows-server-2019-english-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_ENTERPRISE` is returned
+* is `:windows-server-2019-english-full-sql-2017-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_EXPRESS` is returned
+* is `:windows-server-2019-english-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_STANDARD` is returned
+* is `:windows-server-2019-english-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_WEB` is returned
+* is `:windows-server-2019-english-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_ENTERPRISE` is returned
+* is `:windows-server-2019-english-full-sql-2019-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_EXPRESS` is returned
+* is `:windows-server-2019-english-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_STANDARD` is returned
+* is `:windows-server-2019-english-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_WEB` is returned
+* is `:windows-server-2019-english-full-sql-2022-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_ENTERPRISE` is returned
+* is `:windows-server-2019-english-full-sql-2022-express` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_EXPRESS` is returned
+* is `:windows-server-2019-english-full-sql-2022-standard` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_STANDARD` is returned
+* is `:windows-server-2019-english-full-sql-2022-web` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_WEB` is returned
+* is `:windows-server-2019-english-stig-core` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_STIG_CORE` is returned
+* is `:windows-server-2019-english-stig-full` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_STIG_FULL` is returned
+* is `:windows-server-2019-english-tesla` - `WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_TESLA` is returned
+* is `:windows-server-2019-french-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_FRENCH_FULL_BASE` is returned
+* is `:windows-server-2019-german-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_GERMAN_FULL_BASE` is returned
+* is `:windows-server-2019-hungarian-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_HUNGARIAN_FULL_BASE` is returned
+* is `:windows-server-2019-italian-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_ITALIAN_FULL_BASE` is returned
+* is `:windows-server-2019-japanese-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_BASE` is returned
+* is `:windows-server-2019-japanese-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_ENTERPRISE` is returned
+* is `:windows-server-2019-japanese-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_STANDARD` is returned
+* is `:windows-server-2019-japanese-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_WEB` is returned
+* is `:windows-server-2019-japanese-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_ENTERPRISE` is returned
+* is `:windows-server-2019-japanese-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_STANDARD` is returned
+* is `:windows-server-2019-japanese-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_WEB` is returned
+* is `:windows-server-2019-japanese-full-sql-2022-enterprise` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_ENTERPRISE` is returned
+* is `:windows-server-2019-japanese-full-sql-2022-standard` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_STANDARD` is returned
+* is `:windows-server-2019-japanese-full-sql-2022-web` - `WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_WEB` is returned
+* is `:windows-server-2019-korean-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_KOREAN_FULL_BASE` is returned
+* is `:windows-server-2019-polish-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_POLISH_FULL_BASE` is returned
+* is `:windows-server-2019-portuguese-brazil-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_PORTUGUESE_BRAZIL_FULL_BASE` is returned
+* is `:windows-server-2019-portuguese-portugal-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_PORTUGUESE_PORTUGAL_FULL_BASE` is returned
+* is `:windows-server-2019-russian-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_RUSSIAN_FULL_BASE` is returned
+* is `:windows-server-2019-spanish-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_SPANISH_FULL_BASE` is returned
+* is `:windows-server-2019-swedish-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_SWEDISH_FULL_BASE` is returned
+* is `:windows-server-2019-turkish-full-base` - `WindowsVersion/WINDOWS_SERVER_2019_TURKISH_FULL_BASE` is returned
+* is `:windows-server-2022-chinese-simplified-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_CHINESE_SIMPLIFIED_FULL_BASE` is returned
+* is `:windows-server-2022-chinese-traditional-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_CHINESE_TRADITIONAL_FULL_BASE` is returned
+* is `:windows-server-2022-czech-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_CZECH_FULL_BASE` is returned
+* is `:windows-server-2022-dutch-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_DUTCH_FULL_BASE` is returned
+* is `:windows-server-2022-english-core-base` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_BASE` is returned
+* is `:windows-server-2022-english-core-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_CONTAINERSLATEST` is returned
+* is `:windows-server-2022-english-core-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_ECS_OPTIMIZED` is returned
+* is `:windows-server-2022-english-core-eks-optimized-1-23` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_23` is returned
+* is `:windows-server-2022-english-core-eks-optimized-1-24` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_24` is returned
+* is `:windows-server-2022-english-core-eks-optimized-1-25` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_25` is returned
+* is `:windows-server-2022-english-core-eks-optimized-1-26` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_26` is returned
+* is `:windows-server-2022-english-core-eks-optimized-1-27` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_27` is returned
+* is `:windows-server-2022-english-core-eks-optimized-1-28` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_28` is returned
+* is `:windows-server-2022-english-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_BASE` is returned
+* is `:windows-server-2022-english-full-containerslatest` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_CONTAINERSLATEST` is returned
+* is `:windows-server-2022-english-full-ecs-optimized` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_ECS_OPTIMIZED` is returned
+* is `:windows-server-2022-english-full-eks-optimized-1-23` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_23` is returned
+* is `:windows-server-2022-english-full-eks-optimized-1-24` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_24` is returned
+* is `:windows-server-2022-english-full-eks-optimized-1-25` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_25` is returned
+* is `:windows-server-2022-english-full-eks-optimized-1-26` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_26` is returned
+* is `:windows-server-2022-english-full-eks-optimized-1-27` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_27` is returned
+* is `:windows-server-2022-english-full-eks-optimized-1-28` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_28` is returned
+* is `:windows-server-2022-english-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_ENTERPRISE` is returned
+* is `:windows-server-2022-english-full-sql-2017-express` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_EXPRESS` is returned
+* is `:windows-server-2022-english-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_STANDARD` is returned
+* is `:windows-server-2022-english-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_WEB` is returned
+* is `:windows-server-2022-english-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_ENTERPRISE` is returned
+* is `:windows-server-2022-english-full-sql-2019-express` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_EXPRESS` is returned
+* is `:windows-server-2022-english-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_STANDARD` is returned
+* is `:windows-server-2022-english-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_WEB` is returned
+* is `:windows-server-2022-english-full-sql-2022-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_ENTERPRISE` is returned
+* is `:windows-server-2022-english-full-sql-2022-express` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_EXPRESS` is returned
+* is `:windows-server-2022-english-full-sql-2022-standard` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_STANDARD` is returned
+* is `:windows-server-2022-english-full-sql-2022-web` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_WEB` is returned
+* is `:windows-server-2022-english-stig-core` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_STIG_CORE` is returned
+* is `:windows-server-2022-english-stig-full` - `WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_STIG_FULL` is returned
+* is `:windows-server-2022-french-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_FRENCH_FULL_BASE` is returned
+* is `:windows-server-2022-german-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_GERMAN_FULL_BASE` is returned
+* is `:windows-server-2022-hungarian-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_HUNGARIAN_FULL_BASE` is returned
+* is `:windows-server-2022-italian-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_ITALIAN_FULL_BASE` is returned
+* is `:windows-server-2022-japanese-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_BASE` is returned
+* is `:windows-server-2022-japanese-full-sql-2017-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_ENTERPRISE` is returned
+* is `:windows-server-2022-japanese-full-sql-2017-standard` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_STANDARD` is returned
+* is `:windows-server-2022-japanese-full-sql-2017-web` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_WEB` is returned
+* is `:windows-server-2022-japanese-full-sql-2019-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_ENTERPRISE` is returned
+* is `:windows-server-2022-japanese-full-sql-2019-standard` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_STANDARD` is returned
+* is `:windows-server-2022-japanese-full-sql-2019-web` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_WEB` is returned
+* is `:windows-server-2022-japanese-full-sql-2022-enterprise` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_ENTERPRISE` is returned
+* is `:windows-server-2022-japanese-full-sql-2022-standard` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_STANDARD` is returned
+* is `:windows-server-2022-japanese-full-sql-2022-web` - `WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_WEB` is returned
+* is `:windows-server-2022-korean-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_KOREAN_FULL_BASE` is returned
+* is `:windows-server-2022-polish-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_POLISH_FULL_BASE` is returned
+* is `:windows-server-2022-portuguese-brazil-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_PORTUGUESE_BRAZIL_FULL_BASE` is returned
+* is `:windows-server-2022-portuguese-portugal-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_PORTUGUESE_PORTUGAL_FULL_BASE` is returned
+* is `:windows-server-2022-russian-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_RUSSIAN_FULL_BASE` is returned
+* is `:windows-server-2022-spanish-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_SPANISH_FULL_BASE` is returned
+* is `:windows-server-2022-swedish-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_SWEDISH_FULL_BASE` is returned
+* is `:windows-server-2022-turkish-full-base` - `WindowsVersion/WINDOWS_SERVER_2022_TURKISH_FULL_BASE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? WindowsVersion data) data
-      (= :windows-server-2019-english-full-hyperv data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_HYPERV
-      (= :windows-server-2022-english-full-eks-optimized-1-25 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_25
-      (= :windows-server-2016-czech-full-base data) WindowsVersion/WINDOWS_SERVER_2016_CZECH_FULL_BASE
-      (= :windows-server-2016-english-full-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_WEB
-      (= :windows-server-2019-chinese-traditional-full-base data) WindowsVersion/WINDOWS_SERVER_2019_CHINESE_TRADITIONAL_FULL_BASE
-      (= :windows-server-2016-english-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_WEB
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_EXPRESS
-      (= :windows-server-2016-english-full-containers data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_CONTAINERS
-      (= :windows-server-2019-japanese-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_WEB
-      (= :windows-server-2019-japanese-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_STANDARD
-      (= :windows-server-2012-r2-rtm-german-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_GERMAN_64BIT_BASE
-      (= :windows-server-2016-chinese-simplified-full-base data) WindowsVersion/WINDOWS_SERVER_2016_CHINESE_SIMPLIFIED_FULL_BASE
-      (= :windows-server-2016-turkish-full-base data) WindowsVersion/WINDOWS_SERVER_2016_TURKISH_FULL_BASE
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_WEB
-      (= :windows-server-2016-japanese-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_WEB
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_STANDARD
-      (= :windows-server-2016-polish-full-base data) WindowsVersion/WINDOWS_SERVER_2016_POLISH_FULL_BASE
-      (= :windows-server-2016-japanese-full-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_STANDARD
-      (= :windows-server-2008-r2-sp1-korean-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_KOREAN_64BIT_BASE
-      (= :windows-server-2019-english-stig-core data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_STIG_CORE
-      (= :windows-server-2012-rtm-english-full-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_FULL_BASE
-      (= :windows-server-2019-english-full-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_WEB
-      (= :windows-server-2022-japanese-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_WEB
-      (= :windows-server-2012-rtm-portuguese-brazil-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_PORTUGUESE_BRAZIL_64BIT_BASE
-      (= :windows-server-2016-japanese-full-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_STANDARD
-      (= :windows-server-2022-english-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_STANDARD
-      (= :windows-server-2022-czech-full-base data) WindowsVersion/WINDOWS_SERVER_2022_CZECH_FULL_BASE
-      (= :windows-server-2022-english-full-sql-2019-express data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_EXPRESS
-      (= :windows-server-2008-r2-sp1-portuguese-brazil-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_PORTUGUESE_BRAZIL_64BIT_BASE
-      (= :windows-server-2016-japanese-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_ENTERPRISE
-      (= :windows-server-2019-english-full-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_STANDARD
-      (= :windows-server-2012-r2-rtm-italian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ITALIAN_64BIT_BASE
-      (= :windows-server-2016-swedish-full-base data) WindowsVersion/WINDOWS_SERVER_2016_SWEDISH_FULL_BASE
-      (= :windows-server-2016-english-core-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_ENTERPRISE
-      (= :windows-server-2022-hungarian-full-base data) WindowsVersion/WINDOWS_SERVER_2022_HUNGARIAN_FULL_BASE
-      (= :windows-server-2016-english-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_STANDARD
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_STANDARD
-      (= :windows-server-2016-english-full-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_ENTERPRISE
-      (= :windows-server-2019-english-core-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_ECS_OPTIMIZED
-      (= :windows-server-2008-sp2-english-64bit-sql-2008-sp4-express data) WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_SQL_2008_SP4_EXPRESS
-      (= :windows-server-2003-r2-sp2-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_BASE
-      (= :windows-server-2022-japanese-full-sql-2022-standard data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_STANDARD
-      (= :windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-web data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_WEB
-      (= :windows-server-2016-portuguese-portugal-full-base data) WindowsVersion/WINDOWS_SERVER_2016_PORTUGUESE_PORTUGAL_FULL_BASE
-      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-web data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_WEB
-      (= :windows-server-2012-rtm-portuguese-portugal-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_PORTUGUESE_PORTUGAL_64BIT_BASE
-      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP3_EXPRESS
-      (= :windows-server-2012-rtm-french-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_FRENCH_64BIT_BASE
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_STANDARD
-      (= :windows-server-2016-english-core-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_STANDARD
-      (= :windows-server-2016-english-full-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_WEB
-      (= :windows-server-2012-r2-rtm-french-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_FRENCH_64BIT_BASE
-      (= :windows-server-2019-english-full-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_ENTERPRISE
-      (= :windows-server-2012-rtm-english-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2008_R2_SP3_EXPRESS
-      (= :windows-server-2022-dutch-full-base data) WindowsVersion/WINDOWS_SERVER_2022_DUTCH_FULL_BASE
-      (= :windows-server-2022-english-full-eks-optimized-1-28 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_28
-      (= :windows-server-2016-japanese-full-base data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_BASE
-      (= :windows-server-1809-english-core-base data) WindowsVersion/WINDOWS_SERVER_1809_ENGLISH_CORE_BASE
-      (= :windows-server-2012-rtm-russian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_RUSSIAN_64BIT_BASE
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_EXPRESS
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_STANDARD
-      (= :windows-server-2016-italian-full-base data) WindowsVersion/WINDOWS_SERVER_2016_ITALIAN_FULL_BASE
-      (= :windows-server-2003-r2-sp2-language-packs-64bit-sql-2005-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_SQL_2005_SP4_STANDARD
-      (= :windows-server-2012-rtm-english-64bit-sql-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_STANDARD
-      (= :windows-server-2022-french-full-base data) WindowsVersion/WINDOWS_SERVER_2022_FRENCH_FULL_BASE
-      (= :windows-server-2016-english-full-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_EXPRESS
-      (= :windows-server-2019-portuguese-portugal-full-base data) WindowsVersion/WINDOWS_SERVER_2019_PORTUGUESE_PORTUGAL_FULL_BASE
-      (= :windows-server-2008-r2-sp1-english-64bit-core data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_CORE
-      (= :windows-server-2012-rtm-italian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ITALIAN_64BIT_BASE
-      (= :windows-server-2008-sp2-english-32bit-base data) WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_32BIT_BASE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_WEB
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2008_R2_SP3_EXPRESS
-      (= :windows-server-2016-japanese-full-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_ENTERPRISE
-      (= :windows-server-2016-english-full-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_STANDARD
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_WEB
-      (= :windows-server-2012-r2-rtm-english-p3 data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_P3
-      (= :windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_EXPRESS
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_WEB
-      (= :windows-server-2019-english-core-eks-optimized-1-27 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_27
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_ENTERPRISE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_STANDARD
-      (= :windows-server-2016-japanese-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_STANDARD
-      (= :windows-server-2003-r2-sp2-language-packs-64bit-sql-2005-sp4-express data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_SQL_2005_SP4_EXPRESS
-      (= :windows-server-2016-english-core-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_ENTERPRISE
-      (= :windows-server-2022-english-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_ENTERPRISE
-      (= :windows-server-2016-portuguese-brazil-full-base data) WindowsVersion/WINDOWS_SERVER_2016_PORTUGUESE_BRAZIL_FULL_BASE
-      (= :windows-server-2019-english-full-sql-2019-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_EXPRESS
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_ENTERPRISE
-      (= :windows-server-2012-rtm-chinese-traditional-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_TRADITIONAL_64BIT_BASE
-      (= :windows-server-2016-english-full-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_ENTERPRISE
-      (= :windows-server-2012-rtm-czech-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_CZECH_64BIT_BASE
-      (= :windows-server-2022-german-full-base data) WindowsVersion/WINDOWS_SERVER_2022_GERMAN_FULL_BASE
       (= :windows-server-1709-english-core-base data) WindowsVersion/WINDOWS_SERVER_1709_ENGLISH_CORE_BASE
-      (= :windows-server-2012-rtm-chinese-simplified-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_SIMPLIFIED_64BIT_BASE
-      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_EXPRESS
-      (= :windows-server-2016-english-core-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_EXPRESS
-      (= :windows-server-2022-turkish-full-base data) WindowsVersion/WINDOWS_SERVER_2022_TURKISH_FULL_BASE
-      (= :windows-server-2012-rtm-english-64bit-2014-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_2014_SP3_WEB
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_WEB
-      (= :windows-server-2022-english-full-containerslatest data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_CONTAINERSLATEST
-      (= :windows-server-2007-r2-sp1-language-packs-64bit-base data) WindowsVersion/WINDOWS_SERVER_2007_R2_SP1_LANGUAGE_PACKS_64BIT_BASE
-      (= :windows-server-2012-rtm-english-64bit-sql-2012-sp4-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_WEB
       (= :windows-server-1709-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_1709_ENGLISH_CORE_CONTAINERSLATEST
-      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP3_STANDARD
-      (= :windows-server-2016-english-full-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_ENTERPRISE
-      (= :windows-server-2022-english-full-eks-optimized-1-24 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_24
-      (= :windows-server-2019-japanese-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_ENTERPRISE
-      (= :windows-server-2008-r2-sp1-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_BASE
-      (= :windows-server-2016-japanese-full-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_ENTERPRISE
-      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_STANDARD
-      (= :windows-server-2022-chinese-simplified-full-base data) WindowsVersion/WINDOWS_SERVER_2022_CHINESE_SIMPLIFIED_FULL_BASE
-      (= :windows-server-2022-english-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_WEB
-      (= :windows-server-2012-r2-rtm-portuguese-portugal-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_PORTUGUESE_PORTUGAL_64BIT_BASE
-      (= :windows-server-2022-english-full-eks-optimized-1-23 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_23
-      (= :windows-server-2012-rtm-english-64bit-sql-2012-sp4-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_EXPRESS
-      (= :windows-server-2022-italian-full-base data) WindowsVersion/WINDOWS_SERVER_2022_ITALIAN_FULL_BASE
-      (= :windows-server-2022-portuguese-portugal-full-base data) WindowsVersion/WINDOWS_SERVER_2022_PORTUGUESE_PORTUGAL_FULL_BASE
-      (= :windows-server-2008-r2-sp1-japanese-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_BASE
-      (= :windows-server-2016-english-deep-learning data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_DEEP_LEARNING
-      (= :windows-server-2019-english-full-containerslatest data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_CONTAINERSLATEST
-      (= :windows-server-2022-english-core-base data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_BASE
-      (= :windows-server-2022-english-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_STANDARD
-      (= :windows-server-2012-rtm-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_BASE
-      (= :windows-server-2016-japanese-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_ENTERPRISE
-      (= :windows-server-2019-japanese-full-base data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_BASE
-      (= :windows-server-2019-english-core-eks-optimized-1-25 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_25
-      (= :windows-server-2008-r2-sp1-english-64bit-core-sql-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_CORE_SQL_2012_SP4_STANDARD
-      (= :windows-server-2019-czech-full-base data) WindowsVersion/WINDOWS_SERVER_2019_CZECH_FULL_BASE
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP3_STANDARD
-      (= :windows-server-2016-russian-full-base data) WindowsVersion/WINDOWS_SERVER_2016_RUSSIAN_FULL_BASE
-      (= :windows-server-2019-german-full-base data) WindowsVersion/WINDOWS_SERVER_2019_GERMAN_FULL_BASE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_EXPRESS
-      (= :windows-server-2016-english-core-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_ENTERPRISE
-      (= :windows-server-2016-english-tesla data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_TESLA
-      (= :windows-server-2008-r2-sp1-english-61bit-sql-2012-rtm-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_61BIT_SQL_2012_RTM_SP2_ENTERPRISE
-      (= :windows-server-2019-english-full-sql-2022-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_ENTERPRISE
-      (= :windows-server-2016-english-core-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_WEB
-      (= :windows-server-2022-japanese-full-sql-2022-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_ENTERPRISE
-      (= :windows-server-2022-english-stig-full data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_STIG_FULL
-      (= :windows-server-2019-english-full-eks-optimized-1-24 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_24
-      (= :windows-server-2022-russian-full-base data) WindowsVersion/WINDOWS_SERVER_2022_RUSSIAN_FULL_BASE
-      (= :windows-server-1809-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_1809_ENGLISH_CORE_CONTAINERSLATEST
-      (= :windows-server-2019-english-full-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_EXPRESS
-      (= :windows-server-2003-r2-sp2-language-packs-64bit-base data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_BASE
-      (= :windows-server-2012-r2-rtm-russian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_RUSSIAN_64BIT_BASE
-      (= :windows-server-2022-chinese-traditional-full-base data) WindowsVersion/WINDOWS_SERVER_2022_CHINESE_TRADITIONAL_FULL_BASE
-      (= :windows-server-2016-japanese-full-fql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_FQL_2016_SP2_WEB
-      (= :windows-server-2016-english-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_ENTERPRISE
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2008_R2_SP3_STANDARD
-      (= :windows-server-2019-english-full-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_STANDARD
-      (= :windows-server-2016-english-core-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_STANDARD
-      (= :windows-server-2016-english-core-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_STANDARD
-      (= :windows-server-2008-sp2-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_BASE
-      (= :windows-server-2019-japanese-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_STANDARD
-      (= :windows-server-2022-korean-full-base data) WindowsVersion/WINDOWS_SERVER_2022_KOREAN_FULL_BASE
-      (= :windows-server-2003-r2-sp2-english-32bit-base data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_32BIT_BASE
-      (= :windows-server-2019-english-full-base data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_BASE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_ENTERPRISE
-      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2012-sp4-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2012_SP4_EXPRESS
-      (= :windows-server-2016-english-full-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2014_SP3_STANDARD
-      (= :windows-server-2012-rtm-turkish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_TURKISH_64BIT_BASE
-      (= :windows-server-2022-portuguese-brazil-full-base data) WindowsVersion/WINDOWS_SERVER_2022_PORTUGUESE_BRAZIL_FULL_BASE
-      (= :windows-server-2022-japanese-full-sql-2022-web data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_WEB
-      (= :windows-server-2022-english-full-base data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_BASE
-      (= :windows-server-2022-english-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_ENTERPRISE
-      (= :windows-server-2016-english-full-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_STANDARD
-      (= :windows-server-2022-english-stig-core data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_STIG_CORE
-      (= :windows-server-2003-r2-sp2-english-64bit-sql-2005-sp4-express data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_SQL_2005_SP4_EXPRESS
-      (= :windows-server-2012-r2-rtm-czech-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CZECH_64BIT_BASE
-      (= :windows-server-2016-english-core-containers data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_CONTAINERS
-      (= :windows-server-2012-rtm-polish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_POLISH_64BIT_BASE
-      (= :windows-server-2008-r2-sp1-chinese-prc-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_CHINESE_PRC_64BIT_BASE
-      (= :windows-server-2019-japanese-full-sql-2022-standard data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_STANDARD
-      (= :windows-server-2012-rtm-dutch-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_DUTCH_64BIT_BASE
-      (= :windows-server-2016-english-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_ENTERPRISE
-      (= :windows-server-2019-english-full-sql-2022-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_STANDARD
-      (= :windows-server-2019-japanese-full-sql-2022-web data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_WEB
-      (= :windows-server-2016-english-full-hyperv data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_HYPERV
-      (= :windows-server-2019-english-full-eks-optimized-1-27 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_27
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_ENTERPRISE
-      (= :windows-server-2016-spanish-full-base data) WindowsVersion/WINDOWS_SERVER_2016_SPANISH_FULL_BASE
-      (= :windows-server-2019-chinese-simplified-full-base data) WindowsVersion/WINDOWS_SERVER_2019_CHINESE_SIMPLIFIED_FULL_BASE
-      (= :windows-server-2022-japanese-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_STANDARD
-      (= :windows-server-2019-hungarian-full-base data) WindowsVersion/WINDOWS_SERVER_2019_HUNGARIAN_FULL_BASE
-      (= :windows-server-2012-r2-sp1-portuguese-brazil-64bit-core data) WindowsVersion/WINDOWS_SERVER_2012_R2_SP1_PORTUGUESE_BRAZIL_64BIT_CORE
-      (= :windows-server-2016-french-full-base data) WindowsVersion/WINDOWS_SERVER_2016_FRENCH_FULL_BASE
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_WEB
-      (= :windows-server-2016-korean-full-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP1_STANDARD
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_EXPRESS
-      (= :windows-server-2019-dutch-full-base data) WindowsVersion/WINDOWS_SERVER_2019_DUTCH_FULL_BASE
-      (= :windows-server-2016-japanese-full-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_ENTERPRISE
-      (= :windows-server-2016-hungarian-full-base data) WindowsVersion/WINDOWS_SERVER_2016_HUNGARIAN_FULL_BASE
-      (= :windows-server-2019-english-core-eks-optimized-1-26 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_26
-      (= :windows-server-2022-english-core-eks-optimized-1-28 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_28
-      (= :windows-server-2016-english-full-base data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_BASE
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2012-sp4-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2012_SP4_EXPRESS
-      (= :windows-server-2016-english-full-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_STANDARD
-      (= :windows-server-2019-polish-full-base data) WindowsVersion/WINDOWS_SERVER_2019_POLISH_FULL_BASE
-      (= :windows-server-2022-japanese-full-base data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_BASE
-      (= :windows-server-2022-english-full-sql-2017-express data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_EXPRESS
-      (= :windows-server-2008-sp2-english-64bit-sql-2008-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_SQL_2008_SP4_STANDARD
-      (= :windows-server-2019-english-deep-learning data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_DEEP_LEARNING
-      (= :windows-server-2016-english-full-sql-2017-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_EXPRESS
-      (= :windows-server-2022-polish-full-base data) WindowsVersion/WINDOWS_SERVER_2022_POLISH_FULL_BASE
-      (= :windows-server-2019-english-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_STANDARD
-      (= :windows-server-2008-r2-sp1-language-packs-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_LANGUAGE_PACKS_64BIT_SQL_2008_R2_SP3_EXPRESS
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_EXPRESS
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_WEB
       (= :windows-server-1803-english-core-base data) WindowsVersion/WINDOWS_SERVER_1803_ENGLISH_CORE_BASE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_EXPRESS
-      (= :windows-server-2022-english-full-sql-2022-standard data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_STANDARD
-      (= :windows-server-2012-r2-rtm-polish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_POLISH_64BIT_BASE
-      (= :windows-server-2022-swedish-full-base data) WindowsVersion/WINDOWS_SERVER_2022_SWEDISH_FULL_BASE
-      (= :windows-server-2016-japanese-full-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_STANDARD
-      (= :windows-server-2016-chinese-traditional-full-base data) WindowsVersion/WINDOWS_SERVER_2016_CHINESE_TRADITIONAL_FULL_BASE
-      (= :windows-server-2022-spanish-full-base data) WindowsVersion/WINDOWS_SERVER_2022_SPANISH_FULL_BASE
-      (= :windows-server-2022-english-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_WEB
-      (= :windows-server-2019-english-core-eks-optimized-1-28 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_28
-      (= :windows-server-2019-japanese-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_WEB
-      (= :windows-server-2022-english-full-sql-2022-express data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_EXPRESS
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_STANDARD
-      (= :windows-server-2016-english-core-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_EXPRESS
-      (= :windows-server-2022-english-core-eks-optimized-1-24 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_24
-      (= :windows-server-2012-rtm-english-64bit-sql-2007-r2-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2007_R2_SP3_WEB
-      (= :windows-server-2019-italian-full-base data) WindowsVersion/WINDOWS_SERVER_2019_ITALIAN_FULL_BASE
-      (= :windows-server-2022-english-core-eks-optimized-1-25 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_25
-      (= :windows-server-2019-english-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_STANDARD
-      (= :windows-server-2019-english-full-eks-optimized-1-25 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_25
-      (= :windows-server-2022-english-full-eks-optimized-1-26 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_26
-      (= :windows-server-2016-english-full-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_ECS_OPTIMIZED
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_ENTERPRISE
-      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2012_SP4_STANDARD
-      (= :windows-server-2022-japanese-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_STANDARD
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_WEB
-      (= :windows-server-2016-japanese-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_STANDARD
-      (= :windows-server-2016-english-full-sql-2014-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2014_SP3_ENTERPRISE
-      (= :windows-server-2019-russian-full-base data) WindowsVersion/WINDOWS_SERVER_2019_RUSSIAN_FULL_BASE
-      (= :windows-server-2012-rtm-hungarian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_HUNGARIAN_64BIT_BASE
-      (= :windows-server-2016-english-full-sql-2019-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_EXPRESS
-      (= :windows-server-2019-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_CONTAINERSLATEST
-      (= :windows-server-2008-sp2-portuguese-brazil-32bit-base data) WindowsVersion/WINDOWS_SERVER_2008_SP2_PORTUGUESE_BRAZIL_32BIT_BASE
-      (= :windows-server-2022-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_CONTAINERSLATEST
-      (= :windows-server-2019-japanese-full-sql-2022-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_ENTERPRISE
-      (= :windows-server-2016-japanese-full-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_WEB
-      (= :windows-server-2019-english-full-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_EXPRESS
-      (= :windows-server-2019-english-full-sql-2022-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_WEB
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_WEB
-      (= :windows-server-2022-english-full-sql-2022-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_ENTERPRISE
-      (= :windows-server-2019-english-full-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_ECS_OPTIMIZED
-      (= :windows-server-2019-portuguese-brazil-full-base data) WindowsVersion/WINDOWS_SERVER_2019_PORTUGUESE_BRAZIL_FULL_BASE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_ENTERPRISE
-      (= :windows-server-2019-turkish-full-base data) WindowsVersion/WINDOWS_SERVER_2019_TURKISH_FULL_BASE
-      (= :windows-server-2012-r2-rtm-english-deep-learning data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_DEEP_LEARNING
-      (= :windows-server-2016-english-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_STANDARD
-      (= :windows-server-2019-english-full-eks-optimized-1-28 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_28
-      (= :windows-server-2012-r2-rtm-chinese-traditional-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_TRADITIONAL_64BIT_BASE
-      (= :windows-server-2022-english-full-eks-optimized-1-27 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_27
-      (= :windows-server-2022-english-core-eks-optimized-1-27 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_27
-      (= :windows-server-2019-english-full-eks-optimized-1-23 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_23
-      (= :windows-server-2012-r2-rtm-swedish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_SWEDISH_64BIT_BASE
-      (= :windows-server-2012-rtm-chinese-traditional-hong-kong-sar-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_TRADITIONAL_HONG_KONG_SAR_64BIT_BASE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_EXPRESS
-      (= :windows-server-2019-english-full-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_ENTERPRISE
-      (= :windows-server-2016-japanese-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_WEB
-      (= :windows-server-2019-english-core-base data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_BASE
-      (= :windows-server-2019-swedish-full-base data) WindowsVersion/WINDOWS_SERVER_2019_SWEDISH_FULL_BASE
-      (= :windows-server-2016-dutch-full-base data) WindowsVersion/WINDOWS_SERVER_2016_DUTCH_FULL_BASE
-      (= :windows-server-2012-r2-rtm-portuguese-brazil-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_PORTUGUESE_BRAZIL_64BIT_BASE
-      (= :windows-server-2012-r2-rtm-english-64bit-hyperv data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_HYPERV
-      (= :windows-server-2008-r2-sp1-language-packs-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_LANGUAGE_PACKS_64BIT_SQL_2008_R2_SP3_STANDARD
-      (= :windows-server-2016-english-core-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_WEB
-      (= :windows-server-2016-english-64bit-sql-2012-sp4-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP3_EXPRESS
-      (= :windows-server-2012-r2-rtm-turkish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_TURKISH_64BIT_BASE
-      (= :windows-server-2016-english-core-base data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_BASE
-      (= :windows-server-2019-english-core-eks-optimized-1-22 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_22
-      (= :windows-server-2012-r2-rtm-english-full-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_FULL_BASE
-      (= :windows-server-2012-rtm-english-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2008_R2_SP3_STANDARD
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP2_EXPRESS
-      (= :windows-server-2019-english-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_WEB
-      (= :windows-server-2022-japanese-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_ENTERPRISE
-      (= :windows-server-2019-english-stig-full data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_STIG_FULL
-      (= :windows-server-2012-sp2-portuguese-brazil-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_SP2_PORTUGUESE_BRAZIL_64BIT_BASE
-      (= :windows-server-2012-rtm-japanese-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_BASE
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2016_SP2_EXPRESS
-      (= :windows-server-2012-r2-rtm-korean-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_KOREAN_64BIT_BASE
-      (= :windows-server-2016-korean-full-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP3_STANDARD
-      (= :windows-server-2019-english-core-eks-optimized-1-24 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_24
-      (= :windows-server-2008-r2-sp1-english-64bit-sharepoint-2010-sp2-foundation data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SHAREPOINT_2010_SP2_FOUNDATION
       (= :windows-server-1803-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_1803_ENGLISH_CORE_CONTAINERSLATEST
-      (= :windows-server-2022-english-full-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_ECS_OPTIMIZED
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2012-sp4-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE
-      (= :windows-server-2016-english-full-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_EXPRESS
-      (= :windows-server-2019-spanish-full-base data) WindowsVersion/WINDOWS_SERVER_2019_SPANISH_FULL_BASE
-      (= :windows-server-2012-r2-english-stig-full data) WindowsVersion/WINDOWS_SERVER_2012_R2_ENGLISH_STIG_FULL
-      (= :windows-server-2012-r2-rtm-dutch-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_DUTCH_64BIT_BASE
-      (= :windows-server-2012-r2-rtm-hungarian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_HUNGARIAN_64BIT_BASE
-      (= :windows-server-2022-japanese-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_WEB
-      (= :windows-server-2016-english-full-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_EXPRESS
-      (= :windows-server-2016-english-core-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_EXPRESS
-      (= :windows-server-2016-japanese-full-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_EXPRESS
-      (= :windows-server-2016-english-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_WEB
-      (= :windows-server-2019-english-core-eks-optimized-1-23 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_23
-      (= :windows-server-2019-english-full-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_WEB
-      (= :windows-server-2016-english-stig-core data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_STIG_CORE
-      (= :windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-web data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_WEB
-      (= :windows-server-2016-korean-full-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP2_STANDARD
-      (= :windows-server-2012-r2-rtm-japanese-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_BASE
-      (= :windows-server-2016-japanese-full-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_WEB
-      (= :windows-server-2019-english-full-sql-2022-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_EXPRESS
+      (= :windows-server-1809-english-core-base data) WindowsVersion/WINDOWS_SERVER_1809_ENGLISH_CORE_BASE
+      (= :windows-server-1809-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_1809_ENGLISH_CORE_CONTAINERSLATEST
+      (= :windows-server-2003-r2-sp2-english-32bit-base data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_32BIT_BASE
+      (= :windows-server-2003-r2-sp2-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_BASE
+      (= :windows-server-2003-r2-sp2-english-64bit-sql-2005-sp4-express data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_SQL_2005_SP4_EXPRESS
       (= :windows-server-2003-r2-sp2-english-64bit-sql-2005-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_ENGLISH_64BIT_SQL_2005_SP4_STANDARD
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_EXPRESS
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_STANDARD
-      (= :windows-server-2016-english-core-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_WEB
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2012-sp4-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2012_SP4_WEB
-      (= :windows-server-2022-english-core-eks-optimized-1-26 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_26
-      (= :windows-server-2012-r2-rtm-chinese-traditional-hong-kong-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_TRADITIONAL_HONG_KONG_64BIT_BASE
-      (= :windows-server-2012-r2-rtm-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_BASE
-      (= :windows-server-2012-rtm-spanish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_SPANISH_64BIT_BASE
       (= :windows-server-2003-r2-sp2-language-packs-32bit-base data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_32BIT_BASE
-      (= :windows-server-2019-english-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_WEB
-      (= :windows-server-2022-english-full-sql-2022-web data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_WEB
-      (= :windows-server-2012-rtm-german-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_GERMAN_64BIT_BASE
-      (= :windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_STANDARD
-      (= :windows-server-2016-english-stig-full data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_STIG_FULL
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_STANDARD
-      (= :windows-server-2012-r2-rtm-chinese-simplified-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_SIMPLIFIED_64BIT_BASE
-      (= :windows-server-2019-french-full-base data) WindowsVersion/WINDOWS_SERVER_2019_FRENCH_FULL_BASE
-      (= :windows-server-2012-r2-rtm-spanish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_SPANISH_64BIT_BASE
-      (= :windows-server-2012-r2-english-stig-core data) WindowsVersion/WINDOWS_SERVER_2012_R2_ENGLISH_STIG_CORE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_ENTERPRISE
-      (= :windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_EXPRESS
-      (= :windows-server-2019-english-full-eks-optimized-1-22 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_22
-      (= :windows-server-2012-r2-rtm-english-64bit-core data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_CORE
-      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_WEB
-      (= :windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_STANDARD
-      (= :windows-server-2016-english-full-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_WEB
-      (= :windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-enterprise data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE
-      (= :windows-server-2019-english-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_ENTERPRISE
-      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_EXPRESS
-      (= :windows-server-2022-english-core-eks-optimized-1-23 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_23
-      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_WEB
-      (= :windows-server-2016-japanese-full-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_EXPRESS
-      (= :windows-server-2016-english-p3 data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_P3
-      (= :windows-server-2012-rtm-swedish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_SWEDISH_64BIT_BASE
-      (= :windows-server-2019-japanese-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_ENTERPRISE
-      (= :windows-server-2022-japanese-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_ENTERPRISE
-      (= :windows-server-2016-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_CONTAINERSLATEST
-      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_STANDARD
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_ENTERPRISE
+      (= :windows-server-2003-r2-sp2-language-packs-64bit-base data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_BASE
+      (= :windows-server-2003-r2-sp2-language-packs-64bit-sql-2005-sp4-express data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_SQL_2005_SP4_EXPRESS
+      (= :windows-server-2003-r2-sp2-language-packs-64bit-sql-2005-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2003_R2_SP2_LANGUAGE_PACKS_64BIT_SQL_2005_SP4_STANDARD
+      (= :windows-server-2007-r2-sp1-language-packs-64bit-base data) WindowsVersion/WINDOWS_SERVER_2007_R2_SP1_LANGUAGE_PACKS_64BIT_BASE
       (= :windows-server-2008-r2-sp1-chinese-hong-kong-sar-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_CHINESE_HONG_KONG_SAR_64BIT_BASE
-      (= :windows-server-2019-korean-full-base data) WindowsVersion/WINDOWS_SERVER_2019_KOREAN_FULL_BASE
-      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_STANDARD
-      (= :windows-server-2019-english-full-sql-2017-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_EXPRESS
-      (= :windows-server-2019-english-tesla data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_TESLA
-      (= :windows-server-2019-english-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_ENTERPRISE
-      (= :windows-server-2016-german-full-base data) WindowsVersion/WINDOWS_SERVER_2016_GERMAN_FULL_BASE
-      (= :windows-server-2012-rtm-korean-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_KOREAN_64BIT_BASE
+      (= :windows-server-2008-r2-sp1-chinese-prc-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_CHINESE_PRC_64BIT_BASE
+      (= :windows-server-2008-r2-sp1-english-61bit-sql-2012-rtm-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_61BIT_SQL_2012_RTM_SP2_ENTERPRISE
+      (= :windows-server-2008-r2-sp1-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_BASE
+      (= :windows-server-2008-r2-sp1-english-64bit-core data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_CORE
+      (= :windows-server-2008-r2-sp1-english-64bit-core-sql-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_CORE_SQL_2012_SP4_STANDARD
+      (= :windows-server-2008-r2-sp1-english-64bit-sharepoint-2010-sp2-foundation data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SHAREPOINT_2010_SP2_FOUNDATION
+      (= :windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_EXPRESS
+      (= :windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_STANDARD
+      (= :windows-server-2008-r2-sp1-english-64bit-sql-2008-r2-sp3-web data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2008_R2_SP3_WEB
+      (= :windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-enterprise data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE
+      (= :windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_EXPRESS
+      (= :windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_STANDARD
+      (= :windows-server-2008-r2-sp1-english-64bit-sql-2012-sp4-web data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_ENGLISH_64BIT_SQL_2012_SP4_WEB
+      (= :windows-server-2008-r2-sp1-japanese-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_BASE
+      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_EXPRESS
+      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_STANDARD
+      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2008-r2-sp3-web data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2008_R2_SP3_WEB
+      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2012-sp4-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2012_SP4_EXPRESS
+      (= :windows-server-2008-r2-sp1-japanese-64bit-sql-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_JAPANESE_64BIT_SQL_2012_SP4_STANDARD
+      (= :windows-server-2008-r2-sp1-korean-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_KOREAN_64BIT_BASE
+      (= :windows-server-2008-r2-sp1-language-packs-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_LANGUAGE_PACKS_64BIT_SQL_2008_R2_SP3_EXPRESS
+      (= :windows-server-2008-r2-sp1-language-packs-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_LANGUAGE_PACKS_64BIT_SQL_2008_R2_SP3_STANDARD
+      (= :windows-server-2008-r2-sp1-portuguese-brazil-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_R2_SP1_PORTUGUESE_BRAZIL_64BIT_BASE
+      (= :windows-server-2008-sp2-english-32bit-base data) WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_32BIT_BASE
+      (= :windows-server-2008-sp2-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_BASE
+      (= :windows-server-2008-sp2-english-64bit-sql-2008-sp4-express data) WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_SQL_2008_SP4_EXPRESS
+      (= :windows-server-2008-sp2-english-64bit-sql-2008-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2008_SP2_ENGLISH_64BIT_SQL_2008_SP4_STANDARD
+      (= :windows-server-2008-sp2-portuguese-brazil-32bit-base data) WindowsVersion/WINDOWS_SERVER_2008_SP2_PORTUGUESE_BRAZIL_32BIT_BASE
+      (= :windows-server-2012-r2-english-stig-core data) WindowsVersion/WINDOWS_SERVER_2012_R2_ENGLISH_STIG_CORE
+      (= :windows-server-2012-r2-english-stig-full data) WindowsVersion/WINDOWS_SERVER_2012_R2_ENGLISH_STIG_FULL
+      (= :windows-server-2012-r2-rtm-chinese-simplified-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_SIMPLIFIED_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-chinese-traditional-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_TRADITIONAL_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-chinese-traditional-hong-kong-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CHINESE_TRADITIONAL_HONG_KONG_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-czech-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_CZECH_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-dutch-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_DUTCH_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-english-64bit-core data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_CORE
+      (= :windows-server-2012-r2-rtm-english-64bit-hyperv data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_HYPERV
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2012-sp4-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_EXPRESS
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_STANDARD
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP2_WEB
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_EXPRESS
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_STANDARD
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2014-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2014_SP3_WEB
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_EXPRESS
       (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_STANDARD
-      (= :windows-server-2019-english-full-eks-optimized-1-26 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_26
-      (= :windows-server-2016-japanese-full-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_EXPRESS
-      (= :windows-server-2022-english-core-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_ECS_OPTIMIZED
-      (= :windows-server-2012-rtm-japanese-64bit-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_2012_SP4_STANDARD
-      (= :windows-server-2016-korean-full-base data) WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_BASE
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP1_WEB
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_EXPRESS
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_STANDARD
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP2_WEB
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_EXPRESS
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_STANDARD
+      (= :windows-server-2012-r2-rtm-english-64bit-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_64BIT_SQL_2016_SP3_WEB
+      (= :windows-server-2012-r2-rtm-english-deep-learning data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_DEEP_LEARNING
+      (= :windows-server-2012-r2-rtm-english-full-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_FULL_BASE
+      (= :windows-server-2012-r2-rtm-english-p3 data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ENGLISH_P3
+      (= :windows-server-2012-r2-rtm-french-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_FRENCH_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-german-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_GERMAN_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-hungarian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_HUNGARIAN_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-italian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_ITALIAN_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-japanese-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP2_EXPRESS
       (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP2_STANDARD
-      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_EXPRESS)))
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP3_EXPRESS
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2014_SP3_STANDARD
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_EXPRESS
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_STANDARD
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP1_WEB
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_STANDARD
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP2_WEB
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_ENTERPRISE
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_EXPRESS
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_STANDARD
+      (= :windows-server-2012-r2-rtm-japanese-64bit-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_JAPANESE_64BIT_SQL_2016_SP3_WEB
+      (= :windows-server-2012-r2-rtm-korean-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_KOREAN_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-polish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_POLISH_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-portuguese-brazil-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_PORTUGUESE_BRAZIL_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-portuguese-portugal-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_PORTUGUESE_PORTUGAL_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-russian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_RUSSIAN_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-spanish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_SPANISH_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-swedish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_SWEDISH_64BIT_BASE
+      (= :windows-server-2012-r2-rtm-turkish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_R2_RTM_TURKISH_64BIT_BASE
+      (= :windows-server-2012-r2-sp1-portuguese-brazil-64bit-core data) WindowsVersion/WINDOWS_SERVER_2012_R2_SP1_PORTUGUESE_BRAZIL_64BIT_CORE
+      (= :windows-server-2012-rtm-chinese-simplified-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_SIMPLIFIED_64BIT_BASE
+      (= :windows-server-2012-rtm-chinese-traditional-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_TRADITIONAL_64BIT_BASE
+      (= :windows-server-2012-rtm-chinese-traditional-hong-kong-sar-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_CHINESE_TRADITIONAL_HONG_KONG_SAR_64BIT_BASE
+      (= :windows-server-2012-rtm-czech-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_CZECH_64BIT_BASE
+      (= :windows-server-2012-rtm-dutch-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_DUTCH_64BIT_BASE
+      (= :windows-server-2012-rtm-english-64bit-2014-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_2014_SP3_WEB
+      (= :windows-server-2012-rtm-english-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_BASE
+      (= :windows-server-2012-rtm-english-64bit-sql-2007-r2-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2007_R2_SP3_WEB
+      (= :windows-server-2012-rtm-english-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2008_R2_SP3_EXPRESS
+      (= :windows-server-2012-rtm-english-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2008_R2_SP3_STANDARD
+      (= :windows-server-2012-rtm-english-64bit-sql-2012-sp4-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_EXPRESS
+      (= :windows-server-2012-rtm-english-64bit-sql-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_STANDARD
+      (= :windows-server-2012-rtm-english-64bit-sql-2012-sp4-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2012_SP4_WEB
+      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_EXPRESS
+      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_STANDARD
+      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP2_WEB
+      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP3_EXPRESS
+      (= :windows-server-2012-rtm-english-64bit-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_64BIT_SQL_2014_SP3_STANDARD
+      (= :windows-server-2012-rtm-english-full-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ENGLISH_FULL_BASE
+      (= :windows-server-2012-rtm-french-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_FRENCH_64BIT_BASE
+      (= :windows-server-2012-rtm-german-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_GERMAN_64BIT_BASE
+      (= :windows-server-2012-rtm-hungarian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_HUNGARIAN_64BIT_BASE
+      (= :windows-server-2012-rtm-italian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_ITALIAN_64BIT_BASE
+      (= :windows-server-2012-rtm-japanese-64bit-2012-sp4-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_2012_SP4_STANDARD
+      (= :windows-server-2012-rtm-japanese-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_BASE
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2008-r2-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2008_R2_SP3_EXPRESS
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2008-r2-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2008_R2_SP3_STANDARD
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2012-sp4-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2012_SP4_EXPRESS
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2012-sp4-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2012_SP4_WEB
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_EXPRESS
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_STANDARD
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp2-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP2_WEB
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_EXPRESS
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_STANDARD
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2014-sp3-web data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2014_SP3_WEB
+      (= :windows-server-2012-rtm-japanese-64bit-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2012_RTM_JAPANESE_64BIT_SQL_2016_SP2_EXPRESS
+      (= :windows-server-2012-rtm-korean-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_KOREAN_64BIT_BASE
+      (= :windows-server-2012-rtm-polish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_POLISH_64BIT_BASE
+      (= :windows-server-2012-rtm-portuguese-brazil-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_PORTUGUESE_BRAZIL_64BIT_BASE
+      (= :windows-server-2012-rtm-portuguese-portugal-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_PORTUGUESE_PORTUGAL_64BIT_BASE
+      (= :windows-server-2012-rtm-russian-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_RUSSIAN_64BIT_BASE
+      (= :windows-server-2012-rtm-spanish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_SPANISH_64BIT_BASE
+      (= :windows-server-2012-rtm-swedish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_SWEDISH_64BIT_BASE
+      (= :windows-server-2012-rtm-turkish-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_RTM_TURKISH_64BIT_BASE
+      (= :windows-server-2012-sp2-portuguese-brazil-64bit-base data) WindowsVersion/WINDOWS_SERVER_2012_SP2_PORTUGUESE_BRAZIL_64BIT_BASE
+      (= :windows-server-2016-chinese-simplified-full-base data) WindowsVersion/WINDOWS_SERVER_2016_CHINESE_SIMPLIFIED_FULL_BASE
+      (= :windows-server-2016-chinese-traditional-full-base data) WindowsVersion/WINDOWS_SERVER_2016_CHINESE_TRADITIONAL_FULL_BASE
+      (= :windows-server-2016-czech-full-base data) WindowsVersion/WINDOWS_SERVER_2016_CZECH_FULL_BASE
+      (= :windows-server-2016-dutch-full-base data) WindowsVersion/WINDOWS_SERVER_2016_DUTCH_FULL_BASE
+      (= :windows-server-2016-english-64bit-sql-2012-sp4-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_64BIT_SQL_2012_SP4_ENTERPRISE
+      (= :windows-server-2016-english-core-base data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_BASE
+      (= :windows-server-2016-english-core-containers data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_CONTAINERS
+      (= :windows-server-2016-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_CONTAINERSLATEST
+      (= :windows-server-2016-english-core-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_ENTERPRISE
+      (= :windows-server-2016-english-core-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_EXPRESS
+      (= :windows-server-2016-english-core-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_STANDARD
+      (= :windows-server-2016-english-core-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP1_WEB
+      (= :windows-server-2016-english-core-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_ENTERPRISE
+      (= :windows-server-2016-english-core-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_EXPRESS
+      (= :windows-server-2016-english-core-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_STANDARD
+      (= :windows-server-2016-english-core-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP2_WEB
+      (= :windows-server-2016-english-core-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_ENTERPRISE
+      (= :windows-server-2016-english-core-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_EXPRESS
+      (= :windows-server-2016-english-core-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_STANDARD
+      (= :windows-server-2016-english-core-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_CORE_SQL_2016_SP3_WEB
+      (= :windows-server-2016-english-deep-learning data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_DEEP_LEARNING
+      (= :windows-server-2016-english-full-base data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_BASE
+      (= :windows-server-2016-english-full-containers data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_CONTAINERS
+      (= :windows-server-2016-english-full-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_ECS_OPTIMIZED
+      (= :windows-server-2016-english-full-hyperv data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_HYPERV
+      (= :windows-server-2016-english-full-sql-2014-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2014_SP3_ENTERPRISE
+      (= :windows-server-2016-english-full-sql-2014-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2014_SP3_STANDARD
+      (= :windows-server-2016-english-full-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_ENTERPRISE
+      (= :windows-server-2016-english-full-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_EXPRESS
+      (= :windows-server-2016-english-full-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_STANDARD
+      (= :windows-server-2016-english-full-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP1_WEB
+      (= :windows-server-2016-english-full-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_ENTERPRISE
+      (= :windows-server-2016-english-full-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_EXPRESS
+      (= :windows-server-2016-english-full-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_STANDARD
+      (= :windows-server-2016-english-full-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP2_WEB
+      (= :windows-server-2016-english-full-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_ENTERPRISE
+      (= :windows-server-2016-english-full-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_EXPRESS
+      (= :windows-server-2016-english-full-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_STANDARD
+      (= :windows-server-2016-english-full-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2016_SP3_WEB
+      (= :windows-server-2016-english-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_ENTERPRISE
+      (= :windows-server-2016-english-full-sql-2017-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_EXPRESS
+      (= :windows-server-2016-english-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_STANDARD
+      (= :windows-server-2016-english-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2017_WEB
+      (= :windows-server-2016-english-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_ENTERPRISE
+      (= :windows-server-2016-english-full-sql-2019-express data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_EXPRESS
+      (= :windows-server-2016-english-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_STANDARD
+      (= :windows-server-2016-english-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_FULL_SQL_2019_WEB
+      (= :windows-server-2016-english-p3 data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_P3
+      (= :windows-server-2016-english-stig-core data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_STIG_CORE
+      (= :windows-server-2016-english-stig-full data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_STIG_FULL
+      (= :windows-server-2016-english-tesla data) WindowsVersion/WINDOWS_SERVER_2016_ENGLISH_TESLA
+      (= :windows-server-2016-french-full-base data) WindowsVersion/WINDOWS_SERVER_2016_FRENCH_FULL_BASE
+      (= :windows-server-2016-german-full-base data) WindowsVersion/WINDOWS_SERVER_2016_GERMAN_FULL_BASE
+      (= :windows-server-2016-hungarian-full-base data) WindowsVersion/WINDOWS_SERVER_2016_HUNGARIAN_FULL_BASE
+      (= :windows-server-2016-italian-full-base data) WindowsVersion/WINDOWS_SERVER_2016_ITALIAN_FULL_BASE
+      (= :windows-server-2016-japanese-full-base data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_BASE
+      (= :windows-server-2016-japanese-full-fql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_FQL_2016_SP2_WEB
+      (= :windows-server-2016-japanese-full-sql-2016-sp1-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_ENTERPRISE
+      (= :windows-server-2016-japanese-full-sql-2016-sp1-express data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_EXPRESS
+      (= :windows-server-2016-japanese-full-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_STANDARD
+      (= :windows-server-2016-japanese-full-sql-2016-sp1-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP1_WEB
+      (= :windows-server-2016-japanese-full-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_ENTERPRISE
+      (= :windows-server-2016-japanese-full-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_EXPRESS
+      (= :windows-server-2016-japanese-full-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP2_STANDARD
+      (= :windows-server-2016-japanese-full-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_ENTERPRISE
+      (= :windows-server-2016-japanese-full-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_EXPRESS
+      (= :windows-server-2016-japanese-full-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_STANDARD
+      (= :windows-server-2016-japanese-full-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2016_SP3_WEB
+      (= :windows-server-2016-japanese-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_ENTERPRISE
+      (= :windows-server-2016-japanese-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_STANDARD
+      (= :windows-server-2016-japanese-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2017_WEB
+      (= :windows-server-2016-japanese-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_ENTERPRISE
+      (= :windows-server-2016-japanese-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_STANDARD
+      (= :windows-server-2016-japanese-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2016_JAPANESE_FULL_SQL_2019_WEB
+      (= :windows-server-2016-korean-full-base data) WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_BASE
+      (= :windows-server-2016-korean-full-sql-2016-sp1-standard data) WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP1_STANDARD
+      (= :windows-server-2016-korean-full-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP2_STANDARD
+      (= :windows-server-2016-korean-full-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2016_KOREAN_FULL_SQL_2016_SP3_STANDARD
+      (= :windows-server-2016-polish-full-base data) WindowsVersion/WINDOWS_SERVER_2016_POLISH_FULL_BASE
+      (= :windows-server-2016-portuguese-brazil-full-base data) WindowsVersion/WINDOWS_SERVER_2016_PORTUGUESE_BRAZIL_FULL_BASE
+      (= :windows-server-2016-portuguese-portugal-full-base data) WindowsVersion/WINDOWS_SERVER_2016_PORTUGUESE_PORTUGAL_FULL_BASE
+      (= :windows-server-2016-russian-full-base data) WindowsVersion/WINDOWS_SERVER_2016_RUSSIAN_FULL_BASE
+      (= :windows-server-2016-spanish-full-base data) WindowsVersion/WINDOWS_SERVER_2016_SPANISH_FULL_BASE
+      (= :windows-server-2016-swedish-full-base data) WindowsVersion/WINDOWS_SERVER_2016_SWEDISH_FULL_BASE
+      (= :windows-server-2016-turkish-full-base data) WindowsVersion/WINDOWS_SERVER_2016_TURKISH_FULL_BASE
+      (= :windows-server-2019-chinese-simplified-full-base data) WindowsVersion/WINDOWS_SERVER_2019_CHINESE_SIMPLIFIED_FULL_BASE
+      (= :windows-server-2019-chinese-traditional-full-base data) WindowsVersion/WINDOWS_SERVER_2019_CHINESE_TRADITIONAL_FULL_BASE
+      (= :windows-server-2019-czech-full-base data) WindowsVersion/WINDOWS_SERVER_2019_CZECH_FULL_BASE
+      (= :windows-server-2019-dutch-full-base data) WindowsVersion/WINDOWS_SERVER_2019_DUTCH_FULL_BASE
+      (= :windows-server-2019-english-core-base data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_BASE
+      (= :windows-server-2019-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_CONTAINERSLATEST
+      (= :windows-server-2019-english-core-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_ECS_OPTIMIZED
+      (= :windows-server-2019-english-core-eks-optimized-1-22 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_22
+      (= :windows-server-2019-english-core-eks-optimized-1-23 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_23
+      (= :windows-server-2019-english-core-eks-optimized-1-24 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_24
+      (= :windows-server-2019-english-core-eks-optimized-1-25 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_25
+      (= :windows-server-2019-english-core-eks-optimized-1-26 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_26
+      (= :windows-server-2019-english-core-eks-optimized-1-27 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_27
+      (= :windows-server-2019-english-core-eks-optimized-1-28 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_CORE_EKS_OPTIMIZED_1_28
+      (= :windows-server-2019-english-deep-learning data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_DEEP_LEARNING
+      (= :windows-server-2019-english-full-base data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_BASE
+      (= :windows-server-2019-english-full-containerslatest data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_CONTAINERSLATEST
+      (= :windows-server-2019-english-full-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_ECS_OPTIMIZED
+      (= :windows-server-2019-english-full-eks-optimized-1-22 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_22
+      (= :windows-server-2019-english-full-eks-optimized-1-23 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_23
+      (= :windows-server-2019-english-full-eks-optimized-1-24 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_24
+      (= :windows-server-2019-english-full-eks-optimized-1-25 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_25
+      (= :windows-server-2019-english-full-eks-optimized-1-26 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_26
+      (= :windows-server-2019-english-full-eks-optimized-1-27 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_27
+      (= :windows-server-2019-english-full-eks-optimized-1-28 data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_EKS_OPTIMIZED_1_28
+      (= :windows-server-2019-english-full-hyperv data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_HYPERV
+      (= :windows-server-2019-english-full-sql-2016-sp2-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_ENTERPRISE
+      (= :windows-server-2019-english-full-sql-2016-sp2-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_EXPRESS
+      (= :windows-server-2019-english-full-sql-2016-sp2-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_STANDARD
+      (= :windows-server-2019-english-full-sql-2016-sp2-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP2_WEB
+      (= :windows-server-2019-english-full-sql-2016-sp3-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_ENTERPRISE
+      (= :windows-server-2019-english-full-sql-2016-sp3-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_EXPRESS
+      (= :windows-server-2019-english-full-sql-2016-sp3-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_STANDARD
+      (= :windows-server-2019-english-full-sql-2016-sp3-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2016_SP3_WEB
+      (= :windows-server-2019-english-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_ENTERPRISE
+      (= :windows-server-2019-english-full-sql-2017-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_EXPRESS
+      (= :windows-server-2019-english-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_STANDARD
+      (= :windows-server-2019-english-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2017_WEB
+      (= :windows-server-2019-english-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_ENTERPRISE
+      (= :windows-server-2019-english-full-sql-2019-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_EXPRESS
+      (= :windows-server-2019-english-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_STANDARD
+      (= :windows-server-2019-english-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2019_WEB
+      (= :windows-server-2019-english-full-sql-2022-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_ENTERPRISE
+      (= :windows-server-2019-english-full-sql-2022-express data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_EXPRESS
+      (= :windows-server-2019-english-full-sql-2022-standard data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_STANDARD
+      (= :windows-server-2019-english-full-sql-2022-web data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_FULL_SQL_2022_WEB
+      (= :windows-server-2019-english-stig-core data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_STIG_CORE
+      (= :windows-server-2019-english-stig-full data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_STIG_FULL
+      (= :windows-server-2019-english-tesla data) WindowsVersion/WINDOWS_SERVER_2019_ENGLISH_TESLA
+      (= :windows-server-2019-french-full-base data) WindowsVersion/WINDOWS_SERVER_2019_FRENCH_FULL_BASE
+      (= :windows-server-2019-german-full-base data) WindowsVersion/WINDOWS_SERVER_2019_GERMAN_FULL_BASE
+      (= :windows-server-2019-hungarian-full-base data) WindowsVersion/WINDOWS_SERVER_2019_HUNGARIAN_FULL_BASE
+      (= :windows-server-2019-italian-full-base data) WindowsVersion/WINDOWS_SERVER_2019_ITALIAN_FULL_BASE
+      (= :windows-server-2019-japanese-full-base data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_BASE
+      (= :windows-server-2019-japanese-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_ENTERPRISE
+      (= :windows-server-2019-japanese-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_STANDARD
+      (= :windows-server-2019-japanese-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2017_WEB
+      (= :windows-server-2019-japanese-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_ENTERPRISE
+      (= :windows-server-2019-japanese-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_STANDARD
+      (= :windows-server-2019-japanese-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2019_WEB
+      (= :windows-server-2019-japanese-full-sql-2022-enterprise data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_ENTERPRISE
+      (= :windows-server-2019-japanese-full-sql-2022-standard data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_STANDARD
+      (= :windows-server-2019-japanese-full-sql-2022-web data) WindowsVersion/WINDOWS_SERVER_2019_JAPANESE_FULL_SQL_2022_WEB
+      (= :windows-server-2019-korean-full-base data) WindowsVersion/WINDOWS_SERVER_2019_KOREAN_FULL_BASE
+      (= :windows-server-2019-polish-full-base data) WindowsVersion/WINDOWS_SERVER_2019_POLISH_FULL_BASE
+      (= :windows-server-2019-portuguese-brazil-full-base data) WindowsVersion/WINDOWS_SERVER_2019_PORTUGUESE_BRAZIL_FULL_BASE
+      (= :windows-server-2019-portuguese-portugal-full-base data) WindowsVersion/WINDOWS_SERVER_2019_PORTUGUESE_PORTUGAL_FULL_BASE
+      (= :windows-server-2019-russian-full-base data) WindowsVersion/WINDOWS_SERVER_2019_RUSSIAN_FULL_BASE
+      (= :windows-server-2019-spanish-full-base data) WindowsVersion/WINDOWS_SERVER_2019_SPANISH_FULL_BASE
+      (= :windows-server-2019-swedish-full-base data) WindowsVersion/WINDOWS_SERVER_2019_SWEDISH_FULL_BASE
+      (= :windows-server-2019-turkish-full-base data) WindowsVersion/WINDOWS_SERVER_2019_TURKISH_FULL_BASE
+      (= :windows-server-2022-chinese-simplified-full-base data) WindowsVersion/WINDOWS_SERVER_2022_CHINESE_SIMPLIFIED_FULL_BASE
+      (= :windows-server-2022-chinese-traditional-full-base data) WindowsVersion/WINDOWS_SERVER_2022_CHINESE_TRADITIONAL_FULL_BASE
+      (= :windows-server-2022-czech-full-base data) WindowsVersion/WINDOWS_SERVER_2022_CZECH_FULL_BASE
+      (= :windows-server-2022-dutch-full-base data) WindowsVersion/WINDOWS_SERVER_2022_DUTCH_FULL_BASE
+      (= :windows-server-2022-english-core-base data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_BASE
+      (= :windows-server-2022-english-core-containerslatest data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_CONTAINERSLATEST
+      (= :windows-server-2022-english-core-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_ECS_OPTIMIZED
+      (= :windows-server-2022-english-core-eks-optimized-1-23 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_23
+      (= :windows-server-2022-english-core-eks-optimized-1-24 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_24
+      (= :windows-server-2022-english-core-eks-optimized-1-25 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_25
+      (= :windows-server-2022-english-core-eks-optimized-1-26 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_26
+      (= :windows-server-2022-english-core-eks-optimized-1-27 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_27
+      (= :windows-server-2022-english-core-eks-optimized-1-28 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_CORE_EKS_OPTIMIZED_1_28
+      (= :windows-server-2022-english-full-base data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_BASE
+      (= :windows-server-2022-english-full-containerslatest data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_CONTAINERSLATEST
+      (= :windows-server-2022-english-full-ecs-optimized data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_ECS_OPTIMIZED
+      (= :windows-server-2022-english-full-eks-optimized-1-23 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_23
+      (= :windows-server-2022-english-full-eks-optimized-1-24 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_24
+      (= :windows-server-2022-english-full-eks-optimized-1-25 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_25
+      (= :windows-server-2022-english-full-eks-optimized-1-26 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_26
+      (= :windows-server-2022-english-full-eks-optimized-1-27 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_27
+      (= :windows-server-2022-english-full-eks-optimized-1-28 data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_EKS_OPTIMIZED_1_28
+      (= :windows-server-2022-english-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_ENTERPRISE
+      (= :windows-server-2022-english-full-sql-2017-express data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_EXPRESS
+      (= :windows-server-2022-english-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_STANDARD
+      (= :windows-server-2022-english-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2017_WEB
+      (= :windows-server-2022-english-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_ENTERPRISE
+      (= :windows-server-2022-english-full-sql-2019-express data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_EXPRESS
+      (= :windows-server-2022-english-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_STANDARD
+      (= :windows-server-2022-english-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2019_WEB
+      (= :windows-server-2022-english-full-sql-2022-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_ENTERPRISE
+      (= :windows-server-2022-english-full-sql-2022-express data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_EXPRESS
+      (= :windows-server-2022-english-full-sql-2022-standard data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_STANDARD
+      (= :windows-server-2022-english-full-sql-2022-web data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_FULL_SQL_2022_WEB
+      (= :windows-server-2022-english-stig-core data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_STIG_CORE
+      (= :windows-server-2022-english-stig-full data) WindowsVersion/WINDOWS_SERVER_2022_ENGLISH_STIG_FULL
+      (= :windows-server-2022-french-full-base data) WindowsVersion/WINDOWS_SERVER_2022_FRENCH_FULL_BASE
+      (= :windows-server-2022-german-full-base data) WindowsVersion/WINDOWS_SERVER_2022_GERMAN_FULL_BASE
+      (= :windows-server-2022-hungarian-full-base data) WindowsVersion/WINDOWS_SERVER_2022_HUNGARIAN_FULL_BASE
+      (= :windows-server-2022-italian-full-base data) WindowsVersion/WINDOWS_SERVER_2022_ITALIAN_FULL_BASE
+      (= :windows-server-2022-japanese-full-base data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_BASE
+      (= :windows-server-2022-japanese-full-sql-2017-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_ENTERPRISE
+      (= :windows-server-2022-japanese-full-sql-2017-standard data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_STANDARD
+      (= :windows-server-2022-japanese-full-sql-2017-web data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2017_WEB
+      (= :windows-server-2022-japanese-full-sql-2019-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_ENTERPRISE
+      (= :windows-server-2022-japanese-full-sql-2019-standard data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_STANDARD
+      (= :windows-server-2022-japanese-full-sql-2019-web data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2019_WEB
+      (= :windows-server-2022-japanese-full-sql-2022-enterprise data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_ENTERPRISE
+      (= :windows-server-2022-japanese-full-sql-2022-standard data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_STANDARD
+      (= :windows-server-2022-japanese-full-sql-2022-web data) WindowsVersion/WINDOWS_SERVER_2022_JAPANESE_FULL_SQL_2022_WEB
+      (= :windows-server-2022-korean-full-base data) WindowsVersion/WINDOWS_SERVER_2022_KOREAN_FULL_BASE
+      (= :windows-server-2022-polish-full-base data) WindowsVersion/WINDOWS_SERVER_2022_POLISH_FULL_BASE
+      (= :windows-server-2022-portuguese-brazil-full-base data) WindowsVersion/WINDOWS_SERVER_2022_PORTUGUESE_BRAZIL_FULL_BASE
+      (= :windows-server-2022-portuguese-portugal-full-base data) WindowsVersion/WINDOWS_SERVER_2022_PORTUGUESE_PORTUGAL_FULL_BASE
+      (= :windows-server-2022-russian-full-base data) WindowsVersion/WINDOWS_SERVER_2022_RUSSIAN_FULL_BASE
+      (= :windows-server-2022-spanish-full-base data) WindowsVersion/WINDOWS_SERVER_2022_SPANISH_FULL_BASE
+      (= :windows-server-2022-swedish-full-base data) WindowsVersion/WINDOWS_SERVER_2022_SWEDISH_FULL_BASE
+      (= :windows-server-2022-turkish-full-base data) WindowsVersion/WINDOWS_SERVER_2022_TURKISH_FULL_BASE)))
 
 
 (defn acl-cidr-config-builder>

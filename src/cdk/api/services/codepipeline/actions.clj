@@ -94,18 +94,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CodeCommitTrigger` - the value is returned.
-* is `:poll` - `CodeCommitTrigger/POLL` is returned
 * is `:events` - `CodeCommitTrigger/EVENTS` is returned
 * is `:none` - `CodeCommitTrigger/NONE` is returned
+* is `:poll` - `CodeCommitTrigger/POLL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CodeCommitTrigger data) data
-      (= :poll data) CodeCommitTrigger/POLL
       (= :events data) CodeCommitTrigger/EVENTS
-      (= :none data) CodeCommitTrigger/NONE)))
+      (= :none data) CodeCommitTrigger/NONE
+      (= :poll data) CodeCommitTrigger/POLL)))
 
 
 (defn git-hub-trigger
@@ -116,8 +116,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `GitHubTrigger` - the value is returned.
 * is `:none` - `GitHubTrigger/NONE` is returned
-* is `:webhook` - `GitHubTrigger/WEBHOOK` is returned
 * is `:poll` - `GitHubTrigger/POLL` is returned
+* is `:webhook` - `GitHubTrigger/WEBHOOK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -125,8 +125,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? GitHubTrigger data) data
       (= :none data) GitHubTrigger/NONE
-      (= :webhook data) GitHubTrigger/WEBHOOK
-      (= :poll data) GitHubTrigger/POLL)))
+      (= :poll data) GitHubTrigger/POLL
+      (= :webhook data) GitHubTrigger/WEBHOOK)))
 
 
 (defn jenkins-action-type
@@ -136,16 +136,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `JenkinsActionType` - the value is returned.
-* is `:test` - `JenkinsActionType/TEST` is returned
 * is `:build` - `JenkinsActionType/BUILD` is returned
+* is `:test` - `JenkinsActionType/TEST` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? JenkinsActionType data) data
-      (= :test data) JenkinsActionType/TEST
-      (= :build data) JenkinsActionType/BUILD)))
+      (= :build data) JenkinsActionType/BUILD
+      (= :test data) JenkinsActionType/TEST)))
 
 
 (defn s3-trigger
@@ -156,8 +156,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `S3Trigger` - the value is returned.
 * is `:events` - `S3Trigger/EVENTS` is returned
-* is `:poll` - `S3Trigger/POLL` is returned
 * is `:none` - `S3Trigger/NONE` is returned
+* is `:poll` - `S3Trigger/POLL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -165,8 +165,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? S3Trigger data) data
       (= :events data) S3Trigger/EVENTS
-      (= :poll data) S3Trigger/POLL
-      (= :none data) S3Trigger/NONE)))
+      (= :none data) S3Trigger/NONE
+      (= :poll data) S3Trigger/POLL)))
 
 
 (defn stack-set-organizations-auto-deployment
@@ -176,18 +176,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `StackSetOrganizationsAutoDeployment` - the value is returned.
-* is `:enabled-with-stack-retention` - `StackSetOrganizationsAutoDeployment/ENABLED_WITH_STACK_RETENTION` is returned
 * is `:disabled` - `StackSetOrganizationsAutoDeployment/DISABLED` is returned
 * is `:enabled` - `StackSetOrganizationsAutoDeployment/ENABLED` is returned
+* is `:enabled-with-stack-retention` - `StackSetOrganizationsAutoDeployment/ENABLED_WITH_STACK_RETENTION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? StackSetOrganizationsAutoDeployment data) data
-      (= :enabled-with-stack-retention data) StackSetOrganizationsAutoDeployment/ENABLED_WITH_STACK_RETENTION
       (= :disabled data) StackSetOrganizationsAutoDeployment/DISABLED
-      (= :enabled data) StackSetOrganizationsAutoDeployment/ENABLED)))
+      (= :enabled data) StackSetOrganizationsAutoDeployment/ENABLED
+      (= :enabled-with-stack-retention data) StackSetOrganizationsAutoDeployment/ENABLED_WITH_STACK_RETENTION)))
 
 
 (defn alexa-skill-deploy-action-builder>

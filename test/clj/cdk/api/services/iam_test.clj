@@ -11,14 +11,14 @@
 
 (deftest access-key-status-test
   (testing "Testing enum function access-key-status"
-    (is (= AccessKeyStatus/INACTIVE (access-key-status {:item AccessKeyStatus/INACTIVE} "test" :item)))
-    (is (= AccessKeyStatus/INACTIVE (access-key-status {:test/item AccessKeyStatus/INACTIVE} "test" :item)))
     (is (= AccessKeyStatus/ACTIVE (access-key-status {:item AccessKeyStatus/ACTIVE} "test" :item)))
     (is (= AccessKeyStatus/ACTIVE (access-key-status {:test/item AccessKeyStatus/ACTIVE} "test" :item)))
-    (is (= AccessKeyStatus/INACTIVE (access-key-status {:item :inactive} "test" :item)))
-    (is (= AccessKeyStatus/INACTIVE (access-key-status {:test/item :inactive} "test" :item)))
+    (is (= AccessKeyStatus/INACTIVE (access-key-status {:item AccessKeyStatus/INACTIVE} "test" :item)))
+    (is (= AccessKeyStatus/INACTIVE (access-key-status {:test/item AccessKeyStatus/INACTIVE} "test" :item)))
     (is (= AccessKeyStatus/ACTIVE (access-key-status {:item :active} "test" :item)))
-    (is (= AccessKeyStatus/ACTIVE (access-key-status {:test/item :active} "test" :item)))))
+    (is (= AccessKeyStatus/ACTIVE (access-key-status {:test/item :active} "test" :item)))
+    (is (= AccessKeyStatus/INACTIVE (access-key-status {:item :inactive} "test" :item)))
+    (is (= AccessKeyStatus/INACTIVE (access-key-status {:test/item :inactive} "test" :item)))))
 
 
 (deftest effect-test

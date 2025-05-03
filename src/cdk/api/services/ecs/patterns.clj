@@ -86,18 +86,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `NetworkLoadBalancedServiceRecordType` - the value is returned.
-* is `:none` - `NetworkLoadBalancedServiceRecordType/NONE` is returned
-* is `:cname` - `NetworkLoadBalancedServiceRecordType/CNAME` is returned
 * is `:alias` - `NetworkLoadBalancedServiceRecordType/ALIAS` is returned
+* is `:cname` - `NetworkLoadBalancedServiceRecordType/CNAME` is returned
+* is `:none` - `NetworkLoadBalancedServiceRecordType/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? NetworkLoadBalancedServiceRecordType data) data
-      (= :none data) NetworkLoadBalancedServiceRecordType/NONE
+      (= :alias data) NetworkLoadBalancedServiceRecordType/ALIAS
       (= :cname data) NetworkLoadBalancedServiceRecordType/CNAME
-      (= :alias data) NetworkLoadBalancedServiceRecordType/ALIAS)))
+      (= :none data) NetworkLoadBalancedServiceRecordType/NONE)))
 
 
 (defn application-listener-props-builder>

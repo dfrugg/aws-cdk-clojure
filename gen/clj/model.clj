@@ -101,12 +101,12 @@
   "Processes a single builder on a package."
   [classpath-info package-data builder-data]
   (-> package-data
-      (update :source-builders-code concatv (builder-source-function builder-data classpath-info))))
+      (update :source-builders-code concatv (builder-source-function classpath-info builder-data))))
 
 
 (defn process-builders
   "Processes all of the builder definitions on a package."
-  [package-data classpath-info]
+  [classpath-info package-data]
   (reduce (partial process-builder classpath-info)
           package-data
           (sort-by :fn-name (:builders package-data))))

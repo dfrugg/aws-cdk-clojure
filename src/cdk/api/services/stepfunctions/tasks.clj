@@ -252,8 +252,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AuthType` - the value is returned.
-* is `:no-auth` - `AuthType/NO_AUTH` is returned
 * is `:iam-role` - `AuthType/IAM_ROLE` is returned
+* is `:no-auth` - `AuthType/NO_AUTH` is returned
 * is `:resource-policy` - `AuthType/RESOURCE_POLICY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -261,8 +261,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AuthType data) data
-      (= :no-auth data) AuthType/NO_AUTH
       (= :iam-role data) AuthType/IAM_ROLE
+      (= :no-auth data) AuthType/NO_AUTH
       (= :resource-policy data) AuthType/RESOURCE_POLICY)))
 
 
@@ -273,16 +273,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BatchStrategy` - the value is returned.
-* is `:single-record` - `BatchStrategy/SINGLE_RECORD` is returned
 * is `:multi-record` - `BatchStrategy/MULTI_RECORD` is returned
+* is `:single-record` - `BatchStrategy/SINGLE_RECORD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BatchStrategy data) data
-      (= :single-record data) BatchStrategy/SINGLE_RECORD
-      (= :multi-record data) BatchStrategy/MULTI_RECORD)))
+      (= :multi-record data) BatchStrategy/MULTI_RECORD
+      (= :single-record data) BatchStrategy/SINGLE_RECORD)))
 
 
 (defn compression-type
@@ -311,18 +311,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DynamoConsumedCapacity` - the value is returned.
-* is `:total` - `DynamoConsumedCapacity/TOTAL` is returned
 * is `:indexes` - `DynamoConsumedCapacity/INDEXES` is returned
 * is `:none` - `DynamoConsumedCapacity/NONE` is returned
+* is `:total` - `DynamoConsumedCapacity/TOTAL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DynamoConsumedCapacity data) data
-      (= :total data) DynamoConsumedCapacity/TOTAL
       (= :indexes data) DynamoConsumedCapacity/INDEXES
-      (= :none data) DynamoConsumedCapacity/NONE)))
+      (= :none data) DynamoConsumedCapacity/NONE
+      (= :total data) DynamoConsumedCapacity/TOTAL)))
 
 
 (defn dynamo-item-collection-metrics
@@ -332,16 +332,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DynamoItemCollectionMetrics` - the value is returned.
-* is `:size` - `DynamoItemCollectionMetrics/SIZE` is returned
 * is `:none` - `DynamoItemCollectionMetrics/NONE` is returned
+* is `:size` - `DynamoItemCollectionMetrics/SIZE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DynamoItemCollectionMetrics data) data
-      (= :size data) DynamoItemCollectionMetrics/SIZE
-      (= :none data) DynamoItemCollectionMetrics/NONE)))
+      (= :none data) DynamoItemCollectionMetrics/NONE
+      (= :size data) DynamoItemCollectionMetrics/SIZE)))
 
 
 (defn dynamo-return-values
@@ -351,22 +351,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DynamoReturnValues` - the value is returned.
-* is `:updated-old` - `DynamoReturnValues/UPDATED_OLD` is returned
-* is `:all-old` - `DynamoReturnValues/ALL_OLD` is returned
-* is `:updated-new` - `DynamoReturnValues/UPDATED_NEW` is returned
-* is `:none` - `DynamoReturnValues/NONE` is returned
 * is `:all-new` - `DynamoReturnValues/ALL_NEW` is returned
+* is `:all-old` - `DynamoReturnValues/ALL_OLD` is returned
+* is `:none` - `DynamoReturnValues/NONE` is returned
+* is `:updated-new` - `DynamoReturnValues/UPDATED_NEW` is returned
+* is `:updated-old` - `DynamoReturnValues/UPDATED_OLD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DynamoReturnValues data) data
-      (= :updated-old data) DynamoReturnValues/UPDATED_OLD
+      (= :all-new data) DynamoReturnValues/ALL_NEW
       (= :all-old data) DynamoReturnValues/ALL_OLD
-      (= :updated-new data) DynamoReturnValues/UPDATED_NEW
       (= :none data) DynamoReturnValues/NONE
-      (= :all-new data) DynamoReturnValues/ALL_NEW)))
+      (= :updated-new data) DynamoReturnValues/UPDATED_NEW
+      (= :updated-old data) DynamoReturnValues/UPDATED_OLD)))
 
 
 (defn emr-create-cluster-cloud-watch-alarm-comparison-operator
@@ -376,20 +376,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmrCreateCluster$CloudWatchAlarmComparisonOperator` - the value is returned.
-* is `:less-than-or-equal` - `EmrCreateCluster$CloudWatchAlarmComparisonOperator/LESS_THAN_OR_EQUAL` is returned
 * is `:greater-than` - `EmrCreateCluster$CloudWatchAlarmComparisonOperator/GREATER_THAN` is returned
-* is `:less-than` - `EmrCreateCluster$CloudWatchAlarmComparisonOperator/LESS_THAN` is returned
 * is `:greater-than-or-equal` - `EmrCreateCluster$CloudWatchAlarmComparisonOperator/GREATER_THAN_OR_EQUAL` is returned
+* is `:less-than` - `EmrCreateCluster$CloudWatchAlarmComparisonOperator/LESS_THAN` is returned
+* is `:less-than-or-equal` - `EmrCreateCluster$CloudWatchAlarmComparisonOperator/LESS_THAN_OR_EQUAL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmrCreateCluster$CloudWatchAlarmComparisonOperator data) data
-      (= :less-than-or-equal data) EmrCreateCluster$CloudWatchAlarmComparisonOperator/LESS_THAN_OR_EQUAL
       (= :greater-than data) EmrCreateCluster$CloudWatchAlarmComparisonOperator/GREATER_THAN
+      (= :greater-than-or-equal data) EmrCreateCluster$CloudWatchAlarmComparisonOperator/GREATER_THAN_OR_EQUAL
       (= :less-than data) EmrCreateCluster$CloudWatchAlarmComparisonOperator/LESS_THAN
-      (= :greater-than-or-equal data) EmrCreateCluster$CloudWatchAlarmComparisonOperator/GREATER_THAN_OR_EQUAL)))
+      (= :less-than-or-equal data) EmrCreateCluster$CloudWatchAlarmComparisonOperator/LESS_THAN_OR_EQUAL)))
 
 
 (defn emr-create-cluster-cloud-watch-alarm-statistic
@@ -399,22 +399,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmrCreateCluster$CloudWatchAlarmStatistic` - the value is returned.
-* is `:sample-count` - `EmrCreateCluster$CloudWatchAlarmStatistic/SAMPLE_COUNT` is returned
+* is `:average` - `EmrCreateCluster$CloudWatchAlarmStatistic/AVERAGE` is returned
 * is `:maximum` - `EmrCreateCluster$CloudWatchAlarmStatistic/MAXIMUM` is returned
 * is `:minimum` - `EmrCreateCluster$CloudWatchAlarmStatistic/MINIMUM` is returned
+* is `:sample-count` - `EmrCreateCluster$CloudWatchAlarmStatistic/SAMPLE_COUNT` is returned
 * is `:sum` - `EmrCreateCluster$CloudWatchAlarmStatistic/SUM` is returned
-* is `:average` - `EmrCreateCluster$CloudWatchAlarmStatistic/AVERAGE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmrCreateCluster$CloudWatchAlarmStatistic data) data
-      (= :sample-count data) EmrCreateCluster$CloudWatchAlarmStatistic/SAMPLE_COUNT
+      (= :average data) EmrCreateCluster$CloudWatchAlarmStatistic/AVERAGE
       (= :maximum data) EmrCreateCluster$CloudWatchAlarmStatistic/MAXIMUM
       (= :minimum data) EmrCreateCluster$CloudWatchAlarmStatistic/MINIMUM
-      (= :sum data) EmrCreateCluster$CloudWatchAlarmStatistic/SUM
-      (= :average data) EmrCreateCluster$CloudWatchAlarmStatistic/AVERAGE)))
+      (= :sample-count data) EmrCreateCluster$CloudWatchAlarmStatistic/SAMPLE_COUNT
+      (= :sum data) EmrCreateCluster$CloudWatchAlarmStatistic/SUM)))
 
 
 (defn emr-create-cluster-cloud-watch-alarm-unit
@@ -424,32 +424,32 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmrCreateCluster$CloudWatchAlarmUnit` - the value is returned.
-* is `:giga-bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BITS_PER_SECOND` is returned
-* is `:giga-bytes-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BYTES_PER_SECOND` is returned
-* is `:mega-bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BITS_PER_SECOND` is returned
-* is `:milli-seconds` - `EmrCreateCluster$CloudWatchAlarmUnit/MILLI_SECONDS` is returned
-* is `:count` - `EmrCreateCluster$CloudWatchAlarmUnit/COUNT` is returned
-* is `:giga-bits` - `EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BITS` is returned
-* is `:tera-bits` - `EmrCreateCluster$CloudWatchAlarmUnit/TERA_BITS` is returned
-* is `:tera-bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/TERA_BYTES` is returned
-* is `:percent` - `EmrCreateCluster$CloudWatchAlarmUnit/PERCENT` is returned
-* is `:tera-bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/TERA_BITS_PER_SECOND` is returned
-* is `:kilo-bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/KILO_BYTES` is returned
-* is `:count-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/COUNT_PER_SECOND` is returned
-* is `:none` - `EmrCreateCluster$CloudWatchAlarmUnit/NONE` is returned
-* is `:kilo-bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/KILO_BITS_PER_SECOND` is returned
-* is `:mega-bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BYTES` is returned
-* is `:bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/BYTES` is returned
-* is `:micro-seconds` - `EmrCreateCluster$CloudWatchAlarmUnit/MICRO_SECONDS` is returned
-* is `:giga-bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BYTES` is returned
-* is `:seconds` - `EmrCreateCluster$CloudWatchAlarmUnit/SECONDS` is returned
-* is `:mega-bytes-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BYTES_PER_SECOND` is returned
-* is `:mega-bits` - `EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BITS` is returned
-* is `:bytes-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/BYTES_PER_SECOND` is returned
-* is `:bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/BITS_PER_SECOND` is returned
-* is `:kilo-bits` - `EmrCreateCluster$CloudWatchAlarmUnit/KILO_BITS` is returned
 * is `:bits` - `EmrCreateCluster$CloudWatchAlarmUnit/BITS` is returned
+* is `:bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/BITS_PER_SECOND` is returned
+* is `:bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/BYTES` is returned
+* is `:bytes-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/BYTES_PER_SECOND` is returned
+* is `:count` - `EmrCreateCluster$CloudWatchAlarmUnit/COUNT` is returned
+* is `:count-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/COUNT_PER_SECOND` is returned
+* is `:giga-bits` - `EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BITS` is returned
+* is `:giga-bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BITS_PER_SECOND` is returned
+* is `:giga-bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BYTES` is returned
+* is `:giga-bytes-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BYTES_PER_SECOND` is returned
+* is `:kilo-bits` - `EmrCreateCluster$CloudWatchAlarmUnit/KILO_BITS` is returned
+* is `:kilo-bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/KILO_BITS_PER_SECOND` is returned
+* is `:kilo-bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/KILO_BYTES` is returned
 * is `:kilo-bytes-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/KILO_BYTES_PER_SECOND` is returned
+* is `:mega-bits` - `EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BITS` is returned
+* is `:mega-bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BITS_PER_SECOND` is returned
+* is `:mega-bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BYTES` is returned
+* is `:mega-bytes-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BYTES_PER_SECOND` is returned
+* is `:micro-seconds` - `EmrCreateCluster$CloudWatchAlarmUnit/MICRO_SECONDS` is returned
+* is `:milli-seconds` - `EmrCreateCluster$CloudWatchAlarmUnit/MILLI_SECONDS` is returned
+* is `:none` - `EmrCreateCluster$CloudWatchAlarmUnit/NONE` is returned
+* is `:percent` - `EmrCreateCluster$CloudWatchAlarmUnit/PERCENT` is returned
+* is `:seconds` - `EmrCreateCluster$CloudWatchAlarmUnit/SECONDS` is returned
+* is `:tera-bits` - `EmrCreateCluster$CloudWatchAlarmUnit/TERA_BITS` is returned
+* is `:tera-bits-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/TERA_BITS_PER_SECOND` is returned
+* is `:tera-bytes` - `EmrCreateCluster$CloudWatchAlarmUnit/TERA_BYTES` is returned
 * is `:tera-bytes-per-second` - `EmrCreateCluster$CloudWatchAlarmUnit/TERA_BYTES_PER_SECOND` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -457,32 +457,32 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmrCreateCluster$CloudWatchAlarmUnit data) data
-      (= :giga-bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BITS_PER_SECOND
-      (= :giga-bytes-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BYTES_PER_SECOND
-      (= :mega-bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BITS_PER_SECOND
-      (= :milli-seconds data) EmrCreateCluster$CloudWatchAlarmUnit/MILLI_SECONDS
-      (= :count data) EmrCreateCluster$CloudWatchAlarmUnit/COUNT
-      (= :giga-bits data) EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BITS
-      (= :tera-bits data) EmrCreateCluster$CloudWatchAlarmUnit/TERA_BITS
-      (= :tera-bytes data) EmrCreateCluster$CloudWatchAlarmUnit/TERA_BYTES
-      (= :percent data) EmrCreateCluster$CloudWatchAlarmUnit/PERCENT
-      (= :tera-bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/TERA_BITS_PER_SECOND
-      (= :kilo-bytes data) EmrCreateCluster$CloudWatchAlarmUnit/KILO_BYTES
-      (= :count-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/COUNT_PER_SECOND
-      (= :none data) EmrCreateCluster$CloudWatchAlarmUnit/NONE
-      (= :kilo-bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/KILO_BITS_PER_SECOND
-      (= :mega-bytes data) EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BYTES
-      (= :bytes data) EmrCreateCluster$CloudWatchAlarmUnit/BYTES
-      (= :micro-seconds data) EmrCreateCluster$CloudWatchAlarmUnit/MICRO_SECONDS
-      (= :giga-bytes data) EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BYTES
-      (= :seconds data) EmrCreateCluster$CloudWatchAlarmUnit/SECONDS
-      (= :mega-bytes-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BYTES_PER_SECOND
-      (= :mega-bits data) EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BITS
-      (= :bytes-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/BYTES_PER_SECOND
-      (= :bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/BITS_PER_SECOND
-      (= :kilo-bits data) EmrCreateCluster$CloudWatchAlarmUnit/KILO_BITS
       (= :bits data) EmrCreateCluster$CloudWatchAlarmUnit/BITS
+      (= :bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/BITS_PER_SECOND
+      (= :bytes data) EmrCreateCluster$CloudWatchAlarmUnit/BYTES
+      (= :bytes-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/BYTES_PER_SECOND
+      (= :count data) EmrCreateCluster$CloudWatchAlarmUnit/COUNT
+      (= :count-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/COUNT_PER_SECOND
+      (= :giga-bits data) EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BITS
+      (= :giga-bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BITS_PER_SECOND
+      (= :giga-bytes data) EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BYTES
+      (= :giga-bytes-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/GIGA_BYTES_PER_SECOND
+      (= :kilo-bits data) EmrCreateCluster$CloudWatchAlarmUnit/KILO_BITS
+      (= :kilo-bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/KILO_BITS_PER_SECOND
+      (= :kilo-bytes data) EmrCreateCluster$CloudWatchAlarmUnit/KILO_BYTES
       (= :kilo-bytes-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/KILO_BYTES_PER_SECOND
+      (= :mega-bits data) EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BITS
+      (= :mega-bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BITS_PER_SECOND
+      (= :mega-bytes data) EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BYTES
+      (= :mega-bytes-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/MEGA_BYTES_PER_SECOND
+      (= :micro-seconds data) EmrCreateCluster$CloudWatchAlarmUnit/MICRO_SECONDS
+      (= :milli-seconds data) EmrCreateCluster$CloudWatchAlarmUnit/MILLI_SECONDS
+      (= :none data) EmrCreateCluster$CloudWatchAlarmUnit/NONE
+      (= :percent data) EmrCreateCluster$CloudWatchAlarmUnit/PERCENT
+      (= :seconds data) EmrCreateCluster$CloudWatchAlarmUnit/SECONDS
+      (= :tera-bits data) EmrCreateCluster$CloudWatchAlarmUnit/TERA_BITS
+      (= :tera-bits-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/TERA_BITS_PER_SECOND
+      (= :tera-bytes data) EmrCreateCluster$CloudWatchAlarmUnit/TERA_BYTES
       (= :tera-bytes-per-second data) EmrCreateCluster$CloudWatchAlarmUnit/TERA_BYTES_PER_SECOND)))
 
 
@@ -493,24 +493,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmrCreateCluster$EbsBlockDeviceVolumeType` - the value is returned.
-* is `:io1` - `EmrCreateCluster$EbsBlockDeviceVolumeType/IO1` is returned
-* is `:gp3` - `EmrCreateCluster$EbsBlockDeviceVolumeType/GP3` is returned
-* is `:st1` - `EmrCreateCluster$EbsBlockDeviceVolumeType/ST1` is returned
-* is `:sc1` - `EmrCreateCluster$EbsBlockDeviceVolumeType/SC1` is returned
-* is `:standard` - `EmrCreateCluster$EbsBlockDeviceVolumeType/STANDARD` is returned
 * is `:gp2` - `EmrCreateCluster$EbsBlockDeviceVolumeType/GP2` is returned
+* is `:gp3` - `EmrCreateCluster$EbsBlockDeviceVolumeType/GP3` is returned
+* is `:io1` - `EmrCreateCluster$EbsBlockDeviceVolumeType/IO1` is returned
+* is `:sc1` - `EmrCreateCluster$EbsBlockDeviceVolumeType/SC1` is returned
+* is `:st1` - `EmrCreateCluster$EbsBlockDeviceVolumeType/ST1` is returned
+* is `:standard` - `EmrCreateCluster$EbsBlockDeviceVolumeType/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmrCreateCluster$EbsBlockDeviceVolumeType data) data
-      (= :io1 data) EmrCreateCluster$EbsBlockDeviceVolumeType/IO1
+      (= :gp2 data) EmrCreateCluster$EbsBlockDeviceVolumeType/GP2
       (= :gp3 data) EmrCreateCluster$EbsBlockDeviceVolumeType/GP3
-      (= :st1 data) EmrCreateCluster$EbsBlockDeviceVolumeType/ST1
+      (= :io1 data) EmrCreateCluster$EbsBlockDeviceVolumeType/IO1
       (= :sc1 data) EmrCreateCluster$EbsBlockDeviceVolumeType/SC1
-      (= :standard data) EmrCreateCluster$EbsBlockDeviceVolumeType/STANDARD
-      (= :gp2 data) EmrCreateCluster$EbsBlockDeviceVolumeType/GP2)))
+      (= :st1 data) EmrCreateCluster$EbsBlockDeviceVolumeType/ST1
+      (= :standard data) EmrCreateCluster$EbsBlockDeviceVolumeType/STANDARD)))
 
 
 (defn emr-create-cluster-emr-cluster-scale-down-behavior
@@ -539,16 +539,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmrCreateCluster$InstanceMarket` - the value is returned.
-* is `:spot` - `EmrCreateCluster$InstanceMarket/SPOT` is returned
 * is `:on-demand` - `EmrCreateCluster$InstanceMarket/ON_DEMAND` is returned
+* is `:spot` - `EmrCreateCluster$InstanceMarket/SPOT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmrCreateCluster$InstanceMarket data) data
-      (= :spot data) EmrCreateCluster$InstanceMarket/SPOT
-      (= :on-demand data) EmrCreateCluster$InstanceMarket/ON_DEMAND)))
+      (= :on-demand data) EmrCreateCluster$InstanceMarket/ON_DEMAND
+      (= :spot data) EmrCreateCluster$InstanceMarket/SPOT)))
 
 
 (defn emr-create-cluster-instance-role-type
@@ -558,8 +558,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmrCreateCluster$InstanceRoleType` - the value is returned.
-* is `:master` - `EmrCreateCluster$InstanceRoleType/MASTER` is returned
 * is `:core` - `EmrCreateCluster$InstanceRoleType/CORE` is returned
+* is `:master` - `EmrCreateCluster$InstanceRoleType/MASTER` is returned
 * is `:task` - `EmrCreateCluster$InstanceRoleType/TASK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -567,8 +567,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmrCreateCluster$InstanceRoleType data) data
-      (= :master data) EmrCreateCluster$InstanceRoleType/MASTER
       (= :core data) EmrCreateCluster$InstanceRoleType/CORE
+      (= :master data) EmrCreateCluster$InstanceRoleType/MASTER
       (= :task data) EmrCreateCluster$InstanceRoleType/TASK)))
 
 
@@ -596,8 +596,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmrCreateCluster$ScalingAdjustmentType` - the value is returned.
-* is `:exact-capacity` - `EmrCreateCluster$ScalingAdjustmentType/EXACT_CAPACITY` is returned
 * is `:change-in-capacity` - `EmrCreateCluster$ScalingAdjustmentType/CHANGE_IN_CAPACITY` is returned
+* is `:exact-capacity` - `EmrCreateCluster$ScalingAdjustmentType/EXACT_CAPACITY` is returned
 * is `:percent-change-in-capacity` - `EmrCreateCluster$ScalingAdjustmentType/PERCENT_CHANGE_IN_CAPACITY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -605,8 +605,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmrCreateCluster$ScalingAdjustmentType data) data
-      (= :exact-capacity data) EmrCreateCluster$ScalingAdjustmentType/EXACT_CAPACITY
       (= :change-in-capacity data) EmrCreateCluster$ScalingAdjustmentType/CHANGE_IN_CAPACITY
+      (= :exact-capacity data) EmrCreateCluster$ScalingAdjustmentType/EXACT_CAPACITY
       (= :percent-change-in-capacity data) EmrCreateCluster$ScalingAdjustmentType/PERCENT_CHANGE_IN_CAPACITY)))
 
 
@@ -617,20 +617,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmrCreateCluster$SpotAllocationStrategy` - the value is returned.
-* is `:price-capacity-optimized` - `EmrCreateCluster$SpotAllocationStrategy/PRICE_CAPACITY_OPTIMIZED` is returned
+* is `:capacity-optimized` - `EmrCreateCluster$SpotAllocationStrategy/CAPACITY_OPTIMIZED` is returned
 * is `:diversified` - `EmrCreateCluster$SpotAllocationStrategy/DIVERSIFIED` is returned
 * is `:lowest-price` - `EmrCreateCluster$SpotAllocationStrategy/LOWEST_PRICE` is returned
-* is `:capacity-optimized` - `EmrCreateCluster$SpotAllocationStrategy/CAPACITY_OPTIMIZED` is returned
+* is `:price-capacity-optimized` - `EmrCreateCluster$SpotAllocationStrategy/PRICE_CAPACITY_OPTIMIZED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmrCreateCluster$SpotAllocationStrategy data) data
-      (= :price-capacity-optimized data) EmrCreateCluster$SpotAllocationStrategy/PRICE_CAPACITY_OPTIMIZED
+      (= :capacity-optimized data) EmrCreateCluster$SpotAllocationStrategy/CAPACITY_OPTIMIZED
       (= :diversified data) EmrCreateCluster$SpotAllocationStrategy/DIVERSIFIED
       (= :lowest-price data) EmrCreateCluster$SpotAllocationStrategy/LOWEST_PRICE
-      (= :capacity-optimized data) EmrCreateCluster$SpotAllocationStrategy/CAPACITY_OPTIMIZED)))
+      (= :price-capacity-optimized data) EmrCreateCluster$SpotAllocationStrategy/PRICE_CAPACITY_OPTIMIZED)))
 
 
 (defn emr-create-cluster-spot-timeout-action
@@ -659,8 +659,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EncryptionOption` - the value is returned.
-* is `:kms` - `EncryptionOption/KMS` is returned
 * is `:client-side-kms` - `EncryptionOption/CLIENT_SIDE_KMS` is returned
+* is `:kms` - `EncryptionOption/KMS` is returned
 * is `:s3-managed` - `EncryptionOption/S3_MANAGED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -668,8 +668,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EncryptionOption data) data
-      (= :kms data) EncryptionOption/KMS
       (= :client-side-kms data) EncryptionOption/CLIENT_SIDE_KMS
+      (= :kms data) EncryptionOption/KMS
       (= :s3-managed data) EncryptionOption/S3_MANAGED)))
 
 
@@ -680,26 +680,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpMethod` - the value is returned.
+* is `:delete` - `HttpMethod/DELETE` is returned
 * is `:get` - `HttpMethod/GET` is returned
 * is `:head` - `HttpMethod/HEAD` is returned
 * is `:options` - `HttpMethod/OPTIONS` is returned
+* is `:patch` - `HttpMethod/PATCH` is returned
 * is `:post` - `HttpMethod/POST` is returned
 * is `:put` - `HttpMethod/PUT` is returned
-* is `:patch` - `HttpMethod/PATCH` is returned
-* is `:delete` - `HttpMethod/DELETE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpMethod data) data
+      (= :delete data) HttpMethod/DELETE
       (= :get data) HttpMethod/GET
       (= :head data) HttpMethod/HEAD
       (= :options data) HttpMethod/OPTIONS
-      (= :post data) HttpMethod/POST
-      (= :put data) HttpMethod/PUT
       (= :patch data) HttpMethod/PATCH
-      (= :delete data) HttpMethod/DELETE)))
+      (= :post data) HttpMethod/POST
+      (= :put data) HttpMethod/PUT)))
 
 
 (defn http-methods
@@ -710,11 +710,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `HttpMethods` - the value is returned.
 * is `:delete` - `HttpMethods/DELETE` is returned
-* is `:put` - `HttpMethods/PUT` is returned
-* is `:patch` - `HttpMethods/PATCH` is returned
-* is `:post` - `HttpMethods/POST` is returned
 * is `:get` - `HttpMethods/GET` is returned
 * is `:head` - `HttpMethods/HEAD` is returned
+* is `:patch` - `HttpMethods/PATCH` is returned
+* is `:post` - `HttpMethods/POST` is returned
+* is `:put` - `HttpMethods/PUT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -722,11 +722,11 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? HttpMethods data) data
       (= :delete data) HttpMethods/DELETE
-      (= :put data) HttpMethods/PUT
+      (= :get data) HttpMethods/GET
+      (= :head data) HttpMethods/HEAD
       (= :patch data) HttpMethods/PATCH
       (= :post data) HttpMethods/POST
-      (= :get data) HttpMethods/GET
-      (= :head data) HttpMethods/HEAD)))
+      (= :put data) HttpMethods/PUT)))
 
 
 (defn input-mode
@@ -736,18 +736,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `InputMode` - the value is returned.
-* is `:pipe` - `InputMode/PIPE` is returned
-* is `:file` - `InputMode/FILE` is returned
 * is `:fast-file` - `InputMode/FAST_FILE` is returned
+* is `:file` - `InputMode/FILE` is returned
+* is `:pipe` - `InputMode/PIPE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? InputMode data) data
-      (= :pipe data) InputMode/PIPE
+      (= :fast-file data) InputMode/FAST_FILE
       (= :file data) InputMode/FILE
-      (= :fast-file data) InputMode/FAST_FILE)))
+      (= :pipe data) InputMode/PIPE)))
 
 
 (defn lambda-invocation-type
@@ -757,18 +757,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LambdaInvocationType` - the value is returned.
-* is `:request-response` - `LambdaInvocationType/REQUEST_RESPONSE` is returned
-* is `:event` - `LambdaInvocationType/EVENT` is returned
 * is `:dry-run` - `LambdaInvocationType/DRY_RUN` is returned
+* is `:event` - `LambdaInvocationType/EVENT` is returned
+* is `:request-response` - `LambdaInvocationType/REQUEST_RESPONSE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LambdaInvocationType data) data
-      (= :request-response data) LambdaInvocationType/REQUEST_RESPONSE
+      (= :dry-run data) LambdaInvocationType/DRY_RUN
       (= :event data) LambdaInvocationType/EVENT
-      (= :dry-run data) LambdaInvocationType/DRY_RUN)))
+      (= :request-response data) LambdaInvocationType/REQUEST_RESPONSE)))
 
 
 (defn message-attribute-data-type
@@ -778,20 +778,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MessageAttributeDataType` - the value is returned.
-* is `:string-array` - `MessageAttributeDataType/STRING_ARRAY` is returned
-* is `:string` - `MessageAttributeDataType/STRING` is returned
-* is `:number` - `MessageAttributeDataType/NUMBER` is returned
 * is `:binary` - `MessageAttributeDataType/BINARY` is returned
+* is `:number` - `MessageAttributeDataType/NUMBER` is returned
+* is `:string` - `MessageAttributeDataType/STRING` is returned
+* is `:string-array` - `MessageAttributeDataType/STRING_ARRAY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MessageAttributeDataType data) data
-      (= :string-array data) MessageAttributeDataType/STRING_ARRAY
-      (= :string data) MessageAttributeDataType/STRING
+      (= :binary data) MessageAttributeDataType/BINARY
       (= :number data) MessageAttributeDataType/NUMBER
-      (= :binary data) MessageAttributeDataType/BINARY)))
+      (= :string data) MessageAttributeDataType/STRING
+      (= :string-array data) MessageAttributeDataType/STRING_ARRAY)))
 
 
 (defn mode
@@ -859,8 +859,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `S3DataType` - the value is returned.
 * is `:augmented-manifest-file` - `S3DataType/AUGMENTED_MANIFEST_FILE` is returned
-* is `:s3-prefix` - `S3DataType/S3_PREFIX` is returned
 * is `:manifest-file` - `S3DataType/MANIFEST_FILE` is returned
+* is `:s3-prefix` - `S3DataType/S3_PREFIX` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -868,8 +868,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? S3DataType data) data
       (= :augmented-manifest-file data) S3DataType/AUGMENTED_MANIFEST_FILE
-      (= :s3-prefix data) S3DataType/S3_PREFIX
-      (= :manifest-file data) S3DataType/MANIFEST_FILE)))
+      (= :manifest-file data) S3DataType/MANIFEST_FILE
+      (= :s3-prefix data) S3DataType/S3_PREFIX)))
 
 
 (defn split-type
@@ -880,9 +880,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `SplitType` - the value is returned.
 * is `:line` - `SplitType/LINE` is returned
+* is `:none` - `SplitType/NONE` is returned
 * is `:record-io` - `SplitType/RECORD_IO` is returned
 * is `:tf-record` - `SplitType/TF_RECORD` is returned
-* is `:none` - `SplitType/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -890,9 +890,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? SplitType data) data
       (= :line data) SplitType/LINE
+      (= :none data) SplitType/NONE
       (= :record-io data) SplitType/RECORD_IO
-      (= :tf-record data) SplitType/TF_RECORD
-      (= :none data) SplitType/NONE)))
+      (= :tf-record data) SplitType/TF_RECORD)))
 
 
 (defn url-encoding-format
@@ -902,24 +902,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `URLEncodingFormat` - the value is returned.
+* is `:brackets` - `URLEncodingFormat/BRACKETS` is returned
+* is `:commas` - `URLEncodingFormat/COMMAS` is returned
+* is `:default` - `URLEncodingFormat/DEFAULT` is returned
 * is `:indices` - `URLEncodingFormat/INDICES` is returned
 * is `:none` - `URLEncodingFormat/NONE` is returned
 * is `:repeat` - `URLEncodingFormat/REPEAT` is returned
-* is `:commas` - `URLEncodingFormat/COMMAS` is returned
-* is `:default` - `URLEncodingFormat/DEFAULT` is returned
-* is `:brackets` - `URLEncodingFormat/BRACKETS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? URLEncodingFormat data) data
-      (= :indices data) URLEncodingFormat/INDICES
-      (= :none data) URLEncodingFormat/NONE
-      (= :repeat data) URLEncodingFormat/REPEAT
+      (= :brackets data) URLEncodingFormat/BRACKETS
       (= :commas data) URLEncodingFormat/COMMAS
       (= :default data) URLEncodingFormat/DEFAULT
-      (= :brackets data) URLEncodingFormat/BRACKETS)))
+      (= :indices data) URLEncodingFormat/INDICES
+      (= :none data) URLEncodingFormat/NONE
+      (= :repeat data) URLEncodingFormat/REPEAT)))
 
 
 (defn worker-type
@@ -931,11 +931,11 @@ function on the data with the provided namespace id and item-key.  The found val
 * instance of `WorkerType` - the value is returned.
 * is `:g-025x` - `WorkerType/G_025X` is returned
 * is `:g-1x` - `WorkerType/G_1X` is returned
-* is `:standard` - `WorkerType/STANDARD` is returned
 * is `:g-2x` - `WorkerType/G_2X` is returned
-* is `:z-2x` - `WorkerType/Z_2X` is returned
-* is `:g-8x` - `WorkerType/G_8X` is returned
 * is `:g-4x` - `WorkerType/G_4X` is returned
+* is `:g-8x` - `WorkerType/G_8X` is returned
+* is `:standard` - `WorkerType/STANDARD` is returned
+* is `:z-2x` - `WorkerType/Z_2X` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -944,11 +944,11 @@ function on the data with the provided namespace id and item-key.  The found val
       (instance? WorkerType data) data
       (= :g-025x data) WorkerType/G_025X
       (= :g-1x data) WorkerType/G_1X
-      (= :standard data) WorkerType/STANDARD
       (= :g-2x data) WorkerType/G_2X
-      (= :z-2x data) WorkerType/Z_2X
+      (= :g-4x data) WorkerType/G_4X
       (= :g-8x data) WorkerType/G_8X
-      (= :g-4x data) WorkerType/G_4X)))
+      (= :standard data) WorkerType/STANDARD
+      (= :z-2x data) WorkerType/Z_2X)))
 
 
 (defn algorithm-specification-builder>

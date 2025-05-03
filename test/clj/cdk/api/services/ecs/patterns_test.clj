@@ -27,15 +27,15 @@
 
 (deftest network-load-balanced-service-record-type-test
   (testing "Testing enum function network-load-balanced-service-record-type"
-    (is (= NetworkLoadBalancedServiceRecordType/NONE (network-load-balanced-service-record-type {:item NetworkLoadBalancedServiceRecordType/NONE} "test" :item)))
-    (is (= NetworkLoadBalancedServiceRecordType/NONE (network-load-balanced-service-record-type {:test/item NetworkLoadBalancedServiceRecordType/NONE} "test" :item)))
-    (is (= NetworkLoadBalancedServiceRecordType/CNAME (network-load-balanced-service-record-type {:item NetworkLoadBalancedServiceRecordType/CNAME} "test" :item)))
-    (is (= NetworkLoadBalancedServiceRecordType/CNAME (network-load-balanced-service-record-type {:test/item NetworkLoadBalancedServiceRecordType/CNAME} "test" :item)))
     (is (= NetworkLoadBalancedServiceRecordType/ALIAS (network-load-balanced-service-record-type {:item NetworkLoadBalancedServiceRecordType/ALIAS} "test" :item)))
     (is (= NetworkLoadBalancedServiceRecordType/ALIAS (network-load-balanced-service-record-type {:test/item NetworkLoadBalancedServiceRecordType/ALIAS} "test" :item)))
-    (is (= NetworkLoadBalancedServiceRecordType/NONE (network-load-balanced-service-record-type {:item :none} "test" :item)))
-    (is (= NetworkLoadBalancedServiceRecordType/NONE (network-load-balanced-service-record-type {:test/item :none} "test" :item)))
+    (is (= NetworkLoadBalancedServiceRecordType/CNAME (network-load-balanced-service-record-type {:item NetworkLoadBalancedServiceRecordType/CNAME} "test" :item)))
+    (is (= NetworkLoadBalancedServiceRecordType/CNAME (network-load-balanced-service-record-type {:test/item NetworkLoadBalancedServiceRecordType/CNAME} "test" :item)))
+    (is (= NetworkLoadBalancedServiceRecordType/NONE (network-load-balanced-service-record-type {:item NetworkLoadBalancedServiceRecordType/NONE} "test" :item)))
+    (is (= NetworkLoadBalancedServiceRecordType/NONE (network-load-balanced-service-record-type {:test/item NetworkLoadBalancedServiceRecordType/NONE} "test" :item)))
+    (is (= NetworkLoadBalancedServiceRecordType/ALIAS (network-load-balanced-service-record-type {:item :alias} "test" :item)))
+    (is (= NetworkLoadBalancedServiceRecordType/ALIAS (network-load-balanced-service-record-type {:test/item :alias} "test" :item)))
     (is (= NetworkLoadBalancedServiceRecordType/CNAME (network-load-balanced-service-record-type {:item :cname} "test" :item)))
     (is (= NetworkLoadBalancedServiceRecordType/CNAME (network-load-balanced-service-record-type {:test/item :cname} "test" :item)))
-    (is (= NetworkLoadBalancedServiceRecordType/ALIAS (network-load-balanced-service-record-type {:item :alias} "test" :item)))
-    (is (= NetworkLoadBalancedServiceRecordType/ALIAS (network-load-balanced-service-record-type {:test/item :alias} "test" :item)))))
+    (is (= NetworkLoadBalancedServiceRecordType/NONE (network-load-balanced-service-record-type {:item :none} "test" :item)))
+    (is (= NetworkLoadBalancedServiceRecordType/NONE (network-load-balanced-service-record-type {:test/item :none} "test" :item)))))

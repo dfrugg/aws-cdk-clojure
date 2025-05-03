@@ -224,24 +224,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FailoverStatusCode` - the value is returned.
-* is `:service-unavailable` - `FailoverStatusCode/SERVICE_UNAVAILABLE` is returned
-* is `:gateway-timeout` - `FailoverStatusCode/GATEWAY_TIMEOUT` is returned
-* is `:forbidden` - `FailoverStatusCode/FORBIDDEN` is returned
-* is `:not-found` - `FailoverStatusCode/NOT_FOUND` is returned
 * is `:bad-gateway` - `FailoverStatusCode/BAD_GATEWAY` is returned
+* is `:forbidden` - `FailoverStatusCode/FORBIDDEN` is returned
+* is `:gateway-timeout` - `FailoverStatusCode/GATEWAY_TIMEOUT` is returned
 * is `:internal-server-error` - `FailoverStatusCode/INTERNAL_SERVER_ERROR` is returned
+* is `:not-found` - `FailoverStatusCode/NOT_FOUND` is returned
+* is `:service-unavailable` - `FailoverStatusCode/SERVICE_UNAVAILABLE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FailoverStatusCode data) data
-      (= :service-unavailable data) FailoverStatusCode/SERVICE_UNAVAILABLE
-      (= :gateway-timeout data) FailoverStatusCode/GATEWAY_TIMEOUT
-      (= :forbidden data) FailoverStatusCode/FORBIDDEN
-      (= :not-found data) FailoverStatusCode/NOT_FOUND
       (= :bad-gateway data) FailoverStatusCode/BAD_GATEWAY
-      (= :internal-server-error data) FailoverStatusCode/INTERNAL_SERVER_ERROR)))
+      (= :forbidden data) FailoverStatusCode/FORBIDDEN
+      (= :gateway-timeout data) FailoverStatusCode/GATEWAY_TIMEOUT
+      (= :internal-server-error data) FailoverStatusCode/INTERNAL_SERVER_ERROR
+      (= :not-found data) FailoverStatusCode/NOT_FOUND
+      (= :service-unavailable data) FailoverStatusCode/SERVICE_UNAVAILABLE)))
 
 
 (defn function-event-type
@@ -251,16 +251,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FunctionEventType` - the value is returned.
-* is `:viewer-response` - `FunctionEventType/VIEWER_RESPONSE` is returned
 * is `:viewer-request` - `FunctionEventType/VIEWER_REQUEST` is returned
+* is `:viewer-response` - `FunctionEventType/VIEWER_RESPONSE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FunctionEventType data) data
-      (= :viewer-response data) FunctionEventType/VIEWER_RESPONSE
-      (= :viewer-request data) FunctionEventType/VIEWER_REQUEST)))
+      (= :viewer-request data) FunctionEventType/VIEWER_REQUEST
+      (= :viewer-response data) FunctionEventType/VIEWER_RESPONSE)))
 
 
 (defn headers-frame-option
@@ -270,16 +270,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HeadersFrameOption` - the value is returned.
-* is `:sameorigin` - `HeadersFrameOption/SAMEORIGIN` is returned
 * is `:deny` - `HeadersFrameOption/DENY` is returned
+* is `:sameorigin` - `HeadersFrameOption/SAMEORIGIN` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HeadersFrameOption data) data
-      (= :sameorigin data) HeadersFrameOption/SAMEORIGIN
-      (= :deny data) HeadersFrameOption/DENY)))
+      (= :deny data) HeadersFrameOption/DENY
+      (= :sameorigin data) HeadersFrameOption/SAMEORIGIN)))
 
 
 (defn headers-referrer-policy
@@ -289,28 +289,28 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HeadersReferrerPolicy` - the value is returned.
-* is `:no-referrer-when-downgrade` - `HeadersReferrerPolicy/NO_REFERRER_WHEN_DOWNGRADE` is returned
-* is `:strict-origin-when-cross-origin` - `HeadersReferrerPolicy/STRICT_ORIGIN_WHEN_CROSS_ORIGIN` is returned
-* is `:unsafe-url` - `HeadersReferrerPolicy/UNSAFE_URL` is returned
 * is `:no-referrer` - `HeadersReferrerPolicy/NO_REFERRER` is returned
-* is `:origin-when-cross-origin` - `HeadersReferrerPolicy/ORIGIN_WHEN_CROSS_ORIGIN` is returned
+* is `:no-referrer-when-downgrade` - `HeadersReferrerPolicy/NO_REFERRER_WHEN_DOWNGRADE` is returned
 * is `:origin` - `HeadersReferrerPolicy/ORIGIN` is returned
+* is `:origin-when-cross-origin` - `HeadersReferrerPolicy/ORIGIN_WHEN_CROSS_ORIGIN` is returned
 * is `:same-origin` - `HeadersReferrerPolicy/SAME_ORIGIN` is returned
 * is `:strict-origin` - `HeadersReferrerPolicy/STRICT_ORIGIN` is returned
+* is `:strict-origin-when-cross-origin` - `HeadersReferrerPolicy/STRICT_ORIGIN_WHEN_CROSS_ORIGIN` is returned
+* is `:unsafe-url` - `HeadersReferrerPolicy/UNSAFE_URL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HeadersReferrerPolicy data) data
-      (= :no-referrer-when-downgrade data) HeadersReferrerPolicy/NO_REFERRER_WHEN_DOWNGRADE
-      (= :strict-origin-when-cross-origin data) HeadersReferrerPolicy/STRICT_ORIGIN_WHEN_CROSS_ORIGIN
-      (= :unsafe-url data) HeadersReferrerPolicy/UNSAFE_URL
       (= :no-referrer data) HeadersReferrerPolicy/NO_REFERRER
-      (= :origin-when-cross-origin data) HeadersReferrerPolicy/ORIGIN_WHEN_CROSS_ORIGIN
+      (= :no-referrer-when-downgrade data) HeadersReferrerPolicy/NO_REFERRER_WHEN_DOWNGRADE
       (= :origin data) HeadersReferrerPolicy/ORIGIN
+      (= :origin-when-cross-origin data) HeadersReferrerPolicy/ORIGIN_WHEN_CROSS_ORIGIN
       (= :same-origin data) HeadersReferrerPolicy/SAME_ORIGIN
-      (= :strict-origin data) HeadersReferrerPolicy/STRICT_ORIGIN)))
+      (= :strict-origin data) HeadersReferrerPolicy/STRICT_ORIGIN
+      (= :strict-origin-when-cross-origin data) HeadersReferrerPolicy/STRICT_ORIGIN_WHEN_CROSS_ORIGIN
+      (= :unsafe-url data) HeadersReferrerPolicy/UNSAFE_URL)))
 
 
 (defn http-version
@@ -320,20 +320,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpVersion` - the value is returned.
-* is `:http3` - `HttpVersion/HTTP3` is returned
-* is `:http2-and-3` - `HttpVersion/HTTP2_AND_3` is returned
-* is `:http2` - `HttpVersion/HTTP2` is returned
 * is `:http1-1` - `HttpVersion/HTTP1_1` is returned
+* is `:http2` - `HttpVersion/HTTP2` is returned
+* is `:http2-and-3` - `HttpVersion/HTTP2_AND_3` is returned
+* is `:http3` - `HttpVersion/HTTP3` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpVersion data) data
-      (= :http3 data) HttpVersion/HTTP3
-      (= :http2-and-3 data) HttpVersion/HTTP2_AND_3
+      (= :http1-1 data) HttpVersion/HTTP1_1
       (= :http2 data) HttpVersion/HTTP2
-      (= :http1-1 data) HttpVersion/HTTP1_1)))
+      (= :http2-and-3 data) HttpVersion/HTTP2_AND_3
+      (= :http3 data) HttpVersion/HTTP3)))
 
 
 (defn lambda-edge-event-type
@@ -343,20 +343,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LambdaEdgeEventType` - the value is returned.
-* is `:viewer-response` - `LambdaEdgeEventType/VIEWER_RESPONSE` is returned
-* is `:viewer-request` - `LambdaEdgeEventType/VIEWER_REQUEST` is returned
 * is `:origin-request` - `LambdaEdgeEventType/ORIGIN_REQUEST` is returned
 * is `:origin-response` - `LambdaEdgeEventType/ORIGIN_RESPONSE` is returned
+* is `:viewer-request` - `LambdaEdgeEventType/VIEWER_REQUEST` is returned
+* is `:viewer-response` - `LambdaEdgeEventType/VIEWER_RESPONSE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LambdaEdgeEventType data) data
-      (= :viewer-response data) LambdaEdgeEventType/VIEWER_RESPONSE
-      (= :viewer-request data) LambdaEdgeEventType/VIEWER_REQUEST
       (= :origin-request data) LambdaEdgeEventType/ORIGIN_REQUEST
-      (= :origin-response data) LambdaEdgeEventType/ORIGIN_RESPONSE)))
+      (= :origin-response data) LambdaEdgeEventType/ORIGIN_RESPONSE
+      (= :viewer-request data) LambdaEdgeEventType/VIEWER_REQUEST
+      (= :viewer-response data) LambdaEdgeEventType/VIEWER_RESPONSE)))
 
 
 (defn origin-protocol-policy
@@ -366,18 +366,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `OriginProtocolPolicy` - the value is returned.
-* is `:match-viewer` - `OriginProtocolPolicy/MATCH_VIEWER` is returned
 * is `:https-only` - `OriginProtocolPolicy/HTTPS_ONLY` is returned
 * is `:http-only` - `OriginProtocolPolicy/HTTP_ONLY` is returned
+* is `:match-viewer` - `OriginProtocolPolicy/MATCH_VIEWER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? OriginProtocolPolicy data) data
-      (= :match-viewer data) OriginProtocolPolicy/MATCH_VIEWER
       (= :https-only data) OriginProtocolPolicy/HTTPS_ONLY
-      (= :http-only data) OriginProtocolPolicy/HTTP_ONLY)))
+      (= :http-only data) OriginProtocolPolicy/HTTP_ONLY
+      (= :match-viewer data) OriginProtocolPolicy/MATCH_VIEWER)))
 
 
 (defn origin-ssl-policy
@@ -387,20 +387,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `OriginSslPolicy` - the value is returned.
-* is `:tls-v1-2` - `OriginSslPolicy/TLS_V1_2` is returned
-* is `:tls-v1-1` - `OriginSslPolicy/TLS_V1_1` is returned
-* is `:tls-v1` - `OriginSslPolicy/TLS_V1` is returned
 * is `:ssl-v3` - `OriginSslPolicy/SSL_V3` is returned
+* is `:tls-v1` - `OriginSslPolicy/TLS_V1` is returned
+* is `:tls-v1-1` - `OriginSslPolicy/TLS_V1_1` is returned
+* is `:tls-v1-2` - `OriginSslPolicy/TLS_V1_2` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? OriginSslPolicy data) data
-      (= :tls-v1-2 data) OriginSslPolicy/TLS_V1_2
-      (= :tls-v1-1 data) OriginSslPolicy/TLS_V1_1
+      (= :ssl-v3 data) OriginSslPolicy/SSL_V3
       (= :tls-v1 data) OriginSslPolicy/TLS_V1
-      (= :ssl-v3 data) OriginSslPolicy/SSL_V3)))
+      (= :tls-v1-1 data) OriginSslPolicy/TLS_V1_1
+      (= :tls-v1-2 data) OriginSslPolicy/TLS_V1_2)))
 
 
 (defn price-class
@@ -410,8 +410,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PriceClass` - the value is returned.
-* is `:price-class-200` - `PriceClass/PRICE_CLASS_200` is returned
 * is `:price-class-100` - `PriceClass/PRICE_CLASS_100` is returned
+* is `:price-class-200` - `PriceClass/PRICE_CLASS_200` is returned
 * is `:price-class-all` - `PriceClass/PRICE_CLASS_ALL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -419,8 +419,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PriceClass data) data
-      (= :price-class-200 data) PriceClass/PRICE_CLASS_200
       (= :price-class-100 data) PriceClass/PRICE_CLASS_100
+      (= :price-class-200 data) PriceClass/PRICE_CLASS_200
       (= :price-class-all data) PriceClass/PRICE_CLASS_ALL)))
 
 
@@ -431,26 +431,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SecurityPolicyProtocol` - the value is returned.
-* is `:tls-v1-2-2018` - `SecurityPolicyProtocol/TLS_V1_2_2018` is returned
-* is `:tls-v1-2016` - `SecurityPolicyProtocol/TLS_V1_2016` is returned
+* is `:ssl-v3` - `SecurityPolicyProtocol/SSL_V3` is returned
 * is `:tls-v1` - `SecurityPolicyProtocol/TLS_V1` is returned
 * is `:tls-v1-1-2016` - `SecurityPolicyProtocol/TLS_V1_1_2016` is returned
+* is `:tls-v1-2016` - `SecurityPolicyProtocol/TLS_V1_2016` is returned
+* is `:tls-v1-2-2018` - `SecurityPolicyProtocol/TLS_V1_2_2018` is returned
 * is `:tls-v1-2-2019` - `SecurityPolicyProtocol/TLS_V1_2_2019` is returned
 * is `:tls-v1-2-2021` - `SecurityPolicyProtocol/TLS_V1_2_2021` is returned
-* is `:ssl-v3` - `SecurityPolicyProtocol/SSL_V3` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SecurityPolicyProtocol data) data
-      (= :tls-v1-2-2018 data) SecurityPolicyProtocol/TLS_V1_2_2018
-      (= :tls-v1-2016 data) SecurityPolicyProtocol/TLS_V1_2016
+      (= :ssl-v3 data) SecurityPolicyProtocol/SSL_V3
       (= :tls-v1 data) SecurityPolicyProtocol/TLS_V1
       (= :tls-v1-1-2016 data) SecurityPolicyProtocol/TLS_V1_1_2016
+      (= :tls-v1-2016 data) SecurityPolicyProtocol/TLS_V1_2016
+      (= :tls-v1-2-2018 data) SecurityPolicyProtocol/TLS_V1_2_2018
       (= :tls-v1-2-2019 data) SecurityPolicyProtocol/TLS_V1_2_2019
-      (= :tls-v1-2-2021 data) SecurityPolicyProtocol/TLS_V1_2_2021
-      (= :ssl-v3 data) SecurityPolicyProtocol/SSL_V3)))
+      (= :tls-v1-2-2021 data) SecurityPolicyProtocol/TLS_V1_2_2021)))
 
 
 (defn ssl-method
@@ -460,16 +460,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SSLMethod` - the value is returned.
-* is `:vip` - `SSLMethod/VIP` is returned
 * is `:sni` - `SSLMethod/SNI` is returned
+* is `:vip` - `SSLMethod/VIP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SSLMethod data) data
-      (= :vip data) SSLMethod/VIP
-      (= :sni data) SSLMethod/SNI)))
+      (= :sni data) SSLMethod/SNI
+      (= :vip data) SSLMethod/VIP)))
 
 
 (defn viewer-protocol-policy
@@ -479,18 +479,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ViewerProtocolPolicy` - the value is returned.
-* is `:redirect-to-https` - `ViewerProtocolPolicy/REDIRECT_TO_HTTPS` is returned
-* is `:https-only` - `ViewerProtocolPolicy/HTTPS_ONLY` is returned
 * is `:allow-all` - `ViewerProtocolPolicy/ALLOW_ALL` is returned
+* is `:https-only` - `ViewerProtocolPolicy/HTTPS_ONLY` is returned
+* is `:redirect-to-https` - `ViewerProtocolPolicy/REDIRECT_TO_HTTPS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ViewerProtocolPolicy data) data
-      (= :redirect-to-https data) ViewerProtocolPolicy/REDIRECT_TO_HTTPS
+      (= :allow-all data) ViewerProtocolPolicy/ALLOW_ALL
       (= :https-only data) ViewerProtocolPolicy/HTTPS_ONLY
-      (= :allow-all data) ViewerProtocolPolicy/ALLOW_ALL)))
+      (= :redirect-to-https data) ViewerProtocolPolicy/REDIRECT_TO_HTTPS)))
 
 
 (defn add-behavior-options-builder>

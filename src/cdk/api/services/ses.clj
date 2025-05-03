@@ -106,18 +106,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CloudWatchDimensionSource` - the value is returned.
-* is `:message-tag` - `CloudWatchDimensionSource/MESSAGE_TAG` is returned
 * is `:email-header` - `CloudWatchDimensionSource/EMAIL_HEADER` is returned
 * is `:link-tag` - `CloudWatchDimensionSource/LINK_TAG` is returned
+* is `:message-tag` - `CloudWatchDimensionSource/MESSAGE_TAG` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CloudWatchDimensionSource data) data
-      (= :message-tag data) CloudWatchDimensionSource/MESSAGE_TAG
       (= :email-header data) CloudWatchDimensionSource/EMAIL_HEADER
-      (= :link-tag data) CloudWatchDimensionSource/LINK_TAG)))
+      (= :link-tag data) CloudWatchDimensionSource/LINK_TAG
+      (= :message-tag data) CloudWatchDimensionSource/MESSAGE_TAG)))
 
 
 (defn configuration-set-tls-policy
@@ -146,16 +146,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EasyDkimSigningKeyLength` - the value is returned.
-* is `:rsa-2048-bit` - `EasyDkimSigningKeyLength/RSA_2048_BIT` is returned
 * is `:rsa-1024-bit` - `EasyDkimSigningKeyLength/RSA_1024_BIT` is returned
+* is `:rsa-2048-bit` - `EasyDkimSigningKeyLength/RSA_2048_BIT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EasyDkimSigningKeyLength data) data
-      (= :rsa-2048-bit data) EasyDkimSigningKeyLength/RSA_2048_BIT
-      (= :rsa-1024-bit data) EasyDkimSigningKeyLength/RSA_1024_BIT)))
+      (= :rsa-1024-bit data) EasyDkimSigningKeyLength/RSA_1024_BIT
+      (= :rsa-2048-bit data) EasyDkimSigningKeyLength/RSA_2048_BIT)))
 
 
 (defn email-sending-event
@@ -165,32 +165,32 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EmailSendingEvent` - the value is returned.
-* is `:send` - `EmailSendingEvent/SEND` is returned
-* is `:open` - `EmailSendingEvent/OPEN` is returned
+* is `:bounce` - `EmailSendingEvent/BOUNCE` is returned
+* is `:click` - `EmailSendingEvent/CLICK` is returned
 * is `:complaint` - `EmailSendingEvent/COMPLAINT` is returned
-* is `:reject` - `EmailSendingEvent/REJECT` is returned
-* is `:subscription` - `EmailSendingEvent/SUBSCRIPTION` is returned
 * is `:delivery` - `EmailSendingEvent/DELIVERY` is returned
 * is `:delivery-delay` - `EmailSendingEvent/DELIVERY_DELAY` is returned
-* is `:click` - `EmailSendingEvent/CLICK` is returned
-* is `:bounce` - `EmailSendingEvent/BOUNCE` is returned
+* is `:open` - `EmailSendingEvent/OPEN` is returned
+* is `:reject` - `EmailSendingEvent/REJECT` is returned
 * is `:rendering-failure` - `EmailSendingEvent/RENDERING_FAILURE` is returned
+* is `:send` - `EmailSendingEvent/SEND` is returned
+* is `:subscription` - `EmailSendingEvent/SUBSCRIPTION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EmailSendingEvent data) data
-      (= :send data) EmailSendingEvent/SEND
-      (= :open data) EmailSendingEvent/OPEN
+      (= :bounce data) EmailSendingEvent/BOUNCE
+      (= :click data) EmailSendingEvent/CLICK
       (= :complaint data) EmailSendingEvent/COMPLAINT
-      (= :reject data) EmailSendingEvent/REJECT
-      (= :subscription data) EmailSendingEvent/SUBSCRIPTION
       (= :delivery data) EmailSendingEvent/DELIVERY
       (= :delivery-delay data) EmailSendingEvent/DELIVERY_DELAY
-      (= :click data) EmailSendingEvent/CLICK
-      (= :bounce data) EmailSendingEvent/BOUNCE
-      (= :rendering-failure data) EmailSendingEvent/RENDERING_FAILURE)))
+      (= :open data) EmailSendingEvent/OPEN
+      (= :reject data) EmailSendingEvent/REJECT
+      (= :rendering-failure data) EmailSendingEvent/RENDERING_FAILURE
+      (= :send data) EmailSendingEvent/SEND
+      (= :subscription data) EmailSendingEvent/SUBSCRIPTION)))
 
 
 (defn mail-from-behavior-on-mx-failure
@@ -200,16 +200,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MailFromBehaviorOnMxFailure` - the value is returned.
-* is `:use-default-value` - `MailFromBehaviorOnMxFailure/USE_DEFAULT_VALUE` is returned
 * is `:reject-message` - `MailFromBehaviorOnMxFailure/REJECT_MESSAGE` is returned
+* is `:use-default-value` - `MailFromBehaviorOnMxFailure/USE_DEFAULT_VALUE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MailFromBehaviorOnMxFailure data) data
-      (= :use-default-value data) MailFromBehaviorOnMxFailure/USE_DEFAULT_VALUE
-      (= :reject-message data) MailFromBehaviorOnMxFailure/REJECT_MESSAGE)))
+      (= :reject-message data) MailFromBehaviorOnMxFailure/REJECT_MESSAGE
+      (= :use-default-value data) MailFromBehaviorOnMxFailure/USE_DEFAULT_VALUE)))
 
 
 (defn receipt-filter-policy
@@ -238,16 +238,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ScalingMode` - the value is returned.
-* is `:standard` - `ScalingMode/STANDARD` is returned
 * is `:managed` - `ScalingMode/MANAGED` is returned
+* is `:standard` - `ScalingMode/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ScalingMode data) data
-      (= :standard data) ScalingMode/STANDARD
-      (= :managed data) ScalingMode/MANAGED)))
+      (= :managed data) ScalingMode/MANAGED
+      (= :standard data) ScalingMode/STANDARD)))
 
 
 (defn suppression-reasons
@@ -257,8 +257,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SuppressionReasons` - the value is returned.
-* is `:bounces-only` - `SuppressionReasons/BOUNCES_ONLY` is returned
 * is `:bounces-and-complaints` - `SuppressionReasons/BOUNCES_AND_COMPLAINTS` is returned
+* is `:bounces-only` - `SuppressionReasons/BOUNCES_ONLY` is returned
 * is `:complaints-only` - `SuppressionReasons/COMPLAINTS_ONLY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -266,8 +266,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SuppressionReasons data) data
-      (= :bounces-only data) SuppressionReasons/BOUNCES_ONLY
       (= :bounces-and-complaints data) SuppressionReasons/BOUNCES_AND_COMPLAINTS
+      (= :bounces-only data) SuppressionReasons/BOUNCES_ONLY
       (= :complaints-only data) SuppressionReasons/COMPLAINTS_ONLY)))
 
 
@@ -278,16 +278,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TlsPolicy` - the value is returned.
-* is `:require` - `TlsPolicy/REQUIRE` is returned
 * is `:optional` - `TlsPolicy/OPTIONAL` is returned
+* is `:require` - `TlsPolicy/REQUIRE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TlsPolicy data) data
-      (= :require data) TlsPolicy/REQUIRE
-      (= :optional data) TlsPolicy/OPTIONAL)))
+      (= :optional data) TlsPolicy/OPTIONAL
+      (= :require data) TlsPolicy/REQUIRE)))
 
 
 (defn add-header-action-config-builder>

@@ -120,22 +120,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AuthorizationType` - the value is returned.
-* is `:lambda` - `AuthorizationType/LAMBDA` is returned
-* is `:user-pool` - `AuthorizationType/USER_POOL` is returned
-* is `:iam` - `AuthorizationType/IAM` is returned
-* is `:oidc` - `AuthorizationType/OIDC` is returned
 * is `:api-key` - `AuthorizationType/API_KEY` is returned
+* is `:iam` - `AuthorizationType/IAM` is returned
+* is `:lambda` - `AuthorizationType/LAMBDA` is returned
+* is `:oidc` - `AuthorizationType/OIDC` is returned
+* is `:user-pool` - `AuthorizationType/USER_POOL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AuthorizationType data) data
-      (= :lambda data) AuthorizationType/LAMBDA
-      (= :user-pool data) AuthorizationType/USER_POOL
+      (= :api-key data) AuthorizationType/API_KEY
       (= :iam data) AuthorizationType/IAM
+      (= :lambda data) AuthorizationType/LAMBDA
       (= :oidc data) AuthorizationType/OIDC
-      (= :api-key data) AuthorizationType/API_KEY)))
+      (= :user-pool data) AuthorizationType/USER_POOL)))
 
 
 (defn field-log-level
@@ -146,8 +146,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `FieldLogLevel` - the value is returned.
 * is `:all` - `FieldLogLevel/ALL` is returned
-* is `:none` - `FieldLogLevel/NONE` is returned
 * is `:error` - `FieldLogLevel/ERROR` is returned
+* is `:none` - `FieldLogLevel/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -155,8 +155,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? FieldLogLevel data) data
       (= :all data) FieldLogLevel/ALL
-      (= :none data) FieldLogLevel/NONE
-      (= :error data) FieldLogLevel/ERROR)))
+      (= :error data) FieldLogLevel/ERROR
+      (= :none data) FieldLogLevel/NONE)))
 
 
 (defn function-runtime-family
@@ -183,16 +183,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `IntrospectionConfig` - the value is returned.
-* is `:enabled` - `IntrospectionConfig/ENABLED` is returned
 * is `:disabled` - `IntrospectionConfig/DISABLED` is returned
+* is `:enabled` - `IntrospectionConfig/ENABLED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? IntrospectionConfig data) data
-      (= :enabled data) IntrospectionConfig/ENABLED
-      (= :disabled data) IntrospectionConfig/DISABLED)))
+      (= :disabled data) IntrospectionConfig/DISABLED
+      (= :enabled data) IntrospectionConfig/ENABLED)))
 
 
 (defn merge-type
@@ -202,16 +202,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MergeType` - the value is returned.
-* is `:manual-merge` - `MergeType/MANUAL_MERGE` is returned
 * is `:auto-merge` - `MergeType/AUTO_MERGE` is returned
+* is `:manual-merge` - `MergeType/MANUAL_MERGE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MergeType data) data
-      (= :manual-merge data) MergeType/MANUAL_MERGE
-      (= :auto-merge data) MergeType/AUTO_MERGE)))
+      (= :auto-merge data) MergeType/AUTO_MERGE
+      (= :manual-merge data) MergeType/MANUAL_MERGE)))
 
 
 (defn user-pool-default-action

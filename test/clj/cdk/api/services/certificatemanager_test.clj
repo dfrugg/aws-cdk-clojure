@@ -9,11 +9,11 @@
 
 (deftest validation-method-test
   (testing "Testing enum function validation-method"
-    (is (= ValidationMethod/EMAIL (validation-method {:item ValidationMethod/EMAIL} "test" :item)))
-    (is (= ValidationMethod/EMAIL (validation-method {:test/item ValidationMethod/EMAIL} "test" :item)))
     (is (= ValidationMethod/DNS (validation-method {:item ValidationMethod/DNS} "test" :item)))
     (is (= ValidationMethod/DNS (validation-method {:test/item ValidationMethod/DNS} "test" :item)))
-    (is (= ValidationMethod/EMAIL (validation-method {:item :email} "test" :item)))
-    (is (= ValidationMethod/EMAIL (validation-method {:test/item :email} "test" :item)))
+    (is (= ValidationMethod/EMAIL (validation-method {:item ValidationMethod/EMAIL} "test" :item)))
+    (is (= ValidationMethod/EMAIL (validation-method {:test/item ValidationMethod/EMAIL} "test" :item)))
     (is (= ValidationMethod/DNS (validation-method {:item :dns} "test" :item)))
-    (is (= ValidationMethod/DNS (validation-method {:test/item :dns} "test" :item)))))
+    (is (= ValidationMethod/DNS (validation-method {:test/item :dns} "test" :item)))
+    (is (= ValidationMethod/EMAIL (validation-method {:item :email} "test" :item)))
+    (is (= ValidationMethod/EMAIL (validation-method {:test/item :email} "test" :item)))))

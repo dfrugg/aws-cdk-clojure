@@ -49,16 +49,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `IpAddressType` - the value is returned.
-* is `:ipv4` - `IpAddressType/IPV4` is returned
 * is `:dual-stack` - `IpAddressType/DUAL_STACK` is returned
+* is `:ipv4` - `IpAddressType/IPV4` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? IpAddressType data) data
-      (= :ipv4 data) IpAddressType/IPV4
-      (= :dual-stack data) IpAddressType/DUAL_STACK)))
+      (= :dual-stack data) IpAddressType/DUAL_STACK
+      (= :ipv4 data) IpAddressType/IPV4)))
 
 
 (defn tls-security-policy
@@ -68,18 +68,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TLSSecurityPolicy` - the value is returned.
-* is `:tls-1-2-pfs` - `TLSSecurityPolicy/TLS_1_2_PFS` is returned
-* is `:tls-1-2` - `TLSSecurityPolicy/TLS_1_2` is returned
 * is `:tls-1-0` - `TLSSecurityPolicy/TLS_1_0` is returned
+* is `:tls-1-2` - `TLSSecurityPolicy/TLS_1_2` is returned
+* is `:tls-1-2-pfs` - `TLSSecurityPolicy/TLS_1_2_PFS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TLSSecurityPolicy data) data
-      (= :tls-1-2-pfs data) TLSSecurityPolicy/TLS_1_2_PFS
+      (= :tls-1-0 data) TLSSecurityPolicy/TLS_1_0
       (= :tls-1-2 data) TLSSecurityPolicy/TLS_1_2
-      (= :tls-1-0 data) TLSSecurityPolicy/TLS_1_0)))
+      (= :tls-1-2-pfs data) TLSSecurityPolicy/TLS_1_2_PFS)))
 
 
 (defn advanced-security-options-builder>

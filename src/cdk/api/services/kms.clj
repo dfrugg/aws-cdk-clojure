@@ -25,18 +25,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `KeySpec` - the value is returned.
-* is `:hmac-512` - `KeySpec/HMAC_512` is returned
-* is `:ecc-nist-p384` - `KeySpec/ECC_NIST_P384` is returned
-* is `:rsa-3072` - `KeySpec/RSA_3072` is returned
-* is `:hmac-384` - `KeySpec/HMAC_384` is returned
-* is `:sm2` - `KeySpec/SM2` is returned
-* is `:rsa-2048` - `KeySpec/RSA_2048` is returned
-* is `:hmac-256` - `KeySpec/HMAC_256` is returned
-* is `:ecc-secg-p256k1` - `KeySpec/ECC_SECG_P256K1` is returned
-* is `:rsa-4096` - `KeySpec/RSA_4096` is returned
-* is `:hmac-224` - `KeySpec/HMAC_224` is returned
-* is `:ecc-nist-p521` - `KeySpec/ECC_NIST_P521` is returned
 * is `:ecc-nist-p256` - `KeySpec/ECC_NIST_P256` is returned
+* is `:ecc-nist-p384` - `KeySpec/ECC_NIST_P384` is returned
+* is `:ecc-nist-p521` - `KeySpec/ECC_NIST_P521` is returned
+* is `:ecc-secg-p256k1` - `KeySpec/ECC_SECG_P256K1` is returned
+* is `:hmac-224` - `KeySpec/HMAC_224` is returned
+* is `:hmac-256` - `KeySpec/HMAC_256` is returned
+* is `:hmac-384` - `KeySpec/HMAC_384` is returned
+* is `:hmac-512` - `KeySpec/HMAC_512` is returned
+* is `:rsa-2048` - `KeySpec/RSA_2048` is returned
+* is `:rsa-3072` - `KeySpec/RSA_3072` is returned
+* is `:rsa-4096` - `KeySpec/RSA_4096` is returned
+* is `:sm2` - `KeySpec/SM2` is returned
 * is `:symmetric-default` - `KeySpec/SYMMETRIC_DEFAULT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -44,18 +44,18 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? KeySpec data) data
-      (= :hmac-512 data) KeySpec/HMAC_512
-      (= :ecc-nist-p384 data) KeySpec/ECC_NIST_P384
-      (= :rsa-3072 data) KeySpec/RSA_3072
-      (= :hmac-384 data) KeySpec/HMAC_384
-      (= :sm2 data) KeySpec/SM2
-      (= :rsa-2048 data) KeySpec/RSA_2048
-      (= :hmac-256 data) KeySpec/HMAC_256
-      (= :ecc-secg-p256k1 data) KeySpec/ECC_SECG_P256K1
-      (= :rsa-4096 data) KeySpec/RSA_4096
-      (= :hmac-224 data) KeySpec/HMAC_224
-      (= :ecc-nist-p521 data) KeySpec/ECC_NIST_P521
       (= :ecc-nist-p256 data) KeySpec/ECC_NIST_P256
+      (= :ecc-nist-p384 data) KeySpec/ECC_NIST_P384
+      (= :ecc-nist-p521 data) KeySpec/ECC_NIST_P521
+      (= :ecc-secg-p256k1 data) KeySpec/ECC_SECG_P256K1
+      (= :hmac-224 data) KeySpec/HMAC_224
+      (= :hmac-256 data) KeySpec/HMAC_256
+      (= :hmac-384 data) KeySpec/HMAC_384
+      (= :hmac-512 data) KeySpec/HMAC_512
+      (= :rsa-2048 data) KeySpec/RSA_2048
+      (= :rsa-3072 data) KeySpec/RSA_3072
+      (= :rsa-4096 data) KeySpec/RSA_4096
+      (= :sm2 data) KeySpec/SM2
       (= :symmetric-default data) KeySpec/SYMMETRIC_DEFAULT)))
 
 

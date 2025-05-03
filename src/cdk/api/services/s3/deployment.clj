@@ -39,26 +39,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `StorageClass` - the value is returned.
-* is `:glacier` - `StorageClass/GLACIER` is returned
-* is `:reduced-redundancy` - `StorageClass/REDUCED_REDUNDANCY` is returned
-* is `:onezone-ia` - `StorageClass/ONEZONE_IA` is returned
-* is `:standard-ia` - `StorageClass/STANDARD_IA` is returned
-* is `:standard` - `StorageClass/STANDARD` is returned
-* is `:intelligent-tiering` - `StorageClass/INTELLIGENT_TIERING` is returned
 * is `:deep-archive` - `StorageClass/DEEP_ARCHIVE` is returned
+* is `:glacier` - `StorageClass/GLACIER` is returned
+* is `:intelligent-tiering` - `StorageClass/INTELLIGENT_TIERING` is returned
+* is `:onezone-ia` - `StorageClass/ONEZONE_IA` is returned
+* is `:reduced-redundancy` - `StorageClass/REDUCED_REDUNDANCY` is returned
+* is `:standard` - `StorageClass/STANDARD` is returned
+* is `:standard-ia` - `StorageClass/STANDARD_IA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? StorageClass data) data
+      (= :deep-archive data) StorageClass/DEEP_ARCHIVE
       (= :glacier data) StorageClass/GLACIER
-      (= :reduced-redundancy data) StorageClass/REDUCED_REDUNDANCY
-      (= :onezone-ia data) StorageClass/ONEZONE_IA
-      (= :standard-ia data) StorageClass/STANDARD_IA
-      (= :standard data) StorageClass/STANDARD
       (= :intelligent-tiering data) StorageClass/INTELLIGENT_TIERING
-      (= :deep-archive data) StorageClass/DEEP_ARCHIVE)))
+      (= :onezone-ia data) StorageClass/ONEZONE_IA
+      (= :reduced-redundancy data) StorageClass/REDUCED_REDUNDANCY
+      (= :standard data) StorageClass/STANDARD
+      (= :standard-ia data) StorageClass/STANDARD_IA)))
 
 
 (defn bucket-deployment-builder>

@@ -273,20 +273,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AmiHardwareType` - the value is returned.
-* is `:gpu` - `AmiHardwareType/GPU` is returned
-* is `:standard` - `AmiHardwareType/STANDARD` is returned
 * is `:arm` - `AmiHardwareType/ARM` is returned
+* is `:gpu` - `AmiHardwareType/GPU` is returned
 * is `:neuron` - `AmiHardwareType/NEURON` is returned
+* is `:standard` - `AmiHardwareType/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AmiHardwareType data) data
-      (= :gpu data) AmiHardwareType/GPU
-      (= :standard data) AmiHardwareType/STANDARD
       (= :arm data) AmiHardwareType/ARM
-      (= :neuron data) AmiHardwareType/NEURON)))
+      (= :gpu data) AmiHardwareType/GPU
+      (= :neuron data) AmiHardwareType/NEURON
+      (= :standard data) AmiHardwareType/STANDARD)))
 
 
 (defn aws-log-driver-mode
@@ -296,16 +296,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AwsLogDriverMode` - the value is returned.
-* is `:non-blocking` - `AwsLogDriverMode/NON_BLOCKING` is returned
 * is `:blocking` - `AwsLogDriverMode/BLOCKING` is returned
+* is `:non-blocking` - `AwsLogDriverMode/NON_BLOCKING` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AwsLogDriverMode data) data
-      (= :non-blocking data) AwsLogDriverMode/NON_BLOCKING
-      (= :blocking data) AwsLogDriverMode/BLOCKING)))
+      (= :blocking data) AwsLogDriverMode/BLOCKING
+      (= :non-blocking data) AwsLogDriverMode/NON_BLOCKING)))
 
 
 (defn bin-pack-resource
@@ -315,16 +315,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BinPackResource` - the value is returned.
-* is `:memory` - `BinPackResource/MEMORY` is returned
 * is `:cpu` - `BinPackResource/CPU` is returned
+* is `:memory` - `BinPackResource/MEMORY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BinPackResource data) data
-      (= :memory data) BinPackResource/MEMORY
-      (= :cpu data) BinPackResource/CPU)))
+      (= :cpu data) BinPackResource/CPU
+      (= :memory data) BinPackResource/MEMORY)))
 
 
 (defn bottlerocket-ecs-variant
@@ -334,20 +334,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BottlerocketEcsVariant` - the value is returned.
-* is `:aws-ecs-2-nvidia` - `BottlerocketEcsVariant/AWS_ECS_2_NVIDIA` is returned
 * is `:aws-ecs-1` - `BottlerocketEcsVariant/AWS_ECS_1` is returned
-* is `:aws-ecs-2` - `BottlerocketEcsVariant/AWS_ECS_2` is returned
 * is `:aws-ecs-1-nvidia` - `BottlerocketEcsVariant/AWS_ECS_1_NVIDIA` is returned
+* is `:aws-ecs-2` - `BottlerocketEcsVariant/AWS_ECS_2` is returned
+* is `:aws-ecs-2-nvidia` - `BottlerocketEcsVariant/AWS_ECS_2_NVIDIA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BottlerocketEcsVariant data) data
-      (= :aws-ecs-2-nvidia data) BottlerocketEcsVariant/AWS_ECS_2_NVIDIA
       (= :aws-ecs-1 data) BottlerocketEcsVariant/AWS_ECS_1
+      (= :aws-ecs-1-nvidia data) BottlerocketEcsVariant/AWS_ECS_1_NVIDIA
       (= :aws-ecs-2 data) BottlerocketEcsVariant/AWS_ECS_2
-      (= :aws-ecs-1-nvidia data) BottlerocketEcsVariant/AWS_ECS_1_NVIDIA)))
+      (= :aws-ecs-2-nvidia data) BottlerocketEcsVariant/AWS_ECS_2_NVIDIA)))
 
 
 (defn capability
@@ -357,88 +357,88 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Capability` - the value is returned.
-* is `:sys-pacct` - `Capability/SYS_PACCT` is returned
-* is `:sys-ptrace` - `Capability/SYS_PTRACE` is returned
-* is `:sys-tty-config` - `Capability/SYS_TTY_CONFIG` is returned
-* is `:sys-admin` - `Capability/SYS_ADMIN` is returned
-* is `:net-admin` - `Capability/NET_ADMIN` is returned
-* is `:sys-boot` - `Capability/SYS_BOOT` is returned
-* is `:dac-read-search` - `Capability/DAC_READ_SEARCH` is returned
-* is `:syslog` - `Capability/SYSLOG` is returned
-* is `:setfcap` - `Capability/SETFCAP` is returned
-* is `:linux-immutable` - `Capability/LINUX_IMMUTABLE` is returned
-* is `:wake-alarm` - `Capability/WAKE_ALARM` is returned
+* is `:all` - `Capability/ALL` is returned
+* is `:audit-control` - `Capability/AUDIT_CONTROL` is returned
 * is `:audit-write` - `Capability/AUDIT_WRITE` is returned
+* is `:block-suspend` - `Capability/BLOCK_SUSPEND` is returned
+* is `:chown` - `Capability/CHOWN` is returned
+* is `:dac-override` - `Capability/DAC_OVERRIDE` is returned
+* is `:dac-read-search` - `Capability/DAC_READ_SEARCH` is returned
+* is `:fowner` - `Capability/FOWNER` is returned
+* is `:fsetid` - `Capability/FSETID` is returned
+* is `:ipc-lock` - `Capability/IPC_LOCK` is returned
+* is `:ipc-owner` - `Capability/IPC_OWNER` is returned
+* is `:kill` - `Capability/KILL` is returned
+* is `:lease` - `Capability/LEASE` is returned
+* is `:linux-immutable` - `Capability/LINUX_IMMUTABLE` is returned
+* is `:mac-admin` - `Capability/MAC_ADMIN` is returned
+* is `:mac-override` - `Capability/MAC_OVERRIDE` is returned
+* is `:mknod` - `Capability/MKNOD` is returned
+* is `:net-admin` - `Capability/NET_ADMIN` is returned
+* is `:net-bind-service` - `Capability/NET_BIND_SERVICE` is returned
+* is `:net-broadcast` - `Capability/NET_BROADCAST` is returned
+* is `:net-raw` - `Capability/NET_RAW` is returned
+* is `:setfcap` - `Capability/SETFCAP` is returned
+* is `:setgid` - `Capability/SETGID` is returned
+* is `:setpcap` - `Capability/SETPCAP` is returned
+* is `:setuid` - `Capability/SETUID` is returned
+* is `:syslog` - `Capability/SYSLOG` is returned
+* is `:sys-admin` - `Capability/SYS_ADMIN` is returned
+* is `:sys-boot` - `Capability/SYS_BOOT` is returned
+* is `:sys-chroot` - `Capability/SYS_CHROOT` is returned
 * is `:sys-module` - `Capability/SYS_MODULE` is returned
 * is `:sys-nice` - `Capability/SYS_NICE` is returned
-* is `:lease` - `Capability/LEASE` is returned
-* is `:audit-control` - `Capability/AUDIT_CONTROL` is returned
-* is `:ipc-lock` - `Capability/IPC_LOCK` is returned
-* is `:mac-admin` - `Capability/MAC_ADMIN` is returned
-* is `:block-suspend` - `Capability/BLOCK_SUSPEND` is returned
-* is `:sys-chroot` - `Capability/SYS_CHROOT` is returned
-* is `:sys-resource` - `Capability/SYS_RESOURCE` is returned
-* is `:kill` - `Capability/KILL` is returned
-* is `:chown` - `Capability/CHOWN` is returned
-* is `:net-bind-service` - `Capability/NET_BIND_SERVICE` is returned
+* is `:sys-pacct` - `Capability/SYS_PACCT` is returned
+* is `:sys-ptrace` - `Capability/SYS_PTRACE` is returned
 * is `:sys-rawio` - `Capability/SYS_RAWIO` is returned
-* is `:fsetid` - `Capability/FSETID` is returned
-* is `:setuid` - `Capability/SETUID` is returned
-* is `:mac-override` - `Capability/MAC_OVERRIDE` is returned
-* is `:net-broadcast` - `Capability/NET_BROADCAST` is returned
+* is `:sys-resource` - `Capability/SYS_RESOURCE` is returned
 * is `:sys-time` - `Capability/SYS_TIME` is returned
-* is `:setgid` - `Capability/SETGID` is returned
-* is `:dac-override` - `Capability/DAC_OVERRIDE` is returned
-* is `:fowner` - `Capability/FOWNER` is returned
-* is `:net-raw` - `Capability/NET_RAW` is returned
-* is `:ipc-owner` - `Capability/IPC_OWNER` is returned
-* is `:mknod` - `Capability/MKNOD` is returned
-* is `:setpcap` - `Capability/SETPCAP` is returned
-* is `:all` - `Capability/ALL` is returned
+* is `:sys-tty-config` - `Capability/SYS_TTY_CONFIG` is returned
+* is `:wake-alarm` - `Capability/WAKE_ALARM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Capability data) data
-      (= :sys-pacct data) Capability/SYS_PACCT
-      (= :sys-ptrace data) Capability/SYS_PTRACE
-      (= :sys-tty-config data) Capability/SYS_TTY_CONFIG
-      (= :sys-admin data) Capability/SYS_ADMIN
-      (= :net-admin data) Capability/NET_ADMIN
-      (= :sys-boot data) Capability/SYS_BOOT
-      (= :dac-read-search data) Capability/DAC_READ_SEARCH
-      (= :syslog data) Capability/SYSLOG
-      (= :setfcap data) Capability/SETFCAP
-      (= :linux-immutable data) Capability/LINUX_IMMUTABLE
-      (= :wake-alarm data) Capability/WAKE_ALARM
+      (= :all data) Capability/ALL
+      (= :audit-control data) Capability/AUDIT_CONTROL
       (= :audit-write data) Capability/AUDIT_WRITE
+      (= :block-suspend data) Capability/BLOCK_SUSPEND
+      (= :chown data) Capability/CHOWN
+      (= :dac-override data) Capability/DAC_OVERRIDE
+      (= :dac-read-search data) Capability/DAC_READ_SEARCH
+      (= :fowner data) Capability/FOWNER
+      (= :fsetid data) Capability/FSETID
+      (= :ipc-lock data) Capability/IPC_LOCK
+      (= :ipc-owner data) Capability/IPC_OWNER
+      (= :kill data) Capability/KILL
+      (= :lease data) Capability/LEASE
+      (= :linux-immutable data) Capability/LINUX_IMMUTABLE
+      (= :mac-admin data) Capability/MAC_ADMIN
+      (= :mac-override data) Capability/MAC_OVERRIDE
+      (= :mknod data) Capability/MKNOD
+      (= :net-admin data) Capability/NET_ADMIN
+      (= :net-bind-service data) Capability/NET_BIND_SERVICE
+      (= :net-broadcast data) Capability/NET_BROADCAST
+      (= :net-raw data) Capability/NET_RAW
+      (= :setfcap data) Capability/SETFCAP
+      (= :setgid data) Capability/SETGID
+      (= :setpcap data) Capability/SETPCAP
+      (= :setuid data) Capability/SETUID
+      (= :syslog data) Capability/SYSLOG
+      (= :sys-admin data) Capability/SYS_ADMIN
+      (= :sys-boot data) Capability/SYS_BOOT
+      (= :sys-chroot data) Capability/SYS_CHROOT
       (= :sys-module data) Capability/SYS_MODULE
       (= :sys-nice data) Capability/SYS_NICE
-      (= :lease data) Capability/LEASE
-      (= :audit-control data) Capability/AUDIT_CONTROL
-      (= :ipc-lock data) Capability/IPC_LOCK
-      (= :mac-admin data) Capability/MAC_ADMIN
-      (= :block-suspend data) Capability/BLOCK_SUSPEND
-      (= :sys-chroot data) Capability/SYS_CHROOT
-      (= :sys-resource data) Capability/SYS_RESOURCE
-      (= :kill data) Capability/KILL
-      (= :chown data) Capability/CHOWN
-      (= :net-bind-service data) Capability/NET_BIND_SERVICE
+      (= :sys-pacct data) Capability/SYS_PACCT
+      (= :sys-ptrace data) Capability/SYS_PTRACE
       (= :sys-rawio data) Capability/SYS_RAWIO
-      (= :fsetid data) Capability/FSETID
-      (= :setuid data) Capability/SETUID
-      (= :mac-override data) Capability/MAC_OVERRIDE
-      (= :net-broadcast data) Capability/NET_BROADCAST
+      (= :sys-resource data) Capability/SYS_RESOURCE
       (= :sys-time data) Capability/SYS_TIME
-      (= :setgid data) Capability/SETGID
-      (= :dac-override data) Capability/DAC_OVERRIDE
-      (= :fowner data) Capability/FOWNER
-      (= :net-raw data) Capability/NET_RAW
-      (= :ipc-owner data) Capability/IPC_OWNER
-      (= :mknod data) Capability/MKNOD
-      (= :setpcap data) Capability/SETPCAP
-      (= :all data) Capability/ALL)))
+      (= :sys-tty-config data) Capability/SYS_TTY_CONFIG
+      (= :wake-alarm data) Capability/WAKE_ALARM)))
 
 
 (defn compatibility
@@ -448,20 +448,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Compatibility` - the value is returned.
-* is `:fargate` - `Compatibility/FARGATE` is returned
-* is `:external` - `Compatibility/EXTERNAL` is returned
 * is `:ec2` - `Compatibility/EC2` is returned
 * is `:ec2-and-fargate` - `Compatibility/EC2_AND_FARGATE` is returned
+* is `:external` - `Compatibility/EXTERNAL` is returned
+* is `:fargate` - `Compatibility/FARGATE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Compatibility data) data
-      (= :fargate data) Compatibility/FARGATE
-      (= :external data) Compatibility/EXTERNAL
       (= :ec2 data) Compatibility/EC2
-      (= :ec2-and-fargate data) Compatibility/EC2_AND_FARGATE)))
+      (= :ec2-and-fargate data) Compatibility/EC2_AND_FARGATE
+      (= :external data) Compatibility/EXTERNAL
+      (= :fargate data) Compatibility/FARGATE)))
 
 
 (defn container-dependency-condition
@@ -472,8 +472,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `ContainerDependencyCondition` - the value is returned.
 * is `:complete` - `ContainerDependencyCondition/COMPLETE` is returned
-* is `:start` - `ContainerDependencyCondition/START` is returned
 * is `:healthy` - `ContainerDependencyCondition/HEALTHY` is returned
+* is `:start` - `ContainerDependencyCondition/START` is returned
 * is `:success` - `ContainerDependencyCondition/SUCCESS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -482,8 +482,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? ContainerDependencyCondition data) data
       (= :complete data) ContainerDependencyCondition/COMPLETE
-      (= :start data) ContainerDependencyCondition/START
       (= :healthy data) ContainerDependencyCondition/HEALTHY
+      (= :start data) ContainerDependencyCondition/START
       (= :success data) ContainerDependencyCondition/SUCCESS)))
 
 
@@ -494,18 +494,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DeploymentControllerType` - the value is returned.
+* is `:code-deploy` - `DeploymentControllerType/CODE_DEPLOY` is returned
 * is `:ecs` - `DeploymentControllerType/ECS` is returned
 * is `:external` - `DeploymentControllerType/EXTERNAL` is returned
-* is `:code-deploy` - `DeploymentControllerType/CODE_DEPLOY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DeploymentControllerType data) data
+      (= :code-deploy data) DeploymentControllerType/CODE_DEPLOY
       (= :ecs data) DeploymentControllerType/ECS
-      (= :external data) DeploymentControllerType/EXTERNAL
-      (= :code-deploy data) DeploymentControllerType/CODE_DEPLOY)))
+      (= :external data) DeploymentControllerType/EXTERNAL)))
 
 
 (defn device-permission
@@ -536,16 +536,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EbsPropagatedTagSource` - the value is returned.
-* is `:task-definition` - `EbsPropagatedTagSource/TASK_DEFINITION` is returned
 * is `:service` - `EbsPropagatedTagSource/SERVICE` is returned
+* is `:task-definition` - `EbsPropagatedTagSource/TASK_DEFINITION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EbsPropagatedTagSource data) data
-      (= :task-definition data) EbsPropagatedTagSource/TASK_DEFINITION
-      (= :service data) EbsPropagatedTagSource/SERVICE)))
+      (= :service data) EbsPropagatedTagSource/SERVICE
+      (= :task-definition data) EbsPropagatedTagSource/TASK_DEFINITION)))
 
 
 (defn environment-file-type
@@ -573,8 +573,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `ExecuteCommandLogging` - the value is returned.
 * is `:default` - `ExecuteCommandLogging/DEFAULT` is returned
-* is `:override` - `ExecuteCommandLogging/OVERRIDE` is returned
 * is `:none` - `ExecuteCommandLogging/NONE` is returned
+* is `:override` - `ExecuteCommandLogging/OVERRIDE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -582,8 +582,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? ExecuteCommandLogging data) data
       (= :default data) ExecuteCommandLogging/DEFAULT
-      (= :override data) ExecuteCommandLogging/OVERRIDE
-      (= :none data) ExecuteCommandLogging/NONE)))
+      (= :none data) ExecuteCommandLogging/NONE
+      (= :override data) ExecuteCommandLogging/OVERRIDE)))
 
 
 (defn fargate-platform-version
@@ -593,24 +593,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FargatePlatformVersion` - the value is returned.
+* is `:latest` - `FargatePlatformVersion/LATEST` is returned
+* is `:version1-0` - `FargatePlatformVersion/VERSION1_0` is returned
 * is `:version1-1` - `FargatePlatformVersion/VERSION1_1` is returned
 * is `:version1-2` - `FargatePlatformVersion/VERSION1_2` is returned
 * is `:version1-3` - `FargatePlatformVersion/VERSION1_3` is returned
 * is `:version1-4` - `FargatePlatformVersion/VERSION1_4` is returned
-* is `:version1-0` - `FargatePlatformVersion/VERSION1_0` is returned
-* is `:latest` - `FargatePlatformVersion/LATEST` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FargatePlatformVersion data) data
+      (= :latest data) FargatePlatformVersion/LATEST
+      (= :version1-0 data) FargatePlatformVersion/VERSION1_0
       (= :version1-1 data) FargatePlatformVersion/VERSION1_1
       (= :version1-2 data) FargatePlatformVersion/VERSION1_2
       (= :version1-3 data) FargatePlatformVersion/VERSION1_3
-      (= :version1-4 data) FargatePlatformVersion/VERSION1_4
-      (= :version1-0 data) FargatePlatformVersion/VERSION1_0
-      (= :latest data) FargatePlatformVersion/LATEST)))
+      (= :version1-4 data) FargatePlatformVersion/VERSION1_4)))
 
 
 (defn file-system-type
@@ -620,18 +620,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FileSystemType` - the value is returned.
-* is `:xfs` - `FileSystemType/XFS` is returned
 * is `:ext3` - `FileSystemType/EXT3` is returned
 * is `:ext4` - `FileSystemType/EXT4` is returned
+* is `:xfs` - `FileSystemType/XFS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FileSystemType data) data
-      (= :xfs data) FileSystemType/XFS
       (= :ext3 data) FileSystemType/EXT3
-      (= :ext4 data) FileSystemType/EXT4)))
+      (= :ext4 data) FileSystemType/EXT4
+      (= :xfs data) FileSystemType/XFS)))
 
 
 (defn firelens-config-file-type
@@ -641,16 +641,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FirelensConfigFileType` - the value is returned.
-* is `:s3` - `FirelensConfigFileType/S3` is returned
 * is `:file` - `FirelensConfigFileType/FILE` is returned
+* is `:s3` - `FirelensConfigFileType/S3` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FirelensConfigFileType data) data
-      (= :s3 data) FirelensConfigFileType/S3
-      (= :file data) FirelensConfigFileType/FILE)))
+      (= :file data) FirelensConfigFileType/FILE
+      (= :s3 data) FirelensConfigFileType/S3)))
 
 
 (defn firelens-log-router-type
@@ -660,16 +660,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FirelensLogRouterType` - the value is returned.
-* is `:fluentd` - `FirelensLogRouterType/FLUENTD` is returned
 * is `:fluentbit` - `FirelensLogRouterType/FLUENTBIT` is returned
+* is `:fluentd` - `FirelensLogRouterType/FLUENTD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FirelensLogRouterType data) data
-      (= :fluentd data) FirelensLogRouterType/FLUENTD
-      (= :fluentbit data) FirelensLogRouterType/FLUENTBIT)))
+      (= :fluentbit data) FirelensLogRouterType/FLUENTBIT
+      (= :fluentd data) FirelensLogRouterType/FLUENTD)))
 
 
 (defn gelf-compression-type
@@ -679,8 +679,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `GelfCompressionType` - the value is returned.
-* is `:none` - `GelfCompressionType/NONE` is returned
 * is `:gzip` - `GelfCompressionType/GZIP` is returned
+* is `:none` - `GelfCompressionType/NONE` is returned
 * is `:zlib` - `GelfCompressionType/ZLIB` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -688,8 +688,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? GelfCompressionType data) data
-      (= :none data) GelfCompressionType/NONE
       (= :gzip data) GelfCompressionType/GZIP
+      (= :none data) GelfCompressionType/NONE
       (= :zlib data) GelfCompressionType/ZLIB)))
 
 
@@ -700,18 +700,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `IpcMode` - the value is returned.
-* is `:task` - `IpcMode/TASK` is returned
 * is `:host` - `IpcMode/HOST` is returned
 * is `:none` - `IpcMode/NONE` is returned
+* is `:task` - `IpcMode/TASK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? IpcMode data) data
-      (= :task data) IpcMode/TASK
       (= :host data) IpcMode/HOST
-      (= :none data) IpcMode/NONE)))
+      (= :none data) IpcMode/NONE
+      (= :task data) IpcMode/TASK)))
 
 
 (defn launch-type
@@ -721,18 +721,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LaunchType` - the value is returned.
-* is `:fargate` - `LaunchType/FARGATE` is returned
 * is `:ec2` - `LaunchType/EC2` is returned
 * is `:external` - `LaunchType/EXTERNAL` is returned
+* is `:fargate` - `LaunchType/FARGATE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LaunchType data) data
-      (= :fargate data) LaunchType/FARGATE
       (= :ec2 data) LaunchType/EC2
-      (= :external data) LaunchType/EXTERNAL)))
+      (= :external data) LaunchType/EXTERNAL
+      (= :fargate data) LaunchType/FARGATE)))
 
 
 (defn machine-image-type
@@ -761,22 +761,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `NetworkMode` - the value is returned.
-* is `:nat` - `NetworkMode/NAT` is returned
-* is `:none` - `NetworkMode/NONE` is returned
+* is `:aws-vpc` - `NetworkMode/AWS_VPC` is returned
 * is `:bridge` - `NetworkMode/BRIDGE` is returned
 * is `:host` - `NetworkMode/HOST` is returned
-* is `:aws-vpc` - `NetworkMode/AWS_VPC` is returned
+* is `:nat` - `NetworkMode/NAT` is returned
+* is `:none` - `NetworkMode/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? NetworkMode data) data
-      (= :nat data) NetworkMode/NAT
-      (= :none data) NetworkMode/NONE
+      (= :aws-vpc data) NetworkMode/AWS_VPC
       (= :bridge data) NetworkMode/BRIDGE
       (= :host data) NetworkMode/HOST
-      (= :aws-vpc data) NetworkMode/AWS_VPC)))
+      (= :nat data) NetworkMode/NAT
+      (= :none data) NetworkMode/NONE)))
 
 
 (defn pid-mode
@@ -806,8 +806,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `PropagatedTagSource` - the value is returned.
 * is `:none` - `PropagatedTagSource/NONE` is returned
-* is `:task-definition` - `PropagatedTagSource/TASK_DEFINITION` is returned
 * is `:service` - `PropagatedTagSource/SERVICE` is returned
+* is `:task-definition` - `PropagatedTagSource/TASK_DEFINITION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -815,8 +815,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? PropagatedTagSource data) data
       (= :none data) PropagatedTagSource/NONE
-      (= :task-definition data) PropagatedTagSource/TASK_DEFINITION
-      (= :service data) PropagatedTagSource/SERVICE)))
+      (= :service data) PropagatedTagSource/SERVICE
+      (= :task-definition data) PropagatedTagSource/TASK_DEFINITION)))
 
 
 (defn protocol
@@ -826,16 +826,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Protocol` - the value is returned.
-* is `:udp` - `Protocol/UDP` is returned
 * is `:tcp` - `Protocol/TCP` is returned
+* is `:udp` - `Protocol/UDP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Protocol data) data
-      (= :udp data) Protocol/UDP
-      (= :tcp data) Protocol/TCP)))
+      (= :tcp data) Protocol/TCP
+      (= :udp data) Protocol/UDP)))
 
 
 (defn scope
@@ -845,16 +845,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Scope` - the value is returned.
-* is `:task` - `Scope/TASK` is returned
 * is `:shared` - `Scope/SHARED` is returned
+* is `:task` - `Scope/TASK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Scope data) data
-      (= :task data) Scope/TASK
-      (= :shared data) Scope/SHARED)))
+      (= :shared data) Scope/SHARED
+      (= :task data) Scope/TASK)))
 
 
 (defn splunk-log-format
@@ -885,90 +885,90 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TmpfsMountOption` - the value is returned.
-* is `:rbind` - `TmpfsMountOption/RBIND` is returned
-* is `:strictatime` - `TmpfsMountOption/STRICTATIME` is returned
-* is `:slave` - `TmpfsMountOption/SLAVE` is returned
-* is `:rslave` - `TmpfsMountOption/RSLAVE` is returned
-* is `:nosuid` - `TmpfsMountOption/NOSUID` is returned
-* is `:nomand` - `TmpfsMountOption/NOMAND` is returned
-* is `:rshared` - `TmpfsMountOption/RSHARED` is returned
-* is `:nr-blocks` - `TmpfsMountOption/NR_BLOCKS` is returned
-* is `:atime` - `TmpfsMountOption/ATIME` is returned
-* is `:shared` - `TmpfsMountOption/SHARED` is returned
-* is `:norelatime` - `TmpfsMountOption/NORELATIME` is returned
-* is `:mode` - `TmpfsMountOption/MODE` is returned
-* is `:noexec` - `TmpfsMountOption/NOEXEC` is returned
-* is `:sync` - `TmpfsMountOption/SYNC` is returned
-* is `:uid` - `TmpfsMountOption/UID` is returned
-* is `:suid` - `TmpfsMountOption/SUID` is returned
-* is `:defaults` - `TmpfsMountOption/DEFAULTS` is returned
-* is `:rprivate` - `TmpfsMountOption/RPRIVATE` is returned
-* is `:exec` - `TmpfsMountOption/EXEC` is returned
-* is `:nostrictatime` - `TmpfsMountOption/NOSTRICTATIME` is returned
-* is `:noatime` - `TmpfsMountOption/NOATIME` is returned
-* is `:nodev` - `TmpfsMountOption/NODEV` is returned
-* is `:unbindable` - `TmpfsMountOption/UNBINDABLE` is returned
-* is `:mpol` - `TmpfsMountOption/MPOL` is returned
-* is `:ro` - `TmpfsMountOption/RO` is returned
-* is `:dirsync` - `TmpfsMountOption/DIRSYNC` is returned
-* is `:nodiratime` - `TmpfsMountOption/NODIRATIME` is returned
-* is `:remount` - `TmpfsMountOption/REMOUNT` is returned
-* is `:mand` - `TmpfsMountOption/MAND` is returned
 * is `:async` - `TmpfsMountOption/ASYNC` is returned
-* is `:relatime` - `TmpfsMountOption/RELATIME` is returned
-* is `:private` - `TmpfsMountOption/PRIVATE` is returned
-* is `:runbindable` - `TmpfsMountOption/RUNBINDABLE` is returned
+* is `:atime` - `TmpfsMountOption/ATIME` is returned
 * is `:bind` - `TmpfsMountOption/BIND` is returned
+* is `:defaults` - `TmpfsMountOption/DEFAULTS` is returned
 * is `:dev` - `TmpfsMountOption/DEV` is returned
 * is `:diratime` - `TmpfsMountOption/DIRATIME` is returned
-* is `:nr-inodes` - `TmpfsMountOption/NR_INODES` is returned
-* is `:rw` - `TmpfsMountOption/RW` is returned
+* is `:dirsync` - `TmpfsMountOption/DIRSYNC` is returned
+* is `:exec` - `TmpfsMountOption/EXEC` is returned
 * is `:gid` - `TmpfsMountOption/GID` is returned
+* is `:mand` - `TmpfsMountOption/MAND` is returned
+* is `:mode` - `TmpfsMountOption/MODE` is returned
+* is `:mpol` - `TmpfsMountOption/MPOL` is returned
+* is `:noatime` - `TmpfsMountOption/NOATIME` is returned
+* is `:nodev` - `TmpfsMountOption/NODEV` is returned
+* is `:nodiratime` - `TmpfsMountOption/NODIRATIME` is returned
+* is `:noexec` - `TmpfsMountOption/NOEXEC` is returned
+* is `:nomand` - `TmpfsMountOption/NOMAND` is returned
+* is `:norelatime` - `TmpfsMountOption/NORELATIME` is returned
+* is `:nostrictatime` - `TmpfsMountOption/NOSTRICTATIME` is returned
+* is `:nosuid` - `TmpfsMountOption/NOSUID` is returned
+* is `:nr-blocks` - `TmpfsMountOption/NR_BLOCKS` is returned
+* is `:nr-inodes` - `TmpfsMountOption/NR_INODES` is returned
+* is `:private` - `TmpfsMountOption/PRIVATE` is returned
+* is `:rbind` - `TmpfsMountOption/RBIND` is returned
+* is `:relatime` - `TmpfsMountOption/RELATIME` is returned
+* is `:remount` - `TmpfsMountOption/REMOUNT` is returned
+* is `:ro` - `TmpfsMountOption/RO` is returned
+* is `:rprivate` - `TmpfsMountOption/RPRIVATE` is returned
+* is `:rshared` - `TmpfsMountOption/RSHARED` is returned
+* is `:rslave` - `TmpfsMountOption/RSLAVE` is returned
+* is `:runbindable` - `TmpfsMountOption/RUNBINDABLE` is returned
+* is `:rw` - `TmpfsMountOption/RW` is returned
+* is `:shared` - `TmpfsMountOption/SHARED` is returned
+* is `:slave` - `TmpfsMountOption/SLAVE` is returned
+* is `:strictatime` - `TmpfsMountOption/STRICTATIME` is returned
+* is `:suid` - `TmpfsMountOption/SUID` is returned
+* is `:sync` - `TmpfsMountOption/SYNC` is returned
+* is `:uid` - `TmpfsMountOption/UID` is returned
+* is `:unbindable` - `TmpfsMountOption/UNBINDABLE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TmpfsMountOption data) data
-      (= :rbind data) TmpfsMountOption/RBIND
-      (= :strictatime data) TmpfsMountOption/STRICTATIME
-      (= :slave data) TmpfsMountOption/SLAVE
-      (= :rslave data) TmpfsMountOption/RSLAVE
-      (= :nosuid data) TmpfsMountOption/NOSUID
-      (= :nomand data) TmpfsMountOption/NOMAND
-      (= :rshared data) TmpfsMountOption/RSHARED
-      (= :nr-blocks data) TmpfsMountOption/NR_BLOCKS
-      (= :atime data) TmpfsMountOption/ATIME
-      (= :shared data) TmpfsMountOption/SHARED
-      (= :norelatime data) TmpfsMountOption/NORELATIME
-      (= :mode data) TmpfsMountOption/MODE
-      (= :noexec data) TmpfsMountOption/NOEXEC
-      (= :sync data) TmpfsMountOption/SYNC
-      (= :uid data) TmpfsMountOption/UID
-      (= :suid data) TmpfsMountOption/SUID
-      (= :defaults data) TmpfsMountOption/DEFAULTS
-      (= :rprivate data) TmpfsMountOption/RPRIVATE
-      (= :exec data) TmpfsMountOption/EXEC
-      (= :nostrictatime data) TmpfsMountOption/NOSTRICTATIME
-      (= :noatime data) TmpfsMountOption/NOATIME
-      (= :nodev data) TmpfsMountOption/NODEV
-      (= :unbindable data) TmpfsMountOption/UNBINDABLE
-      (= :mpol data) TmpfsMountOption/MPOL
-      (= :ro data) TmpfsMountOption/RO
-      (= :dirsync data) TmpfsMountOption/DIRSYNC
-      (= :nodiratime data) TmpfsMountOption/NODIRATIME
-      (= :remount data) TmpfsMountOption/REMOUNT
-      (= :mand data) TmpfsMountOption/MAND
       (= :async data) TmpfsMountOption/ASYNC
-      (= :relatime data) TmpfsMountOption/RELATIME
-      (= :private data) TmpfsMountOption/PRIVATE
-      (= :runbindable data) TmpfsMountOption/RUNBINDABLE
+      (= :atime data) TmpfsMountOption/ATIME
       (= :bind data) TmpfsMountOption/BIND
+      (= :defaults data) TmpfsMountOption/DEFAULTS
       (= :dev data) TmpfsMountOption/DEV
       (= :diratime data) TmpfsMountOption/DIRATIME
+      (= :dirsync data) TmpfsMountOption/DIRSYNC
+      (= :exec data) TmpfsMountOption/EXEC
+      (= :gid data) TmpfsMountOption/GID
+      (= :mand data) TmpfsMountOption/MAND
+      (= :mode data) TmpfsMountOption/MODE
+      (= :mpol data) TmpfsMountOption/MPOL
+      (= :noatime data) TmpfsMountOption/NOATIME
+      (= :nodev data) TmpfsMountOption/NODEV
+      (= :nodiratime data) TmpfsMountOption/NODIRATIME
+      (= :noexec data) TmpfsMountOption/NOEXEC
+      (= :nomand data) TmpfsMountOption/NOMAND
+      (= :norelatime data) TmpfsMountOption/NORELATIME
+      (= :nostrictatime data) TmpfsMountOption/NOSTRICTATIME
+      (= :nosuid data) TmpfsMountOption/NOSUID
+      (= :nr-blocks data) TmpfsMountOption/NR_BLOCKS
       (= :nr-inodes data) TmpfsMountOption/NR_INODES
+      (= :private data) TmpfsMountOption/PRIVATE
+      (= :rbind data) TmpfsMountOption/RBIND
+      (= :relatime data) TmpfsMountOption/RELATIME
+      (= :remount data) TmpfsMountOption/REMOUNT
+      (= :ro data) TmpfsMountOption/RO
+      (= :rprivate data) TmpfsMountOption/RPRIVATE
+      (= :rshared data) TmpfsMountOption/RSHARED
+      (= :rslave data) TmpfsMountOption/RSLAVE
+      (= :runbindable data) TmpfsMountOption/RUNBINDABLE
       (= :rw data) TmpfsMountOption/RW
-      (= :gid data) TmpfsMountOption/GID)))
+      (= :shared data) TmpfsMountOption/SHARED
+      (= :slave data) TmpfsMountOption/SLAVE
+      (= :strictatime data) TmpfsMountOption/STRICTATIME
+      (= :suid data) TmpfsMountOption/SUID
+      (= :sync data) TmpfsMountOption/SYNC
+      (= :uid data) TmpfsMountOption/UID
+      (= :unbindable data) TmpfsMountOption/UNBINDABLE)))
 
 
 (defn ulimit-name
@@ -978,42 +978,42 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `UlimitName` - the value is returned.
+* is `:core` - `UlimitName/CORE` is returned
+* is `:cpu` - `UlimitName/CPU` is returned
 * is `:data` - `UlimitName/DATA` is returned
-* is `:rttime` - `UlimitName/RTTIME` is returned
+* is `:fsize` - `UlimitName/FSIZE` is returned
 * is `:locks` - `UlimitName/LOCKS` is returned
+* is `:memlock` - `UlimitName/MEMLOCK` is returned
 * is `:msgqueue` - `UlimitName/MSGQUEUE` is returned
 * is `:nice` - `UlimitName/NICE` is returned
-* is `:memlock` - `UlimitName/MEMLOCK` is returned
-* is `:nproc` - `UlimitName/NPROC` is returned
-* is `:stack` - `UlimitName/STACK` is returned
-* is `:sigpending` - `UlimitName/SIGPENDING` is returned
-* is `:core` - `UlimitName/CORE` is returned
-* is `:fsize` - `UlimitName/FSIZE` is returned
 * is `:nofile` - `UlimitName/NOFILE` is returned
-* is `:rtprio` - `UlimitName/RTPRIO` is returned
-* is `:cpu` - `UlimitName/CPU` is returned
+* is `:nproc` - `UlimitName/NPROC` is returned
 * is `:rss` - `UlimitName/RSS` is returned
+* is `:rtprio` - `UlimitName/RTPRIO` is returned
+* is `:rttime` - `UlimitName/RTTIME` is returned
+* is `:sigpending` - `UlimitName/SIGPENDING` is returned
+* is `:stack` - `UlimitName/STACK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? UlimitName data) data
+      (= :core data) UlimitName/CORE
+      (= :cpu data) UlimitName/CPU
       (= :data data) UlimitName/DATA
-      (= :rttime data) UlimitName/RTTIME
+      (= :fsize data) UlimitName/FSIZE
       (= :locks data) UlimitName/LOCKS
+      (= :memlock data) UlimitName/MEMLOCK
       (= :msgqueue data) UlimitName/MSGQUEUE
       (= :nice data) UlimitName/NICE
-      (= :memlock data) UlimitName/MEMLOCK
-      (= :nproc data) UlimitName/NPROC
-      (= :stack data) UlimitName/STACK
-      (= :sigpending data) UlimitName/SIGPENDING
-      (= :core data) UlimitName/CORE
-      (= :fsize data) UlimitName/FSIZE
       (= :nofile data) UlimitName/NOFILE
+      (= :nproc data) UlimitName/NPROC
+      (= :rss data) UlimitName/RSS
       (= :rtprio data) UlimitName/RTPRIO
-      (= :cpu data) UlimitName/CPU
-      (= :rss data) UlimitName/RSS)))
+      (= :rttime data) UlimitName/RTTIME
+      (= :sigpending data) UlimitName/SIGPENDING
+      (= :stack data) UlimitName/STACK)))
 
 
 (defn windows-optimized-version
@@ -1023,18 +1023,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `WindowsOptimizedVersion` - the value is returned.
-* is `:server-2022` - `WindowsOptimizedVersion/SERVER_2022` is returned
-* is `:server-2019` - `WindowsOptimizedVersion/SERVER_2019` is returned
 * is `:server-2016` - `WindowsOptimizedVersion/SERVER_2016` is returned
+* is `:server-2019` - `WindowsOptimizedVersion/SERVER_2019` is returned
+* is `:server-2022` - `WindowsOptimizedVersion/SERVER_2022` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? WindowsOptimizedVersion data) data
-      (= :server-2022 data) WindowsOptimizedVersion/SERVER_2022
+      (= :server-2016 data) WindowsOptimizedVersion/SERVER_2016
       (= :server-2019 data) WindowsOptimizedVersion/SERVER_2019
-      (= :server-2016 data) WindowsOptimizedVersion/SERVER_2016)))
+      (= :server-2022 data) WindowsOptimizedVersion/SERVER_2022)))
 
 
 (defn add-auto-scaling-group-capacity-options-builder>

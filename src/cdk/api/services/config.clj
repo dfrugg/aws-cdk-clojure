@@ -69,22 +69,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MaximumExecutionFrequency` - the value is returned.
+* is `:one-hour` - `MaximumExecutionFrequency/ONE_HOUR` is returned
+* is `:six-hours` - `MaximumExecutionFrequency/SIX_HOURS` is returned
+* is `:three-hours` - `MaximumExecutionFrequency/THREE_HOURS` is returned
 * is `:twelve-hours` - `MaximumExecutionFrequency/TWELVE_HOURS` is returned
 * is `:twenty-four-hours` - `MaximumExecutionFrequency/TWENTY_FOUR_HOURS` is returned
-* is `:one-hour` - `MaximumExecutionFrequency/ONE_HOUR` is returned
-* is `:three-hours` - `MaximumExecutionFrequency/THREE_HOURS` is returned
-* is `:six-hours` - `MaximumExecutionFrequency/SIX_HOURS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MaximumExecutionFrequency data) data
-      (= :twelve-hours data) MaximumExecutionFrequency/TWELVE_HOURS
-      (= :twenty-four-hours data) MaximumExecutionFrequency/TWENTY_FOUR_HOURS
       (= :one-hour data) MaximumExecutionFrequency/ONE_HOUR
+      (= :six-hours data) MaximumExecutionFrequency/SIX_HOURS
       (= :three-hours data) MaximumExecutionFrequency/THREE_HOURS
-      (= :six-hours data) MaximumExecutionFrequency/SIX_HOURS)))
+      (= :twelve-hours data) MaximumExecutionFrequency/TWELVE_HOURS
+      (= :twenty-four-hours data) MaximumExecutionFrequency/TWENTY_FOUR_HOURS)))
 
 
 (defn access-keys-rotated-builder>

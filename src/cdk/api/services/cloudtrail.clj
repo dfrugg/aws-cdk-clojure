@@ -35,16 +35,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DataResourceType` - the value is returned.
-* is `:s3-object` - `DataResourceType/S3_OBJECT` is returned
 * is `:lambda-function` - `DataResourceType/LAMBDA_FUNCTION` is returned
+* is `:s3-object` - `DataResourceType/S3_OBJECT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DataResourceType data) data
-      (= :s3-object data) DataResourceType/S3_OBJECT
-      (= :lambda-function data) DataResourceType/LAMBDA_FUNCTION)))
+      (= :lambda-function data) DataResourceType/LAMBDA_FUNCTION
+      (= :s3-object data) DataResourceType/S3_OBJECT)))
 
 
 (defn management-event-sources
@@ -74,9 +74,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `ReadWriteType` - the value is returned.
 * is `:all` - `ReadWriteType/ALL` is returned
-* is `:write-only` - `ReadWriteType/WRITE_ONLY` is returned
-* is `:read-only` - `ReadWriteType/READ_ONLY` is returned
 * is `:none` - `ReadWriteType/NONE` is returned
+* is `:read-only` - `ReadWriteType/READ_ONLY` is returned
+* is `:write-only` - `ReadWriteType/WRITE_ONLY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -84,9 +84,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? ReadWriteType data) data
       (= :all data) ReadWriteType/ALL
-      (= :write-only data) ReadWriteType/WRITE_ONLY
+      (= :none data) ReadWriteType/NONE
       (= :read-only data) ReadWriteType/READ_ONLY
-      (= :none data) ReadWriteType/NONE)))
+      (= :write-only data) ReadWriteType/WRITE_ONLY)))
 
 
 (defn add-event-selector-options-builder>

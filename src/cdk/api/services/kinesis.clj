@@ -23,8 +23,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `StreamEncryption` - the value is returned.
 * is `:kms` - `StreamEncryption/KMS` is returned
-* is `:unencrypted` - `StreamEncryption/UNENCRYPTED` is returned
 * is `:managed` - `StreamEncryption/MANAGED` is returned
+* is `:unencrypted` - `StreamEncryption/UNENCRYPTED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -32,8 +32,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? StreamEncryption data) data
       (= :kms data) StreamEncryption/KMS
-      (= :unencrypted data) StreamEncryption/UNENCRYPTED
-      (= :managed data) StreamEncryption/MANAGED)))
+      (= :managed data) StreamEncryption/MANAGED
+      (= :unencrypted data) StreamEncryption/UNENCRYPTED)))
 
 
 (defn stream-mode
@@ -43,16 +43,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `StreamMode` - the value is returned.
-* is `:provisioned` - `StreamMode/PROVISIONED` is returned
 * is `:on-demand` - `StreamMode/ON_DEMAND` is returned
+* is `:provisioned` - `StreamMode/PROVISIONED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? StreamMode data) data
-      (= :provisioned data) StreamMode/PROVISIONED
-      (= :on-demand data) StreamMode/ON_DEMAND)))
+      (= :on-demand data) StreamMode/ON_DEMAND
+      (= :provisioned data) StreamMode/PROVISIONED)))
 
 
 (defn cfn-stream-builder>

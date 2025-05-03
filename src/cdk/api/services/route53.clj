@@ -97,18 +97,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CaaTag` - the value is returned.
-* is `:issuewild` - `CaaTag/ISSUEWILD` is returned
-* is `:issue` - `CaaTag/ISSUE` is returned
 * is `:iodef` - `CaaTag/IODEF` is returned
+* is `:issue` - `CaaTag/ISSUE` is returned
+* is `:issuewild` - `CaaTag/ISSUEWILD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CaaTag data) data
-      (= :issuewild data) CaaTag/ISSUEWILD
+      (= :iodef data) CaaTag/IODEF
       (= :issue data) CaaTag/ISSUE
-      (= :iodef data) CaaTag/IODEF)))
+      (= :issuewild data) CaaTag/ISSUEWILD)))
 
 
 (defn continent
@@ -118,12 +118,12 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Continent` - the value is returned.
-* is `:north-america` - `Continent/NORTH_AMERICA` is returned
-* is `:europe` - `Continent/EUROPE` is returned
-* is `:oceania` - `Continent/OCEANIA` is returned
+* is `:africa` - `Continent/AFRICA` is returned
 * is `:antarctica` - `Continent/ANTARCTICA` is returned
 * is `:asia` - `Continent/ASIA` is returned
-* is `:africa` - `Continent/AFRICA` is returned
+* is `:europe` - `Continent/EUROPE` is returned
+* is `:north-america` - `Continent/NORTH_AMERICA` is returned
+* is `:oceania` - `Continent/OCEANIA` is returned
 * is `:south-america` - `Continent/SOUTH_AMERICA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -131,12 +131,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Continent data) data
-      (= :north-america data) Continent/NORTH_AMERICA
-      (= :europe data) Continent/EUROPE
-      (= :oceania data) Continent/OCEANIA
+      (= :africa data) Continent/AFRICA
       (= :antarctica data) Continent/ANTARCTICA
       (= :asia data) Continent/ASIA
-      (= :africa data) Continent/AFRICA
+      (= :europe data) Continent/EUROPE
+      (= :north-america data) Continent/NORTH_AMERICA
+      (= :oceania data) Continent/OCEANIA
       (= :south-america data) Continent/SOUTH_AMERICA)))
 
 
@@ -166,18 +166,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RecordType` - the value is returned.
-* is `:ptr` - `RecordType/PTR` is returned
-* is `:ds` - `RecordType/DS` is returned
-* is `:spf` - `RecordType/SPF` is returned
-* is `:ns` - `RecordType/NS` is returned
-* is `:caa` - `RecordType/CAA` is returned
-* is `:naptr` - `RecordType/NAPTR` is returned
 * is `:a` - `RecordType/A` is returned
-* is `:cname` - `RecordType/CNAME` is returned
-* is `:soa` - `RecordType/SOA` is returned
-* is `:srv` - `RecordType/SRV` is returned
-* is `:mx` - `RecordType/MX` is returned
 * is `:aaaa` - `RecordType/AAAA` is returned
+* is `:caa` - `RecordType/CAA` is returned
+* is `:cname` - `RecordType/CNAME` is returned
+* is `:ds` - `RecordType/DS` is returned
+* is `:mx` - `RecordType/MX` is returned
+* is `:naptr` - `RecordType/NAPTR` is returned
+* is `:ns` - `RecordType/NS` is returned
+* is `:ptr` - `RecordType/PTR` is returned
+* is `:soa` - `RecordType/SOA` is returned
+* is `:spf` - `RecordType/SPF` is returned
+* is `:srv` - `RecordType/SRV` is returned
 * is `:txt` - `RecordType/TXT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -185,18 +185,18 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RecordType data) data
-      (= :ptr data) RecordType/PTR
-      (= :ds data) RecordType/DS
-      (= :spf data) RecordType/SPF
-      (= :ns data) RecordType/NS
-      (= :caa data) RecordType/CAA
-      (= :naptr data) RecordType/NAPTR
       (= :a data) RecordType/A
-      (= :cname data) RecordType/CNAME
-      (= :soa data) RecordType/SOA
-      (= :srv data) RecordType/SRV
-      (= :mx data) RecordType/MX
       (= :aaaa data) RecordType/AAAA
+      (= :caa data) RecordType/CAA
+      (= :cname data) RecordType/CNAME
+      (= :ds data) RecordType/DS
+      (= :mx data) RecordType/MX
+      (= :naptr data) RecordType/NAPTR
+      (= :ns data) RecordType/NS
+      (= :ptr data) RecordType/PTR
+      (= :soa data) RecordType/SOA
+      (= :spf data) RecordType/SPF
+      (= :srv data) RecordType/SRV
       (= :txt data) RecordType/TXT)))
 
 

@@ -9,11 +9,11 @@
 
 (deftest http-lambda-response-type-test
   (testing "Testing enum function http-lambda-response-type"
-    (is (= HttpLambdaResponseType/SIMPLE (http-lambda-response-type {:item HttpLambdaResponseType/SIMPLE} "test" :item)))
-    (is (= HttpLambdaResponseType/SIMPLE (http-lambda-response-type {:test/item HttpLambdaResponseType/SIMPLE} "test" :item)))
     (is (= HttpLambdaResponseType/IAM (http-lambda-response-type {:item HttpLambdaResponseType/IAM} "test" :item)))
     (is (= HttpLambdaResponseType/IAM (http-lambda-response-type {:test/item HttpLambdaResponseType/IAM} "test" :item)))
-    (is (= HttpLambdaResponseType/SIMPLE (http-lambda-response-type {:item :simple} "test" :item)))
-    (is (= HttpLambdaResponseType/SIMPLE (http-lambda-response-type {:test/item :simple} "test" :item)))
+    (is (= HttpLambdaResponseType/SIMPLE (http-lambda-response-type {:item HttpLambdaResponseType/SIMPLE} "test" :item)))
+    (is (= HttpLambdaResponseType/SIMPLE (http-lambda-response-type {:test/item HttpLambdaResponseType/SIMPLE} "test" :item)))
     (is (= HttpLambdaResponseType/IAM (http-lambda-response-type {:item :iam} "test" :item)))
-    (is (= HttpLambdaResponseType/IAM (http-lambda-response-type {:test/item :iam} "test" :item)))))
+    (is (= HttpLambdaResponseType/IAM (http-lambda-response-type {:test/item :iam} "test" :item)))
+    (is (= HttpLambdaResponseType/SIMPLE (http-lambda-response-type {:item :simple} "test" :item)))
+    (is (= HttpLambdaResponseType/SIMPLE (http-lambda-response-type {:test/item :simple} "test" :item)))))

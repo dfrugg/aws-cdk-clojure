@@ -20,3 +20,12 @@
                               base-key
                               namespace)
                       {:data data :namespace namespace :base-key base-key}))))
+
+
+(defn execute-builder
+  "Attempts to use a builder to generate a field value for another builder when the "
+  [builder-fn property-config global-config]
+  (let [args (:builder/args property-config)]
+    (when-not (vector? args)
+      (throw (ex-info "Configuration for builder is missing the :builder/args vector" property-config)))
+    (apply builder-fn (conj args (merge global-config property-config)))))

@@ -23,15 +23,15 @@
 
 (deftest docker-credential-usage-test
   (testing "Testing enum function docker-credential-usage"
+    (is (= DockerCredentialUsage/ASSET_PUBLISHING (docker-credential-usage {:item DockerCredentialUsage/ASSET_PUBLISHING} "test" :item)))
+    (is (= DockerCredentialUsage/ASSET_PUBLISHING (docker-credential-usage {:test/item DockerCredentialUsage/ASSET_PUBLISHING} "test" :item)))
     (is (= DockerCredentialUsage/SELF_UPDATE (docker-credential-usage {:item DockerCredentialUsage/SELF_UPDATE} "test" :item)))
     (is (= DockerCredentialUsage/SELF_UPDATE (docker-credential-usage {:test/item DockerCredentialUsage/SELF_UPDATE} "test" :item)))
     (is (= DockerCredentialUsage/SYNTH (docker-credential-usage {:item DockerCredentialUsage/SYNTH} "test" :item)))
     (is (= DockerCredentialUsage/SYNTH (docker-credential-usage {:test/item DockerCredentialUsage/SYNTH} "test" :item)))
-    (is (= DockerCredentialUsage/ASSET_PUBLISHING (docker-credential-usage {:item DockerCredentialUsage/ASSET_PUBLISHING} "test" :item)))
-    (is (= DockerCredentialUsage/ASSET_PUBLISHING (docker-credential-usage {:test/item DockerCredentialUsage/ASSET_PUBLISHING} "test" :item)))
+    (is (= DockerCredentialUsage/ASSET_PUBLISHING (docker-credential-usage {:item :asset-publishing} "test" :item)))
+    (is (= DockerCredentialUsage/ASSET_PUBLISHING (docker-credential-usage {:test/item :asset-publishing} "test" :item)))
     (is (= DockerCredentialUsage/SELF_UPDATE (docker-credential-usage {:item :self-update} "test" :item)))
     (is (= DockerCredentialUsage/SELF_UPDATE (docker-credential-usage {:test/item :self-update} "test" :item)))
     (is (= DockerCredentialUsage/SYNTH (docker-credential-usage {:item :synth} "test" :item)))
-    (is (= DockerCredentialUsage/SYNTH (docker-credential-usage {:test/item :synth} "test" :item)))
-    (is (= DockerCredentialUsage/ASSET_PUBLISHING (docker-credential-usage {:item :asset-publishing} "test" :item)))
-    (is (= DockerCredentialUsage/ASSET_PUBLISHING (docker-credential-usage {:test/item :asset-publishing} "test" :item)))))
+    (is (= DockerCredentialUsage/SYNTH (docker-credential-usage {:test/item :synth} "test" :item)))))

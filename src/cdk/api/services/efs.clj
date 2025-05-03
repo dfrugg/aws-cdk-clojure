@@ -45,30 +45,30 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LifecyclePolicy` - the value is returned.
-* is `:after-270-days` - `LifecyclePolicy/AFTER_270_DAYS` is returned
-* is `:after-1-day` - `LifecyclePolicy/AFTER_1_DAY` is returned
-* is `:after-30-days` - `LifecyclePolicy/AFTER_30_DAYS` is returned
-* is `:after-180-days` - `LifecyclePolicy/AFTER_180_DAYS` is returned
-* is `:after-90-days` - `LifecyclePolicy/AFTER_90_DAYS` is returned
 * is `:after-14-days` - `LifecyclePolicy/AFTER_14_DAYS` is returned
-* is `:after-7-days` - `LifecyclePolicy/AFTER_7_DAYS` is returned
+* is `:after-180-days` - `LifecyclePolicy/AFTER_180_DAYS` is returned
+* is `:after-1-day` - `LifecyclePolicy/AFTER_1_DAY` is returned
+* is `:after-270-days` - `LifecyclePolicy/AFTER_270_DAYS` is returned
+* is `:after-30-days` - `LifecyclePolicy/AFTER_30_DAYS` is returned
 * is `:after-365-days` - `LifecyclePolicy/AFTER_365_DAYS` is returned
 * is `:after-60-days` - `LifecyclePolicy/AFTER_60_DAYS` is returned
+* is `:after-7-days` - `LifecyclePolicy/AFTER_7_DAYS` is returned
+* is `:after-90-days` - `LifecyclePolicy/AFTER_90_DAYS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LifecyclePolicy data) data
-      (= :after-270-days data) LifecyclePolicy/AFTER_270_DAYS
-      (= :after-1-day data) LifecyclePolicy/AFTER_1_DAY
-      (= :after-30-days data) LifecyclePolicy/AFTER_30_DAYS
-      (= :after-180-days data) LifecyclePolicy/AFTER_180_DAYS
-      (= :after-90-days data) LifecyclePolicy/AFTER_90_DAYS
       (= :after-14-days data) LifecyclePolicy/AFTER_14_DAYS
-      (= :after-7-days data) LifecyclePolicy/AFTER_7_DAYS
+      (= :after-180-days data) LifecyclePolicy/AFTER_180_DAYS
+      (= :after-1-day data) LifecyclePolicy/AFTER_1_DAY
+      (= :after-270-days data) LifecyclePolicy/AFTER_270_DAYS
+      (= :after-30-days data) LifecyclePolicy/AFTER_30_DAYS
       (= :after-365-days data) LifecyclePolicy/AFTER_365_DAYS
-      (= :after-60-days data) LifecyclePolicy/AFTER_60_DAYS)))
+      (= :after-60-days data) LifecyclePolicy/AFTER_60_DAYS
+      (= :after-7-days data) LifecyclePolicy/AFTER_7_DAYS
+      (= :after-90-days data) LifecyclePolicy/AFTER_90_DAYS)))
 
 
 (defn out-of-infrequent-access-policy
@@ -114,16 +114,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ReplicationOverwriteProtection` - the value is returned.
-* is `:enabled` - `ReplicationOverwriteProtection/ENABLED` is returned
 * is `:disabled` - `ReplicationOverwriteProtection/DISABLED` is returned
+* is `:enabled` - `ReplicationOverwriteProtection/ENABLED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ReplicationOverwriteProtection data) data
-      (= :enabled data) ReplicationOverwriteProtection/ENABLED
-      (= :disabled data) ReplicationOverwriteProtection/DISABLED)))
+      (= :disabled data) ReplicationOverwriteProtection/DISABLED
+      (= :enabled data) ReplicationOverwriteProtection/ENABLED)))
 
 
 (defn throughput-mode
@@ -133,8 +133,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ThroughputMode` - the value is returned.
-* is `:elastic` - `ThroughputMode/ELASTIC` is returned
 * is `:bursting` - `ThroughputMode/BURSTING` is returned
+* is `:elastic` - `ThroughputMode/ELASTIC` is returned
 * is `:provisioned` - `ThroughputMode/PROVISIONED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -142,8 +142,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ThroughputMode data) data
-      (= :elastic data) ThroughputMode/ELASTIC
       (= :bursting data) ThroughputMode/BURSTING
+      (= :elastic data) ThroughputMode/ELASTIC
       (= :provisioned data) ThroughputMode/PROVISIONED)))
 
 

@@ -63,16 +63,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ParameterDataType` - the value is returned.
-* is `:text` - `ParameterDataType/TEXT` is returned
 * is `:aws-ec2-image` - `ParameterDataType/AWS_EC2_IMAGE` is returned
+* is `:text` - `ParameterDataType/TEXT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ParameterDataType data) data
-      (= :text data) ParameterDataType/TEXT
-      (= :aws-ec2-image data) ParameterDataType/AWS_EC2_IMAGE)))
+      (= :aws-ec2-image data) ParameterDataType/AWS_EC2_IMAGE
+      (= :text data) ParameterDataType/TEXT)))
 
 
 (defn parameter-tier
@@ -82,18 +82,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ParameterTier` - the value is returned.
-* is `:standard` - `ParameterTier/STANDARD` is returned
-* is `:intelligent-tiering` - `ParameterTier/INTELLIGENT_TIERING` is returned
 * is `:advanced` - `ParameterTier/ADVANCED` is returned
+* is `:intelligent-tiering` - `ParameterTier/INTELLIGENT_TIERING` is returned
+* is `:standard` - `ParameterTier/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ParameterTier data) data
-      (= :standard data) ParameterTier/STANDARD
+      (= :advanced data) ParameterTier/ADVANCED
       (= :intelligent-tiering data) ParameterTier/INTELLIGENT_TIERING
-      (= :advanced data) ParameterTier/ADVANCED)))
+      (= :standard data) ParameterTier/STANDARD)))
 
 
 (defn parameter-value-type
@@ -103,34 +103,34 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ParameterValueType` - the value is returned.
-* is `:aws-ec2-volume-id` - `ParameterValueType/AWS_EC2_VOLUME_ID` is returned
-* is `:aws-ec2-subnet-id` - `ParameterValueType/AWS_EC2_SUBNET_ID` is returned
+* is `:aws-ec2-availabilityzone-name` - `ParameterValueType/AWS_EC2_AVAILABILITYZONE_NAME` is returned
+* is `:aws-ec2-image-id` - `ParameterValueType/AWS_EC2_IMAGE_ID` is returned
 * is `:aws-ec2-instance-id` - `ParameterValueType/AWS_EC2_INSTANCE_ID` is returned
-* is `:aws-ec2-vpc-id` - `ParameterValueType/AWS_EC2_VPC_ID` is returned
-* is `:aws-route53-hostedzone-id` - `ParameterValueType/AWS_ROUTE53_HOSTEDZONE_ID` is returned
+* is `:aws-ec2-keypair-keyname` - `ParameterValueType/AWS_EC2_KEYPAIR_KEYNAME` is returned
 * is `:aws-ec2-securitygroup-groupname` - `ParameterValueType/AWS_EC2_SECURITYGROUP_GROUPNAME` is returned
 * is `:aws-ec2-securitygroup-id` - `ParameterValueType/AWS_EC2_SECURITYGROUP_ID` is returned
-* is `:aws-ec2-image-id` - `ParameterValueType/AWS_EC2_IMAGE_ID` is returned
-* is `:aws-ec2-availabilityzone-name` - `ParameterValueType/AWS_EC2_AVAILABILITYZONE_NAME` is returned
+* is `:aws-ec2-subnet-id` - `ParameterValueType/AWS_EC2_SUBNET_ID` is returned
+* is `:aws-ec2-volume-id` - `ParameterValueType/AWS_EC2_VOLUME_ID` is returned
+* is `:aws-ec2-vpc-id` - `ParameterValueType/AWS_EC2_VPC_ID` is returned
+* is `:aws-route53-hostedzone-id` - `ParameterValueType/AWS_ROUTE53_HOSTEDZONE_ID` is returned
 * is `:string` - `ParameterValueType/STRING` is returned
-* is `:aws-ec2-keypair-keyname` - `ParameterValueType/AWS_EC2_KEYPAIR_KEYNAME` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ParameterValueType data) data
-      (= :aws-ec2-volume-id data) ParameterValueType/AWS_EC2_VOLUME_ID
-      (= :aws-ec2-subnet-id data) ParameterValueType/AWS_EC2_SUBNET_ID
+      (= :aws-ec2-availabilityzone-name data) ParameterValueType/AWS_EC2_AVAILABILITYZONE_NAME
+      (= :aws-ec2-image-id data) ParameterValueType/AWS_EC2_IMAGE_ID
       (= :aws-ec2-instance-id data) ParameterValueType/AWS_EC2_INSTANCE_ID
-      (= :aws-ec2-vpc-id data) ParameterValueType/AWS_EC2_VPC_ID
-      (= :aws-route53-hostedzone-id data) ParameterValueType/AWS_ROUTE53_HOSTEDZONE_ID
+      (= :aws-ec2-keypair-keyname data) ParameterValueType/AWS_EC2_KEYPAIR_KEYNAME
       (= :aws-ec2-securitygroup-groupname data) ParameterValueType/AWS_EC2_SECURITYGROUP_GROUPNAME
       (= :aws-ec2-securitygroup-id data) ParameterValueType/AWS_EC2_SECURITYGROUP_ID
-      (= :aws-ec2-image-id data) ParameterValueType/AWS_EC2_IMAGE_ID
-      (= :aws-ec2-availabilityzone-name data) ParameterValueType/AWS_EC2_AVAILABILITYZONE_NAME
-      (= :string data) ParameterValueType/STRING
-      (= :aws-ec2-keypair-keyname data) ParameterValueType/AWS_EC2_KEYPAIR_KEYNAME)))
+      (= :aws-ec2-subnet-id data) ParameterValueType/AWS_EC2_SUBNET_ID
+      (= :aws-ec2-volume-id data) ParameterValueType/AWS_EC2_VOLUME_ID
+      (= :aws-ec2-vpc-id data) ParameterValueType/AWS_EC2_VPC_ID
+      (= :aws-route53-hostedzone-id data) ParameterValueType/AWS_ROUTE53_HOSTEDZONE_ID
+      (= :string data) ParameterValueType/STRING)))
 
 
 (defn cfn-association-builder>

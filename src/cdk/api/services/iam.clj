@@ -88,16 +88,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AccessKeyStatus` - the value is returned.
-* is `:inactive` - `AccessKeyStatus/INACTIVE` is returned
 * is `:active` - `AccessKeyStatus/ACTIVE` is returned
+* is `:inactive` - `AccessKeyStatus/INACTIVE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AccessKeyStatus data) data
-      (= :inactive data) AccessKeyStatus/INACTIVE
-      (= :active data) AccessKeyStatus/ACTIVE)))
+      (= :active data) AccessKeyStatus/ACTIVE
+      (= :inactive data) AccessKeyStatus/INACTIVE)))
 
 
 (defn effect

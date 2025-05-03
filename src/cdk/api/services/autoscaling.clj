@@ -121,8 +121,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `AdjustmentType` - the value is returned.
 * is `:change-in-capacity` - `AdjustmentType/CHANGE_IN_CAPACITY` is returned
-* is `:percent-change-in-capacity` - `AdjustmentType/PERCENT_CHANGE_IN_CAPACITY` is returned
 * is `:exact-capacity` - `AdjustmentType/EXACT_CAPACITY` is returned
+* is `:percent-change-in-capacity` - `AdjustmentType/PERCENT_CHANGE_IN_CAPACITY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -130,8 +130,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? AdjustmentType data) data
       (= :change-in-capacity data) AdjustmentType/CHANGE_IN_CAPACITY
-      (= :percent-change-in-capacity data) AdjustmentType/PERCENT_CHANGE_IN_CAPACITY
-      (= :exact-capacity data) AdjustmentType/EXACT_CAPACITY)))
+      (= :exact-capacity data) AdjustmentType/EXACT_CAPACITY
+      (= :percent-change-in-capacity data) AdjustmentType/PERCENT_CHANGE_IN_CAPACITY)))
 
 
 (defn default-result
@@ -141,16 +141,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DefaultResult` - the value is returned.
-* is `:continue` - `DefaultResult/CONTINUE` is returned
 * is `:abandon` - `DefaultResult/ABANDON` is returned
+* is `:continue` - `DefaultResult/CONTINUE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DefaultResult data) data
-      (= :continue data) DefaultResult/CONTINUE
-      (= :abandon data) DefaultResult/ABANDON)))
+      (= :abandon data) DefaultResult/ABANDON
+      (= :continue data) DefaultResult/CONTINUE)))
 
 
 (defn ebs-device-volume-type
@@ -160,24 +160,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EbsDeviceVolumeType` - the value is returned.
-* is `:io1` - `EbsDeviceVolumeType/IO1` is returned
 * is `:gp2` - `EbsDeviceVolumeType/GP2` is returned
 * is `:gp3` - `EbsDeviceVolumeType/GP3` is returned
+* is `:io1` - `EbsDeviceVolumeType/IO1` is returned
 * is `:sc1` - `EbsDeviceVolumeType/SC1` is returned
-* is `:standard` - `EbsDeviceVolumeType/STANDARD` is returned
 * is `:st1` - `EbsDeviceVolumeType/ST1` is returned
+* is `:standard` - `EbsDeviceVolumeType/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EbsDeviceVolumeType data) data
-      (= :io1 data) EbsDeviceVolumeType/IO1
       (= :gp2 data) EbsDeviceVolumeType/GP2
       (= :gp3 data) EbsDeviceVolumeType/GP3
+      (= :io1 data) EbsDeviceVolumeType/IO1
       (= :sc1 data) EbsDeviceVolumeType/SC1
-      (= :standard data) EbsDeviceVolumeType/STANDARD
-      (= :st1 data) EbsDeviceVolumeType/ST1)))
+      (= :st1 data) EbsDeviceVolumeType/ST1
+      (= :standard data) EbsDeviceVolumeType/STANDARD)))
 
 
 (defn lifecycle-transition
@@ -206,18 +206,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MetricAggregationType` - the value is returned.
+* is `:average` - `MetricAggregationType/AVERAGE` is returned
 * is `:maximum` - `MetricAggregationType/MAXIMUM` is returned
 * is `:minimum` - `MetricAggregationType/MINIMUM` is returned
-* is `:average` - `MetricAggregationType/AVERAGE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MetricAggregationType data) data
+      (= :average data) MetricAggregationType/AVERAGE
       (= :maximum data) MetricAggregationType/MAXIMUM
-      (= :minimum data) MetricAggregationType/MINIMUM
-      (= :average data) MetricAggregationType/AVERAGE)))
+      (= :minimum data) MetricAggregationType/MINIMUM)))
 
 
 (defn monitoring
@@ -246,16 +246,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `OnDemandAllocationStrategy` - the value is returned.
-* is `:prioritized` - `OnDemandAllocationStrategy/PRIORITIZED` is returned
 * is `:lowest-price` - `OnDemandAllocationStrategy/LOWEST_PRICE` is returned
+* is `:prioritized` - `OnDemandAllocationStrategy/PRIORITIZED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? OnDemandAllocationStrategy data) data
-      (= :prioritized data) OnDemandAllocationStrategy/PRIORITIZED
-      (= :lowest-price data) OnDemandAllocationStrategy/LOWEST_PRICE)))
+      (= :lowest-price data) OnDemandAllocationStrategy/LOWEST_PRICE
+      (= :prioritized data) OnDemandAllocationStrategy/PRIORITIZED)))
 
 
 (defn pool-state
@@ -265,18 +265,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PoolState` - the value is returned.
-* is `:stopped` - `PoolState/STOPPED` is returned
 * is `:hibernated` - `PoolState/HIBERNATED` is returned
 * is `:running` - `PoolState/RUNNING` is returned
+* is `:stopped` - `PoolState/STOPPED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PoolState data) data
-      (= :stopped data) PoolState/STOPPED
       (= :hibernated data) PoolState/HIBERNATED
-      (= :running data) PoolState/RUNNING)))
+      (= :running data) PoolState/RUNNING
+      (= :stopped data) PoolState/STOPPED)))
 
 
 (defn predefined-metric
@@ -287,9 +287,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `PredefinedMetric` - the value is returned.
 * is `:alb-request-count-per-target` - `PredefinedMetric/ALB_REQUEST_COUNT_PER_TARGET` is returned
+* is `:asg-average-cpu-utilization` - `PredefinedMetric/ASG_AVERAGE_CPU_UTILIZATION` is returned
 * is `:asg-average-network-in` - `PredefinedMetric/ASG_AVERAGE_NETWORK_IN` is returned
 * is `:asg-average-network-out` - `PredefinedMetric/ASG_AVERAGE_NETWORK_OUT` is returned
-* is `:asg-average-cpu-utilization` - `PredefinedMetric/ASG_AVERAGE_CPU_UTILIZATION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -297,9 +297,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? PredefinedMetric data) data
       (= :alb-request-count-per-target data) PredefinedMetric/ALB_REQUEST_COUNT_PER_TARGET
+      (= :asg-average-cpu-utilization data) PredefinedMetric/ASG_AVERAGE_CPU_UTILIZATION
       (= :asg-average-network-in data) PredefinedMetric/ASG_AVERAGE_NETWORK_IN
-      (= :asg-average-network-out data) PredefinedMetric/ASG_AVERAGE_NETWORK_OUT
-      (= :asg-average-cpu-utilization data) PredefinedMetric/ASG_AVERAGE_CPU_UTILIZATION)))
+      (= :asg-average-network-out data) PredefinedMetric/ASG_AVERAGE_NETWORK_OUT)))
 
 
 (defn scaling-event
@@ -310,10 +310,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `ScalingEvent` - the value is returned.
 * is `:instance-launch` - `ScalingEvent/INSTANCE_LAUNCH` is returned
+* is `:instance-launch-error` - `ScalingEvent/INSTANCE_LAUNCH_ERROR` is returned
+* is `:instance-terminate` - `ScalingEvent/INSTANCE_TERMINATE` is returned
 * is `:instance-terminate-error` - `ScalingEvent/INSTANCE_TERMINATE_ERROR` is returned
 * is `:test-notification` - `ScalingEvent/TEST_NOTIFICATION` is returned
-* is `:instance-terminate` - `ScalingEvent/INSTANCE_TERMINATE` is returned
-* is `:instance-launch-error` - `ScalingEvent/INSTANCE_LAUNCH_ERROR` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -321,10 +321,10 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? ScalingEvent data) data
       (= :instance-launch data) ScalingEvent/INSTANCE_LAUNCH
-      (= :instance-terminate-error data) ScalingEvent/INSTANCE_TERMINATE_ERROR
-      (= :test-notification data) ScalingEvent/TEST_NOTIFICATION
+      (= :instance-launch-error data) ScalingEvent/INSTANCE_LAUNCH_ERROR
       (= :instance-terminate data) ScalingEvent/INSTANCE_TERMINATE
-      (= :instance-launch-error data) ScalingEvent/INSTANCE_LAUNCH_ERROR)))
+      (= :instance-terminate-error data) ScalingEvent/INSTANCE_TERMINATE_ERROR
+      (= :test-notification data) ScalingEvent/TEST_NOTIFICATION)))
 
 
 (defn scaling-process
@@ -334,30 +334,30 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ScalingProcess` - the value is returned.
-* is `:terminate` - `ScalingProcess/TERMINATE` is returned
-* is `:alarm-notification` - `ScalingProcess/ALARM_NOTIFICATION` is returned
-* is `:launch` - `ScalingProcess/LAUNCH` is returned
 * is `:add-to-load-balancer` - `ScalingProcess/ADD_TO_LOAD_BALANCER` is returned
-* is `:scheduled-actions` - `ScalingProcess/SCHEDULED_ACTIONS` is returned
-* is `:instance-refresh` - `ScalingProcess/INSTANCE_REFRESH` is returned
-* is `:health-check` - `ScalingProcess/HEALTH_CHECK` is returned
+* is `:alarm-notification` - `ScalingProcess/ALARM_NOTIFICATION` is returned
 * is `:az-rebalance` - `ScalingProcess/AZ_REBALANCE` is returned
+* is `:health-check` - `ScalingProcess/HEALTH_CHECK` is returned
+* is `:instance-refresh` - `ScalingProcess/INSTANCE_REFRESH` is returned
+* is `:launch` - `ScalingProcess/LAUNCH` is returned
 * is `:replace-unhealthy` - `ScalingProcess/REPLACE_UNHEALTHY` is returned
+* is `:scheduled-actions` - `ScalingProcess/SCHEDULED_ACTIONS` is returned
+* is `:terminate` - `ScalingProcess/TERMINATE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ScalingProcess data) data
-      (= :terminate data) ScalingProcess/TERMINATE
-      (= :alarm-notification data) ScalingProcess/ALARM_NOTIFICATION
-      (= :launch data) ScalingProcess/LAUNCH
       (= :add-to-load-balancer data) ScalingProcess/ADD_TO_LOAD_BALANCER
-      (= :scheduled-actions data) ScalingProcess/SCHEDULED_ACTIONS
-      (= :instance-refresh data) ScalingProcess/INSTANCE_REFRESH
-      (= :health-check data) ScalingProcess/HEALTH_CHECK
+      (= :alarm-notification data) ScalingProcess/ALARM_NOTIFICATION
       (= :az-rebalance data) ScalingProcess/AZ_REBALANCE
-      (= :replace-unhealthy data) ScalingProcess/REPLACE_UNHEALTHY)))
+      (= :health-check data) ScalingProcess/HEALTH_CHECK
+      (= :instance-refresh data) ScalingProcess/INSTANCE_REFRESH
+      (= :launch data) ScalingProcess/LAUNCH
+      (= :replace-unhealthy data) ScalingProcess/REPLACE_UNHEALTHY
+      (= :scheduled-actions data) ScalingProcess/SCHEDULED_ACTIONS
+      (= :terminate data) ScalingProcess/TERMINATE)))
 
 
 (defn spot-allocation-strategy
@@ -367,20 +367,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SpotAllocationStrategy` - the value is returned.
-* is `:lowest-price` - `SpotAllocationStrategy/LOWEST_PRICE` is returned
-* is `:capacity-optimized-prioritized` - `SpotAllocationStrategy/CAPACITY_OPTIMIZED_PRIORITIZED` is returned
-* is `:price-capacity-optimized` - `SpotAllocationStrategy/PRICE_CAPACITY_OPTIMIZED` is returned
 * is `:capacity-optimized` - `SpotAllocationStrategy/CAPACITY_OPTIMIZED` is returned
+* is `:capacity-optimized-prioritized` - `SpotAllocationStrategy/CAPACITY_OPTIMIZED_PRIORITIZED` is returned
+* is `:lowest-price` - `SpotAllocationStrategy/LOWEST_PRICE` is returned
+* is `:price-capacity-optimized` - `SpotAllocationStrategy/PRICE_CAPACITY_OPTIMIZED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SpotAllocationStrategy data) data
-      (= :lowest-price data) SpotAllocationStrategy/LOWEST_PRICE
+      (= :capacity-optimized data) SpotAllocationStrategy/CAPACITY_OPTIMIZED
       (= :capacity-optimized-prioritized data) SpotAllocationStrategy/CAPACITY_OPTIMIZED_PRIORITIZED
-      (= :price-capacity-optimized data) SpotAllocationStrategy/PRICE_CAPACITY_OPTIMIZED
-      (= :capacity-optimized data) SpotAllocationStrategy/CAPACITY_OPTIMIZED)))
+      (= :lowest-price data) SpotAllocationStrategy/LOWEST_PRICE
+      (= :price-capacity-optimized data) SpotAllocationStrategy/PRICE_CAPACITY_OPTIMIZED)))
 
 
 (defn termination-policy
@@ -390,28 +390,28 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TerminationPolicy` - the value is returned.
+* is `:allocation-strategy` - `TerminationPolicy/ALLOCATION_STRATEGY` is returned
+* is `:closest-to-next-instance-hour` - `TerminationPolicy/CLOSEST_TO_NEXT_INSTANCE_HOUR` is returned
 * is `:custom-lambda-function` - `TerminationPolicy/CUSTOM_LAMBDA_FUNCTION` is returned
 * is `:default` - `TerminationPolicy/DEFAULT` is returned
-* is `:oldest-instance` - `TerminationPolicy/OLDEST_INSTANCE` is returned
-* is `:allocation-strategy` - `TerminationPolicy/ALLOCATION_STRATEGY` is returned
-* is `:oldest-launch-template` - `TerminationPolicy/OLDEST_LAUNCH_TEMPLATE` is returned
 * is `:newest-instance` - `TerminationPolicy/NEWEST_INSTANCE` is returned
+* is `:oldest-instance` - `TerminationPolicy/OLDEST_INSTANCE` is returned
 * is `:oldest-launch-configuration` - `TerminationPolicy/OLDEST_LAUNCH_CONFIGURATION` is returned
-* is `:closest-to-next-instance-hour` - `TerminationPolicy/CLOSEST_TO_NEXT_INSTANCE_HOUR` is returned
+* is `:oldest-launch-template` - `TerminationPolicy/OLDEST_LAUNCH_TEMPLATE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TerminationPolicy data) data
+      (= :allocation-strategy data) TerminationPolicy/ALLOCATION_STRATEGY
+      (= :closest-to-next-instance-hour data) TerminationPolicy/CLOSEST_TO_NEXT_INSTANCE_HOUR
       (= :custom-lambda-function data) TerminationPolicy/CUSTOM_LAMBDA_FUNCTION
       (= :default data) TerminationPolicy/DEFAULT
-      (= :oldest-instance data) TerminationPolicy/OLDEST_INSTANCE
-      (= :allocation-strategy data) TerminationPolicy/ALLOCATION_STRATEGY
-      (= :oldest-launch-template data) TerminationPolicy/OLDEST_LAUNCH_TEMPLATE
       (= :newest-instance data) TerminationPolicy/NEWEST_INSTANCE
+      (= :oldest-instance data) TerminationPolicy/OLDEST_INSTANCE
       (= :oldest-launch-configuration data) TerminationPolicy/OLDEST_LAUNCH_CONFIGURATION
-      (= :closest-to-next-instance-hour data) TerminationPolicy/CLOSEST_TO_NEXT_INSTANCE_HOUR)))
+      (= :oldest-launch-template data) TerminationPolicy/OLDEST_LAUNCH_TEMPLATE)))
 
 
 (defn adjustment-tier-builder>

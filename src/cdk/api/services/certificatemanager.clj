@@ -23,16 +23,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ValidationMethod` - the value is returned.
-* is `:email` - `ValidationMethod/EMAIL` is returned
 * is `:dns` - `ValidationMethod/DNS` is returned
+* is `:email` - `ValidationMethod/EMAIL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ValidationMethod data) data
-      (= :email data) ValidationMethod/EMAIL
-      (= :dns data) ValidationMethod/DNS)))
+      (= :dns data) ValidationMethod/DNS
+      (= :email data) ValidationMethod/EMAIL)))
 
 
 (defn certificate-builder>

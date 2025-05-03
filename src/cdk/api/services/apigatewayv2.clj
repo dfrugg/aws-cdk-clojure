@@ -140,16 +140,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ContentHandling` - the value is returned.
-* is `:convert-to-text` - `ContentHandling/CONVERT_TO_TEXT` is returned
 * is `:convert-to-binary` - `ContentHandling/CONVERT_TO_BINARY` is returned
+* is `:convert-to-text` - `ContentHandling/CONVERT_TO_TEXT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ContentHandling data) data
-      (= :convert-to-text data) ContentHandling/CONVERT_TO_TEXT
-      (= :convert-to-binary data) ContentHandling/CONVERT_TO_BINARY)))
+      (= :convert-to-binary data) ContentHandling/CONVERT_TO_BINARY
+      (= :convert-to-text data) ContentHandling/CONVERT_TO_TEXT)))
 
 
 (defn cors-http-method
@@ -159,28 +159,28 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CorsHttpMethod` - the value is returned.
-* is `:post` - `CorsHttpMethod/POST` is returned
-* is `:head` - `CorsHttpMethod/HEAD` is returned
+* is `:any` - `CorsHttpMethod/ANY` is returned
 * is `:delete` - `CorsHttpMethod/DELETE` is returned
+* is `:get` - `CorsHttpMethod/GET` is returned
+* is `:head` - `CorsHttpMethod/HEAD` is returned
 * is `:options` - `CorsHttpMethod/OPTIONS` is returned
 * is `:patch` - `CorsHttpMethod/PATCH` is returned
-* is `:get` - `CorsHttpMethod/GET` is returned
+* is `:post` - `CorsHttpMethod/POST` is returned
 * is `:put` - `CorsHttpMethod/PUT` is returned
-* is `:any` - `CorsHttpMethod/ANY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CorsHttpMethod data) data
-      (= :post data) CorsHttpMethod/POST
-      (= :head data) CorsHttpMethod/HEAD
+      (= :any data) CorsHttpMethod/ANY
       (= :delete data) CorsHttpMethod/DELETE
+      (= :get data) CorsHttpMethod/GET
+      (= :head data) CorsHttpMethod/HEAD
       (= :options data) CorsHttpMethod/OPTIONS
       (= :patch data) CorsHttpMethod/PATCH
-      (= :get data) CorsHttpMethod/GET
-      (= :put data) CorsHttpMethod/PUT
-      (= :any data) CorsHttpMethod/ANY)))
+      (= :post data) CorsHttpMethod/POST
+      (= :put data) CorsHttpMethod/PUT)))
 
 
 (defn endpoint-type
@@ -190,16 +190,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EndpointType` - the value is returned.
-* is `:regional` - `EndpointType/REGIONAL` is returned
 * is `:edge` - `EndpointType/EDGE` is returned
+* is `:regional` - `EndpointType/REGIONAL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EndpointType data) data
-      (= :regional data) EndpointType/REGIONAL
-      (= :edge data) EndpointType/EDGE)))
+      (= :edge data) EndpointType/EDGE
+      (= :regional data) EndpointType/REGIONAL)))
 
 
 (defn http-authorizer-type
@@ -209,18 +209,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpAuthorizerType` - the value is returned.
-* is `:lambda` - `HttpAuthorizerType/LAMBDA` is returned
-* is `:jwt` - `HttpAuthorizerType/JWT` is returned
 * is `:iam` - `HttpAuthorizerType/IAM` is returned
+* is `:jwt` - `HttpAuthorizerType/JWT` is returned
+* is `:lambda` - `HttpAuthorizerType/LAMBDA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpAuthorizerType data) data
-      (= :lambda data) HttpAuthorizerType/LAMBDA
+      (= :iam data) HttpAuthorizerType/IAM
       (= :jwt data) HttpAuthorizerType/JWT
-      (= :iam data) HttpAuthorizerType/IAM)))
+      (= :lambda data) HttpAuthorizerType/LAMBDA)))
 
 
 (defn http-connection-type
@@ -249,32 +249,32 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpIntegrationSubtype` - the value is returned.
+* is `:appconfig-get-configuration` - `HttpIntegrationSubtype/APPCONFIG_GET_CONFIGURATION` is returned
+* is `:eventbridge-put-events` - `HttpIntegrationSubtype/EVENTBRIDGE_PUT_EVENTS` is returned
+* is `:kinesis-put-record` - `HttpIntegrationSubtype/KINESIS_PUT_RECORD` is returned
+* is `:sqs-delete-message` - `HttpIntegrationSubtype/SQS_DELETE_MESSAGE` is returned
+* is `:sqs-purge-queue` - `HttpIntegrationSubtype/SQS_PURGE_QUEUE` is returned
 * is `:sqs-receive-message` - `HttpIntegrationSubtype/SQS_RECEIVE_MESSAGE` is returned
 * is `:sqs-send-message` - `HttpIntegrationSubtype/SQS_SEND_MESSAGE` is returned
-* is `:eventbridge-put-events` - `HttpIntegrationSubtype/EVENTBRIDGE_PUT_EVENTS` is returned
 * is `:stepfunctions-start-execution` - `HttpIntegrationSubtype/STEPFUNCTIONS_START_EXECUTION` is returned
-* is `:sqs-purge-queue` - `HttpIntegrationSubtype/SQS_PURGE_QUEUE` is returned
-* is `:stepfunctions-stop-execution` - `HttpIntegrationSubtype/STEPFUNCTIONS_STOP_EXECUTION` is returned
 * is `:stepfunctions-start-sync-execution` - `HttpIntegrationSubtype/STEPFUNCTIONS_START_SYNC_EXECUTION` is returned
-* is `:kinesis-put-record` - `HttpIntegrationSubtype/KINESIS_PUT_RECORD` is returned
-* is `:appconfig-get-configuration` - `HttpIntegrationSubtype/APPCONFIG_GET_CONFIGURATION` is returned
-* is `:sqs-delete-message` - `HttpIntegrationSubtype/SQS_DELETE_MESSAGE` is returned
+* is `:stepfunctions-stop-execution` - `HttpIntegrationSubtype/STEPFUNCTIONS_STOP_EXECUTION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpIntegrationSubtype data) data
+      (= :appconfig-get-configuration data) HttpIntegrationSubtype/APPCONFIG_GET_CONFIGURATION
+      (= :eventbridge-put-events data) HttpIntegrationSubtype/EVENTBRIDGE_PUT_EVENTS
+      (= :kinesis-put-record data) HttpIntegrationSubtype/KINESIS_PUT_RECORD
+      (= :sqs-delete-message data) HttpIntegrationSubtype/SQS_DELETE_MESSAGE
+      (= :sqs-purge-queue data) HttpIntegrationSubtype/SQS_PURGE_QUEUE
       (= :sqs-receive-message data) HttpIntegrationSubtype/SQS_RECEIVE_MESSAGE
       (= :sqs-send-message data) HttpIntegrationSubtype/SQS_SEND_MESSAGE
-      (= :eventbridge-put-events data) HttpIntegrationSubtype/EVENTBRIDGE_PUT_EVENTS
       (= :stepfunctions-start-execution data) HttpIntegrationSubtype/STEPFUNCTIONS_START_EXECUTION
-      (= :sqs-purge-queue data) HttpIntegrationSubtype/SQS_PURGE_QUEUE
-      (= :stepfunctions-stop-execution data) HttpIntegrationSubtype/STEPFUNCTIONS_STOP_EXECUTION
       (= :stepfunctions-start-sync-execution data) HttpIntegrationSubtype/STEPFUNCTIONS_START_SYNC_EXECUTION
-      (= :kinesis-put-record data) HttpIntegrationSubtype/KINESIS_PUT_RECORD
-      (= :appconfig-get-configuration data) HttpIntegrationSubtype/APPCONFIG_GET_CONFIGURATION
-      (= :sqs-delete-message data) HttpIntegrationSubtype/SQS_DELETE_MESSAGE)))
+      (= :stepfunctions-stop-execution data) HttpIntegrationSubtype/STEPFUNCTIONS_STOP_EXECUTION)))
 
 
 (defn http-integration-type
@@ -305,11 +305,11 @@ function on the data with the provided namespace id and item-key.  The found val
 * instance of `HttpMethod` - the value is returned.
 * is `:any` - `HttpMethod/ANY` is returned
 * is `:delete` - `HttpMethod/DELETE` is returned
+* is `:get` - `HttpMethod/GET` is returned
 * is `:head` - `HttpMethod/HEAD` is returned
 * is `:options` - `HttpMethod/OPTIONS` is returned
-* is `:post` - `HttpMethod/POST` is returned
-* is `:get` - `HttpMethod/GET` is returned
 * is `:patch` - `HttpMethod/PATCH` is returned
+* is `:post` - `HttpMethod/POST` is returned
 * is `:put` - `HttpMethod/PUT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -319,11 +319,11 @@ function on the data with the provided namespace id and item-key.  The found val
       (instance? HttpMethod data) data
       (= :any data) HttpMethod/ANY
       (= :delete data) HttpMethod/DELETE
+      (= :get data) HttpMethod/GET
       (= :head data) HttpMethod/HEAD
       (= :options data) HttpMethod/OPTIONS
-      (= :post data) HttpMethod/POST
-      (= :get data) HttpMethod/GET
       (= :patch data) HttpMethod/PATCH
+      (= :post data) HttpMethod/POST
       (= :put data) HttpMethod/PUT)))
 
 
@@ -335,8 +335,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `PassthroughBehavior` - the value is returned.
 * is `:never` - `PassthroughBehavior/NEVER` is returned
-* is `:when-no-templates` - `PassthroughBehavior/WHEN_NO_TEMPLATES` is returned
 * is `:when-no-match` - `PassthroughBehavior/WHEN_NO_MATCH` is returned
+* is `:when-no-templates` - `PassthroughBehavior/WHEN_NO_TEMPLATES` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -344,8 +344,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? PassthroughBehavior data) data
       (= :never data) PassthroughBehavior/NEVER
-      (= :when-no-templates data) PassthroughBehavior/WHEN_NO_TEMPLATES
-      (= :when-no-match data) PassthroughBehavior/WHEN_NO_MATCH)))
+      (= :when-no-match data) PassthroughBehavior/WHEN_NO_MATCH
+      (= :when-no-templates data) PassthroughBehavior/WHEN_NO_TEMPLATES)))
 
 
 (defn security-policy
@@ -393,18 +393,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `WebSocketIntegrationType` - the value is returned.
-* is `:mock` - `WebSocketIntegrationType/MOCK` is returned
 * is `:aws` - `WebSocketIntegrationType/AWS` is returned
 * is `:aws-proxy` - `WebSocketIntegrationType/AWS_PROXY` is returned
+* is `:mock` - `WebSocketIntegrationType/MOCK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? WebSocketIntegrationType data) data
-      (= :mock data) WebSocketIntegrationType/MOCK
       (= :aws data) WebSocketIntegrationType/AWS
-      (= :aws-proxy data) WebSocketIntegrationType/AWS_PROXY)))
+      (= :aws-proxy data) WebSocketIntegrationType/AWS_PROXY
+      (= :mock data) WebSocketIntegrationType/MOCK)))
 
 
 (defn add-routes-options-builder>

@@ -24,9 +24,9 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RepositoryEventTrigger` - the value is returned.
-* is `:delete-ref` - `RepositoryEventTrigger/DELETE_REF` is returned
-* is `:create-ref` - `RepositoryEventTrigger/CREATE_REF` is returned
 * is `:all` - `RepositoryEventTrigger/ALL` is returned
+* is `:create-ref` - `RepositoryEventTrigger/CREATE_REF` is returned
+* is `:delete-ref` - `RepositoryEventTrigger/DELETE_REF` is returned
 * is `:update-ref` - `RepositoryEventTrigger/UPDATE_REF` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -34,9 +34,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RepositoryEventTrigger data) data
-      (= :delete-ref data) RepositoryEventTrigger/DELETE_REF
-      (= :create-ref data) RepositoryEventTrigger/CREATE_REF
       (= :all data) RepositoryEventTrigger/ALL
+      (= :create-ref data) RepositoryEventTrigger/CREATE_REF
+      (= :delete-ref data) RepositoryEventTrigger/DELETE_REF
       (= :update-ref data) RepositoryEventTrigger/UPDATE_REF)))
 
 
@@ -47,34 +47,34 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RepositoryNotificationEvents` - the value is returned.
-* is `:pull-request-created` - `RepositoryNotificationEvents/PULL_REQUEST_CREATED` is returned
+* is `:approval-rule-overridden` - `RepositoryNotificationEvents/APPROVAL_RULE_OVERRIDDEN` is returned
 * is `:approval-status-changed` - `RepositoryNotificationEvents/APPROVAL_STATUS_CHANGED` is returned
+* is `:branch-or-tag-created` - `RepositoryNotificationEvents/BRANCH_OR_TAG_CREATED` is returned
 * is `:branch-or-tag-deleted` - `RepositoryNotificationEvents/BRANCH_OR_TAG_DELETED` is returned
+* is `:branch-or-tag-updated` - `RepositoryNotificationEvents/BRANCH_OR_TAG_UPDATED` is returned
 * is `:commit-comment` - `RepositoryNotificationEvents/COMMIT_COMMENT` is returned
+* is `:pull-request-comment` - `RepositoryNotificationEvents/PULL_REQUEST_COMMENT` is returned
+* is `:pull-request-created` - `RepositoryNotificationEvents/PULL_REQUEST_CREATED` is returned
+* is `:pull-request-merged` - `RepositoryNotificationEvents/PULL_REQUEST_MERGED` is returned
 * is `:pull-request-source-updated` - `RepositoryNotificationEvents/PULL_REQUEST_SOURCE_UPDATED` is returned
 * is `:pull-request-status-changed` - `RepositoryNotificationEvents/PULL_REQUEST_STATUS_CHANGED` is returned
-* is `:branch-or-tag-updated` - `RepositoryNotificationEvents/BRANCH_OR_TAG_UPDATED` is returned
-* is `:branch-or-tag-created` - `RepositoryNotificationEvents/BRANCH_OR_TAG_CREATED` is returned
-* is `:pull-request-merged` - `RepositoryNotificationEvents/PULL_REQUEST_MERGED` is returned
-* is `:approval-rule-overridden` - `RepositoryNotificationEvents/APPROVAL_RULE_OVERRIDDEN` is returned
-* is `:pull-request-comment` - `RepositoryNotificationEvents/PULL_REQUEST_COMMENT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RepositoryNotificationEvents data) data
-      (= :pull-request-created data) RepositoryNotificationEvents/PULL_REQUEST_CREATED
-      (= :approval-status-changed data) RepositoryNotificationEvents/APPROVAL_STATUS_CHANGED
-      (= :branch-or-tag-deleted data) RepositoryNotificationEvents/BRANCH_OR_TAG_DELETED
-      (= :commit-comment data) RepositoryNotificationEvents/COMMIT_COMMENT
-      (= :pull-request-source-updated data) RepositoryNotificationEvents/PULL_REQUEST_SOURCE_UPDATED
-      (= :pull-request-status-changed data) RepositoryNotificationEvents/PULL_REQUEST_STATUS_CHANGED
-      (= :branch-or-tag-updated data) RepositoryNotificationEvents/BRANCH_OR_TAG_UPDATED
-      (= :branch-or-tag-created data) RepositoryNotificationEvents/BRANCH_OR_TAG_CREATED
-      (= :pull-request-merged data) RepositoryNotificationEvents/PULL_REQUEST_MERGED
       (= :approval-rule-overridden data) RepositoryNotificationEvents/APPROVAL_RULE_OVERRIDDEN
-      (= :pull-request-comment data) RepositoryNotificationEvents/PULL_REQUEST_COMMENT)))
+      (= :approval-status-changed data) RepositoryNotificationEvents/APPROVAL_STATUS_CHANGED
+      (= :branch-or-tag-created data) RepositoryNotificationEvents/BRANCH_OR_TAG_CREATED
+      (= :branch-or-tag-deleted data) RepositoryNotificationEvents/BRANCH_OR_TAG_DELETED
+      (= :branch-or-tag-updated data) RepositoryNotificationEvents/BRANCH_OR_TAG_UPDATED
+      (= :commit-comment data) RepositoryNotificationEvents/COMMIT_COMMENT
+      (= :pull-request-comment data) RepositoryNotificationEvents/PULL_REQUEST_COMMENT
+      (= :pull-request-created data) RepositoryNotificationEvents/PULL_REQUEST_CREATED
+      (= :pull-request-merged data) RepositoryNotificationEvents/PULL_REQUEST_MERGED
+      (= :pull-request-source-updated data) RepositoryNotificationEvents/PULL_REQUEST_SOURCE_UPDATED
+      (= :pull-request-status-changed data) RepositoryNotificationEvents/PULL_REQUEST_STATUS_CHANGED)))
 
 
 (defn cfn-repository-builder>

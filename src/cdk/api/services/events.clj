@@ -86,26 +86,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpMethod` - the value is returned.
-* is `:get` - `HttpMethod/GET` is returned
-* is `:patch` - `HttpMethod/PATCH` is returned
-* is `:put` - `HttpMethod/PUT` is returned
-* is `:post` - `HttpMethod/POST` is returned
-* is `:head` - `HttpMethod/HEAD` is returned
 * is `:delete` - `HttpMethod/DELETE` is returned
+* is `:get` - `HttpMethod/GET` is returned
+* is `:head` - `HttpMethod/HEAD` is returned
 * is `:options` - `HttpMethod/OPTIONS` is returned
+* is `:patch` - `HttpMethod/PATCH` is returned
+* is `:post` - `HttpMethod/POST` is returned
+* is `:put` - `HttpMethod/PUT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpMethod data) data
-      (= :get data) HttpMethod/GET
-      (= :patch data) HttpMethod/PATCH
-      (= :put data) HttpMethod/PUT
-      (= :post data) HttpMethod/POST
-      (= :head data) HttpMethod/HEAD
       (= :delete data) HttpMethod/DELETE
-      (= :options data) HttpMethod/OPTIONS)))
+      (= :get data) HttpMethod/GET
+      (= :head data) HttpMethod/HEAD
+      (= :options data) HttpMethod/OPTIONS
+      (= :patch data) HttpMethod/PATCH
+      (= :post data) HttpMethod/POST
+      (= :put data) HttpMethod/PUT)))
 
 
 (defn api-destination-attributes-builder>

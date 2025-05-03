@@ -48,18 +48,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AdjustmentType` - the value is returned.
+* is `:change-in-capacity` - `AdjustmentType/CHANGE_IN_CAPACITY` is returned
 * is `:exact-capacity` - `AdjustmentType/EXACT_CAPACITY` is returned
 * is `:percent-change-in-capacity` - `AdjustmentType/PERCENT_CHANGE_IN_CAPACITY` is returned
-* is `:change-in-capacity` - `AdjustmentType/CHANGE_IN_CAPACITY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AdjustmentType data) data
+      (= :change-in-capacity data) AdjustmentType/CHANGE_IN_CAPACITY
       (= :exact-capacity data) AdjustmentType/EXACT_CAPACITY
-      (= :percent-change-in-capacity data) AdjustmentType/PERCENT_CHANGE_IN_CAPACITY
-      (= :change-in-capacity data) AdjustmentType/CHANGE_IN_CAPACITY)))
+      (= :percent-change-in-capacity data) AdjustmentType/PERCENT_CHANGE_IN_CAPACITY)))
 
 
 (defn metric-aggregation-type
@@ -69,8 +69,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MetricAggregationType` - the value is returned.
-* is `:maximum` - `MetricAggregationType/MAXIMUM` is returned
 * is `:average` - `MetricAggregationType/AVERAGE` is returned
+* is `:maximum` - `MetricAggregationType/MAXIMUM` is returned
 * is `:minimum` - `MetricAggregationType/MINIMUM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -78,8 +78,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MetricAggregationType data) data
-      (= :maximum data) MetricAggregationType/MAXIMUM
       (= :average data) MetricAggregationType/AVERAGE
+      (= :maximum data) MetricAggregationType/MAXIMUM
       (= :minimum data) MetricAggregationType/MINIMUM)))
 
 
@@ -91,30 +91,30 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `PredefinedMetric` - the value is returned.
 * is `:alb-request-count-per-target` - `PredefinedMetric/ALB_REQUEST_COUNT_PER_TARGET` is returned
-* is `:dyanmodb-write-capacity-utilization` - `PredefinedMetric/DYANMODB_WRITE_CAPACITY_UTILIZATION` is returned
-* is `:ecs-service-average-memory-utilization` - `PredefinedMetric/ECS_SERVICE_AVERAGE_MEMORY_UTILIZATION` is returned
-* is `:sagemaker-variant-provisioned-concurrency-utilization` - `PredefinedMetric/SAGEMAKER_VARIANT_PROVISIONED_CONCURRENCY_UTILIZATION` is returned
-* is `:comprehend-inference-utilization` - `PredefinedMetric/COMPREHEND_INFERENCE_UTILIZATION` is returned
-* is `:ecs-service-average-cpu-utilization` - `PredefinedMetric/ECS_SERVICE_AVERAGE_CPU_UTILIZATION` is returned
-* is `:elasticache-database-capacity-usage-counted-for-evict-percentage` - `PredefinedMetric/ELASTICACHE_DATABASE_CAPACITY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE` is returned
+* is `:appstream-average-capacity-utilization` - `PredefinedMetric/APPSTREAM_AVERAGE_CAPACITY_UTILIZATION` is returned
+* is `:cassandra-read-capacity-utilization` - `PredefinedMetric/CASSANDRA_READ_CAPACITY_UTILIZATION` is returned
 * is `:cassandra-write-capacity-utilization` - `PredefinedMetric/CASSANDRA_WRITE_CAPACITY_UTILIZATION` is returned
-* is `:rds-reader-average-cpu-utilization` - `PredefinedMetric/RDS_READER_AVERAGE_CPU_UTILIZATION` is returned
-* is `:elasticache-database-memory-usage-counted-for-evict-percentage` - `PredefinedMetric/ELASTICACHE_DATABASE_MEMORY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE` is returned
-* is `:sagemaker-variant-invocations-per-instance` - `PredefinedMetric/SAGEMAKER_VARIANT_INVOCATIONS_PER_INSTANCE` is returned
+* is `:comprehend-inference-utilization` - `PredefinedMetric/COMPREHEND_INFERENCE_UTILIZATION` is returned
+* is `:dyanmodb-write-capacity-utilization` - `PredefinedMetric/DYANMODB_WRITE_CAPACITY_UTILIZATION` is returned
+* is `:dynamodb-read-capacity-utilization` - `PredefinedMetric/DYNAMODB_READ_CAPACITY_UTILIZATION` is returned
+* is `:dynamodb-write-capacity-utilization` - `PredefinedMetric/DYNAMODB_WRITE_CAPACITY_UTILIZATION` is returned
 * is `:ec2-spot-fleet-request-average-cpu-utilization` - `PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_CPU_UTILIZATION` is returned
+* is `:ec2-spot-fleet-request-average-network-in` - `PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_NETWORK_IN` is returned
+* is `:ec2-spot-fleet-request-average-network-out` - `PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_NETWORK_OUT` is returned
+* is `:ecs-service-average-cpu-utilization` - `PredefinedMetric/ECS_SERVICE_AVERAGE_CPU_UTILIZATION` is returned
+* is `:ecs-service-average-memory-utilization` - `PredefinedMetric/ECS_SERVICE_AVERAGE_MEMORY_UTILIZATION` is returned
+* is `:elasticache-database-capacity-usage-counted-for-evict-percentage` - `PredefinedMetric/ELASTICACHE_DATABASE_CAPACITY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE` is returned
+* is `:elasticache-database-memory-usage-counted-for-evict-percentage` - `PredefinedMetric/ELASTICACHE_DATABASE_MEMORY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE` is returned
+* is `:elasticache-primary-engine-cpu-utilization` - `PredefinedMetric/ELASTICACHE_PRIMARY_ENGINE_CPU_UTILIZATION` is returned
+* is `:elasticache-replica-engine-cpu-utilization` - `PredefinedMetric/ELASTICACHE_REPLICA_ENGINE_CPU_UTILIZATION` is returned
+* is `:kafka-broker-storage-utilization` - `PredefinedMetric/KAFKA_BROKER_STORAGE_UTILIZATION` is returned
 * is `:lambda-provisioned-concurrency-utilization` - `PredefinedMetric/LAMBDA_PROVISIONED_CONCURRENCY_UTILIZATION` is returned
 * is `:nepture-reader-average-cpu-utilization` - `PredefinedMetric/NEPTURE_READER_AVERAGE_CPU_UTILIZATION` is returned
-* is `:ec2-spot-fleet-request-average-network-out` - `PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_NETWORK_OUT` is returned
-* is `:sagemaker-inference-component-invocations-per-copy` - `PredefinedMetric/SAGEMAKER_INFERENCE_COMPONENT_INVOCATIONS_PER_COPY` is returned
-* is `:cassandra-read-capacity-utilization` - `PredefinedMetric/CASSANDRA_READ_CAPACITY_UTILIZATION` is returned
+* is `:rds-reader-average-cpu-utilization` - `PredefinedMetric/RDS_READER_AVERAGE_CPU_UTILIZATION` is returned
 * is `:rds-reader-average-database-connections` - `PredefinedMetric/RDS_READER_AVERAGE_DATABASE_CONNECTIONS` is returned
-* is `:elasticache-replica-engine-cpu-utilization` - `PredefinedMetric/ELASTICACHE_REPLICA_ENGINE_CPU_UTILIZATION` is returned
-* is `:appstream-average-capacity-utilization` - `PredefinedMetric/APPSTREAM_AVERAGE_CAPACITY_UTILIZATION` is returned
-* is `:elasticache-primary-engine-cpu-utilization` - `PredefinedMetric/ELASTICACHE_PRIMARY_ENGINE_CPU_UTILIZATION` is returned
-* is `:dynamodb-write-capacity-utilization` - `PredefinedMetric/DYNAMODB_WRITE_CAPACITY_UTILIZATION` is returned
-* is `:dynamodb-read-capacity-utilization` - `PredefinedMetric/DYNAMODB_READ_CAPACITY_UTILIZATION` is returned
-* is `:kafka-broker-storage-utilization` - `PredefinedMetric/KAFKA_BROKER_STORAGE_UTILIZATION` is returned
-* is `:ec2-spot-fleet-request-average-network-in` - `PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_NETWORK_IN` is returned
+* is `:sagemaker-inference-component-invocations-per-copy` - `PredefinedMetric/SAGEMAKER_INFERENCE_COMPONENT_INVOCATIONS_PER_COPY` is returned
+* is `:sagemaker-variant-invocations-per-instance` - `PredefinedMetric/SAGEMAKER_VARIANT_INVOCATIONS_PER_INSTANCE` is returned
+* is `:sagemaker-variant-provisioned-concurrency-utilization` - `PredefinedMetric/SAGEMAKER_VARIANT_PROVISIONED_CONCURRENCY_UTILIZATION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -122,30 +122,30 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? PredefinedMetric data) data
       (= :alb-request-count-per-target data) PredefinedMetric/ALB_REQUEST_COUNT_PER_TARGET
-      (= :dyanmodb-write-capacity-utilization data) PredefinedMetric/DYANMODB_WRITE_CAPACITY_UTILIZATION
-      (= :ecs-service-average-memory-utilization data) PredefinedMetric/ECS_SERVICE_AVERAGE_MEMORY_UTILIZATION
-      (= :sagemaker-variant-provisioned-concurrency-utilization data) PredefinedMetric/SAGEMAKER_VARIANT_PROVISIONED_CONCURRENCY_UTILIZATION
-      (= :comprehend-inference-utilization data) PredefinedMetric/COMPREHEND_INFERENCE_UTILIZATION
-      (= :ecs-service-average-cpu-utilization data) PredefinedMetric/ECS_SERVICE_AVERAGE_CPU_UTILIZATION
-      (= :elasticache-database-capacity-usage-counted-for-evict-percentage data) PredefinedMetric/ELASTICACHE_DATABASE_CAPACITY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE
+      (= :appstream-average-capacity-utilization data) PredefinedMetric/APPSTREAM_AVERAGE_CAPACITY_UTILIZATION
+      (= :cassandra-read-capacity-utilization data) PredefinedMetric/CASSANDRA_READ_CAPACITY_UTILIZATION
       (= :cassandra-write-capacity-utilization data) PredefinedMetric/CASSANDRA_WRITE_CAPACITY_UTILIZATION
-      (= :rds-reader-average-cpu-utilization data) PredefinedMetric/RDS_READER_AVERAGE_CPU_UTILIZATION
-      (= :elasticache-database-memory-usage-counted-for-evict-percentage data) PredefinedMetric/ELASTICACHE_DATABASE_MEMORY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE
-      (= :sagemaker-variant-invocations-per-instance data) PredefinedMetric/SAGEMAKER_VARIANT_INVOCATIONS_PER_INSTANCE
+      (= :comprehend-inference-utilization data) PredefinedMetric/COMPREHEND_INFERENCE_UTILIZATION
+      (= :dyanmodb-write-capacity-utilization data) PredefinedMetric/DYANMODB_WRITE_CAPACITY_UTILIZATION
+      (= :dynamodb-read-capacity-utilization data) PredefinedMetric/DYNAMODB_READ_CAPACITY_UTILIZATION
+      (= :dynamodb-write-capacity-utilization data) PredefinedMetric/DYNAMODB_WRITE_CAPACITY_UTILIZATION
       (= :ec2-spot-fleet-request-average-cpu-utilization data) PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_CPU_UTILIZATION
+      (= :ec2-spot-fleet-request-average-network-in data) PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_NETWORK_IN
+      (= :ec2-spot-fleet-request-average-network-out data) PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_NETWORK_OUT
+      (= :ecs-service-average-cpu-utilization data) PredefinedMetric/ECS_SERVICE_AVERAGE_CPU_UTILIZATION
+      (= :ecs-service-average-memory-utilization data) PredefinedMetric/ECS_SERVICE_AVERAGE_MEMORY_UTILIZATION
+      (= :elasticache-database-capacity-usage-counted-for-evict-percentage data) PredefinedMetric/ELASTICACHE_DATABASE_CAPACITY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE
+      (= :elasticache-database-memory-usage-counted-for-evict-percentage data) PredefinedMetric/ELASTICACHE_DATABASE_MEMORY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE
+      (= :elasticache-primary-engine-cpu-utilization data) PredefinedMetric/ELASTICACHE_PRIMARY_ENGINE_CPU_UTILIZATION
+      (= :elasticache-replica-engine-cpu-utilization data) PredefinedMetric/ELASTICACHE_REPLICA_ENGINE_CPU_UTILIZATION
+      (= :kafka-broker-storage-utilization data) PredefinedMetric/KAFKA_BROKER_STORAGE_UTILIZATION
       (= :lambda-provisioned-concurrency-utilization data) PredefinedMetric/LAMBDA_PROVISIONED_CONCURRENCY_UTILIZATION
       (= :nepture-reader-average-cpu-utilization data) PredefinedMetric/NEPTURE_READER_AVERAGE_CPU_UTILIZATION
-      (= :ec2-spot-fleet-request-average-network-out data) PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_NETWORK_OUT
-      (= :sagemaker-inference-component-invocations-per-copy data) PredefinedMetric/SAGEMAKER_INFERENCE_COMPONENT_INVOCATIONS_PER_COPY
-      (= :cassandra-read-capacity-utilization data) PredefinedMetric/CASSANDRA_READ_CAPACITY_UTILIZATION
+      (= :rds-reader-average-cpu-utilization data) PredefinedMetric/RDS_READER_AVERAGE_CPU_UTILIZATION
       (= :rds-reader-average-database-connections data) PredefinedMetric/RDS_READER_AVERAGE_DATABASE_CONNECTIONS
-      (= :elasticache-replica-engine-cpu-utilization data) PredefinedMetric/ELASTICACHE_REPLICA_ENGINE_CPU_UTILIZATION
-      (= :appstream-average-capacity-utilization data) PredefinedMetric/APPSTREAM_AVERAGE_CAPACITY_UTILIZATION
-      (= :elasticache-primary-engine-cpu-utilization data) PredefinedMetric/ELASTICACHE_PRIMARY_ENGINE_CPU_UTILIZATION
-      (= :dynamodb-write-capacity-utilization data) PredefinedMetric/DYNAMODB_WRITE_CAPACITY_UTILIZATION
-      (= :dynamodb-read-capacity-utilization data) PredefinedMetric/DYNAMODB_READ_CAPACITY_UTILIZATION
-      (= :kafka-broker-storage-utilization data) PredefinedMetric/KAFKA_BROKER_STORAGE_UTILIZATION
-      (= :ec2-spot-fleet-request-average-network-in data) PredefinedMetric/EC2_SPOT_FLEET_REQUEST_AVERAGE_NETWORK_IN)))
+      (= :sagemaker-inference-component-invocations-per-copy data) PredefinedMetric/SAGEMAKER_INFERENCE_COMPONENT_INVOCATIONS_PER_COPY
+      (= :sagemaker-variant-invocations-per-instance data) PredefinedMetric/SAGEMAKER_VARIANT_INVOCATIONS_PER_INSTANCE
+      (= :sagemaker-variant-provisioned-concurrency-utilization data) PredefinedMetric/SAGEMAKER_VARIANT_PROVISIONED_CONCURRENCY_UTILIZATION)))
 
 
 (defn service-namespace
@@ -155,38 +155,38 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ServiceNamespace` - the value is returned.
-* is `:neptune` - `ServiceNamespace/NEPTUNE` is returned
-* is `:elastic-map-reduce` - `ServiceNamespace/ELASTIC_MAP_REDUCE` is returned
-* is `:rds` - `ServiceNamespace/RDS` is returned
-* is `:ec2` - `ServiceNamespace/EC2` is returned
-* is `:elasticache` - `ServiceNamespace/ELASTICACHE` is returned
-* is `:dynamodb` - `ServiceNamespace/DYNAMODB` is returned
-* is `:kafka` - `ServiceNamespace/KAFKA` is returned
-* is `:comprehend` - `ServiceNamespace/COMPREHEND` is returned
 * is `:appstream` - `ServiceNamespace/APPSTREAM` is returned
-* is `:sagemaker` - `ServiceNamespace/SAGEMAKER` is returned
-* is `:ecs` - `ServiceNamespace/ECS` is returned
-* is `:lambda` - `ServiceNamespace/LAMBDA` is returned
+* is `:comprehend` - `ServiceNamespace/COMPREHEND` is returned
 * is `:custom-resource` - `ServiceNamespace/CUSTOM_RESOURCE` is returned
+* is `:dynamodb` - `ServiceNamespace/DYNAMODB` is returned
+* is `:ec2` - `ServiceNamespace/EC2` is returned
+* is `:ecs` - `ServiceNamespace/ECS` is returned
+* is `:elasticache` - `ServiceNamespace/ELASTICACHE` is returned
+* is `:elastic-map-reduce` - `ServiceNamespace/ELASTIC_MAP_REDUCE` is returned
+* is `:kafka` - `ServiceNamespace/KAFKA` is returned
+* is `:lambda` - `ServiceNamespace/LAMBDA` is returned
+* is `:neptune` - `ServiceNamespace/NEPTUNE` is returned
+* is `:rds` - `ServiceNamespace/RDS` is returned
+* is `:sagemaker` - `ServiceNamespace/SAGEMAKER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ServiceNamespace data) data
-      (= :neptune data) ServiceNamespace/NEPTUNE
-      (= :elastic-map-reduce data) ServiceNamespace/ELASTIC_MAP_REDUCE
-      (= :rds data) ServiceNamespace/RDS
-      (= :ec2 data) ServiceNamespace/EC2
-      (= :elasticache data) ServiceNamespace/ELASTICACHE
-      (= :dynamodb data) ServiceNamespace/DYNAMODB
-      (= :kafka data) ServiceNamespace/KAFKA
-      (= :comprehend data) ServiceNamespace/COMPREHEND
       (= :appstream data) ServiceNamespace/APPSTREAM
-      (= :sagemaker data) ServiceNamespace/SAGEMAKER
+      (= :comprehend data) ServiceNamespace/COMPREHEND
+      (= :custom-resource data) ServiceNamespace/CUSTOM_RESOURCE
+      (= :dynamodb data) ServiceNamespace/DYNAMODB
+      (= :ec2 data) ServiceNamespace/EC2
       (= :ecs data) ServiceNamespace/ECS
+      (= :elasticache data) ServiceNamespace/ELASTICACHE
+      (= :elastic-map-reduce data) ServiceNamespace/ELASTIC_MAP_REDUCE
+      (= :kafka data) ServiceNamespace/KAFKA
       (= :lambda data) ServiceNamespace/LAMBDA
-      (= :custom-resource data) ServiceNamespace/CUSTOM_RESOURCE)))
+      (= :neptune data) ServiceNamespace/NEPTUNE
+      (= :rds data) ServiceNamespace/RDS
+      (= :sagemaker data) ServiceNamespace/SAGEMAKER)))
 
 
 (defn adjustment-tier-builder>

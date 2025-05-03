@@ -66,16 +66,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LogGroupClass` - the value is returned.
-* is `:standard` - `LogGroupClass/STANDARD` is returned
 * is `:infrequent-access` - `LogGroupClass/INFREQUENT_ACCESS` is returned
+* is `:standard` - `LogGroupClass/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LogGroupClass data) data
-      (= :standard data) LogGroupClass/STANDARD
-      (= :infrequent-access data) LogGroupClass/INFREQUENT_ACCESS)))
+      (= :infrequent-access data) LogGroupClass/INFREQUENT_ACCESS
+      (= :standard data) LogGroupClass/STANDARD)))
 
 
 (defn retention-days
@@ -85,58 +85,58 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RetentionDays` - the value is returned.
-* is `:four-months` - `RetentionDays/FOUR_MONTHS` is returned
-* is `:seven-years` - `RetentionDays/SEVEN_YEARS` is returned
-* is `:ten-years` - `RetentionDays/TEN_YEARS` is returned
-* is `:three-years` - `RetentionDays/THREE_YEARS` is returned
-* is `:one-year` - `RetentionDays/ONE_YEAR` is returned
+* is `:eighteen-months` - `RetentionDays/EIGHTEEN_MONTHS` is returned
 * is `:eight-years` - `RetentionDays/EIGHT_YEARS` is returned
-* is `:three-days` - `RetentionDays/THREE_DAYS` is returned
+* is `:five-days` - `RetentionDays/FIVE_DAYS` is returned
+* is `:five-months` - `RetentionDays/FIVE_MONTHS` is returned
+* is `:five-years` - `RetentionDays/FIVE_YEARS` is returned
+* is `:four-months` - `RetentionDays/FOUR_MONTHS` is returned
 * is `:infinite` - `RetentionDays/INFINITE` is returned
 * is `:nine-years` - `RetentionDays/NINE_YEARS` is returned
-* is `:six-years` - `RetentionDays/SIX_YEARS` is returned
-* is `:thirteen-months` - `RetentionDays/THIRTEEN_MONTHS` is returned
-* is `:one-week` - `RetentionDays/ONE_WEEK` is returned
-* is `:two-months` - `RetentionDays/TWO_MONTHS` is returned
-* is `:one-month` - `RetentionDays/ONE_MONTH` is returned
-* is `:six-months` - `RetentionDays/SIX_MONTHS` is returned
-* is `:two-years` - `RetentionDays/TWO_YEARS` is returned
-* is `:two-weeks` - `RetentionDays/TWO_WEEKS` is returned
-* is `:three-months` - `RetentionDays/THREE_MONTHS` is returned
-* is `:five-years` - `RetentionDays/FIVE_YEARS` is returned
-* is `:five-months` - `RetentionDays/FIVE_MONTHS` is returned
-* is `:eighteen-months` - `RetentionDays/EIGHTEEN_MONTHS` is returned
 * is `:one-day` - `RetentionDays/ONE_DAY` is returned
-* is `:five-days` - `RetentionDays/FIVE_DAYS` is returned
+* is `:one-month` - `RetentionDays/ONE_MONTH` is returned
+* is `:one-week` - `RetentionDays/ONE_WEEK` is returned
+* is `:one-year` - `RetentionDays/ONE_YEAR` is returned
+* is `:seven-years` - `RetentionDays/SEVEN_YEARS` is returned
+* is `:six-months` - `RetentionDays/SIX_MONTHS` is returned
+* is `:six-years` - `RetentionDays/SIX_YEARS` is returned
+* is `:ten-years` - `RetentionDays/TEN_YEARS` is returned
+* is `:thirteen-months` - `RetentionDays/THIRTEEN_MONTHS` is returned
+* is `:three-days` - `RetentionDays/THREE_DAYS` is returned
+* is `:three-months` - `RetentionDays/THREE_MONTHS` is returned
+* is `:three-years` - `RetentionDays/THREE_YEARS` is returned
+* is `:two-months` - `RetentionDays/TWO_MONTHS` is returned
+* is `:two-weeks` - `RetentionDays/TWO_WEEKS` is returned
+* is `:two-years` - `RetentionDays/TWO_YEARS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RetentionDays data) data
-      (= :four-months data) RetentionDays/FOUR_MONTHS
-      (= :seven-years data) RetentionDays/SEVEN_YEARS
-      (= :ten-years data) RetentionDays/TEN_YEARS
-      (= :three-years data) RetentionDays/THREE_YEARS
-      (= :one-year data) RetentionDays/ONE_YEAR
+      (= :eighteen-months data) RetentionDays/EIGHTEEN_MONTHS
       (= :eight-years data) RetentionDays/EIGHT_YEARS
-      (= :three-days data) RetentionDays/THREE_DAYS
+      (= :five-days data) RetentionDays/FIVE_DAYS
+      (= :five-months data) RetentionDays/FIVE_MONTHS
+      (= :five-years data) RetentionDays/FIVE_YEARS
+      (= :four-months data) RetentionDays/FOUR_MONTHS
       (= :infinite data) RetentionDays/INFINITE
       (= :nine-years data) RetentionDays/NINE_YEARS
-      (= :six-years data) RetentionDays/SIX_YEARS
-      (= :thirteen-months data) RetentionDays/THIRTEEN_MONTHS
-      (= :one-week data) RetentionDays/ONE_WEEK
-      (= :two-months data) RetentionDays/TWO_MONTHS
-      (= :one-month data) RetentionDays/ONE_MONTH
-      (= :six-months data) RetentionDays/SIX_MONTHS
-      (= :two-years data) RetentionDays/TWO_YEARS
-      (= :two-weeks data) RetentionDays/TWO_WEEKS
-      (= :three-months data) RetentionDays/THREE_MONTHS
-      (= :five-years data) RetentionDays/FIVE_YEARS
-      (= :five-months data) RetentionDays/FIVE_MONTHS
-      (= :eighteen-months data) RetentionDays/EIGHTEEN_MONTHS
       (= :one-day data) RetentionDays/ONE_DAY
-      (= :five-days data) RetentionDays/FIVE_DAYS)))
+      (= :one-month data) RetentionDays/ONE_MONTH
+      (= :one-week data) RetentionDays/ONE_WEEK
+      (= :one-year data) RetentionDays/ONE_YEAR
+      (= :seven-years data) RetentionDays/SEVEN_YEARS
+      (= :six-months data) RetentionDays/SIX_MONTHS
+      (= :six-years data) RetentionDays/SIX_YEARS
+      (= :ten-years data) RetentionDays/TEN_YEARS
+      (= :thirteen-months data) RetentionDays/THIRTEEN_MONTHS
+      (= :three-days data) RetentionDays/THREE_DAYS
+      (= :three-months data) RetentionDays/THREE_MONTHS
+      (= :three-years data) RetentionDays/THREE_YEARS
+      (= :two-months data) RetentionDays/TWO_MONTHS
+      (= :two-weeks data) RetentionDays/TWO_WEEKS
+      (= :two-years data) RetentionDays/TWO_YEARS)))
 
 
 (defn cfn-account-policy-builder>

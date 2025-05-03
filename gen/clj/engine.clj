@@ -21,10 +21,10 @@
   "Builds the source file contents"
   [classpath-info package-data]
   (log "Building Package Code - " (:package-name package-data))
-  (let [package-coded (-> package-data
-                          process-namespace
-                          process-enums
-                          (process-builders classpath-info))
+  (let [package-coded (->> package-data
+                           process-namespace
+                           process-enums
+                           (process-builders classpath-info))
         source (->> [(:source-namespace-code package-coded)
                      (sort (:source-enums-code package-coded))
                      (:source-builders-code package-coded)]
@@ -78,11 +78,11 @@ and the namespace to use, etc.  Should have the following fields added to the pa
 
 (defn prepare-builder-requires
   "Adds any clojure requires that are need to generate builders."
-  [{:keys [enums]} {:keys [builders source-namespace] :as package-data}]
+  [{known-enums :enums known-builders :builders} {:keys [builders source-namespace] :as package-data}]
   (let [enums (->> (mapv :methods builders)
                    flatten
                    (mapv :method-arg)
-                   (mapv enums)
+                   (mapv (merge known-enums known-builders))
                    (filterv some?))]
     (reduce (fn [pd {n :namespace f :fn-name}]
               (if (= n source-namespace)

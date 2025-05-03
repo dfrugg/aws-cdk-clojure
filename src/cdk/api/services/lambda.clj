@@ -146,20 +146,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AdotLambdaExecWrapper` - the value is returned.
+* is `:instrument-handler` - `AdotLambdaExecWrapper/INSTRUMENT_HANDLER` is returned
+* is `:proxy-handler` - `AdotLambdaExecWrapper/PROXY_HANDLER` is returned
 * is `:regular-handler` - `AdotLambdaExecWrapper/REGULAR_HANDLER` is returned
 * is `:stream-handler` - `AdotLambdaExecWrapper/STREAM_HANDLER` is returned
-* is `:proxy-handler` - `AdotLambdaExecWrapper/PROXY_HANDLER` is returned
-* is `:instrument-handler` - `AdotLambdaExecWrapper/INSTRUMENT_HANDLER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AdotLambdaExecWrapper data) data
-      (= :regular-handler data) AdotLambdaExecWrapper/REGULAR_HANDLER
-      (= :stream-handler data) AdotLambdaExecWrapper/STREAM_HANDLER
+      (= :instrument-handler data) AdotLambdaExecWrapper/INSTRUMENT_HANDLER
       (= :proxy-handler data) AdotLambdaExecWrapper/PROXY_HANDLER
-      (= :instrument-handler data) AdotLambdaExecWrapper/INSTRUMENT_HANDLER)))
+      (= :regular-handler data) AdotLambdaExecWrapper/REGULAR_HANDLER
+      (= :stream-handler data) AdotLambdaExecWrapper/STREAM_HANDLER)))
 
 
 (defn application-log-level
@@ -169,11 +169,11 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ApplicationLogLevel` - the value is returned.
-* is `:trace` - `ApplicationLogLevel/TRACE` is returned
 * is `:debug` - `ApplicationLogLevel/DEBUG` is returned
-* is `:info` - `ApplicationLogLevel/INFO` is returned
-* is `:fatal` - `ApplicationLogLevel/FATAL` is returned
 * is `:error` - `ApplicationLogLevel/ERROR` is returned
+* is `:fatal` - `ApplicationLogLevel/FATAL` is returned
+* is `:info` - `ApplicationLogLevel/INFO` is returned
+* is `:trace` - `ApplicationLogLevel/TRACE` is returned
 * is `:warn` - `ApplicationLogLevel/WARN` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -181,11 +181,11 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ApplicationLogLevel data) data
-      (= :trace data) ApplicationLogLevel/TRACE
       (= :debug data) ApplicationLogLevel/DEBUG
-      (= :info data) ApplicationLogLevel/INFO
-      (= :fatal data) ApplicationLogLevel/FATAL
       (= :error data) ApplicationLogLevel/ERROR
+      (= :fatal data) ApplicationLogLevel/FATAL
+      (= :info data) ApplicationLogLevel/INFO
+      (= :trace data) ApplicationLogLevel/TRACE
       (= :warn data) ApplicationLogLevel/WARN)))
 
 
@@ -196,16 +196,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DestinationType` - the value is returned.
-* is `:success` - `DestinationType/SUCCESS` is returned
 * is `:failure` - `DestinationType/FAILURE` is returned
+* is `:success` - `DestinationType/SUCCESS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DestinationType data) data
-      (= :success data) DestinationType/SUCCESS
-      (= :failure data) DestinationType/FAILURE)))
+      (= :failure data) DestinationType/FAILURE
+      (= :success data) DestinationType/SUCCESS)))
 
 
 (defn function-url-auth-type
@@ -234,28 +234,28 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpMethod` - the value is returned.
-* is `:put` - `HttpMethod/PUT` is returned
+* is `:all` - `HttpMethod/ALL` is returned
 * is `:delete` - `HttpMethod/DELETE` is returned
+* is `:get` - `HttpMethod/GET` is returned
 * is `:head` - `HttpMethod/HEAD` is returned
 * is `:options` - `HttpMethod/OPTIONS` is returned
-* is `:all` - `HttpMethod/ALL` is returned
 * is `:patch` - `HttpMethod/PATCH` is returned
-* is `:get` - `HttpMethod/GET` is returned
 * is `:post` - `HttpMethod/POST` is returned
+* is `:put` - `HttpMethod/PUT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpMethod data) data
-      (= :put data) HttpMethod/PUT
+      (= :all data) HttpMethod/ALL
       (= :delete data) HttpMethod/DELETE
+      (= :get data) HttpMethod/GET
       (= :head data) HttpMethod/HEAD
       (= :options data) HttpMethod/OPTIONS
-      (= :all data) HttpMethod/ALL
       (= :patch data) HttpMethod/PATCH
-      (= :get data) HttpMethod/GET
-      (= :post data) HttpMethod/POST)))
+      (= :post data) HttpMethod/POST
+      (= :put data) HttpMethod/PUT)))
 
 
 (defn invoke-mode
@@ -265,16 +265,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `InvokeMode` - the value is returned.
-* is `:response-stream` - `InvokeMode/RESPONSE_STREAM` is returned
 * is `:buffered` - `InvokeMode/BUFFERED` is returned
+* is `:response-stream` - `InvokeMode/RESPONSE_STREAM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? InvokeMode data) data
-      (= :response-stream data) InvokeMode/RESPONSE_STREAM
-      (= :buffered data) InvokeMode/BUFFERED)))
+      (= :buffered data) InvokeMode/BUFFERED
+      (= :response-stream data) InvokeMode/RESPONSE_STREAM)))
 
 
 (defn log-format
@@ -284,16 +284,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LogFormat` - the value is returned.
-* is `:text` - `LogFormat/TEXT` is returned
 * is `:json` - `LogFormat/JSON` is returned
+* is `:text` - `LogFormat/TEXT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LogFormat data) data
-      (= :text data) LogFormat/TEXT
-      (= :json data) LogFormat/JSON)))
+      (= :json data) LogFormat/JSON
+      (= :text data) LogFormat/TEXT)))
 
 
 (defn logging-format
@@ -303,16 +303,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LoggingFormat` - the value is returned.
-* is `:text` - `LoggingFormat/TEXT` is returned
 * is `:json` - `LoggingFormat/JSON` is returned
+* is `:text` - `LoggingFormat/TEXT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LoggingFormat data) data
-      (= :text data) LoggingFormat/TEXT
-      (= :json data) LoggingFormat/JSON)))
+      (= :json data) LoggingFormat/JSON
+      (= :text data) LoggingFormat/TEXT)))
 
 
 (defn params-and-secrets-log-level
@@ -322,22 +322,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ParamsAndSecretsLogLevel` - the value is returned.
-* is `:warn` - `ParamsAndSecretsLogLevel/WARN` is returned
-* is `:info` - `ParamsAndSecretsLogLevel/INFO` is returned
-* is `:error` - `ParamsAndSecretsLogLevel/ERROR` is returned
 * is `:debug` - `ParamsAndSecretsLogLevel/DEBUG` is returned
+* is `:error` - `ParamsAndSecretsLogLevel/ERROR` is returned
+* is `:info` - `ParamsAndSecretsLogLevel/INFO` is returned
 * is `:none` - `ParamsAndSecretsLogLevel/NONE` is returned
+* is `:warn` - `ParamsAndSecretsLogLevel/WARN` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ParamsAndSecretsLogLevel data) data
-      (= :warn data) ParamsAndSecretsLogLevel/WARN
-      (= :info data) ParamsAndSecretsLogLevel/INFO
-      (= :error data) ParamsAndSecretsLogLevel/ERROR
       (= :debug data) ParamsAndSecretsLogLevel/DEBUG
-      (= :none data) ParamsAndSecretsLogLevel/NONE)))
+      (= :error data) ParamsAndSecretsLogLevel/ERROR
+      (= :info data) ParamsAndSecretsLogLevel/INFO
+      (= :none data) ParamsAndSecretsLogLevel/NONE
+      (= :warn data) ParamsAndSecretsLogLevel/WARN)))
 
 
 (defn params-and-secrets-versions
@@ -364,26 +364,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RuntimeFamily` - the value is returned.
-* is `:ruby` - `RuntimeFamily/RUBY` is returned
 * is `:dotnet-core` - `RuntimeFamily/DOTNET_CORE` is returned
-* is `:python` - `RuntimeFamily/PYTHON` is returned
-* is `:java` - `RuntimeFamily/JAVA` is returned
 * is `:go` - `RuntimeFamily/GO` is returned
+* is `:java` - `RuntimeFamily/JAVA` is returned
 * is `:nodejs` - `RuntimeFamily/NODEJS` is returned
 * is `:other` - `RuntimeFamily/OTHER` is returned
+* is `:python` - `RuntimeFamily/PYTHON` is returned
+* is `:ruby` - `RuntimeFamily/RUBY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RuntimeFamily data) data
-      (= :ruby data) RuntimeFamily/RUBY
       (= :dotnet-core data) RuntimeFamily/DOTNET_CORE
-      (= :python data) RuntimeFamily/PYTHON
-      (= :java data) RuntimeFamily/JAVA
       (= :go data) RuntimeFamily/GO
+      (= :java data) RuntimeFamily/JAVA
       (= :nodejs data) RuntimeFamily/NODEJS
-      (= :other data) RuntimeFamily/OTHER)))
+      (= :other data) RuntimeFamily/OTHER
+      (= :python data) RuntimeFamily/PYTHON
+      (= :ruby data) RuntimeFamily/RUBY)))
 
 
 (defn starting-position
@@ -393,18 +393,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `StartingPosition` - the value is returned.
+* is `:at-timestamp` - `StartingPosition/AT_TIMESTAMP` is returned
 * is `:latest` - `StartingPosition/LATEST` is returned
 * is `:trim-horizon` - `StartingPosition/TRIM_HORIZON` is returned
-* is `:at-timestamp` - `StartingPosition/AT_TIMESTAMP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? StartingPosition data) data
+      (= :at-timestamp data) StartingPosition/AT_TIMESTAMP
       (= :latest data) StartingPosition/LATEST
-      (= :trim-horizon data) StartingPosition/TRIM_HORIZON
-      (= :at-timestamp data) StartingPosition/AT_TIMESTAMP)))
+      (= :trim-horizon data) StartingPosition/TRIM_HORIZON)))
 
 
 (defn system-log-level
@@ -414,18 +414,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SystemLogLevel` - the value is returned.
-* is `:warn` - `SystemLogLevel/WARN` is returned
-* is `:info` - `SystemLogLevel/INFO` is returned
 * is `:debug` - `SystemLogLevel/DEBUG` is returned
+* is `:info` - `SystemLogLevel/INFO` is returned
+* is `:warn` - `SystemLogLevel/WARN` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SystemLogLevel data) data
-      (= :warn data) SystemLogLevel/WARN
+      (= :debug data) SystemLogLevel/DEBUG
       (= :info data) SystemLogLevel/INFO
-      (= :debug data) SystemLogLevel/DEBUG)))
+      (= :warn data) SystemLogLevel/WARN)))
 
 
 (defn tracing
@@ -435,18 +435,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Tracing` - the value is returned.
-* is `:pass-through` - `Tracing/PASS_THROUGH` is returned
-* is `:disabled` - `Tracing/DISABLED` is returned
 * is `:active` - `Tracing/ACTIVE` is returned
+* is `:disabled` - `Tracing/DISABLED` is returned
+* is `:pass-through` - `Tracing/PASS_THROUGH` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Tracing data) data
-      (= :pass-through data) Tracing/PASS_THROUGH
+      (= :active data) Tracing/ACTIVE
       (= :disabled data) Tracing/DISABLED
-      (= :active data) Tracing/ACTIVE)))
+      (= :pass-through data) Tracing/PASS_THROUGH)))
 
 
 (defn untrusted-artifact-on-deployment

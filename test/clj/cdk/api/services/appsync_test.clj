@@ -21,42 +21,42 @@
 
 (deftest authorization-type-test
   (testing "Testing enum function authorization-type"
-    (is (= AuthorizationType/LAMBDA (authorization-type {:item AuthorizationType/LAMBDA} "test" :item)))
-    (is (= AuthorizationType/LAMBDA (authorization-type {:test/item AuthorizationType/LAMBDA} "test" :item)))
-    (is (= AuthorizationType/USER_POOL (authorization-type {:item AuthorizationType/USER_POOL} "test" :item)))
-    (is (= AuthorizationType/USER_POOL (authorization-type {:test/item AuthorizationType/USER_POOL} "test" :item)))
-    (is (= AuthorizationType/IAM (authorization-type {:item AuthorizationType/IAM} "test" :item)))
-    (is (= AuthorizationType/IAM (authorization-type {:test/item AuthorizationType/IAM} "test" :item)))
-    (is (= AuthorizationType/OIDC (authorization-type {:item AuthorizationType/OIDC} "test" :item)))
-    (is (= AuthorizationType/OIDC (authorization-type {:test/item AuthorizationType/OIDC} "test" :item)))
     (is (= AuthorizationType/API_KEY (authorization-type {:item AuthorizationType/API_KEY} "test" :item)))
     (is (= AuthorizationType/API_KEY (authorization-type {:test/item AuthorizationType/API_KEY} "test" :item)))
-    (is (= AuthorizationType/LAMBDA (authorization-type {:item :lambda} "test" :item)))
-    (is (= AuthorizationType/LAMBDA (authorization-type {:test/item :lambda} "test" :item)))
-    (is (= AuthorizationType/USER_POOL (authorization-type {:item :user-pool} "test" :item)))
-    (is (= AuthorizationType/USER_POOL (authorization-type {:test/item :user-pool} "test" :item)))
+    (is (= AuthorizationType/IAM (authorization-type {:item AuthorizationType/IAM} "test" :item)))
+    (is (= AuthorizationType/IAM (authorization-type {:test/item AuthorizationType/IAM} "test" :item)))
+    (is (= AuthorizationType/LAMBDA (authorization-type {:item AuthorizationType/LAMBDA} "test" :item)))
+    (is (= AuthorizationType/LAMBDA (authorization-type {:test/item AuthorizationType/LAMBDA} "test" :item)))
+    (is (= AuthorizationType/OIDC (authorization-type {:item AuthorizationType/OIDC} "test" :item)))
+    (is (= AuthorizationType/OIDC (authorization-type {:test/item AuthorizationType/OIDC} "test" :item)))
+    (is (= AuthorizationType/USER_POOL (authorization-type {:item AuthorizationType/USER_POOL} "test" :item)))
+    (is (= AuthorizationType/USER_POOL (authorization-type {:test/item AuthorizationType/USER_POOL} "test" :item)))
+    (is (= AuthorizationType/API_KEY (authorization-type {:item :api-key} "test" :item)))
+    (is (= AuthorizationType/API_KEY (authorization-type {:test/item :api-key} "test" :item)))
     (is (= AuthorizationType/IAM (authorization-type {:item :iam} "test" :item)))
     (is (= AuthorizationType/IAM (authorization-type {:test/item :iam} "test" :item)))
+    (is (= AuthorizationType/LAMBDA (authorization-type {:item :lambda} "test" :item)))
+    (is (= AuthorizationType/LAMBDA (authorization-type {:test/item :lambda} "test" :item)))
     (is (= AuthorizationType/OIDC (authorization-type {:item :oidc} "test" :item)))
     (is (= AuthorizationType/OIDC (authorization-type {:test/item :oidc} "test" :item)))
-    (is (= AuthorizationType/API_KEY (authorization-type {:item :api-key} "test" :item)))
-    (is (= AuthorizationType/API_KEY (authorization-type {:test/item :api-key} "test" :item)))))
+    (is (= AuthorizationType/USER_POOL (authorization-type {:item :user-pool} "test" :item)))
+    (is (= AuthorizationType/USER_POOL (authorization-type {:test/item :user-pool} "test" :item)))))
 
 
 (deftest field-log-level-test
   (testing "Testing enum function field-log-level"
     (is (= FieldLogLevel/ALL (field-log-level {:item FieldLogLevel/ALL} "test" :item)))
     (is (= FieldLogLevel/ALL (field-log-level {:test/item FieldLogLevel/ALL} "test" :item)))
-    (is (= FieldLogLevel/NONE (field-log-level {:item FieldLogLevel/NONE} "test" :item)))
-    (is (= FieldLogLevel/NONE (field-log-level {:test/item FieldLogLevel/NONE} "test" :item)))
     (is (= FieldLogLevel/ERROR (field-log-level {:item FieldLogLevel/ERROR} "test" :item)))
     (is (= FieldLogLevel/ERROR (field-log-level {:test/item FieldLogLevel/ERROR} "test" :item)))
+    (is (= FieldLogLevel/NONE (field-log-level {:item FieldLogLevel/NONE} "test" :item)))
+    (is (= FieldLogLevel/NONE (field-log-level {:test/item FieldLogLevel/NONE} "test" :item)))
     (is (= FieldLogLevel/ALL (field-log-level {:item :all} "test" :item)))
     (is (= FieldLogLevel/ALL (field-log-level {:test/item :all} "test" :item)))
-    (is (= FieldLogLevel/NONE (field-log-level {:item :none} "test" :item)))
-    (is (= FieldLogLevel/NONE (field-log-level {:test/item :none} "test" :item)))
     (is (= FieldLogLevel/ERROR (field-log-level {:item :error} "test" :item)))
-    (is (= FieldLogLevel/ERROR (field-log-level {:test/item :error} "test" :item)))))
+    (is (= FieldLogLevel/ERROR (field-log-level {:test/item :error} "test" :item)))
+    (is (= FieldLogLevel/NONE (field-log-level {:item :none} "test" :item)))
+    (is (= FieldLogLevel/NONE (field-log-level {:test/item :none} "test" :item)))))
 
 
 (deftest function-runtime-family-test
@@ -69,26 +69,26 @@
 
 (deftest introspection-config-test
   (testing "Testing enum function introspection-config"
-    (is (= IntrospectionConfig/ENABLED (introspection-config {:item IntrospectionConfig/ENABLED} "test" :item)))
-    (is (= IntrospectionConfig/ENABLED (introspection-config {:test/item IntrospectionConfig/ENABLED} "test" :item)))
     (is (= IntrospectionConfig/DISABLED (introspection-config {:item IntrospectionConfig/DISABLED} "test" :item)))
     (is (= IntrospectionConfig/DISABLED (introspection-config {:test/item IntrospectionConfig/DISABLED} "test" :item)))
-    (is (= IntrospectionConfig/ENABLED (introspection-config {:item :enabled} "test" :item)))
-    (is (= IntrospectionConfig/ENABLED (introspection-config {:test/item :enabled} "test" :item)))
+    (is (= IntrospectionConfig/ENABLED (introspection-config {:item IntrospectionConfig/ENABLED} "test" :item)))
+    (is (= IntrospectionConfig/ENABLED (introspection-config {:test/item IntrospectionConfig/ENABLED} "test" :item)))
     (is (= IntrospectionConfig/DISABLED (introspection-config {:item :disabled} "test" :item)))
-    (is (= IntrospectionConfig/DISABLED (introspection-config {:test/item :disabled} "test" :item)))))
+    (is (= IntrospectionConfig/DISABLED (introspection-config {:test/item :disabled} "test" :item)))
+    (is (= IntrospectionConfig/ENABLED (introspection-config {:item :enabled} "test" :item)))
+    (is (= IntrospectionConfig/ENABLED (introspection-config {:test/item :enabled} "test" :item)))))
 
 
 (deftest merge-type-test
   (testing "Testing enum function merge-type"
-    (is (= MergeType/MANUAL_MERGE (merge-type {:item MergeType/MANUAL_MERGE} "test" :item)))
-    (is (= MergeType/MANUAL_MERGE (merge-type {:test/item MergeType/MANUAL_MERGE} "test" :item)))
     (is (= MergeType/AUTO_MERGE (merge-type {:item MergeType/AUTO_MERGE} "test" :item)))
     (is (= MergeType/AUTO_MERGE (merge-type {:test/item MergeType/AUTO_MERGE} "test" :item)))
-    (is (= MergeType/MANUAL_MERGE (merge-type {:item :manual-merge} "test" :item)))
-    (is (= MergeType/MANUAL_MERGE (merge-type {:test/item :manual-merge} "test" :item)))
+    (is (= MergeType/MANUAL_MERGE (merge-type {:item MergeType/MANUAL_MERGE} "test" :item)))
+    (is (= MergeType/MANUAL_MERGE (merge-type {:test/item MergeType/MANUAL_MERGE} "test" :item)))
     (is (= MergeType/AUTO_MERGE (merge-type {:item :auto-merge} "test" :item)))
-    (is (= MergeType/AUTO_MERGE (merge-type {:test/item :auto-merge} "test" :item)))))
+    (is (= MergeType/AUTO_MERGE (merge-type {:test/item :auto-merge} "test" :item)))
+    (is (= MergeType/MANUAL_MERGE (merge-type {:item :manual-merge} "test" :item)))
+    (is (= MergeType/MANUAL_MERGE (merge-type {:test/item :manual-merge} "test" :item)))))
 
 
 (deftest user-pool-default-action-test

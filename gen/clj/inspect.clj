@@ -1,6 +1,7 @@
 (ns inspect
   "Responsible for inspecting found Java classes to analyze and save in context."
   (:require [model :refer [java-class-info]]
+            [reflect :refer [reflect-enum]]
             [util :refer [constant-keyword
                           camel->kebab-case
                           package>namespace]]
@@ -35,21 +36,6 @@
                                           :method-key :method-symbol}]}]}})
 
 
-; Begin Enum Specific Processing
-
-(defn enum-values
-  "Extracts a map of Enum values and there key value."
-  [^Enum enum]
-  (->> (ref/reflect enum)
-       :members
-       (filterv (comp :public :flags))
-       (filterv (comp :enum :flags))
-       (mapv :name)
-       (mapv (juxt identity constant-keyword))
-       (into {})))
-
-
-; Begin Builder Specific Processing
 (def create-method
   "The form that matches the value of the create method when reflected."
   (symbol "create"))
@@ -140,7 +126,7 @@
   "Create the attribute definition for enums"
   [^Class klass]
   (-> (java-class-info klass)
-      (assoc :values (enum-values klass))))
+      (assoc :values (reflect-enum klass))))
 
 
 (defn describe-enums

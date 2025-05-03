@@ -183,20 +183,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ArnFormat` - the value is returned.
-* is `:slash-resource-name` - `ArnFormat/SLASH_RESOURCE_NAME` is returned
-* is `:no-resource-name` - `ArnFormat/NO_RESOURCE_NAME` is returned
-* is `:slash-resource-slash-resource-name` - `ArnFormat/SLASH_RESOURCE_SLASH_RESOURCE_NAME` is returned
 * is `:colon-resource-name` - `ArnFormat/COLON_RESOURCE_NAME` is returned
+* is `:no-resource-name` - `ArnFormat/NO_RESOURCE_NAME` is returned
+* is `:slash-resource-name` - `ArnFormat/SLASH_RESOURCE_NAME` is returned
+* is `:slash-resource-slash-resource-name` - `ArnFormat/SLASH_RESOURCE_SLASH_RESOURCE_NAME` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ArnFormat data) data
-      (= :slash-resource-name data) ArnFormat/SLASH_RESOURCE_NAME
+      (= :colon-resource-name data) ArnFormat/COLON_RESOURCE_NAME
       (= :no-resource-name data) ArnFormat/NO_RESOURCE_NAME
-      (= :slash-resource-slash-resource-name data) ArnFormat/SLASH_RESOURCE_SLASH_RESOURCE_NAME
-      (= :colon-resource-name data) ArnFormat/COLON_RESOURCE_NAME)))
+      (= :slash-resource-name data) ArnFormat/SLASH_RESOURCE_NAME
+      (= :slash-resource-slash-resource-name data) ArnFormat/SLASH_RESOURCE_SLASH_RESOURCE_NAME)))
 
 
 (defn asset-hash-type
@@ -206,18 +206,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AssetHashType` - the value is returned.
+* is `:custom` - `AssetHashType/CUSTOM` is returned
 * is `:output` - `AssetHashType/OUTPUT` is returned
 * is `:source` - `AssetHashType/SOURCE` is returned
-* is `:custom` - `AssetHashType/CUSTOM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AssetHashType data) data
+      (= :custom data) AssetHashType/CUSTOM
       (= :output data) AssetHashType/OUTPUT
-      (= :source data) AssetHashType/SOURCE
-      (= :custom data) AssetHashType/CUSTOM)))
+      (= :source data) AssetHashType/SOURCE)))
 
 
 (defn bundling-file-access
@@ -246,20 +246,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BundlingOutput` - the value is returned.
-* is `:auto-discover` - `BundlingOutput/AUTO_DISCOVER` is returned
-* is `:single-file` - `BundlingOutput/SINGLE_FILE` is returned
 * is `:archived` - `BundlingOutput/ARCHIVED` is returned
+* is `:auto-discover` - `BundlingOutput/AUTO_DISCOVER` is returned
 * is `:not-archived` - `BundlingOutput/NOT_ARCHIVED` is returned
+* is `:single-file` - `BundlingOutput/SINGLE_FILE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BundlingOutput data) data
-      (= :auto-discover data) BundlingOutput/AUTO_DISCOVER
-      (= :single-file data) BundlingOutput/SINGLE_FILE
       (= :archived data) BundlingOutput/ARCHIVED
-      (= :not-archived data) BundlingOutput/NOT_ARCHIVED)))
+      (= :auto-discover data) BundlingOutput/AUTO_DISCOVER
+      (= :not-archived data) BundlingOutput/NOT_ARCHIVED
+      (= :single-file data) BundlingOutput/SINGLE_FILE)))
 
 
 (defn cfn-capabilities
@@ -269,20 +269,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CfnCapabilities` - the value is returned.
-* is `:auto-expand` - `CfnCapabilities/AUTO_EXPAND` is returned
-* is `:none` - `CfnCapabilities/NONE` is returned
-* is `:named-iam` - `CfnCapabilities/NAMED_IAM` is returned
 * is `:anonymous-iam` - `CfnCapabilities/ANONYMOUS_IAM` is returned
+* is `:auto-expand` - `CfnCapabilities/AUTO_EXPAND` is returned
+* is `:named-iam` - `CfnCapabilities/NAMED_IAM` is returned
+* is `:none` - `CfnCapabilities/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CfnCapabilities data) data
+      (= :anonymous-iam data) CfnCapabilities/ANONYMOUS_IAM
       (= :auto-expand data) CfnCapabilities/AUTO_EXPAND
-      (= :none data) CfnCapabilities/NONE
       (= :named-iam data) CfnCapabilities/NAMED_IAM
-      (= :anonymous-iam data) CfnCapabilities/ANONYMOUS_IAM)))
+      (= :none data) CfnCapabilities/NONE)))
 
 
 (defn cfn-deletion-policy
@@ -293,9 +293,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `CfnDeletionPolicy` - the value is returned.
 * is `:delete` - `CfnDeletionPolicy/DELETE` is returned
-* is `:snapshot` - `CfnDeletionPolicy/SNAPSHOT` is returned
 * is `:retain` - `CfnDeletionPolicy/RETAIN` is returned
 * is `:retain-except-on-create` - `CfnDeletionPolicy/RETAIN_EXCEPT_ON_CREATE` is returned
+* is `:snapshot` - `CfnDeletionPolicy/SNAPSHOT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -303,9 +303,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? CfnDeletionPolicy data) data
       (= :delete data) CfnDeletionPolicy/DELETE
-      (= :snapshot data) CfnDeletionPolicy/SNAPSHOT
       (= :retain data) CfnDeletionPolicy/RETAIN
-      (= :retain-except-on-create data) CfnDeletionPolicy/RETAIN_EXCEPT_ON_CREATE)))
+      (= :retain-except-on-create data) CfnDeletionPolicy/RETAIN_EXCEPT_ON_CREATE
+      (= :snapshot data) CfnDeletionPolicy/SNAPSHOT)))
 
 
 (defn cfn-dynamic-reference-service
@@ -336,18 +336,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CfnTrafficRoutingType` - the value is returned.
-* is `:time-based-linear` - `CfnTrafficRoutingType/TIME_BASED_LINEAR` is returned
 * is `:all-at-once` - `CfnTrafficRoutingType/ALL_AT_ONCE` is returned
 * is `:time-based-canary` - `CfnTrafficRoutingType/TIME_BASED_CANARY` is returned
+* is `:time-based-linear` - `CfnTrafficRoutingType/TIME_BASED_LINEAR` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CfnTrafficRoutingType data) data
-      (= :time-based-linear data) CfnTrafficRoutingType/TIME_BASED_LINEAR
       (= :all-at-once data) CfnTrafficRoutingType/ALL_AT_ONCE
-      (= :time-based-canary data) CfnTrafficRoutingType/TIME_BASED_CANARY)))
+      (= :time-based-canary data) CfnTrafficRoutingType/TIME_BASED_CANARY
+      (= :time-based-linear data) CfnTrafficRoutingType/TIME_BASED_LINEAR)))
 
 
 (defn custom-resource-provider-runtime
@@ -357,8 +357,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CustomResourceProviderRuntime` - the value is returned.
-* is `:nodejs-14-x` - `CustomResourceProviderRuntime/NODEJS_14_X` is returned
 * is `:nodejs-12-x` - `CustomResourceProviderRuntime/NODEJS_12_X` is returned
+* is `:nodejs-14-x` - `CustomResourceProviderRuntime/NODEJS_14_X` is returned
 * is `:nodejs-16-x` - `CustomResourceProviderRuntime/NODEJS_16_X` is returned
 * is `:nodejs-18-x` - `CustomResourceProviderRuntime/NODEJS_18_X` is returned
 
@@ -367,8 +367,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CustomResourceProviderRuntime data) data
-      (= :nodejs-14-x data) CustomResourceProviderRuntime/NODEJS_14_X
       (= :nodejs-12-x data) CustomResourceProviderRuntime/NODEJS_12_X
+      (= :nodejs-14-x data) CustomResourceProviderRuntime/NODEJS_14_X
       (= :nodejs-16-x data) CustomResourceProviderRuntime/NODEJS_16_X
       (= :nodejs-18-x data) CustomResourceProviderRuntime/NODEJS_18_X)))
 
@@ -380,18 +380,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DockerVolumeConsistency` - the value is returned.
+* is `:cached` - `DockerVolumeConsistency/CACHED` is returned
 * is `:consistent` - `DockerVolumeConsistency/CONSISTENT` is returned
 * is `:delegated` - `DockerVolumeConsistency/DELEGATED` is returned
-* is `:cached` - `DockerVolumeConsistency/CACHED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DockerVolumeConsistency data) data
+      (= :cached data) DockerVolumeConsistency/CACHED
       (= :consistent data) DockerVolumeConsistency/CONSISTENT
-      (= :delegated data) DockerVolumeConsistency/DELEGATED
-      (= :cached data) DockerVolumeConsistency/CACHED)))
+      (= :delegated data) DockerVolumeConsistency/DELEGATED)))
 
 
 (defn file-asset-packaging
@@ -401,16 +401,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FileAssetPackaging` - the value is returned.
-* is `:zip-directory` - `FileAssetPackaging/ZIP_DIRECTORY` is returned
 * is `:file` - `FileAssetPackaging/FILE` is returned
+* is `:zip-directory` - `FileAssetPackaging/ZIP_DIRECTORY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FileAssetPackaging data) data
-      (= :zip-directory data) FileAssetPackaging/ZIP_DIRECTORY
-      (= :file data) FileAssetPackaging/FILE)))
+      (= :file data) FileAssetPackaging/FILE
+      (= :zip-directory data) FileAssetPackaging/ZIP_DIRECTORY)))
 
 
 (defn ignore-mode
@@ -441,16 +441,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PolicyValidationReportStatusBeta1` - the value is returned.
-* is `:success` - `PolicyValidationReportStatusBeta1/SUCCESS` is returned
 * is `:failure` - `PolicyValidationReportStatusBeta1/FAILURE` is returned
+* is `:success` - `PolicyValidationReportStatusBeta1/SUCCESS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PolicyValidationReportStatusBeta1 data) data
-      (= :success data) PolicyValidationReportStatusBeta1/SUCCESS
-      (= :failure data) PolicyValidationReportStatusBeta1/FAILURE)))
+      (= :failure data) PolicyValidationReportStatusBeta1/FAILURE
+      (= :success data) PolicyValidationReportStatusBeta1/SUCCESS)))
 
 
 (defn removal-policy
@@ -460,20 +460,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RemovalPolicy` - the value is returned.
-* is `:snapshot` - `RemovalPolicy/SNAPSHOT` is returned
-* is `:retain-on-update-or-delete` - `RemovalPolicy/RETAIN_ON_UPDATE_OR_DELETE` is returned
 * is `:destroy` - `RemovalPolicy/DESTROY` is returned
 * is `:retain` - `RemovalPolicy/RETAIN` is returned
+* is `:retain-on-update-or-delete` - `RemovalPolicy/RETAIN_ON_UPDATE_OR_DELETE` is returned
+* is `:snapshot` - `RemovalPolicy/SNAPSHOT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RemovalPolicy data) data
-      (= :snapshot data) RemovalPolicy/SNAPSHOT
-      (= :retain-on-update-or-delete data) RemovalPolicy/RETAIN_ON_UPDATE_OR_DELETE
       (= :destroy data) RemovalPolicy/DESTROY
-      (= :retain data) RemovalPolicy/RETAIN)))
+      (= :retain data) RemovalPolicy/RETAIN
+      (= :retain-on-update-or-delete data) RemovalPolicy/RETAIN_ON_UPDATE_OR_DELETE
+      (= :snapshot data) RemovalPolicy/SNAPSHOT)))
 
 
 (defn resolution-type-hint
@@ -483,8 +483,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ResolutionTypeHint` - the value is returned.
-* is `:string` - `ResolutionTypeHint/STRING` is returned
 * is `:number` - `ResolutionTypeHint/NUMBER` is returned
+* is `:string` - `ResolutionTypeHint/STRING` is returned
 * is `:string-list` - `ResolutionTypeHint/STRING_LIST` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -492,8 +492,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ResolutionTypeHint data) data
-      (= :string data) ResolutionTypeHint/STRING
       (= :number data) ResolutionTypeHint/NUMBER
+      (= :string data) ResolutionTypeHint/STRING
       (= :string-list data) ResolutionTypeHint/STRING_LIST)))
 
 
@@ -504,8 +504,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SizeRoundingBehavior` - the value is returned.
-* is `:floor` - `SizeRoundingBehavior/FLOOR` is returned
 * is `:fail` - `SizeRoundingBehavior/FAIL` is returned
+* is `:floor` - `SizeRoundingBehavior/FLOOR` is returned
 * is `:none` - `SizeRoundingBehavior/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -513,8 +513,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SizeRoundingBehavior data) data
-      (= :floor data) SizeRoundingBehavior/FLOOR
       (= :fail data) SizeRoundingBehavior/FAIL
+      (= :floor data) SizeRoundingBehavior/FLOOR
       (= :none data) SizeRoundingBehavior/NONE)))
 
 
@@ -525,20 +525,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SymlinkFollowMode` - the value is returned.
-* is `:never` - `SymlinkFollowMode/NEVER` is returned
-* is `:block-external` - `SymlinkFollowMode/BLOCK_EXTERNAL` is returned
 * is `:always` - `SymlinkFollowMode/ALWAYS` is returned
+* is `:block-external` - `SymlinkFollowMode/BLOCK_EXTERNAL` is returned
 * is `:external` - `SymlinkFollowMode/EXTERNAL` is returned
+* is `:never` - `SymlinkFollowMode/NEVER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SymlinkFollowMode data) data
-      (= :never data) SymlinkFollowMode/NEVER
-      (= :block-external data) SymlinkFollowMode/BLOCK_EXTERNAL
       (= :always data) SymlinkFollowMode/ALWAYS
-      (= :external data) SymlinkFollowMode/EXTERNAL)))
+      (= :block-external data) SymlinkFollowMode/BLOCK_EXTERNAL
+      (= :external data) SymlinkFollowMode/EXTERNAL
+      (= :never data) SymlinkFollowMode/NEVER)))
 
 
 (defn tag-type
@@ -548,22 +548,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TagType` - the value is returned.
-* is `:map` - `TagType/MAP` is returned
-* is `:standard` - `TagType/STANDARD` is returned
-* is `:not-taggable` - `TagType/NOT_TAGGABLE` is returned
-* is `:key-value` - `TagType/KEY_VALUE` is returned
 * is `:autoscaling-group` - `TagType/AUTOSCALING_GROUP` is returned
+* is `:key-value` - `TagType/KEY_VALUE` is returned
+* is `:map` - `TagType/MAP` is returned
+* is `:not-taggable` - `TagType/NOT_TAGGABLE` is returned
+* is `:standard` - `TagType/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TagType data) data
-      (= :map data) TagType/MAP
-      (= :standard data) TagType/STANDARD
-      (= :not-taggable data) TagType/NOT_TAGGABLE
+      (= :autoscaling-group data) TagType/AUTOSCALING_GROUP
       (= :key-value data) TagType/KEY_VALUE
-      (= :autoscaling-group data) TagType/AUTOSCALING_GROUP)))
+      (= :map data) TagType/MAP
+      (= :not-taggable data) TagType/NOT_TAGGABLE
+      (= :standard data) TagType/STANDARD)))
 
 
 (defn app-builder>

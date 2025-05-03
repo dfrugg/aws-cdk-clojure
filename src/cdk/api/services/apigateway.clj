@@ -196,20 +196,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AuthorizationType` - the value is returned.
-* is `:none` - `AuthorizationType/NONE` is returned
-* is `:iam` - `AuthorizationType/IAM` is returned
 * is `:cognito` - `AuthorizationType/COGNITO` is returned
 * is `:custom` - `AuthorizationType/CUSTOM` is returned
+* is `:iam` - `AuthorizationType/IAM` is returned
+* is `:none` - `AuthorizationType/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AuthorizationType data) data
-      (= :none data) AuthorizationType/NONE
-      (= :iam data) AuthorizationType/IAM
       (= :cognito data) AuthorizationType/COGNITO
-      (= :custom data) AuthorizationType/CUSTOM)))
+      (= :custom data) AuthorizationType/CUSTOM
+      (= :iam data) AuthorizationType/IAM
+      (= :none data) AuthorizationType/NONE)))
 
 
 (defn connection-type
@@ -219,16 +219,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ConnectionType` - the value is returned.
-* is `:vpc-link` - `ConnectionType/VPC_LINK` is returned
 * is `:internet` - `ConnectionType/INTERNET` is returned
+* is `:vpc-link` - `ConnectionType/VPC_LINK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ConnectionType data) data
-      (= :vpc-link data) ConnectionType/VPC_LINK
-      (= :internet data) ConnectionType/INTERNET)))
+      (= :internet data) ConnectionType/INTERNET
+      (= :vpc-link data) ConnectionType/VPC_LINK)))
 
 
 (defn content-handling
@@ -278,22 +278,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `IntegrationType` - the value is returned.
-* is `:http-proxy` - `IntegrationType/HTTP_PROXY` is returned
-* is `:mock` - `IntegrationType/MOCK` is returned
 * is `:aws` - `IntegrationType/AWS` is returned
 * is `:aws-proxy` - `IntegrationType/AWS_PROXY` is returned
 * is `:http` - `IntegrationType/HTTP` is returned
+* is `:http-proxy` - `IntegrationType/HTTP_PROXY` is returned
+* is `:mock` - `IntegrationType/MOCK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? IntegrationType data) data
-      (= :http-proxy data) IntegrationType/HTTP_PROXY
-      (= :mock data) IntegrationType/MOCK
       (= :aws data) IntegrationType/AWS
       (= :aws-proxy data) IntegrationType/AWS_PROXY
-      (= :http data) IntegrationType/HTTP)))
+      (= :http data) IntegrationType/HTTP
+      (= :http-proxy data) IntegrationType/HTTP_PROXY
+      (= :mock data) IntegrationType/MOCK)))
 
 
 (defn json-schema-type
@@ -304,10 +304,10 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `JsonSchemaType` - the value is returned.
 * is `:array` - `JsonSchemaType/ARRAY` is returned
-* is `:number` - `JsonSchemaType/NUMBER` is returned
-* is `:null` - `JsonSchemaType/NULL` is returned
 * is `:boolean` - `JsonSchemaType/BOOLEAN` is returned
 * is `:integer` - `JsonSchemaType/INTEGER` is returned
+* is `:null` - `JsonSchemaType/NULL` is returned
+* is `:number` - `JsonSchemaType/NUMBER` is returned
 * is `:object` - `JsonSchemaType/OBJECT` is returned
 * is `:string` - `JsonSchemaType/STRING` is returned
 
@@ -317,10 +317,10 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? JsonSchemaType data) data
       (= :array data) JsonSchemaType/ARRAY
-      (= :number data) JsonSchemaType/NUMBER
-      (= :null data) JsonSchemaType/NULL
       (= :boolean data) JsonSchemaType/BOOLEAN
       (= :integer data) JsonSchemaType/INTEGER
+      (= :null data) JsonSchemaType/NULL
+      (= :number data) JsonSchemaType/NUMBER
       (= :object data) JsonSchemaType/OBJECT
       (= :string data) JsonSchemaType/STRING)))
 
@@ -351,18 +351,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MethodLoggingLevel` - the value is returned.
-* is `:off` - `MethodLoggingLevel/OFF` is returned
-* is `:info` - `MethodLoggingLevel/INFO` is returned
 * is `:error` - `MethodLoggingLevel/ERROR` is returned
+* is `:info` - `MethodLoggingLevel/INFO` is returned
+* is `:off` - `MethodLoggingLevel/OFF` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MethodLoggingLevel data) data
-      (= :off data) MethodLoggingLevel/OFF
+      (= :error data) MethodLoggingLevel/ERROR
       (= :info data) MethodLoggingLevel/INFO
-      (= :error data) MethodLoggingLevel/ERROR)))
+      (= :off data) MethodLoggingLevel/OFF)))
 
 
 (defn passthrough-behavior
@@ -394,8 +394,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `Period` - the value is returned.
 * is `:day` - `Period/DAY` is returned
-* is `:week` - `Period/WEEK` is returned
 * is `:month` - `Period/MONTH` is returned
+* is `:week` - `Period/WEEK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -403,8 +403,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? Period data) data
       (= :day data) Period/DAY
-      (= :week data) Period/WEEK
-      (= :month data) Period/MONTH)))
+      (= :month data) Period/MONTH
+      (= :week data) Period/WEEK)))
 
 
 (defn security-policy

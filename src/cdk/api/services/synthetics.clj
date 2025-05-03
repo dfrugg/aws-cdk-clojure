@@ -34,16 +34,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Cleanup` - the value is returned.
-* is `:nothing` - `Cleanup/NOTHING` is returned
 * is `:lambda` - `Cleanup/LAMBDA` is returned
+* is `:nothing` - `Cleanup/NOTHING` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Cleanup data) data
-      (= :nothing data) Cleanup/NOTHING
-      (= :lambda data) Cleanup/LAMBDA)))
+      (= :lambda data) Cleanup/LAMBDA
+      (= :nothing data) Cleanup/NOTHING)))
 
 
 (defn runtime-family
@@ -54,8 +54,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `RuntimeFamily` - the value is returned.
 * is `:nodejs` - `RuntimeFamily/NODEJS` is returned
-* is `:python` - `RuntimeFamily/PYTHON` is returned
 * is `:other` - `RuntimeFamily/OTHER` is returned
+* is `:python` - `RuntimeFamily/PYTHON` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -63,8 +63,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? RuntimeFamily data) data
       (= :nodejs data) RuntimeFamily/NODEJS
-      (= :python data) RuntimeFamily/PYTHON
-      (= :other data) RuntimeFamily/OTHER)))
+      (= :other data) RuntimeFamily/OTHER
+      (= :python data) RuntimeFamily/PYTHON)))
 
 
 (defn artifacts-bucket-location-builder>

@@ -89,18 +89,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AttributeType` - the value is returned.
+* is `:binary` - `AttributeType/BINARY` is returned
 * is `:number` - `AttributeType/NUMBER` is returned
 * is `:string` - `AttributeType/STRING` is returned
-* is `:binary` - `AttributeType/BINARY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AttributeType data) data
+      (= :binary data) AttributeType/BINARY
       (= :number data) AttributeType/NUMBER
-      (= :string data) AttributeType/STRING
-      (= :binary data) AttributeType/BINARY)))
+      (= :string data) AttributeType/STRING)))
 
 
 (defn billing-mode
@@ -110,16 +110,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BillingMode` - the value is returned.
-* is `:provisioned` - `BillingMode/PROVISIONED` is returned
 * is `:pay-per-request` - `BillingMode/PAY_PER_REQUEST` is returned
+* is `:provisioned` - `BillingMode/PROVISIONED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BillingMode data) data
-      (= :provisioned data) BillingMode/PROVISIONED
-      (= :pay-per-request data) BillingMode/PAY_PER_REQUEST)))
+      (= :pay-per-request data) BillingMode/PAY_PER_REQUEST
+      (= :provisioned data) BillingMode/PROVISIONED)))
 
 
 (defn capacity-mode
@@ -169,40 +169,40 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Operation` - the value is returned.
-* is `:batch-get-item` - `Operation/BATCH_GET_ITEM` is returned
 * is `:batch-execute-statement` - `Operation/BATCH_EXECUTE_STATEMENT` is returned
-* is `:put-item` - `Operation/PUT_ITEM` is returned
-* is `:execute-statement` - `Operation/EXECUTE_STATEMENT` is returned
+* is `:batch-get-item` - `Operation/BATCH_GET_ITEM` is returned
 * is `:batch-write-item` - `Operation/BATCH_WRITE_ITEM` is returned
-* is `:transact-get-items` - `Operation/TRANSACT_GET_ITEMS` is returned
-* is `:execute-transaction` - `Operation/EXECUTE_TRANSACTION` is returned
-* is `:transact-write-items` - `Operation/TRANSACT_WRITE_ITEMS` is returned
-* is `:update-item` - `Operation/UPDATE_ITEM` is returned
 * is `:delete-item` - `Operation/DELETE_ITEM` is returned
-* is `:query` - `Operation/QUERY` is returned
-* is `:scan` - `Operation/SCAN` is returned
+* is `:execute-statement` - `Operation/EXECUTE_STATEMENT` is returned
+* is `:execute-transaction` - `Operation/EXECUTE_TRANSACTION` is returned
 * is `:get-item` - `Operation/GET_ITEM` is returned
 * is `:get-records` - `Operation/GET_RECORDS` is returned
+* is `:put-item` - `Operation/PUT_ITEM` is returned
+* is `:query` - `Operation/QUERY` is returned
+* is `:scan` - `Operation/SCAN` is returned
+* is `:transact-get-items` - `Operation/TRANSACT_GET_ITEMS` is returned
+* is `:transact-write-items` - `Operation/TRANSACT_WRITE_ITEMS` is returned
+* is `:update-item` - `Operation/UPDATE_ITEM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Operation data) data
-      (= :batch-get-item data) Operation/BATCH_GET_ITEM
       (= :batch-execute-statement data) Operation/BATCH_EXECUTE_STATEMENT
-      (= :put-item data) Operation/PUT_ITEM
-      (= :execute-statement data) Operation/EXECUTE_STATEMENT
+      (= :batch-get-item data) Operation/BATCH_GET_ITEM
       (= :batch-write-item data) Operation/BATCH_WRITE_ITEM
-      (= :transact-get-items data) Operation/TRANSACT_GET_ITEMS
-      (= :execute-transaction data) Operation/EXECUTE_TRANSACTION
-      (= :transact-write-items data) Operation/TRANSACT_WRITE_ITEMS
-      (= :update-item data) Operation/UPDATE_ITEM
       (= :delete-item data) Operation/DELETE_ITEM
+      (= :execute-statement data) Operation/EXECUTE_STATEMENT
+      (= :execute-transaction data) Operation/EXECUTE_TRANSACTION
+      (= :get-item data) Operation/GET_ITEM
+      (= :get-records data) Operation/GET_RECORDS
+      (= :put-item data) Operation/PUT_ITEM
       (= :query data) Operation/QUERY
       (= :scan data) Operation/SCAN
-      (= :get-item data) Operation/GET_ITEM
-      (= :get-records data) Operation/GET_RECORDS)))
+      (= :transact-get-items data) Operation/TRANSACT_GET_ITEMS
+      (= :transact-write-items data) Operation/TRANSACT_WRITE_ITEMS
+      (= :update-item data) Operation/UPDATE_ITEM)))
 
 
 (defn projection-type
@@ -212,18 +212,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ProjectionType` - the value is returned.
-* is `:keys-only` - `ProjectionType/KEYS_ONLY` is returned
-* is `:include` - `ProjectionType/INCLUDE` is returned
 * is `:all` - `ProjectionType/ALL` is returned
+* is `:include` - `ProjectionType/INCLUDE` is returned
+* is `:keys-only` - `ProjectionType/KEYS_ONLY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ProjectionType data) data
-      (= :keys-only data) ProjectionType/KEYS_ONLY
+      (= :all data) ProjectionType/ALL
       (= :include data) ProjectionType/INCLUDE
-      (= :all data) ProjectionType/ALL)))
+      (= :keys-only data) ProjectionType/KEYS_ONLY)))
 
 
 (defn stream-view-type
@@ -233,9 +233,9 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `StreamViewType` - the value is returned.
-* is `:new-image` - `StreamViewType/NEW_IMAGE` is returned
-* is `:new-and-old-images` - `StreamViewType/NEW_AND_OLD_IMAGES` is returned
 * is `:keys-only` - `StreamViewType/KEYS_ONLY` is returned
+* is `:new-and-old-images` - `StreamViewType/NEW_AND_OLD_IMAGES` is returned
+* is `:new-image` - `StreamViewType/NEW_IMAGE` is returned
 * is `:old-image` - `StreamViewType/OLD_IMAGE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -243,9 +243,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? StreamViewType data) data
-      (= :new-image data) StreamViewType/NEW_IMAGE
-      (= :new-and-old-images data) StreamViewType/NEW_AND_OLD_IMAGES
       (= :keys-only data) StreamViewType/KEYS_ONLY
+      (= :new-and-old-images data) StreamViewType/NEW_AND_OLD_IMAGES
+      (= :new-image data) StreamViewType/NEW_IMAGE
       (= :old-image data) StreamViewType/OLD_IMAGE)))
 
 
@@ -275,8 +275,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TableEncryption` - the value is returned.
-* is `:customer-managed` - `TableEncryption/CUSTOMER_MANAGED` is returned
 * is `:aws-managed` - `TableEncryption/AWS_MANAGED` is returned
+* is `:customer-managed` - `TableEncryption/CUSTOMER_MANAGED` is returned
 * is `:default` - `TableEncryption/DEFAULT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -284,8 +284,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TableEncryption data) data
-      (= :customer-managed data) TableEncryption/CUSTOMER_MANAGED
       (= :aws-managed data) TableEncryption/AWS_MANAGED
+      (= :customer-managed data) TableEncryption/CUSTOMER_MANAGED
       (= :default data) TableEncryption/DEFAULT)))
 
 

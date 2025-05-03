@@ -60,46 +60,46 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BackupVaultEvents` - the value is returned.
-* is `:restore-job-completed` - `BackupVaultEvents/RESTORE_JOB_COMPLETED` is returned
-* is `:recovery-point-modified` - `BackupVaultEvents/RECOVERY_POINT_MODIFIED` is returned
-* is `:restore-job-failed` - `BackupVaultEvents/RESTORE_JOB_FAILED` is returned
-* is `:copy-job-successful` - `BackupVaultEvents/COPY_JOB_SUCCESSFUL` is returned
-* is `:backup-plan-created` - `BackupVaultEvents/BACKUP_PLAN_CREATED` is returned
-* is `:restore-job-successful` - `BackupVaultEvents/RESTORE_JOB_SUCCESSFUL` is returned
-* is `:backup-job-expired` - `BackupVaultEvents/BACKUP_JOB_EXPIRED` is returned
-* is `:s3-restore-object-failed` - `BackupVaultEvents/S3_RESTORE_OBJECT_FAILED` is returned
-* is `:backup-job-failed` - `BackupVaultEvents/BACKUP_JOB_FAILED` is returned
-* is `:backup-plan-modified` - `BackupVaultEvents/BACKUP_PLAN_MODIFIED` is returned
-* is `:copy-job-started` - `BackupVaultEvents/COPY_JOB_STARTED` is returned
-* is `:s3-backup-object-failed` - `BackupVaultEvents/S3_BACKUP_OBJECT_FAILED` is returned
-* is `:backup-job-started` - `BackupVaultEvents/BACKUP_JOB_STARTED` is returned
 * is `:backup-job-completed` - `BackupVaultEvents/BACKUP_JOB_COMPLETED` is returned
-* is `:restore-job-started` - `BackupVaultEvents/RESTORE_JOB_STARTED` is returned
-* is `:copy-job-failed` - `BackupVaultEvents/COPY_JOB_FAILED` is returned
+* is `:backup-job-expired` - `BackupVaultEvents/BACKUP_JOB_EXPIRED` is returned
+* is `:backup-job-failed` - `BackupVaultEvents/BACKUP_JOB_FAILED` is returned
+* is `:backup-job-started` - `BackupVaultEvents/BACKUP_JOB_STARTED` is returned
 * is `:backup-job-successful` - `BackupVaultEvents/BACKUP_JOB_SUCCESSFUL` is returned
+* is `:backup-plan-created` - `BackupVaultEvents/BACKUP_PLAN_CREATED` is returned
+* is `:backup-plan-modified` - `BackupVaultEvents/BACKUP_PLAN_MODIFIED` is returned
+* is `:copy-job-failed` - `BackupVaultEvents/COPY_JOB_FAILED` is returned
+* is `:copy-job-started` - `BackupVaultEvents/COPY_JOB_STARTED` is returned
+* is `:copy-job-successful` - `BackupVaultEvents/COPY_JOB_SUCCESSFUL` is returned
+* is `:recovery-point-modified` - `BackupVaultEvents/RECOVERY_POINT_MODIFIED` is returned
+* is `:restore-job-completed` - `BackupVaultEvents/RESTORE_JOB_COMPLETED` is returned
+* is `:restore-job-failed` - `BackupVaultEvents/RESTORE_JOB_FAILED` is returned
+* is `:restore-job-started` - `BackupVaultEvents/RESTORE_JOB_STARTED` is returned
+* is `:restore-job-successful` - `BackupVaultEvents/RESTORE_JOB_SUCCESSFUL` is returned
+* is `:s3-backup-object-failed` - `BackupVaultEvents/S3_BACKUP_OBJECT_FAILED` is returned
+* is `:s3-restore-object-failed` - `BackupVaultEvents/S3_RESTORE_OBJECT_FAILED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BackupVaultEvents data) data
-      (= :restore-job-completed data) BackupVaultEvents/RESTORE_JOB_COMPLETED
-      (= :recovery-point-modified data) BackupVaultEvents/RECOVERY_POINT_MODIFIED
-      (= :restore-job-failed data) BackupVaultEvents/RESTORE_JOB_FAILED
-      (= :copy-job-successful data) BackupVaultEvents/COPY_JOB_SUCCESSFUL
-      (= :backup-plan-created data) BackupVaultEvents/BACKUP_PLAN_CREATED
-      (= :restore-job-successful data) BackupVaultEvents/RESTORE_JOB_SUCCESSFUL
-      (= :backup-job-expired data) BackupVaultEvents/BACKUP_JOB_EXPIRED
-      (= :s3-restore-object-failed data) BackupVaultEvents/S3_RESTORE_OBJECT_FAILED
-      (= :backup-job-failed data) BackupVaultEvents/BACKUP_JOB_FAILED
-      (= :backup-plan-modified data) BackupVaultEvents/BACKUP_PLAN_MODIFIED
-      (= :copy-job-started data) BackupVaultEvents/COPY_JOB_STARTED
-      (= :s3-backup-object-failed data) BackupVaultEvents/S3_BACKUP_OBJECT_FAILED
-      (= :backup-job-started data) BackupVaultEvents/BACKUP_JOB_STARTED
       (= :backup-job-completed data) BackupVaultEvents/BACKUP_JOB_COMPLETED
-      (= :restore-job-started data) BackupVaultEvents/RESTORE_JOB_STARTED
+      (= :backup-job-expired data) BackupVaultEvents/BACKUP_JOB_EXPIRED
+      (= :backup-job-failed data) BackupVaultEvents/BACKUP_JOB_FAILED
+      (= :backup-job-started data) BackupVaultEvents/BACKUP_JOB_STARTED
+      (= :backup-job-successful data) BackupVaultEvents/BACKUP_JOB_SUCCESSFUL
+      (= :backup-plan-created data) BackupVaultEvents/BACKUP_PLAN_CREATED
+      (= :backup-plan-modified data) BackupVaultEvents/BACKUP_PLAN_MODIFIED
       (= :copy-job-failed data) BackupVaultEvents/COPY_JOB_FAILED
-      (= :backup-job-successful data) BackupVaultEvents/BACKUP_JOB_SUCCESSFUL)))
+      (= :copy-job-started data) BackupVaultEvents/COPY_JOB_STARTED
+      (= :copy-job-successful data) BackupVaultEvents/COPY_JOB_SUCCESSFUL
+      (= :recovery-point-modified data) BackupVaultEvents/RECOVERY_POINT_MODIFIED
+      (= :restore-job-completed data) BackupVaultEvents/RESTORE_JOB_COMPLETED
+      (= :restore-job-failed data) BackupVaultEvents/RESTORE_JOB_FAILED
+      (= :restore-job-started data) BackupVaultEvents/RESTORE_JOB_STARTED
+      (= :restore-job-successful data) BackupVaultEvents/RESTORE_JOB_SUCCESSFUL
+      (= :s3-backup-object-failed data) BackupVaultEvents/S3_BACKUP_OBJECT_FAILED
+      (= :s3-restore-object-failed data) BackupVaultEvents/S3_RESTORE_OBJECT_FAILED)))
 
 
 (defn tag-operation
@@ -109,16 +109,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TagOperation` - the value is returned.
-* is `:string-equals` - `TagOperation/STRING_EQUALS` is returned
 * is `:dummy` - `TagOperation/DUMMY` is returned
+* is `:string-equals` - `TagOperation/STRING_EQUALS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TagOperation data) data
-      (= :string-equals data) TagOperation/STRING_EQUALS
-      (= :dummy data) TagOperation/DUMMY)))
+      (= :dummy data) TagOperation/DUMMY
+      (= :string-equals data) TagOperation/STRING_EQUALS)))
 
 
 (defn backup-plan-builder>

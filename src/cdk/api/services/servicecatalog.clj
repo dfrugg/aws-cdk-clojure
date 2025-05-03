@@ -71,8 +71,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `MessageLanguage` - the value is returned.
 * is `:en` - `MessageLanguage/EN` is returned
-* is `:zh` - `MessageLanguage/ZH` is returned
 * is `:jp` - `MessageLanguage/JP` is returned
+* is `:zh` - `MessageLanguage/ZH` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -80,8 +80,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? MessageLanguage data) data
       (= :en data) MessageLanguage/EN
-      (= :zh data) MessageLanguage/ZH
-      (= :jp data) MessageLanguage/JP)))
+      (= :jp data) MessageLanguage/JP
+      (= :zh data) MessageLanguage/ZH)))
 
 
 (defn cfn-accepted-portfolio-share-builder>

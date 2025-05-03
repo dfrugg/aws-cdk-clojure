@@ -44,11 +44,11 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AttachmentTargetType` - the value is returned.
-* is `:docdb-db-instance` - `AttachmentTargetType/DOCDB_DB_INSTANCE` is returned
-* is `:rds-db-instance` - `AttachmentTargetType/RDS_DB_INSTANCE` is returned
-* is `:rds-db-cluster` - `AttachmentTargetType/RDS_DB_CLUSTER` is returned
-* is `:rds-db-proxy` - `AttachmentTargetType/RDS_DB_PROXY` is returned
 * is `:docdb-db-cluster` - `AttachmentTargetType/DOCDB_DB_CLUSTER` is returned
+* is `:docdb-db-instance` - `AttachmentTargetType/DOCDB_DB_INSTANCE` is returned
+* is `:rds-db-cluster` - `AttachmentTargetType/RDS_DB_CLUSTER` is returned
+* is `:rds-db-instance` - `AttachmentTargetType/RDS_DB_INSTANCE` is returned
+* is `:rds-db-proxy` - `AttachmentTargetType/RDS_DB_PROXY` is returned
 * is `:redshift-cluster` - `AttachmentTargetType/REDSHIFT_CLUSTER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -56,11 +56,11 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AttachmentTargetType data) data
-      (= :docdb-db-instance data) AttachmentTargetType/DOCDB_DB_INSTANCE
-      (= :rds-db-instance data) AttachmentTargetType/RDS_DB_INSTANCE
-      (= :rds-db-cluster data) AttachmentTargetType/RDS_DB_CLUSTER
-      (= :rds-db-proxy data) AttachmentTargetType/RDS_DB_PROXY
       (= :docdb-db-cluster data) AttachmentTargetType/DOCDB_DB_CLUSTER
+      (= :docdb-db-instance data) AttachmentTargetType/DOCDB_DB_INSTANCE
+      (= :rds-db-cluster data) AttachmentTargetType/RDS_DB_CLUSTER
+      (= :rds-db-instance data) AttachmentTargetType/RDS_DB_INSTANCE
+      (= :rds-db-proxy data) AttachmentTargetType/RDS_DB_PROXY
       (= :redshift-cluster data) AttachmentTargetType/REDSHIFT_CLUSTER)))
 
 

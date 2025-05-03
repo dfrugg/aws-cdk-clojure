@@ -49,18 +49,18 @@
 
 (deftest integration-pattern-test
   (testing "Testing enum function integration-pattern"
+    (is (= IntegrationPattern/REQUEST_RESPONSE (integration-pattern {:item IntegrationPattern/REQUEST_RESPONSE} "test" :item)))
+    (is (= IntegrationPattern/REQUEST_RESPONSE (integration-pattern {:test/item IntegrationPattern/REQUEST_RESPONSE} "test" :item)))
     (is (= IntegrationPattern/RUN_JOB (integration-pattern {:item IntegrationPattern/RUN_JOB} "test" :item)))
     (is (= IntegrationPattern/RUN_JOB (integration-pattern {:test/item IntegrationPattern/RUN_JOB} "test" :item)))
     (is (= IntegrationPattern/WAIT_FOR_TASK_TOKEN (integration-pattern {:item IntegrationPattern/WAIT_FOR_TASK_TOKEN} "test" :item)))
     (is (= IntegrationPattern/WAIT_FOR_TASK_TOKEN (integration-pattern {:test/item IntegrationPattern/WAIT_FOR_TASK_TOKEN} "test" :item)))
-    (is (= IntegrationPattern/REQUEST_RESPONSE (integration-pattern {:item IntegrationPattern/REQUEST_RESPONSE} "test" :item)))
-    (is (= IntegrationPattern/REQUEST_RESPONSE (integration-pattern {:test/item IntegrationPattern/REQUEST_RESPONSE} "test" :item)))
+    (is (= IntegrationPattern/REQUEST_RESPONSE (integration-pattern {:item :request-response} "test" :item)))
+    (is (= IntegrationPattern/REQUEST_RESPONSE (integration-pattern {:test/item :request-response} "test" :item)))
     (is (= IntegrationPattern/RUN_JOB (integration-pattern {:item :run-job} "test" :item)))
     (is (= IntegrationPattern/RUN_JOB (integration-pattern {:test/item :run-job} "test" :item)))
     (is (= IntegrationPattern/WAIT_FOR_TASK_TOKEN (integration-pattern {:item :wait-for-task-token} "test" :item)))
-    (is (= IntegrationPattern/WAIT_FOR_TASK_TOKEN (integration-pattern {:test/item :wait-for-task-token} "test" :item)))
-    (is (= IntegrationPattern/REQUEST_RESPONSE (integration-pattern {:item :request-response} "test" :item)))
-    (is (= IntegrationPattern/REQUEST_RESPONSE (integration-pattern {:test/item :request-response} "test" :item)))))
+    (is (= IntegrationPattern/WAIT_FOR_TASK_TOKEN (integration-pattern {:test/item :wait-for-task-token} "test" :item)))))
 
 
 (deftest jitter-type-test
@@ -79,44 +79,44 @@
   (testing "Testing enum function log-level"
     (is (= LogLevel/ALL (log-level {:item LogLevel/ALL} "test" :item)))
     (is (= LogLevel/ALL (log-level {:test/item LogLevel/ALL} "test" :item)))
+    (is (= LogLevel/ERROR (log-level {:item LogLevel/ERROR} "test" :item)))
+    (is (= LogLevel/ERROR (log-level {:test/item LogLevel/ERROR} "test" :item)))
     (is (= LogLevel/FATAL (log-level {:item LogLevel/FATAL} "test" :item)))
     (is (= LogLevel/FATAL (log-level {:test/item LogLevel/FATAL} "test" :item)))
     (is (= LogLevel/OFF (log-level {:item LogLevel/OFF} "test" :item)))
     (is (= LogLevel/OFF (log-level {:test/item LogLevel/OFF} "test" :item)))
-    (is (= LogLevel/ERROR (log-level {:item LogLevel/ERROR} "test" :item)))
-    (is (= LogLevel/ERROR (log-level {:test/item LogLevel/ERROR} "test" :item)))
     (is (= LogLevel/ALL (log-level {:item :all} "test" :item)))
     (is (= LogLevel/ALL (log-level {:test/item :all} "test" :item)))
+    (is (= LogLevel/ERROR (log-level {:item :error} "test" :item)))
+    (is (= LogLevel/ERROR (log-level {:test/item :error} "test" :item)))
     (is (= LogLevel/FATAL (log-level {:item :fatal} "test" :item)))
     (is (= LogLevel/FATAL (log-level {:test/item :fatal} "test" :item)))
     (is (= LogLevel/OFF (log-level {:item :off} "test" :item)))
-    (is (= LogLevel/OFF (log-level {:test/item :off} "test" :item)))
-    (is (= LogLevel/ERROR (log-level {:item :error} "test" :item)))
-    (is (= LogLevel/ERROR (log-level {:test/item :error} "test" :item)))))
+    (is (= LogLevel/OFF (log-level {:test/item :off} "test" :item)))))
 
 
 (deftest processor-mode-test
   (testing "Testing enum function processor-mode"
-    (is (= ProcessorMode/INLINE (processor-mode {:item ProcessorMode/INLINE} "test" :item)))
-    (is (= ProcessorMode/INLINE (processor-mode {:test/item ProcessorMode/INLINE} "test" :item)))
     (is (= ProcessorMode/DISTRIBUTED (processor-mode {:item ProcessorMode/DISTRIBUTED} "test" :item)))
     (is (= ProcessorMode/DISTRIBUTED (processor-mode {:test/item ProcessorMode/DISTRIBUTED} "test" :item)))
-    (is (= ProcessorMode/INLINE (processor-mode {:item :inline} "test" :item)))
-    (is (= ProcessorMode/INLINE (processor-mode {:test/item :inline} "test" :item)))
+    (is (= ProcessorMode/INLINE (processor-mode {:item ProcessorMode/INLINE} "test" :item)))
+    (is (= ProcessorMode/INLINE (processor-mode {:test/item ProcessorMode/INLINE} "test" :item)))
     (is (= ProcessorMode/DISTRIBUTED (processor-mode {:item :distributed} "test" :item)))
-    (is (= ProcessorMode/DISTRIBUTED (processor-mode {:test/item :distributed} "test" :item)))))
+    (is (= ProcessorMode/DISTRIBUTED (processor-mode {:test/item :distributed} "test" :item)))
+    (is (= ProcessorMode/INLINE (processor-mode {:item :inline} "test" :item)))
+    (is (= ProcessorMode/INLINE (processor-mode {:test/item :inline} "test" :item)))))
 
 
 (deftest processor-type-test
   (testing "Testing enum function processor-type"
-    (is (= ProcessorType/STANDARD (processor-type {:item ProcessorType/STANDARD} "test" :item)))
-    (is (= ProcessorType/STANDARD (processor-type {:test/item ProcessorType/STANDARD} "test" :item)))
     (is (= ProcessorType/EXPRESS (processor-type {:item ProcessorType/EXPRESS} "test" :item)))
     (is (= ProcessorType/EXPRESS (processor-type {:test/item ProcessorType/EXPRESS} "test" :item)))
-    (is (= ProcessorType/STANDARD (processor-type {:item :standard} "test" :item)))
-    (is (= ProcessorType/STANDARD (processor-type {:test/item :standard} "test" :item)))
+    (is (= ProcessorType/STANDARD (processor-type {:item ProcessorType/STANDARD} "test" :item)))
+    (is (= ProcessorType/STANDARD (processor-type {:test/item ProcessorType/STANDARD} "test" :item)))
     (is (= ProcessorType/EXPRESS (processor-type {:item :express} "test" :item)))
-    (is (= ProcessorType/EXPRESS (processor-type {:test/item :express} "test" :item)))))
+    (is (= ProcessorType/EXPRESS (processor-type {:test/item :express} "test" :item)))
+    (is (= ProcessorType/STANDARD (processor-type {:item :standard} "test" :item)))
+    (is (= ProcessorType/STANDARD (processor-type {:test/item :standard} "test" :item)))))
 
 
 (deftest service-integration-pattern-test

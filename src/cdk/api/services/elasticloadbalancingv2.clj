@@ -120,22 +120,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AlpnPolicy` - the value is returned.
-* is `:http2-optional` - `AlpnPolicy/HTTP2_OPTIONAL` is returned
+* is `:http1-only` - `AlpnPolicy/HTTP1_ONLY` is returned
 * is `:http2-only` - `AlpnPolicy/HTTP2_ONLY` is returned
+* is `:http2-optional` - `AlpnPolicy/HTTP2_OPTIONAL` is returned
 * is `:http2-preferred` - `AlpnPolicy/HTTP2_PREFERRED` is returned
 * is `:none` - `AlpnPolicy/NONE` is returned
-* is `:http1-only` - `AlpnPolicy/HTTP1_ONLY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AlpnPolicy data) data
-      (= :http2-optional data) AlpnPolicy/HTTP2_OPTIONAL
+      (= :http1-only data) AlpnPolicy/HTTP1_ONLY
       (= :http2-only data) AlpnPolicy/HTTP2_ONLY
+      (= :http2-optional data) AlpnPolicy/HTTP2_OPTIONAL
       (= :http2-preferred data) AlpnPolicy/HTTP2_PREFERRED
-      (= :none data) AlpnPolicy/NONE
-      (= :http1-only data) AlpnPolicy/HTTP1_ONLY)))
+      (= :none data) AlpnPolicy/NONE)))
 
 
 (defn application-protocol
@@ -145,16 +145,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ApplicationProtocol` - the value is returned.
-* is `:https` - `ApplicationProtocol/HTTPS` is returned
 * is `:http` - `ApplicationProtocol/HTTP` is returned
+* is `:https` - `ApplicationProtocol/HTTPS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ApplicationProtocol data) data
-      (= :https data) ApplicationProtocol/HTTPS
-      (= :http data) ApplicationProtocol/HTTP)))
+      (= :http data) ApplicationProtocol/HTTP
+      (= :https data) ApplicationProtocol/HTTPS)))
 
 
 (defn application-protocol-version
@@ -185,18 +185,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ClientRoutingPolicy` - the value is returned.
+* is `:any-availability-zone` - `ClientRoutingPolicy/ANY_AVAILABILITY_ZONE` is returned
 * is `:availability-zone-affinity` - `ClientRoutingPolicy/AVAILABILITY_ZONE_AFFINITY` is returned
 * is `:partial-availability-zone-affinity` - `ClientRoutingPolicy/PARTIAL_AVAILABILITY_ZONE_AFFINITY` is returned
-* is `:any-availability-zone` - `ClientRoutingPolicy/ANY_AVAILABILITY_ZONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ClientRoutingPolicy data) data
+      (= :any-availability-zone data) ClientRoutingPolicy/ANY_AVAILABILITY_ZONE
       (= :availability-zone-affinity data) ClientRoutingPolicy/AVAILABILITY_ZONE_AFFINITY
-      (= :partial-availability-zone-affinity data) ClientRoutingPolicy/PARTIAL_AVAILABILITY_ZONE_AFFINITY
-      (= :any-availability-zone data) ClientRoutingPolicy/ANY_AVAILABILITY_ZONE)))
+      (= :partial-availability-zone-affinity data) ClientRoutingPolicy/PARTIAL_AVAILABILITY_ZONE_AFFINITY)))
 
 
 (defn desync-mitigation-mode
@@ -206,18 +206,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DesyncMitigationMode` - the value is returned.
-* is `:strictest` - `DesyncMitigationMode/STRICTEST` is returned
-* is `:monitor` - `DesyncMitigationMode/MONITOR` is returned
 * is `:defensive` - `DesyncMitigationMode/DEFENSIVE` is returned
+* is `:monitor` - `DesyncMitigationMode/MONITOR` is returned
+* is `:strictest` - `DesyncMitigationMode/STRICTEST` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DesyncMitigationMode data) data
-      (= :strictest data) DesyncMitigationMode/STRICTEST
+      (= :defensive data) DesyncMitigationMode/DEFENSIVE
       (= :monitor data) DesyncMitigationMode/MONITOR
-      (= :defensive data) DesyncMitigationMode/DEFENSIVE)))
+      (= :strictest data) DesyncMitigationMode/STRICTEST)))
 
 
 (defn http-code-elb
@@ -271,16 +271,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `IpAddressType` - the value is returned.
-* is `:ipv4` - `IpAddressType/IPV4` is returned
 * is `:dual-stack` - `IpAddressType/DUAL_STACK` is returned
+* is `:ipv4` - `IpAddressType/IPV4` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? IpAddressType data) data
-      (= :ipv4 data) IpAddressType/IPV4
-      (= :dual-stack data) IpAddressType/DUAL_STACK)))
+      (= :dual-stack data) IpAddressType/DUAL_STACK
+      (= :ipv4 data) IpAddressType/IPV4)))
 
 
 (defn protocol
@@ -290,11 +290,11 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Protocol` - the value is returned.
-* is `:tcp-udp` - `Protocol/TCP_UDP` is returned
 * is `:http` - `Protocol/HTTP` is returned
-* is `:tls` - `Protocol/TLS` is returned
-* is `:tcp` - `Protocol/TCP` is returned
 * is `:https` - `Protocol/HTTPS` is returned
+* is `:tcp` - `Protocol/TCP` is returned
+* is `:tcp-udp` - `Protocol/TCP_UDP` is returned
+* is `:tls` - `Protocol/TLS` is returned
 * is `:udp` - `Protocol/UDP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -302,11 +302,11 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Protocol data) data
-      (= :tcp-udp data) Protocol/TCP_UDP
       (= :http data) Protocol/HTTP
-      (= :tls data) Protocol/TLS
-      (= :tcp data) Protocol/TCP
       (= :https data) Protocol/HTTPS
+      (= :tcp data) Protocol/TCP
+      (= :tcp-udp data) Protocol/TCP_UDP
+      (= :tls data) Protocol/TLS
       (= :udp data) Protocol/UDP)))
 
 
@@ -317,62 +317,62 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SslPolicy` - the value is returned.
-* is `:forward-secrecy-tls11` - `SslPolicy/FORWARD_SECRECY_TLS11` is returned
-* is `:fips-tls13-12-ext2` - `SslPolicy/FIPS_TLS13_12_EXT2` is returned
-* is `:tls13-ext2` - `SslPolicy/TLS13_EXT2` is returned
-* is `:legacy` - `SslPolicy/LEGACY` is returned
-* is `:fips-tls13-12` - `SslPolicy/FIPS_TLS13_12` is returned
-* is `:forward-secrecy-tls12-res-gcm` - `SslPolicy/FORWARD_SECRECY_TLS12_RES_GCM` is returned
-* is `:recommended-tls` - `SslPolicy/RECOMMENDED_TLS` is returned
-* is `:forward-secrecy` - `SslPolicy/FORWARD_SECRECY` is returned
-* is `:tls13-10` - `SslPolicy/TLS13_10` is returned
-* is `:tls12` - `SslPolicy/TLS12` is returned
-* is `:forward-secrecy-tls12-res` - `SslPolicy/FORWARD_SECRECY_TLS12_RES` is returned
-* is `:fips-tls13-12-ext0` - `SslPolicy/FIPS_TLS13_12_EXT0` is returned
 * is `:fips-tls13-10` - `SslPolicy/FIPS_TLS13_10` is returned
-* is `:fips-tls13-12-ext1` - `SslPolicy/FIPS_TLS13_12_EXT1` is returned
-* is `:fips-tls13-13` - `SslPolicy/FIPS_TLS13_13` is returned
-* is `:tls13-res` - `SslPolicy/TLS13_RES` is returned
 * is `:fips-tls13-11` - `SslPolicy/FIPS_TLS13_11` is returned
-* is `:tls13-11` - `SslPolicy/TLS13_11` is returned
-* is `:tls12-ext` - `SslPolicy/TLS12_EXT` is returned
-* is `:tls11` - `SslPolicy/TLS11` is returned
-* is `:tls13-ext1` - `SslPolicy/TLS13_EXT1` is returned
+* is `:fips-tls13-12` - `SslPolicy/FIPS_TLS13_12` is returned
+* is `:fips-tls13-12-ext0` - `SslPolicy/FIPS_TLS13_12_EXT0` is returned
+* is `:fips-tls13-12-ext1` - `SslPolicy/FIPS_TLS13_12_EXT1` is returned
+* is `:fips-tls13-12-ext2` - `SslPolicy/FIPS_TLS13_12_EXT2` is returned
 * is `:fips-tls13-12-res` - `SslPolicy/FIPS_TLS13_12_RES` is returned
-* is `:tls13-13` - `SslPolicy/TLS13_13` is returned
+* is `:fips-tls13-13` - `SslPolicy/FIPS_TLS13_13` is returned
+* is `:forward-secrecy` - `SslPolicy/FORWARD_SECRECY` is returned
+* is `:forward-secrecy-tls11` - `SslPolicy/FORWARD_SECRECY_TLS11` is returned
 * is `:forward-secrecy-tls12` - `SslPolicy/FORWARD_SECRECY_TLS12` is returned
+* is `:forward-secrecy-tls12-res` - `SslPolicy/FORWARD_SECRECY_TLS12_RES` is returned
+* is `:forward-secrecy-tls12-res-gcm` - `SslPolicy/FORWARD_SECRECY_TLS12_RES_GCM` is returned
+* is `:legacy` - `SslPolicy/LEGACY` is returned
 * is `:recommended` - `SslPolicy/RECOMMENDED` is returned
+* is `:recommended-tls` - `SslPolicy/RECOMMENDED_TLS` is returned
+* is `:tls11` - `SslPolicy/TLS11` is returned
+* is `:tls12` - `SslPolicy/TLS12` is returned
+* is `:tls12-ext` - `SslPolicy/TLS12_EXT` is returned
+* is `:tls13-10` - `SslPolicy/TLS13_10` is returned
+* is `:tls13-11` - `SslPolicy/TLS13_11` is returned
+* is `:tls13-13` - `SslPolicy/TLS13_13` is returned
+* is `:tls13-ext1` - `SslPolicy/TLS13_EXT1` is returned
+* is `:tls13-ext2` - `SslPolicy/TLS13_EXT2` is returned
+* is `:tls13-res` - `SslPolicy/TLS13_RES` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SslPolicy data) data
-      (= :forward-secrecy-tls11 data) SslPolicy/FORWARD_SECRECY_TLS11
-      (= :fips-tls13-12-ext2 data) SslPolicy/FIPS_TLS13_12_EXT2
-      (= :tls13-ext2 data) SslPolicy/TLS13_EXT2
-      (= :legacy data) SslPolicy/LEGACY
-      (= :fips-tls13-12 data) SslPolicy/FIPS_TLS13_12
-      (= :forward-secrecy-tls12-res-gcm data) SslPolicy/FORWARD_SECRECY_TLS12_RES_GCM
-      (= :recommended-tls data) SslPolicy/RECOMMENDED_TLS
-      (= :forward-secrecy data) SslPolicy/FORWARD_SECRECY
-      (= :tls13-10 data) SslPolicy/TLS13_10
-      (= :tls12 data) SslPolicy/TLS12
-      (= :forward-secrecy-tls12-res data) SslPolicy/FORWARD_SECRECY_TLS12_RES
-      (= :fips-tls13-12-ext0 data) SslPolicy/FIPS_TLS13_12_EXT0
       (= :fips-tls13-10 data) SslPolicy/FIPS_TLS13_10
-      (= :fips-tls13-12-ext1 data) SslPolicy/FIPS_TLS13_12_EXT1
-      (= :fips-tls13-13 data) SslPolicy/FIPS_TLS13_13
-      (= :tls13-res data) SslPolicy/TLS13_RES
       (= :fips-tls13-11 data) SslPolicy/FIPS_TLS13_11
-      (= :tls13-11 data) SslPolicy/TLS13_11
-      (= :tls12-ext data) SslPolicy/TLS12_EXT
-      (= :tls11 data) SslPolicy/TLS11
-      (= :tls13-ext1 data) SslPolicy/TLS13_EXT1
+      (= :fips-tls13-12 data) SslPolicy/FIPS_TLS13_12
+      (= :fips-tls13-12-ext0 data) SslPolicy/FIPS_TLS13_12_EXT0
+      (= :fips-tls13-12-ext1 data) SslPolicy/FIPS_TLS13_12_EXT1
+      (= :fips-tls13-12-ext2 data) SslPolicy/FIPS_TLS13_12_EXT2
       (= :fips-tls13-12-res data) SslPolicy/FIPS_TLS13_12_RES
-      (= :tls13-13 data) SslPolicy/TLS13_13
+      (= :fips-tls13-13 data) SslPolicy/FIPS_TLS13_13
+      (= :forward-secrecy data) SslPolicy/FORWARD_SECRECY
+      (= :forward-secrecy-tls11 data) SslPolicy/FORWARD_SECRECY_TLS11
       (= :forward-secrecy-tls12 data) SslPolicy/FORWARD_SECRECY_TLS12
-      (= :recommended data) SslPolicy/RECOMMENDED)))
+      (= :forward-secrecy-tls12-res data) SslPolicy/FORWARD_SECRECY_TLS12_RES
+      (= :forward-secrecy-tls12-res-gcm data) SslPolicy/FORWARD_SECRECY_TLS12_RES_GCM
+      (= :legacy data) SslPolicy/LEGACY
+      (= :recommended data) SslPolicy/RECOMMENDED
+      (= :recommended-tls data) SslPolicy/RECOMMENDED_TLS
+      (= :tls11 data) SslPolicy/TLS11
+      (= :tls12 data) SslPolicy/TLS12
+      (= :tls12-ext data) SslPolicy/TLS12_EXT
+      (= :tls13-10 data) SslPolicy/TLS13_10
+      (= :tls13-11 data) SslPolicy/TLS13_11
+      (= :tls13-13 data) SslPolicy/TLS13_13
+      (= :tls13-ext1 data) SslPolicy/TLS13_EXT1
+      (= :tls13-ext2 data) SslPolicy/TLS13_EXT2
+      (= :tls13-res data) SslPolicy/TLS13_RES)))
 
 
 (defn target-group-load-balancing-algorithm-type
@@ -382,16 +382,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TargetGroupLoadBalancingAlgorithmType` - the value is returned.
-* is `:round-robin` - `TargetGroupLoadBalancingAlgorithmType/ROUND_ROBIN` is returned
 * is `:least-outstanding-requests` - `TargetGroupLoadBalancingAlgorithmType/LEAST_OUTSTANDING_REQUESTS` is returned
+* is `:round-robin` - `TargetGroupLoadBalancingAlgorithmType/ROUND_ROBIN` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TargetGroupLoadBalancingAlgorithmType data) data
-      (= :round-robin data) TargetGroupLoadBalancingAlgorithmType/ROUND_ROBIN
-      (= :least-outstanding-requests data) TargetGroupLoadBalancingAlgorithmType/LEAST_OUTSTANDING_REQUESTS)))
+      (= :least-outstanding-requests data) TargetGroupLoadBalancingAlgorithmType/LEAST_OUTSTANDING_REQUESTS
+      (= :round-robin data) TargetGroupLoadBalancingAlgorithmType/ROUND_ROBIN)))
 
 
 (defn target-type
@@ -402,9 +402,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `TargetType` - the value is returned.
 * is `:alb` - `TargetType/ALB` is returned
-* is `:lambda` - `TargetType/LAMBDA` is returned
 * is `:instance` - `TargetType/INSTANCE` is returned
 * is `:ip` - `TargetType/IP` is returned
+* is `:lambda` - `TargetType/LAMBDA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -412,9 +412,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? TargetType data) data
       (= :alb data) TargetType/ALB
-      (= :lambda data) TargetType/LAMBDA
       (= :instance data) TargetType/INSTANCE
-      (= :ip data) TargetType/IP)))
+      (= :ip data) TargetType/IP
+      (= :lambda data) TargetType/LAMBDA)))
 
 
 (defn unauthenticated-action
@@ -445,18 +445,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `XffHeaderProcessingMode` - the value is returned.
-* is `:remove` - `XffHeaderProcessingMode/REMOVE` is returned
-* is `:preserve` - `XffHeaderProcessingMode/PRESERVE` is returned
 * is `:append` - `XffHeaderProcessingMode/APPEND` is returned
+* is `:preserve` - `XffHeaderProcessingMode/PRESERVE` is returned
+* is `:remove` - `XffHeaderProcessingMode/REMOVE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? XffHeaderProcessingMode data) data
-      (= :remove data) XffHeaderProcessingMode/REMOVE
+      (= :append data) XffHeaderProcessingMode/APPEND
       (= :preserve data) XffHeaderProcessingMode/PRESERVE
-      (= :append data) XffHeaderProcessingMode/APPEND)))
+      (= :remove data) XffHeaderProcessingMode/REMOVE)))
 
 
 (defn add-application-action-props-builder>

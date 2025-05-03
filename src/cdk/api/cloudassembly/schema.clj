@@ -65,24 +65,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ArtifactMetadataEntryType` - the value is returned.
-* is `:logical-id` - `ArtifactMetadataEntryType/LOGICAL_ID` is returned
-* is `:info` - `ArtifactMetadataEntryType/INFO` is returned
-* is `:error` - `ArtifactMetadataEntryType/ERROR` is returned
-* is `:warn` - `ArtifactMetadataEntryType/WARN` is returned
 * is `:asset` - `ArtifactMetadataEntryType/ASSET` is returned
+* is `:error` - `ArtifactMetadataEntryType/ERROR` is returned
+* is `:info` - `ArtifactMetadataEntryType/INFO` is returned
+* is `:logical-id` - `ArtifactMetadataEntryType/LOGICAL_ID` is returned
 * is `:stack-tags` - `ArtifactMetadataEntryType/STACK_TAGS` is returned
+* is `:warn` - `ArtifactMetadataEntryType/WARN` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ArtifactMetadataEntryType data) data
-      (= :logical-id data) ArtifactMetadataEntryType/LOGICAL_ID
-      (= :info data) ArtifactMetadataEntryType/INFO
-      (= :error data) ArtifactMetadataEntryType/ERROR
-      (= :warn data) ArtifactMetadataEntryType/WARN
       (= :asset data) ArtifactMetadataEntryType/ASSET
-      (= :stack-tags data) ArtifactMetadataEntryType/STACK_TAGS)))
+      (= :error data) ArtifactMetadataEntryType/ERROR
+      (= :info data) ArtifactMetadataEntryType/INFO
+      (= :logical-id data) ArtifactMetadataEntryType/LOGICAL_ID
+      (= :stack-tags data) ArtifactMetadataEntryType/STACK_TAGS
+      (= :warn data) ArtifactMetadataEntryType/WARN)))
 
 
 (defn artifact-type
@@ -92,22 +92,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ArtifactType` - the value is returned.
-* is `:cdk-tree` - `ArtifactType/CDK_TREE` is returned
-* is `:aws-cloudformation-stack` - `ArtifactType/AWS_CLOUDFORMATION_STACK` is returned
 * is `:asset-manifest` - `ArtifactType/ASSET_MANIFEST` is returned
-* is `:none` - `ArtifactType/NONE` is returned
+* is `:aws-cloudformation-stack` - `ArtifactType/AWS_CLOUDFORMATION_STACK` is returned
+* is `:cdk-tree` - `ArtifactType/CDK_TREE` is returned
 * is `:nested-cloud-assembly` - `ArtifactType/NESTED_CLOUD_ASSEMBLY` is returned
+* is `:none` - `ArtifactType/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ArtifactType data) data
-      (= :cdk-tree data) ArtifactType/CDK_TREE
-      (= :aws-cloudformation-stack data) ArtifactType/AWS_CLOUDFORMATION_STACK
       (= :asset-manifest data) ArtifactType/ASSET_MANIFEST
-      (= :none data) ArtifactType/NONE
-      (= :nested-cloud-assembly data) ArtifactType/NESTED_CLOUD_ASSEMBLY)))
+      (= :aws-cloudformation-stack data) ArtifactType/AWS_CLOUDFORMATION_STACK
+      (= :cdk-tree data) ArtifactType/CDK_TREE
+      (= :nested-cloud-assembly data) ArtifactType/NESTED_CLOUD_ASSEMBLY
+      (= :none data) ArtifactType/NONE)))
 
 
 (defn context-provider
@@ -117,34 +117,34 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ContextProvider` - the value is returned.
-* is `:vpc-provider` - `ContextProvider/VPC_PROVIDER` is returned
+* is `:ami-provider` - `ContextProvider/AMI_PROVIDER` is returned
+* is `:availability-zone-provider` - `ContextProvider/AVAILABILITY_ZONE_PROVIDER` is returned
+* is `:endpoint-service-availability-zone-provider` - `ContextProvider/ENDPOINT_SERVICE_AVAILABILITY_ZONE_PROVIDER` is returned
 * is `:hosted-zone-provider` - `ContextProvider/HOSTED_ZONE_PROVIDER` is returned
 * is `:key-provider` - `ContextProvider/KEY_PROVIDER` is returned
 * is `:load-balancer-listener-provider` - `ContextProvider/LOAD_BALANCER_LISTENER_PROVIDER` is returned
-* is `:security-group-provider` - `ContextProvider/SECURITY_GROUP_PROVIDER` is returned
-* is `:endpoint-service-availability-zone-provider` - `ContextProvider/ENDPOINT_SERVICE_AVAILABILITY_ZONE_PROVIDER` is returned
-* is `:ami-provider` - `ContextProvider/AMI_PROVIDER` is returned
-* is `:plugin` - `ContextProvider/PLUGIN` is returned
-* is `:availability-zone-provider` - `ContextProvider/AVAILABILITY_ZONE_PROVIDER` is returned
-* is `:ssm-parameter-provider` - `ContextProvider/SSM_PARAMETER_PROVIDER` is returned
 * is `:load-balancer-provider` - `ContextProvider/LOAD_BALANCER_PROVIDER` is returned
+* is `:plugin` - `ContextProvider/PLUGIN` is returned
+* is `:security-group-provider` - `ContextProvider/SECURITY_GROUP_PROVIDER` is returned
+* is `:ssm-parameter-provider` - `ContextProvider/SSM_PARAMETER_PROVIDER` is returned
+* is `:vpc-provider` - `ContextProvider/VPC_PROVIDER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ContextProvider data) data
-      (= :vpc-provider data) ContextProvider/VPC_PROVIDER
+      (= :ami-provider data) ContextProvider/AMI_PROVIDER
+      (= :availability-zone-provider data) ContextProvider/AVAILABILITY_ZONE_PROVIDER
+      (= :endpoint-service-availability-zone-provider data) ContextProvider/ENDPOINT_SERVICE_AVAILABILITY_ZONE_PROVIDER
       (= :hosted-zone-provider data) ContextProvider/HOSTED_ZONE_PROVIDER
       (= :key-provider data) ContextProvider/KEY_PROVIDER
       (= :load-balancer-listener-provider data) ContextProvider/LOAD_BALANCER_LISTENER_PROVIDER
-      (= :security-group-provider data) ContextProvider/SECURITY_GROUP_PROVIDER
-      (= :endpoint-service-availability-zone-provider data) ContextProvider/ENDPOINT_SERVICE_AVAILABILITY_ZONE_PROVIDER
-      (= :ami-provider data) ContextProvider/AMI_PROVIDER
+      (= :load-balancer-provider data) ContextProvider/LOAD_BALANCER_PROVIDER
       (= :plugin data) ContextProvider/PLUGIN
-      (= :availability-zone-provider data) ContextProvider/AVAILABILITY_ZONE_PROVIDER
+      (= :security-group-provider data) ContextProvider/SECURITY_GROUP_PROVIDER
       (= :ssm-parameter-provider data) ContextProvider/SSM_PARAMETER_PROVIDER
-      (= :load-balancer-provider data) ContextProvider/LOAD_BALANCER_PROVIDER)))
+      (= :vpc-provider data) ContextProvider/VPC_PROVIDER)))
 
 
 (defn file-asset-packaging
@@ -174,11 +174,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `LoadBalancerListenerProtocol` - the value is returned.
 * is `:http` - `LoadBalancerListenerProtocol/HTTP` is returned
-* is `:tls` - `LoadBalancerListenerProtocol/TLS` is returned
-* is `:udp` - `LoadBalancerListenerProtocol/UDP` is returned
 * is `:https` - `LoadBalancerListenerProtocol/HTTPS` is returned
 * is `:tcp` - `LoadBalancerListenerProtocol/TCP` is returned
 * is `:tcp-udp` - `LoadBalancerListenerProtocol/TCP_UDP` is returned
+* is `:tls` - `LoadBalancerListenerProtocol/TLS` is returned
+* is `:udp` - `LoadBalancerListenerProtocol/UDP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -186,11 +186,11 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? LoadBalancerListenerProtocol data) data
       (= :http data) LoadBalancerListenerProtocol/HTTP
-      (= :tls data) LoadBalancerListenerProtocol/TLS
-      (= :udp data) LoadBalancerListenerProtocol/UDP
       (= :https data) LoadBalancerListenerProtocol/HTTPS
       (= :tcp data) LoadBalancerListenerProtocol/TCP
-      (= :tcp-udp data) LoadBalancerListenerProtocol/TCP_UDP)))
+      (= :tcp-udp data) LoadBalancerListenerProtocol/TCP_UDP
+      (= :tls data) LoadBalancerListenerProtocol/TLS
+      (= :udp data) LoadBalancerListenerProtocol/UDP)))
 
 
 (defn load-balancer-type
@@ -200,16 +200,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LoadBalancerType` - the value is returned.
-* is `:network` - `LoadBalancerType/NETWORK` is returned
 * is `:application` - `LoadBalancerType/APPLICATION` is returned
+* is `:network` - `LoadBalancerType/NETWORK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LoadBalancerType data) data
-      (= :network data) LoadBalancerType/NETWORK
-      (= :application data) LoadBalancerType/APPLICATION)))
+      (= :application data) LoadBalancerType/APPLICATION
+      (= :network data) LoadBalancerType/NETWORK)))
 
 
 (defn require-approval

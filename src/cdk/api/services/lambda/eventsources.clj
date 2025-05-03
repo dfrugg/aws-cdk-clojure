@@ -38,20 +38,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AuthenticationMethod` - the value is returned.
-* is `:client-certificate-tls-auth` - `AuthenticationMethod/CLIENT_CERTIFICATE_TLS_AUTH` is returned
-* is `:sasl-scram-512-auth` - `AuthenticationMethod/SASL_SCRAM_512_AUTH` is returned
 * is `:basic-auth` - `AuthenticationMethod/BASIC_AUTH` is returned
+* is `:client-certificate-tls-auth` - `AuthenticationMethod/CLIENT_CERTIFICATE_TLS_AUTH` is returned
 * is `:sasl-scram-256-auth` - `AuthenticationMethod/SASL_SCRAM_256_AUTH` is returned
+* is `:sasl-scram-512-auth` - `AuthenticationMethod/SASL_SCRAM_512_AUTH` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AuthenticationMethod data) data
-      (= :client-certificate-tls-auth data) AuthenticationMethod/CLIENT_CERTIFICATE_TLS_AUTH
-      (= :sasl-scram-512-auth data) AuthenticationMethod/SASL_SCRAM_512_AUTH
       (= :basic-auth data) AuthenticationMethod/BASIC_AUTH
-      (= :sasl-scram-256-auth data) AuthenticationMethod/SASL_SCRAM_256_AUTH)))
+      (= :client-certificate-tls-auth data) AuthenticationMethod/CLIENT_CERTIFICATE_TLS_AUTH
+      (= :sasl-scram-256-auth data) AuthenticationMethod/SASL_SCRAM_256_AUTH
+      (= :sasl-scram-512-auth data) AuthenticationMethod/SASL_SCRAM_512_AUTH)))
 
 
 (defn api-event-source-builder>

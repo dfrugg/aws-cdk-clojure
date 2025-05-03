@@ -144,22 +144,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ClusterLoggingTypes` - the value is returned.
-* is `:authenticator` - `ClusterLoggingTypes/AUTHENTICATOR` is returned
-* is `:audit` - `ClusterLoggingTypes/AUDIT` is returned
 * is `:api` - `ClusterLoggingTypes/API` is returned
-* is `:scheduler` - `ClusterLoggingTypes/SCHEDULER` is returned
+* is `:audit` - `ClusterLoggingTypes/AUDIT` is returned
+* is `:authenticator` - `ClusterLoggingTypes/AUTHENTICATOR` is returned
 * is `:controller-manager` - `ClusterLoggingTypes/CONTROLLER_MANAGER` is returned
+* is `:scheduler` - `ClusterLoggingTypes/SCHEDULER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ClusterLoggingTypes data) data
-      (= :authenticator data) ClusterLoggingTypes/AUTHENTICATOR
-      (= :audit data) ClusterLoggingTypes/AUDIT
       (= :api data) ClusterLoggingTypes/API
-      (= :scheduler data) ClusterLoggingTypes/SCHEDULER
-      (= :controller-manager data) ClusterLoggingTypes/CONTROLLER_MANAGER)))
+      (= :audit data) ClusterLoggingTypes/AUDIT
+      (= :authenticator data) ClusterLoggingTypes/AUTHENTICATOR
+      (= :controller-manager data) ClusterLoggingTypes/CONTROLLER_MANAGER
+      (= :scheduler data) ClusterLoggingTypes/SCHEDULER)))
 
 
 (defn core-dns-compute-type
@@ -169,16 +169,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CoreDnsComputeType` - the value is returned.
-* is `:fargate` - `CoreDnsComputeType/FARGATE` is returned
 * is `:ec2` - `CoreDnsComputeType/EC2` is returned
+* is `:fargate` - `CoreDnsComputeType/FARGATE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CoreDnsComputeType data) data
-      (= :fargate data) CoreDnsComputeType/FARGATE
-      (= :ec2 data) CoreDnsComputeType/EC2)))
+      (= :ec2 data) CoreDnsComputeType/EC2
+      (= :fargate data) CoreDnsComputeType/FARGATE)))
 
 
 (defn cpu-arch
@@ -188,16 +188,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `CpuArch` - the value is returned.
-* is `:x86-64` - `CpuArch/X86_64` is returned
 * is `:arm-64` - `CpuArch/ARM_64` is returned
+* is `:x86-64` - `CpuArch/X86_64` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? CpuArch data) data
-      (= :x86-64 data) CpuArch/X86_64
-      (= :arm-64 data) CpuArch/ARM_64)))
+      (= :arm-64 data) CpuArch/ARM_64
+      (= :x86-64 data) CpuArch/X86_64)))
 
 
 (defn default-capacity-type
@@ -264,20 +264,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `NodeType` - the value is returned.
-* is `:trainium` - `NodeType/TRAINIUM` is returned
 * is `:gpu` - `NodeType/GPU` is returned
 * is `:inferentia` - `NodeType/INFERENTIA` is returned
 * is `:standard` - `NodeType/STANDARD` is returned
+* is `:trainium` - `NodeType/TRAINIUM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? NodeType data) data
-      (= :trainium data) NodeType/TRAINIUM
       (= :gpu data) NodeType/GPU
       (= :inferentia data) NodeType/INFERENTIA
-      (= :standard data) NodeType/STANDARD)))
+      (= :standard data) NodeType/STANDARD
+      (= :trainium data) NodeType/TRAINIUM)))
 
 
 (defn nodegroup-ami-type
@@ -287,38 +287,38 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `NodegroupAmiType` - the value is returned.
-* is `:windows-core-2019-x86-64` - `NodegroupAmiType/WINDOWS_CORE_2019_X86_64` is returned
-* is `:bottlerocket-arm-64` - `NodegroupAmiType/BOTTLEROCKET_ARM_64` is returned
-* is `:bottlerocket-x86-64-nvidia` - `NodegroupAmiType/BOTTLEROCKET_X86_64_NVIDIA` is returned
-* is `:windows-full-2022-x86-64` - `NodegroupAmiType/WINDOWS_FULL_2022_X86_64` is returned
-* is `:windows-core-2022-x86-64` - `NodegroupAmiType/WINDOWS_CORE_2022_X86_64` is returned
 * is `:al2023-arm-64-standard` - `NodegroupAmiType/AL2023_ARM_64_STANDARD` is returned
-* is `:bottlerocket-x86-64` - `NodegroupAmiType/BOTTLEROCKET_X86_64` is returned
-* is `:al2-x86-64` - `NodegroupAmiType/AL2_X86_64` is returned
 * is `:al2023-x86-64-standard` - `NodegroupAmiType/AL2023_X86_64_STANDARD` is returned
-* is `:windows-full-2019-x86-64` - `NodegroupAmiType/WINDOWS_FULL_2019_X86_64` is returned
-* is `:al2-x86-64-gpu` - `NodegroupAmiType/AL2_X86_64_GPU` is returned
-* is `:bottlerocket-arm-64-nvidia` - `NodegroupAmiType/BOTTLEROCKET_ARM_64_NVIDIA` is returned
 * is `:al2-arm-64` - `NodegroupAmiType/AL2_ARM_64` is returned
+* is `:al2-x86-64` - `NodegroupAmiType/AL2_X86_64` is returned
+* is `:al2-x86-64-gpu` - `NodegroupAmiType/AL2_X86_64_GPU` is returned
+* is `:bottlerocket-arm-64` - `NodegroupAmiType/BOTTLEROCKET_ARM_64` is returned
+* is `:bottlerocket-arm-64-nvidia` - `NodegroupAmiType/BOTTLEROCKET_ARM_64_NVIDIA` is returned
+* is `:bottlerocket-x86-64` - `NodegroupAmiType/BOTTLEROCKET_X86_64` is returned
+* is `:bottlerocket-x86-64-nvidia` - `NodegroupAmiType/BOTTLEROCKET_X86_64_NVIDIA` is returned
+* is `:windows-core-2019-x86-64` - `NodegroupAmiType/WINDOWS_CORE_2019_X86_64` is returned
+* is `:windows-core-2022-x86-64` - `NodegroupAmiType/WINDOWS_CORE_2022_X86_64` is returned
+* is `:windows-full-2019-x86-64` - `NodegroupAmiType/WINDOWS_FULL_2019_X86_64` is returned
+* is `:windows-full-2022-x86-64` - `NodegroupAmiType/WINDOWS_FULL_2022_X86_64` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? NodegroupAmiType data) data
-      (= :windows-core-2019-x86-64 data) NodegroupAmiType/WINDOWS_CORE_2019_X86_64
-      (= :bottlerocket-arm-64 data) NodegroupAmiType/BOTTLEROCKET_ARM_64
-      (= :bottlerocket-x86-64-nvidia data) NodegroupAmiType/BOTTLEROCKET_X86_64_NVIDIA
-      (= :windows-full-2022-x86-64 data) NodegroupAmiType/WINDOWS_FULL_2022_X86_64
-      (= :windows-core-2022-x86-64 data) NodegroupAmiType/WINDOWS_CORE_2022_X86_64
       (= :al2023-arm-64-standard data) NodegroupAmiType/AL2023_ARM_64_STANDARD
-      (= :bottlerocket-x86-64 data) NodegroupAmiType/BOTTLEROCKET_X86_64
-      (= :al2-x86-64 data) NodegroupAmiType/AL2_X86_64
       (= :al2023-x86-64-standard data) NodegroupAmiType/AL2023_X86_64_STANDARD
-      (= :windows-full-2019-x86-64 data) NodegroupAmiType/WINDOWS_FULL_2019_X86_64
+      (= :al2-arm-64 data) NodegroupAmiType/AL2_ARM_64
+      (= :al2-x86-64 data) NodegroupAmiType/AL2_X86_64
       (= :al2-x86-64-gpu data) NodegroupAmiType/AL2_X86_64_GPU
+      (= :bottlerocket-arm-64 data) NodegroupAmiType/BOTTLEROCKET_ARM_64
       (= :bottlerocket-arm-64-nvidia data) NodegroupAmiType/BOTTLEROCKET_ARM_64_NVIDIA
-      (= :al2-arm-64 data) NodegroupAmiType/AL2_ARM_64)))
+      (= :bottlerocket-x86-64 data) NodegroupAmiType/BOTTLEROCKET_X86_64
+      (= :bottlerocket-x86-64-nvidia data) NodegroupAmiType/BOTTLEROCKET_X86_64_NVIDIA
+      (= :windows-core-2019-x86-64 data) NodegroupAmiType/WINDOWS_CORE_2019_X86_64
+      (= :windows-core-2022-x86-64 data) NodegroupAmiType/WINDOWS_CORE_2022_X86_64
+      (= :windows-full-2019-x86-64 data) NodegroupAmiType/WINDOWS_FULL_2019_X86_64
+      (= :windows-full-2022-x86-64 data) NodegroupAmiType/WINDOWS_FULL_2022_X86_64)))
 
 
 (defn patch-type
@@ -328,18 +328,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PatchType` - the value is returned.
-* is `:strategic` - `PatchType/STRATEGIC` is returned
 * is `:json` - `PatchType/JSON` is returned
 * is `:merge` - `PatchType/MERGE` is returned
+* is `:strategic` - `PatchType/STRATEGIC` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PatchType data) data
-      (= :strategic data) PatchType/STRATEGIC
       (= :json data) PatchType/JSON
-      (= :merge data) PatchType/MERGE)))
+      (= :merge data) PatchType/MERGE
+      (= :strategic data) PatchType/STRATEGIC)))
 
 
 (defn taint-effect
@@ -349,18 +349,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TaintEffect` - the value is returned.
-* is `:prefer-no-schedule` - `TaintEffect/PREFER_NO_SCHEDULE` is returned
 * is `:no-execute` - `TaintEffect/NO_EXECUTE` is returned
 * is `:no-schedule` - `TaintEffect/NO_SCHEDULE` is returned
+* is `:prefer-no-schedule` - `TaintEffect/PREFER_NO_SCHEDULE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TaintEffect data) data
-      (= :prefer-no-schedule data) TaintEffect/PREFER_NO_SCHEDULE
       (= :no-execute data) TaintEffect/NO_EXECUTE
-      (= :no-schedule data) TaintEffect/NO_SCHEDULE)))
+      (= :no-schedule data) TaintEffect/NO_SCHEDULE
+      (= :prefer-no-schedule data) TaintEffect/PREFER_NO_SCHEDULE)))
 
 
 (defn alb-controller-builder>

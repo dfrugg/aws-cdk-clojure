@@ -159,12 +159,12 @@ function on the data with the provided namespace id and item-key.  The found val
 * instance of `BucketAccessControl` - the value is returned.
 * is `:authenticated-read` - `BucketAccessControl/AUTHENTICATED_READ` is returned
 * is `:aws-exec-read` - `BucketAccessControl/AWS_EXEC_READ` is returned
-* is `:public-read` - `BucketAccessControl/PUBLIC_READ` is returned
-* is `:private` - `BucketAccessControl/PRIVATE` is returned
-* is `:log-delivery-write` - `BucketAccessControl/LOG_DELIVERY_WRITE` is returned
 * is `:bucket-owner-full-control` - `BucketAccessControl/BUCKET_OWNER_FULL_CONTROL` is returned
-* is `:public-read-write` - `BucketAccessControl/PUBLIC_READ_WRITE` is returned
 * is `:bucket-owner-read` - `BucketAccessControl/BUCKET_OWNER_READ` is returned
+* is `:log-delivery-write` - `BucketAccessControl/LOG_DELIVERY_WRITE` is returned
+* is `:private` - `BucketAccessControl/PRIVATE` is returned
+* is `:public-read` - `BucketAccessControl/PUBLIC_READ` is returned
+* is `:public-read-write` - `BucketAccessControl/PUBLIC_READ_WRITE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -173,12 +173,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (instance? BucketAccessControl data) data
       (= :authenticated-read data) BucketAccessControl/AUTHENTICATED_READ
       (= :aws-exec-read data) BucketAccessControl/AWS_EXEC_READ
-      (= :public-read data) BucketAccessControl/PUBLIC_READ
-      (= :private data) BucketAccessControl/PRIVATE
-      (= :log-delivery-write data) BucketAccessControl/LOG_DELIVERY_WRITE
       (= :bucket-owner-full-control data) BucketAccessControl/BUCKET_OWNER_FULL_CONTROL
-      (= :public-read-write data) BucketAccessControl/PUBLIC_READ_WRITE
-      (= :bucket-owner-read data) BucketAccessControl/BUCKET_OWNER_READ)))
+      (= :bucket-owner-read data) BucketAccessControl/BUCKET_OWNER_READ
+      (= :log-delivery-write data) BucketAccessControl/LOG_DELIVERY_WRITE
+      (= :private data) BucketAccessControl/PRIVATE
+      (= :public-read data) BucketAccessControl/PUBLIC_READ
+      (= :public-read-write data) BucketAccessControl/PUBLIC_READ_WRITE)))
 
 
 (defn bucket-encryption
@@ -188,24 +188,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BucketEncryption` - the value is returned.
-* is `:dsse-managed` - `BucketEncryption/DSSE_MANAGED` is returned
-* is `:kms-managed` - `BucketEncryption/KMS_MANAGED` is returned
-* is `:unencrypted` - `BucketEncryption/UNENCRYPTED` is returned
-* is `:s3-managed` - `BucketEncryption/S3_MANAGED` is returned
-* is `:kms` - `BucketEncryption/KMS` is returned
 * is `:dsse` - `BucketEncryption/DSSE` is returned
+* is `:dsse-managed` - `BucketEncryption/DSSE_MANAGED` is returned
+* is `:kms` - `BucketEncryption/KMS` is returned
+* is `:kms-managed` - `BucketEncryption/KMS_MANAGED` is returned
+* is `:s3-managed` - `BucketEncryption/S3_MANAGED` is returned
+* is `:unencrypted` - `BucketEncryption/UNENCRYPTED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BucketEncryption data) data
+      (= :dsse data) BucketEncryption/DSSE
       (= :dsse-managed data) BucketEncryption/DSSE_MANAGED
-      (= :kms-managed data) BucketEncryption/KMS_MANAGED
-      (= :unencrypted data) BucketEncryption/UNENCRYPTED
-      (= :s3-managed data) BucketEncryption/S3_MANAGED
       (= :kms data) BucketEncryption/KMS
-      (= :dsse data) BucketEncryption/DSSE)))
+      (= :kms-managed data) BucketEncryption/KMS_MANAGED
+      (= :s3-managed data) BucketEncryption/S3_MANAGED
+      (= :unencrypted data) BucketEncryption/UNENCRYPTED)))
 
 
 (defn bucket-notification-destination-type
@@ -215,18 +215,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BucketNotificationDestinationType` - the value is returned.
+* is `:lambda` - `BucketNotificationDestinationType/LAMBDA` is returned
 * is `:queue` - `BucketNotificationDestinationType/QUEUE` is returned
 * is `:topic` - `BucketNotificationDestinationType/TOPIC` is returned
-* is `:lambda` - `BucketNotificationDestinationType/LAMBDA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BucketNotificationDestinationType data) data
+      (= :lambda data) BucketNotificationDestinationType/LAMBDA
       (= :queue data) BucketNotificationDestinationType/QUEUE
-      (= :topic data) BucketNotificationDestinationType/TOPIC
-      (= :lambda data) BucketNotificationDestinationType/LAMBDA)))
+      (= :topic data) BucketNotificationDestinationType/TOPIC)))
 
 
 (defn event-type
@@ -236,62 +236,62 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EventType` - the value is returned.
-* is `:object-tagging-put` - `EventType/OBJECT_TAGGING_PUT` is returned
+* is `:intelligent-tiering` - `EventType/INTELLIGENT_TIERING` is returned
+* is `:lifecycle-expiration` - `EventType/LIFECYCLE_EXPIRATION` is returned
 * is `:lifecycle-expiration-delete` - `EventType/LIFECYCLE_EXPIRATION_DELETE` is returned
-* is `:object-restore-delete` - `EventType/OBJECT_RESTORE_DELETE` is returned
-* is `:object-created-copy` - `EventType/OBJECT_CREATED_COPY` is returned
-* is `:replication-operation-not-tracked` - `EventType/REPLICATION_OPERATION_NOT_TRACKED` is returned
+* is `:lifecycle-expiration-delete-marker-created` - `EventType/LIFECYCLE_EXPIRATION_DELETE_MARKER_CREATED` is returned
 * is `:lifecycle-transition` - `EventType/LIFECYCLE_TRANSITION` is returned
 * is `:object-acl-put` - `EventType/OBJECT_ACL_PUT` is returned
-* is `:lifecycle-expiration` - `EventType/LIFECYCLE_EXPIRATION` is returned
-* is `:object-tagging` - `EventType/OBJECT_TAGGING` is returned
-* is `:object-restore-post` - `EventType/OBJECT_RESTORE_POST` is returned
-* is `:object-removed-delete` - `EventType/OBJECT_REMOVED_DELETE` is returned
-* is `:replication-operation-missed-threshold` - `EventType/REPLICATION_OPERATION_MISSED_THRESHOLD` is returned
-* is `:lifecycle-expiration-delete-marker-created` - `EventType/LIFECYCLE_EXPIRATION_DELETE_MARKER_CREATED` is returned
-* is `:object-restore-completed` - `EventType/OBJECT_RESTORE_COMPLETED` is returned
-* is `:replication-operation-failed-replication` - `EventType/REPLICATION_OPERATION_FAILED_REPLICATION` is returned
-* is `:object-removed` - `EventType/OBJECT_REMOVED` is returned
-* is `:object-created-post` - `EventType/OBJECT_CREATED_POST` is returned
 * is `:object-created` - `EventType/OBJECT_CREATED` is returned
 * is `:object-created-complete-multipart-upload` - `EventType/OBJECT_CREATED_COMPLETE_MULTIPART_UPLOAD` is returned
-* is `:object-removed-delete-marker-created` - `EventType/OBJECT_REMOVED_DELETE_MARKER_CREATED` is returned
-* is `:replication-operation-replicated-after-threshold` - `EventType/REPLICATION_OPERATION_REPLICATED_AFTER_THRESHOLD` is returned
-* is `:reduced-redundancy-lost-object` - `EventType/REDUCED_REDUNDANCY_LOST_OBJECT` is returned
-* is `:intelligent-tiering` - `EventType/INTELLIGENT_TIERING` is returned
+* is `:object-created-copy` - `EventType/OBJECT_CREATED_COPY` is returned
+* is `:object-created-post` - `EventType/OBJECT_CREATED_POST` is returned
 * is `:object-created-put` - `EventType/OBJECT_CREATED_PUT` is returned
+* is `:object-removed` - `EventType/OBJECT_REMOVED` is returned
+* is `:object-removed-delete` - `EventType/OBJECT_REMOVED_DELETE` is returned
+* is `:object-removed-delete-marker-created` - `EventType/OBJECT_REMOVED_DELETE_MARKER_CREATED` is returned
+* is `:object-restore-completed` - `EventType/OBJECT_RESTORE_COMPLETED` is returned
+* is `:object-restore-delete` - `EventType/OBJECT_RESTORE_DELETE` is returned
+* is `:object-restore-post` - `EventType/OBJECT_RESTORE_POST` is returned
+* is `:object-tagging` - `EventType/OBJECT_TAGGING` is returned
 * is `:object-tagging-delete` - `EventType/OBJECT_TAGGING_DELETE` is returned
+* is `:object-tagging-put` - `EventType/OBJECT_TAGGING_PUT` is returned
+* is `:reduced-redundancy-lost-object` - `EventType/REDUCED_REDUNDANCY_LOST_OBJECT` is returned
+* is `:replication-operation-failed-replication` - `EventType/REPLICATION_OPERATION_FAILED_REPLICATION` is returned
+* is `:replication-operation-missed-threshold` - `EventType/REPLICATION_OPERATION_MISSED_THRESHOLD` is returned
+* is `:replication-operation-not-tracked` - `EventType/REPLICATION_OPERATION_NOT_TRACKED` is returned
+* is `:replication-operation-replicated-after-threshold` - `EventType/REPLICATION_OPERATION_REPLICATED_AFTER_THRESHOLD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EventType data) data
-      (= :object-tagging-put data) EventType/OBJECT_TAGGING_PUT
+      (= :intelligent-tiering data) EventType/INTELLIGENT_TIERING
+      (= :lifecycle-expiration data) EventType/LIFECYCLE_EXPIRATION
       (= :lifecycle-expiration-delete data) EventType/LIFECYCLE_EXPIRATION_DELETE
-      (= :object-restore-delete data) EventType/OBJECT_RESTORE_DELETE
-      (= :object-created-copy data) EventType/OBJECT_CREATED_COPY
-      (= :replication-operation-not-tracked data) EventType/REPLICATION_OPERATION_NOT_TRACKED
+      (= :lifecycle-expiration-delete-marker-created data) EventType/LIFECYCLE_EXPIRATION_DELETE_MARKER_CREATED
       (= :lifecycle-transition data) EventType/LIFECYCLE_TRANSITION
       (= :object-acl-put data) EventType/OBJECT_ACL_PUT
-      (= :lifecycle-expiration data) EventType/LIFECYCLE_EXPIRATION
-      (= :object-tagging data) EventType/OBJECT_TAGGING
-      (= :object-restore-post data) EventType/OBJECT_RESTORE_POST
-      (= :object-removed-delete data) EventType/OBJECT_REMOVED_DELETE
-      (= :replication-operation-missed-threshold data) EventType/REPLICATION_OPERATION_MISSED_THRESHOLD
-      (= :lifecycle-expiration-delete-marker-created data) EventType/LIFECYCLE_EXPIRATION_DELETE_MARKER_CREATED
-      (= :object-restore-completed data) EventType/OBJECT_RESTORE_COMPLETED
-      (= :replication-operation-failed-replication data) EventType/REPLICATION_OPERATION_FAILED_REPLICATION
-      (= :object-removed data) EventType/OBJECT_REMOVED
-      (= :object-created-post data) EventType/OBJECT_CREATED_POST
       (= :object-created data) EventType/OBJECT_CREATED
       (= :object-created-complete-multipart-upload data) EventType/OBJECT_CREATED_COMPLETE_MULTIPART_UPLOAD
-      (= :object-removed-delete-marker-created data) EventType/OBJECT_REMOVED_DELETE_MARKER_CREATED
-      (= :replication-operation-replicated-after-threshold data) EventType/REPLICATION_OPERATION_REPLICATED_AFTER_THRESHOLD
-      (= :reduced-redundancy-lost-object data) EventType/REDUCED_REDUNDANCY_LOST_OBJECT
-      (= :intelligent-tiering data) EventType/INTELLIGENT_TIERING
+      (= :object-created-copy data) EventType/OBJECT_CREATED_COPY
+      (= :object-created-post data) EventType/OBJECT_CREATED_POST
       (= :object-created-put data) EventType/OBJECT_CREATED_PUT
-      (= :object-tagging-delete data) EventType/OBJECT_TAGGING_DELETE)))
+      (= :object-removed data) EventType/OBJECT_REMOVED
+      (= :object-removed-delete data) EventType/OBJECT_REMOVED_DELETE
+      (= :object-removed-delete-marker-created data) EventType/OBJECT_REMOVED_DELETE_MARKER_CREATED
+      (= :object-restore-completed data) EventType/OBJECT_RESTORE_COMPLETED
+      (= :object-restore-delete data) EventType/OBJECT_RESTORE_DELETE
+      (= :object-restore-post data) EventType/OBJECT_RESTORE_POST
+      (= :object-tagging data) EventType/OBJECT_TAGGING
+      (= :object-tagging-delete data) EventType/OBJECT_TAGGING_DELETE
+      (= :object-tagging-put data) EventType/OBJECT_TAGGING_PUT
+      (= :reduced-redundancy-lost-object data) EventType/REDUCED_REDUNDANCY_LOST_OBJECT
+      (= :replication-operation-failed-replication data) EventType/REPLICATION_OPERATION_FAILED_REPLICATION
+      (= :replication-operation-missed-threshold data) EventType/REPLICATION_OPERATION_MISSED_THRESHOLD
+      (= :replication-operation-not-tracked data) EventType/REPLICATION_OPERATION_NOT_TRACKED
+      (= :replication-operation-replicated-after-threshold data) EventType/REPLICATION_OPERATION_REPLICATED_AFTER_THRESHOLD)))
 
 
 (defn http-methods
@@ -301,22 +301,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpMethods` - the value is returned.
-* is `:get` - `HttpMethods/GET` is returned
-* is `:put` - `HttpMethods/PUT` is returned
-* is `:post` - `HttpMethods/POST` is returned
 * is `:delete` - `HttpMethods/DELETE` is returned
+* is `:get` - `HttpMethods/GET` is returned
 * is `:head` - `HttpMethods/HEAD` is returned
+* is `:post` - `HttpMethods/POST` is returned
+* is `:put` - `HttpMethods/PUT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpMethods data) data
-      (= :get data) HttpMethods/GET
-      (= :put data) HttpMethods/PUT
-      (= :post data) HttpMethods/POST
       (= :delete data) HttpMethods/DELETE
-      (= :head data) HttpMethods/HEAD)))
+      (= :get data) HttpMethods/GET
+      (= :head data) HttpMethods/HEAD
+      (= :post data) HttpMethods/POST
+      (= :put data) HttpMethods/PUT)))
 
 
 (defn inventory-format
@@ -326,18 +326,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `InventoryFormat` - the value is returned.
+* is `:csv` - `InventoryFormat/CSV` is returned
 * is `:orc` - `InventoryFormat/ORC` is returned
 * is `:parquet` - `InventoryFormat/PARQUET` is returned
-* is `:csv` - `InventoryFormat/CSV` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? InventoryFormat data) data
+      (= :csv data) InventoryFormat/CSV
       (= :orc data) InventoryFormat/ORC
-      (= :parquet data) InventoryFormat/PARQUET
-      (= :csv data) InventoryFormat/CSV)))
+      (= :parquet data) InventoryFormat/PARQUET)))
 
 
 (defn inventory-frequency
@@ -366,16 +366,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `InventoryObjectVersion` - the value is returned.
-* is `:current` - `InventoryObjectVersion/CURRENT` is returned
 * is `:all` - `InventoryObjectVersion/ALL` is returned
+* is `:current` - `InventoryObjectVersion/CURRENT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? InventoryObjectVersion data) data
-      (= :current data) InventoryObjectVersion/CURRENT
-      (= :all data) InventoryObjectVersion/ALL)))
+      (= :all data) InventoryObjectVersion/ALL
+      (= :current data) InventoryObjectVersion/CURRENT)))
 
 
 (defn object-lock-mode
@@ -385,16 +385,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ObjectLockMode` - the value is returned.
-* is `:governance` - `ObjectLockMode/GOVERNANCE` is returned
 * is `:compliance` - `ObjectLockMode/COMPLIANCE` is returned
+* is `:governance` - `ObjectLockMode/GOVERNANCE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ObjectLockMode data) data
-      (= :governance data) ObjectLockMode/GOVERNANCE
-      (= :compliance data) ObjectLockMode/COMPLIANCE)))
+      (= :compliance data) ObjectLockMode/COMPLIANCE
+      (= :governance data) ObjectLockMode/GOVERNANCE)))
 
 
 (defn object-ownership
@@ -444,16 +444,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RedirectProtocol` - the value is returned.
-* is `:https` - `RedirectProtocol/HTTPS` is returned
 * is `:http` - `RedirectProtocol/HTTP` is returned
+* is `:https` - `RedirectProtocol/HTTPS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RedirectProtocol data) data
-      (= :https data) RedirectProtocol/HTTPS
-      (= :http data) RedirectProtocol/HTTP)))
+      (= :http data) RedirectProtocol/HTTP
+      (= :https data) RedirectProtocol/HTTPS)))
 
 
 (defn block-public-access-builder>

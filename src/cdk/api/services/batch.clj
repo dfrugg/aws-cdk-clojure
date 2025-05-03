@@ -135,16 +135,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Action` - the value is returned.
-* is `:retry` - `Action/RETRY` is returned
 * is `:exit` - `Action/EXIT` is returned
+* is `:retry` - `Action/RETRY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Action data) data
-      (= :retry data) Action/RETRY
-      (= :exit data) Action/EXIT)))
+      (= :exit data) Action/EXIT
+      (= :retry data) Action/RETRY)))
 
 
 (defn allocation-strategy
@@ -154,9 +154,9 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AllocationStrategy` - the value is returned.
-* is `:spot-capacity-optimized` - `AllocationStrategy/SPOT_CAPACITY_OPTIMIZED` is returned
-* is `:best-fit-progressive` - `AllocationStrategy/BEST_FIT_PROGRESSIVE` is returned
 * is `:best-fit` - `AllocationStrategy/BEST_FIT` is returned
+* is `:best-fit-progressive` - `AllocationStrategy/BEST_FIT_PROGRESSIVE` is returned
+* is `:spot-capacity-optimized` - `AllocationStrategy/SPOT_CAPACITY_OPTIMIZED` is returned
 * is `:spot-price-capacity-optimized` - `AllocationStrategy/SPOT_PRICE_CAPACITY_OPTIMIZED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -164,9 +164,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AllocationStrategy data) data
-      (= :spot-capacity-optimized data) AllocationStrategy/SPOT_CAPACITY_OPTIMIZED
-      (= :best-fit-progressive data) AllocationStrategy/BEST_FIT_PROGRESSIVE
       (= :best-fit data) AllocationStrategy/BEST_FIT
+      (= :best-fit-progressive data) AllocationStrategy/BEST_FIT_PROGRESSIVE
+      (= :spot-capacity-optimized data) AllocationStrategy/SPOT_CAPACITY_OPTIMIZED
       (= :spot-price-capacity-optimized data) AllocationStrategy/SPOT_PRICE_CAPACITY_OPTIMIZED)))
 
 
@@ -177,18 +177,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DevicePermission` - the value is returned.
+* is `:mknod` - `DevicePermission/MKNOD` is returned
 * is `:read` - `DevicePermission/READ` is returned
 * is `:write` - `DevicePermission/WRITE` is returned
-* is `:mknod` - `DevicePermission/MKNOD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DevicePermission data) data
+      (= :mknod data) DevicePermission/MKNOD
       (= :read data) DevicePermission/READ
-      (= :write data) DevicePermission/WRITE
-      (= :mknod data) DevicePermission/MKNOD)))
+      (= :write data) DevicePermission/WRITE)))
 
 
 (defn dns-policy
@@ -198,8 +198,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DnsPolicy` - the value is returned.
-* is `:cluster-first-with-host-net` - `DnsPolicy/CLUSTER_FIRST_WITH_HOST_NET` is returned
 * is `:cluster-first` - `DnsPolicy/CLUSTER_FIRST` is returned
+* is `:cluster-first-with-host-net` - `DnsPolicy/CLUSTER_FIRST_WITH_HOST_NET` is returned
 * is `:default` - `DnsPolicy/DEFAULT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -207,8 +207,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DnsPolicy data) data
-      (= :cluster-first-with-host-net data) DnsPolicy/CLUSTER_FIRST_WITH_HOST_NET
       (= :cluster-first data) DnsPolicy/CLUSTER_FIRST
+      (= :cluster-first-with-host-net data) DnsPolicy/CLUSTER_FIRST_WITH_HOST_NET
       (= :default data) DnsPolicy/DEFAULT)))
 
 
@@ -219,16 +219,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EcsMachineImageType` - the value is returned.
-* is `:ecs-al2-nvidia` - `EcsMachineImageType/ECS_AL2_NVIDIA` is returned
 * is `:ecs-al2` - `EcsMachineImageType/ECS_AL2` is returned
+* is `:ecs-al2-nvidia` - `EcsMachineImageType/ECS_AL2_NVIDIA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EcsMachineImageType data) data
-      (= :ecs-al2-nvidia data) EcsMachineImageType/ECS_AL2_NVIDIA
-      (= :ecs-al2 data) EcsMachineImageType/ECS_AL2)))
+      (= :ecs-al2 data) EcsMachineImageType/ECS_AL2
+      (= :ecs-al2-nvidia data) EcsMachineImageType/ECS_AL2_NVIDIA)))
 
 
 (defn eks-machine-image-type
@@ -238,16 +238,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EksMachineImageType` - the value is returned.
-* is `:eks-al2-nvidia` - `EksMachineImageType/EKS_AL2_NVIDIA` is returned
 * is `:eks-al2` - `EksMachineImageType/EKS_AL2` is returned
+* is `:eks-al2-nvidia` - `EksMachineImageType/EKS_AL2_NVIDIA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EksMachineImageType data) data
-      (= :eks-al2-nvidia data) EksMachineImageType/EKS_AL2_NVIDIA
-      (= :eks-al2 data) EksMachineImageType/EKS_AL2)))
+      (= :eks-al2 data) EksMachineImageType/EKS_AL2
+      (= :eks-al2-nvidia data) EksMachineImageType/EKS_AL2_NVIDIA)))
 
 
 (defn empty-dir-medium-type
@@ -276,18 +276,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ImagePullPolicy` - the value is returned.
-* is `:never` - `ImagePullPolicy/NEVER` is returned
-* is `:if-not-present` - `ImagePullPolicy/IF_NOT_PRESENT` is returned
 * is `:always` - `ImagePullPolicy/ALWAYS` is returned
+* is `:if-not-present` - `ImagePullPolicy/IF_NOT_PRESENT` is returned
+* is `:never` - `ImagePullPolicy/NEVER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ImagePullPolicy data) data
-      (= :never data) ImagePullPolicy/NEVER
+      (= :always data) ImagePullPolicy/ALWAYS
       (= :if-not-present data) ImagePullPolicy/IF_NOT_PRESENT
-      (= :always data) ImagePullPolicy/ALWAYS)))
+      (= :never data) ImagePullPolicy/NEVER)))
 
 
 (defn job-state-time-limit-actions-action
@@ -352,90 +352,90 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TmpfsMountOption` - the value is returned.
-* is `:rbind` - `TmpfsMountOption/RBIND` is returned
-* is `:strictatime` - `TmpfsMountOption/STRICTATIME` is returned
-* is `:slave` - `TmpfsMountOption/SLAVE` is returned
-* is `:rslave` - `TmpfsMountOption/RSLAVE` is returned
-* is `:nosuid` - `TmpfsMountOption/NOSUID` is returned
-* is `:nomand` - `TmpfsMountOption/NOMAND` is returned
-* is `:rshared` - `TmpfsMountOption/RSHARED` is returned
-* is `:nr-blocks` - `TmpfsMountOption/NR_BLOCKS` is returned
-* is `:atime` - `TmpfsMountOption/ATIME` is returned
-* is `:shared` - `TmpfsMountOption/SHARED` is returned
-* is `:norelatime` - `TmpfsMountOption/NORELATIME` is returned
-* is `:mode` - `TmpfsMountOption/MODE` is returned
-* is `:noexec` - `TmpfsMountOption/NOEXEC` is returned
-* is `:sync` - `TmpfsMountOption/SYNC` is returned
-* is `:uid` - `TmpfsMountOption/UID` is returned
-* is `:suid` - `TmpfsMountOption/SUID` is returned
-* is `:defaults` - `TmpfsMountOption/DEFAULTS` is returned
-* is `:rprivate` - `TmpfsMountOption/RPRIVATE` is returned
-* is `:exec` - `TmpfsMountOption/EXEC` is returned
-* is `:nostrictatime` - `TmpfsMountOption/NOSTRICTATIME` is returned
-* is `:noatime` - `TmpfsMountOption/NOATIME` is returned
-* is `:nodev` - `TmpfsMountOption/NODEV` is returned
-* is `:unbindable` - `TmpfsMountOption/UNBINDABLE` is returned
-* is `:mpol` - `TmpfsMountOption/MPOL` is returned
-* is `:ro` - `TmpfsMountOption/RO` is returned
-* is `:dirsync` - `TmpfsMountOption/DIRSYNC` is returned
-* is `:nodiratime` - `TmpfsMountOption/NODIRATIME` is returned
-* is `:remount` - `TmpfsMountOption/REMOUNT` is returned
-* is `:mand` - `TmpfsMountOption/MAND` is returned
 * is `:async` - `TmpfsMountOption/ASYNC` is returned
-* is `:relatime` - `TmpfsMountOption/RELATIME` is returned
-* is `:private` - `TmpfsMountOption/PRIVATE` is returned
-* is `:runbindable` - `TmpfsMountOption/RUNBINDABLE` is returned
+* is `:atime` - `TmpfsMountOption/ATIME` is returned
 * is `:bind` - `TmpfsMountOption/BIND` is returned
+* is `:defaults` - `TmpfsMountOption/DEFAULTS` is returned
 * is `:dev` - `TmpfsMountOption/DEV` is returned
 * is `:diratime` - `TmpfsMountOption/DIRATIME` is returned
-* is `:nr-inodes` - `TmpfsMountOption/NR_INODES` is returned
-* is `:rw` - `TmpfsMountOption/RW` is returned
+* is `:dirsync` - `TmpfsMountOption/DIRSYNC` is returned
+* is `:exec` - `TmpfsMountOption/EXEC` is returned
 * is `:gid` - `TmpfsMountOption/GID` is returned
+* is `:mand` - `TmpfsMountOption/MAND` is returned
+* is `:mode` - `TmpfsMountOption/MODE` is returned
+* is `:mpol` - `TmpfsMountOption/MPOL` is returned
+* is `:noatime` - `TmpfsMountOption/NOATIME` is returned
+* is `:nodev` - `TmpfsMountOption/NODEV` is returned
+* is `:nodiratime` - `TmpfsMountOption/NODIRATIME` is returned
+* is `:noexec` - `TmpfsMountOption/NOEXEC` is returned
+* is `:nomand` - `TmpfsMountOption/NOMAND` is returned
+* is `:norelatime` - `TmpfsMountOption/NORELATIME` is returned
+* is `:nostrictatime` - `TmpfsMountOption/NOSTRICTATIME` is returned
+* is `:nosuid` - `TmpfsMountOption/NOSUID` is returned
+* is `:nr-blocks` - `TmpfsMountOption/NR_BLOCKS` is returned
+* is `:nr-inodes` - `TmpfsMountOption/NR_INODES` is returned
+* is `:private` - `TmpfsMountOption/PRIVATE` is returned
+* is `:rbind` - `TmpfsMountOption/RBIND` is returned
+* is `:relatime` - `TmpfsMountOption/RELATIME` is returned
+* is `:remount` - `TmpfsMountOption/REMOUNT` is returned
+* is `:ro` - `TmpfsMountOption/RO` is returned
+* is `:rprivate` - `TmpfsMountOption/RPRIVATE` is returned
+* is `:rshared` - `TmpfsMountOption/RSHARED` is returned
+* is `:rslave` - `TmpfsMountOption/RSLAVE` is returned
+* is `:runbindable` - `TmpfsMountOption/RUNBINDABLE` is returned
+* is `:rw` - `TmpfsMountOption/RW` is returned
+* is `:shared` - `TmpfsMountOption/SHARED` is returned
+* is `:slave` - `TmpfsMountOption/SLAVE` is returned
+* is `:strictatime` - `TmpfsMountOption/STRICTATIME` is returned
+* is `:suid` - `TmpfsMountOption/SUID` is returned
+* is `:sync` - `TmpfsMountOption/SYNC` is returned
+* is `:uid` - `TmpfsMountOption/UID` is returned
+* is `:unbindable` - `TmpfsMountOption/UNBINDABLE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TmpfsMountOption data) data
-      (= :rbind data) TmpfsMountOption/RBIND
-      (= :strictatime data) TmpfsMountOption/STRICTATIME
-      (= :slave data) TmpfsMountOption/SLAVE
-      (= :rslave data) TmpfsMountOption/RSLAVE
-      (= :nosuid data) TmpfsMountOption/NOSUID
-      (= :nomand data) TmpfsMountOption/NOMAND
-      (= :rshared data) TmpfsMountOption/RSHARED
-      (= :nr-blocks data) TmpfsMountOption/NR_BLOCKS
-      (= :atime data) TmpfsMountOption/ATIME
-      (= :shared data) TmpfsMountOption/SHARED
-      (= :norelatime data) TmpfsMountOption/NORELATIME
-      (= :mode data) TmpfsMountOption/MODE
-      (= :noexec data) TmpfsMountOption/NOEXEC
-      (= :sync data) TmpfsMountOption/SYNC
-      (= :uid data) TmpfsMountOption/UID
-      (= :suid data) TmpfsMountOption/SUID
-      (= :defaults data) TmpfsMountOption/DEFAULTS
-      (= :rprivate data) TmpfsMountOption/RPRIVATE
-      (= :exec data) TmpfsMountOption/EXEC
-      (= :nostrictatime data) TmpfsMountOption/NOSTRICTATIME
-      (= :noatime data) TmpfsMountOption/NOATIME
-      (= :nodev data) TmpfsMountOption/NODEV
-      (= :unbindable data) TmpfsMountOption/UNBINDABLE
-      (= :mpol data) TmpfsMountOption/MPOL
-      (= :ro data) TmpfsMountOption/RO
-      (= :dirsync data) TmpfsMountOption/DIRSYNC
-      (= :nodiratime data) TmpfsMountOption/NODIRATIME
-      (= :remount data) TmpfsMountOption/REMOUNT
-      (= :mand data) TmpfsMountOption/MAND
       (= :async data) TmpfsMountOption/ASYNC
-      (= :relatime data) TmpfsMountOption/RELATIME
-      (= :private data) TmpfsMountOption/PRIVATE
-      (= :runbindable data) TmpfsMountOption/RUNBINDABLE
+      (= :atime data) TmpfsMountOption/ATIME
       (= :bind data) TmpfsMountOption/BIND
+      (= :defaults data) TmpfsMountOption/DEFAULTS
       (= :dev data) TmpfsMountOption/DEV
       (= :diratime data) TmpfsMountOption/DIRATIME
+      (= :dirsync data) TmpfsMountOption/DIRSYNC
+      (= :exec data) TmpfsMountOption/EXEC
+      (= :gid data) TmpfsMountOption/GID
+      (= :mand data) TmpfsMountOption/MAND
+      (= :mode data) TmpfsMountOption/MODE
+      (= :mpol data) TmpfsMountOption/MPOL
+      (= :noatime data) TmpfsMountOption/NOATIME
+      (= :nodev data) TmpfsMountOption/NODEV
+      (= :nodiratime data) TmpfsMountOption/NODIRATIME
+      (= :noexec data) TmpfsMountOption/NOEXEC
+      (= :nomand data) TmpfsMountOption/NOMAND
+      (= :norelatime data) TmpfsMountOption/NORELATIME
+      (= :nostrictatime data) TmpfsMountOption/NOSTRICTATIME
+      (= :nosuid data) TmpfsMountOption/NOSUID
+      (= :nr-blocks data) TmpfsMountOption/NR_BLOCKS
       (= :nr-inodes data) TmpfsMountOption/NR_INODES
+      (= :private data) TmpfsMountOption/PRIVATE
+      (= :rbind data) TmpfsMountOption/RBIND
+      (= :relatime data) TmpfsMountOption/RELATIME
+      (= :remount data) TmpfsMountOption/REMOUNT
+      (= :ro data) TmpfsMountOption/RO
+      (= :rprivate data) TmpfsMountOption/RPRIVATE
+      (= :rshared data) TmpfsMountOption/RSHARED
+      (= :rslave data) TmpfsMountOption/RSLAVE
+      (= :runbindable data) TmpfsMountOption/RUNBINDABLE
       (= :rw data) TmpfsMountOption/RW
-      (= :gid data) TmpfsMountOption/GID)))
+      (= :shared data) TmpfsMountOption/SHARED
+      (= :slave data) TmpfsMountOption/SLAVE
+      (= :strictatime data) TmpfsMountOption/STRICTATIME
+      (= :suid data) TmpfsMountOption/SUID
+      (= :sync data) TmpfsMountOption/SYNC
+      (= :uid data) TmpfsMountOption/UID
+      (= :unbindable data) TmpfsMountOption/UNBINDABLE)))
 
 
 (defn ulimit-name
@@ -445,42 +445,42 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `UlimitName` - the value is returned.
+* is `:core` - `UlimitName/CORE` is returned
+* is `:cpu` - `UlimitName/CPU` is returned
 * is `:data` - `UlimitName/DATA` is returned
-* is `:rttime` - `UlimitName/RTTIME` is returned
+* is `:fsize` - `UlimitName/FSIZE` is returned
 * is `:locks` - `UlimitName/LOCKS` is returned
+* is `:memlock` - `UlimitName/MEMLOCK` is returned
 * is `:msgqueue` - `UlimitName/MSGQUEUE` is returned
 * is `:nice` - `UlimitName/NICE` is returned
-* is `:memlock` - `UlimitName/MEMLOCK` is returned
-* is `:nproc` - `UlimitName/NPROC` is returned
-* is `:stack` - `UlimitName/STACK` is returned
-* is `:sigpending` - `UlimitName/SIGPENDING` is returned
-* is `:core` - `UlimitName/CORE` is returned
-* is `:fsize` - `UlimitName/FSIZE` is returned
 * is `:nofile` - `UlimitName/NOFILE` is returned
-* is `:rtprio` - `UlimitName/RTPRIO` is returned
-* is `:cpu` - `UlimitName/CPU` is returned
+* is `:nproc` - `UlimitName/NPROC` is returned
 * is `:rss` - `UlimitName/RSS` is returned
+* is `:rtprio` - `UlimitName/RTPRIO` is returned
+* is `:rttime` - `UlimitName/RTTIME` is returned
+* is `:sigpending` - `UlimitName/SIGPENDING` is returned
+* is `:stack` - `UlimitName/STACK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? UlimitName data) data
+      (= :core data) UlimitName/CORE
+      (= :cpu data) UlimitName/CPU
       (= :data data) UlimitName/DATA
-      (= :rttime data) UlimitName/RTTIME
+      (= :fsize data) UlimitName/FSIZE
       (= :locks data) UlimitName/LOCKS
+      (= :memlock data) UlimitName/MEMLOCK
       (= :msgqueue data) UlimitName/MSGQUEUE
       (= :nice data) UlimitName/NICE
-      (= :memlock data) UlimitName/MEMLOCK
-      (= :nproc data) UlimitName/NPROC
-      (= :stack data) UlimitName/STACK
-      (= :sigpending data) UlimitName/SIGPENDING
-      (= :core data) UlimitName/CORE
-      (= :fsize data) UlimitName/FSIZE
       (= :nofile data) UlimitName/NOFILE
+      (= :nproc data) UlimitName/NPROC
+      (= :rss data) UlimitName/RSS
       (= :rtprio data) UlimitName/RTPRIO
-      (= :cpu data) UlimitName/CPU
-      (= :rss data) UlimitName/RSS)))
+      (= :rttime data) UlimitName/RTTIME
+      (= :sigpending data) UlimitName/SIGPENDING
+      (= :stack data) UlimitName/STACK)))
 
 
 (defn cfn-compute-environment-builder>

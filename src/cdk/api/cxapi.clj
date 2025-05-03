@@ -77,8 +77,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `VpcSubnetGroupType` - the value is returned.
 * is `:isolated` - `VpcSubnetGroupType/ISOLATED` is returned
-* is `:public` - `VpcSubnetGroupType/PUBLIC` is returned
 * is `:private` - `VpcSubnetGroupType/PRIVATE` is returned
+* is `:public` - `VpcSubnetGroupType/PUBLIC` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -86,8 +86,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? VpcSubnetGroupType data) data
       (= :isolated data) VpcSubnetGroupType/ISOLATED
-      (= :public data) VpcSubnetGroupType/PUBLIC
-      (= :private data) VpcSubnetGroupType/PRIVATE)))
+      (= :private data) VpcSubnetGroupType/PRIVATE
+      (= :public data) VpcSubnetGroupType/PUBLIC)))
 
 
 (defn assembly-build-options-builder

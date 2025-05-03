@@ -63,26 +63,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ActionPoint` - the value is returned.
-* is `:on-deployment-start` - `ActionPoint/ON_DEPLOYMENT_START` is returned
-* is `:on-deployment-step` - `ActionPoint/ON_DEPLOYMENT_STEP` is returned
 * is `:on-deployment-baking` - `ActionPoint/ON_DEPLOYMENT_BAKING` is returned
 * is `:on-deployment-complete` - `ActionPoint/ON_DEPLOYMENT_COMPLETE` is returned
-* is `:pre-start-deployment` - `ActionPoint/PRE_START_DEPLOYMENT` is returned
-* is `:pre-create-hosted-configuration-version` - `ActionPoint/PRE_CREATE_HOSTED_CONFIGURATION_VERSION` is returned
 * is `:on-deployment-rolled-back` - `ActionPoint/ON_DEPLOYMENT_ROLLED_BACK` is returned
+* is `:on-deployment-start` - `ActionPoint/ON_DEPLOYMENT_START` is returned
+* is `:on-deployment-step` - `ActionPoint/ON_DEPLOYMENT_STEP` is returned
+* is `:pre-create-hosted-configuration-version` - `ActionPoint/PRE_CREATE_HOSTED_CONFIGURATION_VERSION` is returned
+* is `:pre-start-deployment` - `ActionPoint/PRE_START_DEPLOYMENT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ActionPoint data) data
-      (= :on-deployment-start data) ActionPoint/ON_DEPLOYMENT_START
-      (= :on-deployment-step data) ActionPoint/ON_DEPLOYMENT_STEP
       (= :on-deployment-baking data) ActionPoint/ON_DEPLOYMENT_BAKING
       (= :on-deployment-complete data) ActionPoint/ON_DEPLOYMENT_COMPLETE
-      (= :pre-start-deployment data) ActionPoint/PRE_START_DEPLOYMENT
+      (= :on-deployment-rolled-back data) ActionPoint/ON_DEPLOYMENT_ROLLED_BACK
+      (= :on-deployment-start data) ActionPoint/ON_DEPLOYMENT_START
+      (= :on-deployment-step data) ActionPoint/ON_DEPLOYMENT_STEP
       (= :pre-create-hosted-configuration-version data) ActionPoint/PRE_CREATE_HOSTED_CONFIGURATION_VERSION
-      (= :on-deployment-rolled-back data) ActionPoint/ON_DEPLOYMENT_ROLLED_BACK)))
+      (= :pre-start-deployment data) ActionPoint/PRE_START_DEPLOYMENT)))
 
 
 (defn configuration-source-type
@@ -92,22 +92,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ConfigurationSourceType` - the value is returned.
-* is `:secrets-manager` - `ConfigurationSourceType/SECRETS_MANAGER` is returned
-* is `:ssm-parameter` - `ConfigurationSourceType/SSM_PARAMETER` is returned
-* is `:s3` - `ConfigurationSourceType/S3` is returned
 * is `:code-pipeline` - `ConfigurationSourceType/CODE_PIPELINE` is returned
+* is `:s3` - `ConfigurationSourceType/S3` is returned
+* is `:secrets-manager` - `ConfigurationSourceType/SECRETS_MANAGER` is returned
 * is `:ssm-document` - `ConfigurationSourceType/SSM_DOCUMENT` is returned
+* is `:ssm-parameter` - `ConfigurationSourceType/SSM_PARAMETER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ConfigurationSourceType data) data
-      (= :secrets-manager data) ConfigurationSourceType/SECRETS_MANAGER
-      (= :ssm-parameter data) ConfigurationSourceType/SSM_PARAMETER
-      (= :s3 data) ConfigurationSourceType/S3
       (= :code-pipeline data) ConfigurationSourceType/CODE_PIPELINE
-      (= :ssm-document data) ConfigurationSourceType/SSM_DOCUMENT)))
+      (= :s3 data) ConfigurationSourceType/S3
+      (= :secrets-manager data) ConfigurationSourceType/SECRETS_MANAGER
+      (= :ssm-document data) ConfigurationSourceType/SSM_DOCUMENT
+      (= :ssm-parameter data) ConfigurationSourceType/SSM_PARAMETER)))
 
 
 (defn configuration-type
@@ -117,16 +117,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ConfigurationType` - the value is returned.
-* is `:freeform` - `ConfigurationType/FREEFORM` is returned
 * is `:feature-flags` - `ConfigurationType/FEATURE_FLAGS` is returned
+* is `:freeform` - `ConfigurationType/FREEFORM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ConfigurationType data) data
-      (= :freeform data) ConfigurationType/FREEFORM
-      (= :feature-flags data) ConfigurationType/FEATURE_FLAGS)))
+      (= :feature-flags data) ConfigurationType/FEATURE_FLAGS
+      (= :freeform data) ConfigurationType/FREEFORM)))
 
 
 (defn growth-type
@@ -136,16 +136,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `GrowthType` - the value is returned.
-* is `:linear` - `GrowthType/LINEAR` is returned
 * is `:exponential` - `GrowthType/EXPONENTIAL` is returned
+* is `:linear` - `GrowthType/LINEAR` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? GrowthType data) data
-      (= :linear data) GrowthType/LINEAR
-      (= :exponential data) GrowthType/EXPONENTIAL)))
+      (= :exponential data) GrowthType/EXPONENTIAL
+      (= :linear data) GrowthType/LINEAR)))
 
 
 (defn monitor-type
@@ -155,16 +155,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `MonitorType` - the value is returned.
-* is `:cloudwatch` - `MonitorType/CLOUDWATCH` is returned
 * is `:cfn-monitors-property` - `MonitorType/CFN_MONITORS_PROPERTY` is returned
+* is `:cloudwatch` - `MonitorType/CLOUDWATCH` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? MonitorType data) data
-      (= :cloudwatch data) MonitorType/CLOUDWATCH
-      (= :cfn-monitors-property data) MonitorType/CFN_MONITORS_PROPERTY)))
+      (= :cfn-monitors-property data) MonitorType/CFN_MONITORS_PROPERTY
+      (= :cloudwatch data) MonitorType/CLOUDWATCH)))
 
 
 (defn platform
@@ -174,16 +174,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Platform` - the value is returned.
-* is `:x86-64` - `Platform/X86_64` is returned
 * is `:arm-64` - `Platform/ARM_64` is returned
+* is `:x86-64` - `Platform/X86_64` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Platform data) data
-      (= :x86-64 data) Platform/X86_64
-      (= :arm-64 data) Platform/ARM_64)))
+      (= :arm-64 data) Platform/ARM_64
+      (= :x86-64 data) Platform/X86_64)))
 
 
 (defn source-type
@@ -195,8 +195,8 @@ function on the data with the provided namespace id and item-key.  The found val
 * instance of `SourceType` - the value is returned.
 * is `:events` - `SourceType/EVENTS` is returned
 * is `:lambda` - `SourceType/LAMBDA` is returned
-* is `:sqs` - `SourceType/SQS` is returned
 * is `:sns` - `SourceType/SNS` is returned
+* is `:sqs` - `SourceType/SQS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -205,8 +205,8 @@ function on the data with the provided namespace id and item-key.  The found val
       (instance? SourceType data) data
       (= :events data) SourceType/EVENTS
       (= :lambda data) SourceType/LAMBDA
-      (= :sqs data) SourceType/SQS
-      (= :sns data) SourceType/SNS)))
+      (= :sns data) SourceType/SNS
+      (= :sqs data) SourceType/SQS)))
 
 
 (defn validator-type

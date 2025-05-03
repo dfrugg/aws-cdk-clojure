@@ -83,18 +83,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ComputePlatform` - the value is returned.
+* is `:ecs` - `ComputePlatform/ECS` is returned
 * is `:lambda` - `ComputePlatform/LAMBDA` is returned
 * is `:server` - `ComputePlatform/SERVER` is returned
-* is `:ecs` - `ComputePlatform/ECS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ComputePlatform data) data
+      (= :ecs data) ComputePlatform/ECS
       (= :lambda data) ComputePlatform/LAMBDA
-      (= :server data) ComputePlatform/SERVER
-      (= :ecs data) ComputePlatform/ECS)))
+      (= :server data) ComputePlatform/SERVER)))
 
 
 (defn load-balancer-generation
@@ -104,16 +104,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LoadBalancerGeneration` - the value is returned.
-* is `:second` - `LoadBalancerGeneration/SECOND` is returned
 * is `:first` - `LoadBalancerGeneration/FIRST` is returned
+* is `:second` - `LoadBalancerGeneration/SECOND` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LoadBalancerGeneration data) data
-      (= :second data) LoadBalancerGeneration/SECOND
-      (= :first data) LoadBalancerGeneration/FIRST)))
+      (= :first data) LoadBalancerGeneration/FIRST
+      (= :second data) LoadBalancerGeneration/SECOND)))
 
 
 (defn auto-rollback-config-builder>

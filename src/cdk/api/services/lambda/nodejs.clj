@@ -42,24 +42,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LogLevel` - the value is returned.
-* is `:info` - `LogLevel/INFO` is returned
-* is `:warning` - `LogLevel/WARNING` is returned
-* is `:error` - `LogLevel/ERROR` is returned
-* is `:verbose` - `LogLevel/VERBOSE` is returned
-* is `:silent` - `LogLevel/SILENT` is returned
 * is `:debug` - `LogLevel/DEBUG` is returned
+* is `:error` - `LogLevel/ERROR` is returned
+* is `:info` - `LogLevel/INFO` is returned
+* is `:silent` - `LogLevel/SILENT` is returned
+* is `:verbose` - `LogLevel/VERBOSE` is returned
+* is `:warning` - `LogLevel/WARNING` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LogLevel data) data
-      (= :info data) LogLevel/INFO
-      (= :warning data) LogLevel/WARNING
+      (= :debug data) LogLevel/DEBUG
       (= :error data) LogLevel/ERROR
-      (= :verbose data) LogLevel/VERBOSE
+      (= :info data) LogLevel/INFO
       (= :silent data) LogLevel/SILENT
-      (= :debug data) LogLevel/DEBUG)))
+      (= :verbose data) LogLevel/VERBOSE
+      (= :warning data) LogLevel/WARNING)))
 
 
 (defn output-format
@@ -69,16 +69,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `OutputFormat` - the value is returned.
-* is `:esm` - `OutputFormat/ESM` is returned
 * is `:cjs` - `OutputFormat/CJS` is returned
+* is `:esm` - `OutputFormat/ESM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? OutputFormat data) data
-      (= :esm data) OutputFormat/ESM
-      (= :cjs data) OutputFormat/CJS)))
+      (= :cjs data) OutputFormat/CJS
+      (= :esm data) OutputFormat/ESM)))
 
 
 (defn source-map-mode
@@ -88,20 +88,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SourceMapMode` - the value is returned.
-* is `:external` - `SourceMapMode/EXTERNAL` is returned
-* is `:default` - `SourceMapMode/DEFAULT` is returned
-* is `:inline` - `SourceMapMode/INLINE` is returned
 * is `:both` - `SourceMapMode/BOTH` is returned
+* is `:default` - `SourceMapMode/DEFAULT` is returned
+* is `:external` - `SourceMapMode/EXTERNAL` is returned
+* is `:inline` - `SourceMapMode/INLINE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SourceMapMode data) data
-      (= :external data) SourceMapMode/EXTERNAL
+      (= :both data) SourceMapMode/BOTH
       (= :default data) SourceMapMode/DEFAULT
-      (= :inline data) SourceMapMode/INLINE
-      (= :both data) SourceMapMode/BOTH)))
+      (= :external data) SourceMapMode/EXTERNAL
+      (= :inline data) SourceMapMode/INLINE)))
 
 
 (defn bundling-options-builder>

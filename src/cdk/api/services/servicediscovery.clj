@@ -64,16 +64,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DiscoveryType` - the value is returned.
-* is `:dns-and-api` - `DiscoveryType/DNS_AND_API` is returned
 * is `:api` - `DiscoveryType/API` is returned
+* is `:dns-and-api` - `DiscoveryType/DNS_AND_API` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DiscoveryType data) data
-      (= :dns-and-api data) DiscoveryType/DNS_AND_API
-      (= :api data) DiscoveryType/API)))
+      (= :api data) DiscoveryType/API
+      (= :dns-and-api data) DiscoveryType/DNS_AND_API)))
 
 
 (defn dns-record-type
@@ -83,22 +83,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DnsRecordType` - the value is returned.
-* is `:srv` - `DnsRecordType/SRV` is returned
-* is `:cname` - `DnsRecordType/CNAME` is returned
 * is `:a` - `DnsRecordType/A` is returned
 * is `:aaaa` - `DnsRecordType/AAAA` is returned
 * is `:a-aaaa` - `DnsRecordType/A_AAAA` is returned
+* is `:cname` - `DnsRecordType/CNAME` is returned
+* is `:srv` - `DnsRecordType/SRV` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DnsRecordType data) data
-      (= :srv data) DnsRecordType/SRV
-      (= :cname data) DnsRecordType/CNAME
       (= :a data) DnsRecordType/A
       (= :aaaa data) DnsRecordType/AAAA
-      (= :a-aaaa data) DnsRecordType/A_AAAA)))
+      (= :a-aaaa data) DnsRecordType/A_AAAA
+      (= :cname data) DnsRecordType/CNAME
+      (= :srv data) DnsRecordType/SRV)))
 
 
 (defn health-check-type
@@ -130,8 +130,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `NamespaceType` - the value is returned.
 * is `:dns-private` - `NamespaceType/DNS_PRIVATE` is returned
-* is `:http` - `NamespaceType/HTTP` is returned
 * is `:dns-public` - `NamespaceType/DNS_PUBLIC` is returned
+* is `:http` - `NamespaceType/HTTP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -139,8 +139,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? NamespaceType data) data
       (= :dns-private data) NamespaceType/DNS_PRIVATE
-      (= :http data) NamespaceType/HTTP
-      (= :dns-public data) NamespaceType/DNS_PUBLIC)))
+      (= :dns-public data) NamespaceType/DNS_PUBLIC
+      (= :http data) NamespaceType/HTTP)))
 
 
 (defn routing-policy

@@ -13,20 +13,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Ec2InstanceAction` - the value is returned.
-* is `:terminate` - `Ec2InstanceAction/TERMINATE` is returned
-* is `:stop` - `Ec2InstanceAction/STOP` is returned
 * is `:reboot` - `Ec2InstanceAction/REBOOT` is returned
 * is `:recover` - `Ec2InstanceAction/RECOVER` is returned
+* is `:stop` - `Ec2InstanceAction/STOP` is returned
+* is `:terminate` - `Ec2InstanceAction/TERMINATE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Ec2InstanceAction data) data
-      (= :terminate data) Ec2InstanceAction/TERMINATE
-      (= :stop data) Ec2InstanceAction/STOP
       (= :reboot data) Ec2InstanceAction/REBOOT
-      (= :recover data) Ec2InstanceAction/RECOVER)))
+      (= :recover data) Ec2InstanceAction/RECOVER
+      (= :stop data) Ec2InstanceAction/STOP
+      (= :terminate data) Ec2InstanceAction/TERMINATE)))
 
 
 (defn ops-item-category
@@ -36,22 +36,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `OpsItemCategory` - the value is returned.
-* is `:recovery` - `OpsItemCategory/RECOVERY` is returned
 * is `:availability` - `OpsItemCategory/AVAILABILITY` is returned
-* is `:security` - `OpsItemCategory/SECURITY` is returned
 * is `:cost` - `OpsItemCategory/COST` is returned
 * is `:performance` - `OpsItemCategory/PERFORMANCE` is returned
+* is `:recovery` - `OpsItemCategory/RECOVERY` is returned
+* is `:security` - `OpsItemCategory/SECURITY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? OpsItemCategory data) data
-      (= :recovery data) OpsItemCategory/RECOVERY
       (= :availability data) OpsItemCategory/AVAILABILITY
-      (= :security data) OpsItemCategory/SECURITY
       (= :cost data) OpsItemCategory/COST
-      (= :performance data) OpsItemCategory/PERFORMANCE)))
+      (= :performance data) OpsItemCategory/PERFORMANCE
+      (= :recovery data) OpsItemCategory/RECOVERY
+      (= :security data) OpsItemCategory/SECURITY)))
 
 
 (defn ops-item-severity
@@ -61,17 +61,17 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `OpsItemSeverity` - the value is returned.
-* is `:medium` - `OpsItemSeverity/MEDIUM` is returned
 * is `:critical` - `OpsItemSeverity/CRITICAL` is returned
-* is `:low` - `OpsItemSeverity/LOW` is returned
 * is `:high` - `OpsItemSeverity/HIGH` is returned
+* is `:low` - `OpsItemSeverity/LOW` is returned
+* is `:medium` - `OpsItemSeverity/MEDIUM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? OpsItemSeverity data) data
-      (= :medium data) OpsItemSeverity/MEDIUM
       (= :critical data) OpsItemSeverity/CRITICAL
+      (= :high data) OpsItemSeverity/HIGH
       (= :low data) OpsItemSeverity/LOW
-      (= :high data) OpsItemSeverity/HIGH)))
+      (= :medium data) OpsItemSeverity/MEDIUM)))

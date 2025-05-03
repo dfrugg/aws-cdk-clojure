@@ -47,16 +47,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FifoThroughputLimit` - the value is returned.
-* is `:per-queue` - `FifoThroughputLimit/PER_QUEUE` is returned
 * is `:per-message-group-id` - `FifoThroughputLimit/PER_MESSAGE_GROUP_ID` is returned
+* is `:per-queue` - `FifoThroughputLimit/PER_QUEUE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FifoThroughputLimit data) data
-      (= :per-queue data) FifoThroughputLimit/PER_QUEUE
-      (= :per-message-group-id data) FifoThroughputLimit/PER_MESSAGE_GROUP_ID)))
+      (= :per-message-group-id data) FifoThroughputLimit/PER_MESSAGE_GROUP_ID
+      (= :per-queue data) FifoThroughputLimit/PER_QUEUE)))
 
 
 (defn queue-encryption
@@ -66,20 +66,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `QueueEncryption` - the value is returned.
-* is `:unencrypted` - `QueueEncryption/UNENCRYPTED` is returned
 * is `:kms` - `QueueEncryption/KMS` is returned
-* is `:sqs-managed` - `QueueEncryption/SQS_MANAGED` is returned
 * is `:kms-managed` - `QueueEncryption/KMS_MANAGED` is returned
+* is `:sqs-managed` - `QueueEncryption/SQS_MANAGED` is returned
+* is `:unencrypted` - `QueueEncryption/UNENCRYPTED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? QueueEncryption data) data
-      (= :unencrypted data) QueueEncryption/UNENCRYPTED
       (= :kms data) QueueEncryption/KMS
+      (= :kms-managed data) QueueEncryption/KMS_MANAGED
       (= :sqs-managed data) QueueEncryption/SQS_MANAGED
-      (= :kms-managed data) QueueEncryption/KMS_MANAGED)))
+      (= :unencrypted data) QueueEncryption/UNENCRYPTED)))
 
 
 (defn redrive-permission
@@ -89,8 +89,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `RedrivePermission` - the value is returned.
-* is `:by-queue` - `RedrivePermission/BY_QUEUE` is returned
 * is `:allow-all` - `RedrivePermission/ALLOW_ALL` is returned
+* is `:by-queue` - `RedrivePermission/BY_QUEUE` is returned
 * is `:deny-all` - `RedrivePermission/DENY_ALL` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -98,8 +98,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? RedrivePermission data) data
-      (= :by-queue data) RedrivePermission/BY_QUEUE
       (= :allow-all data) RedrivePermission/ALLOW_ALL
+      (= :by-queue data) RedrivePermission/BY_QUEUE
       (= :deny-all data) RedrivePermission/DENY_ALL)))
 
 

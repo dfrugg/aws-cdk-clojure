@@ -60,20 +60,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LustreAutoImportPolicy` - the value is returned.
-* is `:new-changed-deleted` - `LustreAutoImportPolicy/NEW_CHANGED_DELETED` is returned
 * is `:new` - `LustreAutoImportPolicy/NEW` is returned
-* is `:none` - `LustreAutoImportPolicy/NONE` is returned
 * is `:new-changed` - `LustreAutoImportPolicy/NEW_CHANGED` is returned
+* is `:new-changed-deleted` - `LustreAutoImportPolicy/NEW_CHANGED_DELETED` is returned
+* is `:none` - `LustreAutoImportPolicy/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LustreAutoImportPolicy data) data
-      (= :new-changed-deleted data) LustreAutoImportPolicy/NEW_CHANGED_DELETED
       (= :new data) LustreAutoImportPolicy/NEW
-      (= :none data) LustreAutoImportPolicy/NONE
-      (= :new-changed data) LustreAutoImportPolicy/NEW_CHANGED)))
+      (= :new-changed data) LustreAutoImportPolicy/NEW_CHANGED
+      (= :new-changed-deleted data) LustreAutoImportPolicy/NEW_CHANGED_DELETED
+      (= :none data) LustreAutoImportPolicy/NONE)))
 
 
 (defn lustre-data-compression-type
@@ -102,20 +102,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LustreDeploymentType` - the value is returned.
+* is `:persistent-1` - `LustreDeploymentType/PERSISTENT_1` is returned
 * is `:persistent-2` - `LustreDeploymentType/PERSISTENT_2` is returned
 * is `:scratch-1` - `LustreDeploymentType/SCRATCH_1` is returned
 * is `:scratch-2` - `LustreDeploymentType/SCRATCH_2` is returned
-* is `:persistent-1` - `LustreDeploymentType/PERSISTENT_1` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LustreDeploymentType data) data
+      (= :persistent-1 data) LustreDeploymentType/PERSISTENT_1
       (= :persistent-2 data) LustreDeploymentType/PERSISTENT_2
       (= :scratch-1 data) LustreDeploymentType/SCRATCH_1
-      (= :scratch-2 data) LustreDeploymentType/SCRATCH_2
-      (= :persistent-1 data) LustreDeploymentType/PERSISTENT_1)))
+      (= :scratch-2 data) LustreDeploymentType/SCRATCH_2)))
 
 
 (defn weekday
@@ -125,26 +125,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Weekday` - the value is returned.
+* is `:friday` - `Weekday/FRIDAY` is returned
+* is `:monday` - `Weekday/MONDAY` is returned
+* is `:saturday` - `Weekday/SATURDAY` is returned
 * is `:sunday` - `Weekday/SUNDAY` is returned
 * is `:thursday` - `Weekday/THURSDAY` is returned
 * is `:tuesday` - `Weekday/TUESDAY` is returned
 * is `:wednesday` - `Weekday/WEDNESDAY` is returned
-* is `:monday` - `Weekday/MONDAY` is returned
-* is `:friday` - `Weekday/FRIDAY` is returned
-* is `:saturday` - `Weekday/SATURDAY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Weekday data) data
+      (= :friday data) Weekday/FRIDAY
+      (= :monday data) Weekday/MONDAY
+      (= :saturday data) Weekday/SATURDAY
       (= :sunday data) Weekday/SUNDAY
       (= :thursday data) Weekday/THURSDAY
       (= :tuesday data) Weekday/TUESDAY
-      (= :wednesday data) Weekday/WEDNESDAY
-      (= :monday data) Weekday/MONDAY
-      (= :friday data) Weekday/FRIDAY
-      (= :saturday data) Weekday/SATURDAY)))
+      (= :wednesday data) Weekday/WEDNESDAY)))
 
 
 (defn cfn-data-repository-association-auto-export-policy-property-builder>

@@ -102,18 +102,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AlarmState` - the value is returned.
-* is `:ok` - `AlarmState/OK` is returned
-* is `:insufficient-data` - `AlarmState/INSUFFICIENT_DATA` is returned
 * is `:alarm` - `AlarmState/ALARM` is returned
+* is `:insufficient-data` - `AlarmState/INSUFFICIENT_DATA` is returned
+* is `:ok` - `AlarmState/OK` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AlarmState data) data
-      (= :ok data) AlarmState/OK
+      (= :alarm data) AlarmState/ALARM
       (= :insufficient-data data) AlarmState/INSUFFICIENT_DATA
-      (= :alarm data) AlarmState/ALARM)))
+      (= :ok data) AlarmState/OK)))
 
 
 (defn alarm-status-widget-sort-by
@@ -144,26 +144,26 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ComparisonOperator` - the value is returned.
+* is `:greater-than-or-equal-to-threshold` - `ComparisonOperator/GREATER_THAN_OR_EQUAL_TO_THRESHOLD` is returned
+* is `:greater-than-threshold` - `ComparisonOperator/GREATER_THAN_THRESHOLD` is returned
 * is `:greater-than-upper-threshold` - `ComparisonOperator/GREATER_THAN_UPPER_THRESHOLD` is returned
 * is `:less-than-lower-or-greater-than-upper-threshold` - `ComparisonOperator/LESS_THAN_LOWER_OR_GREATER_THAN_UPPER_THRESHOLD` is returned
 * is `:less-than-lower-threshold` - `ComparisonOperator/LESS_THAN_LOWER_THRESHOLD` is returned
-* is `:greater-than-threshold` - `ComparisonOperator/GREATER_THAN_THRESHOLD` is returned
-* is `:less-than-threshold` - `ComparisonOperator/LESS_THAN_THRESHOLD` is returned
-* is `:greater-than-or-equal-to-threshold` - `ComparisonOperator/GREATER_THAN_OR_EQUAL_TO_THRESHOLD` is returned
 * is `:less-than-or-equal-to-threshold` - `ComparisonOperator/LESS_THAN_OR_EQUAL_TO_THRESHOLD` is returned
+* is `:less-than-threshold` - `ComparisonOperator/LESS_THAN_THRESHOLD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ComparisonOperator data) data
+      (= :greater-than-or-equal-to-threshold data) ComparisonOperator/GREATER_THAN_OR_EQUAL_TO_THRESHOLD
+      (= :greater-than-threshold data) ComparisonOperator/GREATER_THAN_THRESHOLD
       (= :greater-than-upper-threshold data) ComparisonOperator/GREATER_THAN_UPPER_THRESHOLD
       (= :less-than-lower-or-greater-than-upper-threshold data) ComparisonOperator/LESS_THAN_LOWER_OR_GREATER_THAN_UPPER_THRESHOLD
       (= :less-than-lower-threshold data) ComparisonOperator/LESS_THAN_LOWER_THRESHOLD
-      (= :greater-than-threshold data) ComparisonOperator/GREATER_THAN_THRESHOLD
-      (= :less-than-threshold data) ComparisonOperator/LESS_THAN_THRESHOLD
-      (= :greater-than-or-equal-to-threshold data) ComparisonOperator/GREATER_THAN_OR_EQUAL_TO_THRESHOLD
-      (= :less-than-or-equal-to-threshold data) ComparisonOperator/LESS_THAN_OR_EQUAL_TO_THRESHOLD)))
+      (= :less-than-or-equal-to-threshold data) ComparisonOperator/LESS_THAN_OR_EQUAL_TO_THRESHOLD
+      (= :less-than-threshold data) ComparisonOperator/LESS_THAN_THRESHOLD)))
 
 
 (defn graph-widget-view
@@ -173,18 +173,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `GraphWidgetView` - the value is returned.
-* is `:time-series` - `GraphWidgetView/TIME_SERIES` is returned
-* is `:pie` - `GraphWidgetView/PIE` is returned
 * is `:bar` - `GraphWidgetView/BAR` is returned
+* is `:pie` - `GraphWidgetView/PIE` is returned
+* is `:time-series` - `GraphWidgetView/TIME_SERIES` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? GraphWidgetView data) data
-      (= :time-series data) GraphWidgetView/TIME_SERIES
+      (= :bar data) GraphWidgetView/BAR
       (= :pie data) GraphWidgetView/PIE
-      (= :bar data) GraphWidgetView/BAR)))
+      (= :time-series data) GraphWidgetView/TIME_SERIES)))
 
 
 (defn legend-position
@@ -215,22 +215,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LogQueryVisualizationType` - the value is returned.
-* is `:stackedarea` - `LogQueryVisualizationType/STACKEDAREA` is returned
 * is `:bar` - `LogQueryVisualizationType/BAR` is returned
 * is `:line` - `LogQueryVisualizationType/LINE` is returned
-* is `:table` - `LogQueryVisualizationType/TABLE` is returned
 * is `:pie` - `LogQueryVisualizationType/PIE` is returned
+* is `:stackedarea` - `LogQueryVisualizationType/STACKEDAREA` is returned
+* is `:table` - `LogQueryVisualizationType/TABLE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LogQueryVisualizationType data) data
-      (= :stackedarea data) LogQueryVisualizationType/STACKEDAREA
       (= :bar data) LogQueryVisualizationType/BAR
       (= :line data) LogQueryVisualizationType/LINE
-      (= :table data) LogQueryVisualizationType/TABLE
-      (= :pie data) LogQueryVisualizationType/PIE)))
+      (= :pie data) LogQueryVisualizationType/PIE
+      (= :stackedarea data) LogQueryVisualizationType/STACKEDAREA
+      (= :table data) LogQueryVisualizationType/TABLE)))
 
 
 (defn period-override
@@ -259,18 +259,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Shading` - the value is returned.
-* is `:none` - `Shading/NONE` is returned
 * is `:above` - `Shading/ABOVE` is returned
 * is `:below` - `Shading/BELOW` is returned
+* is `:none` - `Shading/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Shading data) data
-      (= :none data) Shading/NONE
       (= :above data) Shading/ABOVE
-      (= :below data) Shading/BELOW)))
+      (= :below data) Shading/BELOW
+      (= :none data) Shading/NONE)))
 
 
 (defn table-layout
@@ -299,20 +299,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TableSummaryColumn` - the value is returned.
-* is `:sum` - `TableSummaryColumn/SUM` is returned
-* is `:maximum` - `TableSummaryColumn/MAXIMUM` is returned
 * is `:average` - `TableSummaryColumn/AVERAGE` is returned
+* is `:maximum` - `TableSummaryColumn/MAXIMUM` is returned
 * is `:minimum` - `TableSummaryColumn/MINIMUM` is returned
+* is `:sum` - `TableSummaryColumn/SUM` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TableSummaryColumn data) data
-      (= :sum data) TableSummaryColumn/SUM
-      (= :maximum data) TableSummaryColumn/MAXIMUM
       (= :average data) TableSummaryColumn/AVERAGE
-      (= :minimum data) TableSummaryColumn/MINIMUM)))
+      (= :maximum data) TableSummaryColumn/MAXIMUM
+      (= :minimum data) TableSummaryColumn/MINIMUM
+      (= :sum data) TableSummaryColumn/SUM)))
 
 
 (defn text-widget-background
@@ -322,16 +322,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TextWidgetBackground` - the value is returned.
-* is `:transparent` - `TextWidgetBackground/TRANSPARENT` is returned
 * is `:solid` - `TextWidgetBackground/SOLID` is returned
+* is `:transparent` - `TextWidgetBackground/TRANSPARENT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TextWidgetBackground data) data
-      (= :transparent data) TextWidgetBackground/TRANSPARENT
-      (= :solid data) TextWidgetBackground/SOLID)))
+      (= :solid data) TextWidgetBackground/SOLID
+      (= :transparent data) TextWidgetBackground/TRANSPARENT)))
 
 
 (defn treat-missing-data
@@ -341,20 +341,20 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TreatMissingData` - the value is returned.
-* is `:ignore` - `TreatMissingData/IGNORE` is returned
-* is `:not-breaching` - `TreatMissingData/NOT_BREACHING` is returned
-* is `:missing` - `TreatMissingData/MISSING` is returned
 * is `:breaching` - `TreatMissingData/BREACHING` is returned
+* is `:ignore` - `TreatMissingData/IGNORE` is returned
+* is `:missing` - `TreatMissingData/MISSING` is returned
+* is `:not-breaching` - `TreatMissingData/NOT_BREACHING` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TreatMissingData data) data
+      (= :breaching data) TreatMissingData/BREACHING
       (= :ignore data) TreatMissingData/IGNORE
-      (= :not-breaching data) TreatMissingData/NOT_BREACHING
       (= :missing data) TreatMissingData/MISSING
-      (= :breaching data) TreatMissingData/BREACHING)))
+      (= :not-breaching data) TreatMissingData/NOT_BREACHING)))
 
 
 (defn unit
@@ -364,66 +364,66 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `Unit` - the value is returned.
-* is `:megabits-per-second` - `Unit/MEGABITS_PER_SECOND` is returned
-* is `:terabits-per-second` - `Unit/TERABITS_PER_SECOND` is returned
+* is `:bits` - `Unit/BITS` is returned
+* is `:bits-per-second` - `Unit/BITS_PER_SECOND` is returned
+* is `:bytes` - `Unit/BYTES` is returned
+* is `:bytes-per-second` - `Unit/BYTES_PER_SECOND` is returned
+* is `:count` - `Unit/COUNT` is returned
+* is `:count-per-second` - `Unit/COUNT_PER_SECOND` is returned
 * is `:gigabits` - `Unit/GIGABITS` is returned
-* is `:terabytes` - `Unit/TERABYTES` is returned
+* is `:gigabits-per-second` - `Unit/GIGABITS_PER_SECOND` is returned
+* is `:gigabytes` - `Unit/GIGABYTES` is returned
+* is `:gigabytes-per-second` - `Unit/GIGABYTES_PER_SECOND` is returned
+* is `:kilobits` - `Unit/KILOBITS` is returned
 * is `:kilobits-per-second` - `Unit/KILOBITS_PER_SECOND` is returned
 * is `:kilobytes` - `Unit/KILOBYTES` is returned
-* is `:count` - `Unit/COUNT` is returned
-* is `:milliseconds` - `Unit/MILLISECONDS` is returned
-* is `:megabytes-per-second` - `Unit/MEGABYTES_PER_SECOND` is returned
-* is `:terabytes-per-second` - `Unit/TERABYTES_PER_SECOND` is returned
-* is `:percent` - `Unit/PERCENT` is returned
-* is `:megabits` - `Unit/MEGABITS` is returned
-* is `:count-per-second` - `Unit/COUNT_PER_SECOND` is returned
-* is `:none` - `Unit/NONE` is returned
-* is `:microseconds` - `Unit/MICROSECONDS` is returned
-* is `:megabytes` - `Unit/MEGABYTES` is returned
-* is `:kilobits` - `Unit/KILOBITS` is returned
-* is `:bytes` - `Unit/BYTES` is returned
-* is `:seconds` - `Unit/SECONDS` is returned
 * is `:kilobytes-per-second` - `Unit/KILOBYTES_PER_SECOND` is returned
-* is `:gigabytes-per-second` - `Unit/GIGABYTES_PER_SECOND` is returned
-* is `:bytes-per-second` - `Unit/BYTES_PER_SECOND` is returned
-* is `:bits-per-second` - `Unit/BITS_PER_SECOND` is returned
+* is `:megabits` - `Unit/MEGABITS` is returned
+* is `:megabits-per-second` - `Unit/MEGABITS_PER_SECOND` is returned
+* is `:megabytes` - `Unit/MEGABYTES` is returned
+* is `:megabytes-per-second` - `Unit/MEGABYTES_PER_SECOND` is returned
+* is `:microseconds` - `Unit/MICROSECONDS` is returned
+* is `:milliseconds` - `Unit/MILLISECONDS` is returned
+* is `:none` - `Unit/NONE` is returned
+* is `:percent` - `Unit/PERCENT` is returned
+* is `:seconds` - `Unit/SECONDS` is returned
 * is `:terabits` - `Unit/TERABITS` is returned
-* is `:gigabytes` - `Unit/GIGABYTES` is returned
-* is `:gigabits-per-second` - `Unit/GIGABITS_PER_SECOND` is returned
-* is `:bits` - `Unit/BITS` is returned
+* is `:terabits-per-second` - `Unit/TERABITS_PER_SECOND` is returned
+* is `:terabytes` - `Unit/TERABYTES` is returned
+* is `:terabytes-per-second` - `Unit/TERABYTES_PER_SECOND` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? Unit data) data
-      (= :megabits-per-second data) Unit/MEGABITS_PER_SECOND
-      (= :terabits-per-second data) Unit/TERABITS_PER_SECOND
+      (= :bits data) Unit/BITS
+      (= :bits-per-second data) Unit/BITS_PER_SECOND
+      (= :bytes data) Unit/BYTES
+      (= :bytes-per-second data) Unit/BYTES_PER_SECOND
+      (= :count data) Unit/COUNT
+      (= :count-per-second data) Unit/COUNT_PER_SECOND
       (= :gigabits data) Unit/GIGABITS
-      (= :terabytes data) Unit/TERABYTES
+      (= :gigabits-per-second data) Unit/GIGABITS_PER_SECOND
+      (= :gigabytes data) Unit/GIGABYTES
+      (= :gigabytes-per-second data) Unit/GIGABYTES_PER_SECOND
+      (= :kilobits data) Unit/KILOBITS
       (= :kilobits-per-second data) Unit/KILOBITS_PER_SECOND
       (= :kilobytes data) Unit/KILOBYTES
-      (= :count data) Unit/COUNT
-      (= :milliseconds data) Unit/MILLISECONDS
-      (= :megabytes-per-second data) Unit/MEGABYTES_PER_SECOND
-      (= :terabytes-per-second data) Unit/TERABYTES_PER_SECOND
-      (= :percent data) Unit/PERCENT
-      (= :megabits data) Unit/MEGABITS
-      (= :count-per-second data) Unit/COUNT_PER_SECOND
-      (= :none data) Unit/NONE
-      (= :microseconds data) Unit/MICROSECONDS
-      (= :megabytes data) Unit/MEGABYTES
-      (= :kilobits data) Unit/KILOBITS
-      (= :bytes data) Unit/BYTES
-      (= :seconds data) Unit/SECONDS
       (= :kilobytes-per-second data) Unit/KILOBYTES_PER_SECOND
-      (= :gigabytes-per-second data) Unit/GIGABYTES_PER_SECOND
-      (= :bytes-per-second data) Unit/BYTES_PER_SECOND
-      (= :bits-per-second data) Unit/BITS_PER_SECOND
+      (= :megabits data) Unit/MEGABITS
+      (= :megabits-per-second data) Unit/MEGABITS_PER_SECOND
+      (= :megabytes data) Unit/MEGABYTES
+      (= :megabytes-per-second data) Unit/MEGABYTES_PER_SECOND
+      (= :microseconds data) Unit/MICROSECONDS
+      (= :milliseconds data) Unit/MILLISECONDS
+      (= :none data) Unit/NONE
+      (= :percent data) Unit/PERCENT
+      (= :seconds data) Unit/SECONDS
       (= :terabits data) Unit/TERABITS
-      (= :gigabytes data) Unit/GIGABYTES
-      (= :gigabits-per-second data) Unit/GIGABITS_PER_SECOND
-      (= :bits data) Unit/BITS)))
+      (= :terabits-per-second data) Unit/TERABITS_PER_SECOND
+      (= :terabytes data) Unit/TERABYTES
+      (= :terabytes-per-second data) Unit/TERABYTES_PER_SECOND)))
 
 
 (defn variable-input-type
@@ -434,8 +434,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `VariableInputType` - the value is returned.
 * is `:input` - `VariableInputType/INPUT` is returned
-* is `:select` - `VariableInputType/SELECT` is returned
 * is `:radio` - `VariableInputType/RADIO` is returned
+* is `:select` - `VariableInputType/SELECT` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -443,8 +443,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? VariableInputType data) data
       (= :input data) VariableInputType/INPUT
-      (= :select data) VariableInputType/SELECT
-      (= :radio data) VariableInputType/RADIO)))
+      (= :radio data) VariableInputType/RADIO
+      (= :select data) VariableInputType/SELECT)))
 
 
 (defn variable-type
@@ -473,8 +473,8 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `VerticalShading` - the value is returned.
-* is `:before` - `VerticalShading/BEFORE` is returned
 * is `:after` - `VerticalShading/AFTER` is returned
+* is `:before` - `VerticalShading/BEFORE` is returned
 * is `:none` - `VerticalShading/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
@@ -482,8 +482,8 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? VerticalShading data) data
-      (= :before data) VerticalShading/BEFORE
       (= :after data) VerticalShading/AFTER
+      (= :before data) VerticalShading/BEFORE
       (= :none data) VerticalShading/NONE)))
 
 

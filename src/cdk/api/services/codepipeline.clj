@@ -70,24 +70,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ActionCategory` - the value is returned.
-* is `:deploy` - `ActionCategory/DEPLOY` is returned
 * is `:approval` - `ActionCategory/APPROVAL` is returned
-* is `:test` - `ActionCategory/TEST` is returned
-* is `:invoke` - `ActionCategory/INVOKE` is returned
 * is `:build` - `ActionCategory/BUILD` is returned
+* is `:deploy` - `ActionCategory/DEPLOY` is returned
+* is `:invoke` - `ActionCategory/INVOKE` is returned
 * is `:source` - `ActionCategory/SOURCE` is returned
+* is `:test` - `ActionCategory/TEST` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ActionCategory data) data
-      (= :deploy data) ActionCategory/DEPLOY
       (= :approval data) ActionCategory/APPROVAL
-      (= :test data) ActionCategory/TEST
-      (= :invoke data) ActionCategory/INVOKE
       (= :build data) ActionCategory/BUILD
-      (= :source data) ActionCategory/SOURCE)))
+      (= :deploy data) ActionCategory/DEPLOY
+      (= :invoke data) ActionCategory/INVOKE
+      (= :source data) ActionCategory/SOURCE
+      (= :test data) ActionCategory/TEST)))
 
 
 (defn execution-mode
@@ -97,18 +97,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ExecutionMode` - the value is returned.
-* is `:superseded` - `ExecutionMode/SUPERSEDED` is returned
 * is `:parallel` - `ExecutionMode/PARALLEL` is returned
 * is `:queued` - `ExecutionMode/QUEUED` is returned
+* is `:superseded` - `ExecutionMode/SUPERSEDED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ExecutionMode data) data
-      (= :superseded data) ExecutionMode/SUPERSEDED
       (= :parallel data) ExecutionMode/PARALLEL
-      (= :queued data) ExecutionMode/QUEUED)))
+      (= :queued data) ExecutionMode/QUEUED
+      (= :superseded data) ExecutionMode/SUPERSEDED)))
 
 
 (defn git-pull-request-event
@@ -118,18 +118,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `GitPullRequestEvent` - the value is returned.
-* is `:updated` - `GitPullRequestEvent/UPDATED` is returned
-* is `:open` - `GitPullRequestEvent/OPEN` is returned
 * is `:closed` - `GitPullRequestEvent/CLOSED` is returned
+* is `:open` - `GitPullRequestEvent/OPEN` is returned
+* is `:updated` - `GitPullRequestEvent/UPDATED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? GitPullRequestEvent data) data
-      (= :updated data) GitPullRequestEvent/UPDATED
+      (= :closed data) GitPullRequestEvent/CLOSED
       (= :open data) GitPullRequestEvent/OPEN
-      (= :closed data) GitPullRequestEvent/CLOSED)))
+      (= :updated data) GitPullRequestEvent/UPDATED)))
 
 
 (defn pipeline-notification-events
@@ -139,48 +139,48 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PipelineNotificationEvents` - the value is returned.
-* is `:pipeline-execution-started` - `PipelineNotificationEvents/PIPELINE_EXECUTION_STARTED` is returned
-* is `:stage-execution-started` - `PipelineNotificationEvents/STAGE_EXECUTION_STARTED` is returned
-* is `:pipeline-execution-superseded` - `PipelineNotificationEvents/PIPELINE_EXECUTION_SUPERSEDED` is returned
-* is `:manual-approval-failed` - `PipelineNotificationEvents/MANUAL_APPROVAL_FAILED` is returned
-* is `:action-execution-started` - `PipelineNotificationEvents/ACTION_EXECUTION_STARTED` is returned
-* is `:pipeline-execution-canceled` - `PipelineNotificationEvents/PIPELINE_EXECUTION_CANCELED` is returned
-* is `:stage-execution-succeeded` - `PipelineNotificationEvents/STAGE_EXECUTION_SUCCEEDED` is returned
-* is `:stage-execution-failed` - `PipelineNotificationEvents/STAGE_EXECUTION_FAILED` is returned
-* is `:stage-execution-canceled` - `PipelineNotificationEvents/STAGE_EXECUTION_CANCELED` is returned
-* is `:pipeline-execution-succeeded` - `PipelineNotificationEvents/PIPELINE_EXECUTION_SUCCEEDED` is returned
-* is `:manual-approval-needed` - `PipelineNotificationEvents/MANUAL_APPROVAL_NEEDED` is returned
-* is `:pipeline-execution-failed` - `PipelineNotificationEvents/PIPELINE_EXECUTION_FAILED` is returned
-* is `:action-execution-failed` - `PipelineNotificationEvents/ACTION_EXECUTION_FAILED` is returned
-* is `:stage-execution-resumed` - `PipelineNotificationEvents/STAGE_EXECUTION_RESUMED` is returned
-* is `:manual-approval-succeeded` - `PipelineNotificationEvents/MANUAL_APPROVAL_SUCCEEDED` is returned
-* is `:action-execution-succeeded` - `PipelineNotificationEvents/ACTION_EXECUTION_SUCCEEDED` is returned
 * is `:action-execution-canceled` - `PipelineNotificationEvents/ACTION_EXECUTION_CANCELED` is returned
+* is `:action-execution-failed` - `PipelineNotificationEvents/ACTION_EXECUTION_FAILED` is returned
+* is `:action-execution-started` - `PipelineNotificationEvents/ACTION_EXECUTION_STARTED` is returned
+* is `:action-execution-succeeded` - `PipelineNotificationEvents/ACTION_EXECUTION_SUCCEEDED` is returned
+* is `:manual-approval-failed` - `PipelineNotificationEvents/MANUAL_APPROVAL_FAILED` is returned
+* is `:manual-approval-needed` - `PipelineNotificationEvents/MANUAL_APPROVAL_NEEDED` is returned
+* is `:manual-approval-succeeded` - `PipelineNotificationEvents/MANUAL_APPROVAL_SUCCEEDED` is returned
+* is `:pipeline-execution-canceled` - `PipelineNotificationEvents/PIPELINE_EXECUTION_CANCELED` is returned
+* is `:pipeline-execution-failed` - `PipelineNotificationEvents/PIPELINE_EXECUTION_FAILED` is returned
 * is `:pipeline-execution-resumed` - `PipelineNotificationEvents/PIPELINE_EXECUTION_RESUMED` is returned
+* is `:pipeline-execution-started` - `PipelineNotificationEvents/PIPELINE_EXECUTION_STARTED` is returned
+* is `:pipeline-execution-succeeded` - `PipelineNotificationEvents/PIPELINE_EXECUTION_SUCCEEDED` is returned
+* is `:pipeline-execution-superseded` - `PipelineNotificationEvents/PIPELINE_EXECUTION_SUPERSEDED` is returned
+* is `:stage-execution-canceled` - `PipelineNotificationEvents/STAGE_EXECUTION_CANCELED` is returned
+* is `:stage-execution-failed` - `PipelineNotificationEvents/STAGE_EXECUTION_FAILED` is returned
+* is `:stage-execution-resumed` - `PipelineNotificationEvents/STAGE_EXECUTION_RESUMED` is returned
+* is `:stage-execution-started` - `PipelineNotificationEvents/STAGE_EXECUTION_STARTED` is returned
+* is `:stage-execution-succeeded` - `PipelineNotificationEvents/STAGE_EXECUTION_SUCCEEDED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PipelineNotificationEvents data) data
-      (= :pipeline-execution-started data) PipelineNotificationEvents/PIPELINE_EXECUTION_STARTED
-      (= :stage-execution-started data) PipelineNotificationEvents/STAGE_EXECUTION_STARTED
-      (= :pipeline-execution-superseded data) PipelineNotificationEvents/PIPELINE_EXECUTION_SUPERSEDED
-      (= :manual-approval-failed data) PipelineNotificationEvents/MANUAL_APPROVAL_FAILED
-      (= :action-execution-started data) PipelineNotificationEvents/ACTION_EXECUTION_STARTED
-      (= :pipeline-execution-canceled data) PipelineNotificationEvents/PIPELINE_EXECUTION_CANCELED
-      (= :stage-execution-succeeded data) PipelineNotificationEvents/STAGE_EXECUTION_SUCCEEDED
-      (= :stage-execution-failed data) PipelineNotificationEvents/STAGE_EXECUTION_FAILED
-      (= :stage-execution-canceled data) PipelineNotificationEvents/STAGE_EXECUTION_CANCELED
-      (= :pipeline-execution-succeeded data) PipelineNotificationEvents/PIPELINE_EXECUTION_SUCCEEDED
-      (= :manual-approval-needed data) PipelineNotificationEvents/MANUAL_APPROVAL_NEEDED
-      (= :pipeline-execution-failed data) PipelineNotificationEvents/PIPELINE_EXECUTION_FAILED
-      (= :action-execution-failed data) PipelineNotificationEvents/ACTION_EXECUTION_FAILED
-      (= :stage-execution-resumed data) PipelineNotificationEvents/STAGE_EXECUTION_RESUMED
-      (= :manual-approval-succeeded data) PipelineNotificationEvents/MANUAL_APPROVAL_SUCCEEDED
-      (= :action-execution-succeeded data) PipelineNotificationEvents/ACTION_EXECUTION_SUCCEEDED
       (= :action-execution-canceled data) PipelineNotificationEvents/ACTION_EXECUTION_CANCELED
-      (= :pipeline-execution-resumed data) PipelineNotificationEvents/PIPELINE_EXECUTION_RESUMED)))
+      (= :action-execution-failed data) PipelineNotificationEvents/ACTION_EXECUTION_FAILED
+      (= :action-execution-started data) PipelineNotificationEvents/ACTION_EXECUTION_STARTED
+      (= :action-execution-succeeded data) PipelineNotificationEvents/ACTION_EXECUTION_SUCCEEDED
+      (= :manual-approval-failed data) PipelineNotificationEvents/MANUAL_APPROVAL_FAILED
+      (= :manual-approval-needed data) PipelineNotificationEvents/MANUAL_APPROVAL_NEEDED
+      (= :manual-approval-succeeded data) PipelineNotificationEvents/MANUAL_APPROVAL_SUCCEEDED
+      (= :pipeline-execution-canceled data) PipelineNotificationEvents/PIPELINE_EXECUTION_CANCELED
+      (= :pipeline-execution-failed data) PipelineNotificationEvents/PIPELINE_EXECUTION_FAILED
+      (= :pipeline-execution-resumed data) PipelineNotificationEvents/PIPELINE_EXECUTION_RESUMED
+      (= :pipeline-execution-started data) PipelineNotificationEvents/PIPELINE_EXECUTION_STARTED
+      (= :pipeline-execution-succeeded data) PipelineNotificationEvents/PIPELINE_EXECUTION_SUCCEEDED
+      (= :pipeline-execution-superseded data) PipelineNotificationEvents/PIPELINE_EXECUTION_SUPERSEDED
+      (= :stage-execution-canceled data) PipelineNotificationEvents/STAGE_EXECUTION_CANCELED
+      (= :stage-execution-failed data) PipelineNotificationEvents/STAGE_EXECUTION_FAILED
+      (= :stage-execution-resumed data) PipelineNotificationEvents/STAGE_EXECUTION_RESUMED
+      (= :stage-execution-started data) PipelineNotificationEvents/STAGE_EXECUTION_STARTED
+      (= :stage-execution-succeeded data) PipelineNotificationEvents/STAGE_EXECUTION_SUCCEEDED)))
 
 
 (defn pipeline-type
@@ -190,16 +190,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PipelineType` - the value is returned.
-* is `:v2` - `PipelineType/V2` is returned
 * is `:v1` - `PipelineType/V1` is returned
+* is `:v2` - `PipelineType/V2` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PipelineType data) data
-      (= :v2 data) PipelineType/V2
-      (= :v1 data) PipelineType/V1)))
+      (= :v1 data) PipelineType/V1
+      (= :v2 data) PipelineType/V2)))
 
 
 (defn provider-type

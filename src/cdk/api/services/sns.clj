@@ -37,16 +37,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `FilterOrPolicyType` - the value is returned.
-* is `:policy` - `FilterOrPolicyType/POLICY` is returned
 * is `:filter` - `FilterOrPolicyType/FILTER` is returned
+* is `:policy` - `FilterOrPolicyType/POLICY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? FilterOrPolicyType data) data
-      (= :policy data) FilterOrPolicyType/POLICY
-      (= :filter data) FilterOrPolicyType/FILTER)))
+      (= :filter data) FilterOrPolicyType/FILTER
+      (= :policy data) FilterOrPolicyType/POLICY)))
 
 
 (defn logging-protocol
@@ -56,22 +56,22 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LoggingProtocol` - the value is returned.
-* is `:firehose` - `LoggingProtocol/FIREHOSE` is returned
-* is `:sqs` - `LoggingProtocol/SQS` is returned
-* is `:http` - `LoggingProtocol/HTTP` is returned
 * is `:application` - `LoggingProtocol/APPLICATION` is returned
+* is `:firehose` - `LoggingProtocol/FIREHOSE` is returned
+* is `:http` - `LoggingProtocol/HTTP` is returned
 * is `:lambda` - `LoggingProtocol/LAMBDA` is returned
+* is `:sqs` - `LoggingProtocol/SQS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LoggingProtocol data) data
-      (= :firehose data) LoggingProtocol/FIREHOSE
-      (= :sqs data) LoggingProtocol/SQS
-      (= :http data) LoggingProtocol/HTTP
       (= :application data) LoggingProtocol/APPLICATION
-      (= :lambda data) LoggingProtocol/LAMBDA)))
+      (= :firehose data) LoggingProtocol/FIREHOSE
+      (= :http data) LoggingProtocol/HTTP
+      (= :lambda data) LoggingProtocol/LAMBDA
+      (= :sqs data) LoggingProtocol/SQS)))
 
 
 (defn subscription-protocol
@@ -81,30 +81,30 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `SubscriptionProtocol` - the value is returned.
-* is `:http` - `SubscriptionProtocol/HTTP` is returned
 * is `:application` - `SubscriptionProtocol/APPLICATION` is returned
+* is `:email` - `SubscriptionProtocol/EMAIL` is returned
 * is `:email-json` - `SubscriptionProtocol/EMAIL_JSON` is returned
-* is `:sqs` - `SubscriptionProtocol/SQS` is returned
-* is `:sms` - `SubscriptionProtocol/SMS` is returned
+* is `:firehose` - `SubscriptionProtocol/FIREHOSE` is returned
+* is `:http` - `SubscriptionProtocol/HTTP` is returned
 * is `:https` - `SubscriptionProtocol/HTTPS` is returned
 * is `:lambda` - `SubscriptionProtocol/LAMBDA` is returned
-* is `:email` - `SubscriptionProtocol/EMAIL` is returned
-* is `:firehose` - `SubscriptionProtocol/FIREHOSE` is returned
+* is `:sms` - `SubscriptionProtocol/SMS` is returned
+* is `:sqs` - `SubscriptionProtocol/SQS` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? SubscriptionProtocol data) data
-      (= :http data) SubscriptionProtocol/HTTP
       (= :application data) SubscriptionProtocol/APPLICATION
+      (= :email data) SubscriptionProtocol/EMAIL
       (= :email-json data) SubscriptionProtocol/EMAIL_JSON
-      (= :sqs data) SubscriptionProtocol/SQS
-      (= :sms data) SubscriptionProtocol/SMS
+      (= :firehose data) SubscriptionProtocol/FIREHOSE
+      (= :http data) SubscriptionProtocol/HTTP
       (= :https data) SubscriptionProtocol/HTTPS
       (= :lambda data) SubscriptionProtocol/LAMBDA
-      (= :email data) SubscriptionProtocol/EMAIL
-      (= :firehose data) SubscriptionProtocol/FIREHOSE)))
+      (= :sms data) SubscriptionProtocol/SMS
+      (= :sqs data) SubscriptionProtocol/SQS)))
 
 
 (defn tracing-config

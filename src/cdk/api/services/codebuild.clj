@@ -91,18 +91,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `BuildEnvironmentVariableType` - the value is returned.
-* is `:secrets-manager` - `BuildEnvironmentVariableType/SECRETS_MANAGER` is returned
-* is `:plaintext` - `BuildEnvironmentVariableType/PLAINTEXT` is returned
 * is `:parameter-store` - `BuildEnvironmentVariableType/PARAMETER_STORE` is returned
+* is `:plaintext` - `BuildEnvironmentVariableType/PLAINTEXT` is returned
+* is `:secrets-manager` - `BuildEnvironmentVariableType/SECRETS_MANAGER` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? BuildEnvironmentVariableType data) data
-      (= :secrets-manager data) BuildEnvironmentVariableType/SECRETS_MANAGER
+      (= :parameter-store data) BuildEnvironmentVariableType/PARAMETER_STORE
       (= :plaintext data) BuildEnvironmentVariableType/PLAINTEXT
-      (= :parameter-store data) BuildEnvironmentVariableType/PARAMETER_STORE)))
+      (= :secrets-manager data) BuildEnvironmentVariableType/SECRETS_MANAGER)))
 
 
 (defn compute-type
@@ -112,32 +112,32 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ComputeType` - the value is returned.
-* is `:small` - `ComputeType/SMALL` is returned
-* is `:large` - `ComputeType/LARGE` is returned
-* is `:x-large` - `ComputeType/X_LARGE` is returned
 * is `:lambda-10gb` - `ComputeType/LAMBDA_10GB` is returned
-* is `:lambda-2gb` - `ComputeType/LAMBDA_2GB` is returned
-* is `:medium` - `ComputeType/MEDIUM` is returned
-* is `:x2-large` - `ComputeType/X2_LARGE` is returned
 * is `:lambda-1gb` - `ComputeType/LAMBDA_1GB` is returned
+* is `:lambda-2gb` - `ComputeType/LAMBDA_2GB` is returned
 * is `:lambda-4gb` - `ComputeType/LAMBDA_4GB` is returned
 * is `:lambda-8gb` - `ComputeType/LAMBDA_8GB` is returned
+* is `:large` - `ComputeType/LARGE` is returned
+* is `:medium` - `ComputeType/MEDIUM` is returned
+* is `:small` - `ComputeType/SMALL` is returned
+* is `:x2-large` - `ComputeType/X2_LARGE` is returned
+* is `:x-large` - `ComputeType/X_LARGE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ComputeType data) data
-      (= :small data) ComputeType/SMALL
-      (= :large data) ComputeType/LARGE
-      (= :x-large data) ComputeType/X_LARGE
       (= :lambda-10gb data) ComputeType/LAMBDA_10GB
-      (= :lambda-2gb data) ComputeType/LAMBDA_2GB
-      (= :medium data) ComputeType/MEDIUM
-      (= :x2-large data) ComputeType/X2_LARGE
       (= :lambda-1gb data) ComputeType/LAMBDA_1GB
+      (= :lambda-2gb data) ComputeType/LAMBDA_2GB
       (= :lambda-4gb data) ComputeType/LAMBDA_4GB
-      (= :lambda-8gb data) ComputeType/LAMBDA_8GB)))
+      (= :lambda-8gb data) ComputeType/LAMBDA_8GB
+      (= :large data) ComputeType/LARGE
+      (= :medium data) ComputeType/MEDIUM
+      (= :small data) ComputeType/SMALL
+      (= :x2-large data) ComputeType/X2_LARGE
+      (= :x-large data) ComputeType/X_LARGE)))
 
 
 (defn event-action
@@ -147,9 +147,9 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `EventAction` - the value is returned.
+* is `:pull-request-created` - `EventAction/PULL_REQUEST_CREATED` is returned
 * is `:pull-request-merged` - `EventAction/PULL_REQUEST_MERGED` is returned
 * is `:pull-request-reopened` - `EventAction/PULL_REQUEST_REOPENED` is returned
-* is `:pull-request-created` - `EventAction/PULL_REQUEST_CREATED` is returned
 * is `:pull-request-updated` - `EventAction/PULL_REQUEST_UPDATED` is returned
 * is `:push` - `EventAction/PUSH` is returned
 
@@ -158,9 +158,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? EventAction data) data
+      (= :pull-request-created data) EventAction/PULL_REQUEST_CREATED
       (= :pull-request-merged data) EventAction/PULL_REQUEST_MERGED
       (= :pull-request-reopened data) EventAction/PULL_REQUEST_REOPENED
-      (= :pull-request-created data) EventAction/PULL_REQUEST_CREATED
       (= :pull-request-updated data) EventAction/PULL_REQUEST_UPDATED
       (= :push data) EventAction/PUSH)))
 
@@ -172,16 +172,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ImagePullPrincipalType` - the value is returned.
-* is `:service-role` - `ImagePullPrincipalType/SERVICE_ROLE` is returned
 * is `:codebuild` - `ImagePullPrincipalType/CODEBUILD` is returned
+* is `:service-role` - `ImagePullPrincipalType/SERVICE_ROLE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ImagePullPrincipalType data) data
-      (= :service-role data) ImagePullPrincipalType/SERVICE_ROLE
-      (= :codebuild data) ImagePullPrincipalType/CODEBUILD)))
+      (= :codebuild data) ImagePullPrincipalType/CODEBUILD
+      (= :service-role data) ImagePullPrincipalType/SERVICE_ROLE)))
 
 
 (defn local-cache-mode
@@ -212,24 +212,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ProjectNotificationEvents` - the value is returned.
-* is `:build-stopped` - `ProjectNotificationEvents/BUILD_STOPPED` is returned
 * is `:build-failed` - `ProjectNotificationEvents/BUILD_FAILED` is returned
-* is `:build-succeeded` - `ProjectNotificationEvents/BUILD_SUCCEEDED` is returned
-* is `:build-phase-failed` - `ProjectNotificationEvents/BUILD_PHASE_FAILED` is returned
 * is `:build-in-progress` - `ProjectNotificationEvents/BUILD_IN_PROGRESS` is returned
+* is `:build-phase-failed` - `ProjectNotificationEvents/BUILD_PHASE_FAILED` is returned
 * is `:build-phase-succeeded` - `ProjectNotificationEvents/BUILD_PHASE_SUCCEEDED` is returned
+* is `:build-stopped` - `ProjectNotificationEvents/BUILD_STOPPED` is returned
+* is `:build-succeeded` - `ProjectNotificationEvents/BUILD_SUCCEEDED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ProjectNotificationEvents data) data
-      (= :build-stopped data) ProjectNotificationEvents/BUILD_STOPPED
       (= :build-failed data) ProjectNotificationEvents/BUILD_FAILED
-      (= :build-succeeded data) ProjectNotificationEvents/BUILD_SUCCEEDED
-      (= :build-phase-failed data) ProjectNotificationEvents/BUILD_PHASE_FAILED
       (= :build-in-progress data) ProjectNotificationEvents/BUILD_IN_PROGRESS
-      (= :build-phase-succeeded data) ProjectNotificationEvents/BUILD_PHASE_SUCCEEDED)))
+      (= :build-phase-failed data) ProjectNotificationEvents/BUILD_PHASE_FAILED
+      (= :build-phase-succeeded data) ProjectNotificationEvents/BUILD_PHASE_SUCCEEDED
+      (= :build-stopped data) ProjectNotificationEvents/BUILD_STOPPED
+      (= :build-succeeded data) ProjectNotificationEvents/BUILD_SUCCEEDED)))
 
 
 (defn report-group-type

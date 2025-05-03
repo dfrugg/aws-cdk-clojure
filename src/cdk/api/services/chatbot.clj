@@ -19,8 +19,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `LoggingLevel` - the value is returned.
 * is `:error` - `LoggingLevel/ERROR` is returned
-* is `:none` - `LoggingLevel/NONE` is returned
 * is `:info` - `LoggingLevel/INFO` is returned
+* is `:none` - `LoggingLevel/NONE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -28,8 +28,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? LoggingLevel data) data
       (= :error data) LoggingLevel/ERROR
-      (= :none data) LoggingLevel/NONE
-      (= :info data) LoggingLevel/INFO)))
+      (= :info data) LoggingLevel/INFO
+      (= :none data) LoggingLevel/NONE)))
 
 
 (defn cfn-microsoft-teams-channel-configuration-builder>

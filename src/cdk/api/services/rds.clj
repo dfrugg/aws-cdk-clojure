@@ -145,34 +145,34 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AuroraCapacityUnit` - the value is returned.
-* is `:acu-32` - `AuroraCapacityUnit/ACU_32` is returned
-* is `:acu-8` - `AuroraCapacityUnit/ACU_8` is returned
-* is `:acu-16` - `AuroraCapacityUnit/ACU_16` is returned
-* is `:acu-128` - `AuroraCapacityUnit/ACU_128` is returned
 * is `:acu-1` - `AuroraCapacityUnit/ACU_1` is returned
+* is `:acu-128` - `AuroraCapacityUnit/ACU_128` is returned
+* is `:acu-16` - `AuroraCapacityUnit/ACU_16` is returned
+* is `:acu-192` - `AuroraCapacityUnit/ACU_192` is returned
+* is `:acu-2` - `AuroraCapacityUnit/ACU_2` is returned
+* is `:acu-256` - `AuroraCapacityUnit/ACU_256` is returned
+* is `:acu-32` - `AuroraCapacityUnit/ACU_32` is returned
 * is `:acu-384` - `AuroraCapacityUnit/ACU_384` is returned
 * is `:acu-4` - `AuroraCapacityUnit/ACU_4` is returned
 * is `:acu-64` - `AuroraCapacityUnit/ACU_64` is returned
-* is `:acu-256` - `AuroraCapacityUnit/ACU_256` is returned
-* is `:acu-2` - `AuroraCapacityUnit/ACU_2` is returned
-* is `:acu-192` - `AuroraCapacityUnit/ACU_192` is returned
+* is `:acu-8` - `AuroraCapacityUnit/ACU_8` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AuroraCapacityUnit data) data
-      (= :acu-32 data) AuroraCapacityUnit/ACU_32
-      (= :acu-8 data) AuroraCapacityUnit/ACU_8
-      (= :acu-16 data) AuroraCapacityUnit/ACU_16
-      (= :acu-128 data) AuroraCapacityUnit/ACU_128
       (= :acu-1 data) AuroraCapacityUnit/ACU_1
+      (= :acu-128 data) AuroraCapacityUnit/ACU_128
+      (= :acu-16 data) AuroraCapacityUnit/ACU_16
+      (= :acu-192 data) AuroraCapacityUnit/ACU_192
+      (= :acu-2 data) AuroraCapacityUnit/ACU_2
+      (= :acu-256 data) AuroraCapacityUnit/ACU_256
+      (= :acu-32 data) AuroraCapacityUnit/ACU_32
       (= :acu-384 data) AuroraCapacityUnit/ACU_384
       (= :acu-4 data) AuroraCapacityUnit/ACU_4
       (= :acu-64 data) AuroraCapacityUnit/ACU_64
-      (= :acu-256 data) AuroraCapacityUnit/ACU_256
-      (= :acu-2 data) AuroraCapacityUnit/ACU_2
-      (= :acu-192 data) AuroraCapacityUnit/ACU_192)))
+      (= :acu-8 data) AuroraCapacityUnit/ACU_8)))
 
 
 (defn client-password-auth-type
@@ -183,9 +183,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `ClientPasswordAuthType` - the value is returned.
 * is `:mysql-native-password` - `ClientPasswordAuthType/MYSQL_NATIVE_PASSWORD` is returned
-* is `:sql-server-authentication` - `ClientPasswordAuthType/SQL_SERVER_AUTHENTICATION` is returned
 * is `:postgres-md5` - `ClientPasswordAuthType/POSTGRES_MD5` is returned
 * is `:postgres-scram-sha-256` - `ClientPasswordAuthType/POSTGRES_SCRAM_SHA_256` is returned
+* is `:sql-server-authentication` - `ClientPasswordAuthType/SQL_SERVER_AUTHENTICATION` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -193,9 +193,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? ClientPasswordAuthType data) data
       (= :mysql-native-password data) ClientPasswordAuthType/MYSQL_NATIVE_PASSWORD
-      (= :sql-server-authentication data) ClientPasswordAuthType/SQL_SERVER_AUTHENTICATION
       (= :postgres-md5 data) ClientPasswordAuthType/POSTGRES_MD5
-      (= :postgres-scram-sha-256 data) ClientPasswordAuthType/POSTGRES_SCRAM_SHA_256)))
+      (= :postgres-scram-sha-256 data) ClientPasswordAuthType/POSTGRES_SCRAM_SHA_256
+      (= :sql-server-authentication data) ClientPasswordAuthType/SQL_SERVER_AUTHENTICATION)))
 
 
 (defn db-cluster-storage-type
@@ -243,16 +243,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `InstanceUpdateBehaviour` - the value is returned.
-* is `:rolling` - `InstanceUpdateBehaviour/ROLLING` is returned
 * is `:bulk` - `InstanceUpdateBehaviour/BULK` is returned
+* is `:rolling` - `InstanceUpdateBehaviour/ROLLING` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? InstanceUpdateBehaviour data) data
-      (= :rolling data) InstanceUpdateBehaviour/ROLLING
-      (= :bulk data) InstanceUpdateBehaviour/BULK)))
+      (= :bulk data) InstanceUpdateBehaviour/BULK
+      (= :rolling data) InstanceUpdateBehaviour/ROLLING)))
 
 
 (defn license-model
@@ -262,18 +262,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `LicenseModel` - the value is returned.
-* is `:license-included` - `LicenseModel/LICENSE_INCLUDED` is returned
-* is `:general-public-license` - `LicenseModel/GENERAL_PUBLIC_LICENSE` is returned
 * is `:bring-your-own-license` - `LicenseModel/BRING_YOUR_OWN_LICENSE` is returned
+* is `:general-public-license` - `LicenseModel/GENERAL_PUBLIC_LICENSE` is returned
+* is `:license-included` - `LicenseModel/LICENSE_INCLUDED` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? LicenseModel data) data
-      (= :license-included data) LicenseModel/LICENSE_INCLUDED
+      (= :bring-your-own-license data) LicenseModel/BRING_YOUR_OWN_LICENSE
       (= :general-public-license data) LicenseModel/GENERAL_PUBLIC_LICENSE
-      (= :bring-your-own-license data) LicenseModel/BRING_YOUR_OWN_LICENSE)))
+      (= :license-included data) LicenseModel/LICENSE_INCLUDED)))
 
 
 (defn network-type
@@ -302,62 +302,62 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `PerformanceInsightRetention` - the value is returned.
-* is `:months-1` - `PerformanceInsightRetention/MONTHS_1` is returned
-* is `:months-2` - `PerformanceInsightRetention/MONTHS_2` is returned
-* is `:months-9` - `PerformanceInsightRetention/MONTHS_9` is returned
 * is `:default` - `PerformanceInsightRetention/DEFAULT` is returned
+* is `:long-term` - `PerformanceInsightRetention/LONG_TERM` is returned
+* is `:months-1` - `PerformanceInsightRetention/MONTHS_1` is returned
+* is `:months-10` - `PerformanceInsightRetention/MONTHS_10` is returned
+* is `:months-11` - `PerformanceInsightRetention/MONTHS_11` is returned
+* is `:months-12` - `PerformanceInsightRetention/MONTHS_12` is returned
+* is `:months-13` - `PerformanceInsightRetention/MONTHS_13` is returned
+* is `:months-14` - `PerformanceInsightRetention/MONTHS_14` is returned
 * is `:months-15` - `PerformanceInsightRetention/MONTHS_15` is returned
+* is `:months-16` - `PerformanceInsightRetention/MONTHS_16` is returned
+* is `:months-17` - `PerformanceInsightRetention/MONTHS_17` is returned
+* is `:months-18` - `PerformanceInsightRetention/MONTHS_18` is returned
 * is `:months-19` - `PerformanceInsightRetention/MONTHS_19` is returned
-* is `:months-5` - `PerformanceInsightRetention/MONTHS_5` is returned
-* is `:months-7` - `PerformanceInsightRetention/MONTHS_7` is returned
+* is `:months-2` - `PerformanceInsightRetention/MONTHS_2` is returned
 * is `:months-20` - `PerformanceInsightRetention/MONTHS_20` is returned
 * is `:months-21` - `PerformanceInsightRetention/MONTHS_21` is returned
 * is `:months-22` - `PerformanceInsightRetention/MONTHS_22` is returned
-* is `:months-18` - `PerformanceInsightRetention/MONTHS_18` is returned
-* is `:months-10` - `PerformanceInsightRetention/MONTHS_10` is returned
-* is `:months-11` - `PerformanceInsightRetention/MONTHS_11` is returned
-* is `:months-16` - `PerformanceInsightRetention/MONTHS_16` is returned
-* is `:months-12` - `PerformanceInsightRetention/MONTHS_12` is returned
 * is `:months-23` - `PerformanceInsightRetention/MONTHS_23` is returned
-* is `:months-14` - `PerformanceInsightRetention/MONTHS_14` is returned
-* is `:months-6` - `PerformanceInsightRetention/MONTHS_6` is returned
 * is `:months-3` - `PerformanceInsightRetention/MONTHS_3` is returned
-* is `:months-17` - `PerformanceInsightRetention/MONTHS_17` is returned
-* is `:months-13` - `PerformanceInsightRetention/MONTHS_13` is returned
-* is `:long-term` - `PerformanceInsightRetention/LONG_TERM` is returned
 * is `:months-4` - `PerformanceInsightRetention/MONTHS_4` is returned
+* is `:months-5` - `PerformanceInsightRetention/MONTHS_5` is returned
+* is `:months-6` - `PerformanceInsightRetention/MONTHS_6` is returned
+* is `:months-7` - `PerformanceInsightRetention/MONTHS_7` is returned
 * is `:months-8` - `PerformanceInsightRetention/MONTHS_8` is returned
+* is `:months-9` - `PerformanceInsightRetention/MONTHS_9` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? PerformanceInsightRetention data) data
-      (= :months-1 data) PerformanceInsightRetention/MONTHS_1
-      (= :months-2 data) PerformanceInsightRetention/MONTHS_2
-      (= :months-9 data) PerformanceInsightRetention/MONTHS_9
       (= :default data) PerformanceInsightRetention/DEFAULT
+      (= :long-term data) PerformanceInsightRetention/LONG_TERM
+      (= :months-1 data) PerformanceInsightRetention/MONTHS_1
+      (= :months-10 data) PerformanceInsightRetention/MONTHS_10
+      (= :months-11 data) PerformanceInsightRetention/MONTHS_11
+      (= :months-12 data) PerformanceInsightRetention/MONTHS_12
+      (= :months-13 data) PerformanceInsightRetention/MONTHS_13
+      (= :months-14 data) PerformanceInsightRetention/MONTHS_14
       (= :months-15 data) PerformanceInsightRetention/MONTHS_15
+      (= :months-16 data) PerformanceInsightRetention/MONTHS_16
+      (= :months-17 data) PerformanceInsightRetention/MONTHS_17
+      (= :months-18 data) PerformanceInsightRetention/MONTHS_18
       (= :months-19 data) PerformanceInsightRetention/MONTHS_19
-      (= :months-5 data) PerformanceInsightRetention/MONTHS_5
-      (= :months-7 data) PerformanceInsightRetention/MONTHS_7
+      (= :months-2 data) PerformanceInsightRetention/MONTHS_2
       (= :months-20 data) PerformanceInsightRetention/MONTHS_20
       (= :months-21 data) PerformanceInsightRetention/MONTHS_21
       (= :months-22 data) PerformanceInsightRetention/MONTHS_22
-      (= :months-18 data) PerformanceInsightRetention/MONTHS_18
-      (= :months-10 data) PerformanceInsightRetention/MONTHS_10
-      (= :months-11 data) PerformanceInsightRetention/MONTHS_11
-      (= :months-16 data) PerformanceInsightRetention/MONTHS_16
-      (= :months-12 data) PerformanceInsightRetention/MONTHS_12
       (= :months-23 data) PerformanceInsightRetention/MONTHS_23
-      (= :months-14 data) PerformanceInsightRetention/MONTHS_14
-      (= :months-6 data) PerformanceInsightRetention/MONTHS_6
       (= :months-3 data) PerformanceInsightRetention/MONTHS_3
-      (= :months-17 data) PerformanceInsightRetention/MONTHS_17
-      (= :months-13 data) PerformanceInsightRetention/MONTHS_13
-      (= :long-term data) PerformanceInsightRetention/LONG_TERM
       (= :months-4 data) PerformanceInsightRetention/MONTHS_4
-      (= :months-8 data) PerformanceInsightRetention/MONTHS_8)))
+      (= :months-5 data) PerformanceInsightRetention/MONTHS_5
+      (= :months-6 data) PerformanceInsightRetention/MONTHS_6
+      (= :months-7 data) PerformanceInsightRetention/MONTHS_7
+      (= :months-8 data) PerformanceInsightRetention/MONTHS_8
+      (= :months-9 data) PerformanceInsightRetention/MONTHS_9)))
 
 
 (defn storage-type
@@ -392,16 +392,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TimeoutAction` - the value is returned.
-* is `:rollback-capacity-change` - `TimeoutAction/ROLLBACK_CAPACITY_CHANGE` is returned
 * is `:force-apply-capacity-change` - `TimeoutAction/FORCE_APPLY_CAPACITY_CHANGE` is returned
+* is `:rollback-capacity-change` - `TimeoutAction/ROLLBACK_CAPACITY_CHANGE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TimeoutAction data) data
-      (= :rollback-capacity-change data) TimeoutAction/ROLLBACK_CAPACITY_CHANGE
-      (= :force-apply-capacity-change data) TimeoutAction/FORCE_APPLY_CAPACITY_CHANGE)))
+      (= :force-apply-capacity-change data) TimeoutAction/FORCE_APPLY_CAPACITY_CHANGE
+      (= :rollback-capacity-change data) TimeoutAction/ROLLBACK_CAPACITY_CHANGE)))
 
 
 (defn aurora-cluster-engine-props-builder>

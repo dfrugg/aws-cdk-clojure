@@ -222,17 +222,30 @@
     (. builder %s data))")
 
 
+(def template-builder-method-builder
+  "
+  (when-some [data (lookup-entry config id :%s)]
+    (let [field-data (if (map? data) (builder-config % data config) data)]
+      (. builder %s data)))")
+
+
 (defn template-builder-method
   [{:keys [method method-key method-arg]} {:keys [enums]}]
   (let [enum-config (enums method-arg)]
-    (if enum-config
+    (cond
+      enum-config
       (format template-builder-method-enum (:fn-name enum-config) method-key method)
+
+      ;builder-config
+      ;(format template-builder-method-builder method-key (:fn-name builder-config) method)
+
+      :else
       (format template-builder-method-lookup method-key method))))
 
 
 (defn build-builder-source-function
   "Generates code when builders have single constructor options"
-  [{:keys [methods fn-name class-name]} classpath-info]
+  [classpath-info {:keys [methods fn-name class-name]}]
   (let [docstring (template-builder-docstring methods fn-name class-name classpath-info)
         builder-header (format template-build-builder-start fn-name docstring class-name)
         builder-sets (->> (mapv #(template-builder-method % classpath-info) methods)
@@ -422,10 +435,10 @@
 
 (defn builder-source-function
   "Builds out the source code for for the builders on a package"
-  [{:keys [inits fn-name class-name methods] :as builder-data} classpath-info]
+  [classpath-info {:keys [inits fn-name class-name methods] :as builder-data}]
   (let [builder? (some? (seq methods))
         build  (if builder?
-                 (build-builder-source-function builder-data classpath-info)
+                 (build-builder-source-function classpath-info builder-data)
                  (builder-source-no-config-function builder-data))]
     (cond
       ; Return just the builder

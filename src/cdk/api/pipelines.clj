@@ -64,18 +64,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `DockerCredentialUsage` - the value is returned.
+* is `:asset-publishing` - `DockerCredentialUsage/ASSET_PUBLISHING` is returned
 * is `:self-update` - `DockerCredentialUsage/SELF_UPDATE` is returned
 * is `:synth` - `DockerCredentialUsage/SYNTH` is returned
-* is `:asset-publishing` - `DockerCredentialUsage/ASSET_PUBLISHING` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? DockerCredentialUsage data) data
+      (= :asset-publishing data) DockerCredentialUsage/ASSET_PUBLISHING
       (= :self-update data) DockerCredentialUsage/SELF_UPDATE
-      (= :synth data) DockerCredentialUsage/SYNTH
-      (= :asset-publishing data) DockerCredentialUsage/ASSET_PUBLISHING)))
+      (= :synth data) DockerCredentialUsage/SYNTH)))
 
 
 (defn add-stage-opts-builder>

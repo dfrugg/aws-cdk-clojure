@@ -147,24 +147,24 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AccountRecovery` - the value is returned.
-* is `:none` - `AccountRecovery/NONE` is returned
+* is `:email-and-phone-without-mfa` - `AccountRecovery/EMAIL_AND_PHONE_WITHOUT_MFA` is returned
 * is `:email-only` - `AccountRecovery/EMAIL_ONLY` is returned
+* is `:none` - `AccountRecovery/NONE` is returned
+* is `:phone-and-email` - `AccountRecovery/PHONE_AND_EMAIL` is returned
 * is `:phone-only-without-mfa` - `AccountRecovery/PHONE_ONLY_WITHOUT_MFA` is returned
 * is `:phone-without-mfa-and-email` - `AccountRecovery/PHONE_WITHOUT_MFA_AND_EMAIL` is returned
-* is `:phone-and-email` - `AccountRecovery/PHONE_AND_EMAIL` is returned
-* is `:email-and-phone-without-mfa` - `AccountRecovery/EMAIL_AND_PHONE_WITHOUT_MFA` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AccountRecovery data) data
-      (= :none data) AccountRecovery/NONE
+      (= :email-and-phone-without-mfa data) AccountRecovery/EMAIL_AND_PHONE_WITHOUT_MFA
       (= :email-only data) AccountRecovery/EMAIL_ONLY
-      (= :phone-only-without-mfa data) AccountRecovery/PHONE_ONLY_WITHOUT_MFA
-      (= :phone-without-mfa-and-email data) AccountRecovery/PHONE_WITHOUT_MFA_AND_EMAIL
+      (= :none data) AccountRecovery/NONE
       (= :phone-and-email data) AccountRecovery/PHONE_AND_EMAIL
-      (= :email-and-phone-without-mfa data) AccountRecovery/EMAIL_AND_PHONE_WITHOUT_MFA)))
+      (= :phone-only-without-mfa data) AccountRecovery/PHONE_ONLY_WITHOUT_MFA
+      (= :phone-without-mfa-and-email data) AccountRecovery/PHONE_WITHOUT_MFA_AND_EMAIL)))
 
 
 (defn advanced-security-mode
@@ -174,18 +174,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `AdvancedSecurityMode` - the value is returned.
-* is `:off` - `AdvancedSecurityMode/OFF` is returned
 * is `:audit` - `AdvancedSecurityMode/AUDIT` is returned
 * is `:enforced` - `AdvancedSecurityMode/ENFORCED` is returned
+* is `:off` - `AdvancedSecurityMode/OFF` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? AdvancedSecurityMode data) data
-      (= :off data) AdvancedSecurityMode/OFF
       (= :audit data) AdvancedSecurityMode/AUDIT
-      (= :enforced data) AdvancedSecurityMode/ENFORCED)))
+      (= :enforced data) AdvancedSecurityMode/ENFORCED
+      (= :off data) AdvancedSecurityMode/OFF)))
 
 
 (defn lambda-version

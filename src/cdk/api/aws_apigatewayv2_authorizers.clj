@@ -21,16 +21,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `HttpLambdaResponseType` - the value is returned.
-* is `:simple` - `HttpLambdaResponseType/SIMPLE` is returned
 * is `:iam` - `HttpLambdaResponseType/IAM` is returned
+* is `:simple` - `HttpLambdaResponseType/SIMPLE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? HttpLambdaResponseType data) data
-      (= :simple data) HttpLambdaResponseType/SIMPLE
-      (= :iam data) HttpLambdaResponseType/IAM)))
+      (= :iam data) HttpLambdaResponseType/IAM
+      (= :simple data) HttpLambdaResponseType/SIMPLE)))
 
 
 (defn http-jwt-authorizer-builder>

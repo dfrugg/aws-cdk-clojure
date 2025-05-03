@@ -40,16 +40,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TagMutability` - the value is returned.
-* is `:mutable` - `TagMutability/MUTABLE` is returned
 * is `:immutable` - `TagMutability/IMMUTABLE` is returned
+* is `:mutable` - `TagMutability/MUTABLE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TagMutability data) data
-      (= :mutable data) TagMutability/MUTABLE
-      (= :immutable data) TagMutability/IMMUTABLE)))
+      (= :immutable data) TagMutability/IMMUTABLE
+      (= :mutable data) TagMutability/MUTABLE)))
 
 
 (defn tag-status
@@ -59,18 +59,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `TagStatus` - the value is returned.
+* is `:any` - `TagStatus/ANY` is returned
 * is `:tagged` - `TagStatus/TAGGED` is returned
 * is `:untagged` - `TagStatus/UNTAGGED` is returned
-* is `:any` - `TagStatus/ANY` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? TagStatus data) data
+      (= :any data) TagStatus/ANY
       (= :tagged data) TagStatus/TAGGED
-      (= :untagged data) TagStatus/UNTAGGED
-      (= :any data) TagStatus/ANY)))
+      (= :untagged data) TagStatus/UNTAGGED)))
 
 
 (defn cfn-public-repository-builder>

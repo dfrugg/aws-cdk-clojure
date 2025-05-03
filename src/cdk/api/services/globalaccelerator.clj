@@ -58,16 +58,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ConnectionProtocol` - the value is returned.
-* is `:udp` - `ConnectionProtocol/UDP` is returned
 * is `:tcp` - `ConnectionProtocol/TCP` is returned
+* is `:udp` - `ConnectionProtocol/UDP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ConnectionProtocol data) data
-      (= :udp data) ConnectionProtocol/UDP
-      (= :tcp data) ConnectionProtocol/TCP)))
+      (= :tcp data) ConnectionProtocol/TCP
+      (= :udp data) ConnectionProtocol/UDP)))
 
 
 (defn health-check-protocol
@@ -78,8 +78,8 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `HealthCheckProtocol` - the value is returned.
 * is `:http` - `HealthCheckProtocol/HTTP` is returned
-* is `:tcp` - `HealthCheckProtocol/TCP` is returned
 * is `:https` - `HealthCheckProtocol/HTTPS` is returned
+* is `:tcp` - `HealthCheckProtocol/TCP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -87,8 +87,8 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? HealthCheckProtocol data) data
       (= :http data) HealthCheckProtocol/HTTP
-      (= :tcp data) HealthCheckProtocol/TCP
-      (= :https data) HealthCheckProtocol/HTTPS)))
+      (= :https data) HealthCheckProtocol/HTTPS
+      (= :tcp data) HealthCheckProtocol/TCP)))
 
 
 (defn ip-address-type
@@ -98,16 +98,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `IpAddressType` - the value is returned.
-* is `:ipv4` - `IpAddressType/IPV4` is returned
 * is `:dual-stack` - `IpAddressType/DUAL_STACK` is returned
+* is `:ipv4` - `IpAddressType/IPV4` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? IpAddressType data) data
-      (= :ipv4 data) IpAddressType/IPV4
-      (= :dual-stack data) IpAddressType/DUAL_STACK)))
+      (= :dual-stack data) IpAddressType/DUAL_STACK
+      (= :ipv4 data) IpAddressType/IPV4)))
 
 
 (defn accelerator-attributes-builder>

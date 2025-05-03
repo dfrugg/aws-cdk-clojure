@@ -26,9 +26,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `LoadBalancingProtocol` - the value is returned.
 * is `:http` - `LoadBalancingProtocol/HTTP` is returned
-* is `:tcp` - `LoadBalancingProtocol/TCP` is returned
 * is `:https` - `LoadBalancingProtocol/HTTPS` is returned
 * is `:ssl` - `LoadBalancingProtocol/SSL` is returned
+* is `:tcp` - `LoadBalancingProtocol/TCP` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -36,9 +36,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? LoadBalancingProtocol data) data
       (= :http data) LoadBalancingProtocol/HTTP
-      (= :tcp data) LoadBalancingProtocol/TCP
       (= :https data) LoadBalancingProtocol/HTTPS
-      (= :ssl data) LoadBalancingProtocol/SSL)))
+      (= :ssl data) LoadBalancingProtocol/SSL
+      (= :tcp data) LoadBalancingProtocol/TCP)))
 
 
 (defn cfn-load-balancer-access-logging-policy-property-builder>

@@ -127,18 +127,18 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `IntegrationPattern` - the value is returned.
+* is `:request-response` - `IntegrationPattern/REQUEST_RESPONSE` is returned
 * is `:run-job` - `IntegrationPattern/RUN_JOB` is returned
 * is `:wait-for-task-token` - `IntegrationPattern/WAIT_FOR_TASK_TOKEN` is returned
-* is `:request-response` - `IntegrationPattern/REQUEST_RESPONSE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? IntegrationPattern data) data
+      (= :request-response data) IntegrationPattern/REQUEST_RESPONSE
       (= :run-job data) IntegrationPattern/RUN_JOB
-      (= :wait-for-task-token data) IntegrationPattern/WAIT_FOR_TASK_TOKEN
-      (= :request-response data) IntegrationPattern/REQUEST_RESPONSE)))
+      (= :wait-for-task-token data) IntegrationPattern/WAIT_FOR_TASK_TOKEN)))
 
 
 (defn jitter-type
@@ -168,9 +168,9 @@ function on the data with the provided namespace id and item-key.  The found val
 
 * instance of `LogLevel` - the value is returned.
 * is `:all` - `LogLevel/ALL` is returned
+* is `:error` - `LogLevel/ERROR` is returned
 * is `:fatal` - `LogLevel/FATAL` is returned
 * is `:off` - `LogLevel/OFF` is returned
-* is `:error` - `LogLevel/ERROR` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
@@ -178,9 +178,9 @@ function on the data with the provided namespace id and item-key.  The found val
     (cond
       (instance? LogLevel data) data
       (= :all data) LogLevel/ALL
+      (= :error data) LogLevel/ERROR
       (= :fatal data) LogLevel/FATAL
-      (= :off data) LogLevel/OFF
-      (= :error data) LogLevel/ERROR)))
+      (= :off data) LogLevel/OFF)))
 
 
 (defn processor-mode
@@ -190,16 +190,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ProcessorMode` - the value is returned.
-* is `:inline` - `ProcessorMode/INLINE` is returned
 * is `:distributed` - `ProcessorMode/DISTRIBUTED` is returned
+* is `:inline` - `ProcessorMode/INLINE` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ProcessorMode data) data
-      (= :inline data) ProcessorMode/INLINE
-      (= :distributed data) ProcessorMode/DISTRIBUTED)))
+      (= :distributed data) ProcessorMode/DISTRIBUTED
+      (= :inline data) ProcessorMode/INLINE)))
 
 
 (defn processor-type
@@ -209,16 +209,16 @@ the configuration provided to builders.  The value is found using the `cdk.suppo
 function on the data with the provided namespace id and item-key.  The found value is interpretted as follows: 
 
 * instance of `ProcessorType` - the value is returned.
-* is `:standard` - `ProcessorType/STANDARD` is returned
 * is `:express` - `ProcessorType/EXPRESS` is returned
+* is `:standard` - `ProcessorType/STANDARD` is returned
 
  If a value is not found or matches the above criteria, nil is returned."
   [config id item-key]
   (let [data (lookup-entry config id item-key)]
     (cond
       (instance? ProcessorType data) data
-      (= :standard data) ProcessorType/STANDARD
-      (= :express data) ProcessorType/EXPRESS)))
+      (= :express data) ProcessorType/EXPRESS
+      (= :standard data) ProcessorType/STANDARD)))
 
 
 (defn service-integration-pattern
